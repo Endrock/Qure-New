@@ -1425,7 +1425,8 @@ body[data-variantc-upsell-carousel] {
 
 /* CROSS SELL */
   .cross-sell {
-    margin-bottom: 40px;
+    max-width: 550px;
+    margin: 0 auto 40px;
   }
   .cross-sell .cross-sell__products {
     display: flex;
@@ -1522,6 +1523,9 @@ body[data-variantc-upsell-carousel] {
   @media screen and (max-width:767px) {
     .cross-sell .cross-sell__title {
       font-size: 20px;
+    }
+    .cross-sell .cross-sell__product-content--title.small-text {
+      font-size: 14px;
     }
   }
 /* CROSS SELL END */
