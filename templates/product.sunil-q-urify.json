@@ -13,7 +13,7 @@
         "list_BDhCQ7": {
           "type": "list",
           "settings": {
-            "text": "<ul><li>Filters your faucet tap water for the most purified cleanse.</li><li>Aids in removing known skin irritants like chlorine, calcium and magnesium.</li><li>Improve skin barrier for healthier skin without any extra steps in your routine. </li></ul>"
+            "text": "<ul><li>Filters your faucet water for the most purified cleanse.</li><li>Aids in reducing known skin irritants like chlorine, calcium and magnesium.</li><li>Boosts skin hydration, reduces appearance of wrinkles and prevents pre-mature aging without any extra steps in your routine.</li></ul>"
           }
         },
         "subscribe_J9Afdq": {
@@ -126,79 +126,51 @@
         "heading": ""
       }
     },
-    "two_column_box_fMJLLc": {
-      "type": "two-column-box",
-      "blocks": {
-        "image_cGGk64": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/free_report.webp",
-            "classname": "mw-mob-100"
-          }
-        },
-        "content_AzCjy3": {
-          "type": "content",
-          "settings": {
-            "text": "<h2>What contaminants is your skin absorbing everyday?</h2><p>Enter your information below to get a free, custom water report for your local area. Learn about what’s in your water and how it can be affecting your skin.</p><p>[code]</p>",
-            "column_content": 0,
-            "classname": "free_report_info section_header px-0 text-start ms-0 pt-md-4 ps-md-4"
-          }
-        },
-        "code_RekAEF": {
-          "type": "code",
-          "settings": {
-            "code": "<form>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<style>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t/* specical for desktop */\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t@media only screen and (min-width:769px){\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t.klaviyo-mobile {\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tdisplay:none;\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t}\n.klaviyo-form {\npadding-bottom: 0px;\n}\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t/* special for mobile */\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t@media (max-width: 768px) {\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t.klaviyo-desktop , .only-desktop{\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tdisplay:none;\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t}\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t.klaviyo-form {\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tmin-height: 200px;\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t.needsclick.kl-private-reset-css-Xuajs1 {\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tmin-height:auto !important;\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</style>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"klaviyo-form klaviyo-desktop\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"klaviyo-form-SVbDx9\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"klaviyo-form klaviyo-mobile\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"klaviyo-form-WezUbv\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"only-desktop\">By submitting this form, you agree to receive recurring automated promotional and\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tpersonalized marketing Emails from Qure to the Email used when signing up. See\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\thref=\"https://www.qureskincare.com/pages/terms-and-conditions?_ga=2.8994934.238572732.1701676238-1116108182.1699606045\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tstyle=\"text-decoration: underline;\">Terms</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t& <a target=\"_blank\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\thref=\"https://www.qureskincare.com/pages/privacy-page?_ga=2.8994934.238572732.1701676238-1116108182.1699606045\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tstyle=\"text-decoration: underline;\">Privacy.</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</form>"
-          }
-        }
-      },
-      "block_order": [
-        "image_cGGk64",
-        "content_AzCjy3",
-        "code_RekAEF"
-      ],
-      "settings": {
-        "classname": "free_report",
-        "column_image": 6,
-        "column_content": 6
-      }
-    },
     "two_column_box_L6gnTR": {
       "type": "two-column-box",
       "blocks": {
-        "content_eWtXM9": {
-          "type": "content",
-          "settings": {
-            "text": "<h2>[image_mobile]Tap into a whole new side of skincare</h2><p>[only_mobile_start] Get your maximum clean at the flip of a switch with the Q-urify Water Filter. It’s perfect for maximizing the effectiveness of your skincare products without any extra steps in your routine – giving your skin the best chance at natural radiance. [only_mobile_end][code]</p>",
-            "column_content": 0,
-            "classname": "it_info p-0 pt-0 pt-md-0"
-          }
-        },
         "image_7zKDRt": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/newside.webp",
-            "classname": "mw-mob-100"
+            "classname": "it_img pb-3 pb-md-0 pe-0 pe-md-5 mw-mob-100"
+          }
+        },
+        "content_eWtXM9": {
+          "type": "content",
+          "settings": {
+            "text": "<h2>5 Reasons why everyone is tapping into a whole new side of skincare</h2><p>[code]</p>",
+            "column_content": 0,
+            "classname": "it_info p-0 pt-0 pt-md-0"
           }
         },
         "code_yDHdYe": {
           "type": "code",
           "settings": {
-            "code": "<div class=\"newside_list\">\n    <ul>\n        <li>\n            <img src=\"https://qureskincaredns.com/new/assets/newside_barrier.svg?v=112592229601901552111705497377\" alt=\"\">\n            <p>Improve skin barrier</p>\n        </li>\n        <li>\n            <img src=\"https://qureskincaredns.com/new/assets/newside_breakouts.svg?v=58225705729726438961705497378\" alt=\"\">\n            <p>Helps reduce breakouts</p>\n        </li>\n        <li>\n            <img src=\"https://qureskincaredns.com/new/assets/newside_moisture.svg?v=155433967161302795961705497389\" alt=\"\">\n            <p>Increase skin hydration</p>\n        </li>\n        <li>\n            <img src=\"https://qureskincaredns.com/new/assets/newside_radiance.svg?v=122212907782778649961705497400\" alt=\"\">\n            <p>Enhance skin radiance</p>\n        </li>\n        <li>\n            <img src=\"https://qureskincaredns.com/new/assets/newside_irritation.svg?v=115069587530214116971705497389\" alt=\"\">\n            <p>Improve redness & irritation</p>\n        </li>\n    </ul>\n</div>"
+            "code": "<div class=\"newside_list\">\n                                <ul>\n                                    <li>\n                                        <img src=\"{{ 'newside_barrier.svg' | asset_url }}\" alt=\"\">\n                                        <p>Enhances the effectiveness of topical products with a clean skin base</p>\n                                    </li>\n                                    <li>\n                                        <img src=\"{{ 'newside_breakouts.svg' | asset_url }}\" alt=\"\">\n                                        <p>Reduces appearance of wrinkles and prevents premature ageing </p>\n                                    </li>\n                                    <li>\n                                        <img src=\"{{ 'newside_moisture.svg' | asset_url }}\" alt=\"\">\n                                        <p>Increases skin hydration and improves skin barrier</p>\n                                    </li>\n                                    <li>\n                                        <img src=\"{{ 'newside_radiance.svg' | asset_url }}\" alt=\"\">\n                                        <p>Reduces pore clogging contaminants for less breakouts and clearer skin</p>\n                                    </li>\n                                    <li>\n                                        <img src=\"{{ 'newside_irritation.svg' | asset_url }}\" alt=\"\">\n                                        <p>Decreases redness and irritation, great for sensitive skin</p>\n                                    </li>\n                                </ul>\n                            </div>"
           }
         }
       },
       "block_order": [
-        "content_eWtXM9",
         "image_7zKDRt",
+        "content_eWtXM9",
         "code_yDHdYe"
       ],
       "custom_css": [
-        "@media (max-width: 768px) {.imageText {margin-top: -55px; } .title-lg .d-md-none {padding-bottom: 20px; }}"
+
       ],
       "settings": {
-        "classname": "imageText new_side section",
+        "classname": "imageText new_side p-0 pt-md-5",
         "column_image": 6,
         "column_content": 6
+      }
+    },
+    "skin_hydration_NmJkjQ": {
+      "type": "skin-hydration",
+      "settings": {
+        "heading": "Clinically proven to improve skin hydration in just 2 weeks",
+        "text": "<p>The object of this test was to define the influence of the tested product on the <strong>level of skin hydration </strong>and <strong>appearance of wrinkles.</strong></p><p>Test subjects range in age between 25-65 with normal and sensitive skin.</p><p>Study conducted by Regulatory Consultants. </p>",
+        "image": "shopify://shop_images/skin_hydration.webp"
       }
     },
     "results_ApY4eq": {
@@ -265,6 +237,180 @@
         "text_verified_customer": "Verified customer"
       }
     },
+    "trusted_F8P8xL": {
+      "type": "trusted",
+      "blocks": {
+        "feedback_6xfLNJ": {
+          "type": "feedback",
+          "settings": {
+            "image": "shopify://shop_images/cl_shah.webp",
+            "text": "<p>\"You wanna look for something that’s gonna remove both <strong>calcium carbonate </strong>and chlorine from your water.\"</p><h6><strong>Dr Shah, MD </strong>Board-Certified Dermatologist</h6>"
+          }
+        },
+        "feedback_Fw4HQy": {
+          "type": "feedback",
+          "settings": {
+            "image": "shopify://shop_images/cl_max.webp",
+            "text": "<p>“<strong>...if water is a contributing factor </strong>it may be the easiest thing to help fix that first.”</p><h6><strong>Dr Maxfield, MD</strong> Board-Certified Dermatologist</h6>"
+          }
+        }
+      },
+      "block_order": [
+        "feedback_6xfLNJ",
+        "feedback_Fw4HQy"
+      ],
+      "settings": {
+        "classname": "trusted_bl",
+        "heading": "Recommended and trusted by leading Dermatologists",
+        "likes": "4.8K",
+        "views": "192K views",
+        "image": "shopify://shop_images/trusted_main.webp",
+        "video_url": "https://www.youtube.com/watch?v=QuJ3puVLKzU",
+        "video_label": "Click To Watch Review"
+      }
+    },
+    "videos_PfhR49": {
+      "type": "videos",
+      "blocks": {
+        "wistia_GyWU4e": {
+          "type": "wistia",
+          "settings": {
+            "wistia_id": "kc6exz5vhj"
+          }
+        },
+        "wistia_Q8mNUr": {
+          "type": "wistia",
+          "settings": {
+            "wistia_id": "va6eyhm4v0"
+          }
+        },
+        "wistia_az7KJp": {
+          "type": "wistia",
+          "settings": {
+            "wistia_id": "wgi1stvd8c"
+          }
+        },
+        "wistia_GbdbJj": {
+          "type": "wistia",
+          "settings": {
+            "wistia_id": "y7zo1envmx"
+          }
+        },
+        "wistia_7CGQKT": {
+          "type": "wistia",
+          "settings": {
+            "wistia_id": "ipd5pzekbg"
+          }
+        },
+        "wistia_RPkKm6": {
+          "type": "wistia",
+          "settings": {
+            "wistia_id": "ehc0n9atb7"
+          }
+        },
+        "wistia_A3g7GL": {
+          "type": "wistia",
+          "settings": {
+            "wistia_id": "mprugrn2b7"
+          }
+        }
+      },
+      "block_order": [
+        "wistia_GyWU4e",
+        "wistia_Q8mNUr",
+        "wistia_az7KJp",
+        "wistia_GbdbJj",
+        "wistia_7CGQKT",
+        "wistia_RPkKm6",
+        "wistia_A3g7GL"
+      ],
+      "settings": {
+        "heading": "No filters were used in the making of these videos",
+        "text": "<p>To clarify, we mean no editing filters were used in the making of these videos:</p>",
+        "classname": "bg-yellow"
+      }
+    },
+    "compare_yQKzP4": {
+      "type": "compare",
+      "blocks": {
+        "object_jWtKpX": {
+          "type": "object",
+          "settings": {
+            "image": "shopify://shop_images/beauty_qurifyTap.webp",
+            "heading": "Q-urify Water\\nFilter ",
+            "text": "",
+            "price": "",
+            "style": "correctCircle",
+            "list": "<ul><li>Reduces chlorine</li><li>Reduces calcium</li><li>Reduces magnesium</li></ul>"
+          }
+        },
+        "object_beMBx9": {
+          "type": "object",
+          "settings": {
+            "image": "shopify://shop_images/alternative_filters.png",
+            "heading": "Alternative\\nFilters",
+            "text": "",
+            "price": "",
+            "style": "incorrectCircle",
+            "list": "<p><em>Reduces chlorine</em></p><ul><li>Reduces calcium</li><li>Reduces magnesium</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "object_jWtKpX",
+        "object_beMBx9"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "classname": "beauty_skincare section bg-white beauty_ftrs_center",
+        "heading": "More effective and safer than other filters",
+        "text": "<p>Other filtration systems focus on just chlorine removal, but calcium and magnesium are the true skin-barrier disruptors. With the Q-urify Water Filter, you get the best science-backed, dermatologist-approved solution to filtered water at home for better skin...</p>"
+      }
+    },
+    "two_column_box_fMJLLc": {
+      "type": "two-column-box",
+      "blocks": {
+        "image_cGGk64": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/free_report.webp",
+            "classname": "free_report_img mw-mob-100"
+          }
+        },
+        "content_AzCjy3": {
+          "type": "content",
+          "settings": {
+            "text": "<h2>What contaminants is your skin absorbing everyday?</h2><p>Enter your information below to get a free, custom water report for your local area. Learn about what’s in your water and how it can be affecting your skin.</p><p>[code]</p>",
+            "column_content": 0,
+            "classname": "free_report_info section_header px-0 text-start ms-0 pt-md-4 ps-md-4"
+          }
+        },
+        "code_RekAEF": {
+          "type": "code",
+          "settings": {
+            "code": "<form>\n\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"klaviyo-form klaviyo-desktop\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"klaviyo-form-SVbDx9\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"klaviyo-form klaviyo-mobile\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"klaviyo-form-WezUbv\"></div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p class=\"only-desktop\">By submitting this form, you agree to receive recurring automated promotional and\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tpersonalized marketing Emails from Qure to the Email used when signing up. See\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a target=\"_blank\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\thref=\"https://www.qureskincare.com/pages/terms-and-conditions?_ga=2.8994934.238572732.1701676238-1116108182.1699606045\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tstyle=\"text-decoration: underline;\">Terms</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t& <a target=\"_blank\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\thref=\"https://www.qureskincare.com/pages/privacy-page?_ga=2.8994934.238572732.1701676238-1116108182.1699606045\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tstyle=\"text-decoration: underline;\">Privacy.</a>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</form>"
+          }
+        }
+      },
+      "block_order": [
+        "image_cGGk64",
+        "content_AzCjy3",
+        "code_RekAEF"
+      ],
+      "custom_css": [
+        "@media only screen and (min-width:769px){.klaviyo-mobile {display:none;}.klaviyo-form {padding-bottom: 0px;}}",
+        "@media (max-width: 768px) {.klaviyo-desktop , .only-desktop{display:none;}}",
+        ".klaviyo-form {min-height: 200px;}",
+        ".needsclick.kl-private-reset-css-Xuajs1 {min-height:auto !important;}"
+      ],
+      "settings": {
+        "classname": "free_report section",
+        "column_image": 6,
+        "column_content": 6
+      }
+    },
     "two_column_box_9KGBC4": {
       "type": "two-column-box",
       "blocks": {
@@ -327,46 +473,6 @@
         "classname": "technology_light section",
         "column_image": 6,
         "column_content": 6
-      }
-    },
-    "skin_hydration_NmJkjQ": {
-      "type": "skin-hydration",
-      "settings": {
-        "heading": "Clinically proven to improve skin hydration in just 2 weeks",
-        "text": "<p>The object of this test was to define the influence of the tested product on the <strong>level of skin hydration </strong>and <strong>appearance of wrinkles.</strong></p><p>Test subjects range in age between 25-65 with normal and sensitive skin.</p><p>Study conducted by Regulatory Consultants. </p>",
-        "image": "shopify://shop_images/skin_hydration.webp"
-      }
-    },
-    "trusted_F8P8xL": {
-      "type": "trusted",
-      "blocks": {
-        "feedback_6xfLNJ": {
-          "type": "feedback",
-          "settings": {
-            "image": "shopify://shop_images/cl_shah.webp",
-            "text": "<p>\"You wanna look for something that’s gonna remove both <strong>calcium carbonate </strong>and chlorine from your water.\"</p><h6><strong>Dr Shah, MD </strong>Board-Certified Dermatologist</h6>"
-          }
-        },
-        "feedback_Fw4HQy": {
-          "type": "feedback",
-          "settings": {
-            "image": "shopify://shop_images/cl_max.webp",
-            "text": "<p>“<strong>...if water is a contributing factor </strong>it may be the easiest thing to help fix that first.”</p><h6><strong>Dr Maxfield, MD</strong> Board-Certified Dermatologist</h6>"
-          }
-        }
-      },
-      "block_order": [
-        "feedback_6xfLNJ",
-        "feedback_Fw4HQy"
-      ],
-      "settings": {
-        "classname": "trusted_bl",
-        "heading": "Recommended and trusted by world leading Dermatologists",
-        "likes": "4.8K",
-        "views": "192K views",
-        "image": "shopify://shop_images/trusted_main.webp",
-        "video_url": "https://www.youtube.com/watch?v=QuJ3puVLKzU",
-        "video_label": "Click To Watch Review"
       }
     },
     "two_column_box_mjpNxF": {
@@ -447,45 +553,6 @@
       "settings": {
       }
     },
-    "compare_yQKzP4": {
-      "type": "compare",
-      "blocks": {
-        "object_jWtKpX": {
-          "type": "object",
-          "settings": {
-            "image": "shopify://shop_images/beauty_qurifyTap.webp",
-            "heading": "Q-urify Water\\nFilter ",
-            "text": "",
-            "price": "",
-            "style": "correctCircle",
-            "list": "<ul><li>Reduces chlorine</li><li>Reduces calcium</li><li>Reduces magnesium</li></ul>"
-          }
-        },
-        "object_beMBx9": {
-          "type": "object",
-          "settings": {
-            "image": "shopify://shop_images/alternative_filters.png",
-            "heading": "Alternative\\nFilters",
-            "text": "",
-            "price": "",
-            "style": "incorrectCircle",
-            "list": "<p><em>Reduces chlorine</em></p><ul><li>Reduces calcium</li><li>Reduces magnesium</li></ul>"
-          }
-        }
-      },
-      "block_order": [
-        "object_jWtKpX",
-        "object_beMBx9"
-      ],
-      "custom_css": [
-
-      ],
-      "settings": {
-        "classname": "beauty_skincare section bg-white beauty_ftrs_center",
-        "heading": "More effective and safer than other filters",
-        "text": "<p>Other filtration systems focus on just chlorine removal, but calcium and magnesium are the true skin-barrier disruptors. With the Q-urify Water Filter, you get the best science-backed, dermatologist-approved solution to filtered water at home for better skin...</p>"
-      }
-    },
     "guide_7WfJ8X": {
       "type": "guide",
       "blocks": {
@@ -554,55 +621,9 @@
         "object_P3gAdM"
       ],
       "settings": {
-        "classname": "bg_yellow",
+        "classname": "",
         "heading": "How to install",
         "text": ""
-      }
-    },
-    "two_column_box_ixntx8": {
-      "type": "two-column-box",
-      "blocks": {
-        "heading_Xx46gj": {
-          "type": "heading",
-          "settings": {
-            "heading": "All you need is included",
-            "text": "",
-            "code": "",
-            "classname": "section_header mb-3 text-center"
-          }
-        },
-        "image_TnUeeT": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/qurify_need.webp",
-            "classname": "mw-mob-100"
-          }
-        },
-        "content_44HNwe": {
-          "type": "content",
-          "settings": {
-            "text": "<p>[code]</p>",
-            "column_content": 0,
-            "classname": "it_info p-0 pt-0 pt-md-3"
-          }
-        },
-        "code_rErkzq": {
-          "type": "code",
-          "settings": {
-            "code": "<div class=\"cp_ftr_wrapper p-0\">\n                                <div class=\"cp_item\">\n                                    <img src=\"{{ 'qurify_filter-device.svg' | asset_url }}\" alt=\"\">\n                                    <p>Water Filter Device with 3 month filter inside </p>\n                                </div>\n                                <div class=\"cp_item\">\n                                    <img src=\"{{ 'qurify_faucet.svg' | asset_url }}\" alt=\"\">\n                                    <p>Different attachments included to match your faucet</p>\n                                </div>\n                                <div class=\"cp_item\">\n                                    <img src=\"{{ 'qurify_user-manual.svg' | asset_url }}\" alt=\"\">\n                                    <p>Step by step user manual </p>\n                                </div>\n                                <div class=\"cp_item\">\n                                    <img src=\"{{ 'qurify_all-in-one.svg' | asset_url }}\" alt=\"\">\n                                    <p>All-In-One tool for installing</p>\n                                </div>\n                            </div>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_Xx46gj",
-        "image_TnUeeT",
-        "content_44HNwe",
-        "code_rErkzq"
-      ],
-      "settings": {
-        "classname": "chest_pdp_ftr section",
-        "column_image": 6,
-        "column_content": 6
       }
     },
     "faq_NrT9Hx": {
@@ -671,6 +692,14 @@
             "text": "<p>Hard water is water that contains a high quantity of dissolved minerals (like calcium and magnesium). Where soft water has been treated, so that the only ion remaining is sodium. When rainwater falls, it is naturally soft. </p><p>However, as water makes its way through the ground and into our waterways, it picks up minerals like chalk, lime, calcium and magnesium and becomes hard water. Hard water is to blame for dishes with spots, dingy looking clothes, and residue and soap scums in bathrooms. Soap and cleansers are also less effective with hard water due to its reaction to the magnesium and calcium, which makes the lather not as rich and bubbly and leaves hair feeling sticky and dull.</p>",
             "code": ""
           }
+        },
+        "object_igexDf": {
+          "type": "object",
+          "settings": {
+            "heading": "What’s included?",
+            "text": "",
+            "code": "<div class=\"container\">\n                                    <div class=\"chest_pdp_ftr1\">\n                                        <div class=\"cp_ftr_wrapper p-0\">\n                                            <div class=\"cp_item\">\n                                                <img src=\"{{ 'qurify_filter-device.svg' | asset_url }}\" alt=\"\">\n                                                <p>Water Filter Device with 3 month filter inside </p>\n                                            </div>\n                                            <div class=\"cp_item\">\n                                                <img src=\"{{ 'qurify_faucet.svg' | asset_url }}\" alt=\"\">\n                                                <p>Different attachments included to match your faucet</p>\n                                            </div>\n                                            <div class=\"cp_item\">\n                                                <img src=\"{{ 'qurify_user-manual.svg' | asset_url }}\" alt=\"\">\n                                                <p>Step by step user manual </p>\n                                            </div>\n                                            <div class=\"cp_item\">\n                                                <img src=\"{{ 'qurify_all-in-one.svg' | asset_url }}\" alt=\"\">\n                                                <p>All-In-One tool for installing</p>\n                                            </div>\n                                        </div>\n                                    </div>\n                                </div>"
+          }
         }
       },
       "block_order": [
@@ -681,7 +710,8 @@
         "object_bEXBbc",
         "object_4VFAPN",
         "object_hNd63i",
-        "object_A6tABB"
+        "object_A6tABB",
+        "object_igexDf"
       ],
       "settings": {
         "classname": "bg_yellow",
@@ -700,17 +730,17 @@
   "order": [
     "main",
     "featuredin_RKtJRq",
-    "two_column_box_fMJLLc",
     "two_column_box_L6gnTR",
-    "results_ApY4eq",
-    "two_column_box_9KGBC4",
     "skin_hydration_NmJkjQ",
+    "results_ApY4eq",
     "trusted_F8P8xL",
+    "videos_PfhR49",
+    "compare_yQKzP4",
+    "two_column_box_fMJLLc",
+    "two_column_box_9KGBC4",
     "two_column_box_mjpNxF",
     "icons_list_y8yF3M",
-    "compare_yQKzP4",
     "guide_7WfJ8X",
-    "two_column_box_ixntx8",
     "faq_NrT9Hx",
     "pdm_product_social_proof_data_4iretp"
   ]
