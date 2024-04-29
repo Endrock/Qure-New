@@ -78,8 +78,8 @@
         "link_crBjL9": {
           "type": "link",
           "settings": {
-            "link_label": "Get Youthful-Looking Skin",
-            "link_url": "shopify:\/\/products\/micro-infusion-targeted-patches-single"
+            "link_label": "SHOP NOW & SAVE",
+            "link_url": "shopify:\/\/pages\/exclusive-holiday-bundle-deal"
           }
         }
       },
@@ -87,10 +87,10 @@
         "link_crBjL9"
       ],
       "settings": {
-        "heading": "Treat stubborn areas & say goodbye to wrinkles",
-        "text": "<p>MICRO-INFUSION <strong>TARGETED PATCHES<\/strong><\/p>",
-        "image": "shopify:\/\/shop_images\/mipatches_banner_desk_2f72a060-b075-4c66-862b-b6fd364e277c.webp",
-        "image_mobile": "shopify:\/\/shop_images\/mipatches_banner_mob_64dd7ec2-8dec-48ad-a880-42a624bbfc04.webp"
+        "heading": "CELEBRATING MOM",
+        "text": "<h2>Nurture Her\\n Natural Beauty<\/h2><p>Save up to 55% on Mother's Day Bundles<\/p>",
+        "image": "shopify:\/\/shop_images\/homepage_mothersday_h_desk.webp",
+        "image_mobile": "shopify:\/\/shop_images\/homepage_mothersday_mob.webp"
       }
     },
     "main_banner_rJmjKt": {
@@ -395,6 +395,7 @@
         },
         "video_zVFniz": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/trusted_maren_e150642f-391b-46c3-98e6-d57c44d7e9e8.webp",
             "video_url": "https:\/\/www.youtube.com\/watch?v=DvA8FkhJqso",
