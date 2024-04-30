@@ -26,7 +26,6 @@
             "type": "announcement-promotion",
             "settings": {
               "heading": "MOTHER’S DAY",
-              "text": "SHOW HER YOU CARE WITH SKINCARE",
               "button_label": "SAVE UP TO 55%",
               "button_mobile_label": "SAVE UP TO 55%",
               "button_url": "shopify:\/\/pages\/exclusive-holiday-bundle-deal"
@@ -145,12 +144,6 @@
       "1291562577487733835": {
         "type": "shopify:\/\/apps\/black-crow-more-new-customers\/blocks\/blackcrow_ai_script\/3e73f597-cb71-47a1-8a06-0c931482ecd2",
         "disabled": false,
-        "settings": {
-        }
-      },
-      "7885500093077574326": {
-        "type": "shopify:\/\/apps\/videowise-video-platform-ugc\/blocks\/script_embed\/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
-        "disabled": true,
         "settings": {
         }
       },
