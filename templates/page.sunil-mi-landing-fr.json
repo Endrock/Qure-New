@@ -270,14 +270,14 @@
           "settings": {
             "text": "<h2>La peau \"hollywoodienne\" est enfin accessible sans le budget des célébrités[image_mobile]<\/h2><p>Vous êtes-vous déjà demandé à quoi ressemblerait votre peau si vous aviez accès aux traitements les plus avancés?<\/p><p>Ceux que seuls les \"riches et célèbres\" peuvent s'offrir, réalisés par les meilleurs dermatologues et disponibles uniquement dans des cliniques exclusives.<\/p>",
             "column_content": 0,
-            "classname": "it_info p-0 pt-0 pt-md-3"
+            "classname": "it_info p-0 pt-0 pt-md-3 mw-525"
           }
         },
         "image_VkznhH": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/carpet_2.webp",
-            "classname": "pt-2"
+            "classname": "it_img pb-md-0 pt-3"
           }
         }
       },
@@ -287,8 +287,8 @@
       ],
       "settings": {
         "classname": "imageText section",
-        "column_image": 6,
-        "column_content": 6
+        "column_image": 5,
+        "column_content": 7
       }
     },
     "two_column_box_wJmxTY": {
@@ -306,7 +306,7 @@
           "settings": {
             "text": "<h2>Le booster de peau de choix créé pour des journées sans maquillage en toute sécurité[image_mobile]<\/h2><p>La micro-infusion, <strong>un traitement de la peau adulé par les célébrités,<\/strong> est enfin accessible au grand public.<\/p><p>Vous pouvez désormais faire l'expérience du soin du <strong>visage par microinfusion pour éclaircir le teint, lisser la texture et obtenir un éclat digne d'un tapis rouge.<\/strong><\/p><p>Le plus beau, c'est que vous pouvez en <strong>profiter pour une fraction du prix,<\/strong> dans le confort de votre maison, avec peu ou pas de temps d'arrêt!<\/p>",
             "column_content": 0,
-            "classname": "it_info p-0 pt-0 pt-md-3"
+            "classname": "it_info p-0 ps-md-4"
           }
         }
       },
@@ -334,7 +334,7 @@
           "type": "product",
           "settings": {
             "heading": "",
-            "text": "<h2>Présentation du système de microperfusion Qure Système de micro perfusion<\/h2><p>[rating]<\/p><p>Cliniques, dermatologues et célébrités sont d'accord<strong>Ça marche VRAIMENT<\/strong><\/p><ul><li>Aide à réduire l'apparence des ridules<\/li><li>Se réveiller avec <strong>une peau rosée et éclatante<\/strong><\/li><li>Révéler une peau d'apparence <strong>plus lumineuse<\/strong> et <strong>plus ferme au toucher<\/strong><\/li><li>Aide à atténuer l'apparence des taches sombres et des <strong>marques d'acné<\/strong><\/li><\/ul><p><strong> <\/strong><\/p>",
+            "text": "<h2>Présentation du système de microperfusion Qure Système de micro perfusion<\/h2><p>[rating]<\/p><p>Cliniques, dermatologues et célébrités sont d'accord <strong>Ça marche VRAIMENT<\/strong><\/p><ul><li>Aide à réduire l'apparence des ridules<\/li><li>Se réveiller avec <strong>une peau rosée et éclatante<\/strong><\/li><li>Révéler une peau d'apparence <strong>plus lumineuse<\/strong> et <strong>plus ferme au toucher<\/strong><\/li><li>Aide à atténuer l'apparence des taches sombres et des <strong>marques d'acné<\/strong><\/li><\/ul><p><strong> <\/strong><\/p>",
             "product": ""
           }
         },
@@ -367,10 +367,10 @@
       ],
       "custom_css": [
         ".mb_contents {max-width: unset !important;}",
-        ".btn-primary {max-width: 100% !important;}"
+        ".mb_contents h2 {max-width: 464px !important;}"
       ],
       "settings": {
-        "classname": "main_banner section pt-0",
+        "classname": "main_banner pt-0",
         "heading": "",
         "text": ""
       }
@@ -474,6 +474,9 @@
         "video_PCt47J",
         "video_WCKqeb",
         "wistia_ctwd8i"
+      ],
+      "custom_css": [
+        ".section_header {text-align: center !important;}"
       ],
       "settings": {
         "heading": "La confiance en soi commence ici",
@@ -781,6 +784,9 @@
         "result_NQdtBQ",
         "result_9zp48n"
       ],
+      "custom_css": [
+        ".result_s {padding-top: 0px !important;}"
+      ],
       "settings": {
         "classname": "mi_landing_result",
         "heading": "Des résultats que vous verrez de vos propres yeux",
@@ -825,7 +831,9 @@
         "object_THMRbY"
       ],
       "custom_css": [
-        ".section_header {max-width: 800px !important;}"
+        ".beauty_skincare {background-color: white !important;}",
+        ".section_header {max-width: 941px !important;}",
+        "@media (min-width: 768px) {.section_header p {margin-right: auto !important; margin-left: auto !important; }}"
       ],
       "settings": {
         "classname": "beauty_skincare section",
@@ -1209,6 +1217,9 @@
         "image_XeTxa8",
         "image_pJBwRK",
         "image_TfLXhY"
+      ],
+      "custom_css": [
+        ".section_header {max-width: 1050px !important;}"
       ],
       "settings": {
         "heading": "Rejoignez les 30 000 fans de Qure qui révolutionnent leur soin de la peau à domicile.",
