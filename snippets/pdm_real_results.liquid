@@ -9,13 +9,12 @@
             {% assign mediaImage = block.settings[image_id] %}
             <a class="banner-popup-link" id="popup-link">
               <picture id="image-id">
-                <source media="(min-width:720px)" srcset="{{ mediaImage | img_url:  'master'  }}">
                 <img
                   width="100"
                   height="auto"
                   class="img-fluid tab_img"
                   alt="{{ block.settings[text_id] }}"
-                  src="{{ mediaImage | img_url: '720x' }}"
+                  src="{{ mediaImage | img_url: 'master' }}"
                 >
               </picture>
             </a>
