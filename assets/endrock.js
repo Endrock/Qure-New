@@ -704,7 +704,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       this.btnSumbitText.innerHTML =
         `
-          <span class="landing-submit-text__discount">${this.selectedInputValueJson.discountPercent} $</span>
+          <span class="landing-submit-text__discount">${this.selectedInputValueJson.discountPercent} %</span>
         `;
     }
 
