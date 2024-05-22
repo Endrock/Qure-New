@@ -835,6 +835,10 @@ body:not([data-price-test="true"]) .price-test {
   margin-top: 16px;
 }
 
+.subscriptionType:not(.active)[data-subscription="no-subscription"] .price-test {
+  display: none !important;
+}
+
 .product-price, .product-price .subscriptions-prices {
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
