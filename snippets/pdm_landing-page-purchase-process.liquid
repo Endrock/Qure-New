@@ -1,3 +1,25 @@
+{% comment %}
+  Render the purchase process section with fo steps and a button to add to cart.
+  The products came from metaobject for default
+
+  Needs:
+  - pdm_landing-purchase-icons
+  - pdm_landing-purchase-step1-inputs
+  - pdm_landing-purchase-step1-cards-container-mobile
+  - pdm_landing-purchase-step2-inputs
+  - pdm_landing-purchase-step3-inputs
+  - pdm_landing-purchase-step4-inputs
+  - pdm_landing-purchase-buttons
+  - pdm_landing-purchase-breadcrumbs
+
+  all the metafields need it, it's from the page
+
+  Usage:
+  {% render 'pdm_landing-page-purchase-process' %}
+ {% endcomment %}
+
+
+
 {% liquid
   #######
   # general settings
@@ -97,14 +119,10 @@
     render 'pdm_landing-purchase-icons', icon: 'star'
   endcapture
 %}
-
-<script>
-  console.log('p1_refill_2', {{ products1_refill_product_2 | json }})
-  console.log('p2_refill_2', {{ products2_refill_product_2 | json }})
-  console.log('p3_refill_2', {{ products3_refill_product_2 | json }})
-</script>
-
-<section id="new-landing-purchase" class="new-landing-purchase serumTestVariant">
+<div class="available_bar">
+  <p>{{ "microInfusionLandingPage.redLabel.title" | t }}</p>
+</div>
+<section id="new-landing-purchase" class="new-landing-purchase">
   <div class="container">
     <div class="landing-container-title">
       <h3>{{ general_settings.title }}</h3>
@@ -212,7 +230,7 @@
       </div>
       {% comment %} panel 3 {% endcomment %}
       <div id="landing-step-three" class="landing-panel panel-hidden">
-        {% render 'pdm_landing-purchase-step3-inptus',
+        {% render 'pdm_landing-purchase-step3-inputs',
           generalSettings: general_settings,
           nameOne: 'step3-price-one',
           nameTwo: 'step3-price-two'
