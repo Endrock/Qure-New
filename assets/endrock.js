@@ -102,12 +102,14 @@ const verifyCustomer = () => {
   }
 }
 const hidePrices = () => {
+  const testActive = document.body.hasAttribute('data-price-test');
   const stickyButton = document.querySelectorAll('.button_sticky_wrapper');
-
-  if (stickyButton) {
-    stickyButton.forEach((element) => {
-      element.querySelector('a').textContent = "ADD TO BAG";
-    })
+  if (testActive) {
+    if (stickyButton) {
+      stickyButton.forEach((element) => {
+        element.querySelector('a').textContent = "ADD TO BAG";
+      })
+    }
   }
 }
 
@@ -115,15 +117,16 @@ const hidePrices = () => {
 const atcNoPricesPdp = () => {
 
   const subscriptionTypes = document.querySelectorAll('.subscriptionType'); 
-  
-
+  console.log(subscriptionTypes);
   if (subscriptionTypes) {
     subscriptionTypes.forEach((element) => {
       element.addEventListener('click', function(e) {
 
         const subscriptionType = e.currentTarget.getAttribute('data-subscription');
         const subscriptionPrices = document.querySelectorAll('.subscriptions-prices');
-        
+        console.log("subscriptionType", subscriptionType);
+        console.log("subscriptionPrices", subscriptionPrices);
+
         subscriptionPrices.forEach((element) => { element.classList.add('hidden'); });
         document.getElementById(`${subscriptionType}`).classList.remove('hidden');
         hidePrices();
@@ -141,7 +144,8 @@ document.addEventListener('ig:ready', function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-
+/*   atcNoPricesPdp();
+  hidePrices(); */
   // Start Cross-sell page targeting validation
   const pageTargeting = [
     "/products/q-rejuvalight-pro-facewear",
