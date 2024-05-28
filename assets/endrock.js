@@ -103,6 +103,7 @@ const verifyCustomer = () => {
 }
 const hidePrices = () => {
   const testActive = document.body.hasAttribute('data-price-test');
+  console.log("is active", testActive);
   const stickyButton = document.querySelectorAll('.button_sticky_wrapper');
   if (testActive) {
     if (stickyButton) {
@@ -115,7 +116,7 @@ const hidePrices = () => {
 
 /* ATC NO PRICES PDP */
 const atcNoPricesPdp = () => {
-
+console.log('🚀 --- atcNoPricesPdp');
   const subscriptionTypes = document.querySelectorAll('.subscriptionType'); 
   console.log(subscriptionTypes);
   if (subscriptionTypes) {
@@ -139,14 +140,16 @@ document.addEventListener('ig:ready', function() {
   /* ATC NO PRICE TEST PDP */
   atcNoPricesPdp();
   hidePrices();
-
+  console.log('🚀🚀 --- ig eradu');
 });
 
 
 document.addEventListener('DOMContentLoaded', function() {
-/*   atcNoPricesPdp();
-  hidePrices(); */
+  atcNoPricesPdp();
+  hidePrices();
+  console.log('🚀🚀 🚀 ---  cpmetmet');
   // Start Cross-sell page targeting validation
+  console.log('PAGE LOG');
   const pageTargeting = [
     "/products/q-rejuvalight-pro-facewear",
     "/pages/microinfusion",
