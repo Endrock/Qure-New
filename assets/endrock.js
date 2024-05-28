@@ -120,13 +120,13 @@ const atcNoPricesPdp = () => {
   if (subscriptionTypes) {
     subscriptionTypes.forEach((element) => {
       element.addEventListener('click', function(e) {
-        hidePrices();
+
         const subscriptionType = e.currentTarget.getAttribute('data-subscription');
         const subscriptionPrices = document.querySelectorAll('.subscriptions-prices');
         
         subscriptionPrices.forEach((element) => { element.classList.add('hidden'); });
         document.getElementById(`${subscriptionType}`).classList.remove('hidden');
-
+        hidePrices();
       });
     });
   }
