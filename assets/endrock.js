@@ -101,21 +101,32 @@ const verifyCustomer = () => {
     });
   }
 
+const hidePrices = () => {
+  const stickyButton = document.querySelectorAll('.button_sticky_wrapper');
+
+  if (stickyButton) {
+    stickyButton.forEach((element) => {
+      element.querySelector('a').textContent = "ADD TO BAG";
+    })
+  }
 }
 
 /* ATC NO PRICES PDP */
 const atcNoPricesPdp = () => {
 
-  const subscriptionTypes = document.querySelectorAll('.subscriptionType');    
+  const subscriptionTypes = document.querySelectorAll('.subscriptionType'); 
+  
 
   if (subscriptionTypes) {
     subscriptionTypes.forEach((element) => {
       element.addEventListener('click', function(e) {
+        hidePrices();
         const subscriptionType = e.currentTarget.getAttribute('data-subscription');
         const subscriptionPrices = document.querySelectorAll('.subscriptions-prices');
         
         subscriptionPrices.forEach((element) => { element.classList.add('hidden'); });
         document.getElementById(`${subscriptionType}`).classList.remove('hidden');
+
       });
     });
   }
@@ -124,11 +135,13 @@ const atcNoPricesPdp = () => {
 document.addEventListener('ig:ready', function() {
   /* ATC NO PRICE TEST PDP */
   atcNoPricesPdp();
+  hidePrices();
+
 });
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  atcNoPricesPdp();
+
   // Start Cross-sell page targeting validation
   const pageTargeting = [
     "/products/q-rejuvalight-pro-facewear",
