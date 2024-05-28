@@ -94,7 +94,7 @@
   position: fixed;
   left: 50%;
   bottom: -20px;
-  z-index: 99;
+  z-index: 98;
   border-radius: 16px 16px 0px 0px;
   border-top: 1px solid #C92127;
   border-right: 1px solid #C92127;
@@ -869,3 +869,9 @@ body[class~="page.sunil-mi-landing"] .product-price{
 }
 
 /* PRICE BELOW REVIEWS PDP - TEST ---  END*/
+/* QR- Shopify 2.0 Features Adjustments  */
+#green-product-sticky-btn{
+  display: block;
+  width: unset !important;
+}
+/* end QR- Shopify 2.0 Features Adjustments  */
