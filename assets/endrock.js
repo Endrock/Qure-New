@@ -100,7 +100,7 @@ const verifyCustomer = () => {
       element.classList.remove('hidden');
     });
   }
-
+}
 const hidePrices = () => {
   const stickyButton = document.querySelectorAll('.button_sticky_wrapper');
 
