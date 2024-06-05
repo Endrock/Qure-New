@@ -140,14 +140,12 @@ document.addEventListener('ig:ready', function() {
   /* ATC NO PRICE TEST PDP */
   atcNoPricesPdp();
   hidePrices();
-  console.log('🚀🚀 --- ig eradu');
 });
 
 
 document.addEventListener('DOMContentLoaded', function() {
   atcNoPricesPdp();
   hidePrices();
-  console.log('🚀🚀 🚀 ---  cpmetmet');
   // Start Cross-sell page targeting validation
   console.log('PAGE LOG');
   const pageTargeting = [
