@@ -6,7 +6,7 @@
         "announcement_JyMH8T": {
           "type": "announcement",
           "settings": {
-            "heading": "Holiday Sale Ends In:",
+            "heading": "Limited Time Only:",
             "timer": "2024-06-09T23:59:59",
             "timer_next": 7
           }
@@ -64,6 +64,109 @@
         "image_mobile": "shopify:\/\/shop_images\/holiday_banner_mob.webp",
         "button_label": "Shop now",
         "button_url": "#bf-bundles"
+      }
+    },
+    "pdm_product_landing_sales_F9Dn8a": {
+      "type": "pdm_product-landing-sales",
+      "blocks": {
+        "product_Pmff3V": {
+          "type": "product",
+          "settings": {
+            "product": "mi-bundle-may",
+            "announcement_id": "New",
+            "button_url_id": "#mi-bundle-may",
+            "button_text_id": "Get yours"
+          }
+        },
+        "product_UQdbaG": {
+          "type": "product",
+          "settings": {
+            "product": "best-seller-bundle",
+            "announcement_id": "Most popular",
+            "button_url_id": "#best-seller-bundle",
+            "button_text_id": "Get yours"
+          }
+        },
+        "product_mmM6Jm": {
+          "type": "product",
+          "settings": {
+            "product": "skin-ssentials-set-doctorly-choice",
+            "announcement_id": "Doctorly recommended",
+            "button_url_id": "#all-in-one-face-serum-bundle",
+            "button_text_id": "Get yours"
+          }
+        },
+        "product_ahkGAV": {
+          "type": "product",
+          "settings": {
+            "product": "youth-boosting-bundle",
+            "announcement_id": "",
+            "button_url_id": "#youth-boosting-bundle",
+            "button_text_id": "Get yours"
+          }
+        },
+        "product_yNEYEK": {
+          "type": "product",
+          "settings": {
+            "product": "all-in-one-face-serum-bundle",
+            "announcement_id": "",
+            "button_url_id": "#all-in-one-face-serum-bundle",
+            "button_text_id": "Get yours"
+          }
+        },
+        "product_MpViyV": {
+          "type": "product",
+          "settings": {
+            "product": "youthify-or-glow-set",
+            "announcement_id": "",
+            "button_url_id": "#youthify-or-glow-set",
+            "button_text_id": "Get yours"
+          }
+        },
+        "product_ncYWKA": {
+          "type": "product",
+          "settings": {
+            "product": "ageless-glow-bundle",
+            "announcement_id": "",
+            "button_url_id": "#ageless-glow-bundle",
+            "button_text_id": "Get yours"
+          }
+        },
+        "product_3gJLGX": {
+          "type": "product",
+          "settings": {
+            "product": "confidence-booster-bundle",
+            "announcement_id": "",
+            "button_url_id": "#confidence-booster-bundle",
+            "button_text_id": "Get yours"
+          }
+        },
+        "product_Mhxq4H": {
+          "type": "product",
+          "settings": {
+            "product": "hydra-glow",
+            "announcement_id": "",
+            "button_url_id": "#hydra-glow",
+            "button_text_id": "Get yours"
+          }
+        }
+      },
+      "block_order": [
+        "product_Pmff3V",
+        "product_UQdbaG",
+        "product_mmM6Jm",
+        "product_ahkGAV",
+        "product_yNEYEK",
+        "product_MpViyV",
+        "product_ncYWKA",
+        "product_3gJLGX",
+        "product_Mhxq4H"
+      ],
+      "settings": {
+        "text_banner": "EXCLUSIVE HOLIDAY BUNDLES",
+        "text_offer_banner": "Save Up To 50%",
+        "button_banner_url": "#bf-bundles",
+        "button_banner_text": "Shop Now"
       }
     },
     "icons_list_qXfGQA": {
@@ -367,6 +470,28 @@
     "bundle_list_LdzHxV": {
       "type": "bundle-list",
       "blocks": {
+        "product_3Frmww": {
+          "type": "product",
+          "settings": {
+            "product": "best-seller-bundle",
+            "comment_ammount": 729,
+            "percent": 30,
+            "ppl_choise": 1,
+            "recommended": 0,
+            "recommended_code": ""
+          }
+        },
+        "product_JVJkGj": {
+          "type": "product",
+          "settings": {
+            "product": "youth-boosting-bundle",
+            "comment_ammount": 202,
+            "percent": 38,
+            "ppl_choise": 0,
+            "recommended": 0,
+            "recommended_code": ""
+          }
+        },
         "product_DgMQiP": {
           "type": "product",
           "settings": {
@@ -378,13 +503,13 @@
             "recommended_code": "<div class=\"doctorly_rec new_bundle\">\n                                                <img src=\"{{ 'new_bundle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                                <div class=\"doctorly_text\">\n                                                    <p>NEW BUNDLE<\/p>\n                                                <\/div>\n                                            <\/div>"
           }
         },
-        "product_3Frmww": {
+        "product_pCXqdM": {
           "type": "product",
           "settings": {
-            "product": "best-seller-bundle",
-            "comment_ammount": 729,
-            "percent": 30,
-            "ppl_choise": 1,
+            "product": "ageless-glow-bundle",
+            "comment_ammount": 283,
+            "percent": 26,
+            "ppl_choise": 0,
             "recommended": 0,
             "recommended_code": ""
           }
@@ -400,45 +525,12 @@
             "recommended_code": "<div class=\"doctorly_rec\">\n                                                    <img src=\"{{ 'doctorly.png' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                                    <div class=\"doctorly_text\">\n                                                        <p>Doctorly <br><span>Recommended<\/span><\/p>\n                                                    <\/div>\n                                                <\/div>"
           }
         },
-        "product_JVJkGj": {
-          "type": "product",
-          "settings": {
-            "product": "youth-boosting-bundle",
-            "comment_ammount": 202,
-            "percent": 24,
-            "ppl_choise": 0,
-            "recommended": 0,
-            "recommended_code": ""
-          }
-        },
         "product_zF9wP9": {
           "type": "product",
           "settings": {
             "product": "all-in-one-face-serum-bundle",
             "comment_ammount": 212,
             "percent": 44,
-            "ppl_choise": 0,
-            "recommended": 0,
-            "recommended_code": ""
-          }
-        },
-        "product_CnMwyU": {
-          "type": "product",
-          "settings": {
-            "product": "youthify-or-glow-set",
-            "comment_ammount": 514,
-            "percent": 44,
-            "ppl_choise": 0,
-            "recommended": 0,
-            "recommended_code": ""
-          }
-        },
-        "product_pCXqdM": {
-          "type": "product",
-          "settings": {
-            "product": "ageless-glow-bundle",
-            "comment_ammount": 283,
-            "percent": 29,
             "ppl_choise": 0,
             "recommended": 0,
             "recommended_code": ""
@@ -455,12 +547,12 @@
             "recommended_code": ""
           }
         },
-        "product_nRhA4x": {
+        "product_CnMwyU": {
           "type": "product",
           "settings": {
-            "product": "hydra-glow",
-            "comment_ammount": 187,
-            "percent": 42,
+            "product": "youthify-or-glow-set",
+            "comment_ammount": 514,
+            "percent": 44,
             "ppl_choise": 0,
             "recommended": 0,
             "recommended_code": ""
@@ -468,15 +560,14 @@
         }
       },
       "block_order": [
-        "product_DgMQiP",
         "product_3Frmww",
-        "product_EQ6HJY",
         "product_JVJkGj",
-        "product_zF9wP9",
-        "product_CnMwyU",
+        "product_DgMQiP",
         "product_pCXqdM",
+        "product_EQ6HJY",
+        "product_zF9wP9",
         "product_aKUc4N",
-        "product_nRhA4x"
+        "product_CnMwyU"
       ],
       "settings": {
         "heading": "Choose your bundle.",
@@ -928,6 +1019,7 @@
   "order": [
     "header_sales_TMQyBR",
     "main",
+    "pdm_product_landing_sales_F9Dn8a",
     "icons_list_qXfGQA",
     "results_NKDiDj",
     "two_column_box_FQCXGb",
