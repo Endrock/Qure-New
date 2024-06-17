@@ -7,8 +7,6 @@
     {%- endcase -%}
 {%- endfor -%}
 
-
-
 <!-- -- press slider start -- -->
 <div class="press_bl">
     <div class="container">
@@ -52,7 +50,6 @@
                             </div>
                         </div>
                     </div>
-    
                 </div>                
             {% else %}
                 {% if section.settings.heading != blank %}
@@ -79,98 +76,190 @@
 </div>
 <!-- -- press slider end -- -->
 
+{% comment %} MI LP Science Section AB test  {% endcomment %}
+{% for block in section.blocks %}
+  {% if block.type == 'science_section_block' %}
+    {% render 'pdm_science_section', data: block.settings %}
+  {% endif %}
+{% endfor %}
+{% comment %} MI LP Science Section AB test  {% endcomment %}
 
 {% schema %}
+{
+  "name": "t:sections.featuredin.name",
+  "class": "section-featured-in",
+  "settings": [
     {
-        "name": "t:sections.featuredin.name",
-        "class": "section-featured-in",
-        "settings": [
-            {
-                "type": "text",
-                "id": "heading",
-                "label": "t:common.heading.label"
-            }
-        ],
-        "blocks": [
-            {
-                "type": "heading",
-                "name": "t:common.heading.label",
-                "limit": 1,
-                "settings": [
-                    {
-                        "type": "text",
-                        "id": "heading",
-                        "label": "t:common.heading.label"
-                    }
-                ]
-		    },
-            {
-                "type": "image",
-                "name": "t:common.image.label",
-                "limit": 6,
-                "settings": [
-                    {
-                        "type": "image_picker",
-                        "id": "image",
-                        "label": "t:common.image.label"
-                    },
-                    {
-                        "type": "checkbox",
-                        "id": "mobile_hide",
-                        "label": "t:common.image.hide.mobile.label",
-                        "default": false
-                    }
-                ]
-		    }
-        ],
-        "presets": [
-			{
-				"name": "t:sections.featuredin.name",
-                "blocks": [
-                    {
-                        "type": "heading",
-                        "settings": {
-                            "heading": "FEATURED IN"
-                        }
-                    },
-                    {
-                        "type": "image",
-                        "settings": {
-                            "image": "shopify:\/\/shop_images\/vogue.svg"
-                        }
-                    },
-                    {
-                        "type": "image",
-                        "settings": {
-                            "image": "shopify:\/\/shop_images\/elle.svg"
-                        }
-                    },
-                    {
-                        "type": "image",
-                        "settings": {
-                            "image": "shopify:\/\/shop_images\/glamour.svg"
-                        }
-                    },
-                    {
-                        "type": "image",
-                        "settings": {
-                            "image": "shopify:\/\/shop_images\/grazia.svg"
-                        }
-                    },
-                    {
-                        "type": "image",
-                        "settings": {
-                            "image": "shopify:\/\/shop_images\/cosmopolitan.svg"
-                        }
-                    },
-                    {
-                        "type": "image",
-                        "settings": {
-                            "image": "shopify:\/\/shop_images\/bazaar_889503c3-d4d6-4eb0-b7be-dd1212b56c58.png"
-                        }
-                    }
-                ]
-			}
-        ]
+      "type": "text",
+      "id": "heading",
+      "label": "t:common.heading.label"
     }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "t:common.heading.label",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "t:common.heading.label"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "t:common.image.label",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:common.image.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "mobile_hide",
+          "label": "t:common.image.hide.mobile.label",
+          "default": false
+        }
+      ]
+    },
+    {
+      "name": "science section",
+      "type": "science_section_block",
+      "settings": [
+        {
+          "type": "video",
+          "id": "video_science_section",
+          "label": "video"
+        },
+				{
+					"type": "video",
+					"id": "video_science_section_vertical",
+					"label": "video science section vertical"
+				},
+        {
+          "type": "text",
+          "id": "science_heading",
+          "label": "heading",
+          "default": "Qure’s Micro-Infusion Goes Where Your Skin Cream Can’t…"
+        },
+        {
+          "type": "text",
+          "id": "science_subheading",
+          "label": "science subheading",
+          "default": "Its tiny, almost painless, microneedles penetrate beyond the skin’s surface increasing serum absorption and delivering powerful active ingredients EXACTLY where they’re needed!"
+        },
+        {
+          "type": "header",
+          "content": "Values props",
+          "info": "Add values props images and text"
+        },
+        {
+          "type": "image_picker",
+          "id": "value_prop_img_1",
+          "label": "value image 1"
+        },
+        {
+          "type": "richtext",
+          "id": "value_prop_text_1",
+          "label": "value text 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "value_prop_img_2",
+          "label": "value image 2"
+        },
+        {
+          "type": "richtext",
+          "id": "value_prop_text_2",
+          "label": "value text 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "value_prop_img_3",
+          "label": "value image 3"
+        },
+        {
+          "type": "richtext",
+          "id": "value_prop_text_3",
+          "label": "value text 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "value_prop_img_4",
+          "label": "value image 4"
+        },
+        {
+          "type": "richtext",
+          "id": "value_prop_text_4",
+          "label": "value text 4"
+        },
+        {
+          "type": "text",
+          "id": "cta_text",
+          "label": "ctatext",
+          "default": "Shop Now"
+        },
+        {
+          "type": "text",
+          "id": "cta_link",
+          "label": "cta_link",
+          "default": "productSubscription"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.featuredin.name",
+      "blocks": [
+        {
+          "type": "heading",
+          "settings": {
+            "heading": "FEATURED IN"
+          }
+        },
+        {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vogue.svg"
+          }
+        },
+        {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/elle.svg"
+          }
+        },
+        {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/glamour.svg"
+          }
+        },
+        {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/grazia.svg"
+          }
+        },
+        {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cosmopolitan.svg"
+          }
+        },
+        {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bazaar_889503c3-d4d6-4eb0-b7be-dd1212b56c58.png"
+          }
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}
