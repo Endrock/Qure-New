@@ -1,0 +1,35 @@
+<div class="new_trusted_left">
+  <div class="new_trusted_left--wrapper">
+    <div class="trusted_recomendation_container">
+      {{ section.settings.dermatoglis_check | image_url: width: 20 | image_tag: alt: 'check icon' }}
+      <p>
+        {{ section.settings.dermatoglist_check_text | upcase }}
+      </p>
+    </div>
+    <div class="trusted_opinon_container">
+      {{ section.settings.dermatoglist_left_subtext }}
+    </div>
+  </div>
+</div>
+<div class="new_trusted_right">
+  <div
+    style="
+      background-image: url({{ section.settings.dermatoglist_right_image | image_url: width: 600 }});
+      background-size: cover;
+      background-repeat: no-repeat;
+    "
+    class="new_trusted_right_wrapper"
+  >
+    <div class="new_trusted_right_wrapper-information">
+      <div class="new_trusted_right_wrapper-information-text">
+        <h3>{{ section.settings.dermatoglist_right_name }}</h3>
+        <p>{{ section.settings.dermatoglist_right_especiality }}</p>
+      </div>
+      <div class="play_btn">
+				<a class="popup-youtube" rel="nofollow" href="{{ section.settings.dermatoglist_right_video_url }}">
+					{{ section.settings.dermatoglist_right_play | image_url: width: 48 | image_tag: alt: 'play icon' }}
+				</a>
+      </div>
+    </div>
+  </div>
+</div>

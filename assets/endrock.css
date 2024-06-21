@@ -1248,3 +1248,196 @@ body[data-test-product-landing='true']{
 }
 
 /* end pdm_product-landing-sales */
+
+/* Dermatologist Section AB test  */
+#quote_original_dermatologist{
+  display: none;
+}
+#popyoutube_original_dermatologist{
+  background-color: unset;
+  max-width: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#popyoutube_original_dermatologist > span > h6{
+  display: none;
+}
+#popyoutube_original_dermatologist > span > img{
+  height: 54px;
+}
+
+.trusted_bl .trusted_cl .container .section_header{
+  display: none !important;
+}
+.trusted_bl .trusted_cl{
+  background: unset;
+  background-color: white;
+}
+
+#original-dermatologist{
+  display: none;
+}
+
+#new-dermatolgist{
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 768px) {
+  #new-dermatolgist{
+    flex-direction: column-reverse;
+    gap: 32px;
+  }
+}
+
+#new-dermatolgist .new_trusted_left{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 55.28%;
+}
+@media screen and (max-width: 768px) {
+  #new-dermatolgist .new_trusted_left{
+    width: 100%;
+  }
+}
+
+#new-dermatolgist .new_trusted_left .new_trusted_left--wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+#new-dermatolgist .new_trusted_left .new_trusted_left--wrapper .trusted_recomendation_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f3f3;
+  border: 1px solid #D7D9D9;
+  border-radius: 8px;
+  padding: 12px 16px 12px 12px;
+  gap: 8px;
+}
+#new-dermatolgist .new_trusted_left .new_trusted_left--wrapper .trusted_recomendation_container > img{
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+#new-dermatolgist .new_trusted_left .new_trusted_left--wrapper .trusted_recomendation_container > p{
+  font-family: 'Poppins';
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  color: #797D7C
+}
+@media screen and (max-width: 768px) {
+  #new-dermatolgist .new_trusted_left .new_trusted_left--wrapper .trusted_recomendation_container > p{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0.05em;
+    text-align: left;
+  }
+}
+
+#new-dermatolgist .new_trusted_left .new_trusted_left--wrapper .trusted_opinon_container > p{
+  font-family: 'Poppins';
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  #new-dermatolgist .new_trusted_left .new_trusted_left--wrapper .trusted_opinon_container > p{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    text-align: left;
+  }
+}
+
+#new-dermatolgist .new_trusted_right{
+  width: 46.11%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  #new-dermatolgist .new_trusted_right{
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+#new-dermatolgist .new_trusted_right .new_trusted_right_wrapper{
+  width: 488px;
+  height: 538px;
+  border-radius: 24px;
+  background-position: unset;
+}
+
+@media screen and (max-width: 768px) {
+  #new-dermatolgist .new_trusted_right .new_trusted_right_wrapper{
+    width: 342px;
+    height: 325px;
+    border-radius: 24px;
+  }
+}
+
+#new-dermatolgist .new_trusted_right .new_trusted_right_wrapper .new_trusted_right_wrapper-information{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: space-between;
+  padding: 24px 24px 24px 24px;
+}
+
+#new-dermatolgist .new_trusted_right .new_trusted_right_wrapper .new_trusted_right_wrapper-information .new_trusted_right_wrapper-information-text > h3{
+  color: white;
+  font-family: 'Poppins';
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  #new-dermatolgist .new_trusted_right .new_trusted_right_wrapper .new_trusted_right_wrapper-information .new_trusted_right_wrapper-information-text > h3{
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: left;
+  }
+}
+
+#new-dermatolgist .new_trusted_right .new_trusted_right_wrapper .new_trusted_right_wrapper-information .new_trusted_right_wrapper-information-text > p{
+  color: white;
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  #new-dermatolgist .new_trusted_right .new_trusted_right_wrapper .new_trusted_right_wrapper-information .new_trusted_right_wrapper-information-text > p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    text-align: left;
+  }
+}
+#new-dermatolgist .new_trusted_right .new_trusted_right_wrapper .new_trusted_right_wrapper-information .play_btn .popup-youtube{
+  background-color: unset;
+}
+/* end Dermatologist Section AB test  */

@@ -30,7 +30,10 @@
                     </h2>
                 </div>                
             {% endif %}
-            <div class="row">
+            <div id="new-dermatolgist">
+                {% render 'pdm_new_dermatologist' %}
+            </div>
+            <div id="original-dermatologist" class="row">
                 <div class="col-lg-6 order-2 order-lg-1">
                     <div class="trusted_left">
                         {% if section.settings.heading != blank %}
@@ -78,7 +81,7 @@
                             {%- endfor -%}
                         </div>
                         {% endif %}
-                    </div>
+                    </div>                    
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2">
                     <div class="trusted_cl_m mb-2 mb-md-0">
@@ -133,7 +136,7 @@
                                                 <img class="img-fluid" src="{{ block.settings.image | img_url: '600x' }}" alt="{{ block.settings.image.alt | escape }}">
                                                 {% if block.settings.video_url != blank and block.settings.wistia_id == blank %}
                                                     <div class="play_btn">
-                                                        <a class="popup-youtube" href="{{ block.settings.video_url }}">
+                                                        <a id="popyoutube_original_dermatologist" class="popup-youtube" href="{{ block.settings.video_url }}">
                                                             <span>
                                                                 <img src="{{ 'trusted_play.svg' | asset_url }}" alt="" class="w-auto">
                                                                 <h6>{{ block.settings.video_label }}</h6>
@@ -164,7 +167,7 @@
         
                                         {% if block.settings.text != blank %}
                                             <div class="trust_item_info">
-                                                <div class="quote">
+                                                <div id='quote_original_dermatologist' class="quote">
                                                     <img src="{{ 'quote.svg' | asset_url }}" alt="" class="img-fluid">
                                                 </div>
                                                 <div class="result_content">
@@ -228,6 +231,65 @@
                 "id": "video_label",
                 "label": "t:common.video.cta.label",
                 "default": "Click To Watch Review"
+            },
+            {
+                "type": "header",
+                "content": "Dermatologist ab test",
+                "info": "This is a test for dermatologist ab test"
+            },
+            {
+                "type": "header",
+                "content": "left side",
+                "info": "left side"
+            },
+            {
+                "type": "image_picker",
+                "id": "dermatoglis_check",
+                "label": "dermatoglist check image"
+            },
+            {
+                "type": "text",
+                "id": "dermatoglist_check_text",
+                "label": "dermatoglist check text",
+                "default": "Trusted and recommended by world leading Dermatologists"
+            },
+            {
+                "type": "richtext",
+                "id": "dermatoglist_left_subtext",
+                "label": "dermatoglistleft subtext"
+            },
+            {
+                "type": "header",
+                "content": "right side",
+                "info": "right side"
+            },
+            {
+                "type": "image_picker",
+                "id": "dermatoglist_right_image",
+                "label": "dermatoglis image"
+            },
+            {
+                "type": "text",
+                "id": "dermatoglist_right_name",
+                "label": "dermatoglist name",
+                "default": "Dr Shah, MD"
+            },
+            {
+                "type": "text",
+                "id": "dermatoglist_right_especiality",
+                "label": "dermatoglist especiality",
+                "default": "Board certified dermatologist"
+            },
+            {
+                "type": "image_picker",
+                "id": "dermatoglist_right_play",
+                "label": "dermatoglist play icon"
+            },
+            {
+                "type": "text",
+                "id": "dermatoglist_right_video_url",
+                "label": "dermatoglist right video url",
+                "default": "https://www.youtube.com/watch?v=I2Fe-kP-2Jg"
             }
         ],
         "blocks": [
