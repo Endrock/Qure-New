@@ -29,7 +29,7 @@ Usage:
               {% assign value_text = 'value_prop_text_' | append: i %}
               <div class="value-prop-card">
                 <div class="value-prop-card__img">
-                  {{ data[value_img] | image_url: width: 54 | image_tag: alt: 'value prop image' }}
+                  {{ data[value_img] | image_url: width: 120 | image_tag: alt: 'value prop image' }}
                 </div>
                 <div class="value-prop-card__text">
                   <p>{{ data[value_text] }}</p>
