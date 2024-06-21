@@ -1971,6 +1971,12 @@
   display: none;
 }
 
+body[data-science-test='true'] .buzz_original,
+body[data-science-test='true'] .imageText_original,
+body[data-science-test='true'] .imageText_original_2{
+  display: none;
+}
+
 body[data-science-test='true'] .science-section-container{
   display: block;
   padding: 56px 0;
