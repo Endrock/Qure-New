@@ -14,10 +14,6 @@
 {% render "slidecart-insurance" %}
 
 <style>
-	.my-floating-cart .cart_total-checkout {
-			position: relative !important
-	}
-
 	.my-floating-cart .percent_off {
 			padding: 0 !important;
 	}
@@ -202,6 +198,21 @@
 			text-decoration: none;
 	}
 
+	.upsell_amt i {
+		font-style: normal !important;
+	}
+
+	.my-floating-cart .cart_total-checkout {
+		position: relative !important
+	}
+
+	.custom-shadow 
+	{
+		position: sticky !important;
+		bottom: 0px !important;
+		z-index: 1 !important;
+	}
+
 	@media(max-width:767px) {
 			.my-floating-cart .percent_off {
 					padding-top: 10px !important;
@@ -339,16 +350,16 @@
 		.upsell_amt {
 			min-width:55px !important;
 		}
-	}
-
-	.upsell_amt i {
-		font-style: normal !important;
-	}
-
-	.custom-shadow {
-		position: sticky !important;
-		bottom: 0px !important;
-		z-index: 1 !important;
+		.my-floating-cart .cart_total-checkout {
+			height: 130px !important;
+			position: sticky !important
+		}
+		.custom-shadow {
+			bottom: 130px !important;
+		}
+		.stamped-launcher-button, iframe#launcher {
+			z-index: 8 !important;
+		}
 	}
 </style>
 
@@ -358,32 +369,6 @@
 		<div class="drawer__overlay" tabindex="-1"></div>
 	</a>
 	<div class="drawer__wrapper" data-ajax-cart-section>
-
-		<style>
-			/* specical for desktop */
-			@media only screen and (min-width:769px) {
-				.my-floating-cart .drawer__cart-discounts {
-					position: sticky !important;
-					top: 46px !important;
-					z-index: 1 !important;
-				}
-			}
-
-			/* special for mobile */
-			@media (max-width: 768px) {
-				.my-floating-cart .drawer__cart-discounts {
-					position: sticky !important;
-					top: 36px !important;
-					z-index: 1 !important;
-				}
-			}
-
-			.custom-shadow {
-				position: sticky !important;
-				bottom: 0px !important;
-				z-index: 1 !important;
-			}
-		</style>
 
 		<form action="{{ routes.cart_url }}" method="post" class="my-cart cart_empty_class">
 

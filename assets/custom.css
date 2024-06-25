@@ -39,4 +39,7 @@
     .q_water_card {
         height: auto !important;
     }
+    .mobile-menu-custome .mob_icon {
+        margin-left: 15px;
+    }
 }

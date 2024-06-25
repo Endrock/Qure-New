@@ -75,9 +75,15 @@
             <li><a href="{{ link.url }}" aria-label="{{ link.title | escape }}">{{ link.title | escape }}</a></li>
         {% else %}
             <li class="dropdown mega-dropdown new-menu">
-                <a class="mega-drop-tag">
-                    {{ link.title | escape }}
-                </a>
+                {% if link.url != blank %}
+                    <a href="{{ link.url }}" class="mega-drop-tag">
+                        {{ link.title | escape }}
+                    </a>   
+                {% else %}
+                    <a class="mega-drop-tag">
+                        {{ link.title | escape }}
+                    </a>
+                {% endif %}
                 <ul class="dropdown-menu-hp mega-dropdown-menu row">
                     <div class="container">
                         <div class="dropdown_menu_wrap">
@@ -119,9 +125,15 @@
             <li><a href="{{ link.url }}" aria-label="{{ link.title | escape }}">{{ link.title | escape }}</a></li>
         {% else %}
             <li class="dropdown mega-dropdown new-menu">
-                <a class="mega-drop-tag">
-                    {{ link.title | escape }}
-                </a>
+                {% if link.url != blank %}
+                    <a href="{{ link.url }}" class="mega-drop-tag">
+                        {{ link.title | escape }}
+                    </a> 
+                {% else %}
+                    <a class="mega-drop-tag">
+                        {{ link.title | escape }}
+                    </a>
+                {% endif %}
                 <ul class="dropdown-menu-hp mega-dropdown-menu row">
                     <div class="container">
                         <div class="dropdown_menu_wrap">

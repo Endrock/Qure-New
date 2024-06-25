@@ -67,7 +67,7 @@
                             {% endif %}
                         {%- endfor -%}
                     {% endif %}
-                    {% unless page.handle == 'microinfusion' or page.handle == 'qure-microinfusion-offer' or page.handle == 'qure-microinfusion-offer-de' or page.handle == 'qure-micro-infusion-landing-page-affiliate'%}
+                    {% unless page.handle == 'microinfusion' or page.handle == 'qure-microinfusion-offer' or page.handle == 'qure-microinfusion-offer-de' or page.handle == 'qure-micro-infusion-landing-page-affiliate' or page.handle == 'qure-microinfusion-offer-men' or page.handle == 'qure-microinfusion-offer-fr' or page.handle == 'qure-microinfusion-offer-es'%}
                         <div class="product-price">
                             {% render 'pdm_product-price' subscribe_count: 1, section: section, landing:true %}
                         </div>

@@ -1908,7 +1908,7 @@ img.fa.fa-user.nav__icon {
     }
 
     .header-new.new-hp-header {
-        padding: 5px 24px;
+        padding: 5px 24px !important;
     }
 
     .mobile-menu-custome ul.hamburger {
