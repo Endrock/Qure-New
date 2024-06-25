@@ -1982,7 +1982,7 @@ body[data-science-test='true'] .science-section-container{
   padding: 56px 0;
 }
 @media screen and (max-width: 768px){
-  .science-section-container{
+  body[data-science-test='true'] .science-section-container{
     padding: 0px 0px 12px;
   }
   .science-section-container .container{
