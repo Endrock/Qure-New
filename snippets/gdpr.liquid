@@ -182,6 +182,7 @@
 
         document.querySelector('#gdpr_reject').addEventListener('click', function() {
             event.preventDefault();
+            setCookie("gdrp", "true", 365);
             gdrpModal.hide();
         });
 

@@ -1,5 +1,10 @@
 <!DOCTYPE html>
+
+{% if request.path contains 'qure-microinfusion-offer-ar' %}
+<html lang="ar" dir="rtl"></html>
+{% else %}
 <html lang="{{ shop.locale }}">
+{% endif %}
 
 <head>
     <meta charset="utf-8">

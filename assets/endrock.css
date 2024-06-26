@@ -1402,26 +1402,29 @@ body[data-test-product-landing='true'] .pdm-product-landing-sales{
 }
 
 /* end pdm_product-landing-sales */
-
-/* Dermatologist Section AB test  */
-#quote_original_dermatologist{
+#new-dermatolgist{
   display: none;
 }
-#popyoutube_original_dermatologist{
+
+/* Dermatologist Section AB test  */
+body[data-dermatologist-test='true'] #quote_original_dermatologist{
+  display: none;
+}
+body[data-dermatologist-test='true'] #popyoutube_original_dermatologist{
   background-color: unset;
   max-width: none;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#popyoutube_original_dermatologist > span > h6{
+body[data-dermatologist-test='true'] #popyoutube_original_dermatologist > span > h6{
   display: none;
 }
-#popyoutube_original_dermatologist > span > img{
+body[data-dermatologist-test='true'] #popyoutube_original_dermatologist > span > img{
   height: 54px;
 }
 
-.trusted_bl .trusted_cl .container .section_header{
+body[data-dermatologist-test='true'] .trusted_bl .trusted_cl .container .section_header{
   display: none !important;
 }
 .trusted_bl .trusted_cl{
@@ -1429,16 +1432,16 @@ body[data-test-product-landing='true'] .pdm-product-landing-sales{
   background-color: white;
 }
 
-#original-dermatologist{
+body[data-dermatologist-test='true'] #original-dermatologist{
   display: none;
 }
 
-#new-dermatolgist{
+body[data-dermatologist-test='true'] #new-dermatolgist{
   display: flex;
   flex-direction: row;
 }
 @media screen and (max-width: 768px) {
-  #new-dermatolgist{
+  body[data-dermatologist-test='true'] #new-dermatolgist{
     flex-direction: column-reverse;
     gap: 32px;
   }
