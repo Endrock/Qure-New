@@ -1427,7 +1427,7 @@ body[data-dermatologist-test='true'] #popyoutube_original_dermatologist > span >
 body[data-dermatologist-test='true'] .trusted_bl .trusted_cl .container .section_header{
   display: none !important;
 }
-.trusted_bl .trusted_cl{
+body[data-dermatologist-test='true'] .trusted_bl .trusted_cl{
   background: unset;
   background-color: white;
 }
