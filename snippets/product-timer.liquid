@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="{{ 'product-bf-sales.css' | asset_url }}">
+
+<style>
+    .payment_method {
+        display: flex;
+    }
+</style>
+
+{%- assign timer_unix = block.settings.timer | date: '%s' -%}
+
+<div class="limited_offer announcement_bar">
+    <div class="lo_heading">
+        <p><strong>{{ block.settings.heading }}</strong></p>
+    </div>
+    <div class="bfBundle__content mt-1">
+        <div class="bfCountdown countdown_timer_with_zone" data-target-date="{{ block.settings.timer }}" data-target-time-zone="America/Los_Angeles">
+            <div class="countdown_block">
+                <span class="d-flex align-items-center theTimer" id="headerTimer">
+                    <span data-name="days" id="days">00</span><span
+                        class="dots">:</span>
+                    <span data-name="hours" id="hours">00</span> <span
+                        class="dots">:</span>
+                    <span data-name="mins" id="minutes">00</span> <span
+                        class="dots">:</span>
+                    <span data-name="secs" id="seconds">00</span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="lo_code mt-2">
+        {{ block.settings.text |  replace: '<em>', '<span>' |  replace: '</em>', '</span>' }}
+    </div>
+</div>
+
+<script src="{{ '__app_countdown.js' | asset_url }}"></script>

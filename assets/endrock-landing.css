@@ -1804,7 +1804,7 @@
 .new-landing-purchase .landing-buttons-container{
   padding: 10px 0;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   gap:16px;
 }

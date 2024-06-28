@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -44,6 +53,15 @@
           "settings": {
             "video_new_section": "shopify:\/\/files\/videos\/0424(1).mov"
           }
+        },
+        "timer_abVU3e": {
+          "type": "timer",
+          "disabled": true,
+          "settings": {
+            "heading": "4th of July Limited Time Offer!",
+            "text": "<p>Get <em><strong>$50 OFF<\/strong><\/em><strong> <\/strong>with code: <strong>FREEDOMGLOW<\/strong><\/p>",
+            "timer": "2024-07-07T23:59:59"
+          }
         }
       },
       "block_order": [
@@ -51,7 +69,8 @@
         "list_EVK9TV",
         "supply_iDLrxG",
         "before_and_after_KfYL7X",
-        "video_before_and_after_kUMR9A"
+        "video_before_and_after_kUMR9A",
+        "timer_abVU3e"
       ],
       "settings": {
         "heading": "Repair & rejuvenate your skin with our Light Therapy Mask",
@@ -205,6 +224,7 @@
       "settings": {
         "classname": "skincare_slider bg_gradient_yellow_bt",
         "heading": "",
+        "title_tag": "h2",
         "text": ""
       }
     },

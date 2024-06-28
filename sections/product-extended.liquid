@@ -8,6 +8,7 @@
 {%- assign list_count = 0 -%}
 {%- assign supply_count = 0 -%}
 {%- assign subscribe_count = 0 -%}
+{%- assign timer = blank -%}
 
 {%- for block in section.blocks -%}
 	{%- case block.type -%}
@@ -19,6 +20,8 @@
             {%- assign supply_count = supply_count | plus: 1 -%}
         {%- when 'subscribe' -%}
             {%- assign subscribe_count = subscribe_count | plus: 1 -%}
+        {%- when 'timer' -%}
+            {%- assign timer = block -%}
     {%- endcase -%}
 {%- endfor -%}
 
@@ -222,6 +225,10 @@
                                     current_price: product.price, 
                                     original_price: product.price, 
                                 %}
+                            {% endif %}
+
+                            {% if timer != blank %}
+                                {% render 'product-timer' with block: timer %}
                             {% endif %}
 
                             <div class="payment_method">
@@ -699,7 +706,30 @@
                         "label": "video"
                     }
                 ]
-            }          
+            },
+            {
+                "type": "timer",
+                "name": "t:common.timer.label",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type" : "text",
+                        "id" : "heading",
+                        "label" : "t:common.heading.label"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "t:common.text.label"
+                    },
+                    {
+                        "type" : "text",
+                        "id" : "timer",
+                        "label" : "t:common.timer.label",
+                        "info": "t:common.timer.info"
+                    }
+                ]
+            }        
         ]
     }
 {% endschema %}
