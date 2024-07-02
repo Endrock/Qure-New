@@ -20,7 +20,7 @@
 
 
 <!-- -- trusted section start -- -->
-<div class="{{ section.settings.classname }}">
+<div class="{{ section.settings.classname }} {% if template == 'index'%}new_trusted_bl{% endif %}">
     <div class="trusted_cl">
         <div class="container">
             {% if section.settings.heading != blank %}
@@ -30,10 +30,12 @@
                     </h2>
                 </div>                
             {% endif %}
-            <div id="new-dermatolgist">
-                {% render 'pdm_new_dermatologist' %}
-            </div>
-            <div id="original-dermatologist" class="row">
+            {% if template == 'index' %}
+                <div id="new-dermatolgist">
+                    {% render 'pdm_new_dermatologist' %}
+                </div>
+            {% endif %}
+            <div class="row {% if template == 'index' %} original-dermatologist {% endif %}">
                 <div class="col-lg-6 order-2 order-lg-1">
                     <div class="trusted_left">
                         {% if section.settings.heading != blank %}
@@ -136,7 +138,7 @@
                                                 <img class="img-fluid" src="{{ block.settings.image | img_url: '600x' }}" alt="{{ block.settings.image.alt | escape }}">
                                                 {% if block.settings.video_url != blank and block.settings.wistia_id == blank %}
                                                     <div class="play_btn">
-                                                        <a id="popyoutube_original_dermatologist" class="popup-youtube" href="{{ block.settings.video_url }}">
+                                                        <a class="popup-youtube {% if template == 'index' %}popyoutube_original_dermatologist{% endif %}" href="{{ block.settings.video_url }}">
                                                             <span>
                                                                 <img src="{{ 'trusted_play.svg' | asset_url }}" alt="" class="w-auto">
                                                                 <h6>{{ block.settings.video_label }}</h6>
@@ -167,7 +169,7 @@
         
                                         {% if block.settings.text != blank %}
                                             <div class="trust_item_info">
-                                                <div id='quote_original_dermatologist' class="quote">
+                                                <div class="quote {% if template == 'index' %}quote_original_dermatologist {% endif %}">
                                                     <img src="{{ 'quote.svg' | asset_url }}" alt="" class="img-fluid">
                                                 </div>
                                                 <div class="result_content">
