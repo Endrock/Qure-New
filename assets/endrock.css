@@ -953,43 +953,43 @@ body[class~="page.sunil-mi-landing"] .product-price{
 
 /* PRICE BELOW REVIEWS PDP - TEST ---  END*/
 
-
-.pdm-product-landing-sales{
+/* pdm_product-landing-sales */
+.pdm-mobile-product-landing-sales{
   display: block;
   background: linear-gradient(to right, white 50%, #F5F5F5 50%);
 }
-.original-product-landing-sales{
+.desktop-product-landing-sales{
   display: none;
 }
 @media screen and (min-width: 769px) {
-  .pdm-product-landing-sales{
+  .pdm-mobile-product-landing-sales{
     display: none;
   }
-  .original-product-landing-sales{
+  .desktop-product-landing-sales{
     display: block;
   }
 }
 
 @media screen and (max-width: 768px){
-   .pdm-product-landing-sales{
+   .pdm-mobile-product-landing-sales{
     background: white;
   }
 }
 
 @media screen and (max-width: 640px){
-  .pdm-product-landing-sales .container{
+  .pdm-mobile-product-landing-sales .container{
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
 }
 
-.pdm-product-landing-sales .container .pdm_product-landing-sales-wrapper{
+.pdm-mobile-product-landing-sales .container .pdm_product-landing-sales-wrapper{
   display: flex;
   flex-direction: row;
   height: auto;
 }
 @media screen and (max-width: 768px){
-  .pdm-product-landing-sales .container .pdm_product-landing-sales-wrapper{
+  .pdm-mobile-product-landing-sales .container .pdm_product-landing-sales-wrapper{
     flex-direction: column;
     height: auto;
   }
