@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -281,7 +290,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/results_debbie.webp",
             "heading": "Faded my dark spots",
-            "text": "<p>Micro-Infusion worked wonders on my skin. It's light, easy to use, and faded my dark spots and acne scars in just a few weeks. I've seen noticeable improvements such as a brighter glow and even skin tone. Thumbs up for this effective skincare solution!<\/p>",
+            "text": "<p>\"Micro-Infusion worked wonders on my skin. It's light, easy to use, and faded my dark spots and acne scars in just a few weeks. I've seen noticeable improvements such as a brighter glow and even skin tone. Thumbs up for this effective skincare solution!\"<\/p>",
             "image_country": "shopify:\/\/shop_images\/usa_89e25711-f730-4521-8931-83b3307204af.png",
             "text_country": "United States",
             "client": "Debbie",
@@ -395,6 +404,42 @@
             "client": "Jennifer Nay",
             "code": ""
           }
+        },
+        "result_EpL9mk": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Shelly_S.png",
+            "heading": "Looking better and better",
+            "text": "<p>\"I have used the Qure Microneedling system for 3 monthly treatments. The results are clearer, plumper and firmer skin. With further treatments I am looking forward to looking better and better.\"<\/p>",
+            "image_country": "shopify:\/\/shop_images\/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Shelly S.",
+            "code": ""
+          }
+        },
+        "result_djxhNa": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Shelby_F.png",
+            "heading": "Wow amazing",
+            "text": "<p>\"Just using this product once my skin looks and feels healthy! I’ve also had acne scars for about 5 years now and this fixed them I couldn’t believe it! Can’t wait to do it again in 2 weeks!\"<\/p>",
+            "image_country": "shopify:\/\/shop_images\/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Shelby F.",
+            "code": ""
+          }
+        },
+        "result_JNEbr4": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Audrey_M.png",
+            "heading": "Microneedling has been a skin saver!",
+            "text": "<p>\"I bought the refill after I initially ran out of my infusion vials. I am so impressed with the results! As an acne sufferer with minor scarring this has been great in reducing overall texture and making my skin truly glow!\"<\/p>",
+            "image_country": "shopify:\/\/shop_images\/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Audrey M.",
+            "code": ""
+          }
         }
       },
       "block_order": [
@@ -408,7 +453,10 @@
         "result_bkVjix",
         "result_rhcQKL",
         "result_g6zQgr",
-        "result_zHPFqU"
+        "result_zHPFqU",
+        "result_EpL9mk",
+        "result_djxhNa",
+        "result_JNEbr4"
       ],
       "settings": {
         "classname": "mi_landing_result",
@@ -644,7 +692,12 @@
         "views": "1.3M views",
         "image": "shopify:\/\/shop_images\/trusted_3.webp",
         "video_url": "https:\/\/www.youtube.com\/watch?v=JPWycy8cwN8",
-        "video_label": "Click To Watch Review"
+        "video_label": "Click To Watch Review",
+        "dermatoglist_check_text": "Trusted and recommended by world leading Dermatologists",
+        "dermatoglist_left_subtext": "",
+        "dermatoglist_right_name": "Dr Shah, MD",
+        "dermatoglist_right_especiality": "Board certified dermatologist",
+        "dermatoglist_right_video_url": "https:\/\/www.youtube.com\/watch?v=I2Fe-kP-2Jg"
       }
     },
     "liquid_yCpGbf": {

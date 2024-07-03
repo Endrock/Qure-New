@@ -56,7 +56,6 @@
         },
         "timer_abVU3e": {
           "type": "timer",
-          "disabled": true,
           "settings": {
             "heading": "4th of July Limited Time Offer!",
             "text": "<p>Get <em><strong>$50 OFF<\/strong><\/em><strong> <\/strong>with code: <strong>FREEDOMGLOW<\/strong><\/p>",
@@ -347,10 +346,13 @@
         "image": "shopify:\/\/shop_images\/trusted_2.jpg",
         "video_url": "https:\/\/www.youtube.com\/watch?v=I2Fe-kP-2Jg",
         "video_label": "Click To Watch Review",
+        "dermatoglis_check": "shopify:\/\/shop_images\/Layer_1.svg",
         "dermatoglist_check_text": "Trusted and recommended by world leading Dermatologists",
-        "dermatoglist_left_subtext": "",
+        "dermatoglist_left_subtext": "<p>\"The best LED mask on the market in my opinion at this time, that being said you do need to use this consistently to see results…\"<\/p>",
+        "dermatoglist_right_image": "shopify:\/\/shop_images\/doctor.png",
         "dermatoglist_right_name": "Dr Shah, MD",
         "dermatoglist_right_especiality": "Board certified dermatologist",
+        "dermatoglist_right_play": "shopify:\/\/shop_images\/octicon_play-16.svg",
         "dermatoglist_right_video_url": "https:\/\/www.youtube.com\/watch?v=I2Fe-kP-2Jg"
       }
     },

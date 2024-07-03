@@ -1,73 +1,4 @@
 {% comment %} Don't forget to delete startCartTimer from cart-ajax.liquid {% endcomment %}
-<!-- temp updated 17.11 - 27.11 -->
-<style>
-	.my-floating-cart .cart_timer {
-			background-color: #F5F5F5;
-			padding: 4px 0;
-	}
-
-	.my-floating-cart .cart_timer .timer_wrapper {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-	}
-
-	.timer_separator {
-			width: 1px;
-			background-color: #C92127;
-			height: 30px;
-			margin: 0 40px
-	}
-
-	.my-floating-cart .timer_wrapper .timer_countdown {
-			display: flex;
-			color: #C92127;
-			padding: 10px 0;
-			align-items: center;
-	}
-
-	.my-floating-cart .timer_wrapper .timer_countdown .timer_countdown_heading {
-			font-size: 13px;
-			line-height: 13px;
-			font-weight: 400;
-	}
-
-	.my-floating-cart .timer_wrapper .timer_countdown .countdown_cart {
-			margin-left: 20px;
-			font-size: 20px;
-			line-height: 18px;
-			font-weight: 500;
-	}
-
-	.my-floating-cart .timer_wrapper .timer_text {
-			font-size: 13px;
-			line-height: 13px;
-			font-weight: 600;
-			color: #C92127;
-			padding: 10px 0;
-	}
-
-	@media(max-width:556px) {
-			.my-floating-cart .timer_wrapper .timer_text {
-					font-size: 12px;
-					line-height: 12px;
-			}
-			.timer_separator {
-					margin: 0 20px;
-			}
-			.my-floating-cart .timer_wrapper .timer_countdown .timer_countdown_heading {
-					font-size: 12px;
-					line-height: 12px;
-			}
-
-			.my-floating-cart .timer_wrapper .timer_countdown .countdown_cart {
-					margin-left: 20px;
-					font-size: 18px;
-					line-height: 18px;
-			}
-	}
-</style>
-
 {% if cart.item_count > 0  %}
 	<div class="cart_timer">
 		<div class="timer_wrapper">
@@ -142,4 +73,3 @@ async function tick() {
 }
 
 </script>
-<!-- temp updated 17.11 - 27.11 -->

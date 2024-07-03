@@ -953,21 +953,25 @@ body[class~="page.sunil-mi-landing"] .product-price{
 
 /* PRICE BELOW REVIEWS PDP - TEST ---  END*/
 
-/* pdm_product-landing-sales */
-.pdm-product-landing-sales{
-  display: none;
-}
-body[data-test-product-landing='true'] .original-product-landing-sales {
-    display: none;
-  }
 
-body[data-test-product-landing='true'] .pdm-product-landing-sales{
+.pdm-product-landing-sales{
   display: block;
   background: linear-gradient(to right, white 50%, #F5F5F5 50%);
 }
+.original-product-landing-sales{
+  display: none;
+}
+@media screen and (min-width: 769px) {
+  .pdm-product-landing-sales{
+    display: none;
+  }
+  .original-product-landing-sales{
+    display: block;
+  }
+}
 
 @media screen and (max-width: 768px){
-    body[data-test-product-landing='true'] .pdm-product-landing-sales{
+   .pdm-product-landing-sales{
     background: white;
   }
 }

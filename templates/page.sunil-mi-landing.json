@@ -708,7 +708,12 @@
         "views": "1.3M VIEWS",
         "image": "shopify:\/\/shop_images\/trusted_3.webp",
         "video_url": "https:\/\/www.youtube.com\/watch?v=JPWycy8cwN8",
-        "video_label": "Click To Watch Review"
+        "video_label": "Click To Watch Review",
+        "dermatoglist_check_text": "Trusted and recommended by world leading Dermatologists",
+        "dermatoglist_left_subtext": "",
+        "dermatoglist_right_name": "Dr Shah, MD",
+        "dermatoglist_right_especiality": "Board certified dermatologist",
+        "dermatoglist_right_video_url": "https:\/\/www.youtube.com\/watch?v=I2Fe-kP-2Jg"
       }
     },
     "results_3LEkF7": {
@@ -845,6 +850,42 @@
             "client": "Chelsea J.",
             "code": ""
           }
+        },
+        "result_Eb4G8W": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Shelby_F.png",
+            "heading": "Wow amazing",
+            "text": "<p>\"Just using this product once my skin looks and feels healthy! I’ve also had acne scars for about 5 years now and this fixed them I couldn’t believe it! Can’t wait to do it again in 2 weeks!\"<\/p>",
+            "image_country": "shopify:\/\/shop_images\/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Shelby F.",
+            "code": ""
+          }
+        },
+        "result_h4ehch": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Audrey_M.png",
+            "heading": "Microneedling has been a skin saver!",
+            "text": "<p>\"I bought the refill after I initially ran out of my infusion vials. I am so impressed with the results! As an acne sufferer with minor scarring this has been great in reducing overall texture and making my skin truly glow!\"<\/p>",
+            "image_country": "shopify:\/\/shop_images\/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Audrey M.",
+            "code": ""
+          }
+        },
+        "result_xtFHnk": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Shelly_S.png",
+            "heading": "Looking better and better",
+            "text": "<p>\"I have used the Qure Microneedleing system for 3 monthly treatments. The results are clearer, plumper and firmer skin. With further treatments I am looking forward to looking better and better.\"<\/p>",
+            "image_country": "shopify:\/\/shop_images\/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Shelly S.",
+            "code": ""
+          }
         }
       },
       "block_order": [
@@ -858,7 +899,10 @@
         "result_URKRDq",
         "result_TJXM8n",
         "result_6FrBJW",
-        "result_xgWrGm"
+        "result_xgWrGm",
+        "result_Eb4G8W",
+        "result_h4ehch",
+        "result_xtFHnk"
       ],
       "settings": {
         "classname": "mi_landing_result",

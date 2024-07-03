@@ -117,7 +117,6 @@
             {% endcase %}
 
             <div class="productBlockGrid fixed_height_btn">
-                <a href="{{ routes.root_url }}{{ product_url }}" class="productLink"></a>
                 <div class="cus-tag">
                     {% assign amount = 0 %}
                     {% for variant in product.variants %}
@@ -134,7 +133,9 @@
                     {% endfor %}
                 </div>
                 <div class="product-grid__image">
-                    <img src="{{ product.featured_image | img_url: '720x' }}" alt="collection img" />
+                    <a href="{{ routes.root_url }}{{ product_url }}" class="productLink">
+                        <img src="{{ product.featured_image | img_url: '720x' }}" alt="collection img" />
+                    </a>
                 </div>
                 <div class="pdt_cln_info">
                     <div class="product-grid__review collection-review">
