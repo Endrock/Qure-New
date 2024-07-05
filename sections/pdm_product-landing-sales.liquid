@@ -29,7 +29,7 @@
           <div class="swiper-wrapper">
             {% for block in section.blocks %}
               {% liquid
-                assign show_price = block.settings.active_price
+                assign show_save_price = block.settings.show_save_price
                 assign product_block = block.settings.product
                 assign save_price = product_block.compare_at_price | minus: product_block.price | money_without_trailing_zeros
               %}
@@ -53,7 +53,7 @@
                       </span>
                       <h3>{{ product_block.title }}</h3>
                     </div>
-                    {% if show_price == true %}
+                    {% if show_save_price == true %}
                       <div class="product-landing-save-price">
                         <p>
                           {{ section.settings.save_text | upcase }}
@@ -156,10 +156,10 @@
         },
         {
           "type": "checkbox",
-          "id": "active_price",
-          "label": "active price",
+          "id": "show_save_price",
+          "label": "Show save amount badge",
           "default": true,
-          "info": "use this check to active price in product card"
+          "info": "Use this check to make visible the green badge with the save amount"
         }
       ]
     }
