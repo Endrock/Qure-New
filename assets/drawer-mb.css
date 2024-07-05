@@ -1392,12 +1392,14 @@
 		  padding-right: 30px
   }
   
+  /*
   p.insurance__text--top {
 		  font-size: 12px;
 		  font-weight: 400;
 		  margin-bottom: 3px;
 		  cursor: pointer
   }
+  */
   
   p.insurance__text--bottom {
 		  font-size: 10px;
@@ -2311,9 +2313,11 @@
 				  justify-content: unset!important
 		  }
   
+		  /*
 		  p.insurance__text--top {
 				  font-size: 10px
 		  }
+		  */
   
 		  .drawer__cart-total {
 				  padding: 8px 20px!important

@@ -16,7 +16,7 @@
             {% assign num = 0 %}
             {%- for block in section.blocks -%}
                 {% if block.type == 'banner' %}
-                    {% if num < 2 %}
+                    {% if num == 0 %}
                         <a class="dm_imgItem" href="{{ block.settings.button_url }}">
                             <img src="{{ block.settings.image | img_url: '400x' }}" alt="" class="img-fluid">
                             <h6>{{ block.settings.button_label |  replace: '[', '<span>' |  replace: ']', '</span>' }} <img src="{{ 'header_drop_right.svg' | asset_url }}" alt="" class="ms-1"></h6>
@@ -35,7 +35,7 @@
             {% assign num = 0 %}
             {%- for block in section.blocks -%}
                 {% if block.type == 'banner' %}
-                    {% if num > 1 and num < 4 %}
+                    {% if num > 0 and num < 3 %}
                         <a class="dm_imgItem" href="{{ block.settings.button_url }}">
                             <img src="{{ block.settings.image | img_url: '400x' }}" alt="" class="img-fluid">
                             <h6>{{ block.settings.button_label |  replace: '[', '<span>' |  replace: ']', '</span>' }} <img src="{{ 'header_drop_right.svg' | asset_url }}" alt="" class="ms-1"></h6>
@@ -54,7 +54,7 @@
             {% assign num = 0 %}
             {%- for block in section.blocks -%}
                 {% if block.type == 'banner' %}
-                    {% if num > 3 and num < 6 %}
+                    {% if num > 2 and num < 5 %}
                         <a class="dm_imgItem" href="{{ block.settings.button_url }}">
                             <img src="{{ block.settings.image | img_url: '400x' }}" alt="" class="img-fluid">
                             <h6>{{ block.settings.button_label |  replace: '[', '<span>' |  replace: ']', '</span>' }} <img src="{{ 'header_drop_right.svg' | asset_url }}" alt="" class="ms-1"></h6>
@@ -86,23 +86,51 @@
                 {% endif %}
                 <ul class="dropdown-menu-hp mega-dropdown-menu row">
                     <div class="container">
-                        <div class="dropdown_menu_wrap">
+                        <div class="dropdown_menu_wrap {% if link.title == 'Products' %}menu_product{% endif %}">
                             <div class="dropdown_menu_links" data-index="{{ forloop.index }}">
                                 {%- for childlink in link.links -%}
-                                    <div class="dm_list">
-                                        <div class="dm_list_heading" {% if childlink.title == 'FOLDER' %}style="display:none;"{% endif %}>{{ childlink.title | escape }}</div>
-                                        {% if childlink.links.size > 0 %}
-                                            <ul>
-                                                {% for childChildlink in childlink.links %}
-                                                    <li>
-                                                        <a href="{{ childChildlink.url }}" aria-label="{{ childChildlink.title | escape }}">
-                                                            <span>{{ childChildlink.title | escape }}</span>
-                                                        </a>
-                                                    </li>
-                                                {%- endfor -%}
-                                            </ul>
-                                        {% endif %}
-                                    </div>
+                                    {% if childlink.title == 'Shop' %}
+                                        <div class="dm_list">
+                                            <div class="dm_list_heading">Shop</div>
+                                            {% if childlink.links.size > 0 %}
+                                            <div class="dm_list_two_cols">
+                                                <ul>
+                                                    {% for childChildlink in childlink.links limit:4 %}
+                                                        <li>
+                                                            <a href="{{ childChildlink.url }}" aria-label="{{ childChildlink.title | escape }}">
+                                                                <span>{{ childChildlink.title | escape }}</span>
+                                                            </a>
+                                                        </li>
+                                                    {%- endfor -%}
+                                                </ul>
+                                                <ul>
+                                                    {% for childChildlink in childlink.links offset:4 %}
+                                                        <li>
+                                                            <a href="{{ childChildlink.url }}" aria-label="{{ childChildlink.title | escape }}">
+                                                                <span>{{ childChildlink.title | escape }}</span>
+                                                            </a>
+                                                        </li>
+                                                    {%- endfor -%}
+                                                </ul>
+                                            </div>
+                                            {% endif %}
+                                        </div>
+                                    {% else %}
+                                        <div class="dm_list">
+                                            <div class="dm_list_heading" {% if childlink.title == 'FOLDER' %}style="display:none;"{% endif %}>{{ childlink.title | escape }}</div>
+                                            {% if childlink.links.size > 0 %}
+                                                <ul>
+                                                    {% for childChildlink in childlink.links %}
+                                                        <li>
+                                                            <a href="{{ childChildlink.url }}" aria-label="{{ childChildlink.title | escape }}">
+                                                                <span>{{ childChildlink.title | escape }}</span>
+                                                            </a>
+                                                        </li>
+                                                    {%- endfor -%}
+                                                </ul>
+                                            {% endif %}
+                                        </div>
+                                    {% endif %}
                                 {%- endfor -%}
                             </div>
                             {% case forloop.index %}
@@ -188,7 +216,7 @@
                 <img src="{{ 'login.svg' | asset_url }}" class="fa fa-user nav__icon" alt="navigation">
             </a>
         </li>
-        <li class="nav__item cart_btn" data-ajax-cart-toggle-class-button="js-my-cart-open" style="cursor:pointer;">
+        <li class="nav__item cart_btn" data-ajax-cart-toggle-class-button="js-my-cart-open" style="cursor:pointer;" data-bs-toggle="offcanvas" href="#cartCanvas" role="button" aria-controls="cartCanvas">
             <a href="{{ routes.cart_url }}" class="nav__url">
                 <img src="{{ 'cart.svg' | asset_url }}" class="fa fa-shopping-cart nav__icon cart-mb-icon" alt="navigation">
                 <span class="nav__cart-count" data-ajax-cart-bind-state="cart.item_count">{{ cart.item_count }}</span>

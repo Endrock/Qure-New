@@ -10,31 +10,20 @@
 {% comment %} sliders {% endcomment %}
 
 {% capture first_slider %}
-    {% if section.blocks.size > 0 %}
-        <div class="swiper twa__swiper menuSlider dot_pagination"
-            id="twa__swiper-menuSlider" data-section-id="menuSlider"
-            data-autoplay="false" data-loop="false" data-centerslide="false"
-            data-mobile="1.1" data-tablet="2" data-desktop="3" data-spacing="30"
-            data-arrowleft="menuSlider-swiper-prev"
-            data-arrowright="menuSlider-swiper-next">
-            <div class="swiper-wrapper">
-                {% assign num = 0 %}
-                {%- for block in section.blocks -%}
-                    {% if block.type == 'banner' %}
-                        {% if num < 2 %}
-                            <div class="swiper-slide">
-                                <a class="dm_imgItem" href="{{ block.settings.button_url }}">
-                                    <img src="{{ block.settings.image | img_url: '400x' }}" alt="" class="img-fluid">
-                                    <h6>{{ block.settings.button_label |  replace: '[', '<span>' |  replace: ']', '</span>'  }} <img src="{{ 'header_drop_right.svg' | asset_url }}" alt="" class="ms-1"></h6>
-                                </a>
-                            </div>
-                        {% endif %}
-                        {%- assign num = num | plus: 1 -%}
-                    {% endif %}
-                {% endfor %}
-            </div>
-        </div>
-    {% endif %}
+    {% assign num = 0 %}
+    {%- for block in section.blocks -%}
+        {% if block.type == 'banner' %}
+            {% if num == 0 %}
+                <div class="menuSlider">
+                    <a class="dm_imgItem" href="{{ block.settings.button_url }}">
+                        <img src="{{ block.settings.image | img_url: '400x' }}" alt="" class="img-fluid">
+                        <h6>{{ block.settings.button_label |  replace: '[', '<span>' |  replace: ']', '</span>'  }} <img src="{{ 'header_drop_right.svg' | asset_url }}" alt="" class="ms-1"></h6>
+                    </a>
+                </div>
+            {% endif %}
+            {%- assign num = num | plus: 1 -%}
+        {% endif %}
+    {% endfor %}
 {% endcapture %}
 
 {% capture second_slider %}
@@ -49,7 +38,7 @@
                 {% assign num = 0 %}
                 {%- for block in section.blocks -%}
                     {% if block.type == 'banner' %}
-                        {% if num > 1 and num < 4 %}
+                        {% if num > 0 and num < 3 %}
                             <div class="swiper-slide">
                                 <a class="dm_imgItem" href="{{ block.settings.button_url }}">
                                     <img src="{{ block.settings.image | img_url: '400x' }}" alt="" class="img-fluid">
@@ -78,7 +67,7 @@
                 {% assign num = 0 %}
                 {%- for block in section.blocks -%}
                     {% if block.type == 'banner' %}
-                        {% if num > 3 and num < 6 %}
+                        {% if num > 2 and num < 5 %}
                             <div class="swiper-slide">
                                 <a class="dm_imgItem" href="{{ block.settings.button_url }}">
                                     <img src="{{ block.settings.image | img_url: '400x' }}" alt="" class="img-fluid">
@@ -119,18 +108,18 @@
         {% if link.links.size > 0 %}
             <div class="dropdown_menu_links d-block">
                 {%- for childlink in link.links -%}
-                    <div class="dm_list">
+                    <div class="dm_list {% if childlink.title == 'Shop' %}menu_product{% endif %}">
                         <div class="dm_list_heading">{{ childlink.title | escape }}</div>
                         {% if childlink.links.size > 0 %}
-                        <ul>
-                            {% for childChildlink in childlink.links %}
-                                <li>
-                                    <a href="{{ childChildlink.url }}" aria-label="{{ childChildlink.title | escape }}">
-                                        <span>{{ childChildlink.title | escape }}</span>
-                                    </a>
-                                </li>
-                            {%- endfor -%}
-                        </ul>
+                            <ul>
+                                {% for childChildlink in childlink.links %}
+                                    <li>
+                                        <a href="{{ childChildlink.url }}" aria-label="{{ childChildlink.title | escape }}">
+                                            <span>{{ childChildlink.title | escape }}</span>
+                                        </a>
+                                    </li>
+                                {%- endfor -%}
+                            </ul>
                         {% endif %}
                     </div>
                 {%- endfor -%}

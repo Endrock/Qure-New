@@ -78,6 +78,16 @@
     "pdm_product_landing_sales_F9Dn8a": {
       "type": "pdm_product-landing-sales",
       "blocks": {
+        "product_MAY97j": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "exclusive-amazon-prime-bundle",
+            "announcement_id": "",
+            "button_url_id": "#amazon-prime",
+            "button_text_id": "Get yours"
+          }
+        },
         "product_UQdbaG": {
           "type": "product",
           "settings": {
@@ -162,6 +172,7 @@
         }
       },
       "block_order": [
+        "product_MAY97j",
         "product_UQdbaG",
         "product_ncYWKA",
         "product_ahkGAV",
@@ -481,6 +492,18 @@
     "bundle_list_LdzHxV": {
       "type": "bundle-list",
       "blocks": {
+        "product_FjAVNE": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "exclusive-amazon-prime-bundle",
+            "comment_ammount": 100,
+            "percent": 34,
+            "ppl_choise": 0,
+            "recommended": 0,
+            "recommended_code": ""
+          }
+        },
         "product_3Frmww": {
           "type": "product",
           "settings": {
@@ -571,6 +594,7 @@
         }
       },
       "block_order": [
+        "product_FjAVNE",
         "product_3Frmww",
         "product_JVJkGj",
         "product_DgMQiP",
