@@ -80,7 +80,6 @@
       "blocks": {
         "product_MAY97j": {
           "type": "product",
-          "disabled": true,
           "settings": {
             "product": "exclusive-amazon-prime-bundle",
             "announcement_id": "",
@@ -494,7 +493,6 @@
       "blocks": {
         "product_FjAVNE": {
           "type": "product",
-          "disabled": true,
           "settings": {
             "product": "exclusive-amazon-prime-bundle",
             "comment_ammount": 100,
