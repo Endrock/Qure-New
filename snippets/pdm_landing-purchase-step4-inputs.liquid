@@ -28,6 +28,10 @@
 
 {% endcomment %}
 
+<script>
+  console.log('selling plans product' , {{ productRefill.selling_plan_groups[0].selling_plans | json}})
+  console.log('selling plans refill' , {{ productRefill2.selling_plan_groups[0].selling_plans | json}})
+</script>
 
 <div
   id="inputs-{{ name }}"
