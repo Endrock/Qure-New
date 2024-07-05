@@ -1,7 +1,3 @@
-{% comment %} 
-  active test data-test-product-landing="true"
-{% endcomment %}
-
 <div class="container">
   <div class="pdm_product-landing-sales-wrapper">
     <div class="left-panel">
@@ -25,26 +21,28 @@
           </svg>
         </div>
         <div class="swiper-pdm-landing-sales-next">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4.80079 17.4824C4.71964 17.5682 4.6562 17.6693 4.61409 17.7796C4.57198 17.89 4.55203 18.0076 4.55537 18.1257C4.55871 18.2438 4.58528 18.3601 4.63356 18.468C4.68185 18.5758 4.7509 18.6731 4.83677 18.7542C4.92264 18.8354 5.02366 18.8988 5.13405 18.9409C5.24444 18.983 5.36205 19.003 5.48015 18.9996C5.59825 18.9963 5.71454 18.9697 5.82237 18.9214C5.93021 18.8732 6.02747 18.8041 6.10862 18.7182L13.7541 10.623C13.912 10.456 14 10.2349 14 10.0051C14 9.77523 13.912 9.55412 13.7541 9.38712L6.10863 1.29097C6.02801 1.20321 5.93076 1.13235 5.82253 1.0825C5.7143 1.03265 5.59725 1.0048 5.47816 1.00057C5.35908 0.996333 5.24034 1.01581 5.12884 1.05785C5.01735 1.0999 4.91532 1.16368 4.82868 1.24549C4.74204 1.3273 4.67252 1.42551 4.62416 1.53442C4.5758 1.64332 4.54956 1.76075 4.54697 1.87989C4.54437 1.99902 4.56547 2.11748 4.60905 2.22839C4.65262 2.33929 4.7178 2.44044 4.80079 2.52594L11.8634 10.0051L4.80079 17.4824Z" fill="#797D7C"/>
-      </svg>
-    </div>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.80079 17.4824C4.71964 17.5682 4.6562 17.6693 4.61409 17.7796C4.57198 17.89 4.55203 18.0076 4.55537 18.1257C4.55871 18.2438 4.58528 18.3601 4.63356 18.468C4.68185 18.5758 4.7509 18.6731 4.83677 18.7542C4.92264 18.8354 5.02366 18.8988 5.13405 18.9409C5.24444 18.983 5.36205 19.003 5.48015 18.9996C5.59825 18.9963 5.71454 18.9697 5.82237 18.9214C5.93021 18.8732 6.02747 18.8041 6.10862 18.7182L13.7541 10.623C13.912 10.456 14 10.2349 14 10.0051C14 9.77523 13.912 9.55412 13.7541 9.38712L6.10863 1.29097C6.02801 1.20321 5.93076 1.13235 5.82253 1.0825C5.7143 1.03265 5.59725 1.0048 5.47816 1.00057C5.35908 0.996333 5.24034 1.01581 5.12884 1.05785C5.01735 1.0999 4.91532 1.16368 4.82868 1.24549C4.74204 1.3273 4.67252 1.42551 4.62416 1.53442C4.5758 1.64332 4.54956 1.76075 4.54697 1.87989C4.54437 1.99902 4.56547 2.11748 4.60905 2.22839C4.65262 2.33929 4.7178 2.44044 4.80079 2.52594L11.8634 10.0051L4.80079 17.4824Z" fill="#797D7C"/>
+          </svg>
+        </div>
         <div class="swiper pdm_swiper_product_landing">
           <div class="swiper-wrapper">
             {% for block in section.blocks %}
               {% liquid
+                assign show_price = block.settings.active_price
                 assign product_block = block.settings.product
                 assign save_price = product_block.compare_at_price | minus: product_block.price | money_without_trailing_zeros
               %}
               <div class="swiper-slide">
-                <div 
-                style="
-                      background-image: url({{ product_block.media | first | image_url: width: 1200 }});
-                      background-size: cover;
-                      background-position: center;
-                      background-repeat: no-repeat;
-                    "
-                class="pdm-product-landing-card-container">
+                <div
+                  style="
+                    background-image: url({{ product_block.media | first | image_url: width: 1200 }});
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                  "
+                  class="pdm-product-landing-card-container"
+                >
                   {% comment %} header-text {% endcomment %}
                   <div class="product-landing-text-container">
                     <div class="product-landing-information-item">
@@ -55,12 +53,14 @@
                       </span>
                       <h3>{{ product_block.title }}</h3>
                     </div>
-                    <div class="product-landing-save-price">
-                      <p>
-                        {{ section.settings.save_text | upcase }}
-                        {{ save_price }}
-                      </p>
-                    </div>
+                    {% if show_price == true %}
+                      <div class="product-landing-save-price">
+                        <p>
+                          {{ section.settings.save_text | upcase }}
+                          {{ save_price }}
+                        </p>
+                      </div>
+                    {% endif %}
                   </div>
                   {% comment %} image {% endcomment %}
                   <div class="product-landing-img-container"></div>
@@ -73,7 +73,7 @@
                         {{ product_block.price | money_without_trailing_zeros }}
                       </p>
                     </div>
-                    <a href="{{ block.settings.button_url_id }}">
+                    <a href="#{{ product_block.handle }}">
                       {{ block.settings.button_text_id }}
                     </a>
                   </div>
@@ -84,9 +84,7 @@
           <div class="swiper-pdm-landing-sales-pagination"></div>
         </div>
       </div>
-      
     </div>
-    
   </div>
 </div>
 
@@ -152,14 +150,16 @@
         },
         {
           "type": "text",
-          "id": "button_url_id",
-          "label": "button id"
-        },
-        {
-          "type": "text",
           "id": "button_text_id",
           "label": "button text",
           "default": "Get yours"
+        },
+        {
+          "type": "checkbox",
+          "id": "active_price",
+          "label": "active price",
+          "default": true,
+          "info": "use this check to active price in product card"
         }
       ]
     }
