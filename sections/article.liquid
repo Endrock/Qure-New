@@ -32,7 +32,7 @@
                                 <source media="(min-width:1100px)" srcset="{{ article | img_url: '1100x' }}">
                                 <source media="(min-width:720px)" srcset="{{ article | img_url: '720x' }}">
                                 <source media="(min-width:540px)" srcset="{{ article | img_url: '540x' }}">
-                                <img class="img-fluid" src="{{ article | img_url: '540x' }}" alt="{{ section.settings.image.alt | escape }}" width="332" height="192">
+                                <img class="img-fluid" src="{{ article | img_url: '540x' }}" alt="{{ article.image.alt | escape }}" width="332" height="192">
                             </picture>
                         {% endif %}
 

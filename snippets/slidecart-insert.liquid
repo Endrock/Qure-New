@@ -1,96 +1,95 @@
-<link rel="stylesheet" href="{{ 'drawer-mb.css' | asset_url }}">
-
 {% assign insuranceProduct = all_products["shipping-insurance"] %}
+
 <script>
 	var CustomInsuraceVariants = [
 	{% for variant in insuranceProduct.variants %}
 		"{{variant.id}}", 
 	{% endfor %}
 	]
-</script>
-<script>
+
 	var currency = '{{ shop.money_with_currency_format | remove: ' ' | split: '' | first }}';
 	var cart_price = '{{ cart.items_subtotal_price | money_without_currency | round:2 }}';
 	var __discount_applied = false;
 </script>
-<script type="application/json" data-ajax-cart-initial-state class="__init"> {{ cart | json }} </script> 
-<script type="application/json" data-ajax-cart-configuration class="__init"> { "addToCartCssClass": "js-my-cart-open" } </script>
 
-  <!-- Swiper JS Add PDM By Samu3le-->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script type="application/json" data-ajax-cart-initial-state> {{ cart | json }} </script> 
+<script type="application/json" data-ajax-cart-configuration> { "addToCartCssClass": "js-my-cart-open" } </script>
+
+<!-- Swiper JS Add PDM By Samu3le-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   
-  <!-- Initialize Swiper -->
-  <script>
-    // align cards center when they nedded
-    const displayCard = () => {
-        const customUpsell = document.querySelector(".my-floating-cart form.my-cart .custom_upsell .swiper-wrapper");
-        if (!customUpsell) return;
-        const shouldCenterSlide = customUpsell.querySelectorAll(".swiper-slide").length <= 2;
-        customUpsell.classList.toggle('align-slide', shouldCenterSlide);
+<!-- Initialize Swiper -->
+<script>
+  // align cards center when they nedded
+  const displayCard = () => {
+      const customUpsell = document.querySelector(".my-floating-cart form.my-cart .custom_upsell .swiper-wrapper");
+      if (!customUpsell) return;
+      const shouldCenterSlide = customUpsell.querySelectorAll(".swiper-slide").length <= 2;
+      customUpsell.classList.toggle('align-slide', shouldCenterSlide);
+  }
+  //create swiper Upsell 
+  const upsellSwiper = () => {
+    const isMobile = window.innerWidth <= 768;
+    if(isMobile){
+      return new Swiper('.swiper.custom_upsell', {
+        slidesPerView: "auto",
+        centeredSlides: false,
+        slidesOffsetAfter: 20, 
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        mousewheel:{
+          forceToAxis:true
+        }
+      });
+    }else{
+      return new Swiper('.swiper.custom_upsell', {
+        slidesPerView: "auto",
+        centeredSlides: false,
+        slidesOffsetAfter: 20, 
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        mousewheel:{
+          forceToAxis:true
+        }
+      });
     }
-    //create swiper Upsell 
-    const upsellSwiper = () => {
-      const isMobile = window.innerWidth <= 768;
-      if(isMobile){
-        return new Swiper('.swiper.custom_upsell', {
-          slidesPerView: "auto",
-          centeredSlides: false,
-          slidesOffsetAfter: 20, 
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          mousewheel:{
-            forceToAxis:true
-          }
-        });
-      }else{
-        return new Swiper('.swiper.custom_upsell', {
-          slidesPerView: "auto",
-          centeredSlides: false,
-          slidesOffsetAfter: 20, 
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-          mousewheel:{
-            forceToAxis:true
-          }
-        });
+  }
+  //show upsell data only if the contain product
+  const showUpsell = () => {
+      const myCart = document.querySelector('form.my-cart');
+      if (myCart) {
+        const upsell = myCart.querySelector('.swiper.custom_upsell');
+        if (upsell) {
+          const upsellProducts = document.querySelectorAll('.swiper-slide.upsell_main');
+          const hasUpsellProducts = upsellProducts.length == 0;
+          upsell.classList.toggle('notVisible', hasUpsellProducts);
+        }
       }
-    }
-    //show upsell data only if the contain product
-    const showUpsell = () => {
-        const myCart = document.querySelector('form.my-cart');
-        if (myCart) {
-          const upsell = myCart.querySelector('.swiper.custom_upsell');
-          if (upsell) {
-            const upsellProducts = document.querySelectorAll('.swiper-slide.upsell_main');
-            const hasUpsellProducts = upsellProducts.length == 0;
-            upsell.classList.toggle('notVisible', hasUpsellProducts);
-          }
-        }
-    };
-    //init functionalities swiper upsell by pdm
-    const initUpsellSwiper = () => {
-      displayCard();
-      showUpsell();
-      const upsell = upsellSwiper();
-        const isMobile = window.innerWidth <= 1179;
-        if(isMobile && upsell){
-          upsell.init();
-        }
-    }
-    window.initUpsellSwiper =   initUpsellSwiper; 
-  </script>
+  };
+  //init functionalities swiper upsell by pdm
+  const initUpsellSwiper = () => {
+    displayCard();
+    showUpsell();
+    const upsell = upsellSwiper();
+      const isMobile = window.innerWidth <= 1179;
+      if(isMobile && upsell){
+        upsell.init();
+      }
+  }
+  window.initUpsellSwiper =   initUpsellSwiper; 
+</script>
 
 <script type="module"> import { configureCart, subscribeToCartSectionsUpdate, cartRequestAdd, cartRequestChange, getCartState } from '{{ "liquid-ajax-cart-v1.11.1.js" | asset_url  }}'; 
 	configureCart('addToCartCssClass', 'js-my-cart-open'); 
-  	initUpsellSwiper(); //Upsell Swiper PDM when add product need show upsell slider
+  initUpsellSwiper(); //Upsell Swiper PDM when add product need show upsell slider
 
 	subscribeToCartSectionsUpdate( sections => {
 
@@ -135,7 +134,7 @@
 		});
 	}
 
-    function gift(productId, productQuantity, priceLimit, discountCode = '') {
+  function gift(productId, productQuantity, priceLimit, discountCode = '') {
         fetch('/cart.js')
             .then(response => response.json())
             .then(cart => {
@@ -167,5 +166,5 @@
 					},  {} )
 				}
 		});
-    }
+  }
 </script> 

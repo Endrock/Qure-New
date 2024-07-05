@@ -51,14 +51,6 @@
               "heading": "🤍 Rediscover The Qure"
             }
           },
-          "banner_BeVKei": {
-            "type": "banner",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/header_drop1.webp",
-              "button_label": "Shop [Micro-Infusion]: reduce look of wrinkles",
-              "button_url": "https:\/\/www.qureskincare.com\/pages\/microinfusion"
-            }
-          },
           "banner_jrcxU4": {
             "type": "banner",
             "settings": {
@@ -103,7 +95,6 @@
         "block_order": [
           "announcement_TPxBgi",
           "tab_3Wyyea",
-          "banner_BeVKei",
           "banner_jrcxU4",
           "banner_CiNYWN",
           "banner_9fKdQK",
