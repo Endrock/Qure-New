@@ -334,6 +334,75 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // end pdm product landing sales
+
+  //  micro-infusion landing page purchase process test price
+
+  let dataPriceTest = document.body.getAttribute('data-test-price');
+  if (dataPriceTest === 'true') {
+    console.log('test price');
+
+    // Elimina el contenedor original
+    let InputFourthStepOriginal = document.querySelector('.landing-fourth-inputs-original');
+    if (InputFourthStepOriginal) {
+      InputFourthStepOriginal.remove();
+    }
+
+    // Oculta los títulos del contenedor de prueba
+    let inputFourthStepTest = document.querySelector('.landing-fourth-inputs-test');
+    if (inputFourthStepTest) {
+      let originalInputFourthStepTitleOriginals = inputFourthStepTest.querySelectorAll('.step4-card-title-original');
+      originalInputFourthStepTitleOriginals.forEach(function(title) {
+        title.style.display = 'none';
+      });
+    }
+
+    let itemWithPriceOriginal = document.querySelectorAll('.step4-card-value-props__information--original-price');
+    itemWithPriceOriginal.forEach(function(item) {
+      item.style.display = 'none';
+    })
+
+    let valuePropsNoRefillOriginals = document.querySelectorAll('.step4-card-value-props__information--original');
+    valuePropsNoRefillOriginals.forEach(function(value) {
+      value.style.display = 'none';
+    });
+
+  } else {
+    console.log('original price');
+
+    // Elimina el contenedor de prueba
+    let inputFourthStepTest = document.querySelector('.landing-fourth-inputs-test');
+    if (inputFourthStepTest) {
+      inputFourthStepTest.remove();
+    }
+
+    // Oculta los títulos del contenedor original
+    let originalInputFourthStepOriginal = document.querySelector('.landing-fourth-inputs-original');
+    if (originalInputFourthStepOriginal) {
+      let testInputFourthStepTitleTests = originalInputFourthStepOriginal.querySelectorAll('.step4-card-title-test');
+      testInputFourthStepTitleTests.forEach(function(title) {
+        title.style.display = 'none';
+      });
+    }
+
+    let itemWithPriceTest = document.querySelectorAll('.step4-card-value-props__information--test-price');
+    itemWithPriceTest.forEach(function(item) {
+      item.style.display = 'none';
+    })
+
+    let valuePropsNoRefillTess = document.querySelectorAll('.step4-card-value-props__information--test');
+    valuePropsNoRefillTess.forEach(function(value) {
+      value.style.display = 'none';
+    });
+    
+    let inputToCheck = dataPriceTest === 'true' ? '.landing-fourth-inputs-test' : '.landing-fourth-inputs-original';
+    let inputRadio = document.querySelector(`${inputToCheck} input[type="radio"]`);
+    if (inputRadio) {
+      inputRadio.checked = true;
+    }
+    
+  }
+
+  // end micro-infusion landing page purchase process test price
 });
 
 

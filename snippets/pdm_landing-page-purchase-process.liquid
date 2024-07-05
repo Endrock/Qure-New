@@ -241,11 +241,12 @@
         <div class="landing-fourth-title-container">
           <h3>{{ general_settings.step_4_title }}</h3>
         </div>
-        <div class="landing-fourth-inputs-container">
+        <div class="landing-fourth-inputs-container landing-fourth-inputs-original">
           {% render 'pdm_landing-purchase-step4-inputs',
             productRefill: products1_refill_product,
             productRefill2: products1_refill_product_2,
             productRefillInfo: products1_refill_info,
+            sellingPlan: products1_refill_product.selling_plan_groups[0].selling_plans[0].id
             generalSettings: general_settings,
             checkIcon: checkIcon,
             crossIcon: crossIcon,
@@ -258,6 +259,7 @@
             productRefill: products2_refill_product,
             productRefill2: products2_refill_product_2,
             productRefillInfo: products2_refill_info,
+            sellingPlan: products1_refill_product.selling_plan_groups[0].selling_plans[0].id
             generalSettings: general_settings,
             checkIcon: checkIcon,
             crossIcon: crossIcon,
@@ -270,6 +272,48 @@
             productRefill: products3_refill_product,
             productRefill2: products3_refill_product_2,
             productRefillInfo: products3_refill_info,
+            sellingPlan: products1_refill_product.selling_plan_groups[0].selling_plans[0].id
+            generalSettings: general_settings,
+            checkIcon: checkIcon,
+            crossIcon: crossIcon,
+            starIcon: starIcon,
+            parentContainer: 'parent-products6',
+            uniqueId: 'collapseSix',
+            name: 'products6'
+          %}
+        </div>
+        <div class="landing-fourth-inputs-container landing-fourth-inputs-test">
+          {% render 'pdm_landing-purchase-step4-inputs',
+            productRefill: products1_refill_product,
+            productRefill2: products1_refill_product_2,
+            productRefillInfo: products1_refill_info,
+            sellingPlan: 1234567890,
+            generalSettings: general_settings,
+            checkIcon: checkIcon,
+            crossIcon: crossIcon,
+            starIcon: starIcon,
+            uniqueId: 'collapseFour',
+            parentContainer: 'parent-products4',
+            name: 'products4'
+          %}
+          {% render 'pdm_landing-purchase-step4-inputs',
+            productRefill: products2_refill_product,
+            productRefill2: products2_refill_product_2,
+            productRefillInfo: products2_refill_info,
+            sellingPlan: 1234567890,
+            generalSettings: general_settings,
+            checkIcon: checkIcon,
+            crossIcon: crossIcon,
+            starIcon: starIcon,
+            uniqueId: 'collapseFive',
+            parentContainer: 'parent-products5',
+            name: 'products5'
+          %}
+          {% render 'pdm_landing-purchase-step4-inputs',
+            productRefill: products3_refill_product,
+            productRefill2: products3_refill_product_2,
+            productRefillInfo: products3_refill_info,
+            sellingPlan: 1234567890,
             generalSettings: general_settings,
             checkIcon: checkIcon,
             crossIcon: crossIcon,

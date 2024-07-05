@@ -28,11 +28,6 @@
 
 {% endcomment %}
 
-<script>
-  console.log('selling plans product' , {{ productRefill.selling_plan_groups[0].selling_plans | json}})
-  console.log('selling plans refill' , {{ productRefill2.selling_plan_groups[0].selling_plans | json}})
-</script>
-
 <div
   id="inputs-{{ name }}"
   class="inputs-{{ name }} {% if name == 'products4' %} show-inputs {% endif %}"
@@ -48,7 +43,7 @@
     value='{
       "position":1, 
       "id":{{ productRefill.selected_or_first_available_variant.id }}, 
-      "sellingPlanId":{{ productRefill.selling_plan_groups[0].selling_plans[0].id }},
+      "sellingPlanId":{{ sellingPlan }},
       "titleBundle":"{{ productRefill.title }}",
       "input":"{{ name }}"
     }'
