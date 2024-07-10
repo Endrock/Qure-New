@@ -290,11 +290,12 @@
         "content_DLpMJ6",
         "code_ENeDfJ"
       ],
+      "disabled": true,
       "custom_css": [
 
       ],
       "settings": {
-        "classname": "imageText buzz_about buzz_original",
+        "classname": "imageText buzz_about",
         "column_image": 6,
         "column_content": 6
       }
@@ -322,8 +323,9 @@
         "content_Hham8b",
         "image_VkznhH"
       ],
+      "disabled": true,
       "settings": {
-        "classname": "imageText section imageText_original",
+        "classname": "imageText section",
         "column_image": 6,
         "column_content": 6
       }
@@ -351,8 +353,9 @@
         "image_NwMbgP",
         "content_XdKeWR"
       ],
+      "disabled": true,
       "settings": {
-        "classname": "imageText section imageText_original_2",
+        "classname": "imageText section",
         "column_image": 6,
         "column_content": 6
       }

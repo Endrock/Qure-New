@@ -2124,23 +2124,14 @@
 }
 
 
-/* MI LP Science Section AB test */
+/* MI LP Science Section */
+
 .science-section-container{
-  display: none;
-}
-
-body[data-science-test='true'] .buzz_original,
-body[data-science-test='true'] .imageText_original,
-body[data-science-test='true'] .imageText_original_2{
-  display: none;
-}
-
-body[data-science-test='true'] .science-section-container{
   display: block;
   padding: 56px 0;
 }
 @media screen and (max-width: 768px){
-  body[data-science-test='true'] .science-section-container{
+  .science-section-container{
     padding: 0px 0px 12px;
   }
   .science-section-container .container{

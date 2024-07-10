@@ -1620,3 +1620,239 @@ body[class~="page.sunil-mi-landing"] .product-price{
   background-color: unset;
 }
 /* end Dermatologist Section AB test  */
+
+
+/* MI LP Science Section */
+
+.science-section-container{
+  display: block;
+  padding: 56px 0;
+}
+@media screen and (max-width: 768px){
+  .science-section-container{
+    padding: 0px 0px 12px;
+  }
+  .science-section-container .container{
+    padding: 0 !important;
+  }
+}
+
+.science-section-container .container .science-section-wrapper{
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 768px){
+  .science-section-container .container .science-section-wrapper{
+    flex-direction: column;
+  }
+}
+
+.science-section-container .container .science-section-wrapper .left-panel{
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px){
+  .science-section-container .container .science-section-wrapper .left-panel{
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.science-section-container .container .science-section-wrapper .left-panel .science-video-container-horizontal{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+}
+
+@media screen and (max-width: 768px) {
+  .science-section-container .container .science-section-wrapper .left-panel .science-video-container-horizontal{
+    display: none;
+    width: 100%;
+  }
+}
+
+.science-section-container .container .science-section-wrapper .left-panel .science-video-container-horizontal video{
+  width: 100%;
+  height: auto;
+}
+
+.science-section-container .container .science-section-wrapper .left-panel .science-video-container-vertical{
+  width: 472px;
+  height: 482px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px){
+  .science-section-container .container .science-section-wrapper .left-panel .science-video-container-vertical{
+    display: flex;
+    width: 100%;
+    height: 282px;
+  }
+}
+
+.science-section-container .container .science-section-wrapper .left-panel .science-video-container-vertical video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.science-section-container .container .science-section-wrapper .right-panel{
+  width: 50%;
+  display: flex;
+}
+
+@media screen and (max-width: 768px){
+  .science-section-container .container .science-section-wrapper .right-panel{
+    width: 100%;
+    padding: 24px 16px 24px;
+  }
+}
+
+.science-section-container .container .science-section-wrapper .right-panel .science-text-container{
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  width: 592px;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 1024px){
+  .science-section-container .container .science-section-wrapper .right-panel .science-text-container{
+    width: 100%;
+    gap: 16px;
+  }
+}
+
+.science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-information {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media screen and (max-width: 768px){
+  .science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-information {
+    gap: 8px;
+  }
+}
+
+.science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-information h2{
+  margin: 0;
+  font-family: 'Canela Web';
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 46px;
+}
+
+@media screen and (max-width: 768px){
+  .science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-information h2{
+    font-family: 'Canela Web';
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 38px;
+  }
+}
+
+.science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-information p{
+  margin: 0;
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px){
+  .science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-information p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+}
+
+.science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-value-props{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+@media screen and (max-width: 768px){
+  .science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-value-props{
+    gap: 16px;
+  }
+}
+
+.science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-value-props .value-prop-card{
+  width: 278px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+@media screen and (max-width: 1024px){
+  .science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-value-props .value-prop-card{
+    width: 100%;
+  }
+}
+
+.science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-value-props .value-prop-card .value-prop-card__img{
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+}
+
+.science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-value-props .value-prop-card .value-prop-card__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-value-props .value-prop-card .value-prop-card__text > p{
+  font-family: 'Poppins';
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+}
+
+.science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-anchor-container > a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 268px;
+  height: 56px;
+  border-radius: 100px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-family: 'Poppins';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px){
+  .science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-anchor-container > a{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-anchor-container{
+    padding-top: 8px;
+  }
+}
+
+/* end MI LP Science Section */
