@@ -142,7 +142,7 @@
     .custom-shadow {
         bottom: 130px !important;
     }
-    .stamped-launcher-button, iframe#launcher {
+    /*.stamped-launcher-button, */iframe#launcher {
         z-index: 8 !important;
     }
 }

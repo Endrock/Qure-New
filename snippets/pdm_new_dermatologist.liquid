@@ -1,22 +1,33 @@
+{% comment %}
+  This snippet is used in the new_trusted.liquid
+  It renders the dermatologist section
+  all the data is passed as settings
+
+  Accepts:
+  - settings: {Object} - The settings of the section.
+  Usage:
+  {% render 'pdm_new_dermatologist', settings: section.settings %}
+{% endcomment %}
+
 <div class="new_trusted_left">
   <div class="new_trusted_left--wrapper">
     <div class="trusted_recomendation_container">
-      {% if section.settings.dermatoglis_check != blank %}
-        {{ section.settings.dermatoglis_check | image_url: width: 20 | image_tag: alt: 'check icon' }}
+      {% if settings.dermatoglis_check != blank %}
+        {{ settings.dermatoglis_check | image_url: width: 20 | image_tag: alt: 'check icon' }}
       {% endif %}
       <p>
-        {{ section.settings.dermatoglist_check_text | upcase }}
+        {{ settings.dermatoglist_check_text | upcase }}
       </p>
     </div>
     <div class="trusted_opinon_container">
-      {{ section.settings.dermatoglist_left_subtext }}
+      {{ settings.dermatoglist_left_subtext }}
     </div>
   </div>
 </div>
 <div class="new_trusted_right">
   <div
     style="
-      background-image: url({{ section.settings.dermatoglist_right_image | image_url: width: 600 }});
+      background-image: url({{ settings.dermatoglist_right_image | image_url: width: 600 }});
       background-size: cover;
       background-repeat: no-repeat;
     "
@@ -24,17 +35,17 @@
   >
     <div class="new_trusted_right_wrapper-information">
       <div class="new_trusted_right_wrapper-information-text">
-        <h3>{{ section.settings.dermatoglist_right_name }}</h3>
-        <p>{{ section.settings.dermatoglist_right_especiality }}</p>
+        <h3>{{ settings.dermatoglist_right_name }}</h3>
+        <p>{{ settings.dermatoglist_right_especiality }}</p>
       </div>
       <div class="play_btn">
-				<a class="popup-youtube" rel="nofollow" href="{{ section.settings.dermatoglist_right_video_url }}">
-          {% if section.settings.dermatoglist_right_play != blank %}
-					  {{ section.settings.dermatoglist_right_play | image_url: width: 48 | image_tag: alt: 'play icon' }}
+        <a class="popup-youtube" rel="nofollow" href="{{ settings.dermatoglist_right_video_url }}">
+          {% if settings.dermatoglist_right_play != blank %}
+            {{ settings.dermatoglist_right_play | image_url: width: 48 | image_tag: alt: 'play icon' }}
           {% else %}
-            <img src="{{ 'trusted_play_md.svg' | asset_url }}" />
+            <img src="{{ 'trusted_play_md.svg' | asset_url }}">
           {% endif %}
-				</a>
+        </a>
       </div>
     </div>
   </div>

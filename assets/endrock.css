@@ -1415,64 +1415,68 @@ body[class~="page.sunil-mi-landing"] .product-price{
 /* end pdm_product-landing-sales */
 
 /* Dermatologist Section AB test  */
-#new-dermatolgist{
+
+.homepage .quote_original_dermatologist{
   display: none;
 }
 
-body[data-dermatologist-test='true'] .quote_original_dermatologist{
-  display: none;
-}
-body[data-dermatologist-test='true'] .popyoutube_original_dermatologist{
+.homepage .popyoutube_original_dermatologist{
   background-color: unset !important;
   max-width: none !important;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body[data-dermatologist-test='true'] .popyoutube_original_dermatologist > span > h6{
+
+.homepage .popyoutube_original_dermatologist > span > h6{
   display: none;
 }
-body[data-dermatologist-test='true'] .popyoutube_original_dermatologist > span > img{
+
+.homepage .popyoutube_original_dermatologist > span > img{
   height: 54px;
 }
+
 @media screen and (max-width: 768px) {
-  body[data-dermatologist-test='true'] .homepage .trusted_bl.new_trusted_bl {
+  .homepage .trusted_bl.new_trusted_bl {
     background: unset;
   }
   
 }
 
-body[data-dermatologist-test='true'] .trusted_bl.new_trusted_bl .trusted_cl .container .section_header{
+.homepage .trusted_bl.new_trusted_bl .trusted_cl .container .section_header{
   display: none !important;
 }
-body[data-dermatologist-test='true'] .trusted_bl.new_trusted_bl .trusted_cl{
+
+.homepage .trusted_bl.new_trusted_bl .trusted_cl{
   background: unset;
   background-color: white;
 }
 
-body[data-dermatologist-test='true'] .original-dermatologist{
+.homepage .original-dermatologist{
   display: none;
 }
 
-body[data-dermatologist-test='true'] #new-dermatolgist{
+.homepage #new-dermatolgist{
   display: flex;
   flex-direction: row;
 }
+
 @media screen and (max-width: 768px) {
-  body[data-dermatologist-test='true'] #new-dermatolgist{
+  .homepage #new-dermatolgist{
     flex-direction: column-reverse;
     gap: 32px;
   }
 }
 
-#new-dermatolgist .new_trusted_left{
+.homepage #new-dermatolgist .new_trusted_left{
   display: flex;
   flex-direction: column;
   gap: 24px;
   width: 55.28%;
 }
+
 @media screen and (max-width: 768px) {
-  #new-dermatolgist .new_trusted_left{
+  .homepage #new-dermatolgist .new_trusted_left{
     width: 100%;
   }
 }

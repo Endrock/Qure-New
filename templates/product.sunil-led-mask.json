@@ -56,6 +56,7 @@
         },
         "timer_abVU3e": {
           "type": "timer",
+          "disabled": true,
           "settings": {
             "heading": "4th of July Limited Time Offer!",
             "text": "<p>Get <em><strong>$50 OFF<\/strong><\/em><strong> <\/strong>with code: <strong>FREEDOMGLOW<\/strong><\/p>",
@@ -520,6 +521,18 @@
             "client": "John P.",
             "code": ""
           }
+        },
+        "result_W8bKNg": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Jessica_k_led_mask_b_a.png",
+            "heading": "Thrilled with the results!",
+            "text": "<p>\"I am 45 so I am fighting signs of aging, but also still dealing with acne flare ups. I haven’t had a single breakout since I started using the mask, plus I notice a definite smoothing of fine wrinkles on my cheeks & around my eyes. I recommend this product to anyone. Well worth the investment.\"<\/p>",
+            "image_country": "shopify:\/\/shop_images\/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "US",
+            "client": "Jessica K.",
+            "code": ""
+          }
         }
       },
       "block_order": [
@@ -532,7 +545,8 @@
         "result_FcTEnw",
         "result_Bwe94z",
         "result_GAd3YG",
-        "result_U4khQD"
+        "result_U4khQD",
+        "result_W8bKNg"
       ],
       "settings": {
         "classname": "mi_landing_result",

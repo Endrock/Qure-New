@@ -32,7 +32,7 @@
             {% endif %}
             {% if template == 'index' %}
                 <div id="new-dermatolgist">
-                    {% render 'pdm_new_dermatologist' %}
+                    {% render 'pdm_new_dermatologist' settings: section.settings %}
                 </div>
             {% endif %}
             <div class="row {% if template == 'index' %} original-dermatologist {% endif %}">
