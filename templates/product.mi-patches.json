@@ -158,8 +158,14 @@
         }
       },
       "block_order": [
-        "image_Ur9jQT",
-        "content_3efCFm"
+        "content_CyDBCN",
+        "content_GiwwRp",
+        "code_heG6wK"
+      ],
+      "custom_css": [
+        ".row {align-items: center !important;}",
+        ".code_mobile {margin-top: -10px; padding-bottom: 10px;}",
+        ".d-md-block .wistia_responsive_padding {padding: 150px !important;}"
       ],
       "settings": {
         "classname": "section",

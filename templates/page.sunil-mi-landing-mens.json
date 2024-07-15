@@ -218,6 +218,25 @@
             "image": "shopify:\/\/shop_images\/cosmopolitan.svg",
             "mobile_hide": true
           }
+        },
+        "science_section_block_zcp3g7": {
+          "type": "science_section_block",
+          "settings": {
+            "video_science_section": "shopify:\/\/files\/videos\/-f2d8-4301-becc-9db87b3963fa.mp4",
+            "video_science_section_vertical": "shopify:\/\/files\/videos\/-35ec-494e-a74a-4c3407b738c8.mp4",
+            "science_heading": "Qure’s Micro-Infusion Goes Where Your Skin Cream Can’t…",
+            "science_subheading": "Its tiny, almost painless, microneedles penetrate beyond the skin’s surface increasing serum absorption and delivering powerful active ingredients EXACTLY where they’re needed!",
+            "value_prop_img_1": "shopify:\/\/shop_images\/percent.png",
+            "value_prop_text_1": "<p>Agreed their <strong>skin looked better<\/strong> after Micro-Infusion treatments<\/p>",
+            "value_prop_img_2": "shopify:\/\/shop_images\/percent_1.png",
+            "value_prop_text_2": "<p>Agreed their <strong>fine lines looked smoother<\/strong><\/p>",
+            "value_prop_img_3": "shopify:\/\/shop_images\/percent_2.png",
+            "value_prop_text_3": "<p>Reported skin appeared more <strong>hydrated and glowy<\/strong><\/p>",
+            "value_prop_img_4": "shopify:\/\/shop_images\/percent_3.png",
+            "value_prop_text_4": "<p>Prefer this <strong>convenient Micro-Infusion treatment<\/strong> over going to clinic treatments<\/p>",
+            "cta_text": "Shop Now",
+            "cta_link": "productSubscription"
+          }
         }
       },
       "block_order": [
@@ -225,7 +244,8 @@
         "image_CE8JHg",
         "image_DGN3zc",
         "image_wdPDGq",
-        "image_TXKk7A"
+        "image_TXKk7A",
+        "science_section_block_zcp3g7"
       ],
       "settings": {
         "heading": ""

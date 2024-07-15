@@ -1856,3 +1856,8 @@ body[class~="page.sunil-mi-landing"] .product-price{
 }
 
 /* end MI LP Science Section */
+
+/* LP Science section Mens */
+.mi_landing.mi_landing_men .science-section-container {
+  display: none;
+}
