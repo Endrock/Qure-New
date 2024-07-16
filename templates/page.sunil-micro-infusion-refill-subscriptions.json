@@ -645,12 +645,23 @@
         },
         "video_D7zBLA": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/trusted_anthony.webp",
             "video_url": "https:\/\/www.youtube.com\/watch?v=gGVKgTHloXw",
             "video_label": "Watch Video",
             "wistia_id": "",
             "text": "<p>\"The Qure’s System is the closest thing that you can get to bringing your aesthetician home with you!\"<\/p><h6><strong>Dr Anthony Youn<\/strong> Board-Certified Plastic Surgeon<\/h6>"
+          }
+        },
+        "video_37LLVV": {
+          "type": "video",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/trusted_dylan.webp",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=mVdncsTAXiA",
+            "video_label": "Watch Video",
+            "wistia_id": "",
+            "text": "<p>\"The Qure micro-infusion system takes it a step further by not only increasing hydration but also delivering growth factors right where they need to be.\"<\/p><h6><strong>Dr Dylan Greeney, <\/strong>Board-Certified Dermatologist<\/h6>"
           }
         },
         "video_zTx4mk": {
@@ -701,6 +712,7 @@
         "video_76qkgq",
         "video_R7fmpe",
         "video_D7zBLA",
+        "video_37LLVV",
         "video_zTx4mk",
         "video_dcczF3",
         "video_fbrc7r",

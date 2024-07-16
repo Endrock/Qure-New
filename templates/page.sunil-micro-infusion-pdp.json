@@ -504,25 +504,25 @@
             "text": "<p>\"I have liked this in between my in-office treatments. It’s convenient, great before events, and safe even for beginners.\"<\/p><h6><strong>Dr Aleksandra Brown, <\/strong>Board-Certified Dermatologist<\/h6>"
           }
         },
+        "video_VYhrrF": {
+          "type": "video",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/trusted_dylan.webp",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=mVdncsTAXiA",
+            "video_label": "Watch Video",
+            "wistia_id": "",
+            "text": "<p>\"The Qure micro-infusion system takes it a step further by not only increasing hydration but also delivering growth factors right where they need to be.\"<\/p><h6><strong>Dr Dylan Greeney, <\/strong>Board-Certified Dermatologist<\/h6>"
+          }
+        },
         "video_iBtttp": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/trusted_anthony.webp",
             "video_url": "https:\/\/www.youtube.com\/watch?v=gGVKgTHloXw",
             "video_label": "Watch Video",
             "wistia_id": "",
             "text": "<p>\"The Qure’s System is the closest thing that you can get to bringing your aesthetician home with you!\"<\/p><h6><strong>Dr Anthony Youn,<\/strong> Board-Certified Plastic Surgeon<\/h6>"
-          }
-        },
-        "video_kmVPyX": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/trusted_davim.webp",
-            "video_url": "https:\/\/www.youtube.com\/watch?v=0Lxofv19620",
-            "video_label": "Watch Video",
-            "wistia_id": "",
-            "text": "<p>\"Unlike using harsh micro needles or Derma rollers, this one is super safe...\"<\/p><h6><strong>Dr Davin Lim,<\/strong> Certified Dermatologist<\/h6>"
           }
         },
         "video_d8Uixm": {
@@ -546,16 +546,6 @@
             "text": "<p>\"It’s an amazing 5-minute facial with minimal to no downtime! I absolutely love this. Ten out of ten from me.\"<\/p><h6><strong>Dr Doireann O’Leary, <\/strong>Medical Doctor<\/h6>"
           }
         },
-        "video_VYhrrF": {
-          "type": "video",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/trusted_dylan.webp",
-            "video_url": "https:\/\/www.youtube.com\/watch?v=mVdncsTAXiA",
-            "video_label": "Watch Video",
-            "wistia_id": "",
-            "text": "<p>\"The Qure micro-infusion system takes it a step further by not only increasing hydration but also delivering growth factors right where they need to be.\"<\/p><h6><strong>Dr Dylan Greeney, <\/strong>Board-Certified Dermatologist<\/h6>"
-          }
-        },
         "video_ptTnVF": {
           "type": "video",
           "settings": {
@@ -565,6 +555,16 @@
             "wistia_id": "",
             "text": "<p>”..safe for generally all skin tones and types to perform at home without any risk of infection or trauma.” <\/p><h6><strong>Dr Prasanthi Purusothman, <\/strong>General Practitioner & Cosmetic Doctor<\/h6>"
           }
+        },
+        "video_kmVPyX": {
+          "type": "video",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/trusted_davim.webp",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=0Lxofv19620",
+            "video_label": "Watch Video",
+            "wistia_id": "",
+            "text": "<p>\"Unlike using harsh micro needles or Derma rollers, this one is super safe...\"<\/p><h6><strong>Dr Davin Lim,<\/strong> Certified Dermatologist<\/h6>"
+          }
         }
       },
       "block_order": [
@@ -572,12 +572,12 @@
         "feedback_kBwhbe",
         "video_KX3Nyw",
         "video_DmNX4M",
+        "video_VYhrrF",
         "video_iBtttp",
-        "video_kmVPyX",
         "video_d8Uixm",
         "video_rhRLDB",
-        "video_VYhrrF",
-        "video_ptTnVF"
+        "video_ptTnVF",
+        "video_kmVPyX"
       ],
       "settings": {
         "classname": "trusted_bl",
