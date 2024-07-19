@@ -129,7 +129,11 @@
                                     </div>
                                 </li>
                             {% endif %}
-    
+                            <li class="nav__item header_gift_btn d-md-none">
+                                <a href="javascript:;" class="nav__url" onclick="StampedFn.toggleRewardsModal()">
+                                    <img src="{{ 'header-gift.svg' | asset_url }}"  class="fa fa-shopping-cart nav__icon cart-mb-icon" alt="navigation">
+                                </a>
+                            </li>
                             <li class="nav__item cart_btn" data-ajax-cart-toggle-class-button="js-my-cart-open" style="cursor:pointer;">
                                 <a href="{{ routes.cart_url }}" class="nav__url" aria-label="Cart">
                                     <img src="{{ 'cart.svg' | asset_url }}" class="fa fa-shopping-cart nav__icon cart-mb-icon" alt="navigation">

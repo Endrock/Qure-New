@@ -293,6 +293,30 @@
     "results_RAwjmJ": {
       "type": "results",
       "blocks": {
+        "result_EpL9mk": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Shelly_S.png",
+            "heading": "Looking better and better",
+            "text": "<p>\"I have used the Qure Microneedling system for 3 monthly treatments. The results are clearer, plumper and firmer skin. With further treatments I am looking forward to looking better and better.\"<\/p>",
+            "image_country": "shopify:\/\/shop_images\/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Shelly S.",
+            "code": ""
+          }
+        },
+        "result_JNEbr4": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Audrey_M.png",
+            "heading": "Microneedling has been a skin saver!",
+            "text": "<p>\"I bought the refill after I initially ran out of my infusion vials. I am so impressed with the results! As an acne sufferer with minor scarring this has been great in reducing overall texture and making my skin truly glow!\"<\/p>",
+            "image_country": "shopify:\/\/shop_images\/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Audrey M.",
+            "code": ""
+          }
+        },
         "result_eP4AeV": {
           "type": "result",
           "settings": {
@@ -425,18 +449,6 @@
             "code": ""
           }
         },
-        "result_EpL9mk": {
-          "type": "result",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Shelly_S.png",
-            "heading": "Looking better and better",
-            "text": "<p>\"I have used the Qure Microneedling system for 3 monthly treatments. The results are clearer, plumper and firmer skin. With further treatments I am looking forward to looking better and better.\"<\/p>",
-            "image_country": "shopify:\/\/shop_images\/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
-            "text_country": "United States",
-            "client": "Shelly S.",
-            "code": ""
-          }
-        },
         "result_djxhNa": {
           "type": "result",
           "settings": {
@@ -448,21 +460,11 @@
             "client": "Shelby F.",
             "code": ""
           }
-        },
-        "result_JNEbr4": {
-          "type": "result",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Audrey_M.png",
-            "heading": "Microneedling has been a skin saver!",
-            "text": "<p>\"I bought the refill after I initially ran out of my infusion vials. I am so impressed with the results! As an acne sufferer with minor scarring this has been great in reducing overall texture and making my skin truly glow!\"<\/p>",
-            "image_country": "shopify:\/\/shop_images\/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
-            "text_country": "United States",
-            "client": "Audrey M.",
-            "code": ""
-          }
         }
       },
       "block_order": [
+        "result_EpL9mk",
+        "result_JNEbr4",
         "result_eP4AeV",
         "result_Wz8gak",
         "result_nmtgEE",
@@ -474,9 +476,7 @@
         "result_rhcQKL",
         "result_g6zQgr",
         "result_zHPFqU",
-        "result_EpL9mk",
-        "result_djxhNa",
-        "result_JNEbr4"
+        "result_djxhNa"
       ],
       "settings": {
         "classname": "mi_landing_result",
@@ -612,14 +612,14 @@
           "type": "feedback",
           "settings": {
             "image": "shopify:\/\/shop_images\/cl_shah.webp",
-            "text": "<p>\"...[Qure's Micro-Infusion] will help your products <strong>penetrate better<\/strong>\"<\/p><h6><strong>Dr Shah, MD<\/strong>Board-Certified Dermatologist<\/h6>"
+            "text": "<p>\"This treatment is an at-home option for those who want to avoid the hassle or cost of going to the office.\"<\/p><h6><strong>Dr Shah, MD<\/strong>Board-Certified Dermatologist<\/h6>"
           }
         },
         "feedback_mKipFz": {
           "type": "feedback",
           "settings": {
             "image": "shopify:\/\/shop_images\/cl_max.webp",
-            "text": "<p>\"In terms of safety, the micro stamping devices, this [Qure's Micro-Infusion] is great...\"<\/p><h6><strong>Dr Maxfield, MD<\/strong>Board-Certified Dermatologist<\/h6>"
+            "text": "<p>\"Brighter looking, more even skin, minimum pain, and little downtime, just a few reasons why this is my favorite at-home treatment.\"<\/p><h6><strong>Dr Maxfield, MD<\/strong>Board-Certified Dermatologist<\/h6>"
           }
         },
         "video_76qkgq": {
