@@ -247,3 +247,23 @@ function getCookie(name) {
     }
     return null;
 }
+
+function openChat() {
+    var iframe = document.getElementById('launcher');
+  
+    if (iframe) {
+      setTimeout(function() {
+        var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+  
+        var button = iframeDocument.querySelector('[data-testid="launcher"]');
+  
+        if (button) {
+          button.click();
+        } else {
+          console.error('Button not found in iframe');
+        }
+      }, 2000);
+    } else {
+      console.error('Iframe not found');
+    }
+}

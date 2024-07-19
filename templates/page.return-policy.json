@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main": {
+      "type": "temp-return-policy",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

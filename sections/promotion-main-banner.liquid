@@ -1,44 +1,13 @@
-{% comment %} <link rel="stylesheet" href="{{ 'homepage_promo.css' | asset_url }}">
+<link rel="stylesheet" href="{{ 'homepage_promo.css' | asset_url }}">
 
-<!-- -- main banner start -- -->
-<div class="main_banner">
-    <picture>
-        <source media="(min-width:1920px)" srcset="https://qureskincaredns.com/new/assets/homepage_banner_desk2.webp"
-            class="img-fluid bg_banner" width="432" height="167">
-        <source media="(min-width:1600px)" srcset="https://qureskincaredns.com/new/assets/homepage_banner_desk2.webp"
-            class="img-fluid bg_banner" width="432" height="167">
-        <source media="(min-width:1100px)" srcset="https://qureskincaredns.com/new/assets/homepage_banner_desk2.webp"
-            class="img-fluid bg_banner" width="432" height="167">
-        <source media="(min-width:720px)" srcset="https://qureskincaredns.com/new/assets/homepage_banner_desk2.webp" class="img-fluid bg_banner"
-            width="432" height="167">
-        <source media="(min-width:540px)" srcset="https://qureskincaredns.com/new/assets/homepage_banner_mob2.webp" class="img-fluid bg_banner"
-            width="125" height="173">
-        <img src="https://qureskincaredns.com/new/assets/homepage_banner_mob2.webp" width="125" height="173" alt="" class="img-fluid bg_banner">
-    </picture>
-    <div class="main_b_wrapper">
-        <div class="container">
-            <div class="m_b_content">
-                <div class="section_header pb-0">
-                    <h1 class="title-xl paddingB text-center text-md-start">New Onyx <br>Q-Rejuvalight Pro</h1>
-                </div>
-                <p class="pb-4 text-center text-md-start" style="font-weight:300"><span
-                        style="font-style: italic">Best-Selling </span>
-                    Customizable <span style="font-weight:400">Anti-Aging &
-                        Anti-Acne LED Mask</span> now in a new colour
-                </p>
-                <div class="btn-auto text-center text-md-start">
-                    <a href="https://www.qureskincare.com/products/q-rejuvalight-pro-facewear" class="btn_black"
-                        aria-label="Shop Best Sellers">Shop
-                        Now</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- -- main banner end -- --> {% endcomment %}
-
-
-<link rel="stylesheet" href="{{ 'homepage.css' | asset_url }}">
+<style>
+    p.text-md-start {
+        font-weight:300 !important;
+    }
+    p.text-md-start strong {
+        font-weight: 400 !important;
+    }
+</style>
 
 <!-- -- main banner start -- -->
 <div class="main_banner">
@@ -59,29 +28,22 @@
     <div class="main_b_wrapper">
         <div class="container">
             <div class="m_b_content">
-                {% if section.settings.heading != blank %}
-                    <div class="section_header pb-0">
-                      {% if section.settings.heading_tag == 'h1' %}
-                          <h1 class="title-xl paddingB text-center text-md-start">{{ section.settings.heading }}</h1>
-                        {% else %}
-                          <h2 class="title-xl paddingB text-center text-md-start">{{ section.settings.heading }}</h2>
-                      {% endif %}
-                    </div>
-                {% endif %}
+                <div class="section_header pb-0">
+                    <h1 class="title-xl paddingB text-center text-md-start">{{ section.settings.heading |  replace: '\n', '<br />' }}</h1>
+                </div>
+
+                {{ section.settings.text |  replace:  '<p>', '<p class="pb-4 text-center text-md-start">' }}
 
                 {%- for block in section.blocks -%}
                     <div class="btn-auto text-center text-md-start">
                         <a href="{{ block.settings.link_url }}" class="btn_black" aria-label="{{ block.settings.link_label | escape }}">{{ block.settings.link_label }}</a>
                     </div>
                 {%- endfor -%}
-
-                {{ section.settings.text |  replace:  '<p>', '<p class="pt-2 d-none d-md-block">' }}
             </div>
         </div>
     </div>
 </div>
 <!-- -- main banner end -- -->
-
 
 {% schema %}
     {
