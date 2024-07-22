@@ -16,10 +16,21 @@ usage: {% render 'pdm_upsell_cards_slide', image_slide:image_slide, title_copy:t
     <div class="upsell_product">
       <img src="{{ image_slide }}">
     </div>
-    <div class="upsell_content">
+    
+    <div class="upsell_content upsell_content_original">
       <h4>{{ title_copy }}</h4>
       <p>{{ description_copy }}</p>
+      <span class="upsell_content-price-a">{{ product_slide.price | money_without_trailing_zeros }}</span>
     </div>
+
+    <div class="upsell_content upsell_content_test">
+      <div class="upsell_content-text">
+        <h4>{{ title_copy }}</h4>
+        <p>{{ description_copy }}</p>
+      </div>
+      <span class="upsell_content-price-a">{{ product_slide.price | money_without_trailing_zeros }}</span>
+    </div>
+
   </div>
   <div class="upsell_price">
     <div class="upsell_amt">

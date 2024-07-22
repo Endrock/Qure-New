@@ -81,6 +81,11 @@
       "settings": {
       }
     },
+    "temp": {
+      "type": "temp-index",
+      "settings": {
+      }
+    },
     "promotion_main_banner_48gkNr": {
       "type": "promotion-main-banner",
       "blocks": {
@@ -101,29 +106,6 @@
         "text": "<p><em>Best-Selling <\/em>Customizable <strong>Anti-Aging<\/strong> & <strong>Anti-Acne LED Mask<\/strong> now in a new colour<\/p>",
         "image": "shopify:\/\/shop_images\/homepage_banner_desk_4d4f5e11-a9be-46af-87cb-d309a79c1b6a.webp",
         "image_mobile": "shopify:\/\/shop_images\/homepage_banner_mob_4f6f8948-68d3-4a64-829e-6cfc65ea6ef8.webp"
-      }
-    },
-    "main_banner_rJmjKt": {
-      "type": "main-banner",
-      "blocks": {
-        "link_6iQ8RV": {
-          "type": "link",
-          "settings": {
-            "link_label": "Shop Best Sellers",
-            "link_url": "shopify:\/\/collections\/best-sellers"
-          }
-        }
-      },
-      "block_order": [
-        "link_6iQ8RV"
-      ],
-      "disabled": true,
-      "settings": {
-        "heading": "Clinic-level results from home - minus the ‘clinical’ costs.",
-        "subheading": "smoother, brighter, healthier skin",
-        "text": "<p><strong>50,000+ <\/strong>customers feel more confident in their own skin.<\/p>",
-        "image": "shopify:\/\/shop_images\/homepage_banner_desk1.webp",
-        "image_mobile": "shopify:\/\/shop_images\/homepage_banner_mob1.webp"
       }
     },
     "featuredin_extended_h8hWKY": {
@@ -202,74 +184,9 @@
         "image_jfT3fA",
         "image_Nttj3a"
       ],
-      "settings": {
-        "heading": "FEATURED IN"
-      }
-    },
-    "featuredin_cgKaqj": {
-      "type": "featuredin",
-      "blocks": {
-        "heading_YyDyVn": {
-          "type": "heading",
-          "settings": {
-            "heading": "FEATURED IN"
-          }
-        },
-        "image_WfRncU": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/vogue.svg",
-            "mobile_hide": false
-          }
-        },
-        "image_MEEkak": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/elle.svg",
-            "mobile_hide": false
-          }
-        },
-        "image_dcMyYm": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/cosmopolitan.svg",
-            "mobile_hide": false
-          }
-        },
-        "image_fY8aLL": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/grazia.svg",
-            "mobile_hide": false
-          }
-        },
-        "image_Ft78hT": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/glamour.svg",
-            "mobile_hide": false
-          }
-        },
-        "image_KNeCQ7": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/bazaar_889503c3-d4d6-4eb0-b7be-dd1212b56c58.png",
-            "mobile_hide": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_YyDyVn",
-        "image_WfRncU",
-        "image_MEEkak",
-        "image_dcMyYm",
-        "image_fY8aLL",
-        "image_Ft78hT",
-        "image_KNeCQ7"
-      ],
       "disabled": true,
       "settings": {
-        "heading": ""
+        "heading": "FEATURED IN"
       }
     },
     "uses_gjAiWF": {
@@ -323,6 +240,7 @@
         "column_fwkxwx",
         "column_XycrHX"
       ],
+      "disabled": true,
       "settings": {
       }
     },
@@ -364,6 +282,7 @@
         "icon_TYWJ97",
         "icon_7DF4yt"
       ],
+      "disabled": true,
       "settings": {
       }
     },
@@ -469,6 +388,7 @@
         "slide_kiTVen",
         "slide_B4zrcd"
       ],
+      "disabled": true,
       "settings": {
         "classname": "skincare_slider bg_gradient_yellow_bt",
         "heading": "Science-backed skincare that’s proven to work.",
@@ -565,6 +485,7 @@
         "video_4eMcWB",
         "video_Kb99Wn"
       ],
+      "disabled": true,
       "settings": {
         "classname": "trusted_bl",
         "heading": "Trusted and recommended by world leading Dermatologists",
@@ -622,6 +543,7 @@
         "product_QKidrm",
         "product_JQnqag"
       ],
+      "disabled": true,
       "settings": {
       }
     },
@@ -687,6 +609,7 @@
         "object_U6RabF",
         "button_NCdWPA"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Personalized treatments for your specific skin type and needs",
         "text": "<p>Your skin is unique. So your treatment should be too.<\/p><p>LED light therapy works be emitting infrared lights in different wavelengths (like red or blue). And each wavelength has its own benefits: red light, for example, stimulates collagen production and blue light kills bacteria.<\/p><p>If you deal with things like sagging or wrinkling skin, acne, or inflammation, you should try Qure light therapy.<\/p>"
@@ -722,6 +645,7 @@
         "object_gKrU3q",
         "object_DXpTpn"
       ],
+      "disabled": true,
       "settings": {
         "classname": "beauty_skincare section bg_yellow",
         "heading": "The beauty of clinical results from home - without the ‘clinical’ costs",
@@ -762,6 +686,7 @@
         "image_qYRbmY",
         "image_z4kpCb"
       ],
+      "disabled": true,
       "settings": {
         "heading": "The future of skincare is",
         "text": "bright",
@@ -782,6 +707,7 @@
       "block_order": [
         "form_G4MGjz"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Personalized solutions for your skin’s unique needs",
         "text": "<p>Answer a few questions and we’ll tell you how to achieve your skincare goals.<\/p>"
@@ -791,9 +717,8 @@
   "order": [
     "main",
     "promotion_main_banner_48gkNr",
-    "main_banner_rJmjKt",
+    "temp",
     "featuredin_extended_h8hWKY",
-    "featuredin_cgKaqj",
     "uses_gjAiWF",
     "icons_list_aYq7xP",
     "before_after_slider_dckiYy",
