@@ -428,12 +428,12 @@ body[data-test-price-upsell="A"] .my-floating-cart form.my-cart .custom_upsell{
   padding: 14px 20px 20px;
 }
 
-body[data-test-price-upsell="A"] .my-floating-cart form.my-cart .custom_upsell > div .upsell_main{
-  height: 278px;
-  max-height: 278px;
-}
-
 @media screen and (width >= 1025px) {
+  body[data-test-price-upsell="A"] .my-floating-cart form.my-cart .custom_upsell > div .upsell_main{
+    height: 278px;
+    max-height: 278px;
+  }
+
   body[data-test-price-upsell="A"] .my-floating-cart form.my-cart .custom_upsell{
     padding: 14px 80px 14px 20px;
   }
