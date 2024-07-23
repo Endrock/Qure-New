@@ -1,0 +1,18 @@
+{% if 
+    template == 'page.qurify-offer' 
+    or template == 'page.why-qurify'
+    or template == 'page.sunil-free-water-report'
+    or template == 'page.sunil-bf-sales'
+%}
+    <script src="{{ '__app-redirect.js' | asset_url }}"></script>
+{% endif %}
+
+{% if
+    product.handle == 'q-urify-water-filter' 
+    or product.handle == 'confidence-booster-bundle'
+    or product.handle == 'youthify-or-glow-set'
+    or product.handle == 'skin-ssentials-set-doctorly-choice'
+    or product.handle == 'q-rify-replacement-water-filter'
+%}
+    <script src="{{ '__app-redirect.js' | asset_url }}"></script>
+{% endif %}

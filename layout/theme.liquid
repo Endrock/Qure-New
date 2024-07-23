@@ -74,6 +74,7 @@
 
     {{ content_for_header }}
 
+    {% include 'redirect' %}
     {% include 'config-layout' %}
 
     <!-- styles endrock -->
@@ -99,7 +100,7 @@
 
 </head>
 
-<body class="{{ template }}">
+<body data-test-price-upsell="A" class="{{ template }}">
 
     <!-- Google Tag Manager (noscript) -- BV -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLP8CZF"
