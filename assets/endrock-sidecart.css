@@ -429,8 +429,8 @@ body[data-test-price-upsell="A"] .my-floating-cart form.my-cart .custom_upsell{
 }
 
 body[data-test-price-upsell="A"] .my-floating-cart form.my-cart .custom_upsell > div .upsell_main{
-  height: 268px;
-  max-height: 268px;
+  height: 278px;
+  max-height: 278px;
 }
 
 @media screen and (width >= 1025px) {
