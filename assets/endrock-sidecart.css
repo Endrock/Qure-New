@@ -415,7 +415,7 @@
   display: none;
 }
 
-.my-floating-cart form.my-cart .custom_upsell > div .upsell_main .upsell_image .upsell_content.upsell_content_original .upsell_content-price-a{
+.my-floating-cart form.my-cart .custom_upsell > div .upsell_main .upsell_image .upsell_content.upsell_content_original .upsell_content-price-wrapper{
   display: none;
 }
 
@@ -448,7 +448,25 @@ body[data-test-price-upsell="A"] .my-floating-cart form.my-cart .custom_upsell >
   display: none;
 }
 
-body[data-test-price-upsell="A"] .my-floating-cart form.my-cart .custom_upsell > div .upsell_main .upsell_image .upsell_content .upsell_content-price-a{
+body[data-test-price-upsell="A"] .my-floating-cart form.my-cart .custom_upsell > div .upsell_main .upsell_image .upsell_content .upsell_content-price-wrapper{
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+
+body[data-test-price-upsell="A"] .my-floating-cart form.my-cart .custom_upsell > div .upsell_main .upsell_image .upsell_content .upsell_content-price-wrapper .upsell_content-price-wrapper--full{
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: 0.12px;
+  color: #afafaf;
+  text-decoration: line-through;
+}
+
+body[data-test-price-upsell="A"] .my-floating-cart form.my-cart .custom_upsell > div .upsell_main .upsell_image .upsell_content .upsell_content-price-wrapper .upsell_content-price-wrapper--real{
   display: inline-block;
   font-family: 'Poppins', sans-serif;
   font-size: 12px;
@@ -522,7 +540,25 @@ body[data-test-price-upsell="B"] .my-floating-cart form.my-cart .custom_upsell >
   letter-spacing: 0.1px;
 }
 
-body[data-test-price-upsell="B"] .my-floating-cart form.my-cart .custom_upsell > div .upsell_main .upsell_image .upsell_content .upsell_content-price-a{
+body[data-test-price-upsell="B"] .my-floating-cart form.my-cart .custom_upsell > div .upsell_main .upsell_image .upsell_content .upsell_content-price-wrapper{
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+
+body[data-test-price-upsell="B"] .my-floating-cart form.my-cart .custom_upsell > div .upsell_main .upsell_image .upsell_content .upsell_content-price-wrapper .upsell_content-price-wrapper--full{
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: 0.12px;
+  color: #afafaf;
+  text-decoration: line-through;
+}
+
+body[data-test-price-upsell="B"] .my-floating-cart form.my-cart .custom_upsell > div .upsell_main .upsell_image .upsell_content .upsell_content-price-wrapper .upsell_content-price-wrapper--real{
   display: inline-block;
   font-family: 'Poppins', sans-serif;
   font-size: 12px;

@@ -20,7 +20,10 @@ usage: {% render 'pdm_upsell_cards_slide', image_slide:image_slide, title_copy:t
     <div class="upsell_content upsell_content_original">
       <h4>{{ title_copy }}</h4>
       <p>{{ description_copy }}</p>
-      <span class="upsell_content-price-a">{{ product_slide.price | money_without_trailing_zeros }}</span>
+      <div class="upsell_content-price-wrapper">
+        <span class="upsell_content-price-wrapper--full">{{ product_slide.compare_at_price | money_without_trailing_zeros  }}</span>
+        <span class="upsell_content-price-wrapper--real">{{ product_slide.price | money_without_trailing_zeros }}</span>
+      </div>
     </div>
 
     <div class="upsell_content upsell_content_test">
@@ -28,7 +31,10 @@ usage: {% render 'pdm_upsell_cards_slide', image_slide:image_slide, title_copy:t
         <h4>{{ title_copy }}</h4>
         <p>{{ description_copy }}</p>
       </div>
-      <span class="upsell_content-price-a">{{ product_slide.price | money_without_trailing_zeros }}</span>
+      <div class="upsell_content-price-wrapper">
+        <span class="upsell_content-price-wrapper--full">{{ product_slide.compare_at_price | money_without_trailing_zeros  }}</span>
+        <span class="upsell_content-price-wrapper--real">{{ product_slide.price | money_without_trailing_zeros }}</span>
+      </div>
     </div>
 
   </div>
