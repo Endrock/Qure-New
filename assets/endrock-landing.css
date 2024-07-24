@@ -317,7 +317,7 @@
   position: absolute;
   left: 8px;
   top: 0;
-  height: 101%;
+  height: 100%;
   width: 96%;
   border-bottom-right-radius: 25px;
   border-top-right-radius: 25px;
@@ -333,6 +333,7 @@
     border-top: #c8e6dc 1px solid;
     border-bottom: #c8e6dc 1px solid;
     left: 3px;
+    width: 93%;
   }
 }
 
@@ -344,7 +345,7 @@
 #landing-breadcrumbs .breadcrumb-arrow-shape-end-cricle.landing-breadcrumbs-item::before {
   border-right: unset;
   background-color: unset;
-  width: 90%;
+  width: 78%;
 }
 
 #landing-breadcrumbs .breadcrumb-arrow-shape-end-cricle.landing-breadcrumbs-item.active-end-circle::after,
