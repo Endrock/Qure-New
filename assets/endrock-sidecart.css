@@ -462,7 +462,7 @@ body[data-test-price-upsell="A"] .my-floating-cart form.my-cart .custom_upsell >
   font-weight: 600;
   line-height: 16px; /* 133.333% */
   letter-spacing: 0.12px;
-  color: #afafaf;
+  color: #b3b3b3;
   text-decoration: line-through;
 }
 
@@ -554,7 +554,7 @@ body[data-test-price-upsell="B"] .my-floating-cart form.my-cart .custom_upsell >
   font-weight: 600;
   line-height: 16px; /* 133.333% */
   letter-spacing: 0.12px;
-  color: #afafaf;
+  color: #b3b3b3;
   text-decoration: line-through;
 }
 
