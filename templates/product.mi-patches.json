@@ -247,6 +247,55 @@
             "client": "Damiano",
             "code": ""
           }
+        },
+        "result_CPGXbx": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/results_shammi.webp",
+            "heading": "I am so impressed!",
+            "text": "<p>“I only use these for two hours and I cannot wait to continue using them to see further results. I am so impressed that these were the results and in just two hours. Love how you can do this at home.”<\/p>",
+            "image_country": "shopify:\/\/shop_images\/canada_f.svg",
+            "text_country": "Canada",
+            "client": "Shammi",
+            "code": ""
+          }
+        },
+        "result_xnAADx": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/results_jay1.webp",
+            "heading": "There’s a clear improvement",
+            "text": "<p>My first test was on my “1” crease between my eyes, and I was impressed. I did 3 hours, and there’s a clear improvement upon removal (Before and afters). These are high-end in price, and it’s a get-what-you-pay-for situation. They work!”<\/p>",
+            "image_country": "shopify:\/\/shop_images\/usa_89e25711-f730-4521-8931-83b3307204af.png",
+            "text_country": "United States",
+            "client": "Jay",
+            "code": ""
+          }
+        },
+        "result_gUDpyX": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/results_ernie.webp",
+            "heading": "seen such a huge change",
+            "text": "<p>“I loved the microneedling patches so much, and seen such a huge change in my under eyes!”<\/p>",
+            "image_country": "shopify:\/\/shop_images\/usa_89e25711-f730-4521-8931-83b3307204af.png",
+            "text_country": "United States",
+            "client": "Ernie",
+            "code": ""
+          }
+        },
+        "result_EGPDqD": {
+          "type": "result",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/results_tanya.webp",
+            "heading": "What a big difference!",
+            "text": "<p>\"I have dark circles under my eyes and I've been so excited to start using these since the day I received them. What a big difference I've noticed from my first 3 uses. They are easy to use and come in a well-organized box of 8 pairs which equals out to be 16 patches, enough for a month.\"<\/p>",
+            "image_country": "shopify:\/\/shop_images\/canada_f.svg",
+            "text_country": "Canada",
+            "client": "Tanya",
+            "code": ""
+          }
         }
       },
       "block_order": [

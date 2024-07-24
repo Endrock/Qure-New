@@ -81,11 +81,6 @@
       "settings": {
       }
     },
-    "temp": {
-      "type": "temp-index",
-      "settings": {
-      }
-    },
     "promotion_main_banner_48gkNr": {
       "type": "promotion-main-banner",
       "blocks": {
@@ -101,11 +96,16 @@
         "link_crBjL9"
       ],
       "settings": {
-        "heading": "New Onyx \\n Q-Rejuvalight Pro",
+        "heading": "Onyx Q-Rejuvalight Pro",
         "heading_tag": "h1",
         "text": "<p><em>Best-Selling <\/em>Customizable <strong>Anti-Aging<\/strong> & <strong>Anti-Acne LED Mask<\/strong> now in a new colour<\/p>",
-        "image": "shopify:\/\/shop_images\/homepage_banner_desk_4d4f5e11-a9be-46af-87cb-d309a79c1b6a.webp",
-        "image_mobile": "shopify:\/\/shop_images\/homepage_banner_mob_4f6f8948-68d3-4a64-829e-6cfc65ea6ef8.webp"
+        "image": "shopify:\/\/shop_images\/homepage_banner_desk3.webp",
+        "image_mobile": "shopify:\/\/shop_images\/homepage_banner_mob3.webp"
+      }
+    },
+    "temp": {
+      "type": "temp-index",
+      "settings": {
       }
     },
     "featuredin_extended_h8hWKY": {

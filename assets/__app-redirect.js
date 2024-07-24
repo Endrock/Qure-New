@@ -38,9 +38,11 @@ async function main() {
     //console.log('countryCode [' + countryCode + ']');
 
     if (['US'].includes(countryCode)) {
-        if(window.location.href == 'https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal')
+        if(window.location.href.includes('exclusive-holiday-bundle-deal'))
         {
-            window.location = 'https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal-for-us';
+            document.getElementById('skin-ssentials-set-doctorly-choice').style.display = 'none';
+            document.getElementById('confidence-booster-bundle').style.display = 'none';
+            document.getElementById('youthify-or-glow-set').style.display = 'none';
         }
         else
         {
