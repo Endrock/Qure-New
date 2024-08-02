@@ -16,7 +16,7 @@
 {% endif %}
 
 <!-- -- how to use start -- -->
-<div class="see_it 1 section bg_yellow" id="see_it_section">
+<div class="see_it 1 section bg_yellow {{ section.settings.custom_class }}" id="see_it_section">
     <div class="container">
         <div class="ms-0 p-0 mb-3">
             {% if section.settings.heading != blank %}
@@ -63,6 +63,11 @@
                 "type": "text",
                 "id": "heading",
                 "label": "t:common.heading.label"
+            },
+            {
+                "type": "text",
+                "id": "custom_class",
+                "label": "Custom Class"
             }
         ],
         "blocks": [

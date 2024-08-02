@@ -31,7 +31,10 @@
                 {% endif %}
 
                 {% if section.settings.text != blank %}
-                    {{ section.settings.text }}
+                    <div class="subtitle original-copy">{{ section.settings.text }}</div>
+                {% endif %}
+                {% if section.settings.text_reduced != blank %}
+                    <div class="subtitle reduced-copy">{{ section.settings.text_reduced }}</div>
                 {% endif %}
             </div>
         {% endif %}
@@ -140,6 +143,11 @@
                 "type": "richtext",
                 "id": "text",
                 "label": "t:common.text.label"
+            },
+            {
+                "type": "richtext",
+                "id": "text_reduced",
+                "label": "Text Reduced"
             }
         ],
         "blocks": [

@@ -1856,3 +1856,175 @@ body[class~="page.sunil-mi-landing"] .product-price{
 }
 
 /* end MI LP Science Section */
+
+/* LP Science section Mens */
+.mi_landing.mi_landing_men .science-section-container {
+  display: none;
+}
+
+/* reduced-copy pro led mask */
+.reduced-copy {
+  display: none !important;
+}
+[data-reduced-copy] .original-copy {
+  display: none !important;
+}
+[data-reduced-copy] .reduced-copy {
+  display: block !important;
+}
+
+[data-reduced-copy] .led-light-container .reduced-copy {
+  padding-left: 58px;
+}
+[data-reduced-copy] .led-light-container li,
+[data-reduced-copy] .qure-mobile-app-container li {
+  padding-left: 0;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+[data-reduced-copy] .led-light-container li::before,
+[data-reduced-copy] .qure-mobile-app-container li::before { 
+  position: unset;
+  content: unset;
+  left: unset;
+  top: unset;
+}
+[data-reduced-copy] .clinical-grade-container .reduced-copy { 
+  padding-left: 38px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+[data-reduced-copy] .clinical-grade-container .reduced-copy .title { 
+  margin-bottom: 12px !important;
+}
+[data-reduced-copy] .clinical-grade-container .reduced-copy .sub-title,
+[data-reduced-copy] .qure-mobile-app-container .reduced-copy .sub-title { 
+  color: #000;
+  font-family: "Canela Web", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: 0.28px;
+}
+[data-reduced-copy] .clinical-grade-container .reduced-copy .accordion-item {  
+  width: 472px;
+}
+[data-reduced-copy] .qure-mobile-app-container .reduced-copy {  
+  order: -1;
+  padding-right: 36px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+} 
+[data-reduced-copy] .qure-mobile-app-container .reduced-copy .ss_list {
+  padding: 0; 
+}
+[data-reduced-copy] .section-easy-guide .reduced-copy .see_item_info ol li { 
+  opacity: 0.8;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+}
+[data-reduced-copy] .section-product-box .subtitle.reduced-copy p { 
+  max-width: unset;
+} 
+@media screen and (min-width: 768px) { 
+  [data-reduced-copy] .section-trusted .trusted_cl .section_header.reduced-copy:not(.d-lg-block) {  
+    display: none !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  [data-reduced-copy] .section-trusted .trusted_cl { 
+    padding-top: 20px !important;
+  } 
+  [data-reduced-copy] .section-trusted .trusted_cl .section_header.reduced-copy .title-lg { 
+    padding: 0 50px;
+    text-align: center;
+  } 
+  [data-reduced-copy] .section-trusted .trusted_left .title-lg { 
+    display: none;
+  }
+  [data-reduced-copy] .section-trusted .trusted_left .section_header.reduced-copy {
+    padding: 0 !important;
+  }
+  [data-reduced-copy] .section-results .section_header { 
+    display: flex;
+    justify-content: center;
+  } 
+  [data-reduced-copy] .section-results .section_header .title-lg.reduced-copy { 
+    width: 293px;
+    text-align: center;
+  } 
+  [data-reduced-copy] .section-two-column-box .led-light-container .reduced-copy { 
+    padding-left: 24px;
+  }
+  [data-reduced-copy] .section-two-column-box .led-light-container .reduced-copy .title { 
+    margin-top: 30px !important;
+    margin-bottom: 50px !important;
+  } 
+
+  [data-reduced-copy] .section-two-column-box .led-light-container .reduced-copy ul,
+  [data-reduced-copy] .section-two-column-box .qure-mobile-app-container .reduced-copy ul { 
+    list-style-position: inside;
+    padding-left: 10px;
+  }
+  [data-reduced-copy] .section-two-column-box .led-light-container .reduced-copy ul li,
+  [data-reduced-copy] .section-two-column-box .qure-mobile-app-container .reduced-copy ul li { 
+    text-indent: -15px;
+    padding-left: 15px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  [data-reduced-copy] .section-two-column-box .led-light-container .reduced-copy .ss_list { 
+    padding-top: 30px;
+  } 
+  [data-reduced-copy] .section-two-column-box .clinical-grade-container .reduced-copy { 
+    padding-left: 24px;
+  }
+  [data-reduced-copy] .section-two-column-box .clinical-grade-container .reduced-copy .it_info .sub-title { 
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28px; 
+    letter-spacing: 0.22px;
+    padding-bottom: 24px;
+  } 
+  [data-reduced-copy] .section-two-column-box .clinical-grade-container .reduced-copy .it_info .sub-title img { 
+    padding-top: 20px;
+    padding-left: 24px;
+  } 
+  [data-reduced-copy] .section-two-column-box .clinical-grade-container .reduced-copy .accordion-item { 
+    width: auto;
+  } 
+  [data-reduced-copy] .section-two-column-box .qure-mobile-app-container .reduced-copy .sub-title {
+    font-family: "Canela Web";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28px;
+    letter-spacing: 0.22px;
+  } 
+  [data-reduced-copy] .section-two-column-box .qure-mobile-app-container .reduced-copy .it_info img { 
+    padding-left: 24px;
+  } 
+  [data-reduced-copy] .section-easy-guide .reduced-copy .container .title-lg { 
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  [data-reduced-copy] .section-compare .section_header { 
+    margin-left: 0;
+  } 
+  [data-reduced-copy] .section-compare .title-lg.reduced-copy { 
+    text-align: start;
+    padding-right: 50px;
+  } 
+  [data-reduced-copy] .section-compare .subtitle.reduced-copy { 
+    text-align: start;
+  } 
+}

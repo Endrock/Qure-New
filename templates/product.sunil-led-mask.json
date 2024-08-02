@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "main": {
@@ -64,6 +55,12 @@
             "text": "<p>Get <em><strong>$50 OFF<\/strong><\/em><strong> <\/strong>with code: <strong>FREEDOMGLOW<\/strong><\/p>",
             "timer": "2024-07-07T23:59:59"
           }
+        },
+        "list_reduced_yep6j9": {
+          "type": "list_reduced",
+          "settings": {
+            "text": "<ul><li><strong>Treats acne<\/strong>, fine lines, wrinkles, and dark spots<\/li><li>Adaptable to <strong>your unique skin concerns<\/strong><\/li><li>Quick 3-minute, wireless, daily treatment<\/li><li><strong>FDA-cleared<\/strong><\/li><\/ul>"
+          }
         }
       },
       "block_order": [
@@ -72,7 +69,8 @@
         "supply_iDLrxG",
         "before_and_after_KfYL7X",
         "video_before_and_after_kUMR9A",
-        "timer_abVU3e"
+        "timer_abVU3e",
+        "list_reduced_yep6j9"
       ],
       "settings": {
         "heading": "Repair & rejuvenate your skin with our Light Therapy Mask",
@@ -344,6 +342,7 @@
       "settings": {
         "classname": "trusted_bl",
         "heading": "Trusted and recommended by world leading Dermatologists",
+        "heading_reduced": "World-leading dermatologists recommend it",
         "likes": "4.8K",
         "views": "192K views",
         "image": "shopify:\/\/shop_images\/trusted_2.jpg",
@@ -553,6 +552,7 @@
       "settings": {
         "classname": "mi_landing_result",
         "heading": "Results you‘ll see with your own eyes",
+        "heading_reduced": "Results you see with your own eyes",
         "text_verified_customer": "Verified customer",
         "text_reviewed": "Reviewed in"
       }
@@ -574,14 +574,23 @@
             "column_content": 0,
             "classname": "it_info p-0 pt-0 pt-md-3"
           }
+        },
+        "content_reduced_PFHmVD": {
+          "type": "content_reduced",
+          "settings": {
+            "text": "<h2>Our LED light therapy mask is unlike any other<\/h2><p>One device, all the skin-firming, smoothing, and clearing benefits<br\/><\/p><ul><li>Portable, <strong>FDA-cleared<\/strong>, at-home LED light therapy treatment<\/li><li><strong>Scientifically proven<\/strong> to change your skin for the better<\/li><li><strong>Three treatment options<\/strong>: anti-breakouts, anti-aging, and custom treatment zones<\/li><\/ul>",
+            "column_content": 0,
+            "classname": "it_info p-0 pt-0 pt-md-3"
+          }
         }
       },
       "block_order": [
         "image_XwjXVA",
-        "content_rgPkBx"
+        "content_rgPkBx",
+        "content_reduced_PFHmVD"
       ],
       "settings": {
-        "classname": "technology_light section",
+        "classname": "technology_light section led-light-container",
         "column_image": 6,
         "column_content": 6
       }
@@ -678,16 +687,25 @@
             "heading": "Treatment details",
             "text": "<p><strong>USE:<\/strong> Use daily after cleansing, before topical skincare<\/p><p><strong>ANTI-AGING TREATMENT:<\/strong> 605nm (Amber), 630nm (Red), 660nm (Deep Red), 880nm (Infrared)<\/p><p><strong>ANTI-BREAKOUT TREATMENT: <\/strong>415nm (Blue), 630nm (Red)<\/p><p><strong>CUSTOMIZED TREATMENT:<\/strong> Choose treatment modes on 5 different facial areas<\/p><p><strong>SKIN TYPE:<\/strong> Most suitable for Fitzpatrick Skin Types I-IV<\/p>"
           }
+        },
+        "content_reduced_EApyeE": {
+          "type": "content_reduced",
+          "settings": {
+            "text": "<h2>Personalized clinical-grade LED<\/h2><h3>Transform your skin in less than 12 weeks<br\/>[image_mobile]<\/h3><p>Safe, clinically proven light wavelengths <strong>penetrate various skin layers to trigger natural cellular regeneration processes<\/strong>, treating the skin from the inside out for immediate, long-lasting results. <\/p><p>[details]<br\/><\/p>",
+            "column_content": 0,
+            "classname": "it_info p-0 pt-0 pt-md-3"
+          }
         }
       },
       "block_order": [
         "image_3GMzFL",
         "content_WQADAK",
         "details_dcD8rL",
-        "details_3XnYk4"
+        "details_3XnYk4",
+        "content_reduced_EApyeE"
       ],
       "settings": {
-        "classname": "technology_light section",
+        "classname": "technology_light section clinical-grade-container",
         "column_image": 6,
         "column_content": 6
       }
@@ -709,14 +727,23 @@
             "image": "shopify:\/\/shop_images\/LED_mask_mob_app.png",
             "classname": "mw-mob-100"
           }
+        },
+        "content_reduced_aRr6Ap": {
+          "type": "content_reduced",
+          "settings": {
+            "text": "<h2>Qure Mobile App<\/h2><h3>Get the best results by personalizing your treatment and setting daily reminders<\/h3><p>[image_mobile] <\/p><p><strong>Use Qure’s LED Light Therapy Mask app to:<\/strong><\/p><ul><li>Target and treat what your skin needs today<\/li><li>Select from our range of treatments across five different facial areas<\/li><li>Set daily reminders so you’ll never miss a treatment<\/li><\/ul>",
+            "column_content": 0,
+            "classname": "it_info p-0 pt-0 pt-md-3"
+          }
         }
       },
       "block_order": [
         "content_TwGCn9",
-        "image_Qzkxgd"
+        "image_Qzkxgd",
+        "content_reduced_aRr6Ap"
       ],
       "settings": {
-        "classname": "technology_light",
+        "classname": "technology_light qure-mobile-app-container",
         "column_image": 6,
         "column_content": 6
       }
@@ -818,7 +845,51 @@
         "object_dnNYjT"
       ],
       "settings": {
-        "heading": "Quick start: easy guide to glowy skin"
+        "heading": "Quick start: easy guide to glowy skin",
+        "custom_class": "original-copy"
+      }
+    },
+    "easy_guide_tn7LxG": {
+      "type": "easy-guide",
+      "blocks": {
+        "object_XmiCkL": {
+          "type": "object",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LED_mask_app_step1.png",
+            "text": "<ol><li>Download Qure Skincare App & set up your profile<\/li><li>Turn on your Bluetooth and pair you LED mask with the app<\/li><\/ol>"
+          }
+        },
+        "object_JzMwyx": {
+          "type": "object",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/led_quick_step_2.webp",
+            "text": "<ol><li>Clean your skin thoroughly <\/li><li>Turn the device on by holding the button for 2-3 seconds<\/li><li>Place mask on your face<\/li><\/ol>"
+          }
+        },
+        "object_fDk3zG": {
+          "type": "object",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LED_mask_app_step3.png",
+            "text": "<p>Press button once for Anti-Aging treatment, press button again for Anti-Breakout treatment OR customize your treatment on 5 facial areas with the Qure app and press start<br\/><\/p>"
+          }
+        },
+        "object_i8yje9": {
+          "type": "object",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/led_quick_step_4.webp",
+            "text": "<ol><li>The device will turn off automatically after 3 minutes; remove the mask and clean it with a wipe<\/li><li>Continue with your regular skincare routine<br\/><\/li><\/ol>"
+          }
+        }
+      },
+      "block_order": [
+        "object_XmiCkL",
+        "object_JzMwyx",
+        "object_fDk3zG",
+        "object_i8yje9"
+      ],
+      "settings": {
+        "heading": "Quick start: easy guide to glowy skin",
+        "custom_class": "reduced-copy"
       }
     },
     "compare_GAEKyR": {
@@ -854,7 +925,9 @@
       "settings": {
         "classname": "beauty_skincare section bg-white",
         "heading": "The beauty of clinical results from home - without the ‘clinical’ costs",
-        "text": "<p>It’s like going to a clinic, minus the on-going costs, the time commitment, the overpromises, the upselling and the hassle.<\/p>"
+        "heading_reduced": "Clinical results from home – without the “clinical” cost",
+        "text": "<p>It’s like going to a clinic, minus the on-going costs, the time commitment, the overpromises, the upselling and the hassle.<\/p>",
+        "text_reduced": "<p>Stop worrying about the “clinical” time commitment, transportation costs, overpromises, upselling, and hassle.<\/p>"
       }
     },
     "liquid_Azh7Kn": {
@@ -917,7 +990,8 @@
       "settings": {
         "classname": "clinical_grade boost_bl",
         "heading": "Treat beyond the face",
-        "text": "<p>Perfect combination to the Q-Rejuvalight Pro LED mask for the ultimate skin rejuvenation experience. Target the delicate area of neck and décolletage that often gets overlooked.<\/p>"
+        "text": "<p>Perfect combination to the Q-Rejuvalight Pro LED mask for the ultimate skin rejuvenation experience. Target the delicate area of neck and décolletage that often gets overlooked.<\/p>",
+        "text_reduced": "<p>Combine our Neck & Décolletage set with your face mask for a comprehensive treatment.<\/p>"
       }
     },
     "faq_BgPiYb": {
@@ -1055,6 +1129,7 @@
     "two_column_box_tq6b9C",
     "videos_list_kLheEB",
     "easy_guide_E8KQFR",
+    "easy_guide_tn7LxG",
     "compare_GAEKyR",
     "liquid_Azh7Kn",
     "product_box_JzAAt3",

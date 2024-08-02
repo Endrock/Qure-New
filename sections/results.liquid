@@ -3,8 +3,13 @@
     <div class="container">
         <div class="section_header text-start text-md-center ms-0 m-md-auto mw-100">
             {% if section.settings.heading != blank %}
-                <h2 class="title-lg paddingB">
+                <h2 class="title-lg paddingB original-copy">
                     {{ section.settings.heading }}
+                </h2>
+            {% endif %}
+            {% if section.settings.heading_reduced != blank %}
+                <h2 class="title-lg paddingB reduced-copy">
+                    {{ section.settings.heading_reduced }}
                 </h2>
             {% endif %}
         </div>
@@ -87,6 +92,11 @@
                 "type": "text",
                 "id": "heading",
                 "label": "t:common.heading.label"
+            },
+            {
+                "type": "text",
+                "id": "heading_reduced",
+                "label": "Header Reduced"
             },
             {
                 "type": "text",

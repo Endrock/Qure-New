@@ -9,6 +9,7 @@
 {%- assign supply_count = 0 -%}
 {%- assign subscribe_count = 0 -%}
 {%- assign timer = blank -%}
+{%- assign list_count_reduced = blank -%}
 
 {%- for block in section.blocks -%}
 	{%- case block.type -%}
@@ -16,6 +17,8 @@
             {%- assign rating_count = rating_count | plus: 1 -%}    
         {%- when 'list' -%}
             {%- assign list_count = list_count | plus: 1 -%}
+        {%- when 'list_reduced' -%}
+            {%- assign list_count_reduced = list_count_reduced | plus: 1 -%}
         {%- when 'supply' -%}
             {%- assign supply_count = supply_count | plus: 1 -%}
         {%- when 'subscribe' -%}
@@ -83,10 +86,24 @@
 
                     <div class="mw-452">
                         {% if list_count > 0 %}
-                            <div class="ss_list py-4">
+                            <div class="ss_list py-4 original-copy">
                                 <ul>
                                 {%- for block in section.blocks -%}
                                     {% if block.type == 'list' %}
+                                        {% if block.settings.text %}
+                                            {{ block.settings.text }}
+                                        {% endif %}
+                                    {% endif %}
+                                {%- endfor -%} 
+                                </ul>
+                            </div>
+                        {% endif %}
+
+                        {% if list_count_reduced > 0 %}
+                            <div class="ss_list py-4 reduced-copy">
+                                <ul>
+                                {%- for block in section.blocks -%}
+                                    {% if block.type == 'list_reduced' %}
                                         {% if block.settings.text %}
                                             {{ block.settings.text }}
                                         {% endif %}
@@ -574,6 +591,18 @@
             {
                 "type": "list",
                 "name": "t:common.list.label",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "t:common.text.label"
+                    }
+                ]
+		    },
+            {
+                "type": "list_reduced",
+                "name": "list_reduced",
                 "limit": 1,
                 "settings": [
                     {

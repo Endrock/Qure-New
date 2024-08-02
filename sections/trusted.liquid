@@ -24,9 +24,14 @@
     <div class="trusted_cl">
         <div class="container">
             {% if section.settings.heading != blank %}
-                <div class="section_header d-block d-lg-none">
+                <div class="section_header d-block d-lg-none original-copy">
                     <h2 class="title-lg">
                         {{ section.settings.heading }}
+                    </h2>
+                </div>                
+                <div class="section_header d-block d-lg-none reduced-copy">
+                    <h2 class="title-lg">
+                        {{ section.settings.heading_reduced }}
                     </h2>
                 </div>                
             {% endif %}
@@ -39,9 +44,16 @@
                 <div class="col-lg-6 order-2 order-lg-1">
                     <div class="trusted_left">
                         {% if section.settings.heading != blank %}
-                            <div class="section_header d-none d-lg-block pb-5">
+                            <div class="section_header d-none d-lg-block pb-5 original-copy">
                                 <h2 class="title-lg mb-0">
                                     {{ section.settings.heading }}
+                                </h2>
+                            </div>
+                        {% endif %}
+                        {% if section.settings.heading_reduced != blank %}
+                            <div class="section_header d-none d-lg-block pb-5 reduced-copy">
+                                <h2 class="title-lg mb-0">
+                                    {{ section.settings.heading_reduced }}
                                 </h2>
                             </div>
                         {% endif %}
@@ -207,6 +219,11 @@
                 "type": "text",
                 "id": "heading",
                 "label": "t:common.heading.label"
+            },
+            {
+                "type": "text",
+                "id": "heading_reduced",
+                "label": "Heading Reduced"
             },
             {
                 "type": "text",

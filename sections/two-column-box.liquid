@@ -122,12 +122,43 @@
                                 </div>
                             {% endif %}
                         {% when 'content' %}
-                            <div class="col-12 col-md-{% if block.settings.column_content > 0 %}{{ block.settings.column_content }}{% else %}{{ section.settings.column_content }}{% endif %}">
+                            <div class="original-copy col-12 col-md-{% if block.settings.column_content > 0 %}{{ block.settings.column_content }}{% else %}{{ section.settings.column_content }}{% endif %}">
                                 <div class="{{ block.settings.classname }}">
                                         {% if block.settings.text != blank %}
                                             {{ block.settings.text 
                                                 |  replace: '<h2>', '<h2 class="title-lg mb-4">' 
                                                 |  replace: '<h3>', '<h3 class="paddingB">' 
+                                                |  replace: '<ul>', '<div class="ss_list"><ul>' 
+                                                |  replace: '</ul>', '</ul></div>' 
+                                                |  replace: '<p>[code]</p>', code
+                                                |  replace: '[code]', code
+                                                |  replace: '<p>[code_desktop]</p>', code_desktop 
+                                                |  replace: '[code_desktop]', code_desktop 
+                                                |  replace: '<p>[code_mobile]</p>', code_mobile 
+                                                |  replace: '[code_mobile]', code_mobile 
+                                                |  replace: '<p>[details]</p>', details
+                                                |  replace: '[details]', details
+                                                |  replace: '<p>[details_desktop]</p>', details_desktop 
+                                                |  replace: '[details_desktop]', details_desktop 
+                                                |  replace: '<p>[details_mobile]</p>', details_mobile 
+                                                |  replace: '[details_mobile]', details_mobile 
+                                                |  replace: '<p>[image_mobile]</p>', image_mobile
+                                                |  replace: '[image_mobile]', image_mobile
+                                                |  replace: '<p>[only_desktop_start]</p>', only_desktop_start
+                                                |  replace: '[only_desktop_start]', only_desktop_start
+                                                |  replace: '<p>[only_desktop_end]</p>', only_desktop_end
+                                                |  replace: '[only_desktop_end]', only_desktop_end
+                                            }} 
+                                        {% endif %}
+                                </div>
+                            </div>
+                        {% when 'content_reduced' %}
+                            <div class="reduced-copy col-12 col-md-{% if block.settings.column_content > 0 %}{{ block.settings.column_content }}{% else %}{{ section.settings.column_content }}{% endif %}">
+                                <div class="{{ block.settings.classname }}">
+                                        {% if block.settings.text != blank %}
+                                            {{ block.settings.text 
+                                                |  replace: '<h2>', '<h2 class="title title-lg mb-4">' 
+                                                |  replace: '<h3>', '<h3 class="sub-title paddingB">' 
                                                 |  replace: '<ul>', '<div class="ss_list"><ul>' 
                                                 |  replace: '</ul>', '</ul></div>' 
                                                 |  replace: '<p>[code]</p>', code
@@ -246,6 +277,34 @@
             {
                 "type": "content",
                 "name": "t:common.content.label",
+                "limit": 2,
+                "settings": [
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "t:common.text.label"
+                    },
+                    {
+                        "type": "range",
+                        "id": "column_content",
+                        "min": 0,
+                        "max": 11,
+                        "step": 1,
+                        "unit": "col",
+                        "label": "t:common.column.content.label",
+                        "default": 0
+                    },
+                    {
+                        "type": "text",
+                        "id": "classname",
+                        "label": "t:common.classname.label",
+                        "default": "it_info p-0 pt-0 pt-md-3"
+                    }
+                ]
+		    },
+            {
+                "type": "content_reduced",
+                "name": "Content Reduced",
                 "limit": 2,
                 "settings": [
                     {

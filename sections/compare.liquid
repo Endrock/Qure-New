@@ -2,12 +2,20 @@
     <div class="container">
         <div class="section_header text-center mb-4">
             {% if section.settings.heading %}
-                <h2 class="title-lg paddingB mx-auto">
+                <h2 class="title-lg paddingB mx-auto original-copy">
                     {{ section.settings.heading }}
                 </h2> 
             {% endif %}
+            {% if section.settings.heading_reduced %}
+                <h2 class="title-lg paddingB mx-auto reduced-copy">
+                    {{ section.settings.heading_reduced }}
+                </h2> 
+            {% endif %}
             {% if section.settings.text %}
-                {{ section.settings.text }}
+                <div class="subtitle original-copy">{{ section.settings.text }}</div>
+            {% endif %}
+            {% if section.settings.text_reduced %}
+                <div class="subtitle reduced-copy">{{ section.settings.text_reduced }}</div>
             {% endif %}
         </div>
         {% if section.blocks.size > 0 %}
@@ -100,9 +108,19 @@
                 "label": "t:common.heading.label"
             },
             {
+                "type": "text",
+                "id": "heading_reduced",
+                "label": "Heading Reduced"
+            },
+            {
                 "type": "richtext",
                 "id": "text",
                 "label": "t:common.text.label"
+            },
+            {
+                "type": "richtext",
+                "id": "text_reduced",
+                "label": "Text Reduced"
             }
         ],
         "blocks": [
