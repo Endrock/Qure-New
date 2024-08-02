@@ -43,6 +43,26 @@
         <div class="row">
             <div class="col-md-6 order-2 order-md-1">
                 <div class="refill_info pt-0 pt-md-3">
+
+                    {% if rating_count %}
+                        {%- for block in section.blocks -%}
+                            {% if block.type == 'rating' %}
+                                {% if block.settings.product %}
+                                    {% render 'product-rating', rating_value: block.settings.product.metafields.reviews.rating.value, rating_count: block.settings.product.metafields.reviews.rating_count.value %}
+                                {% else %}
+                                    <div class="refill_review">
+                                        <div class="star_gp">
+                                            {% if block.settings.image != blank %}
+                                                <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}">
+                                            {% endif %}
+                                        </div>
+                                        <p class="text-sm fw-normal" style="text-decoration: none;">{{ block.settings.text }}</p>
+                                    </div>
+                                {% endif %}
+                            {% endif %}
+                        {%- endfor -%}
+                    {% endif %}
+
                     <div class="section_header text-start ms-0">
                         {% if section.settings.heading != blank %}
                             <h1 class="title-xl d-none d-md-block">{{ section.settings.heading | replace: '\n', '<br />' }}</h1>
@@ -53,20 +73,7 @@
                             <h2 class="title-xl d-md-none">{{ section.settings.heading | replace: '\n', '<br />' }}</h2>
                         {% endif %}
                     </div>
-                    {% if rating_count %}
-                        {%- for block in section.blocks -%}
-                            {% if block.type == 'rating' %}
-                                <div class="refill_review">
-                                    <div class="star_gp">
-                                        {% if block.settings.image != blank %}
-                                            <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}">
-                                        {% endif %}
-                                    </div>
-                                    <p class="text-sm fw-normal" style="text-decoration: none;">{{ block.settings.text }}</p>
-                                </div>
-                            {% endif %}
-                        {%- endfor -%}
-                    {% endif %}
+
                     {% unless page.handle == 'microinfusion' or page.handle == 'qure-microinfusion-offer' or page.handle == 'qure-microinfusion-offer-de' or page.handle == 'qure-micro-infusion-landing-page-affiliate' or page.handle == 'qure-microinfusion-offer-men' or page.handle == 'qure-microinfusion-offer-fr' or page.handle == 'qure-microinfusion-offer-es'%}
                         <div class="product-price">
                             {% render 'pdm_product-price' subscribe_count: 1, section: section, landing:true %}
@@ -560,6 +567,11 @@
                         "type": "richtext",
                         "id": "text",
                         "label": "t:common.text.label"
+                    },
+                    {
+                        "type": "product",
+                        "id": "product",
+                        "label": "t:common.product.label"
                     }
                 ]
 		        },

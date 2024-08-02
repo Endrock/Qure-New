@@ -1,0 +1,37 @@
+{% if rating_count %}
+    <div class="refill_review">
+        {% assign rating_string = rating_value %}
+        {% assign parts = rating_string | split: "." %}
+        {% assign integer_part = parts[0] | times: 1 %}
+        {% assign decimal_part = parts[1] | slice: 0, 2 | times: 1 | round: 2 %}
+
+        <div class="star_gp">
+            {% if integer_part > 0 %}
+                <img src="{{ "star.png" | asset_url  }}" width="23" height="21" />
+            {% endif %}
+            {% if integer_part > 1 %}
+                <img src="{{ "star.png" | asset_url  }}" width="23" height="21" />
+            {% endif %}
+            {% if integer_part > 2 %}
+                <img src="{{ "star.png" | asset_url  }}" width="23" height="21" />
+            {% endif %}
+            {% if integer_part > 3 %}
+                <img src="{{ "star.png" | asset_url  }}" width="23" height="21" />
+            {% endif %}
+            {% if decimal_part > 50 %}
+                <img src="{{ "star.png" | asset_url  }}" width="23" height="21" />
+            {% else %}
+                <img src="{{ "star-half.png" | asset_url  }}" width="23" height="21" />
+            {% endif %}
+        </div>
+        <p class="text-sm fw-normal" style="text-decoration: none;">
+            <a href="#stamped-main-widget">Based on {{ rating_count }} reviews</a>
+        </p>
+    </div>
+
+    <style>
+        .refill_review a {
+            color: #000 !important;
+        }
+    </style>
+{% endif %}

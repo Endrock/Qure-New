@@ -41,18 +41,22 @@
             <div class="col-md-6 order-2 order-md-1">
                 <div class="refill_info pt-0 pt-md-3">
 
-                    {% if rating_count and template == 'product.sunil-led-mask' %}
+                    {% if rating_count %}
                         {%- for block in section.blocks -%}
                             {% if block.type == 'rating' %}
-                                <div class="refill_review">
-                                    <div class="star_gp">
-                                        {% if block.settings.image != blank %}
-                                            <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}">
-                                        {% endif %}
+                                {% if product.metafields.reviews.rating_count.value > 10 %}
+                                    {% render 'product-rating', rating_value: product.metafields.reviews.rating.value, rating_count: product.metafields.reviews.rating_count.value %}
+                                {% else %}
+                                    <div class="refill_review">
+                                        <div class="star_gp">
+                                            {% if block.settings.image != blank %}
+                                                <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}">
+                                            {% endif %}
+                                        </div>
+                                        {{ block.settings.text |  replace: '<p>', '<p class="text-sm fw-normal" style="text-decoration: none;">' }}
+                                        </p>
                                     </div>
-                                    {{ block.settings.text |  replace: '<p>', '<p class="text-sm fw-normal" style="text-decoration: none;">' }}
-                                    </p>
-                                </div>
+                                {% endif %}
                             {% endif %}
                         {%- endfor -%}
                     {% endif %}
@@ -67,23 +71,6 @@
                             <h2 class="title-xl d-md-none">{{ section.settings.heading | replace: '\n', '<br />' }}</h2>
                         {% endif %}
                     </div>
-
-
-                    {% if rating_count and template != 'product.sunil-led-mask' %}
-                        {%- for block in section.blocks -%}
-                            {% if block.type == 'rating' %}
-                                <div class="refill_review">
-                                    <div class="star_gp">
-                                        {% if block.settings.image != blank %}
-                                            <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}">
-                                        {% endif %}
-                                    </div>
-                                    {{ block.settings.text |  replace: '<p>', '<p class="text-sm fw-normal" style="text-decoration: none;">' }}
-                                    </p>
-                                </div>
-                            {% endif %}
-                        {%- endfor -%}
-                    {% endif %}
 
                     {% render 'product-led-mask' %}
 

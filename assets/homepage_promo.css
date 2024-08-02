@@ -519,7 +519,7 @@
         /* background-color: #fff;
         color: #000; */
         max-width: 231px;
-        padding: 10px 28px;
+        padding: 10px 26px;
     }
 
     .homepage .skincare_journey .btn_black {
@@ -528,10 +528,15 @@
         width: 100% !important;
     }
 
+    .homepage .main_banner .main_b_wrapper .btn_black {
+        background-color: #fff;
+        color: #000;
+    }
 
     .homepage .main_banner .main_b_wrapper {
-        align-items: flex-start;
-        top: 30px;
+        /* align-items: flex-start;
+        top: 30px; */
+        color: #fff;
     }
 
     .homepage .main_b_wrapper .section_header p {

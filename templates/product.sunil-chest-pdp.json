@@ -27,12 +27,11 @@
         },
         "supply_b9ppf8": {
           "type": "supply",
-          "disabled": true,
           "settings": {
-            "heading": "Next batch ships 10th March 2024:",
-            "heading_mobile": "Next batch ships 10th March 2024:",
+            "heading": "The next batch ships in early August 2024:",
+            "heading_mobile": "The next batch ships in early August 2024:",
             "text": "<p>Due to high demand, our Neck & Décolletage LED device is sold out. Order now and secure yours from the next shipment.<\/p>",
-            "html": "<div class=\"batch_h batch_h_fade mt-3 mt-md-4\">\n                                          <div class=\"batch_h_month\">February 2nd<\/div>\n                                          <div class=\"batch_h_info sold_out_h\" style=\"--bgPercent:100%;\"><span>SOLD\n                                                  OUT<\/span><\/div>\n                                      <\/div>\n                                      <div class=\"batch_h my-2\">\n                                          <div class=\"batch_h_month\">March 10th<\/div>\n                                          <div class=\"batch_h_info\" style=\"--bgPercent:52%;\">48% Reserved<\/div>\n                                      <\/div>\n                                      <div class=\"batch_h batch_h_fade\">\n                                          <div class=\"batch_h_month\">May 20th<\/div>\n                                          <div class=\"batch_h_info\" style=\"--bgPercent:0%;\"><span>In\n                                                  Production<\/span><\/div>\n                                      <\/div>"
+            "html": "<div class=\"batch_h batch_h_fade mt-3 mt-md-4\">\n                                          <div class=\"batch_h_month\">July 30th<\/div>\n                                          <div class=\"batch_h_info sold_out_h\" style=\"--bgPercent:100%;\"><span>SOLD\n                                                  OUT<\/span><\/div>\n                                      <\/div>\n                                      <div class=\"batch_h my-2\">\n                                          <div class=\"batch_h_month\">August 10th<\/div>\n                                          <div class=\"batch_h_info\" style=\"--bgPercent:52%;\">48% Reserved<\/div>\n                                      <\/div>\n                                      <div class=\"batch_h batch_h_fade\">\n                                          <div class=\"batch_h_month\">October 20th<\/div>\n                                          <div class=\"batch_h_info\" style=\"--bgPercent:0%;\"><span>In\n                                                  Production<\/span><\/div>\n                                      <\/div>"
           }
         },
         "before_and_after_d9ReDz": {
@@ -69,7 +68,7 @@
         "product_button_label": "Product",
         "before_after_images_limit": 2,
         "before_after_button_label": "Before & After",
-        "reserve": false,
+        "reserve": true,
         "underbutton_text_left": "Dermatologist Reviewed",
         "underbutton_text_right": "Free Shipping Over $100",
         "selected_design": "new",
