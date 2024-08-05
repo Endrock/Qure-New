@@ -106,4 +106,24 @@
       }
     ]
   },
+  {
+    "name": "TrustPilot Custom Component",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "custom_trustpilot_name",
+        "label": "Custom Trustpilot Name"
+      },
+      {
+        "type": "image_picker",
+        "id": "custom_trustpilot_stars",
+        "label": "Custom Trustpilot Stars"
+      },
+      {
+        "type": "image_picker",
+        "id": "custom_trustpilot_score",
+        "label": "Custom Trustpilot Score"
+      }
+    ]
+  }
 ]

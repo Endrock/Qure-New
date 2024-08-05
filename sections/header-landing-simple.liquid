@@ -1,5 +1,6 @@
 {%- assign announcement_count = 0 -%}
 {%- assign navigation_link_count = 0 -%}
+{%- assign navigation_link_image = false -%}
 
 {%- for block in section.blocks -%}
 	{%- case block.type -%}
@@ -7,6 +8,9 @@
             {%- assign announcement_count = announcement_count | plus: 1 -%}
         {%- when 'navigation-link' -%}
             {%- assign navigation_link_count = navigation_link_count | plus: 1 -%}
+            {% if block.settings.image %}
+                {% assign navigation_link_image = true %}
+            {% endif %}
     {%- endcase -%}
 {%- endfor -%}
 
@@ -30,25 +34,56 @@
         <div class="container">
             <div class="dek-menu">
 
-                <nav class="mobile-menu-custome">
-                    <div class="hamburger-container">
-                        <ul class="hamburger">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                    <ul id="menu">
-                        {%- for block in section.blocks offset:announcement_count -%}
-                            {% if block.type == 'navigation-link' %}
-                                <li class="title">
-                                    <a href="{{ block.settings.link_url }}" aria-label="{{ block.settings.link_label | escape }}" id="hsm_{{ forloop.index }}">{{ block.settings.link_label }}</a>
-                                </li>
+                {% if navigation_link_image == true %}
+                    <nav class="mobile-menu-custome">
+                        <div class="hamburger-container">
+                            <ul class="hamburger">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <div id="menu" class="menu_with_icons">
+                            {% if navigation_link_count > 0 %}
+                                <ul>
+                                    {%- for block in section.blocks offset:announcement_count -%}
+                                        {% if block.type == 'navigation-link' %}
+                                            <li class="title"><a href="{{ block.settings.link_url }}" aria-label="{{ block.settings.link_label | escape }}" id="hsm_{{ forloop.index }}">
+                                                <div class="menuBlock">
+                                                    {% if block.settings.image != blank %}
+                                                        <img class="img-fluid" src="{{ block.settings.image | img_url: '150x' }}" alt="mobile menu image" />
+                                                    {% endif %}
+                                                    <span>{{ block.settings.link_label }}</span>
+                                                </div>
+                                                <img class="mob_icon" src="{{ 'header_arrow_right_white.svg' | asset_url }}" alt="mobile menu arrow">
+                                            </a>
+                                        </li>
+                                        {% endif %}
+                                    {%- endfor -%}
+                                </ul>
                             {% endif %}
-                        {%- endfor -%}
-                    </ul>
-                </nav>
-
+                        </div>
+                    </nav>
+                {% else %}
+                    <nav class="mobile-menu-custome">
+                        <div class="hamburger-container">
+                            <ul class="hamburger">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <ul id="menu">
+                            {%- for block in section.blocks offset:announcement_count -%}
+                                {% if block.type == 'navigation-link' %}
+                                    <li class="title">
+                                        <a href="{{ block.settings.link_url }}" aria-label="{{ block.settings.link_label | escape }}" id="hsm_{{ forloop.index }}">{{ block.settings.link_label }}</a>
+                                    </li>
+                                {% endif %}
+                            {%- endfor -%}
+                        </ul>
+                    </nav> 
+                {% endif %}
 
                 <div class="menu saf-menu">
                     <ul>
@@ -121,6 +156,11 @@
                         "type": "url",
                         "id": "link_url",
                         "label": "t:common.link.url.label"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "t:common.image.label"
                     }
                 ]
             }

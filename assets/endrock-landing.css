@@ -2359,3 +2359,34 @@
 }
 
 /* end MI LP Science Section AB test */
+
+
+/* custom-trustpilot sunil-mi-landing page */
+
+
+.custom-review-container {
+  display: none;
+}
+body[data-custom-review] .section-product-landing .refill_review { 
+  display: none;
+}
+body[data-custom-review] .section-product-landing .custom-review-container { 
+    display: block;
+    padding-top: 10px;
+}
+body[data-custom-review] .section-product-landing .custom-review-container + a[href="#productSubscription"] {
+  margin-top: 30px !important;
+}
+body[data-custom-review] #productSubscription .custom-review-container {
+  display: block;
+  padding-top: 80px;
+  text-align: center;
+}
+body[data-custom-review] #productSubscription .custom-review-container + .landing-container-title {
+  padding-top: 30px !important;
+}
+@media screen and (max-width: 768px) {
+  body[data-custom-review] #productSubscription .custom-review-container {
+    padding-top: 50px;
+  }
+}

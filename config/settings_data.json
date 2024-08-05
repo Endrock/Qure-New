@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "current": {
     "favicon": "shopify:\/\/shop_images\/qure_favicon.png",
@@ -32,6 +23,9 @@
     ],
     "show_order_by_receive_by": true,
     "today_text": "Order today",
+    "custom_trustpilot_name": "shopify:\/\/shop_images\/reviews_name.svg",
+    "custom_trustpilot_stars": "shopify:\/\/shop_images\/stars.svg",
+    "custom_trustpilot_score": "shopify:\/\/shop_images\/score.svg",
     "promotion": "promotion",
     "sections": {
       "header": {
