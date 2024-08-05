@@ -59,7 +59,7 @@
         "list_reduced_yep6j9": {
           "type": "list_reduced",
           "settings": {
-            "text": "<ul><li><strong>Treats acne<\/strong>, fine lines, wrinkles, and dark spots<\/li><li>Adaptable to <strong>your unique skin concerns<\/strong><\/li><li>Quick 3-minute, wireless, daily treatment<\/li><li><strong>FDA-cleared<\/strong><\/li><\/ul>"
+            "text": "<ul><li><strong>Treats acne<\/strong>, fine lines, wrinkles, and dark spots<\/li><li>Adaptable to <strong>your unique skin concerns<\/strong><\/li><li><strong>Quick 3-minute<\/strong>, wireless, daily treatment<\/li><li><strong>FDA-cleared<\/strong><\/li><\/ul>"
           }
         }
       },
@@ -691,7 +691,7 @@
         "content_reduced_EApyeE": {
           "type": "content_reduced",
           "settings": {
-            "text": "<h2>Personalized clinical-grade LED<\/h2><h3>Transform your skin in less than 12 weeks<br\/>[image_mobile]<\/h3><p>Safe, clinically proven light wavelengths <strong>penetrate various skin layers to trigger natural cellular regeneration processes<\/strong>, treating the skin from the inside out for immediate, long-lasting results. <\/p><p>[details]<br\/><\/p>",
+            "text": "<h2>Personalized clinical-grade LED<\/h2><h3>See transformative results in less than 12 weeks. <br\/>[image_mobile]<\/h3><p>Safe, clinically proven light wavelengths <strong>penetrate various skin layers to trigger natural cellular regeneration processes<\/strong>, treating the skin from the inside out for immediate, long-lasting results. <\/p><p>[details]<\/p>",
             "column_content": 0,
             "classname": "it_info p-0 pt-0 pt-md-3"
           }

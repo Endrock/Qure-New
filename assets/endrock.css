@@ -1938,6 +1938,12 @@ body[class~="page.sunil-mi-landing"] .product-price{
   [data-reduced-copy] .section-trusted .trusted_cl .section_header.reduced-copy:not(.d-lg-block) {  
     display: none !important;
   }
+  [data-reduced-copy] .section-compare .title-lg.reduced-copy { 
+    width: 700px;
+  } 
+  [data-reduced-copy] .section-compare .subtitle.reduced-copy { 
+    width: 670px;
+  } 
 }
 @media screen and (max-width: 768px) {
   [data-reduced-copy] .section-trusted .trusted_cl { 
@@ -1985,25 +1991,33 @@ body[class~="page.sunil-mi-landing"] .product-price{
     padding-top: 30px;
   } 
   [data-reduced-copy] .section-two-column-box .clinical-grade-container .reduced-copy { 
-    padding-left: 24px;
+    padding-left: 12px;
   }
   [data-reduced-copy] .section-two-column-box .clinical-grade-container .reduced-copy .it_info .sub-title { 
+    font-family: "Canela Light",sans-serif;
     font-size: 22px;
     font-style: normal;
     font-weight: 300;
     line-height: 28px; 
     letter-spacing: 0.22px;
-    padding-bottom: 24px;
+    position: relative;
+    padding-bottom: 310px;
+    padding-right: 67px;
   } 
   [data-reduced-copy] .section-two-column-box .clinical-grade-container .reduced-copy .it_info .sub-title img { 
     padding-top: 20px;
-    padding-left: 24px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    height: 320px !important;
   } 
   [data-reduced-copy] .section-two-column-box .clinical-grade-container .reduced-copy .accordion-item { 
     width: auto;
   } 
   [data-reduced-copy] .section-two-column-box .qure-mobile-app-container .reduced-copy .sub-title {
-    font-family: "Canela Web";
+    font-family: "Canela Light",sans-serif;
     font-size: 22px;
     font-style: normal;
     font-weight: 300;
@@ -2019,12 +2033,15 @@ body[class~="page.sunil-mi-landing"] .product-price{
   }
   [data-reduced-copy] .section-compare .section_header { 
     margin-left: 0;
+    max-width: unset;
   } 
   [data-reduced-copy] .section-compare .title-lg.reduced-copy { 
     text-align: start;
-    padding-right: 50px;
+    padding-right: 100px;
   } 
   [data-reduced-copy] .section-compare .subtitle.reduced-copy { 
     text-align: start;
+    width: 100%;
+    padding-right: 40px;
   } 
 }
