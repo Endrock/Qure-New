@@ -1,3 +1,6 @@
+{% comment %}
+  Usage:  {% render 'pdm_cart-gamification', settingsGamification: section.settings, cartTotal: cart.items_subtotal_price %}
+{% endcomment %}
 {% liquid
   assign enableFreeShipping = settingsGamification.enable_free_shipping_treshold 
   assign freeShippingTreshold = settingsGamification.product_free_shipping_threshold 

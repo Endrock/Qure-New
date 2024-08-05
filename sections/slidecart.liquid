@@ -468,6 +468,7 @@
 									<p><span class="money">$10</span></p>
 								{% endif %}
 							</div>
+              {% render 'pdm_cart-shipping-ammount', settingsGamification: section.settings, cartTotal: cart.items_subtotal_price  %}
 						{%- endif -%}
 					</div>
 				</div>

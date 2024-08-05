@@ -637,6 +637,18 @@ body[data-test-price-upsell="B"] .my-floating-cart form.my-cart .custom_upsell >
   display: none;
 }
 
+.drawer_shipping.gamification-test {
+  display: none;
+}
+
+body[data-free-gift-gamification] .drawer__cart-subtotal-end .drawer_shipping {
+  display: none;
+}
+
+body[data-free-gift-gamification] .drawer_shipping.gamification-test {
+  display: block;
+}
+
 body[data-free-gift-gamification] .drawer__cart-discounts_wrap {
   display:none;
 }
