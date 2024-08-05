@@ -3,12 +3,14 @@
 {% case template %}
     {% when 'index' %}
         {% assign main_class = 'homepage' %}
-        <link rel="stylesheet" href="https://qureskincaredns.com/new/assets/contact-us.css">
         <link rel="stylesheet" href="https://qureskincaredns.com/new/assets/qure-skincare-app.css">
     {% when 'collection' %}
         {% assign main_class = 'collection_page' %}
         <link rel="stylesheet" href="{{ 'collections.css' | asset_url }}">
     {% when 'product.sunil-led-mask' %}
+        {% assign main_class = 'led_mask' %}
+        <link rel="stylesheet" href="{{ 'product-led-mask.css' | asset_url }}">
+    {% when 'product.sunil-led-mask-onyx' %}
         {% assign main_class = 'led_mask' %}
         <link rel="stylesheet" href="{{ 'product-led-mask.css' | asset_url }}">
     {% when 'product.mi-patches' %}
@@ -129,7 +131,6 @@
     {% when 'page.contact' %}
         {% assign main_class = 'contact_us' %}
         <link rel="stylesheet" href="{{ 'qure_form.css' | asset_url }}">
-        <link rel="stylesheet" href="{{ 'contact-us.css' | asset_url }}">
     {% when 'page.custom-form' %}
         {% assign main_class = 'stocklist' %}
         <link rel="stylesheet" href="{{ 'qure_form.css' | asset_url }}">
