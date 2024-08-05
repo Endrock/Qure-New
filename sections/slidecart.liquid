@@ -116,6 +116,8 @@
 						</div>
 					</div>
 				</div>
+
+        {% render 'pdm_cart-gamification', settingsGamification: section.settings, cartTotal: cart.items_subtotal_price %}
 			</div>
 
 			{% render 'slidecart-timer' %}
@@ -226,7 +228,7 @@
 								</div>
 
 									<div class="drawer__cart-price-quantity">
-
+                    {% unless item.properties['_required_validation'] %} {% comment %} validation for free gift test {% endcomment %}
 											{% if free_gift %}
 												<div class="drawer__cart-quantity">
 													<a href="javascript:;" style="color:#e4e0e0">
@@ -277,6 +279,11 @@
 												{%- endif -%}
 											</div>
 										{% endif %}
+                  {% endunless %}
+                    {% if item.properties['_required_validation'] %}
+                      {% render 'pdm_free-gift-cart', itemCart: item %}
+                    {% endif %}
+
 									</div>									
 							</div>
 
@@ -461,6 +468,7 @@
 									<p><span class="money">$10</span></p>
 								{% endif %}
 							</div>
+              {% render 'pdm_cart-shipping-ammount', settingsGamification: section.settings, cartTotal: cart.items_subtotal_price  %}
 						{%- endif -%}
 					</div>
 				</div>
@@ -589,14 +597,51 @@
 	{% endfor %}
 {% endif %}
 
-{% render 'slidecart-insert', giftProduct: giftProduct, giftPriceLimit: giftPriceLimit, giftQuantity: giftQuantity, giftDiscount: giftDiscount %}
+{% assign enableProductGift = section.settings.enable_product_gift %}
+{% assign giftTresholdPdm = section.settings.product_gift_threshold |  times: 100 | money_without_currency %}
+{% assign productGiftPdm = section.settings.product_free_gift %}
+
+{% render 'slidecart-insert', giftProduct: giftProduct, giftPriceLimit: giftPriceLimit, giftQuantity: giftQuantity, giftDiscount: giftDiscount, 
+enableProductGift: enableProductGift,
+giftTresholdPdm: giftTresholdPdm,
+productGiftPdm: productGiftPdm %}
 
 {% schema %}
 	{
 		"name": "t:sections.slidecart.name",
 		"class": "section-slidecart",
 		"settings": [
-	
+      {
+        "type": "checkbox",
+        "id": "enable_free_shipping_treshold",
+        "label": "t:sections.slidecart.settings.enable_free_shipping.label",
+        "default": false
+      },
+      {
+        "type": "number",
+        "id": "product_free_shipping_threshold",
+        "label": "t:sections.slidecart.settings.free_shipping_treshold.label",
+        "info": "t:sections.slidecart.settings.free_shipping_treshold.info",
+        "default": 0
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_product_gift",
+        "label": "t:sections.slidecart.settings.enable_product_gift.label",
+        "default": false
+      },
+      {
+        "type": "number",
+        "id": "product_gift_threshold",
+        "label": "t:sections.slidecart.settings.product_gift_treshold.label",
+        "info": "t:sections.slidecart.settings.product_gift_treshold.info",
+        "default": 0
+      },
+      {
+        "type": "product",
+        "id": "product_free_gift",
+        "label": "t:sections.slidecart.settings.product_gift.label",
+      }
 		],
 		"blocks": [
 			{

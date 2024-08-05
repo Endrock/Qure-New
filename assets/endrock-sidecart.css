@@ -630,3 +630,140 @@ body[data-test-price-upsell="B"] .my-floating-cart form.my-cart .custom_upsell >
 }
 
 /* end data test price upsell */
+
+/* Start test gamification */
+
+.progress-container.pdm-gamification {
+  display: none;
+}
+
+.drawer_shipping.gamification-test {
+  display: none;
+}
+
+body[data-free-gift-gamification] .drawer__cart-subtotal-end .drawer_shipping {
+  display: none;
+}
+
+body[data-free-gift-gamification] .drawer_shipping.gamification-test {
+  display: block;
+}
+
+body[data-free-gift-gamification] .drawer__cart-discounts_wrap {
+  display:none;
+}
+
+body[data-free-gift-gamification] .drawer_top_sticky{
+  box-shadow: 0px -11px 20px 0px #000;
+}
+
+body[data-free-gift-gamification] .progress-container {
+  display: flex;
+  padding: 8px 24px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  align-self: stretch;
+  background: #fff;
+  @media screen and (min-width: 769px){
+    padding: 8px 80px;
+  }
+}
+
+body[data-free-gift-gamification] .progress-container__message span {
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.55px;
+
+  @media screen and (min-width: 769px){
+    letter-spacing: 0.33px;
+  }
+}
+
+body[data-free-gift-gamification] .progress-container__message span strong{
+  font-weight: 600;
+}
+
+body[data-free-gift-gamification] .progress-bar-container {
+  height: 58px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+body[data-free-gift-gamification] .progress-bar {
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  position: relative;
+  overflow: visible;
+  width: 100%;
+}
+
+body[data-free-gift-gamification] .progress {
+  height: 100%;
+  background-color: #000;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+body[data-free-gift-gamification] .milestone {
+  position: absolute;
+  top: 0.6em;
+  transform: translateX(-50%);
+}
+
+body[data-free-gift-gamification] .milestone-icon {
+  font-size: 20px;
+  line-height: 1;
+  border-radius: 50%;
+  background: #E2E2E2;
+  display: flex;
+  width: 32px;
+  height: 32px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+body[data-free-gift-gamification] .milestone-icon.backgound-black {
+  background: #000;
+}
+
+body[data-free-gift-gamification] .milestone-icon .free-gift {
+  width: 20px;
+  height: 14.501px;
+}
+body[data-free-gift-gamification] .milestone-icon .product-gift {
+  width: 8px;
+  height: 25px;
+}
+
+body[data-free-gift-gamification] .milestone-label {
+  color: #A6A6A6;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+body[data-free-gift-gamification] .first-milestone {
+  left: 20%;
+}
+
+body[data-free-gift-gamification] .second-milestone {
+  left: 80%;
+}
+
+/* End test gamification */
