@@ -1943,6 +1943,8 @@ body[class~="page.sunil-mi-landing"] .product-price{
   } 
   [data-reduced-copy] .section-compare .subtitle.reduced-copy { 
     width: 670px;
+    margin-left: auto;
+    margin-right: auto;
   } 
 }
 @media screen and (max-width: 768px) {
