@@ -2,25 +2,19 @@
   Usage:  {% render 'pdm_cart-gamification', settingsGamification: section.settings, cartTotal: cart.items_subtotal_price %}
 {% endcomment %}
 {% liquid
-  assign enableFreeShipping = settingsGamification.enable_free_shipping_treshold 
-  assign freeShippingTreshold = settingsGamification.product_free_shipping_threshold 
-  assign freeShippingTresholdCents = settingsGamification.product_free_shipping_threshold |  times: 100 
-  assign freeShippingTresholdMoney = settingsGamification.product_free_shipping_threshold |  times: 100 |  money_without_currency 
+  assign enableFreeShipping = settingsGamification.enable_free_shipping_treshold
+  assign freeShippingTreshold = shop.metaobjects['sidecart_gamification_tresholds']['sidecart-gamification-tresholds-swspsm6c']['free_shipping'].value
 
   assign enableProductGift = settingsGamification.enable_product_gift 
-  assign giftTresholdPdm = settingsGamification.product_gift_threshold 
-  assign giftTresholdPdmCents = settingsGamification.product_gift_threshold |  times: 100 
-  assign giftTresholdPdmMoney = settingsGamification.product_gift_threshold |  times: 100 |  money_without_currency 
+  assign giftTresholdPdm = shop.metaobjects['sidecart_gamification_tresholds']['sidecart-gamification-tresholds-swspsm6c']['product_gift'].value
 
-  assign differenceFreeShipping = freeShippingTresholdCents | minus: cartTotal
-  assign differenceFreeGift = giftTresholdPdmCents | minus: cartTotal
-
-  assign price_checkT = cartTotal | money_without_currency
+  assign differenceFreeShipping = freeShippingTreshold | minus: cartTotal
+  assign differenceFreeGift = giftTresholdPdm | minus: cartTotal
 
   if enableProductGift
-    assign treshold = giftTresholdPdmCents
+    assign treshold = giftTresholdPdm
   elsif enableFreeShipping
-    assign treshold = freeShippingTresholdCents
+    assign treshold = freeShippingTreshold
   endif
 
   assign progress_percentage = cartTotal | times: 100 | divided_by: treshold
@@ -35,15 +29,15 @@
       <span>
         {% if enableFreeShipping and differenceFreeShipping > 0 %}
           {% if cart.item_count == 0  %}
-            You’re <i class="money" style="font-style: normal;">{{ freeShippingTreshold | times: 100 | money_without_trailing_zeros }}</i> away from <strong>Free Shipping!</strong>
+            You’re <i class="money" style="font-style: normal;">{{ freeShippingTreshold | money_without_trailing_zeros }}</i> away from <strong>Free Shipping!</strong>
           {% elsif differenceFreeShipping > 0 and cartTotal > 0 %}
-            Spend <i class="money" style="font-style: normal;">{{ freeShippingTresholdMoney | minus: price_checkT |  times: 100 |  money_without_trailing_zeros }}</i> more to get <strong>Free Shipping!</strong>
+            Spend <i class="money" style="font-style: normal;">{{ freeShippingTreshold | minus: cartTotal |  money_without_trailing_zeros }}</i> more to get <strong>Free Shipping!</strong>
           {% endif %}
         {% elsif enableProductGift %}
           {% if cart.item_count == 0  %}
-            You’re <i class="money" style="font-style: normal;">{{ giftTresholdPdm | times: 100 | money_without_trailing_zeros }}</i> away from <strong>Free Gift!</strong>
+            You’re <i class="money" style="font-style: normal;">{{ giftTresholdPdm | money_without_trailing_zeros }}</i> away from <strong>Free Gift!</strong>
           {% elsif differenceFreeGift > 0 %}
-            Spend <i class="money" style="font-style: normal;">{{ giftTresholdPdmMoney | minus: price_checkT | times: 100 |  money_without_trailing_zeros }}</i> more to get <strong>Free Gift!</strong>
+            Spend <i class="money" style="font-style: normal;">{{ giftTresholdPdm | minus: cartTotal |  money_without_trailing_zeros }}</i> more to get <strong>Free Gift!</strong>
           {% else %}
             <strong>Congrats! {% if enableFreeShipping %} Shipping is on us. {% endif %} Do you have a gift from us.</strong>
           {% endif %}
@@ -61,7 +55,7 @@
           <path d="M1.51923 0.778809C1.05649 0.778809 0.75 1.08593 0.75 1.54961V12.3409C0.75 12.8046 1.05649 13.1117 1.51923 13.1117H3.05769C3.21094 11.8019 4.36478 10.727 5.75 10.727C7.13522 10.727 8.28906 11.8019 8.44231 13.1117H11.5192C11.982 13.1117 12.2885 12.8046 12.2885 12.3409V1.54961C12.2885 1.08593 11.982 0.778809 11.5192 0.778809H1.51923ZM13.8269 3.86202C13.3642 3.86202 13.0577 4.16914 13.0577 4.63283V12.3409C13.0577 12.7263 13.3642 13.1117 13.8269 13.1117C13.9802 11.8019 15.134 10.727 16.5192 10.727C17.9044 10.727 19.0583 11.7236 19.2115 13.1117H19.9808C20.4435 13.1117 20.75 12.8046 20.75 12.3409V8.48685C20.75 7.79433 20.125 6.94524 20.125 6.94524L18.4423 4.63283C18.0577 4.16914 17.8263 3.86202 17.2885 3.86202H13.8269ZM15.3654 5.40363H17.2163C17.3696 5.40363 17.5288 5.54816 17.5288 5.54816L19.1394 7.78831C19.2927 8.02015 19.4519 8.26102 19.4519 8.41458H15.3654V5.40363ZM5.75 11.7146C4.77344 11.7146 3.97115 12.5185 3.97115 13.4971C3.97115 14.4756 4.77344 15.2796 5.75 15.2796C6.72656 15.2796 7.52885 14.4756 7.52885 13.4971C7.52885 12.5185 6.72656 11.7146 5.75 11.7146ZM16.5192 11.7146C15.5427 11.7146 14.7404 12.5185 14.7404 13.4971C14.7404 14.4756 15.5427 15.2796 16.5192 15.2796C17.4958 15.2796 18.2981 14.4756 18.2981 13.4971C18.2981 12.5185 17.4958 11.7146 16.5192 11.7146Z" fill="white"/>
         </svg>
       </div>
-      <span class="milestone-label">{{ freeShippingTresholdCents  | money_without_trailing_zeros }}</span>
+      <span class="milestone-label">{{ freeShippingTreshold  | money_without_trailing_zeros }}</span>
     </div>
     <div class="milestone second-milestone">
       <div class="milestone-icon {% if differenceFreeGift <= 0 %} backgound-black {% endif %}">
@@ -79,7 +73,7 @@
           </defs>
         </svg>
       </div>
-      <span class="milestone-label">{{ giftTresholdPdmCents |  money_without_trailing_zeros }}</span>
+      <span class="milestone-label">{{ giftTresholdPdm |  money_without_trailing_zeros }}</span>
     </div>
   </div>
 
