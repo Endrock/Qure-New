@@ -1876,19 +1876,7 @@ body[class~="page.sunil-mi-landing"] .product-price{
 [data-reduced-copy] .led-light-container .reduced-copy {
   padding-left: 58px;
 }
-[data-reduced-copy] .led-light-container li,
-[data-reduced-copy] .qure-mobile-app-container li {
-  padding-left: 0;
-  list-style-type: disc;
-  list-style-position: inside;
-}
-[data-reduced-copy] .led-light-container li::before,
-[data-reduced-copy] .qure-mobile-app-container li::before { 
-  position: unset;
-  content: unset;
-  left: unset;
-  top: unset;
-}
+
 [data-reduced-copy] .clinical-grade-container .reduced-copy { 
   padding-left: 38px;
   display: flex !important;
@@ -1977,18 +1965,6 @@ body[class~="page.sunil-mi-landing"] .product-price{
     margin-bottom: 50px !important;
   } 
 
-  [data-reduced-copy] .section-two-column-box .led-light-container .reduced-copy ul,
-  [data-reduced-copy] .section-two-column-box .qure-mobile-app-container .reduced-copy ul { 
-    list-style-position: inside;
-    padding-left: 10px;
-  }
-  [data-reduced-copy] .section-two-column-box .led-light-container .reduced-copy ul li,
-  [data-reduced-copy] .section-two-column-box .qure-mobile-app-container .reduced-copy ul li { 
-    text-indent: -15px;
-    padding-left: 15px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
   [data-reduced-copy] .section-two-column-box .led-light-container .reduced-copy .ss_list { 
     padding-top: 30px;
   } 
