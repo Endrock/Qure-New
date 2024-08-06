@@ -21,6 +21,11 @@
   if progress_percentage > 100
     assign progress_percentage = 100
   endif
+
+  assign enableShowGiftPrice = settingsGamification.enable_show_gift_price 
+  assign copyGiftLabel = settingsGamification.copy_title_gift
+  assign giftProduct = settingsGamification.product_free_gift
+
 %}
 
 {% if enableFreeShipping or enableProductGift %}
@@ -28,18 +33,26 @@
     <div class="progress-container__message">
       <span>
         {% if enableFreeShipping and differenceFreeShipping > 0 %}
-          {% if cart.item_count == 0  %}
-            You’re <i class="money" style="font-style: normal;">{{ freeShippingTreshold | money_without_trailing_zeros }}</i> away from <strong>Free Shipping!</strong>
-          {% elsif differenceFreeShipping > 0 and cartTotal > 0 %}
-            Spend <i class="money" style="font-style: normal;">{{ freeShippingTreshold | minus: cartTotal |  money_without_trailing_zeros }}</i> more to get <strong>Free Shipping!</strong>
+          {% if differenceFreeShipping > 0 and cartTotal > 0 %}
+            {% assign remainingAmount = freeShippingTreshold | minus: cartTotal %}
+            You are <i class="money" style="font-style: normal;">{{ remainingAmount | money_without_trailing_zeros }}</i> away from <strong>Free Shipping!</strong>
           {% endif %}
         {% elsif enableProductGift %}
-          {% if cart.item_count == 0  %}
-            You’re <i class="money" style="font-style: normal;">{{ giftTresholdPdm | money_without_trailing_zeros }}</i> away from <strong>Free Gift!</strong>
-          {% elsif differenceFreeGift > 0 %}
-            Spend <i class="money" style="font-style: normal;">{{ giftTresholdPdm | minus: cartTotal |  money_without_trailing_zeros }}</i> more to get <strong>Free Gift!</strong>
+          {% assign remainingGiftAmount = giftTresholdPdm | minus: cartTotal %}
+          {% if differenceFreeGift > 0 %}
+            You’re <i class="money" style="font-style: normal;">{{ remainingGiftAmount | money_without_trailing_zeros }}</i> away from a
+            {% if copyGiftLabel != blank %}
+              <strong>
+                {{ copyGiftLabel }}
+                {% if enableShowGiftPrice %}
+                  {{ giftProduct.variants.first.price | money_without_trailing_zeros }}
+                {% endif %}
+              </strong>
+            {% else %}
+              <strong>Free Gift!</strong>
+            {% endif %}
           {% else %}
-            <strong>Congrats! {% if enableFreeShipping %} Shipping is on us. {% endif %} Do you have a gift from us.</strong>
+            Congrats! You've unlocked your Free <strong>{{ giftProduct.title |  capitalize }}!</strong>
           {% endif %}
         {% endif %}
       </span>
@@ -78,5 +91,4 @@
   </div>
 
   </div>
-
 {% endif %}
