@@ -2367,6 +2367,12 @@
 .custom-review-container {
   display: none;
 }
+body[data-custom-review] .custom-review-container img { 
+  padding-right: 5px;
+}
+body[data-custom-review] .custom-review-container img:last-child { 
+  transform: scale(0.9);
+}
 body[data-custom-review] .section-product-landing .refill_review { 
   display: none;
 }
