@@ -116,7 +116,7 @@
                     {% capture product_url %}products/{{ product.handle }}{% endcapture %}
             {% endcase %}
 
-            <div class="productBlockGrid fixed_height_btn">
+            <div class="productBlockGrid fixed_height_btn" id="{{ product.handle }}">
                 <div class="cus-tag">
                     {% assign amount = 0 %}
                     {% for variant in product.variants %}

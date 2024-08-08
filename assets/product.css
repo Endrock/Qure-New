@@ -3837,7 +3837,7 @@ p.border-r {
 }
 
 .trusted_bl.trustedVerified .trust_item .trust_item_info .result_content {
-    padding: 0;
+    padding: 0 !important;
 }
 
 .trusted_bl.trustedVerified .trust_item .trust_item_info {
@@ -3950,6 +3950,10 @@ p.border-r {
     .trusted_bl.trustedVerified .trusted_left .section_header h2.title-lg {
         font-size: 24px;
         line-height: 36px;
+    }
+
+    .trusted_bl.trustedVerified .trustedVerified_Play {
+        gap: 0px;
     }
 }
 
@@ -6382,6 +6386,38 @@ p.title_mob {
     margin-bottom: 20px;
 }
 
+.howUse_slider h6 {
+    color: #D9D9D9;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.14px;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.howUse_slider .swiper-slide-thumb-active h6 {
+    color: #000;
+    background-color: transparent;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 3px;
+}
+
+.howUse_slider_tab .swiper-slide {
+    max-width: fit-content;
+    cursor: pointer;
+}
+
+.howUse_slider_tab {
+    margin-bottom: 24px;
+}
+
+.howUse_slider_img {
+    margin-bottom: 24px;
+}
+
 @media(max-width:767px) {
     .howUse .howUse_item h6 {
         display: none;
@@ -6397,6 +6433,17 @@ p.title_mob {
         margin-bottom: 10px;
     }
 
+    .howUse_slider h6 {
+        font-size: 13px;
+    }
+
+    .howUse_slider_tab .swiper-wrapper {
+        justify-content: space-between;
+    }
+
+    .howUse_slider_info p:not(:last-child) {
+        padding-bottom: 16px;
+    }
 }
 
 /* --------------------- How to Use End ----------------------------- */
@@ -9133,7 +9180,7 @@ p.title_mob {
 }
 
 /* ======== videosQure with dropdown end ========= */
-/* ===============contact us start ================ */
+/* =============== contact us start ================ */
 .contact_us_bl {
     background-color: #121212;
     color: #fff;
@@ -9167,9 +9214,62 @@ p.title_mob {
     font-family: 'Canela Light';
 }
 
+.contact_btns h3 {
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 1px;
+    font-family: 'Canela Light';
+}
+
+.contact_btns p {
+    opacity: 0.8;
+}
+
+.contact_us_bl .customer_details {
+    margin-top: 40px;
+}
+
+.contact_us_bl .customer_details .c_d_wrapper span:after {
+    background-color: #fff;
+}
+
+.customer_details .c_d_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.customer_details .c_d_wrapper span {
+    position: relative;
+}
+
+.customer_details .c_d_wrapper span:after {
+    width: 1.3px;
+    display: unset;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+}
+
+.customer_details .c_d_wrapper .c_d_wrapper_links a {
+    font-size: 14px;
+}
+
 @media(max-width:767px) {
     .contact_us_bl {
         border-bottom: 1px solid #fff;
+    }
+
+    .customer_details .c_d_wrapper .c_d_wrapper_links a {
+        font-size: 12px;
     }
 }
 
@@ -9207,8 +9307,7 @@ p.title_mob {
 
 .price .new_price {
     font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.24px;
 }
@@ -9225,3 +9324,177 @@ p.title_mob {
 .price_wrap .green_tag p span {
     font-weight: 500 !important;
 }
+
+/* ====== qure_MI_ftr start =============== */
+
+.qure_MI_ftr {
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.qure_MI_ftr_wrap.imageText .it_info p {
+    font-weight: 500;
+}
+
+.qure_MI_ftr .progessInfo {
+    font-size: 13px;
+}
+
+.qure_MI_ftr_wrap .qure_MI_ftr .skincare_percent p {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.qure_MI_ftr_wrap .btn-primary {
+    max-width: 268px !important;
+}
+
+.qure_MI_ftr_wrap .skincare_percent p {
+    padding: 0 !important;
+    padding-left: 5px !important;
+}
+
+/* -- get compliment css start -- */
+.get_compliment_wrap .gc_img_wrap {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    overflow: hidden;
+}
+
+.get_compliment_wrap .gc_img img {
+    width: 300px;
+}
+
+.get_compliment_wrap #pills-tab-skin {
+    display: flex;
+    margin: 20px 0;
+    gap: 20px;
+}
+
+.get_compliment_wrap .tab-pane {
+    opacity: 0;
+    transition: fade;
+}
+
+
+.get_compliment_wrap .tab-pane.show {
+    opacity: 1;
+}
+
+.get_compliment_wrap .nav-pills .nav-link {
+    color: #D9D9D9;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.14px;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.get_compliment_wrap .nav-pills .nav-link.active,
+.get_compliment_wrap .nav-pills .show>.nav-link {
+    color: #000;
+    background-color: transparent;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 3px;
+}
+
+.get_compliment_wrap ul li {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.13px;
+    opacity: 0.8;
+    color: #000;
+}
+
+.get_compliment_wrap #pills-tabContent2 {
+    max-width: 540px;
+}
+
+.affect_howToUse p:not(:last-child) {
+    padding-bottom: 16px;
+}
+
+.surgeon_video .w-css-reset img {
+    object-fit: cover !important;
+}
+
+@media(min-width:767px) {
+    .qure_MI_ftr_wrap .it_img .wistia_responsive_padding .wistia_embed>div {
+        border-radius: 20px !important;
+    }
+}
+
+@media(max-width:767px) {
+    .affect_skin.affect_howToUse .dsn-right-container {
+        padding: 0 24px;
+    }
+
+    .affect_howToUse .get_compliment_wrap #pills-tab-skin {
+        justify-content: space-between;
+    }
+
+    .affect_skin.affect_howToUse .dsn-right-container {
+        padding: 0 24px;
+    }
+
+    .affect_howToUse .get_compliment_wrap .nav-pills .nav-link {
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .affect_howToUse .get_compliment_wrap .tab-pane p {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0.12px;
+    }
+
+    .affect_howToUse .get_compliment_wrap .gc_img_wrap {
+        overflow: unset;
+    }
+
+    .affect_skin .affect_skinContent {
+        padding: 0;
+        margin-top: 30px;
+    }
+
+    .get_compliment_wrap #pills-tab-skin {
+        gap: 10px
+    }
+
+    .get_compliment_wrap .nav-pills .nav-link {
+        font-size: 12px;
+        font-weight: 900;
+    }
+
+    .get_compliment_wrap .gc_img_wrap {
+        gap: 12px;
+    }
+
+    .get_compliment_wrap ul li {
+        font-size: 12px;
+    }
+
+    .qure_MI_ftr {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .qure_MI_ftr_wrap .btn-primary {
+        max-width: 100% !important;
+    }
+
+    .qure_MI_ftr_wrap {
+        padding-top: 0;
+    }
+}
+
+/* ====== qure_MI_ftr end =============== */

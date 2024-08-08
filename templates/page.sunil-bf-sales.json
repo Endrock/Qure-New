@@ -78,6 +78,16 @@
     "pdm_product_landing_sales_F9Dn8a": {
       "type": "pdm_product-landing-sales",
       "blocks": {
+        "product_cRJKBk": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "exclusive-labor-day-bundle",
+            "announcement_id": "",
+            "button_text_id": "Get yours",
+            "show_save_price": true
+          }
+        },
         "product_MAY97j": {
           "type": "product",
           "disabled": true,
@@ -172,6 +182,7 @@
         }
       },
       "block_order": [
+        "product_cRJKBk",
         "product_MAY97j",
         "product_UQdbaG",
         "product_ncYWKA",
@@ -492,6 +503,18 @@
     "bundle_list_LdzHxV": {
       "type": "bundle-list",
       "blocks": {
+        "product_9rPLGX": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "exclusive-labor-day-bundle",
+            "comment_ammount": 100,
+            "percent": 34,
+            "ppl_choise": 0,
+            "recommended": 0,
+            "recommended_code": ""
+          }
+        },
         "product_FjAVNE": {
           "type": "product",
           "disabled": true,
@@ -594,6 +617,7 @@
         }
       },
       "block_order": [
+        "product_9rPLGX",
         "product_FjAVNE",
         "product_3Frmww",
         "product_JVJkGj",

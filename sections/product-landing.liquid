@@ -65,7 +65,7 @@
 
                     <div class="section_header text-start ms-0">
                         {% if section.settings.heading != blank %}
-                            <h1 class="title-xl d-none d-md-block">{{ section.settings.heading | replace: '\n', '<br />' }}</h1>
+                            <h1 id="page-{{ page.handle | escape }}" class="title-xl d-none d-md-block">{{ section.settings.heading | replace: '\n', '<br />' }}</h1>
                         {% endif %}
                         {% if section.settings.heading_mobile != blank %}
                             <h2 class="title-xl d-md-none">{{ section.settings.heading_mobile | replace: '\n', '<br />' }}</h2>

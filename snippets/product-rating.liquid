@@ -25,13 +25,36 @@
             {% endif %}
         </div>
         <p class="text-sm fw-normal" style="text-decoration: none;">
-            <a href="#stamped-main-widget">Based on {{ rating_count }} reviews</a>
+            <a href="#stamped-main-widget"><span id="rating">{{ rating_value | slice: 0, 3 }}</span>/5.0</a>
         </p>
     </div>
-
     <style>
+        .refill_review {
+            margin-bottom: 10px;
+        }
         .refill_review a {
             color: #000 !important;
+            font-weight: bold;
         }
     </style>
+    <script>
+        (function() {
+            function customRound(value) {
+                let integerPart = Math.floor(value);
+                let firstDecimalDigit = Math.floor((value - integerPart) * 10);
+                let remainingDecimals = (value - integerPart) * 10 - firstDecimalDigit;
+
+                if (remainingDecimals >= 0.5) {
+                    return integerPart + (firstDecimalDigit + 1) / 10;
+                } else {
+                    return integerPart + firstDecimalDigit / 10;
+                }
+            }
+
+            let ratingElement = document.getElementById('rating');
+            if (ratingElement) {
+                ratingElement.textContent = customRound('{{ rating_value }}');
+            }
+        })();        
+    </script>
 {% endif %}

@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "header_landing_pFmaRH": {
@@ -7,7 +16,7 @@
           "type": "navigation-link",
           "settings": {
             "link_label": "CONTENT REQUIREMENTS",
-            "link_url": "#mob_item1",
+            "link_url": "#tabsAccordion",
             "image": "shopify:\/\/shop_images\/header_cs1.webp"
           }
         },
@@ -15,7 +24,7 @@
           "type": "navigation-link",
           "settings": {
             "link_label": "PRODUCT",
-            "link_url": "#mob_item2",
+            "link_url": "#tabsAccordion",
             "image": "shopify:\/\/shop_images\/header_cs2.webp"
           }
         },
@@ -23,7 +32,7 @@
           "type": "navigation-link",
           "settings": {
             "link_label": "GOOD EXAMPLES",
-            "link_url": "#mob_item3",
+            "link_url": "#tabsAccordion",
             "image": "shopify:\/\/shop_images\/header_cs3.webp"
           }
         }
@@ -34,8 +43,6 @@
         "navigation_link_3X4mrf"
       ],
       "settings": {
-        "button_label": "SAVE UP TO 43%",
-        "button_url": "#productSubscription"
       }
     },
     "main": {

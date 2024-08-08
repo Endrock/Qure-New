@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "header_landing_simple_zFxaEH": {
@@ -65,7 +74,7 @@
             "image": "shopify:\/\/shop_images\/return.svg",
             "text": "<p>See how you can easily return<br\/>your Q-Rejuvalight Pro.<\/p>",
             "button_label": "Hassle-Free Returns",
-            "button_url": "https:\/\/qureskincare.loopreturns.com\/#\/",
+            "button_url": "shopify:\/\/pages\/returns-exchanges",
             "button_label_second": "Button label",
             "button_url_second": ""
           }

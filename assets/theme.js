@@ -210,7 +210,7 @@ window.addEventListener('load', function () {
 // =================================== js for same height ===============================
 $(function () {
     //setTimeout(function () {
-    $('.q_uses_header, .dfrc__hdr, .s_name, .result_item, .trust_item, .serum_bx, .bs_content, .skin_item, .safety_content, .mc_desc, .blog_wrap, .see_item img, .menu li a').matchHeight({
+    $('.q_uses_header, .dfrc__hdr, .s_name, .result_item, .trust_item, .serum_bx, .bs_content, .skin_item, .safety_content, .mc_desc, .blog_wrap, .see_item img, .menu li a, .return_step1').matchHeight({
         property: 'height',
         target: null,
         remove: false
@@ -302,7 +302,7 @@ accordionHeaders.forEach(header => {
 });
 
 // scroll to id
-$('a[href*="#"]:not([href="#"])').not('.faq-menu__url, .skincare_right a.popup-modal.ss_c_link, .popup-youtube, .ss_c_link, .collection-form .button_primary, .menu li a').click(function () {
+$('a[href*="#"]:not([href="#"])').not('.faq-menu__url, .skincare_right a.popup-modal.ss_c_link, .popup-youtube, .ss_c_link, .collection-form .button_primary, .menu li a, #menu li a').click(function () {
     var target = $(this.hash);
     $('html,body').stop().animate({
         scrollTop: target.offset().top - 100
@@ -1553,5 +1553,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.user_report_wrap').forEach(section => {
         observer.observe(section);
+    });
+});
+
+//How to use section js start
+document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('#pills-tab-skin .nav-link');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('show.bs.tab', function (event) {
+            const targetId = event.target.getAttribute('data-bs-target');
+            const targetPane1 = document.querySelector(`#pills-tabContent1 ${targetId}`);
+            const targetPane2 = document.querySelector(`#pills-tabContent2 ${targetId.replace('1', '2')}`);
+
+            document.querySelectorAll('#pills-tabContent1 .tab-pane').forEach(pane => {
+                pane.classList.remove('show', 'active');
+            });
+            document.querySelectorAll('#pills-tabContent2 .tab-pane').forEach(pane => {
+                pane.classList.remove('show', 'active');
+            });
+
+            if (targetPane1) {
+                targetPane1.classList.add('show', 'active');
+            }
+            if (targetPane2) {
+                targetPane2.classList.add('show', 'active');
+            }
+        });
     });
 });

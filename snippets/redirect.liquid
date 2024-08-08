@@ -16,3 +16,11 @@
 %}
     <script src="{{ '__app-redirect.js' | asset_url }}"></script>
 {% endif %}
+
+{% if 
+    template == 'collection'
+    or template == 'collection.acne-breakouts'
+    or template == 'collection.fine-lines-wrinkles'
+%}
+    <script src="{{ '__app-redirect.js' | asset_url }}"></script>
+{% endif %}
