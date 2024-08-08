@@ -4,23 +4,19 @@
 
 {% liquid
   assign enableFreeShipping = settingsGamification.enable_free_shipping_treshold
-  assign differenceFreeShipping = freeShippingTresholdCents | minus: cartTotal
+  assign freeShippingTreshold = shop.metaobjects['sidecart_gamification_tresholds']['sidecart-gamification-tresholds-swspsm6c']['free_shipping'].value
+  assign differenceFreeShipping = freeShippingTreshold | minus: cartTotal
 %}
 
 <div class="drawer_shipping gamification-test">
-
-
-{% if enableFreeShipping %}
-  {% if differenceFreeShipping < 0  %}
-    <p>Free</p>
-  {% endif %}
-  {% if differenceFreeShipping > 0 and cartTotal > 0 %}
+  {% if enableFreeShipping %}
+    {% if differenceFreeShipping < 0  %}
+      <p>Free</p>
+    {% endif %}
+    {% if differenceFreeShipping > 0 and cartTotal > 0 %}
+      <p><span class="money">$10</span></p>
+    {% endif %}
+  {% else %}
     <p><span class="money">$10</span></p>
   {% endif %}
-{% else %}
-  <p><span class="money">$10</span></p>
-{% endif %}
-
-
-
 </div>

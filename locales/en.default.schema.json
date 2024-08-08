@@ -860,19 +860,17 @@
         "enable_free_shipping" :{
           "label": "Enable Free Shipping Treshold"
         },
-        "free_shipping_treshold": {
-          "label": "Threshold Free Shipping - Dollars",
-          "info": "The value entered must be in US dollars for subsequent conversion to cents."
-        },
         "enable_product_gift" : {
           "label": "Enable Product Gift"
         },
-        "product_gift_treshold": {
-          "label": "Threshold Product Free - Dollars",
-          "info": "The value entered must be in US dollars for subsequent conversion to cents."
-        },
         "product_gift": {
           "label": "Product free"
+        },
+        "enable_show_gift_price": {
+          "label": "Show Gift Price"
+        },
+        "copy_title_gift": {
+          "label": "Copy Title Gift"
         }
       },
       "blocks": {
