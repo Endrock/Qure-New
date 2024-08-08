@@ -2371,7 +2371,10 @@ body[data-custom-review] .custom-review-container img {
   padding-right: 5px;
 }
 body[data-custom-review] .custom-review-container img:last-child { 
-  transform: scale(0.9);
+  transform: scale(0.8);
+  position: relative;
+  left: -5px;
+  bottom: -2px;
 }
 body[data-custom-review] .section-product-landing .refill_review { 
   display: none;
@@ -2394,5 +2397,11 @@ body[data-custom-review] #productSubscription .custom-review-container + .landin
 @media screen and (max-width: 768px) {
   body[data-custom-review] #productSubscription .custom-review-container {
     padding-top: 50px;
+  }
+  body[data-custom-review] .custom-review-container img:last-child { 
+    transform: scale(0.7);
+    position: relative;
+    left: -10px;
+    bottom: -2px;
   }
 }
