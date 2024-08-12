@@ -1118,4 +1118,82 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // end pdm product landing sales
+
+  // new sidecart timer 
+  const isTestActive = document.body.hasAttribute('data-sidecart-timer');
+  if (isTestActive) {
+    initSidecarTimer();
+  }
 });
+
+
+ /**
+ * Initializes the sidecar timer on the page.
+ *
+ * This function checks if the sidecar timer is within the valid date range
+ * and displays the countdown timer accordingly. If the current date is outside
+ * the specified start and finish dates, the timer container is hidden. The timer
+ * updates every second to show the remaining time in days, hours, minutes, and seconds.
+ *
+ * @function initSidecarTimer
+ * @returns {void} - The function does not return a value.
+ */
+ function initSidecarTimer () {
+  const isSidecartOpen = document.body.classList.contains('js-my-cart-open');
+  const sidecartTimerContainer = document.querySelector('.sidecart-timer-container');
+
+  if (!sidecartTimerContainer) return;
+
+  let { finishDate, startDate } = sidecartTimerContainer.dataset;
+
+  startDate = new Date(startDate).getTime();
+  finishDate = new Date(finishDate).getTime();
+  let now = new Date().getTime();
+
+  console.log('CRO:', {startDate, finishDate});
+
+  // check the dates to hide it in case is out of date 
+  if (now < startDate || now > finishDate) {
+    sidecartTimerContainer.style.display = 'none';
+  }
+  
+  const countdown = setInterval(function() {
+    now = new Date().getTime();
+    
+    // Find the time remaining until the target date
+    const remainingTime = finishDate - now;
+    
+    // Time calculations for days, hours, minutes, and seconds
+    const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+    setTimer(sidecartTimerContainer.querySelector('.sidecart-timer-container__timer--days-amount'),days);
+    
+    const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    setTimer(sidecartTimerContainer.querySelector('.sidecart-timer-container__timer--hours-amount'),hours);
+    
+    const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+    setTimer(sidecartTimerContainer.querySelector('.sidecart-timer-container__timer--minutes-amount'),minutes);
+    
+    const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+    setTimer(sidecartTimerContainer.querySelector('.sidecart-timer-container__timer--seconds-amount'),seconds);
+
+    // clearInterval
+    if (remainingTime < 0) {
+      clearInterval(countdown);
+    }
+  }, 1000);
+
+}
+
+/**
+* This function formats the provided amount, ensuring it has a leading zero if it's
+* less than 10, and then updates the text content of the given selector with the formatted value.
+*
+* @function setTimer
+* @param {HTMLElement} selector - The HTML element where the timer value will be displayed.
+* @param {number} amount - The numerical value to be displayed in the timer (days, hours, minutes, or seconds).
+* @returns {void}
+*/
+function setTimer (selector, amount) {
+  let amountFixed = amount < 10 ? `0${amount}` : amount;
+  selector.textContent = amountFixed;
+}

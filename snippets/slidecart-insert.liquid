@@ -111,10 +111,11 @@
 			startCartTimer(15 * 60);
 		}
      // new sidecart timer 
-    const isTestActive = document.body.hasAttribute('data-sidecart-timer');
-    if (isTestActive && 'function' == typeof initSidecarTimer) {
-      initSidecarTimer();
-    }
+      const isTestActive = document.body.hasAttribute('data-sidecart-timer');
+      if (isTestActive && 'function' == typeof initSidecarTimer) {
+        initSidecarTimer();
+      }
+
     	initUpsellSwiper();
 	});
 

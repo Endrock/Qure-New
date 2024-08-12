@@ -808,6 +808,9 @@ body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__t
   align-items: center;
   border-right: 1px solid #C92127;
 }
+body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__timer .sidecart-timer-container__timer--seconds {
+  border-right: unset;
+} 
 body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper .sidecart-timer-container__timer--days-amount, 
 body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper .sidecart-timer-container__timer--hours-amount, 
 body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper .sidecart-timer-container__timer--minutes-amount, 
@@ -835,3 +838,8 @@ body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__t
   line-height: 16px; 
   letter-spacing: 0.09px;
 } 
+@media screen and (max-width: 768px) {
+  body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__label { 
+    margin-right: 0;
+  } 
+}
