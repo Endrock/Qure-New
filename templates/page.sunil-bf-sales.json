@@ -16,7 +16,7 @@
           "type": "announcement",
           "settings": {
             "heading": "Limited Time Only:",
-            "timer": "2024-08-11T23:59:59",
+            "timer": "2024-08-18T23:59:59",
             "timer_next": 7
           }
         },
@@ -86,16 +86,6 @@
             "announcement_id": "",
             "button_text_id": "Get yours",
             "show_save_price": true
-          }
-        },
-        "product_MAY97j": {
-          "type": "product",
-          "disabled": true,
-          "settings": {
-            "product": "exclusive-amazon-prime-bundle",
-            "announcement_id": "",
-            "button_text_id": "Get yours",
-            "show_save_price": false
           }
         },
         "product_UQdbaG": {
@@ -183,7 +173,6 @@
       },
       "block_order": [
         "product_cRJKBk",
-        "product_MAY97j",
         "product_UQdbaG",
         "product_ncYWKA",
         "product_ahkGAV",
@@ -385,6 +374,7 @@
       "settings": {
         "classname": "mi_landing_result",
         "heading": "Confidence changing results, from people just like you",
+        "heading_reduced": "",
         "text_verified_customer": "Verified customer",
         "text_reviewed": "Reviewed in"
       }
@@ -505,21 +495,8 @@
       "blocks": {
         "product_9rPLGX": {
           "type": "product",
-          "disabled": true,
           "settings": {
             "product": "exclusive-labor-day-bundle",
-            "comment_ammount": 100,
-            "percent": 34,
-            "ppl_choise": 0,
-            "recommended": 0,
-            "recommended_code": ""
-          }
-        },
-        "product_FjAVNE": {
-          "type": "product",
-          "disabled": true,
-          "settings": {
-            "product": "exclusive-amazon-prime-bundle",
             "comment_ammount": 100,
             "percent": 34,
             "ppl_choise": 0,
@@ -618,7 +595,6 @@
       },
       "block_order": [
         "product_9rPLGX",
-        "product_FjAVNE",
         "product_3Frmww",
         "product_JVJkGj",
         "product_DgMQiP",
@@ -781,6 +757,7 @@
       "settings": {
         "classname": "trusted_bl",
         "heading": "Trusted and recommended by world leading Dermatologists",
+        "heading_reduced": "",
         "likes": "2.4K",
         "views": "1.4M views",
         "image": "shopify:\/\/shop_images\/trusted_3.webp",
@@ -829,7 +806,9 @@
       "settings": {
         "classname": "beauty_skincare section",
         "heading": "Hello make up free days, goodbye clinical costs",
-        "text": "<p>Are you ready to enjoy the same technology used in clinics, without the price tag or hassle?<\/p><p>Get clinic-level results with consistent treatments from the comfort of your own home – for a fraction of the clinical cost.<\/p>"
+        "heading_reduced": "",
+        "text": "<p>Are you ready to enjoy the same technology used in clinics, without the price tag or hassle?<\/p><p>Get clinic-level results with consistent treatments from the comfort of your own home – for a fraction of the clinical cost.<\/p>",
+        "text_reduced": ""
       }
     },
     "details_sliders_BwedTq": {

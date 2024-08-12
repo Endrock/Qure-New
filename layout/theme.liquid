@@ -82,8 +82,6 @@
     {% case template %}
         {% when 'page.sunil-mi-landing' %}
             {{ 'endrock-landing.css' | asset_url | stylesheet_tag }}
-        {% when 'page.anti-creams-microinfusion' %}
-            {{ 'endrock-landing.css' | asset_url | stylesheet_tag }}
         {% when 'page.sunil-mi-landing-de' %}
     {% else %}
         {{ 'endrock.css' | asset_url | stylesheet_tag }}
@@ -168,7 +166,6 @@
     <script src="{{ '__app_trackObject.js' | asset_url }}"></script>
     <script src="{{ '__app_serums-months-form.js' | asset_url }}"></script>
     <script src="{{ '__app_serums-refill-form.js' | asset_url }}"></script>
-
     <script async type="text/javascript" src="https://cdn1.stamped.io/files/widget.min.js"></script>
 
     <script defer type="text/javascript">
@@ -236,56 +233,25 @@
     <script type="text/javascript" src="https://s.skimresources.com/js/200448X1678823.skimlinks.js"></script>
     <script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=4c00ac67-4d68-4b44-95c1-190a7b67b92a"></script>
     <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=4a846202-05f3-48b3-a077-4d4a2eacbe6a"> </script>
-
-    {% comment %} <script>
-        {% if collection %}
-            console.log('https://admin.shopify.com/store/qure-skincare/collections/{{ collection.id }}')
-            console.log('handle: {{ collection.handle }}')
-            console.log('template name: {{ template }}')
-        {% endif %}
-        
-        {% if product %}
-            console.log('https://admin.shopify.com/store/qure-skincare/products/{{ product.id }}')
-            console.log('handle: {{ product.handle }}')
-            console.log('template name: {{ template }}')
-        {% endif %}
-        
-        {% if page %}
-            console.log('https://admin.shopify.com/store/qure-skincare/pages/{{ page.id }}')
-            console.log('handle: {{ page.handle }}')
-            console.log('template name: {{ template }}')
-        {% endif %}
-        
-        {% if blog %}
-            console.log('https://admin.shopify.com/store/qure-skincare/blogs/{{ blog.id }}')
-            console.log('handle: {{ blog.handle }}')
-            console.log('template name: {{ template }}')
-        {% endif %}
-        
-        {% if article %}
-            console.log('https://admin.shopify.com/store/qure-skincare/articles/{{ article.id }}')
-            console.log('handle: {{ article.handle }}')
-            console.log('template name: {{ template }}')
-        {% endif %}
-    </script> {% endcomment %}
-
     <script>function myInit(){ StampedFn.init({ apiKey: 'pubkey-s0D9tf0qd11g0kyfeoSf23o9h0Ts3b', sId: '198244' }); }</script>
     <script async onload="myInit()" type="text/javascript" src="https://cdn1.stamped.io/files/widget.min.js"></script>
 
     {% section 'slidecart' %}
 
     {% render 'gdpr' %} 
-  <!-- hide launcher on the below page -->
+    <!-- hide launcher on the below page -->
  
-  {% if request.path == '/pages/exclusive-eofy-bundle-deal' or request.path =='/pages/exclusive-holiday-bundle-deal' or request.path =='/pages/q-rejuvalight-pro-led-mask-guide' or request.path =='/pages/qure-microinfusion-offer' or request.path =='/pages/microinfusion-safety-guide' or request.path =='/pages/qurify-offer' or request.path =='/pages/why-qurify' or request.path == '/pages/free-water-report' or request.path == '/pages/q-urify-water-filter-guide' or request.path == '/pages/qure-microinfusion-offer-men' or request.path == '/pages/anti-creams-microinfusion-page' %}
-  <style>  
-    .stamped-launcher-button {
-    display: none !important;
-}
-  </style>
-  {% endif %}
+    {% if request.path == '/pages/exclusive-eofy-bundle-deal' or request.path =='/pages/exclusive-holiday-bundle-deal' or request.path =='/pages/q-rejuvalight-pro-led-mask-guide' or request.path =='/pages/qure-microinfusion-offer' or request.path =='/pages/microinfusion-safety-guide' or request.path =='/pages/qurify-offer' or request.path =='/pages/why-qurify' or request.path == '/pages/free-water-report' or request.path == '/pages/q-urify-water-filter-guide' or request.path == '/pages/qure-microinfusion-offer-men' or request.path == '/pages/anti-creams-microinfusion-page' %}
+        <style>  
+            .stamped-launcher-button {
+            display: none !important;
+        }
+        </style>
+    {% endif %}
   
-<!-- hide launcher on the above page -->
+    <!-- hide launcher on the above page -->
+
+    {% include 'info' %}
 
 </body>
 

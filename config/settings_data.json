@@ -34,7 +34,7 @@
           "announcement_TPxBgi": {
             "type": "announcement",
             "settings": {
-              "heading": "<p><strong>FREE World-Wide Shipping <\/strong>All Orders Above $100<\/p>",
+              "heading": "<p><strong>FREE <\/strong>World-Wide Shipping Orders $100+<\/p>",
               "button_label": "SHOP NOW",
               "button_url": "shopify:\/\/collections\/best-sellers"
             }
@@ -182,7 +182,15 @@
           "enable_product_gift": true,
           "product_free_gift": "face-serum",
           "enable_show_gift_price": true,
-          "copy_title_gift": "FREE Full-Size Serum worth"
+          "copy_title_gift": "FREE Full-Size Serum worth",
+          "sidecart_enable": true,
+          "start_date": "08-12-2024 00:00",
+          "finish_date": "09-03-2024 00:00",
+          "label_ends": "Labor Day Sales Ends In:",
+          "label_days": "DAYS",
+          "label_hours": "HOURS",
+          "label_minutes": "MINUTES",
+          "label_seconds": "SECONDS"
         }
       },
       "footer-landing": {
