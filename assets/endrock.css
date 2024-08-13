@@ -1936,6 +1936,9 @@ body[class~="page.sunil-mi-landing"] .product-price{
   } 
 }
 @media screen and (max-width: 768px) {
+  [data-reduced-copy] .section-trusted { 
+    background: linear-gradient(180deg, rgba(199, 231, 220, 0.91) -98.65%, #FFF 69.3%);
+  } 
   [data-reduced-copy] .section-trusted .trusted_cl { 
     padding-top: 20px !important;
   } 
@@ -2014,8 +2017,9 @@ body[class~="page.sunil-mi-landing"] .product-price{
     max-width: unset;
   } 
   [data-reduced-copy] .section-compare .title-lg.reduced-copy { 
+    width: 260px;
     text-align: start;
-    padding-right: 100px;
+    margin-left: 0 !important;
   } 
   [data-reduced-copy] .section-compare .subtitle.reduced-copy { 
     text-align: start;
