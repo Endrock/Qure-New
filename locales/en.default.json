@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin language editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "general": {
     "password_page": {
@@ -490,8 +499,8 @@
       "send_on_label": "Send on (optional)"
     }
   },
-  "microInfusionLandingPage":{
-    "redLabel":{
+  "microInfusionLandingPage": {
+    "redLabel": {
       "title": "AVAILABLE UNTIL STOCK LASTS"
     }
   },
@@ -507,6 +516,20 @@
       },
       "marketing": {
         "accept_sms_checkbox_label": "Get Skincare Hacks & Exclusive Deals to Your Phone"
+      },
+      "contact": {
+        "address2_label": "Apartment, suite, etc (We are not able to ship to PO boxes).",
+        "optional_address2_label": "Apartment, suite, etc (We are not able to ship to PO boxes)."
+      },
+      "field_errors": {
+        "address_address2_blank": "Apartment, suite, etc (We are not able to ship to PO boxes)."
+      },
+      "wallets": {
+        "errors": {
+          "missing": {
+            "address2": "Apartment, suite, etc (We are not able to ship to PO boxes)."
+          }
+        }
       }
     }
   }

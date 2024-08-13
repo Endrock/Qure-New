@@ -80,7 +80,6 @@
       "blocks": {
         "product_cRJKBk": {
           "type": "product",
-          "disabled": true,
           "settings": {
             "product": "exclusive-labor-day-bundle",
             "announcement_id": "",
@@ -126,6 +125,7 @@
         },
         "product_3gJLGX": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "confidence-booster-bundle",
             "announcement_id": "",
@@ -144,6 +144,7 @@
         },
         "product_mmM6Jm": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "skin-ssentials-set-doctorly-choice",
             "announcement_id": "Doctorly recommended",
@@ -153,6 +154,7 @@
         },
         "product_MpViyV": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "youthify-or-glow-set",
             "announcement_id": "",
@@ -550,6 +552,7 @@
         },
         "product_EQ6HJY": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "skin-ssentials-set-doctorly-choice",
             "comment_ammount": 202,
@@ -572,6 +575,7 @@
         },
         "product_aKUc4N": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "confidence-booster-bundle",
             "comment_ammount": 242,
@@ -583,6 +587,7 @@
         },
         "product_CnMwyU": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "youthify-or-glow-set",
             "comment_ammount": 514,
