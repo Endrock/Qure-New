@@ -769,8 +769,11 @@ body[data-free-gift-gamification] .second-milestone {
 /* End test gamification */
 
 
-/* timer  */
+/* new sidecart timer  */
 .sidecart-timer-container {
+  display: none;
+}
+.drawer__wrapper .cart_timer {
   display: none;
 }
 body[data-sidecart-timer] .cart_timer {
@@ -842,4 +845,16 @@ body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__t
   body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__label { 
     margin-right: 0;
   } 
+}
+@media screen and (max-width: 400px) {
+  body[data-sidecart-timer] .sidecart-timer-container { 
+    justify-content: space-evenly;
+  } 
+  body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__label { 
+    margin-left: 5px;
+  } 
+  body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper { 
+    width: 48px;
+    padding: 0 10px;
+  }
 }
