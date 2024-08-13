@@ -124,6 +124,13 @@
 </div>
 <section id="new-landing-purchase" class="new-landing-purchase">
   <div class="container">
+    {%- if page.handle == "qure-microinfusion-offer" or page.handle == "qure-micro-infusion-landing-page-affiliate" -%}
+      <div class="custom-review-container">
+          {{ settings.custom_trustpilot_name | image_url: width: 90 | image_tag: alt:"custom-name"  }}
+          {{ settings.custom_trustpilot_stars | image_url: width: 90 | image_tag: alt:"custom-stars"  }}
+          {{ settings.custom_trustpilot_score | image_url: width: 90 | image_tag: alt:"custom-score"  }}
+      </div>
+    {%- endif -%}
     <div class="landing-container-title">
       <h3>{{ general_settings.title }}</h3>
       <p>{{ general_settings.subtitle }}</p>

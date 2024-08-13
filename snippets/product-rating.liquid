@@ -1,5 +1,5 @@
 {% if rating_count %}
-    <div class="refill_review">
+    <div class="refill_review mb-2">
         {% assign rating_string = rating_value %}
         {% assign parts = rating_string | split: "." %}
         {% assign integer_part = parts[0] | times: 1 %}
@@ -25,16 +25,12 @@
             {% endif %}
         </div>
         <p class="text-sm fw-normal" style="text-decoration: none;">
-            <a href="#stamped-main-widget"><span id="rating">{{ rating_value | slice: 0, 3 }}</span>/5.0</a>
+            <a href="#stamped-main-widget"><span id="rating">{{ rating_value | slice: 0, 3 }}</span>/5 Rated by Customers</a>
         </p>
     </div>
     <style>
-        .refill_review {
-            margin-bottom: 10px;
-        }
         .refill_review a {
             color: #000 !important;
-            font-weight: bold;
         }
     </style>
     <script>

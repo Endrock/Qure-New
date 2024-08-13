@@ -47,7 +47,7 @@
                     {% if rating_count %}
                         {%- for block in section.blocks -%}
                             {% if block.type == 'rating' %}
-                                {% if block.settings.product %}
+                                {% if block.settings.product != blank %}
                                     {% render 'product-rating', rating_value: block.settings.product.metafields.reviews.rating.value, rating_count: block.settings.product.metafields.reviews.rating_count.value %}
                                 {% else %}
                                     <div class="refill_review">
@@ -74,11 +74,29 @@
                         {% endif %}
                     </div>
 
-                    {% unless page.handle == 'microinfusion' or page.handle == 'qure-microinfusion-offer' or page.handle == 'qure-microinfusion-offer-de' or page.handle == 'qure-micro-infusion-landing-page-affiliate' or page.handle == 'qure-microinfusion-offer-men' or page.handle == 'qure-microinfusion-offer-fr' or page.handle == 'qure-microinfusion-offer-es'%}
+                    {%- if page.handle == "qure-microinfusion-offer" or page.handle == "qure-micro-infusion-landing-page-affiliate" -%}
+                        <div class="custom-review-container">
+                            {{ settings.custom_trustpilot_name | image_url: width: 80 | image_tag: alt:"custom-name"  }}
+                            {{ settings.custom_trustpilot_stars | image_url: width: 80 | image_tag: alt:"custom-stars"  }}
+                            {{ settings.custom_trustpilot_score | image_url: width: 80 | image_tag: alt:"custom-score"  }}
+                        </div>
+                    {%- endif -%}
+
+                    {% unless 
+                        page.handle == 'microinfusion' 
+                        or page.handle == 'qure-microinfusion-offer' 
+                        or page.handle == 'anti-creams-microinfusion-page' 
+                        or page.handle == 'qure-microinfusion-offer-de' 
+                        or page.handle == 'qure-micro-infusion-landing-page-affiliate' 
+                        or page.handle == 'qure-microinfusion-offer-men' 
+                        or page.handle == 'qure-microinfusion-offer-fr' 
+                        or page.handle == 'qure-microinfusion-offer-es'
+                    %}
                         <div class="product-price">
                             {% render 'pdm_product-price' subscribe_count: 1, section: section, landing:true %}
                         </div>
                     {% endunless %}
+
                     {% if button_count %}
                         {%- for block in section.blocks -%}
                             {% if block.type == 'button' %}
