@@ -518,8 +518,10 @@
         "accept_sms_checkbox_label": "Get Skincare Hacks & Exclusive Deals to Your Phone"
       },
       "contact": {
-        "address2_label": "Apartment, suite, etc (We are not able to ship to PO boxes).",
-        "optional_address2_label": "Apartment, suite, etc (We are not able to ship to PO boxes)."
+        "address2_label": "Apartment, suite, etc ",
+        "optional_address2_label": "Apartment, suite, etc",
+        "address_title": "Address",
+        "address1_label": "Address (We are not able to ship to PO boxes)."
       },
       "field_errors": {
         "address_address2_blank": "Apartment, suite, etc (We are not able to ship to PO boxes)."

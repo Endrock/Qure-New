@@ -75,14 +75,17 @@
                         {% endif %}
                     </div>
 
-                    {% render 'product-led-mask' %}
-
                     {% unless page.handle == 'qure-micro-infusion-landing-page-affiliate' %}
-                        
-                        <div class="product-price">
-                            {% render 'pdm_product-price' subscribe_count: subscribe_count, section: section %}
+                        <div class="price_wrap">
+                            <div class="price">
+                                <div class="new_price">
+                                    {% render 'pdm_product-price' subscribe_count: subscribe_count, section: section %}
+                                </div>
                             </div>
+                        </div>
                     {% endunless %}
+
+                    {% render 'product-led-mask' %}
 
                     <div class="mw-452">
                         {% if list_count > 0 %}

@@ -1139,23 +1139,29 @@ document.addEventListener('DOMContentLoaded', function() {
  * @returns {void} - The function does not return a value.
  */
  function initSidecarTimer () {
-  const isSidecartOpen = document.body.classList.contains('js-my-cart-open');
   const sidecartTimerContainer = document.querySelector('.sidecart-timer-container');
 
   if (!sidecartTimerContainer) return;
 
   let { finishDate, startDate } = sidecartTimerContainer.dataset;
 
-  startDate = new Date(startDate).getTime();
-  finishDate = new Date(finishDate).getTime();
-  let now = new Date().getTime();
+   // parse dates
+   startDate = parseCustomDate(startDate); 
+   finishDate = parseCustomDate(finishDate);
 
-  console.log('CRO:', {startDate, finishDate});
-
-  // check the dates to hide it in case is out of date 
-  if (now < startDate || now > finishDate) {
-    sidecartTimerContainer.style.display = 'none';
-  }
+   if (isNaN(startDate) || isNaN(finishDate)) {
+     console.error('Invalid date format:', { startDate, finishDate });
+     sidecartTimerContainer.style.display = 'none';
+     return;
+   }
+ 
+   let now = new Date().getTime();
+ 
+   // Hide timer if out of date
+   if (now < startDate || now > finishDate) {
+     sidecartTimerContainer.style.display = 'none';
+     return;
+   }
   
   const countdown = setInterval(function() {
     now = new Date().getTime();
@@ -1165,15 +1171,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Time calculations for days, hours, minutes, and seconds
     const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-    setTimer(sidecartTimerContainer.querySelector('.sidecart-timer-container__timer--days-amount'),days);
-    
     const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    setTimer(sidecartTimerContainer.querySelector('.sidecart-timer-container__timer--hours-amount'),hours);
-    
     const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-    setTimer(sidecartTimerContainer.querySelector('.sidecart-timer-container__timer--minutes-amount'),minutes);
-    
     const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+    
+    setTimer(sidecartTimerContainer.querySelector('.sidecart-timer-container__timer--days-amount'),days);
+    setTimer(sidecartTimerContainer.querySelector('.sidecart-timer-container__timer--hours-amount'),hours);
+    setTimer(sidecartTimerContainer.querySelector('.sidecart-timer-container__timer--minutes-amount'),minutes);
     setTimer(sidecartTimerContainer.querySelector('.sidecart-timer-container__timer--seconds-amount'),seconds);
 
     // clearInterval
@@ -1194,6 +1198,27 @@ document.addEventListener('DOMContentLoaded', function() {
 * @returns {void}
 */
 function setTimer (selector, amount) {
+  if (!selector || !amount) return;
+
   let amountFixed = amount < 10 ? `0${amount}` : amount;
   selector.textContent = amountFixed;
+}
+
+/**
+ * Parses a date string in the format "MM-DD-YYYY HH:MM" and returns the corresponding
+ * timestamp in milliseconds.
+ *
+ * This function splits the date string into its date and time components, extracts
+ * the month, day, year, hours, and minutes, and then constructs a Date object
+ * using these values. The month is adjusted to be zero-indexed (0 for January, 11 for December).
+ *
+ * @function parseCustomDate
+ * @param {string} dateString - The date string to be parsed, in the format "MM-DD-YYYY HH:MM".
+ * @returns {number} - The timestamp in milliseconds representing the parsed date and time.
+ */
+function parseCustomDate(dateString) {
+  const [datePart, timePart] = dateString.split(' ');
+  const [month, day, year] = datePart.split('-').map(Number);
+  const [hours, minutes] = timePart.split(':').map(Number);
+  return new Date(year, month - 1, day, hours, minutes, 0, 0).getTime();
 }
