@@ -17,7 +17,7 @@ usage: {% render 'pdm_upsell_cards_slide', image_slide:image_slide, title_copy:t
       <img src="{{ image_slide }}">
     </div>
     
-    <div class="upsell_content upsell_content_original">
+    <div class="upsell_content upsell_content_mobile">
       <h4>{{ title_copy }}</h4>
       <p>{{ description_copy }}</p>
       <div class="upsell_content-price-wrapper">
@@ -26,7 +26,7 @@ usage: {% render 'pdm_upsell_cards_slide', image_slide:image_slide, title_copy:t
       </div>
     </div>
 
-    <div class="upsell_content upsell_content_test">
+    <div class="upsell_content upsell_content_desktop">
       <div class="upsell_content-text">
         <h4>{{ title_copy }}</h4>
         <p>{{ description_copy }}</p>
@@ -38,7 +38,7 @@ usage: {% render 'pdm_upsell_cards_slide', image_slide:image_slide, title_copy:t
     </div>
 
   </div>
-  <div class="upsell_price">
+  <div class="upsell_price upsell_price_desktop">
     <div class="upsell_amt">
       <span>{{ product_slide.compare_at_price | money_without_trailing_zeros  }}</span>
       <i class="money">{{ product_slide.price | money_without_trailing_zeros  }}</i>
