@@ -32,6 +32,11 @@
     gap: 17px !important;
 }
 
+.mi_landing.mi_landing_men .science-section-container
+{
+        display: block !important;
+}
+
 @media(max-width:767px) {
     .mi_landing .shipping.one_line .s_bx p {
         width: 130px;

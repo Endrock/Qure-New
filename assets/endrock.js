@@ -1124,6 +1124,48 @@ document.addEventListener('DOMContentLoaded', function() {
   if (isTestActive) {
     initSidecarTimer();
   }
+
+  // holiday bundles concern dropdowns
+  // Select all buttons that trigger the dropdown within the holiday bundles container
+  const dropdownButtonsHolidayBundles = document.querySelectorAll('.holiday-bundles-concern-card-inside-dropdown');
+
+  /**
+   * Handles the click event to toggle the dropdown
+   * @param {Event} event - The click event
+   */
+  function handleDropdownToggle(event) {
+    // Get the associated dropdown container, which is the next sibling element of the clicked button
+    const dropdownContainer = event.currentTarget.nextElementSibling;
+    
+    // Get the dropdown image, if it exists, within the clicked button
+    const dropdownImage = event.currentTarget.querySelector('.holiday-bundles-concern-card-inside-dropdown--image');
+
+    // Toggle the 'active' class on the dropdown container
+    toggleClass(dropdownContainer, 'active');
+
+    // If a dropdown image exists, also toggle the 'active' class on it
+    if (dropdownImage) {
+      toggleClass(dropdownImage, 'active');
+    }
+  }
+
+  /**
+   * Adds or removes a class from an element
+   * @param {Element} element - The element to which the class will be added or removed
+   * @param {string} className - The name of the class to add or remove
+   */
+  function toggleClass(element, className) {
+    element.classList.toggle(className);
+  }
+
+  // Check if the body has the 'data-bundle-test' attribute before executing the code
+  if (document.body.hasAttribute('data-bundle-test')) {
+    // Assign the event handler to each button in the list
+    dropdownButtonsHolidayBundles.forEach(function(button) {
+      button.addEventListener('click', handleDropdownToggle);
+    });
+  }
+  // end holiday bundles concern dropdowns
 });
 
 

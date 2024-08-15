@@ -381,6 +381,63 @@
         "text_reviewed": "Reviewed in"
       }
     },
+    "holiday_bundles_concern_bUWzEL": {
+      "type": "holiday-bundles-concern",
+      "blocks": {
+        "product_card_AeE4RC": {
+          "type": "product-card",
+          "settings": {
+            "card_product": "youthful-you",
+            "card_color_background_outside": "#C7E7DC",
+            "card_color_background_inside": "#F5F5F5",
+            "card_subheader": "ULTIMATE bundle for",
+            "card_header": "Signs of Aging",
+            "card_show_black_tab": false,
+            "card_black_tab_text": "Over 20,000 people chose these products",
+            "card_dropdown_title": "What is included?",
+            "card_dropdown_image": "shopify:\/\/shop_images\/arrow_icon_e53a55d9-9a21-47ca-b204-46a1bbd0539c.svg",
+            "card_dropdown_content": "<ul><li>Q-Rejuvalight Pro LED Mask<\/li><li>All-In-One Face Serum(30ml)<\/li><li>Neck & Décolletage LED Device<\/li><\/ul>",
+            "card_price_save_text": "SAVE:",
+            "card_percentage_stock_left": 34,
+            "card_percentage_stock_left_text_prefix": "%",
+            "card_percentage_stock_left_text": "of stock left",
+            "card_button_text": "Add To Cart"
+          }
+        },
+        "product_card_EWkrp4": {
+          "type": "product-card",
+          "settings": {
+            "card_product": "best-seller-bundle",
+            "card_color_background_outside": "#C7E7DC",
+            "card_color_background_inside": "#F5F5F5",
+            "card_subheader": "ULTIMATE bundle for",
+            "card_header": "Dark Spots",
+            "card_show_black_tab": true,
+            "card_black_tab_text": "Over 20,000 people chose these products",
+            "card_dropdown_title": "What is included?",
+            "card_dropdown_image": "shopify:\/\/shop_images\/arrow_icon_e53a55d9-9a21-47ca-b204-46a1bbd0539c.svg",
+            "card_dropdown_content": "<ul><li>Q-Rejuvalight Pro LED Mask<\/li><li>Micro-Infusion 3 Month Limited Edition Bundle<\/li><\/ul>",
+            "card_price_save_text": "SAVE:",
+            "card_percentage_stock_left": 36,
+            "card_percentage_stock_left_text_prefix": "%",
+            "card_percentage_stock_left_text": "of stock left",
+            "card_button_text": "Add To Cart"
+          }
+        }
+      },
+      "block_order": [
+        "product_card_AeE4RC",
+        "product_card_EWkrp4"
+      ],
+      "settings": {
+        "title_section": "We created these bundles just for your skin needs",
+        "image_section_review": "shopify:\/\/shop_images\/reviews_section_Qure.png",
+        "section_footer_anchor": "Shop All Bundles",
+        "section_footer_url": "bf-bundles",
+        "section_footer_payment_text": "Buy now, pay later in 4 monthly payments with",
+        "section_footer_payment_image": "shopify:\/\/shop_images\/payment_icons_qure.png"
+      }
+    },
     "two_column_box_FQCXGb": {
       "type": "two-column-box",
       "blocks": {
@@ -1070,6 +1127,7 @@
     "pdm_product_landing_sales_F9Dn8a",
     "icons_list_qXfGQA",
     "results_NKDiDj",
+    "holiday_bundles_concern_bUWzEL",
     "two_column_box_FQCXGb",
     "featuredin_cQiHyx",
     "bundle_list_LdzHxV",

@@ -191,9 +191,12 @@
                                             {% unless supply_count > 0 %}
                                                 {% render 'pdm_orderby' %}
                                             {% endunless %}
-                                            <a class="btn btn-lg btn-primary without_subscription buy_btn" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>
-                                            {% if section.settings.reserve == true %}Reserve now{% else %}Buy Now{% endif %}
-                                            </a>
+
+                                            {% if product.variants.first.available %}
+                                                <a class="btn btn-lg btn-primary without_subscription buy_btn" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>{% if section.settings.reserve == true %}Reserve now{% else %}Buy Now{% endif %}</a>
+                                            {% else %}
+                                                <a class="btn btn-lg btn-primary without_subscription buy_btn" href="#">{% if section.settings.reserve == true %}Reserve now{% else %}Sold Out{% endif %}</a>
+                                            {% endif %}
 
                                             {% capture sticky-button-classname %}without_subscription{% endcapture %}
 
