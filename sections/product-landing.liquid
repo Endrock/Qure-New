@@ -37,6 +37,11 @@
     endif
 %}
 
+<script>
+  {% if page.handle == 'microinfusion' or page.handle == "qure-microinfusion-offer" or page.handle == "qure-micro-infusion-landing-page-affiliate"  %}
+    window.testPriceActive = true;
+  {% endif %}
+</script>
 <!-- -- main banner start -- -->
 <div class="refill_bl pt-0 tabSlider" id="page">
     <div class="container">
