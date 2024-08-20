@@ -1119,12 +1119,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // end pdm product landing sales
 
-  // new sidecart timer 
-  const isTestActive = document.body.hasAttribute('data-sidecart-timer');
-  if (isTestActive) {
-    initSidecarTimer();
-  }
-
   // holiday bundles concern dropdowns
   // Select all buttons that trigger the dropdown within the holiday bundles container
   const dropdownButtonsHolidayBundles = document.querySelectorAll('.holiday-bundles-concern-card-inside-dropdown');
@@ -1166,6 +1160,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   // end holiday bundles concern dropdowns
+
+  // new sidecart timer 
+  const isTestActive = document.body.hasAttribute('data-sidecart-timer');
+  if (isTestActive) {
+    initSidecarTimer();
+  }
+
 });
 
 

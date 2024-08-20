@@ -1,90 +1,99 @@
 <div class="container holiday-bundles-concern-container">
   <div class="holiday-bundles-concern-header">
     <h2 class="holiday-bundles-concern-header--title">{{ section.settings.title_section }}</h2>
-    <div class="holiday-bundles-concern-header--image">
-      {{ section.settings.image_section_review | image_url: width: 450 | image_tag: alt: 'image section reviews' }}
-    </div>
-  </div>
-	<div class="holiday-bundles-concern-wrapper-card">
-  {% for block in section.blocks %}
     <div
-      class="holiday-bundles-concern-card"
-      style="background-color: {{ block.settings.card_color_background_outside }};"
-    >
-      {% assign card_save_price = block.settings.card_product.compare_at_price
-        | minus: block.settings.card_product.price
-      %}
+      class="holiday-bundles-concern-header--image"
+      style="background-image: url({{ section.settings.image_section_review |  img_url: 'master' }})"
+    ></div>
+  </div>
+  <div class="holiday-bundles-concern-wrapper-card">
+    {% for block in section.blocks %}
+      <div
+        class="holiday-bundles-concern-card"
+        style="background-color: {{ block.settings.card_color_background_outside }};"
+      >
+        {% assign card_save_price = block.settings.card_product.compare_at_price
+          | minus: block.settings.card_product.price
+        %}
 
-      <div class="holiday-bundles-concern-card--title">
-        <h3>{{ block.settings.card_subheader }}</h3>
-        <h2>{{ block.settings.card_header }}</h2>
-      </div>
-      <div class="holiday-bundles-concern-card-inside" style="background-color: {{ block.settings.card_color_background_inside }};">
-        {% if block.settings.card_show_black_tab == true %}
-          <div class="holiday-bundles-concern-card-inside-blacktab-mobile">
-            {{ block.settings.card_black_tab_text }}
-          </div>
-          <div class="holiday-bundles-concern-card-inside-blacktab-desktop">
-            {{ block.settings.card_black_tab_text }}
-          </div>
-        {% endif %}
-        <div class="holiday-bundles-concern-card-inside--image">
-          {{
-            block.settings.card_product.featured_image
-            | image_url: width: 350
-            | image_tag: alt: block.settings.card_product.title
-          }}
+        <div class="holiday-bundles-concern-card--title">
+          <h3>{{ block.settings.card_subheader }}</h3>
+          <h2>{{ block.settings.card_header }}</h2>
         </div>
-        <h3>{{ block.settings.card_product.title }}</h3>
-        <div class="holiday-bundles-concern-card-inside-price-container">
-          <div class="holiday-bundles-concern-card-inside-price-wrapper">
-            <p class="holiday-bundles-concern-card-inside-price-wrapper--full">{{ block.settings.card_product.compare_at_price | money_without_trailing_zeros }}</p>
-            <p class="holiday-bundles-concern-card-inside-price-wrapper--discount">{{ block.settings.card_product.price | money_without_trailing_zeros }}</p>
-          </div>
-          <div class="holiday-bundles-concern-card-inside-price-save">
+        <div
+          class="holiday-bundles-concern-card-inside"
+          style="background-color: {{ block.settings.card_color_background_inside }};"
+        >
+          {% if block.settings.card_show_black_tab == true %}
+            <div class="holiday-bundles-concern-card-inside-blacktab-mobile">
+              {{ block.settings.card_black_tab_text }}
+            </div>
+            <div class="holiday-bundles-concern-card-inside-blacktab-desktop">
+              {{ block.settings.card_black_tab_text }}
+            </div>
+          {% endif %}
+          <div
+            class="holiday-bundles-concern-card-inside--image"
+            style="background-image: url({{ block.settings.card_product.featured_image | img_url: 'master' }}); "
+          ></div>
+          <h3>{{ block.settings.card_product.title }}</h3>
+          <div class="holiday-bundles-concern-card-inside-price-container">
+            <div class="holiday-bundles-concern-card-inside-price-wrapper">
+              <p class="holiday-bundles-concern-card-inside-price-wrapper--full">
+                {{ block.settings.card_product.compare_at_price | money_without_trailing_zeros }}
+              </p>
+              <p class="holiday-bundles-concern-card-inside-price-wrapper--discount">
+                {{ block.settings.card_product.price | money_without_trailing_zeros }}
+              </p>
+            </div>
+            <div class="holiday-bundles-concern-card-inside-price-save">
               {{ block.settings.card_price_save_text }}
               <p>{{ card_save_price | money_without_trailing_zeros }}</p>
+            </div>
           </div>
-        </div>
-        {% comment %} dropdown {% endcomment %}
-        <button class="holiday-bundles-concern-card-inside-dropdown">
-          {{ block.settings.card_dropdown_title }}
-          {% if block.settings.card_dropdown_image != null %}
-            {{ block.settings.card_dropdown_image | image_url: width: 18 | image_tag: alt: 'dropdown arrow', class: 'holiday-bundles-concern-card-inside-dropdown--image' }}
-          {% endif %}
-        </button>
-        <div class="holiday-bundles-concern-card-inside-dropdown-container">
-          {{ block.settings.card_dropdown_content }}
-        </div>
-        {% comment %} add to cart {% endcomment %}
-        <div class="holiday-bundles-concern-card-inside-footer">
-          <div class="holiday-bundles-concern-card-inside-footer-availability">
-            <p class="holiday-bundles-concern-card-inside-footer-availability--number">
-              {{ block.settings.card_percentage_stock_left }}
-              {{ block.settings.card_percentage_stock_left_text_prefix }}
-            </p>
-            <p class="holiday-bundles-concern-card-inside-footer-availability--text">
-              {{ block.settings.card_percentage_stock_left_text }}
-            </p>
+          {% comment %} dropdown {% endcomment %}
+          <button class="holiday-bundles-concern-card-inside-dropdown">
+            {{ block.settings.card_dropdown_title }}
+            {% if block.settings.card_dropdown_image != null %}
+              {{
+                block.settings.card_dropdown_image
+                | image_url: width: 18
+                | image_tag: alt: 'dropdown arrow', class: 'holiday-bundles-concern-card-inside-dropdown--image'
+              }}
+            {% endif %}
+          </button>
+          <div class="holiday-bundles-concern-card-inside-dropdown-container">
+            {{ block.settings.card_dropdown_content }}
           </div>
-          <a
-            href="{{ routes.cart_add_url }}?id={{ block.settings.card_product.first_available_variant.id }}&quantity=1"
-            data-ajax-cart-request-button
-          >
-            {{ block.settings.card_button_text }}
-          </a>
+          {% comment %} add to cart {% endcomment %}
+          <div class="holiday-bundles-concern-card-inside-footer">
+            <div class="holiday-bundles-concern-card-inside-footer-availability">
+              <p class="holiday-bundles-concern-card-inside-footer-availability--number">
+                {{ block.settings.card_percentage_stock_left }}
+                {{ block.settings.card_percentage_stock_left_text_prefix }}
+              </p>
+              <p class="holiday-bundles-concern-card-inside-footer-availability--text">
+                {{ block.settings.card_percentage_stock_left_text }}
+              </p>
+            </div>
+            <a
+              href="{{ routes.cart_add_url }}?id={{ block.settings.card_product.first_available_variant.id }}&quantity=1"
+              data-ajax-cart-request-button
+            >
+              {{ block.settings.card_button_text }}
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  {% endfor %}
-	</div>
+    {% endfor %}
+  </div>
   <div class="holiday-bundles-concern-footer">
     <a href="#{{ section.settings.section_footer_url }}">{{ section.settings.section_footer_anchor }}</a>
     <div class="holiday-bundles-concern-footer-payment">
       <p>{{ section.settings.section_footer_payment_text }}</p>
       {% if section.settings.section_footer_payment_image != null %}
         <div class="holiday-bundles-concern-footer-payment--image">
-          {{ section.settings.section_footer_payment_image | image_url: width: 350 | image_tag: alt: 'payment icons' }}
+          {{ section.settings.section_footer_payment_image | image_url: width: 650 | image_tag: alt: 'payment icons' }}
         </div>
       {% endif %}
     </div>
