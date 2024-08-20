@@ -117,15 +117,16 @@
         "before_and_after_jmNTNh": {
           "type": "before_and_after",
           "settings": {
-            "image_new_section_1": "shopify:\/\/shop_images\/before_and_after_-_m1.png",
-            "image_new_section_text_1": "real resul",
+            "image_new_section_1": "shopify:\/\/shop_images\/before_and_after_-_D_0ea487be-8e7f-4a8b-a6f7-950b0e530ac6.png",
+            "image_new_section_text_1": "real result",
             "image_new_section_2": "shopify:\/\/shop_images\/before_and_after_-_m3.png",
             "image_new_section_text_2": "testimonail two",
             "image_new_section_3": "shopify:\/\/shop_images\/before_and_after_-_m2.png",
             "image_new_section_text_3": "",
             "image_new_section_4": "shopify:\/\/shop_images\/before_and_after_-_m4.png",
             "image_new_section_text_4": "",
-            "image_new_section_text_5": "",
+            "image_new_section_5": "shopify:\/\/shop_images\/before_and_after_-_m1_d489fd6a-0d41-4ef1-8531-ff2925a28c60.png",
+            "image_new_section_text_5": "Result",
             "image_new_section_text_6": ""
           }
         },
@@ -482,6 +483,7 @@
       "settings": {
         "classname": "mi_landing_result",
         "heading": "Results you‘ll see with your own eyes",
+        "heading_reduced": "",
         "text_verified_customer": "Verified customer",
         "text_reviewed": "Reviewed in"
       }
@@ -729,6 +731,7 @@
       "settings": {
         "classname": "trusted_bl",
         "heading": "Loved by world leading Dermatologists",
+        "heading_reduced": "",
         "likes": "23K",
         "views": "1.3M views",
         "image": "shopify:\/\/shop_images\/trusted_3.webp",

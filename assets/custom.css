@@ -289,3 +289,16 @@ iframe#typeform-full {
                 margin-right: 10px !important;
         }
 }
+
+
+body[class~="page.sunil-mi-landing-special"] {
+        .title-xl.d-none {
+                font-size: 46px !important;
+        } 
+        .btn-lg {
+                font-size: 19px !important;
+        }
+        .product-price{
+                display: none !important;
+        }
+}

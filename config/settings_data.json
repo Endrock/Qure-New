@@ -1,6 +1,15 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
-    "favicon": "shopify:\/\/shop_images\/qure_favicon.png",
+    "favicon": "shopify:\/\/shop_images\/qure.png",
     "social_instagram_link": "https:\/\/www.instagram.com\/qureskincare\/",
     "social_facebook_link": "https:\/\/www.facebook.com\/Qureskincare\/",
     "social_tiktok_link": "https:\/\/www.tiktok.com\/@qureskincare",
@@ -34,9 +43,9 @@
           "announcement_TPxBgi": {
             "type": "announcement",
             "settings": {
-              "heading": "<p><strong>FREE <\/strong>World-Wide Shipping Orders $100+<\/p>",
-              "button_label": "SHOP NOW",
-              "button_url": "shopify:\/\/collections\/best-sellers"
+              "heading": "<p>🇺🇲 <strong>LABOR DAY SALE<\/strong> Exclusive Bundle <\/p>",
+              "button_label": "SAVE 51%",
+              "button_url": "https:\/\/www.qureskincare.com\/pages\/exclusive-holiday-bundle-deal#exclusive-labor-day-bundle"
             }
           },
           "tab_3Wyyea": {
@@ -178,19 +187,19 @@
           "gift_ccQgi4"
         ],
         "settings": {
-          "enable_free_shipping_treshold": true,
-          "enable_product_gift": true,
-          "product_free_gift": "face-serum",
-          "enable_show_gift_price": true,
-          "copy_title_gift": "FREE Full-Size Serum worth",
           "sidecart_enable": true,
-          "start_date": "08-12-2024 00:00",
-          "finish_date": "09-03-2024 00:00",
+          "start_date": "08-15-2024 12:00",
+          "finish_date": "09-03-2024 23:59",
           "label_ends": "Labor Day Sales Ends In:",
           "label_days": "DAYS",
           "label_hours": "HOURS",
           "label_minutes": "MINUTES",
-          "label_seconds": "SECONDS"
+          "label_seconds": "SECONDS",
+          "enable_free_shipping_treshold": true,
+          "enable_product_gift": true,
+          "product_free_gift": "face-serum",
+          "enable_show_gift_price": true,
+          "copy_title_gift": "FREE Full-Size Serum worth"
         }
       },
       "footer-landing": {

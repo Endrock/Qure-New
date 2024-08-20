@@ -97,6 +97,17 @@
 		{
 			dicount(37390541553813, 44062187913455, 'N&D100');
 		}
+    else if(window.location.href.includes("micro-infusion-special-offer"))
+    {
+      //Rejuvenating + Hydra-Soothing
+      giftSpecial('43216449208559', 'BUY1GET1_H/R');
+
+      //Rejuvenating
+      giftSpecial('43216398450927', 'BUY1GET1_R');
+
+      //Hydra-Soothing
+      giftSpecial('43216434069743', 'BUY1GET1_H');
+    }
 		else
 		{
 			{% if giftProduct != blank and giftQuantity != blank and giftPriceLimit != blank and giftDiscount != blank %}
@@ -119,61 +130,90 @@
     	initUpsellSwiper();
 	});
 
-	function dicount(productId, dproductId, discountCode) {
-        fetch('/cart.js')
-            .then(response => response.json())
-            .then(cart => {
-				if(window.__discount_applied == false)
-				{
-					if (cart.items.some(item => item.id === +(productId)) && cart.items.some(item => item.id === +(dproductId))) {
-						fetch('/discount/' + discountCode).then(async () => {
-							var event = new Event('click', {
-									'bubbles': true,
-									'cancelable': true
-							});
+  function giftSpecial(productId, discountCode) {
+    fetch('/cart.js')
+    .then(response => response.json())
+    .then(cart => { 
+      if(window['__discount_applied' + productId] === undefined) {
+        if (cart.items.some(item => item.id === +(productId)))
+        {
+          fetch('/discount/' + discountCode).then(async () => {
+            cartRequestAdd({ 
+              items: [
+                {
+                  id: productId,
+                  quantity: 1,
+                  properties: {
+                    _discount_code: discountCode
+                  }
+                }
+              ]  
+            }, {
+              firstComplete: ( requestState ) => {
+                window['__discount_applied' + productId] = true;
+              }
+            } )
+          });                  
+        }
+      }
+    });
+  }
 
-							document.querySelector("#cart-reload").dispatchEvent(event);
-							window.__discount_applied = true;
-						});
-                	}
-					else {
-						window.__discount_applied = false;
-					}
-				}
+	function dicount(productId, dproductId, discountCode) {
+    fetch('/cart.js')
+    .then(response => response.json())
+    .then(cart => {
+        if(window.__discount_applied == false)
+        {
+          if (cart.items.some(item => item.id === +(productId)) && cart.items.some(item => item.id === +(dproductId))) {
+            fetch('/discount/' + discountCode).then(async () => {
+              var event = new Event('click', {
+                  'bubbles': true,
+                  'cancelable': true
+              });
+
+              document.querySelector("#cart-reload").dispatchEvent(event);
+              window.__discount_applied = true;
+            });
+                  }
+          else {
+            window.__discount_applied = false;
+          }
+        }
 		});
 	}
 
   function gift(productId, productQuantity, priceLimit, discountCode = '') {
-        fetch('/cart.js')
-            .then(response => response.json())
-            .then(cart => {
-				var total_price = cart.total_price / 100;
-				var gift = cart.items.some(item => item.id === +(productId));
+    fetch('/cart.js')
+    .then(response => response.json())
+    .then(cart => {
+      var total_price = cart.total_price / 100;
+      var gift = cart.items.some(item => item.id === +(productId));
 
-                if (total_price > priceLimit && !gift) {
-					fetch('/discount/' + discountCode).then(async () => {
-						cartRequestAdd({ 
-						items: [
-							{
-								id: productId,
-								quantity: productQuantity,
-								properties: {
-									_discount_code: discountCode,
-									_free_product: true
-								}
-							}
-						]  
-					}, {} )
-					});
-                }
-				else if(total_price <= priceLimit && gift)
-				{
-					const giftInCart = cart.items.find(item => item.id === +(productId));
-					cartRequestChange({ 
-						id: giftInCart.key,
-						quantity: 0
-					},  {} )
-				}
+      if (total_price > priceLimit && !gift) {
+        fetch('/discount/' + discountCode).then(async () => {
+          cartRequestAdd({ 
+          items: [
+            {
+              id: productId,
+              quantity: productQuantity,
+              properties: {
+                _discount_code: discountCode,
+                _free_product: true
+              }
+            }
+          ]  
+        }, {} )
+        });
+      }
+      else if(total_price <= priceLimit && gift)
+      {
+        const giftInCart = cart.items.find(item => item.id === +(productId));
+        cartRequestChange({ 
+          id: giftInCart.key,
+          quantity: 0
+        },  {} )
+      }
 		});
   }
 

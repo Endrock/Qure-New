@@ -46,6 +46,7 @@ function selectProduct(destination)
             $("#sale-price").text(sale_price);
 
             updateProductButtonHref(destination, product_variant_id);
+            updateClass(product_period);
         });
     });
 }
@@ -61,4 +62,19 @@ function updateProductButtonHref(destination, product_variant_id) {
             button.setAttribute('href', url.toString());
         }
     });
+}
+
+function updateClass(product_period)
+{
+    var element = document.querySelector('#special-detail-container');
+    if (element) {
+        if(product_period == '2')
+        {
+            element.classList.add('offer_active');
+        }
+        else 
+        {
+            element.classList.remove('offer_active');
+        }
+    }
 }
