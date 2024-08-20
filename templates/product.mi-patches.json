@@ -68,6 +68,7 @@
       "settings": {
         "heading": "Smooth, firm and plump stubborn areas with Micro- Infusion Targeted Patches",
         "heading_mobile": "Smooth, firm and plump stubborn areas with Micro- Infusion Targeted Patches",
+        "test_product_name": "Micro-Infusion Targeted Patches",
         "product": "micro-infusion-targeted-patches",
         "product_images_offset": 2,
         "product_images_limit": 7,
@@ -310,6 +311,7 @@
       "settings": {
         "classname": "mi_landing_result",
         "heading": "Words directly from the source",
+        "heading_reduced": "",
         "text_verified_customer": "Verified customer",
         "text_reviewed": "Reviewed in"
       }
@@ -468,7 +470,9 @@
       "settings": {
         "classname": "beauty_skincare section bg-white",
         "heading": "These are not your ordinary eye patches",
-        "text": ""
+        "heading_reduced": "",
+        "text": "",
+        "text_reduced": ""
       }
     },
     "liquid_WdMeGQ": {
