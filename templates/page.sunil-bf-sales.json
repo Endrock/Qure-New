@@ -388,6 +388,7 @@
           "type": "product-card",
           "settings": {
             "card_product": "youthful-you",
+            "card_image": "shopify:\/\/shop_images\/qure_build_image.png",
             "card_color_background_outside": "#C7E7DC",
             "card_color_background_inside": "#F5F5F5",
             "card_subheader": "ULTIMATE bundle for",
@@ -408,6 +409,7 @@
           "type": "product-card",
           "settings": {
             "card_product": "best-seller-bundle",
+            "card_image": "shopify:\/\/shop_images\/qure_build_image_2.png",
             "card_color_background_outside": "#C7E7DC",
             "card_color_background_inside": "#F5F5F5",
             "card_subheader": "ULTIMATE bundle for",

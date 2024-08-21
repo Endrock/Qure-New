@@ -34,8 +34,13 @@
           {% endif %}
           <div
             class="holiday-bundles-concern-card-inside--image"
-            style="background-image: url({{ block.settings.card_product.featured_image | img_url: 'master' }}); "
-          ></div>
+          >
+            {{
+              block.settings.card_image
+              | image_url: width: 750
+              | image_tag: alt: block.settings.card_product.title
+            }}
+          </div>
           <h3>{{ block.settings.card_product.title }}</h3>
           <div class="holiday-bundles-concern-card-inside-price-container">
             <div class="holiday-bundles-concern-card-inside-price-wrapper">
@@ -155,6 +160,11 @@
           "type": "product",
           "id": "card_product",
           "label": "Product"
+        },
+        {
+          "type": "image_picker",
+          "id": "card_image",
+          "label": "card_image"
         },
         {
           "type": "header",
