@@ -639,7 +639,7 @@
 <!-- -- qurify water filter thumbnail end -- -->
 
 {% assign product = all_products['neck-decolletage-led'] %}
-{% assign discount = product.price | times: 0.33333 | divided_by: 100.0 | ceil | times: 100 %}
+{% assign discount = product.price | times: 0.5 | divided_by: 100.0 | ceil | times: 100 %}
 {% assign product_price = product.price %}
 {% assign final_price = product_price |  minus: discount %}
 

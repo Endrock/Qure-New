@@ -220,7 +220,7 @@
   function productGiftPdm (productId,priceLimit) {
     if(document.body.hasAttribute('data-free-gift-gamification')){
       fetch('/cart.js').then(response => response.json()).then(cart => {
-          const gift = cart.items.some(item => item.id === +(productId));
+          const gift = cart.items.some(item => item.id === +(productId) && item.properties && item.properties['_required_validation']);
           const total_price = cart.total_price;
           if (total_price >= priceLimit && !gift) {
             cartRequestAdd({
@@ -235,7 +235,7 @@
               ]
             }, {} )
           }else if (total_price < priceLimit && gift) {
-            const getGiftInCart = cart.items.find(item => item.id === +(productId));
+            const getGiftInCart = cart.items.find(item => item.id === +(productId) && item.properties['_required_validation']);
             cartRequestChange({
               id: getGiftInCart.key,
               quantity: 0
