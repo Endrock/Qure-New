@@ -68,7 +68,9 @@
     "main": {
       "type": "product-landing-sales",
       "settings": {
-        "heading": "<h3>EXCLUSIVE <strong>HOLIDAY<\/strong> BUNDLES<\/h3><h3>Save Up To 55%<\/h3>",
+        "enable_subheading": false,
+        "heading": "Hate investing in skincare that doesn't work?",
+        "subheading": "SAVE UP TO 55% ON REAL SKINCARE SOLUTIONS THIS HOLIDAY SEASON",
         "image": "shopify:\/\/shop_images\/holiday_banner_desk.webp",
         "image_mobile": "shopify:\/\/shop_images\/holiday_banner_mob.webp",
         "button_label": "Shop now",
@@ -186,8 +188,8 @@
         "product_Mhxq4H"
       ],
       "settings": {
-        "text_banner": "EXCLUSIVE HOLIDAY BUNDLES",
-        "text_offer_banner": "Save Up To 55%",
+        "text_banner": "SAVE UP TO 55% ON REAL SKINCARE SOLUTIONS THIS HOLIDAY SEASON",
+        "text_offer_banner": "Hate investing in skincare that doesn't work?",
         "button_banner_url": "#bf-bundles",
         "button_banner_text": "Shop Now",
         "save_text": "save"

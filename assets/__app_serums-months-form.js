@@ -30,6 +30,7 @@ function selectProduct(destination)
             product_type = productTypeElement.getAttribute('data-product-type');
             let product_variant_id = product_variants[product_type][product_period];
             updateProductButtonHref(destination, product_variant_id);
+            applySpecialPromo(destination, product_period, product_variant_id);
         });
     });
 
@@ -46,7 +47,7 @@ function selectProduct(destination)
             $("#sale-price").text(sale_price);
 
             updateProductButtonHref(destination, product_variant_id);
-            updateClass(product_period);
+            applySpecialPromo(destination, product_period, product_variant_id);
         });
     });
 }
@@ -64,17 +65,62 @@ function updateProductButtonHref(destination, product_variant_id) {
     });
 }
 
-function updateClass(product_period)
-{
-    var element = document.querySelector('#special-detail-container');
-    if (element) {
-        if(product_period == '2')
-        {
-            element.classList.add('offer_active');
-        }
-        else 
-        {
-            element.classList.remove('offer_active');
+
+function applySpecialPromo(destination, product_period, product_variant_id) {
+   
+    if(window.location.href.includes("micro-infusion-special-offer"))
+    {
+        let discountCode = '';
+
+        var element = document.querySelector('#special-detail-container');
+        if (element) {
+            if(product_period == '2')
+            {
+                switch (product_variant_id) {
+                    //Rejuvenating + Hydra-Soothing
+                    case 43216449208559:
+                        discountCode = 'BUY1GET1_H/R';
+                    break;
+                    //Rejuvenating
+                    case 43216398450927:
+                        discountCode = 'BUY1GET1_R';
+                    break;
+                    //Hydra-Soothing
+                    case 43216434069743:
+                        discountCode = 'BUY1GET1_H';
+                    break;
+                }
+
+                fetch('/discount/' + discountCode).then(async () => {
+                    let buttons = document.querySelectorAll('.' + destination + 'productButtonObject');
+                    buttons.forEach(button => {
+                        if (button) {
+                            let href = button.getAttribute('href');
+                            let url = new URL(href, window.location.origin);
+                            updateItemObject(product_variant_id);
+                            url.searchParams.set('quantity', 2);
+                            button.setAttribute('href', url.toString());
+                        }
+                    });
+    
+                    element.classList.add('offer_active');
+                });
+            }
+            else 
+            {
+                let buttons = document.querySelectorAll('.' + destination + 'productButtonObject');
+                buttons.forEach(button => {
+                    if (button) {
+                        let href = button.getAttribute('href');
+                        let url = new URL(href, window.location.origin);
+                        updateItemObject(product_variant_id);
+                        url.searchParams.set('quantity', 1);
+                        button.setAttribute('href', url.toString());
+                    }
+                });
+
+                element.classList.remove('offer_active');
+            }
         }
     }
 }

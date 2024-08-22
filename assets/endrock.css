@@ -1031,7 +1031,7 @@ body[class~="page.sunil-mi-landing"] .product-price{
 
 .pdm_product-landing-sales-wrapper .left-panel .product-landing-information .product-landing-information-text{
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 
 .pdm_product-landing-sales-wrapper .left-panel .product-landing-information .product-landing-information-text h3{
@@ -1041,7 +1041,7 @@ body[class~="page.sunil-mi-landing"] .product-price{
   line-height: 24px;
   letter-spacing: 1.5px;
   text-align: left;
-  padding-bottom: 8px;
+  padding-bottom: 0px;
   margin: 0;
 }
 @media screen and (max-width: 768px){
@@ -1052,6 +1052,7 @@ body[class~="page.sunil-mi-landing"] .product-price{
     letter-spacing: 1.5px;
     text-align: center;
     margin: 0;
+    padding-bottom: 0px;
   }
 }
 
@@ -1063,7 +1064,8 @@ body[class~="page.sunil-mi-landing"] .product-price{
   letter-spacing: 1.5px;
   text-align: left;
   margin: 0;
-  white-space: nowrap;
+  white-space: normal;
+  padding-bottom: 10px; 
 }
 
 @media screen and (max-width: 768px){
@@ -1074,6 +1076,7 @@ body[class~="page.sunil-mi-landing"] .product-price{
     letter-spacing: 1.5px;
     text-align: center;
     margin: 0;
+    padding-bottom: 10px;
   }
 }
 
@@ -2549,3 +2552,33 @@ body[data-bundle-test] .holiday-bundles-concern {
   display: none;
 }
 /* end product header test */
+/* Holiday LP Hero Banner Copy  */
+.bfBundle__bannerBlock .bfBundle__content{
+  max-width: 750px;
+}
+
+.bfBundle_bnr_hdr{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.bfBundle_bnr_hdr .bfHeading{
+  text-align: left;
+}
+
+.bfBundle_bnr_hdr .bfSubheading-text{
+  color: #000;
+  text-align: center;
+  font-family: 'Poppins';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 133.333% */
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+
+/* end Holiday LP Hero Banner Copy  */

@@ -97,17 +97,6 @@
 		{
 			dicount(37390541553813, 44062187913455, 'N&D100');
 		}
-    else if(window.location.href.includes("micro-infusion-special-offer"))
-    {
-      //Rejuvenating + Hydra-Soothing
-      giftSpecial('43216449208559', 'BUY1GET1_H/R');
-
-      //Rejuvenating
-      giftSpecial('43216398450927', 'BUY1GET1_R');
-
-      //Hydra-Soothing
-      giftSpecial('43216434069743', 'BUY1GET1_H');
-    }
 		else
 		{
 			{% if giftProduct != blank and giftQuantity != blank and giftPriceLimit != blank and giftDiscount != blank %}
@@ -129,35 +118,6 @@
 
     	initUpsellSwiper();
 	});
-
-  function giftSpecial(productId, discountCode) {
-    fetch('/cart.js')
-    .then(response => response.json())
-    .then(cart => { 
-      if(window['__discount_applied' + productId] === undefined) {
-        if (cart.items.some(item => item.id === +(productId)))
-        {
-          fetch('/discount/' + discountCode).then(async () => {
-            cartRequestAdd({ 
-              items: [
-                {
-                  id: productId,
-                  quantity: 1,
-                  properties: {
-                    _discount_code: discountCode
-                  }
-                }
-              ]  
-            }, {
-              firstComplete: ( requestState ) => {
-                window['__discount_applied' + productId] = true;
-              }
-            } )
-          });                  
-        }
-      }
-    });
-  }
 
 	function dicount(productId, dproductId, discountCode) {
     fetch('/cart.js')

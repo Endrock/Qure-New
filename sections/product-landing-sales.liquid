@@ -145,10 +145,13 @@
         <div class="container">
             <div class="bfBundle__content  bfBundle__content-mob pb-md-5 pb-0">
                 <div class="bfBundle_bnr_hdr">
-                    <div class="subHeading">
-                        <h3 class="bfSub_heading">Exclusive <strong>Holiday</strong> Bundles</h3>
-                    </div>
-                    <h1 class="bfHeading">Save Up To 55%</h1>
+                    {% if section.settings.enable_subheading %}
+                        <div class="subHeading">
+                            <h3 class="bfSub_heading">Exclusive <strong>Holiday</strong> Bundles</h3>
+                        </div>
+                    {% endif %}
+                    <h1 class="bfHeading">{{ section.settings.heading }}</h1>
+                    <p class="bfSubheading-text">{{ section.settings.subheading }}</p>
                     <a href="#bf-bundles" class="btn btn-bfBundle">Shop now</a>
                 </div>
 
@@ -173,9 +176,20 @@
         "class": "section-product-landing-sales desktop-product-landing-sales",
         "settings": [
             {
-                "type": "richtext",
+                "type": "checkbox",
+                "id": "enable_subheading",
+                "label": "enable",
+                "default": false
+            },
+            {
+                "type": "text",
                 "id": "heading",
                 "label": "t:common.heading.label"
+            },
+            {
+                "type": "text",
+                "id": "subheading",
+                "label": "subheading"
             },
             {
                 "type": "image_picker",
