@@ -653,16 +653,9 @@ body[data-free-gift-gamification] .milestone-icon {
   align-items: center;
   gap: 8px;
 }
+
 body[data-free-gift-gamification] .milestone-icon.backgound-black {
   background: #000;
-}
-
-body[data-free-gift-gamification] .milestone-icon.backgound-black svg path:nth-of-type(-n+2) {
-  fill: #C8E6DC;
-}
-
-body[data-free-gift-gamification] .milestone-icon.backgound-black svg path:nth-of-type(n+3) {
-  fill: #000;
 }
 
 body[data-free-gift-gamification] .milestone-icon .free-gift {

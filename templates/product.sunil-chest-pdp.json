@@ -27,6 +27,7 @@
         },
         "supply_b9ppf8": {
           "type": "supply",
+          "disabled": true,
           "settings": {
             "heading": "The next batch ships in mid August 2024:",
             "heading_mobile": "The next batch ships in mid August 2024:",
@@ -69,7 +70,7 @@
         "product_button_label": "Product",
         "before_after_images_limit": 2,
         "before_after_button_label": "Before & After",
-        "reserve": true,
+        "reserve": false,
         "underbutton_text_left": "Dermatologist Reviewed",
         "underbutton_text_right": "Free Shipping Over $100",
         "selected_design": "new",

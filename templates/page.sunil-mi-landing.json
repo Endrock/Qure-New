@@ -62,13 +62,14 @@
           "type": "rating",
           "settings": {
             "image": "shopify:\/\/shop_images\/star-half_fill.svg",
-            "text": "<p>4.8\/5 Based on 43,893 Users<\/p>"
+            "text": "<p>4.8\/5 Based on 43,893 Users<\/p>",
+            "product": ""
           }
         },
         "button_L9q6wE": {
           "type": "button",
           "settings": {
-            "button_label": "GET SMOOTHER, GLOWING SKIN",
+            "button_label": "BUY NOW & SAVE UP TO 43%",
             "button_url": "#productSubscription"
           }
         },
@@ -400,7 +401,8 @@
       "settings": {
         "classname": "main_banner section pt-0",
         "heading": "",
-        "text": ""
+        "text": "",
+        "text_reduced": ""
       }
     },
     "before_after_short_slider_pYmNqR": {
@@ -709,6 +711,7 @@
       "settings": {
         "classname": "trusted_bl",
         "heading": "Reviewed by world leading Dermatologists",
+        "heading_reduced": "",
         "likes": "23K",
         "views": "1.3M VIEWS",
         "image": "shopify:\/\/shop_images\/trusted_3.webp",
@@ -925,6 +928,7 @@
       "settings": {
         "classname": "mi_landing_result",
         "heading": "Results you‘ll see with your own eyes",
+        "heading_reduced": "",
         "text_verified_customer": "Verified customer",
         "text_reviewed": "Reviewed in"
       }
@@ -968,7 +972,9 @@
       "settings": {
         "classname": "beauty_skincare section",
         "heading": "Typically more effective and safer than other at-home needling devices",
-        "text": "<p>Unlike at-home needle roller devices, Micro-infusion requires little to <strong>no downtime,<\/strong>is <strong>virtually painless, <\/strong>and minimizes risk of infection and irritation.<\/p>"
+        "heading_reduced": "",
+        "text": "<p>Unlike at-home needle roller devices, Micro-infusion requires little to <strong>no downtime,<\/strong>is <strong>virtually painless, <\/strong>and minimizes risk of infection and irritation.<\/p>",
+        "text_reduced": ""
       }
     },
     "guide_xibEe6": {
