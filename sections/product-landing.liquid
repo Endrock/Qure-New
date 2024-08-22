@@ -78,14 +78,6 @@
                         <h1>{{ section.settings.test_product_name }}</h1>
                     </div>
 
-                    {%- if page.handle == "qure-microinfusion-offer" or page.handle == "qure-micro-infusion-landing-page-affiliate" -%}
-                        <div class="custom-review-container">
-                            {{ settings.custom_trustpilot_name | image_url: width: 80 | image_tag: alt:"custom-name"  }}
-                            {{ settings.custom_trustpilot_stars | image_url: width: 80 | image_tag: alt:"custom-stars"  }}
-                            {{ settings.custom_trustpilot_score | image_url: width: 80 | image_tag: alt:"custom-score"  }}
-                        </div>
-                    {%- endif -%}
-
                     {% unless 
                         page.handle == 'microinfusion' 
                         or page.handle == 'qure-microinfusion-offer' 
