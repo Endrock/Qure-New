@@ -39,7 +39,7 @@
           {% if differenceFreeShipping > 0 and cartTotal > 0 %}
             {% assign textToShow = "<i class='money' style='font-style: normal;'>" | append: remainingAmountMoney | append: "</i>" %}
             {{ copyFreeShipping | replace: "&price-left&", textToShow }}
-          {% endif %} &&
+          {% endif %}
         {% elsif enableProductGift %}
           {% assign remainingGiftAmount = giftTresholdPdm | minus: cartTotal %}
           {% assign remainingGiftAmountMoney = remainingGiftAmount | money_without_trailing_zeros %}
