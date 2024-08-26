@@ -87,8 +87,9 @@
         "link_crBjL9": {
           "type": "link",
           "settings": {
-            "link_label": "Shop Best Sellers",
-            "link_url": "shopify:\/\/collections\/best-sellers"
+            "link_label": "Shop Labor Day Sale",
+            "link_label_mobile": "Shop & Save 51%",
+            "link_url": "https:\/\/www.qureskincare.com\/products\/exclusive-labor-day-bundle?variant=45668461674735"
           }
         }
       },
@@ -96,10 +97,14 @@
         "link_crBjL9"
       ],
       "settings": {
-        "heading": "Get clinic-level results from home- minus the ‘clinical’ costs.",
-        "text": "<p><strong>50,000+<\/strong>customers feel more confident in their own skin.<\/p>",
-        "image": "shopify:\/\/shop_images\/homepage_banner_desk_5a394355-a35f-4911-ad68-df2ef1c021df.webp",
-        "image_mobile": "shopify:\/\/shop_images\/homepage_banner_mob_098b63eb-bcc4-4cd1-9cf1-30c41a61fb0a.webp"
+        "heading": "Labor Day Sale Save 51%",
+        "heading_mobile": "Labor Day Sale",
+        "heading_tag": "h2",
+        "subheading": "<p>on Exclusive <strong>Limited Edition<\/strong> Micro-Infusion Bundle<\/p>",
+        "subheading_mobile": "<p>Exclusive <strong>Limited Edition<\/strong> Micro-Infusion Bundle<\/p>",
+        "text": "<p><em>A deal so good, it’s limited to one per order.<\/em><\/p>",
+        "image": "shopify:\/\/shop_images\/LABOR_NEW_DESKTOP.png",
+        "image_mobile": "shopify:\/\/shop_images\/LABOR_NEW_MBILE.png"
       }
     },
     "temp": {
@@ -488,6 +493,7 @@
       "settings": {
         "classname": "trusted_bl",
         "heading": "Trusted and recommended by world leading Dermatologists",
+        "heading_reduced": "",
         "likes": "7.1K",
         "views": "351K views",
         "image": "shopify:\/\/shop_images\/trusted_2.jpg",
@@ -648,7 +654,9 @@
       "settings": {
         "classname": "beauty_skincare section bg_yellow",
         "heading": "The beauty of clinical results from home - without the ‘clinical’ costs",
-        "text": "<p>It’s like going to a clinic, minus the on-going costs, the time commitment, the overpromises, <br\/>the upselling and the hassle.<\/p>"
+        "heading_reduced": "",
+        "text": "<p>It’s like going to a clinic, minus the on-going costs, the time commitment, the overpromises, <br\/>the upselling and the hassle.<\/p>",
+        "text_reduced": ""
       }
     },
     "tile_JERe9p": {

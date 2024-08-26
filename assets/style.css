@@ -30542,7 +30542,14 @@ p {
     margin: 0 auto;
 }
 
-
+/* -- common css for font size start --- */
+.fs-11{
+    font-size: 11px;
+}
+.fs-12{
+    font-size: 12px;
+}
+/* -- common css for font size start --- */
 
 .bs_vs_item .bs_versace span {
     font-weight: 400;

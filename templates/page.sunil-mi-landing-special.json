@@ -69,7 +69,7 @@
         "button_L9q6wE": {
           "type": "button",
           "settings": {
-            "button_label": "GET SMOOTHER, GLOWING SKIN NOW",
+            "button_label": "BUY NOW & SAVE UP TO 50%",
             "button_url": "#productSubscription"
           }
         },
@@ -168,8 +168,8 @@
         "video_GAjMEW"
       ],
       "settings": {
-        "heading": "Transform dull looking skin with Micro-Infusion System",
-        "heading_mobile": "Transform dull looking skin with Micro-Infusion System",
+        "heading": "Ditch The Make-up: Embrace a New Level of Confidence with Micro-Infusion",
+        "heading_mobile": "Ditch The Make-up: Embrace a New Level of Confidence with Micro-Infusion",
         "product": "",
         "product_images_offset": 0,
         "product_images_limit": 6,
@@ -737,18 +737,6 @@
     "results_3LEkF7": {
       "type": "results",
       "blocks": {
-        "result_DckD68": {
-          "type": "result",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/results_glorija.webp",
-            "heading": "The best natural glow",
-            "text": "<p>“I was hesitant at first as I didn’t know how much it would hurt but to my surprise it was pretty painless. The 2nd day after the treatment, my skin has the best natural glow!<\/p><p>I was also happy to to see how much my pigmentation had lightened after 3rd treatment :) I switch between the serums depending on how my skin is before the treatment.”<\/p>",
-            "image_country": "shopify:\/\/shop_images\/australia_f.webp",
-            "text_country": "Australia",
-            "client": "Glorija",
-            "code": ""
-          }
-        },
         "result_VCJwgD": {
           "type": "result",
           "settings": {
@@ -758,6 +746,18 @@
             "image_country": "shopify:\/\/shop_images\/usa_89e25711-f730-4521-8931-83b3307204af.png",
             "text_country": "United States",
             "client": "Ellie V.",
+            "code": ""
+          }
+        },
+        "result_DckD68": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/results_glorija.webp",
+            "heading": "The best natural glow",
+            "text": "<p>“I was hesitant at first as I didn’t know how much it would hurt but to my surprise it was pretty painless. The 2nd day after the treatment, my skin has the best natural glow!<\/p><p>I was also happy to to see how much my pigmentation had lightened after 3rd treatment :) I switch between the serums depending on how my skin is before the treatment.”<\/p>",
+            "image_country": "shopify:\/\/shop_images\/australia_f.webp",
+            "text_country": "Australia",
+            "client": "Glorija",
             "code": ""
           }
         },
@@ -919,8 +919,8 @@
         }
       },
       "block_order": [
-        "result_DckD68",
         "result_VCJwgD",
+        "result_DckD68",
         "result_YbRNi7",
         "result_ThnNPK",
         "result_JjTHyx",

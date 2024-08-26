@@ -2032,6 +2032,7 @@ body[class~="page.sunil-mi-landing"] .product-price{
 }
 
 /* end reduced-copy pro led mask */
+
 /* holiday-bundles-concern */
 
 .holiday-bundles-concern {
@@ -2546,13 +2547,15 @@ body[data-bundle-test] .holiday-bundles-concern {
 }
 
 /* end holiday-bundles-concern */
-/* product header test */
 
+/* product header test */
 .text-header-test{
   display: none;
 }
+
 /* end product header test */
 /* Holiday LP Hero Banner Copy  */
+
 .bfBundle__bannerBlock .bfBundle__content{
   max-width: 750px;
 }
@@ -2579,6 +2582,5 @@ body[data-bundle-test] .holiday-bundles-concern {
   text-transform: uppercase;
   text-align: left;
 }
-
 
 /* end Holiday LP Hero Banner Copy  */

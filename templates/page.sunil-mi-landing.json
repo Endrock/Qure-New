@@ -902,8 +902,32 @@
             "heading": "Thrilled with the results!",
             "text": "<p>\"I have been using the mask & microneedling for 6 weeks & am truly impressed with the results. I have noticed a dramatic reduction in redness, an improvement in my dark spots, scars & overall skin tone & firmness, and a smoothing of fine lines & wrinkles.\"<\/p>",
             "image_country": "shopify:\/\/shop_images\/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
-            "text_country": "US",
+            "text_country": "United States",
             "client": "Jessica K.",
+            "code": ""
+          }
+        },
+        "result_7DbhCR": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/B_A-Petrina-MI.jpg",
+            "heading": "Impressive results",
+            "text": "<p><em>I’m thrilled with the Qure Rejuvenating Micro Infusion System! After just three months of use, I’ve seen a noticeable reduction in fine lines on my forehead and a significant improvement in the depth of a deep scar on my face. The results have been so impressive that I’ve already purchased a refill to continue the treatment for another three months. Highly recommend this product for anyone looking to enhance their skin’s appearance.<\/em><\/p>",
+            "image_country": "shopify:\/\/shop_images\/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Petrina Yokay",
+            "code": ""
+          }
+        },
+        "result_UHVMGG": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/B_A-Linda-MI.jpg",
+            "heading": "Great “At Home” Treatment",
+            "text": "<p><em> I have read extensively on the positive effects of micro needling and have been wanting to try it. The Qure Micro-Infusion (Hydra-Soothing) option is an excellent at home way to get the benefits of micro needling without having to leave home! I have been doing a treatment about every 2 - 3 weeks for a few months and am gradually noticing an improvement in the overall appearance of my skiing, reduction in fine lines as well as a softening with the vertical wrinkles around my mouth. I love it!!<\/em><\/p>",
+            "image_country": "shopify:\/\/shop_images\/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Linda Longhouse",
             "code": ""
           }
         }
@@ -923,7 +947,9 @@
         "result_Eb4G8W",
         "result_h4ehch",
         "result_xtFHnk",
-        "result_UVLAG4"
+        "result_UVLAG4",
+        "result_7DbhCR",
+        "result_UHVMGG"
       ],
       "settings": {
         "classname": "mi_landing_result",
