@@ -196,7 +196,9 @@
           "enable_product_gift": true,
           "product_free_gift": "face-serum",
           "enable_show_gift_price": true,
-          "copy_title_gift": "FREE Full-Size Serum worth"
+          "copy_get_free_shipping": "<p>You are &price-left& away from <strong>Free Shipping!<\/strong><\/p>",
+          "copy_get_product_free": "<p>You’re &price-left& away from a <strong>FREE Full-Size Serum worth<\/strong> &product-price&<\/p>",
+          "copy_congrats": "<p>Congrats! You've unlocked your Free &product-title&<\/p>"
         }
       },
       "footer-landing": {

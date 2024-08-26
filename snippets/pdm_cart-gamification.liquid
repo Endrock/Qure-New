@@ -23,39 +23,43 @@
   endif
 
   assign enableShowGiftPrice = settingsGamification.enable_show_gift_price 
-  assign copyGiftLabel = settingsGamification.copy_title_gift
+  assign copyFreeShipping = settingsGamification.copy_get_free_shipping
+  assign copyProductGift = settingsGamification.copy_get_product_free
+  assign copyCongrats = settingsGamification.copy_congrats
   assign giftProduct = settingsGamification.product_free_gift
 
+  assign remainingAmount = freeShippingTreshold | minus: cartTotal
+  assign remainingAmountMoney = remainingAmount | money_without_trailing_zeros
 %}
 
 {% if enableFreeShipping or enableProductGift %}
   <div class="progress-container pdm-gamification">
     <div class="progress-container__message">
-      <span>
         {% if enableFreeShipping and differenceFreeShipping > 0 %}
           {% if differenceFreeShipping > 0 and cartTotal > 0 %}
-            {% assign remainingAmount = freeShippingTreshold | minus: cartTotal %}
-            You are <i class="money" style="font-style: normal;">{{ remainingAmount | money_without_trailing_zeros }}</i> away from <strong>Free Shipping!</strong>
-          {% endif %}
+            {% assign textToShow = "<i class='money' style='font-style: normal;'>" | append: remainingAmountMoney | append: "</i>" %}
+            {{ copyFreeShipping | replace: "&price-left&", textToShow }}
+          {% endif %} &&
         {% elsif enableProductGift %}
           {% assign remainingGiftAmount = giftTresholdPdm | minus: cartTotal %}
+          {% assign remainingGiftAmountMoney = remainingGiftAmount | money_without_trailing_zeros %}
           {% if differenceFreeGift > 0 %}
-            You’re <i class="money" style="font-style: normal;">{{ remainingGiftAmount | money_without_trailing_zeros }}</i> away from a
-            {% if copyGiftLabel != blank %}
-              <strong>
-                {{ copyGiftLabel }}
-                {% if enableShowGiftPrice %}
-                  {{ giftProduct.variants.first.price | money_without_trailing_zeros }}
-                {% endif %}
-              </strong>
+            {% assign textToShow = "<i class='money' style='font-style: normal;'>" | append: remainingGiftAmountMoney | append: "</i>" %}
+            {% assign textProductGift = copyProductGift |  replace: "&price-left&", textToShow %}
+            {% if enableShowGiftPrice %}
+              {% assign productGiftPrice = giftProduct.variants.first.price | money_without_trailing_zeros %}
+              {% assign textProductPrice = "<strong>" | append: productGiftPrice  |  append: "</strong>" %}
+              {% assign textProductGift = textProductGift |  replace: "&product-price&", textProductPrice %}
             {% else %}
-              <strong>Free Gift!</strong>
+              {% assign textProductGift = textProductGift |  replace: "&product-price&", "" %}
             {% endif %}
+            {{ textProductGift }}
           {% else %}
-            Congrats! You've unlocked your Free <strong>{{ giftProduct.title |  capitalize }}!</strong>
+            {% assign textProductTitle = giftProduct.title |  capitalize  %}
+            {% assign textCongrats = "<strong>" | append:textProductTitle | append: "!</strong>" %}
+            {{ copyCongrats |  replace: "&product-title&", textCongrats }}
           {% endif %}
         {% endif %}
-      </span>
     </div>
 
   <div class="progress-bar-container">

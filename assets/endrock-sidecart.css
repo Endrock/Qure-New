@@ -591,14 +591,14 @@ body[data-free-gift-gamification] .progress-container {
   }
 }
 
-body[data-free-gift-gamification] .progress-container__message span {
+body[data-free-gift-gamification] .progress-container__message > p {
   color: #000;
   text-align: center;
   font-family: Poppins;
   font-size: 11px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 1;
   letter-spacing: 0.55px;
 
   @media screen and (min-width: 769px){
@@ -606,7 +606,7 @@ body[data-free-gift-gamification] .progress-container__message span {
   }
 }
 
-body[data-free-gift-gamification] .progress-container__message span strong{
+body[data-free-gift-gamification] .progress-container__message > p strong{
   font-weight: 600;
 }
 
