@@ -263,18 +263,6 @@
             "code": "<div class=\"result_learnMore\">\n                                    <div class=\"rl_img\">\n                                        <img src=\"{{ 'results_micro.webp' | asset_url }}\" alt=\"\">\n                                    <\/div>\n                                    <div class=\"rl_info\">\n                                        <p>Micro-Infusion System<\/p>\n                                        <a href=\"#bf-bundles\">Save up to 55% in a Bundle ><\/a>\n                                    <\/div>\n                                <\/div>"
           }
         },
-        "result_xWj8KY": {
-          "type": "result",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/results_hanna_a9a19b3e-4b75-442b-93b7-665aee9538d4.webp",
-            "heading": "Hydrated more than ever",
-            "text": "<p>“I never had any major issues with skin before I moved. Then I started to get irritation and my makeup would look cakey cause my skin was dry.<\/p><p>Hydrated more than ever. I didn’t change anything in my skincare routine except filtered water. I’m never washing my face with anything less than Q-urified water!”<\/p>",
-            "image_country": "shopify:\/\/shop_images\/usa_89e25711-f730-4521-8931-83b3307204af.png",
-            "text_country": "United States",
-            "client": "Hannah",
-            "code": "<div class=\"result_learnMore\">\n                                    <div class=\"rl_img\">\n                                        <img src=\"{{ 'results_qurify.webp' | asset_url }}\" alt=\"\">\n                                    <\/div>\n                                    <div class=\"rl_info\">\n                                        <p>Q-urify Water Filter<\/p>\n                                        <a href=\"#bf-bundles\">Save up to 55% in a Bundle ><\/a>\n                                    <\/div>\n                                <\/div>"
-          }
-        },
         "result_4bU4Vd": {
           "type": "result",
           "settings": {
@@ -358,19 +346,31 @@
             "client": "Mary R.M.",
             "code": "<div class=\"result_learnMore\">\n                                    <div class=\"rl_img\">\n                                        <img src=\"{{ 'results_chest.webp' | asset_url }}\" alt=\"\">\n                                    <\/div>\n                                    <div class=\"rl_info\">\n                                        <p>Neck & Décolletage LED Device<\/p>\n                                        <a href=\"#bf-bundles\">Save up to 55% in a Bundle ><\/a>\n                                    <\/div>\n                                <\/div>"
           }
+        },
+        "result_xWj8KY": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/results_hanna_a9a19b3e-4b75-442b-93b7-665aee9538d4.webp",
+            "heading": "Hydrated more than ever",
+            "text": "<p>“I never had any major issues with skin before I moved. Then I started to get irritation and my makeup would look cakey cause my skin was dry.<\/p><p>Hydrated more than ever. I didn’t change anything in my skincare routine except filtered water. I’m never washing my face with anything less than Q-urified water!”<\/p>",
+            "image_country": "shopify:\/\/shop_images\/usa_89e25711-f730-4521-8931-83b3307204af.png",
+            "text_country": "United States",
+            "client": "Hannah",
+            "code": "<div class=\"result_learnMore\">\n                                    <div class=\"rl_img\">\n                                        <img src=\"{{ 'results_qurify.webp' | asset_url }}\" alt=\"\">\n                                    <\/div>\n                                    <div class=\"rl_info\">\n                                        <p>Q-urify Water Filter<\/p>\n                                        <a href=\"#bf-bundles\">Save up to 55% in a Bundle ><\/a>\n                                    <\/div>\n                                <\/div>"
+          }
         }
       },
       "block_order": [
         "result_9TbCEi",
         "result_qPtW3B",
-        "result_xWj8KY",
         "result_4bU4Vd",
         "result_HAiWRG",
         "result_dtxXKm",
         "result_LnaKQn",
         "result_CXpHFb",
         "result_TacyCe",
-        "result_XBpdJz"
+        "result_XBpdJz",
+        "result_xWj8KY"
       ],
       "custom_css": [
         "@media only screen and (min-width: 769px) {.section_header {width: 50%; }}"
@@ -685,16 +685,6 @@
             "text": "<p>\"<strong>These devices definitely work<\/strong> but using them safely is the key to long term results...\"<\/p><h6><strong>Dr Shah, MD<\/strong> Certified Dermatologist<\/h6>"
           }
         },
-        "video_RFQncL": {
-          "type": "video",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/trusted_anthony.webp",
-            "video_url": "https:\/\/www.youtube.com\/watch?v=gGVKgTHloXw",
-            "video_label": "Watch Video",
-            "wistia_id": "",
-            "text": "<p>\"The Qure’s System is the closest thing that you can get to bringing your aesthetician home with you!\"<\/p><h6><strong>Dr Anthony Youn,<\/strong> Board-Certified Plastic Surgeon<\/h6>"
-          }
-        },
         "feedback_4rqbDD": {
           "type": "feedback",
           "settings": {
@@ -732,6 +722,16 @@
             "video_label": "Watch Video",
             "wistia_id": "",
             "text": "<p>\"Unlike using harsh micro needles or Derma rollers, this one is super safe...\"<\/p><h6><strong>Dr Davin Lim<\/strong> Certified Dermatologist<\/h6>"
+          }
+        },
+        "video_xNcPBw": {
+          "type": "video",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/trusted_dylan.webp",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=mVdncsTAXiA",
+            "video_label": "Watch Video",
+            "wistia_id": "",
+            "text": "<p>The Qure micro-infusion system takes it a step further by not only increasing hydration but also delivering growth factors right where they need to be.<\/p><h6><strong>Dr Dylan Greeney, <\/strong>Board-Certified Dermatologist<\/h6>"
           }
         },
         "video_yzhjt8": {
@@ -774,18 +774,20 @@
             "text": "<p>\"There have been studies to show that this will definitely work to help your products penetrate better...\"<\/p><h6><strong>Dr Shah & Dr Maxfield,<\/strong> Certified Dermatologist<\/h6>"
           }
         },
-        "video_xNcPBw": {
+        "video_RFQncL": {
           "type": "video",
+          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/trusted_dylan.webp",
-            "video_url": "https:\/\/www.youtube.com\/watch?v=mVdncsTAXiA",
+            "image": "shopify:\/\/shop_images\/trusted_anthony.webp",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=gGVKgTHloXw",
             "video_label": "Watch Video",
             "wistia_id": "",
-            "text": "<p>The Qure micro-infusion system takes it a step further by not only increasing hydration but also delivering growth factors right where they need to be.<\/p><h6><strong>Dr Dylan Greeney, <\/strong>Board-Certified Dermatologist<\/h6>"
+            "text": "<p>\"The Qure’s System is the closest thing that you can get to bringing your aesthetician home with you!\"<\/p><h6><strong>Dr Anthony Youn,<\/strong> Board-Certified Plastic Surgeon<\/h6>"
           }
         },
         "video_jNRqTh": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/trusted_q-urify-doctorly.webp",
             "video_url": "https:\/\/www.youtube.com\/watch?v=QuJ3puVLKzU",
@@ -807,16 +809,16 @@
       },
       "block_order": [
         "feedback_mHiyFf",
-        "video_RFQncL",
         "feedback_4rqbDD",
         "video_H7pW4b",
         "video_JryNck",
         "video_Rx4fxx",
+        "video_xNcPBw",
         "video_yzhjt8",
         "video_wd7xtq",
         "video_YJbEzh",
         "video_TMkBGh",
-        "video_xNcPBw",
+        "video_RFQncL",
         "video_jNRqTh",
         "video_QAC7VY"
       ],
@@ -898,6 +900,7 @@
         },
         "slide_HpKCt3": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "heading": "<h2>Q-urify<br\/>Tap Water Filter<\/h2>",
             "image": "shopify:\/\/shop_images\/skinPromise_3.png",
@@ -994,6 +997,7 @@
         },
         "object_rdny9V": {
           "type": "object",
+          "disabled": true,
           "settings": {
             "heading": "Q-urify Tap Water Filter",
             "image": "shopify:\/\/shop_images\/faq-qurifytap.svg",
