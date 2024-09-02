@@ -184,9 +184,10 @@
           "gift_ccQgi4"
         ],
         "settings": {
-          "sidecart_enable": true,
+          "copy_title_gift": "",
+          "sidecart_enable": false,
           "start_date": "08-15-2024 12:00",
-          "finish_date": "09-03-2024 23:59",
+          "finish_date": "09-01-2024 23:59",
           "label_ends": "Labor Day Sales Ends In:",
           "label_days": "DAYS",
           "label_hours": "HOURS",

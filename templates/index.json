@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -187,8 +196,8 @@
             "heading": "Dermatologist Approved and Science-Backed",
             "text": "<p>Backed by the most respected peer-reviewed <strong>Dermatologist Journals<\/strong> and <strong>scientific studies<\/strong> that <strong>prove<\/strong>; Qure’s skincare <strong>works<\/strong>.<\/p>",
             "logo": "shopify:\/\/shop_images\/q_uses_1_12585e4b-1c56-477e-a662-8e2a03b0ea51.webp",
-            "btn_text": "<p>Science-Backed, Dermatologist Approved<\/p>",
-            "btn_img": "shopify:\/\/shop_images\/s_q_3.svg"
+            "btn_img": "shopify:\/\/shop_images\/s_q_3.svg",
+            "btn_text": "<p>Science-Backed, Dermatologist Approved<\/p>"
           }
         },
         "box_kKUckK": {
@@ -196,8 +205,8 @@
           "settings": {
             "heading": "Safe and Easy To Use Devices",
             "text": "<p>Perform <strong>safely <\/strong>from home for quick and <strong>easy <\/strong>regular <strong>DIY therapies<\/strong> so you can maintain long term smooth and healthy skin.<\/p>",
-            "btn_text": "<p>Safe & Easy To Use Devices<\/p>",
-            "btn_img": "shopify:\/\/shop_images\/derma-ft-lg.svg"
+            "btn_img": "shopify:\/\/shop_images\/derma-ft-lg.svg",
+            "btn_text": "<p>Safe & Easy To Use Devices<\/p>"
           }
         },
         "box_ideJJP": {
@@ -205,8 +214,8 @@
           "settings": {
             "heading": "Saves You Time, and Money",
             "text": "<p>No one has the time, or the money, to attend regular in-clinic treatments in order to see long lasting results. With Qure, it’s like going to the clinic 5x a week - Minus the cost and the time commitment.<\/p>",
-            "btn_text": "<p>Saves You Time, and Money<\/p>",
-            "btn_img": "shopify:\/\/shop_images\/money_time.svg"
+            "btn_img": "shopify:\/\/shop_images\/money_time.svg",
+            "btn_text": "<p>Saves You Time, and Money<\/p>"
           }
         },
         "box_tkGFdT": {
@@ -214,8 +223,8 @@
           "settings": {
             "heading": "Treat Multiple Skin Concerns",
             "text": "<p>Feel good in your skin with personalized treatments for your specific skin type and concern. We put <strong>clinically proven<\/strong> skincare in your hands so you can <strong>achieve in-clinic results without the guess work.<\/strong><\/p>",
-            "btn_text": "<p>Treat Multiple Skin Concerns<\/p>",
-            "btn_img": "shopify:\/\/shop_images\/treat-skin-lg.svg"
+            "btn_img": "shopify:\/\/shop_images\/treat-skin-lg.svg",
+            "btn_text": "<p>Treat Multiple Skin Concerns<\/p>"
           }
         }
       },
@@ -717,11 +726,6 @@
         "btn_url": "https:\/\/m.facebook.com\/groups\/140594262121805\/"
       }
     },
-    // "temp": {
-    //   "type": "temp-index",
-    //   "settings": {
-    //   }
-    // },
     "solution_form_wVyepN": {
       "type": "solutionForm",
       "blocks": {
@@ -757,7 +761,6 @@
     "results_slider_w6BARa",
     "tile_JERe9p",
     "community_QPpfkf",
-    // "temp",
     "solution_form_wVyepN"
   ]
 }

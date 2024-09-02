@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin language editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "settings_schema": {
     "logo": {
@@ -46,19 +55,19 @@
     "badge": {
       "label": "Rating text"
     },
-    "benefits":{
+    "benefits": {
       "label": "Benefits List",
       "title": "Benefit"
     },
-    "url":{
+    "url": {
       "label": "Product Url"
     }
   },
-  "commonMob":{
-    "header":{
+  "commonMob": {
+    "header": {
       "label": "Mobile Content"
     },
-    "benefits":{
+    "benefits": {
       "label": "Benefits List"
     }
   },
@@ -68,21 +77,21 @@
     }
   },
   "common": {
-    "title":{
+    "title": {
       "label": "Title"
     },
-    "serum":{
+    "serum": {
       "label": "Serum For",
       "type": "Serum Type"
     },
-    "sale":{
+    "sale": {
       "label": "Sale Name",
       "discount": "Discount"
     },
-    "background":{
+    "background": {
       "label": "Background"
     },
-    "Section":{
+    "Section": {
       "label": "Section Heading"
     },
     "timer": {
@@ -175,7 +184,7 @@
       "url": {
         "label": "Product url"
       },
-      "type":{
+      "type": {
         "label": "Product Type"
       }
     },
@@ -326,15 +335,15 @@
         "label": "Subscribe plan"
       }
     },
-    "desc":{
+    "desc": {
       "label": "Description"
     }
   },
   "sections": {
-    "padding":{
-      "section_padding_heading":"Padding",
-      "padding_top":"Padding top",
-      "padding_bottom":"Padding bottom"
+    "padding": {
+      "section_padding_heading": "Padding",
+      "padding_top": "Padding top",
+      "padding_bottom": "Padding bottom"
     },
     "header": {
       "name": "Header",
@@ -442,9 +451,6 @@
       },
       "blocks": {
       }
-    },
-    "collection":{
-      "label": "Collection Name"
     },
     "collection": {
       "name": "Collection",
@@ -953,10 +959,10 @@
     "slidecart": {
       "name": "Slidecart",
       "settings": {
-        "enable_free_shipping" :{
+        "enable_free_shipping": {
           "label": "Enable Free Shipping Treshold"
         },
-        "enable_product_gift" : {
+        "enable_product_gift": {
           "label": "Enable Product Gift"
         },
         "product_gift": {
@@ -1005,14 +1011,14 @@
       "blocks": {
       }
     },
-    "box-slider":{
-      "name":"Box Slider",
+    "box-slider": {
+      "name": "Box Slider",
       "button": "Box Text"
     },
     "f-collection": {
       "name": "Featured Collection"
     },
-    "banner_tabs":{
+    "banner_tabs": {
       "name": "Banner Tab Slider"
     }
   }
