@@ -28,18 +28,20 @@
                         <h2 class="title-lg">{{ section.settings.heading }}</h2>
                     </div>
 
-                    <div class="ss_list mw-452 pt-2 pb-4 d-none d-md-block">
+                    <div class="ss_list mw-452 py-4 d-none d-md-block">
                         {{ section.settings.text }}
                     </div>
 
                     {%- for block in section.blocks -%}
                         {% if block.type == 'button' %}
                             {% if block.settings.button_label != blank %}
-                                <div class="get_clearer_wrapper text-center">
-                                    <p><span><img src="https://qureskincaredns.com/new/assets/derma-sm.svg" alt=""></span>{{ block.settings.text_first }}</p>
+                                <div class="get_clearer_wrapper text-center ms-0 mt-md-3">
+                                    {% if block.settings.text_first != blank %}
+                                    <p><span><img src=" {{ block.settings.btn1_icon | img_url: '16x' }} " alt=""></span>{{ block.settings.text_first }}</p>
+                                    {% endif %}
                                     <a class="btn btn-lg btn-primary btn_green" href="{{ block.settings.button_url }}">{{ block.settings.button_label }}</span>
                                     </a>
-                                    <p><span> <img src="https://qureskincaredns.com/new/assets/money-sm.svg" alt=""></span>{{ block.settings.text_second }}</p>
+                                    <p><span> <img src=" {{ block.settings.btn2_icon | img_url: '16x' }} " alt=""></span>{{ block.settings.text_second }}</p>
                                 </div>
                             {% endif %}
                         {% endif %}
@@ -109,17 +111,15 @@
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-home" type="button" role="tab"
-                                    aria-controls="pills-home" aria-selected="true">Product</button>
+                                    aria-controls="pills-home" aria-selected="true">{{ section.settings.product_button_label }}</button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link d-none d-md-block" id="pills-profile-tab"
                                     data-bs-toggle="pill" data-bs-target="#pills-profile" type="button"
-                                    role="tab" aria-controls="pills-profile" aria-selected="false">Real
-                                    Results</button>
+                                    role="tab" aria-controls="pills-profile" aria-selected="false">{{ section.settings.before_after_button_label }}</button>
                                 <button class="nav-link d-block d-md-none" id="pills-profile-tab"
                                     data-bs-toggle="pill" data-bs-target="#pills-profile" type="button"
-                                    role="tab" aria-controls="pills-profile" aria-selected="false">Before &
-                                    After</button>
+                                    role="tab" aria-controls="pills-profile" aria-selected="false"></button>
                             </li>
                         </ul>
                     </div>
@@ -191,7 +191,7 @@
             {
                 "type": "text",
                 "id": "before_after_button_label",
-                "default": "Before & After",
+                "default": "Real results",
                 "label": "t:common.button.label",
                 "info": "t:common.button.info"
             }
@@ -233,6 +233,16 @@
                         "default": "Dermatologist-Reviewed"
                     },
                     {
+                        "type": "image_picker",
+                        "id": "btn2_icon",
+                        "label": "Icon"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "btn1_icon",
+                        "label": "Icon"
+                    },
+                    {
                         "type": "text",
                         "id": "text_second",
                         "label": "t:common.text.label",
@@ -240,6 +250,11 @@
                     }
                 ]
 		    }
+        ],
+        "presets":[
+            {
+            "name": "Main",
+        }
         ]
     }
 {% endschema %}

@@ -72,10 +72,12 @@
                         {%- for block in section.blocks -%}
                             {% if block.type == 'button' %}
                                 {% if block.settings.button_label != blank %}
-                                    <div class="get_clearer_wrapper text-center">
-                                        <p><span><img src="https://qureskincaredns.com/new/assets/derma-sm.svg" alt=""></span>{{ block.settings.text_first }}</p>
+                                    <div class="get_clearer_wrapper ms-0 text-center">
+                                        {%- if block.settings.text_first != blank -%}
+                                        <p><span>{%- if block.settings.icon != blank -%}<img src="{{ block.settings.icon | img_url: '16px' }}" alt="">{%- endif -%}</span>{{ block.settings.text_first }}</p>
+                                       {%- endif -%}
                                         <a class="btn btn-lg btn-primary btn_green" href="{{ block.settings.button_url }}" aria-label="{{ block.settings.button_label | escape }}">{{ block.settings.button_label }}</span></a>
-                                        <p><span> <img src="https://qureskincaredns.com/new/assets/money-sm.svg" alt=""></span>{{ block.settings.text_second }}</p>
+                                        <p><span>{%- if block.settings.icon2 != blank -%}<img src="{{ block.settings.icon2 | img_url: '16px' }}" alt="">{%- endif -%}</span>{{ block.settings.text_second }}</p>
                                     </div>
                                 {% endif %}
                             {% endif %}
@@ -192,10 +194,20 @@
                         "default": "Dermatologist-Reviewed"
                     },
                     {
+                        "type": "image_picker",
+                        "id": "icon",
+                        "label": "t:common.icon.label"
+                    },
+                    {
                         "type": "text",
                         "id": "text_second",
                         "label": "t:common.text.label",
                         "default": "30-Day Money-Back Guarantee"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "icon2",
+                        "label": "t:common.icon.label"
                     }
                 ]
 		    },
@@ -396,13 +408,18 @@
             {
                 "type": "video_before_and_after",
                 "name": "video derm test",
-                "limit": 1,
+                "limit": 2,
                 "settings": [
                     {
                         "type": "video",
                         "id": "video_new_section",
                         "label": "video"
-                    }
+                    },
+                    {
+                        "type": "text",
+                        "id": "video_wistia_id",
+                        "label": "Wistia Video ID"
+                      }
                 ]
             }          
         ],

@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "product_landing_tetLcC": {
@@ -445,6 +436,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Rectangle_188_2a078240-295d-4e92-a36f-2acb2c6b5c1f.png",
             "heading": "Micro-Infusion Targeted Patches",
+            "mob_text": "",
             "text": "",
             "price": "",
             "style": "correctCircle",
@@ -456,6 +448,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/mi-eye-patches.webp",
             "heading": "Alternative Eye Patches",
+            "mob_text": "",
             "text": "",
             "price": "",
             "style": "incorrectCircle",
@@ -475,10 +468,83 @@
         "text_reduced": ""
       }
     },
-    "liquid_WdMeGQ": {
-      "type": "liquid",
+    "ingredients_dropdown_PbbjxK": {
+      "type": "ingredients-dropdown",
+      "blocks": {
+        "left_column_tV7EwV": {
+          "type": "left_column",
+          "settings": {
+            "dropdown_design": "with_image",
+            "name_left": "Retinol",
+            "text_left": "A natural derivative of vitamin A, this hero ingredient speeds up the removal of old skin cells to reveal your best, most rejuvenated skin underneath.",
+            "image_left": "shopify:\/\/shop_images\/pi_retinol.webp"
+          }
+        },
+        "left_column_HCVPwx": {
+          "type": "left_column",
+          "settings": {
+            "dropdown_design": "with_image",
+            "name_left": "Niacinamide",
+            "text_left": "A type of vitamin B3, this powerhouse ingredient helps maintain skin health for a brighter, more even skin tone. It also helps smooth the look of wrinkles – especially when combined with retinol.",
+            "image_left": "shopify:\/\/shop_images\/pi_niacinamide.webp"
+          }
+        },
+        "left_column_hNcrpj": {
+          "type": "left_column",
+          "settings": {
+            "dropdown_design": "with_image",
+            "name_left": "Caffeine",
+            "text_left": "Caffeine works through micro-circulation, helping to fade the look of dark circles and under-eye bags – like a pick-me-up for the skin.",
+            "image_left": "shopify:\/\/shop_images\/pi_caffeine.webp"
+          }
+        },
+        "right_column_3BL3gP": {
+          "type": "right_column",
+          "settings": {
+            "dropdown_design": "with_image",
+            "name_right": "Acetyl Hexapeptide-8 Peptides ",
+            "text_right": "This safe, synthetic form of Botox visibly reduces the appearance of fine lines and wrinkles & boosts collagen production. It’s the first peptide designed to target expression lines.",
+            "image_right": "shopify:\/\/shop_images\/pi_acetyl.webp"
+          }
+        },
+        "right_column_Ji7WE9": {
+          "type": "right_column",
+          "settings": {
+            "dropdown_design": "with_image",
+            "name_right": "Copper Peptides",
+            "text_right": "Copper peptides promote collagen and elastin production which helps plump and tighten the skin. They also serve as an antioxidant, working to protect the skin against further barrier damage.",
+            "image_right": "shopify:\/\/shop_images\/pi_copper.webp"
+          }
+        },
+        "right_column_nrntBY": {
+          "type": "right_column",
+          "settings": {
+            "dropdown_design": "with_image",
+            "name_right": "Licorice",
+            "text_right": "Licorice boasts anti-inflammatory properties that work wonders in reducing puffiness and soothing irritated skin.",
+            "image_right": "shopify:\/\/shop_images\/pi_licorice.webp"
+          }
+        },
+        "right_column_jycAXk": {
+          "type": "right_column",
+          "settings": {
+            "dropdown_design": "without_image",
+            "name_right": "All Ingredients",
+            "text_right": "Sodium Hyaluronate, Caffeine, Copper-Tripeptide-1, Niacinamide, Cyclodextrin, Water, Glycine Soja (Soybean) Oil, Madecassoside, Macadamia Nut Oil, Allantoin, Retinol, Oil Soluble Licorice(Glycyrrhiza) Extract, Centella Asiatica Extract,  Acetyl Hexapeptide-8, BHT"
+          }
+        }
+      },
+      "block_order": [
+        "left_column_tV7EwV",
+        "left_column_HCVPwx",
+        "left_column_hNcrpj",
+        "right_column_3BL3gP",
+        "right_column_Ji7WE9",
+        "right_column_nrntBY",
+        "right_column_jycAXk"
+      ],
       "settings": {
-        "code": "<div class=\"skincare_slider skin_slider\">\n            <div class=\"container\">\n                <div class=\"section_header text-start text-md-center\">\n                    <h2 class=\"title-lg\">\n                        Deeply replenishes the skin with these powerful, science-backed ingredients\n                    <\/h2>\n                <\/div>\n                <div class=\"skin_item\">\n                    <div class=\"row\">\n                        <div class=\"col-md-6\">\n                            <div class=\"skincare_left\">\n                                <img src=\"{{ 'mi-patches-shannon-skincare.webp' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                <div class=\"r_c_info\">\n                                    <div class=\"c_information\">\n                                        <div class=\"flag_img pe-2\">\n                                            <img src=\"{{ 'america_f.webp' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        <\/div>\n                                        <p class=\"r_c_name pe-4\">Shannon<\/p>\n                                        <div class=\"verified_img pe-2\">\n                                            <img src=\"{{ 'verified.svg' | asset_url }}\" alt=\"\">\n                                        <\/div>\n                                        <p>Verified customer<\/p>\n                                    <\/div>\n                                <\/div>\n                            <\/div>\n                        <\/div>\n                        <div class=\"col-md-6\">\n                            <div class=\"h-100\">\n                                <div class=\"skincare_right\">\n                                    <div class=\"accordion\" id=\"accordionSkin2\">\n                                        <div class=\"accordion-item\">\n                                            <h2 class=\"accordion-header\" id=\"accordionSkin2headingOne\">\n                                                <button class=\"accordion-button collapsed\" type=\"button\"\n                                                    data-bs-toggle=\"collapse\"\n                                                    data-bs-target=\"#accordionSkin2collapseOne\" aria-expanded=\"true\"\n                                                    aria-controls=\"accordionSkin2collapseOne\">\n                                                    <strong>Retinol<\/strong>\n                                                <\/button>\n                                            <\/h2>\n                                            <div id=\"accordionSkin2collapseOne\" class=\"accordion-collapse collapse\"\n                                                aria-labelledby=\"accordionSkin2headingOne\"\n                                                data-bs-parent=\"#accordionSkin2\">\n                                                <div class=\"accordion-body\">\n                                                    <p>A natural derivative of vitamin A, this hero ingredient speeds up\n                                                        the removal of old skin cells to reveal your best, most\n                                                        rejuvenated skin underneath.\n                                                    <\/p>\n                                                <\/div>\n                                            <\/div>\n                                        <\/div>\n                                        <div class=\"accordion-item\">\n                                            <h2 class=\"accordion-header\" id=\"accordionSkin2headingTwo\">\n                                                <button class=\"accordion-button collapsed\" type=\"button\"\n                                                    data-bs-toggle=\"collapse\"\n                                                    data-bs-target=\"#accordionSkin2collapseTwo\" aria-expanded=\"false\"\n                                                    aria-controls=\"accordionSkin2collapseTwo\">\n                                                    <strong>Niacinamide <\/strong>\n                                                <\/button>\n                                            <\/h2>\n                                            <div id=\"accordionSkin2collapseTwo\" class=\"accordion-collapse collapse\"\n                                                aria-labelledby=\"accordionSkin2headingTwo\"\n                                                data-bs-parent=\"#accordionSkin2\">\n                                                <div class=\"accordion-body\">\n                                                    <p>A type of vitamin B3, this powerhouse ingredient helps maintain\n                                                        skin health for a brighter, more even skin tone. It also helps\n                                                        smooth the look of wrinkles – especially when combined with\n                                                        retinol.\n                                                    <\/p>\n                                                <\/div>\n                                            <\/div>\n                                        <\/div>\n                                        <div class=\"accordion-item\">\n                                            <h2 class=\"accordion-header\" id=\"accordionSkin2headingThree\">\n                                                <button class=\"accordion-button collapsed\" type=\"button\"\n                                                    data-bs-toggle=\"collapse\"\n                                                    data-bs-target=\"#accordionSkin2collapseThree\" aria-expanded=\"false\"\n                                                    aria-controls=\"accordionSkin2collapseThree\">\n                                                    <strong>Caffeine<\/strong>\n                                                <\/button>\n                                            <\/h2>\n                                            <div id=\"accordionSkin2collapseThree\" class=\"accordion-collapse collapse\"\n                                                aria-labelledby=\"accordionSkin2headingThree\"\n                                                data-bs-parent=\"#accordionSkin2\">\n                                                <div class=\"accordion-body\">\n                                                    <p>Caffeine works through micro-circulation, helping to fade the\n                                                        look of dark circles and under-eye bags – like a pick-me-up for\n                                                        the skin.\n                                                    <\/p>\n                                                <\/div>\n                                            <\/div>\n                                        <\/div>\n                                        <div class=\"accordion-item\">\n                                            <h2 class=\"accordion-header\" id=\"accordionSkin2headingFour\">\n                                                <button class=\"accordion-button collapsed\" type=\"button\"\n                                                    data-bs-toggle=\"collapse\"\n                                                    data-bs-target=\"#accordionSkin2collapseFour\" aria-expanded=\"false\"\n                                                    aria-controls=\"accordionSkin2collapseFour\">\n                                                    <strong>Acetyl Hexapeptide-8 Peptides<\/strong>\n                                                <\/button>\n                                            <\/h2>\n                                            <div id=\"accordionSkin2collapseFour\" class=\"accordion-collapse collapse\"\n                                                aria-labelledby=\"accordionSkin2headingFour\"\n                                                data-bs-parent=\"#accordionSkin2\">\n                                                <div class=\"accordion-body\">\n                                                    <p>This safe, synthetic form of Botox visibly reduces the appearance\n                                                        of fine lines and wrinkles & boosts collagen production. It’s\n                                                        the first peptide designed to target expression lines.\n                                                    <\/p>\n                                                <\/div>\n                                            <\/div>\n                                        <\/div>\n                                        <div class=\"accordion-item\">\n                                            <h2 class=\"accordion-header\" id=\"accordionSkin2headingFive\">\n                                                <button class=\"accordion-button collapsed\" type=\"button\"\n                                                    data-bs-toggle=\"collapse\"\n                                                    data-bs-target=\"#accordionSkin2collapseFive\" aria-expanded=\"false\"\n                                                    aria-controls=\"accordionSkin2collapseFive\">\n                                                    <strong>Copper Peptides<\/strong>\n                                                <\/button>\n                                            <\/h2>\n                                            <div id=\"accordionSkin2collapseFive\" class=\"accordion-collapse collapse\"\n                                                aria-labelledby=\"accordionSkin2headingFive\"\n                                                data-bs-parent=\"#accordionSkin2\">\n                                                <div class=\"accordion-body\">\n                                                    <p>Copper peptides promote collagen and elastin production which\n                                                        helps plump and tighten the skin. They also serve as an\n                                                        antioxidant, working to protect the skin against further barrier\n                                                        damage.\n                                                    <\/p>\n                                                <\/div>\n                                            <\/div>\n                                        <\/div>\n                                        <div class=\"accordion-item\">\n                                            <h2 class=\"accordion-header\" id=\"accordionSkin2headingSix\">\n                                                <button class=\"accordion-button collapsed\" type=\"button\"\n                                                    data-bs-toggle=\"collapse\"\n                                                    data-bs-target=\"#accordionSkin2collapseFSix\" aria-expanded=\"false\"\n                                                    aria-controls=\"accordionSkin2collapseFSix\">\n                                                    <strong>Licorice<\/strong>\n                                                <\/button>\n                                            <\/h2>\n                                            <div id=\"accordionSkin2collapseFSix\" class=\"accordion-collapse collapse\"\n                                                aria-labelledby=\"accordionSkin2headingSix\"\n                                                data-bs-parent=\"#accordionSkin2\">\n                                                <div class=\"accordion-body\">\n                                                    <p>Licorice boasts anti-inflammatory properties that work wonders in\n                                                        reducing puffiness and soothing irritated skin.\n                                                    <\/p>\n                                                <\/div>\n                                            <\/div>\n                                        <\/div>\n                                    <\/div>\n                                    <div class=\"accordionTechnologyWrapper\">\n                                        <div class=\"accordion accordion-flush\" id=\"accordionTechnology\">\n                                            <div class=\"accordion-item u_item_question\">\n                                                <h2 class=\"accordion-header u_item_expandable bg-grey\">\n                                                    <button class=\"accordion-button collapsed\" type=\"button\"\n                                                        data-bs-toggle=\"collapse\" data-bs-target=\"#t_item_accordion_1\"\n                                                        aria-expanded=\"false\" aria-controls=\"t_item_accordion_1\">\n                                                        <div class=\"containers\">All Ingredients<\/div>\n                                                    <\/button>\n                                                <\/h2>\n                                                <div id=\"t_item_accordion_1\" class=\"accordion-collapse collapse\"\n                                                    data-bs-parent=\"#accordionTechnology\">\n                                                    <div class=\"accordion-body bg-grey\">\n                                                        <div class=\"containers\">\n                                                            <p>Sodium Hyaluronate, Caffeine, Copper-Tripeptide-1,\n                                                                Niacinamide, Cyclodextrin, Water, Glycine Soja (Soybean)\n                                                                Oil, Madecassoside, Macadamia Nut Oil, Allantoin,\n                                                                Retinol, Oil Soluble Licorice(Glycyrrhiza) Extract,\n                                                                Centella Asiatica Extract,  Acetyl Hexapeptide-8, BHT\n                                                            <\/p>\n                                                        <\/div>\n                                                    <\/div>\n                                                <\/div>\n                                            <\/div>\n                                        <\/div>\n                                    <\/div>\n                                <\/div>\n                            <\/div>\n                        <\/div>\n                    <\/div>\n                <\/div>\n            <\/div>\n        <\/div>"
+        "heading": "Deeply replenishes the skin with these powerful, science-backed ingredients"
       }
     },
     "liquid_irWWVT": {
@@ -595,6 +661,7 @@
         "object_HjiKT3"
       ],
       "settings": {
+        "background": "bg_yellow",
         "classname": "bg_yellow",
         "heading": "Your burning questions, our glowing answers",
         "text": "",
@@ -634,7 +701,7 @@
     "videos_RDmhf8",
     "two_column_box_cGgxCb",
     "compare_b7K3DX",
-    "liquid_WdMeGQ",
+    "ingredients_dropdown_PbbjxK",
     "liquid_irWWVT",
     "two_column_box_kCjBfM",
     "faq_Q9aq8V",

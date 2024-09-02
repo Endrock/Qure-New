@@ -1,5 +1,5 @@
 <!-- -- featured promotion start -- -->
-<div class="featured_promotion">
+<div class="featured_promotion {{ section.settings.background }}">
     <div class="container">
         <div class="fp-wrapper">
             {%- for block in section.blocks -%}
@@ -27,7 +27,25 @@
         "name": "t:sections.icons-list.name",
         "class": "section-icons-list",
         "settings": [
-
+            {
+                "type": "select",
+                "id": "background",
+                "label": "t:common.background.label",
+                "options": [
+                    {
+                        "value": "bg-grey",
+                        "label": "Grey",
+                    },
+                    {
+                        "value": "bg-yellow",
+                        "label": "Yellow"
+                    },
+                    {
+                        "value": "trasnparent",
+                        "label": "Transparent"
+                    }
+                ]
+            }
         ],
         "blocks": [
             {

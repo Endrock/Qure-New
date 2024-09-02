@@ -123,6 +123,10 @@
 /* -- app slider end -- */
 
 @media(max-width:767px) {
+    .app_press .app_subhheading {
+        font-size: 22px;
+        padding: 22px 0 !important;
+    }
     .app_slider {
         overflow: hidden;
     }

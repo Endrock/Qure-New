@@ -1,0 +1,62 @@
+<!-- -- single step start -- -->
+<div class="single_step section bg-lightGrey">
+  <div class="container">
+    <div class="section_header d-block d-md-none text-center">
+      {%- if section.settings.heading -%}
+        <h2 class="title-lg paddingB">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+    </div>
+    <div class="row gx-5 align-items-center">
+      <div class="col-md-6">
+        <div class="single-step_img">
+          <img
+            src="{% if section.settings.image == blank %} https://cdn.shopify.com/s/files/1/0441/1431/3365/files/light_therapy.webp?v=1724659763 {% endif %} {{ section.settings.image | img_url: '400px' }}"
+            alt="{{ section.settings.image.alt }}" class="w-100">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="single_step ps-md-3 mt-3 mt-md-0">
+          <div class="section_header">
+            {%- if section.settings.heading -%}
+              <h2 class="title-lg paddingB d-none d-md-block">{{ section.settings.heading }}</h2>
+            {%- endif -%}
+            {%- if section.settings.text -%}
+              {{ section.settings.text }}
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- -- single step end -- -->
+
+{% schema %}
+{
+  "name": "Image-Text",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:common.image.label"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Why Light Therapy Is Proven To Work",
+      "label": "t:common.heading.label"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "<p>Just as plants need sunlight, our skin craves the rejuvenating power of light. But in our modern world, relentless exposure to harsh artificial lights can leave our complexion dull and damaged.</p>",
+      "label": "t:common.text.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image & Text"
+    }
+  ]
+}
+{% endschema %}

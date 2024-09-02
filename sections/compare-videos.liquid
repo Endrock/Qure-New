@@ -1,0 +1,231 @@
+{% assign heading = false %}
+{% assign option = false %}
+{% assign button = false %}
+
+{%- for block in section.blocks -%}
+    {% case block.type %}
+        {% when 'heading' %}
+            {%- assign heading = heading | plus: 1 -%}
+        {% when 'option' %}
+            {%- assign option = option | plus: 1 -%}
+        {% when 'button' %}
+            {%- assign button = button | plus: 1 -%}
+    {% endcase %}
+{% endfor %}
+
+<!-- -- beauty clinical start -- -->
+<div class="beauty_skincare bg-white">
+    <div class="container">
+        <div class="section_header text-start text-md-center mw-750 mb-3">
+            {% if section.settings.heading != blank %}
+                {% if section.settings.heading_tag == 'h1' %}
+                    <h1 class="title-lg mw-680 mx-auto paddingB">{{ section.settings.heading | replace: '\n', '<br>' }}</h1>
+                  {% else %}
+                    <h2 class="title-lg mw-680 mx-auto paddingB">{{ section.settings.heading | replace: '\n', '<br>' }}</h2>
+                {% endif %}
+            {% endif %}
+        
+            {% if section.settings.text != blank %}
+                <div class="pb-3 pb-md-0">
+                    {{ section.settings.text }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="bs_grid">
+            {% if section.settings.wistia_id != blank %}
+                <div class="bs_item">
+                    <div class="bs_img">
+                        <div class="wistia_responsive_padding beauty_img" style="position:relative;">
+                            <div class="wistia_responsive_wrapper"
+                                style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                                <div class="wistia_embed wistia_async_{{ section.settings.wistia_id }} seo=false videoFoam=true"
+                                    style="height:100%;position:relative;width:100%">&nbsp;</div>
+                            </div>
+                        </div>
+                    </div>
+                    {% if section.settings.wistia_id_label != blank %}
+                        <div class="bs_content">
+                            <h4>{{ section.settings.wistia_id_label | replace: '\n', '<br>' }}</h4>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endif %}
+            <div class="bs_vs_item">
+                <div class="bs_versace">
+                    <span>vs</span>
+                </div>
+            </div>
+            {% if section.settings.wistia_id_second != blank %}
+                <div class="bs_item">
+                    <div class="bs_img">
+                        <div class="wistia_responsive_padding beauty_img" style="position:relative;">
+                            <div class="wistia_responsive_wrapper"
+                                style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                                <div class="wistia_embed wistia_async_{{ section.settings.wistia_id_second }} seo=false videoFoam=true"
+                                    style="height:100%;position:relative;width:100%">&nbsp;</div>
+                            </div>
+                        </div>
+                    </div>
+                    {% if section.settings.wistia_id_second_label != blank %}
+                        <div class="bs_content">
+                            <h4>{{ section.settings.wistia_id_second_label | replace: '\n', '<br>' }}</h4>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endif %}
+        </div>
+        {% if heading or option or button %}
+            <div class="your_quest mw-546 mx-auto">
+            
+            {% if heading != false %}
+                {%- for block in section.blocks -%}
+                    {% case block.type %}
+                        {% when 'heading' %}
+                            <h2 class="title-lg">{{ block.settings.heading }}</h2>
+                    {% endcase %}
+                {% endfor %}
+            {% endif %}
+
+            {%- for block in section.blocks -%}
+                {% case block.type %}
+                    {% when 'option' %}
+                        <div class="your_quest-inner mw-464 mx-auto">
+                            {% if block.settings.image != blank %}
+                                <div class="your_quest-icon">
+                                    <img src="{{ block.settings.image | img_url: '200x' }}" alt="{{ block.settings.image.alt | escape }}">
+                                </div>
+                            {% endif %}
+                            {% if block.settings.text != blank %}
+                                <div class="your_quest-text">
+                                    {{ block.settings.text }}
+                                </div>  
+                            {% endif %}
+                        </div>
+                {% endcase %}
+            {% endfor %}
+            
+            {% if button != false %}
+                {%- for block in section.blocks -%}
+                    {% case block.type %}
+                        {% when 'button' %}
+                            <div class="your_quest-btn mw-464 mx-auto pt-2">
+                                <a class="btn btn-lg btn-primary buy_btn" href="{{ block.settings.button_url }}" title="{{ block.settings.button_label | escape }}">{{ block.settings.button_label }}</a>
+                            </div>
+                    {% endcase %}
+                {% endfor %}
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+<!-- -- beauty clinical start -- -->
+
+{% schema %}
+    {
+        "name": "t:sections.compare-videos.name",
+        "class": "section-landing-main-banner",
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "t:common.heading.label"
+            },
+            {
+              "type": "select",
+              "id": "heading_tag",
+              "label": "Heading tag",
+              "options": [
+                {
+                  "value": "h1",
+                  "label": "H1"
+                },
+                {
+                  "value": "h2",
+                  "label": "H2"
+                }
+              ],
+              "default": "h1"
+            },
+            {
+                "type": "richtext",
+                "id": "text",
+                "label": "t:common.text.label"
+            },
+            {
+                "type": "text",
+                "id": "wistia_id",
+                "label": "t:common.wistia.id.label"
+            },
+            {
+                "type": "text",
+                "id": "wistia_id_label",
+                "label": "t:common.video.cta.label"
+            },
+            {
+                "type": "text",
+                "id": "wistia_id_second",
+                "label": "t:common.wistia.id.label"
+            },
+            {
+                "type": "text",
+                "id": "wistia_id_second_label",
+                "label": "t:common.video.cta.label"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "heading",
+                "name": "t:common.heading.label",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "t:common.heading.label"
+                    }
+                ]
+		    },
+            {
+                "type": "option",
+                "name": "t:common.option.name",
+                "limit": 10,
+                "settings": [
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "t:common.text.label"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "t:common.image.label"
+                    }
+                ]
+		    },
+            {
+                "type": "button",
+                "name": "t:common.button.name",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "button_label",
+                        "default": "Button label",
+                        "label": "t:common.button.label",
+                        "info": "t:common.button.info"
+                    },
+                    {
+                        "type": "url",
+                        "id": "button_url",
+                        "label": "t:common.button.url.label"
+                    }
+                ]
+		    }
+        ],
+        "presets": [
+			{
+				"name": "t:sections.compare-videos.name"
+			}
+        ]
+    }
+{% endschema %}

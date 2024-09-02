@@ -1,8 +1,12 @@
 <!-- -- futures skincare start -- -->
 <div class="future_skincare fs_dark">
     <div class="fs-content">
+        <div class="mw-455 mx-auto text-start">
         {% if section.settings.heading != blank %}
-            <h2>{{ section.settings.heading }}</h2>
+            <h2 class="text-start">{{ section.settings.heading }}</h2>
+        {% endif %}
+        {% if section.settings.text_content != blank %}
+            {{ section.settings.text_content }}
         {% endif %}
         {% if section.settings.text != blank %}
             <span>{{ section.settings.text }}</span>
@@ -10,6 +14,7 @@
         {% if section.settings.button_label != blank %}
             <a href="{{ section.settings.button_url }}" target="_blank" class="future_btn">{{ section.settings.button_label }}</a>
         {% endif %}
+        </div>
     </div>
     {% if section.blocks.size > 0 %}
         <div class="fs-img">
@@ -39,6 +44,11 @@
                 "type": "text",
                 "id": "text",
                 "label": "t:common.text.label"
+            },
+            {
+                "type": "richtext",
+                "id": "text_content",
+                "label": "Text Content"
             },
             {
                 "type": "text",

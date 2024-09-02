@@ -18,7 +18,7 @@
             {% endif %}
 
         </div>
-        <div class="videoInfo mw-mob-100">
+        <div class="videoInfo">
             <!-- <div class="swiper qureSlider dot_pagination"> -->
 
             <div 
@@ -28,10 +28,10 @@
                 data-autoplay="false" 
                 data-loop="false" 
                 data-centerslide="false"
-                data-mobile="2" 
-                data-tablet="6" 
-                data-desktop="6" 
-                data-spacing="10"
+                data-mobile="1.7" 
+                data-tablet="5" 
+                data-desktop="4.2" 
+                data-spacing="20"
                 data-arrowleft="qureSlider-swiper-prev" 
                 data-arrowright="qureSlider-swiper-next">
                 {% if section.blocks.size > 0 %}
@@ -56,6 +56,29 @@
                                             </div>
                                         </div>
                                     </div>
+                                    {%- if block.settings.dr_name != blank -%}
+                                    <div class="accordion" id="accordionExample{{ block.id }}">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="heading{{ block.id }}">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapse{{ block.id }}" aria-expanded="true"
+                                                    aria-controls="collapse{{ block.id }}">
+                                                    <div class="vQ_name">{{ block.settings.dr_name }}</div>
+                                                </button>
+                                                <div class="vQ_desc">{{ block.settings.board }}</div>
+                                            </h2>
+                                            <div id="collapse{{ block.id }}" class="accordion-collapse collapse {% if forloop.first %} show {%endif %}"
+                                                aria-labelledby="heading{{ block.id }}"
+                                                data-bs-parent="#accordionExample{{ block.id }}">
+                                                {%- if block.settings.desc != blank -%}
+                                                <div class="accordion-body">
+                                                    {{ block.settings.desc }}
+                                                </div>
+                                                {%- endif -%}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {%- endif -%}
                                 </div>
                                 <script src="https://fast.wistia.com/embed/medias/{{ block.settings.wistia_id }}.jsonp" async></script>
                             {% else %}
@@ -97,7 +120,16 @@
                         {%- endfor -%}
                     </div>
                 {% endif %}
-                <div class="swiper-pagination"></div>
+                <div class="pagination_navigation">
+                    <div class="swiper-pagination"></div>
+                    <div class="qureSlider-swiper-prev swiper-button-prev swiper-button"></div>
+                    <div class="qureSlider-swiper-next  swiper-button-next swiper-button"></div>
+
+                </div>
+
+                <div class="get_clearer_wrapper text-center mt-5">
+                    <a class="btn btn-lg btn-primary btn_green" href="{% if section.settings.btn_url != blank%} {{ section.settings.btn_url }} {% endif %}">{{ section.settings.btn }}</a>
+                </div>
             </div>
         </div>
     </div>
@@ -105,6 +137,8 @@
 <!-- Video blocks end-->
 
 {% if wistia_videos_count > 0 %}
+
+    <script src="https://fast.wistia.com/embed/medias/3ahwzg8wjz.jsonp" async></script>
     <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 {% endif %}
 
@@ -123,6 +157,16 @@
                 "id": "classname",
                 "label": "t:common.classname.label",
                 "default": "section videosQure"
+            },
+            {
+                "type": "text",
+                "id": "btn",
+                "label": "t:common.button.label"
+            },
+            {
+                "type": "url",
+                "id": "btn_url",
+                "label": "t:common.button.url.label"
             }
         ],
         "blocks": [
@@ -135,6 +179,21 @@
                         "type": "text",
                         "id": "wistia_id",
                         "label": "t:common.wistia.id.label"
+                    },
+                    {
+                        "type": "text",
+                        "id": "dr_name",
+                        "label": "Doctor's Name"
+                    },
+                    {
+                        "type": "text",
+                        "id": "board",
+                        "label": "Board"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "desc",
+                        "label": "t:common.desc.label"
                     }
                 ]
 		    },

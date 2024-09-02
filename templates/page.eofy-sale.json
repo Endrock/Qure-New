@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "header_sales_TMQyBR": {
@@ -83,7 +74,6 @@
           "settings": {
             "product": "best-seller-bundle",
             "announcement_id": "Most popular",
-            "button_url_id": "#best-seller-bundle",
             "button_text_id": "Get yours"
           }
         },
@@ -92,7 +82,6 @@
           "settings": {
             "product": "ageless-glow-bundle",
             "announcement_id": "",
-            "button_url_id": "#ageless-glow-bundle",
             "button_text_id": "Get yours"
           }
         },
@@ -101,7 +90,6 @@
           "settings": {
             "product": "youth-boosting-bundle",
             "announcement_id": "",
-            "button_url_id": "#youth-boosting-bundle",
             "button_text_id": "Get yours"
           }
         },
@@ -110,7 +98,6 @@
           "settings": {
             "product": "all-in-one-face-serum-bundle",
             "announcement_id": "",
-            "button_url_id": "#all-in-one-face-serum-bundle",
             "button_text_id": "Get yours"
           }
         },
@@ -119,7 +106,6 @@
           "settings": {
             "product": "confidence-booster-bundle",
             "announcement_id": "",
-            "button_url_id": "#confidence-booster-bundle",
             "button_text_id": "Get yours"
           }
         },
@@ -128,7 +114,6 @@
           "settings": {
             "product": "mi-bundle-may",
             "announcement_id": "New",
-            "button_url_id": "#mi-bundle-may",
             "button_text_id": "Get yours"
           }
         },
@@ -137,7 +122,6 @@
           "settings": {
             "product": "skin-ssentials-set-doctorly-choice",
             "announcement_id": "Doctorly recommended",
-            "button_url_id": "#skin-ssentials-set-doctorly-choice",
             "button_text_id": "Get yours"
           }
         },
@@ -146,7 +130,6 @@
           "settings": {
             "product": "youthify-or-glow-set",
             "announcement_id": "",
-            "button_url_id": "#youthify-or-glow-set",
             "button_text_id": "Get yours"
           }
         },
@@ -156,7 +139,6 @@
           "settings": {
             "product": "hydra-glow",
             "announcement_id": "",
-            "button_url_id": "#hydra-glow",
             "button_text_id": "Get yours"
           }
         }

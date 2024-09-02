@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "main": {
@@ -424,6 +415,18 @@
             "code": ""
           }
         },
+        "result_NhAn8a": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Sophie_Richards_Desktop.png",
+            "heading": "Amazing!",
+            "text": "<p><em>Has made such a massive on my acne. Still getting breakouts but they disappear way quicker. Took maybe 2 days to start working. Pics are about 3 weeks difference.<\/em><\/p>",
+            "image_country": "shopify:\/\/shop_images\/New_zealand_image.png",
+            "text_country": "New Zealand",
+            "client": "Sophie R.",
+            "code": ""
+          }
+        },
         "result_73PVKN": {
           "type": "result",
           "settings": {
@@ -548,6 +551,7 @@
       },
       "block_order": [
         "result_LwfFir",
+        "result_NhAn8a",
         "result_73PVKN",
         "result_TkKNU8",
         "result_pmCAWA",
@@ -580,7 +584,7 @@
         "content_rgPkBx": {
           "type": "content",
           "settings": {
-            "text": "<h2>Qure’s LED light therapy mask is unlike any other skincare device<\/h2><p>A portable, <strong>FDA-cleared<\/strong>, at-home LED light therapy treatment that is <strong>scientifically proven<\/strong> to change your skin for the better. That makes you feel better, too.<\/p><p><\/p><p>Choose between three treatment modes, <strong>“Anti-Breakout”<\/strong>, <strong>“Anti-Aging”<\/strong> or <strong>custom treatment zones.<\/strong> Each treatment mode utilizes a combination of market-leading light wavelengths to treat a multitude of skin concerns deep within the skin, where even the best creams and serums can’t reach.<\/p><p><\/p><p>Get all the skin firming, smoothing, clearing benefits with just <strong>1 device.<\/strong><\/p>",
+            "text": "<h2>All the skin firming, smoothing, clearing benefits with just 1 device. <\/h2><p>A portable, <strong>FDA-cleared<\/strong>, at-home LED light therapy treatment that is <strong>scientifically proven<\/strong> to change your skin for the better. That makes you feel better, too.<\/p><p><\/p><p>Q-Rejuvalight Pro utilizes utilizes a combination of 5 market-leading light wavelengths to treat a multitude of skin concerns deep within the skin, where even the best creams and serums can’t reach.<\/p>",
             "column_content": 0,
             "classname": "it_info p-0 pt-0 pt-md-3"
           }
@@ -679,7 +683,7 @@
         "content_WQADAK": {
           "type": "content",
           "settings": {
-            "text": "<h2>Clinical-grade LED, personalized to your skin.<\/h2><h3>See transformative results in less than 12 weeks. [image_mobile]<\/h3><p>Safe, <strong>clinically proven<\/strong> wavelengths of light penetrate the layers of the skin at various depths to trigger natural cellular reactions that treats skin concerns from the inside out, for <strong>immediate and long lasting results<\/strong>.<\/p><p>The <strong>same technology used in clinics<\/strong> by dermatologists, giving you <strong>transformative results conveniently from home,<\/strong> without the clinical price tag.<\/p><p>[details]<\/p>",
+            "text": "<h2>Clinical-grade LED, personalized to your skin.<\/h2><h3>See transformative results in less than 12 weeks. [image_mobile]<\/h3><p>Safe, <strong>clinically proven<\/strong> wavelengths of light penetrate the layers of the skin at various depths to trigger natural cellular reactions that treats skin concerns from the inside out, for <strong>immediate and long lasting results<\/strong>.<\/p><p>[details]<\/p>",
             "column_content": 0,
             "classname": "section_header text-start pb-0"
           }
@@ -726,7 +730,7 @@
         "content_TwGCn9": {
           "type": "content",
           "settings": {
-            "text": "<h2>Qure Mobile App<\/h2><h3>Your skin is unique, so your treatment should be too.<\/h3><p>[image_mobile] <\/p><p>Qure’s LED Light Therapy Mask comes with a companion iPhone\/Android app.<\/p><p>Select from our range of <strong>treatments<\/strong> across five different facial areas to treat and target what your skin needs today. So you can <strong>help prevent breakouts on your chin<\/strong> while smoothing the appearance of “crow’s feet” at the same time.<\/p><p>You’ll never miss a treatment with Qure mobile app <strong>planner<\/strong> and phone reminders.<\/p>",
+            "text": "<h2>Qure Mobile App<\/h2><h3>The only FDA-cleared LED light therapy mask with an app.<\/h3><p>[image_mobile] <\/p><p>Your skin is unique, so your treatment should be too.<\/p><p>Choose between three treatment modes, “Anti-Breakout”, “Anti-Aging” or custom treatment zones. <strong>Select a treatment mode on five different facial areas to treat and target what your skin needs today.<\/strong> So you can help prevent breakouts on your chin while smoothing the appearance of “crow’s feet” at the same time.  <\/p><p>You’ll never miss a treatment with Qure mobile app <strong>planner<\/strong> and phone reminders.<\/p>",
             "column_content": 0,
             "classname": "section_header text-start pb-0"
           }
@@ -1109,7 +1113,7 @@
       "type": "apps",
       "blocks": {
         "stamped_product_reviews_ugc_main_widget_A4ebAn": {
-          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
+          "type": "shopify:\/\/apps\/stamped-reviews\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
           "settings": {
             "take_questions": 2,
             "animation": true,

@@ -30734,6 +30734,10 @@ p {
 }
 
 @media (max-width: 767px) {
+    .dot_pagination .swiper-pagination-bullet {
+        height: 10px !important;
+        width: 10px !important;
+    }
     .dot_pagination .swiper-pagination {
         padding-top: 20px;
     }
@@ -30765,6 +30769,9 @@ p {
     }
     .result_s_wrapper .swiper-button-next {
         right: 10px;
+    }
+    .qurify_lp .videosQure .swiper-button {
+        display: none;
     }
 }
 
@@ -31814,7 +31821,6 @@ p {
 /* ====== featured promotion start  ===== */
 .featured_promotion {
     padding: 30px 0 34px;
-    background-color: var(--clr-yellow);
 }
 
 .fp-wrapper {

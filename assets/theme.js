@@ -1,7 +1,7 @@
 /* 
 * Common JS Start
 */
-setTimeout(function () {
+
     var TwaSettingsSwiper = {
         init: function () {
             this.TwaSettingsCarousel();
@@ -82,9 +82,12 @@ setTimeout(function () {
                 })
         }
     };
+    setTimeout(function () {
     TwaSettingsSwiper.init();
 }, 500);
-
+document.addEventListener("shopify:section:load", function(event) {
+    TwaSettingsSwiper.init()
+})
 
 
 //Header

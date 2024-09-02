@@ -7,7 +7,11 @@
     --text-spacing-mobile: 30px;
     --s-text-color: black !important;
 }
-
+main.qurify_lp .faq_inner {
+    width: 100%;
+    max-width: 736px;
+    margin: auto;
+}
 .qurify_lp.led_lp .refill_info .section_header .title-lg {
     font-size: 40px;
     line-height: 60px;
@@ -46,7 +50,9 @@
 .user_report_wrap .progressCont p {
     color: #000;
 }
-
+.user_report_wrap .tootltip_text p{
+    display: inline-block;
+}
 .tooltip_btn {
     width: 100%;
 }
@@ -78,7 +84,9 @@
     letter-spacing: 0.11px;
     position: relative;
 }
-
+.tootltip_text * {
+    font-size: var(--heading-font-size);
+}
 .tootltip_text img {
     margin-left: 5px;
     cursor: pointer;

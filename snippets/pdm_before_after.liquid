@@ -28,13 +28,31 @@
       <div id="info-derma" class="panel">
         <div class="derma-wrapper">
           {% for block in data %}
-            {% if block.type == 'video_before_and_after' %}
+            {% if block.settings.video_new_section %}
               <div class="video-container">
                 {{
                   block.settings.video_new_section
                   | video_tag: autoplay: true, controls: true, muted: true, loop: false, class: 'derma-video'
                 }}
               </div>
+            {% endif %}
+            {%- if block.settings.video_wistia_id -%}
+              <div class="wistia_responsive_padding" style="position:relative;">
+                <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                  <div
+                    class="wistia_embed wistia_async_{{ block.settings.video_wistia_id }} seo=false videoFoam=true"
+                    style="height:100%;position:relative;width:100%;display: flex;align-items: center;"
+                  >
+                    <div
+                      class="wistia_swatch"
+                      style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"
+                    >
+                  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
             {% endif %}
           {% endfor %}
         </div>

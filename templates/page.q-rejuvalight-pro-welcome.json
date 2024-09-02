@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "header_landing_simple_zFxaEH": {
@@ -85,7 +76,10 @@
         "object_HhDQ9F"
       ],
       "settings": {
-        "heading": "Welcome to Qure!"
+        "heading": "Welcome to Qure!",
+        "btm_text": "<p>If you have any questions, our team is here for support!<\/p>",
+        "btn_label": "Contact Us",
+        "btn_url": "https:\/\/www.qureskincare.com\/pages\/contact-us"
       }
     }
   },

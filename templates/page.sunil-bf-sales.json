@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "header_sales_TMQyBR": {
@@ -16,7 +7,7 @@
           "type": "announcement",
           "settings": {
             "heading": "Limited Time Only:",
-            "timer": "2024-09-01T23:59:59",
+            "timer": "2024-09-08T23:59:59",
             "timer_next": 7
           }
         },
@@ -682,14 +673,14 @@
           "type": "feedback",
           "settings": {
             "image": "shopify:\/\/shop_images\/cl_shah.webp",
-            "text": "<p>\"<strong>These devices definitely work<\/strong> but using them safely is the key to long term results...\"<\/p><h6><strong>Dr Shah, MD<\/strong> Certified Dermatologist<\/h6>"
+            "text": "<p>“I recommend this treatment to so many of my patients who are looking for a <strong>glowing, fresh looking complexion<\/strong>”<\/p><h6><strong>Dr Shah, MD<\/strong> Certified Dermatologist<\/h6>"
           }
         },
         "feedback_4rqbDD": {
           "type": "feedback",
           "settings": {
             "image": "shopify:\/\/shop_images\/cl_max.webp",
-            "text": "<p>\"In terms of safety, the micro stamping devices, this [Qure's Micro-Infusion] is great...\"<\/p><h6><strong>Dr Maxfield, MD<\/strong> Certified Dermatologist<\/h6>"
+            "text": "<p>“<strong>Brighter looking, more even skin<\/strong>, minimum pain, and little downtime, just a few reasons why <strong>this is a great at-home treatment<\/strong>”<\/p><h6><strong>Dr Maxfield, MD<\/strong> Certified Dermatologist<\/h6>"
           }
         },
         "video_H7pW4b": {

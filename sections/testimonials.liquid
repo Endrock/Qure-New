@@ -1,0 +1,330 @@
+{%- liquid
+assign st = section.settings
+assign loop = st.enable_loop
+assign autoplay = st.enable_autoplay
+assign desktop_slides = st.slide_on_desktop
+assign tab_slides = st.slide_on_tablet
+assign mobile_slides = st.slide_on_mobile
+assign slides_space = st.space_between_slides
+-%}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.40 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.40 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings40 }}px;
+    }
+  }
+  #shopify-section-{{ section.id }}.trusted_bl.trustedVerified {
+    padding:0;
+  }
+  #shopify-section-{{ section.id }} .play-btn-size {
+    width: 56px !important;
+    height: 56px;
+    color: #fff;
+  }
+{% endstyle %}
+
+<div class="section-{{ section.id }}-padding {{ section.settings.custom_class }}">
+    <div class="container">
+        <div class="trusted_wrapper mt-0">
+            <div class="swiper dot_pagination trustedSwipper twa__swiper" 
+                id="twa__swiper-{{ section.id }}"
+                data-section-id="{{ section.id }}" 
+                data-autoplay="{{autoplay}}" 
+                data-loop="{{ loop }}"
+                data-centerslide="false" 
+                data-mobile="{{mobile_slides}}" 
+                data-tablet="{{tab_slides}}" 
+                data-desktop="{{desktop_slides}}" 
+                data-spacing="{{slides_space}}"
+                data-arrowleft="template-{{ section.id }}-swiper-prev" 
+                data-arrowright="template-{{ section.id }}-swiper-next">
+                <div class="swiper-wrapper">
+                    {% for block in section.blocks %}
+                        {% liquid
+                            assign bs = block.settings
+                            assign video_type = bs.video_type
+                            assign image = bs.image
+                            assign badge_txt = bs.badge_txt
+                        %}
+                    <div class="swiper-slide">
+                        <div class="trust_item">
+                            <div class="trust_img">
+                                {%- if image != blank -%}
+                                    <img src="{{ image | img_url:'master' }}" alt="{{ image.alt }}" class="img-fluid t_m_img">
+                                {%- else -%}
+                                    {%- render 'placeholder-render' -%}
+                                {%- endif -%}
+                                <div class="play_btn">
+                                    {% case video_type %}
+                                        {%- when 'youtube' -%}
+                                            <a class="popup-youtube" href="{{ bs.youtube_link }}">
+                                                <span class="justify-content-center">
+                                                    {% render 'icon-play', class:"w-auto play-btn-size" %}
+                                                </span>
+                                            </a>
+                                        {%- when 'video' -%}
+                                            <a class="popup-youtube"
+                                                href="{{bs.video_link}}">
+                                                <span
+                                                    class="justify-content-center"> 
+                                                    {% render 'icon-play', class:"w-auto play-btn-size" %}
+                                                </span>
+                                            </a>
+                                        {%- when 'wistia' -%}
+                                            <div class="wis tia_responsive_padding" style="position:relative;">
+                                                <div class="wistia_responsive_wrapper"
+                                                    style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                                                    <span
+                                                        class="wistia_embed {{bs.wistia_id}} popover=true videoFoam=true"
+                                                        style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span>
+                                                </div>
+                                                <span class="justify-content-center">
+                                                     {% render 'icon-play', class:"w-auto play-btn-size" %}
+                                                </span>
+                                            </div>
+                                    {% endcase %}
+                                </div>
+                            </div>
+                            {% if bs.title != blank %}
+                                <div class="trust_item_info">
+                                    <div class="result_content">
+                                            <p>"{{ bs.title }}"</p>
+                                        {% if bs.client_details != blank %}
+                                            <h6>{{ bs.client_details }}</h6>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                            <div class="trusted_tag_sm">
+                                <img src="https://qureskincaredns.com/new/assets/trusted_play_esm.svg" alt="">{{ badge_txt }}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+                </div>
+                <div class="pagination_navigation">
+                    <div class="swiper-pagination"></div>
+                    <div class="template-{{ section.id }}-swiper-prev swiper-button-prev swiper-button"></div>
+                    <div class="template-{{ section.id }}-swiper-next  swiper-button-next swiper-button"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+    "name":"Testimonials",
+    "settings":[
+        {
+            "type": "header",
+            "content": "Slider settings"
+        },
+        {
+            "type":"checkbox",
+            "id":"enable_autoplay",
+            "label":"Enable autoplay",
+            "default":false
+        },
+        {
+            "type":"checkbox",
+            "id":"enable_loop",
+            "label":"Enable loop",
+            "default":false
+        },
+        {
+            "type": "range",
+            "id": "slide_on_desktop",
+            "min": 2,
+            "max": 4,
+            "step": 1,
+            "label": "Slides on desktop",
+            "default": 3
+        },
+        {
+            "type": "range",
+            "id": "slide_on_tablet",
+            "min": 2,
+            "max": 4,
+            "step": 1,
+            "label": "Slides on tablet",
+            "default": 2
+        },
+        {
+            "type": "range",
+            "id": "slide_on_mobile",
+            "min": 1,
+            "max": 4,
+            "step": 1,
+            "label": "Slides on desktop",
+            "default": 1
+        },
+        {
+            "type": "range",
+            "id": "space_between_slides",
+            "min": 0,
+            "max": 30,
+            "step": 1,
+            "label": "Space between slides",
+            "default": 20
+        },
+        {
+            "type": "header",
+            "content": "t:sections.padding.section_padding_heading"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "t:sections.padding.padding_top",
+            "default": 0,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px"
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "t:sections.padding.padding_bottom",
+            "default": 0,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px"
+        },
+        {
+            "type":"text",
+            "id":"custom_class",
+            "label":"Custom class",
+            "default":"trusted_bl trustedVerified"
+        }
+    ],
+    "blocks":[
+        {
+            "type":"testimonial",
+            "name":"Testimonial",
+            "settings": [
+                {
+                    "type":"image_picker",
+                    "id":"image",
+                    "label":"Image"
+                },
+                {
+                    "type": "select",
+                    "id": "video_type",
+                    "label": "Video type",
+                    "options": [
+                      {
+                        "value": "video",
+                        "label": "Video"
+                      },
+                      {
+                        "value": "wistia",
+                        "label": "Wistia"
+                      },
+                      {
+                        "value": "youtube",
+                        "label": "Youtube"
+                      }
+                    ],
+                    "default": "video"
+                },
+                {
+                    "type":"textarea",
+                    "id":"video_link",
+                    "label":"Choose video"
+                },
+                {
+                    "type":"header",
+                    "content":"Youtube settings"
+                },
+                {
+                    "type":"video_url",
+                    "id":"youtube_link",
+                    "label":"Add youtube link",
+                    "accept": [
+                        "youtube"
+                    ]
+                },
+                { 
+                    "type":"header",
+                    "content":"Wistia settings"
+                },
+                {
+                    "type":"text",
+                    "id":"wistia_id",
+                    "label":"Add wistia id",
+                    "info":"If you choose Wistia then add the Wistia video id here"
+                },
+                {
+                    "type":"header",
+                    "content":"Testimonail settings"
+                },
+                {
+                    "type":"textarea",
+                    "id":"badge_txt",
+                    "label":"Badge text",
+                    "default":"Subscriber/Views/Followers"
+                },
+                {
+                    "type":"inline_richtext",
+                    "id":"title",
+                    "label":"Testimonial text",
+                    "default":"Testimonial text goes here"
+                },
+                {
+                    "type":"inline_richtext",
+                    "id":"client_details",
+                    "label":"Client details",
+                    "default":"<strong>Dr Mona Patel,</strong> Internal Medicine"
+                }
+                
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name":"Testimonials",
+            "blocks": [
+                {
+                    "type": "testimonial",
+                    "settings":{
+                        "video_type": "video",
+                        "title":"There have been studies to show that this will definitely work to help your products penetrate better..."
+                    }
+                },
+                {
+                    "type": "testimonial",
+                    "settings":{
+                        "video_type": "youtube",
+                        "youtube_link":"https://www.youtube.com/watch?v=1iXBgh7WPOY",
+                        "title":"I’ve liked using this in between my in-office treatments. It’s convenient and you get all the benefits of micro-needling treatment from the comfort of your home..."
+                    }
+                },
+                {
+                    "type": "testimonial",
+                    "settings":{
+                        "video_type": "wistia",
+                        "wistia_id":"wistia_async_yuqb3gno7g",
+                        "title":"“Qure's anti-ageing treatment gets down deep into your skin to stimulate collagen & makes a big difference in skin texture, decreasing fine lines & wrinkles"
+                    }
+                },
+                {
+                    "type": "testimonial",
+                    "settings":{
+                        "video_type": "video",
+                        "title":"You'll see a kind of dewy glowy look after you use it but within a couple of days your skin really looks quite amazing."
+                    }
+                }
+            ] 
+        }
+    ]
+}
+{% endschema %}

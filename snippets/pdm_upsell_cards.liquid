@@ -199,12 +199,12 @@
     {% elsif MicroRefill %}
       <div class="swiper-wrapper micro-refill">
         {% comment %} product_q_rify {% endcomment %}
-        {% if cartItem != "" and cartItem != product_q_rify.title%}
+        {% comment %} {% if cartItem != "" and cartItem != product_q_rify.title%}
           {% assign image_slide = "https://cdn.shopify.com/s/files/1/0441/1431/3365/files/qurify-with-box.jpg?v=1707719035" %}
           {% assign title_copy = "Q-urify Water Filter" %}
           {% assign description_copy = "Clearer, hydrated skin on tap" %}
           {% render 'pdm_upsell_cards_slide', image_slide:image_slide, title_copy:title_copy, description_copy:description_copy, product_slide: product_q_rify   %}
-        {% endif %}
+        {% endif %} {% endcomment %}
         {% comment %} micro-infusion-hydra-soothing-2-treatments {% endcomment %}
         {% if cartItem != "" and cartItem != product_hydra_soothing.title%}
           {% assign image_slide = "https://cdn.shopify.com/s/files/1/0441/1431/3365/files/MicroinfusionSystem-refill-beta-x2.png?v=1690366121" %}
