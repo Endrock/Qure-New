@@ -5,11 +5,15 @@
             <div class="col-md-6">
                 <div class="refill_info pt-0 pt-md-3">
                     <div class="refill_review justify-content-center justify-content-md-start">
+                        {% if section.settings.stars != blank %}
                         <div class="star_gp">
                             <img src="{{ section.settings.stars | img_url: '130px' }}" alt="">
                         </div>
+                        {% endif %}
+                        {% if section.settings.rating_text != blank %}
                         <p class="text-sm fw-normal">{{ section.settings.rating_text }}
                         </p>
+                        {% endif %}
                     </div>
                     <div class="section_header text-center text-md-start">
                         {%- if section.settings.heading != blank -%}
@@ -23,12 +27,14 @@
                         </div>
                         {%- endif -%}
                         <div class="get_clearer_wrapper text-center ms-0 mt-md-3">
-                            {%- if section.settings.btn_txt -%}
-                            <a class="btn btn-lg btn-primary btn_green" href="#shop">{{ section.settings.btn_txt }}</span>
+                            {%- if section.settings.btn_txt != blank -%}
+                            <a class="btn btn-lg btn-primary btn_green" href="{{ section.settings.btn_url }}">{{ section.settings.btn_txt }}</span>
                             </a>
                             {%- endif -%}
+                            {%- if section.settings.recomand != blank -%}
                             <p><span><img src="{{ section.settings.d_icon | image_url: width: 16 }}" alt=""></span>{{ section.settings.recomand }}
                             </p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -155,12 +161,14 @@
                         {%- endif -%}
                     </div>
                     <div class="get_clearer_wrapper text-center ms-0 mt-md-3">
-                        {%- if section.settings.btn_txt -%}
-                        <a class="btn btn-lg btn-primary btn_green" href="#shop">{{ section.settings.btn_txt }}</span>
+                        {%- if section.settings.btn_txt != blank -%}
+                        <a class="btn btn-lg btn-primary btn_green" href="{{ section.settings.btn_url }}">{{ section.settings.btn_txt }}</span>
                         </a>
                         {%- endif -%}
+                        {%- if section.settings.recomand != blank -%}
                         <p><span><img src="{{ section.settings.d_icon | image_url: width: 16 }}" alt=""></span>{{ section.settings.recomand }}
                         </p>
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -191,7 +199,7 @@
         {
             "type": "image_picker",
             "id": "stars",
-            "label": "Stars"
+            "label": "t:common.rating.stars"
         },
         {
             "type": "text",
@@ -199,14 +207,19 @@
             "label": "t:common.button.label"
         },
         {
+            "type": "url",
+            "id": "btn_url",
+            "label": "t:common.button.url.label"
+        },
+        {
           "type": "image_picker",
           "id": "d_icon",
-          "label": "Recommended Icon"
+          "label": "t:common.recommended.icon"
         },
         {
           "type": "text",
           "id": "recomand",
-          "label": "Recommended"
+          "label": "t:common.recommended.label"
         }
     ],
     "blocks":[

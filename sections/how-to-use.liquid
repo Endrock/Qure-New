@@ -74,40 +74,53 @@
                 <div class="get_compliment_wrap">
                     <div class="tab-content" id="pills-tabContent1">
                         {%- for block in section.blocks -%}
-                            <div class="tab-pane fade show  {% if forloop.first %} active {% endif %}" id="{{ block.id }}" role="tabpanel"
-                                aria-labelledby="pills-specs-tab">
-                                <div class="gc_img_wrap">
-                                    <div class="gc_img">
-                                        <img src="{{ block.settings.image1 | img_url: '1100x' }}" alt="block.settings.image.alt">
-                                    </div>
-                                    <div class="gc_img">
-                                        <img src="{{ block.settings.image2 | img_url: '1100x' }}" alt="block.settings.image.alt">
-                                    </div>
-                                    <div class="gc_img">
-                                        <img src="{{ block.settings.image3 | img_url: '1100x' }}" alt="block.settings.image.alt">
-                                    </div>
-                                    <div class="gc_img">
-                                        <img src="{{ block.settings.image4 | img_url: '1100x' }}" alt="block.settings.image.alt">
+                            
+                            {% if block.type == 'Tab' %}
+                                <div class="tab-pane fade show  {% if forloop.first %} active {% endif %} {{ forloop.index }}" id="{{ block.id }}" role="tabpanel"
+                                    aria-labelledby="pills-specs-tab">
+                                    <div class="gc_img_wrap">
+                                        {%- for block in section.blocks -%}
+                                            {% case forloop.index %}
+                                                {% when 1 %}
+                                                    {% capture classCycle %}{% cycle 'order-1', 'order-2', 'order-3', 'order-4' %}{% endcapture %}
+                                                {% when 2 %}
+                                                    {% capture classCycle %}{% cycle 'order-4', 'order-1', 'order-2', 'order-3' %}{% endcapture %}
+                                                {% when 3 %}
+                                                    {% capture classCycle %}{% cycle 'order-3', 'order-4', 'order-1', 'order-2' %}{% endcapture %}
+                                                {% when 4 %}
+                                                    {% capture classCycle %}{% cycle 'order-2', 'order-3', 'order-4', 'order-1' %}{% endcapture %}
+                                            {% endcase %}
+                                            {% if block.type == 'Tab' %}
+
+                                                <div class="gc_img {{ forloop.index }} {{ classCycle }}">
+                                                    <img src="{{ block.settings.image | img_url: '1100x' }}" alt="{{ block.settings.image.alt }}">
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
                                     </div>
                                 </div>
-                            </div>
+                            {% endif %}
                         {%- endfor -%}
                     </div>
                     <ul class="nav nav-pills mb-3" id="pills-tab-skin" role="tablist">
                         {%- for block in section.blocks -%}
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link {% if forloop.first %} active {% endif %}"  id="{{ block.id }}-tab" data-bs-toggle="pill"
-                                data-bs-target="#{{ block.id }}" type="button" role="tab"
-                                aria-controls="{{ block.id }}" aria-selected="true">{{ block.settings.tab_txt }}</button>
-                        </li>
+                            {% if block.type == 'Tab' %}
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link {% if forloop.first %} active {% endif %}"  id="{{ block.id }}-tab" data-bs-toggle="pill"
+                                        data-bs-target="#{{ block.id }}" type="button" role="tab"
+                                        aria-controls="{{ block.id }}" aria-selected="true">{{ block.settings.tab_txt }}</button>
+                                </li>
+                            {% endif %}
                         {%- endfor -%}
                     </ul>
                     <div class="tab-content" id="pills-tabContent2">
                         {%- for block in section.blocks -%}
-                        <div class="tab-pane fade {% if forloop.first %} show active {% endif %}" id="{{ block.id }}" role="tabpanel"
-                            aria-labelledby="pills-specs-tab">
-                            {{ block.settings.tab_desc }}
-                        </div>
+                            {% if block.type == 'Tab' %}
+                                <div class="tab-pane fade {% if forloop.first %} show active {% endif %}" id="{{ block.id }}" role="tabpanel"
+                                    aria-labelledby="pills-specs-tab">
+                                    {{ block.settings.tab_desc }}
+                                </div>
+                            {% endif %}
                         {%- endfor -%}
                     </div>
                 </div>
@@ -121,7 +134,7 @@
 
 {% schema %}
 {
-    "name": "how to use",
+    "name": "t:sections.how_to_use.name",
     "settings": [
         {
             "type": "text",
@@ -139,14 +152,12 @@
                     "type": "text",
                     "id": "wistia_id",
                     "label": "t:common.wistia.id.label"
-                }
-            ]
-        },
-        {
-            "type": "video",
-            "name": "t:common.video.label",
-            "limit": 1,
-            "settings": [
+                },
+                {
+                    "type":"header",
+                    "content":"t:common.video.hosted",
+                    "info":"t:common.video.info"
+                },
                 {
                     "type": "image_picker",
                     "id": "image",
@@ -158,40 +169,25 @@
                     "label": "t:common.video.label"
                 }
             ]
-        },
+        }, 
         {
             "type": "Tab",
             "name": "Tab",
-            "limit": 4,
+            "limit":4,
             "settings": [
                 {
                     "type": "text",
                     "id": "tab_txt",
-                    "label": "Tab Name"
+                    "label": "t:common.tab.name"
                 },
                 {
                     "type": "richtext",
                     "id": "tab_desc",
-                    "label": "Tab Description"
+                    "label": "t:common.desc.label"
                 },
                 {
                     "type": "image_picker",
-                    "id": "image1",
-                    "label": "t:common.image.label"
-                },
-                {
-                    "type": "image_picker",
-                    "id": "image2",
-                    "label": "t:common.image.label"
-                },
-                {
-                    "type": "image_picker",
-                    "id": "image3",
-                    "label": "t:common.image.label"
-                },
-                {
-                    "type": "image_picker",
-                    "id": "image4",
+                    "id": "image",
                     "label": "t:common.image.label"
                 }
             ]
@@ -199,7 +195,7 @@
     ],
     "presets": [
         {
-            "name": "how to use"
+            "name": "t:sections.how_to_use.name"
         }
     ]
 }

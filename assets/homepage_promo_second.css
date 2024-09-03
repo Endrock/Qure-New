@@ -1,0 +1,586 @@
+.homepage .r_c_info {
+    padding: 15px 0;
+}
+
+.homepage .trusted_left {
+    max-width: 475px;
+}
+
+.homepage .main_banner .main_b_wrapper .m_b_content {
+    max-width: 438px;
+}
+
+.homepage .main_banner .bg_banner {
+    /* min-height: 500px; */
+    object-fit: cover;
+    object-position: right;
+}
+
+/* == bestseller section start == */
+.bestseller {
+    background: linear-gradient(269deg, #d2ece3 38.74%, rgba(199, 231, 220, .17) 51.88%, rgba(255, 255, 255, .12) 91.02%);
+    padding: 60px 0 96px;
+}
+
+.bestseller .swiper {
+    overflow: visible !important;
+    overflow-x: clip !important;
+}
+
+.bestseller-block {
+    background: #fff;
+    border: 1.10092px solid #c7e7dc;
+    box-shadow: 0 5.50459px 16.5138px rgba(176, 176, 176, .25);
+    border-radius: 8px;
+    padding: 0 28px 40px;
+}
+
+.bestseller-img {
+    position: relative;
+    width: 100%;
+    height: 173px;
+    padding-bottom: 0;
+    overflow: unset;
+    max-width: 222px;
+    margin: -130px auto 0;
+    text-align: center;
+}
+
+.bestseller-img img {
+    object-fit: contain;
+    object-position: bottom;
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+}
+
+.bestseller-content .badge-seller {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 3.30275px;
+    text-transform: uppercase;
+    color: #dd4d45;
+}
+
+.bestSellerbtn {
+    max-width: 265px;
+    margin: 0 auto;
+}
+
+.bestseller-content h4 {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    font-family: 'Canela Web';
+    text-align: center;
+    letter-spacing: .01em;
+    color: #000;
+    margin: 12px 0 15px;
+}
+
+.bestseller-content p {
+    font-weight: 400;
+    text-align: center;
+    margin: 26px auto 40px;
+    max-width: 265px;
+}
+
+.s-block-2 {
+    margin-top: 0;
+}
+
+.s-block-2 .bestseller-img {
+    height: 210px;
+}
+
+.bestseller .swiper-wrapper {
+    /* align-items: stretch; */
+    align-items: end;
+}
+
+.bestseller .swiper-wrapper .swiper-slide {
+    /* height: unset; */
+}
+
+/* .bestseller .swiper-pagination {
+    display: none;
+} */
+
+.bestseller-wrap {
+    text-align: center;
+}
+
+/* == solutions form start == */
+.solution_form {
+    background: #CCE5DD;
+    text-align: center;
+}
+
+.solution_form .form-btn,
+.solution_form .sf_form input {
+    padding: 15px 20px;
+}
+
+.sf_form {
+    max-width: 430px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.sf_form input {
+    max-width: 430px;
+    width: 100%;
+    padding: 15px 55px 15px 15px;
+    border-radius: 40px;
+    border: none;
+    margin-bottom: 20px;
+    box-shadow: 0px 7px 15px 0px #0000001A;
+
+}
+
+.form-btn {
+    width: 100%;
+    padding: 15px 55px 15px 15px;
+    border-radius: 40px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+.form-btn:hover {
+    color: #fff;
+}
+
+/* == solutions form end == */
+
+/* == personalized treatment start == */
+.personalized_t {
+    background-color: var(--clr-yellow);
+}
+
+.personalized_t .section_header {
+    padding-bottom: 10px;
+}
+
+.personalized_t .title-lg {
+    max-width: 514px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pt_icons_wrapper {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.pt_item {
+    text-align: center;
+    max-width: 200px;
+    margin: 20px auto;
+}
+
+.pt_item img {
+    /* max-width: 50px; */
+    height: 64px;
+}
+
+.pt_item p {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    padding-top: 10px;
+}
+
+.pt_btn {
+    margin-top: 40px;
+}
+
+.pt_btn {
+    background: #000;
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 14px 30px;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+}
+
+.new_btn {
+    border-radius: 30px;
+    background-color: #C7E7DC;
+    max-width: fit-content;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 9px 19px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 15px;
+    letter-spacing: 0.18px;
+    text-transform: uppercase;
+}
+
+@media(max-width:991px) and (min-width:720px) {
+
+    .homepage .main_banner .bg_banner,
+    .homepage_banner .bg_banner {
+        min-height: 450px;
+        object-fit: cover;
+        object-position: right;
+    }
+}
+
+@media(max-width:767px) {
+
+    .bestseller-content {
+        text-align: center;
+    }
+
+    .bestseller-img {
+        margin: -105px auto 10px;
+    }
+
+    .pt_btn {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .pt_btn {
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 0;
+    }
+
+    .pt_item {
+        margin: 25px auto;
+    }
+
+    .personalized_t .section_header p {
+        font-size: 14px;
+    }
+
+    .press_slider.press_slider_row2 .ps_wrapper {
+        margin: 10px 0;
+        justify-content: space-evenly;
+    }
+
+    .new_btn {
+        padding: 2px 12px;
+        font-size: 11px;
+        line-height: 15px;
+        letter-spacing: 0.22px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+
+    .m_b_content .section_header .title-xl {
+        font-size: 31px;
+        line-height: 40px;
+        letter-spacing: 0.31px;
+    }
+
+    .m_b_content .section_header .title-xl {
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 640px) {
+    .bestseller {
+        padding: 150px 0 30px;
+        background: linear-gradient(0deg, #FFFAF1 0%, #CCE5DD 77.94%);
+    }
+
+    .bestseller-content h4 {
+        margin: 5px 0 15px;
+    }
+
+    .bestseller-content p {
+        margin: 24px auto 40px;
+    }
+}
+
+@media (max-width: 556px) {
+    .section_header {
+        max-width: 338px;
+    }
+
+    .homepage .main_banner .main_b_wrapper .m_b_content .btn_white {
+        margin: 40px auto;
+        margin-left: auto !important;
+    }
+
+    .homepage .main_b_wrapper .container {
+        padding-right: 19px !important;
+        padding-left: 19px !important;
+    }
+
+    .homepage .main_banner .main_b_wrapper .m_b_content .m_b_review {
+        max-width: 276px;
+        margin: 0 auto;
+    }
+}
+
+/* ================================== homepage old start ================================ */
+.product_slider .swiper-slide h3 {
+    margin: 5px 0;
+    font-size: 8px;
+    line-height: 11.02px;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+}
+
+
+.product_slider .swiper-slide>a {
+    display: inline-block;
+    max-width: 70px;
+}
+
+.product_slider .swiper-slide:first-child {
+    padding-left: 10px;
+}
+
+.product_slider {
+    padding: 10px 0;
+}
+
+.product_slider img {
+    width: 70px;
+    height: 70px;
+}
+
+.ss_clinical .ss_c_detail a.ss_c_link {
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.homepage .btn_black {
+    background-color: #000;
+    color: #fff;
+    padding: 11px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 0.167px;
+    font-size: 20px;
+    margin-bottom: 15px;
+    display: inline-block;
+    max-width: 354px;
+    width: 100%;
+    text-align: center;
+}
+
+.homepage .main_b_wrapper .section_header p {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+.q_uses_bl .q_uses_item-outer+.q_uses_item-outer:before {
+    display: none;
+}
+
+.future_skincare .fs-content .future_btn {
+    padding: 18.5px 31px;
+    color: #000;
+}
+
+.bs_item h4 {
+    border-bottom: 0;
+}
+
+.bs_content {
+    padding: 24px 0 0;
+}
+
+.homepage .skincare_journey .btn_black {
+    padding: 20px;
+}
+
+.homepage .skincare_journey .btn_black,
+.homepage .customer_fav .btn_black {
+    background-color: #000;
+    color: #fff;
+}
+
+.videosQure_dropdown .qureSlider .accordion-button {
+    justify-content: space-between;
+}
+
+.homepage .q_uses_bl .q_use_img {
+    margin-bottom: 0;
+    /* margin-top: 20px; */
+    max-width: 156px;
+}
+
+.videosQure_dropdown.videosQureTrusted .qureSlider .accordion-button::after {
+    margin-left: 10px;
+    height: 14px;
+    width: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='9' viewBox='0 0 16 9' fill='none'%3E%3Cpath opacity='0.8' d='M1 1.3866L8 7.3866L15 1.3866' stroke='black' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.videosQure_dropdown .qureSlider .accordion-button {
+    padding: 20px 0 0px;
+}
+
+.videosQure_dropdown .vQ_desc {
+    font-size: 14px;
+}
+
+.beauty_skincare .bs_feature.correct ul li:before {
+    content: url(./correct_circle.svg);
+}
+
+.skin_concern .section_header h4 {
+    font-family: 'Canela Light';
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 0.28px;
+}
+
+
+.contact_us_bl .customer_details {
+    background-color: transparent;
+    margin-top: 40px;
+}
+
+.contact_us_bl .customer_details .c_d_wrapper span:after {
+    background-color: #fff;
+}
+
+/* .result_item.result_item_info_with_fixed {
+    padding-bottom: 100px !important;
+} */
+
+.mi_landing_result .result_c_info .star_gp p {
+    margin-left: 0px;
+}
+
+.result_item.result_item_info_with_fixed .result_product_name {
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 0.11px;
+    padding: 5px 15px;
+}
+
+.result_item.result_item_info_with_fixed .result_learnMore .result_c_info {
+    padding: 0;
+}
+
+.homepage .result_item.result_item_info_with_fixed .result_c_info {
+    padding: 15px 15px 0;
+}
+
+.homepage .q_uses_bl .q_uses_mob_wrap {
+    display: flex;
+    gap: 0;
+}
+
+.homepage .mySwiperTest {
+    padding: 10px;
+}
+
+.trusted_bl .trust_item .trust_item_info .result_content p,
+.trust_item .trust_item_info .result_content h6 {
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.beauty_skincare .section_header .title-lg {
+    max-width: 441px;
+}
+
+.homepage .result_item.result_item_info_with_fixed .result_c_info .verified_img p {
+    color: #797D7C;
+}
+
+@media(max-width:767px) {
+    .ss_clinical .ss_c_detail a.ss_c_link {
+        font-size: 12px;
+        line-height: 22px;
+    }
+
+    .sf_form {
+        margin-top: 35px !important;
+    }
+
+    .homepage .btn_black {
+        /* background-color: #fff;
+        color: #000; */
+        max-width: 231px;
+        padding: 10px 26px;
+    }
+
+    .homepage .skincare_journey .btn_black {
+        padding: 15px !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .homepage .main_banner .main_b_wrapper .btn_black {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .homepage .main_banner .main_b_wrapper {
+        /* align-items: flex-start;
+        top: 30px; */
+        color: #fff;
+    }
+
+    .homepage .main_b_wrapper .section_header p {
+        font-size: 14px;
+        line-height: 21px;
+        padding: 16px 0;
+    }
+
+    .pagination_navigation .swiper-button {
+        display: grid;
+    }
+
+    .future_skincare .fs-content .future_btn {
+        padding: 12.5px 31px;
+    }
+
+    .videosQureTrusted .swiper-button-next.swiper-button-disabled,
+    .videosQureTrusted .swiper-button-prev.swiper-button-disabled,
+    .skin_concern .swiper-button-next.swiper-button-disabled,
+    .skin_concern .swiper-button-prev.swiper-button-disabled {
+        opacity: 0;
+    }
+
+    .skin_concern .section_header h4 {
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: 0.22px;
+    }
+
+    .customer_fav .btn_black {
+        max-width: 100%;
+    }
+
+    .result_item.result_item_info_with_fixed .result_product_name {
+        padding: 6px 15px 15px;
+    }
+
+    .homepage .mySwiperTest {
+        padding: 5px;
+    }
+
+    .newsletter_bl {
+        border-bottom: none;
+    }
+}
+
+/* ================================== homepage old start ================================ */

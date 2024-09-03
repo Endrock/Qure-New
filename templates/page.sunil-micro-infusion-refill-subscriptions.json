@@ -291,8 +291,6 @@
         "column_EUUCCQ"
       ],
       "settings": {
-        "section_heading": "",
-        "subheading": ""
       }
     },
     "results_RAwjmJ": {
@@ -941,8 +939,6 @@
         "button_BBy9iK": {
           "type": "button",
           "settings": {
-            "ext_btn": "",
-            "ext_url": ""
           }
         }
       },
@@ -961,7 +957,6 @@
         "button_BBy9iK"
       ],
       "settings": {
-        "background": "bg_yellow",
         "classname": "bg_yellow",
         "heading": "The answers to your questions",
         "text": "",

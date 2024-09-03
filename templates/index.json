@@ -7,6 +7,15 @@
 * made to this file may be overwritten.
 * ------------------------------------------------------------
 */
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -107,6 +116,33 @@
         "image_mobile": "shopify:\/\/shop_images\/LABOR_NEW_MBILE.png"
       }
     },
+    "promotion_main_banner_second_jCUkqh": {
+      "type": "promotion-main-banner-second",
+      "blocks": {
+        "link_Pk3LH6": {
+          "type": "link",
+          "settings": {
+            "link_label": "Shop Best Sellers",
+            "link_label_mobile": "Shop Best Sellers",
+            "link_url": "https:\/\/www.qureskincare.com\/collections\/best-sellers"
+          }
+        }
+      },
+      "block_order": [
+        "link_Pk3LH6"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Get clinic-level results from home- minus the ‘clinical’ costs.",
+        "heading_mobile": "",
+        "heading_tag": "h1",
+        "subheading": "",
+        "subheading_mobile": "",
+        "text": "<p><strong>50,000+<\/strong>customers feel more confident in their own skin.<\/p>",
+        "image": "shopify:\/\/shop_images\/banner_after.png",
+        "image_mobile": "shopify:\/\/shop_images\/banner_mobile.png"
+      }
+    },
     "featuredin_extended_P7BNDN": {
       "type": "featuredin_extended",
       "blocks": {
@@ -197,7 +233,8 @@
             "text": "<p>Backed by the most respected peer-reviewed <strong>Dermatologist Journals<\/strong> and <strong>scientific studies<\/strong> that <strong>prove<\/strong>; Qure’s skincare <strong>works<\/strong>.<\/p>",
             "logo": "shopify:\/\/shop_images\/q_uses_1_12585e4b-1c56-477e-a662-8e2a03b0ea51.webp",
             "btn_img": "shopify:\/\/shop_images\/s_q_3.svg",
-            "btn_text": "<p>Science-Backed, Dermatologist Approved<\/p>"
+            "btn_text": "<p>Science-Backed, Dermatologist Approved<\/p>",
+            "btn_textm": "<p>Dermatologist Approved<\/p>"
           }
         },
         "box_kKUckK": {
@@ -206,7 +243,8 @@
             "heading": "Safe and Easy To Use Devices",
             "text": "<p>Perform <strong>safely <\/strong>from home for quick and <strong>easy <\/strong>regular <strong>DIY therapies<\/strong> so you can maintain long term smooth and healthy skin.<\/p>",
             "btn_img": "shopify:\/\/shop_images\/derma-ft-lg.svg",
-            "btn_text": "<p>Safe & Easy To Use Devices<\/p>"
+            "btn_text": "<p>Safe & Easy To Use Devices<\/p>",
+            "btn_textm": "<p>Safe & Easy To Use Devices<\/p>"
           }
         },
         "box_ideJJP": {
@@ -215,7 +253,8 @@
             "heading": "Saves You Time, and Money",
             "text": "<p>No one has the time, or the money, to attend regular in-clinic treatments in order to see long lasting results. With Qure, it’s like going to the clinic 5x a week - Minus the cost and the time commitment.<\/p>",
             "btn_img": "shopify:\/\/shop_images\/money_time.svg",
-            "btn_text": "<p>Saves You Time, and Money<\/p>"
+            "btn_text": "<p>Saves You Time, and Money<\/p>",
+            "btn_textm": "<p>Saves You Time & Money<\/p>"
           }
         },
         "box_tkGFdT": {
@@ -224,7 +263,8 @@
             "heading": "Treat Multiple Skin Concerns",
             "text": "<p>Feel good in your skin with personalized treatments for your specific skin type and concern. We put <strong>clinically proven<\/strong> skincare in your hands so you can <strong>achieve in-clinic results without the guess work.<\/strong><\/p>",
             "btn_img": "shopify:\/\/shop_images\/treat-skin-lg.svg",
-            "btn_text": "<p>Treat Multiple Skin Concerns<\/p>"
+            "btn_text": "<p>Treat Multiple Skin Concerns<\/p>",
+            "btn_textm": "<p>Treat Multiple Skin Concerns<\/p>"
           }
         }
       },
@@ -393,7 +433,7 @@
         "icon_iah3Eg"
       ],
       "settings": {
-        "background": "trasnparent"
+        "background": "bg-grey"
       }
     },
     "text_with_video_TwRQhd": {
@@ -524,7 +564,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/beauty_ledmask1.webp",
             "heading": "Qure",
-            "mob_text": "Qure",
+            "mob_text": "",
             "text": "",
             "price": "",
             "style": "correctCircle",
@@ -536,7 +576,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/beauty_derma1.webp",
             "heading": "Derm\/ Clinic Treatments",
-            "mob_text": "Derm\/ Clinic",
+            "mob_text": "",
             "text": "",
             "price": "",
             "style": "incorrectCircle",
@@ -688,7 +728,7 @@
       "settings": {
         "heading": "Feeling good in your skin is not a privilege —  it's a right.",
         "text": "",
-        "text_content": "<p>At Qure, we're redefining beauty boundaries by making professional clinical treatments accessible to everyone from the comfort of peoples home—without the clinical price tag.<\/p>",
+        "text_content": "<p>At Qure, we're redefining beauty boundaries by making professional clinical treatments accessible to everyone from the comfort of peoples home—without the clinical price tag. <\/p>",
         "button_label": "Our story",
         "button_url": "https:\/\/www.qureskincare.com\/pages\/our-story"
       }
@@ -742,14 +782,15 @@
       "settings": {
         "heading": "Personalized solutions for your skin’s unique needs",
         "text": "<p>Answer a few questions and we’ll tell you how to achieve your skincare goals.<\/p>",
-        "btn_text": "Claim Free Consultation",
-        "btn_url": "https:\/\/www.qureskincare.com\/pages\/skin-consultation"
+        "btn_text": "",
+        "btn_url": ""
       }
     }
   },
   "order": [
     "main",
     "promotion_main_banner_48gkNr",
+    "promotion_main_banner_second_jCUkqh",
     "featuredin_extended_P7BNDN",
     "box_slider_HRHeRA",
     "featured_collection_Hj3Xcw",

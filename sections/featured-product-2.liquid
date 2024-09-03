@@ -24,17 +24,23 @@
                 <div class="col-12 col-md-7 offset-md-5">
                     <div class="neck_bundle_wrap">
                         <div class="bundle_outer">
-                            <p>Bundle & SAVE {{ discount | money_without_trailing_zeros }}</p>
+                            {% if section.settings.btn_txt != blank %}
+                            <p>{{ section.settings.btn_txt }} {{ discount | money_without_trailing_zeros }}</p>
+                            {% endif %}
                         </div>
                         <div class="banner_content mw-100 position-relative">
                             <div class="refill_review justify-content-start">
                                 <div class="star_gp">
+                                    {% if section.settings.stars != blank %}
                                     <img src="{{ section.settings.stars | img_url: '130px' }}" alt="">
+                                    {% endif %}
                                 </div>
                                 <p class="text-sm fw-normal text-decoration-none">{{ section.settings.rating_text }}</p>
                             </div>
                             <div class="section_header ps-0 pb-0 pt-2 ms-0">
+                                {% if section.settings.product_name != blank %}
                                 <h2 class="title-lg">{{ section.settings.product_name }}</h2>
+                                {% endif %}
                             </div>
                             <div class="price_wrap">
                                 <div class="price">
@@ -45,23 +51,27 @@
                                     <p>YOU SAVE <span>{{ discount | money_without_trailing_zeros  }}</span></p>
                                 </div>
                             </div>
+                            {% if section.settings.abt_product != blank %}
                             <p>{{ section.settings.abt_product }}</p>
+                            {% endif %}
 
-                            {%- if section.settings.benefits -%}
+                            {%- if section.settings.benefits != blank -%}
                             <div class="tq_list my-3 ss_list d-none d-md-block">
                                 {{ section.settings.benefits }}
                             </div>
                             {%- endif -%}
 
-                            {%- if section.settings.m_benefits -%}
+                            {%- if section.settings.m_benefits != blank -%}
                             <div class="tq_list my-3 ss_list d-block d-md-none">
                                 {{ section.settings.m_benefits }}
                             </div>
                              {%- endif -%}
+                            {% if section.settings.btn_txt != blank %}
                             <div class="get_clearer_wrapper ms-0">
-                                <a class="btn btn-lg btn-primary btn_green mw-100" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>Bundle & SAVE - {{ discount | money_without_trailing_zeros }}</a>
-                                <a id="cart-reload" style="display:none" class="btn btn-lg btn-primary btn_green mw-100" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=0" data-ajax-cart-request-button>Bundle & SAVE - {{ discount | money_without_trailing_zeros }}</a>
+                                <a class="btn btn-lg btn-primary btn_green mw-100" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>{{ section.settings.btn_txt }} - {{ discount | money_without_trailing_zeros }}</a>
+                                <a id="cart-reload" style="display:none" class="btn btn-lg btn-primary btn_green mw-100" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=0" data-ajax-cart-request-button>{{ section.settings.btn_txt }} - {{ discount | money_without_trailing_zeros }}</a>
                             </div>
+                            {% endif %}
                         </div>
                     </div>
 
@@ -74,7 +84,7 @@
 
 {% schema %}
 {
-  "name": "featured-product 2",
+  "name": "t:sections.f_product2.name",
   "settings": [
     {
         "type": "image_picker",
@@ -84,7 +94,7 @@
     {
         "type": "product",
         "id": "product",
-        "label": "Product"
+        "label": "t:sections.product.name"
     },
     {
       "type": "text",
@@ -103,13 +113,18 @@
     },
     {
         "type": "text",
+        "id": "btn_txt",
+        "label": "t:common.button.label"
+    },
+    {
+        "type": "text",
         "id": "rating_text",
         "label": "t:product.badge.label"
     },
     {
         "type": "image_picker",
         "id": "stars",
-        "label": "Stars"
+        "label": "t:common.rating.stars"
     },
     {
         "type": "header",
@@ -128,7 +143,7 @@
   ],
   "presets": [
     {
-      "name": "Featured Product 2"
+      "name": "t:sections.f_product2.name"
     }
   ]
 }

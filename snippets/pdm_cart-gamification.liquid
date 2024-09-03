@@ -18,6 +18,9 @@
   endif
 
   assign progress_percentage = cartTotal | times: 100 | divided_by: treshold
+  if treshold > cartTotal and progress_percentage > 80
+    assign progress_percentage = 80
+  endif
   if progress_percentage > 100
     assign progress_percentage = 100
   endif

@@ -1,6 +1,6 @@
 <!-- -- user report start -- -->
 
-<div class="user_report bg-lightGrey section">
+<div class="user_report bg-lightGrey section" id="{{ section.id }}">
     <div class="container">
         {%- if section.settings.section_heading != blank -%}
             <div class="section_header mb-3 text-center">
@@ -33,9 +33,8 @@
                                 <div class="tootltip_text {{ block.settings.block_className }}" style="--heading-font-size: {{ block.settings.font_size | append:'px' }}">
                                     {{ block.settings.toolip_hed }}
                                     
-                                    <img src="https://qureskincaredns.com/new/assets/info_lg.svg" alt="">
+                                    <img src="{{ 'info_lg.svg' | asset_url }}" alt="">
                                     <div class="tooltip_info">
-                                        <img src="https://qureskincaredns.com/new/assets/tooltip_triangle.svg" alt="">
                                         <div>{{ block.settings.toolip_desc }}</div>
                                     </div>
                                 </div>
@@ -50,31 +49,31 @@
 <!-- -- user report end -- -->
 
 {% style %}
-.tootltip_text * {
+#section.id .tootltip_text * {
     font-size: var(--heading-font-size);
 }
 {% endstyle %}
 
 {% schema %}
     {
-        "name": "Progress Blocks",
+        "name": "t:sections.progress_blocks.label",
         "settings": [
             {
                 "type": "text",
                 "id": "section_heading",
-                "label": "Heading",
+                "label": "t:common.heading.label",
                 "default": "Proof In Numbers"
             },
             {
                 "type": "richtext",
                 "id": "subheading",
-                "label": "Sub Heading"
+                "label": "t:common.subheading.label"
             }
         ],
         "blocks": [
             {
                 "type": "column",
-                "name": "column",
+                "name": "t:common.column.label",
                 "limit": 3,
                 "settings": [
                     {
@@ -89,17 +88,17 @@
                         "max": 100,
                         "default": 10,
                         "step": 1,
-                        "label": "Percentage Bar"
+                        "label": "t:progressBlock.column.percent_bars"
                     },
                     {
                         "type": "richtext",
                         "id": "toolip_hed",
-                        "label": "Info Heading"
+                        "label": "t:common.heading.info"
                     },
                     {
                         "type": "richtext",
                         "id": "toolip_desc",
-                        "label": "Info Description"
+                        "label": "t:common.desc.info"
                     },
                     {
                         "type": "range",
@@ -108,14 +107,14 @@
                         "max": 100,
                         "default": 12,
                         "step": 1,
-                        "label": "Font size"
+                        "label": "t:common.font.size"
                     },
                 ]
 		    }
         ],
         "presets": [
             {
-                "name": "Progress Blocks"
+                "name": "t:sections.progress_blocks.label"
             }
         ]
     }

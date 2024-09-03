@@ -1,10 +1,11 @@
+{% assign random_number='now' | date: "%s" | modulo: 100 | plus: 1 %}
 <div class="q_uses_bl {{ section.settings.background }} section q_uses_tab">
   <div class="container">
     <div class="row">
       <div class="col-md-4 order-2 order-md-1">
         <div
           style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-          class="swiper mySwiper2-{{ section.id }} dot_pagination mt-4 mt-md-0"
+          class="swiper swiper2_{{ random_number }} dot_pagination mt-4 mt-md-0"
         >
           <div class="swiper-wrapper">
             {%- for block in section.blocks -%}
@@ -31,7 +32,7 @@
         </div>
       </div>
       <div class="offset-md-1 col-md-6 order-1 order-md-2">
-        <div thumbsSlider="" class="swiper mySwiper-{{ section.id }}">
+        <div thumbsSlider="" class="swiper swiper_{{ random_number }}">
           <div class="swiper-wrapper q_uses_mob_wrap">
             {%- for block in section.blocks -%}
               <div class="swiper-slide q_uses_item">
@@ -59,7 +60,7 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var swiper = new Swiper('.mySwiper-{{ section.id }}', {
+    var swiper = new Swiper('.swiper_{{ random_number }}', {
       spaceBetween: 10,
       slidesPerView: 2,
       freeMode: true,
@@ -76,7 +77,7 @@
         },
       },
     });
-    var swiper2 = new Swiper('.mySwiper2-{{ section.id }}', {
+    var swiper2 = new Swiper('.swiper2_{{ random_number }}', {
       spaceBetween: 0,
       navigation: {
         nextEl: '.swiper-button-next',
@@ -105,15 +106,15 @@
       "options": [
         {
           "value": "bg-yellow",
-          "label": "Yellow"
+          "label": "t:common.background.yellow"
         },
         {
           "value": "bg-lightGrey",
-          "label": "Grey"
+          "label": "t:common.background.grey"
         },
         {
           "value": "bg_clr_transparent",
-          "label": "Tranparent"
+          "label": "t:common.background.transparent"
         }
       ],
       "default": "bg_clr_transparent"

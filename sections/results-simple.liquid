@@ -86,7 +86,7 @@
 {% schema %}
     {
         "name": "t:sections.results-simple.name",
-        "class": "section-landing-main-banner",
+        "class": "section-results-simple",
         "settings": [
             {
                 "type": "text",
@@ -125,7 +125,39 @@
         ],
         "presets": [
 			{
-				"name": "t:sections.results-simple.name"
+				"name": "t:sections.results-simple.name",
+                "settings": {
+                    "text_verified_customer": "Verified customer"
+                },
+                "blocks": [
+                    {
+                        "type": "result",
+                        "settings": {
+                            "image": "shopify:\/\/shop_images\/results_jess1.webp",
+                            "image_country": "shopify:\/\/shop_images\/usa_89e25711-f730-4521-8931-83b3307204af.png",
+                            "text_country": "United Stated",
+                            "client": "Jess"
+                        }
+                    },
+                    {
+                        "type": "result",
+                        "settings": {
+                            "image": "shopify:\/\/shop_images\/results_ellie.webp",
+                            "image_country": "shopify:\/\/shop_images\/usa_89e25711-f730-4521-8931-83b3307204af.png",
+                            "text_country": "United Stated",
+                            "client": "Ellie V."
+                        }
+                    },
+                    {
+                        "type": "result",
+                        "settings": {
+                            "image": "shopify:\/\/shop_images\/results-Ramandeep.png",
+                            "image_country": "shopify:\/\/shop_images\/usa_89e25711-f730-4521-8931-83b3307204af.png",
+                            "text_country": "United States",
+                            "client": "Ramandeep"
+                        }
+                    }
+                ]
 			}
         ]
     }

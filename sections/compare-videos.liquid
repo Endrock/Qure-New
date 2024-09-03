@@ -26,9 +26,7 @@
             {% endif %}
         
             {% if section.settings.text != blank %}
-                <div class="pb-3 pb-md-0">
-                    {{ section.settings.text }}
-                </div>
+                {{ section.settings.text |  replace: '<p>', '<p class="pb-3 pb-md-0">'  }}
             {% endif %}
         </div>
         <div class="bs_grid">
@@ -57,6 +55,9 @@
             </div>
             {% if section.settings.wistia_id_second != blank %}
                 <div class="bs_item">
+                    <div class="bs_content d-md-none d-block pb-3 pt-0">
+                        <h4 class="pb-1"><span class="d-md-none">{{ section.settings.wistia_id_second_label | replace: '\n', '<br>' }}</h4>
+                    </div>
                     <div class="bs_img">
                         <div class="wistia_responsive_padding beauty_img" style="position:relative;">
                             <div class="wistia_responsive_wrapper"
@@ -67,7 +68,7 @@
                         </div>
                     </div>
                     {% if section.settings.wistia_id_second_label != blank %}
-                        <div class="bs_content">
+                        <div class="bs_content d-md-block d-none">
                             <h4>{{ section.settings.wistia_id_second_label | replace: '\n', '<br>' }}</h4>
                         </div>
                     {% endif %}
@@ -123,7 +124,7 @@
 {% schema %}
     {
         "name": "t:sections.compare-videos.name",
-        "class": "section-landing-main-banner",
+        "class": "section-compare-videos",
         "settings": [
             {
                 "type": "text",
@@ -224,7 +225,52 @@
         ],
         "presets": [
 			{
-				"name": "t:sections.compare-videos.name"
+				"name": "t:sections.compare-videos.name",
+                "settings": {
+                    "heading": "Qure’s Micro-Infusion System goes where your skin creams can’t…",
+                    "heading_tag": "h2",
+                    "text": "<p>Tired of constantly switching skincare products and still <strong>not seeing results?<\/strong><\/p><p><strong>Topical skincare alone isn't effective <\/strong>because many ingredients in face creams and serums are too large to penetrate deep enough into the skin, where your skin needs them most.<\/p>",
+                    "wistia_id": "9gjsppjkja",
+                    "wistia_id_label": "Topical creams",
+                    "wistia_id_second": "na8z16hdlx",
+                    "wistia_id_second_label": "Stamping Your Skin with \\n Micro-Infusion System"
+                },
+                "blocks": [
+                    {
+                        "type": "heading",
+                        "settings": {
+                            "heading": "Your quest for the “one product that finally works” ends here."
+                        }
+                    },
+                    {
+                        "type": "option",
+                        "settings": {
+                            "text": "<p><strong>2-in-1 system <\/strong>stimulates skin rejuvenation while infusing serum deeper for <strong>faster results.<\/strong><\/p>",
+                            "image": "shopify:\/\/shop_images\/deeply-hydrates.svg"
+                        }
+                    },
+                    {
+                        "type": "option",
+                        "settings": {
+                            "text": "<p>With just one easy, virtually painless, <strong>at-home 5-minute treatment <\/strong>every 2 weeks.<\/p>",
+                            "image": "shopify:\/\/shop_images\/TIME_4de7163b-8d89-43a3-b353-636fd21536b4.svg"
+                        }
+                    },
+                    {
+                        "type": "option",
+                        "settings": {
+                            "text": "<p>At a price up to <strong>30X lower <\/strong>than any professional in-clinc treatment!<\/p>",
+                            "image": "shopify:\/\/shop_images\/MONEY_5d92e21e-7f2c-4b8c-b8d3-09315a988e9d.svg"
+                        }
+                    },
+                    {
+                        "type": "button",
+                        "settings": {
+                            "button_label": "Discover Qure",
+                            "button_url": "#new-landing-purchase"
+                        }
+                    }
+                ]
 			}
         ]
     }

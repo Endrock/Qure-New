@@ -27,11 +27,11 @@
                 data-section-id="qureSlider" 
                 data-autoplay="false" 
                 data-loop="false" 
-                data-centerslide="false"
+                data-centerslide="false" 
                 data-mobile="1.7" 
-                data-tablet="5" 
-                data-desktop="4.2" 
-                data-spacing="20"
+                data-tablet="6" 
+                data-desktop="6" 
+                data-spacing="10"
                 data-arrowleft="qureSlider-swiper-prev" 
                 data-arrowright="qureSlider-swiper-next">
                 {% if section.blocks.size > 0 %}
@@ -127,9 +127,11 @@
 
                 </div>
 
-                <div class="get_clearer_wrapper text-center mt-5">
-                    <a class="btn btn-lg btn-primary btn_green" href="{% if section.settings.btn_url != blank%} {{ section.settings.btn_url }} {% endif %}">{{ section.settings.btn }}</a>
-                </div>
+                {% if section.settings.btn != blank %}
+                    <div class="get_clearer_wrapper text-center mt-5">
+                        <a class="btn btn-lg btn-primary btn_green" href="{% if section.settings.btn_url != blank%} {{ section.settings.btn_url }} {% endif %}">{{ section.settings.btn }}</a>
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -183,12 +185,12 @@
                     {
                         "type": "text",
                         "id": "dr_name",
-                        "label": "Doctor's Name"
+                        "label": "t:common.card.doctor.name"
                     },
                     {
                         "type": "text",
                         "id": "board",
-                        "label": "Board"
+                        "label": "t:common.card.doctor.board"
                     },
                     {
                         "type": "richtext",

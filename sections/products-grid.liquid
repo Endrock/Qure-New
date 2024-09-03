@@ -1,5 +1,5 @@
  <!-- -- customer favourite start -- -->
- <div class="customer_fav section 1">
+ <div class="customer_fav section">
     <div class="container">
         <div class="row">
             {% if section.settings.heading != blank %}
@@ -12,11 +12,12 @@
             <div class="customer_fav_grid">
                 {% for block in section.blocks %}
                 <a href="{{ block.settings.pd_link }}" class="fav_pdt best_seller">
+                    {% if block.settings.pd_img != blank %}
                     <div class="fav_pdt_img">
                         <img src="{{ block.settings.pd_img | img_url: '265x' }}" alt="" class="img-fluid">
                     </div>
+                    {% endif %}
                     <div class="fav_pdt_info">
-                        
                         <div class="refill_review">
                             {% if block.settings.rating != blank %}
                             <div class="star_gp">
@@ -37,7 +38,9 @@
                 </a>
                 {% endfor %}
             </div>
+            {% if section.settings.btn != blank %}
             <a href="{{ section.settings.btn_url }}" class="btn_black mx-auto mt-5">{{ section.settings.btn }}</a>
+            {% endif %}
         </div>
     </div>
 </div>
@@ -45,7 +48,7 @@
 
 {% schema %}
 {
-    "name": "products-grid",
+    "name": "t:sections.product_grid.label",
     "settings": [
         {
             "type": "text",
@@ -66,7 +69,7 @@
     "blocks":[
         {
             "type": "product",
-            "name": "Product",
+            "name": "t:common.product.label",
             "limit": 4,
             "settings": [
                 {
@@ -82,7 +85,7 @@
                 {
                     "type": "checkbox",
                     "id": "from",
-                    "label": "From",
+                    "label": "t:common.checkbox.from",
                     "default" :false
                 },
                 {
@@ -93,7 +96,7 @@
                 {
                     "type": "checkbox",
                     "id": "bestseller",
-                    "label": "Bestseller",
+                    "label": "t:sections.bestseller.name",
                     "default" :false
                 },
                 {
@@ -116,7 +119,7 @@
     ],
     "presets": [
         {
-            "name": "Products Grid"
+            "name": "t:sections.product_grid.label"
         }
     ]
 }

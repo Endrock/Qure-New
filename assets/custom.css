@@ -260,6 +260,9 @@ iframe#typeform-full {
 body[class~="page.sunil-mi-landing-mens"] .header_gift_btn, body[class~="page.sunil-mi-landing-special"] .header_gift_btn {
         display: none !important;
 }
+.bg-grey {
+        background-color: var(--clr-grey) !important;
+}
 
 @media only screen and (max-width: 480px),only screen and (max-device-width:480px) {
         .stamped-launcher-button {
@@ -294,6 +297,20 @@ body[class~="page.sunil-mi-landing-mens"] .header_gift_btn, body[class~="page.su
         }
 }
 
+@media(max-width:767px) {
+        .ps_wrapperInner {
+                justify-content: space-around;
+                display: flex;
+        }
+
+        .press_bl .ps_wrapper {
+                flex-direction: column;
+                gap: 20px;
+        }
+        .affect_skin .dsn-right-container {
+                padding: 0 24px !important;
+        }
+}
 
 body[class~="page.sunil-mi-landing-special"] {
         .title-xl.d-none {

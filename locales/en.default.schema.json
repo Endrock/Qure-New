@@ -7,6 +7,15 @@
 * made to this file may be overwritten.
 * ------------------------------------------------------------
 */
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin language editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "settings_schema": {
     "logo": {
@@ -42,10 +51,12 @@
   },
   "progressBlock": {
     "column": {
-      "percent_text": "Percentage"
+      "percent_text": "Percentage",
+      "percent_bars": "Percentage Bars"
     }
   },
   "product": {
+    "label": "Product",
     "name": {
       "label": "Product Name"
     },
@@ -53,20 +64,37 @@
       "label": "About Product"
     },
     "badge": {
-      "label": "Rating text"
+      "label": "Rating text",
+      "text": "Badge text"
     },
     "benefits": {
+    "benefits": {
       "label": "Benefits List",
-      "title": "Benefit"
+      "title": "Benefit",
+      "p_benefits": "Product benefits"
     },
     "url": {
+    "url": {
       "label": "Product Url"
+    },
+    "video": {
+      "label": "Product Video"
+    },
+    "video_txt": {
+      "label": "Video Text"
+    },
+    "warranty": {
+      "label": "Warranty Text",
+      "icon": "Warranty Icon"
     }
   },
   "commonMob": {
     "header": {
+  "commonMob": {
+    "header": {
       "label": "Mobile Content"
     },
+    "benefits": {
     "benefits": {
       "label": "Benefits List"
     }
@@ -77,20 +105,52 @@
     }
   },
   "common": {
+    "testimonial": {
+      "text": "Testimonial text"
+    },
+    "tab": {
+      "name": "Tab Name"
+    },
+    "skin": {
+      "concerns": "Skin Concerns"
+    },
+    "font": {
+      "size": "Font Size"
+    },
+    "checkbox": {
+      "from": "From",
+      "verified": "Verified Customer",
+      "loop": "Enable loop",
+      "autoplay": "Enable autoplay"
+    },
+    "dropdown": {
+      "design": "Dropdown design"
+    },
+    "blog": {
+      "label": "Blog"
+    },
     "title": {
       "label": "Title"
+    },
+    "percentage": {
+      "label": "Percentage"
     },
     "serum": {
       "label": "Serum For",
       "type": "Serum Type"
     },
     "sale": {
+    "sale": {
       "label": "Sale Name",
       "discount": "Discount"
     },
     "background": {
-      "label": "Background"
+      "label": "Background",
+      "yellow": "Yellow",
+      "grey": "Grey",
+      "transparent": "Tranparent"
     },
+    "Section": {
     "Section": {
       "label": "Section Heading"
     },
@@ -111,14 +171,26 @@
         "label": "Comments amount"
       }
     },
+    "before-after-image": {
+      "label": "Before after image"
+    },
     "align": {
       "label": "Align",
       "center": {
         "label": "Align center"
       }
     },
+    "choose_option": {
+      "first": {
+        "label": "First YES\/NO"
+      },
+      "second": {
+        "label": "Second YES\/NO"
+      }
+    },
     "heading": {
       "label": "Heading",
+      "info": "Info Heading",
       "mobile": {
         "label": "Heading for mobile"
       }
@@ -133,7 +205,8 @@
       }
     },
     "recommended": {
-      "label": "Recommended"
+      "label": "Recommended",
+      "icon": "Recommended Icon"
     },
     "option": {
       "name": "Option",
@@ -150,7 +223,9 @@
         "label": "Client card"
       },
       "doctor": {
-        "label": "Doctor card"
+        "label": "Doctor card",
+        "name": "Doctor's Name",
+        "board": "Board"
       },
       "brand": {
         "label": "Brand card"
@@ -167,6 +242,8 @@
     },
     "image": {
       "label": "Image",
+      "with": "With image",
+      "without": "Without image",
       "hide": {
         "mobile": {
           "label": "Hide on mobile"
@@ -178,6 +255,9 @@
       "image": {
         "label": "Product image"
       },
+      "images": {
+        "label": "Product Images"
+      },
       "title": {
         "label": "Product title"
       },
@@ -186,6 +266,12 @@
       },
       "type": {
         "label": "Product Type"
+      },
+      "instalments": {
+        "label": "Instalments"
+      },
+      "payment": {
+        "icon": "Payment Icon"
       }
     },
     "object": {
@@ -208,6 +294,8 @@
     },
     "column": {
       "label": "Column",
+      "left": "Left column",
+      "right": "Right column",
       "image": {
         "label": "Image column"
       },
@@ -237,7 +325,8 @@
       "label": "Reserve"
     },
     "text": {
-      "label": "Text"
+      "label": "Text",
+      "content": "Text content"
     },
     "html": {
       "label": "Html"
@@ -255,10 +344,19 @@
       "label": "Percent"
     },
     "classname": {
-      "label": "CSS classname"
+      "label": "CSS classname",
+      "custom": "Custom class"
     },
     "video": {
       "label": "Video",
+      "hosted": "Hosted video",
+      "info": "Use the following settings if you want to use hosted video",
+      "type": "Video type",
+      "choose": "Choose video",
+      "youtube": {
+        "settings": "Youtube settings",
+        "link": "Add youtube link"
+      },
       "url": {
         "label": "Video url"
       },
@@ -268,8 +366,9 @@
     },
     "wistia": {
       "label": "Wistia video",
+      "wistia": "Wista",
       "id": {
-        "label": "Video id"
+        "label": "Wistia id"
       }
     },
     "button": {
@@ -298,8 +397,12 @@
     },
     "client": {
       "label": "Client",
+      "details": "Client Details",
       "country": {
         "label": "Country"
+      },
+      "text": {
+        "label": "Client text"
       }
     },
     "progress": {
@@ -321,7 +424,8 @@
       "label": "Pre order"
     },
     "rating": {
-      "label": "Rating"
+      "label": "Rating",
+      "stars": "Stars"
     },
     "code": {
       "label": "Code"
@@ -410,6 +514,13 @@
       "blocks": {
       }
     },
+    "text-block": {
+      "name": "Text block",
+      "settings": {
+      },
+      "blocks": {
+      }
+    },
     "compare-videos": {
       "name": "Compare videos",
       "settings": {
@@ -426,6 +537,41 @@
     },
     "results-simple": {
       "name": "Results simple",
+      "settings": {
+      },
+      "blocks": {
+      }
+    },
+    "effective": {
+      "name": "Effective",
+      "settings": {
+      },
+      "blocks": {
+      }
+    },
+    "confidence": {
+      "name": "Confidence",
+      "settings": {
+      },
+      "blocks": {
+      }
+    },
+    "accelerate-results": {
+      "name": "Accelerate results",
+      "settings": {
+      },
+      "blocks": {
+      }
+    },
+    "choice": {
+      "name": "Choice",
+      "settings": {
+      },
+      "blocks": {
+      }
+    },
+    "why-choose": {
+      "name": "Why choose",
       "settings": {
       },
       "blocks": {
@@ -557,6 +703,18 @@
         }
       }
     },
+    "main-banner-promotion-second": {
+      "name": "Main banner promo second",
+      "settings": {
+      },
+      "blocks": {
+        "link": {
+          "name": "Link",
+          "settings": {
+          }
+        }
+      }
+    },
     "featuredin": {
       "name": "Featured in",
       "settings": {
@@ -595,6 +753,7 @@
     },
     "slider": {
       "name": "Slider",
+      "space_between": "Space between slides",
       "settings": {
       },
       "blocks": {
@@ -675,6 +834,9 @@
     },
     "trusted": {
       "name": "Trusted",
+      "header": "Trust line settings",
+      "icon": "Trust icon",
+      "text": "Trust text",
       "settings": {
       },
       "blocks": {
@@ -1020,6 +1182,42 @@
     },
     "banner_tabs": {
       "name": "Banner Tab Slider"
+    },
+    "posts": {
+      "name": "Community Posts"
+    },
+    "f_product2": {
+      "name": "Featured Product 2"
+    },
+    "f_product": {
+      "name": "Featured Product"
+    },
+    "img_txt": {
+      "name": "Image & Text"
+    },
+    "how_to_use": {
+      "name": "How to Use"
+    },
+    "product_grid": {
+      "label": "Products Grid"
+    },
+    "progress_blocks": {
+      "label": "Progress Blocks"
+    },
+    "result_slider": {
+      "label": "Results Slider"
+    },
+    "text_video": {
+      "label": "Text with video"
+    },
+    "testimonials": {
+      "label": "Testimonials"
+    },
+    "serum_ingredients": {
+      "label": "Serum Ingredients"
+    },
+    "ingredients-dropdown": {
+      "label": "Ingredients dropdown"
     }
   }
 }

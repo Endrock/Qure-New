@@ -93,17 +93,17 @@
                       {% endfor %}
                     </div>
                     {% comment %} {% if  %} {% endcomment %}
+                     {% if section.settings.video_txt != blank %}
                     <a
                       class="see_action d-flex justify-content-center popup-youtube"
                       href="{{ section.settings.pd_video }}"
                     >
                       <p>
                         <span>
-                          <img src="{{ 'see_it_btn.svg' | asset_url }}" alt="" class="img-fluid">See it
-                          in action
-                        </span>
+                          <img src="{{ 'see_it_btn.svg' | asset_url }}" alt="" class="img-fluid">{{ section.settings.video_txt }}</span>
                       </p>
                     </a>
+                    {% endif %}
                   </div>
             {% endcase %}
           {% endfor %}
@@ -129,7 +129,7 @@
               >
             {%- endfor -%}
           </div>
-           
+          {% if section.settings.video_txt != blank %}
             <a
               class="see_action d-flex justify-content-center popup-youtube"
               href="{{ section.settings.pd_video }}"
@@ -137,12 +137,10 @@
             
               <p>
                 <span style="text-decoration: underline;">
-                  <img src="{{ 'see_it_btn.svg' | asset_url }}" alt="" class="me-2">See it in
-                  action
-                </span>
+                  <img src="{{ 'see_it_btn.svg' | asset_url }}" alt="" class="me-2">{{ section.settings.video_txt }}</span>
               </p>
             </a>
-          
+          {% endif %}
         </div>
       </div>
     </div>
@@ -152,17 +150,22 @@
 
 {% schema %}
 {
-  "name": "featured-product",
+  "name": "t:sections.f_product.name",
   "settings": [
     {
       "type": "product",
       "id": "product",
-      "label": "Product"
+      "label": "t:product.name.label"
     },
     {
       "type": "url",
        "id": "pd_video",
-      "label": "Product Video"
+      "label": "t:product.video.label"
+    },
+    {
+      "type": "text",
+      "id": "video_txt",
+      "label": "t:product.video_txt.label"
     }
   ],
   "blocks": [
@@ -173,7 +176,7 @@
         {
           "type": "text",
           "id": "badge_text",
-          "label": "Badge text"
+          "label": "t:product.badge.text"
         },
         {
           "type": "text",
@@ -184,50 +187,50 @@
     },
     {
       "type": "heading",
-      "name": "Heading",
+      "name": "t:common.heading.label",
       "settings": [
         {
           "type": "textarea",
           "id": "heading",
-          "label": "Heading"
+          "label": "t:common.heading.label"
         },
         {
           "type": "richtext",
           "id": "des",
-          "label": "About description"
+          "label": "t:common.desc.label"
         }
       ]
     },
     {
       "type": "product_images",
-      "name": "Product image",
+      "name": "t:common.product.images.label",
       "limit": 1,
       "settings": [
         {
           "type": "image_picker",
           "id": "pd_image_1",
-          "label": "Product Image"
+          "label": "t:common.image.label"
         },
         {
           "type": "image_picker",
           "id": "pd_image_2",
-          "label": "Product Image 2"
+          "label": "t:common.image.label"
         },
         {
           "type": "image_picker",
           "id": "pd_image_3",
-          "label": "Product Image 3"
+          "label": "t:common.image.label"
         },
         {
           "type": "image_picker",
           "id": "pd_image_4",
-          "label": "Product Image 4"
+          "label": "t:common.image.label"
         }
       ]
     },
     {
       "type": "product_benefits",
-      "name": "Product benefits",
+      "name": "t:product.benefits.p_benefits",
       "settings": [
         {
           "type": "richtext",
@@ -245,27 +248,27 @@
           "type": "text",
           "id": "btn_text",
           "default": "Buy Now",
-          "label": "Button Label"
+          "label": "t:common.button.label"
         },
         {
           "type": "image_picker",
           "id": "w_icon",
-          "label": "Warranty Icon"
+          "label": "t:product.warranty.icon"
         },
         {
           "type": "text",
           "id": "warranty",
-          "label": "Warranty Text"
+          "label": "t:product.warranty.label"
         },
         {
           "type": "image_picker",
           "id": "d_icon",
-          "label": "Recommended Icon"
+          "label": "t:common.recommended.icon"
         },
         {
           "type": "text",
           "id": "recomand",
-          "label": "Recommended"
+          "label": "t:common.recommended.label"
         },
         {
           "type": "header",
@@ -278,29 +281,29 @@
           "max": 10,
           "step": 1,
           "id": "instalment",
-          "label": "Instalments"
+          "label": "t:common.product.instalments.label"
         },
         {
           "type": "image_picker",
           "id": "payment_1",
-          "label": "Payment icon 1"
+          "label": "t:common.product.payment.icon"
         },
         {
           "type": "image_picker",
           "id": "payment_2",
-          "label": "Payment icon 2"
+          "label": "t:common.product.payment.icon"
         },
         {
           "type": "image_picker",
           "id": "payment_3",
-          "label": "Payment icon 3"
+          "label": "t:common.product.payment.icon"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Featured Product"
+      "name": "t:sections.f_product.name"
     }
   ]
 }

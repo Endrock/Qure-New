@@ -59,7 +59,7 @@
 
 {% schema %}
 {
-    "name": "community-post",
+    "name": "t:sections.posts.name",
     "settings": [
         {
             "type": "text",
@@ -80,24 +80,20 @@
     "blocks": [
         {
             "type": "blog",
-            "name": "Blog",
+            "name": "t:common.blog.label",
             "limit": 3,
             "settings": [
                 {
                     "type": "article",
                     "id": "article",
-                    "label": "Blog"
+                    "label": "t:common.blog.label"
                     }
             ]
         }
     ],
     "presets": [
         {
-            "name": "Community Posts",
-            "settings": {
-                "head_txt": "Learn more and share your skincare journey",
-                "btn_txt": "Join our skincare community"
-            }
+            "name": "t:sections.posts.name"
         }
     ]
 }

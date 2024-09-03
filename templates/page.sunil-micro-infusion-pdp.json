@@ -374,8 +374,6 @@
         "button_WyPm98": {
           "type": "button",
           "settings": {
-            "ext_btn": "",
-            "ext_url": ""
           }
         }
       },
@@ -397,7 +395,6 @@
         "button_WyPm98"
       ],
       "settings": {
-        "background": "bg_yellow",
         "classname": "bg_yellow",
         "heading": "The answers to your questions",
         "text": "",

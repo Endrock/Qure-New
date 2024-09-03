@@ -2,9 +2,11 @@
 <div class="result_s section mi_landing_result" id="result_section">
     <div class="container">
         <div class="section_header text-lg-center text-start mb-3 mw-100">
+            {% if section.settings.heading != blank %}
             <h2 class="title-lg">
                 {{ section.settings.heading }}
             </h2>
+            {% endif %}
             {% if section.settings.stars != blank %}
             <div class="refill_review justify-content-center">
                 <div class="star_gp">
@@ -53,15 +55,21 @@
                                 <div class="result_learnMore_wrap">
                                     <div class="result_c_info">
                                         <div class="r_flag">
+                                            {% if block.settings.image_country != blank %}
                                             <div class="flag_img">
                                                 <img src="{{ block.settings.image_country | img_url: '25x' }}" alt="">
                                             </div>
+                                            {% endif %}
+                                            {% if block.settings.client != blank %}
                                             <p class="r_c_name pe-2">{{ block.settings.client }}</p>
+                                            {% endif %}
                                         </div>
+                                        {% if block.settings.verified != blank %}
                                         <div class="verified_img">
                                             <img src="{{ 'verified.svg' | asset_url }}" alt="">
                                             <p>Verified customer</p>
                                         </div>
+                                        {% endif %}
                                     </div>
                                 </div>
                                 {% if block.settings.concerns != blank %}
@@ -88,7 +96,7 @@
 
 {% schema %}
 {
-"name": "Results Slider",
+"name": "t:sections.result_slider.label",
 "settings": [
     {
         "type": "text",
@@ -152,15 +160,20 @@
             {
                 "type": "text",
                 "id": "concerns",
-                "label": "Skin Concerns"
+                "label": "t:common.skin.concerns"
+            },
+            {
+                "type": "checkbox",
+                "id": "verified",
+                "label": "t:common.checkbox.verified",
+                "default": true
             }
-
         ]
     }
 ],
 "presets": [
     {
-        "name": "Results Slider"
+        "name": "t:sections.result_slider.label"
     },
     
 ]

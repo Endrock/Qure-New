@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "header_landing_pFmaRH": {
@@ -40,10 +49,107 @@
       "type": "temp-content-instructions",
       "settings": {
       }
+    },
+    "guide_content_MCCY96": {
+      "type": "guide-content",
+      "settings": {
+        "heading": "Micro-Infusion Creative Content Guide",
+        "sub_heading": "<p>Hey skincare enthusiasts!<\/p><p>Ready to take your content to the next level?<\/p><p>Our creative guide will help you craft engaging content that showcases how our innovative tool transforms skincare routines for radiant, glowing skin, so let's start!<\/p>",
+        "button_label": "Learn more about the Micro-Infusion System",
+        "button_url": "https:\/\/www.qureskincare.com\/pages\/microinfusion",
+        "wistia_id": "h8lz5uvd39"
+      }
+    },
+    "qure_founder_jMR6ex": {
+      "type": "qure-founder",
+      "settings": {
+        "heading": "“Feeling good in your skin is not a privilege; it's a fundamental right, and we've set out on a mission to make it universally attainable.”",
+        "sub_heading": "<p>-Kristina, founder of Qure<\/p>",
+        "image": "shopify:\/\/shop_images\/kristina.webp",
+        "trust_des": ""
+      }
+    },
+    "content_guide_dropdown_amT6fH": {
+      "type": "content-guide-dropdown",
+      "blocks": {
+        "content_requirements_ii9rW4": {
+          "type": "content_requirements",
+          "settings": {
+            "step": "Step 1",
+            "heading": "<p>Merge Qure into your creatives<\/p>",
+            "image": "shopify:\/\/shop_images\/ac_step1.webp",
+            "button_label": "Content Requirements",
+            "heading_icon": "shopify:\/\/shop_images\/key_message.svg",
+            "bl_heading": "Key Messages",
+            "bl_subheading": "<p>Key Points to include in the messaging:<\/p>",
+            "dropdown1_heading": "How it works",
+            "dropdown1_content": "<ul><li>The unique 2-in-1 system uses virtually painless needles to create invisible micro-channels in the top layer of your skin through a \"stamping\" technique. This controlled trauma stimulates the skin’s natural healing process, enhancing skin texture. Simultaneously, the invisible micro-channels allow science-backed serums to be infused directly below the skin barrier, delivering active ingredients more effectively for faster results - resulting in a rejuvenated, glowing complexion.<\/li><\/ul>",
+            "dropdown2_heading": "Why everyone is obsessing over Qure’s Micro-Infusion System",
+            "dropdown2_content": "<ul><li><strong>Affordable and Convenient:<\/strong><br\/>Enjoy an at-home 5-minute treatment every 2 weeks that costs up to 15X less than professional in-clinic treatments, saving you both time and money.<\/li><li><strong>Visible Results for Big Events:<\/strong><br\/>Ideal for quickly enhancing your skin before important occasions, with visible results after just one treatment.<\/li><li><strong>Enhanced Serum Absorption:<\/strong><br\/>Delivers serum directly to the skin, increasing absorption for better results.<\/li><li><strong>Safe and Easy to Use:<\/strong><br\/>Quick DIY at-home facial with little to no downtime. Single-use sterile needle heads help minimize the risk of infection or irritation caused by blunt and multi-use needles. <\/li><\/ul>",
+            "dropdown3_heading": "Serums to treat your specific skin concerns",
+            "dropdown3_content": "<p>Your skin is <strong>unique,<\/strong>so your treatment should be. Choose between two serums (or both) you want to infuse with your Micro-Infusion device and experience a set of benefits tailored to<strong>your<\/strong>exact skin concerns.<\/p>",
+            "serum_yellow_img": "shopify:\/\/shop_images\/u_serum_1.webp",
+            "serum_yellow_tag": "Dark Spots",
+            "serum_yellow_heading": "For dark spots and uneven skin tone choose Rejuvenating serum",
+            "serum_yellow_info": "<ul><li>Brightens discolouration, fades dark spots and acne marks, promotes even skin tone and minimizes pores.<\/li><li>Formulated with Epidermal Growth Factor (EGF), Niacinamide, Tranexamic Acid.<\/li><\/ul>",
+            "serum_grey_tag": "Dark Spots",
+            "serum_grey_heading": "Serum 2 Heading",
+            "serum_grey_info": "",
+            "dropdown4_heading": "Dropdown Heading 4",
+            "dropdown4_content": "",
+            "dropdown5_heading": "Dropdown Heading 5",
+            "dropdown5_content": "",
+            "block1_list": "",
+            "link_text": "",
+            "link_url": "",
+            "technical_specification": "Technical Specification",
+            "technical_specification_info": "",
+            "treatment_details": "Treatment Details",
+            "treatment_details_info": "",
+            "heading2_icon": "shopify:\/\/shop_images\/direction.svg",
+            "bl2_heading": "Creative Direction",
+            "bl2_list": "<ul><li>High quality, bright lighting and high resolution imagery\/videography to be supplied. No obvious filters.<\/li><li>Close-up of the Micro-Infusion device and serums to be the feature in the content. Background must be clean and bright.<\/li><li>When demonstrating the application of the product, please do not wear any make-up, or no visible\/noticeable makeup and make sure to do a close-up.<\/li><li>In cover photos for video content always show yourself using the Qure Micro-Infusion, unless otherwise agreed on with the brand.<\/li><\/ul>",
+            "heading3_icon": "shopify:\/\/shop_images\/inclusion.svg",
+            "bl3_heading": "Inclusion",
+            "bl3_list": "<ul><li>Tag and mention @qureskincare<\/li><li>Include hashtags in caption: #quremicroinfusion #microneedling #microinfusion #athomefacial #antiageing #qure #qureskincare #quremicroinfusion<\/li><li>Please include your affiliate link or link provided by Qure in Instagram stories and in captions of YouTube videos. If can’t be placed in BIO then please include in linktree or similar.<\/li><\/ul>"
+          }
+        },
+        "product_information_Enxmtc": {
+          "type": "product_information",
+          "settings": {
+            "step": "Step 2",
+            "heading": "<p>Get to know our Micro-Infusion System<\/p>",
+            "button_label": "Product Information",
+            "image": "shopify:\/\/shop_images\/ac_step2.webp",
+            "contentT": "<p>Cooo<\/p>"
+          }
+        },
+        "inspiring_content_iBPkMb": {
+          "type": "inspiring_content",
+          "settings": {
+            "step": "Step 3",
+            "heading": "<p>Get inspired by other content creators<\/p>",
+            "button_label": "Inspiring Content",
+            "image": "shopify:\/\/shop_images\/ac_step3.webp",
+            "contentT": "<p>Cooo<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_requirements_ii9rW4",
+        "product_information_Enxmtc",
+        "inspiring_content_iBPkMb"
+      ],
+      "settings": {
+        "heading": "All you need to know before you start creating your amazing content"
+      }
     }
   },
   "order": [
     "header_landing_pFmaRH",
-    "main"
+    "main",
+    "guide_content_MCCY96",
+    "qure_founder_jMR6ex",
+    "content_guide_dropdown_amT6fH"
   ]
 }

@@ -300,22 +300,193 @@
       ],
       "settings": {
         "heading": "Dermatologist's go-to choice for their own skin",
-        "heading_tag": "h1"
+        "heading_tag": "h2"
       }
     },
     "anti-creams-microinfusion-page-stamping": {
       "type": "anti-creams-microinfusion-page-stamping",
+      "blocks": {
+        "video_e4rgp4": {
+          "type": "video",
+          "settings": {
+            "wistia_id": "womq9t497b"
+          }
+        },
+        "option_RjVYMf": {
+          "type": "option",
+          "settings": {
+            "heading": "Minimizing the look of \\n Fine Lines and Wrinkles",
+            "text": "<p>Our powerful Hydra-Soothing Serum gets deep into your skin where it can be quickly absorbed, <strong>fading <\/strong>the appearance of wrinkles, <strong>reducing <\/strong>fine lines, and <strong>deeply hydrating <\/strong>for a dewy glow. <\/p>",
+            "image": "shopify:\/\/shop_images\/Lines_Wrinkles.svg"
+          }
+        },
+        "option_WQWEz3": {
+          "type": "option",
+          "settings": {
+            "heading": "Reducing the appearance of Dark Spots \\n and Hyperpigmentation",
+            "text": "<p>Our scientifically-backed rejuvenating serum gets deep into your skin where it can be quickly absorbed, <strong>reducing pigmentation <\/strong>and <strong>fading dark spots <\/strong>while <strong>evening the look of the skin <\/strong>and reducing the size appearance of pores. <\/p>",
+            "image": "shopify:\/\/shop_images\/dark_spots_1428ac89-c09a-4f7b-bb00-4ff0e67c6b13.svg"
+          }
+        },
+        "button_P998T8": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get Confident Skin",
+            "button_url": "#new-landing-purchase"
+          }
+        }
+      },
+      "block_order": [
+        "video_e4rgp4",
+        "option_RjVYMf",
+        "option_WQWEz3",
+        "button_P998T8"
+      ],
       "settings": {
+        "heading": "How does “stamping your skin” work?",
+        "text": "<p>Qure’s microneedles <strong>bypass the stratum corneum<\/strong> (the tough protective outer layer of skin) to <strong>deliver our scientifically-backed serum<\/strong> where it is needed to give you faster, better results.<\/p><p>It also triggers your <strong>natural recovery process<\/strong> giving your skin a rejuvenating boost.<\/p>"
       }
     },
     "effective": {
       "type": "effective",
+      "blocks": {
+        "image_aePDNH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/effective_face_creams.webp"
+          }
+        },
+        "option_FT3hkJ": {
+          "type": "option",
+          "settings": {
+            "heading": "AFTER 1 treatment",
+            "text": "<p>reported more hydrated and glowy skin*<\/p>",
+            "percent_bar": 93
+          }
+        },
+        "option_jj4b6n": {
+          "type": "option",
+          "settings": {
+            "heading": "AFTER 2 treatments",
+            "text": "<p>agreed their fine lines looked smoother*<\/p>",
+            "percent_bar": 70
+          }
+        },
+        "option_kcwiy8": {
+          "type": "option",
+          "settings": {
+            "heading": "AFTER 6 treatments",
+            "text": "<p>noticed even better results after 6 treatments*<\/p>",
+            "percent_bar": 83
+          }
+        },
+        "before_after_mXCbRp": {
+          "type": "before_after",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ec_b_a.webp",
+            "text": "Data collected from an independent user study over 6 treatments."
+          }
+        }
+      },
+      "block_order": [
+        "image_aePDNH",
+        "option_FT3hkJ",
+        "option_jj4b6n",
+        "option_kcwiy8",
+        "before_after_mXCbRp"
+      ],
       "settings": {
+        "heading": "More effective than face creams.  More affordable than clinics."
       }
     },
     "accelerate-results": {
       "type": "accelerate-results",
+      "blocks": {
+        "product_FkWhnr": {
+          "type": "product",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/u_serum_2.webp",
+            "heading": "For fine lines and wrinkles",
+            "text": "(Hydra-Soothing Serum)"
+          }
+        },
+        "option_M4wLjz": {
+          "type": "option",
+          "settings": {
+            "heading": "Beta Glucon",
+            "text": "<p>A hydrating boost for your skin. Improves skin barrier, smooths skin, and is packed with antioxidants.<\/p>",
+            "image": "shopify:\/\/shop_images\/pi_caffeine.webp"
+          }
+        },
+        "option_mgwdWL": {
+          "type": "option",
+          "settings": {
+            "heading": "Niacinamide",
+            "text": "<p>Helps with most skin concerns from soothing, brightening, hydrating and clarifying, to reducing the look of fine lines and wrinkles.<\/p>",
+            "image": "shopify:\/\/shop_images\/pi_niacinamide.webp"
+          }
+        },
+        "option_WGKQBQ": {
+          "type": "option",
+          "settings": {
+            "heading": "Tripeptide-1 Peptide",
+            "text": "<p>Proven to stimulate the production of dermal protein, slowing the skin's ageing process. Helps the skin retain water and restore elasticity, and reduces appearance of wrinkles<\/p>",
+            "image": "shopify:\/\/shop_images\/pi_acetyl.webp"
+          }
+        },
+        "product_dB9FNL": {
+          "type": "product",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/u_serum_1.webp",
+            "heading": "For dark spots and uneven skintone",
+            "text": "(Rejuvenating Serum)"
+          }
+        },
+        "option_KtDdRN": {
+          "type": "option",
+          "settings": {
+            "heading": "Epidermal Growth Factor",
+            "text": "<p>Works at a cellular level to repair and rejuvenate skin. Reduces appearance of wrinkles, improves hydration, and prevents pigmentation.<\/p>",
+            "image": "shopify:\/\/shop_images\/pi_epidermal.webp"
+          }
+        },
+        "option_9ftefr": {
+          "type": "option",
+          "settings": {
+            "heading": "Niacinamide",
+            "text": "<p>Helps with most skin concerns from soothing, brightening, hydrating and clarifying, to reducing the look of fine lines and wrinkles.<\/p>",
+            "image": "shopify:\/\/shop_images\/pi_niacinamide.webp"
+          }
+        },
+        "option_a7pDtr": {
+          "type": "option",
+          "settings": {
+            "heading": "Tranexamic Acid",
+            "text": "<p>Helps to fade the look of dark spots and discolouration. Assists with brightening and evening skin tone and reducing the appearance of texture.<\/p>",
+            "image": "shopify:\/\/shop_images\/pi_licorice.webp"
+          }
+        },
+        "button_7UNUk3": {
+          "type": "button",
+          "settings": {
+            "button_label": "Regain Your Confidence",
+            "button_url": "#new-landing-purchase"
+          }
+        }
+      },
+      "block_order": [
+        "product_FkWhnr",
+        "option_M4wLjz",
+        "option_mgwdWL",
+        "option_WGKQBQ",
+        "product_dB9FNL",
+        "option_KtDdRN",
+        "option_9ftefr",
+        "option_a7pDtr",
+        "button_7UNUk3"
+      ],
       "settings": {
+        "heading": "Accelerate your results with our scientifically backed serums"
       }
     },
     "liquid_87wfLd": {
@@ -326,17 +497,146 @@
     },
     "choice": {
       "type": "choice",
+      "blocks": {
+        "result_ypTbFr": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cl_anthony.webp",
+            "text": "\"The Qure’s System is the closest thing that you can get to bringing your aesthetician home with you!\"",
+            "client": "Dr Anthony Youn",
+            "client_text": "Board-Certified Plastic Surgeon"
+          }
+        }
+      },
+      "block_order": [
+        "result_ypTbFr"
+      ],
       "settings": {
+        "heading": "The dermatologist's choice for safety and effectiveness…",
+        "image": "shopify:\/\/shop_images\/trusted_anthony_main.webp",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=gGVKgTHloXw"
       }
     },
     "anti-creams-microinfusion-page-safest-way": {
       "type": "anti-creams-microinfusion-page-safest-way",
+      "blocks": {
+        "result_J6NgEG": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cl_doireann.webp",
+            "text": "\"It’s an amazing 5-minute facial with minimal to no downtime! I absolutely love this. Ten out of ten from me.\"",
+            "client": "Dr Doireann O’Leary",
+            "client_text": "Medical Doctor"
+          }
+        },
+        "option_PMAgRt": {
+          "type": "option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sw_1.webp",
+            "text": "<p>Built-in safety mechanism for <strong>safe and even stamping <\/strong>and effortless 5-minute treatments<\/p>"
+          }
+        },
+        "option_pHxCBf": {
+          "type": "option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sw_2.webp",
+            "text": "<p>Sterile 24k gold plated <strong>disposable needleheads <\/strong>for better hygiene and safety<\/p>"
+          }
+        },
+        "option_gUg3qD": {
+          "type": "option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sw_3.webp",
+            "text": "<p>Almost painless with <strong>minimal downtime<\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "result_J6NgEG",
+        "option_PMAgRt",
+        "option_pHxCBf",
+        "option_gUg3qD"
+      ],
       "settings": {
+        "heading": "The safest way to microneedle at home…",
+        "text": "<p>Qure Micro-Infusion system is designed to be as <strong>safe, sterile and, painless as possible.<\/strong> Each 24k gold plated microneedle head is single use, <strong>limiting any risk of infection.<\/strong><\/p><p>Bypass your skin’s outer defensive layer and stamp your way to younger looking skin.<\/p>",
+        "image": "shopify:\/\/shop_images\/safeest_way.webp"
       }
     },
-    "anti-creams-microinfusion-page-why-choose": {
-      "type": "anti-creams-microinfusion-page-why-choose",
+    "why_choose_c8nA49": {
+      "type": "why-choose",
+      "blocks": {
+        "option_LbQPJe": {
+          "type": "option",
+          "settings": {
+            "text": "More effective than topical treatments",
+            "first_option": true,
+            "second_option": false
+          }
+        },
+        "option_DQ8yMX": {
+          "type": "option",
+          "settings": {
+            "text": "Penetrates the skin barrier",
+            "first_option": true,
+            "second_option": false
+          }
+        },
+        "option_GFHCL3": {
+          "type": "option",
+          "settings": {
+            "text": "Deliver ingredients deep into the skin",
+            "first_option": true,
+            "second_option": false
+          }
+        },
+        "option_NjTEdb": {
+          "type": "option",
+          "settings": {
+            "text": "Visible results after one treatment",
+            "first_option": true,
+            "second_option": false
+          }
+        },
+        "option_U86Ach": {
+          "type": "option",
+          "settings": {
+            "text": "Only takes 5 minutes",
+            "first_option": true,
+            "second_option": false
+          }
+        },
+        "option_CaqPix": {
+          "type": "option",
+          "settings": {
+            "text": "Reviewed by dermatologists",
+            "first_option": true,
+            "second_option": true
+          }
+        },
+        "button_3T9LFx": {
+          "type": "button",
+          "settings": {
+            "button_label": "Try It Now",
+            "button_url": "#new-landing-purchase"
+          }
+        }
+      },
+      "block_order": [
+        "option_LbQPJe",
+        "option_DQ8yMX",
+        "option_GFHCL3",
+        "option_NjTEdb",
+        "option_U86Ach",
+        "option_CaqPix",
+        "button_3T9LFx"
+      ],
       "settings": {
+        "heading": "Why choose Qure?",
+        "image_first": "shopify:\/\/shop_images\/compare_micro.webp",
+        "text_first": "Qure",
+        "image_second": "shopify:\/\/shop_images\/face_cream.png",
+        "text_second": "Face Creams"
       }
     },
     "results_3LEkF8": {
@@ -497,6 +797,13 @@
             "client": "Ramandeep",
             "code": ""
           }
+        },
+        "button_p7WMyp": {
+          "type": "button",
+          "settings": {
+            "button_label": "Experience The Difference",
+            "button_url": "#new-landing-purchase"
+          }
         }
       },
       "block_order": [
@@ -512,7 +819,8 @@
         "result_6FrBJW",
         "result_ThnNPK",
         "result_MhYCLK",
-        "result_cGAEkd"
+        "result_cGAEkd",
+        "button_p7WMyp"
       ],
       "settings": {
         "classname": "mi_landing_result",
@@ -525,74 +833,209 @@
     "videos_list_rXDbHD": {
       "type": "videos-list",
       "blocks": {
-        "video_UGRi4h": {
+        "video_bpgNjp": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/all_serum_img_2.webp",
-            "video": "shopify:\/\/files\/videos\/277712230_353854106689571_8091913010585305511_n.mp4"
+            "image": "shopify:\/\/shop_images\/videosQure_img7.webp",
+            "video": "shopify:\/\/files\/videos\/8eecfa9e425c4fde9e8f70da1a50e313.HD-1080p-2.5Mbps-12316975.mp4"
           }
         },
-        "video_LN3GH9": {
-          "type": "video",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/all_serum_img_3.webp",
-            "video": "shopify:\/\/files\/videos\/245142822_1464846133892679_1038157866952092298_n.mp4"
-          }
-        },
-        "wistia_XYikTK": {
+        "wistia_8FyVqr": {
           "type": "wistia",
           "settings": {
-            "wistia_id": "50s645m3k7"
+            "wistia_id": "0criczgmgg",
+            "dr_name": "",
+            "board": "",
+            "desc": ""
           }
         },
-        "video_ihtJ6A": {
-          "type": "video",
+        "wistia_cVBF6N": {
+          "type": "wistia",
           "settings": {
-            "image": "shopify:\/\/shop_images\/all_serum_img_4.webp",
-            "video": "shopify:\/\/files\/videos\/259127368_111580194673707_6605727160995779272_n.mp4"
+            "wistia_id": "n9cn2onbem",
+            "dr_name": "",
+            "board": "",
+            "desc": ""
           }
         },
-        "video_qBem4N": {
+        "video_rFkcBL": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/all_serum_img_5.webp",
-            "video": "shopify:\/\/files\/videos\/215284976_139020341670743_5473774696789470222_n.mp4"
+            "image": "shopify:\/\/shop_images\/videosQure_img10.webp",
+            "video": "shopify:\/\/files\/videos\/71857fdec6b0497294117ed84cab480e.HD-1080p-2.5Mbps-13573985.mp4"
           }
         },
-        "video_7dy6bq": {
+        "video_yYqcmB": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/all_serum_img_6.webp",
-            "video": "shopify:\/\/files\/videos\/298983845_400063408937848_3554475537750886670_n.mp4"
+            "image": "shopify:\/\/shop_images\/videosQure_img11.webp",
+            "video": "shopify:\/\/files\/videos\/63d872e61dac42fd9e5ff1c04c1ae1d5.HD-720p-1.6Mbps-12319287.mp4"
+          }
+        },
+        "wistia_WQehBR": {
+          "type": "wistia",
+          "settings": {
+            "wistia_id": "33rxuxyuw4",
+            "dr_name": "",
+            "board": "",
+            "desc": ""
           }
         }
       },
       "block_order": [
-        "video_UGRi4h",
-        "video_LN3GH9",
-        "wistia_XYikTK",
-        "video_ihtJ6A",
-        "video_qBem4N",
-        "video_7dy6bq"
+        "video_bpgNjp",
+        "wistia_8FyVqr",
+        "wistia_cVBF6N",
+        "video_rFkcBL",
+        "video_yYqcmB",
+        "wistia_WQehBR"
       ],
       "settings": {
-        "heading": "Confident skin starts here. Just ask the internet.",
-        "classname": "section videosQure"
+        "heading": "Confident skin starts here",
+        "classname": "section videosQure",
+        "btn": "Join Thousands Of Women",
+        "btn_url": "#new-landing-purchase"
       }
     },
-    "anti-creams-microinfusion-page-how-to-use": {
-      "type": "anti-creams-microinfusion-page-how-to-use",
+    "how_to_use_tmBApa": {
+      "type": "how-to-use",
+      "blocks": {
+        "tab_AwmhHK": {
+          "type": "Tab",
+          "settings": {
+            "tab_txt": "Prepare",
+            "tab_desc": "<p>Twist open the chamber of the device and fill with one ampule of serum.<br\/>Twist on needle head with lid to close it tight.<\/p><p>Leave the device upside down for 1-2 minutes.<br\/>During this time, wash your face and make sure your hands are clean.<\/p>",
+            "image": "shopify:\/\/shop_images\/howUse_pdp1.webp"
+          }
+        },
+        "tab_yTEcfK": {
+          "type": "Tab",
+          "settings": {
+            "tab_txt": "Treatment",
+            "tab_desc": "<p>Once the serum has had enough time to make its way into the needles, you can take off the lid and start micro-infusing!<\/p><p>Start at the centre of the face and work your way outward to cover the full face. Perform 2\/3 passes. Take any leftover serum from the device and pat it onto your face and neck to leave on overnight.<\/p>",
+            "image": "shopify:\/\/shop_images\/howUse_pdp2.webp"
+          }
+        },
+        "tab_QqVtHE": {
+          "type": "Tab",
+          "settings": {
+            "tab_txt": "Aftercare",
+            "tab_desc": "<p>Once treatment is completed, place lid back on the needle head.<\/p><p>Twist the lid off and dispose safely.<\/p><p>Open a new sterile needle head and put it on the device ready for your next treatment.<\/p>",
+            "image": "shopify:\/\/shop_images\/howUse_pdp10.webp"
+          }
+        },
+        "tab_gUbBCP": {
+          "type": "Tab",
+          "settings": {
+            "tab_txt": "Storage",
+            "tab_desc": "<p>Once treatment is completed, place lid back on the needle head.<\/p><p>Twist the lid off and dispose safely.<\/p><p>Open a new sterile needle head and put it on the device ready for your next treatment.<\/p>",
+            "image": "shopify:\/\/shop_images\/howUse_pdp3.webp"
+          }
+        },
+        "wistia_HJKH8h": {
+          "type": "wistia",
+          "settings": {
+            "wistia_id": "yy9nv8vwsn"
+          }
+        }
+      },
+      "block_order": [
+        "tab_AwmhHK",
+        "tab_yTEcfK",
+        "tab_QqVtHE",
+        "tab_gUbBCP",
+        "wistia_HJKH8h"
+      ],
       "settings": {
+        "heading": "How to use Qure’s Micro-Infusion System"
       }
     },
     "anti-creams-microinfusion-page-break": {
       "type": "anti-creams-microinfusion-page-break",
+      "blocks": {
+        "option_YPqW63": {
+          "type": "option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/q_w_derma.svg",
+            "text": "Real results after your very first treatment."
+          }
+        },
+        "option_LKBaRk": {
+          "type": "option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/q-w_effective.svg",
+            "text": "More effective than topical creams."
+          }
+        },
+        "option_yRNWRF": {
+          "type": "option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/q_w_plus.svg",
+            "text": "Clinic-like skincare without clinic prices."
+          }
+        },
+        "option_r3MNVN": {
+          "type": "option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/q_w_time.svg",
+            "text": "Saves you time."
+          }
+        },
+        "option_Njxw7i": {
+          "type": "option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/q_w_needles.svg",
+            "text": "Virtually painless, minimal to no downtime."
+          }
+        }
+      },
+      "block_order": [
+        "option_YPqW63",
+        "option_LKBaRk",
+        "option_yRNWRF",
+        "option_r3MNVN",
+        "option_Njxw7i"
+      ],
       "settings": {
+        "heading": "Break through your skin’s barrier and rejuvenate from the inside out.",
+        "image": "shopify:\/\/shop_images\/skin_barrier.webp"
       }
     },
     "confidence": {
       "type": "confidence",
+      "blocks": {
+        "option_VjtFxb": {
+          "type": "option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rg_item_1.webp",
+            "text": "<p>noticed a difference in their skin the day after their first treatment.<\/p>",
+            "percent_bar": 93
+          }
+        },
+        "option_aJEYVL": {
+          "type": "option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rg_item_2.webp",
+            "text": "<p>agreed their skin appeared more hydrated and dewy.<\/p>",
+            "percent_bar": 93
+          }
+        },
+        "option_tPPYDt": {
+          "type": "option",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rg_item_3.webp",
+            "text": "<p>prefer the convenience of Qure’s Micro-Infusion System to in-clinic treatments<\/p>",
+            "percent_bar": 87
+          }
+        }
+      },
+      "block_order": [
+        "option_VjtFxb",
+        "option_aJEYVL",
+        "option_tPPYDt"
+      ],
       "settings": {
+        "heading": "Reveal your glow and renew your confidence."
       }
     },
     "faq_CBfhyg": {
@@ -701,6 +1144,7 @@
         "object_n7R7ar"
       ],
       "settings": {
+        "background": "bg-lightGrey",
         "classname": "",
         "heading": "The answers to your questions",
         "text": "",
@@ -722,10 +1166,10 @@
     "liquid_87wfLd",
     "choice",
     "anti-creams-microinfusion-page-safest-way",
-    "anti-creams-microinfusion-page-why-choose",
+    "why_choose_c8nA49",
     "results_3LEkF8",
     "videos_list_rXDbHD",
-    "anti-creams-microinfusion-page-how-to-use",
+    "how_to_use_tmBApa",
     "anti-creams-microinfusion-page-break",
     "confidence",
     "faq_CBfhyg"

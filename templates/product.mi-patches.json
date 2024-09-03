@@ -440,7 +440,6 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Rectangle_188_2a078240-295d-4e92-a36f-2acb2c6b5c1f.png",
             "heading": "Micro-Infusion Targeted Patches",
-            "mob_text": "",
             "text": "",
             "price": "",
             "style": "correctCircle",
@@ -452,7 +451,6 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/mi-eye-patches.webp",
             "heading": "Alternative Eye Patches",
-            "mob_text": "",
             "text": "",
             "price": "",
             "style": "incorrectCircle",
@@ -665,7 +663,6 @@
         "object_HjiKT3"
       ],
       "settings": {
-        "background": "bg_yellow",
         "classname": "bg_yellow",
         "heading": "Your burning questions, our glowing answers",
         "text": "",

@@ -2,7 +2,7 @@
 <div class="single_step section bg-lightGrey">
   <div class="container">
     <div class="section_header d-block d-md-none text-center">
-      {%- if section.settings.heading -%}
+      {%- if section.settings.heading != blank -%}
         <h2 class="title-lg paddingB">{{ section.settings.heading }}</h2>
       {%- endif -%}
     </div>
@@ -17,10 +17,10 @@
       <div class="col-md-6">
         <div class="single_step ps-md-3 mt-3 mt-md-0">
           <div class="section_header">
-            {%- if section.settings.heading -%}
+            {%- if section.settings.heading != blank -%}
               <h2 class="title-lg paddingB d-none d-md-block">{{ section.settings.heading }}</h2>
             {%- endif -%}
-            {%- if section.settings.text -%}
+            {%- if section.settings.text != blank -%}
               {{ section.settings.text }}
             {%- endif -%}
           </div>
@@ -33,7 +33,7 @@
 
 {% schema %}
 {
-  "name": "Image-Text",
+  "name": "t:sections.img_txt.name",
   "settings": [
     {
       "type": "image_picker",
@@ -55,7 +55,7 @@
   ],
   "presets": [
     {
-      "name": "Image & Text"
+      "name": "t:sections.img_txt.name"
     }
   ]
 }

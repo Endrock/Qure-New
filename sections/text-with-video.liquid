@@ -84,7 +84,7 @@
 </div>
 {%- schema -%}
 {
-    "name":"Text with video",
+    "name":"t:sections.text_video.label",
     "class":"trusted_bl section pb-0 trustedVerified",
     "max_blocks": 2,
     "settings":[
@@ -117,18 +117,18 @@
     "blocks":[
         {
             "type":"video",
-            "name":"Video",
+            "name":"t:common.video.label",
             "limit": 1,
             "settings":[
                 {
                     "type":"image_picker",
                     "id":"image",
-                    "label":"Image"
+                    "label":"t:common.image.label"
                 },
                 {
                     "type": "video_url",
                     "id": "video",
-                    "label": "Video",
+                    "label": "t:common.video.label",
                     "accept": [
                       "youtube"
                     ],
@@ -141,13 +141,13 @@
                 {
                     "type":"inline_richtext",
                     "id":"title",
-                    "label":"Dr name",
+                    "label":"t:common.card.doctor.name",
                     "default":"Dr Shah, MD"
                 },
                 {
                     "type":"inline_richtext",
                     "id":"des",
-                    "label":"Description",
+                    "label":"t:common.desc.label",
                     "default":"Board certified dermatologist"
                 }
 
@@ -155,22 +155,22 @@
         },
         {
             "type":"text_content",
-            "name":"Text content",
+            "name":"t:common.text.content",
             "limit": 1,
             "settings":[
                 {
                     "type":"header",
-                    "content":"Trust line settings"
+                    "content":"t:sections.trusted.header"
                 },
                 {
                     "type":"image_picker",
                     "id":"trust_icon",
-                    "label":"Trust icon"
+                    "label":"t:sections.trusted.icon"
                 },
                 {
                     "type":"inline_richtext",
                     "id":"trust_des",
-                    "label":"Trust text",
+                    "label":"t:sections.trusted.text",
                     "default":"Trusted and recommended by world leading Dermatologists"
                 },
                 {
@@ -180,18 +180,18 @@
                 {
                     "type":"inline_richtext",
                     "id":"title",
-                    "label":"Heading",
+                    "label":"t:common.heading.label",
                 },
                 {
                     "type":"color",
                     "id":"title_clr",
-                    "label":"Title color",
+                    "label":"t:common.title.color",
                     "default":"#000"
                 },
                 {
                     "type":"color",
                     "id":"title_strong_clr",
-                    "label":"Title strong color ",
+                    "label":"t:common.title.strong",
                     "default":"#797D7C"
                 }
                 
@@ -200,7 +200,7 @@
     ],
     "presets":[
         {
-            "name":"Text with video",
+            "name":"t:sections.text_video.label",
                 "blocks": [
                 {
                     "type": "video"

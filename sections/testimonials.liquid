@@ -102,7 +102,7 @@ assign slides_space = st.space_between_slides
                                 </div>
                             {% endif %}
                             <div class="trusted_tag_sm">
-                                <img src="https://qureskincaredns.com/new/assets/trusted_play_esm.svg" alt="">{{ badge_txt }}
+                                <img src="{{ 'trusted_play_esm.svg' | asset_url }}" alt="">{{ badge_txt }}
                             </div>
                         </div>
                     </div>
@@ -121,7 +121,7 @@ assign slides_space = st.space_between_slides
 </div>
 {% schema %}
 {
-    "name":"Testimonials",
+    "name":"t:sections.testimonials.label",
     "settings":[
         {
             "type": "header",
@@ -130,13 +130,13 @@ assign slides_space = st.space_between_slides
         {
             "type":"checkbox",
             "id":"enable_autoplay",
-            "label":"Enable autoplay",
+            "label":"t:common.checkbox.autoplay",
             "default":false
         },
         {
             "type":"checkbox",
             "id":"enable_loop",
-            "label":"Enable loop",
+            "label":"t:common.checkbox.loop",
             "default":false
         },
         {
@@ -145,7 +145,7 @@ assign slides_space = st.space_between_slides
             "min": 2,
             "max": 4,
             "step": 1,
-            "label": "Slides on desktop",
+            "label": "t:responsive.desktop.slides",
             "default": 3
         },
         {
@@ -154,7 +154,7 @@ assign slides_space = st.space_between_slides
             "min": 2,
             "max": 4,
             "step": 1,
-            "label": "Slides on tablet",
+            "label": "t:responsive.tablet.slides",
             "default": 2
         },
         {
@@ -163,7 +163,7 @@ assign slides_space = st.space_between_slides
             "min": 1,
             "max": 4,
             "step": 1,
-            "label": "Slides on desktop",
+            "label": "t:responsive.mobile.slides",
             "default": 1
         },
         {
@@ -172,7 +172,7 @@ assign slides_space = st.space_between_slides
             "min": 0,
             "max": 30,
             "step": 1,
-            "label": "Space between slides",
+            "label": "t:sections.slider.space_between",
             "default": 20
         },
         {
@@ -202,36 +202,36 @@ assign slides_space = st.space_between_slides
         {
             "type":"text",
             "id":"custom_class",
-            "label":"Custom class",
+            "label":"t:common.classname.custom",
             "default":"trusted_bl trustedVerified"
         }
     ],
     "blocks":[
         {
             "type":"testimonial",
-            "name":"Testimonial",
+            "name":"t:sections.testimonials.label",
             "settings": [
                 {
                     "type":"image_picker",
                     "id":"image",
-                    "label":"Image"
+                    "label":"t:common.image.label"
                 },
                 {
                     "type": "select",
                     "id": "video_type",
-                    "label": "Video type",
+                    "label": "t:common.video.type",
                     "options": [
                       {
                         "value": "video",
-                        "label": "Video"
+                        "label": "t:common.video.label"
                       },
                       {
                         "value": "wistia",
-                        "label": "Wistia"
+                        "label": "t:common.wistia.label"
                       },
                       {
                         "value": "youtube",
-                        "label": "Youtube"
+                        "label": "t:common.wistia.wistia"
                       }
                     ],
                     "default": "video"
@@ -239,16 +239,16 @@ assign slides_space = st.space_between_slides
                 {
                     "type":"textarea",
                     "id":"video_link",
-                    "label":"Choose video"
+                    "label":"t:common.video.choose"
                 },
                 {
                     "type":"header",
-                    "content":"Youtube settings"
+                    "content":"t:common.video.youtube.settings"
                 },
                 {
                     "type":"video_url",
                     "id":"youtube_link",
-                    "label":"Add youtube link",
+                    "label":"t:common.video.youtube.link",
                     "accept": [
                         "youtube"
                     ]
@@ -260,7 +260,7 @@ assign slides_space = st.space_between_slides
                 {
                     "type":"text",
                     "id":"wistia_id",
-                    "label":"Add wistia id",
+                    "label":"t:common.wistia.id.label",
                     "info":"If you choose Wistia then add the Wistia video id here"
                 },
                 {
@@ -270,19 +270,19 @@ assign slides_space = st.space_between_slides
                 {
                     "type":"textarea",
                     "id":"badge_txt",
-                    "label":"Badge text",
+                    "label":"t:product.badge.text",
                     "default":"Subscriber/Views/Followers"
                 },
                 {
                     "type":"inline_richtext",
                     "id":"title",
-                    "label":"Testimonial text",
+                    "label":"t:common.testimonial.text",
                     "default":"Testimonial text goes here"
                 },
                 {
                     "type":"inline_richtext",
                     "id":"client_details",
-                    "label":"Client details",
+                    "label":"t:common.client.details",
                     "default":"<strong>Dr Mona Patel,</strong> Internal Medicine"
                 }
                 
@@ -291,7 +291,7 @@ assign slides_space = st.space_between_slides
     ],
     "presets": [
         {
-            "name":"Testimonials",
+            "name":"t:sections.testimonials.label",
             "blocks": [
                 {
                     "type": "testimonial",
