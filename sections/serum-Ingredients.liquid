@@ -9,105 +9,102 @@
         </div>
         <div class="unique_grid">
             {% for block in section.blocks %}
-            {% case block.type %}
-            {% when 'Serum' %}
-            <div class="unique_grid_col">
-                <div class="unique_c_item">
-                    <img src="{{ block.settings.pd_img | img_url: '86x' }}" alt="{{ block.settings.pd_img.alt }}">
-                    <div class="u_item_wrapper {{ block.settings.background }}">
-                        <div class="u_item_header">
-<<<<<<< HEAD
-                            <h3>{{ block.settings.serum_type }}</h3>
-=======
-                            {% if block.settings.serum_type != blank %}
-                            <h3>{{ block.settings.serum_type }}</h3>
-                            {% endif %}
-                            {% if block.settings.name != blank %}
->>>>>>> staging
-                            <p>{{ block.settings.name }}</p>
-                        </div>
-                    </div>
-                    <div class="u_item_wrapper {{ block.settings.background }}">
-                        <div class="u_ftr">
-                            <div class="u_ftr_item">
-                                {% if block.settings.icon1 %}
-                                <img src="{{ block.settings.icon1 | img_url: '40x' }}" alt="">
-                                {% endif %}
-                                <p>{{ block.settings.benefit1 }}</p>
-                            </div>
-                            <div class="u_ftr_item">
-                                {% if block.settings.icon2 %}
-                                <img src="{{ block.settings.icon2 | img_url: '40x' }}" alt="">
-                                {% endif %}
-                                <p>{{ block.settings.benefit2 }}</p>
-                            </div>
-                            <div class="u_ftr_item">
-                                {% if block.settings.icon3 %}
-                                <img src="{{ block.settings.icon3 | img_url: '40x' }}" alt="">
-                                {% endif %}
-                                <p>{{ block.settings.benefit3 }}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion accordion-flush" id="accordionQuesExample">
-                        <div class="accordion-item u_item_question {{ block.settings.background }}">
-                            <h2 class="accordion-header u_item_expandable {{ block.settings.background }}">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#u_item_question_1{{ block.id }}" aria-expanded="false"
-                                    aria-controls="u_item_question_1{{ block.id }}">
-                                    <div class="containers">{{ block.settings.title1 }}</div>
-                                </button>
-                            </h2>
-                            <div id="u_item_question_1{{ block.id }}" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionQuesExample">
-                                <div class="accordion-body">
-                                    <div class="containers">
-                                       {{ block.settings.drop_txt1 }}
+                {% case block.type %}
+                    {% when 'Serum' %}
+                        <div class="unique_grid_col">
+                            <div class="unique_c_item">
+                                <img src="{{ block.settings.pd_img | img_url: '86x' }}" alt="{{ block.settings.pd_img.alt }}">
+                                <div class="u_item_wrapper {{ block.settings.background }}">
+                                    <div class="u_item_header">
+                                        {% if block.settings.serum_type != blank %}
+                                        <h3>{{ block.settings.serum_type }}</h3>
+                                        {% endif %}
+                                        {% if block.settings.name != blank %}
+                                        <p>{{ block.settings.name }}</p>
+                                        {% endif %}
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item u_item_question {{ block.settings.background }}">
-                            <h2 class="accordion-header u_item_expandable {{ block.settings.background }}">
-                                <button class="accordion-button collapsed" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#u_item_question_3{{ block.id }}"
-                                    aria-expanded="false" aria-controls="u_item_question_3{{ block.id }}">
-                                    <div class="containers">{{ block.settings.title2 }}</div>
-                                </button>
-                            </h2>
-                            <div id="u_item_question_3{{ block.id }}" class="accordion-collapse collapse"
-                                data-bs-parent="#accordionQuesExample">
-                                <div class="accordion-body">
-                                    <div class="containers">
-                                        {{ block.settings.drop_txt2 }}
+                                <div class="u_item_wrapper {{ block.settings.background }}">
+                                    <div class="u_ftr">
+                                        <div class="u_ftr_item">
+                                            {% if block.settings.icon1 %}
+                                            <img src="{{ block.settings.icon1 | img_url: '40x' }}" alt="">
+                                            {% endif %}
+                                            <p>{{ block.settings.benefit1 }}</p>
+                                        </div>
+                                        <div class="u_ftr_item">
+                                            {% if block.settings.icon2 %}
+                                            <img src="{{ block.settings.icon2 | img_url: '40x' }}" alt="">
+                                            {% endif %}
+                                            <p>{{ block.settings.benefit2 }}</p>
+                                        </div>
+                                        <div class="u_ftr_item">
+                                            {% if block.settings.icon3 %}
+                                            <img src="{{ block.settings.icon3 | img_url: '40x' }}" alt="">
+                                            {% endif %}
+                                            <p>{{ block.settings.benefit3 }}</p>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="accordion accordion-flush" id="accordionQuesExample">
+                                    <div class="accordion-item u_item_question {{ block.settings.background }}">
+                                        <h2 class="accordion-header u_item_expandable {{ block.settings.background }}">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#u_item_question_1{{ block.id }}" aria-expanded="false"
+                                                aria-controls="u_item_question_1{{ block.id }}">
+                                                <div class="containers">{{ block.settings.title1 }}</div>
+                                            </button>
+                                        </h2>
+                                        <div id="u_item_question_1{{ block.id }}" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionQuesExample">
+                                            <div class="accordion-body">
+                                                <div class="containers">
+                                                {{ block.settings.drop_txt1 }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item u_item_question {{ block.settings.background }}">
+                                        <h2 class="accordion-header u_item_expandable {{ block.settings.background }}">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#u_item_question_3{{ block.id }}"
+                                                aria-expanded="false" aria-controls="u_item_question_3{{ block.id }}">
+                                                <div class="containers">{{ block.settings.title2 }}</div>
+                                            </button>
+                                        </h2>
+                                        <div id="u_item_question_3{{ block.id }}" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionQuesExample">
+                                            <div class="accordion-body">
+                                                <div class="containers">
+                                                    {{ block.settings.drop_txt2 }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% if block.settings.stars != blank %}
+                                <div class="unique_review">
+                                    <div class="star-gp">
+                                        <img src="{{ block.settings.stars | img_url: '98x' }}" alt="">
+                                    </div>
+                                    <div class="u_review">
+                                        <p>{{ block.settings.review }}</p>
+                                    </div>
+                                    <div class="u_verified">
+                                        <img src="assets/verified.svg" alt="">
+                                        <p><strong>{{ block.settings.client }}</strong> - {{ block.settings.place }}</p>
+                                    </div>
+                                </div>
+                                {% endif %}
                             </div>
                         </div>
-                    </div>
-                    {% if block.settings.stars != blank %}
-                    <div class="unique_review">
-                        <div class="star-gp">
-                            <img src="{{ block.settings.stars | img_url: '98x' }}" alt="">
+                    {% when 'or' %}
+                        <div class="unique_grid_col">
+                            <div class="u_text_only">
+                                <p class="text-center">{{ block.settings.or_txt }}</p>
+                            </div>
                         </div>
-                        <div class="u_review">
-                            <p>{{ block.settings.review }}</p>
-                        </div>
-                        <div class="u_verified">
-                            <img src="assets/verified.svg" alt="">
-                            <p><strong>{{ block.settings.client }}</strong> - {{ block.settings.place }}</p>
-                        </div>
-                    </div>
-                    {% endif %}
-                </div>
-            </div>
-            {% when 'or' %}
-            <div class="unique_grid_col">
-                <div class="u_text_only">
-                    <p class="text-center">{{ block.settings.or_txt }}</p>
-                </div>
-            </div>
-            {% endcase %}
+                    {% endcase %}
             {% endfor %}
         </div>
     </div>
@@ -183,7 +180,7 @@
                         {
                             "value": "bg-yellow",
                             "label": "Yellow"
-                        },
+                        }
                     ]
                 },
                 {
