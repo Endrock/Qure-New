@@ -105,6 +105,7 @@
       "block_order": [
         "link_crBjL9"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Labor Day Sale Save 51%",
         "heading_mobile": "Labor Day Sale",
@@ -131,7 +132,6 @@
       "block_order": [
         "link_Pk3LH6"
       ],
-      "disabled": true,
       "settings": {
         "heading": "Get clinic-level results from home- minus the ‘clinical’ costs.",
         "heading_mobile": "",
@@ -609,7 +609,8 @@
             "image": "shopify:\/\/shop_images\/results_teresa.webp",
             "image_country": "shopify:\/\/shop_images\/america_f_92cbd39d-f0e3-42b9-a692-c714420fbe53.webp",
             "client": "Teresa S.",
-            "concerns": ""
+            "concerns": "",
+            "verified": true
           }
         },
         "slide_8DpTJn": {
@@ -622,7 +623,8 @@
             "image": "shopify:\/\/shop_images\/ellie_412942fe-4036-4c4e-a52b-10020082a2c1.png",
             "image_country": "shopify:\/\/shop_images\/america_f_92cbd39d-f0e3-42b9-a692-c714420fbe53.webp",
             "client": "Ellie V.",
-            "concerns": ""
+            "concerns": "",
+            "verified": true
           }
         },
         "slide_wwBJ3B": {
@@ -635,7 +637,8 @@
             "image": "shopify:\/\/shop_images\/results_anton_cdc44f21-b8dc-4a5f-a020-6741e12ac25e.webp",
             "image_country": "shopify:\/\/shop_images\/australia_f_35e9b6f0-d77f-4184-afaf-224d96562185.webp",
             "client": "Anton M.",
-            "concerns": ""
+            "concerns": "",
+            "verified": true
           }
         },
         "slide_8TxkNC": {
@@ -648,7 +651,8 @@
             "image": "shopify:\/\/shop_images\/results_glorija.webp",
             "image_country": "shopify:\/\/shop_images\/australia_f_35e9b6f0-d77f-4184-afaf-224d96562185.webp",
             "client": "Glorija",
-            "concerns": ""
+            "concerns": "",
+            "verified": true
           }
         },
         "slide_xWKmb6": {
@@ -661,7 +665,8 @@
             "image": "shopify:\/\/shop_images\/results_tiffany_d43313a3-80f7-4452-a45b-c864ceedae03.webp",
             "image_country": "shopify:\/\/shop_images\/america_f_92cbd39d-f0e3-42b9-a692-c714420fbe53.webp",
             "client": "Tiffany L.",
-            "concerns": ""
+            "concerns": "",
+            "verified": true
           }
         },
         "slide_hFbVVd": {
@@ -674,7 +679,8 @@
             "image": "shopify:\/\/shop_images\/results_mona.webp",
             "image_country": "shopify:\/\/shop_images\/america_f_92cbd39d-f0e3-42b9-a692-c714420fbe53.webp",
             "client": "Mona P.",
-            "concerns": ""
+            "concerns": "",
+            "verified": true
           }
         }
       },

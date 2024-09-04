@@ -1162,10 +1162,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // end holiday bundles concern dropdowns
 
   // new sidecart timer 
-  const isTestActive = document.body.hasAttribute('data-sidecart-timer');
-  if (isTestActive) {
-    initSidecarTimer();
-  }
+  initSidecarTimer();
+  // end sidecart timer
 
 });
 

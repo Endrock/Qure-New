@@ -440,6 +440,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Rectangle_188_2a078240-295d-4e92-a36f-2acb2c6b5c1f.png",
             "heading": "Micro-Infusion Targeted Patches",
+            "mob_text": "",
             "text": "",
             "price": "",
             "style": "correctCircle",
@@ -451,6 +452,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/mi-eye-patches.webp",
             "heading": "Alternative Eye Patches",
+            "mob_text": "",
             "text": "",
             "price": "",
             "style": "incorrectCircle",
@@ -532,7 +534,7 @@
           "settings": {
             "dropdown_design": "without_image",
             "name_right": "All Ingredients",
-            "text_right": "Sodium Hyaluronate, Caffeine, Copper-Tripeptide-1, Niacinamide, Cyclodextrin, Water, Glycine Soja (Soybean) Oil, Madecassoside, Macadamia Nut Oil, Allantoin, Retinol, Oil Soluble Licorice(Glycyrrhiza) Extract, Centella Asiatica Extract,  Acetyl Hexapeptide-8, BHT"
+            "text_right": "Sodium Hyaluronate, Caffeine, Copper-Tripeptide-1, Niacinamide, Cyclodextrin, Water, Glycine Soja (Soybean) Oil, Madecassoside, Macadamia Nut Oil, Allantoin, Retinol, Oil Soluble Licorice(Glycyrrhiza) Extract, Centella Asiatica Extract,  Acetyl Hexapeptide-8, BHT.    \n<br>\nPlease note that due to innovative updates and changing regulatory guidelines, the ingredient lists provided here may differ slightly from those on our packaging and distributor websites."
           }
         }
       },
@@ -663,6 +665,7 @@
         "object_HjiKT3"
       ],
       "settings": {
+        "background": "bg_yellow",
         "classname": "bg_yellow",
         "heading": "Your burning questions, our glowing answers",
         "text": "",

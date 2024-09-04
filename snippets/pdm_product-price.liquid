@@ -19,7 +19,7 @@
   {% endcase %}
 
   {% assign product_price = product.price %}
-  {% assign product_price_discount = product.price | times: 0.80 %}
+  {% assign product_price_discount = product.price | times: 0.70 %}
   {% assign product_price_divided = product.price | divided_by: 4 %}
   {% assign product_variant_id = product.variants.first.id %}
   <div id="subscription" class="subscriptions-prices">

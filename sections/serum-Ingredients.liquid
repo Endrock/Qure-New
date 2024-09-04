@@ -2,14 +2,10 @@
 <div class="unique_c section">
     <div class="container">
         <div class="section_header text-start text-md-center mb-4">
-            {% if section.settings.heading != blank %}
             <h2 class="title-lg paddingB">
                 {{ section.settings.heading }}
             </h2>
-            {% endif %}
-            {% if section.settings.subheading != blank %}
             {{ section.settings.subheading }}
-            {% endif %}
         </div>
         <div class="unique_grid">
             {% for block in section.blocks %}
@@ -20,30 +16,33 @@
                     <img src="{{ block.settings.pd_img | img_url: '86x' }}" alt="{{ block.settings.pd_img.alt }}">
                     <div class="u_item_wrapper {{ block.settings.background }}">
                         <div class="u_item_header">
-                            {% if section.settings.serum_type != blank %}
+<<<<<<< HEAD
+                            <h3>{{ block.settings.serum_type }}</h3>
+=======
+                            {% if block.settings.serum_type != blank %}
                             <h3>{{ block.settings.serum_type }}</h3>
                             {% endif %}
-                            {% if section.settings.name != blank %}
+                            {% if block.settings.name != blank %}
+>>>>>>> staging
                             <p>{{ block.settings.name }}</p>
-                            {% endif %}
                         </div>
                     </div>
                     <div class="u_item_wrapper {{ block.settings.background }}">
                         <div class="u_ftr">
                             <div class="u_ftr_item">
-                                {% if block.settings.icon1 != blank %}
+                                {% if block.settings.icon1 %}
                                 <img src="{{ block.settings.icon1 | img_url: '40x' }}" alt="">
                                 {% endif %}
                                 <p>{{ block.settings.benefit1 }}</p>
                             </div>
                             <div class="u_ftr_item">
-                                {% if block.settings.icon2 != blank %}
+                                {% if block.settings.icon2 %}
                                 <img src="{{ block.settings.icon2 | img_url: '40x' }}" alt="">
                                 {% endif %}
                                 <p>{{ block.settings.benefit2 }}</p>
                             </div>
                             <div class="u_ftr_item">
-                                {% if block.settings.icon3 != blank %}
+                                {% if block.settings.icon3 %}
                                 <img src="{{ block.settings.icon3 | img_url: '40x' }}" alt="">
                                 {% endif %}
                                 <p>{{ block.settings.benefit3 }}</p>
@@ -103,13 +102,11 @@
                 </div>
             </div>
             {% when 'or' %}
-            {% if section.settings.or_txt != blank %}
             <div class="unique_grid_col">
                 <div class="u_text_only">
                     <p class="text-center">{{ block.settings.or_txt }}</p>
                 </div>
             </div>
-            {% endif %}
             {% endcase %}
             {% endfor %}
         </div>
@@ -136,7 +133,7 @@
 
 {% schema %}
 {
-    "name": "t:sections.serum_ingredients.label",
+    "name": "serum-Ingredients",
     "settings": [
         {
             "type": "text",
@@ -171,7 +168,7 @@
     "blocks": [
         {
             "type": "Serum",
-            "name": "t:product.label",
+            "name": "Product",
             "limit": 2,
             "settings": [
                 {
@@ -181,11 +178,11 @@
                     "options": [
                         {
                             "value": "bg-grey",
-                            "label": "t:common.background.grey"
+                            "label": "Grey"
                         },
                         {
                             "value": "bg-yellow",
-                            "label": "t:common.background.yellow"
+                            "label": "Yellow"
                         },
                     ]
                 },
@@ -299,7 +296,7 @@
     ],
     "presets": [
         {
-            "name": "t:sections.serum_ingredients.label",
+            "name": "Serum Ingredients",
             "settings": {
                 "heading": "Science-backed Micro-Infusion serums",
                 "subheading": "<p>Choose the exact serum to use in your Micro-Infusion treatment, or get both and mix them together to experience a complete set of benefits that addresses your specific skin concerns.</p>",

@@ -689,16 +689,8 @@ body[data-free-gift-gamification] .second-milestone {
 
 /* End test gamification */
 /* new sidecart timer  */
+
 .sidecart-timer-container {
-  display: none;
-}
-.drawer__wrapper .cart_timer {
-  display: none;
-}
-body[data-sidecart-timer] .cart_timer {
-  display: none;
-}
-body[data-sidecart-timer] .sidecart-timer-container {
   display: flex;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -706,7 +698,8 @@ body[data-sidecart-timer] .sidecart-timer-container {
   align-items: center;
   background-color: #F5F5F5;
 }
-body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__label { 
+
+.sidecart-timer-container .sidecart-timer-container__label { 
   color: #000;
   text-align: center;
   font-family: Poppins;
@@ -717,12 +710,14 @@ body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__l
   letter-spacing: 0.12px;
   margin-right: 6px;
 } 
-body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__timer { 
+
+.sidecart-timer-container .sidecart-timer-container__timer { 
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper { 
+
+.sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper { 
   width: 60px;
   display: flex;
   padding: 0 12px;
@@ -730,13 +725,15 @@ body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__t
   align-items: center;
   border-right: 1px solid #C92127;
 }
-body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__timer .sidecart-timer-container__timer--seconds {
+
+.sidecart-timer-container .sidecart-timer-container__timer .sidecart-timer-container__timer--seconds {
   border-right: unset;
 } 
-body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper .sidecart-timer-container__timer--days-amount, 
-body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper .sidecart-timer-container__timer--hours-amount, 
-body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper .sidecart-timer-container__timer--minutes-amount, 
-body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper .sidecart-timer-container__timer--seconds-amount {
+
+.sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper .sidecart-timer-container__timer--days-amount, 
+.sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper .sidecart-timer-container__timer--hours-amount, 
+.sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper .sidecart-timer-container__timer--minutes-amount, 
+.sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper .sidecart-timer-container__timer--seconds-amount {
   height: 24px;
   color: #C92127;
   text-align: center;
@@ -747,10 +744,11 @@ body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__t
   line-height: 32px;
   letter-spacing: 0.2px;
 } 
-body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper .sidecart-timer-container__timer--days-label, 
-body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper .sidecart-timer-container__timer--hours-label, 
-body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper .sidecart-timer-container__timer--minutes-label, 
-body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper .sidecart-timer-container__timer--seconds-label {
+
+.sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper .sidecart-timer-container__timer--days-label, 
+.sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper .sidecart-timer-container__timer--hours-label, 
+.sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper .sidecart-timer-container__timer--minutes-label, 
+.sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper .sidecart-timer-container__timer--seconds-label {
   color: #C92127;
   text-align: center;
   font-feature-settings: 'liga' off, 'clig' off;
@@ -760,20 +758,27 @@ body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__t
   line-height: 16px; 
   letter-spacing: 0.09px;
 } 
+
 @media screen and (max-width: 768px) {
-  body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__label { 
+  .sidecart-timer-container .sidecart-timer-container__label { 
     margin-right: 0;
   } 
 }
+
 @media screen and (max-width: 400px) {
-  body[data-sidecart-timer] .sidecart-timer-container { 
+
+  .sidecart-timer-container { 
     justify-content: space-evenly;
   } 
-  body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__label { 
+
+  .sidecart-timer-container .sidecart-timer-container__label { 
     margin-left: 5px;
   } 
-  body[data-sidecart-timer] .sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper { 
+
+  .sidecart-timer-container .sidecart-timer-container__timer .amount-wrapper { 
     width: 48px;
     padding: 0 10px;
   }
 }
+
+/* end new sidecart time */

@@ -40,9 +40,9 @@
           "announcement_TPxBgi": {
             "type": "announcement",
             "settings": {
-              "heading": "<p>🇺🇲 <strong>LABOR DAY SALE<\/strong> Exclusive Bundle <\/p>",
-              "button_label": "SAVE 51%",
-              "button_url": "https:\/\/www.qureskincare.com\/pages\/exclusive-holiday-bundle-deal#exclusive-labor-day-bundle"
+              "heading": "<p><strong>FREE World-Wide Shipping<\/strong>All Orders Above $100<\/p>",
+              "button_label": "SHOP NOW",
+              "button_url": "https:\/\/www.qureskincare.com\/pages\/exclusive-holiday-bundle-deal"
             }
           },
           "tab_3Wyyea": {
@@ -185,7 +185,8 @@
         ],
         "settings": {
           "copy_title_gift": "",
-          "sidecart_enable": true,
+          "sidecart_timer_old_enable": false,
+          "sidecart_timer_new_enable": false,
           "start_date": "08-15-2024 12:00",
           "finish_date": "09-03-2024 23:59",
           "label_ends": "Labor Day Sales Ends In:",

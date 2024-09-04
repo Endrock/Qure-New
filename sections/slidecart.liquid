@@ -120,8 +120,12 @@
         {% render 'pdm_cart-gamification', settingsGamification: section.settings, cartTotal: cart.items_subtotal_price %}
 			</div>
 
-			{% render 'slidecart-timer' %}
-			{% render 'sidecart-timer-new', settings: section.settings %}
+			{% if section.settings.sidecart_timer_old_enable %}
+				{% render 'slidecart-timer' %}
+			{% endif %}
+			{% if section.settings.sidecart_timer_new_enable %}
+				{% render 'sidecart-timer-new', settings: section.settings %}
+			{% endif %}
 
 			<div class="my-cart__info">
 				<div  class ="my-cart__items {% if cart.item_count == 0 %} cart__empty-items {% endif %}">
@@ -619,10 +623,21 @@ productGiftPdm: productGiftPdm %}
         "label": "t:sections.slidecart.settings.copy_title_gift.label"
 			},
 			{
+				"type": "header",
+				"content": "Sidecart Timer",
+				"info": "Use the checkbox to enable either the new or old timer. Make sure to select only one."
+			},
+			{
         "type": "checkbox",
-        "id": "sidecart_enable",
-        "label": "Enable Sidecart Timer",
-				"default": false
+        "id": "sidecart_timer_old_enable",
+        "label": "Enable old Sidecart Timer",
+        "default": false
+      },
+			{
+        "type": "checkbox",
+        "id": "sidecart_timer_new_enable",
+        "label": "Enable new Sidecart Timer",
+        "default": false
       },
 			{
         "type": "text",
