@@ -1,0 +1,44 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "header_landing_KghXM9": {
+      "type": "header-landing",
+      "blocks": {
+        "announcement_Jg3bwh": {
+          "type": "announcement",
+          "settings": {
+            "heading": "Get Up To 43% OFF Younger Looking, Radiant Skin!",
+            "heading_mobile": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_Jg3bwh"
+      ],
+      "custom_css": [
+        ".nav__item.cart_btn,.nav__item.header_gift_btn {display: none !important;}"
+      ],
+      "settings": {
+        "button_label": "SAVE UP TO 43%",
+        "button_url": "https:\/\/www.qureskincare.com\/pages\/qure-microinfusion-offer"
+      }
+    },
+    "main": {
+      "type": "temp-page-micro-infusion-faq-page",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "header_landing_KghXM9",
+    "main"
+  ]
+}

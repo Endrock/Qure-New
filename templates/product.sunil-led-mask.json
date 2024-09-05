@@ -188,17 +188,17 @@
             "product": "",
             "product_title": "",
             "product_url": "",
-            "image_before": "shopify:\/\/shop_images\/jess_before_img.webp",
+            "image_before": "shopify:\/\/shop_images\/LED_MASK_c63c2766-4fb5-4f74-bbde-3d2d41a09663.png",
             "text_before": "BEFORE",
-            "image_after": "shopify:\/\/shop_images\/jess_after_img.webp",
+            "image_after": "shopify:\/\/shop_images\/LED_MASK_AFTER.png",
             "text_after": "AFTER 4 WEEKS",
             "image_country": "shopify:\/\/shop_images\/america_f.webp",
-            "client": "Jess.",
+            "client": "Teresa S.",
             "progress": 91,
             "progress_text": "<p><strong>improved <\/strong>skin tone and enhanced smoothness<\/p>",
             "text": "<ul><li><strong>Soothing, anti-inflammatory<\/strong> benefits reduces redness and inflammation.<\/li><li><strong>Fades appearance of<\/strong> <strong>dark spots<\/strong> for more radiant, even-toned skin.<\/li><li><strong>Heals<\/strong> and <strong>rejuvenates<\/strong> skin, helping with sun damage, hyperpigmentation.<\/li><\/ul>",
             "feedback_title": "In a Clinical Trial...",
-            "feedback_text": "<p><strong>...91%<\/strong> of subjects have a<strong> brighter skin tone<\/strong> and <strong>82%<\/strong> reported <strong>enhanced smoothness<\/strong> of skin after 12 weeks<\/p>",
+            "feedback_text": "<p><strong>...10 out of 10<\/strong> subjects experienced <strong>improved skin complexion and collagen density<\/strong><\/p>",
             "popup_link_text": "Read more about clinical Study",
             "popup_content": "<p>Treatment of the periorbital region was reported more effective than the nasolabial region. At 12-week follow-up, 91% of subjects reported improved skin tone, and 82% reported enhanced smoothness of skin in the treatment area.<\/p><p><strong>About the clinical trial<\/strong><\/p><p>Thirteen subjects with sun damage signs followed a 5-week course of LED therapy with combined wavelengths of 633 and 830 nm and assessed the subject's perception of the treatment. Sun-damage reduction was assessed at 6, 9, and 12 weeks by clinical photography and patient satisfaction scores.<\/p><p><em>Reference<\/em><em><strong>:<\/strong><\/em><em> J Cosmet Dermatol. 2007 Sep;6(3):189-94. doi: 10.1111\/j.1473-2165.2007.00329.x.<\/em><\/p>"
           }
@@ -335,6 +335,16 @@
             "wistia_id": "",
             "text": "<p>\"I have been using this mask with the anti-breakout settings, which has been fantastic to help clear up my complexion in only two weeks.\"<\/p><h6><strong>Dr Hunter, <\/strong>NHS & Aesthetics Doctor<\/h6>"
           }
+        },
+        "video_JwEJy3": {
+          "type": "video",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/alexis.png",
+            "video_url": "https:\/\/youtu.be\/ZMGm5PmWzF0?t=649",
+            "video_label": "Watch Video",
+            "wistia_id": "",
+            "text": "<p>“ You can get a Clinical treatment at home safely and conveniently... It is particularly beneficial for those with melanin rich Skin”<\/p><p><strong>Dr Alexis Stephens<\/strong>,  Board-Certified Dermatologist<\/p>"
+          }
         }
       },
       "block_order": [
@@ -347,7 +357,8 @@
         "video_rVzjQy",
         "video_9pKekb",
         "video_kkYG7b",
-        "video_63bzGN"
+        "video_63bzGN",
+        "video_JwEJy3"
       ],
       "settings": {
         "classname": "trusted_bl",
@@ -407,6 +418,7 @@
         "icon_yPyPhx"
       ],
       "settings": {
+        "background": "bg-grey"
       }
     },
     "results_Yfghzf": {
@@ -593,7 +605,7 @@
         "content_rgPkBx": {
           "type": "content",
           "settings": {
-            "text": "<h2>All the skin firming, smoothing, clearing benefits with just 1 device. <\/h2><p>A portable, <strong>FDA-cleared<\/strong>, at-home LED light therapy treatment that is <strong>scientifically proven<\/strong> to change your skin for the better. That makes you feel better, too.<\/p><p><\/p><p>Q-Rejuvalight Pro utilizes utilizes a combination of 5 market-leading light wavelengths to treat a multitude of skin concerns deep within the skin, where even the best creams and serums can’t reach.<\/p>",
+            "text": "<h2>All the skin firming, smoothing, clearing benefits with just 1 device. <\/h2><p>A portable, <strong>FDA-cleared<\/strong>, at-home LED light therapy treatment that is <strong>scientifically proven<\/strong> to change your skin for the better. That makes you feel better, too.<\/p><p>Q-Rejuvalight Pro utilizes utilizes a combination of 5 market-leading light wavelengths to treat a multitude of skin concerns deep within the skin, where even the best creams and serums can’t reach.<\/p><p><\/p>",
             "column_content": 0,
             "classname": "it_info p-0 pt-0 pt-md-3"
           }
@@ -701,14 +713,14 @@
           "type": "details",
           "settings": {
             "heading": "Technical specifications",
-            "text": "<p><strong>TREATMENT TIME:<\/strong> 3 minutes<\/p><p><strong>CERTIFICATES:<\/strong> FDA, TGA, CE, UKCA<\/p><p><strong>OPERATION:<\/strong> Wireless, hands-free<\/p><p><strong>USE:<\/strong> Daily after cleansing<\/p><p><strong>WAVELENGTH:<\/strong> 415nm (Blue), 605nm (Amber), 630nm (Red), 660nm (Deep Red), 880nm (Infrared)<\/p><p><strong>CHARGING TIME:<\/strong> 2 hours<\/p><p><strong>LEDs:<\/strong> 160 dual core<\/p>"
+            "text": "<p><strong>TREATMENT TIME:<\/strong> 3 minutes<\/p><p><strong>CERTIFICATES:<\/strong> FDA, TGA, CE, UKCA<\/p><p><strong>OPERATION:<\/strong> Wireless, hands-free<\/p><p><strong>WAVELENGTH:<\/strong> 415nm (Blue), 605nm (Amber), 630nm (Red), 660nm (Deep Red), 880nm (Infrared)<\/p><p><strong>CHARGING TIME:<\/strong> 2 hours<\/p><p><strong>LEDs:<\/strong> 160 dual core<\/p>"
           }
         },
         "details_3XnYk4": {
           "type": "details",
           "settings": {
             "heading": "Treatment details",
-            "text": "<p><strong>USE:<\/strong> Use daily after cleansing, before topical skincare<\/p><p><strong>ANTI-AGING TREATMENT:<\/strong> 605nm (Amber), 630nm (Red), 660nm (Deep Red), 880nm (Infrared)<\/p><p><strong>ANTI-BREAKOUT TREATMENT: <\/strong>415nm (Blue), 630nm (Red)<\/p><p><strong>CUSTOMIZED TREATMENT:<\/strong> Choose treatment modes on 5 different facial areas<\/p><p><strong>SKIN TYPE:<\/strong> Most suitable for Fitzpatrick Skin Types I-IV<\/p>"
+            "text": "<p><strong>USE:<\/strong> Use daily after cleansing, before topical skincare<\/p><p><strong>ANTI-AGING TREATMENT:<\/strong> 415nm (Blue), 605nm (Amber), 630nm (Red), 660nm (Deep Red), 880nm (Infrared)<\/p><p><strong>ANTI-BREAKOUT TREATMENT: <\/strong>415nm (Blue), 630nm (Red)<\/p><p><strong>CUSTOMIZED TREATMENT:<\/strong> Choose treatment modes on 5 different facial areas<\/p><p><strong>SKIN TYPE:<\/strong> Most suitable for Fitzpatrick Skin Types I-IV<\/p>"
           }
         },
         "content_reduced_EApyeE": {
@@ -784,7 +796,10 @@
         "wistia_VYtc4Q": {
           "type": "wistia",
           "settings": {
-            "wistia_id": "m9h3ysted6"
+            "wistia_id": "m9h3ysted6",
+            "dr_name": "",
+            "board": "",
+            "desc": ""
           }
         },
         "video_mgnDHg": {
@@ -826,7 +841,9 @@
       ],
       "settings": {
         "heading": "Confident skin starts here. Just ask the internet.",
-        "classname": "section videosQure"
+        "classname": "section videosQure",
+        "btn": "",
+        "btn_url": ""
       }
     },
     "liquid_xkpFwR": {
@@ -931,6 +948,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/compare-1_274fb7f7-5fac-4ee0-81f9-94699d7576c9.png",
             "heading": "Q-Rejuvalight Pro LED Mask",
+            "mob_text": "",
             "text": "<p><strong>One-time cost investment<\/strong><\/p>",
             "price": "$349",
             "style": "correctCircle",
@@ -942,6 +960,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/beauty_derma.webp",
             "heading": "In-Clinic\/\\n Dermatologist",
+            "mob_text": "",
             "text": "<p><strong>per 6 session treatment cost<\/strong><\/p>",
             "price": "$300 - $900",
             "style": "incorrectCircle",
@@ -1104,6 +1123,7 @@
         "object_94NRej"
       ],
       "settings": {
+        "background": "bg_yellow",
         "classname": "bg_yellow",
         "heading": "The answers to your questions",
         "text": "",

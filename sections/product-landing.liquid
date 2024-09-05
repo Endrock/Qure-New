@@ -63,7 +63,7 @@
                         {%- endfor -%}
                     {% endif %}
 
-                    <div class="section_header text-start ms-0 {% if request.path == '/pages/microinfusion' or request.path == '/pages/micro-infusion-refill' or request.path == '/products/micro-infusion-targeted-patches' %} text-header-original {% endif %}">
+                    <div class="section_header text-start ms-0">
                         {% if section.settings.heading != blank %}
                             <h1 id="page-{{ page.handle | escape }}" class="title-xl d-none d-md-block">{{ section.settings.heading | replace: '\n', '<br />' }}</h1>
                         {% endif %}
@@ -73,12 +73,6 @@
                             <h2 class="title-xl d-md-none">{{ section.settings.heading | replace: '\n', '<br />' }}</h2>
                         {% endif %}
                     </div>
-
-                    {% if request.path == '/pages/microinfusion' or request.path == '/pages/micro-infusion-refill' or request.path == '/products/micro-infusion-targeted-patches' %}
-                        <div class="section_header text-start ms-0 text-header-test">
-                            <h1>{{ section.settings.test_product_name }}</h1>
-                        </div>
-                    {% endif %}
 
                     {% unless 
                         page.handle == 'microinfusion' 
@@ -467,15 +461,6 @@
                 "type": "text",
                 "id": "heading_mobile",
                 "label": "t:common.heading.mobile.label"
-            },
-            {
-                "type": "paragraph",
-                "content": "header test"
-            },
-            {
-                "type": "text",
-                "id": "test_product_name",
-                "label": "Product Name"
             },
             {
                 "type": "product",

@@ -64,7 +64,7 @@
                         {%- endfor -%}
                     {% endif %}
                     
-                    <div class="section_header text-start {% if product.handle == 'q-rejuvalight-pro-facewear' or product.handle == 'q-rejuvalight-pro-facewear-onyx' or product.handle == 'face-serum' or product.handle == 'neck-decolletage-led' %}text-header-original{% endif %}">
+                    <div class="section_header text-start">
                         {% if section.settings.heading != blank %}
                             <h1 class="title-xl d-none d-md-block">{{ section.settings.heading | replace: '\n', '<br />' }}</h1>
                         {% endif %}
@@ -75,12 +75,6 @@
                         {% endif %}
                     </div>
                     
-                    {% if product.handle == 'q-rejuvalight-pro-facewear' or product.handle == 'q-rejuvalight-pro-facewear-onyx' or product.handle == 'face-serum' or product.handle == 'neck-decolletage-led'  %}
-                        <div class="section_header text-start text-header-test">
-                            <h1>{{ section.settings.test_product_name }}</h1>
-                        </div>
-                    {% endif %}
-
                     {% unless page.handle == 'qure-micro-infusion-landing-page-affiliate' %}
                         <div class="price_wrap">
                             <div class="price">
@@ -487,15 +481,6 @@
                 "type": "text",
                 "id": "heading_mobile",
                 "label": "t:common.heading.mobile.label"
-            },
-            {
-                "type": "paragraph",
-                "content": "header test"
-            },
-            {
-                "type": "text",
-                "id": "test_product_name",
-                "label": "Product Name"
             },
             {
                 "type": "range",

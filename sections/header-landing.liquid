@@ -32,54 +32,58 @@
             <header>
                 <div class="header-new new-hp-header">
                     
-                    <!-- start mobile menu -->
-                    <nav class="mobile-menu-custome">
-                        <div class="hamburger-container">
-                            <ul class="hamburger">
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </div>
-                        <div id="menu" class="menu_with_icons">
-                            {% if navigation_link_count > 0 %}
-                                <ul>
-                                    <hr>
-                                    {%- for block in section.blocks offset:announcement_count -%}
-                                        {% if block.type == 'navigation-link' %}
-                                            <li class="title">
-                                                <a href="{{ block.settings.link_url }}" aria-label="{{ block.settings.link_label | escape }}">
-                                                    <div class="menuBlock">
-                                                        {% if block.settings.image != blank %}
-                                                            <img class="img-fluid" src="{{ block.settings.image | img_url: '150x' }}" alt="" />
-                                                        {% endif %}
-                                                        <span>{{ block.settings.link_label }}</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        {% endif %}
-                                    {%- endfor -%}
+                    {% if navigation_link_count > 0 %}
+                        <!-- start mobile menu -->
+                        <nav class="mobile-menu-custome">
+                            <div class="hamburger-container">
+                                <ul class="hamburger">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
                                 </ul>
-                            {% endif %}
-
-                            <div class="menu_icon_footer">
-                                <div class="mi_ftrBlock">
-                                    <img src="{{ 'header-shipping.svg' | asset_url }}" alt="">
-                                    <span>Free Shipping Worldwide</span>
-                                </div>
-                                <div class="mi_ftrBlock">
-                                    <img src="{{ 'header-buy_now.svg' | asset_url }}" alt="">
-                                    <span>Buy Now, <br />Pay Later</span>
-                                </div>
-                                <div class="mi_ftrBlock">
-                                    <img src="{{ 'header-clinical.svg' | asset_url }}" alt="">
-                                    <span>Clinical-Grade Skincare</span>
-                                </div>
-
                             </div>
-                        </div>
-                    </nav>
-                    <!-- end mobile menu -->
+                            <div id="menu" class="menu_with_icons">
+                                {% if navigation_link_count > 0 %}
+                                    <ul>
+                                        <hr>
+                                        {%- for block in section.blocks offset:announcement_count -%}
+                                            {% if block.type == 'navigation-link' %}
+                                                <li class="title">
+                                                    <a href="{{ block.settings.link_url }}" aria-label="{{ block.settings.link_label | escape }}">
+                                                        <div class="menuBlock">
+                                                            {% if block.settings.image != blank %}
+                                                                <img class="img-fluid" src="{{ block.settings.image | img_url: '150x' }}" alt="" />
+                                                            {% endif %}
+                                                            <span>{{ block.settings.link_label }}</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            {% endif %}
+                                        {%- endfor -%}
+                                    </ul>
+                                {% endif %}
+
+                                <div class="menu_icon_footer">
+                                    <div class="mi_ftrBlock">
+                                        <img src="{{ 'header-shipping.svg' | asset_url }}" alt="">
+                                        <span>Free Shipping Worldwide</span>
+                                    </div>
+                                    <div class="mi_ftrBlock">
+                                        <img src="{{ 'header-buy_now.svg' | asset_url }}" alt="">
+                                        <span>Buy Now, <br />Pay Later</span>
+                                    </div>
+                                    <div class="mi_ftrBlock">
+                                        <img src="{{ 'header-clinical.svg' | asset_url }}" alt="">
+                                        <span>Clinical-Grade Skincare</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </nav>
+                        <!-- end mobile menu -->
+                    {% else %}
+                        <div class="mobile-menu-custome" style="width: 33% !important;"></div>
+                    {% endif %}
 
                     <!-- start desktop menu -->
                     {% if navigation_link_count > 0 %}
@@ -92,6 +96,8 @@
                                 {% endif %}
                             {%- endfor -%}
                         </ul>
+                    {% else %}
+                        <div class="menu" style="width: 33% !important;"></div>
                     {% endif %}
 
                     <div class="header-logo">
