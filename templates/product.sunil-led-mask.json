@@ -84,7 +84,6 @@
       "settings": {
         "heading": "Repair & rejuvenate your skin with our Light Therapy Mask",
         "heading_mobile": "Customizable LED Light Therapy Mask",
-        "test_product_name": "Q-Rejuvalight Pro LED Mask",
         "product_images_limit": 5,
         "product_button_label": "Product",
         "before_after_images_limit": 2,
@@ -99,61 +98,84 @@
       }
     },
     "featuredin_yT6yRP": {
-      "type": "featuredin",
+      "type": "featuredin_extended",
       "blocks": {
-        "image_LcHDT9": {
+        "image_n99dk9": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/elle.svg",
-            "mobile_hide": false
+            "image": "shopify:\/\/shop_images\/vogue-black.svg"
           }
         },
-        "image_3wjhLt": {
-          "type": "image",
+        "text_hjVp7i": {
+          "type": "text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/glamour.svg",
-            "mobile_hide": false
+            "text": "<p>“The professional grade is the perfect addition to any at-home skincare routine.”<\/p>"
           }
         },
-        "image_VytDAA": {
+        "image_XrzjQ3": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/vogue.svg",
-            "mobile_hide": false
+            "image": "shopify:\/\/shop_images\/womenshealth_e1cfba2e-29da-4232-9235-69184bd9d1a3.svg"
           }
         },
-        "image_r78DY6": {
-          "type": "image",
+        "text_t9tnXK": {
+          "type": "text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/grazia.svg",
-            "mobile_hide": false
+            "text": "<p>\"Treatment time is only three minutes—among the fastest of all devices.\"<\/p>"
           }
         },
-        "image_4cmhLn": {
+        "image_PmUxLt": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/cosmopolitan.svg",
-            "mobile_hide": true
+            "image": "shopify:\/\/shop_images\/elle-black_af7c0fb6-1535-4d44-b64c-b96b7d90bf08.svg"
           }
         },
-        "image_BK9W8D": {
+        "text_bxTn4H": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"A multi-use LED mask with five different light setting options to plump smooth and rejuvenate all skin types.\"<br\/>                                    <\/p>"
+          }
+        },
+        "image_hNLLqX": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bazaar_889503c3-d4d6-4eb0-b7be-dd1212b56c58.png",
-            "mobile_hide": true
+            "image": "shopify:\/\/shop_images\/cosmopolitan-black.svg"
+          }
+        },
+        "text_k6KEBE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>“The combination of colors allows you to customize which lights are used, maximizing its benefits to help your skin...”<br\/>                            <\/p>"
+          }
+        },
+        "image_ebp8NW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/grazia_black.svg"
+          }
+        },
+        "text_Mnmb4P": {
+          "type": "text",
+          "settings": {
+            "text": "<p>“The Qure mask is the FIRST mask in the world that adapts to your skin!...There is an app that reminds you of the treatments too.”<\/p>"
           }
         }
       },
       "block_order": [
-        "image_LcHDT9",
-        "image_3wjhLt",
-        "image_VytDAA",
-        "image_r78DY6",
-        "image_4cmhLn",
-        "image_BK9W8D"
+        "image_n99dk9",
+        "text_hjVp7i",
+        "image_XrzjQ3",
+        "text_t9tnXK",
+        "image_PmUxLt",
+        "text_bxTn4H",
+        "image_hNLLqX",
+        "text_k6KEBE",
+        "image_ebp8NW",
+        "text_Mnmb4P"
       ],
       "settings": {
-        "heading": "FEATURED IN"
+        "heading": "FEATURED IN",
+        "slider_type": "five_slides"
       }
     },
     "before_after_slider_Nfk96E": {
@@ -238,145 +260,166 @@
         "text": ""
       }
     },
-    "trusted_rqeQrY": {
-      "type": "trusted",
+    "text_with_video_TwRQhd": {
+      "type": "text-with-video",
       "blocks": {
-        "feedback_ANdJn9": {
-          "type": "feedback",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/cl_shah.webp",
-            "text": "<p>\"This is <strong>my absolute favorite mask.<\/strong> It’s quick, effective and patients see <strong>great results with consistent use.<\/strong>\"<\/p><h6><strong>Dr Shah, MD <\/strong>Certified Dermatologist<\/h6>"
-          }
-        },
-        "feedback_kGecXN": {
-          "type": "feedback",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/cl_max.webp",
-            "text": "<p>\"After trying countless masks on the market this comes out on top. <strong>Build, clinical wavelengths, the usability of the app, it’s unbeatable<\/strong>.\"<\/p><h6><strong>Dr Maxfield, MD<\/strong> Certified Dermatologist<\/h6>"
-          }
-        },
-        "video_JXWdaW": {
+        "video_xLP3b6": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/trusted_prem.webp",
-            "video_url": "https:\/\/www.youtube.com\/watch?v=_w8yWCPeijg",
-            "video_label": "Watch Video",
-            "wistia_id": "",
-            "text": "<p>Qure has a fully customized mask which has 5 clinical-grade wavelength for anti-ageing, hyperpigmentation and acne and app makes it very easy to customize and control...\"<\/p><h6><strong>Dr Prem,<\/strong> Board Certified Dermatologist<\/h6>"
+            "image": "shopify:\/\/shop_images\/trusted_2.jpg",
+            "video": "https:\/\/www.youtube.com\/watch?v=I2Fe-kP-2Jg",
+            "title": "Dr Shah, MD",
+            "des": "Board certified dermatologist"
           }
         },
-        "video_XTbFJw": {
-          "type": "video",
-          "disabled": true,
+        "text_content_zQrNN6": {
+          "type": "text_content",
           "settings": {
-            "image": "shopify:\/\/shop_images\/trusted_maren.webp",
-            "video_url": "https:\/\/www.youtube.com\/watch?v=DvA8FkhJqso",
-            "video_label": "Watch Video",
-            "wistia_id": "",
-            "text": "<p>\"There are actually many of these on the market but I love this one for several reasons. It's well made, it has a comfortable adjustable headband, it comes with an app..\"<\/p><h6><strong>Dr. Maren Locke,<\/strong> Board Certified Dermatologist<\/h6>"
-          }
-        },
-        "video_xaDaQw": {
-          "type": "video",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/trusted_greeney_8f7d6159-5134-4725-bbad-183898950e84.webp",
-            "video_url": "https:\/\/www.youtube.com\/watch?v=1iXBgh7WPOY",
-            "video_label": "Watch Video",
-            "wistia_id": "",
-            "text": "<p>\"Qure's anti-ageing treatment gets down deep into your skin to stimulate collagen & makes a big difference in skin texture, decreasing fine lines & wrinkles.\"<\/p><h6><strong>Dr Greeney,<\/strong> Board Certified Dermatologist<\/h6>"
-          }
-        },
-        "video_JznTqy": {
-          "type": "video",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/trusted_maxfield.webp",
-            "video_url": "https:\/\/www.youtube.com\/watch?v=AeksxRPZyrA",
-            "video_label": "Watch Video",
-            "wistia_id": "",
-            "text": "<p>\"This is one of my faves from @qureskincare. It’s a high quality mask and personalizable\"<\/p><h6><strong>Dr Maxfield,<\/strong> Board Certified Dermatologist<\/h6>"
-          }
-        },
-        "video_rVzjQy": {
-          "type": "video",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/trusted_natasha.webp",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ebb5f0ed35b844f7b9f2486db670748b.mp4?_ga=2.232823709.263527484.1696998277-1098661776.1696998277",
-            "video_label": "Watch Video",
-            "wistia_id": "",
-            "text": "<p>\"I like this one because it allows you to customize your treatment... This is a great skin care investment\"<\/p><h6><strong>Dr Natasha Henry,<\/strong> Medical Doctor<\/h6>"
-          }
-        },
-        "video_9pKekb": {
-          "type": "video",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/trusted_sarah.webp",
-            "video_url": "",
-            "video_label": "Watch Video",
-            "wistia_id": "yhzax4egvh",
-            "text": "<p>\"Qure’s LED mask combines red lights and blue lights, meaning it can benefit EVERYONE\"<\/p><h6><strong>Dr Sarah Too,<\/strong> Medical Doctor<\/h6>"
-          }
-        },
-        "video_kkYG7b": {
-          "type": "video",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/trusted_zeitany.webp",
-            "video_url": "",
-            "video_label": "Watch Video",
-            "wistia_id": "gpf4liwnyn",
-            "text": "<p>\"It's the only LED mask on the market that pairs with an app and is customizable\"<\/p><h6><strong>Dr Zeitany,<\/strong> Board Certified Dermatologist<\/h6>"
-          }
-        },
-        "video_63bzGN": {
-          "type": "video",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Hunter.png",
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/af8d3f37480346a5b2061c6cb225e2d8.mp4",
-            "video_label": "Watch Video",
-            "wistia_id": "",
-            "text": "<p>\"I have been using this mask with the anti-breakout settings, which has been fantastic to help clear up my complexion in only two weeks.\"<\/p><h6><strong>Dr Hunter, <\/strong>NHS & Aesthetics Doctor<\/h6>"
-          }
-        },
-        "video_JwEJy3": {
-          "type": "video",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/alexis.png",
-            "video_url": "https:\/\/youtu.be\/ZMGm5PmWzF0?t=649",
-            "video_label": "Watch Video",
-            "wistia_id": "",
-            "text": "<p>“ You can get a Clinical treatment at home safely and conveniently... It is particularly beneficial for those with melanin rich Skin”<\/p><p><strong>Dr Alexis Stephens<\/strong>,  Board-Certified Dermatologist<\/p>"
+            "trust_icon": "shopify:\/\/shop_images\/verified_design.svg",
+            "trust_des": "Trusted and recommended by world leading Dermatologists",
+            "title": "\"The best LED mask <strong>on the market in my opinion at this time, that being said you do need to <\/strong>use this consistently to see results…\"",
+            "title_clr": "#000000",
+            "title_strong_clr": "#797d7c"
           }
         }
       },
       "block_order": [
-        "feedback_ANdJn9",
-        "feedback_kGecXN",
-        "video_JXWdaW",
-        "video_XTbFJw",
-        "video_xaDaQw",
-        "video_JznTqy",
-        "video_rVzjQy",
-        "video_9pKekb",
-        "video_kkYG7b",
-        "video_63bzGN",
-        "video_JwEJy3"
+        "video_xLP3b6",
+        "text_content_zQrNN6"
       ],
       "settings": {
-        "classname": "trusted_bl",
-        "heading": "Trusted and recommended by world leading Dermatologists",
-        "heading_reduced": "World-leading dermatologists recommend it",
-        "likes": "4.8K",
-        "views": "192K views",
-        "image": "shopify:\/\/shop_images\/trusted_2.jpg",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=I2Fe-kP-2Jg",
-        "video_label": "Click To Watch Review",
-        "dermatoglis_check": "shopify:\/\/shop_images\/Layer_1.svg",
-        "dermatoglist_check_text": "Trusted and recommended by world leading Dermatologists",
-        "dermatoglist_left_subtext": "<p>\"The best LED mask on the market in my opinion at this time, that being said you do need to use this consistently to see results…\"<\/p>",
-        "dermatoglist_right_image": "shopify:\/\/shop_images\/doctor.png",
-        "dermatoglist_right_name": "Dr Shah, MD",
-        "dermatoglist_right_especiality": "Board certified dermatologist",
-        "dermatoglist_right_play": "shopify:\/\/shop_images\/octicon_play-16.svg",
-        "dermatoglist_right_video_url": "https:\/\/www.youtube.com\/watch?v=I2Fe-kP-2Jg"
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "testimonials_m84mqf": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_EitjK9": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/trusted_prem.webp",
+            "video_type": "youtube",
+            "video_link": "",
+            "youtube_link": "https:\/\/www.youtube.com\/watch?v=_w8yWCPeijg",
+            "wistia_id": "",
+            "badge_txt": "",
+            "title": "Qure has a fully customized mask which has 5 clinical-grade wavelength for anti-ageing, hyperpigmentation and acne and app makes it very easy to customize and control...",
+            "client_details": "<strong>Dr Prem,<\/strong>   Board Certified Dermatologist"
+          }
+        },
+        "testimonial_d3pmRz": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/trusted_greeney_8f7d6159-5134-4725-bbad-183898950e84.webp",
+            "video_type": "youtube",
+            "video_link": "",
+            "youtube_link": "https:\/\/www.youtube.com\/watch?v=1iXBgh7WPOY",
+            "wistia_id": "",
+            "badge_txt": "",
+            "title": "Qure's anti-ageing treatment gets down deep into your skin to stimulate collagen & makes a big difference in skin texture, decreasing fine lines & wrinkles",
+            "client_details": "<strong>Dr Greeney<\/strong>, Certified Dermatologist"
+          }
+        },
+        "testimonial_D3CC69": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/trusted_maxfield.webp",
+            "video_type": "youtube",
+            "video_link": "",
+            "youtube_link": "https:\/\/www.youtube.com\/watch?v=AeksxRPZyrA",
+            "wistia_id": "",
+            "badge_txt": "",
+            "title": "This is one of my faves from @qureskincare. It’s a high quality mask and personalizable",
+            "client_details": "<strong>Dr Maxfield,<\/strong> Board Certified Dermatologist"
+          }
+        },
+        "testimonial_FayfUe": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/trusted_natasha.webp",
+            "video_type": "video",
+            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ebb5f0ed35b844f7b9f2486db670748b.mp4",
+            "youtube_link": "",
+            "wistia_id": "",
+            "badge_txt": "",
+            "title": "I like this one because it allows you to customize your treatment... This is a great skin care investment",
+            "client_details": "<strong>Dr Natasha Henry, <\/strong>Medical Doctor"
+          }
+        },
+        "testimonial_PKTtDU": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/trusted_sarah.webp",
+            "video_type": "wistia",
+            "video_link": "",
+            "youtube_link": "",
+            "wistia_id": "wistia_async_yhzax4egvh",
+            "badge_txt": "",
+            "title": "Qure’s LED mask combines red lights and blue lights, meaning it can benefit EVERYONE",
+            "client_details": "<strong>Dr Sarah Too,<\/strong>  Medical Doctor"
+          }
+        },
+        "testimonial_epJ3rN": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/trusted_zeitany.webp",
+            "video_type": "wistia",
+            "video_link": "",
+            "youtube_link": "",
+            "wistia_id": "wistia_async_gpf4liwnyn",
+            "badge_txt": "",
+            "title": "It's the only LED mask on the market that pairs with an app and is customizable",
+            "client_details": "<strong>Dr Zeitany,<\/strong> Board Certified Dermatologist"
+          }
+        },
+        "testimonial_PjwcFL": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hunter.png",
+            "video_type": "video",
+            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/af8d3f37480346a5b2061c6cb225e2d8.mp4",
+            "youtube_link": "",
+            "wistia_id": "",
+            "badge_txt": "",
+            "title": "I have been using this mask with the anti-breakout settings, which has been fantastic to help clear up my complexion in only two weeks.",
+            "client_details": "<strong>Dr Hunter, <\/strong>NHS & Aesthetics Doctor"
+          }
+        },
+        "testimonial_GfkxXA": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/alexis.png",
+            "video_type": "youtube",
+            "video_link": "",
+            "youtube_link": "https:\/\/youtu.be\/ZMGm5PmWzF0?t=649",
+            "wistia_id": "",
+            "badge_txt": "Subscriber\/Views\/Followers",
+            "title": "You can get a Clinical treatment at home safely and conveniently... It is particularly beneficial for those with melanin rich Skin",
+            "client_details": "<strong>Dr Alexis Stephens<\/strong>,  Board-Certified Dermatologist"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_EitjK9",
+        "testimonial_d3pmRz",
+        "testimonial_D3CC69",
+        "testimonial_FayfUe",
+        "testimonial_PKTtDU",
+        "testimonial_epJ3rN",
+        "testimonial_PjwcFL",
+        "testimonial_GfkxXA"
+      ],
+      "settings": {
+        "enable_autoplay": false,
+        "enable_loop": false,
+        "slide_on_desktop": 3,
+        "slide_on_tablet": 2,
+        "slide_on_mobile": 1,
+        "space_between_slides": 20,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "custom_class": "trusted_bl trustedVerified"
       }
     },
     "icons_list_Fkgrmd": {
@@ -1171,7 +1214,8 @@
     "main",
     "featuredin_yT6yRP",
     "before_after_slider_Nfk96E",
-    "trusted_rqeQrY",
+    "text_with_video_TwRQhd",
+    "testimonials_m84mqf",
     "icons_list_Fkgrmd",
     "results_Yfghzf",
     "two_column_box_xCB6mV",

@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "custom_qurify_filter_lp_product_Mjcjbn": {
@@ -74,6 +65,7 @@
         "video_before_and_after_cJDkYG": {
           "type": "video_before_and_after",
           "settings": {
+            "video_wistia_id": ""
           }
         }
       },
@@ -268,7 +260,8 @@
         "text_HCBmhc"
       ],
       "settings": {
-        "heading": "FEATURED IN"
+        "heading": "FEATURED IN",
+        "slider_type": "five_slides"
       }
     },
     "uses_w3CMA7": {
@@ -314,6 +307,8 @@
         "column_JATQdF"
       ],
       "settings": {
+        "section_heading": "",
+        "subheading": ""
       }
     },
     "progress_blocks_d8f7qn": {
@@ -507,37 +502,55 @@
         "wistia_Kj6tir": {
           "type": "wistia",
           "settings": {
-            "wistia_id": "j0mvc1o853"
+            "wistia_id": "j0mvc1o853",
+            "dr_name": "",
+            "board": "",
+            "desc": ""
           }
         },
         "wistia_hGAhbA": {
           "type": "wistia",
           "settings": {
-            "wistia_id": "ltv3wi7ayy"
+            "wistia_id": "ltv3wi7ayy",
+            "dr_name": "",
+            "board": "",
+            "desc": ""
           }
         },
         "wistia_zenznC": {
           "type": "wistia",
           "settings": {
-            "wistia_id": "lwu2n3u6uc"
+            "wistia_id": "lwu2n3u6uc",
+            "dr_name": "",
+            "board": "",
+            "desc": ""
           }
         },
         "wistia_Ni4zAL": {
           "type": "wistia",
           "settings": {
-            "wistia_id": "3aru3yqv0d"
+            "wistia_id": "3aru3yqv0d",
+            "dr_name": "",
+            "board": "",
+            "desc": ""
           }
         },
         "wistia_DNpHDQ": {
           "type": "wistia",
           "settings": {
-            "wistia_id": "clfa0z9apd"
+            "wistia_id": "clfa0z9apd",
+            "dr_name": "",
+            "board": "",
+            "desc": ""
           }
         },
         "wistia_b3CVhx": {
           "type": "wistia",
           "settings": {
-            "wistia_id": "wumkizwy48"
+            "wistia_id": "wumkizwy48",
+            "dr_name": "",
+            "board": "",
+            "desc": ""
           }
         }
       },
@@ -551,7 +564,9 @@
       ],
       "settings": {
         "heading": "Dermatologist Tried, Tested, & Approved",
-        "classname": "section videosQure"
+        "classname": "section videosQure",
+        "btn": "",
+        "btn_url": ""
       }
     },
     "results_slider_RTd6ad": {
@@ -680,9 +695,40 @@
     },
     "image_text_jBxiPm": {
       "type": "image-text",
+      "blocks": {
+        "image_xAnjen": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/light_therapy.webp",
+            "custom_img": "",
+            "order_mob": false
+          }
+        },
+        "text_ELmdge": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Just as plants need sunlight, our skin craves the rejuvenating power of light. But in our modern world, relentless exposure to harsh artificial lights can leave our complexion dull and damaged.<br\/><br\/>Enter red light therapy — the ultimate skincare revolution.<br\/><br\/>Harnessing the transformative energy of LED light, it penetrates deep into the skin, kickstarting cellular repair and renewal from within. Say goodbye to tired, lacklustre skin and hello to a luminous, youthful glow.<\/p><p>Embrace the light, embrace the beauty!<\/p>",
+            "btn_text": "",
+            "btn_url": "",
+            "custom_class": "",
+            "heading2": "",
+            "text2": "",
+            "heading3": "",
+            "text3": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_xAnjen",
+        "text_ELmdge"
+      ],
       "settings": {
+        "background": "bg-lightGrey",
         "heading": "Why Light Therapy Is Proven To Work",
-        "text": "<p>Just as plants need sunlight, our skin craves the rejuvenating power of light. But in our modern world, relentless exposure to harsh artificial lights can leave our complexion dull and damaged.<\/p><p>Enter red light therapy — the ultimate skincare revolution.<\/p><p>Harnessing the transformative energy of LED light, it penetrates deep into the skin, kickstarting cellular repair and renewal from within. Say goodbye to tired, lacklustre skin and hello to a luminous, youthful glow.<\/p><p>Embrace the light, embrace the beauty!<\/p>"
+        "hide_on_mob": true,
+        "column": 6,
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     },
     "compare_8hnCcH": {
@@ -795,6 +841,8 @@
         "button_xPybyJ": {
           "type": "button",
           "settings": {
+            "ext_btn": "",
+            "ext_url": ""
           }
         }
       },
@@ -810,6 +858,7 @@
         "button_xPybyJ"
       ],
       "settings": {
+        "background": "bg_yellow",
         "classname": "bg_yellow",
         "heading": "Have questions?",
         "text": "<p>We have answers.<\/p>",

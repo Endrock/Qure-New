@@ -57,7 +57,7 @@
                                         <div class="skin_item_n">
                                             {% if block.settings.image != blank %}
                                                 <div class="skin_item_n_img">
-                                                    <img src="{{ block.settings.image | img_url: '400x' }}" alt="{{ block.settings.image.alt | escape }}" class="img-fluid">
+                                                    <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}" class="img-fluid">
                                                 </div>
                                             {% endif %}
 

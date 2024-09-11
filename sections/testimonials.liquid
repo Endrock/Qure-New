@@ -9,14 +9,14 @@ assign slides_space = st.space_between_slides
 -%}
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.40 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.40 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.40 | round: 0 }}px !important;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.40 | round: 0 }}px !important;
   }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings40 }}px;
+      padding-top: {{ section.settings.padding_top }}px !important;
+      padding-bottom: {{ section.settings.padding_bottom }}px !important;
     }
   }
   #shopify-section-{{ section.id }}.trusted_bl.trustedVerified {
@@ -81,7 +81,7 @@ assign slides_space = st.space_between_slides
                                                 <div class="wistia_responsive_wrapper"
                                                     style="height:100%;left:0;position:absolute;top:0;width:100%;">
                                                     <span
-                                                        class="wistia_embed {{bs.wistia_id}} popover=true videoFoam=true"
+                                                        class="wistia_embed wistia_async_{{bs.wistia_id}} popover=true videoFoam=true"
                                                         style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span>
                                                 </div>
                                                 <span class="justify-content-center">
@@ -145,7 +145,7 @@ assign slides_space = st.space_between_slides
             "min": 2,
             "max": 4,
             "step": 1,
-            "label": "t:responsive.desktop.slides",
+            "label": "t:sections.slider.settings.desktop",
             "default": 3
         },
         {
@@ -154,7 +154,7 @@ assign slides_space = st.space_between_slides
             "min": 2,
             "max": 4,
             "step": 1,
-            "label": "t:responsive.tablet.slides",
+            "label": "t:sections.slider.settings.tablet",
             "default": 2
         },
         {
@@ -163,7 +163,7 @@ assign slides_space = st.space_between_slides
             "min": 1,
             "max": 4,
             "step": 1,
-            "label": "t:responsive.mobile.slides",
+            "label": "t:sections.slider.settings.mobile",
             "default": 1
         },
         {
@@ -231,7 +231,7 @@ assign slides_space = st.space_between_slides
                       },
                       {
                         "value": "youtube",
-                        "label": "t:common.wistia.wistia"
+                        "label": "t:settings_schema.social-media.settings.social_youtube_link.label"
                       }
                     ],
                     "default": "video"
@@ -312,7 +312,7 @@ assign slides_space = st.space_between_slides
                     "type": "testimonial",
                     "settings":{
                         "video_type": "wistia",
-                        "wistia_id":"wistia_async_yuqb3gno7g",
+                        "wistia_id":"yuqb3gno7g",
                         "title":"“Qure's anti-ageing treatment gets down deep into your skin to stimulate collagen & makes a big difference in skin texture, decreasing fine lines & wrinkles"
                     }
                 },

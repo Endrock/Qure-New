@@ -1,5 +1,5 @@
 <!-- -- main banner start -- -->
-<div class="main_banner">
+<div class="main_banner{% if section.settings.classname != blank %} {{ section.settings.classname }}{% endif %}">
 
     {% if section.settings.image != blank %}
         <picture>
@@ -16,12 +16,12 @@
         </picture>
     {% endif %}
 
-    <div class="main_b_wrapper {{ section.settings.image }}">
+    <div class="main_b_wrapper {{ section.settings.image }} {% if section.settings.align_right == true %}top-30{% endif %}">
         <div class="container">
-            <div class="row{% if section.settings.align_center == true %} justify-content-center{% endif %}">
-                <div class="col-12 col-md-6 col-sm-8">
-                    <div class="{% if section.settings.align_center == false %}banner_content{% endif %}">
-                        <div class="section_header{% if section.settings.align_center == true %} text-center{% endif %}">
+            <div class="row{% if section.settings.align_center == true %} justify-content-center{% endif %} {% if section.settings.align_right == true %} justify-content-end{% endif %}">
+                <div class="col-12 col-md-{% if section.settings.align_right == true %}5{% else %}6{% endif %} col-sm-8">
+                    <div class="{% if section.settings.align_center == false %}banner_content{% endif %} {% if section.settings.align_right == true %} mw-100{% endif %}">
+                        <div class="section_header{% if section.settings.align_center == true %} text-center{% endif %} {% if section.settings.align_right == true %}text-center text-md-start{% endif %}">
                             {% if section.settings.heading != blank %}
                                 <h1 class="title-xl">{{ section.settings.heading }}</h1>
                             {% endif %}
@@ -88,6 +88,12 @@
                 "type": "checkbox",
                 "id": "align_center",
                 "label": "t:common.align.center.label",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "align_right",
+                "label": "t:common.align.right",
                 "default": false
             },
             {

@@ -208,7 +208,7 @@
         "text_ybVTyM"
       ],
       "custom_css": [
-        "@media (max-width: 575px) {.single-step_img {margin: 0 -24px !important;} .single_step {padding: 30px 0;}}"
+        "@media (max-width: 575px) {.single-step_img {margin: 0 -24px !important; }}"
       ],
       "settings": {
         "background": "bg_clr_transparent",
@@ -307,7 +307,7 @@
         "column_crELCA"
       ],
       "settings": {
-        "heading": "",
+        "heading": "More Help at Your Fingertips",
         "sub_heading": "",
         "container": "container",
         "slide_on_desktop": 3,

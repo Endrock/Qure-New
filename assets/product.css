@@ -7305,7 +7305,7 @@ p.title_mob {
     margin-bottom: 30px;
 }
 
-.compare__titleBlock .compare__title {
+.compare__titleBlock .compare__title, .compare__titleBlock .compare__title h4 {
     font-family: 'Canela Light';
     font-size: 20px;
     font-style: normal;

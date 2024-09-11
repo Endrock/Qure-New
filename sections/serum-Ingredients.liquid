@@ -8,6 +8,7 @@
             {{ section.settings.subheading }}
         </div>
         <div class="unique_grid">
+            {% assign random_number='now' | date: "%s" | modulo: 100 | plus: 1 %}
             {% for block in section.blocks %}
                 {% case block.type %}
                     {% when 'Serum' %}
@@ -46,17 +47,17 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion accordion-flush" id="accordionQuesExample">
+                                <div class="accordion accordion-flush" id="accordion-{{ random_number }}">
                                     <div class="accordion-item u_item_question {{ block.settings.background }}">
                                         <h2 class="accordion-header u_item_expandable {{ block.settings.background }}">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                                 data-bs-target="#u_item_question_1{{ block.id }}" aria-expanded="false"
                                                 aria-controls="u_item_question_1{{ block.id }}">
                                                 <div class="containers">{{ block.settings.title1 }}</div>
                                             </button>
                                         </h2>
                                         <div id="u_item_question_1{{ block.id }}" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionQuesExample">
+                                            data-bs-parent="#accordion-{{ random_number }}">
                                             <div class="accordion-body">
                                                 <div class="containers">
                                                 {{ block.settings.drop_txt1 }}
@@ -73,7 +74,7 @@
                                             </button>
                                         </h2>
                                         <div id="u_item_question_3{{ block.id }}" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionQuesExample">
+                                            data-bs-parent="#accordion-{{ random_number }}">
                                             <div class="accordion-body">
                                                 <div class="containers">
                                                     {{ block.settings.drop_txt2 }}
@@ -179,7 +180,7 @@
                         },
                         {
                             "value": "bg-yellow",
-                            "label": "Yellow"
+                            "label": "t:common.background.yellow"
                         }
                     ]
                 },
@@ -280,7 +281,7 @@
         },
         {
             "type": "or",
-            "name": "Or",
+            "name": "t:common.serum.or",
             "limit": 1,
             "settings": [
                 {

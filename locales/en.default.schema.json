@@ -52,7 +52,9 @@
   "progressBlock": {
     "column": {
       "percent_text": "Percentage",
-      "percent_bars": "Percentage Bars"
+      "percent_bars": "Percentage Bars",
+      "partition": "Column Partition",
+      "info": "For image or video column"
     }
   },
   "product": {
@@ -94,10 +96,18 @@
     "header": {
       "label": "Mobile Content"
     },
+    "image": {
+      "label": "Image Mobile"
+    },
     "benefits": {
     "benefits": {
       "label": "Benefits List"
-    }
+    },
+    "order": {
+      "label": "Order on mobile",
+      "bottom": "Bottom"
+    },
+    "hide": "Hide on mobile"
   },
   "review": {
     "heading": {
@@ -105,11 +115,21 @@
     }
   },
   "common": {
+    "container": {
+      "size": "Section Width",
+      "full": "Full",
+      "half": "Contain"
+    },
+    "text_icon": {
+      "label": "Heading with Icon"
+    },
+    "mark": "Mark",
     "testimonial": {
       "text": "Testimonial text"
     },
     "tab": {
-      "name": "Tab Name"
+      "name": "Tab Name",
+      "tab": "Tab"
     },
     "skin": {
       "concerns": "Skin Concerns"
@@ -137,7 +157,8 @@
     },
     "serum": {
       "label": "Serum For",
-      "type": "Serum Type"
+      "type": "Serum Type",
+      "or": "Or"
     },
     "sale": {
     "sale": {
@@ -167,6 +188,8 @@
     },
     "comment": {
       "label": "Comment",
+      "show": "Show Comment",
+      "flag": "Comment Flag Color",
       "amount": {
         "label": "Comments amount"
       }
@@ -178,7 +201,8 @@
       "label": "Align",
       "center": {
         "label": "Align center"
-      }
+      },
+      "right": "Align Right"
     },
     "choose_option": {
       "first": {
@@ -196,7 +220,10 @@
       }
     },
     "name": {
-      "label": "Name"
+      "label": "Name",
+      "call": "Call",
+      "email": "Email",
+      "chat": "Chat"
     },
     "subheading": {
       "label": "Subheading",
@@ -290,7 +317,9 @@
       "label": "Result"
     },
     "icon": {
-      "label": "Icon"
+      "label": "Icon",
+      "check": "Check",
+      "cross": "Cross"
     },
     "column": {
       "label": "Column",
@@ -326,7 +355,13 @@
     },
     "text": {
       "label": "Text",
-      "content": "Text content"
+      "content": "Text content",
+      "with_acco": "Text With Dropdown",
+      "dropdown": "Dropdowns",
+      "count": {
+        "one": "1 Text",
+        "five": "5 Text"
+      }
     },
     "html": {
       "label": "Html"
@@ -368,7 +403,8 @@
       "label": "Wistia video",
       "wistia": "Wista",
       "id": {
-        "label": "Wistia id"
+        "label": "Wistia id",
+        "mobile": "Wistia video mobile"
       }
     },
     "button": {
@@ -724,6 +760,7 @@
     },
     "featuredin": {
       "name": "Featured in",
+      "two": "Featured in qurify LP",
       "settings": {
       },
       "blocks": {
@@ -750,6 +787,7 @@
       "blocks": {
         "slide": {
           "name": "Slide",
+          "two_slide": "2 Slides only",
           "settings": {
             "popup_content": {
               "label": "Popup content"
@@ -760,8 +798,12 @@
     },
     "slider": {
       "name": "Slider",
+      "type": "Slider Type",
       "space_between": "Space between slides",
       "settings": {
+        "desktop": "Slides on desktop",
+        "tablet": "Slides on tablet",
+        "mobile": "Slides on mobile"
       },
       "blocks": {
       }
@@ -844,6 +886,7 @@
       "header": "Trust line settings",
       "icon": "Trust icon",
       "text": "Trust text",
+      "dermatologist": "Trusted Dermatologist",
       "settings": {
       },
       "blocks": {
@@ -879,6 +922,14 @@
     },
     "compare": {
       "name": "Compare",
+      "product": "Product Comparing",
+      "info": "Which points you want to compare",
+      "points": {
+        "one": "Point 1",
+        "two": "Point 2",
+        "three": "Point 3",
+        "four": "Point 4"
+      },
       "settings": {
       },
       "blocks": {
@@ -1182,7 +1233,9 @@
     },
     "box-slider": {
       "name": "Box Slider",
-      "button": "Box Text"
+      "button": "Box Text",
+      "box": "Box",
+      "two": "Box Slider 2"
     },
     "f-collection": {
       "name": "Featured Collection"
@@ -1203,7 +1256,8 @@
       "name": "Image & Text"
     },
     "how_to_use": {
-      "name": "How to Use"
+      "name": "How to Use",
+      "two": "How to Use 2"
     },
     "product_grid": {
       "label": "Products Grid"
@@ -1225,6 +1279,24 @@
     },
     "ingredients-dropdown": {
       "label": "Ingredients dropdown"
+    },
+    "main": {
+      "label": "Main"
+    },
+    "guide_content": {
+      "label": "Guide Content"
+    },
+    "compare_products": {
+      "label": "Compare Products"
+    },
+    "feature_extend": {
+      "label": "Featured Extended"
+    },
+    "have_ques": {
+      "label": "Have Questions"
+    },
+    "founder": {
+      "label": "Qure Founder"
     }
   }
 }

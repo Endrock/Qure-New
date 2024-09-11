@@ -1,11 +1,13 @@
 <!-- -- result section start -- -->
-<div class="result_s section">
+<div class="result_s section {% if section.settings.slide_count != blank %} result_s2 {% endif %}">
     <div class="container">
         <div class="section_header text-start text-md-center">
+            {% if section.settings.heading != blank %}
             <h2 class="title-lg">
                 {{ section.settings.heading }}
             </h2>
-            {% if section.settings.text %}
+            {% endif %}
+            {% if section.settings.text != blank %}
                 {{ section.settings.text }}
             {% endif %}
         </div>
@@ -13,7 +15,7 @@
             <div class="result_s_wrapper">
                 <div class="swiper  dot_pagination result_slider_lp twa__swiper" id="twa__swiper-result_slider_lp"
                     data-section-id="result_slider_lp" data-autoplay="false" data-loop="false"
-                    data-centerslide="false" data-mobile="1" data-tablet="2" data-desktop="3" data-spacing="20"
+                    data-centerslide="false" data-mobile="1" data-tablet="2" data-desktop="{% if section.settings.slide_count != blank %} 2 {% else %} 3 {% endif %}" data-spacing="20"
                     data-arrowleft="result_slider_lp-swiper-prev" data-arrowright="result_slider_lp-swiper-next">
                     <div class="swiper-wrapper">
                         {%- for block in section.blocks -%}
@@ -119,6 +121,12 @@
                 "type": "richtext",
                 "id": "text",
                 "label": "t:common.text.label"
+            },
+            {
+                "type": "checkbox",
+                "id": "slide_count",
+                "label": "t:sections.before-after-box.blocks.slide.two_slide",
+                "default" :false
             },
             {
                 "type": "text",

@@ -17,7 +17,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/star4.8.svg",
             "text": "<p>97% customer satisfaction rate<\/p>",
-            "product": ""
+            "product": "micro-infusion-targeted-patches"
           }
         },
         "list_qEJGnV": {
@@ -140,7 +140,31 @@
         "heading": ""
       }
     },
-    "two_column_box_T6ewpY": {
+    "featuredin_extended_kENYrm": {
+      "type": "featuredin_extended",
+      "blocks": {
+        "text_JYLPRq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"This helps bring life and radiance to your eyes, the focal point of your face.\"<\/p>"
+          }
+        },
+        "image_VRfJ7m": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vogue-black.svg"
+          }
+        }
+      },
+      "block_order": [
+        "text_JYLPRq",
+        "image_VRfJ7m"
+      ],
+      "settings": {
+        "heading": "FEATURED IN"
+      }
+    },
+    "two_column_box_LbCXBk": {
       "type": "two-column-box",
       "blocks": {
         "image_Ur9jQT": {
@@ -700,7 +724,13 @@
   "order": [
     "product_landing_tetLcC",
     "featuredin_zGJF46",
+<<<<<<< HEAD
     "two_column_box_T6ewpY",
+=======
+    "featuredin_extended_kENYrm",
+    "two_column_box_LbCXBk",
+    "one_column_box_ACaxnJ",
+>>>>>>> cleanup/holiday-lp-bundles-per-concern-test
     "results_pkwNpm",
     "videos_RDmhf8",
     "two_column_box_cGgxCb",

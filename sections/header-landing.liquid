@@ -82,7 +82,7 @@
                         </nav>
                         <!-- end mobile menu -->
                     {% else %}
-                        <div class="mobile-menu-custome" style="width: 33% !important;"></div>
+                        <div class="mobile-menu-custome"></div>
                     {% endif %}
 
                     <!-- start desktop menu -->
@@ -118,9 +118,9 @@
                                 </li>
                             {% endif %}
                             
-                            <li class="nav__item header_gift_btn d-md-none">
+                            <li class="nav__item header_gift_btn pe-md-0 pe-3">
                                 <a href="javascript:;" class="nav__url" onclick="StampedFn.toggleRewardsModal()">
-                                    <img src="{{ 'header-gift.svg' | asset_url }}"  class="fa fa-shopping-cart nav__icon cart-mb-icon" alt="navigation">
+                                    <img src="{{ 'header-gift.svg' | asset_url }}" class="fa fa-shopping-cart nav__icon cart-mb-icon" alt="navigation">
                                 </a>
                             </li>
 

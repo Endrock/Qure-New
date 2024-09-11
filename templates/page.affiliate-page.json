@@ -32,7 +32,8 @@
         "text": "<p><strong>Become a Qure Ambassador and be part of a community that shapes the future of skincare.<\/strong><\/p><p>Let’s bridge the gap to better skincare together and spread skin confidence worldwide.<\/p>",
         "image": "shopify:\/\/shop_images\/affiliate_banner_desk_eac3f62e-a6b8-4b8f-baac-348068557bce.webp",
         "image_mobile": "shopify:\/\/shop_images\/affiliate_banner_mob_a82bdff3-59df-4ee9-9461-040862208406.webp",
-        "align_center": false
+        "align_center": false,
+        "classname": "bg_gradient_mob text-light1"
       }
     },
     "three_column_box_VdFUgY": {
@@ -112,6 +113,7 @@
         "icon_ENM96A"
       ],
       "settings": {
+        "background": "bg-grey"
       }
     },
     "perks_WicUUX": {

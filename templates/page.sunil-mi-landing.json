@@ -448,6 +448,7 @@
       "settings": {
         "heading": "Achieve your skincare goals",
         "text": "",
+        "slide_count": false,
         "text_verified_customer": "Verified customer"
       }
     },
@@ -932,7 +933,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Petrina.png",
             "heading": "Impressive results",
-            "text": "<p><em>I’m thrilled with the Qure Rejuvenating Micro Infusion System! After just three months of use, I’ve seen a noticeable reduction in fine lines on my forehead and a significant improvement in the depth of a deep scar on my face. The results have been so impressive that I’ve already purchased a refill to continue the treatment for another three months. Highly recommend this product for anyone looking to enhance their skin’s appearance.<\/em><\/p>",
+            "text": "<p>\"I’m thrilled with the Qure Rejuvenating Micro Infusion System! After just three months of use, I’ve seen a noticeable reduction in fine lines on my forehead and a significant improvement in the depth of a deep scar on my face. The results have been so impressive that I’ve already purchased a refill to continue the treatment for another three months. Highly recommend this product for anyone looking to enhance their skin’s appearance.\"<\/p>",
             "image_country": "shopify:\/\/shop_images\/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
             "text_country": "United States",
             "client": "Petrina Y.",
@@ -944,10 +945,34 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Linda_b_a_ed1683c6-3cff-4b8a-a7b0-1888bcf2d475.png",
             "heading": "Great “At Home” Treatment",
-            "text": "<p><em> I have read extensively on the positive effects of micro needling and have been wanting to try it. The Qure Micro-Infusion (Hydra-Soothing) option is an excellent at home way to get the benefits of micro needling without having to leave home! I have been doing a treatment about every 2 - 3 weeks for a few months and am gradually noticing an improvement in the overall appearance of my skiing, reduction in fine lines as well as a softening with the vertical wrinkles around my mouth. I love it!!<\/em><\/p>",
+            "text": "<p> \"I have read extensively on the positive effects of micro needling and have been wanting to try it. The Qure Micro-Infusion (Hydra-Soothing) option is an excellent at home way to get the benefits of micro needling without having to leave home! I have been doing a treatment about every 2 - 3 weeks for a few months and am gradually noticing an improvement in the overall appearance of my skiing, reduction in fine lines as well as a softening with the vertical wrinkles around my mouth. I love it!!\"<\/p>",
             "image_country": "shopify:\/\/shop_images\/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
             "text_country": "United States",
             "client": "Linda L.",
+            "code": ""
+          }
+        },
+        "result_TDck3M": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Before_and_after_m.i.png",
+            "heading": "Finally! A product that actually works!",
+            "text": "<p>\"I can't say enough good things about Qure! I have tried everything to even my skin tone, minimize pores and skin texture, & reduce sun spots on my face. I was very skeptical upon ordering Qure products--let's face it, lots of products say they are the miracle cure we have all been looking for, but and they do literally nothing! Qure does exactly what it says it will do and quickly! The process is easy and pretty painless. I will be a product buyer for life!\"<\/p>",
+            "image_country": "shopify:\/\/shop_images\/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Melanie B.",
+            "code": ""
+          }
+        },
+        "result_eNWmez": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/B_A_alexandra.png",
+            "heading": "Cured my PP skin!",
+            "text": "<p>\"Tried top shelf skin routines but none of them were able to help me with my PP skin issues (severe acne, scaring, dark spots, you name it! It was worse then puberty! But it's my second month and my skin is already 90% back to normal! Subscribe to this and stick with it! Customer service is also top notch the best!\"<\/p>",
+            "image_country": "shopify:\/\/shop_images\/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Alexandra R.",
             "code": ""
           }
         }
@@ -969,7 +994,9 @@
         "result_xtFHnk",
         "result_UVLAG4",
         "result_7DbhCR",
-        "result_UHVMGG"
+        "result_UHVMGG",
+        "result_TDck3M",
+        "result_eNWmez"
       ],
       "settings": {
         "classname": "mi_landing_result",

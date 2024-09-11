@@ -167,7 +167,7 @@
         "text_t9tnXK": {
           "type": "text",
           "settings": {
-            "text": "<p>\"Treatment time is only three minutes—among the fastest <\/p>"
+            "text": "<p>\"Treatment time is only three minutes—among the fastest of all devices.\"<\/p>"
           }
         },
         "image_PmUxLt": {
@@ -320,7 +320,7 @@
         "slide_hFbVVd"
       ],
       "settings": {
-        "heading": "See the results yourself",
+        "heading": "Customers love us",
         "rating_text": ""
       }
     },
@@ -366,10 +366,12 @@
         "column_pTADx3",
         "column_7bHmxW"
       ],
+      "custom_css": [
+        ".container-fluid {padding: 0;}"
+      ],
       "settings": {
         "heading": "Get the Qure",
-        "sub_heading": "<h4>Reclaim your confidence at any age, no matter what your skin concern is.<\/h4>",
-        "button": "Shop Now"
+        "sub_heading": "<h4>Reclaim your confidence at any age, no matter what your skin concern is.<\/h4>"
       }
     },
     "products_grid_mCReWM": {
@@ -611,7 +613,7 @@
         "slide_on_tablet": 2,
         "slide_on_mobile": 1,
         "space_between_slides": 20,
-        "padding_top": 0,
+        "padding_top": 60,
         "padding_bottom": 0,
         "custom_class": "trusted_bl trustedVerified"
       }

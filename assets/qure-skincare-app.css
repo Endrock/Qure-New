@@ -121,7 +121,15 @@
     opacity: 1 !important;
   }
 /* -- app slider end -- */
-
+.app_press_sl_img_three .swiper-slide {
+    pointer-events: none;
+  }
+  .app_press_sl_img22 .swiper-slide {
+    opacity: 0.4;
+  }
+  .app_press_sl_img22 .swiper-slide-thumb-active {
+    opacity: 1;
+  }
 @media(max-width:767px) {
     .app_press .app_subhheading {
         font-size: 22px;

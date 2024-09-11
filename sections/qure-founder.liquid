@@ -1,7 +1,7 @@
 <!-- -- qure founder start -- -->
 <div class="qure_founder">
   <div class="container-fluid">
-    <div class="qure_founder_wrap">
+    <div class="qure_founder_wrap {%  if section.settings.trust_des != blank %} d-none d-md-flex{% endif %}">
       <div class="qure_founder_img">
         {% if section.settings.image != blank -%}
           <img
@@ -14,7 +14,7 @@
       <div class="qure_founder_info {% if section.settings.trust_des %}trusted_bl trustedVerified {% endif %}">
         {% if section.settings.trust_des != blank %}
           <div class="trusted_verified">
-              <img src="{{ 'verified_design.svg' | asset_url }}" alt="">
+            <img src="{{ 'verified_design.svg' | asset_url }}" alt="">
             <p>{{ section.settings.trust_des }}</p>
           </div>
         {% endif %}
@@ -28,12 +28,39 @@
         </div>
       </div>
     </div>
+    {% if section.settings.trust_des != blank %}
+      <div class="qure_founder_info trusted_bl trustedVerified d-block d-md-none py-0">
+        <div class="trusted_verified">
+          <img src="{{ 'verified_design.svg' | asset_url }}" alt="">
+          <p>{{ section.settings.trust_des }}</p>
+        </div>
+      </div>
+      <div class="qure_founder-wrap-mobile d-block d-md-none">
+        {% if section.settings.trusted_image_mob != blank -%}
+          <img
+            src="{{section.settings.trusted_image_mob | img_url: 'master'}}"
+            alt="{{ section.settings.trusted_image_mob.alt | escape }}"
+            class="img-fluid"
+          >
+        {%- endif %}
+        <div class="qure_founder_info ">
+          {% if section.settings.heading != blank %}
+            <h5>
+              {{ section.settings.heading }}
+            </h5>
+          {% endif %}
+          {% if section.settings.sub_heading != blank %}
+            {{ section.settings.sub_heading }}
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
   </div>
 </div>
 <!-- -- qure founder end -- -->
 {% schema %}
 {
-  "name": "Qure Founder",
+  "name": "t:sections.founder.label",
   "settings": [
     {
       "type": "text",
@@ -51,15 +78,23 @@
       "label": "t:common.image.label"
     },
     {
+      "type": "header",
+      "content": "t:sections.trusted.dermatologist"
+    },
+    {
       "type": "inline_richtext",
       "id": "trust_des",
-      "label": "Trust text",
-      "default": "Trusted and recommended by world leading Dermatologists"
+      "label": "t:sections.trusted.text"
+    },
+    {
+      "type": "image_picker",
+      "id": "trusted_image_mob",
+      "label": "t:common.image.label"
     }
   ],
   "presets": [
     {
-      "name": "Qure Founder"
+      "name": "t:sections.founder.label"
     }
   ]
 }

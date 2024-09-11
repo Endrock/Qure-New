@@ -139,6 +139,7 @@
 
     .chest_pdp .reasons_wrapper .rs_item {
         max-width: 202px;
+        margin: 0 auto;
     }
 }
 

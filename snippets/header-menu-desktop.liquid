@@ -206,6 +206,11 @@
 <div class="icon-section qure_desktop_menu">
     <ul class="nav nav_e-commerce">
         {{ left_menu }}
+        <li class="nav__item header_gift_btn pe-md-0 pe-3">
+            <a href="javascript:;" class="nav__url" onclick="StampedFn.toggleRewardsModal()">
+                <img src="{{ 'header-gift.svg' | asset_url }}" class="fa fa-shopping-cart nav__icon cart-mb-icon" alt="navigation">
+            </a>
+        </li>
         <li class="nav__item d-only">
             <a href="{{ routes.root_url }}pages/contact-us" aria-label="Contact us" class="nav__url">
                 <img src="{{ 'support.svg' | asset_url }}" class="fa cus-support" alt="support">
@@ -214,11 +219,6 @@
         <li class="nav__item d-only" data-bs-toggle="offcanvas" data-bs-target="#offcanvasAccount" aria-controls="offcanvasAccount">
             <a class="nav__url">
                 <img src="{{ 'login.svg' | asset_url }}" class="fa fa-user nav__icon" alt="navigation">
-            </a>
-        </li>
-        <li class="nav__item header_gift_btn d-md-none">
-            <a href="javascript:;" class="nav__url" onclick="StampedFn.toggleRewardsModal()">
-                <img src="{{ 'header-gift.svg' | asset_url }}"  class="fa fa-shopping-cart nav__icon cart-mb-icon" alt="navigation">
             </a>
         </li>
         <li class="nav__item cart_btn" data-ajax-cart-toggle-class-button="js-my-cart-open" style="cursor:pointer;" data-bs-toggle="offcanvas" href="#cartCanvas" role="button" aria-controls="cartCanvas">

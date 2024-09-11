@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "header_landing_Hza7nA": {
@@ -44,7 +53,7 @@
       "custom_css": [
         ".header_btn img {display: none;}",
         ".menu_icon_footer {display: none;}",
-        ".announcement_bar {background-color: #008763 !important; color: #f8f9fa !important}"
+        ".announcement_bar {background-color: #008763 !important; color: #f8f9fa !important;}"
       ],
       "settings": {
         "button_label": "GET CLEARER SKIN",

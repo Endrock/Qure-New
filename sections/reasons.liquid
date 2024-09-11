@@ -1,5 +1,5 @@
 <!-- -- 6 reasons section start -- -->
-<div class="{{ section.settings.classname }} reasons section" id="reasons_section">
+<div class="{{ section.settings.classname }} section-{{ section.id }} reasons section" id="reasons_section">
     <div class="container">
         {% if section.settings.heading != blank %}
         <div class="section_header text-start text-md-center">
@@ -15,6 +15,8 @@
         <div class="row">
             <div class="reasons_wrapper{% if section.blocks.size == 6 %} reasons_wrapper_6{% endif %}">
                 {%- for block in section.blocks -%}
+                    {% assign variable_name = section.blocks.size %}
+                    {% if block.type == 'icon' %}
                     <div class="rs_item">
                         {% if block.settings.image != blank %}
                             <div class="r_use_img">
@@ -27,12 +29,26 @@
                             </div>
                         {% endif %}
                     </div>
+                    {% endif %}
                 {%- endfor -%}
             </div>
         </div>
     </div>
 </div>
 <!-- -- 6 reasons section end -- -->
+
+{% style %}
+.chest_pdp .section-{{ section.id }} .reasons_wrapper {
+    display: grid;
+    grid-template-columns: repeat({{ variable_name }},auto);
+}
+@media(max-width:767px) {
+    .chest_pdp .section-{{ section.id }} .reasons_wrapper {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+}
+{% endstyle %}
 
 {% schema %}
     {
