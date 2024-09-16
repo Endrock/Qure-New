@@ -2359,3 +2359,167 @@
 }
 
 /* end MI LP Science Section AB test */
+
+/* start confidence slider */
+.skincare_slider_n {
+  display: none;
+}
+.science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-value-props.new{
+  display: none;
+}
+.science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-information .new_heading {
+  display: none;
+}
+
+body[data-confidence-test][class~="page.sunil-mi-landing"] .science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-value-props.original{
+  display: none;
+}
+
+body[data-confidence-test][class~="page.sunil-mi-landing"] .science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-value-props.new{
+  display: flex;
+  flex-direction: column;
+}
+
+body[data-confidence-test][class~="page.sunil-mi-landing"] .science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-information .original_heading {
+  display: none;
+}
+
+body[data-confidence-test][class~="page.sunil-mi-landing"] .science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-information .original_subheading{
+  display: none;
+}
+
+body[data-confidence-test][class~="page.sunil-mi-landing"] .science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-information .new_heading {
+  display: block;
+  color:  #000;
+  font-family: 'Canela Regular';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 0.4px;
+}
+
+body[data-confidence-test][class~="page.sunil-mi-landing"] .science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-value-props.new .value-prop-card{
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+  width: 100%;
+}
+
+body[data-confidence-test][class~="page.sunil-mi-landing"] .science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-value-props.new .value-prop-card .value-prop-card_count{
+  display: flex;
+  width: 32px;
+  padding: 4px 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 2px solid  #C8E6DC;
+  color: #3B8566;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+}
+
+body[data-confidence-test][class~="page.sunil-mi-landing"] .science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-value-props.new .value-prop-card .value-prop-card_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1 0 0;
+}
+
+body[data-confidence-test][class~="page.sunil-mi-landing"] .science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-value-props.new .value-prop-card .value-prop-card_body .value-prop-card__title {
+  color: #000;
+  font-family: 'Canela Regular';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+}
+
+body[data-confidence-test][class~="page.sunil-mi-landing"] .science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-value-props.new .value-prop-card .value-prop-card_body .value-prop-card__text {
+  display: flex;
+}
+
+body[data-confidence-test][class~="page.sunil-mi-landing"] .science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-value-props.new .value-prop-card .value-prop-card_body .value-prop-card__text p {
+  color:#000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+}
+
+body[data-confidence-test][class~="page.sunil-mi-landing"] .science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-value-props.new .value-prop-card .value-prop-card_body .value-prop-card__text svg{
+  width: 36px;
+  height: 25px;
+}
+
+@media(max-width:767px) {
+  body[data-confidence-test][class~="page.sunil-mi-landing"] .science-section-container .container .science-section-wrapper .right-panel .science-text-container {
+    gap: 32px;
+  }
+  body[data-confidence-test][class~="page.sunil-mi-landing"] .science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-information .new_heading {
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0.28px;
+  }
+
+  body[data-confidence-test][class~="page.sunil-mi-landing"] .science-section-container .container .science-section-wrapper .right-panel .science-text-container .science-text-container-value-props.new .value-prop-card .value-prop-card_body .value-prop-card__text p {
+    font-size: 14px;
+    letter-spacing: 0.14px;
+  }
+
+}
+body[data-confidence-test][class~="page.sunil-mi-landing"] .skincare_slider_n {
+  display: block;
+}
+
+body[data-confidence-test][class~="page.sunil-mi-landing"] .skincare_slider_n .progessInfo {
+  font-size: 14px;
+}
+
+body[data-confidence-test][class~="page.sunil-mi-landing"] .skincare_slider_n .section_header>p {
+  margin: 20px 0;
+}
+
+body[data-confidence-test][class~="page.sunil-mi-landing"] .skincare_slider_n .skincare_percent:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+body[data-confidence-test][class~="page.sunil-mi-landing"] .skincare_slider_n .skin_item_n_tag .sn_tag {
+  background-color: #C7E7DC;
+  border-radius: 30px;
+  padding: 2px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-left: 21px;
+}
+
+body[data-confidence-test][class~="page.sunil-mi-landing"] .skincare_slider_n .skin_item_n_tag p {
+  text-align: center;
+  margin: 12px 0;
+}
+
+@media(max-width:767px) {
+  body[data-confidence-test][class~="page.sunil-mi-landing"] .skincare_slider_n .skin_item_n_tag .sn_tag {
+    margin-left: 5px;
+    padding: 2px 10px;
+  }
+
+  body[data-confidence-test][class~="page.sunil-mi-landing"] .skincare_slider_n .skin_item_n_tag .sn_tag,
+  body[data-confidence-test][class~="page.sunil-mi-landing"] .skincare_slider_n .skin_item_n_tag p {
+    font-size: 11px;
+  }
+
+}  
+/* end confidence slider */

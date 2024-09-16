@@ -58,11 +58,10 @@
         },
         "timer_abVU3e": {
           "type": "timer",
-          "disabled": true,
           "settings": {
-            "heading": "4th of July Limited Time Offer!",
-            "text": "<p>Get <em><strong>$50 OFF<\/strong><\/em><strong> <\/strong>with code: <strong>FREEDOMGLOW<\/strong><\/p>",
-            "timer": "2024-07-07T23:59:59"
+            "heading": "Save $50 on any LED device",
+            "text": "<p>Get <em><strong>$50 OFF<\/strong><\/em><strong> <\/strong>with code: <strong>GLOWON50<\/strong><\/p>",
+            "timer": "2024-09-23T23:59:59"
           }
         },
         "list_reduced_yep6j9": {
@@ -503,18 +502,6 @@
             "code": ""
           }
         },
-        "result_TkKNU8": {
-          "type": "result",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Amiee_LED.png",
-            "heading": "Highly recommend!",
-            "text": "<p>“I have only been using it for a month. Prior to using this my skin was flaky & dry. My skin barrier has been severely damaged for the past 2 years where almost anything I use burns, but in 1 month this mask has lightened my hyperpigmentation considerably as well as helped to give a bit of a boost to the area under my eye (a delightful surprise). My friends have mentioned that my skin is definitely glowing. Highly recommend!”<\/p>",
-            "image_country": "shopify:\/\/shop_images\/america_f.webp",
-            "text_country": "United States",
-            "client": "Aimee",
-            "code": ""
-          }
-        },
         "result_pmCAWA": {
           "type": "result",
           "settings": {
@@ -611,13 +598,24 @@
             "client": "Jessica K.",
             "code": ""
           }
+        },
+        "result_TkKNU8": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Amiee_LED.png",
+            "heading": "Highly recommend!",
+            "text": "<p>“I have only been using it for a month. Prior to using this my skin was flaky & dry. My skin barrier has been severely damaged for the past 2 years where almost anything I use burns, but in 1 month this mask has lightened my hyperpigmentation considerably as well as helped to give a bit of a boost to the area under my eye (a delightful surprise). My friends have mentioned that my skin is definitely glowing. Highly recommend!”<\/p>",
+            "image_country": "shopify:\/\/shop_images\/america_f.webp",
+            "text_country": "United States",
+            "client": "Aimee",
+            "code": ""
+          }
         }
       },
       "block_order": [
         "result_LwfFir",
         "result_NhAn8a",
         "result_73PVKN",
-        "result_TkKNU8",
         "result_pmCAWA",
         "result_Mgz3yd",
         "result_bbhV3X",
@@ -625,7 +623,8 @@
         "result_Bwe94z",
         "result_GAd3YG",
         "result_U4khQD",
-        "result_W8bKNg"
+        "result_W8bKNg",
+        "result_TkKNU8"
       ],
       "settings": {
         "classname": "mi_landing_result",

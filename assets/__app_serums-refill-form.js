@@ -1,5 +1,10 @@
-function selectProductRefill(destination)
+function selectProductRefill(destination, product_variant)
 {
+    if(window.item === undefined || window.item.length == 0)
+    {
+        updateItemObject(product_variant);
+    }
+
     // Event listener for all options
     document.querySelectorAll('input[type="radio"][name="serum-' + destination + '"]').forEach(option => {
         option.addEventListener('click', (event) => {

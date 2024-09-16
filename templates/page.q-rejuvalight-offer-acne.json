@@ -16,7 +16,7 @@
           "type": "Tab",
           "settings": {
             "btn_text": "Product",
-            "image": "shopify:\/\/shop_images\/led-lp-product-1.webp",
+            "image": "shopify:\/\/shop_images\/led-lp-product-1-1.png",
             "image2": "shopify:\/\/shop_images\/led_large_3.webp",
             "image3": "shopify:\/\/shop_images\/led_large_4.webp",
             "wistia": ""
@@ -26,8 +26,8 @@
           "type": "Tab",
           "settings": {
             "btn_text": "Real Results",
-            "image": "shopify:\/\/shop_images\/led-lp-result-1.webp",
-            "image2": "shopify:\/\/shop_images\/led-lp-result-2.webp",
+            "image": "shopify:\/\/shop_images\/led-lp-result-4.png",
+            "image2": "shopify:\/\/shop_images\/led-lp-result-2-2.png",
             "image3": "shopify:\/\/shop_images\/led-lp-result-3.png",
             "wistia": ""
           }
@@ -46,8 +46,8 @@
         "tab_nUG7QA"
       ],
       "settings": {
-        "heading": "Feel Confident Makeup-Free with Q-Rejuvalight Pro",
-        "desc": "<ul><li>FDA-cleared at-home LED mask<\/li><li>Treat acne, fine lines, wrinkles & more<\/li><li>Customize, track & schedule treatments with app<\/li><li>Quick & convenient 3-minute wireless treatments<\/li><\/ul>",
+        "heading": "End the Battle With Acne & Feel Confident with the Q-Rejuvalight Pro",
+        "desc": "<ul><li>FDA-cleared at-home LED mask<\/li><li>Clear & prevent acne, smooth fine lines & fade dark spots<\/li><li>Customize, track & schedule treatments with app<\/li><li>Quick & convenient 3-minute wireless treatments<\/li><\/ul>",
         "rating_text": "43,893+ Happy Customers",
         "stars": "shopify:\/\/shop_images\/star-half_fill_d51f6801-2e35-487c-89d0-130f978da1e8.svg",
         "btn_txt": "Transform My Skin",
@@ -144,7 +144,7 @@
         "text_NqidyF": {
           "type": "text",
           "settings": {
-            "text": "<p> “If you're on the hunt for a red light therapy tool that checks all of the boxes (who isn't?!), Qure's Light Therapy Mask is your answer.”<\/p>"
+            "text": "<p> “If you're on the hunt for a red light therapy tool that checks all of the boxes, Qure's Light Therapy Mask is your answer.”<\/p>"
           }
         },
         "image_7jwEXX": {
@@ -156,7 +156,7 @@
         "text_8bYXt8": {
           "type": "text",
           "settings": {
-            "text": "<p>“If you're unsure of what your skin needs, you can get the right treatment  out of your LED face mask. That way, you can mask in total confidence.”<\/p>"
+            "text": "<p>“If you're unsure of what your skin needs, you can get the right treatment  out of your LED face mask.”<\/p>"
           }
         },
         "image_ezT6pQ": {
@@ -230,7 +230,7 @@
         "column_JATQdF"
       ],
       "settings": {
-        "section_heading": "Customers call The Q-Rejuvalight Pro LED Mask \"Game-Changing\"",
+        "section_heading": "Customers call The Q-Rejuvalight Pro LED Mask “Confidence-Changing”",
         "subheading": "<p>Here are 4 reasons why:<\/p>"
       }
     },
@@ -281,19 +281,6 @@
     "results_slider_RTd6ad": {
       "type": "results-slider",
       "blocks": {
-        "slide_pU3mTj": {
-          "type": "Slide",
-          "settings": {
-            "heading": "IT REALLY WORKS!!",
-            "product": "",
-            "text": "<p>I was very skeptical when my husband bought this mask for me. But after 6mo the results are amazing!! I’ve tried numerous serums for my sun spots but nothing worked until I used this mask. Definitely worth the money.<\/p>",
-            "image": "shopify:\/\/shop_images\/results_teresa_3a620dd8-7320-41da-b19d-4202f4097626.webp",
-            "image_country": "shopify:\/\/shop_images\/USA_07.png",
-            "client": "Teresa S.",
-            "concerns": "Dark spots, discoloration",
-            "verified": true
-          }
-        },
         "slide_f6CjxA": {
           "type": "Slide",
           "settings": {
@@ -307,29 +294,55 @@
             "verified": true
           }
         },
-        "slide_36nkwc": {
+        "slide_CPEePW": {
           "type": "Slide",
           "settings": {
-            "heading": "Wish I had this technology years ago!",
+            "heading": "Can’t go a day without it",
             "product": "",
-            "text": "<p>“After two weeks I began to see results and after six weeks the changes in my skin were dramatic. I have now been using Qure six months and loving the compliments! I bought masks for my daughters for Christmas so they could start at a younger age…. I wish this technology had been<br\/> available when I was younger. I am 76 years old! Photos below are after6 weeks.”<\/p>",
-            "image": "shopify:\/\/shop_images\/results_terri.webp",
-            "image_country": "shopify:\/\/shop_images\/USA_07.png",
-            "client": "Terri P.",
-            "concerns": "Fine Lines & Wrinkles",
+            "text": "<p>“I started getting the usual teenage acne. It got very bad. I tried everything... Straight away I noticed results with Qure, after the first week I had no active breakouts anymore.\"<\/p>",
+            "image": "shopify:\/\/shop_images\/results_anton_cdc44f21-b8dc-4a5f-a020-6741e12ac25e.webp",
+            "image_country": "shopify:\/\/shop_images\/AUS_07.png",
+            "client": "Anton",
+            "concerns": "Acne",
             "verified": true
           }
         },
-        "slide_R3C6JP": {
+        "slide_pU3mTj": {
           "type": "Slide",
           "settings": {
-            "heading": "Zero Maskne for 8 weeks",
+            "heading": "IT REALLY WORKS!!",
             "product": "",
-            "text": "<p>“I thought it was only working on my breakouts, zero Maskne for 8 weeks now, BUT thank goodness for Before and After because even I was shocked! My followers have noticed a difference in my skin the past few weeks and now I understand what they’re seeing. The difference isn’t huge but enough that it postpones surgery which I can’t afford right now.”<\/p>",
-            "image": "shopify:\/\/shop_images\/results_michelle_bea5bba9-6469-46b8-b59a-4456973a4b3c.webp",
+            "text": "<p>I was very skeptical when my husband bought this mask for me. But after 6mo the results are amazing!! I’ve tried numerous serums for my sun spots but nothing worked until I used this mask. Definitely worth the money.<\/p>",
+            "image": "shopify:\/\/shop_images\/results_teresa_3a620dd8-7320-41da-b19d-4202f4097626.webp",
             "image_country": "shopify:\/\/shop_images\/USA_07.png",
-            "client": "Michelle S.",
-            "concerns": "Fine Lines & Wrinkles, Acne",
+            "client": "Teresa S.",
+            "concerns": "Dark spots, discoloration",
+            "verified": true
+          }
+        },
+        "slide_6JbRPj": {
+          "type": "Slide",
+          "settings": {
+            "heading": "Amazing!",
+            "product": "",
+            "text": "<p>“Amazing! Has made such a massive on my acne. Still getting breakouts but they disappear way quicker. Took maybe 2 days to start working. Pics are about 3 weeks difference.”<\/p>",
+            "image": "shopify:\/\/shop_images\/Sophie_after_qure.png",
+            "image_country": "shopify:\/\/shop_images\/AUS_07.png",
+            "client": "Sophie R.",
+            "concerns": "Acne",
+            "verified": true
+          }
+        },
+        "slide_ytEe6x": {
+          "type": "Slide",
+          "settings": {
+            "heading": "Renewed skin!",
+            "product": "",
+            "text": "<p>\"My Qure mask has been amazing! As someone who struggles with acne and rosacea, your LED light therapy mask has improved my skin so much that I an now feel comfortable without any makeup. I’m very happy with this product!\"<\/p>",
+            "image": "shopify:\/\/shop_images\/results_tiffany_d43313a3-80f7-4452-a45b-c864ceedae03.webp",
+            "image_country": "shopify:\/\/shop_images\/USA_07.png",
+            "client": "Tiffany L.",
+            "concerns": "Acne, rosacea",
             "verified": true
           }
         },
@@ -346,8 +359,35 @@
             "verified": true
           }
         },
+        "slide_R3C6JP": {
+          "type": "Slide",
+          "settings": {
+            "heading": "Zero Maskne for 8 weeks",
+            "product": "",
+            "text": "<p>“I thought it was only working on my breakouts, zero Maskne for 8 weeks now, BUT thank goodness for Before and After because even I was shocked! My followers have noticed a difference in my skin the past few weeks and now I understand what they’re seeing. The difference isn’t huge but enough that it postpones surgery which I can’t afford right now.”<\/p>",
+            "image": "shopify:\/\/shop_images\/results_michelle_bea5bba9-6469-46b8-b59a-4456973a4b3c.webp",
+            "image_country": "shopify:\/\/shop_images\/USA_07.png",
+            "client": "Michelle S.",
+            "concerns": "Fine Lines & Wrinkles, Acne",
+            "verified": true
+          }
+        },
+        "slide_36nkwc": {
+          "type": "Slide",
+          "settings": {
+            "heading": "Wish I had this technology years ago!",
+            "product": "",
+            "text": "<p>“After two weeks I began to see results and after six weeks the changes in my skin were dramatic. I have now been using Qure six months and loving the compliments! I bought masks for my daughters for Christmas so they could start at a younger age…. I wish this technology had been<br\/> available when I was younger. I am 76 years old! Photos below are after6 weeks.”<\/p>",
+            "image": "shopify:\/\/shop_images\/results_terri.webp",
+            "image_country": "shopify:\/\/shop_images\/USA_07.png",
+            "client": "Terri P.",
+            "concerns": "Fine Lines & Wrinkles",
+            "verified": true
+          }
+        },
         "slide_fBweTe": {
           "type": "Slide",
+          "disabled": true,
           "settings": {
             "heading": "Amazing results!",
             "product": "",
@@ -355,60 +395,21 @@
             "image": "shopify:\/\/shop_images\/results_june_4f06e4e8-529a-404e-b15c-ae472849d9bc.webp",
             "image_country": "shopify:\/\/shop_images\/USA_07.png",
             "client": "June T.",
-            "concerns": "Fine Lines & Wrinkles, Skin Texture",
-            "verified": true
-          }
-        },
-        "slide_ytEe6x": {
-          "type": "Slide",
-          "settings": {
-            "heading": "Renewed skin!",
-            "product": "",
-            "text": "<p>My Qure mask has been amazing! As someone who struggles with acne and rosacea, your LED light therapy mask has improved my skin so much that I an now feel comfortable without any makeup. I’m very happy with this product!<\/p>",
-            "image": "shopify:\/\/shop_images\/results_tiffany_d43313a3-80f7-4452-a45b-c864ceedae03.webp",
-            "image_country": "shopify:\/\/shop_images\/USA_07.png",
-            "client": "Tiffany L.",
-            "concerns": "Acne, rosacea",
-            "verified": true
-          }
-        },
-        "slide_CPEePW": {
-          "type": "Slide",
-          "settings": {
-            "heading": "Can’t go a day without it",
-            "product": "",
-            "text": "<p>“I started getting the usual teenage acne. It got very bad. I tried everything... Straight away I noticed results with Qure, after the first week I had no active breakouts anymore.<\/p>",
-            "image": "shopify:\/\/shop_images\/results_anton_cdc44f21-b8dc-4a5f-a020-6741e12ac25e.webp",
-            "image_country": "shopify:\/\/shop_images\/AUS_07.png",
-            "client": "Anton",
-            "concerns": "Acne",
-            "verified": true
-          }
-        },
-        "slide_mNAa9k": {
-          "type": "Slide",
-          "settings": {
-            "heading": "Amazing!",
-            "product": "",
-            "text": "<p>“Amazing! Has made such a massive on my acne. Still getting breakouts but they disappear way quicker. Took maybe 2 days to start working. Pics are about 3 weeks difference.”<\/p>",
-            "image": "shopify:\/\/shop_images\/Sophie_after_qure.png",
-            "image_country": "shopify:\/\/shop_images\/AUS_07.png",
-            "client": "Sophie R.",
-            "concerns": "Acne",
+            "concerns": "Fine Lines & Wrinkles",
             "verified": true
           }
         }
       },
       "block_order": [
-        "slide_pU3mTj",
         "slide_f6CjxA",
-        "slide_36nkwc",
-        "slide_R3C6JP",
-        "slide_UaaMCL",
-        "slide_fBweTe",
-        "slide_ytEe6x",
         "slide_CPEePW",
-        "slide_mNAa9k"
+        "slide_pU3mTj",
+        "slide_6JbRPj",
+        "slide_ytEe6x",
+        "slide_UaaMCL",
+        "slide_R3C6JP",
+        "slide_36nkwc",
+        "slide_fBweTe"
       ],
       "settings": {
         "heading": "Thousands are out-glowing their insecurities",
@@ -431,7 +432,7 @@
         "subheading_PeqaGP": {
           "type": "subheading",
           "settings": {
-            "badge_text": "IN A STUDY...",
+            "badge_text": "IN REVIEWS...",
             "text": "97% customer satisfaction rate"
           }
         },

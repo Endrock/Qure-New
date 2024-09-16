@@ -24,6 +24,11 @@ product_variants[3][3] = 43216359555311; //3 months
 
 function selectProduct(destination)
 {
+    if(window.item === undefined || window.item.length == 0)
+    {
+        updateItemObject(product_variant);
+    }
+
     document.querySelectorAll('.' + destination + 'productTypeObject').forEach(block => {
         block.addEventListener('click', function() {
             let productTypeElement = this.querySelector('.product_type');

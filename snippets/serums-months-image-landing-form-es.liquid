@@ -305,7 +305,7 @@
                         {% assign product = all_products['micro-infusion-3-month-refill-6x-hydra-soothing-serum'] %}
                         
                         <div class="step_content my-3">
-                            <a class="btn btn-lg btn-primary buy_btn mt-3 {{ section_id }}_productButtonObject event_btn" href="{{ routes.cart_add_url }}?id=43216377217263&quantity=1" data-ajax-cart-request-button>
+                            <a class="btn btn-lg btn-primary buy_btn mt-3 {{ section_id }}_productButtonObject" href="{{ routes.cart_add_url }}?id=43216377217263&quantity=1" onclick="setEventProductHandler('{{ product.handle | escape }}')" data-ajax-cart-request-button>
                                 COMPRA AHORA <span class="btn_value"><strong>Y AHORRA HASTA UN 43%</strong></span>
                                 <img src="{{ 'arrow_right.svg' | asset_url }}" alt="" class="btn_icon">
                             </a>

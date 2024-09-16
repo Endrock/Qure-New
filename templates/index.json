@@ -63,6 +63,7 @@
         },
         "slide_9qAien": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/homepageslide-5.jpg",
             "link_label": "Q-urify Water Filter",
@@ -93,28 +94,27 @@
     "promotion_main_banner_48gkNr": {
       "type": "promotion-main-banner",
       "blocks": {
-        "link_crBjL9": {
+        "link_GirQqh": {
           "type": "link",
           "settings": {
-            "link_label": "Shop Labor Day Sale",
-            "link_label_mobile": "Shop & Save 51%",
-            "link_url": "https:\/\/www.qureskincare.com\/pages\/exclusive-holiday-bundle-deal#exclusive-labor-day-bundle"
+            "link_label": "Save $50",
+            "link_label_mobile": "Save $50",
+            "link_url": "shopify:\/\/collections\/led-light-therapy-devices"
           }
         }
       },
       "block_order": [
-        "link_crBjL9"
+        "link_GirQqh"
       ],
-      "disabled": true,
       "settings": {
-        "heading": "Labor Day Sale Save 51%",
-        "heading_mobile": "Labor Day Sale",
-        "heading_tag": "h2",
-        "subheading": "<p>on Exclusive <strong>Limited Edition<\/strong> Micro-Infusion Bundle<\/p>",
-        "subheading_mobile": "<p>Exclusive <strong>Limited Edition<\/strong> Micro-Infusion Bundle<\/p>",
-        "text": "<p><em>A deal so good, it’s limited to one per order.<\/em><\/p>",
-        "image": "shopify:\/\/shop_images\/LABOR_NEW_DESKTOP.png",
-        "image_mobile": "shopify:\/\/shop_images\/LABOR_NEW_MBILE.png"
+        "heading": "Don't let post-summer skin damage get your confidence down",
+        "heading_mobile": "",
+        "heading_tag": "h1",
+        "subheading": "",
+        "subheading_mobile": "",
+        "text": "<p>Repair, replenish and even skin tone with \\n clinically-proven LED light therapy.<\/p>",
+        "image": "shopify:\/\/shop_images\/summer_banner.webp",
+        "image_mobile": "shopify:\/\/shop_images\/summer_banner-mob.webp"
       }
     },
     "promotion_main_banner_second_jCUkqh": {
@@ -125,13 +125,14 @@
           "settings": {
             "link_label": "Shop Best Sellers",
             "link_label_mobile": "Shop Best Sellers",
-            "link_url": "https:\/\/www.qureskincare.com\/collections\/best-sellers"
+            "link_url": "shopify:\/\/products\/q-rejuvalight-pro-facewear"
           }
         }
       },
       "block_order": [
         "link_Pk3LH6"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Get clinic-level results from home- minus the ‘clinical’ costs.",
         "heading_mobile": "",
@@ -220,7 +221,8 @@
         "text_Mnmb4P"
       ],
       "settings": {
-        "heading": "FEATURED IN"
+        "heading": "FEATURED IN",
+        "slider_type": "five_slides"
       }
     },
     "results_slider_w6BARa": {
@@ -309,6 +311,20 @@
             "concerns": "",
             "verified": true
           }
+        },
+        "slide_yWqyRW": {
+          "type": "Slide",
+          "settings": {
+            "heading": "Thrilled with the results!",
+            "product": "Q-Rejuvalight Pro LED Mask",
+            "stars_img": "shopify:\/\/shop_images\/results_star-full.svg",
+            "text": "<p>\"I am 45 so I am fighting signs of aging, but also still dealing with acne flare ups. I haven’t had a single breakout since I started using the mask, plus I notice a definite smoothing of fine wrinkles on my cheeks & around my eyes. I recommend this product to anyone. Well worth the investment.\"<\/p>",
+            "image": "shopify:\/\/shop_images\/Jessica_k_led_mask_b_a.png",
+            "image_country": "shopify:\/\/shop_images\/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "client": "Jessica K.",
+            "concerns": "",
+            "verified": true
+          }
         }
       },
       "block_order": [
@@ -317,10 +333,11 @@
         "slide_wwBJ3B",
         "slide_8TxkNC",
         "slide_xWKmb6",
-        "slide_hFbVVd"
+        "slide_hFbVVd",
+        "slide_yWqyRW"
       ],
       "settings": {
-        "heading": "Customers love us",
+        "heading": "See the results yourself",
         "rating_text": ""
       }
     },
@@ -332,6 +349,7 @@
           "settings": {
             "c_image": "shopify:\/\/shop_images\/skin_c1.webp",
             "name": "Signs of aging, fine lines & wrinkles",
+            "button": "Shop Now",
             "btn_url": "https:\/\/www.qureskincare.com\/collections\/fine-line-wrinkles"
           }
         },
@@ -340,6 +358,7 @@
           "settings": {
             "c_image": "shopify:\/\/shop_images\/skin_c2.webp",
             "name": "Dark spots & uneven skin tone",
+            "button": "Shop Now",
             "btn_url": "https:\/\/www.qureskincare.com\/collections\/dark-spots?ose=false"
           }
         },
@@ -348,6 +367,7 @@
           "settings": {
             "c_image": "shopify:\/\/shop_images\/skin_c3.webp",
             "name": "Acne Breakouts & Blemishes",
+            "button": "Shop Now",
             "btn_url": "https:\/\/www.qureskincare.com\/collections\/acne-breakouts?ose=false"
           }
         },
@@ -356,6 +376,7 @@
           "settings": {
             "c_image": "shopify:\/\/shop_images\/skin_c4.webp",
             "name": "Large pores & textured skin",
+            "button": "Shop Now",
             "btn_url": "https:\/\/www.qureskincare.com\/collections\/dark-spots?"
           }
         }
@@ -371,7 +392,11 @@
       ],
       "settings": {
         "heading": "Get the Qure",
-        "sub_heading": "<h4>Reclaim your confidence at any age, no matter what your skin concern is.<\/h4>"
+        "sub_heading": "<h4>Reclaim your confidence at any age, no matter what your skin concern is.<\/h4>",
+        "container": "container",
+        "slide_on_desktop": 4,
+        "slide_on_tablet": 2,
+        "slide_on_mobile": 1
       }
     },
     "products_grid_mCReWM": {

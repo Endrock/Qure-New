@@ -9,11 +9,11 @@
       </div>
 
       {% if section.settings.slider_type == 'five_slides' %}
-        {% assign sliderCnt = 'app_press_{{ random_number }}_five' %}
-        {% assign sliderImg = 'app_press_{{ random_number }}_five' %}
+        {% capture sliderCnt %}app_press_{{ random_number }}text_five{% endcapture %}
+        {% capture sliderImg %}app_press_{{ random_number }}img_five{% endcapture %}
       {% else %}
-        {% assign sliderCnt = 'app_press_{{ random_number }}_three' %}
-        {% assign sliderImg = 'app_press_{{ random_number }}_three' %}
+          {% capture sliderCnt %}app_press_{{ random_number }}text_three{% endcapture %}
+          {% capture sliderImg %}app_press_{{ random_number }}img_three{% endcapture %}
       {% endif %}
       {% if section.blocks.size > 0 %}
         <div class="app_press_slider">
@@ -58,17 +58,9 @@
 </div>
 <!-- -- press slider end -- -->
 
-{% if section.settings.slider_type == 'five_slides' %}
-  {% assign sliderCnt = 'app_press_{{ random_number }}_five' %}
-  {% assign sliderImg = 'app_press_{{ random_number }}_five' %}
-{% else %}
-  {% assign sliderCnt = 'app_press_{{ random_number }}_three' %}
-  {% assign sliderImg = 'app_press_{{ random_number }}_three' %}
-{% endif %}
-
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var swiper_press1 = new Swiper('.app_press_{{ random_number }}_three', {
+    var swiper_press1 = new Swiper('.app_press_{{ random_number }}img_three', {
       spaceBetween: 20,
       initialSlide: 1,
       touchRatio: 0,
@@ -81,7 +73,7 @@
         },
       },
     });
-    var swiper_press12 = new Swiper('.app_press_{{ random_number }}_three', {
+    var swiper_press12 = new Swiper('.app_press_{{ random_number }}text_three', {
       spaceBetween: 10,
       slidesPerView: 1,
       initialSlide: 1,
@@ -92,7 +84,7 @@
       touchRatio: 0,
     });
 
-    var swiper_press = new Swiper('.app_press_{{ random_number }}_five', {
+    var swiper_press = new Swiper('.app_press_{{ random_number }}img_five', {
       spaceBetween: 20,
       slidesPerView: 2.9,
       autoplay: {
@@ -112,7 +104,7 @@
         },
       },
     });
-    var swiper_press2 = new Swiper('.app_press_{{ random_number }}_five', {
+    var swiper_press2 = new Swiper('.app_press_{{ random_number }}text_five', {
       spaceBetween: 10,
       autoplay: {
         delay: 5000,

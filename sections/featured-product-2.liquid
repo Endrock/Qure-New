@@ -68,8 +68,8 @@
                              {%- endif -%}
                             {% if section.settings.btn_txt != blank %}
                             <div class="get_clearer_wrapper ms-0">
-                                <a class="btn btn-lg btn-primary btn_green mw-100" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>{{ section.settings.btn_txt }} - {{ discount | money_without_trailing_zeros }}</a>
-                                <a id="cart-reload" style="display:none" class="btn btn-lg btn-primary btn_green mw-100" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=0" data-ajax-cart-request-button>{{ section.settings.btn_txt }} - {{ discount | money_without_trailing_zeros }}</a>
+                                <a class="btn btn-lg btn-primary btn_green mw-100" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" onclick="setEventProductHandler('{{ product.handle | escape }}')" data-ajax-cart-request-button>{{ section.settings.btn_txt }} - {{ discount | money_without_trailing_zeros }}</a>
+                                <a id="cart-reload" style="display:none" class="btn btn-lg btn-primary btn_green mw-100" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=0" onclick="setEventProductHandler('{{ product.handle | escape }}')" data-ajax-cart-request-button>{{ section.settings.btn_txt }} - {{ discount | money_without_trailing_zeros }}</a>
                             </div>
                             {% endif %}
                         </div>

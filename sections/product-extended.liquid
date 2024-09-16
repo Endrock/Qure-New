@@ -193,7 +193,7 @@
                                             {% endunless %}
 
                                             {% if product.variants.first.available %}
-                                                <a class="btn btn-lg btn-primary without_subscription buy_btn" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>{% if section.settings.reserve == true %}Reserve now{% else %}Buy Now{% endif %}</a>
+                                                <a class="btn btn-lg btn-primary without_subscription buy_btn" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" onclick="setEventProductHandler('{{ product.handle | escape }}')" data-ajax-cart-request-button>{% if section.settings.reserve == true %}Reserve now{% else %}Buy Now{% endif %}</a>
                                             {% else %}
                                                 <a class="btn btn-lg btn-primary without_subscription buy_btn" href="#">{% if section.settings.reserve == true %}Reserve now{% else %}Sold Out{% endif %}</a>
                                             {% endif %}
@@ -221,7 +221,7 @@
                                         {% endunless %}
                                         <form method="post" action="/cart/add" accept-charset="UTF-8" class="shopify-product-form buy-form-{{ section_id }} form-test-id" enctype="multipart/form-data" data-form-id="{{ product.id }}">
                                             <input type="hidden" name="selling_plan" value="{{ block.settings.plan }}">
-                                            <button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn event_btn" name="Submit" value="Submit">
+                                            <button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn" onclick="setEventProductHandler('{{ product.handle | escape }}')" name="Submit" value="Submit">
                                                 Subscribe Now
                                             </button>
                                             <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
@@ -244,9 +244,9 @@
                             {% render 'pdm_orderby' %}
                         {% endunless %}
                             {% if product.variants.first.available %}
-                                <a class="btn btn-lg btn-primary buy_btn event_btn" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>{% if section.settings.reserve == true %}Reserve now{% else %}Buy Now{% endif %}</a>
+                                <a class="btn btn-lg btn-primary buy_btn" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" onclick="setEventProductHandler('{{ product.handle | escape }}')" data-ajax-cart-request-button>{% if section.settings.reserve == true %}Reserve now{% else %}Buy Now{% endif %}</a>
                             {% else %}
-                                <a class="btn btn-lg btn-primary buy_btn event_btn" href="#">{% if section.settings.reserve == true %}Reserve now{% else %}Sold Out{% endif %}</a>
+                                <a class="btn btn-lg btn-primary buy_btn" href="#">{% if section.settings.reserve == true %}Reserve now{% else %}Sold Out{% endif %}</a>
                             {% endif %}
 
                             {% if product.compare_at_price != blank %}

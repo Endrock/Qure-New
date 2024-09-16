@@ -141,7 +141,16 @@
         {% assign main_class = 'faq_mi' %}
         <link rel="stylesheet" href="{{ 'custom-treatment.css' | asset_url }}">
         <link rel="stylesheet" href="{{ 'micro-Infusion-faq-lp.css' | asset_url }}">
+    {% when 'page.micro-infusion-faq-page-second' %}
+        {% assign main_class = 'faq_mi anti-creams-microinfusion' %}
+        <link rel="stylesheet" href="{{ 'custom-treatment.css' | asset_url }}">
+        <link rel="stylesheet" href="{{ 'micro-Infusion-faq-lp.css' | asset_url }}">
     {% when 'page.q-rejuvalight-pro-offer' %}
+        {% assign main_class = 'qurify_lp led_lp' %}
+        <link rel="stylesheet" href="{{ 'qurify-filter-lp.css' | asset_url }}">
+        <link rel="stylesheet" href="{{ 'qure-skincare-app.css' | asset_url }}">
+        <link rel="stylesheet" href="{{ 'led_mask_lp.css' | asset_url }}">
+    {% when 'page.q-rejuvalight-offer-acne' %}
         {% assign main_class = 'qurify_lp led_lp' %}
         <link rel="stylesheet" href="{{ 'qurify-filter-lp.css' | asset_url }}">
         <link rel="stylesheet" href="{{ 'qure-skincare-app.css' | asset_url }}">

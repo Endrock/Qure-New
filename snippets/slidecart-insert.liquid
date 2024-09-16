@@ -87,12 +87,33 @@
   window.initUpsellSwiper =   initUpsellSwiper; 
 </script>
 
-<script type="module"> import { configureCart, subscribeToCartSectionsUpdate, cartRequestAdd, cartRequestChange, getCartState } from '{{ "liquid-ajax-cart-v1.11.1.js" | asset_url  }}'; 
+<script type="module"> import { configureCart, subscribeToCartSectionsUpdate, cartRequestAdd, cartRequestChange, subscribeToCartAjaxRequests, getCartState } from '{{ "liquid-ajax-cart-v1.11.1.js" | asset_url  }}'; 
 	configureCart('addToCartCssClass', 'js-my-cart-open'); 
   initUpsellSwiper(); //Upsell Swiper PDM when add product need show upsell slider
 
-	subscribeToCartSectionsUpdate( sections => {
+  subscribeToCartAjaxRequests(myRequestCallback => {
+    if(myRequestCallback.requestType === 'add') {
+      if(window.event_product_handle != undefined)
+      {
+        fetchProductData(window.event_product_handle)
+        .then(() => {
+          console.log(window.item);
+          _learnq.push(['track', 'Added to Cart', window.item]);
+          window.event_product_handle = null;
+        })
+      }
+      else
+      {
+        if(window.item != undefined)
+        {
+          console.log(window.item);
+          _learnq.push(['track', 'Added to Cart', window.item]);
+        }
+      }
+    }
+  })
 
+	subscribeToCartSectionsUpdate( sections => {
 		if (window.location.href.includes("q-rejuvalight-pro-offer"))
 		{
 			dicount(37390541553813, 44062187913455, 'N&D100');

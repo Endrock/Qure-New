@@ -53,6 +53,14 @@
           "settings": {
             "video_new_section": "shopify:\/\/files\/videos\/Neck edit_b34038da-2489-4c95-af0a-0a486968f588.mov"
           }
+        },
+        "timer_fNiV3b": {
+          "type": "timer",
+          "settings": {
+            "heading": "Save $50 on any LED device",
+            "text": "<p>Get <em><strong>$50 OFF<\/strong><\/em><strong> <\/strong>with code: <strong>GLOWON50<\/strong><\/p>",
+            "timer": "2024-09-23T23:59:59"
+          }
         }
       },
       "block_order": [
@@ -60,12 +68,12 @@
         "list_azYRbY",
         "supply_b9ppf8",
         "before_and_after_d9ReDz",
-        "video_before_and_after_dPc77J"
+        "video_before_and_after_dPc77J",
+        "timer_fNiV3b"
       ],
       "settings": {
         "heading": "Combat Signs of Aging with Neck & Décolletage LED Therapy",
         "heading_mobile": "Combat Signs of Aging with Neck & Décolletage LED Therapy",
-        "test_product_name": "Neck & Décolletage LED Device",
         "product_images_limit": 5,
         "product_button_label": "Product",
         "before_after_images_limit": 2,

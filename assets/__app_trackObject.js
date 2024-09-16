@@ -1,28 +1,6 @@
 var item = item || [];
 var _learnq = _learnq || [];
 
-document.querySelectorAll('.event_btn').forEach(button => {
-    button.addEventListener('click', (event) => {
-        pushEvent();
-    });
-});
-
-document.querySelectorAll('.prepare_event_btn').forEach(button => {
-    button.addEventListener('click', (event) => {
-        let targetButton = event.target.closest('.prepare_event_btn');
-        let product_handle = targetButton ? targetButton.getAttribute('data-product-handle') : null;
-
-        if(product_handle)
-        {
-            fetchProductData(product_handle)
-            .then(() => {
-                pushEvent();
-            })
-        }
-    });
-});
-
-
 var updateItemObject = function(product_variant_id)
 {
     let variants_to_handles = [];
@@ -58,38 +36,40 @@ var updateItemObject = function(product_variant_id)
     }
 }
 
-var fetchProductData = function(product_handle)
+var setEventProductHandler = function(product_handle)
 {
-    return new Promise((resolve, reject) => {
-        let baseUrl = '/products/' + product_handle + '.js';
-
-        fetch(baseUrl, {
-            method: 'GET',
-            cache: 'default'
-        })
-        .then(response => response.json())
-        .then(data => {
-            window.item = {
-                Name: data.title,
-                ProductID: data.id,
-                Categories: data.tags,
-                ImageURL: data.featured_image,
-                URL: window.location.origin + data.url,
-                Brand: data.vendor,
-                Price: data.price,
-                CompareAtPrice: data.price
-            }
-            resolve();
-        })
-        .catch(error => {
-            console.log('Error fetching the content:', error);
-            reject(error);
-        });
-    });
+    window.event_product_handle = product_handle;
 }
 
-var pushEvent = function() {
-    console.log('Added to Cart');
-    console.log(item);
-    _learnq.push(['track', 'Added to Cart', item]);
-};
+var fetchProductData = function(product_handle)
+{
+    if(product_handle)
+    {
+        return new Promise((resolve, reject) => {
+            let baseUrl = '/products/' + product_handle + '.js';
+    
+            fetch(baseUrl, {
+                method: 'GET',
+                cache: 'default'
+            })
+            .then(response => response.json())
+            .then(data => {
+                window.item = {
+                    Name: data.title,
+                    ProductID: data.id,
+                    Categories: data.tags,
+                    ImageURL: data.featured_image,
+                    URL: window.location.origin + data.url,
+                    Brand: data.vendor,
+                    Price: data.price,
+                    CompareAtPrice: data.price
+                }
+                resolve();
+            })
+            .catch(error => {
+                console.log('Error fetching the content:', error);
+                reject(error);
+            });
+        });
+    }
+}
