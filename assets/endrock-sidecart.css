@@ -576,9 +576,13 @@ body[data-free-gift-gamification] .drawer__cart-discounts_wrap {
 body[data-free-gift-gamification] .drawer_top_sticky{
   box-shadow: 0px -11px 20px 0px #000;
 }
-
-body[data-free-gift-gamification] .progress-container {
+body[data-free-gift-gamification~="variant-A"] .progress-container.variant-A {
   display: flex;
+}
+  body[data-free-gift-gamification~="variant-B"] .progress-container.variant-B {
+    display: flex;
+  }
+body[data-free-gift-gamification] .progress-container {
   padding: 8px 24px;
   flex-direction: column;
   justify-content: center;

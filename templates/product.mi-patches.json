@@ -68,7 +68,6 @@
       "settings": {
         "heading": "Smooth, firm and plump stubborn areas with Micro- Infusion Targeted Patches",
         "heading_mobile": "Smooth, firm and plump stubborn areas with Micro- Infusion Targeted Patches",
-        "test_product_name": "Micro-Infusion Targeted Patches",
         "product": "micro-infusion-targeted-patches",
         "product_images_offset": 2,
         "product_images_limit": 7,
@@ -161,7 +160,8 @@
         "image_VRfJ7m"
       ],
       "settings": {
-        "heading": "FEATURED IN"
+        "heading": "FEATURED IN",
+        "slider_type": "five_slides"
       }
     },
     "two_column_box_LbCXBk": {
@@ -192,6 +192,88 @@
         "classname": "section",
         "column_image": 6,
         "column_content": 6
+      }
+    },
+    "confidence_slider_Wgjdzg": {
+      "type": "confidence-slider",
+      "blocks": {
+        "option_Y6BeL3": {
+          "type": "option",
+          "settings": {
+            "text": "<p>Noticed continued improvement in <strong>wrinkle reduction. <\/strong><\/p>",
+            "percent_bar": 77
+          }
+        },
+        "option_hcfNfn": {
+          "type": "option",
+          "settings": {
+            "text": "<p>Reported under eyes were visibly <strong>brighter<\/strong>.<\/p>",
+            "percent_bar": 90
+          }
+        },
+        "option_FadxcY": {
+          "type": "option",
+          "settings": {
+            "text": "<p><strong>Would recommend<\/strong> Micro-Infusion Targeted Patches to a friend.<\/p>",
+            "percent_bar": 87
+          }
+        },
+        "image_3MnJTp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_1299_cc31326d-6e2c-4f17-81f1-577910276f40.png",
+            "text": "<p>Proven to visually improve <strong>“Crow's Feet”<\/strong><\/p>"
+          }
+        },
+        "image_D4PQ83": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_12992.png",
+            "text": "<p>Proven to visually improve <strong>Dark under-eyes<\/strong><\/p>"
+          }
+        },
+        "image_78xVBn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_1000004439.png",
+            "text": "<p>Proven to visually improve <strong>Wrinkles<\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "option_Y6BeL3",
+        "option_hcfNfn",
+        "option_FadxcY",
+        "image_3MnJTp",
+        "image_D4PQ83",
+        "image_78xVBn"
+      ],
+      "settings": {
+        "heading": "No promises, just results.",
+        "text": "<p>In an independent user study, participants' skin was measured and showed proven visible improvement after just one month.<\/p>"
+      }
+    },
+    "one_column_box_ACaxnJ": {
+      "type": "one-column-box",
+      "blocks": {
+        "code_XWKhJX": {
+          "type": "code",
+          "settings": {
+            "code": "<div class=\"patches_tech_grid\">\n                    <div class=\"patches_tech_item\">\n                        <div class=\"patches_tech_img\">\n                            <img src=\"{{ 'patches_tech1.webp' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                        <\/div>\n                        <div class=\"patches_tech_content\">\n                            <h6>1: DELIVER<\/h6>\n                            <p>80 micro-darts filled with powerful anti-aging and brightening ingredients melt into\n                                the\n                                skin for deeper delivery.<\/p>\n                        <\/div>\n                    <\/div>\n                    <div class=\"patches_tech_plus\">\n                        +\n                    <\/div>\n                    <div class=\"patches_tech_item\">\n                        <div class=\"patches_tech_img\">\n                            <img src=\"{{ 'patches_tech2.webp' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                        <\/div>\n                        <div class=\"patches_tech_content\">\n                            <h6>2: DISSOLVE<\/h6>\n                            <p>Automatically deliver a precise dose of ingredients, then the patches begin to absorb\n                                into the skin.<\/p>\n                        <\/div>\n                    <\/div>\n                    <div class=\"patches_tech_plus\">\n                        +\n                    <\/div>\n                    <div class=\"patches_tech_item\">\n                        <div class=\"patches_tech_img\">\n                            <img src=\"{{ 'patches_tech3.webp' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                        <\/div>\n                        <div class=\"patches_tech_content\">\n                            <h6>3: PROTECT<\/h6>\n                            <p>Within 2 hours, they dissolve and seal an occlusive layer, locking in the ingredients\n                                and\n                                delivering fast, visible results.<\/p>\n                        <\/div>\n                    <\/div>\n                <\/div>"
+          }
+        }
+      },
+      "block_order": [
+        "code_XWKhJX"
+      ],
+      "custom_css": [
+        ".section_header {max-width: 750px !important;}",
+        "p {max-width: 730px !important; padding-bottom: 40px !important;}"
+      ],
+      "settings": {
+        "heading": "Technology that delivers anti-aging ingredients directly to the source",
+        "text": "<p>As thin and gentle as a hair and as powerful as a needle, each micro-dart painlessly penetrates the skin to deliver the nutrients where they’ll be <strong>absorbed at maximum potential. <\/strong>The patches begin self-dissolving upon contact, so you get powerful, glowing results in <strong>as little as two hours.<\/strong><\/p>",
+        "classname": "technolgy_source section"
       }
     },
     "results_pkwNpm": {
@@ -724,13 +806,10 @@
   "order": [
     "product_landing_tetLcC",
     "featuredin_zGJF46",
-<<<<<<< HEAD
-    "two_column_box_T6ewpY",
-=======
     "featuredin_extended_kENYrm",
     "two_column_box_LbCXBk",
+    "confidence_slider_Wgjdzg",
     "one_column_box_ACaxnJ",
->>>>>>> cleanup/holiday-lp-bundles-per-concern-test
     "results_pkwNpm",
     "videos_RDmhf8",
     "two_column_box_cGgxCb",

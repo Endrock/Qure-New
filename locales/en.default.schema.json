@@ -273,7 +273,13 @@
       "without": "Without image",
       "hide": {
         "mobile": {
-          "label": "Hide on mobile"
+          "label": "Hide on mobile",
+          "on": "Hide On",
+          "default": "Default",
+          "mob": "Mobile"
+        },
+        "desktop": {
+          "label": "Desktop"
         }
       }
     },
@@ -380,7 +386,9 @@
     },
     "classname": {
       "label": "CSS classname",
-      "custom": "Custom class"
+      "custom": "Custom class",
+      "heading": "Heading Custom Class",
+      "content": "Content Custom Class"
     },
     "video": {
       "label": "Video",
@@ -1297,6 +1305,15 @@
     },
     "founder": {
       "label": "Qure Founder"
+    },
+    "skin-care": {
+      "label": "Skin Care Steps"
+    },
+    "how_use_steps": {
+      "label": "How to use steps"
+    },
+    "limited-offer": {
+      "label": "Limited Offer Product"
     }
   }
 }

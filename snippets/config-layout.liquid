@@ -128,6 +128,10 @@
         {% assign main_class = 'content_instructions' %}
         <link rel="stylesheet" href="{{ 'content-instructions.css' | asset_url }}">
         <link rel="stylesheet" href="{{ 'affiliate.css' | asset_url }}">
+    {% when 'page.neck-decolletage-led-pro-content-guide' %}
+        {% assign main_class = 'content_instructions' %}
+        <link rel="stylesheet" href="{{ 'content-instructions.css' | asset_url }}">
+        <link rel="stylesheet" href="{{ 'affiliate.css' | asset_url }}">
     {% when 'page.patches-content-guide' %}
         {% assign main_class = 'content_instructions content_instructions_patches' %}
         <link rel="stylesheet" href="{{ 'content-instructions.css' | asset_url }}">
@@ -183,6 +187,9 @@
     {% when 'page.returns-exchanges' %}
         {% assign main_class = 'return_exchanges' %}
         <link rel="stylesheet" href="{{ 'return.css' | asset_url }}">
+        {% when 'page.return-policy' %}
+            {% assign main_class = 'return_policy' %}
+            <link rel="stylesheet" href="{{ 'return.css' | asset_url }}">
     {% when 'blog' %}
         {% assign main_class = 'blogs' %}
         <link rel="stylesheet" href="{{ 'blogs.css' | asset_url }}">

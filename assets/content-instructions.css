@@ -603,6 +603,12 @@
     .content_instructions_patches .trusted_verified {
         margin-top: 10px !important;
     }
+    .ac_desc_grid .ac_desc.faq .accordion-button {
+        padding: 12px 0;
+    }
+    .ac_desc_grid .ac_desc ul li {
+        font-size: 13px;
+    }
 }
 
 
@@ -744,10 +750,6 @@
     gap: 10px;
     display: grid;
     grid-template-columns: 328px 328px;
-}
-
-.c_guide_img .wistia_responsive_padding {
-    pointer-events: none;
 }
 
 @media(min-width:767px) {

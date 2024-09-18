@@ -368,10 +368,10 @@
     font-size: 20px;
     margin-bottom: 15px;
     display: inline-block;
-    max-width: 218px;
-    width: 100%;
+    width: auto;
     text-align: center;
 }
+
 
 .homepage .main_banner .m_b_content p {
     font-size: 18px;

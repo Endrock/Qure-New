@@ -82,7 +82,7 @@
         {%- for block in section.blocks -%}
             {% case block.type %}
                 {% when 'button' %}
-                    <div class="get_confident-btn mw-452 mx-auto">
+                    <div class="get_confident-btn mx-auto {{ block.settings.custom_class }}">
                         <a class="btn btn-lg btn-primary buy_btn" href="{{ block.settings.button_url }}" title="{{ block.settings.button_label | escape }}">{{ block.settings.button_label }}</a>
                     </div>
             {% endcase %}
@@ -187,6 +187,12 @@
                         "type": "url",
                         "id": "button_url",
                         "label": "t:common.button.url.label"
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "custom_class",
+                        "label": "t:common.classname.custom",
+                        "default": "mw-452"
                     }
                 ]
 		    }

@@ -1,7 +1,7 @@
 <!-- -- stamping your skin start -- -->
 <div class="stamping_your-skin">
     <div class="container">
-        <div class="section_header text-md-center mw-680">
+        <div class="section_header text-md-center {{ section.settings.custom_class }}">
             {% if section.settings.heading != blank %}
                 <h2 class="title-lg paddingB mb-3">{{ section.settings.heading }}</h2>
             {% endif %}
@@ -10,7 +10,7 @@
                 {{ section.settings.text | replace: '<p>', '<p class="pb-3">' }}
             {% endif %}
         </div>
-        <div class="row justify-content-between">
+        <div class="row justify-content-between {{ section.settings.custom_class2 }}">
             <div class="col-md-6">
                 {%- for block in section.blocks -%}
                     {% case block.type %}
@@ -76,7 +76,8 @@
     </div>
 </div>
 <!-- -- stamping your skin end -- -->
-
+<script src="https://fast.wistia.com/embed/medias/pufckxmtin.jsonp" async></script>
+<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 
 {% schema %}
     {
@@ -92,6 +93,17 @@
                 "type": "richtext",
                 "id": "text",
                 "label": "t:common.text.label"
+            },
+            {
+                "type": "textarea",
+                "id": "custom_class",
+                "label": "t:common.classname.heading",
+                "default": "mw-680"
+            },
+            {
+                "type": "textarea",
+                "id": "custom_class2",
+                "label": "t:common.classname.content"
             }
         ],
         "blocks": [
