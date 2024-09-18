@@ -158,6 +158,18 @@
           "settings": {
             "text": "<p>“The Qure mask is the FIRST mask in the world that adapts to your skin!...There is an app that reminds you of the treatments too.”<\/p>"
           }
+        },
+        "image_iy6yaC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gq_logo.png"
+          }
+        },
+        "text_EnENJU": {
+          "type": "text",
+          "settings": {
+            "text": "<p> “Q-Rejuvalight Pro harnesses the power of lights from blue to infrared to address nearly every skincare concern you could imagine.”<\/p>"
+          }
         }
       },
       "block_order": [
@@ -170,7 +182,9 @@
         "image_hNLLqX",
         "text_k6KEBE",
         "image_ebp8NW",
-        "text_Mnmb4P"
+        "text_Mnmb4P",
+        "image_iy6yaC",
+        "text_EnENJU"
       ],
       "settings": {
         "heading": "FEATURED IN",
