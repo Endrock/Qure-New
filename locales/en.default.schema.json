@@ -788,6 +788,11 @@
       "blocks": {
       }
     },
+    "advisors": {
+      "name": "Advisors",
+      "settings": {
+      }
+    },
     "before-after-box": {
       "name": "Before after box",
       "settings": {

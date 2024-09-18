@@ -9,6 +9,52 @@
 */
 {
   "sections": {
+    "header_landing_LTnaTx": {
+      "type": "header-landing",
+      "blocks": {
+        "announcement_68YDyx": {
+          "type": "announcement",
+          "settings": {
+            "heading": "SAVE $100 | FREE Worldwide Shipping",
+            "heading_mobile": "SAVE $100 | FREE Worldwide Shipping"
+          }
+        },
+        "navigation_link_enLf8t": {
+          "type": "navigation-link",
+          "settings": {
+            "link_label": "REVIEWS",
+            "link_url": "#result_section",
+            "image": "shopify:\/\/shop_images\/headerLanding-2.png"
+          }
+        },
+        "navigation_link_wPNEr9": {
+          "type": "navigation-link",
+          "settings": {
+            "link_label": "SPECIAL OFFER",
+            "link_url": "#special_offer",
+            "image": "shopify:\/\/shop_images\/header_specialOffer.webp"
+          }
+        },
+        "navigation_link_wVVWXW": {
+          "type": "navigation-link",
+          "settings": {
+            "link_label": "FAQS",
+            "link_url": "#faq_section",
+            "image": "shopify:\/\/shop_images\/headerLanding-4.png"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_68YDyx",
+        "navigation_link_enLf8t",
+        "navigation_link_wPNEr9",
+        "navigation_link_wVVWXW"
+      ],
+      "settings": {
+        "button_label": "Shop now",
+        "button_url": "#shop"
+      }
+    },
     "banner_tab_slider_dMVdHQ": {
       "type": "banner-tab-slider",
       "blocks": {
@@ -735,6 +781,7 @@
     }
   },
   "order": [
+    "header_landing_LTnaTx",
     "banner_tab_slider_dMVdHQ",
     "liquid_P3wypt",
     "featuredin_extended_kPLtYV",
