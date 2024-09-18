@@ -11,7 +11,7 @@
 
 <div class="drawer_shipping gamification-test variant-A">
   {% if enableFreeShipping %}
-    {% if differenceFreeShipping < 0  %}
+    {% if differenceFreeShipping <= 0  %}
       <p>Free</p>
     {% endif %}
     {% if differenceFreeShipping > 0 and cartTotal > 0 %}
