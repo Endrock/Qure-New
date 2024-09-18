@@ -565,7 +565,11 @@ body[data-free-gift-gamification] .drawer__cart-subtotal-end .drawer_shipping {
   display: none;
 }
 
-body[data-free-gift-gamification] .drawer_shipping.gamification-test {
+body[data-free-gift-gamification~="variant-A"] .drawer_shipping.gamification-test.variant-A {
+  display: block;
+}
+
+body[data-free-gift-gamification~="variant-B"] .drawer_shipping.gamification-test.variant-B {
   display: block;
 }
 
@@ -579,9 +583,9 @@ body[data-free-gift-gamification] .drawer_top_sticky{
 body[data-free-gift-gamification~="variant-A"] .progress-container.variant-A {
   display: flex;
 }
-  body[data-free-gift-gamification~="variant-B"] .progress-container.variant-B {
-    display: flex;
-  }
+body[data-free-gift-gamification~="variant-B"] .progress-container.variant-B {
+  display: flex;
+}
 body[data-free-gift-gamification] .progress-container {
   padding: 8px 24px;
   flex-direction: column;
