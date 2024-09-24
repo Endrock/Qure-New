@@ -18,9 +18,9 @@
   endif
 
   assign progress_percentage = cartTotal | times: 100 | divided_by: treshold
-  assign progress_percentage_free_shipping = freeShippingTreshold | divided_by: cartTotal | times: 100
-  if enableFreeShipping and cartTotal < freeShippingTresholdd
-    if progress_percentage > progress_percentage_free_shipping
+  assign progress_percentage_free_shipping = freeShippingTreshold | times: 100 | divided_by: treshold
+  if enableFreeShipping and cartTotal < freeShippingTreshold
+    if progress_percentage >= progress_percentage_free_shipping
       assign progress_percentage = 20
     endif
   else
