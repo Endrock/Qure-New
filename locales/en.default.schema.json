@@ -7,15 +7,6 @@
 * made to this file may be overwritten.
 * ------------------------------------------------------------
 */
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin language editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "settings_schema": {
     "logo": {
@@ -70,12 +61,10 @@
       "text": "Badge text"
     },
     "benefits": {
-    "benefits": {
       "label": "Benefits List",
       "title": "Benefit",
       "p_benefits": "Product benefits"
     },
-    "url": {
     "url": {
       "label": "Product Url"
     },
@@ -92,14 +81,11 @@
   },
   "commonMob": {
     "header": {
-  "commonMob": {
-    "header": {
       "label": "Mobile Content"
     },
     "image": {
       "label": "Image on Mobile"
     },
-    "benefits": {
     "benefits": {
       "label": "Benefits List"
     },
@@ -165,7 +151,6 @@
       "or": "Or"
     },
     "sale": {
-    "sale": {
       "label": "Sale Name",
       "discount": "Discount"
     },
@@ -175,7 +160,6 @@
       "grey": "Grey",
       "transparent": "Tranparent"
     },
-    "Section": {
     "Section": {
       "label": "Section Heading"
     },
