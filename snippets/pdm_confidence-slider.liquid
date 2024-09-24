@@ -1,11 +1,15 @@
 <!-- -- PDM  skincare slider start  -- -->
+{%- comment -%}
+  Usage:  {% render 'pdm_confidence-slider',  data: block.settings %}
+{%- endcomment -%}
+
 {% assign text_ranges = data.text_first-info | append: ',' | append: data.text_second-info | append: ',' | append: data.text_third-info %}
 {% assign text_ranges_array = text_ranges | split: ',' %}
 
 {% assign ranges = data.percent_bar_first-info | append: ',' | append: data.percent_bar_second-info | append: ',' | append: data.percent_bar_third-info %}
 {% assign ranges_array = ranges | split: ',' %}
 
-<div class="skincare_slider_n section section-confidence">
+<div class="pdm-section-confidence skincare_slider_n section section-confidence">
     <div class="container">
         <div class="row">
             <div class="col-md-6">

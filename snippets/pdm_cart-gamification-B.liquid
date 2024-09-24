@@ -3,7 +3,6 @@
 {% endcomment %}
 {% liquid
   assign enableFreeShipping = settingsGamification.enable_free_shipping_treshold
-
   assign freeShippingTreshold = shop.metaobjects['sidecart_gamification_tresholds']['sidecart-gamification-tresholds-swspsm6c']['free_shipping_b'].value
 
   assign enableProductGift = settingsGamification.enable_product_gift 
@@ -19,11 +18,18 @@
   endif
 
   assign progress_percentage = cartTotal | times: 100 | divided_by: treshold
-  if treshold > cartTotal and progress_percentage > 80
-    assign progress_percentage = 80
-  endif
-  if progress_percentage > 100
-    assign progress_percentage = 100
+  assign progress_percentage_free_shipping = freeShippingTreshold | divided_by: cartTotal | times: 100
+  if enableFreeShipping and cartTotal < freeShippingTresholdd
+    if progress_percentage > progress_percentage_free_shipping
+      assign progress_percentage = 20
+    endif
+  else
+    if treshold > cartTotal and progress_percentage > 80
+      assign progress_percentage = 80
+    endif
+    if progress_percentage > 100
+      assign progress_percentage = 100
+    endif
   endif
 
   assign enableShowGiftPrice = settingsGamification.enable_show_gift_price 

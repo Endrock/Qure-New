@@ -97,7 +97,7 @@
       "label": "Mobile Content"
     },
     "image": {
-      "label": "Image Mobile"
+      "label": "Image on Mobile"
     },
     "benefits": {
     "benefits": {
@@ -115,6 +115,7 @@
     }
   },
   "common": {
+    "read_more": "Read More Content",
     "container": {
       "size": "Section Width",
       "full": "Full",
@@ -135,7 +136,10 @@
       "concerns": "Skin Concerns"
     },
     "font": {
-      "size": "Font Size"
+      "size": "Font size",
+      "mobile": {
+        "size": "Font size mobile"
+      }
     },
     "checkbox": {
       "from": "From",
@@ -217,6 +221,12 @@
       "info": "Info Heading",
       "mobile": {
         "label": "Heading for mobile"
+      }
+    },
+    "announcement": {
+      "label": "Announcement",
+      "color": {
+        "label": "Color"
       }
     },
     "name": {
@@ -1319,6 +1329,9 @@
     },
     "limited-offer": {
       "label": "Limited Offer Product"
+    },
+    "money-back": {
+      "label": "Money Back Guarantee"
     }
   }
 }

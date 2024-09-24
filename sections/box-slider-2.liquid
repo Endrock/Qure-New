@@ -26,7 +26,7 @@
                             <div class="return_step_bx ">{{ forloop.index }}</div>
                             <h6>{{ block.settings.slide_heading }}</h6>
                         </div>
-                        {{ block.settings.slide_text }}
+                        {{ block.settings.slide_text |  replace: '<a', '<a class="text-decoration-underline text-dark fw-bold"' }}
                     </div>
                 </div>
                 {% endcase %}

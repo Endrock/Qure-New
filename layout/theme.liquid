@@ -174,7 +174,13 @@
     <script src="{{ 'qurify-filter-lp.js' | asset_url }}"></script>
     <script src="{{ 'slideLogin.js' | asset_url }}"></script>
     <script src="{{ '__app_trackObject.js' | asset_url }}"></script>
-    <script src="{{ '__app_serums-months-form.js' | asset_url }}"></script>
+
+    {% if template == 'page.sunil-mi-landing-special' %}
+        <script src="{{ '__app_serums-months-form-special.js' | asset_url }}"></script>
+    {% else %}
+        <script src="{{ '__app_serums-months-form.js' | asset_url }}"></script>
+    {% endif %}
+
     <script src="{{ '__app_serums-refill-form.js' | asset_url }}"></script>
     <script async type="text/javascript" src="https://cdn1.stamped.io/files/widget.min.js"></script>
 
@@ -261,7 +267,7 @@
   
     <!-- hide launcher on the above page -->
 
-    {% include 'info' %}
+    {% comment %} {% include 'info' %} {% endcomment %}
 
 </body>
 

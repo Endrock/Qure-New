@@ -259,7 +259,8 @@ iframe#typeform-full {
 
 body[class~="page.sunil-mi-landing-mens"] .header_gift_btn, 
 body[class~="page.sunil-mi-landing-special"] .header_gift_btn, 
-body[class~="page.q-rejuvalight-pro-offer"] .header_gift_btn
+body[class~="page.q-rejuvalight-pro-offer"] .header_gift_btn,
+body[class~="page.q-rejuvalight-offer-acne"] .header_gift_btn
 {
         display: none !important;
 }

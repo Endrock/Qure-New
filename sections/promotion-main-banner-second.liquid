@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="{{ 'homepage_promo_second.css' | asset_url }}">
 
+<!-- -- main banner start -- -->
 <div class="main_banner">
     {% if section.settings.image %}
         <picture>
@@ -17,20 +18,35 @@
     {% endif %}
     <div class="main_b_wrapper">
         <div class="container">
-            <div class="m_b_content">
-                {% if section.settings.heading != blank %}
-                    <div class="section_header pb-0">
-                        <h2 class="title-xl paddingB text-center text-md-start">{{ section.settings.heading }}</h2>
+            <div class="m_b_content mw-100">
+                <div class="event_banner-text pb-0">
+                    {% if section.settings.heading != blank %}
+                        <h6 class="mb-0">{{ section.settings.heading |  replace: '<p>', '' |  replace: '</p>', '' }}</h6>
+                    {% endif %}
+                    {% if section.settings.subheading != blank %}
+                        <h1 class="text-center text-md-start mb-md-4">{{ section.settings.subheading |  replace: '\n', '<br class="d-md-none d-inline-block">'  }}</h1>
+                    {% endif %}  
+                    {%- for block in section.blocks -%}
+                        <a href="{{ block.settings.link_url }}" class="btn_black px-md-5 d-md-none" aria-label="{{ block.settings.link_label | escape }}">{{ block.settings.link_label }}</a>
+                    {%- endfor -%}
+                </div>
+                <div class="event_banner-content btn-auto text-center text-md-start">
+                    {%- for block in section.blocks -%}
+                        <a href="{{ block.settings.link_url }}" class="btn_black px-md-5 d-md-inline-block d-none h-100" aria-label="{{ block.settings.link_label | escape }}">{{ block.settings.link_label }}</a>
+                    {%- endfor -%}
+                    <div class="head_band">
+                        <div class="head_band-main">
+                            <div class="band_img">
+                                <img src="{{ 'headband.webp' | asset_url }}" class="img-fluid" alt="headband">
+                            </div>
+                            <div class="band_txt">
+                                <h5>THIS OCTOBER</h5>
+                                <h4>Receive a free pink<br> headband and a cosmetic<br class="d-md-block d-none"> pouch with every purchase</h4>
+                            </div>
+                        </div>
+                        {{ section.settings.text }}
                     </div>
-                {% endif %}
-
-                {%- for block in section.blocks -%}
-                    <div class="btn-auto text-center text-md-start">
-                        <a href="{{ block.settings.link_url }}" class="btn_black" aria-label="{{ block.settings.link_label | escape }}">{{ block.settings.link_label }}</a>
-                    </div>
-                {%- endfor -%}
-
-                {{ section.settings.text |  replace:  '<p>', '<p class="pt-2 d-none d-md-block">' }}
+                </div>
             </div>
         </div>
     </div>
@@ -43,38 +59,22 @@
         "class": "section-main-banner-promotion-second",
         "settings": [
             {
-                "type": "text",
+                "type": "richtext",
                 "id": "heading",
                 "label": "t:common.heading.label"
             },
             {
-                "type": "text",
+                "type": "richtext",
                 "id": "heading_mobile",
                 "label": "t:common.heading.mobile.label"
             },
             {
-              "type": "select",
-              "id": "heading_tag",
-              "label": "Heading tag",
-              "options": [
-                {
-                  "value": "h1",
-                  "label": "H1"
-                },
-                {
-                  "value": "h2",
-                  "label": "H2"
-                }
-              ],
-              "default": "h2"
-            },
-            {
-                "type": "richtext",
+                "type": "text",
                 "id": "subheading",
                 "label": "t:common.subheading.label"
             },
             {
-                "type": "richtext",
+                "type": "text",
                 "id": "subheading_mobile",
                 "label": "t:common.subheading.mobile.label"
             },

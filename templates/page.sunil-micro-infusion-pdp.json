@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "main": {
@@ -759,6 +750,18 @@
             "client": "Alexandra R.",
             "code": ""
           }
+        },
+        "result_eLJa6L": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Nuala.png",
+            "heading": "I love this!",
+            "text": "<p>\"I love this. It is not painful at all. I have roscea\/super sensitive skin and it does not make my skin break out or go red. It makes my skin so soft as well.\"<\/p>",
+            "image_country": "shopify:\/\/shop_images\/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Nuala T.",
+            "code": ""
+          }
         }
       },
       "block_order": [
@@ -779,7 +782,8 @@
         "result_HkLwK8",
         "result_RgmxFK",
         "result_FagUhT",
-        "result_EfPNCF"
+        "result_EfPNCF",
+        "result_eLJa6L"
       ],
       "settings": {
         "classname": "mi_landing_result pt-0",

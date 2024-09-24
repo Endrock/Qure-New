@@ -7,7 +7,7 @@
 }
 
 .homepage .main_banner .main_b_wrapper .m_b_content {
-    max-width: 438px;
+    max-width: 498px;
 }
 
 .homepage .main_banner .bg_banner {
@@ -368,11 +368,24 @@
     font-size: 20px;
     margin-bottom: 15px;
     display: inline-block;
-    max-width: 354px;
-    width: 100%;
+    width: auto;
     text-align: center;
 }
 
+.homepage .main_banner .m_b_content p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.124px;
+    padding-bottom: 40px;
+    padding-top: 20px;
+}
+.homepage .main_banner .m_b_content h1{
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 57.4px;
+    letter-spacing: 0.45px;
+}
 .homepage .main_b_wrapper .section_header p {
     font-size: 18px;
     line-height: 28px;
@@ -487,10 +500,6 @@
     gap: 0;
 }
 
-.homepage .mySwiperTest {
-    padding: 10px;
-}
-
 .trusted_bl .trust_item .trust_item_info .result_content p,
 .trust_item .trust_item_info .result_content h6 {
     font-size: 12px;
@@ -504,8 +513,50 @@
 .homepage .result_item.result_item_info_with_fixed .result_c_info .verified_img p {
     color: #797D7C;
 }
-
+.advisor_content .accordion-button::after {
+    margin-left: initial;
+    width: 33px;
+    height: 33px;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    background-image: none;
+    content: url(../assets/arrow-down-sm.svg);
+    transform: unset;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.advisor_content .accordion-button:not(.collapsed):after{
+    content: url(../assets/arrow-up-sm.svg);
+}
+.advisor_content .accordion-button:not(.collapsed){
+    box-shadow: none;
+}
+.advisor_content .advisor_detail {
+    margin-top: -120px;
+}
+.advisor_content .advisor_detail h6{
+    font-weight: 600;
+    line-height: 21.538px;
+}
+.advisor_detail .accordion-body p {
+    line-height: 22px;
+}
+.advisor_content .accordion-header p {
+    font-weight: 400;
+    line-height: 21.538px;
+}
+.advisor_4 .advisor_detail {
+    margin-top: -140px;
+}
+.board_of-advisors .swiper {
+    overflow: unset;
+}
 @media(max-width:767px) {
+    .advisor_content .advisor_detail h6{
+        font-size: 14px;
+    }
     .ss_clinical .ss_c_detail a.ss_c_link {
         font-size: 12px;
         line-height: 22px;
@@ -518,8 +569,8 @@
     .homepage .btn_black {
         /* background-color: #fff;
         color: #000; */
-        max-width: 231px;
-        padding: 10px 26px;
+        max-width: 181px;
+        padding: 10px 28px;
     }
 
     .homepage .skincare_journey .btn_black {
@@ -529,14 +580,31 @@
     }
 
     .homepage .main_banner .main_b_wrapper .btn_black {
-        background-color: #fff;
-        color: #000;
+        font-size: 14px;
     }
 
+    .homepage .main_banner .m_b_content h1 {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0.28px;
+    }
+    .homepage .main_banner .m_b_content p {
+    font-size: 12px;
+    line-height: 21.652px;
+    letter-spacing: 0.124px;
+    text-align: center;
+    padding-bottom: 16px;
+    padding-top: 0;
+    }
     .homepage .main_banner .main_b_wrapper {
-        /* align-items: flex-start;
-        top: 30px; */
-        color: #fff;
+        align-items: start;
+        padding-top: 23px;
+    }
+    .homepage .main_banner .main_b_wrapper .m_b_content {
+        max-width: 324px;
+        margin: auto;
     }
 
     .homepage .main_b_wrapper .section_header p {
@@ -584,3 +652,123 @@
 }
 
 /* ================================== homepage old start ================================ */
+
+.homepage .main_banner .m_b_content h6 {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 36.93px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #D453AF;
+}
+.main_banner .main_b_wrapper {
+    align-items: start;
+}
+.homepage .main_banner .main_b_wrapper .m_b_content {
+    padding-top: 50px;
+}
+.main_b_wrapper .head_band-main {
+    display: grid;
+    grid-template-columns: 1fr 1.9fr;
+    gap: 26px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.55);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.12));
+    padding: 15px;
+}
+.head_band{
+    width: 100%;
+    max-width: 472px;
+}
+.head_band-main .band_img{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+.main_b_wrapper .head_band-main h4 {
+    color: #000;
+    font-family: "Canela Web";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.237px;
+}
+.head_band-main .band_txt h5 {
+    color: #D453AF;
+    font-family: Poppins;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 20.269px;
+    letter-spacing: 0.237px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    margin-top: 5px;
+}
+.head_band-main .band_img img {
+    width: 100%;
+    max-width: 112px;
+    margin: auto;
+}
+.main_banner .main_b_wrapper .head_band p {
+    color: #000;
+    font-family: Poppins;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 16.494px;
+    letter-spacing: 0.11px;
+    padding: 12px 0 0;
+}
+.event_banner-content{
+    display: flex;
+    justify-content: space-between;
+}@media(max-width:767px){
+    .event_banner-content {
+        flex-direction: column;
+        align-items: baseline;
+        height: 61%;
+        justify-content: end;
+    }
+    .main_b_wrapper .head_band-main h4 {
+        font-size: 15px;
+        line-height: 20px;
+        text-align: start;
+    }
+    .head_band-main .band_txt h5 {
+        font-size: 8px;
+        text-align: start;
+        margin-bottom: 0;
+    }
+    .main_b_wrapper .head_band-main {
+        gap: 20px;
+        grid-template-columns: 128px auto;
+    }
+    .homepage .main_banner .m_b_content h6 {
+        font-size: 13px;
+        line-height: 22px;
+        text-align: center;
+        padding-bottom: 5px;
+    }
+    .homepage .main_banner .main_b_wrapper .m_b_content {
+        padding-top: 0;
+    }
+    .homepage .main_banner .m_b_content h1 {
+        font-size: 34px;
+        line-height: 40px;
+        padding: 0 10px;
+        margin-bottom: 10px;
+    }
+    .homepage .main_banner .main_b_wrapper .container,
+    .homepage .main_banner .main_b_wrapper .m_b_content {
+        height: 100%;
+    }
+    .homepage .main_banner .main_b_wrapper{
+        padding-top: 0;
+    }
+    .event_banner-text {
+        text-align: center;
+        padding-top: 23px;
+        height: 38%;
+    }
+}

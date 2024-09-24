@@ -16,7 +16,10 @@
           "type": "announcement",
           "settings": {
             "heading": "FREE World-Wide Shipping | SAVE 43% Limited Time Offer Ends This Month",
-            "heading_mobile": "Limited time offer ends this month!"
+            "heading_mobile": "Limited time offer ends this month!",
+            "color": "white",
+            "font_size_desktop": 12,
+            "font_size_mobile": 12
           }
         },
         "navigation_link_97aJVY": {
@@ -145,6 +148,7 @@
         ".press_bl {background-color: rgb(251 251 251) !important; margin: 40px 0; padding: 44px 0;}"
       ],
       "settings": {
+        "custom_class": ""
       }
     },
     "compare-videos": {
@@ -344,7 +348,9 @@
       ],
       "settings": {
         "heading": "How does “stamping your skin” work?",
-        "text": "<p>Qure’s microneedles <strong>bypass the stratum corneum<\/strong> (the tough protective outer layer of skin) to <strong>deliver our scientifically-backed serum<\/strong> where it is needed to give you faster, better results.<\/p><p>It also triggers your <strong>natural recovery process<\/strong> giving your skin a rejuvenating boost.<\/p>"
+        "text": "<p>Qure’s microneedles <strong>bypass the stratum corneum<\/strong> (the tough protective outer layer of skin) to <strong>deliver our scientifically-backed serum<\/strong> where it is needed to give you faster, better results.<\/p><p>It also triggers your <strong>natural recovery process<\/strong> giving your skin a rejuvenating boost.<\/p>",
+        "custom_class": "mw-680",
+        "custom_class2": ""
       }
     },
     "effective": {
@@ -802,7 +808,8 @@
           "type": "button",
           "settings": {
             "button_label": "Experience The Difference",
-            "button_url": "#new-landing-purchase"
+            "button_url": "#new-landing-purchase",
+            "custom_class": "mw-452"
           }
         }
       },
@@ -1105,6 +1112,14 @@
             "code": ""
           }
         },
+        "object_KJWRnn": {
+          "type": "object",
+          "settings": {
+            "heading": "What's the full ingredients list?",
+            "text": "<p><strong>Rejuvenating Serum, All ingredients:<\/strong><br\/>Rosa Damascena Flower Water, Zemea Propanediol 1,3, Vegetable Glycerin, MacDermaTM TA (Tranexamic Acid), Niacinamide, Panthenol, Chrysanthellum indicum extract, Tripeptide-1 \/ Oligopeptide-1, Evermild EHG (Ethylhexylglycerin), Allantoin, Xanthan Gum, sh-Oligopeptide-1.<\/p><p><strong>Hydra-Soothing Serum, All ingredients:<\/strong><\/p><p>Rosa Damascena Flower Water, Zemea Propanediol 1,3, Vegetable Glycerin, Panthenol, Niacinamide, Myrothmnus Flabellifolia leaf \/ stem extract Water \/ Butylene Glycol \/ 4’Hydroxyacetophenone, Oat Beta Glucan, Chrysanthellum indicum extract, Evermild EHG (Ethylhexylglycerin), Palmitoyl Tripeptide-1, Sodium Hyaluronate (VLMW), Allantoin.<\/p><p><\/p><p>Please note that due to innovative updates and changing regulatory guidelines, the ingredient lists provided here may differ slightly from those on our packaging and distributor websites.<\/p>",
+            "code": ""
+          }
+        },
         "object_iNjJHr": {
           "type": "object",
           "settings": {
@@ -1139,6 +1154,7 @@
         "object_b4xRkF",
         "object_qfXzf3",
         "object_9UagXp",
+        "object_KJWRnn",
         "object_iNjJHr",
         "object_jh9h8Y",
         "object_n7R7ar"

@@ -29883,7 +29883,7 @@ p {
     }
 }
 
-@media (min-width:1400px) {
+@media (min-width:991px) {
 
     .dsn-left-container,
     .dsn-right-container {
@@ -30519,6 +30519,11 @@ p {
 
 .mw-849 {
     max-width: 849px !important;
+    margin: 0 auto;
+}
+
+.mw-860 {
+    max-width: 860px !important;
     margin: 0 auto;
 }
 
