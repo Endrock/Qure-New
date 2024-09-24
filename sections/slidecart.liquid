@@ -384,6 +384,13 @@
 			</div>
 
       {% render 'pdm_upsell_cards',cart:cart %}
+
+			{% for block in section.blocks %}
+				{% if block.type == 'trustpilot' %}
+					{% render 'pdm_sidcart-trustpilot', block: block, test_trustpilot: 'b' %}
+				{% endif %}
+			{% endfor %}
+
 			<div class="custom-shadow">
 
 				{% assign price_checkInsurance = price_check %}
@@ -447,7 +454,10 @@
 						{%- if is_only_gift == true -%}
 							<p class="drawer_shipping">&nbsp;</p>
 						{%- else -%}
-							<p class="drawer_shipping">Shipping</p>
+							<p style class="drawer_shipping drawer_shiping_original">Shipping</p>
+							{% if price_check >= 100 %}
+								<p class="drawer_shipping drawer_shiping_test">Shipping</p>
+							{% endif %}
 						{%- endif -%}
 					</div>
 
@@ -477,7 +487,7 @@
 						{%- if is_only_gift == true -%}
 							<div class="drawer_shipping"><p>&nbsp;</p></div>
 						{%- else -%}
-							<div class="drawer_shipping">
+							<div class="drawer_shipping drawer_shiping_original">
 								{% if price_check > 100  %}
 									<p>Free</p>
 								{% endif %}
@@ -485,6 +495,13 @@
 									<p><span class="money">$10</span></p>
 								{% endif %}
 							</div>
+
+							{% if price_check >= 100  %}
+								<div class="drawer_shipping drawer_shiping_test">
+									<p>Free</p>
+								</div>
+							{% endif %} 
+
               {% render 'pdm_cart-shipping-ammount', settingsGamification: section.settings, cartTotal: cart.total_price  %}
 						{%- endif -%}
 					</div>
@@ -547,7 +564,7 @@
 			</div>
 
 			<div class="cart_total-checkout">
-				<div class="drawer__cart-total">
+				<div class="drawer__cart-total" style="display: none;">
 					<p class="cart_items_subtotal_price">Your Total</p>
 					<p class="drawer__cart-total-price">
 						<span class="old_price-cart" data-compare-price="{{ total_cart_compare_price | money_without_currency }}">{% if total_cart_compare_price > cart.items_subtotal_price %}{{ total_cart_compare_price | money_without_trailing_zeros }}{% endif %}</span>
@@ -565,6 +582,13 @@
 						</button>
 					</div>
 				</form>
+
+				{% for block in section.blocks %}
+					{% if block.type == 'trustpilot' %}
+						{% render 'pdm_sidcart-trustpilot', block: block, test_trustpilot: 'c' %}
+					{% endif %}
+				{% endfor %}
+
 				<div class="payment_info">
 					<p>
 						<span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
@@ -771,6 +795,34 @@ productGiftPdm: productGiftPdm %}
 						"id": "disable",
 						"label": "t:sections.slidecart.blocks.gift.settings.disable.label",
 						"default": false
+					}
+				]
+			},
+			{
+				"name": "trustpilot",
+				"type": "trustpilot",
+				"settings": [
+					{
+						"type": "text",
+						"id": "text_area_first",
+						"label": "first content",
+						"default": "<p>Excellent <b>4.4</b></p>"
+					},
+					{
+						"type": "image_picker",
+						"id": "starts",
+						"label": "imagen starts trustpilot"
+					},
+					{
+						"type": "text",
+						"id": "second_text_content",
+						"label": "second text content",
+						"default": "reviews on"
+					},
+					{
+						"type": "image_picker",
+						"id": "logo",
+						"label": "logo trustpilot"
 					}
 				]
 			}

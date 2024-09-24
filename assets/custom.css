@@ -310,11 +310,12 @@ body[class~="page.q-rejuvalight-offer-acne"] .header_gift_btn
                 justify-content: space-around;
                 display: flex;
         }
-
+        /*
         .press_bl .ps_wrapper {
                 flex-direction: column;
                 gap: 20px;
         }
+        */
         .affect_skin .dsn-right-container {
                 padding: 0 24px !important;
         }
