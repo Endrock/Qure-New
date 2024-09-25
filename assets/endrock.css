@@ -2087,21 +2087,70 @@ body[class~="page.sunil-mi-landing"] .product-price{
   display: none;
 }
 
+.drawer_shiping_test{
+  display: none;
+}
+
 /* b */
 body[data-test-trustpilot='b'] .slidecart-trustpilot-container.test-trustpilot-b{
   display: flex;
+}
+
+@media screen and (min-width: 1000px) {
+  body[data-test-trustpilot='b'] .my-floating-cart form.my-cart .my-cart__info{
+    margin-top: 16px;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  body[data-test-trustpilot='b'] .my-floating-cart .cart_total-checkout{
+    height: 110px !important;
+  }
+
+  body[data-test-trustpilot='b'] .my-floating-cart .custom-shadow{
+    bottom: 110px !important;
+  }
+  
 }
 
 /* c */
 
 body[data-test-trustpilot='c'] .slidecart-trustpilot-container.test-trustpilot-c{
   display: flex;
+  padding-top: 6px;
 }
 
 body[data-test-trustpilot='c'] .cart_total-checkout .payment_info{
   display: none;
 }
 
+@media screen and (min-width: 1000px) {
+  body[data-test-trustpilot='c'] #launcher{
+    bottom: 5px !important;
+    margin-right: 5px !important;
+  }
+}
+
+body[data-test-trustpilot='c'] .my-floating-cart .cart_total-checkout{
+  height: 100px !important;
+}
+
+
+body[data-test-trustpilot='c'] .my-floating-cart .custom-shadow{
+  bottom: 100px !important;
+}
+
+@media screen and (min-width: 1000px){
+  body[data-test-trustpilot='c'] .my-floating-cart .cart_total-checkout{
+    height: 100px !important;
+  }
+
+  body[data-test-trustpilot='c'] .my-floating-cart .custom-shadow{
+    bottom: 100px !important;
+  }
+  
+}
 /* both */
 body[data-test-trustpilot='b'] .drawer_shiping_original,
 body[data-test-trustpilot='c'] .drawer_shiping_original{
@@ -2111,6 +2160,16 @@ body[data-test-trustpilot='c'] .drawer_shiping_original{
 body[data-test-trustpilot='b'] .drawer_shiping_test,
 body[data-test-trustpilot='c'] .drawer_shiping_test{
   display: block;
+}
+
+body[data-test-trustpilot='b'] .insurance-spacer,
+body[data-test-trustpilot='c'] .insurance-spacer{
+  display: none;
+}
+
+body[data-test-trustpilot='b'] .cart_total-checkout .drawer__cart-total,
+body[data-test-trustpilot='c'] .cart_total-checkout .drawer__cart-total{
+  display: none;
 }
 
 @media screen and (max-width: 769px) {
@@ -2140,7 +2199,6 @@ body[data-test-trustpilot='c'] .drawer_shiping_test{
   justify-content: center;
   background-color: white;
   border-top: 1px solid #BFBFBF;
-  border-bottom: 1px solid #BFBFBF;
   gap: 4px;
 }
 
@@ -2151,9 +2209,15 @@ body[data-test-trustpilot='c'] .drawer_shiping_test{
   }
 }
 
+@media screen and (min-width: 1000px){
+  .slidecart-trustpilot-container{
+    border-bottom: 1px solid #BFBFBF;
+  }
+}
+
 body[data-test-trustpilot='c'] .slidecart-trustpilot-container{
   flex-direction: row;
-  border-bottom: none;
+  border: none;
   padding-top: 20px;
 }
 
@@ -2215,5 +2279,8 @@ body[data-test-trustpilot='c'] .slidecart-trustpilot-container{
     padding-top: 12px;
   }
 
+  body[data-test-trustpilot=c] .slidecart-trustpilot-container.test-trustpilot-c{
+    padding-top: 6px;
+  }
 }
 /* end test Side-Cart Trustpilot */

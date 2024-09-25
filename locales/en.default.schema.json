@@ -163,6 +163,9 @@
     "Section": {
       "label": "Section Heading"
     },
+    "free_gift": {
+      "label": "Free gift"
+    },
     "timer": {
       "label": "Timer",
       "info": "Valid until this time",

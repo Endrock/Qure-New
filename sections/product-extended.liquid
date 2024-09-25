@@ -9,6 +9,7 @@
 {%- assign supply_count = 0 -%}
 {%- assign subscribe_count = 0 -%}
 {%- assign timer = blank -%}
+{%- assign free_gift = blank -%}
 {%- assign list_count_reduced = 0 -%}
 
 {%- for block in section.blocks -%}
@@ -25,6 +26,8 @@
             {%- assign subscribe_count = subscribe_count | plus: 1 -%}
         {%- when 'timer' -%}
             {%- assign timer = block -%}
+        {%- when 'free_gift' -%}
+            {%- assign free_gift = block -%}
     {%- endcase -%}
 {%- endfor -%}
 
@@ -265,6 +268,10 @@
 
                             {% if timer != blank %}
                                 {% render 'product-timer' with block: timer %}
+                            {% endif %}
+
+                            {% if free_gift != blank %}
+                                {% render 'product-free-gift' with block: free_gift %}
                             {% endif %}
 
                             <div class="payment_method">
@@ -775,6 +782,25 @@
                         "id" : "timer",
                         "label" : "t:common.timer.label",
                         "info": "t:common.timer.info"
+                    }
+                ]
+            },        
+            {
+                "type": "free_gift",
+                "name": "t:common.free_gift.label",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type" : "text",
+                        "id" : "heading",
+                        "label" : "t:common.heading.label",
+                        "default": "Boost your LED results."
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "t:common.text.label",
+                        "default": "<p>Get a FREE All-In-One Face Serum ($79) with purchase</p>"
                     }
                 ]
             }        
