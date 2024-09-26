@@ -32,6 +32,7 @@
     ],
     "show_order_by_receive_by": true,
     "today_text": "Order today",
+    "enable_corner_treatment_bfcm": true,
     "promotion": "promotion",
     "sections": {
       "header": {
