@@ -118,19 +118,34 @@
 
             <div class="productBlockGrid fixed_height_btn" id="{{ product.handle }}">
                 <div class="cus-tag">
-                    {% assign amount = 0 %}
-                    {% for variant in product.variants %}
-                      {% assign saving = variant.compare_at_price | minus: variant.price %}
-                      {% assign amount = saving | at_least: amount %}
-                    {% endfor %}
+                  {% assign show_bf_cm_treadment = false %}
+                  {% assign show_corner_product = product.metafields.custom.enable_corner_treatment_bfcm.value %}
+                  {% if show_corner_product and settings.enable_corner_treatment_bfcm %}
+                    {% assign show_bf_cm_treadment = true %}
+                  {% endif %}
+
+                  {% assign amount = 0 %}
+                  {% for variant in product.variants %}
+                    {% assign saving = variant.compare_at_price | minus: variant.price %}
+                    {% assign amount = saving | at_least: amount %}
+                  {% endfor %}
+
+                  {% if show_bf_cm_treadment and settings.copy_corner_treatment_bfcm != blank%}
+                    <span class="cus-save pdm-corner_bfcm">
+                      {{ settings.copy_corner_treatment_bfcm }}
+                    </span>
+                  {% else %}
                     {% if amount != 0 %}
                         <span class="cus-save">Save {{ amount | money_without_trailing_zeros }}</span>
                     {% endif %}
-                    {% for tag in product.tags %}
-                        {% if tag contains 'Best Seller' %}
-                            <span class="cus-seller">BestSeller</span>
-                        {% endif %}
-                    {% endfor %}
+                  {% endif %}
+
+                  {% for tag in product.tags %}
+                      {% if tag contains 'Best Seller' %}
+                          <span class="cus-seller">BestSeller</span>
+                      {% endif %}
+                  {% endfor %}
+
                 </div>
                 <div class="product-grid__image">
                     <a href="{{ routes.root_url }}{{ product_url }}" class="productLink">

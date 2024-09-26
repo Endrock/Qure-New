@@ -214,19 +214,21 @@
 
         document.querySelector('#gdpr_reject').addEventListener('click', function() {
             event.preventDefault();
-            setCookie("gdrp", "true", 365);
+            gdpr_setCookie("gdrp", "true", 365);
             gdrpModal.hide();
         });
 
         document.querySelector('#gdpr_accept').addEventListener('click', function() {
+            console.log('aaaaqqqq1');
             event.preventDefault();
-            setCookie("gdrp", "true", 365);
+            gdpr_setCookie("gdrp", "true", 365);
+            console.log('aaaaqqqq2');
             gdrpModal.hide();
         });
 
         document.querySelector('#gdpr_accept_settings').addEventListener('click', function() {
             event.preventDefault();
-            setCookie("gdrp", "true", 365);
+            gdpr_setCookie("gdrp", "true", 365);
             gdrpModal.hide();
             gdrpSettingsModal.hide();
         });
