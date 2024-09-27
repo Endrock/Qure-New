@@ -294,10 +294,10 @@
                                         </label>
                                     </div>
                                 </div>
-                                {% assign product = all_products['micro-infusion-3-month-bundle-rejuvenating-copy'] %}
+                                {% assign product = all_products['micro-infusion-3-month-bundle-rejuvenating-lp'] %}
 
                                 <div class="step_content mb-3 pt-0 step_btn">
-                                    <a class="btn btn-lg btn-primary buy_btn mt-3 {{ section_id }}_productButtonObject" href="{{ routes.cart_add_url }}?id=45889972437231&quantity=1" onclick="setEventProductHandler('{{ product.handle | escape }}')" data-ajax-cart-request-button>
+                                    <a class="btn btn-lg btn-primary buy_btn mt-3 {{ section_id }}_productButtonObject" href="{{ routes.cart_add_url }}?id=45889972437231&quantity=1" data-ajax-cart-request-button>
                                         BUY NOW <span class="btn_value"><strong>& SAVE 33%</strong></span>
                                         <img src="{{ 'arrow_right.svg' | asset_url }}" alt="" class="btn_icon">
                                     </a>

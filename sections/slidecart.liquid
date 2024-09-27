@@ -385,14 +385,25 @@
 
       {% render 'pdm_upsell_cards',cart:cart %}
 
-			{% for block in section.blocks %}
-				{% if block.type == 'trustpilot' %}
-					{% render 'pdm_sidcart-trustpilot', block: block, test_trustpilot: 'b' %}
-				{% endif %}
-			{% endfor %}
+			{% if  cart.item_count > 0  %}
+				{% for block in section.blocks %}
+					{% if block.type == 'trustpilot' %}
+						{% render 'pdm_sidcart-trustpilot', block: block, test_trustpilot: 'b' %}
+					{% endif %}
+				{% endfor %}
+			{% endif %}
 
 			<div class="custom-shadow">
 
+				{% comment %} trust pilot {% endcomment %}
+					{% if  cart.item_count > 0  %}
+						{% for block in section.blocks %}
+							{% if block.type == 'trustpilot' %}
+								{% render 'pdm_sidcart-trustpilot', block: block, test_trustpilot: 'b', variant_test: "b-footer"%}
+							{% endif %}
+						{% endfor %}
+					{% endif %}
+				{% comment %} end trust pilot {% endcomment %}
 				{% assign price_checkInsurance = price_check %}
 				{%- assign insPrice = 0 -%}
 

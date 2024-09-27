@@ -93,23 +93,36 @@
 
   subscribeToCartAjaxRequests(myRequestCallback => {
     if(myRequestCallback.requestType === 'add') {
-      if(window.event_product_handle != undefined)
-      {
-        fetchProductData(window.event_product_handle)
-        .then(() => {
-          console.log(window.item);
-          _learnq.push(['track', 'Added to Cart', window.item]);
-          window.event_product_handle = null;
-        })
+      if(!window.event_product_handle) {
+        let atc_href = myRequestCallback.info.initiator.getAttribute('href');
+        let atc_url = new URL(atc_href, window.location.origin);
+        let atc_variant_id = atc_url.searchParams.get('id');
+
+        //console.log('atc_variant_id [' + atc_variant_id + ']'); 
+        updateItemObject(atc_variant_id);
       }
-      else
-      {
-        if(window.item != undefined)
+
+      setTimeout(() => {
+        if(window.event_product_handle)
         {
-          console.log(window.item);
-          _learnq.push(['track', 'Added to Cart', window.item]);
+          //console.log('window.event_product_handle [' + window.event_product_handle + ']');
+
+          fetchProductData(window.event_product_handle)
+          .then(() => {
+            console.log(window.item);
+            _learnq.push(['track', 'Added to Cart', window.item]);
+            window.event_product_handle = null;
+          })
         }
-      }
+        else
+        {
+          if(window.item != undefined)
+          {
+            console.log(window.item);
+            _learnq.push(['track', 'Added to Cart', window.item]);
+          }
+        }
+      }, 500);
     }
   })
 
