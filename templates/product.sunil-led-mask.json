@@ -58,6 +58,7 @@
         },
         "timer_abVU3e": {
           "type": "timer",
+          "disabled": true,
           "settings": {
             "heading": "Save $50 on any LED device",
             "text": "<p>Get <em><strong>$50 OFF</strong></em><strong> </strong>with code: <strong>GLOWON50</strong></p>",

@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -5,8 +14,8 @@
       "settings": {
         "heading": "",
         "heading_mobile": "",
-        "image": "shopify:\/\/shop_images\/banner_desk.png",
-        "image_mobile": "shopify:\/\/shop_images\/banner.png"
+        "image": "shopify://shop_images/Desktop_collection_page_banner_2e791e34-acc8-4944-a769-5a6e4c62dd7d.png",
+        "image_mobile": "shopify://shop_images/Mobile_collection_page_banner_3e16e7d8-94f4-446e-8ff8-467d866631db.png"
       }
     },
     "icons_list_BUTDmx": {
@@ -15,29 +24,29 @@
         "icon_E3nayg": {
           "type": "icon",
           "settings": {
-            "image": "shopify:\/\/shop_images\/free-shipping-ftr.svg",
-            "text": "<p>Free Shipping<\/p><p>Orders Over $100<\/p>"
+            "image": "shopify://shop_images/free-shipping-ftr.svg",
+            "text": "<p>Free Shipping</p><p>Orders Over $100</p>"
           }
         },
         "icon_PKBzbi": {
           "type": "icon",
           "settings": {
-            "image": "shopify:\/\/shop_images\/buy-now-ftr.svg",
-            "text": "<p>Buy Now,<\/p><p>Pay Later<\/p>"
+            "image": "shopify://shop_images/buy-now-ftr.svg",
+            "text": "<p>Buy Now,</p><p>Pay Later</p>"
           }
         },
         "icon_MAhtJW": {
           "type": "icon",
           "settings": {
-            "image": "shopify:\/\/shop_images\/derma-ftr.svg",
-            "text": "<p>Dermatologist<\/p><p>Reviewed & Approved<\/p>"
+            "image": "shopify://shop_images/derma-ftr.svg",
+            "text": "<p>Dermatologist</p><p>Reviewed & Approved</p>"
           }
         },
         "icon_PncCDy": {
           "type": "icon",
           "settings": {
-            "image": "shopify:\/\/shop_images\/science-ftr.svg",
-            "text": "<p>Proven Results,<\/p><p>Backed by science<\/p>"
+            "image": "shopify://shop_images/science-ftr.svg",
+            "text": "<p>Proven Results,</p><p>Backed by science</p>"
           }
         }
       },
@@ -57,9 +66,9 @@
         "client_card_BHKtXC": {
           "type": "client_card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/imgcollection-finelines.png",
-            "image_mobile": "shopify:\/\/shop_images\/imgcollection-finelines-mob.png",
-            "text": "<p>“This is an amazing product that you will not regret in purchasing it. \u2028I really see the change in my skin.”<\/p>",
+            "image": "shopify://shop_images/imgcollection-finelines.png",
+            "image_mobile": "shopify://shop_images/imgcollection-finelines-mob.png",
+            "text": "<p>“This is an amazing product that you will not regret in purchasing it.  I really see the change in my skin.”</p>",
             "client": "Ellie V.",
             "position": "1"
           }
@@ -67,9 +76,9 @@
         "doctor_card_mikzkG": {
           "type": "doctor_card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/collection_drShah.webp",
+            "image": "shopify://shop_images/collection_drShah.webp",
             "header": "Trusted and recommended by world-leading dermatologists",
-            "text": "<p>\"The best LED mask on the market in my opinion at this time, that being said you do need to use this consistently to see results...\"<\/p>",
+            "text": "<p>\"The best LED mask on the market in my opinion at this time, that being said you do need to use this consistently to see results...\"</p>",
             "client": "Dr Shah, MD Certified Dermatologist",
             "position": "4"
           }
@@ -77,12 +86,12 @@
         "brand_card_ynEhKC": {
           "type": "brand_card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/collectionVogue.webp",
-            "image_mobile": "shopify:\/\/shop_images\/collectionVogue.webp",
+            "image": "shopify://shop_images/collectionVogue.webp",
+            "image_mobile": "shopify://shop_images/collectionVogue.webp",
             "header": "VOGUE",
-            "text": "<p>One of VOGUE's top LED masks<\/p>",
+            "text": "<p>One of VOGUE's top LED masks</p>",
             "button_label": "Discover Now",
-            "button_url": "https:\/\/www.qureskincare.com\/products\/q-rejuvalight-pro-facewear",
+            "button_url": "https://www.qureskincare.com/products/q-rejuvalight-pro-facewear",
             "position": "7"
           }
         }
@@ -101,10 +110,10 @@
         "result_ecrrRm": {
           "type": "result",
           "settings": {
-            "image": "shopify:\/\/shop_images\/results_teresa.webp",
+            "image": "shopify://shop_images/results_teresa.webp",
             "heading": "IT REALLY WORKS!!",
-            "text": "<p>“I was very skeptical when my husband bought this mask for me. But after 6mo the results are amazing!! I’ve tried numerous serums for my sun spots but nothing worked until I used this mask. Definitely worth the money.\"<\/p>",
-            "image_country": "shopify:\/\/shop_images\/america_f.webp",
+            "text": "<p>“I was very skeptical when my husband bought this mask for me. But after 6mo the results are amazing!! I’ve tried numerous serums for my sun spots but nothing worked until I used this mask. Definitely worth the money.\"</p>",
+            "image_country": "shopify://shop_images/america_f.webp",
             "text_country": "United States",
             "client": "Teresa S.",
             "code": ""
@@ -113,10 +122,10 @@
         "result_bNqVyU": {
           "type": "result",
           "settings": {
-            "image": "shopify:\/\/shop_images\/results_tiffany.webp",
+            "image": "shopify://shop_images/results_tiffany.webp",
             "heading": "Renewed Skin!",
-            "text": "<p>\"My Qure mask has been amazing! As someone who struggles with acne and rosacea, your LED light therapy mask has improved my skin so much that I can now feel comfortable without any makeup. I’m very happy with this product!\"<\/p>",
-            "image_country": "shopify:\/\/shop_images\/america_f.webp",
+            "text": "<p>\"My Qure mask has been amazing! As someone who struggles with acne and rosacea, your LED light therapy mask has improved my skin so much that I can now feel comfortable without any makeup. I’m very happy with this product!\"</p>",
+            "image_country": "shopify://shop_images/america_f.webp",
             "text_country": "United States",
             "client": "Tiffany L.",
             "code": ""
@@ -125,10 +134,10 @@
         "result_YDr83e": {
           "type": "result",
           "settings": {
-            "image": "shopify:\/\/shop_images\/results_anton.webp",
+            "image": "shopify://shop_images/results_anton.webp",
             "heading": "Can’t go a day without it",
-            "text": "<p>\"I started getting the usual teenage acne. It got very bad. I tried everything, I tried diets, I went completely vegan. I tried all sorts ofskincare, expensive and cheap. Straight away I noticed results with Qure, after the first week I had noactive breakouts anymore.<\/p><p>People ask me now how have I got my skin to be hydrated, acne-free,looking bright with no redness. I'm so reliant on the Qure mask now. Idon't think I can go a day without using it.\"<\/p>",
-            "image_country": "shopify:\/\/shop_images\/australia_f.webp",
+            "text": "<p>\"I started getting the usual teenage acne. It got very bad. I tried everything, I tried diets, I went completely vegan. I tried all sorts ofskincare, expensive and cheap. Straight away I noticed results with Qure, after the first week I had noactive breakouts anymore.</p><p>People ask me now how have I got my skin to be hydrated, acne-free,looking bright with no redness. I'm so reliant on the Qure mask now. Idon't think I can go a day without using it.\"</p>",
+            "image_country": "shopify://shop_images/australia_f.webp",
             "text_country": "Australia",
             "client": "Anton M.",
             "code": ""
@@ -137,10 +146,10 @@
         "result_47bjXc": {
           "type": "result",
           "settings": {
-            "image": "shopify:\/\/shop_images\/results_michelle.webp",
+            "image": "shopify://shop_images/results_michelle.webp",
             "heading": "Zero Maskne for 8 weeks",
-            "text": "<p>“I thought it was only working on my breakouts, zero Maskne for 8 weeks now, BUT thank goodness for Before and After because even I was shocked! My followers have noticed a difference in my skin the past few weeks and now I understand what they’re seeing. The difference isn’t huge but enough that it postpones surgery which I can’t afford right now.”<\/p>",
-            "image_country": "shopify:\/\/shop_images\/america_f.webp",
+            "text": "<p>“I thought it was only working on my breakouts, zero Maskne for 8 weeks now, BUT thank goodness for Before and After because even I was shocked! My followers have noticed a difference in my skin the past few weeks and now I understand what they’re seeing. The difference isn’t huge but enough that it postpones surgery which I can’t afford right now.”</p>",
+            "image_country": "shopify://shop_images/america_f.webp",
             "text_country": "United States",
             "client": "Michelle S.",
             "code": ""
@@ -149,10 +158,10 @@
         "result_NmwfpJ": {
           "type": "result",
           "settings": {
-            "image": "shopify:\/\/shop_images\/results_june.webp",
+            "image": "shopify://shop_images/results_june.webp",
             "heading": "Amazing results!",
-            "text": "<p>“Amazing! I never expected this miracle. I’ve had red blotches above my lips for years and they are vastly improved after using the mask daily for only 6 weeks. I bought it hoping for better skin texture and less wrinkles. It has improved those, but having the redness gone is what I’m<br\/>most excited about.”<\/p>",
-            "image_country": "shopify:\/\/shop_images\/america_f.webp",
+            "text": "<p>“Amazing! I never expected this miracle. I’ve had red blotches above my lips for years and they are vastly improved after using the mask daily for only 6 weeks. I bought it hoping for better skin texture and less wrinkles. It has improved those, but having the redness gone is what I’m<br/>most excited about.”</p>",
+            "image_country": "shopify://shop_images/america_f.webp",
             "text_country": "United States",
             "client": "June T.",
             "code": ""
@@ -161,10 +170,10 @@
         "result_JCcEmh": {
           "type": "result",
           "settings": {
-            "image": "shopify:\/\/shop_images\/results_jess.webp",
+            "image": "shopify://shop_images/results_jess.webp",
             "heading": "So much smoother",
-            "text": "<p>“After few weeks of using it everyday I already can see a difference in my skin - so much more smooth, less red and itchy, pores are smaller and I have less congestion bumps.”<\/p>",
-            "image_country": "shopify:\/\/shop_images\/america_f.webp",
+            "text": "<p>“After few weeks of using it everyday I already can see a difference in my skin - so much more smooth, less red and itchy, pores are smaller and I have less congestion bumps.”</p>",
+            "image_country": "shopify://shop_images/america_f.webp",
             "text_country": "United States",
             "client": "Jess",
             "code": ""
@@ -173,10 +182,10 @@
         "result_AnCMPk": {
           "type": "result",
           "settings": {
-            "image": "shopify:\/\/shop_images\/results_john.webp",
+            "image": "shopify://shop_images/results_john.webp",
             "heading": "Healthier-looking glow",
-            "text": "<p>“My skin feels a lot more clear, considerably less oily, and all round a healthier-looking glow. My breakout scars had even been reduced!”<\/p>",
-            "image_country": "shopify:\/\/shop_images\/canada_f.svg",
+            "text": "<p>“My skin feels a lot more clear, considerably less oily, and all round a healthier-looking glow. My breakout scars had even been reduced!”</p>",
+            "image_country": "shopify://shop_images/canada_f.svg",
             "text_country": "Canada",
             "client": "John P.",
             "code": ""
@@ -185,10 +194,10 @@
         "result_AqGUDT": {
           "type": "result",
           "settings": {
-            "image": "shopify:\/\/shop_images\/results_bj_nardi.webp",
+            "image": "shopify://shop_images/results_bj_nardi.webp",
             "heading": "Completely qured my acne",
-            "text": "<p>“This is the first time in TWO YEARS that I don’t have active acne on my face. I’ve been using my Qure for 1 month now and it has completely qured my acne. It’s gone AND it’s healing all my scars and pox marks. I was literally on the verge of suicide because of my horrible skin. This device SAVED MY LIFE!!!.”<\/p>",
-            "image_country": "shopify:\/\/shop_images\/canada_f.svg",
+            "text": "<p>“This is the first time in TWO YEARS that I don’t have active acne on my face. I’ve been using my Qure for 1 month now and it has completely qured my acne. It’s gone AND it’s healing all my scars and pox marks. I was literally on the verge of suicide because of my horrible skin. This device SAVED MY LIFE!!!.”</p>",
+            "image_country": "shopify://shop_images/canada_f.svg",
             "text_country": "Canada",
             "client": "BJ Nardi",
             "code": ""

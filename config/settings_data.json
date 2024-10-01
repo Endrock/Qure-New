@@ -41,9 +41,9 @@
           "announcement_TPxBgi": {
             "type": "announcement",
             "settings": {
-              "heading": "<p><strong>SAVE $50 </strong>on any LED device</p>",
-              "button_label": "SHOP NOW & SAVE",
-              "button_url": "shopify://collections/led-light-therapy-devices"
+              "heading": "<p><strong>FREE </strong>World-Wide Shipping Over $100</p>",
+              "button_label": "SHOP NOW",
+              "button_url": "shopify://collections/best-sellers"
             }
           },
           "tab_3Wyyea": {
@@ -173,11 +173,11 @@
           "gift_ccQgi4": {
             "type": "gift",
             "settings": {
-              "product": "micro-infusion-targeted-patches-single",
-              "price_limit": "150",
-              "quantity": "2",
-              "discount": "FREEPATCH",
-              "disable": true
+              "product": "pink-headband-pouch-breast-cancer-awareness-month",
+              "price_limit": "0",
+              "quantity": "1",
+              "discount": "FREEHEADBAND",
+              "disable": false
             }
           },
           "trustpilot_JJ7mEQ": {

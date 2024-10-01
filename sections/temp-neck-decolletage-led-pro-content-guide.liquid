@@ -17,7 +17,7 @@
                             LED</a></p>
                 </div>
             </div>
-            <div class="col-md-5 order-1 order-md-2">
+            <div class="col-md-5 order-1 order-md-2 pe-none">
                 <div class="c_guide_img mw-mob-100">
                     <div class="wistia_responsive_padding" style="position:relative;">
                         <div class="wistia_responsive_wrapper"
@@ -1004,10 +1004,7 @@
         document.querySelectorAll('#myTabContent .tab-pane').forEach(function (content) {
             content.classList.remove('show', 'active');
         });
-    });
-</script>
-<script>
-    $(document).ready(function () {
+
         $('a[href^="#"]').on('click', function (event) {
             event.preventDefault();
             var target = $(this.getAttribute('href'));
