@@ -1,0 +1,173 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "product-extended",
+      "blocks": {
+        "rating_KDB67x": {
+          "type": "rating",
+          "settings": {
+            "image": "shopify://shop_images/star-half_fill.svg",
+            "text": "<p>97% customer satisfaction rate</p>"
+          }
+        },
+        "list_azYRbY": {
+          "type": "list",
+          "settings": {
+            "text": "<ul><li>Gently purifies to reduce impurities without stripping or drying out the skin.</li><li>Helps reduce bacteria that can cause breakouts.</li><li>Versatile and safe for use on your face, body, and even devices.</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "rating_KDB67x",
+        "list_azYRbY"
+      ],
+      "settings": {
+        "heading": "Cleanse, calm, and \\n clear your skin with Dermal Mist",
+        "heading_mobile": "Cleanse, calm, and \\n clear your skin with Dermal Mis",
+        "product_images_limit": 2,
+        "product_button_label": "Product",
+        "before_after_images_limit": 0,
+        "before_after_button_label": "Before & After",
+        "reserve": false,
+        "underbutton_text_left": "Dermatologist Reviewed",
+        "underbutton_text_right": "Free Shipping Over $100",
+        "selected_design": "old",
+        "text_label_real_result_1": "",
+        "text_label_real_result_2": "",
+        "text_label_real_result_3": ""
+      }
+    },
+    "second": {
+      "type": "temp-pdp-dermal-mist",
+      "settings": {
+      }
+    },
+    "faq_UUdrDJ": {
+      "type": "faq",
+      "blocks": {
+        "object_EJVLkK": {
+          "type": "object",
+          "settings": {
+            "heading": "What makes Dermal Mist different from other facial sprays?",
+            "text": "<p>Dermal Mist is powered by hypochlorous acid and enriched with chamomile, offering anti-inflammatory and antibacterial benefits without any harsh chemicals. It's pH balanced and gentle enough for all skin types, making it a versatile addition to your daily routine.</p>",
+            "code": ""
+          }
+        },
+        "object_7zitHk": {
+          "type": "object",
+          "settings": {
+            "heading": "Can I use Dermal Mist on sensitive skin?",
+            "text": "<p>Absolutely. Dermal Mist is dermatologically tested, hypoallergenic, and formulated specifically to be kind to even the most sensitive skin. It’s designed to soothe, purify, and protect without causing irritation.</p>",
+            "code": ""
+          }
+        },
+        "object_hCXLPF": {
+          "type": "object",
+          "settings": {
+            "heading": "How should I incorporate Dermal Mist into my skincare routine?",
+            "text": "<p>You can use Dermal Mist morning and evening as a purifying step before applying treatments. It’s also great for refreshing your skin throughout the day, post-workout, or to disinfect surfaces like your skincare tools.</p>",
+            "code": ""
+          }
+        },
+        "object_tRGKQP": {
+          "type": "object",
+          "settings": {
+            "heading": "Why does Dermal Mist have a faint “pool water” smell?",
+            "text": "<p>The natural smell comes from hypochlorous acid, the active ingredient. We don’t add any fragrances or masking agents, so what you’re smelling is simply the product working its magic. The scent is light and fades quickly.</p>",
+            "code": ""
+          }
+        },
+        "object_Lka3dg": {
+          "type": "object",
+          "settings": {
+            "heading": "Is Dermal Mist safe to use around my eyes?",
+            "text": "<p>Yes, it’s safe for facial use, including around the eye area. Just be sure to close your eyes when spraying and allow the mist to air dry—no need to rinse off.</p>",
+            "code": ""
+          }
+        },
+        "object_Mkee9H": {
+          "type": "object",
+          "settings": {
+            "heading": "Can I use Dermal Mist on surfaces, too?",
+            "text": "<p>Yes, Dermal Mist is versatile enough to be used on your face, body, and even surfaces like your pillowcase or skincare tools. It’s a gentle yet effective way to keep bacteria at bay.</p>",
+            "code": ""
+          }
+        },
+        "object_r9ziUD": {
+          "type": "object",
+          "settings": {
+            "heading": "Is this product vegan and cruelty-free?",
+            "text": "<p>Yes, Dermal Mist is both vegan and cruelty-free. We are committed to creating products that are kind to both your skin and the environment.</p>",
+            "code": ""
+          }
+        },
+        "object_WJHFVy": {
+          "type": "object",
+          "settings": {
+            "heading": "What’s the concentration of hypochlorous acid in Dermal Mist?",
+            "text": "<p>Dermal Mist contains a precise 0.02% concentration of hypochlorous acid, which is effective enough to deliver antibacterial and anti-inflammatory benefits while remaining gentle on the skin.</p>",
+            "code": ""
+          }
+        },
+        "object_H3YLF3": {
+          "type": "object",
+          "settings": {
+            "heading": "How should I store Dermal Mist?",
+            "text": "<p>Store Dermal Mist at room temperature, away from direct sunlight and heat. This will help maintain its effectiveness and prolong its shelf life.</p>",
+            "code": ""
+          }
+        },
+        "object_br8Tty": {
+          "type": "object",
+          "settings": {
+            "heading": "Will Dermal Mist dry out my skin?",
+            "text": "<p>No, Dermal Mist is formulated to be non-drying and won’t leave any residue. It’s designed to cleanse and soothe your skin, helping it stay hydrated and balanced.</p>",
+            "code": ""
+          }
+        },
+        "button_8yxV6r": {
+          "type": "button",
+          "settings": {
+            "ext_btn": "",
+            "ext_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "object_EJVLkK",
+        "object_7zitHk",
+        "object_hCXLPF",
+        "object_tRGKQP",
+        "object_Lka3dg",
+        "object_Mkee9H",
+        "object_r9ziUD",
+        "object_WJHFVy",
+        "object_H3YLF3",
+        "object_br8Tty",
+        "button_8yxV6r"
+      ],
+      "settings": {
+        "background": "bg_yellow",
+        "classname": "bg_yellow",
+        "heading": "Your burning questions, our glowing answers",
+        "text": "",
+        "button_label": "Show More Questions",
+        "button_hide_label": "Hide More Questions"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "second",
+    "faq_UUdrDJ"
+  ]
+}

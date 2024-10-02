@@ -1,7 +1,7 @@
 /* 
 * Common JS Start
 */
-
+setTimeout(function () {
     var TwaSettingsSwiper = {
         init: function () {
             this.TwaSettingsCarousel();
@@ -82,12 +82,9 @@
                 })
         }
     };
-    setTimeout(function () {
     TwaSettingsSwiper.init();
 }, 500);
-document.addEventListener("shopify:section:load", function(event) {
-    TwaSettingsSwiper.init()
-})
+
 
 
 //Header
@@ -986,7 +983,9 @@ $(".serumBlock").click(function () {
 * choose serum js start 
 */
 $(document).ready(function () {
-    $('.tab_content').not(':first').hide();
+    $('.tab_content').hide(); // Hide all tab contents initially
+    $('.tab_content').eq(1).show(); // Show the second tab content by default
+
     $('.step_conten_blocks .planBlock').click(function () {
         var regular_price = $(this).find(".regular_price").text();
         var sale_price = $(this).find(".sale_price").text();
@@ -1002,17 +1001,22 @@ $(document).ready(function () {
         $('.tab_content').hide();
         $('.step_conten_blocks .planBlock').removeClass('active');
         $(this).addClass('active');
+
         var tab = $(this).data('tab');
+
+        if(tab == "month_2"){
+            $(".supply-detail").addClass("offer_active");
+        }else{
+            $(".supply-detail").removeClass("offer_active");
+        }
         $('#' + tab).show();
     });
 
     //product subscription
 
-
     var data_month1_image = $(".serum_img.active").attr('data-month1-image');
     var data_month2_image = $(".serum_img.active").attr('data-month2-image');
     var data_month3_image = $(".serum_img.active").attr('data-month3-image');
-
 
     $(".planBlock").each(function () {
         var data_tab = $(this).attr("data-tab");
@@ -1024,7 +1028,6 @@ $(document).ready(function () {
             $(this).attr("data-image", data_month1_image);
         }
     });
-
 
     $(".serumBlock").click(function () {
         var imageLinkss = $(".step_conten_blocks a.planBlock.active").attr('data-image');
@@ -1051,6 +1054,7 @@ $(document).ready(function () {
     });
 
 });
+
 /*
 * choose serum js end 
 */
@@ -1522,6 +1526,27 @@ const swiperAffect = new Swiper(".swiper-containerAffect", {
     },
 });
 
+// affect your skin start
+const swiperAffect2 = new Swiper(".swiper-containerAffect2", {
+    // loop: true,
+    slidesPerView: "1.05",
+    spaceBetween: 20,
+    breakpoints: {
+        600: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        }
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-arrow-next",
+        prevEl: ".swiper-arrow-prev",
+    }
+});
+
 
 var initQWater = false;
 var swiperQWater;
@@ -1584,4 +1609,42 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+});
+
+
+//// App Slider ////
+var swiper_press = new Swiper(".app_press_sl_img", {
+    spaceBetween: 20,
+    slidesPerView: 2.9,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    loop: true,
+    breakpoints: {
+        640: {
+            slidesPerView: 3.5,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+            touchRatio: 0
+        }
+    },
+});
+var swiper_press2 = new Swiper(".app_press_sl_content", {
+    spaceBetween: 10,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    loop: true,
+    thumbs: {
+        swiper: swiper_press,
+    },
+});
+$('.thumbs img').click(function () {
+    $('.largeImage').attr('src', $(this).attr('src').replace('thumb', 'large'));
+    $(this).addClass('current').siblings().removeClass('current');
 });

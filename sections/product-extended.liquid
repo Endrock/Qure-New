@@ -304,7 +304,7 @@
             <div class="col-md-6  order-1 order-md-2">
                 {% if new_design == false %}
                 <div class="refill_slider mw-mob-100">
-                    <div class="refill_s_tab_content">
+                    <div {% if section.settings.before_after_images_limit > 0 %}class="refill_s_tab_content"{% endif %}>
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                                 aria-labelledby="pills-home-tab">
@@ -360,7 +360,15 @@
                                             {% endif %}
                                         {% endfor %}
                                     </div>
-                                    <div class="swiper-pagination"></div>
+                                    {% if section.settings.before_after_images_limit > 0 %}
+                                        <div class="swiper-pagination"></div>
+                                    {% else %}
+                                        <div class="pagination_navigation mt-3 mt-md-5">
+                                            <div class="swiper-pagination"></div>
+                                            <div class="swiper-button-prev productSlider-swiper-prev swiper-button"></div>
+                                            <div class="swiper-button-next productSlider-swiper-next swiper-button"></div>
+                                        </div>
+                                    {% endif %}
                                 </div>
                             </div>
                             {% if section.settings.before_after_images_limit > 0 %}
