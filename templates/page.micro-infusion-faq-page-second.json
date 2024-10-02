@@ -8,37 +8,40 @@
 * ------------------------------------------------------------
 */
 {
-    "sections": {
-      "header_landing_KghXM9": {
-        "type": "header-landing",
-        "blocks": {
-          "announcement_Jg3bwh": {
-            "type": "announcement",
-            "settings": {
-              "heading": "Get Up To 43% OFF Younger Looking, Radiant Skin!",
-              "heading_mobile": ""
-            }
+  "sections": {
+    "header_landing_KghXM9": {
+      "type": "header-landing",
+      "blocks": {
+        "announcement_Jg3bwh": {
+          "type": "announcement",
+          "settings": {
+            "heading": "Get Up To 55% OFF Younger Looking, Radiant Skin!",
+            "heading_mobile": "",
+            "color": "white",
+            "font_size_desktop": 12,
+            "font_size_mobile": 12
           }
-        },
-        "block_order": [
-          "announcement_Jg3bwh"
-        ],
-        "custom_css": [
-          ".nav__item.cart_btn,.nav__item.header_gift_btn {display: none !important;}"
-        ],
-        "settings": {
-          "button_label": "SAVE UP TO 43%",
-          "button_url": "#new-landing-purchase"
         }
       },
-      "main": {
-        "type": "temp-page-micro-infusion-faq-page-second",
-        "settings": {
-        }
+      "block_order": [
+        "announcement_Jg3bwh"
+      ],
+      "custom_css": [
+        ".nav__item.cart_btn,.nav__item.header_gift_btn {display: none !important;}"
+      ],
+      "settings": {
+        "button_label": "SAVE UP TO 55%",
+        "button_url": "#productSubscription"
       }
     },
-    "order": [
-      "header_landing_KghXM9",
-      "main"
-    ]
-  }
+    "main": {
+      "type": "temp-page-micro-infusion-faq-page-second",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "header_landing_KghXM9",
+    "main"
+  ]
+}

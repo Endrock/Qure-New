@@ -4,14 +4,12 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        selectProduct('{{ section_id }}_');
+        s__selectProduct('{{ section_id }}_');
 
         setTimeout(() => {
             document.getElementById('2_month').click();
         }, 500);
     })
-
-
 </script>
 
 <!-- -- choose serum section start -- -->
@@ -19,7 +17,7 @@
     <p>BUY ONE 2 MONTH SUPPLY BUNDLE & <strong> GET ONE FREE</strong></p>
 </div>
 
-<div class="section productSubscription choose_serum" id="productSubscription">
+<div class="section productSubscription choose_serum months-form-special" id="productSubscription">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -335,3 +333,6 @@
     </div>
     <!-- -- choose serum section end -- -->
 {% endif %}
+
+<script src="{{ '__app_serums-months-form-special.js' | asset_url }}"></script>
+<link rel="stylesheet" href="{{ '__app_serums-months-form-special.css' | asset_url }}">

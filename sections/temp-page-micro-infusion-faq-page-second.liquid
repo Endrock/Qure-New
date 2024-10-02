@@ -464,11 +464,15 @@
 </div>
 <!-- -- main banner end -- -->
 
-<div class="section" id="productSubscription">
+<div class="shopify-section section">
+    {% render 'serums-months-image-landing-form-special' with section_id: 'micro-infusion-faq-page-2' %}
+</div>
+
+{% comment %} <div class="section" id="productSubscription">
     {% render 'pdm_product-social-proof-data-snippet' %}
     {% render 'pdm_landing-page-purchase-process' %}
     <script defer src="{{ '__app_treatment-form.js' | asset_url }}"></script>
-</div>
+</div> {% endcomment %}
 
 <!-- -- result section start -- -->
 <div class="result_s section mi_landing_result" id="result_section">
@@ -944,7 +948,7 @@
 </div>
 
 
-<script src="https://qureskincaredns.com/new/assets/custom_treatment.js"></script>
+<script src="https://qureskincaredns.com/new/assets/custom_treatment.js" defer="defer"></script>
 <script src="https://fast.wistia.com/embed/medias/3ahwzg8wjz.jsonp" async></script>
 <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 <script>
