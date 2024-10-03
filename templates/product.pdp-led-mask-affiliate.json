@@ -1197,34 +1197,12 @@
         "button_hide_label": "Hide More Questions"
       }
     },
-    "heading_fijgLW": {
-      "type": "heading",
+    "reviews_TCtMaX": {
+      "type": "reviews",
       "settings": {
         "heading": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>",
-        "heading_mobile": "<h2>Real reviews, real results<br/>from people just like you.</h2>"
-      }
-    },
-    "1707653061bd3707e6": {
-      "type": "apps",
-      "blocks": {
-        "stamped_product_reviews_ugc_main_widget_A4ebAn": {
-          "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
-          "settings": {
-            "take_questions": 2,
-            "animation": true,
-            "tags_exclude": "",
-            "tags_include": "",
-            "search": "",
-            "linkify": true,
-            "use_metafields": false,
-            "sku_tagtype": "sku"
-          }
-        }
-      },
-      "block_order": [
-        "stamped_product_reviews_ugc_main_widget_A4ebAn"
-      ],
-      "settings": {
+        "heading_mobile": "<h2>Real reviews, real results<br/>from people just like you.</h2>",
+        "product": "q-rejuvalight-pro-facewear"
       }
     },
     "pdm_product_social_proof_data_VREtzd": {
@@ -1253,8 +1231,7 @@
     "liquid_Azh7Kn",
     "product_box_JzAAt3",
     "faq_BgPiYb",
-    "heading_fijgLW",
-    "1707653061bd3707e6",
+    "reviews_TCtMaX",
     "pdm_product_social_proof_data_VREtzd"
   ]
 }

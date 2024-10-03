@@ -87,7 +87,7 @@
   window.initUpsellSwiper =   initUpsellSwiper; 
 </script>
 
-<script type="module"> import { configureCart, subscribeToCartSectionsUpdate, cartRequestAdd, cartRequestChange, subscribeToCartAjaxRequests, getCartState } from '{{ "liquid-ajax-cart-v1.11.1.js" | asset_url  }}'; 
+<script type="module"> import { configureCart, subscribeToCartSectionsUpdate, cartRequestAdd, cartRequestChange, subscribeToCartAjaxRequests, getCartState, subscribeToCartStateUpdate } from '{{ "liquid-ajax-cart-v1.11.1.js" | asset_url  }}'; 
 	configureCart('addToCartCssClass', 'js-my-cart-open'); 
   initUpsellSwiper(); //Upsell Swiper PDM when add product need show upsell slider
 
@@ -126,10 +126,7 @@
     }
   })
 
-	subscribeToCartSectionsUpdate( async sections => {
-    const itemsAdd = []
-    const cart = await statusCart();
-
+	subscribeToCartSectionsUpdate( sections => {
 		if (window.location.href.includes("q-rejuvalight-pro-offer"))
 		{
 			dicount(37390541553813, 44062187913455, 'N&D100');
@@ -137,24 +134,12 @@
 		else
 		{
 			{% if giftProduct != blank and giftQuantity != blank and giftPriceLimit != blank and giftDiscount != blank %}
-				const giftProduct =  await gift(cart,'{{ giftProduct.variants.first.id }}', '{{ giftQuantity }}', '{{ giftPriceLimit }}', '{{ giftDiscount }}');
-        if(giftProduct){
-          itemsAdd.push(giftProduct);
-        }
+				gift('{{ giftProduct.variants.first.id }}', '{{ giftQuantity }}', '{{ giftPriceLimit }}', '{{ giftDiscount }}');
 			{% endif %}
 		}
     {% if enableProductGift and giftTresholdPdm != 0 and productGiftPdm != blank %}
-      const pdmProductGift = productGiftPdm(cart,'{{ productGiftPdm.variants.first.id }}', {{ giftTresholdPdm }});
-      if(pdmProductGift){
-        itemsAdd.push(pdmProductGift);
-      }
+      deleteProductGiftPdm('{{ productGiftPdm.variants.first.id }}', {{ giftTresholdPdm }});
     {% endif %}
-
-    if(itemsAdd.length>0){
-      cartRequestAdd({
-        items: itemsAdd
-      }, {} )
-    }
 
 		if(typeof startCartTimer == 'function') {
 			startCartTimer(15 * 60);
@@ -167,6 +152,15 @@
 
     	initUpsellSwiper();
 	});
+
+  subscribeToCartStateUpdate( state => {
+    if ( state.status.cartStateSet && !state.status.requestInProgress ) {
+      {% if enableProductGift and giftTresholdPdm != 0 and productGiftPdm != blank %}
+        const cart = state.cart;
+        productGiftPdm(cart,'{{ productGiftPdm.variants.first.id }}', {{ giftTresholdPdm }});
+      {% endif %}
+    }
+  });
 
 	function dicount(productId, dproductId, discountCode) {
     fetch('/cart.js')
@@ -192,53 +186,106 @@
 		});
 	}
 
-  async function gift(cart,productId, productQuantity, priceLimit, discountCode = '') {
-    var total_price = cart.total_price / 100;
-    var gift = cart.items.some(item => item.id === +(productId));
+  function giftException()
+  {
+    const pages = [
+      'micro-infusion-special-offer',
+      'micro-infusion-faq-page-2',
+      'qure-microinfusion-offer',
+      'qure-microinfusion-offer-ar',
+      'qure-microinfusion-offer-fr',
+      'qure-microinfusion-offer-es',
+      'qure-microinfusion-offer-de',
+      'anti-creams-microinfusion-page',
+      'qure-micro-infusion-landing-page-affiliate',
+      'qure-microinfusion-offer-men'
+    ];
 
-    if (total_price > priceLimit && !gift) {
-      const getDiscount =  await fetch('/discount/' + discountCode).then(response  => response.ok);
-      if(!getDiscount) return;
-      return  {
-        id: productId,
-        quantity: productQuantity,
-        properties: {
-          _discount_code: discountCode,
-          _free_product: true
+    const currentUrl = window.location.href;
+
+    if (pages.some(page => currentUrl.includes(page))) {
+      return true;
+    }
+
+    return false;
+  }
+
+  function gift(productId, productQuantity, priceLimit, discountCode = '') {
+    if(!giftException()) {
+      fetch('/cart.js')
+      .then(response => response.json())
+      .then(cart => {
+        var total_price = cart.total_price / 100;
+        var gift = cart.items.some(item => item.id === +(productId));
+
+        if (total_price > priceLimit && !gift) {
+          fetch('/discount/' + discountCode).then(async () => {
+            cartRequestAdd({ 
+            items: [
+              {
+                id: productId,
+                quantity: productQuantity,
+                properties: {
+                  _discount_code: discountCode,
+                  _free_product: true
+                }
+              }
+            ]  
+          }, {} )
+          });
         }
+        else if(total_price <= priceLimit && gift)
+        {
+          const giftInCart = cart.items.find(item => item.id === +(productId));
+          cartRequestChange({ 
+            id: giftInCart.key,
+            quantity: 0
+          },  {} )
+        }
+      });
+    }
+  }
+
+  function productGiftPdm (cart, productId,priceLimit) {
+    if(document.body.hasAttribute('data-free-gift-gamification')){
+      const gift = cart.items.some(item => item.id === +(productId) && item.properties && item.properties['_required_validation']);
+      const total_price = cart.total_price;
+      if (total_price >= priceLimit && !gift) {
+        cartRequestAdd({
+          items: [
+            {
+              id: productId,
+              quantity: 1,
+              properties: {
+                _required_validation: 'validated',
+              }
+            }
+          ]
+        }, {} )
+      }else if (total_price < priceLimit && gift) {
+        const getGiftInCart = cart.items.find(item => item.id === +(productId) && item.properties['_required_validation']);
+        cartRequestChange({
+          id: getGiftInCart.key,
+          quantity: 0
+        },  {} )
       }
     }
-    else if(total_price <= priceLimit && gift) {
-      const giftInCart = cart.items.find(item => item.id === +(productId));
-      cartRequestChange({
-        id: giftInCart.key,
-        quantity: 0
-      },  {} )
-    }
   }
 
-  async function statusCart () {
-    return await fetch('/cart.js').then(response => response.json());
-  }
-
-  function productGiftPdm (cart,productId,priceLimit) {
-    if(!document.body.hasAttribute('data-free-gift-gamification')) return;
-    const gift = cart.items.some(item => item.id === +(productId) && item.properties && item.properties['_required_validation']);
-    const total_price = cart.total_price;
-    if (total_price >= priceLimit && !gift) {
-      return {
-        id: productId,
-        quantity: 1,
-        properties: {
-          _required_validation: 'validated',
-        }
+  function deleteProductGiftPdm (cart, productId,priceLimit) {
+    if(document.body.hasAttribute('data-free-gift-gamification')){
+    fetch('/cart.js').then(response => response.json()).then(cart => {
+      const gift = cart.items.some(item => item.id === +(productId) && item.properties && item.properties['_required_validation']);
+      const total_price = cart.total_price;
+      if (total_price < priceLimit && gift) {
+        const getGiftInCart = cart.items.find(item => item.id === +(productId) && item.properties['_required_validation']);
+        cartRequestChange({
+          id: getGiftInCart.key,
+          quantity: 0
+        },  {} )
       }
-    }else if (total_price < priceLimit && gift) {
-      const getGiftInCart = cart.items.find(item => item.id === +(productId) && item.properties['_required_validation']);
-      cartRequestChange({
-        id: getGiftInCart.key,
-        quantity: 0
-      },  {} )
+      });
     }
   }
+  
 </script>

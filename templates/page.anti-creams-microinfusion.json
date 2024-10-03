@@ -15,7 +15,7 @@
         "announcement_QmXGJK": {
           "type": "announcement",
           "settings": {
-            "heading": "FREE World-Wide Shipping | SAVE 43% Limited Time Offer Ends This Month",
+            "heading": "FREE World-Wide Shipping | SAVE 55% Limited Time Offer Ends This Month",
             "heading_mobile": "Limited time offer ends this month!",
             "color": "white",
             "font_size_desktop": 12,
@@ -57,8 +57,8 @@
         ".header_gift_btn {display: none;}"
       ],
       "settings": {
-        "button_label": "SAVE UP TO 43%",
-        "button_url": "#new-landing-purchase"
+        "button_label": "SAVE UP TO 55%",
+        "button_url": "#productSubscription"
       }
     },
     "landing-main-banner": {
@@ -498,7 +498,7 @@
     "liquid_87wfLd": {
       "type": "liquid",
       "settings": {
-        "code": "<div id=\"productSubscription\">\n{% render 'pdm_product-social-proof-data-snippet' %}\n{% render 'pdm_landing-page-purchase-process' %}\n</div>"
+        "code": "<div class=\"shopify-section section\">\n    {% render 'serums-months-image-landing-form-special' with section_id: 'anti-creams-microinfusion-page' %}\n</div>"
       }
     },
     "choice": {

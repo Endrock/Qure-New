@@ -1,8 +1,3 @@
-if(location.href.includes('/products/q-rejuvalight-pro-facewear-affiliate') == true)
-{
-    location.href = 'https://www.qureskincare.com/pages/q-rejuvalight-pro-offer';
-}
-
 document.addEventListener('DOMContentLoaded', function() {
     if (window.matchMedia('(max-width: 767px)').matches) {
         document.querySelectorAll('.bf-bundles__item-before').forEach(item => {
