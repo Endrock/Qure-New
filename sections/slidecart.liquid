@@ -569,10 +569,12 @@
 			<div class="cart_total-checkout">
 				<div class="drawer__cart-total">
 					<p class="cart_items_subtotal_price">Your Total</p>
-					<p class="drawer__cart-total-price">
+					<p class="drawer__cart-total-price pdm-Total-Checkout-Original">
 						<span class="old_price-cart" data-compare-price="{{ total_cart_compare_price | money_without_currency }}">{% if total_cart_compare_price > cart.items_subtotal_price %}{{ total_cart_compare_price | money_without_trailing_zeros }}{% endif %}</span>
 						<span class="cart_items_subtotal_price money" id="cart_items_subtotal_price" data-value="{{ subtotal_price }}">{{ subtotal_price }}</span>
 					</p>
+          {% render 'pdm-cart-total-checkout-A' cartData:cart, totalCartComparePrice: total_cart_compare_price, is_only_gift:is_only_gift %}
+          {% render 'pdm-cart-total-checkout-B' cartData:cart, totalCartComparePrice: total_cart_compare_price, is_only_gift:is_only_gift %}
 				</div>
 
 				<form action="https://qureskincaredns.com/checkout" method="post" class="insurance-form" id="insuranceForm"></form>
