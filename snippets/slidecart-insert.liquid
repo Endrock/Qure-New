@@ -137,9 +137,6 @@
 				gift('{{ giftProduct.variants.first.id }}', '{{ giftQuantity }}', '{{ giftPriceLimit }}', '{{ giftDiscount }}');
 			{% endif %}
 		}
-    {% if enableProductGift and giftTresholdPdm != 0 and productGiftPdm != blank %}
-      deleteProductGiftPdm('{{ productGiftPdm.variants.first.id }}', {{ giftTresholdPdm }});
-    {% endif %}
 
 		if(typeof startCartTimer == 'function') {
 			startCartTimer(15 * 60);
