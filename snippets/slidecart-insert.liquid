@@ -16,11 +16,10 @@
 <script type="application/json" data-ajax-cart-configuration> { "addToCartCssClass": "js-my-cart-open" } </script>
 
 <!-- Swiper JS Add PDM By Samu3le-->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  
+
 <!-- Initialize Swiper -->
 <script>
-  // align cards center when they nedded
+  // align cards center when they neddeds
   const displayCard = () => {
       const customUpsell = document.querySelector(".my-floating-cart form.my-cart .custom_upsell .swiper-wrapper");
       if (!customUpsell) return;
@@ -88,8 +87,10 @@
 </script>
 
 <script type="module"> import { configureCart, subscribeToCartSectionsUpdate, cartRequestAdd, cartRequestChange, subscribeToCartAjaxRequests, getCartState, subscribeToCartStateUpdate } from '{{ "liquid-ajax-cart-v1.11.1.js" | asset_url  }}'; 
+
+document.addEventListener('DOMContentLoaded', () => {
+
 	configureCart('addToCartCssClass', 'js-my-cart-open'); 
-  initUpsellSwiper(); //Upsell Swiper PDM when add product need show upsell slider
 
   subscribeToCartAjaxRequests(myRequestCallback => {
     if(myRequestCallback.requestType === 'add') {
@@ -202,33 +203,34 @@
 
   function gift(cart,productId, productQuantity, priceLimit, discountCode = '') {
     if(!giftException()) {
-        var total_price = cart.total_price / 100;
-        var gift = cart.items.some(item => item.id === +(productId));
+      var total_price = cart.total_price / 100;
+      var gift = cart.items.some(item => item.id === +(productId));
 
-        if (total_price > priceLimit && !gift) {
-          fetch('/discount/' + discountCode).then(async () => {
-            cartRequestAdd({ 
-            items: [
-              {
-                id: productId,
-                quantity: productQuantity,
-                properties: {
-                  _discount_code: discountCode,
-                  _free_product: true
-                }
+      if (total_price > priceLimit && !gift) {
+        fetch('/discount/' + discountCode).then(async () => {
+          cartRequestAdd({ 
+          items: [
+            {
+              id: productId,
+              quantity: productQuantity,
+              properties: {
+                _discount_code: discountCode,
+                _free_product: true
               }
-            ]  
-          }, {} )
-          });
-        }
-        else if(total_price <= priceLimit && gift)
-        {
-          const giftInCart = cart.items.find(item => item.id === +(productId));
-          cartRequestChange({ 
-            id: giftInCart.key,
-            quantity: 0
-          },  {} )
-        }
+            }
+          ]  
+        }, {} )
+        return true;
+        });
+      }
+      else if(total_price <= priceLimit && gift)
+      {
+        const giftInCart = cart.items.find(item => item.id === +(productId));
+        cartRequestChange({ 
+          id: giftInCart.key,
+          quantity: 0
+        },  {} )
+      }
     }
   }
 
@@ -257,4 +259,5 @@
       }
     }
   }
+});
 </script>
