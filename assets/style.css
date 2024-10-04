@@ -29549,7 +29549,13 @@ img.mfp-img {
 .mfp-gallery .mfp-image-holder .mfp-figure {
     cursor: pointer;
 }
-
+.newsletter_bl p {
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 15px;
+    border-radius: 30px;
+    font-family: Poppins,sans-serif !important;
+}
 @media screen and (max-width: 800px) and (orientation: landscape),
 screen and (max-height: 300px) {
     .mfp-img-mobile .mfp-image-holder {

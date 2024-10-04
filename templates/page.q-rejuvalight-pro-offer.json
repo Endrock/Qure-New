@@ -27,7 +27,7 @@
           "settings": {
             "link_label": "REVIEWS",
             "link_url": "#result_section",
-            "image": "shopify://shop_images/headerLanding-2.png"
+            "image": "shopify:\/\/shop_images\/headerLanding-2.png"
           }
         },
         "navigation_link_wPNEr9": {
@@ -35,7 +35,7 @@
           "settings": {
             "link_label": "SPECIAL OFFER",
             "link_url": "#special_offer",
-            "image": "shopify://shop_images/header_specialOffer.webp"
+            "image": "shopify:\/\/shop_images\/header_specialOffer.webp"
           }
         },
         "navigation_link_wVVWXW": {
@@ -43,7 +43,7 @@
           "settings": {
             "link_label": "FAQS",
             "link_url": "#faq_section",
-            "image": "shopify://shop_images/headerLanding-4.png"
+            "image": "shopify:\/\/shop_images\/headerLanding-4.png"
           }
         }
       },
@@ -65,9 +65,9 @@
           "type": "Tab",
           "settings": {
             "btn_text": "Product",
-            "image": "shopify://shop_images/led-lp-product-1.webp",
-            "image2": "shopify://shop_images/led_large_3.webp",
-            "image3": "shopify://shop_images/led_large_4.webp",
+            "image": "shopify:\/\/shop_images\/led-lp-product-1.webp",
+            "image2": "shopify:\/\/shop_images\/led_large_3.webp",
+            "image3": "shopify:\/\/shop_images\/led_large_4.webp",
             "wistia": ""
           }
         },
@@ -75,9 +75,9 @@
           "type": "Tab",
           "settings": {
             "btn_text": "Real Results",
-            "image": "shopify://shop_images/led-lp-result-1.webp",
-            "image2": "shopify://shop_images/led-lp-result-2.webp",
-            "image3": "shopify://shop_images/led-lp-result-3.png",
+            "image": "shopify:\/\/shop_images\/led-lp-result-1.webp",
+            "image2": "shopify:\/\/shop_images\/led-lp-result-2.webp",
+            "image3": "shopify:\/\/shop_images\/led-lp-result-3.png",
             "wistia": ""
           }
         },
@@ -96,19 +96,19 @@
       ],
       "settings": {
         "heading": "Feel Confident Makeup-Free with Q-Rejuvalight Pro",
-        "desc": "<ul><li>FDA-cleared at-home LED mask</li><li>Treat acne, fine lines, wrinkles & more</li><li>Customize, track & schedule treatments with app</li><li>Quick & convenient 3-minute wireless treatments</li></ul>",
+        "desc": "<ul><li>FDA-cleared at-home LED mask<\/li><li>Treat acne, fine lines, wrinkles & more<\/li><li>Customize, track & schedule treatments with app<\/li><li>Quick & convenient 3-minute wireless treatments<\/li><\/ul>",
         "rating_text": "43,893+ Happy Customers",
-        "stars": "shopify://shop_images/star-half_fill_d51f6801-2e35-487c-89d0-130f978da1e8.svg",
+        "stars": "shopify:\/\/shop_images\/star-half_fill_d51f6801-2e35-487c-89d0-130f978da1e8.svg",
         "btn_txt": "Transform My Skin",
         "btn_url": "#special_offer",
-        "d_icon": "shopify://shop_images/derma-sm.svg",
+        "d_icon": "shopify:\/\/shop_images\/derma-sm.svg",
         "recomand": "Dermatologist-Reviewed"
       }
     },
     "liquid_P3wypt": {
       "type": "liquid",
       "settings": {
-        "code": "<script>\ndocument.addEventListener('DOMContentLoaded', function() {\n    var event = new Event('click', {\n        'bubbles': true,\n        'cancelable': true\n    });\n    document.querySelector(\"#pills-tab_iyUgHm\").dispatchEvent(event);\n});\n</script>"
+        "code": "<script>\ndocument.addEventListener('DOMContentLoaded', function() {\n    var event = new Event('click', {\n        'bubbles': true,\n        'cancelable': true\n    });\n    document.querySelector(\"#pills-tab_iyUgHm\").dispatchEvent(event);\n});\n<\/script>"
       }
     },
     "featuredin_extended_kPLtYV": {
@@ -117,61 +117,61 @@
         "image_7bGTBH": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/vogue-black.svg"
+            "image": "shopify:\/\/shop_images\/vogue-black.svg"
           }
         },
         "text_rVCJHJ": {
           "type": "text",
           "settings": {
-            "text": "<p>“The professional grade is the perfect addition to any at-home skincare routine.”</p>"
+            "text": "<p>“The professional grade is the perfect addition to any at-home skincare routine.”<\/p>"
           }
         },
         "image_6FJ6tX": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/womenshealth.svg"
+            "image": "shopify:\/\/shop_images\/womenshealth.svg"
           }
         },
         "text_NqidyF": {
           "type": "text",
           "settings": {
-            "text": "<p> “If you're on the hunt for a red light therapy tool that checks all of the boxes (who isn't?!), Qure's Light Therapy Mask is your answer.”</p>"
+            "text": "<p> “If you're on the hunt for a red light therapy tool that checks all of the boxes (who isn't?!), Qure's Light Therapy Mask is your answer.”<\/p>"
           }
         },
         "image_7jwEXX": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/elle-black.svg"
+            "image": "shopify:\/\/shop_images\/elle-black.svg"
           }
         },
         "text_8bYXt8": {
           "type": "text",
           "settings": {
-            "text": "<p>“If you're unsure of what your skin needs, you can get the right treatment  out of your LED face mask. That way, you can mask in total confidence.”</p>"
+            "text": "<p>“If you're unsure of what your skin needs, you can get the right treatment  out of your LED face mask. That way, you can mask in total confidence.”<\/p>"
           }
         },
         "image_ezT6pQ": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/si_showcase.svg"
+            "image": "shopify:\/\/shop_images\/si_showcase.svg"
           }
         },
         "text_HCBmhc": {
           "type": "text",
           "settings": {
-            "text": "<p>“Qure Light Therapy Mask features five different types of light.... You can customize and track your progress using Qure’s app.”</p>"
+            "text": "<p>“Qure Light Therapy Mask features five different types of light.... You can customize and track your progress using Qure’s app.”<\/p>"
           }
         },
         "image_zUxEYC": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/gq_logo.png"
+            "image": "shopify:\/\/shop_images\/gq_logo.png"
           }
         },
         "text_KwkbRg": {
           "type": "text",
           "settings": {
-            "text": "<p>“Q-Rejuvalight Pro harnesses the power of lights from blue to infrared to address nearly every skincare concern you could imagine.”</p>"
+            "text": "<p>“Q-Rejuvalight Pro harnesses the power of lights from blue to infrared to address nearly every skincare concern you could imagine.”<\/p>"
           }
         }
       },
@@ -199,32 +199,32 @@
           "type": "column",
           "settings": {
             "heading": "Trusted by world-leading dermatologists",
-            "text": "<p>Dr. Shah, an MD Board Certified Dermatologist, reviewed that it’s \"the best LED mask the market, in my opinion.”</p>",
-            "image": "shopify://shop_images/cus_acc_1.webp"
+            "text": "<p>Dr. Shah, an MD Board Certified Dermatologist, reviewed that it’s \"the best LED mask the market, in my opinion.”<\/p>",
+            "image": "shopify:\/\/shop_images\/cus_acc_1.webp"
           }
         },
         "column_ThhqcA": {
           "type": "column",
           "settings": {
             "heading": "Proven results in less than 12 weeks",
-            "text": "<p>Customers have reported reduced redness, diminished fine lines & wrinkles, and a glowing, younger-looking complexion after several weeks of consistent use.</p>",
-            "image": "shopify://shop_images/cus_acc_2.webp"
+            "text": "<p>Customers have reported reduced redness, diminished fine lines & wrinkles, and a glowing, younger-looking complexion after several weeks of consistent use.<\/p>",
+            "image": "shopify:\/\/shop_images\/cus_acc_2.webp"
           }
         },
         "column_KXDayz": {
           "type": "column",
           "settings": {
             "heading": "Alleviates many different skin concerns",
-            "text": "<p>Choose between an anti-aging treatment, an anti-breakout treatment, or customized treatment modes for each facial area.</p>",
-            "image": "shopify://shop_images/cus_acc_3.webp"
+            "text": "<p>Choose between an anti-aging treatment, an anti-breakout treatment, or customized treatment modes for each facial area.<\/p>",
+            "image": "shopify:\/\/shop_images\/cus_acc_3.webp"
           }
         },
         "column_JATQdF": {
           "type": "column",
           "settings": {
             "heading": "Track your treatments with Qure mobile app",
-            "text": "<p>Seamlessly pairs with our mobile app (iPhone and Android) for easy treatment planning, tracking, and scheduling. Never miss a treatment with in-app phone reminders, too.</p>",
-            "image": "shopify://shop_images/cus_acc_4.webp"
+            "text": "<p>Seamlessly pairs with our mobile app (iPhone and Android) for easy treatment planning, tracking, and scheduling. Never miss a treatment with in-app phone reminders, too.<\/p>",
+            "image": "shopify:\/\/shop_images\/cus_acc_4.webp"
           }
         }
       },
@@ -236,7 +236,7 @@
       ],
       "settings": {
         "section_heading": "Customers call The Q-Rejuvalight Pro LED Mask \"Game-Changing\"",
-        "subheading": "<p>Here are 4 reasons why:</p>"
+        "subheading": "<p>Here are 4 reasons why:<\/p>"
       }
     },
     "progress_blocks_d8f7qn": {
@@ -247,8 +247,8 @@
           "settings": {
             "percent_text": "87",
             "percent_bar": 87,
-            "toolip_hed": "<p>smoother facial <strong>wrinkles </strong>and <strong>fine lines</strong></p>",
-            "toolip_desc": "<p>*About the clinical trial: Clinical trial was conducted and investigated the potential of light-emitting diode (LED) treatments with a 660 nm. LED effects were then assessed in aged/photoaged individuals in a split-face single-blinded study.</p>",
+            "toolip_hed": "<p>smoother facial <strong>wrinkles <\/strong>and <strong>fine lines<\/strong><\/p>",
+            "toolip_desc": "<p>*About the clinical trial: Clinical trial was conducted and investigated the potential of light-emitting diode (LED) treatments with a 660 nm. LED effects were then assessed in aged\/photoaged individuals in a split-face single-blinded study.<\/p>",
             "font_size": 11
           }
         },
@@ -257,8 +257,8 @@
           "settings": {
             "percent_text": "91",
             "percent_bar": 91,
-            "toolip_hed": "<p>improved <strong>skin tone</strong> and enhanced <strong>smoothness</strong> </p>",
-            "toolip_desc": "<p>*About the clinical trial: Clinical trial was conducted to assess reduction in sun damage signs following 12 weeks of LED therapy with combined wavelengths of 633 and 830 nm. Sun-damage reduction was assessed at 6, 9, and 12 weeks by clinical photography and patient satisfaction scores.</p>",
+            "toolip_hed": "<p>improved <strong>skin tone<\/strong> and enhanced <strong>smoothness<\/strong> <\/p>",
+            "toolip_desc": "<p>*About the clinical trial: Clinical trial was conducted to assess reduction in sun damage signs following 12 weeks of LED therapy with combined wavelengths of 633 and 830 nm. Sun-damage reduction was assessed at 6, 9, and 12 weeks by clinical photography and patient satisfaction scores.<\/p>",
             "font_size": 11
           }
         },
@@ -267,8 +267,8 @@
           "settings": {
             "percent_text": "83",
             "percent_bar": 83,
-            "toolip_hed": "<p>reduction of <strong>acne breakouts</strong></p>",
-            "toolip_desc": "<p>*About the clinical trial: Clinical trial was conducted with male and female subjects with acne grades at baseline ranging from Burton grade 1 to 5. Subjects were treated with LED therapy, alternating between the blue (415 nm) and near-IR (830 nm) heads. No other treatment was allowed. Results were assessed and compared with the baseline values at 1, 4 and 8 weeks post-treatment.</p>",
+            "toolip_hed": "<p>reduction of <strong>acne breakouts<\/strong><\/p>",
+            "toolip_desc": "<p>*About the clinical trial: Clinical trial was conducted with male and female subjects with acne grades at baseline ranging from Burton grade 1 to 5. Subjects were treated with LED therapy, alternating between the blue (415 nm) and near-IR (830 nm) heads. No other treatment was allowed. Results were assessed and compared with the baseline values at 1, 4 and 8 weeks post-treatment.<\/p>",
             "font_size": 11
           }
         }
@@ -280,7 +280,7 @@
       ],
       "settings": {
         "section_heading": "No promises, just proof",
-        "subheading": "<p>During clinical studies on LED light therapy, users reported numerous benefits:</p>"
+        "subheading": "<p>During clinical studies on LED light therapy, users reported numerous benefits:<\/p>"
       }
     },
     "results_slider_RTd6ad": {
@@ -291,9 +291,9 @@
           "settings": {
             "heading": "IT REALLY WORKS!!",
             "product": "",
-            "text": "<p>I was very skeptical when my husband bought this mask for me. But after 6mo the results are amazing!! I’ve tried numerous serums for my sun spots but nothing worked until I used this mask. Definitely worth the money.</p>",
-            "image": "shopify://shop_images/results_teresa_3a620dd8-7320-41da-b19d-4202f4097626.webp",
-            "image_country": "shopify://shop_images/USA_07.png",
+            "text": "<p>I was very skeptical when my husband bought this mask for me. But after 6mo the results are amazing!! I’ve tried numerous serums for my sun spots but nothing worked until I used this mask. Definitely worth the money.<\/p>",
+            "image": "shopify:\/\/shop_images\/results_teresa_3a620dd8-7320-41da-b19d-4202f4097626.webp",
+            "image_country": "shopify:\/\/shop_images\/USA_07.png",
             "client": "Teresa S.",
             "concerns": "Dark spots, discoloration",
             "verified": true
@@ -304,9 +304,9 @@
           "settings": {
             "heading": "Completely qured my acne",
             "product": "",
-            "text": "<p>“This is the first time in TWO YEARS that I don’t have active acne on my face. I’ve been using my Qure for 1 month now and it has completely qured my acne. It’s gone AND it’s healing all my scars and pox marks. I was literally on the verge of suicide because of my horrible skin. This device SAVED MY LIFE!!!.”</p>",
-            "image": "shopify://shop_images/results_bj_nardi_fd924eb5-aaaf-4d31-a054-0e3cdf45f063.webp",
-            "image_country": "shopify://shop_images/CAN07.png",
+            "text": "<p>“This is the first time in TWO YEARS that I don’t have active acne on my face. I’ve been using my Qure for 1 month now and it has completely qured my acne. It’s gone AND it’s healing all my scars and pox marks. I was literally on the verge of suicide because of my horrible skin. This device SAVED MY LIFE!!!.”<\/p>",
+            "image": "shopify:\/\/shop_images\/results_bj_nardi_fd924eb5-aaaf-4d31-a054-0e3cdf45f063.webp",
+            "image_country": "shopify:\/\/shop_images\/CAN07.png",
             "client": "BJ Nardi",
             "concerns": "Acne",
             "verified": true
@@ -317,9 +317,9 @@
           "settings": {
             "heading": "Wish I had this technology years ago!",
             "product": "",
-            "text": "<p>“After two weeks I began to see results and after six weeks the changes in my skin were dramatic. I have now been using Qure six months and loving the compliments! I bought masks for my daughters for Christmas so they could start at a younger age…. I wish this technology had been<br/> available when I was younger. I am 76 years old! Photos below are after6 weeks.”</p>",
-            "image": "shopify://shop_images/results_terri.webp",
-            "image_country": "shopify://shop_images/USA_07.png",
+            "text": "<p>“After two weeks I began to see results and after six weeks the changes in my skin were dramatic. I have now been using Qure six months and loving the compliments! I bought masks for my daughters for Christmas so they could start at a younger age…. I wish this technology had been<br\/> available when I was younger. I am 76 years old! Photos below are after6 weeks.”<\/p>",
+            "image": "shopify:\/\/shop_images\/results_terri.webp",
+            "image_country": "shopify:\/\/shop_images\/USA_07.png",
             "client": "Terri P.",
             "concerns": "Fine Lines & Wrinkles",
             "verified": true
@@ -330,9 +330,9 @@
           "settings": {
             "heading": "Zero Maskne for 8 weeks",
             "product": "",
-            "text": "<p>“I thought it was only working on my breakouts, zero Maskne for 8 weeks now, BUT thank goodness for Before and After because even I was shocked! My followers have noticed a difference in my skin the past few weeks and now I understand what they’re seeing. The difference isn’t huge but enough that it postpones surgery which I can’t afford right now.”</p>",
-            "image": "shopify://shop_images/results_michelle_bea5bba9-6469-46b8-b59a-4456973a4b3c.webp",
-            "image_country": "shopify://shop_images/USA_07.png",
+            "text": "<p>“I thought it was only working on my breakouts, zero Maskne for 8 weeks now, BUT thank goodness for Before and After because even I was shocked! My followers have noticed a difference in my skin the past few weeks and now I understand what they’re seeing. The difference isn’t huge but enough that it postpones surgery which I can’t afford right now.”<\/p>",
+            "image": "shopify:\/\/shop_images\/results_michelle_bea5bba9-6469-46b8-b59a-4456973a4b3c.webp",
+            "image_country": "shopify:\/\/shop_images\/USA_07.png",
             "client": "Michelle S.",
             "concerns": "Fine Lines & Wrinkles, Acne",
             "verified": true
@@ -343,9 +343,9 @@
           "settings": {
             "heading": "Thrilled with the results!",
             "product": "",
-            "text": "<p>“I am 45 so I am fighting signs of aging, but also still dealing with acne flare ups. I haven’t had a single breakout since I started using the mask, plus I notice a definite smoothing of fine wrinkles on my cheeks & around my eyes. I recommend this product to anyone. Well worth the investment”</p>",
-            "image": "shopify://shop_images/results_jessica1.webp",
-            "image_country": "shopify://shop_images/USA_07.png",
+            "text": "<p>“I am 45 so I am fighting signs of aging, but also still dealing with acne flare ups. I haven’t had a single breakout since I started using the mask, plus I notice a definite smoothing of fine wrinkles on my cheeks & around my eyes. I recommend this product to anyone. Well worth the investment”<\/p>",
+            "image": "shopify:\/\/shop_images\/results_jessica1.webp",
+            "image_country": "shopify:\/\/shop_images\/USA_07.png",
             "client": "Jessica K.",
             "concerns": "Acne",
             "verified": true
@@ -356,9 +356,9 @@
           "settings": {
             "heading": "Amazing results!",
             "product": "",
-            "text": "<p>“Amazing! I never expected this miracle. I’ve had red blotches above my  lips for years and they are vastly improved after using the mask daily  for only 6 weeks. I bought it hoping for better skin texture and less wrinkles. It has improved those, but having the redness gone is what I’m most excited about.”</p>",
-            "image": "shopify://shop_images/results_june_4f06e4e8-529a-404e-b15c-ae472849d9bc.webp",
-            "image_country": "shopify://shop_images/USA_07.png",
+            "text": "<p>“Amazing! I never expected this miracle. I’ve had red blotches above my  lips for years and they are vastly improved after using the mask daily  for only 6 weeks. I bought it hoping for better skin texture and less wrinkles. It has improved those, but having the redness gone is what I’m most excited about.”<\/p>",
+            "image": "shopify:\/\/shop_images\/results_june_4f06e4e8-529a-404e-b15c-ae472849d9bc.webp",
+            "image_country": "shopify:\/\/shop_images\/USA_07.png",
             "client": "June T.",
             "concerns": "Fine Lines & Wrinkles, Skin Texture",
             "verified": true
@@ -369,9 +369,9 @@
           "settings": {
             "heading": "Renewed skin!",
             "product": "",
-            "text": "<p>My Qure mask has been amazing! As someone who struggles with acne and rosacea, your LED light therapy mask has improved my skin so much that I an now feel comfortable without any makeup. I’m very happy with this product!</p>",
-            "image": "shopify://shop_images/results_tiffany_d43313a3-80f7-4452-a45b-c864ceedae03.webp",
-            "image_country": "shopify://shop_images/USA_07.png",
+            "text": "<p>My Qure mask has been amazing! As someone who struggles with acne and rosacea, your LED light therapy mask has improved my skin so much that I an now feel comfortable without any makeup. I’m very happy with this product!<\/p>",
+            "image": "shopify:\/\/shop_images\/results_tiffany_d43313a3-80f7-4452-a45b-c864ceedae03.webp",
+            "image_country": "shopify:\/\/shop_images\/USA_07.png",
             "client": "Tiffany L.",
             "concerns": "Acne, rosacea",
             "verified": true
@@ -382,9 +382,9 @@
           "settings": {
             "heading": "Can’t go a day without it",
             "product": "",
-            "text": "<p>“I started getting the usual teenage acne. It got very bad. I tried everything... Straight away I noticed results with Qure, after the first week I had no active breakouts anymore.</p>",
-            "image": "shopify://shop_images/results_anton_cdc44f21-b8dc-4a5f-a020-6741e12ac25e.webp",
-            "image_country": "shopify://shop_images/AUS_07.png",
+            "text": "<p>“I started getting the usual teenage acne. It got very bad. I tried everything... Straight away I noticed results with Qure, after the first week I had no active breakouts anymore.<\/p>",
+            "image": "shopify:\/\/shop_images\/results_anton_cdc44f21-b8dc-4a5f-a020-6741e12ac25e.webp",
+            "image_country": "shopify:\/\/shop_images\/AUS_07.png",
             "client": "Anton",
             "concerns": "Acne",
             "verified": true
@@ -395,9 +395,9 @@
           "settings": {
             "heading": "Amazing!",
             "product": "",
-            "text": "<p>“Amazing! Has made such a massive on my acne. Still getting breakouts but they disappear way quicker. Took maybe 2 days to start working. Pics are about 3 weeks difference.”</p>",
-            "image": "shopify://shop_images/Sophie_after_qure.png",
-            "image_country": "shopify://shop_images/AUS_07.png",
+            "text": "<p>“Amazing! Has made such a massive on my acne. Still getting breakouts but they disappear way quicker. Took maybe 2 days to start working. Pics are about 3 weeks difference.”<\/p>",
+            "image": "shopify:\/\/shop_images\/Sophie_after_qure.png",
+            "image_country": "shopify:\/\/shop_images\/AUS_07.png",
             "client": "Sophie R.",
             "concerns": "Acne",
             "verified": true
@@ -417,8 +417,8 @@
       ],
       "settings": {
         "heading": "Thousands are out-glowing their insecurities",
-        "rating_text": "4.7/5 Based on 48,847 Users",
-        "stars": "shopify://shop_images/star-half_fill_d51f6801-2e35-487c-89d0-130f978da1e8.svg"
+        "rating_text": "4.7\/5 Based on 48,847 Users",
+        "stars": "shopify:\/\/shop_images\/star-half_fill_d51f6801-2e35-487c-89d0-130f978da1e8.svg"
       }
     },
     "featured_product_pEjkiL": {
@@ -427,10 +427,10 @@
         "product_images_mBWBRf": {
           "type": "product_images",
           "settings": {
-            "pd_image_1": "shopify://shop_images/led_large_1.webp",
-            "pd_image_2": "shopify://shop_images/led_large_2.webp",
-            "pd_image_3": "shopify://shop_images/led_large_3.webp",
-            "pd_image_4": "shopify://shop_images/led_large_4.webp"
+            "pd_image_1": "shopify:\/\/shop_images\/led_large_1.webp",
+            "pd_image_2": "shopify:\/\/shop_images\/led_large_2.webp",
+            "pd_image_3": "shopify:\/\/shop_images\/led_large_3.webp",
+            "pd_image_4": "shopify:\/\/shop_images\/led_large_4.webp"
           }
         },
         "subheading_PeqaGP": {
@@ -444,27 +444,27 @@
           "type": "heading",
           "settings": {
             "heading": "Q-Rejuvalight Pro LED Mask",
-            "des": "<p>Repair and rejuvenate your skin—and boost your self-esteem—with our FDA-cleared LED mask that treats acne, fine lines, wrinkles and dark spots.</p>"
+            "des": "<p>Repair and rejuvenate your skin—and boost your self-esteem—with our FDA-cleared LED mask that treats acne, fine lines, wrinkles and dark spots.<\/p>"
           }
         },
         "product_benefits_jpWz4R": {
           "type": "product_benefits",
           "settings": {
-            "benefits": "<ul><li>Customizable treatment on 5 facial areas for your specific skin concerns</li><li>3-minute daily treatments with convenient, hands-free operation</li><li>Compatible app to track, plan and schedule your treatmentssss</li></ul>"
+            "benefits": "<ul><li>Customizable treatment on 5 facial areas for your specific skin concerns<\/li><li>3-minute daily treatments with convenient, hands-free operation<\/li><li>Compatible app to track, plan and schedule your treatmentssss<\/li><\/ul>"
           }
         },
         "button_mxBJWm": {
           "type": "button",
           "settings": {
             "btn_text": "Buy Now",
-            "w_icon": "shopify://shop_images/money-sm.svg",
+            "w_icon": "shopify:\/\/shop_images\/money-sm.svg",
             "warranty": "FREE 1-Year Warranty",
-            "d_icon": "shopify://shop_images/derma-sm.svg",
+            "d_icon": "shopify:\/\/shop_images\/derma-sm.svg",
             "recomand": "Dermatologist-Recommended",
             "instalment": 4,
-            "payment_1": "shopify://shop_images/klarna_054e202f-ce52-442b-aae1-b5a683e1e822.svg",
-            "payment_2": "shopify://shop_images/Group_1000004080.svg",
-            "payment_3": "shopify://shop_images/Afterpay_1.svg"
+            "payment_1": "shopify:\/\/shop_images\/klarna_054e202f-ce52-442b-aae1-b5a683e1e822.svg",
+            "payment_2": "shopify:\/\/shop_images\/Group_1000004080.svg",
+            "payment_3": "shopify:\/\/shop_images\/Afterpay_1.svg"
           }
         }
       },
@@ -477,23 +477,23 @@
       ],
       "settings": {
         "product": "q-rejuvalight-pro-facewear",
-        "pd_video": "https://www.youtube.com/watch?v=X9KXJPv6rno",
+        "pd_video": "https:\/\/www.youtube.com\/watch?v=X9KXJPv6rno",
         "video_txt": "See it in video"
       }
     },
     "featured_product_2_YjNQXn": {
       "type": "featured-product-2",
       "settings": {
-        "bg_image": "shopify://shop_images/led_neck_bundle.webp",
+        "bg_image": "shopify:\/\/shop_images\/led_neck_bundle.webp",
         "product": "neck-decolletage-led",
         "product_name": "Neck & Decolletage LED Device",
-        "abt_product": "<p>Perfect combination to the Q-Rejuvalight Pro LED mask for the ultimate skin rejuvenation experience.</p>",
-        "benefits": "<ul><li>Treat beyond the face for an all-over youthful appearance</li><li>Smooth fine lines, reduce appearance of wrinkles and boost firmness</li><li>Fade dark spots and repair sun-damaged skin for an even-toned complexion</li></ul>",
+        "abt_product": "<p>Perfect combination to the Q-Rejuvalight Pro LED mask for the ultimate skin rejuvenation experience.<\/p>",
+        "benefits": "<ul><li>Treat beyond the face for an all-over youthful appearance<\/li><li>Smooth fine lines, reduce appearance of wrinkles and boost firmness<\/li><li>Fade dark spots and repair sun-damaged skin for an even-toned complexion<\/li><\/ul>",
         "btn_txt": "Bundle & SAVE",
         "rating_text": "97% customer satisfaction rate",
-        "stars": "shopify://shop_images/star-half_fill_d51f6801-2e35-487c-89d0-130f978da1e8.svg",
-        "m_benefits": "<ul><li>Treat beyond the face for an all-over youthful appearance</li><li>Smooth fine lines & wrinkles</li><li>Evens skin tone & smooths texture</li></ul>",
-        "image_mobile": "shopify://shop_images/led_neck_bundle_mob.webp"
+        "stars": "shopify:\/\/shop_images\/star-half_fill_d51f6801-2e35-487c-89d0-130f978da1e8.svg",
+        "m_benefits": "<ul><li>Treat beyond the face for an all-over youthful appearance<\/li><li>Smooth fine lines & wrinkles<\/li><li>Evens skin tone & smooths texture<\/li><\/ul>",
+        "image_mobile": "shopify:\/\/shop_images\/led_neck_bundle_mob.webp"
       }
     },
     "how_to_use_tmBGpa": {
@@ -503,32 +503,32 @@
           "type": "Tab",
           "settings": {
             "tab_txt": "Specs",
-            "tab_desc": "<ul><li>TREATMENT TIME: 3 minutes</li><li>CERTIFICATIONS: FDA, TGA, CE, UKCA</li><li>OPERATION: Wireless, hands-free</li><li>WAVELENGTH: 415nm (Blue), 605nm (Amber), 630nm (Red), 660nm (Deep Red), 880nm (Infrared)</li><li>CHARGING TIME: 2 hours</li><li>LEDs: 160 dual core</li></ul>",
-            "image": "shopify://shop_images/get_specs.webp"
+            "tab_desc": "<ul><li>TREATMENT TIME: 3 minutes<\/li><li>CERTIFICATIONS: FDA, TGA, CE, UKCA<\/li><li>OPERATION: Wireless, hands-free<\/li><li>WAVELENGTH: 415nm (Blue), 605nm (Amber), 630nm (Red), 660nm (Deep Red), 880nm (Infrared)<\/li><li>CHARGING TIME: 2 hours<\/li><li>LEDs: 160 dual core<\/li><\/ul>",
+            "image": "shopify:\/\/shop_images\/get_specs.webp"
           }
         },
         "tab_yTEcfK": {
           "type": "Tab",
           "settings": {
             "tab_txt": "Quick start",
-            "tab_desc": "<ul><li>Cleanse & dry your skin thoroughly before use.</li><li>Hold the button for 2-3 seconds to power ON.</li><li>Adjust the mask to fit your face comfortably.</li><li>For Anti-Aging treatment: Press button once.</li><li>For Anti-Breakout treatment: Press button twice.</li><li>After three minutes, the device will shut off automatically.</li></ul>",
-            "image": "shopify://shop_images/get_quickstart.webp"
+            "tab_desc": "<ul><li>Cleanse & dry your skin thoroughly before use.<\/li><li>Hold the button for 2-3 seconds to power ON.<\/li><li>Adjust the mask to fit your face comfortably.<\/li><li>For Anti-Aging treatment: Press button once.<\/li><li>For Anti-Breakout treatment: Press button twice.<\/li><li>After three minutes, the device will shut off automatically.<\/li><\/ul>",
+            "image": "shopify:\/\/shop_images\/get_quickstart.webp"
           }
         },
         "tab_QqVtHE": {
           "type": "Tab",
           "settings": {
             "tab_txt": "Customize treatment",
-            "tab_desc": "<p>Download the Qure Skincare app and pair your Q-Rejuvalight Pro.Choose either Anti-aging or Anti-breakout treatment on 5 different facial areas.Set reminders and never miss your treatment!</p>",
-            "image": "shopify://shop_images/get_customize.webp"
+            "tab_desc": "<p>Download the Qure Skincare app and pair your Q-Rejuvalight Pro.Choose either Anti-aging or Anti-breakout treatment on 5 different facial areas.Set reminders and never miss your treatment!<\/p>",
+            "image": "shopify:\/\/shop_images\/get_customize.webp"
           }
         },
         "tab_gUbBCP": {
           "type": "Tab",
           "settings": {
             "tab_txt": "Aftercare",
-            "tab_desc": "<p>Remember to wipe the mask down after each treatment.</p><p>When not in use, place your Q-Rejuvalight Pro in the luxury bag provided and store in a cool, moisture-free environment.</p>",
-            "image": "shopify://shop_images/get_aftercare.webp"
+            "tab_desc": "<p>Remember to wipe the mask down after each treatment.<\/p><p>When not in use, place your Q-Rejuvalight Pro in the luxury bag provided and store in a cool, moisture-free environment.<\/p>",
+            "image": "shopify:\/\/shop_images\/get_aftercare.webp"
           }
         },
         "wistia_HJKH8h": {
@@ -552,13 +552,13 @@
     "services_slider_ctkatz": {
       "type": "services-slider",
       "settings": {
-        "slide1": "shopify://shop_images/dermatologist_bce828c0-1c92-4425-a2aa-f88f5ead7aba.svg",
+        "slide1": "shopify:\/\/shop_images\/dermatologist_bce828c0-1c92-4425-a2aa-f88f5ead7aba.svg",
         "text1": "Dermatologist Tested & Approved",
-        "slide2": "shopify://shop_images/hp_icon4.svg",
+        "slide2": "shopify:\/\/shop_images\/hp_icon4.svg",
         "text2": "Proven Results, Backed by Science",
-        "slide3": "shopify://shop_images/free-shipping-ftr.svg",
+        "slide3": "shopify:\/\/shop_images\/free-shipping-ftr.svg",
         "text3": "FREE World-Wide Shipping",
-        "slide4": "shopify://shop_images/buy-now-ftr.svg",
+        "slide4": "shopify:\/\/shop_images\/buy-now-ftr.svg",
         "text4": "Buy Now, Pay Later"
       }
     },
@@ -653,25 +653,25 @@
         "object_CrXkqc": {
           "type": "object",
           "settings": {
-            "image": "shopify://shop_images/beauty_ledmask1.webp",
+            "image": "shopify:\/\/shop_images\/beauty_ledmask1.webp",
             "heading": "Q-Rejuvalight Pro LED Mask",
             "mob_text": "",
-            "text": "<p><strong>one-time cost</strong></p>",
+            "text": "<p><strong>one-time cost<\/strong><\/p>",
             "price": "$379",
             "style": "correctCircle",
-            "list": "<ul><li>just 3 minutes a day</li><li>on your own watch</li><li><strong>unlimited treatments</strong></li><li><strong>comfort of your home</strong></li><li>simple, one-time payment</li></ul>"
+            "list": "<ul><li>just 3 minutes a day<\/li><li>on your own watch<\/li><li><strong>unlimited treatments<\/strong><\/li><li><strong>comfort of your home<\/strong><\/li><li>simple, one-time payment<\/li><\/ul>"
           }
         },
         "object_ci4nep": {
           "type": "object",
           "settings": {
-            "image": "shopify://shop_images/beauty_derma1.webp",
+            "image": "shopify:\/\/shop_images\/beauty_derma1.webp",
             "heading": "Derm or Clinic Treatments",
             "mob_text": "",
-            "text": "<p><strong>per 6 session treatment</strong></p>",
+            "text": "<p><strong>per 6 session treatment<\/strong><\/p>",
             "price": "$900",
             "style": "incorrectCircle",
-            "list": "<ul><li>1 hour+ at the clinic</li><li>when (and if) you get an appointment</li><li>limited treatments</li><li>discomfort of an unfamiliar office</li><li>frustrating ongoing payments</li></ul>"
+            "list": "<ul><li>1 hour+ at the clinic<\/li><li>when (and if) you get an appointment<\/li><li>limited treatments<\/li><li>discomfort of an unfamiliar office<\/li><li>frustrating ongoing payments<\/li><\/ul>"
           }
         }
       },
@@ -683,7 +683,7 @@
         "classname": "beauty_skincare section bg-white",
         "heading": "Clinical Results Without The Clinical Price Tag",
         "heading_reduced": "",
-        "text": "<p>Buy it once, reap the benefits forever.</p>",
+        "text": "<p>Buy it once, reap the benefits forever.<\/p>",
         "text_reduced": ""
       }
     },
@@ -694,7 +694,7 @@
           "type": "object",
           "settings": {
             "heading": "What colour wavelengths of lights does the Q-Rejuvalight have?",
-            "text": "<p>The Q-Rejuvalight Pro Facewear has a total of 5 clinically-proven wavelengths of light:<br/></p><ul><li>Infrared light: Penetrates deepest into the skin for amplified results. Enhances product absorption.</li><li>Deep Red: Accelerates skin healing to fade and prevent scarring. Builds collagen to diminish wrinkles. Helps to repair sun damage and age spots.</li><li>Red: Anti-Ageing properties. Stimulates collagen and elastin production. Firms and plumps skin. Repairs skin cells and promotes hydration. Reduces inflammation, redness and rosacea.</li><li>Amber: Reduces appearance of dark spots. Soothes skin and calms swelling and inflammation.</li><li>Blue: Anti-bacterial, eliminates and prevents acne breakouts. Soothes and calms skin.</li></ul>",
+            "text": "<p>The Q-Rejuvalight Pro Facewear has a total of 5 clinically-proven wavelengths of light:<br\/><\/p><ul><li>Infrared light: Penetrates deepest into the skin for amplified results. Enhances product absorption.<\/li><li>Deep Red: Accelerates skin healing to fade and prevent scarring. Builds collagen to diminish wrinkles. Helps to repair sun damage and age spots.<\/li><li>Red: Anti-Ageing properties. Stimulates collagen and elastin production. Firms and plumps skin. Repairs skin cells and promotes hydration. Reduces inflammation, redness and rosacea.<\/li><li>Amber: Reduces appearance of dark spots. Soothes skin and calms swelling and inflammation.<\/li><li>Blue: Anti-bacterial, eliminates and prevents acne breakouts. Soothes and calms skin.<\/li><\/ul>",
             "code": ""
           }
         },
@@ -702,7 +702,7 @@
           "type": "object",
           "settings": {
             "heading": "Is it FDA cleared?",
-            "text": "<p>YES! Our Q-Rejuvalight Pro LED mask is the world’s first customizable, FDA-cleared at-home LED mask that is proven to be an effective and safe treatment for acne, and aging skin issues. You may find more details on the FDA website (K230042).</p>",
+            "text": "<p>YES! Our Q-Rejuvalight Pro LED mask is the world’s first customizable, FDA-cleared at-home LED mask that is proven to be an effective and safe treatment for acne, and aging skin issues. You may find more details on the FDA website (K230042).<\/p>",
             "code": ""
           }
         },
@@ -710,7 +710,7 @@
           "type": "object",
           "settings": {
             "heading": "What type of results will I see? How quickly will I see them?",
-            "text": "<p>Every individual may respond differently to specific wavelengths of lights and results will depend on the goal you want to achieve.</p><p>Most users see a reduction of acne breakouts and redness quicker than they expect.</p><p>Smoother lines, improved skin tone and firmness can take longer.</p><p>The day-to-day changes will be subtle, so be sure to take \"before and after\" pictures to document progress. The most important thing to remember is that results are cumulative, so consistent daily treatment is key.</p>",
+            "text": "<p>Every individual may respond differently to specific wavelengths of lights and results will depend on the goal you want to achieve.<\/p><p>Most users see a reduction of acne breakouts and redness quicker than they expect.<\/p><p>Smoother lines, improved skin tone and firmness can take longer.<\/p><p>The day-to-day changes will be subtle, so be sure to take \"before and after\" pictures to document progress. The most important thing to remember is that results are cumulative, so consistent daily treatment is key.<\/p>",
             "code": ""
           }
         },
@@ -718,7 +718,7 @@
           "type": "object",
           "settings": {
             "heading": "Do I need to wear eye protection when I use the Q-Rejuvalight Pro?",
-            "text": "<p>The Q-Rejuvalight Pro has been tested and cleared for eye safety. It has successfully passed the IEC62471 evaluation for eye safety test, which is used to determine whether a device's light output is safe for the eyes or not.</p><p>Regardless, we recommend closing your eyes and wearing protective eyewear during treatment. The light can be bright when powered on and some users may experience sensitivity, even when closing their eyes. </p><p>As part of our unwavering commitment to your safety, we decided to take the initiative to include FREE medical grade certified light blocking protective eyewear with our Q-Rejuvalight Pro LED mask that works seamlessly during your treatment.</p>",
+            "text": "<p>The Q-Rejuvalight Pro has been tested and cleared for eye safety. It has successfully passed the IEC62471 evaluation for eye safety test, which is used to determine whether a device's light output is safe for the eyes or not.<\/p><p>Regardless, we recommend closing your eyes and wearing protective eyewear during treatment. The light can be bright when powered on and some users may experience sensitivity, even when closing their eyes. <\/p><p>As part of our unwavering commitment to your safety, we decided to take the initiative to include FREE medical grade certified light blocking protective eyewear with our Q-Rejuvalight Pro LED mask that works seamlessly during your treatment.<\/p>",
             "code": ""
           }
         },
@@ -726,7 +726,7 @@
           "type": "object",
           "settings": {
             "heading": "Is it safe for all skin types?",
-            "text": "<p>It's crucial to note that skin types V and VI (on the fitzpatrick scale) are more sensitive for light therapy as they can absorb more light than other skin types. The reason is that skin type V and VI have higher levels of melanin in the skin. Melanin in the epidermis allows higher absorption of energy which increases the risk of adverse events from epidermal injury in people with skin type V and VI. This is why the FDA recommends caution for individuals with these skin types. </p><p>Based on our experience, numerous customers with skin types V and VI have successfully treated their skin with our Q-Rejuvalight Pro Facewear, reporting positive results. </p><p>For customers with skin types V and VI, we highly recommend consulting with your dermatologist before using our Q-Rejuvalight Pro Facewear. This step is crucial as skin reactions can vary from person to person, and what works well for one individual may not be suitable for another.</p>",
+            "text": "<p>It's crucial to note that skin types V and VI (on the fitzpatrick scale) are more sensitive for light therapy as they can absorb more light than other skin types. The reason is that skin type V and VI have higher levels of melanin in the skin. Melanin in the epidermis allows higher absorption of energy which increases the risk of adverse events from epidermal injury in people with skin type V and VI. This is why the FDA recommends caution for individuals with these skin types. <\/p><p>Based on our experience, numerous customers with skin types V and VI have successfully treated their skin with our Q-Rejuvalight Pro Facewear, reporting positive results. <\/p><p>For customers with skin types V and VI, we highly recommend consulting with your dermatologist before using our Q-Rejuvalight Pro Facewear. This step is crucial as skin reactions can vary from person to person, and what works well for one individual may not be suitable for another.<\/p>",
             "code": ""
           }
         },
@@ -734,7 +734,7 @@
           "type": "object",
           "settings": {
             "heading": "Does the Q-Rejuvalight Pro comes with warranty?",
-            "text": "<p>Q-Rejuvalight Pro Facewear comes with one (1) year warranty covering any manufacturer related problems resulting from everyday use of the product. However, this device is designed to last years! Proudly designed in Australia.</p>",
+            "text": "<p>Q-Rejuvalight Pro Facewear comes with one (1) year warranty covering any manufacturer related problems resulting from everyday use of the product. However, this device is designed to last years! Proudly designed in Australia.<\/p>",
             "code": ""
           }
         },
@@ -742,7 +742,7 @@
           "type": "object",
           "settings": {
             "heading": "At what age and when is the best time to start using LED light therapy?",
-            "text": "<p>Most people can benefit from the Q-Rejuvalight Pro. Whether the goal is to treat acne, help reduce the visible signs of aging, or both, prevention is better than correction. So the sooner the Q-Rejuvalight Pro becomes part of your routine, the better.</p>",
+            "text": "<p>Most people can benefit from the Q-Rejuvalight Pro. Whether the goal is to treat acne, help reduce the visible signs of aging, or both, prevention is better than correction. So the sooner the Q-Rejuvalight Pro becomes part of your routine, the better.<\/p>",
             "code": ""
           }
         },
@@ -750,7 +750,7 @@
           "type": "object",
           "settings": {
             "heading": "Where does the Q-rejuvalight Pro treatment fit into a skincare routine?",
-            "text": "<p>The Q-Rejuvalight Pro Facewear can be used day or night, ideally after cleaning and/or exfoliation.</p><p>After the treatment is complete, follow with your topical skincare products of choice.</p>",
+            "text": "<p>The Q-Rejuvalight Pro Facewear can be used day or night, ideally after cleaning and\/or exfoliation.<\/p><p>After the treatment is complete, follow with your topical skincare products of choice.<\/p>",
             "code": ""
           }
         },
@@ -777,7 +777,7 @@
         "background": "bg_yellow",
         "classname": "bg_yellow",
         "heading": "Have questions?",
-        "text": "<p>We have answers.</p>",
+        "text": "<p>We have answers.<\/p>",
         "button_label": "",
         "button_hide_label": ""
       }

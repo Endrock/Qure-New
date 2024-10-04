@@ -219,10 +219,8 @@
         });
 
         document.querySelector('#gdpr_accept').addEventListener('click', function() {
-            console.log('aaaaqqqq1');
             event.preventDefault();
             gdpr_setCookie("gdrp", "true", 365);
-            console.log('aaaaqqqq2');
             gdrpModal.hide();
         });
 

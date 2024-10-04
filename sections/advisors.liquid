@@ -28,7 +28,7 @@
                 <div class="swiper-wrapper">
                     {%- for block in section.blocks -%}
                         <div class="swiper-slide">
-                            <div class="advisor_content">
+                            <div class="advisor_content {{ block.settings.customClass }}">
                                 {% if block.settings.image != blank %}
                                     <img src="{{ block.settings.image | img_url: '500x' }}" alt="advisor_{{ forloop.index }}" class="img-fluid">
                                 {% endif %}
@@ -125,6 +125,11 @@
                         "type": "image_picker",
                         "id": "image",
                         "label": "t:common.image.label"
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "customClass",
+                        "label": "t:common.classname.custom"
                     }
                 ]
 		    }

@@ -7410,7 +7410,18 @@ p.title_mob {
 .compare_listHeader>.compare__img img {
     width: 151px;
 }
-
+.skincare_slider_n .skin_item_n_tag .sn_tag {
+    background-color: #c7e7dc;
+    border-radius: 30px;
+    padding: 2px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-left: 21px;
+}
+.skincare_slider_n .skin_item_n_tag p {
+    text-align: center;
+    margin: 12px 0;
+}
 @media(max-width:767px) {
     .compare_section {
         overflow-x: hidden;

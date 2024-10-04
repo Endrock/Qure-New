@@ -378,7 +378,8 @@
             "heading": "Dr Shah, MD",
             "subheading": "Board-Certified Dermatologist",
             "text": "<p>“I like that they put a lot of R&D into their products -                                                       Ultimately, I think that they care a lot about the products they                                                        are putting out”</p>",
-            "image": "shopify://shop_images/advisor_1.webp"
+            "image": "shopify://shop_images/advisor_1.webp",
+            "customClass": ""
           }
         },
         "object_fwn8MX": {
@@ -387,7 +388,8 @@
             "heading": "Dr Maxfield, MD",
             "subheading": "Board-Certified Dermatologist",
             "text": "<p>“Qure do studies on this, taking a look at how effective it is, so you can have confidence it’s going to hep what you’re doing for your skincare routine”</p>",
-            "image": "shopify://shop_images/advisor_2.webp"
+            "image": "shopify://shop_images/advisor_2.webp",
+            "customClass": ""
           }
         },
         "object_ztcPKz": {
@@ -396,7 +398,8 @@
             "heading": "Dr Alexis Stephens, MD",
             "subheading": "Board-Certified Dermatologist",
             "text": "<p>\"What really sets Qure apart is the level of innovation and thoughtfulness they put into each product. Their commitment to quality and attention to detail really shines through in everything they create\"</p>",
-            "image": "shopify://shop_images/advisor_3.webp"
+            "image": "shopify://shop_images/advisor_3.webp",
+            "customClass": ""
           }
         },
         "object_rkVQek": {
@@ -405,7 +408,8 @@
             "heading": "Dr Prem Tripathi, MD",
             "subheading": "Double Board Certified Facial Plastic Surgeon",
             "text": "<p>“I love that Qure Skincare products go beyond just topical treatments, helping to maintain the results of in-office procedures.”</p>",
-            "image": "shopify://shop_images/advisor_4.webp"
+            "image": "shopify://shop_images/advisor_4.webp",
+            "customClass": ""
           }
         }
       },
@@ -733,6 +737,7 @@
             "heading": "Dermatologist Approved and Science-Backed",
             "text": "<p>Backed by the most respected peer-reviewed <strong>Dermatologist Journals</strong> and <strong>scientific studies</strong> that <strong>prove</strong>; Qure’s skincare <strong>works</strong>.</p>",
             "logo": "shopify://shop_images/q_uses_1_12585e4b-1c56-477e-a662-8e2a03b0ea51.webp",
+            "logoMob": "shopify://shop_images/q_uses_1Mob.webp",
             "btn_img": "shopify://shop_images/s_q_3.svg",
             "btn_text": "<p>Science-Backed, Dermatologist Approved</p>",
             "btn_textm": "<p>Dermatologist Approved</p>"

@@ -1,4 +1,4 @@
-{% assign random_number='now' | date: "%s" | modulo: 100 | plus: 1 %}
+{% assign random_number = 'now' | date: '%s' | modulo: 100 | plus: 1 %}
 <div class="q_uses_bl {{ section.settings.background }} section q_uses_tab">
   <div class="container">
     <div class="row">
@@ -11,13 +11,18 @@
             {%- for block in section.blocks -%}
               <div class="swiper-slide">
                 <div class="q_uses_description">
-                {%- if block.settings.heading !=blank -%}
-                  <h3>{{ block.settings.heading }}</h3>
+                  {%- if block.settings.heading != blank -%}
+                    <h3>{{ block.settings.heading }}</h3>
                   {%- endif -%}
                   {{ block.settings.text }}
-                  {%- if block.settings.logo -%}
+                  {%- if block.settings.logo != blank -%}
                     <div class="q_use_img">
-                      <img src="{{ block.settings.logo | img_url: 'master' }}" alt="" class="img-fluid">
+                      <img src="{{ block.settings.logo | img_url: 'master' }}" alt="" class="img-fluid d-md-block d-none">
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.logoMob != blank -%}
+                    <div class="q_use_img d-md-none">
+                      <img src="{{ block.settings.logoMob | img_url: '280x' }}" alt="">
                     </div>
                   {%- endif -%}
                 </div>
@@ -40,10 +45,10 @@
                   <img src="{{ block.settings.btn_img | img_url: 'master' }}" alt="" class="img-fluid">
                   <div class="qUses_btn">
                     {%- if block.settings.btn_text != blank -%}
-                    <h6 class="d-none d-md-block">{{ block.settings.btn_text }}</h6>
+                      <h6 class="d-none d-md-block">{{ block.settings.btn_text }}</h6>
                     {%- endif -%}
                     {%- if block.settings.btn_textm != blank -%}
-                    <h6 class="d-block d-md-none">{{ block.settings.btn_textm }}</h6>
+                      <h6 class="d-block d-md-none">{{ block.settings.btn_textm }}</h6>
                     {%- endif -%}
                     <img src="{{ 'uses_plus.svg' | asset_url }}" alt="" class="img-fluid q_uses_plus">
                   </div>
@@ -140,6 +145,11 @@
           "type": "image_picker",
           "id": "logo",
           "label": "t:common.image.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "logoMob",
+          "label": "t:commonMob.image.label"
         },
         {
           "type": "header",

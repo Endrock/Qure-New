@@ -16,9 +16,9 @@
       ],
       "settings": {
         "heading": "Returns & Exchanges",
-        "text": "<h3>Shop with Confidence at Qure</h3>",
-        "image": "shopify://shop_images/returns_banner_desk.webp",
-        "image_mobile": "shopify://shop_images/returns_banner_mob.webp",
+        "text": "<h3>Shop with Confidence at Qure<\/h3>",
+        "image": "shopify:\/\/shop_images\/returns_banner_desk.webp",
+        "image_mobile": "shopify:\/\/shop_images\/returns_banner_mob.webp",
         "align_center": false,
         "align_right": true,
         "classname": "bg_gradient_mob text-black"
@@ -35,17 +35,17 @@
             "btn_url": "",
             "custom_class": "",
             "heading2": "Simple Hassle-Free Returns",
-            "icon": "shopify://shop_images/hassle_free.svg",
-            "text2": "<p>At Qure, we want you to feel confident – but it’s also our goal to save you time and money. No trips to the clinic? Check. Dermatologist trusted & approved? Double check. So, naturally, we want to make returns and exchanges hassle-free, too. Read on for the full details!</p>",
+            "icon": "shopify:\/\/shop_images\/hassle_free.svg",
+            "text2": "<p>At Qure, we want you to feel confident – but it’s also our goal to save you time and money. No trips to the clinic? Check. Dermatologist trusted & approved? Double check. So, naturally, we want to make returns and exchanges hassle-free, too. Read on for the full details!<\/p>",
             "heading3": "30-Day Money Back Guarantee",
-            "icon2": "shopify://shop_images/money-back-md.svg",
-            "text3": "<p>Changed your mind? Returns can be initiated within 30 days upon receiving your order to qualify for our money back guarantee.</p>"
+            "icon2": "shopify:\/\/shop_images\/money-back-md.svg",
+            "text3": "<p>Changed your mind? Returns can be initiated within 30 days upon receiving your order to qualify for our money back guarantee.<\/p>"
           }
         },
         "image_UCpxPE": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/q_reju_pro.webp",
+            "image": "shopify:\/\/shop_images\/q_reju_pro.webp",
             "custom_img": "",
             "order_mob": false,
             "color1": "#000000",
@@ -76,7 +76,7 @@
         "image_NQ7nVL": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/return_quick_fact.webp",
+            "image": "shopify:\/\/shop_images\/return_quick_fact.webp",
             "custom_img": "",
             "order_mob": true,
             "color1": "#000000",
@@ -89,7 +89,7 @@
         "text_awyab8": {
           "type": "text",
           "settings": {
-            "text": "<p>Here’s the low-down on the terms and conditions that apply to the guarantee. You can read full T&Cs <a href=\"https://www.qureskincare.com/pages/terms-and-conditions\">here</a>.<br/><br/></p><ul><li>30 days to return OR exchange for a full refund.</li><li>Returns first need to be approved by Qure support. </li><li>Product must be new, unused with the seal intact.</li><li>Shipping charges are non-refundable.</li><li>A Restocking Fee of $10 will be deducted from the refund. </li></ul>",
+            "text": "<p>Here’s the low-down on the terms and conditions that apply to the guarantee. You can read full T&Cs <a href=\"https:\/\/www.qureskincare.com\/pages\/terms-and-conditions\">here<\/a>.<br\/><br\/><\/p><ul><li>30 days to return OR exchange for a full refund.<\/li><li>Returns first need to be approved by Qure support. <\/li><li>Product must be new, unused with the seal intact.<\/li><li>Shipping charges are non-refundable.<\/li><li>A Restocking Fee of $10 will be deducted from the refund. <\/li><\/ul>",
             "btn_text": "",
             "btn_url": "",
             "custom_class": "it_info subscriptions_section m-0",
@@ -125,28 +125,28 @@
           "type": "slide",
           "settings": {
             "slide_heading": "Go to the Returns Portal",
-            "slide_text": "<p>Click here to visit our <a href=\"https://returns.qureskincare.com\" target=\"_blank\" title=\"https://returns.qureskincare.com\">returns & exchanges</a> portal page.<br/>Enter your order number and either your shipping code or email address.</p>"
+            "slide_text": "<p>Click here to visit our <a href=\"https:\/\/returns.qureskincare.com\" target=\"_blank\" title=\"https:\/\/returns.qureskincare.com\">returns & exchanges<\/a> portal page.<br\/>Enter your order number and either your shipping code or email address.<\/p>"
           }
         },
         "slide_YiKPDx": {
           "type": "slide",
           "settings": {
             "slide_heading": "Choose What’s Next",
-            "slide_text": "<p>Pick whether it’s a return or exchange and answer a few questions. You’ll be asked to provide a photo of the item(s). </p>"
+            "slide_text": "<p>Pick whether it’s a return or exchange and answer a few questions. You’ll be asked to provide a photo of the item(s). <\/p>"
           }
         },
         "slide_xPHTtK": {
           "type": "slide",
           "settings": {
             "slide_heading": "Get an RMA Number",
-            "slide_text": "<p>If approved, you will be provided the return instructions and a Return Merchandise Authorization (RMA) number from our team. Any return received without a Return Authorization Number will be rejected. </p>"
+            "slide_text": "<p>If approved, you will be provided the return instructions and a Return Merchandise Authorization (RMA) number from our team. Any return received without a Return Authorization Number will be rejected. <\/p>"
           }
         },
         "slide_ckFpDU": {
           "type": "slide",
           "settings": {
             "slide_heading": "Pack & Ship",
-            "slide_text": "<p>Securely pack item(s) in a box and ship them! We encourage you to use a trackable shipping service. Please allow up to 7-14 business days for your return to be processed.</p>"
+            "slide_text": "<p>Securely pack item(s) in a box and ship them! We encourage you to use a trackable shipping service. Please allow up to 7-14 business days for your return to be processed.<\/p>"
           }
         }
       },
@@ -186,7 +186,7 @@
       ],
       "settings": {
         "heading": "Have Questions?",
-        "text": "<p>If you have a question about your order please contact our customer service team by sending an email to <a href=\"mailto:support@qureskincare.com\">support@qureskincare.com.<br/></a>For more information on our warranty please visit our warranty policy <a href=\"https://www.qureskincare.com/pages/warranty-returns\" target=\"_blank\">here</a>. </p>"
+        "text": "<p>If you have a question about your order please contact our customer service team by sending an email to <a href=\"mailto:support@qureskincare.com\">support@qureskincare.com.<br\/><\/a>For more information on our warranty please visit our warranty policy <a href=\"https:\/\/www.qureskincare.com\/pages\/warranty-returns\" target=\"_blank\">here<\/a>. <\/p>"
       }
     },
     "image_text_BpRC9g": {
@@ -195,7 +195,7 @@
         "image_7zHLL4": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/good_company.webp",
+            "image": "shopify:\/\/shop_images\/good_company.webp",
             "custom_img": "pe-0 pe-md-5",
             "order_mob": false,
             "color1": "#000000",
@@ -208,8 +208,8 @@
         "text_ybVTyM": {
           "type": "text",
           "settings": {
-            "text": "<p>50,000+ customers feel more confident in their own skin</p>",
-            "rating": "shopify://shop_images/results_star-full.svg",
+            "text": "<p>50,000+ customers feel more confident in their own skin<\/p>",
+            "rating": "shopify:\/\/shop_images\/results_star-full.svg",
             "btn_text": "",
             "btn_url": "",
             "custom_class": "",
@@ -244,7 +244,7 @@
           "type": "object",
           "settings": {
             "heading": "I used a promo code on my purchase. Will I get another one?",
-            "text": "<p>Orders placed with a promo code that discounts the order are only eligible for a store credit in a form of voucher(s).</p>",
+            "text": "<p>Orders placed with a promo code that discounts the order are only eligible for a store credit in a form of voucher(s).<\/p>",
             "code": ""
           }
         },
@@ -252,7 +252,7 @@
           "type": "object",
           "settings": {
             "heading": "What should I do if I receive the wrong product?",
-            "text": "<p>If you received a product different from the one that you ordered, please contact us at<a href=\"mailto:support@qureskincare.com\">support@qureskincare.com</a>and we’ll be sure to make this right!</p>",
+            "text": "<p>If you received a product different from the one that you ordered, please contact us at<a href=\"mailto:support@qureskincare.com\">support@qureskincare.com<\/a>and we’ll be sure to make this right!<\/p>",
             "code": ""
           }
         },
@@ -260,7 +260,7 @@
           "type": "object",
           "settings": {
             "heading": "How long does it take to credit my account for refunds?",
-            "text": "<p>Please allow up to 7-14 business days for your return to be processed. Credit card refunds usually take 5-10 business days to appear on your statement.</p>",
+            "text": "<p>Please allow up to 7-14 business days for your return to be processed. Credit card refunds usually take 5-10 business days to appear on your statement.<\/p>",
             "code": ""
           }
         },
@@ -268,7 +268,7 @@
           "type": "object",
           "settings": {
             "heading": "Is there a Restocking Fee?",
-            "text": "<p>Yes, a return fee will be deducted from the refund to cover the warehouse cost to return the product. This fee amounts to $10 for all products. Customer service agents can provide a more exact cost if the returned product is subject to a shipping fee.</p>",
+            "text": "<p>Yes, a return fee will be deducted from the refund to cover the warehouse cost to return the product. This fee amounts to $10 for all products. Customer service agents can provide a more exact cost if the returned product is subject to a shipping fee.<\/p>",
             "code": ""
           }
         }
@@ -294,7 +294,7 @@
         "column_MFytcF": {
           "type": "column",
           "settings": {
-            "c_image": "shopify://shop_images/more_help1.webp",
+            "c_image": "shopify:\/\/shop_images\/more_help1.webp",
             "name": "",
             "button": "Start Your Skin Consultation",
             "btn_url": ""
@@ -303,7 +303,7 @@
         "column_A4Tzbx": {
           "type": "column",
           "settings": {
-            "c_image": "shopify://shop_images/more_help2.webp",
+            "c_image": "shopify:\/\/shop_images\/more_help2.webp",
             "name": "",
             "button": "Discover More on the Blog",
             "btn_url": ""
@@ -312,7 +312,7 @@
         "column_crELCA": {
           "type": "column",
           "settings": {
-            "c_image": "shopify://shop_images/more_help3.webp",
+            "c_image": "shopify:\/\/shop_images\/more_help3.webp",
             "name": "",
             "button": "Shop Best Sellers ",
             "btn_url": ""
