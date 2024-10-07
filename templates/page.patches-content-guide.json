@@ -36,14 +36,26 @@
       "settings": {
       }
     },
-    "main": {
-      "type": "temp-page-patches-content-guide",
+    "section1": {
+      "type": "temp-page-patches-content-guide-section1",
+      "settings": {
+      }
+    },
+    "section2": {
+      "type": "temp-page-patches-content-guide-section2",
+      "settings": {
+      }
+    },
+    "section3": {
+      "type": "temp-page-patches-content-guide-section3",
       "settings": {
       }
     }
   },
   "order": [
     "header_landing_pFmaRH",
-    "main"
+    "section1",
+    "section2",
+    "section3"
   ]
 }

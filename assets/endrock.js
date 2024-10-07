@@ -10,7 +10,7 @@ const userLocationIP = () => {
   fetch(url, requestOptions)
     .then(response => response.json())
     .then(result => {
-      return deliveryDate(result);
+      return deliveryDate(result, orderByConfig);
     })
     .catch(error => console.log('error', error));
 }
@@ -32,19 +32,32 @@ function getDeliveryRange(stateAcronym) {
 
 
 /**
- * Calculates and displays the delivery date based on the location.
- * @param {Object} location - The location object containing the countryCode and region.
+ * Calculates and displays the delivery date based on the user's location.
+ * If the user's location is within the US and the current date is within the defined
+ * start and end dates, the component remains hidden.
+ *
+ * @param {Object} location - The location object containing `countryCode` and `region`.
+ * @param {Object} orderByConfig - Configuration object defining the display behavior, data from snippets/pdm_orderby.liquid.
+ * @param {boolean} orderByConfig.showOrderByReceiveByUS - Determines whether to display the component in the US.
+ * @param {Date} orderByConfig.startDateOrder - Start date defining the visibility period for the US.
+ * @param {Date} orderByConfig.endDateOrder - End date defining the visibility period for the US.
  */
-const deliveryDate = (location) => {
-  const { countryCode, region } = location;
 
+const deliveryDate = (location, orderByConfig) => {
+  const { countryCode, region } = location;
+  let nowDate = new Date();
   const messageContainer = document.querySelector('.orderby-receiveby__shipping-text');
   const nationalMessage = window.nationalText.split('[]');
+
+  if (countryCode == 'US' && !orderByConfig.showOrderByReceiveByUS ) return
+
+  if (countryCode == 'US' && (nowDate >= orderByConfig.startDateOrder && nowDate <= orderByConfig.endDateOrder )) {
+    return;
+  }
 
   if (countryCode != 'US') {
     messageContainer.innerText = window.internationalText
   } else {
-
     const foundNationalDate = getDeliveryRange(region.toUpperCase());
     messageContainer.innerText = `${nationalMessage[0]} ${foundNationalDate} ${nationalMessage[1]}`
   }

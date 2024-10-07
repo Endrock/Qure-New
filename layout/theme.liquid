@@ -92,7 +92,8 @@
     <!-- end styles endrock -->
 
     {% render 'header-scripts' %}
-
+    {% comment %} add swiper  {% endcomment %}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
 <body class="{{ template }}">
@@ -227,7 +228,6 @@
             ];
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer src="{{ 'endrock.js' | asset_url }}"></script>
 
     <script type="text/javascript" src="https://s.skimresources.com/js/200448X1678823.skimlinks.js"></script>
@@ -251,7 +251,7 @@
   
     <!-- hide launcher on the above page -->
 
-    {% comment %} {% include 'info' %} {% endcomment %}
+    {% include 'info' %}
 
 </body>
 

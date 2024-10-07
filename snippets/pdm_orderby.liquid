@@ -2,6 +2,12 @@
 
 
 {% endcomment %}
+{% liquid
+  assign show_order_us = settings.show_order_by_receive_by_us
+  assign start_date_order = settings.start_time_order
+  assign end_date_order = settings.end_time_order
+%}
+
 {% if settings.today_text != blank %}
   <div class="orderby-receiveby hidden">
     <div class="orderby-receiveby__today">
@@ -16,3 +22,11 @@
     </div>
   </div>
 {% endif %}
+
+<script>
+  const orderByConfig = {
+    showOrderByReceiveByUS: {{ show_order_us }},
+    startDateOrder: new Date("{{ start_date_order }}"),
+    endDateOrder: new Date("{{ end_date_order }}")
+  };
+</script>
