@@ -34,7 +34,7 @@
     "today_text": "Order today",
     "start_time_order": "2024-10-05T23:00",
     "end_time_order": "2024-10-06T23:00",
-    "show_order_by_receive_by_us": true,
+    "show_order_by_receive_by_us": false,
     "enable_corner_treatment_bfcm": true,
     "promotion": "promotion",
     "sections": {
@@ -227,6 +227,7 @@
           "upsell_a74n8t"
         ],
         "settings": {
+          "copy_title_gift": "",
           "upsell_heading": "Achieve your skin goals faster",
           "upsell_product_first": "q-rejuvalight-pro-facewear",
           "upsell_product_first_description": "Add the ultimate skincare investment to your routine",
@@ -234,7 +235,6 @@
           "upsell_product_second_description": "Rejuvenate skin where the first signs of aging show",
           "upsell_product_third": "face-serum",
           "upsell_product_third_description": "Plump, smooth & brighten in just one step",
-          "copy_title_gift": "",
           "sidecart_timer_old_enable": false,
           "sidecart_timer_new_enable": false,
           "start_date": "08-15-2024 12:00",
