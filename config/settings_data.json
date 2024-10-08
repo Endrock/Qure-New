@@ -218,13 +218,23 @@
               "upsell_product_third": "micro-infusion-1-month-bundle-2x-beta-glucan-serum",
               "upsell_product_thid_description": "Reveal smoother, radiant skin"
             }
+          },
+          "trustpilot_a3exnp": {
+            "type": "trustpilot",
+            "settings": {
+              "text_area_first": "<p>Excellent <b>4.4</b></p>",
+              "starts": "shopify://shop_images/stars-4.5_1.svg",
+              "second_text_content": "reviews on",
+              "logo": "shopify://shop_images/logo_truspilot.svg"
+            }
           }
         },
         "block_order": [
           "gift_ccQgi4",
           "upsell_8Karyz",
           "upsell_DQMajg",
-          "upsell_a74n8t"
+          "upsell_a74n8t",
+          "trustpilot_a3exnp"
         ],
         "settings": {
           "copy_title_gift": "",

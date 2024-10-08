@@ -545,7 +545,7 @@
 }
 .advisor_content .accordion-header p {
     font-weight: 400;
-    line-height: 16px;
+    line-height: 21.538px;
 }
 .advisor_4 .advisor_detail {
     margin-top: -140px;
@@ -554,6 +554,9 @@
     overflow: unset;
 }
 @media(max-width:767px) {
+    .homepage .q_uses_bl .q_use_img {
+        max-width: 280px;
+    }
     .advisor_content .advisor_detail h6{
         font-size: 14px;
     }
@@ -652,3 +655,111 @@
 }
 
 /* ================================== homepage old start ================================ */
+
+/* event_home_banner.css */
+
+.homepage .main_banner h6 {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 36.93px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #D453AF;
+}
+.homepage .main_banner h1 {
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 57.4px;
+    letter-spacing: 0.45px;
+}
+.homepage .main_banner .event_text {
+    background-color: #DEE9EA;
+    padding: 50px 30px 50px 50px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.homepage .main_banner .banner_product {
+    width: 100%;
+    max-width: 291px;
+    margin: auto;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.homepage .main_banner a {
+    padding: 10px 42px;
+}
+.homepage .main_banner .banner_product h4 {
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 20.269px;
+    letter-spacing: 0.237px;
+    text-transform: uppercase;
+    color: #D453AF;
+}
+.homepage .main_banner .banner_product h5 {
+    font-family: "Canela Web";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.237px;
+}
+.homepage .main_banner .banner_product p {
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 16.494px;
+    letter-spacing: 0.11px;
+    padding-top: 20px;
+    color: #000;
+}
+.homepage .main_banner .banner_product .product_text {
+    padding-top: 20px;
+}
+
+@media(max-width:767px){
+    .homepage .main_banner .banner_product .product_text {
+        padding-top: 0px;
+    }
+    .homepage .main_banner .event_text {
+        padding: 35px 25px 25px 25px;
+    }
+    .homepage .main_banner h1 {
+        font-size: 34px;
+        line-height: 40px;
+        letter-spacing: 0.34px;
+        margin: 5px 0 10px;
+    }
+    .homepage .main_banner h6 {
+        font-size: 13px;
+        line-height: 22px;
+        letter-spacing: 0.13px;
+        text-align: center;
+    }
+    .homepage .main_banner a {
+        padding: 13px 25px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16.733px;
+        letter-spacing: 0.251px;
+        margin-bottom: 0;
+    }
+    .homepage .main_banner .event_banner-text{
+        text-align: center;
+    }
+    .homepage .main_banner .banner_product {
+        padding: 16px 4px 26px 20px;
+    }
+    .homepage .main_banner .event_content-main {
+        margin: 0 -3px;
+    }
+    .homepage .main_banner .banner_product h5{
+        font-size: 16px;
+    }
+    .homepage .main_banner .event_banner-text p {
+        font-size: 11px;
+        line-height: 16.494px;
+        letter-spacing: 0.11px;
+    }
+}

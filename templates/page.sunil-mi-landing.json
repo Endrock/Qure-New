@@ -256,27 +256,6 @@
             "cta_text": "Shop Now",
             "cta_link": "productSubscription"
           }
-        },
-        "confidence_slider_block_TtgA3M": {
-          "type": "confidence_slider_block",
-          "settings": {
-            "heading": "No hype, just evidence.",
-            "text": "<p>The results speak for themselves. In an independent user study, participants' skin was measured and showed proven visible improvement after just 6 fortnightly treatments.<\/p>",
-            "text_first-info": "<p>of participants say their fine lines<strong>looked smoother.<\/strong><\/p>",
-            "percent_bar_first-info": 70,
-            "text_second-info": "<p>noticed <strong>results the next day <\/strong>after the first Micro-Infusion treatment.<\/p>",
-            "percent_bar_second-info": 93,
-            "text_third-info": "<p>of participants say their skin looked <strong>brighter and more even toned.<\/strong><\/p>",
-            "percent_bar_third-info": 70,
-            "image_slide_first": "shopify:\/\/shop_images\/sn_1.webp",
-            "text_slide_first": "<p>Proven to visually improve <strong>Fine Lines & Wrinkles<\/strong><\/p>",
-            "image_slide_second": "shopify:\/\/shop_images\/sn_2.webp",
-            "text_slide_second": "<p>Proven to visually improve <strong>Large Pores & Skin Texture<\/strong><\/p>",
-            "image_slide_third": "shopify:\/\/shop_images\/sn_3.webp",
-            "text_slide_third": "<p>Proven to visually improve <strong>Dark Spots & Texture<\/strong><\/p>",
-            "image_slide_fourth": "shopify:\/\/shop_images\/sn_4.webp",
-            "text_slide_fourth": "<p>Proven to visually improve <strong>Uneven Skin Tone<\/strong><\/p>"
-          }
         }
       },
       "block_order": [
@@ -286,8 +265,7 @@
         "image_wdPDGq",
         "image_TXKk7A",
         "image_k7aY9B",
-        "science_section_block_zcp3g7",
-        "confidence_slider_block_TtgA3M"
+        "science_section_block_zcp3g7"
       ],
       "settings": {
         "heading": ""

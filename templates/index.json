@@ -97,25 +97,22 @@
         "link_GirQqh": {
           "type": "link",
           "settings": {
-            "link_label": "Save $50",
-            "link_label_mobile": "Save $50",
-            "link_url": "shopify://collections/led-light-therapy-devices"
+            "link_label": "Support now",
+            "link_label_mobile": "Support now",
+            "link_url": "shopify://collections/best-sellers"
           }
         }
       },
       "block_order": [
         "link_GirQqh"
       ],
-      "disabled": true,
       "settings": {
-        "heading": "Don't let post-summer skin damage get your confidence down",
-        "heading_mobile": "",
+        "heading": "STRONGER TOGETHER",
+        "heading_mobile": "STRONGER TOGETHER",
         "heading_tag": "h1",
-        "subheading": "",
-        "subheading_mobile": "",
-        "text": "<p>Repair, replenish and even skin tone with \\n clinically-proven LED light therapy.</p>",
-        "image": "shopify://shop_images/summer_banner.webp",
-        "image_mobile": "shopify://shop_images/summer_banner-mob.webp"
+        "subheading": "<p>Join Us in the Fight Against Breast Cancer</p>",
+        "subheading_mobile": "<p>Join Us in the Fight Against Breast \\n  Cancer</p>",
+        "text": "<p>*To support breast cancer research to prevent, detect, stop and treat breast cancer, Qure will donate $2 from every order to the National Breast Cancer Foundation.</p>"
       }
     },
     "promotion_main_banner_second_jCUkqh": {
@@ -133,6 +130,7 @@
       "block_order": [
         "link_Pk3LH6"
       ],
+      "disabled": true,
       "settings": {
         "heading": "<p>STRONGER <strong>TOGETHER</strong></p>",
         "heading_mobile": "",
