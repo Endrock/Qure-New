@@ -34,7 +34,7 @@
     "today_text": "Order today",
     "start_time_order": "2024-10-05T23:00",
     "end_time_order": "2024-10-06T23:00",
-    "show_order_by_receive_by_us": false,
+    "show_order_by_receive_by_us": true,
     "enable_corner_treatment_bfcm": true,
     "promotion": "promotion",
     "sections": {
