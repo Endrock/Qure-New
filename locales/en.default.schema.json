@@ -107,6 +107,9 @@
       "full": "Full",
       "half": "Contain"
     },
+    "collapsed": {
+      "label": "Collapsed"
+    },
     "text_icon": {
       "label": "Heading with Icon"
     },
@@ -131,7 +134,8 @@
       "from": "From",
       "verified": "Verified Customer",
       "loop": "Enable loop",
-      "autoplay": "Enable autoplay"
+      "autoplay": "Enable autoplay",
+      "show": "Show"
     },
     "dropdown": {
       "design": "Dropdown design"
@@ -468,6 +472,9 @@
     "rating": {
       "label": "Rating",
       "stars": "Stars"
+    },
+    "description": {
+      "label": "Description"
     },
     "code": {
       "label": "Code"
@@ -1054,6 +1061,21 @@
       "settings": {
       },
       "blocks": {
+      }
+    },
+    "guide-header": {
+      "name": "Guide header",
+      "settings": {
+      }
+    },
+    "guide-columns": {
+      "name": "Guide columns",
+      "settings": {
+      },
+      "blocks": {
+        "header": {
+          "label": "Header"
+        }
       }
     },
     "guide": {
