@@ -91,8 +91,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 	configureCart('addToCartCssClass', 'js-my-cart-open'); 
+  let timeoutId = null;
 
-  subscribeToCartAjaxRequests(myRequestCallback => {
+  subscribeToCartAjaxRequests((myRequestCallback, subscribeToResult) => {
     if(myRequestCallback.requestType === 'add') {
       if(!window.event_product_handle) {
         let atc_href = myRequestCallback.info.initiator.getAttribute('href');
@@ -125,6 +126,40 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }, 500);
     }
+
+    subscribeToResult( myRequestCallback => {   
+      if(myRequestCallback.requestType === 'add') {
+
+        {% comment %} urgency note  {% endcomment %}
+        setTimeout(() => {
+          getShopifyCart()
+            .then(cart => {
+              const TIMER_TO_DELETE_URGENCY_PRODUCTS = 30000;
+              const includedUrgencyNoteProducts = checkUrgencyNoteProducts(cart);
+
+              if (!includedUrgencyNoteProducts) return;
+
+              saveUrgencyNoteCloseIconToStorage(false);
+              
+              // Clear the existing timeout if it exists
+              if (timeoutId) { 
+                clearTimeout(timeoutId);
+              }
+
+              // Set a new timeout to remove urgency products after a delay
+              timeoutId = setTimeout(() => {
+                {% comment %} removeUrgencyProductsFromCart(); {% endcomment %}
+                const giftInCart = cart.items.find(item => item.id === +(productId));
+                cartRequestChange({ 
+                  id: giftInCart.key,
+                  quantity: 0
+                },  {} )
+              },TIMER_TO_DELETE_URGENCY_PRODUCTS);
+            });
+        },5000); 
+      }
+      console.log('myRequestCallback.requestType',myRequestCallback.requestType)
+    })
   })
 
 	subscribeToCartSectionsUpdate( sections => {
@@ -132,12 +167,12 @@ document.addEventListener('DOMContentLoaded', () => {
 			startCartTimer(15 * 60);
 		}
      // new sidecart timer 
-      const isTestActive = document.body.hasAttribute('data-sidecart-timer');
-      if (isTestActive && 'function' == typeof initSidecarTimer) {
-        initSidecarTimer();
-      }
+      initSidecarTimer();
 
     	initUpsellSwiper();
+
+      // urgent note 
+      initSidecartUrgencyNote();
 	});
 
   subscribeToCartStateUpdate( state => {
@@ -258,6 +293,111 @@ document.addEventListener('DOMContentLoaded', () => {
         },  {} )
       }
     }
+  }
+
+  // Utility function to save items to LocalStorage
+  function saveUrgencyNoteCloseIconToStorage (status) {
+    localStorage.setItem('urgencyCloseIcon', JSON.stringify(status));
+  };
+
+  // Utility function to get items from LocalStorage
+  function getUrgencyNoteCloseIconToStorage () {
+    const urgencyCloseIcon = localStorage.getItem('urgencyCloseIcon');
+    return urgencyCloseIcon ? JSON.parse(urgencyCloseIcon) : null;
+  };
+
+  function initSidecartUrgencyNote () {
+    const urgencyNoteContainer = document.querySelector('.slide_cart .urgency-note-container');
+    if (!urgencyNoteContainer) return false;
+
+    const closeIcon = urgencyNoteContainer.querySelector('.urgency-note__close-icon');
+    const urgencyCloseIconStatus = getUrgencyNoteCloseIconToStorage();
+
+    if (urgencyCloseIconStatus) urgencyNoteContainer.classList.add('closed');
+
+    closeIcon.addEventListener('click', () => {
+      urgencyNoteContainer.classList.add('closed');
+      saveUrgencyNoteCloseIconToStorage(true);
+    });
+  }
+
+  function checkUrgencyNoteProducts (cart) {
+    const urgencyNoteContainer = document.querySelector('.slide_cart .urgency-note-container');
+    if (!urgencyNoteContainer) return;
+
+    let includedUrgencyNoteProducts = [];
+    let { products:urgencyNoteProducts } = urgencyNoteContainer.dataset;
+    urgencyNoteProducts = urgencyNoteProducts.split(",").map(ele => Number(ele));
+    
+    console.log('urgencyNoteProducts', {urgencyNoteProducts})
+
+    includedUrgencyNoteProducts = cart.items.filter(item => urgencyNoteProducts.includes(item.id));
+    console.log('includedUrgencyNoteProducts => ', includedUrgencyNoteProducts)
+
+    return includedUrgencyNoteProducts;
+  }
+
+  function getShopifyCart () {
+    return fetch('/cart.js', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
+  };
+  
+  function removeUrgencyProductsFromCart () {
+
+    saveUrgencyNoteCloseIconToStorage(false);
+
+    console.log('removeUrgencyProductsFromCart')
+
+    getShopifyCart()
+      .then(cart => {
+        let includedUrgencyNoteProducts = checkUrgencyNoteProducts(cart);
+        
+        console.log('START OF removeUrgencyProductsFromCart', {includedUrgencyNoteProducts})
+
+        if (includedUrgencyNoteProducts.length) {
+
+          console.log({includedUrgencyNoteProducts})
+
+          deleteMultipleCartItems(includedUrgencyNoteProducts)
+            .then(json => console.log('Updated cart after delete urgency note items:', {json}));
+        }
+      });
+  }
+
+  function deleteMultipleCartItems(itemsToDelete) {
+    if (!itemsToDelete) return;
+
+    let updates = itemsToDelete.reduce((acu,cur) => {
+      acu[cur.key] = 0;
+      return acu;
+    }, {});
+    
+    return fetch(window.Shopify.routes.root + 'cart/update.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ updates })
+    })
+    .then(response => {
+      return response.json();
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
   }
 });
 </script>

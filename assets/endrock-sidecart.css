@@ -817,3 +817,56 @@ body[data-free-gift-gamification] .second-milestone {
 }
 
 /* end new sidecart time */
+
+/* start sidecart urgency note */
+.slide_cart .urgency-note-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  position: relative;
+  right: 10px;
+}
+.slide_cart .urgency-note-container.closed {
+  display: none;
+}
+.slide_cart .urgency-note-container .urgency-note {
+  width: 516px;
+  padding: 6px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #F5F5F5;
+  position: relative;
+}
+.slide_cart .urgency-note-container .urgency-note .urgency-note__text { 
+  width: 450px;
+  text-align: left;
+  line-height: 15px;
+}
+.slide_cart .urgency-note-container .urgency-note .urgency-note__text .urgency-note__text--bold { 
+  color: #000;
+  font-family: Poppins;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0.11px;
+} 
+.slide_cart .urgency-note-container .urgency-note .urgency-note__text .urgency-note__text--single { 
+  color: #000;
+  font-family: Poppins;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0.11px;
+} 
+.slide_cart .urgency-note-container .urgency-note .urgency-note__close-icon { 
+  position: absolute;
+  top: 2px;
+  right: 8px;
+  cursor: pointer;
+} 
+
+/* end sidecart urgency note */

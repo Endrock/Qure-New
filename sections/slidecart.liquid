@@ -127,6 +127,10 @@
 				{% render 'sidecart-timer-new', settings: section.settings %}
 			{% endif %}
 
+			{% if section.settings.show_urgency_note %}
+				{% render 'sidecart-urgent-note', settings: section.settings %}
+			{% endif %}
+
 			<div class="my-cart__info">
 				<div  class ="my-cart__items {% if cart.item_count == 0 %} cart__empty-items {% endif %}">
 					{% assign is_not_only_gift = false %}
@@ -805,6 +809,33 @@
 				"label": "t:sections.slidecart.settings.copy_congrats.label",
 				"info": "t:sections.slidecart.settings.copy_congrats.info",
 				"default": "<p>Congrats! You've unlocked your Free &product-title&<\/p>"
+			},
+			{
+				"type": "header",
+				"content": "Urgency Note"
+			},
+			{
+				"type": "checkbox",
+				"id": "show_urgency_note",
+				"label": "Show Urgency Note",
+				"default": true
+			},
+			{
+				"type": "text",
+				"id": "urgency_note_content",
+				"label": "Full Content",
+				"default": "Due to high demand, [] $quantity_label only saved for 30 minutes."
+			},
+			{
+				"type": "text",
+				"id": "urgency_note_label_single",
+				"label": "Single Label",
+				"default": "Checkout now!"
+			},
+			{
+				"type": "product_list",
+				"id": "urgency_note_product_list",
+				"label": "Products"
 			}
 		],
 		"blocks": [
