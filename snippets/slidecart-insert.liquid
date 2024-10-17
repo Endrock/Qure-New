@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	configureCart('addToCartCssClass', 'js-my-cart-open'); 
   let timeoutId = null;
+  let shouldDeleteUrgencyNoteProducts = false;
 
   subscribeToCartAjaxRequests((myRequestCallback, subscribeToResult) => {
     if(myRequestCallback.requestType === 'add') {
@@ -127,14 +128,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 500);
     }
 
-    subscribeToResult( myRequestCallback => {   
+    {% comment %} urgency note  {% endcomment %}
+    subscribeToResult( myRequestCallback => {
       if(myRequestCallback.requestType === 'add') {
 
-        {% comment %} urgency note  {% endcomment %}
         setTimeout(() => {
           getShopifyCart()
             .then(cart => {
-              const TIMER_TO_DELETE_URGENCY_PRODUCTS = 30000;
+              const TIMER_TO_DELETE_URGENCY_PRODUCTS = 1800000;
               const includedUrgencyNoteProducts = checkUrgencyNoteProducts(cart);
 
               if (!includedUrgencyNoteProducts) return;
@@ -148,17 +149,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
               // Set a new timeout to remove urgency products after a delay
               timeoutId = setTimeout(() => {
-                {% comment %} removeUrgencyProductsFromCart(); {% endcomment %}
-                const giftInCart = cart.items.find(item => item.id === +(productId));
-                cartRequestChange({ 
-                  id: giftInCart.key,
-                  quantity: 0
-                },  {} )
+                removeUrgencyProductsFromCart();
+                shouldDeleteUrgencyNoteProducts = true;
               },TIMER_TO_DELETE_URGENCY_PRODUCTS);
             });
         },5000); 
+      } else if(shouldDeleteUrgencyNoteProducts) {
+        removeUrgencyProductsFromCart();
       }
-      console.log('myRequestCallback.requestType',myRequestCallback.requestType)
     })
   })
 
@@ -295,12 +293,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Utility function to save items to LocalStorage
   function saveUrgencyNoteCloseIconToStorage (status) {
     localStorage.setItem('urgencyCloseIcon', JSON.stringify(status));
   };
 
-  // Utility function to get items from LocalStorage
   function getUrgencyNoteCloseIconToStorage () {
     const urgencyCloseIcon = localStorage.getItem('urgencyCloseIcon');
     return urgencyCloseIcon ? JSON.parse(urgencyCloseIcon) : null;
@@ -328,11 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let includedUrgencyNoteProducts = [];
     let { products:urgencyNoteProducts } = urgencyNoteContainer.dataset;
     urgencyNoteProducts = urgencyNoteProducts.split(",").map(ele => Number(ele));
-    
-    console.log('urgencyNoteProducts', {urgencyNoteProducts})
-
     includedUrgencyNoteProducts = cart.items.filter(item => urgencyNoteProducts.includes(item.id));
-    console.log('includedUrgencyNoteProducts => ', includedUrgencyNoteProducts)
 
     return includedUrgencyNoteProducts;
   }
@@ -356,48 +348,23 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   
   function removeUrgencyProductsFromCart () {
-
     saveUrgencyNoteCloseIconToStorage(false);
-
-    console.log('removeUrgencyProductsFromCart')
 
     getShopifyCart()
       .then(cart => {
         let includedUrgencyNoteProducts = checkUrgencyNoteProducts(cart);
         
-        console.log('START OF removeUrgencyProductsFromCart', {includedUrgencyNoteProducts})
+        if (!includedUrgencyNoteProducts) return;
 
-        if (includedUrgencyNoteProducts.length) {
-
-          console.log({includedUrgencyNoteProducts})
-
-          deleteMultipleCartItems(includedUrgencyNoteProducts)
-            .then(json => console.log('Updated cart after delete urgency note items:', {json}));
+        if (includedUrgencyNoteProducts.length > 0) {
+          cartRequestChange({
+            id: includedUrgencyNoteProducts[0].key,
+            quantity: 0
+          },  {} )
+        } else {
+          shouldDeleteUrgencyNoteProducts = false;
         }
       });
-  }
-
-  function deleteMultipleCartItems(itemsToDelete) {
-    if (!itemsToDelete) return;
-
-    let updates = itemsToDelete.reduce((acu,cur) => {
-      acu[cur.key] = 0;
-      return acu;
-    }, {});
-    
-    return fetch(window.Shopify.routes.root + 'cart/update.js', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ updates })
-    })
-    .then(response => {
-      return response.json();
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-    });
   }
 });
 </script>

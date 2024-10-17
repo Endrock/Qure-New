@@ -868,5 +868,42 @@ body[data-free-gift-gamification] .second-milestone {
   right: 8px;
   cursor: pointer;
 } 
+@media screen and (max-width: 768px) {
+  .slide_cart .urgency-note-container {
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    margin: 12px 20px;
+    position: static;
+    
+  }
+  .slide_cart .urgency-note-container .urgency-note {
+    width: 100%;
+    padding: 6px 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background-color: #F5F5F5;
+    position: relative;
+  }
+  .slide_cart .urgency-note-container .urgency-note .urgency-note__text { 
+    text-align: left;
+    line-height: 15px;
+    padding-right: 8px;
+  }
+  .slide_cart .urgency-note-container .urgency-note .urgency-note__text .urgency-note__text--bold { 
+    font-size: 10px;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+  } 
+  .slide_cart .urgency-note-container .urgency-note .urgency-note__text .urgency-note__text--single { 
+    font-size: 10px;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+  } 
+  .slide_cart .urgency-note-container .urgency-note .urgency-note__close-icon { 
+    top: 0;
+  } 
+}
 
 /* end sidecart urgency note */
