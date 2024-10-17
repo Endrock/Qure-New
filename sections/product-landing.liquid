@@ -1,5 +1,6 @@
 {%- assign rating_count = 0 -%}
 {%- assign button_count = 0 -%}
+{%- assign supply_count = 0 -%}
 {%- assign list_count = 0 -%}
 {%- assign liquid_count = 0 -%}
 {%- assign video_count = 0 -%}
@@ -14,6 +15,8 @@
             {%- assign button_count = button_count | plus: 1 -%}    
         {%- when 'list' -%}
             {%- assign list_count = list_count | plus: 1 -%}
+        {%- when 'supply' -%}
+            {%- assign supply_count = supply_count | plus: 1 -%}
         {%- when 'video' -%}
             {%- assign video_count = video_count | plus: 1 -%}
         {%- when 'icons' -%}
@@ -113,6 +116,31 @@
                             {%- endfor -%} 
                             </div>
                         {% endif %}
+
+                        {% if supply_count > 0 %}
+                            <div class="next_batch_bl next_batch_highlight">
+                                {%- for block in section.blocks -%}
+                                    {% if block.type == 'supply' %}
+                                        {% if block.settings.heading != blank %}
+                                            <h6 class="d-none d-md-block">{{ block.settings.heading }}</h6>
+                                        {% endif %}
+
+                                        {% if block.settings.heading_mobile != blank %}
+                                            <h6 class="d-md-none">{{ block.settings.heading_mobile }}</h6>
+                                        {% endif %}
+                                        
+                                        {% if block.settings.text != blank %}
+                                            {{ block.settings.text }}
+                                        {% endif %}
+
+                                        {% if block.settings.html != blank %}
+                                            {{ block.settings.html }}
+                                        {% endif %}
+                                    {% endif %}
+                                {%- endfor -%}
+                            </div>
+                        {% endif %}
+
                         {% if section.settings.product != blank %}
 
                             {% if product.variants.first.available %}
@@ -929,7 +957,34 @@
                         "label": "video"
                     }
                 ]
-            }          
+            },
+            {
+                "type": "supply",
+                "name": "t:common.supply.label",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "t:common.heading.label"
+                    },
+                    {
+                        "type": "text",
+                        "id": "heading_mobile",
+                        "label": "t:common.heading.mobile.label"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "t:common.text.label"
+                    },
+                    {
+                        "type": "html",
+                        "id": "html",
+                        "label": "t:common.html.label"
+                    }
+                ]
+		    }        
         ],
         "presets": [
           {

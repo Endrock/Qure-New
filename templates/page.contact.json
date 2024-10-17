@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -15,25 +15,25 @@
         "object_XPg864": {
           "type": "object",
           "settings": {
-            "image": "shopify:\/\/shop_images\/live-chat.svg",
+            "image": "shopify://shop_images/live-chat.svg",
             "heading": "LIVE CHAT",
-            "text": "<p>Experts are Available: Mon-Sat<\/p><p>9AM - 5PM EST<br\/>9AM - 5PM AEST<\/p>"
+            "text": "<p>Experts are Available: Mon-Sat</p><p>9AM - 5PM EST<br/>9AM - 5PM AEST</p><p>9AM -5PM CET</p>"
           }
         },
         "object_UNNXkx": {
           "type": "object",
           "settings": {
-            "image": "shopify:\/\/shop_images\/call-us.svg",
+            "image": "shopify://shop_images/call-us.svg",
             "heading": "CALL US",
-            "text": "<p><strong>+1 (240) 702-2228<\/strong><\/p><p>Availability: Mon-Sat<\/p><p>9AM - 5PM EST<\/p>"
+            "text": "<p><strong>+1 (240) 702-2228</strong></p><p>Availability: Mon-Sat</p><p>9AM - 5PM EST</p>"
           }
         },
         "object_ejQnXh": {
           "type": "object",
           "settings": {
-            "image": "shopify:\/\/shop_images\/email.svg",
+            "image": "shopify://shop_images/email.svg",
             "heading": "EMAIL",
-            "text": "<p>Send a Message to Customer Service Using the Form Below<\/p>"
+            "text": "<p>Send a Message to Customer Service Using the Form Below</p>"
           }
         }
       },
@@ -47,7 +47,7 @@
       ],
       "settings": {
         "heading": "Contact Us",
-        "text": "<h5>We are here to help<\/h5>"
+        "text": "<h5>We are here to help</h5>"
       }
     }
   },

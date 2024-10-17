@@ -103,6 +103,32 @@
         "label": "National Text",
         "default": "Get in [] business days",
         "info": "Use [] to replace the number of days"
+      },
+      {
+        "type": "header",
+        "content": "Time",
+        "info": "The following date range is used to hide the Order by Received By feature. This only affects the US."
+      },
+      {
+        "type": "text",
+        "id": "start_time_order",
+        "default": "2023-05-30T23:00",
+        "label": "Start date and time",
+        "info": "Format ISO: yyyy-mm-ddTHH:mm"
+      },
+      {
+        "type": "text",
+        "id": "end_time_order",
+        "default": "2023-05-30T23:00",
+        "label": "End date and time",
+        "info": "Format ISO: yyyy-mm-ddTHH:mm"
+      },
+      {
+        "type": "checkbox",
+        "label": "show order by receive by in us",
+        "info": "This checkbox takes precedence over the date range, caution.",
+        "id": "show_order_by_receive_by_us",
+        "default": true
       }
     ]
   },
