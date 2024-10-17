@@ -498,7 +498,7 @@
     "liquid_87wfLd": {
       "type": "liquid",
       "settings": {
-        "code": "<div class=\"shopify-section section\">\n    {% render 'serums-months-image-landing-form-special' with section_id: 'anti-creams-microinfusion-page' %}\n<\/div>"
+        "code": "<div class=\"shopify-section section\">\n    {% render 'serums-months-image-form-v2' with section_id: 'anti-creams-microinfusion-page' %}\n<\/div>"
       }
     },
     "choice": {
