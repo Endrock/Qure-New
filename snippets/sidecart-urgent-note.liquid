@@ -46,7 +46,6 @@
   endfor
 
   assign bold_text = settings.urgency_note_content
-  assign product_titles = product_titles | prepend: "[" | append: "]"
   assign bold_text = bold_text | replace: "[]", product_titles
   assign bold_text = bold_text | replace: "$quantity_label ", label_subject
 %}
