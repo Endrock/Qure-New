@@ -90,10 +90,12 @@
     <div class="milestone second-milestone">
       <div class="milestone-icon {% if differenceFreeGift <= 0 %} backgound-black {% endif %}">
         {% if differenceFreeGift > 0 %}
-          {% render 'pdm_svg-product-gamification-gray' %}
+          {{ settingsGamification.icon_product_gift_clean | image_url: width: 8, height:26 | image_tag }}
+          {% comment %} {% render 'pdm_svg-product-gamification-gray' %} {% endcomment %}
         {% endif %}
         {% if differenceFreeGift <= 0 %}
-          {% render 'pdm_svg-product-gamification-black' %}
+          {{ settingsGamification.icon_product_gift_full | image_url:  width: 8, height:26 | image_tag }}
+          {% comment %} {% render 'pdm_svg-product-gamification-black' %} {% endcomment %}
         {% endif %}
       </div>
       <span class="milestone-label">{{ giftTresholdPdm |  money_without_trailing_zeros }}</span>
