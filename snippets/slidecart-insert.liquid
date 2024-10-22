@@ -125,6 +125,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }, 500);
     }
+
+    const customEvent = new CustomEvent('cartUpdated', {
+      detail: {
+        message: 'cart updated', 
+        time: new Date()
+      }
+    });
+    document.dispatchEvent(customEvent);
   })
 
 	subscribeToCartSectionsUpdate( sections => {
@@ -132,8 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			startCartTimer(15 * 60);
 		}
      // new sidecart timer 
-      const isTestActive = document.body.hasAttribute('data-sidecart-timer');
-      if (isTestActive && 'function' == typeof initSidecarTimer) {
+      if ('function' == typeof initSidecarTimer) {
         initSidecarTimer();
       }
 

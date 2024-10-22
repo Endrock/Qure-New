@@ -1137,6 +1137,10 @@ document.addEventListener('DOMContentLoaded', function() {
   initSidecarTimer();
   // end sidecart timer
 
+  // site-wide-gamification 
+  document.addEventListener('cartUpdated', event => {
+    setTimeout(updateSideWideGamification, 1000);
+  });
 });
 
 
@@ -1152,7 +1156,7 @@ document.addEventListener('DOMContentLoaded', function() {
  * @returns {void} - The function does not return a value.
  */
  function initSidecarTimer () {
-  const sidecartTimerContainer = document.querySelector('.sidecart-timer-container');
+  const sidecartTimerContainer = document.querySelector('.slide_cart .sidecart-timer-container');
 
   if (!sidecartTimerContainer) return;
 
@@ -1235,3 +1239,145 @@ function parseCustomDate(dateString) {
   const [hours, minutes] = timePart.split(':').map(Number);
   return new Date(year, month - 1, day, hours, minutes, 0, 0).getTime();
 }
+
+/**
+ * Updates site-wide gamification progress based on the latest cart subtotal.
+ */
+function updateSideWideGamification() {
+  // Fetch updated cart data
+  fetch('/cart.js')
+    .then(response => response.json())
+    .then(cart => {
+      const cartTotal = cart.items_subtotal_price;
+      updateSiteWideGamification(cartTotal);
+    })
+}
+/**
+ * Updates the progress of site-wide gamification elements, such as free shipping
+ * and gift milestones, based on the current cart total. Updates the message,
+ * progress bar, and milestone visuals accordingly. Intended to enhance user
+ * engagement with rewards during the shopping process.
+ */
+function updateSiteWideGamification (cartTotal) { 
+  const progressContainer = document.querySelector('.progress-container.pdm-gamification');
+
+  if (!progressContainer) return;
+
+  const enableFreeShipping = progressContainer.dataset.enableFreeShipping === 'true';
+  const freeShippingThreshold = parseInt(progressContainer.dataset.freeShippingThreshold, 10);
+  const enableProductGift = progressContainer.dataset.enableProductGift === 'true';
+  const giftThresholdPdm = parseInt(progressContainer.dataset.giftThresholdPdm, 10);
+  const enableShowGiftPrice = progressContainer.dataset.enableShowGiftPrice === 'true';
+  const copyFreeShipping = progressContainer.dataset.copyFreeShipping;
+  const copyProductGift = progressContainer.dataset.copyProductGift;
+  const copyCongrats = progressContainer.dataset.copyCongrats;
+  const giftProductTitle = progressContainer.dataset.giftProductTitle;
+  const giftProductVariantPrice = parseInt(progressContainer.dataset.giftProductVariantPrice, 10);
+
+  // Calculate differences
+  const differenceFreeShipping = freeShippingThreshold - cartTotal;
+  const differenceFreeGift = giftThresholdPdm - cartTotal;
+
+  // Render progress message
+  const progressContainerMessage = document.querySelector('.progress-container__message');
+  if (progressContainerMessage) {
+    if (enableFreeShipping && differenceFreeShipping > 0 && cartTotal > 0) {
+      const remainingAmountMoney = (differenceFreeShipping / 100).toFixed(2);
+      progressContainerMessage.innerHTML = copyFreeShipping.replace("&price-left&", `<i class='money' style='font-style: normal;'>${remainingAmountMoney}</i>`);
+    } else if (enableProductGift && differenceFreeGift > 0) {
+      const remainingGiftAmountMoney = (differenceFreeGift / 100).toFixed(2);
+      let message = copyProductGift.replace("&price-left&", `<i class='money' style='font-style: normal;'>${remainingGiftAmountMoney}</i>`);
+      if (enableShowGiftPrice && !isNaN(giftProductVariantPrice)) {
+        const productGiftPriceFormatted = (giftProductVariantPrice / 100).toFixed(0);
+        message = message.replace("&product-price&", `$${productGiftPriceFormatted}!`);
+      } else {
+        message = message.replace("&product-price&", "");
+      }
+      progressContainerMessage.innerHTML = message;
+    } else if (enableProductGift && differenceFreeGift <= 0) {
+      const congratsMessage = copyCongrats.replace("&product-title&", `<strong>${giftProductTitle}!</strong>`);
+      progressContainerMessage.innerHTML = congratsMessage;
+    }
+  }
+
+  // Update progress bar and milestone states
+  const milestonesContainer = document.querySelector('.milestones-container');
+  const firstMilestone = document.querySelector('.first-milestone');
+  const secondMilestone = document.querySelector('.second-milestone');
+
+  if (milestonesContainer && firstMilestone && secondMilestone) {
+    // Update milestone classes and styles
+    if (differenceFreeGift <= 0) {
+      milestonesContainer.classList.add('background-green');
+    } else {
+      milestonesContainer.classList.remove('background-green');
+    }
+
+    // First Milestone - Free Shipping
+    if (differenceFreeShipping <= 0 && cartTotal > 0) {
+      firstMilestone.classList.add('reach-threshold');
+      firstMilestone.classList.remove('gradient');
+    } else {
+      firstMilestone.classList.remove('reach-threshold');
+      firstMilestone.classList.add('gradient');
+    }
+
+    // Second Milestone - Free Gift
+    if (differenceFreeGift <= 0) {
+      secondMilestone.classList.add('reach-threshold');
+      secondMilestone.classList.remove('gradient');
+    } else {
+      secondMilestone.classList.remove('reach-threshold');
+      if (differenceFreeShipping <= 0 && cartTotal > 0) {
+        secondMilestone.classList.add('gradient');
+      } else {
+        secondMilestone.classList.remove('gradient');
+      }
+    }
+
+    // Update milestone icons based on thresholds
+    const firstMilestoneIconEmpty = firstMilestone.querySelector('.icon-empty-car');
+    const firstMilestoneIconFull = firstMilestone.querySelector('.icon-full-car');
+    const firstMilestoneIconCheck = firstMilestone.querySelector('.icon-check__first-milestone');
+
+    if (firstMilestoneIconEmpty && firstMilestoneIconFull && firstMilestoneIconCheck) {
+      if (differenceFreeShipping <= 0 && cartTotal > 0) {
+        firstMilestoneIconEmpty.classList.add('hidden');
+        firstMilestoneIconFull.classList.remove('hidden');
+        firstMilestoneIconCheck.classList.remove('hidden');
+      } else {
+        firstMilestoneIconEmpty.classList.remove('hidden');
+        firstMilestoneIconFull.classList.add('hidden');
+        firstMilestoneIconCheck.classList.add('hidden');
+      }
+    }
+
+    const secondMilestoneIconEmpty = secondMilestone.querySelector('.icon-empty-pillow');
+    const secondMilestoneIconGradient = secondMilestone.querySelector('.icon-empty-gradient');
+    const secondMilestoneIconFull = secondMilestone.querySelector('.icon-full-pillow');
+    const secondMilestoneIconCheck = secondMilestone.querySelector('.icon-check__second-milestone');
+
+    const bothThresholdUncompleted = differenceFreeShipping > 0 && differenceFreeGift > 0;
+    const bothThresholdCompleted = differenceFreeShipping < 0 && differenceFreeGift < 0;
+
+    if (secondMilestoneIconEmpty && secondMilestoneIconGradient && secondMilestoneIconFull && secondMilestoneIconCheck) {
+      if (bothThresholdCompleted) {
+        secondMilestoneIconEmpty.classList.add('hidden');
+        secondMilestoneIconGradient.classList.add('hidden');
+        secondMilestoneIconFull.classList.remove('hidden');
+        secondMilestoneIconCheck.classList.remove('hidden');
+      } else if (bothThresholdUncompleted) {
+        secondMilestoneIconEmpty.classList.remove('hidden');
+        secondMilestoneIconGradient.classList.add('hidden');
+        secondMilestoneIconFull.classList.add('hidden');
+        secondMilestoneIconCheck.classList.add('hidden');
+      } else {
+        secondMilestoneIconEmpty.classList.add('hidden');
+        secondMilestoneIconGradient.classList.remove('hidden');
+        secondMilestoneIconFull.classList.add('hidden');
+        secondMilestoneIconCheck.classList.add('hidden');
+      }
+    }
+  }
+}
+    

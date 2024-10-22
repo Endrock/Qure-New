@@ -534,5 +534,13 @@
         }
       }
     }
-  }
+  },
+  "site_gamification": {
+    "free_shipping": {
+      "label": "Free Shipping"
+    },
+    "free_pillow_case": {
+      "label": "Free Pillowcase"
+    }
+  },
 }

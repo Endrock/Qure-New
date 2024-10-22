@@ -148,5 +148,116 @@
         "default": "Save 21%"
       }
     ]
+  },
+  {
+    "name": "SiteGamification",
+    "settings": [
+      {
+        "type": "header",
+        "content": "GAMIFICATION",
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_site_gamification",
+        "label": "t:sections.side_gamification.settings.enable_site_gamification.label",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_free_shipping_treshold",
+        "label": "t:sections.slidecart.settings.enable_free_shipping.label",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_product_gift",
+        "label": "t:sections.slidecart.settings.enable_product_gift.label",
+        "default": false
+      },
+      {
+        "type": "product",
+        "id": "product_free_gift",
+        "label": "t:sections.slidecart.settings.product_gift.label",
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_show_gift_price",
+        "label": "t:sections.slidecart.settings.enable_show_gift_price.label",
+        "default": false
+      },
+      {
+        "type": "richtext",
+        "id": "copy_get_free_shipping",
+        "label": "t:sections.slidecart.settings.copy_get_free_shipping.label",
+        "info":  "t:sections.slidecart.settings.copy_get_free_shipping.info",
+        "default": "<p>You are &price-left& away from <strong>Free Shipping!<\/strong><\/p>"
+      },
+      {
+        "type": "richtext",
+        "id": "copy_get_product_free",
+        "label": "t:sections.slidecart.settings.copy_get_product_free.label",
+        "info": "t:sections.slidecart.settings.copy_get_product_free.info",
+        "default": "<p>You’re &price-left& away from a <strong>FREE Full-Size Serum <\/strong>worth &product-price&<\/p>"
+      },
+      {
+        "type": "richtext",
+        "id": "copy_congrats",
+        "label": "t:sections.slidecart.settings.copy_congrats.label",
+        "info": "t:sections.slidecart.settings.copy_congrats.info",
+        "default": "<p>Congrats! You've unlocked your &product-title&<\/p>"
+      },
+      {
+        "type": "header",
+        "content": "TIMER",
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_site_wide_timer",
+        "label": "Enable Site Wide Timer",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "start_date",
+        "label": "Start Date",
+        "info": "Required format: 'MM-DD-YYYY HH:MM, Example: 12-31-2024 24:00"
+      },
+      {
+        "type": "text",
+        "id": "finish_date",
+        "label": "Finish Date",
+        "info": "Required format: 'MM-DD-YYYY HH:MM, Example: 12-31-2024 24:00"
+      },
+      {
+        "type": "text",
+        "id": "label_ends",
+        "label": "Label Ends in",
+        "default": "Sale Ends In:"
+      },
+      {
+        "type": "text",
+        "id": "label_days",
+        "label": "Label Days",
+        "default": "DAYS"
+      },
+      {
+        "type": "text",
+        "id": "label_hours",
+        "label": "Label Hours",
+        "default": "HOURS"
+      },
+      {
+        "type": "text",
+        "id": "label_minutes",
+        "label": "Label Minutes",
+        "default": "MINUTES"
+      },
+      {
+        "type": "text",
+        "id": "label_seconds",
+        "label": "Label Seconds",
+        "default": "SECONDS"
+      }
+    ]
   }
 ]
