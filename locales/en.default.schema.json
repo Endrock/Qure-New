@@ -398,6 +398,9 @@
     "percent": {
       "label": "Percent"
     },
+    "date": {
+      "label": "Date"
+    },
     "classname": {
       "label": "CSS classname",
       "custom": "Custom class",

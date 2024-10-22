@@ -136,9 +136,21 @@
                                             {{ block.settings.text }}
                                         {% endif %}
 
-                                        {% if block.settings.html != blank %}
-                                            {{ block.settings.html }}
-                                        {% endif %}
+                                        <div class="batch_h batch_h_fade mt-3 mt-md-4">
+                                            <div class="batch_h_month">{{ block.settings.first_option_date }}</div>
+                                            <div class="batch_h_info sold_out_h" style="--bgPercent:{{ block.settings.first_option_percent }}%;"><span>{{ block.settings.first_option_text }}</span></div>
+                                        </div>
+
+                                        <div class="batch_h my-2">
+                                            <div class="batch_h_month">{{ block.settings.second_option_date }}</div>
+                                            <div class="batch_h_info" style="--bgPercent:{{ block.settings.second_option_percent }}%;">{{ block.settings.second_option_text }}</div>
+                                        </div>
+
+                                        <div class="batch_h batch_h_fade">
+                                            <div class="batch_h_month">{{ block.settings.third_option_date }}</div>
+                                            <div class="batch_h_info" style="--bgPercent:{{ block.settings.third_option_percent }}%;"><span>{{ block.settings.third_option_text }}</span></div>
+                                        </div>
+
                                     {% endif %}
                                 {%- endfor -%}
                             </div>
@@ -657,9 +669,82 @@
                         "label": "t:common.text.label"
                     },
                     {
-                        "type": "html",
-                        "id": "html",
-                        "label": "t:common.html.label"
+                        "type": "header",
+                        "content": "First option"
+                    },
+                    {
+                        "type": "text",
+                        "id": "first_option_date",
+                        "label": "t:common.date.label",
+                        "default": "October 15th"
+                    },
+                    {
+                        "type": "text",
+                        "id": "first_option_text",
+                        "label": "t:common.text.label",
+                        "default": "SOLD OUT"
+                    },
+                    {
+                        "type": "range",
+                        "id": "first_option_percent",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1,
+                        "unit": "%",
+                        "label": "t:common.percent.label",
+                        "default": 100
+                    },
+                    {
+                        "type": "header",
+                        "content": "Second option"
+                    },
+                    {
+                        "type": "text",
+                        "id": "second_option_date",
+                        "label": "t:common.date.label",
+                        "default": "November 10th"
+                    },
+                    {
+                        "type": "text",
+                        "id": "second_option_text",
+                        "label": "t:common.text.label",
+                        "default": "81% Reserved"
+                    },
+                    {
+                        "type": "range",
+                        "id": "second_option_percent",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1,
+                        "unit": "%",
+                        "label": "t:common.percent.label",
+                        "default": 81
+                    },
+                    {
+                        "type": "header",
+                        "content": "Third option"
+                    },
+                    {
+                        "type": "text",
+                        "id": "third_option_date",
+                        "label": "t:common.date.label",
+                        "default": "December 30th"
+                    },
+                    {
+                        "type": "text",
+                        "id": "third_option_text",
+                        "label": "t:common.text.label",
+                        "default": "In Production"
+                    },
+                    {
+                        "type": "range",
+                        "id": "third_option_percent",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1,
+                        "unit": "%",
+                        "label": "t:common.percent.label",
+                        "default": 0
                     }
                 ]
 		    },

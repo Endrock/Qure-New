@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "product_landing_tetLcC": {
       "type": "product-landing",
@@ -60,7 +60,15 @@
             "heading": "Next batch ships 10th November                                    2024:",
             "heading_mobile": "Next batch ships 10/11:",
             "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.</p>",
-            "html": "<div class=\"batch_h batch_h_fade mt-3 mt-md-4\">\n                                    <div class=\"batch_h_month\">October 15th</div>\n                                    <div class=\"batch_h_info sold_out_h\" style=\"--bgPercent:100%;\"><span>SOLD\n                                            OUT</span></div>\n                                </div>\n\n<div class=\"batch_h my-2\">\n                                    <div class=\"batch_h_month\">November 10th</div>\n                                    <div class=\"batch_h_info\" style=\"--bgPercent:81%;\">81% Reserved</div>\n                                </div>\n\n<div class=\"batch_h batch_h_fade\">\n                                    <div class=\"batch_h_month\">December 30th</div>\n                                    <div class=\"batch_h_info\" style=\"--bgPercent:0%;\"><span>In\n                                            Production</span></div>\n                                </div>"
+            "first_option_date": "October 15th",
+            "first_option_text": "SOLD OUT",
+            "first_option_percent": 100,
+            "second_option_date": "November 10th",
+            "second_option_text": "81% Reserved",
+            "second_option_percent": 81,
+            "third_option_date": "December 30th",
+            "third_option_text": "In Production",
+            "third_option_percent": 0
           }
         }
       },
