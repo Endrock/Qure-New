@@ -267,6 +267,8 @@
           "product_free_gift": "face-serum",
           "icon_product_gift_clean": "shopify://shop_images/Vector.svg",
           "icon_product_gift_full": "shopify://shop_images/Vector_1_dc2b4cda-33fe-4597-8230-931c4ab65f69.svg",
+          "icon_gift_width": 8,
+          "icon_gift_height": 26,
           "enable_show_gift_price": true,
           "copy_get_free_shipping": "<p>You are &price-left& away from <strong>Free Shipping!</strong></p>",
           "copy_get_product_free": "<p>You’re &price-left& away from a <strong>FREE Full-Size Serum worth</strong> &product-price&</p>",
