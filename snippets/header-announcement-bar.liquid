@@ -1,10 +1,19 @@
 {% comment %} <link rel="stylesheet" href="{{ 'announcement-bar.css' | asset_url }}"> {% endcomment %}
 
-<div class="announcement_bar">
-    <p>
-        {{ block.settings.heading |  replace: '<p>', '' |  replace: '</p>', '' }}
-        {% if block.settings.button_label %}
-            <a href="{{ block.settings.button_url }}" aria-label="{{ block.settings.button_label | escape }}" class="green_coloured">{{ block.settings.button_label }}</a>
+<div class="announcement_bar {% if settings.enable_site_gamification %}site-gamification-active{% endif %}">
+    {%- if settings.enable_site_gamification -%}
+        {% render 'pdm_site-wide-gamification', settingsGamification: settings, cartTotal: cart.items_subtotal_price  %}
+        {% if settings.enable_site_wide_timer %}
+            <div class="announcement_bar__timer">
+                {% render 'pdm_site-wide-timer' %}
+            </div>
         {% endif %}
-    </p>
+    {%- else -%}
+        <p>
+            {{ block.settings.heading |  replace: '<p>', '' |  replace: '</p>', '' }}
+            {% if block.settings.button_label %}
+                <a href="{{ block.settings.button_url }}" aria-label="{{ block.settings.button_label | escape }}" class="green_coloured">{{ block.settings.button_label }}</a>
+            {% endif %}
+        </p>
+    {%- endif -%}
 </div>

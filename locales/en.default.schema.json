@@ -1273,6 +1273,14 @@
         }
       }
     },
+    "side_gamification": {
+      "name": "Side Gamification",
+      "settings": {
+        "enable_site_gamification": {
+          "label": "Enable Site Wide Gamification"
+        }
+      }
+    },
     "footer-landing": {
       "name": "Footer landing",
       "settings": {

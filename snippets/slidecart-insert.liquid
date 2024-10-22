@@ -158,6 +158,13 @@ document.addEventListener('DOMContentLoaded', () => {
         removeUrgencyProductsFromCart();
       }
     })
+    const customEvent = new CustomEvent('cartUpdated', {
+      detail: {
+        message: 'cart updated', 
+        time: new Date()
+      }
+    });
+    document.dispatchEvent(customEvent);
   })
 
 	subscribeToCartSectionsUpdate( sections => {
@@ -165,7 +172,9 @@ document.addEventListener('DOMContentLoaded', () => {
 			startCartTimer(15 * 60);
 		}
      // new sidecart timer 
-      initSidecarTimer();
+      if ('function' == typeof initSidecarTimer) {
+        initSidecarTimer();
+      }
 
     	initUpsellSwiper();
 

@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "current": {
     "favicon": "shopify://shop_images/qure.png",
     "social_instagram_link": "https://www.instagram.com/qureskincare/",
@@ -36,6 +36,14 @@
     "end_time_order": "2024-10-06T23:00",
     "show_order_by_receive_by_us": true,
     "enable_corner_treatment_bfcm": false,
+    "enable_free_shipping_treshold": true,
+    "enable_product_gift": true,
+    "product_free_gift": "face-serum",
+    "enable_show_gift_price": true,
+    "enable_site_gamification": true,
+    "enable_site_wide_timer": true,
+    "start_date": "10-18-2024 12:00",
+    "finish_date": "10-25-2024 23:59",
     "promotion": "promotion",
     "sections": {
       "header": {

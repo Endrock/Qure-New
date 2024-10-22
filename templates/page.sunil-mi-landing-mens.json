@@ -69,6 +69,12 @@
             "product": ""
           }
         },
+        "subheading_ezrWa3": {
+          "type": "subheading",
+          "settings": {
+            "text": "Visibly Smoother Skin After Just One Treatment"
+          }
+        },
         "button_L9q6wE": {
           "type": "button",
           "settings": {
@@ -164,6 +170,7 @@
       },
       "block_order": [
         "rating_TfBQ9X",
+        "subheading_ezrWa3",
         "button_L9q6wE",
         "list_pQxE9h",
         "media_H88egg",
@@ -179,8 +186,8 @@
         "video_HWTjXH"
       ],
       "settings": {
-        "heading": "Age like a PRO: \\n See difference after one treatment",
-        "heading_mobile": "Age like a PRO: \\n See difference after one treatment",
+        "heading": "Boost Your Confidence",
+        "heading_mobile": "Boost Your Confidence",
         "product": "",
         "product_images_offset": 0,
         "product_images_limit": 5,

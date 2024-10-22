@@ -1,3 +1,4 @@
+{%- assign subheading_count = 0 -%}
 {%- assign rating_count = 0 -%}
 {%- assign button_count = 0 -%}
 {%- assign supply_count = 0 -%}
@@ -9,6 +10,8 @@
 
 {%- for block in section.blocks -%}
 	{%- case block.type -%}
+        {%- when 'subheading' -%}
+            {%- assign subheading_count = subheading_count | plus: 1 -%}    
         {%- when 'rating' -%}
             {%- assign rating_count = rating_count | plus: 1 -%}    
         {%- when 'button' -%}
@@ -76,6 +79,14 @@
                             <h2 class="title-xl d-md-none">{{ section.settings.heading | replace: '\n', '<br />' }}</h2>
                         {% endif %}
                     </div>
+
+                    {% if subheading_count > 0 %}
+                        {%- for block in section.blocks -%}
+                            {% if block.type == 'subheading' %}
+                                <p>{{ block.settings.text }}</p>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
 
                     {% unless 
                         page.handle == 'microinfusion' 
@@ -607,6 +618,18 @@
         ],
         "blocks": [
             {
+                "type": "subheading",
+                "name": "t:common.subheading.label",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "text",
+                        "label": "t:common.text.label"
+                    }
+                ]
+            },
+            {
                 "type": "rating",
                 "name": "t:common.rating.label",
                 "limit": 1,
@@ -627,7 +650,7 @@
                         "label": "t:common.product.label"
                     }
                 ]
-		        },
+            },
             {
                 "type": "liquid",
                 "name": "t:sections.liquid.name",
