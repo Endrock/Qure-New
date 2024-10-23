@@ -5,7 +5,6 @@
   Usage:
  {% render 'pdm_site-wide-timer' %}
 {% endcomment %}
-{% if cart.item_count > 0 %}
 	<div class="sidecart-timer-container" data-finish-date="{{ settings.finish_date }}" data-start-date="{{ settings.start_date }}">
     <div class="sidecart-timer-container__label">{{ settings.label_ends }}</div>
     <div class="sidecart-timer-container__timer"> 
@@ -23,7 +22,6 @@
       </div>
     </div>
 	</div>
-{%- endif -%}
 
 <script>
   /**

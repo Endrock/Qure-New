@@ -180,12 +180,6 @@
         "label": "t:sections.slidecart.settings.product_gift.label",
       },
       {
-        "type": "checkbox",
-        "id": "enable_show_gift_price",
-        "label": "t:sections.slidecart.settings.enable_show_gift_price.label",
-        "default": false
-      },
-      {
         "type": "richtext",
         "id": "copy_get_free_shipping",
         "label": "t:sections.slidecart.settings.copy_get_free_shipping.label",
@@ -197,7 +191,7 @@
         "id": "copy_get_product_free",
         "label": "t:sections.slidecart.settings.copy_get_product_free.label",
         "info": "t:sections.slidecart.settings.copy_get_product_free.info",
-        "default": "<p>You’re &price-left& away from a <strong>FREE Full-Size Serum <\/strong>worth &product-price&<\/p>"
+        "default": "<p>You’re &price-left& away from <strong>Free &product-title& <\/strong>worth $100!<\/p>"
       },
       {
         "type": "richtext",
@@ -205,6 +199,41 @@
         "label": "t:sections.slidecart.settings.copy_congrats.label",
         "info": "t:sections.slidecart.settings.copy_congrats.info",
         "default": "<p>Congrats! You've unlocked your &product-title&<\/p>"
+      },
+      {
+        "type": "image_picker",
+        "id": "icon_product_gift_clean",
+        "label": "Icon product gift clean"
+      },
+      {
+        "type": "image_picker",
+        "id": "icon_product_gift_gradient",
+        "label": "Icon product gift Gradient"
+      },
+      {
+        "type": "image_picker",
+        "id": "icon_product_gift_full",
+        "label": "Icon product gift full"
+      },
+      {
+        "type": "range",
+        "id": "icon_gift_width",
+        "min": 1,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Icon Product gift width",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "icon_gift_height",
+        "min": 1,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Icon Product gift height",
+        "default": 21
       },
       {
         "type": "header",

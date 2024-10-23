@@ -1263,6 +1263,7 @@ function updateSiteWideGamification (cartTotal) {
 
   if (!progressContainer) return;
 
+  // Extract data attributes from the progress container
   const enableFreeShipping = progressContainer.dataset.enableFreeShipping === 'true';
   const freeShippingThreshold = parseInt(progressContainer.dataset.freeShippingThreshold, 10);
   const enableProductGift = progressContainer.dataset.enableProductGift === 'true';
@@ -1281,17 +1282,19 @@ function updateSiteWideGamification (cartTotal) {
   // Render progress message
   const progressContainerMessage = document.querySelector('.progress-container__message');
   if (progressContainerMessage) {
-    if (enableFreeShipping && differenceFreeShipping > 0 && cartTotal > 0) {
+    if (enableFreeShipping && differenceFreeShipping > 0 && cartTotal >= 0) {
       const remainingAmountMoney = (differenceFreeShipping / 100).toFixed(2);
       progressContainerMessage.innerHTML = copyFreeShipping.replace("&price-left&", `<i class='money' style='font-style: normal;'>${remainingAmountMoney}</i>`);
     } else if (enableProductGift && differenceFreeGift > 0) {
       const remainingGiftAmountMoney = (differenceFreeGift / 100).toFixed(2);
       let message = copyProductGift.replace("&price-left&", `<i class='money' style='font-style: normal;'>${remainingGiftAmountMoney}</i>`);
       if (enableShowGiftPrice && !isNaN(giftProductVariantPrice)) {
-        const productGiftPriceFormatted = (giftProductVariantPrice / 100).toFixed(0);
-        message = message.replace("&product-price&", `$${productGiftPriceFormatted}!`);
+        const productGiftPriceFormatted = (giftProductVariantPrice / 100).toFixed(2);
+        message = message.replace("&product-price&", `${productGiftPriceFormatted}`);
+        message = message.replace("&product-title&", giftProductTitle);
       } else {
         message = message.replace("&product-price&", "");
+        message = message.replace("&product-title&", giftProductTitle);
       }
       progressContainerMessage.innerHTML = message;
     } else if (enableProductGift && differenceFreeGift <= 0) {
@@ -1341,7 +1344,7 @@ function updateSiteWideGamification (cartTotal) {
     const firstMilestoneIconCheck = firstMilestone.querySelector('.icon-check__first-milestone');
 
     if (firstMilestoneIconEmpty && firstMilestoneIconFull && firstMilestoneIconCheck) {
-      if (differenceFreeShipping <= 0 && cartTotal > 0) {
+      if (differenceFreeShipping <= 0 && cartTotal >= 0) {
         firstMilestoneIconEmpty.classList.add('hidden');
         firstMilestoneIconFull.classList.remove('hidden');
         firstMilestoneIconCheck.classList.remove('hidden');
