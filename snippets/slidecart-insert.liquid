@@ -235,28 +235,26 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function productGiftPdm (cart, productId,priceLimit) {
-    if(document.body.hasAttribute('data-free-gift-gamification')){
-      const gift = cart.items.some(item => item.id === +(productId) && item.properties && item.properties['_required_validation']);
-      const total_price = cart.total_price;
-      if (total_price >= priceLimit && !gift) {
-        cartRequestAdd({
-          items: [
-            {
-              id: productId,
-              quantity: 1,
-              properties: {
-                _required_validation: 'validated',
-              }
+    const gift = cart.items.some(item => item.id === +(productId) && item.properties && item.properties['_required_validation']);
+    const total_price = cart.total_price;
+    if (total_price >= priceLimit && !gift) {
+      cartRequestAdd({
+        items: [
+          {
+            id: productId,
+            quantity: 1,
+            properties: {
+              _required_validation: 'validated',
             }
-          ]
-        }, {} )
-      }else if (total_price < priceLimit && gift) {
-        const getGiftInCart = cart.items.find(item => item.id === +(productId) && item.properties['_required_validation']);
-        cartRequestChange({
-          id: getGiftInCart.key,
-          quantity: 0
-        },  {} )
-      }
+          }
+        ]
+      }, {} )
+    }else if (total_price < priceLimit && gift) {
+      const getGiftInCart = cart.items.find(item => item.id === +(productId) && item.properties['_required_validation']);
+      cartRequestChange({
+        id: getGiftInCart.key,
+        quantity: 0
+      },  {} )
     }
   }
 });
