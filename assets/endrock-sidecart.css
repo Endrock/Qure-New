@@ -867,6 +867,8 @@
 .section-header .announcement_bar.site-gamification-active .pdm-gamification .progress-container__message {
   width: max-content;
   margin-right: 20px;
+  display: flex;
+  justify-content: center;
 }
 .section-header .announcement_bar.site-gamification-active .pdm-gamification .progress-container__message p { 
   width: max-content;
