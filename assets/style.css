@@ -30780,7 +30780,7 @@ p {
     position: relative;
     display: grid;
     justify-content: center;
-    max-width: 440px;
+    max-width: 480px;
     margin: 20px auto;
 }
 

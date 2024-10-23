@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "header_landing_yzqaEc": {
@@ -15,7 +15,7 @@
         "announcement_QmXGJK": {
           "type": "announcement",
           "settings": {
-            "heading": "FREE World-Wide Shipping | SAVE 55% Limited Time Offer Ends This Month",
+            "heading": "FREE World-Wide Shipping | SAVE 50% Limited Time Offer Ends This Month",
             "heading_mobile": "Limited time offer ends this month!",
             "color": "white",
             "font_size_desktop": 12,
@@ -54,7 +54,7 @@
         "navigation_link_wMtKmt"
       ],
       "settings": {
-        "button_label": "SAVE UP TO 55%",
+        "button_label": "SAVE UP TO 50%",
         "button_url": "#productSubscription"
       }
     },
@@ -69,10 +69,16 @@
             "product": ""
           }
         },
+        "subheading_ezrWa3": {
+          "type": "subheading",
+          "settings": {
+            "text": "Visibly Smoother Skin After Just One Treatment"
+          }
+        },
         "button_L9q6wE": {
           "type": "button",
           "settings": {
-            "button_label": "BUY NOW & SAVE UP TO 43%",
+            "button_label": "BUY NOW & SAVE UP TO 50%",
             "button_url": "#productSubscription"
           }
         },
@@ -85,7 +91,7 @@
         "media_H88egg": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/mi_refill-product-3-men.webp",
+            "image": "shopify://shop_images/award_men.png",
             "wistia_id": ""
           }
         },
@@ -164,6 +170,7 @@
       },
       "block_order": [
         "rating_TfBQ9X",
+        "subheading_ezrWa3",
         "button_L9q6wE",
         "list_pQxE9h",
         "media_H88egg",
@@ -179,8 +186,8 @@
         "video_HWTjXH"
       ],
       "settings": {
-        "heading": "Age like a PRO: \\n See difference after one treatment",
-        "heading_mobile": "Age like a PRO: \\n See difference after one treatment",
+        "heading": "Boost Your Confidence",
+        "heading_mobile": "Boost Your Confidence",
         "product": "",
         "product_images_offset": 0,
         "product_images_limit": 5,
@@ -832,7 +839,7 @@
     "liquid_86wfLd": {
       "type": "liquid",
       "settings": {
-        "code": "<div class=\"shopify-section section\">\n    {% render 'serums-months-image-landing-form-special' with section_id: 'anti-creams-microinfusion-page' %}\n</div>"
+        "code": "<div class=\"shopify-section section\">\n    {% render 'serums-months-image-form-v2' with section_id: 'anti-creams-microinfusion-page' %}\n</div>"
       }
     },
     "compare_box_p4B7wy": {

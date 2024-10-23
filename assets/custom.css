@@ -259,6 +259,7 @@ iframe#typeform-full {
 
 body[class~="page.sunil-mi-landing-mens"] .header_gift_btn, 
 body[class~="page.sunil-mi-landing-special"] .header_gift_btn, 
+body[class~="page.sunil-mi-landing-special2"] .header_gift_btn, 
 body[class~="page.q-rejuvalight-pro-offer"] .header_gift_btn,
 body[class~="page.q-rejuvalight-offer-acne"] .header_gift_btn
 {
@@ -321,7 +322,9 @@ body[class~="page.q-rejuvalight-offer-acne"] .header_gift_btn
         }
 }
 
-body[class~="page.sunil-mi-landing-special"] {
+body[class~="page.sunil-mi-landing-special"],
+body[class~="page.sunil-mi-landing-special2"]
+{
         .title-xl.d-none {
                 font-size: 46px !important;
         } 
@@ -331,4 +334,7 @@ body[class~="page.sunil-mi-landing-special"] {
         .product-price{
                 display: none !important;
         }
+}
+div.ur_btn {
+        cursor: pointer;
 }

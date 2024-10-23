@@ -135,7 +135,8 @@
       "verified": "Verified Customer",
       "loop": "Enable loop",
       "autoplay": "Enable autoplay",
-      "show": "Show"
+      "show": "Show",
+      "grey": "Grey"
     },
     "dropdown": {
       "design": "Dropdown design"
@@ -272,6 +273,9 @@
       "label": "Image",
       "with": "With image",
       "without": "Without image",
+      "large": {
+        "label": "Image large"
+      },
       "hide": {
         "mobile": {
           "label": "Hide on mobile",
@@ -377,13 +381,25 @@
       "label": "Content"
     },
     "style": {
-      "label": "Style"
+      "label": "Style",
+      "default": {
+        "label": "default"
+      },
+      "grey": {
+        "label": "grey"
+      },
+      "image": {
+        "label": "image"
+      }
     },
     "media": {
       "label": "Media"
     },
     "percent": {
       "label": "Percent"
+    },
+    "date": {
+      "label": "Date"
     },
     "classname": {
       "label": "CSS classname",
@@ -744,6 +760,20 @@
           "name": "Link",
           "settings": {
           }
+        }
+      }
+    },
+    "bf-early-access": {
+      "name": "BF Early Access",
+      "settings": {
+        "password": {
+          "label": "Password"
+        },
+        "password_wrong": {
+          "label": "Wrong password text"
+        },
+        "destination_url": {
+          "label": "Destination page"
         }
       }
     },
@@ -1330,6 +1360,9 @@
     },
     "founder": {
       "label": "Qure Founder"
+    },
+    "founder-v2": {
+      "label": "Qure Founder V2"
     },
     "skin-care": {
       "label": "Skin Care Steps"

@@ -15,8 +15,8 @@
         "announcement_QmXGJK": {
           "type": "announcement",
           "settings": {
-            "heading": "BUY ONE & GET ONE FREE | Limited Time Offer",
-            "heading_mobile": "Special Offer | BUY ONE & GET ONE FREE",
+            "heading": "SAVE UP TO 50% | Limited Time Offer",
+            "heading_mobile": "SAVE UP TO 50% | Limited Time Offer",
             "color": "green",
             "font_size_desktop": 14,
             "font_size_mobile": 13
@@ -54,7 +54,7 @@
         "navigation_link_wMtKmt"
       ],
       "settings": {
-        "button_label": "SAVE UP TO 55%",
+        "button_label": "SAVE UP TO 50%",
         "button_url": "#productSubscription"
       }
     },
@@ -72,7 +72,7 @@
         "button_L9q6wE": {
           "type": "button",
           "settings": {
-            "button_label": "BUY NOW & SAVE UP TO 55%",
+            "button_label": "BUY NOW & SAVE UP TO 50%",
             "button_url": "#productSubscription"
           }
         },
@@ -1111,7 +1111,7 @@
             "benefit3": "Promotes even  skin tone",
             "icon3": "shopify://shop_images/boosts-hydration-02_1_071958b6-9b9b-428b-bd41-944b7590d5bd.svg",
             "title1": "What can it do for your skin",
-            "drop_txt1": "<p>Reveals a <strong>smoother, brighter looking,</strong> and evenly <strong>radiant complexion</strong> to generate a glow effect. Renewal properties to help fade the appearance of dark spots and restore even-looking, smoother-feeling skin.</p>",
+            "drop_txt1": "<p>Reveals a <strong>smoother, brighter looking</strong>, and evenly <strong>radiant complexion</strong> to generate a glow effect. Renewal properties to help fade the appearance of dark spots and restore even-looking, smoother-feeling skin.<br/><br/><strong>Skin Concerns:</strong> Designed for skin with discolouration, rough texture, enlarged pores, acne marks and dark spots.</p>",
             "title2": "All Ingredients",
             "drop_txt2": "<p><strong>Epidermal Growth Factor (EGF):</strong><br/>Works at a cellular level to repair and rejuvenate skin. Reduces appearance of wrinkles, improves hydration, and prevents pigmentation.</p><p><strong>Niacinamide:</strong> Superstar ingredient that helps with most skin concerns from soothing to brightening and clarifying, and reducing look of fine lines and wrinkles.</p><p><strong>Tranexamic Acid:</strong> Helps to fade look of dark spots and discolouration. Assists with brightening and evening look of skin tone.</p><p><strong>All ingredients:</strong><br/>Rosa Damascena Flower Water, Propanediol 1,3, Glycerin, Tranexamic Acid, Niacinamide, Panthenol, Chrysanthellum indicum extract, Ethylhexylglycerin, Tripeptide-1, Xanthan Gum, Allantoin, sh-Oligopeptide-1.</p><p>Please note that due to innovative updates and changing regulatory guidelines, the ingredient lists provided here may differ slightly from those on our packaging and distributor websites.</p>",
             "title3": "",
@@ -1142,7 +1142,7 @@
             "benefit3": "Boosts  hydration",
             "icon3": "shopify://shop_images/unique_hydrates_drop_b01213be-21ee-4f0a-a64e-8f4bafa5e86d.svg",
             "title1": "What can it do for your skin",
-            "drop_txt1": "<p>Reveals a <strong>smoother, brighter looking,</strong> and evenly <strong>radiant complexion</strong> to generate a glow effect. Renewal properties to help fade the appearance of dark spots and restore even-looking, smoother-feeling skin.</p>",
+            "drop_txt1": "<p><strong>Ultra hydration.</strong> Hydrates to help plump skin, reducing the look of fine lines and wrinkles, reduce redness, and supports the skin barrier for firmer-feeling, supple looking skin.<br/><br/><strong>Skin Concerns:</strong> Designed for dull looking skin with wrinkles, fine lines, dehydration, dryness and redness.</p>",
             "title2": "All Ingredients",
             "drop_txt2": "<p><strong>Beta Glucan:</strong> A tall glass of water for your skin. Boosts skin barrier, smooths skin, antioxidant.</p><p><strong>Niacinamide:</strong> Superstar ingredient that helps with most skin concerns from soothing to brightening and clarifying, and reducing fine lines and wrinkles.</p><p><strong>Tripeptide-1 Peptide:</strong> Proven to stimulate the production of dermal protein, which slows the skin's ageing process. Helps the skin retain water and restore elasticity, reduce appearance of wrinkles.</p><p><strong>All ingredients:</strong><br/>Rosa Damascena Flower Water, Propanediol 1,3, Glycerin, Panthenol, Niacinamide, Myrothamnus Flabellifolia leaf /stem extract, Water, Butylene glycol, 4'Hydroxyacetophenone, Copper Tripeptide-1, Oat Beta Glucan, Chrysanthellum indicum extract, Ethylhexylglycerin, Sodium Hyaluronate, Allantoin, Xanthan Gum.</p><p>Please note that due to innovative updates and changing regulatory guidelines, the ingredient lists provided here may differ slightly from those on our packaging and distributor websites.</p>",
             "title3": "",
@@ -1180,7 +1180,7 @@
     "liquid_86wfLd": {
       "type": "liquid",
       "settings": {
-        "code": "{% render 'serums-months-image-landing-form-special' with section_id: section.id %}"
+        "code": "{% render 'serums-months-image-form-v2' with section_id: section.id %}"
       }
     },
     "compare_box_p4B7wy": {

@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "header_sales_TMQyBR": {
@@ -16,7 +16,7 @@
           "type": "announcement",
           "settings": {
             "heading": "Limited Time Only:",
-            "timer": "2024-10-13T23:59:59",
+            "timer": "2024-10-27T23:59:59",
             "timer_next": 7
           }
         },
@@ -82,6 +82,7 @@
       "blocks": {
         "product_YMUgQb": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "exclusive-micro-infusion-bundle",
             "announcement_id": "",
@@ -102,7 +103,7 @@
         "product_UQdbaG": {
           "type": "product",
           "settings": {
-            "product": "best-seller-bundle",
+            "product": "best-seller-bundle-1",
             "announcement_id": "Most popular",
             "button_text_id": "Get yours",
             "show_save_price": true
@@ -511,6 +512,7 @@
       "blocks": {
         "product_bMiKn4": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "exclusive-micro-infusion-bundle",
             "comment_ammount": 100,
@@ -535,7 +537,7 @@
         "product_3Frmww": {
           "type": "product",
           "settings": {
-            "product": "best-seller-bundle",
+            "product": "best-seller-bundle-1",
             "comment_ammount": 729,
             "percent": 30,
             "ppl_choise": 1,

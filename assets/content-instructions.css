@@ -294,9 +294,9 @@
     font-weight: 600;
     line-height: 21.975px;
     letter-spacing: 0.33px;
-    margin-top: 20px;
-    color: #fff;
-    text-decoration: none;
+    margin-top: 20px !important;
+    color: #fff !important;
+    text-decoration: none !important;
 }
 
 .tab_step2 {

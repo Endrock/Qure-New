@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "header_landing_KghXM9": {
@@ -15,7 +15,7 @@
         "announcement_Jg3bwh": {
           "type": "announcement",
           "settings": {
-            "heading": "Get Up To 55% OFF Younger Looking, Radiant Skin!",
+            "heading": "Get Up To 50% OFF Younger Looking, Radiant Skin!",
             "heading_mobile": "",
             "color": "white",
             "font_size_desktop": 12,
@@ -30,7 +30,7 @@
         ".nav__item.cart_btn,.nav__item.header_gift_btn {display: none !important;}"
       ],
       "settings": {
-        "button_label": "SAVE UP TO 55%",
+        "button_label": "SAVE UP TO 50%",
         "button_url": "#productSubscription"
       }
     },
