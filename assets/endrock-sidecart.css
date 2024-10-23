@@ -1026,9 +1026,15 @@
   .section-header .announcement_bar.site-gamification-active .progress-container.pdm-gamification .progress-bar-container { 
     right: 20px;
   }
+  .section-header .announcement_bar.site-gamification-active .pdm-gamification .progress-container__message p { 
+    font-size: 9px !important;
+  }
 }
 @media screen and (max-width: 360px) {
   .section-header .announcement_bar.site-gamification-active .progress-container.pdm-gamification .progress-bar-container { 
     right: 30px;
+  }
+  .section-header .announcement_bar.site-gamification-active .pdm-gamification .progress-container__message p { 
+    font-size: 9px !important;
   }
 }
