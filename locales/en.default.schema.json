@@ -763,6 +763,20 @@
         }
       }
     },
+    "bf-early-access": {
+      "name": "BF Early Access",
+      "settings": {
+        "password": {
+          "label": "Password"
+        },
+        "password_wrong": {
+          "label": "Wrong password text"
+        },
+        "destination_url": {
+          "label": "Destination page"
+        }
+      }
+    },
     "main-banner-promotion": {
       "name": "Main banner promo",
       "settings": {

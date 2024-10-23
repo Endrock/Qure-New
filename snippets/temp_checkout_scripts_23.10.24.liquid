@@ -1,0 +1,565 @@
+<script> cjShopifyData={"ordersCount":"{{customer.orders_count}}","orderId":"{{checkout.order_id}}","items":[{%for line_item in line_items%}{"itemId":"{{line_item.sku|handleize}}","unitPrice":{{line_item.price|times:0.01}},"quantity":{{line_item.quantity}},"discount":{{line_item.line_level_total_discount|times:0.01}}},{%endfor%}]} </script>
+
+    {% if first_time_accessed %} 
+    <script type="text/javascript">
+    var EFTID = "{{ attributes.eftid }}";
+    var aid = 431;
+    var amount = Shopify.checkout.subtotal_price;
+    var order;
+    
+    if (Shopify.checkout.discount != null) {
+        order = {
+            oid: Shopify.checkout.order_id,
+            amt: Shopify.checkout.subtotal_price,
+            bs: Shopify.checkout.shipping_address ? Shopify.checkout.shipping_address.province : '',
+            bc: Shopify.checkout.shipping_address ? Shopify.checkout.shipping_address.country : '',
+            cc: Shopify.checkout.discount.code,
+            items: []
+        };
+    } else {
+        order = {
+            oid: Shopify.checkout.order_id,
+            amt: Shopify.checkout.subtotal_price,
+            bs: Shopify.checkout.shipping_address ? Shopify.checkout.shipping_address.province : '',
+            bc: Shopify.checkout.shipping_address ? Shopify.checkout.shipping_address.country : '',
+            cc: "",
+            items: []
+        };
+    }
+    
+    Shopify.checkout.line_items.forEach(function (line_item) {
+        var item = {};
+        item['ps'] = line_item.sku;
+        item['p'] = line_item.price;
+        item['qty'] = line_item.quantity;
+        item['ds'] = line_item.discount_allocations && line_item.discount_allocations.length > 0 ? line_item.discount_allocations[0].amount : 0;
+    
+        order.items.push(item);
+    });
+    
+    EF.conversion({
+        aid: aid,
+        amount: amount,
+        order: order,
+        order_id: Shopify.checkout.order_id,
+      transaction_id:EFTID,
+      parameters:{'email":Shopify.checkout.email}
+    })
+    </script>
+    {% endif %}
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M7RD8D7B');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Hotjar Tracking Code for https://www.qureskincare.com/ -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:2289227,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+    
+    
+    {% if first_time_accessed %}
+    <!-- Global site tag (gtag.js) - Google Ads: 475155004 - Qure Review LP -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-475155004"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'AW-475155004');
+    </script>
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7RD8D7B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Event snippet for Purchase - BV conversion page - Qure Review LP -->
+    <script>
+      gtag('event', 'conversion', {
+          'send_to': 'AW-11055500960/SoVbCMHXposYEKCd1pcp',
+          'value': {{ checkout.total_price | money_without_currency }},
+          'currency': '{{ shop.currency }}',
+          'transaction_id': '{{ order_number }}'
+      });
+    </script>
+    {% endif %}
+    
+    {% if first_time_accessed %}
+    <!-- Global site tag (gtag.js) - Google Ads: 475155004 - Qure Review LP -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-475155004"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'AW-475155004');
+    </script>
+    
+    <!-- Event snippet for G - Purchase conversion page - Qure Review LP -->
+    <script>
+      gtag('event', 'conversion', {
+          'send_to': 'AW-11055500960/t8AmCIPA8YYYEKCd1pcp',
+          'value': {{ checkout.total_price | money_without_currency }},
+          'currency': '{{ shop.currency }}',
+          'transaction_id': '{{ order_number }}'
+      });
+    </script>
+    {% endif %}
+    
+    
+    {% comment %}
+        Enhanced Conversions Tag - BV
+        {% endcomment %}
+    
+        {% assign gads_aw_id = "AW-475155004" %}
+        {% assign gads_send_to = "AW-475155004/RamWCJCGjPsBELyUyeIB" %}
+        {% assign product_id = "product_id_variant-id" %}
+        {% assign product_id_prefix = "shopify_us_" %}
+        {% assign gads_merchant_id = "368608549" %}
+        {% assign gads_feed_country = "US" %}
+        {% assign gads_feed_language = "EN" %}
+    
+        {% if first_time_accessed %}
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{gads_aw_id}}"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '{{ gads_aw_id }}', { 'allow_enhanced_conversions': true });
+        </script>
+    
+            <!-- START Google Ads Enhanced Conversions - BV -->
+            <script>
+            var enhanced_conversion_data = {
+            {% unless checkout.email == blank %}"email": "{{ checkout.email }}",{% endunless %}
+            {% unless billing_address.phone == blank %}"phone_number": "{{ billing_address.phone }}",{% endunless %}
+            {% unless billing_address.first_name == blank %}"first_name": "{{ billing_address.first_name }}",{% endunless %}
+            {% unless billing_address.last_name == blank %}"last_name": "{{ billing_address.last_name }}",{% endunless %}
+            "home_address": {
+                {% unless billing_address.street == blank %}"street": "{{ billing_address.street }}",{% endunless %}
+                {% unless billing_address.city == blank %}"city": "{{ billing_address.city }}",{% endunless %}
+                {% unless billing_address.province_code == blank %}"region": "{{ billing_address.province_code }}",{% endunless %}
+                {% unless billing_address.zip == blank %}"postal_code": "{{ billing_address.zip }}",{% endunless %}
+                {% unless billing_address.country_code == blank %}"country": "{{ billing_address.country_code }}"{% endunless %}
+            }
+            };
+            </script>
+              <!-- END Google Ads Enhanced Conversions - BV -->
+            <!-- START Cart data - BV -->
+            <script>
+            gtag('event', 'purchase', {
+                'send_to': '{{ gads_send_to }}',
+                'transaction_id': '{{ order.order_number }}',
+                'value': Shopify.checkout.total_price_set.presentment_money.amount,
+                'currency': Shopify.checkout.total_price_set.presentment_money.currency_code,
+                'discount': discount(),
+                'aw_merchant_id': {{ gads_merchant_id }},
+                'aw_feed_country': '{{ gads_feed_country }}',
+                'aw_feed_language': '{{ gads_feed_language }}',
+                'items': items()
+            });
+            function discount(){
+                return (Shopify.checkout.discount == null) ? 0 : Shopify.checkout.discount.amount;
+            }
+            function items(){
+                var jsonarray = [];
+                for (var line_item_count = 0; line_item_count < Shopify.checkout.line_items.length; line_item_count++){
+                    jsonarray.push({
+                        id: {% if product_id == "product_id_variant-id" %}'{{ product_id_prefix }}' + Shopify.checkout.line_items[line_item_count].product_id + '_' + Shopify.checkout.line_items[line_item_count].variant_id{% elsif product_id == 'variant-id' %}Shopify.checkout.line_items[line_item_count].variant_id{% elsif product_id == 'sku' %}Shopify.checkout.line_items[line_item_count].sku{% endif %},
+                        quantity: Shopify.checkout.line_items[line_item_count].quantity,
+                        price: Shopify.checkout.line_items[line_item_count].line_price
+                    })
+                }
+                return jsonarray;
+            }
+            </script>
+            <!-- END Cart data - BV -->
+        {% endif %}
+        {% comment %}
+        END - Enhanced Conversions Tag - BV
+        {% endcomment %}
+    
+    
+    <script type="text/javascript">(function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/PqihwVJtG98XiYZU23g3Cyt1DKpvDgkg24ZQfoUi/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();</script><script>yotpoTrackConversionData = {orderId: "{{order_name|handleize}}", orderAmount: "{{subtotal_price|money_without_currency}}", orderCurrency: "{{shop.currency }}"}</script><noscript><img src="//api.yotpo.com/conversion_tracking.gif?app_key=PqihwVJtG98XiYZU23g3Cyt1DKpvDgkg24ZQfoUi&order_id={{order_name|handleize}}&order_amount={{subtotal_price|money_without_currency}}&order_currency={{ shop.currency }}" width="1" height="1"></noscript>
+    
+    
+    
+    <script data-obct type = "text/javascript">
+      /** DO NOT MODIFY THIS CODE**/
+      !function(_window, _document) {
+        var OB_ADV_ID = '00a5faaf84f5fdc1ad07f50e6164714e62';
+        if (_window.obApi) {
+          var toArray = function(object) {
+            return Object.prototype.toString.call(object) === '[object Array]' ? object : [object];
+          };
+          _window.obApi.marketerId = toArray(_window.obApi.marketerId).concat(toArray(OB_ADV_ID));
+          return;
+        }
+        var api = _window.obApi = function() {
+          api.dispatch ? api.dispatch.apply(api, arguments) : api.queue.push(arguments);
+        };
+        api.version = '1.1';
+        api.loaded = true;
+        api.marketerId = OB_ADV_ID;
+        api.queue = [];
+        var tag = _document.createElement('script');
+        tag.async = true;
+        tag.src = '//amplify.outbrain.com/cp/obtp.js';
+        tag.type = 'text/javascript';
+        var script = _document.getElementsByTagName('script')[0];
+        script.parentNode.insertBefore(tag, script);
+      }(window, document);
+    
+      obApi('track', 'PAGE_VIEW');
+    </script>
+    
+    <!-- Taboola Pixel Code -->
+    <script type='text/javascript'>
+      window._tfa = window._tfa || [];
+      window._tfa.push({notify: 'event', name: 'page_view', id: 1355029});
+      !function (t, f, a, x) {
+             if (!document.getElementById(x)) {
+                t.async = 1;t.src = a;t.id=x;f.parentNode.insertBefore(t, f);
+             }
+      }(document.createElement('script'),
+      document.getElementsByTagName('script')[0],
+      '//cdn.taboola.com/libtrc/unip/1355029/tfa.js',
+      'tb_tfa_script');
+    </script>
+    <noscript>
+      <img src='https://trc.taboola.com/1355029/log/3/unip?en=page_view'
+          width='0' height='0' style='display:none' />
+    </noscript>
+    <!-- End of Taboola Pixel Code -->
+    
+    <!-- Google Ads Dynamic Remarketing -->
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    </script>
+    ​
+    {%comment%}
+    Dynamic remarketing code setup
+    {%endcomment%}
+    ​
+    <script type = "text/javascript">
+    var google_tag_params = {
+    ecomm_prodid:[{% for line in checkout.line_items %}'shopify_US_{{ line.product_id }}_{{ line.variant_id }}'{% unless forloop.last %},{% endunless %}{% endfor %}],
+    ecomm_pname:  [{% for line_item in order.line_items %}'{{ line_item.title }}'{% unless forloop.last %},{% endunless %}{% endfor %}],
+    ecomm_pvalue: [{% for line_item in order.line_items %}{{ line_item.price| money_without_currency | remove: ","}}{% unless forloop.last %},{% endunless %}{% endfor %}],  
+    ecomm_pagetype: 'purchase',
+    user_id: '{{ customer.id }}',
+    ecomm_totalvalue: {{ total_price | money_without_currency | remove: "," }}
+    };
+    </script>
+    ​
+    ​
+    <script>
+    window.dataLayer=window.dataLayer||[];
+    dataLayer.push ({   
+      'event':'dynamicRemarketingTriggered',
+      'google_tag_params': window.google_tag_params
+    });
+    </script>
+    ​
+    ​
+    {% if first_time_accessed %}
+    <script>
+    dataLayer.push ({   
+      'event': 'transactionSuccess',
+      'transactionTotal':'{{ total_price | money_without_currency | remove: "," }}',
+      'transactionId': '{{order.order_number}}',
+      'transactionCurrency': '{{shop.currency}}',
+      'google_tag_params': window.google_tag_params
+    });
+    </script>
+    {% endif %}
+    
+    
+      <script>
+          const cookies = document.cookie.split(';').reduce((res, cookie) => ({ ...res, [(cookie.split('=')[0] || '').trim()]: (cookie.split('=')[1] || '').trim() }), {});
+          const { sms_click_id, sms_click_time } = cookies;
+          const code = `{{checkout.discount_applications[0].title}}`; 
+          if (sms_click_id || code) {
+              fetch(`https://api.shopmyshelf.us/api/order_confirmation`, { 
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({
+                      orderAmount: `{{ checkout.total_price | minus: checkout.shipping_price | minus: checkout.tax_price | money}}`, 
+                      orderId: {{ order_number }}, 
+                      clickId: sms_click_id,
+                      currency: `{{ currency }}`,
+                      page_url: window.location.href,
+                      code
+                  })
+              }).then(r => r.json())
+                  .then(result => {
+                      const now = new Date();
+                      document.cookie = `sms_click_id=;expires=${now.toUTCString()};path=/;`; 
+                      document.cookie = `sms_click_time=;expires=${now.toUTCString()};path=/;`;
+                  }); 
+          }
+      </script>
+    
+    
+    <script type="text/javascript" id="pap_x2s6df8d" src="https://qure.postaffiliatepro.com/scripts/e4vf7j"></script>
+    <script type="text/javascript">
+    PostAffTracker.setAccountId('default1');
+    try {
+    PostAffTracker.track();
+    } catch (err) { }
+    </script>
+    
+    <script type="text/javascript">
+        // Duration in milliseconds to wait while the Kameleoon application file is loaded
+        var kameleoonLoadingTimeout = 1000;
+    
+        window.kameleoonQueue = window.kameleoonQueue || [];
+        window.kameleoonStartLoadTime = new Date().getTime();
+        if (! document.getElementById("kameleoonLoadingStyleSheet") && ! window.kameleoonDisplayPageTimeOut)
+        {
+            var kameleoonS = document.getElementsByTagName("script")[0];
+            var kameleoonCc = "* { visibility: hidden !important; background-image: none !important; }";
+            var kameleoonStn = document.createElement("style");
+            kameleoonStn.type = "text/css";
+            kameleoonStn.id = "kameleoonLoadingStyleSheet";
+            if (kameleoonStn.styleSheet)
+            {
+                kameleoonStn.styleSheet.cssText = kameleoonCc;
+            }
+            else
+            {
+                kameleoonStn.appendChild(document.createTextNode(kameleoonCc));
+            }
+            kameleoonS.parentNode.insertBefore(kameleoonStn, kameleoonS);
+            window.kameleoonDisplayPage = function(fromEngine)
+            {
+                if (!fromEngine)
+                {
+                    window.kameleoonTimeout = true;
+                }
+                if (kameleoonStn.parentNode)
+                {
+                    kameleoonStn.parentNode.removeChild(kameleoonStn);
+                }
+            };
+            window.kameleoonDisplayPageTimeOut = window.setTimeout(window.kameleoonDisplayPage, kameleoonLoadingTimeout);
+        }
+    </script>
+    <script type="text/javascript" src="//cl3yefiw8k.kameleoon.eu/kameleoon.js" async="true"></script>
+    
+    <script>
+        window.acceleratedData=window.acceleratedData || {logs:[]};
+        if (!window.acceleratedData.logs) window.acceleratedData.logs=[];
+        if (!window.acceleratedData.version || window.acceleratedData.version<2022123000) Object.assign(window.acceleratedData,{
+            startTime:new Date().getTime(),
+            log: function() {if (!arguments.length) return this.logs.forEach(l=>console.info(l)); [...arguments].forEach(log=>this.logs.push({startTime: (new Date().getTime())-this.startTime, log}))}
+        });
+        (async GoalID=>{
+            for (let i=0;i<100;i++) {if (!!window.Kameleoon) break; await new Promise(r=>setTimeout(r,50))}
+            let checkout = {
+                GoalID,
+                'normalizedRevenue': {{ checkout.total_price | divided_by: 100.00 }}/(Number(((Shopify||{}).currency||{rate:1}).rate)||1),
+                'revenue': {{ checkout.total_price | divided_by: 100.00 }},
+                'currency': '{{ currency }}',
+                'currencyRate': ((Shopify||{}).currency||{}).rate
+            };
+    {% if first_time_accessed %}
+            Kameleoon.API.Goals.processConversion(GoalID, checkout.normalizedRevenue);
+    {% endif %}
+            return checkout;
+    // ======================================================        
+        })('315818') // <<<< SET THIS 'GoalID' TO REAL VALUE 
+    // ======================================================
+        .then(window.acceleratedData.log.bind(window.acceleratedData))
+        .catch(window.acceleratedData.log.bind(window.acceleratedData))
+    </script>
+    
+    <!-- Custom Banner Code -->
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    console.log("loaded---->");
+        var htmlContent = `
+        <div class="my-container">
+            <div class="image-text-section">
+                <div class="img_wrap">
+                    <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/desk.webp?v=1717582578" alt=""
+                        class="img-fluid d-none d-md-block">
+                    <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/mob.webp?v=1717582579" alt=""
+                        class="img-fluid d-block d-md-none">
+                </div>
+                <div class="image_text_content">
+                    <div class="post_wrap_main">
+                        <p><b style="font-weight:bold">Join our VIP Facebook group</b> and get <b
+                                style="font-weight:bold">20%
+                                off</b> your next order!</p>
+                        <div class="camp_btn">
+                            <a href="https://www.facebook.com/Qureskincare/">Join now</a>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>`;
+    
+        var stepSections = document.querySelector('.step__sections');
+        var sectionElements = stepSections.getElementsByClassName('section');
+        if (sectionElements.length >= 2) {
+            var secondSection = sectionElements[1];
+            var contentBox = secondSection.querySelector('.content-box');
+            if (contentBox) {
+                contentBox.insertAdjacentHTML('afterend', htmlContent);
+            } 
+        } 
+    });
+    
+    
+    </script>
+    <style>
+            .my-container {
+                /* max-width: 1150px; */
+                margin: 15px auto 0;
+            }
+    
+            .image-text-section {
+                max-width: 575px;
+                margin: 0 auto;
+                display: flex;
+                align-items: stretch;
+                /* border: 1px solid #CBE4DE;
+                border-radius: 5px; */
+                overflow: hidden;
+                /* box-shadow: 0px 5px 15px 0px #B0B0B040; */
+                position: relative;
+            }
+    
+            .image_text_content {
+                display: flex;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                align-items: center;
+            }
+    
+            .image_text_content p {
+                margin: 0;
+                font-size: 18px;
+                /* max-width: 300px; */
+                line-height: 28px;
+                color: #000;
+                margin-bottom: 20px;
+            }
+    
+            .image_text_img {
+                max-width: 240px;
+            }
+    
+            .image_text_img img {
+                max-width: 100%;
+                width: 100%;
+                display: block;
+                height: 100%;
+                object-fit: cover;
+            }
+    
+            .camp_btn {
+                margin-top: 10px;
+            }
+    
+            .camp_btn a {
+                display: inline-flex;
+                padding: 16px 40px;
+                background: #000;
+                text-decoration: none;
+                color: #ffff;
+                border-radius: 45px;
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 1.5;
+                position: relative;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+            }
+    
+            .camp_btn a::after {
+                content: '';
+                width: 8px;
+                height: 8px;
+                border-width: 2px 2px 0px 0px;
+                border-style: solid;
+                border-color: #fff;
+                display: block;
+                transform: rotate(45deg);
+            }
+    
+            .d-block {
+                display: block;
+            }
+    
+            .d-none {
+                display: none;
+            }
+    
+            .img-fluid {
+                max-width: 100%;
+                height: auto;
+            }
+    
+            .post_wrap_main {
+        max-width: 300px;
+        padding-left: 30px;
+    }
+            @media(min-width:767px) {
+                .d-md-block {
+                    display: block;
+                }
+    
+                .d-md-none {
+                    display: none;
+                }
+            }
+    
+            @media(max-width:767px) {
+                .post_wrap_main {
+                    max-width: 214px;
+                    padding-left: 15px;
+                }
+            }
+    
+            @media (max-width: 480px) {
+                .image-text-section {
+                    flex-direction: column-reverse;
+                }
+    
+                .image_text_img {
+                    max-width: 100%;
+                }
+    
+                .image_text_content p {
+                    font-size: 16px;
+                    line-height: 28px;
+                    font-weight: 400;
+                }
+                .camp_btn a{
+                    font-weight: 500;
+                    padding: 10px 17px;
+                }
+            }
+        </style>

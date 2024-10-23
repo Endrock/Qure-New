@@ -335,3 +335,6 @@ body[class~="page.sunil-mi-landing-special2"]
                 display: none !important;
         }
 }
+div.ur_btn {
+        cursor: pointer;
+}

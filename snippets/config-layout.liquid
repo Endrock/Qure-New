@@ -45,6 +45,10 @@
         {% assign main_class = 'bf_sale' %}
         <link rel="stylesheet" href="{{ 'product-bf-sales.css' | asset_url }}">
         <link rel="stylesheet" href="{{ 'faq-page.css' | asset_url }}"> 
+    {% when 'page.bf-sales-v2' %}
+        {% assign main_class = 'bf_sale black_friday_sale' %}
+        <link rel="stylesheet" href="{{ 'product-bf-sales.css' | asset_url }}">
+        <link rel="stylesheet" href="{{ 'exclusive-holiday-bundle-deal.css' | asset_url }}"> 
     {% when 'page.sunil-bf-sales-us' %}
         {% assign main_class = 'bf_sale' %}
         <link rel="stylesheet" href="{{ 'product-bf-sales.css' | asset_url }}">
@@ -195,9 +199,12 @@
     {% when 'page.returns-exchanges' %}
         {% assign main_class = 'return_exchanges' %}
         <link rel="stylesheet" href="{{ 'return.css' | asset_url }}">
-        {% when 'page.return-policy' %}
-            {% assign main_class = 'return_policy' %}
-            <link rel="stylesheet" href="{{ 'return.css' | asset_url }}">
+    {% when 'page.return-policy' %}
+        {% assign main_class = 'return_policy' %}
+        <link rel="stylesheet" href="{{ 'return.css' | asset_url }}">
+    {% when 'page.bf-early-access' %}
+        {% assign main_class = 'early_acess_sale' %}
+        <link rel="stylesheet" href="{{ 'early-acess-password-bf-bundle.css' | asset_url }}">
     {% when 'blog' %}
         {% assign main_class = 'blogs' %}
         <link rel="stylesheet" href="{{ 'blogs.css' | asset_url }}">

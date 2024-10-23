@@ -33,7 +33,9 @@
                   <div class="ur_itemName">{{ item.name }}</div>
                   <div class="ur_price_btn">
                       <div class="ur_price">{{ item.product.value.price | money_without_trailing_zeros  }}</div>
-                      <div class="ur_btn"><a href="{{ routes.cart_add_url }}?id={{ item.product.value.variants.first.id }}&quantity=1" onclick="setEventProductHandler('{{ item.product.value.handle | escape }}')" data-ajax-cart-request-button>{{ 'sections.cross-sell.add_to_cart' | t }}</a></div>
+                      <div class="ur_btn" data-ajax-cart-request-button="{{ routes.cart_add_url }}?id={{ item.product.value.variants.first.id }}&quantity=1" onclick="setEventProductHandler('{{ item.product.value.handle | escape }}')">
+                          {{ 'sections.cross-sell.add_to_cart' | t }}
+                      </div>
                   </div>
               </div>
           </div>
