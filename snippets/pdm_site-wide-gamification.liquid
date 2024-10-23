@@ -11,7 +11,6 @@
   assign copy_product_gift = settingsGamification.copy_get_product_free
   assign copy_congrats = settingsGamification.copy_congrats
   assign gift_product = settingsGamification.product_free_gift
-  
   assign difference_free_shipping = free_shipping_threshold | minus: cartTotal
   assign difference_free_gift = gift_threshold_pdm | minus: cartTotal
   assign remaining_amount = free_shipping_threshold | minus: cartTotal
@@ -29,34 +28,41 @@
     data-copy-free-shipping="{{ copy_free_shipping }}"
     data-copy-product-gift="{{ copy_product_gift }}"
     data-copy-congrats="{{ copy_congrats }}"
+    data-gift-product='{{ gift_product | json }}'
     data-gift-product-title="{{ gift_product.title }}"
     data-gift-product-variant-price="{{ gift_product.selected_or_first_available_variant.price }}"
   >
-    <div class="progress-container__message">
-        {% if enable_free_shipping and difference_free_shipping > 0 %}
-          {% if difference_free_shipping > 0 and cartTotal > 0 %}
-            {% assign text_to_show = "<i class='money' style='font-style: normal;'>" | append: remaining_amount_money | append: "</i>" %}
-            {{ copy_free_shipping | replace: "&price-left&", text_to_show }}
-          {% endif %}
-        {% elsif enable_product_gift %}
-          {% assign remaining_gift_amount = gift_threshold_pdm | minus: cartTotal %}
-          {% assign remaining_gift_amount_money = remaining_gift_amount | money_without_trailing_zeros %}
-          {% if difference_free_gift > 0 %}
-            {% assign text_to_show = "<i class='money' style='font-style: normal;'>" | append: remaining_gift_amount_money | append: "</i>" %}
-            {% assign text_product_gift = copy_product_gift |  replace: "&price-left&", text_to_show %}
-            {% if enable_show_gift_price %}
-              {% assign product_gift_price = gift_product.variants.first.price | money_without_trailing_zeros %}
-              {% assign text_product_gift = text_product_gift | replace: "&product-price&", product_gift_price %}
-            {% else %}
-              {% assign text_product_gift = text_product_gift |  replace: "&product-price&", "" %}
-            {% endif %}
-            {{ text_product_gift }}
-          {% else %}
-            {% assign text_product_title = gift_product.title |  capitalize  %}
-            {% assign text_congrats = "<strong>" | append:text_product_title | append: "!</strong>" %}
-            {{ copy_congrats |  replace: "&product-title&", text_congrats }}
-          {% endif %}
+    <div class="progress-container__message" 
+      data-enable_free_shipping="{{ enable_free_shipping }}" 
+      data-difference_free_shipping="{{ difference_free_shipping }}"
+      data-enable_product_gift="{{ enable_product_gift }}"
+    >
+      {% if enable_free_shipping and difference_free_shipping > 0 %}
+        {% if difference_free_shipping > 0 and cartTotal >= 0 %}
+          {% assign text_to_show = "<i class='money' style='font-style: normal;'>" | append: remaining_amount_money | append: "</i>" %}
+          {{ copy_free_shipping | replace: "&price-left&", text_to_show }}
         {% endif %}
+      {% elsif enable_product_gift %}
+        {% assign remaining_gift_amount = gift_threshold_pdm | minus: cartTotal %}
+        {% assign remaining_gift_amount_money = remaining_gift_amount | money_without_trailing_zeros %}
+        {% if difference_free_gift > 0 %}
+          {% assign text_to_show = "<i class='money' style='font-style: normal;'>" | append: remaining_gift_amount_money | append: "</i>" %}
+          {% assign text_product_gift = copy_product_gift |  replace: "&price-left&", text_to_show %}
+          {% if enable_show_gift_price %}
+            {% assign product_gift_price = gift_product.variants.first.price | money_without_trailing_zeros %}
+            {% assign text_product_gift = text_product_gift | replace: "&product-price&", product_gift_price %}
+            {% assign text_product_gift = text_product_gift | replace: "&product-title&", gift_product.title %}
+          {% else %}
+            {% assign text_product_gift = text_product_gift |  replace: "&product-price&", "" %}
+            {% assign text_product_gift = text_product_gift | replace: "&product-title&", gift_product.title %}
+          {% endif %}
+          {{ text_product_gift }}
+        {% else %}
+          {% assign text_product_title = gift_product.title |  capitalize  %}
+          {% assign text_congrats = "<strong>" | append:text_product_title | append: "!</strong>" %}
+          {{ copy_congrats |  replace: "&product-title&", text_congrats }}
+        {% endif %}
+      {% endif %}
     </div>
 
     <div class="progress-bar-container">
@@ -66,15 +72,15 @@
       {% endif %}
       <div class="milestones-container {% if difference_free_gift <= 0 %}background-green{% endif %} {% if reduce_padding %}reduce-padding{% endif %}">
         <div class="milestone first-milestone {% if difference_free_shipping <= 0 and cartTotal > 0 %}reach-threshold{% endif %} {% unless difference_free_shipping <= 0 and cartTotal > 0 %}gradient{% endunless %}">
-          <div class="icon-check__first-milestone {% if difference_free_shipping > 0 and cartTotal > 0 %}hidden{% endif %}">
+          <div class="icon-check__first-milestone {% if difference_free_shipping > 0 and cartTotal >= 0 %}hidden{% endif %}">
             {% render 'pdm_icons', icon: 'check' %}
           </div>
           <div class="milestone__label">
             {{ 'site_gamification.free_shipping.label' | t }}
           </div>
           <div class="milestone-icon {% if difference_free_shipping <= 0 and cartTotal > 0 %} backgound-black {% endif %}">
-              <div class="icon-empty-car {% if difference_free_shipping <= 0 and cartTotal > 0 %}hidden{% endif %}">{% render 'pdm_icons', icon: 'empty-car' %}</div>
-              <div class="icon-full-car {% if difference_free_shipping > 0 %}hidden{% endif %}">{% render 'pdm_icons', icon: 'full-car' %}</div>
+            <div class="icon-empty-car {% if difference_free_shipping <= 0 and cartTotal > 0 %}hidden{% endif %}">{% render 'pdm_icons', icon: 'empty-car' %}</div>
+            <div class="icon-full-car {% if difference_free_shipping > 0 %}hidden{% endif %}">{% render 'pdm_icons', icon: 'full-car' %}</div>
           </div>
         </div>
         <div class="milestone second-milestone {% if difference_free_gift <= 0 %}reach-threshold{% endif %} {% if difference_free_shipping <= 0 and cartTotal > 0 and difference_free_gift > 0 %}gradient{% endif %}">
@@ -91,9 +97,15 @@
             {% assign both_threshold_cumpleted = true %}
           {% endif %}
           <div class="milestone-icon {% if difference_free_gift <= 0 %} backgound-black {% endif %}">
-              <div class="icon-empty-pillow {% if difference_free_shipping <= 0 or difference_free_shipping <= 0 and difference_free_gift <= 0  %}hidden{% endif %}">{% render 'pdm_icons', icon: 'empty-pillow' %}</div>
-              <div class="icon-empty-gradient {% if both_threshold_umcumpleted or both_threshold_cumpleted %}hidden{% endif %}">{% render 'pdm_icons', icon: 'empty-pillow-gradient' %}</div>
-              <div class="icon-full-pillow {% if difference_free_shipping > 0 or difference_free_gift > 0 %}hidden{% endif %}">{% render 'pdm_icons', icon: 'full-pillow' %}</div>
+            <div class="icon-empty-pillow {% if difference_free_shipping <= 0 or difference_free_shipping <= 0 and difference_free_gift <= 0  %}hidden{% endif %}">
+              {{ settingsGamification.icon_product_gift_clean | image_url: width: settingsGamification.icon_gift_width, height: settingsGamification.icon_gift_height | image_tag }}
+            </div>
+            <div class="icon-empty-gradient {% if both_threshold_umcumpleted or both_threshold_cumpleted %}hidden{% endif %}">
+              {{ settingsGamification.icon_product_gift_gradient | image_url: width: settingsGamification.icon_gift_width, height: settingsGamification.icon_gift_height | image_tag }}
+            </div>
+            <div class="icon-full-pillow {% if difference_free_shipping > 0 or difference_free_gift > 0 %}hidden{% endif %}">
+              {{ settingsGamification.icon_product_gift_full | image_url: width: settingsGamification.icon_gift_width, height: settingsGamification.icon_gift_height | image_tag }}
+            </div>
           </div>
         </div>
       </div>
