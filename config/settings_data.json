@@ -40,7 +40,7 @@
     "enable_free_shipping_treshold": true,
     "enable_product_gift": true,
     "product_free_gift": "silk-pillowcase",
-    "enable_show_gift_price": false,
+    "enable_show_gift_price": true,
     "copy_get_product_free": "<p>You’re &price-left& away from a <strong>FREE Silk Pillowcase </strong>worth &product-price&</p>",
     "enable_site_wide_timer": true,
     "start_date": "10-18-2024 12:00",
