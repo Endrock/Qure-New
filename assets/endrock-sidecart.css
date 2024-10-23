@@ -841,6 +841,9 @@ body[data-free-gift-gamification] .second-milestone {
   width: max-content;
   margin-right: 20px;
 }
+.section-header .announcement_bar.site-gamification-active .pdm-gamification .progress-container__message p { 
+  width: max-content;
+}
 .section-header .announcement_bar.site-gamification-active .pdm-gamification .progress-bar-container {
   max-width: 300px;
   height: 40px;
