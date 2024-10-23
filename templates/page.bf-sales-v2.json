@@ -1,0 +1,76 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "header_sales": {
+      "type": "header-sales",
+      "blocks": {
+        "announcement_JyMH8T": {
+          "type": "announcement",
+          "settings": {
+            "heading": "Limited Time Only:",
+            "timer": "2024-10-27T23:59:59",
+            "timer_next": 7
+          }
+        },
+        "navigation_link_4YHENL": {
+          "type": "navigation-link",
+          "settings": {
+            "link_label": "SHOP BUNDLES",
+            "link_url": "#bf-bundles",
+            "image": "shopify://shop_images/header_1.webp"
+          }
+        },
+        "navigation_link_4hxD8e": {
+          "type": "navigation-link",
+          "settings": {
+            "link_label": "RESULTS",
+            "link_url": "#result_section",
+            "image": "shopify://shop_images/header_2.webp"
+          }
+        },
+        "navigation_link_qcGPUL": {
+          "type": "navigation-link",
+          "settings": {
+            "link_label": "PRODUCTS",
+            "link_url": "#skin_promise",
+            "image": "shopify://shop_images/header_3.webp"
+          }
+        },
+        "navigation_link_rmYfWw": {
+          "type": "navigation-link",
+          "settings": {
+            "link_label": "FAQs",
+            "link_url": "#faqs",
+            "image": "shopify://shop_images/header_4.webp"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_JyMH8T",
+        "navigation_link_4YHENL",
+        "navigation_link_4hxD8e",
+        "navigation_link_qcGPUL",
+        "navigation_link_rmYfWw"
+      ],
+      "settings": {
+        "button_label": "SAVE UP TO 55%",
+        "button_url": "#bf-bundles"
+      }
+    },
+    "main": {
+      "type": "temp-bf-sales-v2"
+    }
+  },
+  "order": [
+    "header_sales",
+    "main"
+  ]
+}

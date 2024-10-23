@@ -26,69 +26,6 @@
             "text": "<ul><li>Helps reduce appearance of <strong>fine lines, smooth texture</strong> whilst helping to infuse active ingredients into your skin.</li><li>Virtually <strong>painless</strong> and performed in the comfort and convenience of your home.</li><li>Minimal to <strong>no downtime</strong> with visible results.</li></ul>"
           }
         },
-        "media_CwfKJr": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/mi_pdp-product-1.webp",
-            "wistia_id": ""
-          }
-        },
-        "media_JnMF7G": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/mi_pdp-product-2.webp",
-            "wistia_id": "jg8c1a3bee"
-          }
-        },
-        "media_a6KBAn": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/mi-product-3.png",
-            "wistia_id": ""
-          }
-        },
-        "media_6QEUHd": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/mi_pdp-product-4.webp",
-            "wistia_id": ""
-          }
-        },
-        "media_CeVxmC": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/mi_pdp-product-5.webp",
-            "wistia_id": ""
-          }
-        },
-        "media_9gQKQ7": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/Rectangle_376.png",
-            "wistia_id": ""
-          }
-        },
-        "media_dmxg7T": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/mi_pdp-result-1.webp",
-            "wistia_id": ""
-          }
-        },
-        "media_kaCFw8": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/mi_pdp-result-2.webp",
-            "wistia_id": ""
-          }
-        },
-        "media_bEn9Dc": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/mi_pdp-result-3.webp",
-            "wistia_id": ""
-          }
-        },
         "liquid_6AqWXk": {
           "type": "liquid",
           "settings": {
@@ -98,7 +35,7 @@
         "product_in_page_x33rFD": {
           "type": "product_in_page",
           "settings": {
-            "image_product_1": "shopify://shop_images/mi_pdp-product-1.webp",
+            "image_product_1": "shopify://shop_images/awardMI.png",
             "image_product_text_1": "product one",
             "video_wistia_id_1": "",
             "image_product_2": "shopify://shop_images/mi_pdp-product-2.webp",
@@ -147,15 +84,6 @@
       "block_order": [
         "rating_eLjGX8",
         "list_FatCgk",
-        "media_CwfKJr",
-        "media_JnMF7G",
-        "media_a6KBAn",
-        "media_6QEUHd",
-        "media_CeVxmC",
-        "media_9gQKQ7",
-        "media_dmxg7T",
-        "media_kaCFw8",
-        "media_bEn9Dc",
         "liquid_6AqWXk",
         "product_in_page_x33rFD",
         "before_and_after_i7mAeJ",
