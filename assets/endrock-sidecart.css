@@ -874,7 +874,7 @@
   width: max-content;
 }
 .section-header .announcement_bar.site-gamification-active .pdm-gamification .progress-bar-container {
-  max-width: 300px;
+  max-width: 310px;
   height: 40px;
   background-color: #fff;
   border-radius: 100px;
@@ -891,13 +891,25 @@
   justify-content: space-between;
   padding: 0 5px;
   gap: 15px;
+  overflow: hidden;
+  z-index: 99;
 }
+.section-header .announcement_bar.site-gamification-active .pdm-gamification .progress-bar-container .milestones-container.background-green { 
+  padding: 0;
+} 
+.section-header .announcement_bar.site-gamification-active .pdm-gamification .progress-bar-container .milestones-container .progress-bar__bar { 
+  height: 30px;
+  width: 0%;
+  max-width: 300px;
+  border-radius: 100px;
+  background-color: rgba(199, 231, 220, 1);
+  transition: width 0.4s ease;
+  position: absolute;
+  z-index: -1;
+} 
 .section-header .announcement_bar.site-gamification-active .pdm-gamification .progress-bar-container .milestones-container.reduce-padding { 
   padding: 0;
 } 
-.section-header .announcement_bar.site-gamification-active .pdm-gamification .progress-bar-container .milestones-container.background-green { 
-  background-color: rgba(199, 231, 220, 1);
-}  
 .section-header .announcement_bar.site-gamification-active .pdm-gamification .progress-bar-container .milestone {
   position: static;
   transform: unset;
@@ -978,16 +990,15 @@
     padding-bottom: 5px;
   } 
   .section-header .announcement_bar.site-gamification-active .progress-container.pdm-gamification .progress-bar-container { 
-    transform: scale(0.9);
+    transform: scale(0.85);
     position: relative;
-    /* right: 30px; */
-    bottom: 5px;
+    bottom: 8px;
     align-self: flex-start;
   }
   .section-header .announcement_bar.site-gamification-active .announcement_bar__timer { 
     position: absolute;
     top: 25px;
-    right: 5px;
+    right: 3px;
   }
   .section-header .announcement_bar__timer .sidecart-timer-container .sidecart-timer-container__timer--days-amount, 
   .section-header .announcement_bar__timer .sidecart-timer-container .sidecart-timer-container__timer--hours-amount, 
@@ -1000,12 +1011,12 @@
   } 
   .section-header .announcement_bar__timer .sidecart-timer-container .amount-wrapper { 
     width: 30px;
+    padding: 0 5px;
   } 
 }
-@media screen and (max-width: 401px) {
+@media screen and (max-width: 411px) {
   .section-header .announcement_bar.site-gamification-active .progress-container.pdm-gamification .progress-bar-container { 
-    transform: scale(0.8);
-    bottom: 5px;
+    transform: scale(0.7);
   }
   .section-header .announcement_bar.site-gamification-active .announcement_bar__timer { 
     position: absolute;
@@ -1022,12 +1033,16 @@
     padding: 0 5px;
   }
 }
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 385px) {
   .section-header .announcement_bar.site-gamification-active .progress-container.pdm-gamification .progress-bar-container { 
     right: 20px;
+    transform: scale(0.65);
   }
   .section-header .announcement_bar.site-gamification-active .pdm-gamification .progress-container__message p { 
     font-size: 9px !important;
+  }
+  .section-header .announcement_bar__timer .sidecart-timer-container .amount-wrapper {
+    padding: 0;
   }
 }
 @media screen and (max-width: 360px) {
@@ -1036,5 +1051,8 @@
   }
   .section-header .announcement_bar.site-gamification-active .pdm-gamification .progress-container__message p { 
     font-size: 9px !important;
+  }
+  .section-header .announcement_bar__timer .sidecart-timer-container .amount-wrapper {
+    padding: 0;
   }
 }
