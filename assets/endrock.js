@@ -1274,13 +1274,32 @@ function updateSiteWideGamification (cartTotal) {
   const copyCongrats = progressContainer.dataset.copyCongrats;
   const giftProductTitle = progressContainer.dataset.giftProductTitle;
   const giftProductVariantPrice = parseInt(progressContainer.dataset.giftProductVariantPrice, 10);
+  const threshold = parseInt(progressContainer.dataset.threshold, 10);
 
   // Calculate differences
   const differenceFreeShipping = freeShippingThreshold - cartTotal;
   const differenceFreeGift = giftThresholdPdm - cartTotal;
 
+  // Calculate progress percentage
+  let progressPercentage = (cartTotal / threshold) * 100;
+
+  // Conditions similar to Liquid logic to adjust progress percentage
+  if (enableFreeShipping && cartTotal < freeShippingThreshold) {
+    const progressPercentageFreeShipping = (cartTotal / freeShippingThreshold) * 100;
+    if (progressPercentage > progressPercentageFreeShipping) {
+      progressPercentage = 20;
+    }
+  } else {
+    if (threshold > cartTotal && progressPercentage > 80) {
+      progressPercentage = 80;
+    }
+    if (progressPercentage > 100) {
+      progressPercentage = 100;
+    }
+  }
+
   // Render progress message
-  const progressContainerMessage = document.querySelector('.progress-container__message');
+  const progressContainerMessage = progressContainer.querySelector('.progress-container__message');
   if (progressContainerMessage) {
     if (enableFreeShipping && differenceFreeShipping > 0 && cartTotal >= 0) {
       const remainingAmountMoney = (differenceFreeShipping / 100).toFixed(2);
@@ -1304,11 +1323,15 @@ function updateSiteWideGamification (cartTotal) {
   }
 
   // Update progress bar and milestone states
-  const milestonesContainer = document.querySelector('.milestones-container');
-  const firstMilestone = document.querySelector('.first-milestone');
-  const secondMilestone = document.querySelector('.second-milestone');
+  const milestonesContainer = progressContainer.querySelector('.milestones-container');
+  const firstMilestone = progressContainer.querySelector('.first-milestone');
+  const secondMilestone = progressContainer.querySelector('.second-milestone');
+  const progressBar = progressContainer.querySelector('.progress-bar__bar');
 
-  if (milestonesContainer && firstMilestone && secondMilestone) {
+  if (milestonesContainer && firstMilestone && secondMilestone && progressBar) {
+    // Update progress bar width
+    progressBar.style.width = `${progressPercentage}%`;
+
     // Update milestone classes and styles
     if (differenceFreeGift <= 0) {
       milestonesContainer.classList.add('background-green');

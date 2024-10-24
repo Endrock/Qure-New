@@ -15,6 +15,27 @@
   assign difference_free_gift = gift_threshold_pdm | minus: cartTotal
   assign remaining_amount = free_shipping_threshold | minus: cartTotal
   assign remaining_amount_money = remaining_amount | money_without_trailing_zeros
+
+  if enable_product_gift
+    assign threshold = gift_threshold_pdm
+  elsif enable_free_shipping
+    assign threshold = free_shipping_threshold
+  endif
+
+  assign progress_percentage = cartTotal | times: 100 | divided_by: threshold
+  assign progress_percentage_free_shipping = cartTotal | times: 100 | divided_by: free_shipping_threshold
+  if enable_free_shipping and cartTotal < free_shipping_threshold
+    if progress_percentage > progress_percentage_free_shipping
+      assign progress_percentage = 20
+    endif
+  else
+    if threshold > cartTotal and progress_percentage > 80
+      assign progress_percentage = 80
+    endif
+    if progress_percentage > 100
+      assign progress_percentage = 100
+    endif
+  endif
 %}
 
 {% if enable_free_shipping or enable_product_gift %}
@@ -31,6 +52,8 @@
     data-gift-product='{{ gift_product | json }}'
     data-gift-product-title="{{ gift_product.title }}"
     data-gift-product-variant-price="{{ gift_product.selected_or_first_available_variant.price }}"
+    data-cart-total="{{ cartTotal }}"
+    data-threshold="{{ threshold }}"
   >
     <div class="progress-container__message" 
       data-enable_free_shipping="{{ enable_free_shipping }}" 
@@ -83,6 +106,7 @@
             <div class="icon-full-car {% if difference_free_shipping > 0 %}hidden{% endif %}">{% render 'pdm_icons', icon: 'full-car' %}</div>
           </div>
         </div>
+        <div class="progress-bar__bar" style="width: {{ progress_percentage }}%;"></div>
         <div class="milestone second-milestone {% if difference_free_gift <= 0 %}reach-threshold{% endif %} {% if difference_free_shipping <= 0 and cartTotal > 0 and difference_free_gift > 0 %}gradient{% endif %}">
           <div class="icon-check__second-milestone {% if difference_free_gift > 0 %}hidden{% endif %}">
             {% render 'pdm_icons', icon: 'check' %}
