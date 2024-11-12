@@ -1,0 +1,122 @@
+{% if product != blank %}
+
+    {% assign product_variant = product.variants.first.id %}
+    {% assign product_variant_available = product.variants.first.available %}
+    {% assign product_price = product.price | money_without_trailing_zeros %}
+    {% assign product_price_compare = product.compare_at_price | money_without_trailing_zeros %}
+    {% assign product_price_divided = product.price | divided_by: 4 | money_without_trailing_zeros %}
+    {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
+
+    {% assign __media_limit = 10 %}
+    {% if media_limit != blank %}
+        {% assign __media_limit = media_limit %}
+    {% endif %}
+
+    {% if default_variant != blank %}
+        {% assign product_variant = default_variant %}
+    {% endif %}
+
+    <script>
+        if (typeof bundle_variants === 'undefined') {
+            var bundle_variants = {};
+        }
+        {% if product.variants.size > 0 %}
+            bundle_variants['{{ bundleId }}'] = {};
+            {% for variant in product.variants %}
+                bundle_variants['{{ bundleId }}']['{{ variant.title }}'] = {{ variant.id }};
+            {% endfor %}
+        {% endif %}
+    </script>
+
+    <div class="bfs_bf_item{% if class != blank %} {{ class }}{% endif %}" id="{{ bundleId }}">
+        <div class="bfs_bf_item_slider">
+            <div class="swiper twa__swiper_thumbs" data-section-id="{{ bundleId }}" data-autoplay="false"
+                data-loop="false" data-speed="500" data-mobile="1" data-tablet="1"
+                data-desktop="1" data-arrowleft="twa__swiper_thumbs-{{ bundleId }}-swiper-prev"
+                data-arrowright="twa__swiper_thumbs-{{ bundleId }}-swiper-next">
+                <div id="twa__swiper_thumbs-{{ bundleId }}">
+                    <div class="swiper-wrapper">
+                        {% for media in product.media limit: __media_limit %}
+                            {% assign add_recommended = false %}
+                            {% assign add_preorder = false %}
+
+                            {% if forloop.first and recommended != blank %}
+                                {% assign add_recommended = true %}
+                            {% endif %}
+
+                            {% if forloop.first and preorder != blank %}
+                                {% assign add_preorder = true %}
+                            {% endif %}
+
+                            <div class="swiper-slide">
+                                <div class="bfs_bf_itemSlide{% if add_recommended %} bfs_recommend_wrap{% endif %}">
+                                    <img src="{{ media | img_url: '540x' }}" class="img-fluid" />
+                                    {% if add_recommended %}
+                                        {{ recommended }}
+                                    {% endif %}
+                                    {% if add_preorder %}
+                                        {{ preorder }}
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="thumbsSlider_wrap">
+                    <div id="twa__thumb-{{ bundleId }}" class="swiper-thumbs">
+                        <div class="swiper-wrapper">
+                            {% for media in product.media limit: __media_limit %}
+                                <div class="swiper-slide">
+                                    <div class="bfs_bf_itemThumb">
+                                        <img src="{{ media | img_url: '240x' }}" class="img-fluid" />
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="twa__swiper_thumbs-{{ bundleId }}-swiper-next custom-next swiper-button"
+                        style="color:#fff;">
+                    </div>
+                    <div class="twa__swiper_thumbs-{{ bundleId }}-swiper-prev custom-prev swiper-button"
+                        style="color:#fff;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bfs_bf_item_pdtInfo text-start bf-bundles__content">
+            <div class="bfs_pdtTitle">
+                {{ product.title }}
+            </div>
+            <div class="bfs_pdtPriceWrap">
+                <div class="bfs_pdtPriceAfter">
+                    {{ product_price  }}
+                </div>
+                <div class="bfs_pdtPriceBefore">
+                    {{ product_price_compare }}
+                </div>
+                {% if product.compare_at_price %}
+                    <div class="bfs_pdtPriceOff">
+                        {{ discount_percentage }}% OFF
+                    </div>
+                {% endif %}
+            </div>
+            <div class="payment_method m-0">
+                <p>OR 4 monthly payments {{ product_price_divided }} with</p>
+                <div class="pmt_img ps-2">
+                    <img src="https://qureskincaredns.com/new/assets/bfs_pm.svg" alt="">
+                </div>
+            </div>
+            {{ treatment }}
+        </div>
+            <button data-ajax-cart-request-button="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" onclick="setEventProductHandler('{{ product.handle | escape }}')" class="bfs_bf_item_buyBtn{% if product_variant_available == false and preorder == blank %} soldout{% endif %}" style="--bgPercent:{{ bundlePercent }}%">
+                <div class="stock_left">{{ bundlePercent }}%<div>of stock left</div>
+                </div>
+                {% if preorder != blank %}
+                    <div class="add_cart">Pre-Order Now</div>
+                {% else %}
+                    <div class="add_cart"><span class="me-1">+</span>{% if product_variant_available %}Add to Cart{% else %}Sold out{% endif %}</div>
+                {% endif %}
+            </button>
+        {{ included }}
+    </div>
+{% endif %}

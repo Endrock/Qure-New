@@ -58,6 +58,10 @@
         {% assign main_class = 'bf_sale black_friday_sale' %}
         <link rel="stylesheet" href="{{ 'product-bf-sales.css' | asset_url }}">
         <link rel="stylesheet" href="{{ 'exclusive-holiday-bundle-deal.css' | asset_url }}"> 
+    {% when 'page.exclusive-holiday-bundle-deal' %}
+        {% assign main_class = 'bf_sale black_friday_sale' %}
+        <link rel="stylesheet" href="{{ 'product-bf-sales.css' | asset_url }}">
+        <link rel="stylesheet" href="{{ 'exclusive-holiday-bundle-deal.css' | asset_url }}"> 
     {% when 'page.sunil-bf-sales-us' %}
         {% assign main_class = 'bf_sale' %}
         <link rel="stylesheet" href="{{ 'product-bf-sales.css' | asset_url }}">
