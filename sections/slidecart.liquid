@@ -328,15 +328,6 @@
 
 			<div class="custom-shadow">
 
-				{% comment %} trust pilot {% endcomment %}
-					{% if  cart.item_count > 0  %}
-						{% for block in section.blocks %}
-							{% if block.type == 'trustpilot' %}
-								{% render 'pdm_sidcart-trustpilot', block: block, test_trustpilot: 'b' %}
-							{% endif %}
-						{% endfor %}
-					{% endif %}
-				{% comment %} end trust pilot {% endcomment %}
 				{% assign price_checkInsurance = price_check %}
 				{%- assign insPrice = 0 -%}
 
@@ -508,12 +499,6 @@
 						</button>
 					</div>
 				</form>
-
-				{% for block in section.blocks %}
-					{% if block.type == 'trustpilot' %}
-						{% render 'pdm_sidcart-trustpilot', block: block, test_trustpilot: 'c' %}
-					{% endif %}
-				{% endfor %}
 
 				<div class="payment_info">
 					<p>
@@ -818,34 +803,6 @@
 						"id": "disable",
 						"label": "t:sections.slidecart.blocks.gift.settings.disable.label",
 						"default": false
-					}
-				]
-			},
-			{
-				"name": "trustpilot",
-				"type": "trustpilot",
-				"settings": [
-					{
-						"type": "text",
-						"id": "text_area_first",
-						"label": "first content",
-						"default": "<p>Excellent <b>4.4</b></p>"
-					},
-					{
-						"type": "image_picker",
-						"id": "starts",
-						"label": "imagen starts trustpilot"
-					},
-					{
-						"type": "text",
-						"id": "second_text_content",
-						"label": "second text content",
-						"default": "reviews on"
-					},
-					{
-						"type": "image_picker",
-						"id": "logo",
-						"label": "logo trustpilot"
 					}
 				]
 			},
