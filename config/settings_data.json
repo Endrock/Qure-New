@@ -263,15 +263,6 @@
               "upsell_product_thid_description": "Plump, smooth & brighten in just one step"
             }
           },
-          "trustpilot_a3exnp": {
-            "type": "trustpilot",
-            "settings": {
-              "text_area_first": "<p>Excellent <b>4.5</b></p>",
-              "starts": "shopify://shop_images/stars-4.5_2.svg",
-              "second_text_content": "reviews on",
-              "logo": "shopify://shop_images/logo_truspilot.svg"
-            }
-          }
         },
         "block_order": [
           "saving_FbLdxK",
@@ -280,8 +271,7 @@
           "upsell_8Karyz",
           "upsell_DQMajg",
           "upsell_a74n8t",
-          "upsell_ej4ULU",
-          "trustpilot_a3exnp"
+          "upsell_ej4ULU"
         ],
         "settings": {
           "upsell_heading": "Achieve your skin goals faster",

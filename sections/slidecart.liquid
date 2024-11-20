@@ -336,15 +336,6 @@
 
 			<div class="custom-shadow">
 
-				{% comment %} trust pilot {% endcomment %}
-					{% if  cart.item_count > 0  %}
-						{% for block in section.blocks %}
-							{% if block.type == 'trustpilot' %}
-								{% render 'pdm_sidcart-trustpilot', block: block, test_trustpilot: 'b' %}
-							{% endif %}
-						{% endfor %}
-					{% endif %}
-				{% comment %} end trust pilot {% endcomment %}
 				{% assign price_checkInsurance = price_check %}
 				{%- assign insPrice = 0 -%}
 
@@ -410,10 +401,7 @@
 						{%- if is_only_gift == true -%}
 							<p class="drawer_shipping">&nbsp;</p>
 						{%- else -%}
-							<p style class="drawer_shipping drawer_shiping_original">Shipping</p>
-							{% if price_check >= 100 %}
-								<p class="drawer_shipping drawer_shiping_test">Shipping</p>
-							{% endif %}
+							<p style class="drawer_shipping">Shipping</p>
 						{%- endif -%}
 					</div>
 
@@ -520,12 +508,6 @@
 						</button>
 					</div>
 				</form>
-
-				{% for block in section.blocks %}
-					{% if block.type == 'trustpilot' %}
-						{% render 'pdm_sidcart-trustpilot', block: block, test_trustpilot: 'c' %}
-					{% endif %}
-				{% endfor %}
 
 				<div class="payment_info">
 					<p>
@@ -852,34 +834,6 @@
                     }
                 ]
             },
-			{
-				"name": "trustpilot",
-				"type": "trustpilot",
-				"settings": [
-					{
-						"type": "text",
-						"id": "text_area_first",
-						"label": "first content",
-						"default": "<p>Excellent <b>4.4</b></p>"
-					},
-					{
-						"type": "image_picker",
-						"id": "starts",
-						"label": "imagen starts trustpilot"
-					},
-					{
-						"type": "text",
-						"id": "second_text_content",
-						"label": "second text content",
-						"default": "reviews on"
-					},
-					{
-						"type": "image_picker",
-						"id": "logo",
-						"label": "logo trustpilot"
-					}
-				]
-			},
 			{
 				"name": "upsell",
 				"type": "upsell",
