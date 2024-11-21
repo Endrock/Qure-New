@@ -7,14 +7,13 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "main": {
       "type": "collection",
       "blocks": {
         "banner_MmtDKQ": {
           "type": "banner",
-          "disabled": true,
           "settings": {
             "heading": "BLACK FRIDAY SALE",
             "subheading": "21% Off",

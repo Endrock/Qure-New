@@ -171,6 +171,7 @@
         "video_GAjMEW"
       ],
       "settings": {
+        "seo_heading": "",
         "heading": "Ditch The Make-up: Embrace a New Level of Confidence with Micro-Infusion",
         "heading_mobile": "Ditch The Make-up: Embrace a New Level of Confidence with Micro-Infusion",
         "product": "",
@@ -248,11 +249,11 @@
             "value_prop_img_4": "shopify://shop_images/percent_3.png",
             "value_prop_text_4": "<p>Prefer this <strong>convenient Micro-Infusion treatment</strong> over going to clinic treatments</p>",
             "new_value_prop_title_1": "Stamp",
-            "new_value_prop_text_1": "<p>Virtually painless 24K gold-plated, 0.5 mm microneedles stamp your skin to create controlled trauma.<\/p>",
+            "new_value_prop_text_1": "<p>Virtually painless 24K gold-plated, 0.5 mm microneedles stamp your skin to create controlled trauma.</p>",
             "new_value_prop_title_2": "Infuse",
-            "new_value_prop_text_2": "<p>Microneedles bypass the stratum corneum (the protective outer layer of skin) to infuse science-backed serums.<\/p>",
+            "new_value_prop_text_2": "<p>Microneedles bypass the stratum corneum (the protective outer layer of skin) to infuse science-backed serums.</p>",
             "new_value_prop_title_3": "Absorb",
-            "new_value_prop_text_3": "<p>Powerful active ingredients  are delivered EXACTLY where they’re needed for increased absorption.<\/p>",
+            "new_value_prop_text_3": "<p>Powerful active ingredients  are delivered EXACTLY where they’re needed for increased absorption.</p>",
             "cta_text": "Shop Now",
             "cta_link": "productSubscription"
           }
@@ -261,21 +262,21 @@
           "type": "confidence_slider_block",
           "settings": {
             "heading": "No hype, just evidence.",
-            "text": "<p>The results speak for themselves. In an independent user study, participants' skin was measured and showed proven visible improvement after just 6 fortnightly treatments.<\/p>",
-            "text_first-info": "<p>of participants say their fine lines<strong>looked smoother.<\/strong><\/p>",
+            "text": "<p>The results speak for themselves. In an independent user study, participants' skin was measured and showed proven visible improvement after just 6 fortnightly treatments.</p>",
+            "text_first-info": "<p>of participants say their fine lines<strong>looked smoother.</strong></p>",
             "percent_bar_first-info": 70,
-            "text_second-info": "<p>noticed <strong>results the next day <\/strong>after the first Micro-Infusion treatment.<\/p>",
+            "text_second-info": "<p>noticed <strong>results the next day </strong>after the first Micro-Infusion treatment.</p>",
             "percent_bar_second-info": 93,
-            "text_third-info": "<p>of participants say their skin looked <strong>brighter and more even toned.<\/strong><\/p>",
+            "text_third-info": "<p>of participants say their skin looked <strong>brighter and more even toned.</strong></p>",
             "percent_bar_third-info": 70,
-            "image_slide_first": "shopify:\/\/shop_images\/sn_1.webp",
-            "text_slide_first": "<p>Proven to visually improve <strong>Fine Lines & Wrinkles<\/strong><\/p>",
-            "image_slide_second": "shopify:\/\/shop_images\/sn_2.webp",
-            "text_slide_second": "<p>Proven to visually improve <strong>Large Pores & Skin Texture<\/strong><\/p>",
-            "image_slide_third": "shopify:\/\/shop_images\/sn_3.webp",
-            "text_slide_third": "<p>Proven to visually improve <strong>Dark Spots & Texture<\/strong><\/p>",
-            "image_slide_fourth": "shopify:\/\/shop_images\/sn_4.webp",
-            "text_slide_fourth": "<p>Proven to visually improve <strong>Uneven Skin Tone<\/strong><\/p>"
+            "image_slide_first": "shopify://shop_images/sn_1.webp",
+            "text_slide_first": "<p>Proven to visually improve <strong>Fine Lines & Wrinkles</strong></p>",
+            "image_slide_second": "shopify://shop_images/sn_2.webp",
+            "text_slide_second": "<p>Proven to visually improve <strong>Large Pores & Skin Texture</strong></p>",
+            "image_slide_third": "shopify://shop_images/sn_3.webp",
+            "text_slide_third": "<p>Proven to visually improve <strong>Dark Spots & Texture</strong></p>",
+            "image_slide_fourth": "shopify://shop_images/sn_4.webp",
+            "text_slide_fourth": "<p>Proven to visually improve <strong>Uneven Skin Tone</strong></p>"
           }
         }
       },
@@ -799,6 +800,7 @@
         },
         "result_6FrBJW": {
           "type": "result",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/results_priya.webp",
             "heading": "Plumper, more hydrated!",
@@ -823,6 +825,7 @@
         },
         "result_Eb4G8W": {
           "type": "result",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Shelby_F.png",
             "heading": "Wow amazing",

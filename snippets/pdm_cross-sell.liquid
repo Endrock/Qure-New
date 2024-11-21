@@ -30,7 +30,12 @@
                   <a href="{{ item.product.value.handle }}" title="{{ item.name }}"><img src="{{ item.feature_image | image_url: width: 400, height: 400 }}" alt="{{ item.name }}" class="img-fluid"></a>
               </div>
               <div class="ur_info">
-                  <div class="ur_itemName">{{ item.name }}</div>
+                  {% if settings.show_bf_price == true %}
+                    <div class="save_tag">Save 21% </div>
+                    <div class="ur_itemName pb-2">{{ item.name }}</div>
+                  {% else %}
+                    <div class="ur_itemName">{{ item.name }}</div>
+                  {% endif %}
                   <div class="ur_price_btn">
                       <div class="ur_price">{{ item.product.value.price | money_without_trailing_zeros  }}</div>
                       <div class="ur_btn" data-ajax-cart-request-button="{{ routes.cart_add_url }}?id={{ item.product.value.variants.first.id }}&quantity=1" onclick="setEventProductHandler('{{ item.product.value.handle | escape }}')">
