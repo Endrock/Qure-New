@@ -173,8 +173,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		if(typeof startCartTimer == 'function') {
 			startCartTimer(15 * 60);
 		}
-     // new sidecart timer 
-     initSidecarTimer();
+    // new sidecart timer 
+    const sidecartTimerContainer = document.querySelector('.slide_cart .sidecart-timer-container');
+    initSidecarTimer(sidecartTimerContainer);
 
     	initUpsellSwiper();
 

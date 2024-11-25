@@ -1134,8 +1134,12 @@ document.addEventListener('DOMContentLoaded', function() {
   // end pdm product landing sales
 
   // new sidecart timer 
-  initSidecarTimer();
-  // end sidecart timer
+  const sidecartTimerContainer = document.querySelector('.slide_cart .sidecart-timer-container');
+  initSidecarTimer(sidecartTimerContainer);
+ 
+  // sitewide timer (header) 
+  const siteWideTimerContainer = document.querySelector('.announcement_bar.site-gamification-active .sidecart-timer-container');
+  initSidecarTimer(siteWideTimerContainer);
 
   // site-wide-gamification 
   document.addEventListener('cartUpdated', event => {
@@ -1155,9 +1159,7 @@ document.addEventListener('DOMContentLoaded', function() {
  * @function initSidecarTimer
  * @returns {void} - The function does not return a value.
  */
- function initSidecarTimer () {
-  const sidecartTimerContainer = document.querySelector('.slide_cart .sidecart-timer-container');
-
+ function initSidecarTimer (sidecartTimerContainer) {
   if (!sidecartTimerContainer) return;
 
   let { finishDate, startDate } = sidecartTimerContainer.dataset;
