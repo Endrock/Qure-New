@@ -1,0 +1,46 @@
+/**
+ * Mixin: prefix
+ * 
+ * Adds vendor prefixes to a CSS property with the specified value.
+ * 
+ * @param {string} $property - The CSS property to prefix.
+ * @param {string} $value - The value of the CSS property.
+ * @param {list} $prefixes - A list of vendor prefixes to apply.
+ * 
+ * @example Usage:
+ *   .example {
+ *     @include prefix(transition, all 0.3s ease, webkit moz ms);
+ *   }
+ * 
+ * @returns {CSS} - The prefixed CSS properties.
+ * 
+ * @throws {Warning} - If an unrecognized prefix is provided.
+ */
+@mixin prefix($property, $value, $prefixes) {
+  @each $prefix in $prefixes {
+    @if $prefix == webkit {
+      -webkit-#{$property}: $value;
+    } @else if $prefix == moz {
+      -moz-#{$property}: $value;
+    } @else if $prefix == ms {
+      -ms-#{$property}: $value;
+    } @else if $prefix == o {
+      -o-#{$property}: $value;
+    } @else if $prefix == spec {
+      #{$property}: $value;
+    } @else  {
+      @warn 'Unrecognized prefix: #{$prefix}';
+    }
+  }
+}
+
+/**
+ * Create excerpt
+ * @param $line - Line from apply excerpt
+ */
+@mixin excerpt($line: 2) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+}
