@@ -6,8 +6,11 @@
     padding: 62px 0px 48px 0px;
     max-width:960px;
     display: grid ;
-    grid-template-columns: 43% 51%;
-    gap:6%;
+    grid-template-columns: 43.5% 51.5%;
+    gap:5%;
+    @media (max-width: $tablet-l) {
+    padding: 62px 16px 48px 16px;
+    }
     @media (max-width: $tablet-m) {
       grid-template-columns: 1fr;
       padding: 24px 16px;
