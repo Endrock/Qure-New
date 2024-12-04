@@ -1,0 +1,184 @@
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/theme.scss ***!
+  \**************************************************************************************************************/
+/**
+ * Mixin: prefix
+ * 
+ * Adds vendor prefixes to a CSS property with the specified value.
+ * 
+ * @param {string} $property - The CSS property to prefix.
+ * @param {string} $value - The value of the CSS property.
+ * @param {list} $prefixes - A list of vendor prefixes to apply.
+ * 
+ * @example Usage:
+ *   .example {
+ *     @include prefix(transition, all 0.3s ease, webkit moz ms);
+ *   }
+ * 
+ * @returns {CSS} - The prefixed CSS properties.
+ * 
+ * @throws {Warning} - If an unrecognized prefix is provided.
+ */
+/**
+ * Create excerpt
+ * @param $line - Line from apply excerpt
+ */
+.section-dual-transformation .dual-transformation {
+  padding: 62px 16px 48px 16px;
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: 40% 54%;
+  gap: 6%;
+}
+@media (max-width: 768px) {
+  .section-dual-transformation .dual-transformation {
+    grid-template-columns: 1fr;
+  }
+}
+.section-dual-transformation .container-image {
+  max-width: 416px;
+  width: 100%;
+  margin: auto;
+}
+.section-dual-transformation .img {
+  width: 100%;
+  background: azure;
+  aspect-ratio: 1.58/1;
+}
+.section-dual-transformation .cont-img {
+  width: 100%;
+  border-radius: 16px;
+}
+.section-dual-transformation .top-text {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-items: center;
+  border-radius: 16px 16px 0px 0px;
+  border-right: 1px solid var(--Stroke-01, #D7D9D9);
+  border-top: 1px solid var(--Stroke-01, #D7D9D9);
+  border-left: 1px solid var(--Stroke-01, #D7D9D9);
+  background: #FFF;
+}
+.section-dual-transformation .top-text div {
+  width: 100%;
+  text-align: center;
+}
+.section-dual-transformation .top-text div p {
+  margin: 4px auto;
+  font-family: "Poppins";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  color: #000;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.section-dual-transformation .before {
+  border-right: solid 0.5px var(--Stroke-01, #D7D9D9);
+}
+.section-dual-transformation .after {
+  border-left: solid 0.5px var(--Stroke-01, #D7D9D9);
+}
+.section-dual-transformation .buttom-text {
+  text-align: center;
+  border-radius: 0px 0px 16px 16px;
+  border-right: 1px solid var(--Stroke-01, #D7D9D9);
+  border-bottom: 1px solid var(--Stroke-01, #D7D9D9);
+  border-left: 1px solid var(--Stroke-01, #D7D9D9);
+  background: #F1F1F1;
+}
+.section-dual-transformation .section_caption {
+  font-family: "Poppins";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  color: #000;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+.section-dual-transformation .section_caption strong {
+  font-family: "Poppins";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  color: #000;
+  letter-spacing: normal;
+  text-transform: initial;
+}
+.section-dual-transformation .footer-text {
+  padding-top: 4px;
+  text-align: center;
+}
+.section-dual-transformation .footer-text .link {
+  font-family: "Poppins";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  color: #000;
+  letter-spacing: normal;
+  text-transform: initial;
+  text-decoration: underline;
+}
+.section-dual-transformation .container-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .section-dual-transformation .container-text {
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  .section-dual-transformation .section-title, .section-dual-transformation .section-text {
+    text-align: center;
+  }
+}
+.section-dual-transformation .section-title {
+  font-family: "Poppins";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  color: #000;
+  letter-spacing: normal;
+  text-transform: initial;
+}
+.section-dual-transformation .section-text {
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  color: #000;
+  letter-spacing: normal;
+  text-transform: initial;
+}
+.section-dual-transformation .botton {
+  display: flex;
+  height: 56px;
+  padding: 8px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 100px;
+  background: var(--Black, #000);
+  width: fit-content;
+}
+.section-dual-transformation .section-botton {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--White, #FFF);
+  letter-spacing: 0.2px;
+  text-transform: initial;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+}
