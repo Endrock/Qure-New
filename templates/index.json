@@ -9,6 +9,23 @@
  */
 {
   "sections": {
+    "dual_section_transformation_yx6Xig": {
+      "type": "dual-section-transformation",
+      "settings": {
+        "section_title": "[Username], your results are in.  Let’s transform your signs of aging!",
+        "section_text": "We put together a straightforward, no-nonsense program just for you and your skin. It’s aimed to help you reduce the signs of aging, fine lines and wrinkles, keep your skin smooth, and your confidence high.",
+        "button_text": "Discover Now",
+        "button_link": "shopify://blogs/light-therapy",
+        "before_text": "before",
+        "after_text": "After",
+        "dual_img": "shopify://shop_images/before-after_03b483f7-04ee-4a6b-a887-ee3a4a1bf436.jpg",
+        "user_name": "Ellie V.",
+        "icon_img": "shopify://shop_images/Layer_1_be2f32cf-e586-4583-9959-fb3a68b642d0.svg",
+        "validation_text": "verified customer",
+        "footer_text": "See more transformation",
+        "footer_link": "shopify://blogs/skin"
+      }
+    },
     "main": {
       "type": "mobile-product-slider",
       "blocks": {
@@ -689,26 +706,26 @@
             "text": "<p>Buy Now,</p><p>Pay Later</p>"
           }
         },
-        "icon_MjQxFD": {
-          "type": "icon",
-          "settings": {
-            "image": "shopify://shop_images/derma-ftr.svg",
-            "text": "<p>Dermatologist Tested</p><p>& Approved</p>"
-          }
-        },
         "icon_iah3Eg": {
           "type": "icon",
           "settings": {
             "image": "shopify://shop_images/science-ftr.svg",
             "text": "<p>Proven Results,</p><p>Backed by science</p>"
           }
+        },
+        "icon_MjQxFD": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/derma-ftr.svg",
+            "text": "<p>Dermatologist Tested</p><p>& Approved</p>"
+          }
         }
       },
       "block_order": [
         "icon_wE7DHH",
         "icon_VEziHa",
-        "icon_MjQxFD",
-        "icon_iah3Eg"
+        "icon_iah3Eg",
+        "icon_MjQxFD"
       ],
       "settings": {
         "background": "bg-grey"
@@ -941,7 +958,8 @@
         "heading": "Hello make up free days, goodbye clinical costs",
         "heading_reduced": "",
         "text": "",
-        "text_reduced": ""
+        "text_reduced": "",
+        "design": false
       }
     },
     "tile_JERe9p": {
@@ -1041,6 +1059,7 @@
     }
   },
   "order": [
+    "dual_section_transformation_yx6Xig",
     "main",
     "promotion_main_banner_48gkNr",
     "promotion_main_banner_second_jCUkqh",
