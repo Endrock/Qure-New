@@ -24,15 +24,16 @@
  * @param $line - Line from apply excerpt
  */
 .section-dual-transformation .dual-transformation {
-  padding: 62px 16px 48px 16px;
+  padding: 62px 0px 48px 0px;
   max-width: 960px;
   display: grid;
-  grid-template-columns: 40% 54%;
+  grid-template-columns: 43% 51%;
   gap: 6%;
 }
 @media (max-width: 768px) {
   .section-dual-transformation .dual-transformation {
     grid-template-columns: 1fr;
+    padding: 24px 16px;
   }
 }
 .section-dual-transformation .container-image {
