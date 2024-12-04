@@ -44,6 +44,7 @@
   width: 100%;
   background: azure;
   aspect-ratio: 1.58/1;
+  background-size: contain;
 }
 .section-dual-transformation .cont-img {
   width: 100%;

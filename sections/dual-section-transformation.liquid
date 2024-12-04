@@ -1,14 +1,16 @@
 <style></style>
-{% assign icon_check =  section.settings.icon_img | img_url: 'origin' %}
+{% assign icon_check =  section.settings.icon_img | img_url: 'original' %}
+{% assign main_image =  section.settings.dual_img | img_url: 'original' %}
 <div class="dual-transformation container">
     <div class="container-image">
       {% render 'image-tranformation', 
         wrapper-class: 'cont-img'
-        image: '',
+        image: main_image,
         before-text: section.settings.before_text,
         after-text: section.settings.after_text,
         user-name: section.settings.user_name,
         icon: icon_check,
+        link: section.settings.footer_link,
         verified-text: section.settings.validation_text,
         footer-text: section.settings.footer_text
       %}
@@ -105,7 +107,12 @@
       "id": "footer_text",
       "label": "Footer text",
       "default": "See more transformation"
-    }
+    },
+    {
+      "type": "url",
+      "id": "footer_link",
+      "label": "Button Url"
+    },   
   ],
   "blocks": [],
   "presets": [
