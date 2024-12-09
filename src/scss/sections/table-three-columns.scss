@@ -18,7 +18,7 @@
     }
   }
   .table{
-    max-width:982px;
+    max-width:1046px;
     margin:auto;
   }
   .table-row {
@@ -51,6 +51,8 @@
     height:72px;
     @media (max-width: $tablet-m) {
       height:48px;
+      display: flex ;
+      align-items: center;
     }
   }
   .header-feature{
