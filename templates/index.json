@@ -941,7 +941,8 @@
         "heading": "Hello make up free days, goodbye clinical costs",
         "heading_reduced": "",
         "text": "",
-        "text_reduced": ""
+        "text_reduced": "",
+        "design": false
       }
     },
     "tile_JERe9p": {
@@ -1038,6 +1039,74 @@
         "btn_text": "Claim Free Consultation",
         "btn_url": "https://www.qureskincare.com/pages/skin-consultation"
       }
+    },
+    "table_two_columns_qBzcQK": {
+      "type": "table-two-columns",
+      "blocks": {
+        "row_NXmp3L": {
+          "type": "row",
+          "settings": {
+            "row_title": "Retinol/Tretinoin",
+            "row_content_strong": "Long-Lasting, Root-Cause Solutions",
+            "row_content": "Qure’s targeted products address the  underlying issues for results that last, unlike other treatments that only offer temporary fixes our general solutions."
+          }
+        },
+        "row_kqpFaL": {
+          "type": "row",
+          "settings": {
+            "row_title": "Retinol/Tretinoin",
+            "row_content_strong": "Long-Lasting, Root-Cause Solutions",
+            "row_content": "Qure’s targeted products address the  underlying issues for results that last, unlike other treatments that only offer temporary fixes our general solutions."
+          }
+        }
+      },
+      "block_order": [
+        "row_NXmp3L",
+        "row_kqpFaL"
+      ],
+      "settings": {
+        "section_title": "Think You’ve Tried It All?  Here’s Why Qure Is Different.",
+        "table_left_title": "What You May Have Tried Before",
+        "table_right_title": "Why Qure Stands Out"
+      }
+    },
+    "table_three_columns_p9gt6i": {
+      "type": "table-three-columns",
+      "blocks": {
+        "row_iQpzpW": {
+          "type": "row",
+          "settings": {
+            "row_feature": "Effective, Proven Results",
+            "row_qure": "Targets root causes for lasting change",
+            "qure_check": true,
+            "row_others": "Often only treat symptoms",
+            "others_check": false
+          }
+        },
+        "row_YCFqit": {
+          "type": "row",
+          "settings": {
+            "row_feature": "Effective, Proven Results",
+            "row_qure": "Targets root causes for lasting change",
+            "qure_check": true,
+            "row_others": "Often only treat symptoms",
+            "others_check": false
+          }
+        }
+      },
+      "block_order": [
+        "row_iQpzpW",
+        "row_YCFqit"
+      ],
+      "settings": {
+        "section_title": "Why choose Qure?",
+        "table_feature_title": "Feature",
+        "table_feature_title_mobile": "Why Qure?",
+        "table_qure_title": "shopify://shop_images/logo.svg",
+        "table_others_title": "Others",
+        "check_good": "shopify://shop_images/check-green.svg",
+        "check_error": "shopify://shop_images/check-red.svg"
+      }
     }
   },
   "order": [
@@ -1056,6 +1125,8 @@
     "compare_pPhPQJ",
     "tile_JERe9p",
     "community_QPpfkf",
-    "solution_form_wVyepN"
+    "solution_form_wVyepN",
+    "table_two_columns_qBzcQK",
+    "table_three_columns_p9gt6i"
   ]
 }
