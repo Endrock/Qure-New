@@ -26,6 +26,9 @@
     border-right: 0.5px solid var(--Turquoise, #C8E6DC) !important;
     border-bottom: 0.25px solid var(--Turquoise, #C8E6DC) !important;
   }
+  .header-row, .table-row{
+    display:flex;
+  }
   .header-feature, .row-feature {
     width:40.5%;
     @media (max-width: $tablet-m) {

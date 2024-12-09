@@ -185,6 +185,9 @@
   border-right: 0.5px solid var(--Turquoise, #C8E6DC) !important;
   border-bottom: 0.25px solid var(--Turquoise, #C8E6DC) !important;
 }
+.section-table-thc .header-row, .section-table-thc .table-row {
+  display: flex;
+}
 .section-table-thc .header-feature, .section-table-thc .row-feature {
   width: 40.5%;
 }
