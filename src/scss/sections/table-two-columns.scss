@@ -22,14 +22,14 @@
   }
   .table{
     border-radius: 38px !important;
-    max-width:874px;
+    max-width:1046px;
     margin:auto;
   }
   .table, .header, .body, th, td, tr {
     border: 0.5px solid var(--Turquoise, #C8E6DC) !important;
   }
   .header-title, .row-title{
-    width:184px;
+    width:284px;
     @media (max-width: $tablet-m) {
       width:172px;
       max-width:50%;
