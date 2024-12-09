@@ -177,26 +177,49 @@
   }
 }
 .section-table-thc .table {
-  border-radius: 8px;
   max-width: 982px;
   margin: auto;
 }
-.section-table-thc .table, .section-table-thc .header, .section-table-thc .body, .section-table-thc th, .section-table-thc td, .section-table-thc tr {
-  border: 0.5px solid var(--Turquoise, #C8E6DC) !important;
+.section-table-thc .table-row {
+  border-left: 0.5px solid var(--Turquoise, #C8E6DC) !important;
+  border-right: 0.5px solid var(--Turquoise, #C8E6DC) !important;
+  border-bottom: 0.25px solid var(--Turquoise, #C8E6DC) !important;
 }
 .section-table-thc .header-feature, .section-table-thc .row-feature {
   width: 40.5%;
 }
+@media (max-width: 768px) {
+  .section-table-thc .header-feature, .section-table-thc .row-feature {
+    width: 50%;
+  }
+}
 .section-table-thc .header-qure, .section-table-thc .row-qure {
-  width: 28.4%;
+  width: 28.5%;
+}
+@media (max-width: 768px) {
+  .section-table-thc .header-qure, .section-table-thc .row-qure {
+    width: 25%;
+  }
 }
 .section-table-thc .header-others, .section-table-thc .row-others {
-  width: 30.4%;
+  width: 31%;
+}
+@media (max-width: 768px) {
+  .section-table-thc .header-others, .section-table-thc .row-others {
+    width: 25%;
+  }
+}
+.section-table-thc .header-feature, .section-table-thc .header-others {
+  height: 72px;
+}
+@media (max-width: 768px) {
+  .section-table-thc .header-feature, .section-table-thc .header-others {
+    height: 48px;
+  }
 }
 .section-table-thc .header-feature {
   padding: 16px 48px;
-  align-self: stretch;
-  vertical-align: middle;
+  align-self: end;
   border-radius: 8px 0px 0px 0px;
   background: var(--Black, #000);
 }
@@ -209,21 +232,30 @@
   color: var(--White, #FFF);
   letter-spacing: 0.72px;
   text-transform: initial;
-}
-@media (max-width: 768px) {
-  .section-table-thc .header-feature span {
-    font-size: 24px;
-  }
+  font-size: 24px;
 }
 .section-table-thc .header-feature .mobile {
   display: none;
 }
 @media (max-width: 768px) {
+  .section-table-thc .header-feature {
+    padding: 16px 16px;
+  }
   .section-table-thc .header-feature .mobile {
     display: inline;
+    font-size: 16px;
   }
   .section-table-thc .header-feature .desktop {
     display: none;
+  }
+}
+.section-table-thc .header-qure {
+  height: 104px;
+  border-radius: 8px 8px 0px 0px;
+}
+@media (max-width: 768px) {
+  .section-table-thc .header-qure {
+    height: 68px;
   }
 }
 .section-table-thc .cont-img {
@@ -234,13 +266,26 @@
   border-radius: 100px;
   width: 120px;
   height: 120px;
-  margin: 0 auto 0px auto;
+  margin: -50px auto 0px auto;
+}
+@media (max-width: 768px) {
+  .section-table-thc .cont-img {
+    width: 68px;
+    height: 68px;
+    margin: -30px auto 0px auto;
+  }
+  .section-table-thc .cont-img .logo {
+    width: 30px;
+  }
 }
 .section-table-thc .header-others {
   padding: 16px 48px;
   background: var(--Black, #000);
-  text-align: center;
-  vertical-align: middle;
+  align-self: end;
+  border-radius: 0px 8px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Canela Web";
   font-size: 20px;
   font-style: normal;
@@ -249,6 +294,12 @@
   color: var(--White, #FFF);
   letter-spacing: 0.6px;
   text-transform: initial;
+}
+@media (max-width: 768px) {
+  .section-table-thc .header-others {
+    padding: 16px 16px;
+    font-size: 14px;
+  }
 }
 .section-table-thc .row-feature {
   padding: 24px 48px 16px 48px;
@@ -275,13 +326,24 @@
 }
 .section-table-thc .row-qure, .section-table-thc .row-others {
   padding: 16px 12px;
-  vertical-align: middle;
+  display: flex;
+}
+@media (max-width: 768px) {
+  .section-table-thc .row-qure, .section-table-thc .row-others {
+    justify-content: center;
+    align-items: center;
+  }
 }
 .section-table-thc .row-qure .content, .section-table-thc .row-others .content {
   display: grid;
   grid-template-columns: 24px auto;
   gap: 16px;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .section-table-thc .row-qure .content, .section-table-thc .row-others .content {
+    gap: 0;
+  }
 }
 .section-table-thc .row-qure .text, .section-table-thc .row-others .text {
   font-family: "Poppins";

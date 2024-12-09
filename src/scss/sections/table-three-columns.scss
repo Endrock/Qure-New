@@ -18,26 +18,41 @@
     }
   }
   .table{
-    border-radius: 8px;
     max-width:982px;
     margin:auto;
   }
-  .table, .header, .body, th, td, tr {
-    border: 0.5px solid var(--Turquoise, #C8E6DC) !important;
+  .table-row {
+    border-left: 0.5px solid var(--Turquoise, #C8E6DC) !important;
+    border-right: 0.5px solid var(--Turquoise, #C8E6DC) !important;
+    border-bottom: 0.25px solid var(--Turquoise, #C8E6DC) !important;
   }
   .header-feature, .row-feature {
     width:40.5%;
+    @media (max-width: $tablet-m) {
+      width:50%;
+    }
   }
   .header-qure, .row-qure{
-    width:28.4%;
+    width:28.5%;
+    @media (max-width: $tablet-m) {
+      width:25%;
+    }
   }
   .header-others, .row-others{
-    width:30.4%;
+    width:31%;
+    @media (max-width: $tablet-m) {
+      width:25%;
+    }
+  }
+  .header-feature, .header-others{
+    height:72px;
+    @media (max-width: $tablet-m) {
+      height:48px;
+    }
   }
   .header-feature{
     padding: 16px 48px;
-    align-self: stretch; 
-    vertical-align: middle;
+    align-self: end; 
     border-radius: 8px 0px 0px 0px;
     background: var(--Black, #000);
 
@@ -49,23 +64,29 @@
         $line-height: 40px,
         $letter-spacing: 0.72px,
       );  
-      @media (max-width: $tablet-m) {
-        font-size:24px;
-      }
+      font-size:24px;
     }
     .mobile{
       display:none;
     }
     @media (max-width: $tablet-m) {
+      padding: 16px 16px;
       .mobile{
         display:inline;
+        font-size:16px;
       }
       .desktop{
         display:none;
       }
     }
   }
-
+  .header-qure{
+    height:104px;
+    border-radius: 8px 8px 0px 0px;
+    @media (max-width: $tablet-m) {
+      height:68px;
+    }
+  }
   .cont-img {
     background: black;
     display: flex ;
@@ -74,13 +95,25 @@
     border-radius: 100px;
     width: 120px;
     height: 120px;
-    margin: 0 auto 0px auto;
+    margin: -50px auto 0px auto;
+    @media (max-width: $tablet-m) {
+      width: 68px;
+      height:68px;
+      margin: -30px auto 0px auto;
+      .logo{
+        width:30px;
+      }
+    }
   }
+
   .header-others{
     padding: 16px 48px;
     background: var(--Black, #000); 
-    text-align: center;
-    vertical-align: middle;
+    align-self:end;
+    border-radius: 0px 8px 0px 0px;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
     @include typography(
       $color: var(--White, #FFF),
       $font-family: "Canela Web",
@@ -88,6 +121,10 @@
       $line-height: 32px,
       $letter-spacing: 0.6px,
     );
+    @media (max-width: $tablet-m) {
+      padding:16px 16px;
+      font-size:14px;
+    }
   }
   .row-feature{
     padding: 24px 48px 16px 48px;
@@ -110,12 +147,19 @@
   }
   .row-qure, .row-others{
     padding:16px 12px;
-    vertical-align:middle;
+    display:flex;
+    @media (max-width: $tablet-m) {
+      justify-content: center;
+      align-items: center;
+    }
     .content {
       display: grid;
       grid-template-columns: 24px auto;
       gap: 16px;
       align-items: center;
+      @media (max-width: $tablet-m) {
+        gap:0;
+      }
     }
     .text{
       @include typography(

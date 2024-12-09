@@ -1,26 +1,26 @@
 <div class="table-thc container">
   <h2 class="section-title">{{ section.settings.section_title }}</h2>
   <div class="cont-table">
-    <table class="table">
-      <thead class="header">
-        <tr>
-          <th class="header-feature">
+    <div class="table">
+      <div class="header">
+        <div class="header-row">
+          <div class="header-feature">
             <span class="desktop">{{ section.settings.table_feature_title }}</span>
             <span class="mobile">{{ section.settings.table_feature_title_mobile }}</span>
-          </th>
-          <th class="header-qure">
+          </div>
+          <div class="header-qure">
             <div class="cont-img">
               <img class="logo" src="{{ section.settings.table_qure_title | img_url: 'original' }}" alt="logo">
             </div>
-          </th>
-          <th class="header-others">{{ section.settings.table_others_title }}</th>
-        </tr>
-      </thead>
-      <tbody class="body">
+          </div>
+          <div class="header-others">{{ section.settings.table_others_title }}</div>
+        </div>
+      </div>
+      <div class="t-body">
         {% for block in section.blocks %}
-          <tr class="table-row">
-            <td class="row-feature">{{ block.settings.row_feature }} </td>
-            <td class="row-qure"> 
+          <div class="table-row">
+            <div class="row-feature">{{ block.settings.row_feature }} </div>
+            <div class="row-qure">
               <div class="content">
                 <span class="icon">
                   {% if block.settings.qure_check == true %}
@@ -30,9 +30,9 @@
                   {% endif %}
                 </span>
                 <span class="text">{{ block.settings.row_qure }}</span>
-              </div>            
-            </td>
-            <td class="row-others"> 
+              </div>
+            </div>
+            <div class="row-others">
               <div class="content">
                 <span class="icon">
                   {% if block.settings.others_check == true %}
@@ -43,11 +43,11 @@
                 </span>
                 <span class="text">{{ block.settings.row_others }}</span>
               </div>
-            </td>
-          </tr>
+            </div>
+          </div>
         {% endfor %}
-      </tbody>
-    </table>
+      </div>
+    </div>
   </div>
 </div>
 
