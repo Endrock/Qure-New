@@ -1,0 +1,56 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.section-lifestyle-tips{
+  .lifestyle-tips {
+    max-width: 1348px;
+    margin: auto;
+  }
+  .card{
+    display:grid;
+    grid-template-columns: 50% 50%;
+  }
+  .cont-image {
+    overflow: hidden;
+  }
+  .cont-image {
+    overflow: hidden;
+  }
+  .pagination{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 24px);
+    gap: 8px;
+    .num{
+      border-radius: 24px;
+      border: 1px solid var(--Turquoise, #C8E6DC);
+      height:24px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    .active{
+      height:32px;
+      background: #000;
+      border-color: #000;
+      color: #FFF;
+    }
+  }
+  .arrows {
+    display: grid ;
+    grid-template-columns: 40px 40px;
+    .previous, .next{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      width:40px;
+      height: 40px;
+      opacity:0.3;
+    }
+    .next{
+      transform: rotate(180deg); 
+    }
+    .active{
+      opacity:1;
+    }
+  }
+}

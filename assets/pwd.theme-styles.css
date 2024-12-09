@@ -1,0 +1,76 @@
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/theme.scss ***!
+  \**************************************************************************************************************/
+/**
+ * Mixin: prefix
+ * 
+ * Adds vendor prefixes to a CSS property with the specified value.
+ * 
+ * @param {string} $property - The CSS property to prefix.
+ * @param {string} $value - The value of the CSS property.
+ * @param {list} $prefixes - A list of vendor prefixes to apply.
+ * 
+ * @example Usage:
+ *   .example {
+ *     @include prefix(transition, all 0.3s ease, webkit moz ms);
+ *   }
+ * 
+ * @returns {CSS} - The prefixed CSS properties.
+ * 
+ * @throws {Warning} - If an unrecognized prefix is provided.
+ */
+/**
+ * Create excerpt
+ * @param $line - Line from apply excerpt
+ */
+.section-lifestyle-tips .lifestyle-tips {
+  max-width: 1348px;
+  margin: auto;
+}
+.section-lifestyle-tips .card {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.section-lifestyle-tips .cont-image {
+  overflow: hidden;
+}
+.section-lifestyle-tips .cont-image {
+  overflow: hidden;
+}
+.section-lifestyle-tips .pagination {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 24px);
+  gap: 8px;
+}
+.section-lifestyle-tips .pagination .num {
+  border-radius: 24px;
+  border: 1px solid var(--Turquoise, #C8E6DC);
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-lifestyle-tips .pagination .active {
+  height: 32px;
+  background: #000;
+  border-color: #000;
+  color: #FFF;
+}
+.section-lifestyle-tips .arrows {
+  display: grid;
+  grid-template-columns: 40px 40px;
+}
+.section-lifestyle-tips .arrows .previous, .section-lifestyle-tips .arrows .next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  opacity: 0.3;
+}
+.section-lifestyle-tips .arrows .next {
+  transform: rotate(180deg);
+}
+.section-lifestyle-tips .arrows .active {
+  opacity: 1;
+}

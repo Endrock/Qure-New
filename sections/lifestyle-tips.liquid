@@ -1,0 +1,108 @@
+<div class="lifestyle-tips">
+  <div class="section-header">  
+    <h2>{{ section.settings.section_title }}</h2>
+    <p>{{ section.settings.section_description }}</p>
+  </div>
+  <div class="container-lp">
+    {% for block in section.blocks %}
+      <card-tip class="card"> 
+        <div class="cont-image">
+          <img src="{{ block.settings.image_card | img_url: "original" }}" alt="picture for {{ block.settings.title }}" />
+        </div>
+        <div class="cont-text">
+          <div class="pagination">
+            <div class="num active">1</div>
+            <div class="num">2</div>
+            <div class="num">3</div>
+            <div class="num">4</div>
+            <div class="num">5</div>
+            <div class="num">6</div>
+            <div class="num">7</div>
+            <div class="num">8</div>
+            <div class="num">9</div>
+            <div class="num">10</div>
+            <div class="num">11</div>
+            <div class="num">12</div>
+            <div class="num">13</div>
+            <div class="num">14</div>
+            <div class="num">15</div>
+            <div class="num">16</div>
+            <div class="num">17</div>
+            <div class="num">18</div>
+            <div class="num">19</div>
+            <div class="num">99</div>
+          </div>
+          <div class="full-text">
+            <div class="title">
+              <h3 class="h3">{{ block.settings.title }}</h3>
+            </div>
+            <div class="description">{{ block.settings.description }}</div>
+          </div>
+          <div class="arrows">
+          <div class="previous">{% render "pdm_svg-arrow" %}</div> 
+          <div class="next active">{% render "pdm_svg-arrow" %}</div> 
+          </div>
+        </div>
+      </card-tip>
+    {% endfor %}
+  </div>
+</div>
+{{ 'pwd.theme-styles.css' | asset_url | stylesheet_tag }}
+{% schema %}
+{
+  "name": "Lyfestyle Tips",
+  "tag": "section",
+  "class": "section-lifestyle-tips",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Title",
+      "default": "Skincare is a Lifestyle"
+    },
+    {
+      "type": "text",
+      "id": "section_description",
+      "label": "Description",
+      "default": "Caring for your skin goes beyond the products you use. It’s about adopting habits that support your skin’s health every day. Our dermatologists recommend these expert tips to help you reach your skin goals even faster."
+    }
+  ],
+  "max_blocks": 10;
+  "blocks": [
+    {
+      "type": "tip",
+      "name": "Tip",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Exfoliate 1-2 times per week"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "<p>With an at-home peel that contains Alpha-Hydroxy Acids (AHAs) like glycolic and lactic acids. This will help remove dead skin that has settled into fine lines, making them less visible.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_card",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lyfestyle Tips",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "tip"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
