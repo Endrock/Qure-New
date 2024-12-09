@@ -1040,6 +1040,66 @@
         "btn_url": "https://www.qureskincare.com/pages/skin-consultation"
       }
     },
+    "table_three_columns_p9gt6i": {
+      "type": "table-three-columns",
+      "blocks": {
+        "row_iQpzpW": {
+          "type": "row",
+          "settings": {
+            "row_feature": "Effective, Proven Results",
+            "row_qure": "Targets root causes for lasting change",
+            "qure_check": true,
+            "row_others": "Often only treat symptoms",
+            "others_check": false
+          }
+        },
+        "row_YCFqit": {
+          "type": "row",
+          "settings": {
+            "row_feature": "Gentle on Your Skin, No Downtime",
+            "row_qure": "Gentle with no harsh side effects or downtime",
+            "qure_check": true,
+            "row_others": "Retinol/Tretinoin and laser treatments can be harsh and require downtime",
+            "others_check": false
+          }
+        },
+        "row_HHftU9": {
+          "type": "row",
+          "settings": {
+            "row_feature": "Deeper Penetration, Better Results",
+            "row_qure": "Qure addresses underlying issues and Targets Root Causes for long-term results",
+            "qure_check": true,
+            "row_others": "Topical skincare can’t penetrate deep into the skin.  Doesn’t not address the root cause and may require alternative treatments.",
+            "others_check": false
+          }
+        },
+        "row_hMaQPN": {
+          "type": "row",
+          "settings": {
+            "row_feature": "Dermatologist-Approved",
+            "row_qure": "Reviewed and tested by dermatologists for safety and effectiveness",
+            "qure_check": true,
+            "row_others": "Many treatments are not dermatologist-approved",
+            "others_check": false
+          }
+        }
+      },
+      "block_order": [
+        "row_iQpzpW",
+        "row_YCFqit",
+        "row_HHftU9",
+        "row_hMaQPN"
+      ],
+      "settings": {
+        "section_title": "Why choose Qure?",
+        "table_feature_title": "Feature",
+        "table_feature_title_mobile": "Why Qure?",
+        "table_qure_title": "shopify://shop_images/logo.svg",
+        "table_others_title": "Others",
+        "check_good": "shopify://shop_images/check-green.svg",
+        "check_error": "shopify://shop_images/check-red.svg"
+      }
+    },
     "table_two_columns_qBzcQK": {
       "type": "table-two-columns",
       "blocks": {
@@ -1069,44 +1129,6 @@
         "table_left_title": "What You May Have Tried Before",
         "table_right_title": "Why Qure Stands Out"
       }
-    },
-    "table_three_columns_p9gt6i": {
-      "type": "table-three-columns",
-      "blocks": {
-        "row_iQpzpW": {
-          "type": "row",
-          "settings": {
-            "row_feature": "Effective, Proven Results",
-            "row_qure": "Targets root causes for lasting change",
-            "qure_check": true,
-            "row_others": "Often only treat symptoms",
-            "others_check": false
-          }
-        },
-        "row_YCFqit": {
-          "type": "row",
-          "settings": {
-            "row_feature": "Effective, Proven Results",
-            "row_qure": "Targets root causes for lasting change",
-            "qure_check": true,
-            "row_others": "Often only treat symptoms",
-            "others_check": false
-          }
-        }
-      },
-      "block_order": [
-        "row_iQpzpW",
-        "row_YCFqit"
-      ],
-      "settings": {
-        "section_title": "Why choose Qure?",
-        "table_feature_title": "Feature",
-        "table_feature_title_mobile": "Why Qure?",
-        "table_qure_title": "shopify://shop_images/logo.svg",
-        "table_others_title": "Others",
-        "check_good": "shopify://shop_images/check-green.svg",
-        "check_error": "shopify://shop_images/check-red.svg"
-      }
     }
   },
   "order": [
@@ -1126,7 +1148,7 @@
     "tile_JERe9p",
     "community_QPpfkf",
     "solution_form_wVyepN",
-    "table_two_columns_qBzcQK",
-    "table_three_columns_p9gt6i"
+    "table_three_columns_p9gt6i",
+    "table_two_columns_qBzcQK"
   ]
 }
