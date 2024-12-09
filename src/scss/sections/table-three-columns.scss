@@ -1,0 +1,131 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.section-table-thc{
+  .table-thc{
+    padding: 24px 16px 80px 16px !important;
+  }
+  .section-title{
+    text-align:center;
+    margin-bottom:72px;
+    @include typography(
+      $font-family: "Canela Web",
+      $font-size: 36px,
+      $line-height: 46px,
+    );
+    @media (max-width: $tablet-m) {
+      font-size:34px;
+    }
+  }
+  .table{
+    border-radius: 8px;
+    max-width:982px;
+    margin:auto;
+  }
+  .table, .header, .body, th, td, tr {
+    border: 0.5px solid var(--Turquoise, #C8E6DC) !important;
+  }
+  .header-feature, .row-feature {
+    width:40.5%;
+  }
+  .header-qure, .row-qure{
+    width:28.4%;
+  }
+  .header-others, .row-others{
+    width:30.4%;
+  }
+  .header-feature{
+    padding: 16px 48px;
+    align-self: stretch; 
+    vertical-align: middle;
+    border-radius: 8px 0px 0px 0px;
+    background: var(--Black, #000);
+
+    span{
+      @include typography(
+        $color: var(--White, #FFF),
+        $font-family: "Canela Web",
+        $font-size: 24px,
+        $line-height: 40px,
+        $letter-spacing: 0.72px,
+      );  
+      @media (max-width: $tablet-m) {
+        font-size:24px;
+      }
+    }
+    .mobile{
+      display:none;
+    }
+    @media (max-width: $tablet-m) {
+      .mobile{
+        display:inline;
+      }
+      .desktop{
+        display:none;
+      }
+    }
+  }
+
+  .cont-img {
+    background: black;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 0px auto;
+  }
+  .header-others{
+    padding: 16px 48px;
+    background: var(--Black, #000); 
+    text-align: center;
+    vertical-align: middle;
+    @include typography(
+      $color: var(--White, #FFF),
+      $font-family: "Canela Web",
+      $font-size: 20px,
+      $line-height: 32px,
+      $letter-spacing: 0.6px,
+    );
+  }
+  .row-feature{
+    padding: 24px 48px 16px 48px;
+    @include typography(
+      $font-size: 16px,
+      $font-weight: 700,
+      $line-height: 26px,
+      $letter-spacing: 0.16px,
+    );
+    @media (max-width: $tablet-m) {
+      padding:16px;
+      color: #000;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12px;
+    }
+  }
+  .header-qure, .row-qure{
+    background: #EAF5F2;
+  }
+  .row-qure, .row-others{
+    padding:16px 12px;
+    vertical-align:middle;
+    .content {
+      display: grid;
+      grid-template-columns: 24px auto;
+      gap: 16px;
+      align-items: center;
+    }
+    .text{
+      @include typography(
+        $font-weight: 400,
+        $line-height: 20px,
+        $letter-spacing: 0.14px,
+      );
+      @media (max-width: $tablet-m) {
+        display:none;
+      }
+    }
+  }
+}

@@ -1,0 +1,300 @@
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/theme.scss ***!
+  \**************************************************************************************************************/
+/**
+ * Mixin: prefix
+ * 
+ * Adds vendor prefixes to a CSS property with the specified value.
+ * 
+ * @param {string} $property - The CSS property to prefix.
+ * @param {string} $value - The value of the CSS property.
+ * @param {list} $prefixes - A list of vendor prefixes to apply.
+ * 
+ * @example Usage:
+ *   .example {
+ *     @include prefix(transition, all 0.3s ease, webkit moz ms);
+ *   }
+ * 
+ * @returns {CSS} - The prefixed CSS properties.
+ * 
+ * @throws {Warning} - If an unrecognized prefix is provided.
+ */
+/**
+ * Create excerpt
+ * @param $line - Line from apply excerpt
+ */
+.section-table-tc .table-tc {
+  padding: 24px 16px 80px 16px !important;
+}
+.section-table-tc .section-title {
+  font-family: "Canela Web";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 52px;
+  color: #000;
+  letter-spacing: normal;
+  text-transform: initial;
+  text-align: center;
+  max-width: 464px;
+  margin: 0 auto 40px auto;
+}
+@media (max-width: 768px) {
+  .section-table-tc .section-title {
+    font-size: 24px;
+    margin-top: 12px;
+    margin-bottom: 24px;
+  }
+}
+.section-table-tc .table {
+  border-radius: 38px !important;
+  max-width: 874px;
+  margin: auto;
+}
+.section-table-tc .table, .section-table-tc .header, .section-table-tc .body, .section-table-tc th, .section-table-tc td, .section-table-tc tr {
+  border: 0.5px solid var(--Turquoise, #C8E6DC) !important;
+}
+.section-table-tc .header-title, .section-table-tc .row-title {
+  width: 184px;
+}
+@media (max-width: 768px) {
+  .section-table-tc .header-title, .section-table-tc .row-title {
+    width: 172px;
+    max-width: 50%;
+  }
+}
+.section-table-tc .header-title {
+  padding: 12px 16px;
+  text-align: center;
+  border-radius: 8px 0px 0px 0px;
+  background: var(--Black, #000);
+  vertical-align: middle;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--White, #FFF);
+  letter-spacing: 0.48px;
+  text-transform: initial;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .section-table-tc .header-title {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.42px;
+  }
+}
+.section-table-tc .header-content {
+  height: 64px;
+  padding: 16px 48px;
+  text-align: center;
+  border-radius: 0px 8px 0px 0px;
+  background: var(--Turquoise, #C8E6DC);
+  vertical-align: middle;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  color: #000;
+  letter-spacing: 0.48px;
+  text-transform: initial;
+}
+@media (max-width: 600px) {
+  .section-table-tc .header-content {
+    padding: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.42px;
+  }
+}
+.section-table-tc .row-title {
+  padding: 24px 10px 16px 10px;
+  text-align: center;
+  vertical-align: middle;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  color: #000;
+  letter-spacing: 0.14px;
+  text-transform: initial;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .section-table-tc .row-title {
+    padding: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12px;
+  }
+}
+.section-table-tc .row-content {
+  padding: 16px 12px 16px 32px;
+  background: #EAF5F2;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: #000;
+  letter-spacing: 0.14px;
+  text-transform: initial;
+}
+@media (max-width: 600px) {
+  .section-table-tc .row-content {
+    padding: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12px;
+  }
+  .section-table-tc .row-content span {
+    display: none;
+  }
+}
+
+.section-table-thc .table-thc {
+  padding: 24px 16px 80px 16px !important;
+}
+.section-table-thc .section-title {
+  text-align: center;
+  margin-bottom: 72px;
+  font-family: "Canela Web";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 46px;
+  color: #000;
+  letter-spacing: normal;
+  text-transform: initial;
+}
+@media (max-width: 768px) {
+  .section-table-thc .section-title {
+    font-size: 34px;
+  }
+}
+.section-table-thc .table {
+  border-radius: 8px;
+  max-width: 982px;
+  margin: auto;
+}
+.section-table-thc .table, .section-table-thc .header, .section-table-thc .body, .section-table-thc th, .section-table-thc td, .section-table-thc tr {
+  border: 0.5px solid var(--Turquoise, #C8E6DC) !important;
+}
+.section-table-thc .header-feature, .section-table-thc .row-feature {
+  width: 40.5%;
+}
+.section-table-thc .header-qure, .section-table-thc .row-qure {
+  width: 28.4%;
+}
+.section-table-thc .header-others, .section-table-thc .row-others {
+  width: 30.4%;
+}
+.section-table-thc .header-feature {
+  padding: 16px 48px;
+  align-self: stretch;
+  vertical-align: middle;
+  border-radius: 8px 0px 0px 0px;
+  background: var(--Black, #000);
+}
+.section-table-thc .header-feature span {
+  font-family: "Canela Web";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  color: var(--White, #FFF);
+  letter-spacing: 0.72px;
+  text-transform: initial;
+}
+@media (max-width: 768px) {
+  .section-table-thc .header-feature span {
+    font-size: 24px;
+  }
+}
+.section-table-thc .header-feature .mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .section-table-thc .header-feature .mobile {
+    display: inline;
+  }
+  .section-table-thc .header-feature .desktop {
+    display: none;
+  }
+}
+.section-table-thc .cont-img {
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 0px auto;
+}
+.section-table-thc .header-others {
+  padding: 16px 48px;
+  background: var(--Black, #000);
+  text-align: center;
+  vertical-align: middle;
+  font-family: "Canela Web";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  color: var(--White, #FFF);
+  letter-spacing: 0.6px;
+  text-transform: initial;
+}
+.section-table-thc .row-feature {
+  padding: 24px 48px 16px 48px;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  color: #000;
+  letter-spacing: 0.16px;
+  text-transform: initial;
+}
+@media (max-width: 768px) {
+  .section-table-thc .row-feature {
+    padding: 16px;
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12px;
+  }
+}
+.section-table-thc .header-qure, .section-table-thc .row-qure {
+  background: #EAF5F2;
+}
+.section-table-thc .row-qure, .section-table-thc .row-others {
+  padding: 16px 12px;
+  vertical-align: middle;
+}
+.section-table-thc .row-qure .content, .section-table-thc .row-others .content {
+  display: grid;
+  grid-template-columns: 24px auto;
+  gap: 16px;
+  align-items: center;
+}
+.section-table-thc .row-qure .text, .section-table-thc .row-others .text {
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000;
+  letter-spacing: 0.14px;
+  text-transform: initial;
+}
+@media (max-width: 768px) {
+  .section-table-thc .row-qure .text, .section-table-thc .row-others .text {
+    display: none;
+  }
+}

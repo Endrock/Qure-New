@@ -1,0 +1,115 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.section-table-tc{
+  .table-tc{
+    padding: 24px 16px 80px 16px !important;
+  }
+  .section-title{
+    @include typography(
+      $font-family: "Canela Web",
+      $font-size: 36px,
+      $line-height: 52px,
+    );
+    text-align: center;
+    max-width:464px;
+    margin:0 auto 40px auto;
+    @media (max-width: $tablet-m) {
+      font-size:24px;
+      margin-top:12px;
+      margin-bottom: 24px;
+    }
+  }
+  .table{
+    border-radius: 38px !important;
+    max-width:874px;
+    margin:auto;
+  }
+  .table, .header, .body, th, td, tr {
+    border: 0.5px solid var(--Turquoise, #C8E6DC) !important;
+  }
+  .header-title, .row-title{
+    width:184px;
+    @media (max-width: $tablet-m) {
+      width:172px;
+      max-width:50%;
+    }
+  }
+  .header-title{
+    padding: 12px 16px;
+    text-align:center;
+    border-radius: 8px 0px 0px 0px;
+    background: var(--Black, #000);
+    vertical-align:middle;
+
+    @include typography(
+      $color: var(--White, #FFF),
+      $font-size: 16px,
+      $line-height: 20px,
+      $font-weight: 700,
+      $letter-spacing: 0.48px,
+    );
+    text-align: center;
+    @media (max-width: $tablet-s) {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.42px;
+    }
+  }
+  .header-content{
+    height: 64px;
+    padding: 16px 48px;
+    text-align:center;
+    border-radius: 0px 8px 0px 0px;
+    background: var(--Turquoise, #C8E6DC);
+    vertical-align:middle;
+
+    @include typography(
+      $font-size: 16px,
+      $font-weight: 700,
+      $line-height: 32px,
+      $letter-spacing: 0.48px,
+    );
+    @media (max-width: $tablet-s) {
+      padding: 16px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.42px;
+    }
+  }
+  .row-title{
+    padding: 24px 10px 16px 10px;
+    text-align: center;
+    vertical-align: middle;
+    @include typography(
+      $font-weight: 400,
+      $line-height: 26px,
+      $letter-spacing: 0.14px,
+    );
+    text-align: center;
+    @media (max-width: $tablet-s) {
+      padding: 16px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12px;
+    }
+  }
+  .row-content{
+    padding: 16px 12px 16px 32px;
+    background: #EAF5F2;
+    @include typography(
+      $line-height: 20px,
+      $letter-spacing: 0.14px,
+    );
+    @media (max-width: $tablet-s) {
+      padding: 16px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12px;
+      span{
+        display:none;
+      }
+
+    }
+  }
+}
