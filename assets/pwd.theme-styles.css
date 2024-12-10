@@ -23,42 +23,142 @@
  * Create excerpt
  * @param $line - Line from apply excerpt
  */
+.section-lifestyle-tips {
+  padding: 64px 16px 80px;
+}
+.section-lifestyle-tips .section-header {
+  margin: 0px auto 40px;
+  text-align: center;
+  max-width: 824px;
+}
+.section-lifestyle-tips .section-header h2 {
+  font-family: "Canela Web";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  color: #000;
+  letter-spacing: normal;
+  text-transform: initial;
+}
+.section-lifestyle-tips .section-header p {
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  color: #000;
+  letter-spacing: normal;
+  text-transform: initial;
+}
 .section-lifestyle-tips .lifestyle-tips {
   max-width: 1348px;
   margin: auto;
 }
-.section-lifestyle-tips .card {
-  display: grid;
+.section-lifestyle-tips cards-tips .card {
+  display: none;
   grid-template-columns: 50% 50%;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 8px;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .section-lifestyle-tips cards-tips .card {
+    grid-template-columns: 100%;
+  }
+}
+.section-lifestyle-tips cards-tips .active {
+  display: grid;
 }
 .section-lifestyle-tips .cont-image {
   overflow: hidden;
+  height: 100%;
 }
-.section-lifestyle-tips .cont-image {
-  overflow: hidden;
+.section-lifestyle-tips .cont-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section-lifestyle-tips .cont-text {
+  padding: 66px 13.1% 36px 13.1%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .section-lifestyle-tips .cont-text {
+    padding: 28px 7.1% 32px 7.1%;
+  }
 }
 .section-lifestyle-tips .pagination {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 24px);
+  grid-template-columns: repeat(auto-fill, 40px);
   gap: 8px;
 }
 .section-lifestyle-tips .pagination .num {
   border-radius: 24px;
   border: 1px solid var(--Turquoise, #C8E6DC);
-  height: 24px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  color: #000;
+  letter-spacing: normal;
+  text-transform: initial;
 }
 .section-lifestyle-tips .pagination .active {
-  height: 32px;
+  height: 48px;
   background: #000;
   border-color: #000;
   color: #FFF;
+  cursor: default;
+}
+.section-lifestyle-tips .full-text .h3 {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  font-family: "Canela Web";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  color: #000;
+  letter-spacing: normal;
+  text-transform: initial;
+}
+.section-lifestyle-tips .full-text .description {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+.section-lifestyle-tips .full-text p {
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  color: #000;
+  letter-spacing: -0.014px;
+  text-transform: initial;
 }
 .section-lifestyle-tips .arrows {
   display: grid;
-  grid-template-columns: 40px 40px;
+  grid-template-columns: 1fr 1fr;
+  width: 80px;
+}
+@media (max-width: 768px) {
+  .section-lifestyle-tips .arrows {
+    width: 100%;
+  }
 }
 .section-lifestyle-tips .arrows .previous, .section-lifestyle-tips .arrows .next {
   display: flex;
@@ -71,6 +171,12 @@
 .section-lifestyle-tips .arrows .next {
   transform: rotate(180deg);
 }
+@media (max-width: 768px) {
+  .section-lifestyle-tips .arrows .next {
+    margin: 0 0 0 auto;
+  }
+}
 .section-lifestyle-tips .arrows .active {
   opacity: 1;
+  cursor: pointer;
 }

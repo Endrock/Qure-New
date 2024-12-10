@@ -4,49 +4,112 @@
     <p>{{ section.settings.section_description }}</p>
   </div>
   <div class="container-lp">
+    <cards-tips active-card="1">
     {% for block in section.blocks %}
-      <card-tip class="card"> 
-        <div class="cont-image">
-          <img src="{{ block.settings.image_card | img_url: "original" }}" alt="picture for {{ block.settings.title }}" />
-        </div>
-        <div class="cont-text">
-          <div class="pagination">
-            <div class="num active">1</div>
-            <div class="num">2</div>
-            <div class="num">3</div>
-            <div class="num">4</div>
-            <div class="num">5</div>
-            <div class="num">6</div>
-            <div class="num">7</div>
-            <div class="num">8</div>
-            <div class="num">9</div>
-            <div class="num">10</div>
-            <div class="num">11</div>
-            <div class="num">12</div>
-            <div class="num">13</div>
-            <div class="num">14</div>
-            <div class="num">15</div>
-            <div class="num">16</div>
-            <div class="num">17</div>
-            <div class="num">18</div>
-            <div class="num">19</div>
-            <div class="num">99</div>
-          </div>
-          <div class="full-text">
-            <div class="title">
-              <h3 class="h3">{{ block.settings.title }}</h3>
-            </div>
-            <div class="description">{{ block.settings.description }}</div>
-          </div>
-          <div class="arrows">
-          <div class="previous">{% render "pdm_svg-arrow" %}</div> 
-          <div class="next active">{% render "pdm_svg-arrow" %}</div> 
-          </div>
-        </div>
-      </card-tip>
+      {% render 'card-tip' 
+        class: "test",
+        index: forloop.index,
+        length: forloop.length,
+        active-card:1,
+        image: block.settings.image_card,
+        title: block.settings.title,
+        description: block.settings.description %}
     {% endfor %}
+    </cards-tips>
   </div>
 </div>
+<script>
+window.addEventListener("load", () => {
+  if (!window.customElements.get('cards-tips')) {
+    class CardsTips extends HTMLElement {
+
+      static get observedAttributes() {
+        return ['active-card'];
+      }
+
+      constructor() {
+        super();
+        this.cards = [];
+      }
+
+      connectedCallback() {
+        this.updateCards();
+        this.paginationClick();
+        this.arrowsClick();
+      }
+      attributeChangedCallback(name, oldValue, newValue) {
+        if (name === 'active-card') {
+          this.changeCard(oldValue, newValue);
+        }
+      }
+
+      updateCards() {
+        this.cards = Array.from(this.querySelectorAll('.card'));
+      }
+
+      paginationClick() {
+        const btnsCards = this.querySelectorAll('.pagination .num');
+        if(btnsCards.length < 1) return ;
+        btnsCards.forEach((btn) => {
+          btn.addEventListener('click',() => {
+            this.setAttribute('active-card', btn.dataset.card);
+          })
+        })
+      }
+
+      arrowsClick() {
+        const btnsNext = this.querySelectorAll('.next')
+        const btnsPrevieus = this.querySelectorAll('.previous')
+
+        if( btnsNext.length < 1 && btnsPrevieus < 1) return ;
+
+        btnsNext.forEach((btn) => {
+          btn.addEventListener('click',() => {
+            const nextCard = parseInt(this.getAttribute('active-card')) + 1;
+            if( nextCard > this.cards.length ) return ;
+            this.setAttribute('active-card', nextCard)
+          })
+        });
+
+        btnsPrevieus.forEach((btn) => {
+          btn.addEventListener('click',() => {
+            const previousCard = parseInt(this.getAttribute('active-card')) - 1;
+            if( previousCard < 1 ) return ;
+            this.setAttribute('active-card', previousCard)
+          })
+        });
+      }
+
+      changeCard(oldValue, newValue) {
+
+        if (!newValue || !oldValue || newValue === oldValue) return ;
+
+        if (!this.cards.length) this.updateCards();
+
+        const activatedCard = this.querySelector(`.card[index="${newValue}"]`);
+        const desactivatedCard = this.querySelector(`.card[index="${oldValue}"]`);
+
+        if (activatedCard === desactivatedCard) return;
+        if (!activatedCard) return; 
+
+        if (!desactivatedCard) {
+          this.cards.forEach((card) => {
+            card.classList.remove('active');
+          });
+        } else {
+          desactivatedCard.classList.remove('active');
+        }
+
+        if (activatedCard) {
+          activatedCard.classList.add('active');
+        }
+      }
+    }
+    window.customElements.define('cards-tips', CardsTips);
+  }
+});
+</script>
+
 {{ 'pwd.theme-styles.css' | asset_url | stylesheet_tag }}
 {% schema %}
 {
@@ -67,7 +130,7 @@
       "default": "Caring for your skin goes beyond the products you use. It’s about adopting habits that support your skin’s health every day. Our dermatologists recommend these expert tips to help you reach your skin goals even faster."
     }
   ],
-  "max_blocks": 10;
+  "max_blocks": 10,
   "blocks": [
     {
       "type": "tip",
