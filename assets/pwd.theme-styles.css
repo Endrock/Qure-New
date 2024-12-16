@@ -126,7 +126,6 @@
   text-transform: initial;
 }
 .section-lifestyle-tips .pagination .active {
-  height: 48px;
   background: #000;
   border-color: #000;
   color: #FFF;
