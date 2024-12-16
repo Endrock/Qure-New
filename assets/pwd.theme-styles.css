@@ -30,7 +30,7 @@
   grid-template-columns: 43.5% 51.5%;
   gap: 5%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 768px) {
   .section-dual-transformation .dual-transformation {
     padding: 62px 16px 48px 16px;
   }
@@ -38,7 +38,8 @@
 @media (max-width: 768px) {
   .section-dual-transformation .dual-transformation {
     grid-template-columns: 1fr;
-    padding: 24px 16px;
+    padding: 24px 16px !important;
+    gap: 16px;
   }
 }
 .section-dual-transformation .container-image {
@@ -94,6 +95,7 @@
   border-bottom: 1px solid var(--Stroke-01, #D7D9D9);
   border-left: 1px solid var(--Stroke-01, #D7D9D9);
   background: #F1F1F1;
+  padding: 2px 18px;
 }
 .section-dual-transformation .section_caption {
   font-family: "Poppins";
@@ -115,6 +117,10 @@
   letter-spacing: normal;
   text-transform: initial;
 }
+.section-dual-transformation .section_caption .icon {
+  margin-left: 12px;
+  margin-right: 4px;
+}
 .section-dual-transformation .footer-text {
   padding-top: 4px;
   text-align: center;
@@ -129,6 +135,11 @@
   letter-spacing: normal;
   text-transform: initial;
   text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .section-dual-transformation .footer-text {
+    padding-top: 5px;
+  }
 }
 .section-dual-transformation .container-text {
   display: flex;
@@ -156,6 +167,19 @@
   letter-spacing: normal;
   text-transform: initial;
 }
+@media (max-width: 768px) {
+  .section-dual-transformation .section-title {
+    font-family: "Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    color: #000;
+    letter-spacing: normal;
+    text-transform: initial;
+    margin-bottom: 16px;
+  }
+}
 .section-dual-transformation .section-text {
   font-family: "Poppins";
   font-size: 14px;
@@ -165,6 +189,18 @@
   color: #000;
   letter-spacing: normal;
   text-transform: initial;
+}
+@media (max-width: 768px) {
+  .section-dual-transformation .section-text {
+    font-family: "Poppins";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    color: #000;
+    letter-spacing: normal;
+    text-transform: initial;
+  }
 }
 .section-dual-transformation .botton {
   display: flex;
@@ -177,6 +213,11 @@
   background: var(--Black, #000);
   width: fit-content;
 }
+@media (max-width: 768px) {
+  .section-dual-transformation .botton {
+    height: 44px;
+  }
+}
 .section-dual-transformation .section-botton {
   font-family: "Poppins";
   font-size: 20px;
@@ -188,4 +229,11 @@
   text-transform: initial;
   text-align: center;
   font-feature-settings: "liga" off, "clig" off;
+}
+@media (max-width: 768px) {
+  .section-dual-transformation .section-botton {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.16px;
+  }
 }

@@ -8,12 +8,13 @@
     display: grid ;
     grid-template-columns: 43.5% 51.5%;
     gap:5%;
-    @media (max-width: $tablet-l) {
-    padding: 62px 16px 48px 16px;
+    @media (max-width: $tablet-l) and (min-width: $tablet-m) {
+      padding: 62px 16px 48px 16px;
     }
     @media (max-width: $tablet-m) {
       grid-template-columns: 1fr;
-      padding: 24px 16px;
+      padding: 24px 16px !important;
+      gap:16px;
     }
   }
 
@@ -67,6 +68,7 @@
     border-bottom: 1px solid var(--Stroke-01, #D7D9D9);
     border-left: 1px solid var(--Stroke-01, #D7D9D9);
     background: #F1F1F1;
+    padding:2px 18px;
   }
   .section_caption{
     @include typography(
@@ -81,6 +83,10 @@
         $line-height: 26px,
       );
     }
+    .icon{
+      margin-left:12px;
+      margin-right:4px;
+    }
   }
   .footer-text {
     padding-top: 4px;
@@ -92,6 +98,9 @@
         $line-height: 14px,
       );
       text-decoration: underline;  
+    }
+    @media (max-width: $tablet-m) {
+      padding-top:5px;
     }
   }
   .container-text {
@@ -113,12 +122,25 @@
       $font-size: 24px,
       $line-height: 32px,
     );
+    @media (max-width: $tablet-m) {
+      @include typography(
+      $font-size: 16px,
+      $line-height: 26px,
+      );
+      margin-bottom:16px;
+    }
   }
   .section-text {
     @include typography(
       $font-weight: 400,
       $line-height: 26px,
     );
+    @media (max-width: $tablet-m) {
+      @include typography(
+        $font-size: 12px,
+        $line-height: 22px,
+      );
+    }
   }
   .botton {
     display: flex;
@@ -130,6 +152,9 @@
     border-radius: 100px;
     background: var(--Black, #000);  
     width:fit-content;
+    @media (max-width: $tablet-m) {
+      height: 44px;
+    }
   }
   .section-botton {
     @include typography(
@@ -140,5 +165,10 @@
     );
     text-align: center;
     font-feature-settings: 'liga' off, 'clig' off;
+    @media (max-width: $tablet-m) {
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.16px;
+    }
   }
 }
