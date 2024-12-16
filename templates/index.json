@@ -26,6 +26,44 @@
         "footer_link": "shopify://blogs/skin"
       }
     },
+    "lifestyle_tips_MUfVyJ": {
+      "type": "lifestyle-tips",
+      "blocks": {
+        "tip_PhFnw8": {
+          "type": "tip",
+          "settings": {
+            "title": "Exfoliate 1-2 times per week Exfoliate 1-2 times per weekExfoliate 1-2 times per weekExfoliate 1-2 times per weekExfoliate 1-2 times per week",
+            "description": "<p>With an at-home peel that contains Alpha-Hydroxy Acids (AHAs) like glycolic and lactic acids. This will help remove dead skin that has settled into fine lines, making them less visible. With an at-home peel that contains Alpha-Hydroxy Acids (AHAs) like glycolic and lactic acids. This will help remove dead skin that has settled into fine lines, making them less visible.</p>",
+            "image_card": "shopify://shop_images/image.jpg"
+          }
+        },
+        "tip_nAPRhP": {
+          "type": "tip",
+          "settings": {
+            "title": "2 Exfoliate 1-2 times per week",
+            "description": "<p>With an at-home peel that contains Alpha-Hydroxy Acids (AHAs) like glycolic and lactic acids. This will help remove dead skin that has settled into fine lines, making them less visible.</p>",
+            "image_card": "shopify://shop_images/image.jpg"
+          }
+        },
+        "tip_b8kk7R": {
+          "type": "tip",
+          "settings": {
+            "title": "3 Exfoliate 1-2 times per week",
+            "description": "<p>With an at-home peel that contains Alpha-Hydroxy Acids (AHAs) like glycolic and lactic acids. This will help remove dead skin that has settled into fine lines, making them less visible.</p>",
+            "image_card": "shopify://shop_images/image.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "tip_PhFnw8",
+        "tip_nAPRhP",
+        "tip_b8kk7R"
+      ],
+      "settings": {
+        "section_title": "Skincare is a Lifestyle",
+        "section_description": "Caring for your skin goes beyond the products you use. It’s about adopting habits that support your skin’s health every day. Our dermatologists recommend these expert tips to help you reach your skin goals even faster."
+      }
+    },
     "main": {
       "type": "mobile-product-slider",
       "blocks": {
@@ -1057,44 +1095,6 @@
         "btn_url": "https://www.qureskincare.com/pages/skin-consultation"
       }
     },
-    "lifestyle_tips_MUfVyJ": {
-      "type": "lifestyle-tips",
-      "blocks": {
-        "tip_PhFnw8": {
-          "type": "tip",
-          "settings": {
-            "title": "Exfoliate 1-2 times per week Exfoliate 1-2 times per weekExfoliate 1-2 times per weekExfoliate 1-2 times per weekExfoliate 1-2 times per week",
-            "description": "<p>With an at-home peel that contains Alpha-Hydroxy Acids (AHAs) like glycolic and lactic acids. This will help remove dead skin that has settled into fine lines, making them less visible. With an at-home peel that contains Alpha-Hydroxy Acids (AHAs) like glycolic and lactic acids. This will help remove dead skin that has settled into fine lines, making them less visible.</p>",
-            "image_card": "shopify://shop_images/image.jpg"
-          }
-        },
-        "tip_nAPRhP": {
-          "type": "tip",
-          "settings": {
-            "title": "2 Exfoliate 1-2 times per week",
-            "description": "<p>With an at-home peel that contains Alpha-Hydroxy Acids (AHAs) like glycolic and lactic acids. This will help remove dead skin that has settled into fine lines, making them less visible.</p>",
-            "image_card": "shopify://shop_images/image.jpg"
-          }
-        },
-        "tip_b8kk7R": {
-          "type": "tip",
-          "settings": {
-            "title": "3 Exfoliate 1-2 times per week",
-            "description": "<p>With an at-home peel that contains Alpha-Hydroxy Acids (AHAs) like glycolic and lactic acids. This will help remove dead skin that has settled into fine lines, making them less visible.</p>",
-            "image_card": "shopify://shop_images/image.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "tip_PhFnw8",
-        "tip_nAPRhP",
-        "tip_b8kk7R"
-      ],
-      "settings": {
-        "section_title": "Skincare is a Lifestyle",
-        "section_description": "Caring for your skin goes beyond the products you use. It’s about adopting habits that support your skin’s health every day. Our dermatologists recommend these expert tips to help you reach your skin goals even faster."
-      }
-    },
     "regimen_steps_yYt3kM": {
       "type": "regimen-steps",
       "blocks": {
@@ -1250,6 +1250,10 @@
   },
   "order": [
     "dual_section_transformation_yx6Xig",
+    "lifestyle_tips_MUfVyJ",
+    "regimen_steps_yYt3kM",
+    "table_three_columns_p9gt6i",
+    "table_two_columns_qBzcQK",
     "main",
     "promotion_main_banner_48gkNr",
     "promotion_main_banner_second_jCUkqh",
@@ -1265,10 +1269,6 @@
     "compare_pPhPQJ",
     "tile_JERe9p",
     "community_QPpfkf",
-    "solution_form_wVyepN",
-    "lifestyle_tips_MUfVyJ",
-    "regimen_steps_yYt3kM",
-    "table_three_columns_p9gt6i",
-    "table_two_columns_qBzcQK"
+    "solution_form_wVyepN"
   ]
 }
