@@ -11,6 +11,7 @@ const JS_DIR = path.resolve(__dirname, "../../src/js");
 
 const entry = {
   "pwd.theme-styles": SASS_DIR + "/theme.scss",
+  "pwd.theme-scripts": JS_DIR + "/theme.js",
 };
 
 const output = {
