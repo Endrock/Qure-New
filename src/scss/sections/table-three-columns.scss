@@ -1,0 +1,180 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.section-table-thc{
+  .table-thc{
+    padding: 24px 16px 80px 16px !important;
+  }
+  .section-title{
+    text-align:center;
+    margin-bottom:72px;
+    @include typography(
+      $font-family: "Canela Web",
+      $font-size: 36px,
+      $line-height: 46px,
+    );
+    @media (max-width: $tablet-m) {
+      font-size:34px;
+    }
+  }
+  .table{
+    max-width:1046px;
+    margin:auto;
+  }
+  .table-row {
+    border-left: 0.5px solid var(--Turquoise, #C8E6DC) !important;
+    border-right: 0.5px solid var(--Turquoise, #C8E6DC) !important;
+    border-bottom: 0.25px solid var(--Turquoise, #C8E6DC) !important;
+  }
+  .header-row, .table-row{
+    display:flex;
+  }
+  .header-feature, .row-feature {
+    width:40.5%;
+    @media (max-width: $tablet-m) {
+      width:50%;
+    }
+  }
+  .header-qure, .row-qure{
+    width:28.5%;
+    @media (max-width: $tablet-m) {
+      width:25%;
+    }
+  }
+  .header-others, .row-others{
+    width:31%;
+    @media (max-width: $tablet-m) {
+      width:25%;
+    }
+  }
+  .header-feature, .header-others{
+    height:72px;
+    @media (max-width: $tablet-m) {
+      height:48px;
+      display: flex ;
+      align-items: center;
+    }
+  }
+  .header-feature{
+    padding: 16px 48px;
+    align-self: end; 
+    border-radius: 8px 0px 0px 0px;
+    background: var(--Black, #000);
+
+    span{
+      @include typography(
+        $color: var(--White, #FFF),
+        $font-family: "Canela Web",
+        $font-size: 24px,
+        $line-height: 40px,
+        $letter-spacing: 0.72px,
+      );  
+      font-size:24px;
+    }
+    .mobile{
+      display:none;
+    }
+    @media (max-width: $tablet-m) {
+      padding: 16px 16px;
+      .mobile{
+        display:inline;
+        font-size:16px;
+      }
+      .desktop{
+        display:none;
+      }
+    }
+  }
+  .header-qure{
+    height:104px;
+    border-radius: 8px 8px 0px 0px;
+    @media (max-width: $tablet-m) {
+      height:68px;
+    }
+  }
+  .cont-img {
+    background: black;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    width: 120px;
+    height: 120px;
+    margin: -50px auto 0px auto;
+    @media (max-width: $tablet-m) {
+      width: 68px;
+      height:68px;
+      margin: -30px auto 0px auto;
+      .logo{
+        width:30px;
+      }
+    }
+  }
+
+  .header-others{
+    padding: 16px 48px;
+    background: var(--Black, #000); 
+    align-self:end;
+    border-radius: 0px 8px 0px 0px;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    @include typography(
+      $color: var(--White, #FFF),
+      $font-family: "Canela Web",
+      $font-size: 20px,
+      $line-height: 32px,
+      $letter-spacing: 0.6px,
+    );
+    @media (max-width: $tablet-m) {
+      padding:16px 16px;
+      font-size:14px;
+    }
+  }
+  .row-feature{
+    padding: 24px 48px 16px 48px;
+    @include typography(
+      $font-size: 16px,
+      $font-weight: 700,
+      $line-height: 26px,
+      $letter-spacing: 0.16px,
+    );
+    @media (max-width: $tablet-m) {
+      padding:16px;
+      color: #000;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12px;
+    }
+  }
+  .header-qure, .row-qure{
+    background: #EAF5F2;
+  }
+  .row-qure, .row-others{
+    padding:16px 12px;
+    display:flex;
+    @media (max-width: $tablet-m) {
+      justify-content: center;
+      align-items: center;
+    }
+    .content {
+      display: grid;
+      grid-template-columns: 24px auto;
+      gap: 16px;
+      align-items: center;
+      @media (max-width: $tablet-m) {
+        gap:0;
+      }
+    }
+    .text{
+      @include typography(
+        $font-weight: 400,
+        $line-height: 20px,
+        $letter-spacing: 0.14px,
+      );
+      @media (max-width: $tablet-m) {
+        display:none;
+      }
+    }
+  }
+}
