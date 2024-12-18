@@ -8,14 +8,15 @@ const dermFeatureInit = () => {
         }
 
         connectedCallback() {
-          const swiper = new Swiper(".sdf", {
+          const swiper = new Swiper(this.querySelector(".sdf"), {
             slidesPerView: 'auto',
             spaceBetween: 40,
             loop:true,
             centeredSlides: true,
             breakpoints:{
               600:{
-                centeredSlides: false
+                centeredSlides: false,
+                loop:true
               }
             },
             pagination: {

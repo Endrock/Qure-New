@@ -41,14 +41,15 @@ var dermFeatureInit = function dermFeatureInit() {
         return _createClass(SliderDermFeature, [{
           key: "connectedCallback",
           value: function connectedCallback() {
-            var swiper = new Swiper(".sdf", {
+            var swiper = new Swiper(this.querySelector(".sdf"), {
               slidesPerView: 'auto',
               spaceBetween: 40,
               loop: true,
               centeredSlides: true,
               breakpoints: {
                 600: {
-                  centeredSlides: false
+                  centeredSlides: false,
+                  loop: true
                 }
               },
               pagination: {
