@@ -941,7 +941,8 @@
         "heading": "Hello make up free days, goodbye clinical costs",
         "heading_reduced": "",
         "text": "",
-        "text_reduced": ""
+        "text_reduced": "",
+        "design": false
       }
     },
     "tile_JERe9p": {
@@ -1038,6 +1039,60 @@
         "btn_text": "Claim Free Consultation",
         "btn_url": "https://www.qureskincare.com/pages/skin-consultation"
       }
+    },
+    "slider_derm_feature_MdfEL6": {
+      "type": "slider-derm-feature",
+      "blocks": {
+        "slide_df_JeUeUi": {
+          "type": "slide-df",
+          "settings": {
+            "review_doctor": "“Qure has a really good serum. It probably has the best-known peptide complex. It’s an amazing serum. This product is always sold out from Qure. So get it when you see it.”",
+            "name_doctor": "Dr Shah and Dr Maxfield",
+            "certified_doctor": "Board-Certified Dermatologists",
+            "video": "shopify://files/videos/-afc6-4003-b682-4e808c7172b1.mov",
+            "product": "face-serum"
+          }
+        },
+        "slide_df_YydYKf": {
+          "type": "slide-df",
+          "settings": {
+            "review_doctor": "“Qure has a really good serum. It probably has the best-known peptide complex. It’s an amazing serum. This product is always sold out from Qure. So get it when you see it.”",
+            "name_doctor": "Dr Shah and Dr Maxfield",
+            "certified_doctor": "Board-Certified Dermatologists",
+            "video": "shopify://files/videos/Snapinsta.app_video_An-zPuKMEldgDdItZPmS1z8PtOGTmDvK86ZUxNVs13gpvQ0ErxsmxN2EhomtOTtPITVnvDlYWVR39GEcXVtNfro.mp4",
+            "product": "micro-infusion-darkspots-treatments"
+          }
+        },
+        "slide_df_rtDgAe": {
+          "type": "slide-df",
+          "settings": {
+            "review_doctor": "“Qure has a really good serum. It probably has the best-known peptide complex. It’s an amazing serum. This product is always sold out from Qure. So get it when you see it.”",
+            "name_doctor": "Dr Shah and Dr Maxfield",
+            "certified_doctor": "Board-Certified Dermatologists",
+            "video": "shopify://files/videos/Snapinsta.app_video_An8uvQ3W-uPvNshj36DLSRmfB2Ao-S2WApAJIO90ty_OLoaIIjaftK3jepRCm-wur-z3dmWpcBmZyEp3EGEvz9fW.mp4",
+            "product": "the-face-serum-sample"
+          }
+        },
+        "slide_df_GRY66X": {
+          "type": "slide-df",
+          "settings": {
+            "review_doctor": "“Qure has a really good serum. It probably has the best-known peptide complex. It’s an amazing serum. This product is always sold out from Qure. So get it when you see it.”",
+            "name_doctor": "Dr Shah and Dr Maxfield",
+            "certified_doctor": "Board-Certified Dermatologists",
+            "video": "shopify://files/videos/MICRO INFUSION_fin.mp4",
+            "product": "line-refine-bundle-advanced"
+          }
+        }
+      },
+      "block_order": [
+        "slide_df_JeUeUi",
+        "slide_df_YydYKf",
+        "slide_df_rtDgAe",
+        "slide_df_GRY66X"
+      ],
+      "settings": {
+        "title": "Slider Derm Feature"
+      }
     }
   },
   "order": [
@@ -1056,6 +1111,7 @@
     "compare_pPhPQJ",
     "tile_JERe9p",
     "community_QPpfkf",
-    "solution_form_wVyepN"
+    "solution_form_wVyepN",
+    "slider_derm_feature_MdfEL6"
   ]
 }
