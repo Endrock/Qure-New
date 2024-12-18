@@ -1,0 +1,182 @@
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/theme.scss ***!
+  \**************************************************************************************************************/
+/**
+ * Mixin: prefix
+ * 
+ * Adds vendor prefixes to a CSS property with the specified value.
+ * 
+ * @param {string} $property - The CSS property to prefix.
+ * @param {string} $value - The value of the CSS property.
+ * @param {list} $prefixes - A list of vendor prefixes to apply.
+ * 
+ * @example Usage:
+ *   .example {
+ *     @include prefix(transition, all 0.3s ease, webkit moz ms);
+ *   }
+ * 
+ * @returns {CSS} - The prefixed CSS properties.
+ * 
+ * @throws {Warning} - If an unrecognized prefix is provided.
+ */
+/**
+ * Create excerpt
+ * @param $line - Line from apply excerpt
+ */
+.section-slider-derm-feature .slider-derm-feature {
+  margin: 80px 16px;
+}
+.section-slider-derm-feature .section-title {
+  text-align: center;
+  font-family: "Canela Web";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 46px;
+  color: #000;
+  letter-spacing: normal;
+  text-transform: initial;
+  margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .section-slider-derm-feature .section-title {
+    font-size: 34px;
+  }
+}
+.section-slider-derm-feature .swiper {
+  width: 100%;
+  height: 100%;
+}
+.section-slider-derm-feature .swiper-wrapper {
+  margin-bottom: 40px;
+}
+.section-slider-derm-feature .slide-cont {
+  border-radius: 8px;
+  border: 1px solid var(--Turquoise, #C8E6DC);
+  background: #FFF;
+}
+.section-slider-derm-feature .swiper-slide {
+  max-width: 636px;
+  height: 100%;
+}
+@media (max-width: 600px) {
+  .section-slider-derm-feature .swiper-slide {
+    max-width: 315px;
+  }
+}
+.section-slider-derm-feature .slide-cont {
+  max-width: 636px;
+  height: 420px;
+  display: grid;
+  grid-template-columns: 236px auto;
+  border-radius: 8px;
+  border: 1px solid var(--Turquoise, #C8E6DC);
+  background: #FFF;
+  overflow: hidden;
+}
+@media (max-width: 600px) {
+  .section-slider-derm-feature .slide-cont {
+    grid-template-columns: 100%;
+    max-width: 315px;
+    height: 820px;
+    grid-template-rows: 412px auto;
+  }
+}
+.section-slider-derm-feature .video-cont {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.section-slider-derm-feature .video-cont video {
+  width: 100%;
+}
+@media (max-width: 600px) {
+  .section-slider-derm-feature .video-cont video {
+    height: 100%;
+  }
+}
+.section-slider-derm-feature .text-cont {
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .section-slider-derm-feature .text-cont {
+    padding: 24px;
+  }
+}
+.section-slider-derm-feature .review {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  color: #000;
+  letter-spacing: normal;
+  text-transform: initial;
+  margin-bottom: 24px;
+}
+.section-slider-derm-feature .doctor-info .link-product:hover {
+  color: #000 !important;
+}
+.section-slider-derm-feature .doctor-info .doctor {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  color: #000;
+  letter-spacing: normal;
+  text-transform: initial;
+}
+.section-slider-derm-feature .doctor-info .certified {
+  font-family: "Poppins";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: normal;
+  text-transform: initial;
+  font-feature-settings: "liga" off, "clig" off;
+  margin-bottom: 32px;
+}
+@media (max-width: 600px) {
+  .section-slider-derm-feature .doctor-info .certified {
+    margin-bottom: 24px;
+  }
+}
+.section-slider-derm-feature .link-product {
+  display: grid;
+  grid-template-columns: 80px auto;
+  grid-template-rows: 74px;
+  gap: 8px;
+  align-items: center;
+}
+.section-slider-derm-feature .thumbs-product {
+  width: 80px;
+  height: 74px;
+}
+.section-slider-derm-feature .name-product {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000;
+  letter-spacing: 0.5px;
+  text-transform: initial;
+}
+.section-slider-derm-feature .sdf-pagination {
+  display: flex;
+  justify-content: center;
+}

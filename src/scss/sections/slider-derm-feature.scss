@@ -1,0 +1,134 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.section-slider-derm-feature{
+  .slider-derm-feature{
+    margin:80px 16px;
+  }
+  .section-title{
+    text-align:center;
+    @include typography(
+      $font-family: "Canela Web",
+      $font-size: 36px,
+      $line-height: 46px,
+    );
+    margin-bottom:40px;
+    @media (max-width: $tablet-m) {
+      font-size: 34px;
+    }
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-wrapper{
+    margin-bottom:40px;
+  }
+  .slide-cont {
+    border-radius: 8px;
+    border: 1px solid var(--Turquoise, #C8E6DC);
+    background: #FFF;
+  }
+  .swiper-slide {
+    max-width: 636px;
+    height: 100%;
+    @media (max-width: $tablet-s) {
+      max-width:315px;
+    }
+    
+  }
+  .slide-cont{
+    max-width:636px;
+    height:420px;
+    display:grid;
+    grid-template-columns:236px auto;
+    border-radius: 8px;
+    border: 1px solid var(--Turquoise, #C8E6DC);
+    background: #FFF;
+    overflow: hidden;
+    @media (max-width: $tablet-s) {
+      grid-template-columns: 100%;
+      max-width:315px;
+      height:820px;
+      grid-template-rows: 412px auto;
+    }
+  }
+  .video-cont{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    video{
+      width:100%;
+      @media (max-width: $tablet-s) {
+        height:100%;
+      }
+    }
+  }
+  .text-cont {
+    padding: 40px 32px;
+    display: flex ;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (max-width: $tablet-m) {
+      padding: 24px;
+    }
+  }
+  .review{
+    @include excerpt(6);
+    @include typography(
+      $font-weight: 400,
+      $line-height: 26px,
+    );
+    margin-bottom:24px;
+  }
+  .doctor-info{
+    .link-product:hover{
+      color:#000 !important;
+    }
+    .doctor{
+      @include typography(
+        $font-size: 16px,
+        $font-style: normal,
+        $font-weight: 600,
+        $line-height: 26px,
+      );
+    }
+    .certified{
+      @include typography(
+        $color: rgba(0, 0, 0, 0.50),
+        $font-size: 12px,
+        $font-weight: 400,
+        $line-height: 20px,
+      );
+      font-feature-settings: 'liga' off, 'clig' off;
+      margin-bottom:32px;
+      @media (max-width: $tablet-s) {
+        margin-bottom:24px;
+      }
+    }
+  }    
+  .link-product {
+    display: grid ;
+    grid-template-columns: 80px auto;
+    grid-template-rows: 74px;
+    gap: 8px;
+    align-items: center;
+  }
+  .thumbs-product{
+    width:80px;
+    height:74px;
+  }
+  .name-product{
+    @include excerpt(2);
+    @include typography(
+      $font-weight: 400,
+      $line-height: 24px,
+      $letter-spacing: 0.5px,
+    );
+  }
+  .sdf-pagination {
+    display: flex ;
+    justify-content: center;
+  }
+}
+

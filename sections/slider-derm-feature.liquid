@@ -1,0 +1,90 @@
+<div class="slider-derm-feature">
+  <h2 class="section-title">{{ section.settings.title }}</h2>
+
+  <slider-df class="slider-container">
+    <div class="swiper sdf">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+
+          {% render 'derm-feature-slide' 
+          video: block.settings.video,
+          review: block.settings.review_doctor,
+          doctor: block.settings.name_doctor,
+          certified: block.settings.certified_doctor,
+          product: block.settings.product %}
+
+        {% endfor %}
+      </div>
+      <div class="sdf-pagination"></div>
+    </div>
+  </slider-df>
+</div>
+{{ 'pwd.theme-styles.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+  "name": "Slider Derm Feature",
+  "tag": "section",
+  "class": "section-slider-derm-feature",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Título de la sección",
+      "id": "title",
+      "default": "Trustworthy skincare recommended by Dermatologist"
+    }
+  ],
+  "max_blocks":20,
+  "blocks":[
+    {
+      "name":"slide-df",
+      "type":"slide-df",
+      "settings":[
+        {
+          "type": "text",
+          "id": "review_doctor",
+          "label": "Review",
+          "default": "“Qure has a really good serum. It probably has the best-known peptide complex. It’s an amazing serum. This product is always sold out from Qure. So get it when you see it.”"
+        },
+        {
+          "type": "text",
+          "id": "name_doctor",
+          "label": "Doctor Name",
+          "default": "Dr Shah and Dr Maxfield"
+        },
+        {
+          "type": "text",
+          "id": "certified_doctor",
+          "label": "Doctor Certified",
+          "default": "Board-Certified Dermatologists"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video review"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Slider Derm Feature",
+      "settings": {
+        "title": "Slider Derm Feature"
+      },
+      "blocks":[
+        {
+          "type":"slide-df"
+        }
+      ]
+    }
+  ],
+}
+{% endschema %}
+
+
