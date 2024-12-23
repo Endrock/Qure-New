@@ -2,6 +2,46 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/components/pwd-results-slider.js":
+/*!*************************************************!*\
+  !*** ./src/js/components/pwd-results-slider.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var resultsSliderInit = function resultsSliderInit() {
+  window.addEventListener("load", function () {
+    var swiper = new Swiper(".pwd-result_slider", {
+      spaceBetween: 38,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        centeredSlides: true
+      },
+      breakpoints: {
+        556: {
+          slidesPerView: 1,
+          centeredSlidesBounds: true
+        },
+        768: {
+          slidesPerView: 2,
+          centeredSlides: false
+        },
+        1024: {
+          slidesPerView: 3,
+          centeredSlides: false
+        }
+      }
+    });
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (resultsSliderInit);
+
+/***/ }),
+
 /***/ "./src/js/components/slider-derm-feature.js":
 /*!**************************************************!*\
   !*** ./src/js/components/slider-derm-feature.js ***!
@@ -132,9 +172,11 @@ var __webpack_exports__ = {};
   \*************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_slider_derm_feature__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/slider-derm-feature */ "./src/js/components/slider-derm-feature.js");
+/* harmony import */ var _components_pwd_results_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/pwd-results-slider */ "./src/js/components/pwd-results-slider.js");
 
-console.log('theme.js Carlos Rocha');
+
 (0,_components_slider_derm_feature__WEBPACK_IMPORTED_MODULE_0__["default"])();
+(0,_components_pwd_results_slider__WEBPACK_IMPORTED_MODULE_1__["default"])();
 })();
 
 /******/ })()

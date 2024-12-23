@@ -6,7 +6,6 @@ const dermFeatureInit = () => {
         constructor() {
           super();
         }
-
         connectedCallback() {
           const swiper = new Swiper(this.querySelector(".sdf"), {
             slidesPerView: 'auto',
