@@ -1050,6 +1050,8 @@
             "name_doctor": "Dr Shah and Dr Maxfield",
             "certified_doctor": "Board-Certified Dermatologists",
             "video": "shopify://files/videos/-afc6-4003-b682-4e808c7172b1.mov",
+            "video_external": "",
+            "img": "shopify://shop_images/Rectangle_1_b5f8a216-7cce-4747-b842-69fc2f2b6a0c.png",
             "product": "face-serum"
           }
         },
@@ -1060,6 +1062,8 @@
             "name_doctor": "Dr Shah and Dr Maxfield",
             "certified_doctor": "Board-Certified Dermatologists",
             "video": "shopify://files/videos/Snapinsta.app_video_An-zPuKMEldgDdItZPmS1z8PtOGTmDvK86ZUxNVs13gpvQ0ErxsmxN2EhomtOTtPITVnvDlYWVR39GEcXVtNfro.mp4",
+            "video_external": "",
+            "img": "shopify://shop_images/Dermal_Mist_video_cover.png",
             "product": "micro-infusion-darkspots-treatments"
           }
         },
@@ -1070,6 +1074,8 @@
             "name_doctor": "Dr Shah and Dr Maxfield",
             "certified_doctor": "Board-Certified Dermatologists",
             "video": "shopify://files/videos/Snapinsta.app_video_An8uvQ3W-uPvNshj36DLSRmfB2Ao-S2WApAJIO90ty_OLoaIIjaftK3jepRCm-wur-z3dmWpcBmZyEp3EGEvz9fW.mp4",
+            "video_external": "",
+            "img": "shopify://shop_images/all_serum_product_7.webp",
             "product": "face-serum"
           }
         },
@@ -1080,6 +1086,8 @@
             "name_doctor": "Dr Shah and Dr Maxfield",
             "certified_doctor": "Board-Certified Dermatologists",
             "video": "shopify://files/videos/MICRO INFUSION_fin.mp4",
+            "video_external": "",
+            "img": "shopify://shop_images/all_serum_product_11.webp",
             "product": "breakout-control-essentials"
           }
         }
@@ -1091,7 +1099,63 @@
         "slide_df_GRY66X"
       ],
       "settings": {
-        "title": "Slider Derm Feature"
+        "title": "Slider Derm Feature",
+        "icon_play": "shopify://shop_images/video_-_icon_3738742f-5e8c-4865-85d0-2542dd518ef6.svg"
+      }
+    },
+    "pwd_results_slider_6ejTUB": {
+      "type": "pwd-results-slider",
+      "blocks": {
+        "slide_PG8KEU": {
+          "type": "slide",
+          "settings": {
+            "heading": "Wish I had this technology years ago!",
+            "before": "BEFORE",
+            "after": "AFTER",
+            "image": "shopify://shop_images/before-after_03b483f7-04ee-4a6b-a887-ee3a4a1bf436.jpg",
+            "text": "<p>After two weeks I began to see results and after six weeks the changes in my skin were dramatic. I have now been using Qure six months and loving the compliments! I bought masks for my daughters for Christmas so they could start at a younger age.... I wish this technology had been available when I was younger. I am 76 years old!</p>",
+            "image_country": "shopify://shop_images/Flag_of_the_United_States_1.svg",
+            "client": "Carlos Carlos",
+            "verified": true,
+            "product": "face-serum"
+          }
+        },
+        "slide_gq7QDe": {
+          "type": "slide",
+          "settings": {
+            "heading": "Wish I had this technology years ago!",
+            "before": "BEFORE",
+            "after": "AFTER",
+            "image": "shopify://shop_images/before-after_03b483f7-04ee-4a6b-a887-ee3a4a1bf436.jpg",
+            "text": "<p>After two weeks I began to see results and after six weeks the changes in my skin were dramatic. I have now been using Qure six months and loving the compliments! I bought masks for my daughters for Christmas so they could start at a younger age.... I wish this technology had been available when I was younger. I am 76 years old!</p>",
+            "image_country": "shopify://shop_images/Flag_of_the_United_States_1.svg",
+            "client": "David David",
+            "verified": true,
+            "product": "breakout-control-advanced"
+          }
+        },
+        "slide_fMjahL": {
+          "type": "slide",
+          "settings": {
+            "heading": "Wish I had this technology years ago!",
+            "before": "BEFORE",
+            "after": "AFTER",
+            "image": "shopify://shop_images/before-after_03b483f7-04ee-4a6b-a887-ee3a4a1bf436.jpg",
+            "text": "<p>After two weeks I began to see results and after six weeks the changes in my skin were dramatic. I have now been using Qure six months and loving the compliments! I bought masks for my daughters for Christmas so they could start at a younger age.... I wish this technology had been available when I was younger. I am 76 years old!</p>",
+            "image_country": "shopify://shop_images/Flag_of_the_United_States_1.svg",
+            "client": "Miller Miller",
+            "verified": true,
+            "product": "q-rejuvalight-pro-led-mask-neck-decolletage-led-extended-1-year-warranty"
+          }
+        }
+      },
+      "block_order": [
+        "slide_PG8KEU",
+        "slide_gq7QDe",
+        "slide_fMjahL"
+      ],
+      "settings": {
+        "heading": "No promises, just proof"
       }
     }
   },
@@ -1112,6 +1176,7 @@
     "tile_JERe9p",
     "community_QPpfkf",
     "solution_form_wVyepN",
-    "slider_derm_feature_MdfEL6"
+    "slider_derm_feature_MdfEL6",
+    "pwd_results_slider_6ejTUB"
   ]
 }
