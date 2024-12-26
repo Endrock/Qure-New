@@ -9,8 +9,9 @@ product: block.settings.product %}
 
 <div class="swiper-slide">
   <div class="slide-cont">
-    <div class="video-cont">
-      {{ video | video_tag: autoplay: false, loop: true, muted: false, controls: true }}
+    <div class="video-cont" data-index="{{ index }}">
+      <img class="img-overlay" src="{{ img_ovl | img_url: 'original' }}" alt="video overlay image"></img>
+      <img class="img-icon-play" src="{{ img_play | img_url: 'original' }}" alt="video overlay image"></img>
     </div>
     <div class="text-cont">
       <div class="review">

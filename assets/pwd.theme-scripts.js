@@ -97,6 +97,47 @@ var dermFeatureInit = function dermFeatureInit() {
                 clickable: true
               }
             });
+            this.clickVideo();
+          }
+        }, {
+          key: "clickVideo",
+          value: function clickVideo() {
+            var _this = this;
+            var slides = this.querySelectorAll('.video-cont');
+            if (slides.length > 0) {
+              slides.forEach(function (slide) {
+                slide.addEventListener('click', function () {
+                  var overlay = _this.querySelector('.overlay-popup-sdf');
+                  var videoCont = _this.querySelector(".pwd-video[data-index=\"".concat(slide.dataset.index, "\"]"));
+                  videoCont.dataset.active = 'true';
+                  overlay.classList.remove('hidden');
+                  videoCont.classList.remove('hidden');
+                });
+              });
+            }
+            var videos = this.querySelectorAll('.pwd-video video');
+            if (videos.length > 0) {
+              videos.forEach(function (video) {
+                video.addEventListener('click', function (event) {
+                  event.stopPropagation();
+                });
+              });
+            }
+            var overlay = this.querySelector('.overlay-popup-sdf');
+            overlay.addEventListener('click', function () {
+              var videoCont = _this.querySelector('.pwd-video[data-active="true"]');
+              var video = _this.querySelector('.pwd-video[data-active="true"] video');
+              var iframe = _this.querySelector('.pwd-video[data-active="true"] iframe');
+              if (video) video.pause();
+              if (iframe) {
+                var iframeCopy = iframe.cloneNode(true);
+                videoCont.innerHTML = '';
+                videoCont.appendChild(iframeCopy);
+              }
+              overlay.classList.add('hidden');
+              videoCont.classList.add('hidden');
+              videoCont.dataset.active = 'false';
+            });
           }
         }]);
       }(/*#__PURE__*/_wrapNativeSuper(HTMLElement));
