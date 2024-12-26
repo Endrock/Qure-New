@@ -22,7 +22,7 @@ product: block.settings.product %}
         <div class="certified">{{ certified }}</div>
       </div>
       <div class="product-cont">
-        <a class="link-product" src="{{ product.url }}">
+        <a class="link-product" href="{{ product.url }}">
             <div class="img-product">
               <img loading="lazy" class="thumbs-product" src="{{ product.featured_image | img_url: 'small' }}" alt="{{ product.title }}">
             </div>

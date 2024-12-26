@@ -386,6 +386,9 @@
   width: 80px;
   height: 74px;
 }
+.section-slider-pwd-results-slider .product .producto-name {
+  color: #000 !important;
+}
 .section-slider-pwd-results-slider .swiper-pagination-bullet {
   width: 8px !important;
   height: 8px !important;

@@ -69,12 +69,14 @@
                               </div>
                             </div>
                             {% if block.settings.product != blank %}
+                              <a href="{{ block.settings.product.url }}">
                               <div class="product">
                                 {% assign image_product = block.settings.product.featured_image %} 
                                 {% assign name_product = block.settings.product.title %} 
                                 <img src="{{ image_product | img_url: 'small' }}" alt="{{ name_product }}">
                                 <p class="producto-name">{{ name_product }}</p>
                               </div>
+                              </a>
                             {% endif %}
                                     
                             </div>
