@@ -1050,6 +1050,8 @@
             "name_doctor": "Dr Shah and Dr Maxfield",
             "certified_doctor": "Board-Certified Dermatologists",
             "video": "shopify://files/videos/-afc6-4003-b682-4e808c7172b1.mov",
+            "video_external": "",
+            "img": "shopify://shop_images/Rectangle_1_b5f8a216-7cce-4747-b842-69fc2f2b6a0c.png",
             "product": "face-serum"
           }
         },
@@ -1060,6 +1062,8 @@
             "name_doctor": "Dr Shah and Dr Maxfield",
             "certified_doctor": "Board-Certified Dermatologists",
             "video": "shopify://files/videos/Snapinsta.app_video_An-zPuKMEldgDdItZPmS1z8PtOGTmDvK86ZUxNVs13gpvQ0ErxsmxN2EhomtOTtPITVnvDlYWVR39GEcXVtNfro.mp4",
+            "video_external": "",
+            "img": "shopify://shop_images/Dermal_Mist_video_cover.png",
             "product": "micro-infusion-darkspots-treatments"
           }
         },
@@ -1070,6 +1074,8 @@
             "name_doctor": "Dr Shah and Dr Maxfield",
             "certified_doctor": "Board-Certified Dermatologists",
             "video": "shopify://files/videos/Snapinsta.app_video_An8uvQ3W-uPvNshj36DLSRmfB2Ao-S2WApAJIO90ty_OLoaIIjaftK3jepRCm-wur-z3dmWpcBmZyEp3EGEvz9fW.mp4",
+            "video_external": "",
+            "img": "shopify://shop_images/all_serum_product_7.webp",
             "product": "face-serum"
           }
         },
@@ -1080,6 +1086,8 @@
             "name_doctor": "Dr Shah and Dr Maxfield",
             "certified_doctor": "Board-Certified Dermatologists",
             "video": "shopify://files/videos/MICRO INFUSION_fin.mp4",
+            "video_external": "",
+            "img": "shopify://shop_images/all_serum_product_11.webp",
             "product": "breakout-control-essentials"
           }
         }
@@ -1091,7 +1099,8 @@
         "slide_df_GRY66X"
       ],
       "settings": {
-        "title": "Slider Derm Feature"
+        "title": "Slider Derm Feature",
+        "icon_play": "shopify://shop_images/video_-_icon_3738742f-5e8c-4865-85d0-2542dd518ef6.svg"
       }
     }
   },
