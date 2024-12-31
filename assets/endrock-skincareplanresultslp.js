@@ -1,5 +1,3 @@
-console.log('Carlos skincareplanresultslp')
-
 const lifestyleInit = ()=>{
   window.addEventListener("load", () => {
     if (!window.customElements.get('cards-tips')) {
@@ -125,7 +123,6 @@ const regimenInit = () => {
           if(this.tabs.length < 1) return ;
           this.tabs.forEach((tab) => {
             tab.addEventListener('click',() => {
-              console.log('click', tab.getAttribute('index') );
               this.setAttribute('active-step', tab.getAttribute('index') );
             })
           })
@@ -179,5 +176,129 @@ const regimenInit = () => {
   });
 }
 
+const resultsSliderInit = () => {
+  window.addEventListener("load", () => {
+    let swiper = new Swiper(".pwd-result_slider", {
+      spaceBetween: 38,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        centeredSlides:true,
+      },
+      breakpoints: {
+        556: {
+          slidesPerView: 1,
+          centeredSlidesBounds:true,
+        },
+        768: {
+          slidesPerView: 2,
+          centeredSlides:false,
+        },
+        1024: {
+          slidesPerView: 3,
+          centeredSlides:false,
+        },
+      },
+    });
+  });
+}
+
+const dermFeatureInit = () => {
+  window.addEventListener("load", () => {
+    if (!window.customElements.get('slider-df')) {
+      class SliderDermFeature extends HTMLElement {
+        constructor() {
+          super();
+        }
+        connectedCallback() {
+          const swiper = new Swiper(this.querySelector(".sdf"), {
+            slidesPerView: 'auto',
+            spaceBetween: 40,
+            loop:true,
+            centeredSlides: true,
+            breakpoints:{
+              600:{
+                centeredSlides: false,
+                loop:true
+              }
+            },
+            pagination: {
+              el: ".sdf-pagination",
+              clickable: true,
+            }
+          });
+          this.clickVideo()
+        }
+        clickVideo(){
+          const slides = this.querySelectorAll('.video-cont') ;
+          if(slides.length > 0){
+            slides.forEach((slide) => {
+              slide.addEventListener('click', () => {
+                const overlay = this.querySelector('.overlay-popup-sdf')
+                const videoCont = this.querySelector(`.pwd-video[data-index="${ slide.dataset.index }"]`)
+                videoCont.dataset.active = 'true';
+                overlay.classList.remove('hidden')
+                videoCont.classList.remove('hidden')
+              })
+            })
+          }
+          
+
+          const videos = this.querySelectorAll('.pwd-video video')
+          if(videos.length > 0){
+            videos.forEach((video) => {
+              video.addEventListener('click', (event) => {
+                event.stopPropagation();
+              })
+            })
+          }
+          
+
+          const overlay = this.querySelector('.overlay-popup-sdf')
+          overlay.addEventListener('click', () => {
+            const videoCont = this.querySelector('.pwd-video[data-active="true"]')
+            const video = this.querySelector('.pwd-video[data-active="true"] video')
+            const iframe = this.querySelector('.pwd-video[data-active="true"] iframe')
+
+            if(video) video.pause();
+            
+            if(iframe){
+              const iframeCopy = iframe.cloneNode(true)
+              videoCont.innerHTML = ''
+              videoCont.appendChild(iframeCopy)
+            }
+            overlay.classList.add('hidden')
+            videoCont.classList.add('hidden')
+            videoCont.dataset.active = 'false';
+          })
+
+        }
+      }
+      window.customElements.define('slider-df', SliderDermFeature);
+    }
+  });
+}
+
+const dualTextImgInit = () => {
+  window.addEventListener("load", () => { 
+    const btns = document.querySelectorAll('.cont-btn')
+    if(btns.length < 1 ) return ;
+    btns.forEach((btn) => {
+      btn.addEventListener('click', () =>{
+        const textBody = document.querySelector(`.text-body[data-id="${ btn.dataset.id }"]`)
+        if(!textBody)return;
+        if(textBody.dataset.open === "false"){
+          textBody.dataset.open = "true"
+        }else{
+          textBody.dataset.open = "false"
+        }
+      })
+    })
+  })
+}
+
+dualTextImgInit();
+dermFeatureInit();
+resultsSliderInit();
 regimenInit();
 lifestyleInit();
