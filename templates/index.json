@@ -1199,6 +1199,44 @@
         "title": "Slider Derm Feature",
         "icon_play": "shopify://shop_images/video_-_icon_3738742f-5e8c-4865-85d0-2542dd518ef6.svg"
       }
+    },
+    "pdm_table_three_columns_aL9bew": {
+      "type": "pdm_table-three-columns",
+      "blocks": {
+        "row_e6wfKb": {
+          "type": "row",
+          "settings": {
+            "row_feature": "Effective, Proven Results",
+            "row_qure": "Targets root causes for lasting change",
+            "qure_check": true,
+            "row_others": "Often only treat symptoms",
+            "others_check": false
+          }
+        },
+        "row_FJYzyK": {
+          "type": "row",
+          "settings": {
+            "row_feature": "Effective, Proven Results",
+            "row_qure": "Targets root causes for lasting change",
+            "qure_check": true,
+            "row_others": "Often only treat symptoms",
+            "others_check": false
+          }
+        }
+      },
+      "block_order": [
+        "row_e6wfKb",
+        "row_FJYzyK"
+      ],
+      "settings": {
+        "section_title": "Why choose Qure?",
+        "table_feature_title": "Feature",
+        "table_feature_title_mobile": "Why Qure?",
+        "table_qure_title": "shopify://shop_images/logo.svg",
+        "table_others_title": "Others",
+        "check_good": "shopify://shop_images/check-green.svg",
+        "check_error": "shopify://shop_images/check-red.svg"
+      }
     }
   },
   "order": [
@@ -1221,6 +1259,7 @@
     "pdm_dual_section_transformation_ribqCq",
     "pdm_lifestyle_tips_gMj4KD",
     "pdm_regimen_steps_WJeqDE",
-    "pdm_slider_derm_feature_9bDxDk"
+    "pdm_slider_derm_feature_9bDxDk",
+    "pdm_table_three_columns_aL9bew"
   ]
 }
