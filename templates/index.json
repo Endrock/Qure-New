@@ -1106,6 +1106,50 @@
         "section_title": "Skincare is a Lifestyle",
         "section_description": "Caring for your skin goes beyond the products you use. It’s about adopting habits that support your skin’s health every day. Our dermatologists recommend these expert tips to help you reach your skin goals even faster."
       }
+    },
+    "pdm_regimen_steps_WJeqDE": {
+      "type": "pdm_regimen-steps",
+      "blocks": {
+        "step_8YWLJN": {
+          "type": "step",
+          "settings": {
+            "tab_icon_dark": "shopify://shop_images/ph_sun_1.svg",
+            "tab_icon_light": "shopify://shop_images/ph_sun.svg",
+            "title": "Daily",
+            "regimen_informartion": "every-day",
+            "video_step": "shopify://files/videos/0424(1).mov"
+          }
+        },
+        "step_wnWUBW": {
+          "type": "step",
+          "settings": {
+            "tab_icon_dark": "shopify://shop_images/icon.svg",
+            "tab_icon_light": "shopify://shop_images/icon_2_e3c8c5b4-6565-4b84-adf1-c6fe7ae24072.svg",
+            "title": "Weekly",
+            "regimen_informartion": "every-week",
+            "image_step": "shopify://shop_images/video-2.gif"
+          }
+        },
+        "step_gAEfmA": {
+          "type": "step",
+          "settings": {
+            "tab_icon_dark": "shopify://shop_images/icon_1_edbe5a96-bc85-43c7-bbc4-82064c5ceffe.svg",
+            "tab_icon_light": "shopify://shop_images/icon_3_27b85ba6-24db-4ca7-8e11-d8350e12b6ee.svg",
+            "title": "Fortnight",
+            "regimen_informartion": "every-two-weeks",
+            "image_step": "shopify://shop_images/microneedling_freckle.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "step_8YWLJN",
+        "step_wnWUBW",
+        "step_gAEfmA"
+      ],
+      "settings": {
+        "section_title": "Take charge of your skincare with this personalized program",
+        "section_description": "Here’s What you’ll need  (User Name)"
+      }
     }
   },
   "order": [
@@ -1126,6 +1170,7 @@
     "community_QPpfkf",
     "solution_form_wVyepN",
     "pdm_dual_section_transformation_ribqCq",
-    "pdm_lifestyle_tips_gMj4KD"
+    "pdm_lifestyle_tips_gMj4KD",
+    "pdm_regimen_steps_WJeqDE"
   ]
 }
