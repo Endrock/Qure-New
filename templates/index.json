@@ -1338,6 +1338,16 @@
       "settings": {
         "heading": "No promises, just proof"
       }
+    },
+    "pdm_dual_section_text_image_jeULx9": {
+      "type": "pdm_dual-section-text-image",
+      "settings": {
+        "section_title": "Feeling you look younger and having positive aging experiences are linked,",
+        "section_subtitle": "say 59% of participants in a study by the University of Oklahoma",
+        "paragraph": "<p>A recent study by the University of Oklahoma found t that those who felt they looked younger than they were also reported having more positive experiences related to aging, such as being asked for advice and wisdom and having a strong sense of purpose.</p>",
+        "button_text": "Road More",
+        "dual_img": "shopify://shop_images/image_2_20e2716f-1990-40f6-b709-090f1113a0ab.jpg"
+      }
     }
   },
   "order": [
@@ -1363,6 +1373,7 @@
     "pdm_slider_derm_feature_9bDxDk",
     "pdm_table_three_columns_aL9bew",
     "pdm_table_two_columns_tPBr69",
-    "pdm_results_slider_7RmJxH"
+    "pdm_results_slider_7RmJxH",
+    "pdm_dual_section_text_image_jeULx9"
   ]
 }
