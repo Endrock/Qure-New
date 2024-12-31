@@ -4,7 +4,7 @@
     <p>{{ section.settings.section_description }}</p>
   </div>
   <div class="container-lp">
-    <cards-tips active-card="1">
+    <cards-tips class="cards-tips" active-card="1">
     {% for block in section.blocks %}
       {% render 'pdm_card-tip' 
         class: "test",

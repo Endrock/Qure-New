@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f88427c0-05a4-457b-a5d2-ae1a233bb5f0" name="Default Changelist" comment="" />
+    <list default="true" id="f88427c0-05a4-457b-a5d2-ae1a233bb5f0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout/theme.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/layout/theme.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/pdm_dual-section-transformation.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/pdm_dual-section-transformation.liquid" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +27,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "development"
+    "git-widget-placeholder": "pdm-skincareplanresultslp"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
