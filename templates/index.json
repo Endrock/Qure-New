@@ -1237,6 +1237,36 @@
         "check_good": "shopify://shop_images/check-green.svg",
         "check_error": "shopify://shop_images/check-red.svg"
       }
+    },
+    "pdm_table_two_columns_tPBr69": {
+      "type": "pdm_table-two-columns",
+      "blocks": {
+        "row_m4DJTw": {
+          "type": "row",
+          "settings": {
+            "row_title": "Retinol/Tretinoin",
+            "row_content_strong": "Long-Lasting, Root-Cause Solutions",
+            "row_content": "Qure’s targeted products address the  underlying issues for results that last, unlike other treatments that only offer temporary fixes our general solutions."
+          }
+        },
+        "row_4iLpck": {
+          "type": "row",
+          "settings": {
+            "row_title": "Retinol/Tretinoin",
+            "row_content_strong": "Long-Lasting, Root-Cause Solutions",
+            "row_content": "Qure’s targeted products address the  underlying issues for results that last, unlike other treatments that only offer temporary fixes our general solutions."
+          }
+        }
+      },
+      "block_order": [
+        "row_m4DJTw",
+        "row_4iLpck"
+      ],
+      "settings": {
+        "section_title": "Think You’ve Tried It All? <br> Here’s Why Qure Is Different.",
+        "table_left_title": "What You May Have Tried Before",
+        "table_right_title": "Why Qure Stands Out"
+      }
     }
   },
   "order": [
@@ -1260,6 +1290,7 @@
     "pdm_lifestyle_tips_gMj4KD",
     "pdm_regimen_steps_WJeqDE",
     "pdm_slider_derm_feature_9bDxDk",
-    "pdm_table_three_columns_aL9bew"
+    "pdm_table_three_columns_aL9bew",
+    "pdm_table_two_columns_tPBr69"
   ]
 }
