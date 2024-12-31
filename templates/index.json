@@ -1150,6 +1150,55 @@
         "section_title": "Take charge of your skincare with this personalized program",
         "section_description": "Here’s What you’ll need  (User Name)"
       }
+    },
+    "pdm_slider_derm_feature_9bDxDk": {
+      "type": "pdm_slider-derm-feature",
+      "blocks": {
+        "slide_df_6QrJUq": {
+          "type": "slide-df",
+          "settings": {
+            "review_doctor": "“Qure has a really good serum. It probably has the best-known peptide complex. It’s an amazing serum. This product is always sold out from Qure. So get it when you see it.”",
+            "name_doctor": "Dr Shah and Dr Maxfield",
+            "certified_doctor": "Board-Certified Dermatologists",
+            "video": "shopify://files/videos/f5de3c2a52ec4df78271943cbd8804d3.mp4",
+            "img": "shopify://shop_images/what_microneedling_look_like.jpg",
+            "product": "face-serum"
+          }
+        },
+        "slide_df_jG3aiD": {
+          "type": "slide-df",
+          "settings": {
+            "review_doctor": "“Qure has a really good serum. It probably has the best-known peptide complex. It’s an amazing serum. This product is always sold out from Qure. So get it when you see it.”",
+            "name_doctor": "Dr Shah and Dr Maxfield",
+            "certified_doctor": "Board-Certified Dermatologists",
+            "video": "shopify://files/videos/3bfaeed943a04820bad76f54b3c97c35.mp4",
+            "video_external": "",
+            "img": "shopify://shop_images/what_does_microneedling_feel_like.jpg",
+            "product": "breakout-control-advanced"
+          }
+        },
+        "slide_df_9dzrk3": {
+          "type": "slide-df",
+          "settings": {
+            "review_doctor": "“Qure has a really good serum. It probably has the best-known peptide complex. It’s an amazing serum. This product is always sold out from Qure. So get it when you see it.”",
+            "name_doctor": "Dr Shah and Dr Maxfield",
+            "certified_doctor": "Board-Certified Dermatologists",
+            "video": "shopify://files/videos/-afc6-4003-b682-4e808c7172b1.mov",
+            "video_external": "",
+            "img": "shopify://shop_images/does_microneedling_remove_freckles.jpg",
+            "product": "q-rejuvalight-pro-led-mask-neck-decolletage-led-extended-1-year-warranty"
+          }
+        }
+      },
+      "block_order": [
+        "slide_df_6QrJUq",
+        "slide_df_jG3aiD",
+        "slide_df_9dzrk3"
+      ],
+      "settings": {
+        "title": "Slider Derm Feature",
+        "icon_play": "shopify://shop_images/video_-_icon_3738742f-5e8c-4865-85d0-2542dd518ef6.svg"
+      }
     }
   },
   "order": [
@@ -1171,6 +1220,7 @@
     "solution_form_wVyepN",
     "pdm_dual_section_transformation_ribqCq",
     "pdm_lifestyle_tips_gMj4KD",
-    "pdm_regimen_steps_WJeqDE"
+    "pdm_regimen_steps_WJeqDE",
+    "pdm_slider_derm_feature_9bDxDk"
   ]
 }
