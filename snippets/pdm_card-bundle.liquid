@@ -1,17 +1,17 @@
-<div class="card-bundle">
+<div class="card-bundle" data-product-id="{{ product.id }}">
   <div class="cont-card-bundle">
-    <div class="gallery">
+    <div class="pdm-gallery">
       <div class="media">
           <img src="{{ product.featured_image | img_url: 'medium' }}" alt="image {{ product.title }}">
       </div>
       <div class="media-btns">
-        <div class="product">Product</div>
+        <div class="product active">Product</div>
         <div class="results">Real Results</div>
         <div class="how-work">How It works</div>
       </div>
     </div>
     <div class="product-info">
-      <div class="title">{{ product.title }}</div>
+      <div class="title"><h3>{{ product.title }}</h3></div>
       <div class="text-checks">
           {{ text-checks }}
       </div>
@@ -24,15 +24,14 @@
             <div class="review">
                 {{ doctor-text }}
             </div>
-            <div class="doctor-info">
-                {{ doctor-name }}
-                {{ doctor-certificated }}
+            <div class="doctor-data">
+                <strong>{{ doctor-name }}</strong> | {{ doctor-certificated }}
             </div>
         </div>
     </div>
     <div class="bundle-button">
         <div class="price">
-          {{ product.price }}
+          {{ product.price | money }}
         </div>
         <div class="bundle-btn">
             {{ btn-text }}

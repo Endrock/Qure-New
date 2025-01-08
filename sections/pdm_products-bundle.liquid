@@ -1,26 +1,26 @@
-<div class="products-bundle">
-    <products-bundle class="products-bundle" 
-      data-bundle-name="{{ section.settings.bundle_info.name }}" 
-      data-bundle-id="{{ section.settings.bundle_products.local_storage_name }}">
+<products-bundle class="products-bundle" 
+                 data-bundle-name="{{ section.settings.bundle_info.name }}" 
+                 data-bundle-id="{{ section.settings.bundle_products.local_storage_name }}">
 
-      {% assign productos = section.settings.bundle_products.list_products.value | reverse | reverse %} 
-      {% for card in section.blocks %}
-        {% assign index_product = forloop.index | minus: 1 %}
-        {% render 'pdm_card-bundle'
-          product: productos[ index_product ],
-          result-img: card.settings.image_results,
-          video: card.settings.video,
-          text-checks: card.settings.text_check,
-          doctor-name: card.settings.doctor_name,
-          doctor-image: card.settings.doctor_image,
-          doctor-text: card.settings.doctor_text,
-          doctor-certificated: card.settings.doctor_certificated,
-          btn-text: section.settings.text_button_card
-        %}
-      {% endfor %}
+  {% assign products = section.settings.bundle_products.list_products.value | reverse | reverse %} 
+  {% for card in section.blocks %}
+    {% assign index_product = forloop.index | minus: 1 %}
+    {% assign product_object = products[index_product] %}
+    {% render 'pdm_card-bundle'
+    product: product_object,
+    result-img: card.settings.image_results,
+    video: card.settings.video,
+    text-checks: card.settings.text_check,
+    doctor-name: card.settings.doctor_name,
+    doctor-image: card.settings.doctor_image,
+    doctor-text: card.settings.doctor_text,
+    doctor-certificated: card.settings.doctor_certificated,
+    btn-text: section.settings.text_button_card
+    %}
+  {% endfor %}
 
-    </products-bundle>
-</div>
+</products-bundle>
+
 {% schema %}
 {
   "name": "Products Bundle (PDM)",
@@ -41,13 +41,13 @@
     },
     {
       "type": "text",
-      "id": "text_button_card",
+      "id": "text_button_section",
       "label": "Text Button Save Bundle",
       "default": "Bundle all +$+ and save +$+"
     },
     {
       "type": "text",
-      "id": "footer_linklist_title",
+      "id": "text_button_card",
       "label": "Text Button Card",
       "default": "Add to your bundle"
     }
