@@ -1368,11 +1368,13 @@
         "card_TwAjQM": {
           "type": "card",
           "settings": {
+            "image_results": "shopify://shop_images/mtp_thumb-8.webp",
+            "video": "shopify://files/videos/Qure micro infusion Watermark (1).mp4",
             "show_top_rated": false,
-            "text_check": "",
-            "doctor_name": "",
-            "doctor_text": "",
-            "doctor_certificated": ""
+            "text_check": "<ul><li>Transforms dull-looking skin, reduces appearance of fine lines & smooths texture.</li><li>Active ingredients (Peptides, Niacinamide) penetrate deep into the skin for faster and better results.</li><li>90% agreed their skin looked better after Micro-Infusion treatments.</li></ul>",
+            "doctor_name": "Dr. Shah",
+            "doctor_text": "“I recommend this treatment to so many of my patients who are looking for a glowing, fresh looking complexion”",
+            "doctor_certificated": "Board Certified Dermatologists"
           }
         },
         "card_g84y9c": {
