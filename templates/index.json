@@ -1380,11 +1380,14 @@
         "card_g84y9c": {
           "type": "card",
           "settings": {
+            "image_results": "shopify://shop_images/does_microneedling_make_you_bleed.jpg",
+            "video": "shopify://files/videos/-afc6-4003-b682-4e808c7172b1.mov",
             "show_top_rated": false,
-            "text_check": "",
-            "doctor_name": "",
-            "doctor_text": "",
-            "doctor_certificated": ""
+            "text_check": "<ul><li>Helps to brighten, plump, and smooth the look of skin.</li><li>Simplifies your routine, addresses various concerns in just one step.</li><li>Powerful Ingredients: Argireline® Peptides, Retinol, Bakuchiol, Niacinamide.</li></ul>",
+            "doctor_name": "Dr Shah",
+            "doctor_image": "shopify://shop_images/User_Image_1.png",
+            "doctor_text": "\"Qure has a really good serum, probably is the best known peptide complex…it can really help simplify and consolidate routine steps.\"",
+            "doctor_certificated": "Board Certified Dermatologists"
           }
         },
         "card_KFPVEh": {
