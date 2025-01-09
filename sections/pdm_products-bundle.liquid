@@ -1,7 +1,8 @@
 <products-bundle class="products-bundle" 
                  data-bundle-name="{{ section.settings.bundle_info.name }}" 
-                 data-bundle-id="{{ section.settings.bundle_products.local_storage_name }}">
-
+                 data-bundle-id="{{ section.settings.bundle_products.local_storage_name }}"
+                 data-bundle-array="[]">
+  <div class="container-pb">
   {% assign products = section.settings.bundle_products.list_products.value | reverse | reverse %} 
   {% for card in section.blocks %}
     {% assign index_product = forloop.index | minus: 1 %}
@@ -9,16 +10,20 @@
     {% render 'pdm_card-bundle'
     product: product_object,
     result-img: card.settings.image_results,
+    show-rated: card.settings.show_top_rated,
     video: card.settings.video,
     text-checks: card.settings.text_check,
     doctor-name: card.settings.doctor_name,
     doctor-image: card.settings.doctor_image,
     doctor-text: card.settings.doctor_text,
     doctor-certificated: card.settings.doctor_certificated,
-    btn-text: section.settings.text_button_card
+    btn-text: section.settings.button_card
     %}
   {% endfor %}
-
+  </div>
+  <div class="btn-section">
+    {{ section.settings.text_button_section }}
+  </div>
 </products-bundle>
 
 {% schema %}
@@ -43,11 +48,11 @@
       "type": "text",
       "id": "text_button_section",
       "label": "Text Button Save Bundle",
-      "default": "Bundle all +$+ and save +$+"
+      "default": "Bundle all 4 and save $$"
     },
     {
       "type": "text",
-      "id": "text_button_card",
+      "id": "button_card",
       "label": "Text Button Card",
       "default": "Add to your bundle"
     }
@@ -67,6 +72,12 @@
           "type": "video",
           "id": "video",
           "label": "Video"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_top_rated",
+          "label": "Show Top Rated",
+          "default": false
         },
         {
           "type": "richtext",

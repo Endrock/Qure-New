@@ -1,13 +1,29 @@
+{% if product %}
 <div class="card-bundle" data-product-id="{{ product.id }}">
+    <div class="rate" data-show="{{ show-rated }}" {% if show-rated == false %}style="visibility: hidden;"{% endif %} >
+    Top Rated *
+  </div>
   <div class="cont-card-bundle">
     <div class="pdm-gallery">
       <div class="media">
-          <img src="{{ product.featured_image | img_url: 'medium' }}" alt="image {{ product.title }}">
+          <img class="src product" src="{{ product.featured_image | image_url }}" alt="image {{ product.title }}">
+        {% if result-img %}
+          <img class="src results hidden" src="{{ result-img | image_url }}" alt="result {{ product.title }}">
+        {% endif %}
+        {% if video %}
+          <div class="src how-work hidden">
+            {{ video | video_tag: autoplay: false, loop: false, muted: false, controls: true }}
+          </div>
+        {% endif %}
       </div>
       <div class="media-btns">
-        <div class="product active">Product</div>
-        <div class="results">Real Results</div>
-        <div class="how-work">How It works</div>
+        <div data-ref="product" class="product active">Product</div>
+        {% if result-img %}
+        <div data-ref="results" class="results">Real Results</div>
+        {% endif %}
+        {% if video %}
+        <div data-ref="how-work" class="how-work">How It works</div>
+        {% endif %}
       </div>
     </div>
     <div class="product-info">
@@ -18,7 +34,9 @@
     </div>
     <div class="doctor-info">
         <div class="photo">
-            <img class="photo-doctor" src="{{ doctor-image | img_url: 'medium' }}" alt="{{ doctor-name }}">
+          {% if doctor-image %}
+            <img class="photo-doctor" src="{{ doctor-image | image_url: width: 44, height: 44 }}" alt="{{ doctor-name }}">
+          {% endif %}
         </div>
         <div class="doctor-text">
             <div class="review">
@@ -33,9 +51,11 @@
         <div class="price">
           {{ product.price | money }}
         </div>
-        <div class="bundle-btn">
-            {{ btn-text }}
+        <div class="bundle-btn" data-product-id="{{ product.id }}">
+            <span class="uncheck">{{ btn-text }}</span>
+            <span class="check">Added</span>
         </div>
     </div>
   </div>
 </div>
+{% endif %}

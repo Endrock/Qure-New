@@ -297,6 +297,93 @@ const dualTextImgInit = () => {
   })
 }
 
+const productsBundleInit = ()=>{
+  window.addEventListener("load", () => {
+    if (!window.customElements.get('products-bundle')) {
+      class productsBundle extends HTMLElement {
+
+        static get observedAttributes() {
+          return ['data-bundle-array'];
+        }
+
+        constructor() {
+          super();
+        }
+
+        connectedCallback() {
+          this.mediaTab();
+          this.addProductToBundle();
+        }
+        attributeChangedCallback(name, oldValue, newValue) {
+          if(name == 'data-bundle-array'){
+            console.log('touch attribute')
+            this.changeArrayBundle(oldValue,newValue);
+          }
+        }
+        mediaTab(){
+          const cards = this.querySelectorAll('.card-bundle')
+          cards.forEach((card) => { 
+            const btns = card.querySelectorAll('.media-btns div')
+            btns.forEach((btn) => {
+              btn.addEventListener('click',() => {
+                const medias = card.querySelectorAll('.media .src')
+                medias.forEach((media) => {
+                  media.classList.add('hidden')
+                })
+                btns.forEach((btn) => {
+                  btn.classList.remove('active')
+                })
+                const showMedia = card.querySelector(`.media .${ btn.dataset.ref }`)
+                showMedia.classList.remove('hidden')
+                btn.classList.add('active')
+              })
+            })
+          })
+        }
+        addProductToBundle(){
+          const cards = this.querySelectorAll('.card-bundle')
+          cards.forEach((card) => {
+            const btn = card.querySelector('.bundle-btn')
+            btn.addEventListener('click',() => {
+              const idProduct = btn.dataset.productId;
+              if(card.classList.contains('active')){
+                //card.classList.remove('active')
+                const arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
+                const newArrayBundle = arrayBundle.filter((id) => id != idProduct )
+                this.setAttribute('data-bundle-array', JSON.stringify(newArrayBundle))
+
+              }else{
+                //card.classList.add('active')
+                let arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
+                console.log('array contiene', arrayBundle.includes(idProduct))
+
+                if(arrayBundle.includes(idProduct))return;
+
+                arrayBundle.push(idProduct)
+                this.setAttribute('data-bundle-array', JSON.stringify(arrayBundle) )
+              }
+            })
+          })
+        }
+        changeArrayBundle(oldValue, newValue){
+          console.log('newValue', newValue)
+          const arrayBundle = JSON.parse(newValue)
+          const cards = this.querySelectorAll('.card-bundle')
+          cards.forEach((card) => {
+            if(arrayBundle.includes(card.dataset.productId)){
+              card.classList.add('active')
+            }else{
+              card.classList.remove('active')
+            }
+          })
+        }
+      }
+      window.customElements.define('products-bundle', productsBundle );
+    }
+  });
+}
+
+productsBundleInit()
 dualTextImgInit();
 dermFeatureInit();
 resultsSliderInit();
