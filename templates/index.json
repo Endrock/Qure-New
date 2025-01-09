@@ -1348,6 +1348,66 @@
         "button_text": "Road More",
         "dual_img": "shopify://shop_images/image_2_20e2716f-1990-40f6-b709-090f1113a0ab.jpg"
       }
+    },
+    "pdm_products_bundle_jTVxhe": {
+      "type": "pdm_products-bundle",
+      "blocks": {
+        "card_b3Uffm": {
+          "type": "card",
+          "settings": {
+            "image_results": "shopify://shop_images/targeted-patches-blue.webp",
+            "video": "shopify://files/videos/f5de3c2a52ec4df78271943cbd8804d3.mp4",
+            "show_top_rated": false,
+            "text_check": "<ul><li>Clinically-proven red light therapy stimulates collagen for firmer, fuller skin, penetrating where topicals can’t.</li><li>87% reported smoother facial wrinkles and fine lines.<br/></li><li>Quick daily 3 minute treatments.</li><li>Dermatologist-recommended and FDA-cleared.</li></ul>",
+            "doctor_name": "Dr. Maxfield",
+            "doctor_image": "shopify://shop_images/frontrow-health1.png",
+            "doctor_text": "“This is my absolute favorite mask. It’s quick, effective and patients see great results with consistent use”.Dr. Maxfield  |  Board Certified Dermatologists",
+            "doctor_certificated": "Board Certified Dermatologists"
+          }
+        },
+        "card_TwAjQM": {
+          "type": "card",
+          "settings": {
+            "show_top_rated": false,
+            "text_check": "",
+            "doctor_name": "",
+            "doctor_text": "",
+            "doctor_certificated": ""
+          }
+        },
+        "card_g84y9c": {
+          "type": "card",
+          "settings": {
+            "show_top_rated": false,
+            "text_check": "",
+            "doctor_name": "",
+            "doctor_text": "",
+            "doctor_certificated": ""
+          }
+        },
+        "card_KFPVEh": {
+          "type": "card",
+          "settings": {
+            "show_top_rated": false,
+            "text_check": "",
+            "doctor_name": "",
+            "doctor_text": "",
+            "doctor_certificated": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_b3Uffm",
+        "card_TwAjQM",
+        "card_g84y9c",
+        "card_KFPVEh"
+      ],
+      "settings": {
+        "bundle_info": "bundle-discount",
+        "bundle_products": "219840343",
+        "text_button_section": "Bundle all 4 and save $$",
+        "button_card": "Add to your bundle"
+      }
     }
   },
   "order": [
@@ -1374,6 +1434,7 @@
     "pdm_table_three_columns_aL9bew",
     "pdm_table_two_columns_tPBr69",
     "pdm_results_slider_7RmJxH",
-    "pdm_dual_section_text_image_jeULx9"
+    "pdm_dual_section_text_image_jeULx9",
+    "pdm_products_bundle_jTVxhe"
   ]
 }
