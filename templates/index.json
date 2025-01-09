@@ -1394,11 +1394,13 @@
         "card_KFPVEh": {
           "type": "card",
           "settings": {
+            "image_results": "shopify://shop_images/LineRefineBundlePro_9a6dfac7-96b2-450a-8079-9cd2f28865a4.png",
             "show_top_rated": false,
-            "text_check": "",
-            "doctor_name": "",
-            "doctor_text": "",
-            "doctor_certificated": ""
+            "text_check": "<ul><li>Rejuvenates the delicate skin area where the first signs of aging show.</li><li>Repairs sun-damaged skin, reduces the appearance of dark spots, fine lines & wrinkles.</li><li>80% of users report smoother, rejuvenated skin.</li></ul>",
+            "doctor_name": "Dr Shah & Dr Maxfield",
+            "doctor_image": "shopify://shop_images/frontrow-health1.png",
+            "doctor_text": "\"LED light targets fibroblasts to increase collagen production and has anti-aging benefits especially if you are seeing wrinkles and lines on your neck...\"",
+            "doctor_certificated": "Board Certified Dermatologists"
           }
         }
       },
