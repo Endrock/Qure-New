@@ -254,6 +254,153 @@
         "title": "Slider Derm Feature",
         "icon_play": "shopify://shop_images/video_-_icon_3738742f-5e8c-4865-85d0-2542dd518ef6.svg"
       }
+    },
+    "pdm_table_three_columns_LPVNYN": {
+      "type": "pdm_table-three-columns",
+      "blocks": {
+        "row_pPaYhw": {
+          "type": "row",
+          "settings": {
+            "row_feature": "Effective, Proven Results",
+            "row_qure": "Targets root causes for lasting change",
+            "qure_check": true,
+            "row_others": "Often only treat symptoms",
+            "others_check": false
+          }
+        },
+        "row_MGNFka": {
+          "type": "row",
+          "settings": {
+            "row_feature": "Effective, Proven Results",
+            "row_qure": "Targets root causes for lasting change",
+            "qure_check": true,
+            "row_others": "Often only treat symptoms",
+            "others_check": false
+          }
+        }
+      },
+      "block_order": [
+        "row_pPaYhw",
+        "row_MGNFka"
+      ],
+      "settings": {
+        "section_title": "Why choose Qure?",
+        "table_feature_title": "Feature",
+        "table_feature_title_mobile": "Why Qure?",
+        "table_qure_title": "shopify://shop_images/logo.svg",
+        "table_others_title": "Others",
+        "check_good": "shopify://shop_images/check-green.svg",
+        "check_error": "shopify://shop_images/check-red.svg"
+      }
+    },
+    "pdm_table_two_columns_D9VDkE": {
+      "type": "pdm_table-two-columns",
+      "blocks": {
+        "row_wNQqHc": {
+          "type": "row",
+          "settings": {
+            "row_title": "Retinol/Tretinoin",
+            "row_content_strong": "Long-Lasting, Root-Cause Solutions",
+            "row_content": "Qure’s targeted products address the  underlying issues for results that last, unlike other treatments that only offer temporary fixes our general solutions."
+          }
+        },
+        "row_VUqdx4": {
+          "type": "row",
+          "settings": {
+            "row_title": "Retinol/Tretinoin",
+            "row_content_strong": "Long-Lasting, Root-Cause Solutions",
+            "row_content": "Qure’s targeted products address the  underlying issues for results that last, unlike other treatments that only offer temporary fixes our general solutions."
+          }
+        },
+        "row_Wp4LeM": {
+          "type": "row",
+          "settings": {
+            "row_title": "Retinol/Tretinoin",
+            "row_content_strong": "Long-Lasting, Root-Cause Solutions",
+            "row_content": "Qure’s targeted products address the  underlying issues for results that last, unlike other treatments that only offer temporary fixes our general solutions."
+          }
+        }
+      },
+      "block_order": [
+        "row_wNQqHc",
+        "row_VUqdx4",
+        "row_Wp4LeM"
+      ],
+      "settings": {
+        "section_title": "Think You’ve Tried It All?  Here’s Why Qure Is Different.",
+        "table_left_title": "What You May Have Tried Before",
+        "table_right_title": "Why Qure Stands Out"
+      }
+    },
+    "pdm_results_slider_U7BnMb": {
+      "type": "pdm_results-slider",
+      "blocks": {
+        "slide_BP6FNR": {
+          "type": "slide",
+          "settings": {
+            "heading": "1 Wish I had this technology years ago!",
+            "before": "BEFORE",
+            "after": "AFTER 6 WEEKS",
+            "image": "shopify://shop_images/before-after_03b483f7-04ee-4a6b-a887-ee3a4a1bf436.jpg",
+            "text": "<p>After two weeks I began to see results and after six weeks the changes in my skin were dramatic. I have now been using Qure six months and loving the compliments! I bought masks for my daughters for Christmas so they could start at a younger age.... I wish this technology had been available when I was younger. I am 76 years old!</p>",
+            "image_country": "shopify://shop_images/Flag_of_the_United_States_1.svg",
+            "client": "Carlos Carlos",
+            "verified": true,
+            "product": "face-serum"
+          }
+        },
+        "slide_EcpCWr": {
+          "type": "slide",
+          "settings": {
+            "heading": "2 Wish I had this technology years ago!",
+            "before": "BEFORE",
+            "after": "AFTER 16 WEEKS",
+            "image": "shopify://shop_images/before-after_03b483f7-04ee-4a6b-a887-ee3a4a1bf436.jpg",
+            "text": "<p>After two weeks I began to see results and after six weeks the changes in my skin were dramatic. I have now been using Qure six months and loving the compliments! I bought masks for my daughters for Christmas so they could start at a younger age.... I wish this technology had been available when I was younger. I am 76 years old!</p>",
+            "image_country": "shopify://shop_images/Flag_of_the_United_States_1.svg",
+            "client": "David David",
+            "verified": true,
+            "product": "face-serum"
+          }
+        },
+        "slide_nN9pJj": {
+          "type": "slide",
+          "settings": {
+            "heading": "3 Wish I had this technology years ago!",
+            "before": "BEFORE",
+            "after": "AFTER",
+            "image": "shopify://shop_images/before-after_03b483f7-04ee-4a6b-a887-ee3a4a1bf436.jpg",
+            "text": "<p>After two weeks I began to see results and after six weeks the changes in my skin were dramatic. I have now been using Qure six months and loving the compliments! I bought masks for my daughters for Christmas so they could start at a younger age.... I wish this technology had been available when I was younger. I am 76 years old!</p>",
+            "image_country": "shopify://shop_images/Flag_of_Croatia_svg.png",
+            "client": "Miller Miller",
+            "verified": true,
+            "product": "breakout-control-pro-1"
+          }
+        },
+        "slide_CPfYY6": {
+          "type": "slide",
+          "settings": {
+            "heading": "Wish I had this technology years ago!",
+            "before": "BEFORE",
+            "after": "AFTER",
+            "image": "shopify://shop_images/before-after_03b483f7-04ee-4a6b-a887-ee3a4a1bf436.jpg",
+            "text": "<p>After two weeks I began to see results and after six weeks the changes in my skin were dramatic. I have now been using Qure six months and loving the compliments! I bought masks for my daughters for Christmas so they could start at a younger age.... I wish this technology had been available when I was younger. I am 76 years old!</p>",
+            "image_country": "shopify://shop_images/Flag_of_Croatia_svg.png",
+            "client": "Jorge Jorge",
+            "verified": true,
+            "product": "the-face-serum-sample"
+          }
+        }
+      },
+      "block_order": [
+        "slide_BP6FNR",
+        "slide_EcpCWr",
+        "slide_nN9pJj",
+        "slide_CPfYY6"
+      ],
+      "settings": {
+        "heading": "No promises, just proof"
+      }
     }
   },
   "order": [
@@ -262,6 +409,9 @@
     "pdm_products_bundle_RrtQzg",
     "pdm_lifestyle_tips_bCbTKb",
     "pdm_regimen_steps_c7Kkep",
-    "pdm_slider_derm_feature_cmcDRV"
+    "pdm_slider_derm_feature_cmcDRV",
+    "pdm_table_three_columns_LPVNYN",
+    "pdm_table_two_columns_D9VDkE",
+    "pdm_results_slider_U7BnMb"
   ]
 }
