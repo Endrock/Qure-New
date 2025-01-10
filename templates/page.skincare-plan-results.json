@@ -32,10 +32,80 @@
         "footer_text": "See more transformation",
         "footer_link": ""
       }
+    },
+    "pdm_products_bundle_RrtQzg": {
+      "type": "pdm_products-bundle",
+      "blocks": {
+        "card_AHWV7d": {
+          "type": "card",
+          "settings": {
+            "image_results": "shopify://shop_images/Untitled_design_7.png",
+            "video": "shopify://files/videos/3bfaeed943a04820bad76f54b3c97c35.mp4",
+            "show_top_rated": false,
+            "text_check": "<ul><li>Clinically-proven red light therapy stimulates collagen for firmer, fuller skin, penetrating where topicals can’t.</li><li>87% reported smoother facial wrinkles and fine lines.<br/></li><li>Quick daily 3 minute treatments.</li><li>Dermatologist-recommended and FDA-cleared.</li></ul>",
+            "doctor_name": "Dr. Maxfield",
+            "doctor_image": "shopify://shop_images/Frame_3594.webp",
+            "doctor_text": "“This is my absolute favorite mask. It’s quick, effective and patients see great results with consistent use”.Dr. Maxfield  |  Board Certified Dermatologists",
+            "doctor_certificated": "Board Certified Dermatologists"
+          }
+        },
+        "card_nNyK6F": {
+          "type": "card",
+          "settings": {
+            "image_results": "shopify://shop_images/mtp_thumb-8.webp",
+            "video": "shopify://files/videos/d5d0c051b43e4117be7b6308e06e8f66.mp4",
+            "show_top_rated": false,
+            "text_check": "<ul><li>Transforms dull-looking skin, reduces appearance of fine lines & smooths texture.</li><li>Active ingredients (Peptides, Niacinamide) penetrate deep into the skin for faster and better results.</li><li>90% agreed their skin looked better after Micro-Infusion treatments.</li></ul>",
+            "doctor_name": "Dr. Shah",
+            "doctor_image": "shopify://shop_images/dr.luke.webp",
+            "doctor_text": "“I recommend this treatment to so many of my patients who are looking for a glowing, fresh looking complexion”",
+            "doctor_certificated": "Board Certified Dermatologists"
+          }
+        },
+        "card_zUPrjX": {
+          "type": "card",
+          "settings": {
+            "image_results": "shopify://shop_images/all_serum_product_11.webp",
+            "video": "shopify://files/videos/Qure micro infusion Watermark (1).mp4",
+            "show_top_rated": false,
+            "text_check": "<ul><li>Helps to brighten, plump, and smooth the look of skin.</li><li>Simplifies your routine, addresses various concerns in just one step.</li><li>Powerful Ingredients: Argireline® Peptides, Retinol, Bakuchiol, Niacinamide.</li></ul>",
+            "doctor_name": "Dr Shah",
+            "doctor_image": "shopify://shop_images/ac_video46.webp",
+            "doctor_text": "\"Qure has a really good serum, probably is the best known peptide complex…it can really help simplify and consolidate routine steps.\"",
+            "doctor_certificated": "Board Certified Dermatologists"
+          }
+        },
+        "card_gX4hay": {
+          "type": "card",
+          "settings": {
+            "image_results": "shopify://shop_images/microneedling_freckle.jpg",
+            "video": "shopify://files/videos/278820180_979726216016555_631373817370919333_n.mp4",
+            "show_top_rated": false,
+            "text_check": "<ul><li>Rejuvenates the delicate skin area where the first signs of aging show.</li><li>Repairs sun-damaged skin, reduces the appearance of dark spots, fine lines & wrinkles.</li><li>80% of users report smoother, rejuvenated skin.</li></ul>",
+            "doctor_name": "Dr Shah & Dr Maxfield",
+            "doctor_image": "shopify://shop_images/dr.maxfield.webp",
+            "doctor_text": "\"LED light targets fibroblasts to increase collagen production and has anti-aging benefits especially if you are seeing wrinkles and lines on your neck...\"",
+            "doctor_certificated": "Board Certified Dermatologists"
+          }
+        }
+      },
+      "block_order": [
+        "card_AHWV7d",
+        "card_nNyK6F",
+        "card_zUPrjX",
+        "card_gX4hay"
+      ],
+      "settings": {
+        "bundle_info": "bundle-discount",
+        "bundle_products": "219840343",
+        "text_button_section": "Bundle all 4 and save $$",
+        "button_card": "Add to your bundle"
+      }
     }
   },
   "order": [
     "main",
-    "pdm_dual_section_transformation_NpMqKG"
+    "pdm_dual_section_transformation_NpMqKG",
+    "pdm_products_bundle_RrtQzg"
   ]
 }
