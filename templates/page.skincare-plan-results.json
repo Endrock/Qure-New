@@ -12,22 +12,30 @@
     "main": {
       "type": "page",
       "custom_css": [
-        ".subscriptions_header {display:none}"
+        ".subscriptions_header {display: none;}"
       ],
       "settings": {}
     },
-    "17115385750c73305f": {
-      "type": "apps",
-      "settings": {}
-    },
-    "1723811635f4799cbc": {
-      "type": "apps",
-      "settings": {}
+    "pdm_dual_section_transformation_NpMqKG": {
+      "type": "pdm_dual-section-transformation",
+      "settings": {
+        "section_title": "[Username], your results are in.  Let’s transform your signs of aging!",
+        "section_text": "We put together a straightforward, no-nonsense program just for you and your skin. It’s aimed to help you reduce the signs of aging, fine lines and wrinkles, keep your skin smooth, and your confidence high.",
+        "button_text": "Discover Now",
+        "button_link": "#",
+        "before_text": "before",
+        "after_text": "After",
+        "dual_img": "shopify://shop_images/before-after_03b483f7-04ee-4a6b-a887-ee3a4a1bf436.jpg",
+        "user_name": "Ellie V.",
+        "icon_img": "shopify://shop_images/Layer_1_be2f32cf-e586-4583-9959-fb3a68b642d0.svg",
+        "validation_text": "verified customer",
+        "footer_text": "See more transformation",
+        "footer_link": ""
+      }
     }
   },
   "order": [
     "main",
-    "17115385750c73305f",
-    "1723811635f4799cbc"
+    "pdm_dual_section_transformation_NpMqKG"
   ]
 }
