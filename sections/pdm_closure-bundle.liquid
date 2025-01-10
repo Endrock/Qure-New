@@ -19,7 +19,7 @@
             {% assign index_product = forloop.index | minus: 1 %}
             {% assign product = products[index_product] %}
             {% if product %}
-            <div class="info-closure active " data-product-id="{{ product.id }}">
+            <div class="info-closure" data-product-id="{{ product.id }}">
               <div class="cont-check">
                 <div class="info-check">
                   <img class="icon-check" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/check-bg-green.svg" alt="image {{ product.title }}">

@@ -373,6 +373,17 @@ const productsBundleInit = ()=>{
               card.classList.remove('active')
             }
           })
+          const idBundle = this.getAttribute('data-bundle-id')
+          const allSection = document.querySelectorAll(`[data-bundle-id="${ idBundle }"]`)
+          allSection.forEach((section) => {
+            const sectionBundle = section.getAttribute('data-bundle-array');
+            console.log(section)
+            console.log('sectionBundle', sectionBundle)
+            if( newValue != sectionBundle){
+              section.setAttribute('data-bundle-array', newValue)
+            }
+          })
+
         }
       }
       window.customElements.define('products-bundle', productsBundle );
@@ -430,6 +441,19 @@ const flatingBundleInit = ()=>{
             cubeDiscount.querySelector(`.cube-discount-product[data-product-id="${ idProduct }"]`).classList.remove('hidden')
 
           })
+
+          const idBundle = this.getAttribute('data-bundle-id')
+          const allSection = document.querySelectorAll(`[data-bundle-id="${ idBundle }"]`)
+          allSection.forEach((section) => {
+            const sectionBundle = section.getAttribute('data-bundle-array');
+            console.log(section)
+            console.log('sectionBundle', sectionBundle)
+            if( newValue != sectionBundle){
+              section.setAttribute('data-bundle-array', newValue)
+            }
+          })
+
+
         }
       }
       window.customElements.define('flating-bundle', flatingBundle );
@@ -506,6 +530,18 @@ const  closureBundleInit = ()=>{
               check.classList.remove('active')
             }
           })
+
+          const idBundle = this.getAttribute('data-bundle-id')
+          const allSection = document.querySelectorAll(`[data-bundle-id="${ idBundle }"]`)
+          allSection.forEach((section) => {
+            const sectionBundle = section.getAttribute('data-bundle-array');
+            console.log(section)
+            console.log('sectionBundle', sectionBundle)
+            if( newValue != sectionBundle){
+              section.setAttribute('data-bundle-array', newValue)
+            }
+          })
+          
         }
       }
       window.customElements.define('closure-bundle', closureBundle );
