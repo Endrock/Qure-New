@@ -316,7 +316,6 @@ const productsBundleInit = ()=>{
         }
         attributeChangedCallback(name, oldValue, newValue) {
           if(name == 'data-bundle-array'){
-            console.log('touch attribute')
             this.changeArrayBundle(oldValue,newValue);
           }
         }
@@ -355,7 +354,6 @@ const productsBundleInit = ()=>{
               }else{
                 //card.classList.add('active')
                 let arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
-                console.log('array contiene', arrayBundle.includes(idProduct))
 
                 if(arrayBundle.includes(idProduct))return;
 
@@ -366,7 +364,6 @@ const productsBundleInit = ()=>{
           })
         }
         changeArrayBundle(oldValue, newValue){
-          console.log('newValue', newValue)
           const arrayBundle = JSON.parse(newValue)
           const cards = this.querySelectorAll('.card-bundle')
           cards.forEach((card) => {
@@ -383,6 +380,141 @@ const productsBundleInit = ()=>{
   });
 }
 
+const flatingBundleInit = ()=>{
+  window.addEventListener("load", () => {
+    if (!window.customElements.get('flating-bundle')) {
+      class flatingBundle extends HTMLElement {
+
+        static get observedAttributes() {
+          return ['data-bundle-array'];
+        }
+
+        constructor() {
+          super();
+        }
+
+        connectedCallback() {
+          this.deleteProduct();
+        }
+        attributeChangedCallback(name, oldValue, newValue) {
+          if(name == 'data-bundle-array'){
+            this.changeArrayBundle(oldValue,newValue);
+          }
+        }
+        deleteProduct(){
+          const btnsClose = this.querySelectorAll('.close')
+          btnsClose.forEach((btn) => {
+            btn.addEventListener('click', () => {
+              const idProduct = btn.dataset.productId
+              const arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
+              const newArrayBundle = arrayBundle.filter((id) => id != idProduct )
+              this.setAttribute('data-bundle-array', JSON.stringify(newArrayBundle))
+            })
+          })
+        }
+        changeArrayBundle(oldValue, newValue){
+          const arrayBundle = JSON.parse(newValue);
+          const arrayCubesDiscount = this.querySelectorAll('.cube-discount')
+          arrayCubesDiscount.forEach((cubeDiscount) => {
+            cubeDiscount.querySelector('.cont-text').classList.remove('hidden')
+            const cubeProducts = cubeDiscount.querySelectorAll('.cube-discount-product');
+            cubeProducts.forEach((product) => {
+              if(!product.classList.contains('hidden')){
+                product.classList.add('hidden')
+              }
+            })
+          })
+          arrayBundle.forEach((idProduct, index ) => {
+            const cubeDiscount = arrayCubesDiscount[index]
+            cubeDiscount.querySelector('.cont-text').classList.add('hidden')
+            cubeDiscount.querySelector(`.cube-discount-product[data-product-id="${ idProduct }"]`).classList.remove('hidden')
+
+          })
+        }
+      }
+      window.customElements.define('flating-bundle', flatingBundle );
+    }
+  });
+}
+
+const  closureBundleInit = ()=>{
+  window.addEventListener("load", () => {
+    if (!window.customElements.get('closure-bundle')) {
+      class closureBundle extends HTMLElement {
+
+        static get observedAttributes() {
+          return ['data-bundle-array'];
+        }
+
+        constructor() {
+          super();
+        }
+
+        connectedCallback() {
+          this.test();
+          this.addProductToBundle();
+        }
+        attributeChangedCallback(name, oldValue, newValue) {
+          if(name == 'data-bundle-array'){
+            this.changeArrayBundle(oldValue,newValue);
+          }
+        }
+        test(){
+          console.log('test ClosureBundle')
+        }
+        addProductToBundle(){
+          const cards = this.querySelectorAll('.card-product')
+          cards.forEach((card) => {
+            const btn = card.querySelector('.btn-bundle')
+            btn.addEventListener('click',() => {
+              const idProduct = btn.dataset.productId;
+              if(card.classList.contains('active')){
+                //card.classList.remove('active')
+                const arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
+                const newArrayBundle = arrayBundle.filter((id) => id != idProduct )
+                this.setAttribute('data-bundle-array', JSON.stringify(newArrayBundle))
+
+              }else{
+                //card.classList.add('active')
+                let arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
+                console.log('array contiene', arrayBundle.includes(idProduct))
+
+                if(arrayBundle.includes(idProduct))return;
+
+                arrayBundle.push(idProduct)
+                this.setAttribute('data-bundle-array', JSON.stringify(arrayBundle) )
+              }
+            })
+          })
+        }
+        changeArrayBundle(oldValue, newValue){
+          console.log('newValue', newValue)
+          const arrayBundle = JSON.parse(newValue)
+          const cards = this.querySelectorAll('.card-product')
+          const checks = this.querySelectorAll('.info-closure')
+          cards.forEach((card) => {
+            if(arrayBundle.includes(card.dataset.productId)){
+              card.classList.add('active')
+            }else{
+              card.classList.remove('active')
+            }
+          })
+          checks.forEach((check) => {
+            if(arrayBundle.includes(check.dataset.productId)){
+              check.classList.add('active')
+            }else{
+              check.classList.remove('active')
+            }
+          })
+        }
+      }
+      window.customElements.define('closure-bundle', closureBundle );
+    }
+  });
+}
+
+closureBundleInit()
+flatingBundleInit()
 productsBundleInit()
 dualTextImgInit();
 dermFeatureInit();
