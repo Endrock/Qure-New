@@ -203,6 +203,7 @@
             "name_doctor": "Dr Shah and Dr Maxfield",
             "certified_doctor": "Board-Certified Dermatologists",
             "video": "shopify://files/videos/f5de3c2a52ec4df78271943cbd8804d3.mp4",
+            "video_external": "",
             "img": "shopify://shop_images/mi_refill-result-patches-6.webp",
             "product": "face-serum"
           }
@@ -458,6 +459,13 @@
         "section_info_title": "Have you tackled all your concerns?",
         "button_card": "Add to your bundle"
       }
+    },
+    "pdm_flating_bundle_4jeggX": {
+      "type": "pdm_flating-bundle",
+      "settings": {
+        "bundle_info": "bundle-discount",
+        "bundle_products": "219840343"
+      }
     }
   },
   "order": [
@@ -471,6 +479,7 @@
     "pdm_table_two_columns_D9VDkE",
     "pdm_results_slider_U7BnMb",
     "pdm_dual_section_text_image_aTMNRM",
-    "pdm_closure_bundle_HikqjD"
+    "pdm_closure_bundle_HikqjD",
+    "pdm_flating_bundle_4jeggX"
   ]
 }
