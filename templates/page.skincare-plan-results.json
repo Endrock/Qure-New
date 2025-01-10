@@ -411,6 +411,53 @@
         "button_text": "Road More",
         "dual_img": "shopify://shop_images/image_2_20e2716f-1990-40f6-b709-090f1113a0ab.jpg"
       }
+    },
+    "pdm_closure_bundle_HikqjD": {
+      "type": "pdm_closure-bundle",
+      "blocks": {
+        "card_xCwg4V": {
+          "type": "card",
+          "settings": {
+            "text_check_strong": "Loss of Volume & Wrinkles",
+            "text_check": "Q-Rejuvalight Pro LED Mask"
+          }
+        },
+        "card_eXhJmY": {
+          "type": "card",
+          "settings": {
+            "text_check_strong": "Loss of Volume & Wrinkles",
+            "text_check": "Q-Rejuvalight Pro LED Mask"
+          }
+        },
+        "card_87yRjf": {
+          "type": "card",
+          "settings": {
+            "text_check_strong": "Loss of Volume & Wrinkles",
+            "text_check": "Q-Rejuvalight Pro LED Mask"
+          }
+        },
+        "card_krEHjr": {
+          "type": "card",
+          "settings": {
+            "text_check_strong": "Loss of Volume & Wrinkles",
+            "text_check": "Q-Rejuvalight Pro LED Mask"
+          }
+        }
+      },
+      "block_order": [
+        "card_xCwg4V",
+        "card_eXhJmY",
+        "card_87yRjf",
+        "card_krEHjr"
+      ],
+      "settings": {
+        "bundle_info": "bundle-discount",
+        "bundle_products": "219840343",
+        "section_title": "You’ve got this",
+        "section_paragraph": "<p>We’re confident that with this skincare plan and the tips we’ve shared, you’re well-equipped  to take control of your skin’s journey to aging gracefully. Remember, we’re here to support  you every step of the way.</p>",
+        "section_info_title": "Have you tackled all your concerns?",
+        "button_card": "Add to your bundle"
+      }
     }
   },
   "order": [
@@ -423,6 +470,7 @@
     "pdm_table_three_columns_LPVNYN",
     "pdm_table_two_columns_D9VDkE",
     "pdm_results_slider_U7BnMb",
-    "pdm_dual_section_text_image_aTMNRM"
+    "pdm_dual_section_text_image_aTMNRM",
+    "pdm_closure_bundle_HikqjD"
   ]
 }
