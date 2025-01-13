@@ -1814,15 +1814,23 @@
     }
     .grid-discount{
       margin: 0 24px 16px 24px;
-      justify-content:center;
+      justify-content:space-between;
+
     }
-    .cube-discount{
+    .cube-discount, .cube-discount-product{
       width: 58px;
       height:54px;
     }
     .btn-discount{
       border-radius:0;
       width:100%;
+      font-family: Poppins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: 0.14px;
+
     }
   }
 }
