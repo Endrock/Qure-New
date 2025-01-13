@@ -13,7 +13,7 @@
                     data-bundle-array="[]">
       <div class="cont-text">
         <h3 class="info-title">{{ section.settings.section_info_title }}</h3>
-        <div class="info-products">
+        <div class="info-products desktop">
           {% assign products = section.settings.bundle_products.list_products.value | reverse | reverse %} 
           {% for card in section.blocks %}
             {% assign index_product = forloop.index | minus: 1 %}
@@ -27,6 +27,23 @@
               </div>
               <div class="product-text">
                 <p><strong>{{ card.settings.text_check_strong}}</strong><br>{{ card.settings.text_check }}</p>
+              </div>
+            </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="info-products mobile">
+          {% assign products = section.settings.bundle_products.list_products.value | reverse | reverse %} 
+          {% for card in section.blocks %}
+            {% assign index_product = forloop.index | minus: 1 %}
+            {% assign product = products[index_product] %}
+            {% if product %}
+            <div class="info-closure" data-product-id="{{ product.id }}">
+              <div class="product-text">
+                <p>{{ card.settings.text_check_strong }}</p>
+                <svg class="btn-quit" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+  <path d="M8.41536 2.67148L7.82787 2.08398L5.4987 4.41315L3.16953 2.08398L2.58203 2.67148L4.9112 5.00065L2.58203 7.32982L3.16953 7.91732L5.4987 5.58815L7.82787 7.91732L8.41536 7.32982L6.0862 5.00065L8.41536 2.67148Z" fill="black"/>
+</svg>
               </div>
             </div>
             {% endif %}
@@ -47,7 +64,8 @@
           <div class="product-info">
             <div class="product-title">{{ product.title }}</div>
             <div class="btn-bundle" data-product-id="{{ product.id }}">
-              <span class="uncheck">{{ section.settings.button_card }}</span>
+              <span class="uncheck desktop">{{ section.settings.button_card }}</span>
+              <span class="uncheck mobile">Add</span>
               <span class="check">Added</span>
             </div>
           </div>        

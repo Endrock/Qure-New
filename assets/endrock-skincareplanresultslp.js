@@ -510,6 +510,16 @@ const  closureBundleInit = ()=>{
               }
             })
           })
+          const tags = this.querySelectorAll('.mobile .info-closure')
+          tags.forEach((tag) => {
+            const btn = tag.querySelector('.btn-quit')
+            btn.addEventListener('click', () => {
+              const idProduct = tag.dataset.productId ;
+              const arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
+              const newArrayBundle = arrayBundle.filter((id) => id != idProduct )
+              this.setAttribute('data-bundle-array', JSON.stringify(newArrayBundle))
+            })
+          })
         }
         changeArrayBundle(oldValue, newValue){
           console.log('newValue', newValue)
