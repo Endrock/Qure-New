@@ -1691,9 +1691,9 @@
     .show-mobile{
       display:block;
       width:100%;
+      max-width:377px;
       height: min-content;
-      margin-top: auto;
-      margin-bottom: 0px;
+      margin: auto;
       position: relative;
       
       .cont-card-bundle{
