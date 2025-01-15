@@ -2,7 +2,19 @@
                  data-bundle-name="{{ section.settings.bundle_info.name }}" 
                  data-bundle-id="{{ section.settings.bundle_products.local_storage_name }}"
                  data-bundle-array="[]">
-  <div class="container-pb">
+  <div class="container-mb-pb ">
+  {% assign products = section.settings.bundle_products.list_products.value | reverse | reverse %} 
+  {% for card in section.blocks %}
+    {% assign index_product = forloop.index | minus: 1 %}
+    {% assign product_object = products[index_product] %}
+    {% render 'pdm_card-bundle-mobile'
+    product: product_object,
+    show-rated: card.settings.show_top_rated,
+    btn-text: section.settings.button_card
+    %}
+  {% endfor %}
+  </div>
+  <div class="container-pb popup-hidden">
   {% assign products = section.settings.bundle_products.list_products.value | reverse | reverse %} 
   {% for card in section.blocks %}
     {% assign index_product = forloop.index | minus: 1 %}

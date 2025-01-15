@@ -1,12 +1,19 @@
+
 <flating-bundle class="flating-bundle"
                 data-bundle-name="{{ section.settings.bundle_info.name }}" 
                 data-bundle-id="{{ section.settings.bundle_products.local_storage_name }}"
-                data-bundle-array="[&quot;5657784025237&quot;,&quot;8779021975791&quot;]">
-  <div class="lock-discount">
+                data-bundle-array="[]">
+<div class="btn-mobile mobile">
+  <img class="cart-icon-black" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/humbleicons_cart.svg" alt="cart icon">
+  Your Bundle
+  <img class="cart-icon-black" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/system-uicons_chevron-up.svg" alt="cart icon">
+</div>
+  <div class="lock-discount show-responsive">
     <img class="unlock-icon" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/unlock.svg" alt="unlock icon">
     Add Item to unlock your discount
+    <img class="cart-mobile" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/system-uicons_chevron-up.svg" alt="cart icon">
   </div>
-  <div class="hbar">
+  <div class="hbar show-responsive">
     <div class="grid-discount">
       {% assign products = section.settings.bundle_products.list_products.value | reverse | reverse %} 
       {% for discount in section.settings.bundle_info.discounts.value %}
@@ -31,7 +38,11 @@
     </div>
     <div class="price-discount">
       <img class="cart-icon" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Cart_icon_fa581772-4478-44e8-8175-54bff5157303.svg" alt="cart icon">
-      Total: --
+      <span class="label">Total:</span> 
+      <span class="bundleprice">
+        <span class="full-price">-</span>
+        <span class="discount-price">-</span>
+      </span>
     </div>
     <div class="bundle-discount">
       <span class="btn-discount">Bundle and save</span>

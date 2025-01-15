@@ -1,0 +1,29 @@
+{% if product %}
+<div class="card-bundle mb" data-product-id="{{ product.id }}">
+  <div class="rate mb" data-show="{{ show-rated }}" {% if show-rated == false %}style="visibility: hidden;"{% endif %} >
+    Top Rated *
+  </div>
+  <div class="cont-card-bundle mb">
+    <div class="pdm-gallery mb">
+      <div class="media mb">
+        <img class="src product" src="{{ product.featured_image | image_url }}" alt="image {{ product.title }}">
+      </div>
+    </div>
+    <div class="product-info mb"> 
+      <div class="title mb"><h3>{{ product.title }}</h3></div>
+    </div>
+    <div class="bundle-button mb">
+        <div class="price mb">
+          {{ product.price | money }}
+        </div>
+        <div class="bundle-btn mb" data-product-id="{{ product.id }}">
+            <span class="uncheck">{{ btn-text }}</span>
+            <span class="check">Added</span>
+        </div>
+        <div class="more">
+          <span class="learn-more" data-product-id="{{ product.id }}"> Learn More</span>
+        </div>
+    </div>
+  </div>
+</div>
+{% endif %}
