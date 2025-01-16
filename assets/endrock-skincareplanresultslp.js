@@ -1,3 +1,23 @@
+const getUserName = () => {
+  console.log('getUserName')
+  const urlParams = new URLSearchParams(window.location.search)
+  const userName = urlParams.get('name');
+
+  if(!userName)return;
+  console.log('name',  userName )
+  const elements = document.querySelectorAll('.user-name');
+  if(elements.length < 1)return;
+  console.log('elements', elements)
+  elements.forEach((elem) => {
+    const name = elem.querySelector('.name');
+    if(name){
+      name.innerText = userName 
+      elem.classList.remove('hidden')
+    }
+  })
+}
+
+
 const lifestyleInit = ()=>{
   window.addEventListener("load", () => {
     if (!window.customElements.get('cards-tips')) {
@@ -632,6 +652,7 @@ const  closureBundleInit = ()=>{
   });
 }
 
+getUserName()
 closureBundleInit()
 flatingBundleInit()
 productsBundleInit()
