@@ -59,7 +59,11 @@
             {{ card.settings.text_check_strong }}
           </div>
           <div class="cont-img">
-            <img class="product-img" src="{{ product.featured_image | image_url: width: 208, height: 208, crop: 'center' }}" alt="image {{ product.title }}">
+            {% if card.settings.image_product %}
+              <img class="product-img" src="{{ card.settings.image_product | image_url: width: 208, height: 208, crop: 'center' }}" alt="image {{ product.title }}">
+            {% else %}
+              <img class="product-img" src="{{ product.featured_image | image_url: width: 208, height: 208, crop: 'center' }}" alt="image {{ product.title }}">
+            {% endif %}
           </div>
           <div class="product-info">
             <div class="product-title">{{ product.title }}</div>
@@ -123,6 +127,11 @@
       "type": "card",
       "name": "Card Product",
       "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_product",
+          "label": "Product' Image"
+        },
         {
           "type": "text",
           "id": "text_check_strong",

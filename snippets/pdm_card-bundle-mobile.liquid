@@ -6,7 +6,11 @@
   <div class="cont-card-bundle mb">
     <div class="pdm-gallery mb">
       <div class="media mb">
-        <img class="src product" src="{{ product.featured_image | image_url }}" alt="image {{ product.title }}">
+        {% if product-img %}
+          <img class="src product" src="{{ product-img | image_url }}" alt="image {{ product.title }}">
+        {% else %}
+          <img class="src product" src="{{ product.featured_image | image_url }}" alt="image {{ product.title }}">
+        {% endif %}
       </div>
     </div>
     <div class="product-info mb"> 

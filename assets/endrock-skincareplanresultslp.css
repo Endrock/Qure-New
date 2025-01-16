@@ -2267,7 +2267,10 @@
       display:none;
     }
     .mobile{
-      display:block;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:5px;
     }
   }
   @media (max-width: 768px) {

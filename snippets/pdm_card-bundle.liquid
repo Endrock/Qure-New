@@ -11,7 +11,11 @@
     </div>
     <div class="pdm-gallery">
       <div class="media">
+        {% if product-img %}
+          <img class="src product" src="{{ product-img | image_url }}" alt="image {{ product.title }}">
+        {% else %}
           <img class="src product" src="{{ product.featured_image | image_url }}" alt="image {{ product.title }}">
+        {% endif %}
         {% if result-img %}
           <img class="src results hidden" src="{{ result-img | image_url }}" alt="result {{ product.title }}">
         {% endif %}

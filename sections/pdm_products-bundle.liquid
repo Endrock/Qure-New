@@ -9,6 +9,7 @@
     {% assign product_object = products[index_product] %}
     {% render 'pdm_card-bundle-mobile'
     product: product_object,
+    product-img: card.settings.image_product,
     show-rated: card.settings.show_top_rated,
     btn-text: section.settings.button_card
     %}
@@ -21,6 +22,7 @@
     {% assign product_object = products[index_product] %}
     {% render 'pdm_card-bundle'
     product: product_object,
+    product-img: card.settings.image_product,
     result-img: card.settings.image_results,
     show-rated: card.settings.show_top_rated,
     video: card.settings.video,
@@ -75,6 +77,11 @@
       "type": "card",
       "name": "Card Product",
       "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_product",
+          "label": "Product' Image"
+        },
         {
           "type": "image_picker",
           "id": "image_results",
