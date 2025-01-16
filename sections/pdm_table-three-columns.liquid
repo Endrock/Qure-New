@@ -24,9 +24,9 @@
               <div class="content">
                 <span class="icon">
                   {% if block.settings.qure_check == true %}
-                    <img class="check" src="{{ section.settings.check_good | img_url: 'original' }}" alt="check">
+                    <img class="check" src="{{ section.settings.check_good | image_url: width: 24, height: 24, crop: 'center' }}" alt="check">
                   {% else %}
-                    <img class="check" src="{{ section.settings.check_error | img_url: 'original' }}" alt="check">
+                    <img class="check" src="{{ section.settings.check_error | image_url: width: 24, height: 24, crop: 'center' }}" alt="check">
                   {% endif %}
                 </span>
                 <span class="text">{{ block.settings.row_qure }}</span>
