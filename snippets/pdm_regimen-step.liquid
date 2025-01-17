@@ -32,7 +32,7 @@
     {% if video %}
         {{ video | video_tag: autoplay: true, loop: true, muted: true, controls: false }}
     {% else %}
-        <img loading="lazy" src="{{ image | img_url: "original" }}" alt="picture for {{ title }}" />
+        <img src="{{ image | image_url: width:614, crop: 'center' }}" alt="picture for {{ metaobjectinfo['title'] }}" />
     {% endif %}
     </div>
 </div>

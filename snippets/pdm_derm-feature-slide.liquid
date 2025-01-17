@@ -10,8 +10,8 @@ product: block.settings.product %}
 <div class="swiper-slide">
   <div class="slide-cont">
     <div class="video-cont" data-index="{{ index }}">
-      <img class="img-overlay" src="{{ img_ovl | img_url: 'original' }}" alt="video overlay image"></img>
-      <img class="img-icon-play" src="{{ img_play | img_url: 'original' }}" alt="video overlay image"></img>
+      <img class="img-overlay" src="{{ img_ovl | image_url: width: 313, height:418, crop: 'center' }}" alt="video overlay image"></img>
+      <img class="img-icon-play" src="{{ img_play | image_url: width:40, height: 40, crop: 'center' }}" alt="video overlay image"></img>
     </div>
     <div class="text-cont">
       <div class="review">

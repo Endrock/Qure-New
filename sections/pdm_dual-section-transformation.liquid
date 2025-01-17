@@ -1,5 +1,5 @@
-{% assign icon_check =  section.settings.icon_img | img_url: 'original' %}
-{% assign main_image =  section.settings.dual_img | img_url: 'original' %}
+{% assign icon_check =  section.settings.icon_img | image_url: width: 16, crop: 'center' %}
+{% assign main_image =  section.settings.dual_img | image_url: width: 416, crop: 'center' %}
 <div class="dual-transformation container">
     <div class="container-image">
       {% render 'pdm_image-tranformation', 
