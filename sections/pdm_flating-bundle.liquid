@@ -2,7 +2,8 @@
 <flating-bundle class="flating-bundle"
                 data-bundle-name="{{ section.settings.bundle_info.name }}" 
                 data-bundle-id="{{ section.settings.bundle_products.local_storage_name }}"
-                data-bundle-array="[]">
+                data-bundle-array="[]"
+                bundle-info={% render 'pdm_bundle-info' info: section.settings.bundle_info %}>
 <div class="btn-mobile mobile">
   <img class="cart-icon-black" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/humbleicons_cart.svg" alt="cart icon">
   Your Bundle
