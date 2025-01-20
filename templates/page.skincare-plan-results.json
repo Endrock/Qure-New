@@ -199,13 +199,13 @@
         "slide_df_Y793R7": {
           "type": "slide-df",
           "settings": {
-            "review_doctor": "“Qure has a really good serum. It probably has the best-known peptide complex. It’s an amazing serum. This product is always sold out from Qure. So get it when you see it.”",
-            "name_doctor": "Dr Shah and Dr Maxfield",
-            "certified_doctor": "Board-Certified Dermatologists",
+            "review_doctor": " “As it relates to cost, I think this is a great skincare investment. [...] Unlike many other home skincare devices, this is a device that is backed by a lot of research, so we know it works.”",
+            "name_doctor": "Dr. Natasha Henry",
+            "certified_doctor": "Board-Certified Dermatologist",
             "video": "shopify://files/videos/f5de3c2a52ec4df78271943cbd8804d3.mp4",
             "video_external": "",
-            "img": "shopify://shop_images/mi_refill-result-patches-6.webp",
-            "product": "face-serum"
+            "img": "shopify://shop_images/29f40fc24efce8f7246264227cb00b6b.png",
+            "product": "q-rejuvalight-pro-facewear"
           }
         },
         "slide_df_paGrtK": {
@@ -269,20 +269,42 @@
             "others_check": false
           }
         },
+        "row_MwbTdr": {
+          "type": "row",
+          "settings": {
+            "row_feature": "Gentle on Your Skin, No Downtime",
+            "row_qure": "Gentle with no harsh side effects or downtime",
+            "qure_check": true,
+            "row_others": "Retinol/Tretinoin and laser treatments can be harsh and require downtime",
+            "others_check": false
+          }
+        },
         "row_MGNFka": {
           "type": "row",
           "settings": {
-            "row_feature": "Effective, Proven Results",
-            "row_qure": "Targets root causes for lasting change",
+            "row_feature": "Deeper Penetration, Better Results",
+            "row_qure": "Qure addresses underlying issues and Targets Root Causes for long-term results",
             "qure_check": true,
-            "row_others": "Often only treat symptoms",
+            "row_others": "Topical skincare can’t penetrate deep into the skin.  Doesn’t not address the root cause and may require alternative treatments.",
+            "others_check": false
+          }
+        },
+        "row_4gfCEG": {
+          "type": "row",
+          "settings": {
+            "row_feature": "Dermatologist-Approved",
+            "row_qure": "Reviewed and tested by dermatologists for safety and effectiveness",
+            "qure_check": true,
+            "row_others": "Many treatments are not dermatologist-approved",
             "others_check": false
           }
         }
       },
       "block_order": [
         "row_pPaYhw",
-        "row_MGNFka"
+        "row_MwbTdr",
+        "row_MGNFka",
+        "row_4gfCEG"
       ],
       "settings": {
         "section_title": "Why choose Qure?",
