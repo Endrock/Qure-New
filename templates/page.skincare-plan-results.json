@@ -223,33 +223,20 @@
         "slide_df_JxLnxg": {
           "type": "slide-df",
           "settings": {
-            "review_doctor": "“Qure has a really good serum. It probably has the best-known peptide complex. It’s an amazing serum. This product is always sold out from Qure. So get it when you see it.”",
-            "name_doctor": "Dr Shah and Dr Maxfield",
-            "certified_doctor": "Board-Certified Dermatologists",
+            "review_doctor": "“If you are considering doing something to help you with fine lines or even brighten up or even out your complexion, this is the perfect treatment to do in between your in-office micro-needling treatments.”",
+            "name_doctor": "Dr. Alexandra Brown",
+            "certified_doctor": "Board-Certified Dermatologist",
             "video": "shopify://files/videos/d5d0c051b43e4117be7b6308e06e8f66.mp4",
             "video_external": "",
             "img": "shopify://shop_images/Untitled_design_7.png",
-            "product": "breakout-control-advanced"
-          }
-        },
-        "slide_df_ghwf7Y": {
-          "type": "slide-df",
-          "settings": {
-            "review_doctor": "“Qure has a really good serum. It probably has the best-known peptide complex. It’s an amazing serum. This product is always sold out from Qure. So get it when you see it.”",
-            "name_doctor": "Dr Shah and Dr Maxfield",
-            "certified_doctor": "Board-Certified Dermatologists",
-            "video": "shopify://files/videos/298983845_400063408937848_3554475537750886670_n.mp4",
-            "video_external": "",
-            "img": "shopify://shop_images/Rectangle_1_b5f8a216-7cce-4747-b842-69fc2f2b6a0c.png",
-            "product": "face-serum"
+            "product": "micro-infusion-3-month-bundle-hydra-soothing-lp"
           }
         }
       },
       "block_order": [
         "slide_df_Y793R7",
         "slide_df_paGrtK",
-        "slide_df_JxLnxg",
-        "slide_df_ghwf7Y"
+        "slide_df_JxLnxg"
       ],
       "settings": {
         "title": "Slider Derm Feature",
