@@ -419,9 +419,55 @@ const productsBundleInit = ()=>{
             })
           })
 
+          btnSubmit.addEventListener('click',() => {
+            console.log('bundleToCart productsBundle btn')
+            const arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
+            const bundleInfo = JSON.parse(this.getAttribute('bundle-info'));
+            const bundleId = this.getAttribute('data-bundle-id')
+            console.log('arrayBundle', arrayBundle)
+            console.log('bundleInfo', bundleInfo )
+            const items = []
+
+            arrayBundle.forEach((item) => {
+              items.push({
+                id: item,
+                quantity: 1,
+                properties:{
+                  _pack_id: bundleId,
+                  _bundleInfo: bundleInfo
+                }
+              })
+            })
+
+            console.log('items', items )
+            if(items.length < 1) return;
+            const data = { items }
+            console.log('data', data )
+
+            const endpoint = `/cart/add.js`;
+            const options = {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(data)
+            };
+            console.log('options', options)
+
+            fetch(endpoint, options)
+              .then(response => response.json())
+              .then(data => {
+                console.log('Items added to the cart:', data);
+              })
+              .catch(error => {
+                console.error('Error adding items to the cart:', error);
+              });
+
+          })
 
 
         }
+
         changeArrayBundle(oldValue, newValue){
           const arrayBundle = JSON.parse(newValue)
           const cards = this.querySelectorAll('.card-bundle')
