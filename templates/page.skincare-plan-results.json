@@ -323,14 +323,14 @@
           "type": "row",
           "settings": {
             "row_title": "Retinol/Tretinoin",
-            "row_content_strong": "Long-Lasting, Root-Cause Solutions",
-            "row_content": "Qure’s targeted products address the  underlying issues for results that last, unlike other treatments that only offer temporary fixes our general solutions."
+            "row_content_strong": "Gentle on Your Skin, No Downtime ",
+            "row_content": "Qure delivers effective results without the harsh side effects or downtime often associated with retinoids."
           }
         },
         "row_VUqdx4": {
           "type": "row",
           "settings": {
-            "row_title": "Retinol/Tretinoin",
+            "row_title": "Serums and Topical Creams",
             "row_content_strong": "Long-Lasting, Root-Cause Solutions",
             "row_content": "Qure’s targeted products address the  underlying issues for results that last, unlike other treatments that only offer temporary fixes our general solutions."
           }
@@ -338,16 +338,25 @@
         "row_Wp4LeM": {
           "type": "row",
           "settings": {
-            "row_title": "Retinol/Tretinoin",
-            "row_content_strong": "Long-Lasting, Root-Cause Solutions",
-            "row_content": "Qure’s targeted products address the  underlying issues for results that last, unlike other treatments that only offer temporary fixes our general solutions."
+            "row_title": "Laser Treatments  & Microneedling",
+            "row_content_strong": "Dermatologist-Approved & Safe",
+            "row_content": "Qure’s solutions are reviewed and recommended by Dermatologists, ensuring both safety and effectiveness without the high costs and recovery time of in-office treatments."
+          }
+        },
+        "row_yytDew": {
+          "type": "row",
+          "settings": {
+            "row_title": "Over-the-Counter Topical Products",
+            "row_content_strong": "Visible, Proven Results",
+            "row_content": "Qure combines advanced technology and targeted serums to offer results that are visible and lasting, something many over-the-counter products can’t promise."
           }
         }
       },
       "block_order": [
         "row_wNQqHc",
         "row_VUqdx4",
-        "row_Wp4LeM"
+        "row_Wp4LeM",
+        "row_yytDew"
       ],
       "settings": {
         "section_title": "Think You’ve Tried It All?  Here’s Why Qure Is Different.",
