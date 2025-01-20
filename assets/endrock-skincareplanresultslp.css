@@ -1955,6 +1955,10 @@
     height: 24px;
     margin-right:6px;
   }
+  .disabled {
+    filter: brightness(0.5);
+    cursor: no-drop;
+  }
   .btn-discount{
     display: flex;
     width: 232px;

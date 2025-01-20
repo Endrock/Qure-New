@@ -1,7 +1,8 @@
 <products-bundle class="products-bundle" 
                  data-bundle-name="{{ section.settings.bundle_info.name }}" 
                  data-bundle-id="{{ section.settings.bundle_products.local_storage_name }}"
-                 data-bundle-array="[]">
+                 data-bundle-array="[]"
+                 bundle-info={% render 'pdm_bundle-info' id: section.settings.bundle_products.local_storage_name, info: section.settings.bundle_info %}>
   <div class="container-mb-pb ">
   {% assign products = section.settings.bundle_products.list_products.value | reverse | reverse %} 
   {% for card in section.blocks %}

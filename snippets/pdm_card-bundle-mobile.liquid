@@ -1,5 +1,5 @@
 {% if product %}
-<div class="card-bundle mb" data-product-id="{{ product.id }}">
+<div class="card-bundle mb" data-product-id="{{ product.selected_or_first_available_variant.id }}">
   <div class="rate mb" data-show="{{ show-rated }}" {% if show-rated == false %}style="visibility: hidden;"{% endif %} >
     Top Rated *
   </div>
@@ -20,12 +20,12 @@
         <div class="price mb">
           {{ product.price | money }}
         </div>
-        <div class="bundle-btn mb" data-product-id="{{ product.id }}">
+        <div class="bundle-btn mb" data-product-id="{{ product.selected_or_first_available_variant.id }}">
             <span class="uncheck">{{ btn-text }}</span>
             <span class="check">Added</span>
         </div>
         <div class="more">
-          <span class="learn-more" data-product-id="{{ product.id }}"> Learn More</span>
+          <span class="learn-more" data-product-id="{{ product.selected_or_first_available_variant.id }}"> Learn More</span>
         </div>
     </div>
   </div>

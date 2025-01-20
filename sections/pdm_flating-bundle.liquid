@@ -3,7 +3,7 @@
                 data-bundle-name="{{ section.settings.bundle_info.name }}" 
                 data-bundle-id="{{ section.settings.bundle_products.local_storage_name }}"
                 data-bundle-array="[]"
-                bundle-info={% render 'pdm_bundle-info' info: section.settings.bundle_info %}>
+                bundle-info={% render 'pdm_bundle-info' id: section.settings.bundle_products.local_storage_name, info: section.settings.bundle_info %}>
 <div class="btn-mobile mobile">
   <img class="cart-icon-black" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/humbleicons_cart.svg" alt="cart icon">
   Your Bundle
@@ -23,8 +23,8 @@
             <p class="cube-discount-text">{{ discount }}%<br/><span class="off">OFF</span></p>
           </div>
           {% for product in section.settings.bundle_products.list_products.value %}
-            <div class="child cube-discount-product hidden" data-product-id="{{ product.id }}" data-product-price="{{ product.price }}">
-              <div class="close" data-product-id="{{ product.id }}">
+            <div class="child cube-discount-product hidden" data-product-id="{{ product.selected_or_first_available_variant.id }}" data-product-price="{{ product.price }}">
+              <div class="close" data-product-id="{{ product.selected_or_first_available_variant.id }}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M6.91446 0.5L6.91531 0.500597L7.4994 1.08469L7.5 1.08554L7.4994 1.08708L4.58649 4L7.4994 6.91292L7.5 6.91376L7.4994 6.91531L6.91531 7.4994L6.91446 7.5L6.91292 7.4994L4 4.58649L1.08708 7.4994L1.08624 7.5L1.08469 7.4994L0.500597 6.91531L0.5 6.91446L0.500597 6.91292L3.4135 4L0.500597 1.08708L0.5 1.08624L0.500597 1.08469L1.08469 0.500597L1.08554 0.5L1.08708 0.500597L4 3.4135L6.91292 0.500597L6.91446 0.5Z" fill="black" stroke="black" stroke-width="0.3"/>
                 </svg>
@@ -46,7 +46,7 @@
       </span>
     </div>
     <div class="bundle-discount">
-      <span class="btn-discount">Bundle and save</span>
+      <span class="btn-discount disabled">Bundle and save</span>
     </div>
   </div>
 </flating-bundle>

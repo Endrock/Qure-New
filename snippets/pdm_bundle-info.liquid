@@ -1,0 +1,14 @@
+{% liquid 
+    assign name = info.name.value 
+    assign productVariandid = info.parent_product.value.selected_or_first_available_variant.id
+    assign image = info.parent_product.value.featured_image | image_url: width: 100, crop: 'center'
+    assign discounts = '['
+    for discount in info.discounts.value
+        assign discounts = discounts | append: ' ' | append: discount
+        unless forloop.last
+            assign discounts = discounts | append: ','
+        endunless
+    endfor
+    assign discounts = discounts | append: ']'
+%}
+'{"id":"{{ id }}", "name":"{{ name }}", "discounts":{{ discounts }}, "parentId":"{{ productVariandid }}", "image":"https:/{{ image }}"}'

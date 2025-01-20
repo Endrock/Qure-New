@@ -19,7 +19,7 @@
           {% assign index_product = forloop.index | minus: 1 %}
           {% assign product = products[index_product] %}
           {% if product %}
-            <div class="info-closure" data-product-id="{{ product.id }}">
+            <div class="info-closure" data-product-id="{{ product.selected_or_first_available_variant.id }}">
               <div class="cont-check">
                 <div class="info-check">
                   <img class="icon-check" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/check-bg-green.svg" alt="image {{ product.title }}">
@@ -38,7 +38,7 @@
           {% assign index_product = forloop.index | minus: 1 %}
           {% assign product = products[index_product] %}
           {% if product %}
-            <div class="info-closure" data-product-id="{{ product.id }}">
+            <div class="info-closure" data-product-id="{{ product.selected_or_first_available_variant.id }}">
               <div class="product-text">
                 <p>{{ card.settings.text_check_strong }}</p>
                 <svg class="btn-quit" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
@@ -54,7 +54,7 @@
       {% for card in section.blocks %}
         {% assign index_product = forloop.index | minus: 1 %}
         {% assign product = products[index_product] %}
-        <div class="card-product" data-product-id="{{ product.id }}">
+        <div class="card-product" data-product-id="{{ product.selected_or_first_available_variant.id }}">
           <div class="mobile-text">
             {{ card.settings.text_check_strong }}
           </div>
@@ -67,7 +67,7 @@
           </div>
           <div class="product-info">
             <div class="product-title">{{ product.title }}</div>
-            <div class="btn-bundle" data-product-id="{{ product.id }}">
+            <div class="btn-bundle" data-product-id="{{ product.selected_or_first_available_variant.id }}">
               <span class="uncheck desktop">{{ section.settings.button_card }}</span>
               <span class="uncheck mobile">Add</span>
               <span class="check">Added</span>
