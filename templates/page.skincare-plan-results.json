@@ -44,7 +44,7 @@
             "show_top_rated": false,
             "text_check": "<ul><li>Clinically-proven red light therapy stimulates collagen for firmer, fuller skin, penetrating where topicals can’t.</li><li>87% reported smoother facial wrinkles and fine lines.<br/></li><li>Quick daily 3 minute treatments.</li><li>Dermatologist-recommended and FDA-cleared.</li></ul>",
             "doctor_name": "Dr. Maxfield",
-            "doctor_image": "shopify://shop_images/Frame_3594.webp",
+            "doctor_image": "shopify://shop_images/Testimonial_Image.png",
             "doctor_text": "“This is my absolute favorite mask. It’s quick, effective and patients see great results with consistent use”.Dr. Maxfield  |  Board Certified Dermatologists",
             "doctor_certificated": "Board Certified Dermatologists"
           }
@@ -108,7 +108,7 @@
         "tip_WqzmXT": {
           "type": "tip",
           "settings": {
-            "title": "1 Exfoliate 1-2 times per week",
+            "title": "Exfoliate 1-2 times per week",
             "description": "<p>With an at-home peel that contains Alpha-Hydroxy Acids (AHAs) like glycolic and lactic acids. This will help remove dead skin that has settled into fine lines, making them less visible.</p>",
             "image_card": "shopify://shop_images/image.jpg"
           }
@@ -116,25 +116,25 @@
         "tip_qdCXLz": {
           "type": "tip",
           "settings": {
-            "title": "2 Exfoliate 1-2 times per week",
-            "description": "<p>With an at-home peel that contains Alpha-Hydroxy Acids (AHAs) like glycolic and lactic acids. This will help remove dead skin that has settled into fine lines, making them less visible.</p>",
-            "image_card": "shopify://shop_images/image.jpg"
+            "title": "Reduce sugar intake",
+            "description": "<p>Higher blood sugar levels kick-start a process called “glycation,” which makes collagen fibers cross-link, tangling and causing them to lose elasticity. As a consequence, the skin looks wrinkled and saggy. </p>",
+            "image_card": "shopify://shop_images/image_-_2025-01-20T164516.349.png"
           }
         },
         "tip_8x8iED": {
           "type": "tip",
           "settings": {
-            "title": "3 Exfoliate 1-2 times per week",
-            "description": "<p>With an at-home peel that contains Alpha-Hydroxy Acids (AHAs) like glycolic and lactic acids. This will help remove dead skin that has settled into fine lines, making them less visible.</p>",
-            "image_card": "shopify://shop_images/image.jpg"
+            "title": "Sleep on your back to keep your face symmetric and avoid wrinkles",
+            "description": "<p>On average, we spend about 2,500 hours a year sleeping. When you sleep on your side, you are squishing your face against the pillow, basically ironing wrinkles into your face. Additionally, gravity acts unevenly, pulling the cheeks and nostrils down. As a result, one side of the face will look slightly rounder (the side on which you sleep) and the other more defined.</p>",
+            "image_card": "shopify://shop_images/image_-_2025-01-20T164637.583.png"
           }
         },
         "tip_ChLfdj": {
           "type": "tip",
           "settings": {
-            "title": "4 Exfoliate 1-2 times per week",
-            "description": "<p>With an at-home peel that contains Alpha-Hydroxy Acids (AHAs) like glycolic and lactic acids. This will help remove dead skin that has settled into fine lines, making them less visible.</p>",
-            "image_card": "shopify://shop_images/image.jpg"
+            "title": "Swap your cotton pillowcase for one containing copper oxide to reduce wrinkles and crow’s feet when you sleep on your side.",
+            "description": "<p><strong>Clinical Study</strong>…</p><p>In a 2012 randomized clinical study, participants who slept on a copper pillowcase saw an average 9% reduction in their crow's feet over 8 weeks. Participants not sleeping on the copper cases saw no wrinkle reduction. (Source)</p>",
+            "image_card": "shopify://shop_images/image_-_2025-01-20T165310.317.png"
           }
         }
       },
@@ -199,13 +199,13 @@
         "slide_df_Y793R7": {
           "type": "slide-df",
           "settings": {
-            "review_doctor": "“Qure has a really good serum. It probably has the best-known peptide complex. It’s an amazing serum. This product is always sold out from Qure. So get it when you see it.”",
-            "name_doctor": "Dr Shah and Dr Maxfield",
-            "certified_doctor": "Board-Certified Dermatologists",
-            "video": "shopify://files/videos/f5de3c2a52ec4df78271943cbd8804d3.mp4",
+            "review_doctor": " “As it relates to cost, I think this is a great skincare investment. [...] Unlike many other home skincare devices, this is a device that is backed by a lot of research, so we know it works.”",
+            "name_doctor": "Dr. Natasha Henry",
+            "certified_doctor": "Board-Certified Dermatologist",
+            "video": "shopify://files/videos/Download_3f033eae-717f-4164-9097-ae309c3f15bf.mp4",
             "video_external": "",
-            "img": "shopify://shop_images/mi_refill-result-patches-6.webp",
-            "product": "face-serum"
+            "img": "shopify://shop_images/29f40fc24efce8f7246264227cb00b6b.png",
+            "product": "q-rejuvalight-pro-facewear"
           }
         },
         "slide_df_paGrtK": {
@@ -214,45 +214,32 @@
             "review_doctor": "“Qure has a really good serum. It probably has the best-known peptide complex. It’s an amazing serum. This product is always sold out from Qure. So get it when you see it.”",
             "name_doctor": "Dr Shah and Dr Maxfield",
             "certified_doctor": "Board-Certified Dermatologists",
-            "video": "shopify://files/videos/Qure Micro Infusion_creams-cropped.mp4",
+            "video": "shopify://files/videos/This is how you make simple skincare = effective. Packed with retinol, bakuchiol, antioxidants, the world’s most trusted anti-aging peptide, our All-In-One powerhouse Face Serum is a one step multitasker for all things aging skin. Don’.mp4",
             "video_external": "",
             "img": "shopify://shop_images/mtp_thumb-6.webp",
-            "product": "breakout-control-advanced"
+            "product": "face-serum"
           }
         },
         "slide_df_JxLnxg": {
           "type": "slide-df",
           "settings": {
-            "review_doctor": "“Qure has a really good serum. It probably has the best-known peptide complex. It’s an amazing serum. This product is always sold out from Qure. So get it when you see it.”",
-            "name_doctor": "Dr Shah and Dr Maxfield",
-            "certified_doctor": "Board-Certified Dermatologists",
+            "review_doctor": "“If you are considering doing something to help you with fine lines or even brighten up or even out your complexion, this is the perfect treatment to do in between your in-office micro-needling treatments.”",
+            "name_doctor": "Dr. Alexandra Brown",
+            "certified_doctor": "Board-Certified Dermatologist",
             "video": "shopify://files/videos/d5d0c051b43e4117be7b6308e06e8f66.mp4",
             "video_external": "",
             "img": "shopify://shop_images/Untitled_design_7.png",
-            "product": "breakout-control-advanced"
-          }
-        },
-        "slide_df_ghwf7Y": {
-          "type": "slide-df",
-          "settings": {
-            "review_doctor": "“Qure has a really good serum. It probably has the best-known peptide complex. It’s an amazing serum. This product is always sold out from Qure. So get it when you see it.”",
-            "name_doctor": "Dr Shah and Dr Maxfield",
-            "certified_doctor": "Board-Certified Dermatologists",
-            "video": "shopify://files/videos/298983845_400063408937848_3554475537750886670_n.mp4",
-            "video_external": "",
-            "img": "shopify://shop_images/Rectangle_1_b5f8a216-7cce-4747-b842-69fc2f2b6a0c.png",
-            "product": "face-serum"
+            "product": "micro-infusion-3-month-bundle-6x-beta-glucan-serum"
           }
         }
       },
       "block_order": [
         "slide_df_Y793R7",
         "slide_df_paGrtK",
-        "slide_df_JxLnxg",
-        "slide_df_ghwf7Y"
+        "slide_df_JxLnxg"
       ],
       "settings": {
-        "title": "Slider Derm Feature",
+        "title": "Trustworthy skincare recommended by Dermatologist",
         "icon_play": "shopify://shop_images/video_-_icon_3738742f-5e8c-4865-85d0-2542dd518ef6.svg"
       }
     },
@@ -269,20 +256,42 @@
             "others_check": false
           }
         },
+        "row_MwbTdr": {
+          "type": "row",
+          "settings": {
+            "row_feature": "Gentle on Your Skin, No Downtime",
+            "row_qure": "Gentle with no harsh side effects or downtime",
+            "qure_check": true,
+            "row_others": "Retinol/Tretinoin and laser treatments can be harsh and require downtime",
+            "others_check": false
+          }
+        },
         "row_MGNFka": {
           "type": "row",
           "settings": {
-            "row_feature": "Effective, Proven Results",
-            "row_qure": "Targets root causes for lasting change",
+            "row_feature": "Deeper Penetration, Better Results",
+            "row_qure": "Qure addresses underlying issues and Targets Root Causes for long-term results",
             "qure_check": true,
-            "row_others": "Often only treat symptoms",
+            "row_others": "Topical skincare can’t penetrate deep into the skin.  Doesn’t not address the root cause and may require alternative treatments.",
+            "others_check": false
+          }
+        },
+        "row_4gfCEG": {
+          "type": "row",
+          "settings": {
+            "row_feature": "Dermatologist-Approved",
+            "row_qure": "Reviewed and tested by dermatologists for safety and effectiveness",
+            "qure_check": true,
+            "row_others": "Many treatments are not dermatologist-approved",
             "others_check": false
           }
         }
       },
       "block_order": [
         "row_pPaYhw",
-        "row_MGNFka"
+        "row_MwbTdr",
+        "row_MGNFka",
+        "row_4gfCEG"
       ],
       "settings": {
         "section_title": "Why choose Qure?",
@@ -301,14 +310,14 @@
           "type": "row",
           "settings": {
             "row_title": "Retinol/Tretinoin",
-            "row_content_strong": "Long-Lasting, Root-Cause Solutions",
-            "row_content": "Qure’s targeted products address the  underlying issues for results that last, unlike other treatments that only offer temporary fixes our general solutions."
+            "row_content_strong": "Gentle on Your Skin, No Downtime ",
+            "row_content": "Qure delivers effective results without the harsh side effects or downtime often associated with retinoids."
           }
         },
         "row_VUqdx4": {
           "type": "row",
           "settings": {
-            "row_title": "Retinol/Tretinoin",
+            "row_title": "Serums and Topical Creams",
             "row_content_strong": "Long-Lasting, Root-Cause Solutions",
             "row_content": "Qure’s targeted products address the  underlying issues for results that last, unlike other treatments that only offer temporary fixes our general solutions."
           }
@@ -316,16 +325,25 @@
         "row_Wp4LeM": {
           "type": "row",
           "settings": {
-            "row_title": "Retinol/Tretinoin",
-            "row_content_strong": "Long-Lasting, Root-Cause Solutions",
-            "row_content": "Qure’s targeted products address the  underlying issues for results that last, unlike other treatments that only offer temporary fixes our general solutions."
+            "row_title": "Laser Treatments  & Microneedling",
+            "row_content_strong": "Dermatologist-Approved & Safe",
+            "row_content": "Qure’s solutions are reviewed and recommended by Dermatologists, ensuring both safety and effectiveness without the high costs and recovery time of in-office treatments."
+          }
+        },
+        "row_yytDew": {
+          "type": "row",
+          "settings": {
+            "row_title": "Over-the-Counter Topical Products",
+            "row_content_strong": "Visible, Proven Results",
+            "row_content": "Qure combines advanced technology and targeted serums to offer results that are visible and lasting, something many over-the-counter products can’t promise."
           }
         }
       },
       "block_order": [
         "row_wNQqHc",
         "row_VUqdx4",
-        "row_Wp4LeM"
+        "row_Wp4LeM",
+        "row_yytDew"
       ],
       "settings": {
         "section_title": "Think You’ve Tried It All?  Here’s Why Qure Is Different.",
@@ -339,65 +357,50 @@
         "slide_BP6FNR": {
           "type": "slide",
           "settings": {
-            "heading": "1 Wish I had this technology years ago!",
+            "heading": "Wish I had this technology years ago!",
             "before": "BEFORE",
             "after": "AFTER 6 WEEKS",
-            "image": "shopify://shop_images/before-after_03b483f7-04ee-4a6b-a887-ee3a4a1bf436.jpg",
+            "image": "shopify://shop_images/0f0d15b0558ca653c511583399e295a3.png",
             "text": "<p>After two weeks I began to see results and after six weeks the changes in my skin were dramatic. I have now been using Qure six months and loving the compliments! I bought masks for my daughters for Christmas so they could start at a younger age.... I wish this technology had been available when I was younger. I am 76 years old!</p>",
             "image_country": "shopify://shop_images/Flag_of_the_United_States_1.svg",
-            "client": "Carlos Carlos",
+            "client": "Terri P.",
             "verified": true,
-            "product": "face-serum"
+            "product": "q-rejuvalight-pro-facewear"
           }
         },
         "slide_EcpCWr": {
           "type": "slide",
           "settings": {
-            "heading": "2 Wish I had this technology years ago!",
+            "heading": "Outstanding!",
             "before": "BEFORE",
             "after": "AFTER 16 WEEKS",
-            "image": "shopify://shop_images/before-after_03b483f7-04ee-4a6b-a887-ee3a4a1bf436.jpg",
-            "text": "<p>After two weeks I began to see results and after six weeks the changes in my skin were dramatic. I have now been using Qure six months and loving the compliments! I bought masks for my daughters for Christmas so they could start at a younger age.... I wish this technology had been available when I was younger. I am 76 years old!</p>",
+            "image": "shopify://shop_images/neck_and_deck_signs_of_aging_ba.png",
+            "text": "<p>\"I'm so impressed with the results! I noticed a difference after a few weeks however when comparing photos I am so surprised at how much younger the skin on my neck and chest looks. Wrinkles have significantly reduced, sun spots are lighter and my skin looks and feels more rejuvenated. Device is easy to use, I love that I can clip the controller to my robe and multitask around the house whilst the treatment is on.\"</p>",
             "image_country": "shopify://shop_images/Flag_of_the_United_States_1.svg",
-            "client": "David David",
+            "client": "Mary R.M.",
             "verified": true,
-            "product": "face-serum"
+            "product": "neck-decolletage-led"
           }
         },
         "slide_nN9pJj": {
           "type": "slide",
           "settings": {
-            "heading": "3 Wish I had this technology years ago!",
+            "heading": "my skin RETURNED to LIFE!",
             "before": "BEFORE",
-            "after": "AFTER",
+            "after": "AFTER 6 TREATMENTS",
             "image": "shopify://shop_images/before-after_03b483f7-04ee-4a6b-a887-ee3a4a1bf436.jpg",
-            "text": "<p>After two weeks I began to see results and after six weeks the changes in my skin were dramatic. I have now been using Qure six months and loving the compliments! I bought masks for my daughters for Christmas so they could start at a younger age.... I wish this technology had been available when I was younger. I am 76 years old!</p>",
-            "image_country": "shopify://shop_images/Flag_of_Croatia_svg.png",
-            "client": "Miller Miller",
+            "text": "<p>\"I just turned 57 years. My skin was extremely dry and while using this product my skin RETURNED to LIFE! I am so impressed with it! My Coworkers ask me what I use in my skin.. and I tell them. Product easy to use and the needles are better that using a pen for microneedling. This is an amazing product that you will not regret in purchasing it. really see the change in my skin. Outstanding job QURE!\"</p>",
+            "image_country": "shopify://shop_images/Flag_of_the_United_States_1.svg",
+            "client": "Ellie V.",
             "verified": true,
             "product": "breakout-control-pro-1"
-          }
-        },
-        "slide_CPfYY6": {
-          "type": "slide",
-          "settings": {
-            "heading": "Wish I had this technology years ago!",
-            "before": "BEFORE",
-            "after": "AFTER",
-            "image": "shopify://shop_images/before-after_03b483f7-04ee-4a6b-a887-ee3a4a1bf436.jpg",
-            "text": "<p>After two weeks I began to see results and after six weeks the changes in my skin were dramatic. I have now been using Qure six months and loving the compliments! I bought masks for my daughters for Christmas so they could start at a younger age.... I wish this technology had been available when I was younger. I am 76 years old!</p>",
-            "image_country": "shopify://shop_images/Flag_of_Croatia_svg.png",
-            "client": "Jorge Jorge",
-            "verified": true,
-            "product": "face-serum"
           }
         }
       },
       "block_order": [
         "slide_BP6FNR",
         "slide_EcpCWr",
-        "slide_nN9pJj",
-        "slide_CPfYY6"
+        "slide_nN9pJj"
       ],
       "settings": {
         "heading": "No promises, just proof"
@@ -408,8 +411,8 @@
       "settings": {
         "section_title": "Feeling you look younger and having positive aging experiences are linked,",
         "section_subtitle": "say 59% of participants in a study by the University of Oklahoma",
-        "paragraph": "<p>A recent study by the University of Oklahoma found t that those who felt they looked younger than they were also reported having more positive experiences related to aging, such as being asked for advice and wisdom and having a strong sense of purpose.</p>",
-        "button_text": "Road More",
+        "paragraph": "<p>A <a href=\"https://www.ou.edu/news/articles/2024/february/from-wrinkles-to-wisdom-new-research-explores-the-complex-relationship-between-age-appearance-and-health\" target=\"_blank\" title=\"https://www.ou.edu/news/articles/2024/february/from-wrinkles-to-wisdom-new-research-explores-the-complex-relationship-between-age-appearance-and-health\"><strong>recent</strong></a><strong> study by the University of Oklahoma</strong> found t that those who felt they looked younger than they were also reported having more positive experiences related to aging, such as being asked for advice and wisdom and having a strong sense of purpose. Conversely, those who felt older had more negative experiences related to ageism, which can cause chronic stress and even be harmful to health. </p><p>While several factors beyond dermatological care impact self-esteem, taking care of ourselves, protecting, nurturing, and rejuvenating our skin can greatly impact how we present ourselves to the world and, in turn, our experiences. </p><p>In this personalized skincare plan, you will find a step-by-step guide and all the necessary products to reduce fine lines and wrinkles in your skin so that you can feel comfortable and joyful going out into the world.</p>",
+        "button_text": "Read More",
         "dual_img": "shopify://shop_images/image_2_20e2716f-1990-40f6-b709-090f1113a0ab.jpg"
       }
     },
@@ -426,22 +429,22 @@
         "card_eXhJmY": {
           "type": "card",
           "settings": {
-            "text_check_strong": "Loss of Volume & Wrinkles",
-            "text_check": "Q-Rejuvalight Pro LED Mask"
+            "text_check_strong": "Fine Lines & Dull Complexion",
+            "text_check": "Micro-Infusion System"
           }
         },
         "card_87yRjf": {
           "type": "card",
           "settings": {
-            "text_check_strong": "Loss of Volume & Wrinkles",
-            "text_check": "Q-Rejuvalight Pro LED Mask"
+            "text_check_strong": "Rough Texture",
+            "text_check": "All-In-One Face Serum"
           }
         },
         "card_krEHjr": {
           "type": "card",
           "settings": {
-            "text_check_strong": "Loss of Volume & Wrinkles",
-            "text_check": "Q-Rejuvalight Pro LED Mask"
+            "text_check_strong": "Sun Damage & Dark Spots",
+            "text_check": "Neck & Décolletage LED Light Therapy"
           }
         }
       },
