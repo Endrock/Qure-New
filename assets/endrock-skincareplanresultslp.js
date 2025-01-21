@@ -413,21 +413,28 @@ const productsBundleInit = ()=>{
           if(!btnSubmit) return;
           btnSubmit.addEventListener('click',() => {
             console.log('click productsBundle')
-            const btns = this.querySelectorAll('.container-pb .bundle-btn')
-            btns.forEach((btn) => {
-              btn.click()
-            })
-          })
+            if(btnSubmit.classList.contains('disabled')) return;
 
-          btnSubmit.addEventListener('click',() => {
+            btnSubmit.classList.add('disabled')
+            const cards = this.querySelectorAll('.container-pb .card-bundle')
+            cards.forEach((card) => {
+              console.log('card id', card.dataset.productId )
+              if(!card.classList.contains('active')){
+                const btn = card.querySelector('.bundle-btn')
+                btn.click()
+              }
+            })
+
             console.log('bundleToCart productsBundle btn')
             const arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
-            const bundleInfo = JSON.parse(this.getAttribute('bundle-info'));
             const bundleId = this.getAttribute('data-bundle-id')
+            const bundleInfoLiquid = JSON.parse(this.getAttribute('bundle-info'));
+            const bundleInfo = `{"id":"${ bundleId }" ,"name":"${ bundleInfoLiquid.name }", "discounts":${JSON.stringify(bundleInfoLiquid.discounts)}, "parentId": "${ bundleInfoLiquid.parentId }", "image":"https://cdn.shopify.com/s/files/1/0441/1431/3365/files/image_-_2025-01-20T164637.583.png?v=1737409616" }`
+
             console.log('arrayBundle', arrayBundle)
             console.log('bundleInfo', bundleInfo )
-            const items = []
 
+            const items = []
             arrayBundle.forEach((item) => {
               items.push({
                 id: item,
@@ -462,10 +469,7 @@ const productsBundleInit = ()=>{
               .catch(error => {
                 console.error('Error adding items to the cart:', error);
               });
-
           })
-
-
         }
 
         changeArrayBundle(oldValue, newValue){
@@ -555,13 +559,13 @@ const flatingBundleInit = ()=>{
           btnSubmit.addEventListener('click',() => {
             console.log('bundleToCart flatin btn')
             if(btnSubmit.classList.contains('disabled')) return;
-            const arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
-            const bundleInfo = JSON.parse(this.getAttribute('bundle-info'));
+            btnSubmit.classList.add('disabled')
             const bundleId = this.getAttribute('data-bundle-id')
-            console.log('arrayBundle', arrayBundle)
-            console.log('bundleInfo', bundleInfo )
-            const items = []
+            const arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
+            const bundleInfoLiquid = JSON.parse(this.getAttribute('bundle-info'));
+            const bundleInfo = `{"id":"${ bundleId }" ,"name":"${ bundleInfoLiquid.name }", "discounts":${JSON.stringify(bundleInfoLiquid.discounts)}, "parentId": "${ bundleInfoLiquid.parentId }", "image":"https://cdn.shopify.com/s/files/1/0441/1431/3365/files/image_-_2025-01-20T164637.583.png?v=1737409616" }`
 
+            const items = []
             arrayBundle.forEach((item) => {
               items.push({
                 id: item,
