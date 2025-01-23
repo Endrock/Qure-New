@@ -1,8 +1,16 @@
-
+{% liquid
+  assign is_used = false
+  for item in cart.items
+    if item.title == section.settings.bundle_info.name 
+      assign is_used = true
+    endif
+  endfor
+%}
 <flating-bundle class="flating-bundle"
                 data-bundle-name="{{ section.settings.bundle_info.name }}" 
                 data-bundle-id="{{ section.settings.bundle_products.local_storage_name }}"
                 data-bundle-array="[]"
+                data-bundle-used={{ is_used }}
                 bundle-info={% render 'pdm_bundle-info' id: section.settings.bundle_products.local_storage_name, info: section.settings.bundle_info %}>
 <div class="btn-mobile mobile">
   <img class="cart-icon-black" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/humbleicons_cart.svg" alt="cart icon">

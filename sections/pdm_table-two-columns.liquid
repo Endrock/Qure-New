@@ -11,7 +11,7 @@
           {% for block in section.blocks %}
             <tr class="table-row">
               <td class="row-title">{{ block.settings.row_title | raw }} </td>
-              <td class="row-content"> <strong>{{ block.settings.row_content_strong}}</strong> <span>- {{ block.settings.row_content | raw }}</span></td>
+              <td class="row-content"> <strong>{{ block.settings.row_content_strong}}</strong> <br/> <span>{{ block.settings.row_content | raw }}</span></td>
             </tr>
           {% endfor %}
         </tbody>

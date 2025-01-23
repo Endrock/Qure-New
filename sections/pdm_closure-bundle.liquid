@@ -7,9 +7,18 @@
       {{ section.settings.section_paragraph }}
     </div>
   </div>
+  {% liquid
+    assign is_used = false
+    for item in cart.items
+      if item.title == section.settings.bundle_info.name 
+        assign is_used = true
+      endif
+    endfor
+  %}
   <closure-bundle class="closure-bundle" 
                   data-bundle-name="{{ section.settings.bundle_info.name }}" 
                   data-bundle-id="{{ section.settings.bundle_products.local_storage_name }}" 
+                  data-bundle-used={{ is_used }}
                   data-bundle-array="[]">
     <div class="cont-text">
       <h3 class="info-title">{{ section.settings.section_info_title }}</h3>

@@ -320,7 +320,7 @@ const productsBundleInit = ()=>{
       class productsBundle extends HTMLElement {
 
         static get observedAttributes() {
-          return ['data-bundle-array'];
+          return ['data-bundle-array','data-bundle-used'];
         }
 
         constructor() {
@@ -336,6 +336,9 @@ const productsBundleInit = ()=>{
         attributeChangedCallback(name, oldValue, newValue) {
           if(name == 'data-bundle-array'){
             this.changeArrayBundle(oldValue,newValue);
+          }
+          if(name == 'data-bundle-used'){
+            this.isUsedBundle(newValue);
           }
         }
         mediaTab(){
@@ -413,6 +416,7 @@ const productsBundleInit = ()=>{
           if(!btnSubmit) return;
           btnSubmit.addEventListener('click',() => {
             console.log('click productsBundle')
+            if( this.getAttribute('data-bundle-used') === 'true' )return;
             if(btnSubmit.classList.contains('disabled')) return;
 
             btnSubmit.classList.add('disabled')
@@ -429,7 +433,7 @@ const productsBundleInit = ()=>{
             const arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
             const bundleId = this.getAttribute('data-bundle-id')
             const bundleInfoLiquid = JSON.parse(this.getAttribute('bundle-info'));
-            const bundleInfo = `{"id":"${ bundleId }" ,"name":"${ bundleInfoLiquid.name }", "discounts":${JSON.stringify(bundleInfoLiquid.discounts)}, "parentId": "${ bundleInfoLiquid.parentId }", "image":"https://cdn.shopify.com/s/files/1/0441/1431/3365/files/image_-_2025-01-20T164637.583.png?v=1737409616" }`
+            const bundleInfo = `{"id":"${ bundleId }" ,"name":"${ bundleInfoLiquid.name }", "discounts":${JSON.stringify(bundleInfoLiquid.discounts)}, "parentId": "${ bundleInfoLiquid.parentId }", "image":"https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Breakpoint_Gift_Status_On.png?v=1735674773" }`
 
             console.log('arrayBundle', arrayBundle)
             console.log('bundleInfo', bundleInfo )
@@ -465,6 +469,7 @@ const productsBundleInit = ()=>{
               .then(response => response.json())
               .then(data => {
                 console.log('Items added to the cart:', data);
+                this.setAttribute('data-bundle-used', 'true') 
               })
               .catch(error => {
                 console.error('Error adding items to the cart:', error);
@@ -491,7 +496,17 @@ const productsBundleInit = ()=>{
             }
           })
         }
-
+        isUsedBundle(newValue){
+          console.log('isUsedBundle', newValue )
+          const idBundle = this.getAttribute('data-bundle-id')
+          const allSection = document.querySelectorAll(`[data-bundle-id="${ idBundle }"]`)
+          allSection.forEach((section) => {
+            const sectionBundle = section.getAttribute('data-bundle-used');
+            if( newValue != sectionBundle){
+              section.setAttribute('data-bundle-used', newValue)
+            }
+          })
+        }
       }
       window.customElements.define('products-bundle', productsBundle );
     }
@@ -504,7 +519,7 @@ const flatingBundleInit = ()=>{
       class flatingBundle extends HTMLElement {
 
         static get observedAttributes() {
-          return ['data-bundle-array'];
+          return ['data-bundle-array','data-bundle-used'];
         }
 
         constructor() {
@@ -523,6 +538,9 @@ const flatingBundleInit = ()=>{
             this.changeArrayBundle(oldValue,newValue);
             this.availableButton(newValue)
             this.updatePrice()
+          }
+          if(name == 'data-bundle-used'){
+            this.isUsedBundle(newValue);
           }
         }
         deleteProduct(){
@@ -557,13 +575,13 @@ const flatingBundleInit = ()=>{
           const btnSubmit = this.querySelector('.btn-discount')
           if(!btnSubmit) return;
           btnSubmit.addEventListener('click',() => {
-            console.log('bundleToCart flatin btn')
+            if( this.getAttribute('data-bundle-used') === 'true' )return;
             if(btnSubmit.classList.contains('disabled')) return;
             btnSubmit.classList.add('disabled')
             const bundleId = this.getAttribute('data-bundle-id')
             const arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
             const bundleInfoLiquid = JSON.parse(this.getAttribute('bundle-info'));
-            const bundleInfo = `{"id":"${ bundleId }" ,"name":"${ bundleInfoLiquid.name }", "discounts":${JSON.stringify(bundleInfoLiquid.discounts)}, "parentId": "${ bundleInfoLiquid.parentId }", "image":"https://cdn.shopify.com/s/files/1/0441/1431/3365/files/image_-_2025-01-20T164637.583.png?v=1737409616" }`
+            const bundleInfo = `{"id":"${ bundleId }" ,"name":"${ bundleInfoLiquid.name }", "discounts":${JSON.stringify(bundleInfoLiquid.discounts)}, "parentId": "${ bundleInfoLiquid.parentId }", "image":"https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Breakpoint_Gift_Status_On.png?v=1735674773" }`
 
             const items = []
             arrayBundle.forEach((item) => {
@@ -596,6 +614,7 @@ const flatingBundleInit = ()=>{
               .then(response => response.json())
               .then(data => {
                 console.log('Items added to the cart:', data);
+                this.setAttribute('data-bundle-used', 'true') 
               })
               .catch(error => {
                 console.error('Error adding items to the cart:', error);
@@ -647,10 +666,22 @@ const flatingBundleInit = ()=>{
             this.totalPrice = 0;
           }
         }
+        isUsedBundle(newValue){
+          console.log('isUsedBundle', newValue )
+          const idBundle = this.getAttribute('data-bundle-id')
+          const allSection = document.querySelectorAll(`[data-bundle-id="${ idBundle }"]`)
+          allSection.forEach((section) => {
+            const sectionBundle = section.getAttribute('data-bundle-used');
+            if( newValue != sectionBundle){
+              section.setAttribute('data-bundle-used', newValue)
+            }
+          })
+        }
         availableButton(newValue){
           const arrayBundle = JSON.parse(newValue);
           const btnSubmit = this.querySelector('.btn-discount')
           console.log('availableButton', arrayBundle )
+          if( this.getAttribute('data-bundle-used') === 'true' )return;
           if(arrayBundle.length > 0){
             btnSubmit.classList.remove('disabled')
           }else{
