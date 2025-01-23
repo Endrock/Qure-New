@@ -1708,3 +1708,88 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* end test upsell popup */
+
+/* start test Face Serum Buy Block AB Test */
+const faceSerumBuyBlockContainer = document.querySelector('.pdm_all-in-one-face-serum-offer-form');
+
+if (faceSerumBuyBlockContainer) {
+
+  const faceSerumRadioButtons = document.querySelectorAll('input[name="pdm_monthly-plan"]');
+
+  const updateSerumInformation = ( radiobutton ) => {
+    const parentDiv = radiobutton.closest('.pdm_plan-one-face-serum');
+
+    if(parentDiv){
+      console.log(parentDiv.dataset);
+      const { compareAtPrice, price, savingPrice, variantId, discountMessage, paymentMethods } = parentDiv.dataset;
+      console.log(compareAtPrice, price);
+
+      const imagesSerums = document.querySelectorAll('.pdm_all-in-one-face-serum-offer-form-images-container__img');
+
+      const totalPriceElement = document.querySelector('.pdm_serum-total-price');
+      const discountPriceElement = document.querySelector('.pdm_serum-discount-price');
+      const savingPriceContainer = document.querySelector('.pdm_serum-saving-container');
+      const savingPriceElement = document.querySelector('.pdm_serum-saving-price');
+
+      const anchorAjaxElement = document.querySelector('.pdm_serum-anchor-ajax');
+      const anchorAjaxTextElement = document.querySelector('.pdm_serum-anchor-ajax-text');
+      const paymentMethodElement = document.querySelector('.pdm_payment-methods-serum');
+
+      // left panel images
+
+      imagesSerums.forEach((image) => {
+        image.classList.remove('active');
+
+        if (image.dataset.variantidImage === variantId) {
+          image.classList.add('active');
+        }
+      });
+
+
+      // right panel information
+
+      if (totalPriceElement) {
+        totalPriceElement.textContent = compareAtPrice;
+      }
+
+      if (discountPriceElement) {
+        discountPriceElement.textContent = price;
+      }
+
+      if (savingPriceElement) {
+        if ( compareAtPrice === "" ){
+          savingPriceContainer.style.display = 'none';
+        } else {
+          savingPriceContainer.style.display = 'block';
+          savingPriceElement.textContent = savingPrice;
+        }
+      }
+      
+      if (anchorAjaxElement && variantId) {
+        anchorAjaxElement.href = `/cart/add?id=${variantId}&quantity=1`;
+        anchorAjaxTextElement.textContent = discountMessage;
+      }
+
+      if (paymentMethodElement) {
+        paymentMethodElement.textContent = paymentMethods;
+      }
+
+    }
+  }
+
+  const defaultCheckedRadioButton = document.querySelector('input[name="pdm_monthly-plan"]:checked');
+  if (defaultCheckedRadioButton) {
+    updateSerumInformation(defaultCheckedRadioButton);
+  }
+
+  faceSerumRadioButtons.forEach((radioButton) => {
+    radioButton.addEventListener('change', () => {
+      updateSerumInformation(radioButton);
+    });
+  });
+
+
+}
+
+
+/* end test Face Serum Buy Block AB Test */

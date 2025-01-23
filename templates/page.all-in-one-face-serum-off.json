@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "header_landing": {
       "type": "header-landing",
@@ -628,6 +628,75 @@
       "type": "all-in-one-face-serum-offer-form",
       "settings": {}
     },
+    "pdm_all_in_one_face_serum_offer_form_j6A7ra": {
+      "type": "pdm_all-in-one-face-serum-offer-form",
+      "blocks": {
+        "product_wBM938": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/all_in_one_6.png",
+            "class_image": "active",
+            "product": "all-in-one-face-serum-6-month-bundle-1",
+            "offer_general": "Buy 2, Get 1 FREE",
+            "offer_description": "6 Months Supply | FREE Shipping",
+            "input_quantity": 3,
+            "show_special_offer": true,
+            "special_offer_text": "<p><strong>SPECIAL OFFER</strong> - Limited Time</p>",
+            "discount_product_text": "/each",
+            "discount_text": "save",
+            "discount_suffix": "%"
+          }
+        },
+        "product_fm3HF3": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/all_in_one-2.webp",
+            "class_image": "",
+            "product": "all-in-one-face-serum-3-month-bundle",
+            "offer_general": "Buy 2",
+            "offer_description": "4 Months Supply | FREE Shipping",
+            "input_quantity": 2,
+            "show_special_offer": false,
+            "special_offer_text": "",
+            "discount_product_text": "/each",
+            "discount_text": "save",
+            "discount_suffix": "%"
+          }
+        },
+        "product_mBUti7": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/all_in_one-1.webp",
+            "class_image": "",
+            "product": "face-serum",
+            "offer_general": "1 Serum",
+            "offer_description": "2 Months Supply",
+            "input_quantity": 1,
+            "show_special_offer": false,
+            "special_offer_text": "",
+            "discount_product_text": "/each",
+            "discount_text": "save",
+            "discount_suffix": "%"
+          }
+        }
+      },
+      "block_order": [
+        "product_wBM938",
+        "product_fm3HF3",
+        "product_mBUti7"
+      ],
+      "settings": {
+        "rating": "5.0/5.0 Rated by Customers",
+        "rating_image": "shopify://shop_images/results_star-full.svg",
+        "section_subtitle": "Embrace Ageless Confidence",
+        "section_title": "All-In-One Face Serum",
+        "section_description": "<p>The Qure All-in-One Face Serum, formulated with dermatologist-approved ingredients, hydrates, brightens, and reduces aging signs—delivering professional results for all skin types.</p>",
+        "form_description": "<p><strong>Choose Your Supply</strong> (Best results come from consistent use)</p>",
+        "form_total": "Total",
+        "form_savings": "Your Savings",
+        "form_button": "buy now"
+      }
+    },
     "icons_list_RxBdg4": {
       "type": "icons-list",
       "blocks": {
@@ -828,6 +897,7 @@
     "results_Lezjzk",
     "text_with_video_yQFgir",
     "main",
+    "pdm_all_in_one_face_serum_offer_form_j6A7ra",
     "icons_list_RxBdg4",
     "videos_list_zckcnX",
     "faq_LBTFeM"
