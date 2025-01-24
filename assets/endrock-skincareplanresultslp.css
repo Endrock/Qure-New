@@ -795,7 +795,7 @@
 }
 
 @media (max-width: 768px) {
-  .section-table-thc .row-qure .content {
+  .section-table-thc .row-qure .content, .section-table-thc .row-others .content {
     gap: 0;
   }
 }
@@ -1394,16 +1394,19 @@
   font-weight: 400;
   line-height: 26px;
   letter-spacing: -0.252px;
+  display:-webkit-box;
+  overflow:hidden;
+  -webkit-box-orient: vertical;
 }
 
 .section-dual-text-img .text-body[data-open="false"] p {
   background-image: linear-gradient(to bottom, black 50%, transparent 100%);
   -webkit-background-clip: text;
   color: transparent;
+  -webkit-line-clamp: 4;
 }
 
 .section-dual-text-img .text-body[data-open="true"] p {
-  font-size: 16px;
   line-height: 28px
 }
 
@@ -1803,6 +1806,7 @@
       font-size: 11px;
       line-height: 16px;
       margin-bottom:4px;
+      text-align:center;
     }
 
     .more{
