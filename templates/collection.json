@@ -26,6 +26,7 @@
         },
         "banner_holiday_EEUPJR": {
           "type": "banner_holiday",
+          "disabled": true,
           "settings": {
             "heading": "<p>Exclusive <strong>Holiday</strong> Bundles</p>",
             "link_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal",
@@ -34,11 +35,10 @@
         },
         "banner_14feb_BxBLkb": {
           "type": "banner_14feb",
-          "disabled": true,
           "settings": {
             "heading": "LOVE YOUR SKIN",
             "subheading": "<p>Exclusive <strong>Valentine’s Day</strong> Micro-Infusion Bundle</p>",
-            "link_url": "shopify://collections/best-sellers",
+            "link_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal#Pro-Aging-Bundles",
             "link_label": "Save 66% Off"
           }
         }

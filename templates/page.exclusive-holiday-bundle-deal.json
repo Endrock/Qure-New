@@ -61,7 +61,7 @@
         "navigation_link_rmYfWw"
       ],
       "settings": {
-        "button_label": "SAVE UP TO 55%",
+        "button_label": "SAVE UP TO 66%",
         "button_url": "#bf-bundles"
       }
     },
@@ -80,9 +80,18 @@
         "link_Xz3LeQ": {
           "type": "link",
           "settings": {
-            "link_label": "Shop & SAVE UP TO 55%",
-            "link_label_mobile": "Shop & SAVE UP TO 55%",
+            "link_label": "Shop & SAVE UP TO 66%",
+            "link_label_mobile": "Shop & SAVE UP TO 66%",
             "link_url": "#bf-bundles"
+          }
+        },
+        "product_L8TbkG": {
+          "type": "product",
+          "settings": {
+            "heading": "Exclusive Valentine's day bundle",
+            "discount": 66,
+            "image": "shopify://shop_images/Exclusive_Valentines_day_bundle.png",
+            "product_url": "#Pro-Aging-Bundles"
           }
         },
         "product_YzAr6q": {
@@ -198,6 +207,7 @@
       "block_order": [
         "badge_bNNHbU",
         "link_Xz3LeQ",
+        "product_L8TbkG",
         "product_YzAr6q",
         "product_iEprpi",
         "product_QVwGAe",
@@ -213,7 +223,7 @@
       ],
       "settings": {
         "seo_heading": "",
-        "heading": "Save Up to 55% on \\n Certified Skincare Solutions",
+        "heading": "Save Up to 66% on \\n Certified Skincare Solutions",
         "text": "<p>Backed by the most respected peer-reviewed <strong>Dermatologist Journals </strong>and <strong>scientific studies </strong>that prove; Qure’s skincare <strong>works.</strong></p>"
       }
     },
@@ -337,7 +347,9 @@
       ],
       "settings": {
         "heading": "FEATURED IN",
-        "slider_type": "five_slides"
+        "slider_type": "five_slides",
+        "slide_per_view_desktop": 3,
+        "slide_per_view_mobile": 3
       }
     },
     "before-after": {
@@ -525,6 +537,61 @@
             "image": "shopify://shop_images/bf-ftr-firmer.svg"
           }
         },
+        "bundle_pxhMjY": {
+          "type": "bundle",
+          "settings": {}
+        },
+        "product_Qck4qG": {
+          "type": "product",
+          "settings": {
+            "product": "exclusive",
+            "percent": 46,
+            "media_limit": 0,
+            "hide_us": false,
+            "recommended_heading": "",
+            "recommended_text": "",
+            "is_top_rated": false,
+            "is_preorder": false,
+            "preorder_text": "",
+            "classname": "",
+            "code": ""
+          }
+        },
+        "include_njjqWt": {
+          "type": "include",
+          "settings": {
+            "heading": "Micro-Infusion 3 Month Rejuvenating Bundle",
+            "is_limited": false,
+            "type": "",
+            "image": "shopify://shop_images/MI_6x-rejuv.jpg",
+            "text": "<h5>Rejuvenating Serum Concentrate Ingredients:</h5><p>ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, NIACINAMIDE, PANTHENOL, TRANEXAMIC ACID, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
+            "count": "",
+            "hide": false,
+            "hide_variants": false,
+            "code": ""
+          }
+        },
+        "include_xEBYB3": {
+          "type": "include",
+          "settings": {
+            "heading": "4 Refill  Rejuvenating Treatments FREE",
+            "is_limited": false,
+            "type": "",
+            "image": "shopify://shop_images/Rejuvenating.png",
+            "text": "<h5>Rejuvenating Serum Concentrate Ingredients:</h5><p>ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, NIACINAMIDE, PANTHENOL, TRANEXAMIC ACID, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
+            "count": "",
+            "hide": false,
+            "hide_variants": false,
+            "code": ""
+          }
+        },
+        "how_to_use_qEXdXL": {
+          "type": "how-to-use",
+          "settings": {
+            "image": "shopify://shop_images/bfs_mi_sm.svg",
+            "text": "<h5>Micro-Infusion 3 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Use the 2 month refills after 3 month bundle.</li></ul>"
+          }
+        },
         "bundle_wpXFFy": {
           "type": "bundle",
           "settings": {}
@@ -661,7 +728,7 @@
           "type": "how-to-use",
           "settings": {
             "image": "shopify://shop_images/bfs_mi_sm_4425a83b-96a8-43e9-95d3-fff35b157c82.svg",
-            "text": "<h5>Micro-Infusion 3 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight.</li></ul>"
+            "text": "<h5>Micro-Infusion 3 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Easily purchase 3 month refills via our website.</li></ul>"
           }
         },
         "how_to_use_RGeRNi": {
@@ -738,6 +805,11 @@
         "icon_AcpYLG",
         "icon_f36jbE",
         "icon_eUd4zy",
+        "bundle_pxhMjY",
+        "product_Qck4qG",
+        "include_njjqWt",
+        "include_xEBYB3",
+        "how_to_use_qEXdXL",
         "bundle_wpXFFy",
         "product_aL9V3J",
         "include_cUEVxj",

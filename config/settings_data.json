@@ -35,7 +35,6 @@
     "frontrow_health_image_2": "shopify://shop_images/User_Image_1.png",
     "frontrow_health_count_circle_color": "#c8e6dc",
     "frontrow_health_link": "https://qureskincare.com/pages/derm-reviews",
-    "frontrow_health_link": "https://qureskincare.com/pages/derm-reviews",
     "frontrow_product_list_to_exclude": [
       "silk-pillowcase",
       "dermal-mist",
@@ -85,7 +84,7 @@
             "type": "banner",
             "settings": {
               "image": "shopify://shop_images/Navigation.png",
-              "button_label": "Save up to 55% on [Holiday Bundles]",
+              "button_label": "Save up to 66% on [Holiday Bundles]",
               "button_url": "https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal"
             }
           },

@@ -29,7 +29,7 @@
           "type": "subscribe",
           "settings": {
             "heading": "Subscribe & save 20%",
-            "text": "<p>All-In-One Face Serum delivers every 90 days for only [future_price]. Skip or cancel anytime. <a href=\"https://www.qureskincare.com/pages/subscriptions\" target=\"_blank\">See more details</a></p>",
+            "text": "<p>All-In-One Face Serum delivers every 90 days for only [discount_price]. Skip or cancel anytime. <a href=\"https://www.qureskincare.com/pages/subscriptions\" target=\"_blank\">See more details</a></p>",
             "plan": "5012783343",
             "discount": 20
           }
@@ -258,6 +258,7 @@
       ],
       "settings": {
         "heading": "Fine Lines and Wrinkles",
+        "r_heading": "",
         "text": "<p>Reduces the appearance of fine lines and boost the moisture of your skin!</p>",
         "image": "shopify://shop_images/shannon_skincare.webp",
         "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
@@ -302,6 +303,7 @@
       ],
       "settings": {
         "heading": "Uneven Skin Texture",
+        "r_heading": "",
         "text": "<p>Helps clarify and even skin tone, minimise enlarged pores, strengthen skin’s barrier, and reduce breakouts.</p>",
         "image": "shopify://shop_images/bethany_skincare.webp",
         "image_country": "shopify://shop_images/canada_f.svg",
@@ -346,6 +348,7 @@
       ],
       "settings": {
         "heading": "Dark Spots and Discolouration",
+        "r_heading": "",
         "text": "<p>Brighten and even skin tone for a more radiant complexion. Reduce the appearance of dark spots and help to prevent discolouration with continued use.</p>",
         "image": "shopify://shop_images/Elizabeth_dark_spots.png",
         "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",

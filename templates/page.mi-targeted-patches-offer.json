@@ -822,7 +822,7 @@
           "settings": {
             "tab_txt": "Prepare",
             "tab_desc": "<p>Wash and dry your face prior to use, removing all makeup.</p><p>Make sure your hands are clean.</p><p>Take the patch and simply peel off the adhesive strips.</p><p>Avoid touching the adhesive and the darts with your hands.</p>",
-            "image": "shopify://shop_images/howUse_pdp7.webp"
+            "image": "shopify://shop_images/imagesaa.png"
           }
         },
         "tab_pwMUJN": {
@@ -830,7 +830,7 @@
           "settings": {
             "tab_txt": "Treatment",
             "tab_desc": "<p>Apply the patch on a desired area (11 lines, Crow’s feet, under-eye area or smile lines) with adhesive side facing down.</p><p>Gently press for 5-10 seconds.</p><p>Use 1-2 times per week for at least two hours.</p><p>For best results, leave them on overnight!</p>",
-            "image": "shopify://shop_images/howUse_pdp9.webp"
+            "image": "shopify://shop_images/eee.png"
           }
         },
         "tab_bWCRAy": {
@@ -838,13 +838,14 @@
           "settings": {
             "tab_txt": "Aftercare",
             "tab_desc": "<p>After the treatment (ideally in the morning) peel off the patches gently.</p><p>Wash your face and continue with your regular routine.</p>",
-            "image": "shopify://shop_images/howUse_pdp8.webp"
+            "image": "shopify://shop_images/patsssches.png"
           }
         },
         "wistia_FDDfkR": {
           "type": "wistia",
           "settings": {
-            "wistia_id": "jzt419szoh"
+            "wistia_id": "xnr8wpyi8i",
+            "image": "shopify://shop_images/patches.png"
           }
         }
       },

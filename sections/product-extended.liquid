@@ -197,8 +197,14 @@
                                                             {%- assign future_price = discount_value | money_without_trailing_zeros -%}
                                                         {%- endif -%}
 
+                                                        {% assign discount_price = product_price_discount | money_without_trailing_zeros %}
+
+
                                                         {% if block.settings.text != blank %}
-                                                            {{ block.settings.text | replace: '[future_price]', future_price }}
+                                                            {{ block.settings.text 
+                                                                | replace: '[future_price]', future_price 
+                                                                | replace: '[discount_price]', discount_price
+                                                            }}
                                                         {% endif %}
                                                     </label>
                                                 </div>

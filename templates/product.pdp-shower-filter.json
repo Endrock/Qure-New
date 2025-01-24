@@ -66,10 +66,9 @@
         },
         "subscribe_EyrzEb": {
           "type": "subscribe",
-          "disabled": true,
           "settings": {
             "heading": "Subscribe & save 30%",
-            "text": "<p>3 month replacement filter delivers every 90 days for just $104.30. Skip or cancel anytime.<a href=\"https://crm.aronwebsolutions.com/Qure-Html-2.0/Qure-Html-2.0/shower-filter.html\">See more details</a></p>",
+            "text": "<p>3 month replacement filter delivers every 90 days for just [discount_price]. Skip or cancel anytime.<a href=\"https://crm.aronwebsolutions.com/Qure-Html-2.0/Qure-Html-2.0/shower-filter.html\">See more details</a></p>",
             "plan": "6286115055",
             "discount": 30
           }

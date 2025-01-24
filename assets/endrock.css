@@ -2375,12 +2375,16 @@ body[class~="page.sunil-mi-landing-special2-reorder"] #see_it_section{
   bottom: 50px;
   left: 10px;
   z-index: 99;
+  user-select: none;
+  -webkit-user-select: none;
 } 
 .before-after-carousel-container .swiper-products-thumbs-next { 
   position: absolute;
   right: 10px;
   bottom: 50px;
   z-index: 99;
+  user-select: none;
+  -webkit-user-select: none;
 } 
 .before-after-carousel-container .swiper-products-thumbs-prev.swiper-button-disabled, 
 .before-after-carousel-container .swiper-products-thumbs-next.swiper-button-disabled { 

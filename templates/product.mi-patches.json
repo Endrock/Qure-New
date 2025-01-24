@@ -156,7 +156,9 @@
       ],
       "settings": {
         "heading": "FEATURED IN",
-        "slider_type": "one_slides"
+        "slider_type": "one_slides",
+        "slide_per_view_desktop": 3,
+        "slide_per_view_mobile": 3
       }
     },
     "two_column_box_LbCXBk": {
@@ -764,8 +766,54 @@
     },
     "liquid_irWWVT": {
       "type": "liquid",
+      "disabled": true,
       "settings": {
         "code": "<div class=\"affect_skin section affect_howToUse\">\n        <div class=\"dsn-right-container\">\n            <div class=\"section_header ms-0 d-block d-md-none\">\n                <h2 class=\"title-lg paddingB\">How to use</h2>\n            </div>\n            <div class=\"video_with_slide justify-content-end\">\n                <div class=\"actVideo_block\">\n                    <div class=\"ctmVideo__block\">\n                        <div class=\"player\">\n                            <div class=\"wistia_responsive_padding\" style=\"position:relative;\">\n                                <div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\">\n                                    <div class=\"wistia_embed wistia_async_jzt419szoh seo=false videoFoam=true\" style=\"height:100%;position:relative;width:100%\">\n                                        <div class=\"wistia_swatch\" style=\"height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;\"><img src=\"https://fast.wistia.com/embed/medias/jzt419szoh/swatch\" style=\"filter:blur(5px);height:100%;object-fit:contain;width:100%;\" alt=\"\" aria-hidden=\"true\" onload=\"this.parentNode.style.opacity=1;\" /></div>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n\n                <div class=\"affect_skinContent\">\n                    <div class=\"section_header ms-0 d-none d-md-block\">\n                        <h2 class=\"title-lg paddingB\">How to use</h2>\n                    </div>\n                    <div class=\"get_compliment_wrap\">\n                        <div class=\"tab-content\" id=\"pills-tabContent1\">\n                            <div class=\"tab-pane fade show active\" id=\"pills-specs\" role=\"tabpanel\"\n                                aria-labelledby=\"pills-specs-tab\">\n                                <div class=\"gc_img_wrap\">\n                                    <div class=\"gc_img\">\n                                        <img src=\"https://qureskincaredns.com/new/assets/howUse_pdp7.webp\">\n                                    </div>\n                                    <div class=\"gc_img\">\n                                        <img src=\"https://qureskincaredns.com/new/assets/howUse_pdp8.webp\">\n                                    </div>\n                                    <div class=\"gc_img\">\n                                        <img src=\"https://qureskincaredns.com/new/assets/howUse_pdp9.webp\">\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"tab-pane fade\" id=\"pills-quick\" role=\"tabpanel\"\n                                aria-labelledby=\"pills-profile-tab\">\n                                <div class=\"gc_img_wrap\">\n                                    <div class=\"gc_img\">\n                                        <img src=\"https://qureskincaredns.com/new/assets/howUse_pdp8.webp\">\n                                    </div>\n                                    <div class=\"gc_img\">\n                                        <img src=\"https://qureskincaredns.com/new/assets/howUse_pdp9.webp\">\n                                    </div>\n                                    <div class=\"gc_img\">\n                                        <img src=\"https://qureskincaredns.com/new/assets/howUse_pdp7.webp\">\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"tab-pane fade\" id=\"pills-customize\" role=\"tabpanel\"\n                                aria-labelledby=\"pills-customize-tab\">\n                                <div class=\"gc_img_wrap\">\n                                    <div class=\"gc_img\">\n                                        <img src=\"https://qureskincaredns.com/new/assets/howUse_pdp9.webp\">\n                                    </div>\n                                    <div class=\"gc_img\">\n                                        <img src=\"https://qureskincaredns.com/new/assets/howUse_pdp7.webp\">\n                                    </div>\n                                    <div class=\"gc_img\">\n                                        <img src=\"https://qureskincaredns.com/new/assets/howUse_pdp8.webp\">\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                        <ul class=\"nav nav-pills\" id=\"pills-tab-skin\" role=\"tablist\">\n                            <li class=\"nav-item\" role=\"presentation\">\n                                <button class=\"nav-link active\" id=\"pills-specs-tab\" data-bs-toggle=\"pill\"\n                                    data-bs-target=\"#pills-specs\" type=\"button\" role=\"tab\"\n                                    aria-controls=\"pills-specs\" aria-selected=\"true\">Prepare</button>\n                            </li>\n                            <li class=\"nav-item\" role=\"presentation\">\n                                <button class=\"nav-link\" id=\"pills-quick-tab\" data-bs-toggle=\"pill\"\n                                    data-bs-target=\"#pills-quick\" type=\"button\" role=\"tab\"\n                                    aria-controls=\"pills-quick\" aria-selected=\"false\">Treatment</button>\n                            </li>\n                            <li class=\"nav-item\" role=\"presentation\">\n                                <button class=\"nav-link\" id=\"pills-customize-tab\" data-bs-toggle=\"pill\"\n                                    data-bs-target=\"#pills-customize\" type=\"button\" role=\"tab\"\n                                    aria-controls=\"pills-customize\" aria-selected=\"false\">Aftercare</button>\n                            </li>\n                        </ul>\n                        <div class=\"tab-content\" id=\"pills-tabContent2\">\n                            <div class=\"tab-pane fade show active\" id=\"pills-specs\" role=\"tabpanel\"\n                                aria-labelledby=\"pills-specs-tab\">\n                                <p>Wash and dry your face prior to use, removing all makeup. </p>\n                                <p>Make sure your hands are clean.</p>\n                                <p>Take the patch and simply peel off the adhesive strips.</p>\n                                <p>Avoid touching the adhesive and the darts with your hands.</p>\n                            </div>\n                            <div class=\"tab-pane fade\" id=\"pills-quick\" role=\"tabpanel\"\n                                aria-labelledby=\"pills-quick-tab\">\n                                <p>Apply the patch on a desired area (11 lines, Crow’s feet, under-eye area or smile lines) with adhesive side facing down. </p>\n                                <p>Gently press for 5-10 seconds. </p>\n                                <p>Use 1-2 times per week for at least two hours. </p>\n                                <p>For best results, leave them on overnight!</p>\n                            </div>\n                            <div class=\"tab-pane fade\" id=\"pills-customize\" role=\"tabpanel\"\n                                aria-labelledby=\"pills-customize-tab\">\n                                <p>After the treatment (ideally in the morning) peel off the patches gently. </p>\n                                <p>Wash your face and continue with your regular routine.</p>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>"
+      }
+    },
+    "how_to_use_xAGR76": {
+      "type": "how-to-use",
+      "blocks": {
+        "tab_7Qz6GP": {
+          "type": "Tab",
+          "settings": {
+            "tab_txt": "Prepare",
+            "tab_desc": "<p>Wash and dry your face prior to use, removing all makeup.</p><p>Make sure your hands are clean.</p><p>Take the patch and simply peel off the adhesive strips.</p><p>Avoid touching the adhesive and the darts with your hands.</p>",
+            "image": "shopify://shop_images/imagesaa.png"
+          }
+        },
+        "tab_aWhfb7": {
+          "type": "Tab",
+          "settings": {
+            "tab_txt": "Treatment",
+            "tab_desc": "<p>Apply the patch on a desired area (11 lines, Crow’s feet, under-eye area or smile lines) with adhesive side facing down.</p><p>Gently press for 5-10 seconds.</p><p>Use 1-2 times per week for at least two hours.</p><p>For best results, leave them on overnight!</p>",
+            "image": "shopify://shop_images/eee.png"
+          }
+        },
+        "tab_7m4jKK": {
+          "type": "Tab",
+          "settings": {
+            "tab_txt": "Aftercare",
+            "tab_desc": "<p>After the treatment (ideally in the morning) peel off the patches gently.</p><p>Wash your face and continue with your regular routine.</p>",
+            "image": "shopify://shop_images/patsssches.png"
+          }
+        },
+        "wistia_hmhfyy": {
+          "type": "wistia",
+          "settings": {
+            "wistia_id": "xnr8wpyi8i",
+            "image": "shopify://shop_images/patches.png"
+          }
+        }
+      },
+      "block_order": [
+        "tab_7Qz6GP",
+        "tab_aWhfb7",
+        "tab_7m4jKK",
+        "wistia_hmhfyy"
+      ],
+      "settings": {
+        "heading": ""
       }
     },
     "two_column_box_kCjBfM": {
@@ -920,6 +968,7 @@
     "compare_b7K3DX",
     "ingredients_dropdown_PbbjxK",
     "liquid_irWWVT",
+    "how_to_use_xAGR76",
     "two_column_box_kCjBfM",
     "faq_Q9aq8V",
     "17247546178394fcd3"
