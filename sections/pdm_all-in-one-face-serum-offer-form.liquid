@@ -26,7 +26,7 @@
             %}
             {{
               block.settings.image
-              | image_url: width: 130
+              | image_url: width: 900
               | image_tag:
                 class: complete_class,
                 alt: 'product image',
@@ -77,6 +77,7 @@
                 %}
                 <div
                   class="pdm_all-in-one-face-serum-description-form-wrapper__form-input pdm_plan-one-face-serum"
+                  data-product-handle="{{ block.settings.product.handle }}"
                   data-product-id="{{ block.settings.product.id }}"
                   data-variant-id="{{ block.settings.product.variants.first.id }}"
                   data-payment-methods="{{ product_price |  divided_by:  4 | money_without_trailing_zeros }}"
@@ -112,7 +113,7 @@
                           <p
                             class="pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-price-product"
                           >
-                            <strong>{{- product_price | money_without_currency -}}</strong>
+                            <strong>{{- product_price | money_without_trailing_zeros -}}</strong>
                             {{- block.settings.discount_product_text -}}
                           </p>
                           {% if number_of_products > 1 %}

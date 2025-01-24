@@ -2971,6 +2971,18 @@ body[data-upsell-test] .upsell_popup_btn{
 
 /* start test pdm all in one face serum */
 
+.pdm_all-in-one-face-serum-offer-form{
+  display: none;
+}
+
+body[data-test-pdm-serum='true'] .pdm-test-serum-original{
+  display: none;
+}
+
+body[data-test-pdm-serum='true'] .pdm_all-in-one-face-serum-offer-form{
+  display: block
+}
+
 .pdm_all-in-one-face-main{
   margin-top: 30px;
 }
@@ -3040,10 +3052,18 @@ body[data-upsell-test] .upsell_popup_btn{
 
 .pdm_all-in-one-face-serum-offer-form-images{
   width: 100%;
+  padding-bottom: 20px;
+}
+
+.pdm_all-in-one-face-serum-offer-form-images-container{
+  width: 100%;
 }
 
 .pdm_all-in-one-face-serum-offer-form-images-container__img{
   display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .pdm_all-in-one-face-serum-offer-form-images-container__img.active{
@@ -3329,6 +3349,7 @@ input[type="radio"]:checked + label[for^="pdm_monthly-plan"] .pdm_all-in-one-fac
 
   .pdm_all-in-one-face-serum-offer-form-images{
     width: 50%;
+    padding-bottom: 0;
   }
   
   .pdm_all-in-one-face-serum-desktop-description-container{
@@ -3385,6 +3406,11 @@ input[type="radio"]:checked + label[for^="pdm_monthly-plan"] .pdm_all-in-one-fac
     line-height: 26px;
     letter-spacing: 0.01em;
     text-align: left;
+  }
+
+  .pdm_all-in-one-face-serum-offer-form-images-container{
+    width: 530px;
+    height: 512px;
   }
 
   .pdm_all-in-one-face-serum-description-form{

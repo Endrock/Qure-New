@@ -1710,86 +1710,114 @@ document.addEventListener('DOMContentLoaded', () => {
 /* end test upsell popup */
 
 /* start test Face Serum Buy Block AB Test */
-const faceSerumBuyBlockContainer = document.querySelector('.pdm_all-in-one-face-serum-offer-form');
+// data-test-pdm-serum='true'
 
-if (faceSerumBuyBlockContainer) {
+document.addEventListener('DOMContentLoaded', () => {
+  // Check if the face serum container exists and if the test flag is enabled in the dataset
+  const faceSerumBuyBlockContainer = document.querySelector('.pdm_all-in-one-face-serum-offer-form');
+  const { testPdmSerum } = document.body.dataset;
 
-  const faceSerumRadioButtons = document.querySelectorAll('input[name="pdm_monthly-plan"]');
+  if (faceSerumBuyBlockContainer && testPdmSerum ) {
+    // Get all radio buttons for selecting the monthly plan
+    const faceSerumRadioButtons = document.querySelectorAll('input[name="pdm_monthly-plan"]');
 
-  const updateSerumInformation = ( radiobutton ) => {
-    const parentDiv = radiobutton.closest('.pdm_plan-one-face-serum');
+    const updateSerumInformation = (radiobutton) => {
+      const parentDiv = radiobutton.closest('.pdm_plan-one-face-serum');
+    
+      if (parentDiv) {
+        const {
+          compareAtPrice,
+          price,
+          savingPrice,
+          variantId,
+          discountMessage,
+          paymentMethods,
+          productHandle,
+        } = parentDiv.dataset;
+    
+        updateImages(variantId);
+        updatePrices(compareAtPrice, price, savingPrice);
+        updateAnchorElement(variantId, discountMessage, productHandle);
+        updatePaymentMethods(paymentMethods);
+      }
+    };
 
-    if(parentDiv){
-      console.log(parentDiv.dataset);
-      const { compareAtPrice, price, savingPrice, variantId, discountMessage, paymentMethods } = parentDiv.dataset;
-      console.log(compareAtPrice, price);
-
+      /**
+     * Updates the active image in the serum image gallery based on the selected variant.
+     * @param {string} variantId - The ID of the selected variant.
+     */
+    const updateImages = (variantId) => {
       const imagesSerums = document.querySelectorAll('.pdm_all-in-one-face-serum-offer-form-images-container__img');
+      imagesSerums.forEach((image) => {
+        image.classList.toggle('active', image.dataset.variantidImage === variantId);
+      });
+    };
 
+      /**
+     * Updates the displayed prices, including total price, discount price, and saving details.
+     * @param {string} compareAtPrice - The original price.
+     * @param {string} price - The discounted price.
+     * @param {string} savingPrice - The amount saved.
+     */  
+    const updatePrices = (compareAtPrice, price, savingPrice) => {
       const totalPriceElement = document.querySelector('.pdm_serum-total-price');
       const discountPriceElement = document.querySelector('.pdm_serum-discount-price');
       const savingPriceContainer = document.querySelector('.pdm_serum-saving-container');
       const savingPriceElement = document.querySelector('.pdm_serum-saving-price');
+    
+      if (totalPriceElement) totalPriceElement.textContent = compareAtPrice;
+      if (discountPriceElement) discountPriceElement.textContent = price;
+    
+      if (savingPriceElement) {
+        const isSavingVisible = compareAtPrice !== "";
+        savingPriceContainer.style.display = isSavingVisible ? 'block' : 'none';
+        if (isSavingVisible) savingPriceElement.textContent = savingPrice;
+      }
+    };
 
+    /**
+     * Updates the anchor element with the correct URL, discount message, and event listener for tracking.
+     * @param {string} variantId - The ID of the selected variant.
+     * @param {string} discountMessage - The discount message to display.
+     * @param {string} productHandle - The product handle for tracking purposes.
+     */  
+    const updateAnchorElement = (variantId, discountMessage, productHandle) => {
       const anchorAjaxElement = document.querySelector('.pdm_serum-anchor-ajax');
       const anchorAjaxTextElement = document.querySelector('.pdm_serum-anchor-ajax-text');
-      const paymentMethodElement = document.querySelector('.pdm_payment-methods-serum');
-
-      // left panel images
-
-      imagesSerums.forEach((image) => {
-        image.classList.remove('active');
-
-        if (image.dataset.variantidImage === variantId) {
-          image.classList.add('active');
-        }
-      });
-
-
-      // right panel information
-
-      if (totalPriceElement) {
-        totalPriceElement.textContent = compareAtPrice;
-      }
-
-      if (discountPriceElement) {
-        discountPriceElement.textContent = price;
-      }
-
-      if (savingPriceElement) {
-        if ( compareAtPrice === "" ){
-          savingPriceContainer.style.display = 'none';
-        } else {
-          savingPriceContainer.style.display = 'block';
-          savingPriceElement.textContent = savingPrice;
-        }
-      }
-      
+    
       if (anchorAjaxElement && variantId) {
         anchorAjaxElement.href = `/cart/add?id=${variantId}&quantity=1`;
         anchorAjaxTextElement.textContent = discountMessage;
+    
+        anchorAjaxElement.addEventListener('click', () => {
+          setEventProductHandler(productHandle);
+        });
       }
+    };
 
-      if (paymentMethodElement) {
-        paymentMethodElement.textContent = paymentMethods;
-      }
+    /**
+     * Updates the payment methods displayed.
+     * @param {string} paymentMethods - The payment methods to display.
+     */  
+    const updatePaymentMethods = (paymentMethods) => {
+      const paymentMethodElement = document.querySelector('.pdm_payment-methods-serum');
+      if (paymentMethodElement) paymentMethodElement.textContent = paymentMethods;
+    };
 
+    // Initialize with the default selected radio button
+    const defaultCheckedRadioButton = document.querySelector('input[name="pdm_monthly-plan"]:checked');
+    if (defaultCheckedRadioButton) {
+      updateSerumInformation(defaultCheckedRadioButton);
     }
-  }
 
-  const defaultCheckedRadioButton = document.querySelector('input[name="pdm_monthly-plan"]:checked');
-  if (defaultCheckedRadioButton) {
-    updateSerumInformation(defaultCheckedRadioButton);
-  }
-
-  faceSerumRadioButtons.forEach((radioButton) => {
-    radioButton.addEventListener('change', () => {
-      updateSerumInformation(radioButton);
+    // Add event listeners to each radio button to update information on selection change
+    faceSerumRadioButtons.forEach((radioButton) => {
+      radioButton.addEventListener('change', () => {
+        updateSerumInformation(radioButton);
+      });
     });
-  });
-
-
-}
+  }
+});
 
 
 /* end test Face Serum Buy Block AB Test */
