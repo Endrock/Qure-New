@@ -3060,6 +3060,8 @@ body[data-test-pdm-serum='true'] .pdm_all-in-one-face-serum-offer-form{
 }
 
 .pdm_all-in-one-face-serum-offer-form-images-container{
+  display: flex;
+  justify-content: center;
   width: 100%;
 }
 
@@ -3415,8 +3417,8 @@ input[type="radio"]:checked + label[for^="pdm_monthly-plan"] .pdm_all-in-one-fac
   }
 
   .pdm_all-in-one-face-serum-offer-form-images-container{
-    width: 530px;
-    height: 512px;
+    max-width: 530px;
+    max-height: 512px;
   }
 
   .pdm_all-in-one-face-serum-description-form{
