@@ -7,9 +7,6 @@
         {% assign integer_part = parts[0] | times: 1 %}
         {% assign decimal_part = parts[1] | slice: 0, 2 | times: 1 | round: 2 %}
 
-        <!-- aaaaqqqq [{{ integer_part }}] -->
-        <!-- aaaaqqqq [{{ decimal_part }}] -->
-
         <div class="star_gp">
             {% if integer_part > 0 %}
                 <img src="{{ "star.png" | asset_url  }}" width="23" height="21" />

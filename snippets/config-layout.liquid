@@ -54,6 +54,9 @@
     {% when 'product.sunil-all-in-one' %}
         {% assign main_class = 'all_in_one' %}
         <link rel="stylesheet" href="{{ 'product-serum-pdp.css' | asset_url }}">
+        {% comment %} <link rel="stylesheet" href="{{ 'offer-pages.css' | asset_url }}"> {% endcomment %}
+        {% comment %} {% assign main_class = 'all_in_one' %}
+        <link rel="stylesheet" href="{{ 'product-serum-pdp.css' | asset_url }}"> {% endcomment %}
     {% when 'product.sunil-gift-card' %}
         {% assign main_class = 'bundle_pdp gift_page' %}
         <link rel="stylesheet" href="{{ 'product-gift-card.css' | asset_url }}"> 

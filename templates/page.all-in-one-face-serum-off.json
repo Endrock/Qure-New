@@ -624,9 +624,11 @@
         "padding_bottom": 0
       }
     },
-    "main": {
-      "type": "all-in-one-face-serum-offer-form",
-      "settings": {}
+    "liquid_EH7JLe2": {
+      "type": "liquid",
+      "settings": {
+        "code": "{% render 'serums-allin-months-image-form' with section_id: section.id %}"
+      }
     },
     "pdm_all_in_one_face_serum_offer_form_j6A7ra": {
       "type": "pdm_all-in-one-face-serum-offer-form",
@@ -896,8 +898,8 @@
     "details_HLnHb6",
     "results_Lezjzk",
     "text_with_video_yQFgir",
-    "main",
     "pdm_all_in_one_face_serum_offer_form_j6A7ra",
+    "liquid_EH7JLe2",
     "icons_list_RxBdg4",
     "videos_list_zckcnX",
     "faq_LBTFeM"
