@@ -1717,7 +1717,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const faceSerumBuyBlockContainer = document.querySelector('.pdm_all-in-one-face-serum-offer-form');
   const { testPdmSerum } = document.body.dataset;
 
+  if ( !testPdmSerum ) {
+    faceSerumBuyBlockContainer.remove();
+  }
+
   if (faceSerumBuyBlockContainer && testPdmSerum ) {
+
+    const orignalComponent = document.querySelector('.pdm-test-serum-original');
+    if (orignalComponent) orignalComponent.remove();
+
     // Get all radio buttons for selecting the monthly plan
     const faceSerumRadioButtons = document.querySelectorAll('input[name="pdm_monthly-plan"]');
 
