@@ -114,7 +114,9 @@
                             class="pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-price-product"
                           >
                             <strong>{{- product_price | money_without_trailing_zeros -}}</strong>
-                            {{- block.settings.discount_product_text -}}
+                            {% if number_of_products > 1 %}
+                              {{- block.settings.discount_product_text -}}
+                            {% endif %}
                           </p>
                           {% if number_of_products > 1 %}
                             <p
