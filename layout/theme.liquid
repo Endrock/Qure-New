@@ -98,7 +98,12 @@
 </head>
 
 <body class="{{ template }}">
-
+    {% if product.handle == 'personalized-skincare-plan' %}
+      <script>
+        console.log('carlos rocha to home')
+        window.location.href = "/";
+      </script>
+    {% endif %}
     {% comment %} Edgemesh Performance: Stale cart refresher {% endcomment %}
     {% render 'cart-refresher' %}
 

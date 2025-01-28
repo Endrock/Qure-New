@@ -183,7 +183,7 @@
 
 									<div class="drawer__cart-price-quantity">
                     {% unless item.properties['_required_validation'] %} {% comment %} validation for free gift test {% endcomment %}
-											{% if free_gift %}
+											{% if free_gift or item.id == 46199907123439 %}
 												<div class="drawer__cart-quantity">
 													<a href="javascript:;" style="color:#e4e0e0">
 														-
@@ -209,6 +209,10 @@
 											<div class="drawer__cart-item-price">
 												<p class="old-price"><span class="money">{{ item.original_line_price | money_without_trailing_zeros }}</span></p>
 												<p class="new-price test"><span class="money">$0</span></p>
+											</div>
+										{% elsif item.id == 46199907123439 %}
+											<div class="drawer__cart-item-price">
+												<p class="new-price test"><span class="money">{{ item.price | money_without_trailing_zeros }}</span></p>
 											</div>
 										{% else %}
 											<div class="drawer__cart-item-price">
