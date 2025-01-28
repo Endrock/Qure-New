@@ -2974,16 +2974,7 @@ body[data-upsell-test] .upsell_popup_btn{
 /* end test upsell popup */
 
 /* start test pdm all in one face serum */
-
 .pdm_all-in-one-face-serum-offer-form{
-  display: none;
-}
-
-body[data-test-pdm-serum='true'] .pdm-test-serum-original{
-  display: none;
-}
-
-body[data-test-pdm-serum='true'] .pdm_all-in-one-face-serum-offer-form{
   display: block
 }
 
