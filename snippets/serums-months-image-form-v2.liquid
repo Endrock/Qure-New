@@ -60,14 +60,14 @@
                             </div>
                             <img src="{{ 'MI6x-mixed_blue.webp' | asset_url }}" class="img-fluid" alt="" id="choosen_image" />
                         </div>
-                        <div class="tmtFtrs d-none d-md-flex justify-content-between mb-4 mt-5">
+                        <div class="tmtFtrs d-none d-md-flex justify-content-between mb-4 mt-5 icons-serum-original">
                             <div class="tmtFtrs_block text-center"> <!-- Ftr Block -->
                                 <div class="tmtFtr_icon">
-                                    <img src="{{ 'money-back.svg' | asset_url }}" alt="">
+                                    <img src="{{ 'money-back.svg' | asset_url }}" alt=""> 
                                 </div>
                                 <div class="tmtFtr_des">
                                     Money Back Guarantee
-                                </div>
+                                </div> 
                             </div> <!-- Ftr Block end-->
                             <div class="tmtFtrs_block text-center"> <!-- Ftr Block -->
                                 <div class="tmtFtr_icon">
@@ -84,6 +84,17 @@
                                 <div class="tmtFtr_des">
                                     Dermatologist Reviewed
                                 </div>
+                            </div> <!-- Ftr Block end-->
+                        </div>
+                        <div class="tmtFtrs d-none d-md-flex justify-content-between mb-4 mt-5 icons-serum-pdm-test">
+                            <div class="tmtFtrs_block text-center"> <!-- Ftr Block -->
+                                {% render "serums-months-svg-low-contrast", icon: "thumbs_up" %} 
+                            </div> <!-- Ftr Block end-->
+                            <div class="tmtFtrs_block text-center"> <!-- Ftr Block -->
+                                {% render "serums-months-svg-low-contrast", icon: "truck" %} 
+                            </div> <!-- Ftr Block end-->
+                            <div class="tmtFtrs_block text-center"> <!-- Ftr Block -->
+                                {% render "serums-months-svg-low-contrast", icon: "shield" %} 
                             </div> <!-- Ftr Block end-->
                         </div>
                         <div class="qst_box text-center d-none d-md-block">
@@ -158,9 +169,19 @@
                                         {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
 
                                         <a class="planBlock active {{ section_id }}_productPeriodObject" href="month_3" data-tab="month_3" data-pay="{{ divided_price | money_without_trailing_zeros }}"
-                                            data-per="Buy Now & SAVE {{ discount_percentage }}%" data-image="{{ 'MI2x-mixed.webp' | asset_url }}">
-                                            <div class="plan_choosed mw-100">
+                                            data-per="Buy Now & SAVE {{ discount_percentage }}%" data-image="{{ 'MI2x-mixed.webp' | asset_url }}"
+                                            
+                                            >
+                                            <div class="plan_choosed mw-100 plan_choosed-original">
                                                 <span>MOST POPULAR</span>
+                                            </div>
+                                            <div class="pdm_plan-choosen">
+                                                <p>
+                                                    Best Value
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                                        <path d="M5 0.5L6.22371 3.70411L9.5 3.93769L6.98 6.15153L7.78115 9.5L5 7.66411L2.21885 9.5L3.02 6.15153L0.5 3.93769L3.77629 3.70411L5 0.5Z" fill="#FFFAF0"/>
+                                                    </svg>
+                                                </p>
                                             </div>
 
                                             <input type="radio" name="monthlyPlan" id="3_month" checked data-product-period="3">
@@ -168,7 +189,7 @@
                                                 <div class="plan_des">
                                                     <div class="plan_hdr">
                                                         <h3>3 Month Supply</h3>
-                                                        <span class="saved_price">SAVE {{ discount_percentage }}%</span>
+                                                        <span class="saved_price item-1">SAVE {{ discount_percentage }}%</span>
                                                     </div>
                                                     <div class="plan_des">6 Micro-Infusion Treatments</div>
                                                 </div>
@@ -176,7 +197,12 @@
                                                     <div class="plan_prc regular_price">{{ product.compare_at_price | money_without_trailing_zeros }}</div>
                                                     <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
                                                 </div>
+                                                <div class="pdm_plan-bundle-detail item-1">
+                                                    <p> 🔥 2 months supply <strong>+ 1 extra month for just <span class="pdm_plan-bundle-detail__money"></span></strong></p>
+                                                </div>
                                             </label>
+                                         
+
                                         </a>
 
                                         {% assign product = all_products['micro-infusion-2-month-bundle-rejuvenating'] %}
@@ -190,7 +216,7 @@
                                                 <div class="plan_des">
                                                     <div class="plan_hdr">
                                                         <h3>2 Month Supply</h3>
-                                                        <span class="saved_price d-none d-md-block">SAVE {{ discount_percentage }}%</span>
+                                                        <span class="saved_price d-none d-md-block item-2">SAVE {{ discount_percentage }}%</span>
                                                     </div>
                                                     <div class="plan_des">4 Micro-Infusion Treatments</div>
                                                 </div>
@@ -201,8 +227,12 @@
                                                         <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
                                                     </div>
                                                 </div>
+                                                <div class="pdm_plan-bundle-detail item-2">
+                                                    <p> 1 month supply <strong>+ 1 extra month for just <span class="pdm_plan-bundle-detail__money"></span></strong></p>
+                                                </div>
                                             </label>
                                         </a>
+
                                         {% assign product = all_products['micro-infusion-1-month-bundle-2x-e-g-f-serum'] %}
                                         {% assign divided_price = product.price | divided_by: 4 %}
 
@@ -339,7 +369,7 @@
                             </div>
                         </div>
                         <div class="c_s_shipping d-block d-md-none">
-                            <div class="c_s_wrapper">
+                            <div class="c_s_wrapper cs_wrapper-original">
                                 <div class="c_s_bx">
                                     <img src="{{ 'money-back.svg' | asset_url }}" alt="">
                                     <p>Money Back <br>Guarantee</p>
@@ -351,6 +381,17 @@
                                 <div class="c_s_bx">
                                     <img src="{{ 'derma-ftr.svg' | asset_url }}" alt="">
                                     <p>Dermatologist <br>Reviewed</p>
+                                </div>
+                            </div>
+                            <div class="c_s_wrapper cs_wrapper-test-pdm">
+                                <div class="c_s_bx">
+                                    {% render "serums-months-svg-low-contrast", icon: "thumbs_up" %} 
+                                </div>
+                                <div class="c_s_bx">
+                                    {% render "serums-months-svg-low-contrast", icon: "truck" %} 
+                                </div>
+                                <div class="c_s_bx">
+                                    {% render "serums-months-svg-low-contrast", icon: "shield" %} 
                                 </div>
                             </div>
                             <div class="c_s_ques text-center">
