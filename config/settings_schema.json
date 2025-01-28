@@ -247,9 +247,19 @@
         "default": false
       },
       {
+        "type": "header",
+        "content": "t:sections.slidecart.settings.header_product_gift.label",
+      },
+      {
         "type": "product",
         "id": "product_free_gift",
         "label": "t:sections.slidecart.settings.product_gift.label",
+      },
+      {
+        "type": "textarea",
+        "id": "dont_enable_gift_urls",
+        "label": "t:sections.slidecart.settings.dont_enable_gift_urls.label",
+        "info": "t:sections.slidecart.settings.dont_enable_gift_urls.info"
       },
       {
         "type": "richtext",

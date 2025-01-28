@@ -200,8 +200,14 @@ document.addEventListener('DOMContentLoaded', () => {
         {% endif %}
       }
 
+      {% capture url_dont_enable_gift %}
+        {% render 'pdm-product-gift-urls' %}
+      {% endcapture %}
+
+      {% assign url_dont_enable_gift = url_dont_enable_gift | strip %}
+
       {% if enableProductGift and productGiftPdm.available and giftTresholdPdm != 0 and productGiftPdm != blank %}
-        productGiftPdm(cart,'{{ productGiftPdm.variants.first.id }}', {{ giftTresholdPdm }});
+        productGiftPdm(cart,'{{ productGiftPdm.variants.first.id }}', {{ giftTresholdPdm }}, {{url_dont_enable_gift}});
       {% endif %}
     }
   });
@@ -283,10 +289,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
 
-  function productGiftPdm (cart, productId,priceLimit) {
+  function productGiftPdm (cart, productId,priceLimit, url_dont_enable_gift) {
+
     const gift = cart.items.some(item => item.id === +(productId) && item.properties && item.properties['_required_validation']);
     const total_price = cart.total_price;
     if (total_price >= priceLimit && !gift && !hasAttemptedGiftAdd) {
+
+      if (url_dont_enable_gift != true) return;
+
       hasAttemptedGiftAdd = true;
       hasAttemptedGiftRemove = false;
       cartRequestAdd({

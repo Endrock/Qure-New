@@ -15,7 +15,13 @@
   assign remaining_amount = free_shipping_threshold | minus: cartTotal
   assign remaining_amount_money = remaining_amount | money_without_trailing_zeros
 
-  if enable_product_gift and gift_product.available
+  capture url_dont_enable_gift
+    render 'pdm-product-gift-urls'
+  endcapture
+
+  assign url_dont_enable_gift = url_dont_enable_gift | strip
+
+  if enable_product_gift and url_dont_enable_gift=="true" and gift_product.available
     assign threshold = gift_threshold_pdm
   elsif enable_free_shipping
     assign threshold = free_shipping_threshold
@@ -54,6 +60,7 @@
     data-threshold="{{ threshold }}"
     data-currency-symbol="{{ free_shipping_threshold | money_without_trailing_zeros }}"
     data-is-available-gift-product='{{ gift_product.available }}'
+    data-url-is-available-gift-product = '{{ url_dont_enable_gift }}'
   >
     <div class="progress-container__message" 
       data-enable_free_shipping="{{ enable_free_shipping }}" 
@@ -65,7 +72,7 @@
           {% assign text_to_show = "<i class='money' style='font-style: normal;'>" | append: remaining_amount_money | append: "</i>" %}
           {{ copy_free_shipping | replace: "&price-left&", text_to_show }}
         {% endif %}
-      {% elsif enable_product_gift and gift_product.available %}
+      {% elsif enable_product_gift and url_dont_enable_gift=="true" and gift_product.available %}
         {% assign remaining_gift_amount = gift_threshold_pdm | minus: cartTotal %}
         {% assign remaining_gift_amount_money = remaining_gift_amount | money_without_trailing_zeros %}
         {% if difference_free_gift > 0 %}
@@ -107,7 +114,7 @@
           </div>
         </div>
         <div class="progress-bar__bar {% if difference_free_gift > 0 %}hidden{% endif %}" style="width: {{ progress_percentage }}%;"></div>
-        {% if enable_product_gift and gift_product.available %}
+        {% if enable_product_gift and url_dont_enable_gift=="true" and gift_product.available %}
         <div class="milestone second-milestone {% if difference_free_gift <= 0 %}reach-threshold{% endif %} {% if difference_free_shipping <= 0 and cartTotal > 0 and difference_free_gift > 0 %}gradient{% endif %}">
           <div class="progress-bar-wrapper {% if difference_free_gift <= 0 %}hidden{% endif %}">
             <div class="progress-bar-wrapper__bar" id="progress-bar" style="width: {% if difference_free_shipping <= 0 %}{{ progress_percentage }}%;{% else %}0{% endif %}"></div>

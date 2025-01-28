@@ -494,9 +494,11 @@
         "text_reviewed": "Reviewed in"
       }
     },
-    "main": {
-      "type": "micro-infusion-targeted-patches-offer-form",
-      "settings": {}
+    "liquid_EH7JLe2": {
+      "type": "liquid",
+      "settings": {
+        "code": "{% render 'serums-offer-months-image-form' with section_id: section.id %}"
+      }
     },
     "icons_list_hrRbkg": {
       "type": "icons-list",
@@ -946,7 +948,7 @@
     "confidence_slider_ir7cWU",
     "product_science_8BYxLK",
     "results_KkTxAy",
-    "main",
+    "liquid_EH7JLe2",
     "icons_list_hrRbkg",
     "videos_list_CfJjwV",
     "two_column_box_bkFG8d",

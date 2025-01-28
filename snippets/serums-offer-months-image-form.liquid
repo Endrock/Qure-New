@@ -29,7 +29,7 @@
                             {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
 
 
-                            <a class="planBlock active" data-variantid="{{ product_variant_id }}" href="month_3" data-tab="month_3" data-per="& SAVE {{ discount_percentage }}%"
+                            <a class="planBlock planBlockDown active" data-variantid="{{ product_variant_id }}" href="month_3" data-tab="month_3" data-per="& SAVE {{ discount_percentage }}%"
                                 data-image="https://qureskincaredns.com/new/assets/offer_patches-1.webp">
                                 <div class="plan_choosed">
                                     <span>Over 7,000 people chose this supply</span>
@@ -56,7 +56,7 @@
                             {% assign product_variant_id = product.variants.first.id %}
                             {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
 
-                            <a class="planBlock new_block active" data-variantid="{{ product_variant_id }}" href="month_2" data-tab="month_2"
+                            <a class="planBlock planBlockDown new_block active" data-variantid="{{ product_variant_id }}" href="month_2" data-tab="month_2"
                                 data-per="& SAVE {{ discount_percentage }}%" data-image="https://qureskincaredns.com/new/assets/offer_patches-2.webp">
                                 <input type="radio" name="monthlyPlan" id="2_month">
                                 <label class="monthly_plans" for="2_month" payment-price="{{ product_price_divided | money_without_trailing_zeros }}">
@@ -79,7 +79,7 @@
                             {% assign product_price_divided = product.price | divided_by: 4 %}
                             {% assign product_variant_id = product.variants.first.id %}
 
-                            <a class="planBlock new_block" data-variantid="{{ product_variant_id }}" href="month_1" data-tab="month_1" data-per="- {{ product.price | money_without_trailing_zeros }}"
+                            <a class="planBlock planBlockDown new_block" data-variantid="{{ product_variant_id }}" href="month_1" data-tab="month_1" data-per="- {{ product.price | money_without_trailing_zeros }}"
                                 data-image="https://qureskincaredns.com/new/assets/offer_patches-3.webp">
                                 <input type="radio" name="monthlyPlan" id="1_month">
                                 <label class="monthly_plans" for="1_month" payment-price="{{ product_price_divided | money_without_trailing_zeros }}">
@@ -100,22 +100,22 @@
                             {% assign product_variant_id = product.variants.first.id %}
                             {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
 
-                            <a class="btn btn-atc submit_btn mt-md-2 mt-4" href="/cart/add?id={{ product_variant_id }}&amp;quantity=1" onclick="setEventProductHandler('{{ product.handle }}')" data-ajax-cart-request-button>
+                            <a class="btn btn-atc submit_btn_down mt-md-2 mt-4" href="/cart/add?id={{ product_variant_id }}&amp;quantity=1" onclick="setEventProductHandler('{{ product.handle }}')" data-ajax-cart-request-button>
                                 Buy Now <span class="btn_value">&amp; SAVE {{ discount_percentage }}%</span>
                             </a>
 
                             <script>
                                 document.addEventListener('DOMContentLoaded', function() {
-                                    const submitBtn = document.querySelector('.submit_btn');
-                                    $('.planBlock').click(function () {
+                                    const submitBtnDown = document.querySelector('.submit_btn_down');
+                                    $('.planBlockDown').click(function () {
                                         
                                         var selectedImage = $(this).data('image');
                                         $('#bundleImage').attr('src', selectedImage);
 
-                                        const variantId = $(this).data('variantid');
+                                        const variantIdDown = $(this).data('variantid');
 
-                                        if (submitBtn && variantId) {
-                                            submitBtn.href = submitBtn.href.replace(/id=\d+/, `id=${variantId}`);
+                                        if (submitBtnDown && variantIdDown) {
+                                            submitBtnDown.href = submitBtnDown.href.replace(/id=\d+/, `id=${variantIdDown}`);
                                         }
                                     });
                                 });

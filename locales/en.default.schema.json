@@ -1252,6 +1252,9 @@
     "slidecart": {
       "name": "Slidecart",
       "settings": {
+        "header_product_gift": {
+          "label": "Product gift"
+        },
         "enable_free_shipping": {
           "label": "Enable Free Shipping Treshold"
         },
@@ -1275,7 +1278,12 @@
         "copy_congrats": {
           "label": "Copy Congrats Gift",
           "info": "If you want put the name of a product gift add '&product-title&' to the copy"
+        },
+        "dont_enable_gift_urls": {
+          "label": "Add the URLs where you want to disable the free product gift.",
+          "info": "Add one URL per line, without the domain. Example: \/collections\/all"
         }
+
       },
       "blocks": {
         "gift": {

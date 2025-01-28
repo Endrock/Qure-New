@@ -39,9 +39,13 @@
         {% assign main_class = 'faucet_filter' %}
         <link rel="stylesheet" href="{{ 'faucet-filter-pdp.css' | asset_url }}">
     {% when 'product.mi-patches' %}
-        {% assign main_class = 'mi_landing mi-patches-pdf' %}
+        {% assign main_class = 'mi_landing mi-patches-pdf offer-lp black_friday' %}
         <link rel="stylesheet" href="{{ 'mi-patches-pdp.css' | asset_url }}">
-        <link rel="stylesheet" href="{{ 'qure-skincare-app.css' | asset_url }}">
+        <link rel="stylesheet" href="{{ 'offer-pages.css' | asset_url }}">
+
+        {% comment %} {% assign main_class = 'mi_landing mi-patches-pdf' %}
+        <link rel="stylesheet" href="{{ 'mi-patches-pdp.css' | asset_url }}">
+        <link rel="stylesheet" href="{{ 'qure-skincare-app.css' | asset_url }}"> {% endcomment %}
     {% when 'product.sunil-q-urify' %}
         {% assign main_class = 'qurify_water' %}
         <link rel="stylesheet" href="{{ 'product_q-urify-water.css' | asset_url }}">
@@ -54,9 +58,6 @@
     {% when 'product.sunil-all-in-one' %}
         {% assign main_class = 'all_in_one' %}
         <link rel="stylesheet" href="{{ 'product-serum-pdp.css' | asset_url }}">
-        {% comment %} <link rel="stylesheet" href="{{ 'offer-pages.css' | asset_url }}"> {% endcomment %}
-        {% comment %} {% assign main_class = 'all_in_one' %}
-        <link rel="stylesheet" href="{{ 'product-serum-pdp.css' | asset_url }}"> {% endcomment %}
     {% when 'product.sunil-gift-card' %}
         {% assign main_class = 'bundle_pdp gift_page' %}
         <link rel="stylesheet" href="{{ 'product-gift-card.css' | asset_url }}"> 
