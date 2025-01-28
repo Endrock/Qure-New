@@ -227,7 +227,7 @@
           "type": "icon",
           "settings": {
             "image": "shopify://shop_images/mi_pdp-reason8.svg",
-            "text": "<p>Increases skin hydration and improves skin barrier</p>"
+            "text": "<p>Increases skin hydration and improves skin barrier in 4 weeks</p>"
           }
         },
         "icon_4F6GcW": {
@@ -502,6 +502,18 @@
         "padding_bottom": 0
       }
     },
+    "temp-faucet-filter-section1": {
+      "type": "temp-faucet-filter-section1",
+      "settings": {}
+    },
+    "temp-faucet-filter-section2": {
+      "type": "temp-faucet-filter-section2",
+      "settings": {}
+    },
+    "temp-faucet-filter-section3": {
+      "type": "temp-faucet-filter-section3",
+      "settings": {}
+    },
     "how_to_install_L9i7VN": {
       "type": "how-to-install",
       "blocks": {
@@ -543,18 +555,6 @@
         "heading": "How to install",
         "custom_class": "section"
       }
-    },
-    "temp-faucet-filter-section1": {
-      "type": "temp-faucet-filter-section1",
-      "settings": {}
-    },
-    "temp-faucet-filter-section2": {
-      "type": "temp-faucet-filter-section2",
-      "settings": {}
-    },
-    "temp-faucet-filter-section3": {
-      "type": "temp-faucet-filter-section3",
-      "settings": {}
     },
     "compare_images_TNaVYJ": {
       "type": "compare-images",

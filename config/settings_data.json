@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "current": {
     "show_bf_price": false,
     "favicon": "shopify://shop_images/qure.png",
@@ -52,6 +52,7 @@
     "enable_free_shipping_treshold": true,
     "enable_product_gift": true,
     "product_free_gift": "face-serum",
+    "dont_enable_gift_urls": "/pages/led-mask-offer-2\n/pages/q-rejuvalight-pro-offer",
     "copy_get_product_free": "<p>You’re &price-left& away from  <strong>Free &product-title& </strong>worth &product-price&!</p>",
     "icon_product_gift_clean": "shopify://shop_images/Gift-grey1.svg",
     "icon_product_gift_gradient": "shopify://shop_images/Gift-grey2.svg",

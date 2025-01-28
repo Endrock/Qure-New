@@ -75,7 +75,7 @@
                                                         </div> 
                                                     {% endif %}
                                                     <div class="new_content">
-                                                        <p>{% if section.settings.heading != ''  %}{{ section.settings.heading }}{% endif %} <span class="discount_badge"> SAVE {% if section.settings.text != ''  %}{{ section.settings.text |  replace: '<p>', '' |  replace: '</p>', '' }}{% endif %}</span></p>
+                                                        <p>{% if section.settings.heading != ''  %}{{ section.settings.heading }}{% endif %} <span class="discount_badge">{% if section.settings.text != ''  %}{{ section.settings.text |  replace: '<p>', '' |  replace: '</p>', '' }}{% endif %}</span></p>
                                                         <h4 class="new-header">{{ block.settings.heading |  replace: '<p>', '' |  replace: '</p>', '' }}</h4>
                                                         <a href="{{ block.settings.product_url }}" class="btn btn-light rounded-pill mt-2">Shop now<img src="{{ 'arrow_upright.webp' | asset_url }}" alt="" class="ms-1"></a>
                                                     </div>

@@ -1288,6 +1288,8 @@ function updateSiteWideGamification (cartTotal) {
   const threshold = parseInt(progressContainer.dataset.threshold, 10);
   const currencySymbol = progressContainer.dataset.currencySymbol;
   const giftProductIsAvailable = progressContainer.dataset.isAvailableGiftProduct;
+  const urlGiftProductIsAvailable = progressContainer.dataset.urlIsAvailableGiftProduct;
+
 
   // Calculate differences
   const differenceFreeShipping = freeShippingThreshold - cartTotal;
@@ -1320,7 +1322,7 @@ function updateSiteWideGamification (cartTotal) {
     if (enableFreeShipping && differenceFreeShipping > 0 && cartTotal >= 0) {
       const remainingAmountMoney = (differenceFreeShipping / 100).toFixed(0);
       progressContainerMessage.innerHTML = copyFreeShipping.replace("&price-left&", `<i class='money' style='font-style: normal;'>${currencySymbol.replace(/[0-9]+/, remainingAmountMoney)}</i>`);
-    } else if (enableProductGift && giftProductIsAvailable && differenceFreeGift > 0) {
+    } else if (enableProductGift && urlGiftProductIsAvailable=="true" && giftProductIsAvailable && differenceFreeGift > 0) {
       const remainingGiftAmountMoney = (differenceFreeGift / 100).toFixed(0);
       let message = copyProductGift.replace("&price-left&", `<i class='money' style='font-style: normal;'>${currencySymbol.replace(/[0-9]+/, remainingGiftAmountMoney)}</i>`);
       if (!isNaN(giftProductVariantPrice)) {
@@ -1332,13 +1334,13 @@ function updateSiteWideGamification (cartTotal) {
         message = message.replace("&product-title&", giftProductTitle);
       }
       progressContainerMessage.innerHTML = message;
-    } else if (enableProductGift && giftProductIsAvailable && differenceFreeGift <= 0) {
+    } else if (enableProductGift && giftProductIsAvailable && urlGiftProductIsAvailable=="true" && differenceFreeGift <= 0) {
       const congratsMessage = copyCongrats.replace("&product-title&", `<strong>${giftProductTitle}!</strong>`);
       progressContainerMessage.innerHTML = congratsMessage;
-    } else if ((!enableProductGift || !giftProductIsAvailable) &&
+    } else if ((!enableProductGift || !giftProductIsAvailable || urlGiftProductIsAvailable=="false") &&
         enableFreeShipping &&
         cartTotal >= differenceFreeShipping){
-      progressContainerMessage.innerHTML = "<p>Congrats you have <strong> Free Shipping! js</strong></p>";
+      progressContainerMessage.innerHTML = "<p>Congrats you have <strong> Free Shipping!</strong></p>";
     }
   }
 
