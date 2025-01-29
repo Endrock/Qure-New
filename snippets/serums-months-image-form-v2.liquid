@@ -168,9 +168,11 @@
                                         {% assign divided_price = product.price | divided_by: 4 %}
                                         {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
 
-                                        <a class="planBlock active {{ section_id }}_productPeriodObject" href="month_3" data-tab="month_3" data-pay="{{ divided_price | money_without_trailing_zeros }}"
-                                            data-per="Buy Now & SAVE {{ discount_percentage }}%" data-image="{{ 'MI2x-mixed.webp' | asset_url }}"
-                                            
+                                        <a class="planBlock active {{ section_id }}_productPeriodObject" href="month_3" 
+                                        data-tab="month_3" 
+                                        data-pay="{{ divided_price | money_without_trailing_zeros }}"
+                                        data-per="Buy Now & SAVE {{ discount_percentage }}%" 
+                                        data-image="{{ 'MI2x-mixed.webp' | asset_url }}"
                                             >
                                             <div class="plan_choosed mw-100 plan_choosed-original">
                                                 <span>MOST POPULAR</span>
@@ -184,7 +186,11 @@
                                                 </p>
                                             </div>
 
-                                            <input type="radio" name="monthlyPlan" id="3_month" checked data-product-period="3">
+                                            <input type="radio" name="monthlyPlan" id="3_month" checked
+                                                data-product-period="3"
+                                                data-product-variant-id="{{ product.variants.first.id }}"
+                                                data-product-id="{{ product.id }}"
+                                            >
                                             <label class="monthly_plans" for="3_month">
                                                 <div class="plan_des">
                                                     <div class="plan_hdr">
@@ -193,9 +199,18 @@
                                                     </div>
                                                     <div class="plan_des">6 Micro-Infusion Treatments</div>
                                                 </div>
-                                                <div class="price">
-                                                    <div class="plan_prc regular_price">{{ product.compare_at_price | money_without_trailing_zeros }}</div>
-                                                    <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
+                                                <div class="price pmd_price-first-elemnt">
+                                                    <div class="price-row">
+                                                        <div class="plan_prc regular_price">{{ product.compare_at_price | money_without_trailing_zeros }}</div>
+                                                        <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
+                                                    </div>
+                                                    <div class="pdm_price-stock-left">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                                            <path d="M7 12.25C9.8995 12.25 12.25 9.8995 12.25 7C12.25 4.1005 9.8995 1.75 7 1.75C4.1005 1.75 1.75 4.1005 1.75 7C1.75 9.8995 4.1005 12.25 7 12.25Z" stroke="#C4121A" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M6.41699 4.66797V7.58464H9.33366" stroke="#C4121A" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <p><strong class="pdm_price-stock-left-quantity"></strong>left</p>
+                                                    </div>
                                                 </div>
                                                 <div class="pdm_plan-bundle-detail item-1">
                                                     <p> 🔥 2 months supply <strong>+ 1 extra month for just <span class="pdm_plan-bundle-detail__money"></span></strong></p>
@@ -211,7 +226,11 @@
 
                                         <a class="planBlock {{ section_id }}_productPeriodObject" href="month_2" data-tab="month_2" data-pay="{{ divided_price | money_without_trailing_zeros}}"
                                             data-per="Buy Now & SAVE {{ discount_percentage }}%" data-image="{{ 'MI4x-mixed.webp' | asset_url }}">
-                                            <input type="radio" name="monthlyPlan" id="2_month" data-product-period="2">
+                                            <input type="radio" name="monthlyPlan" id="2_month" 
+                                                data-product-period="2"
+                                                data-product-variant-id="{{ product.variants.first.id }}"
+                                                data-product-id="{{ product.id }}"
+                                            >
                                             <label class="monthly_plans limited__offer" for="2_month">
                                                 <div class="plan_des">
                                                     <div class="plan_hdr">
@@ -238,7 +257,11 @@
 
                                         <a class="planBlock {{ section_id }}_productPeriodObject" href="month_1" data-tab="month_1" data-pay="{{ divided_price | money_without_trailing_zeros}}"
                                             data-per="BUY NOW - {{ product.price | money_without_trailing_zeros }}" data-image="{{ 'treatment.png' | asset_url }}">
-                                            <input type="radio" name="monthlyPlan" id="1_month" data-product-period="1">
+                                            <input type="radio" name="monthlyPlan" id="1_month" 
+                                                data-product-period="1"
+                                                data-product-variant-id="{{ product.variants.first.id }}"
+                                                data-product-id="{{ product.id }}"
+                                            >
                                             <label class="monthly_plans" for="1_month">
                                                 <div class="plan_des">
                                                     <div class="plan_hdr">

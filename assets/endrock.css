@@ -3118,6 +3118,10 @@ body[data-test-high-contrast='true'] .planBlock .monthly_plans .plan_des > .plan
   padding: 0;
 }
 
+body[data-test-high-contrast='true'] .planBlock .monthly_plans .price{
+  padding-right: 16px;
+}
+
 @media screen and (min-width: 769px) {
   body[data-test-high-contrast='true'] .planBlock .monthly_plans .price{
     padding-right: 24px;
@@ -3215,7 +3219,7 @@ body[data-test-high-contrast='true'] .planBlock .monthly_plans .plan_des{
 body[data-test-high-contrast='true'] .planBlock .monthly_plans .saved_price.item-1 {
   border-radius: 40px;
   background-color: #C4121A;
-  padding: 6px 8px;
+  padding: 0px 8px;
   color: #FFF;
   text-align: right;
   font-family: Poppins;
@@ -3228,9 +3232,10 @@ body[data-test-high-contrast='true'] .planBlock .monthly_plans .saved_price.item
 }
 
 body[data-test-high-contrast='true'] .planBlock .monthly_plans .saved_price.item-2 {
+  display: block !important;
   border-radius: 40px;
   background-color: #FFE0E1;
-  padding: 6px 8px;
+  padding: 0px 8px;
   color: #C4121A;
   text-align: right;
   font-family: Poppins;
@@ -3250,6 +3255,66 @@ body[data-test-high-contrast='true'] .planBlock .monthly_plans .saved_price.item
 }
 
 /* prices */
+
+body[data-test-high-contrast='true'] .saved_price.saved_price50{
+  display: none !important;
+}
+
+.pdm_price-stock-left{
+  display: none;
+}
+
+.monthly_plans .price .price-row{
+  display: flex;
+  flex-direction: row;
+}
+
+body[data-test-high-contrast='true'] .price.pmd_price-first-elemnt{
+  flex-direction: column;
+  gap: 2px;
+}
+
+@media screen and (min-width: 769px) {
+  body[data-test-high-contrast='true'] .price.pmd_price-first-elemnt{
+    padding-top: 16px;
+    padding-bottom: 16px;
+    gap: 4px;
+  }
+}
+
+body[data-test-high-contrast='true'] .price.pmd_price-first-elemnt .price-row{
+  display: flex;
+  flex-direction: row;
+}
+
+body[data-test-high-contrast='true'] .pdm_price-stock-left{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  gap: 2px;
+}
+
+body[data-test-high-contrast='true'] .pdm_price-stock-left p{
+  color: #000;
+  font-family: Poppins;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0.11px;
+}
+
+body[data-test-high-contrast='true'] .pdm_price-stock-left p strong{
+  color: black;
+  font-family: Poppins;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 13.2px */
+  letter-spacing: 0.11px;
+}
 
 body[data-test-high-contrast='true'] .planBlock .monthly_plans .price .regular_price {
   color: rgba(0, 0, 0, 0.30);
@@ -3309,6 +3374,22 @@ body[data-test-high-contrast='true'] .pmtBlock input:checked+.pmt_plans{
     padding: 13px 24px;
     border-radius: 80px;
   }
+}
 
+/* footer */
+.cs_wrapper-test-pdm{
+  display: none;
+}
+body[data-test-high-contrast='true'] .cs_wrapper-original{
+  display: none;
+}
+
+body[data-test-high-contrast='true']{
+  display: flex;
+}
+@media screen and (min-width: 769px) {
+  body[data-test-high-contrast='true']{
+    display: none;
+  }
 }
 /* end test high contrast mode micro infusion offer and affiliate */

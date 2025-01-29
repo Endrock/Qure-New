@@ -1710,3 +1710,34 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* end test upsell popup */
+
+/* test high contrast mode micro infusion offer and affiliate */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const { productId } = document.getElementById('3_month').dataset;
+  const elementPriceStock = document.querySelector('.pdm_price-stock-left-quantity');
+  console.log("3_month", productId);
+
+  const urlStock = `https://webhooks.endrock.software/endrockapi/qureskincare/stock/${productId}`;
+
+  const getDataStock = async (url) => {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+  };
+
+  const updateValueStock = async (element, url) => {
+    try {
+      let message = '';
+      const dataStock = await getDataStock(url);
+      message = `${dataStock.data} kits `
+      element.textContent = message;
+    } catch {
+      console.error("Error fetching stock data:", error);
+    }
+  };
+
+  updateValueStock(elementPriceStock, urlStock);
+
+});
+/* end test high contrast mode micro infusion offer and affiliate */
