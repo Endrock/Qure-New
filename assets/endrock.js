@@ -1527,10 +1527,11 @@ function initFrontrowHealth (frontrowContainer, trustedSection) {
 }
 
 
-/* test upsell popup */
-document.addEventListener('DOMContentLoaded', () => {
-  // DOM elements for controlling the upsell popup
-  const openPopupUpsell = document.querySelector("#openPopupUpsell");
+/*  upsell popup micro-infusion-offer and affiliate*/
+// DOM elements for controlling the upsell popup
+const openPopupUpsell = document.querySelector("#openPopupUpsell");
+
+if(openPopupUpsell && openPopupUpsell.dataset?.popupEnabled) {
   const closePopupUpsell = document.querySelector("#closePopupUpsell")
   const popupUpsell = document.querySelector("#popupUpsell");
   const popupUpsellWrapper = document.querySelector('.popupsell-wrapper');
@@ -1586,7 +1587,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!productId) return;
 
     // Find matching upsell data based on product ID
-    const {name, id} = dataInformation.find(item => item.products.includes(productId)) ?? {};
+    const { id } = dataInformation.find(item => item.products.includes(productId)) ?? {};
 
     // Remove 'active' class from all upsell elements
     const allUpsellElements = document.querySelectorAll('.popupsell-card.active');
@@ -1631,85 +1632,85 @@ document.addEventListener('DOMContentLoaded', () => {
 
   };
 
-    // Event listener for upsell buttons to add a product to the cart
-    if(popupUpsellButtons && popupUpsellButtons.length > 0){
-      popupUpsellButtons.forEach((button) => {
-        button.addEventListener('click', (event) => {
-          const target = event.target.closest('[data-product-id]'); // Find the closest element with the data-product-id attribute
-          let productId = null;
-    
-          if (!target || !target.dataset.productId) {
-            productId = 43821069435119; // ID of the default product
-          } else {
-            productId = Number(target.dataset.productId);
-          }
-          addToCartUpsell(productId);
-        });
+  // Event listener for upsell buttons to add a product to the cart
+  if(popupUpsellButtons && popupUpsellButtons.length > 0){
+    popupUpsellButtons.forEach((button) => {
+      button.addEventListener('click', (event) => {
+        const target = event.target.closest('[data-product-id]'); // Find the closest element with the data-product-id attribute
+        let productId = null;
+  
+        if (!target || !target.dataset.productId) {
+          productId = 43821069435119; // ID of the default product
+        } else {
+          productId = Number(target.dataset.productId);
+        }
+        addToCartUpsell(productId);
       });
+    });
+  }
+
+  // Initial handling of the upsell element
+  handleUpsellElement(dataInformationUpsell);
+
+  /**
+   * Closes the upsell popup and triggers the anchor button click if it exists.
+   */
+  const closePopup = () => {
+    const linkAnchorLandingProcess = document.querySelector('.step_content .btn-atc.submit_btn');
+    if (linkAnchorLandingProcess) {
+      linkAnchorLandingProcess.click();
     }
-  
-    // Initial handling of the upsell element
-    handleUpsellElement(dataInformationUpsell);
-  
-    /**
-     * Closes the upsell popup and triggers the anchor button click if it exists.
-     */
-    const closePopup = () => {
-      const linkAnchorLandingProcess = document.querySelector('.step_content .btn-atc.submit_btn');
-      if (linkAnchorLandingProcess) {
-        linkAnchorLandingProcess.click();
-      }
-      popupUpsell.style.display = 'none';
-    };
-  
-    // Update upsell elements when the serum offer container changes
-    if (serumOfferContainer) {
-      serumOfferContainer.addEventListener('change', (event) => {
+    popupUpsell.style.display = 'none';
+  };
+
+  // Update upsell elements when the serum offer container changes
+  if (serumOfferContainer) {
+    serumOfferContainer.addEventListener('change', (event) => {
+      handleUpsellElement(dataInformationUpsell);
+    });
+  }
+
+  // Update upsell elements when a serum offer label is clicked
+  if (serumOfferLabel && serumOfferLabel.length > 0) {
+    serumOfferLabel.forEach((container) => {
+      container.addEventListener('click', () => {
         handleUpsellElement(dataInformationUpsell);
       });
-    }
-  
-    // Update upsell elements when a serum offer label is clicked
-    if (serumOfferLabel && serumOfferLabel.length > 0) {
-      serumOfferLabel.forEach((container) => {
-        container.addEventListener('click', () => {
-          handleUpsellElement(dataInformationUpsell);
-        });
-      });
-    }
-  
-    // Open the upsell popup
-    if (openPopupUpsell) {
-      openPopupUpsell.addEventListener('click', () => {
-        if (popupUpsell) {
-          popupUpsell.style.display = 'flex';
-        }
-      });
-    }
-  
-    // Close the upsell popup
-    if (closePopupUpsell) {
-      closePopupUpsell.addEventListener('click', closePopup);
-    }
-  
-    // Close the upsell popup when the "no thanks" buttons are clicked
-    if (popupUpsellNothanks && popupUpsellNothanks.length > 0) {
-      popupUpsellNothanks.forEach((button) => {
-        button.addEventListener('click', closePopup);
-      });
-    }
-  
-    // Close the upsell popup when clicking outside the wrapper
-    if (popupUpsell) {
-      popupUpsell.addEventListener('click', (e) => {
-        if (popupUpsellWrapper && !popupUpsellWrapper.contains(e.target)) {
-          closePopup();
-        }
-      });
-    }
-});
+    });
+  }
 
-/* end test upsell popup */
+  // Open the upsell popup
+  if (openPopupUpsell) {
+    openPopupUpsell.addEventListener('click', () => {
+      if (popupUpsell) {
+        popupUpsell.style.display = 'flex';
+      }
+    });
+  }
+
+  // Close the upsell popup
+  if (closePopupUpsell) {
+    closePopupUpsell.addEventListener('click', closePopup);
+  }
+
+  // Close the upsell popup when the "no thanks" buttons are clicked
+  if (popupUpsellNothanks && popupUpsellNothanks.length > 0) {
+    popupUpsellNothanks.forEach((button) => {
+      button.addEventListener('click', closePopup);
+    });
+  }
+
+  // Close the upsell popup when clicking outside the wrapper
+  if (popupUpsell) {
+    popupUpsell.addEventListener('click', (e) => {
+      if (popupUpsellWrapper && !popupUpsellWrapper.contains(e.target)) {
+        closePopup();
+      }
+    });
+  }
+}
+  
+/* end upsell popup micro-infusion-offer and affiliate */
 
 /* test high contrast mode micro infusion offer and affiliate */
 
@@ -1740,4 +1741,5 @@ document.addEventListener('DOMContentLoaded', () => {
   updateValueStock(elementPriceStock, urlStock);
 
 });
+
 /* end test high contrast mode micro infusion offer and affiliate */

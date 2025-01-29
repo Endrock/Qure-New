@@ -1315,7 +1315,7 @@
             "recommended_heading": "",
             "recommended_text": "",
             "is_top_rated": false,
-            "is_preorder": true,
+            "is_preorder": false,
             "preorder_text": "SHIPS LATE JANUARY",
             "classname": "",
             "code": ""
@@ -1398,7 +1398,7 @@
             "recommended_heading": "",
             "recommended_text": "",
             "is_top_rated": true,
-            "is_preorder": true,
+            "is_preorder": false,
             "preorder_text": "SHIPS LATE JANUARY",
             "classname": "",
             "code": ""
@@ -1523,7 +1523,7 @@
             "recommended_heading": "",
             "recommended_text": "",
             "is_top_rated": false,
-            "is_preorder": true,
+            "is_preorder": false,
             "preorder_text": "SHIPS LATE JANUARY",
             "classname": "",
             "code": ""

@@ -2612,9 +2612,9 @@ body[class~="page.sunil-mi-landing-special2-reorder"] #see_it_section{
 }
 /* end  frontrow health */
 
-/* test upsell popup */
+/* upsell popup micro-infusion-offer and affiliate */
 .upsell_popup_btn{
-  display: none;
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -2627,10 +2627,6 @@ body[class~="page.sunil-mi-landing-special2-reorder"] #see_it_section{
 
 .upsell_popup_anchor_hover{
   position: relative;
-}
-
-body[data-upsell-test] .upsell_popup_btn{
-  display: block;
 }
 
 .popupsell-main {
