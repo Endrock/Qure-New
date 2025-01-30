@@ -172,11 +172,10 @@
                         {% if subscribe_count > 0 %}
                             {%- for block in section.blocks -%}
                                 {% if block.type == 'subscribe' %}
-                                    {% assign discount_value = block.settings.discount | divided_by: 100.0 | times: product.price | minus: product.price | abs %}
-                                    {% if product.compare_at_price %}
-                                        {% assign product_price_discount = product.compare_at_price %}
+                                    {% if block.settings.product != blank %}
+                                        {% include 'product-extended-subscription-product' product: all_products[block.settings.product], product_custom: true %}
                                     {% else %}
-                                        {% assign product_price_discount = discount_value %}
+                                        {% include 'product-extended-subscription-product' product: product, product_custom: false %}
                                     {% endif %}
 
                                     <div class="subscribe_save_wrapper with_subscription mt-2">
@@ -191,15 +190,6 @@
                                                             <h6>{{ block.settings.heading }}</h6>
                                                         {% endif %}
                                                         
-                                                        {%- if product.handle contains 'q-urify-water-filter' -%}
-                                                            {%- assign future_price = all_products['q-rify-replacement-water-filter'].price | times: 0.7 | money_without_trailing_zeros %}
-                                                        {%- else -%}
-                                                            {%- assign future_price = discount_value | money_without_trailing_zeros -%}
-                                                        {%- endif -%}
-
-                                                        {% assign discount_price = product_price_discount | money_without_trailing_zeros %}
-
-
                                                         {% if block.settings.text != blank %}
                                                             {{ block.settings.text 
                                                                 | replace: '[future_price]', future_price 
@@ -209,7 +199,7 @@
                                                     </label>
                                                 </div>
                                                 <div class="subscribePrice">
-                                                    <p><span>{{ product.price | money_without_trailing_zeros }}</span>{{ product_price_discount | money_without_trailing_zeros  }}</p>
+                                                    <p><span>{{ product_price }}</span>{{ discount_price }}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -253,12 +243,12 @@
                                         {% unless supply_count > 0 %}
                                             {% render 'pdm_orderby' %}
                                         {% endunless %}
-                                        <form method="post" action="/cart/add" accept-charset="UTF-8" id="SubscriptionForm" class="shopify-product-form buy-form-{{ section_id }} form-test-id" enctype="multipart/form-data" data-form-id="{{ product.id }}">
+                                        <form method="post" action="/cart/add" accept-charset="UTF-8" id="SubscriptionForm" class="shopify-product-form buy-form-{{ section_id }} form-test-id" enctype="multipart/form-data" data-form-id="{{ product_id }}">
                                             <input type="hidden" name="selling_plan" value="{{ block.settings.plan }}">
                                             <button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn" onclick="setEventProductHandler('{{ product.handle | escape }}')" name="Submit" value="Submit">
                                                 Subscribe Now
                                             </button>
-                                            <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+                                            <input type="hidden" name="id" value="{{ product_variant_id }}" />
                                         </form>
 
                                         {% capture sticky-button-form-classname %}buy-form-{{ section_id }}{% endcapture %}
@@ -847,6 +837,11 @@
                         "type": "richtext",
                         "id": "text",
                         "label": "t:common.text.label"
+                    },
+                    {
+                        "type": "product",
+                        "id": "product",
+                        "label": "t:common.product.label"
                     },
                     {
                         "type": "text",

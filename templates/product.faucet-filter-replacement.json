@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "main": {
       "type": "product-extended",
@@ -65,7 +65,8 @@
           "settings": {
             "heading": "Subscribe & save 30%",
             "text": "<p>Get a new replacement filter delivered every 90 days for just [discount_price]. Skip or cancel at any time. <a href=\"https://www.qureskincare.com/pages/subscriptions\" target=\"_blank\">See more details</a></p>",
-            "plan": "6180143343",
+            "product": "faucet-filter",
+            "plan": "6190465263",
             "discount": 30
           }
         }
@@ -100,7 +101,8 @@
     "liquid_FrGCjn": {
       "type": "liquid",
       "settings": {
-        "code": "<script>\ndocument.addEventListener('DOMContentLoaded', function() {\n    setTimeout(() => { $(\"#productButton\").trigger('click') }, 1500);\n});\n\n</script>"
+        "code": "<script>\ndocument.addEventListener('DOMContentLoaded', function() {\n    setTimeout(() => { $(\"#productButton\").trigger('click') }, 1500);\n});\n\n</script>",
+        "popup_micro_infusion_enabled": true
       }
     },
     "featuredin_PYCXAH": {
