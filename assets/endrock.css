@@ -3372,19 +3372,101 @@ body[data-test-high-contrast='true'] .pmtBlock input:checked+.pmt_plans{
   }
 }
 
-/* footer */
-.cs_wrapper-test-pdm{
-  display: none;
-}
-body[data-test-high-contrast='true'] .cs_wrapper-original{
+/* 3 step */
+
+
+body[data-test-high-contrast='true'] .pmt_options__image{
   display: none;
 }
 
-body[data-test-high-contrast='true']{
+body[data-test-high-contrast='true'] .pmt_options{
+  width: 159px;
+  height: 18px;
+}
+
+body[data-test-high-contrast='true'] .pmt_options.item-2{
+  width: 93.5px;
+  height: 18px;
+}
+
+.pmt_options .pmt_options__image-test{
+  display: none;
+}
+
+body[data-test-high-contrast='true'] .pmt_options .pmt_options__image-test{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+body[data-test-high-contrast='true'] .pmt_des .pmt_row-test{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+@media screen and (min-width: 769px) {
+  body[data-test-high-contrast='true'] .pmt_des .pmt_row-test{
+    padding-top: 4px;
+  }
+  
+  body[data-test-high-contrast='true'] .pmt_des .pmt_row-test{
+    align-items: center;
+    flex-direction: row;
+    gap: 6px;
+  }
+}
+
+body[data-test-high-contrast='true'] .pmtBlock .pmt_plans .price .regular_price{
+  color: rgba(0, 0, 0, 0.30);
+  text-align: right;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+  letter-spacing: 0.3px;
+  text-decoration: line-through;
+}
+
+body[data-test-high-contrast='true'] .pmtBlock .pmt_plans .price .pmt_prc+.pmt_prc
+body[data-test-high-contrast='true'] .pmtBlock .pmt_plans .price .pmt_prc.pay_today{
+  color: black;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 112.5% */
+  letter-spacing: 0.3px;
+}
+
+@media screen and (min-width: 769px) {
+  body[data-test-high-contrast='true'] .pmtBlock .pmt_plans .price .regular_price,
+  body[data-test-high-contrast='true'] .pmtBlock .pmt_plans .price .pmt_prc+.pmt_prc,
+  body[data-test-high-contrast='true'] .pmtBlock .pmt_plans .price .pmt_prc.pay_today{
+    font-size: 18px;
+  }
+}
+
+
+/* footer */
+.c_s_wrapper.cs_wrapper-test-pdm{
+  display: none;
+}
+
+body[data-test-high-contrast='true'] .c_s_wrapper.cs_wrapper-original{
+  display: none;
+}
+
+body[data-test-high-contrast='true'] .c_s_wrapper.cs_wrapper-test-pdm{
   display: flex;
 }
+
 @media screen and (min-width: 769px) {
-  body[data-test-high-contrast='true']{
+  body[data-test-high-contrast='true'] .c_s_wrapper.cs_wrapper-test-pdm{
     display: none;
   }
 }

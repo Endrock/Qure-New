@@ -1715,30 +1715,51 @@ if(openPopupUpsell && openPopupUpsell.dataset?.popupEnabled) {
 /* test high contrast mode micro infusion offer and affiliate */
 
 document.addEventListener('DOMContentLoaded', () => {
-  const { productId } = document.getElementById('3_month').dataset;
-  const elementPriceStock = document.querySelector('.pdm_price-stock-left-quantity');
-  console.log("3_month", productId);
+  const serum3Month = document.getElementById('3_month');
+  if ( serum3Month ) {
+    
+    const pdmPriceDifferenceContainer = document.querySelector('#pdm_price-difference-container')
+    const elementPriceStock = document.querySelector('.pdm_price-stock-left-quantity');
+    const productId = serum3Month.dataset.productId;
 
-  const urlStock = `https://webhooks.endrock.software/endrockapi/qureskincare/stock/${productId}`;
+     const updatePrices = (htmlContainer) => {
+      const { priceFirst, priceSecond } = htmlContainer.dataset;
+      const textElementPrice3Month = document.querySelector('.pdm_plan-bundle-detail__money.item-1');
+      const textElementPrice2Month = document.querySelector('.pdm_plan-bundle-detail__money.item-2');
 
-  const getDataStock = async (url) => {
-    const response = await fetch(url);
-    const data = await response.json();
-    return data;
-  };
+      if (textElementPrice3Month) {
+        textElementPrice3Month.textContent = priceFirst;
+      }
 
-  const updateValueStock = async (element, url) => {
-    try {
-      let message = '';
-      const dataStock = await getDataStock(url);
-      message = `${dataStock.data} kits `
-      element.textContent = message;
-    } catch {
-      console.error("Error fetching stock data:", error);
+      if (textElementPrice2Month) {
+        textElementPrice2Month.textContent = priceSecond;
+      }
     }
-  };
 
-  updateValueStock(elementPriceStock, urlStock);
+    const getDataStock = async (url) => {
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        console.error("Error fetching stock data:", error);
+        return null;
+      }
+    };
+
+    const updateValueStock = async (element, url) => {
+      const dataStock = await getDataStock(url);
+      if (dataStock) {
+        const message = `${dataStock.data} kits`;
+        element.textContent = message;
+      }
+    };
+
+    updatePrices(pdmPriceDifferenceContainer);
+    const urlStock = `https://webhooks.endrock.software/endrockapi/qureskincare/stock/${productId}`;
+    updateValueStock(elementPriceStock, urlStock);
+
+  }
 
 });
 

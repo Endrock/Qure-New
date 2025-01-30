@@ -1,3 +1,9 @@
+{% liquid
+    assign price_first_element = ""
+    assign price_second_element = ""
+    assign price_third_element = ""
+%}
+
 {% if section_id == blank %}
     <p>Please provide section_id property to use this snippet</p>
 {% else %}
@@ -186,6 +192,7 @@
                                                 </p>
                                             </div>
 
+                                            {% assign price_first_element = product.price %}
                                             <input type="radio" name="monthlyPlan" id="3_month" checked
                                                 data-product-period="3"
                                                 data-product-variant-id="{{ product.variants.first.id }}"
@@ -213,7 +220,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="pdm_plan-bundle-detail item-1">
-                                                    <p> 🔥 2 months supply <strong>+ 1 extra month for just <span class="pdm_plan-bundle-detail__money"></span></strong></p>
+                                                    <p> 🔥 2 months supply <strong>+ 1 extra month for just <span class="pdm_plan-bundle-detail__money item-1"></span></strong></p>
                                                 </div>
                                             </label>
                                          
@@ -226,6 +233,7 @@
 
                                         <a class="planBlock {{ section_id }}_productPeriodObject" href="month_2" data-tab="month_2" data-pay="{{ divided_price | money_without_trailing_zeros}}"
                                             data-per="Buy Now & SAVE {{ discount_percentage }}%" data-image="{{ 'MI4x-mixed.webp' | asset_url }}">
+                                            {% assign price_second_element = product.price %}
                                             <input type="radio" name="monthlyPlan" id="2_month" 
                                                 data-product-period="2"
                                                 data-product-variant-id="{{ product.variants.first.id }}"
@@ -247,7 +255,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="pdm_plan-bundle-detail item-2">
-                                                    <p> 1 month supply <strong>+ 1 extra month for just <span class="pdm_plan-bundle-detail__money"></span></strong></p>
+                                                    <p> 1 month supply <strong>+ 1 extra month for just <span class="pdm_plan-bundle-detail__money item-2"></span></strong></p>
                                                 </div>
                                             </label>
                                         </a>
@@ -257,6 +265,7 @@
 
                                         <a class="planBlock {{ section_id }}_productPeriodObject" href="month_1" data-tab="month_1" data-pay="{{ divided_price | money_without_trailing_zeros}}"
                                             data-per="BUY NOW - {{ product.price | money_without_trailing_zeros }}" data-image="{{ 'treatment.png' | asset_url }}">
+                                            {% assign price_third_element = product.price %}
                                             <input type="radio" name="monthlyPlan" id="1_month" 
                                                 data-product-period="1"
                                                 data-product-variant-id="{{ product.variants.first.id }}"
@@ -351,8 +360,20 @@
                                                 <div class="pmt_hdr">
                                                     <h3>Pay in full</h3>
                                                 </div>
-                                                <div class="pmt_des">One-time payment with</div>
-                                                <div class="pmt_options"><img src="{{ 'payment-bl-1-hq.png' | asset_url }}" width="150px" alt="" /></div>
+                                                <div class="pmt_row-test">
+                                                    <div class="pmt_des">One-time payment with</div>
+                                                    <div class="pmt_options">
+                                                        <img 
+                                                        class="pmt_options__image"
+                                                        src="{{ 'payment-bl-1-hq.png' | asset_url }}" width="150px" alt="" />
+                                                        {{
+                                                            section.settings.payment_icons
+                                                            | image_url: width: 350
+                                                            | image_tag: alt: 'Payment Icons', class: 'pmt_options__image-test'
+                                                         }}
+    
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="price total_price">
                                                 <div class="pmt_prc regular_price">{{ product.compare_at_price | money_without_trailing_zeros }}</div>
@@ -367,8 +388,20 @@
                                                 <div class="pmt_hdr">
                                                     <h3>Pay today only</h3>
                                                 </div>
-                                                <div class="pmt_des">Monthly interest-free payments with</div>
-                                                <div class="pmt_options"><img src="{{ 'payment-bl-3-hq.png' | asset_url }}" width="150px" alt="" /></div>
+                                                <div class="pmt_row-test">
+                                                    <div class="pmt_des">Monthly interest-free payments with</div>
+                                                    <div class="pmt_options item-2">
+                                                        <img 
+                                                        class="pmt_options__image"
+                                                        src="{{ 'payment-bl-3-hq.png' | asset_url }}" width="150px" alt="" />
+                                                        {{
+                                                            section.settings.payment_icons_today_only
+                                                            | image_url: width: 150
+                                                            | image_tag: alt: 'Payment Icons Today Only', class: 'pmt_options__image-test'
+                                                        }}
+                                                    </div>
+                                                </div>
+                                                
                                             </div>
                                             <div class="price">
                                                 <div class="pmt_prc pay_today">{{ divided_price | money_without_trailing_zeros }}</div>
@@ -435,6 +468,12 @@
             </div>
         </div>
     </div>
+    <div 
+        id="pdm_price-difference-container"
+        data-price-first="{{ price_first_element | minus: price_second_element | money_without_trailing_zeros }}"
+        data-price-second="{{ price_second_element | minus: price_third_element | money_without_trailing_zeros }}"
+        hidden
+        ></div>
 
     <script src="{{ '__app_serums-months-form-v2.js' | asset_url }}"></script>
 
