@@ -1716,11 +1716,11 @@ if(openPopupUpsell && openPopupUpsell.dataset?.popupEnabled) {
 
 document.addEventListener('DOMContentLoaded', () => {
   const serum3Month = document.getElementById('3_month');
+  const elementPriceStock = document.querySelector('.pdm_price-stock-left-quantity');
   const { testHighContrast } = document.body.dataset
-  if ( serum3Month && testHighContrast ) {
+  if ( serum3Month && testHighContrast && elementPriceStock ) {
     
     const pdmPriceDifferenceContainer = document.querySelector('#pdm_price-difference-container')
-    const elementPriceStock = document.querySelector('.pdm_price-stock-left-quantity');
     const productId = serum3Month.dataset.productId;
 
      const updatePrices = (htmlContainer) => {
@@ -1751,7 +1751,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const updateValueStock = async (element, url) => {
       const dataStock = await getDataStock(url);
       if (dataStock) {
-        const message = `${dataStock.data} kits`;
+        const message = `${dataStock.data} kits `;
         element.textContent = message;
       }
     };
