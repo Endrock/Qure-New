@@ -1716,7 +1716,8 @@ if(openPopupUpsell && openPopupUpsell.dataset?.popupEnabled) {
 
 document.addEventListener('DOMContentLoaded', () => {
   const serum3Month = document.getElementById('3_month');
-  if ( serum3Month ) {
+  const { testHighContrast } = document.body.dataset
+  if ( serum3Month && testHighContrast ) {
     
     const pdmPriceDifferenceContainer = document.querySelector('#pdm_price-difference-container')
     const elementPriceStock = document.querySelector('.pdm_price-stock-left-quantity');
