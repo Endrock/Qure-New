@@ -90,6 +90,8 @@
 
 <script type="module"> import { configureCart, subscribeToCartSectionsUpdate, cartRequestAdd, cartRequestChange, subscribeToCartAjaxRequests, getCartState, subscribeToCartStateUpdate } from '{{ "liquid-ajax-cart-v1.11.1.js" | asset_url  }}'; 
 
+let hasAttemptedGiftAdd = false;
+let hasAttemptedGiftRemove = false;
 window.cartRequestAdd = cartRequestAdd;
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -198,8 +200,14 @@ document.addEventListener('DOMContentLoaded', () => {
         {% endif %}
       }
 
-      {% if enableProductGift and giftTresholdPdm != 0 and productGiftPdm != blank %}
-        productGiftPdm(cart,'{{ productGiftPdm.variants.first.id }}', {{ giftTresholdPdm }});
+      {% capture url_dont_enable_gift %}
+        {% render 'pdm-product-gift-urls' %}
+      {% endcapture %}
+
+      {% assign url_dont_enable_gift = url_dont_enable_gift | strip %}
+
+      {% if enableProductGift and productGiftPdm.available and giftTresholdPdm != 0 and productGiftPdm != blank %}
+        productGiftPdm(cart,'{{ productGiftPdm.variants.first.id }}', {{ giftTresholdPdm }}, {{url_dont_enable_gift}});
       {% endif %}
     }
   });
@@ -281,10 +289,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
 
-  function productGiftPdm (cart, productId,priceLimit) {
+  function productGiftPdm (cart, productId,priceLimit, url_dont_enable_gift) {
+
     const gift = cart.items.some(item => item.id === +(productId) && item.properties && item.properties['_required_validation']);
     const total_price = cart.total_price;
-    if (total_price >= priceLimit && !gift) {
+    if (total_price >= priceLimit && !gift && !hasAttemptedGiftAdd) {
+
+      if (url_dont_enable_gift != true) return;
+
+      hasAttemptedGiftAdd = true;
+      hasAttemptedGiftRemove = false;
       cartRequestAdd({
         items: [
           {
@@ -296,13 +310,18 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         ]
       }, {} )
-    }else if (total_price < priceLimit && gift) {
+
+    }else if (total_price < priceLimit && gift && !hasAttemptedGiftRemove) {
+
+      hasAttemptedGiftRemove = true;
+      hasAttemptedGiftAdd = false;
       const getGiftInCart = cart.items.find(item => item.id === +(productId) && item.properties['_required_validation']);
       cartRequestChange({
         id: getGiftInCart.key,
         quantity: 0
       },  {} )
     }
+
   }
 
   /** Saves the urgency note close icon status to local storage. */

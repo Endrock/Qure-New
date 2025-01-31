@@ -257,12 +257,14 @@ iframe#typeform-full {
         min-height: 450px;
 }
 
-body[class~="page.sunil-mi-landing-mens"] .header_gift_btn, 
-body[class~="page.sunil-mi-landing-special"] .header_gift_btn, 
-body[class~="page.sunil-mi-landing-special2"] .header_gift_btn, 
+body[class~="page.sunil-mi-landing-mens"] .header_gift_btn,
+body[class~="page.sunil-mi-landing-special"] .header_gift_btn,
+body[class~="page.sunil-mi-landing-special2"] .header_gift_btn,
+body[class~="page.sunil-mi-landing-special2-reorder"] .header_gift_btn,
 body[class~="product.q-rejuvalight-pro-offer"] .header_gift_btn,
 body[class~="page.q-rejuvalight-pro-offer"] .header_gift_btn,
 body[class~="page.q-rejuvalight-offer-acne"] .header_gift_btn,
+body[class~="page.led-mask-offer-2"] .header_gift_btn,
 body[class~="page.mi-targeted-patches-offer"] .header_gift_btn,
 body[class~="page.all-in-one-face-serum-off"] .header_gift_btn
 {

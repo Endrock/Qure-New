@@ -210,6 +210,8 @@
                                 </div>
                             </div> 
 
+                            {% render 'pdm_pdp-frontrow-health' %}
+
                             {% if icons_count > 0 %}
                                 {%- for block in section.blocks -%}
                                     {% if block.type == 'icons' %}
@@ -512,7 +514,7 @@
                 {% endif %}  
                 {% comment %} end component original {% endcomment %}
                 {% if new_design == true %}
-                    {% render 'pdm_before_after', data: section.blocks, dataSection: section.settings %}
+                    {% render 'pdm_before_after_carousel', settings: section.settings %}
                 {% endif %}
 
                 {% if product != blank %}

@@ -173,6 +173,7 @@
   border-radius: 100px;
   background: #000;
   width: fit-content;
+  cursor: pointer
 }
 
 @media (max-width: 768px) {
@@ -1214,6 +1215,7 @@
   height: 100%;
   overflow: hidden;
   position: relative;
+  cursor:pointer;
 }
 
 .section-slider-derm-feature .video-cont .img-overlay {
@@ -1292,6 +1294,7 @@
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.5px;
+  color:#000;
 }
 
 .section-slider-derm-feature .sdf-pagination {
@@ -1434,6 +1437,7 @@
   font-weight: 400;
   line-height: 26px;
   text-decoration-line: underline;
+  cursor:pointer;
 }
 
 .section-dual-text-img .container-img {
@@ -1505,6 +1509,7 @@
     }
     .bundle-btn{
       background: #008763;
+      cursor:pointer;
     }
     .uncheck{
       display:none;
@@ -1522,11 +1527,16 @@
     margin-bottom:12px;
     overflow:hidden;
   }
+  .how-work .cont-video{
+    border-radius: 16px;
+    margin-bottom: 32.5px;
+    overflow:hidden;
+  }
   .how-work video{
     height:100%;
     width: 100%;
-    padding-bottom: 32.5px;
     border-radius: 16px;
+    background:#000;
   }
   .media {
     width: 100%;
@@ -1564,6 +1574,7 @@
       width:106px;
       display:flex;
       justify-content:center;
+      cursor:pointer;
     }
   }
   .media-btns .active{
@@ -2269,6 +2280,10 @@
     font-style: normal;
     font-weight: 500;
     line-height: 20px; /* 142.857% */
+    cursor:pointer;
+    span{
+      cursor:pointer;
+    }
   }
 
   /*@media (max-width: 1024px) {*/

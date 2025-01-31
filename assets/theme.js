@@ -329,79 +329,80 @@ if ($(".plan_bundle_hdr")[0]) {
 
 // =================================== js for slider ===============================
 
-//result slider
-var swiper = new Swiper(".result_slider", {
-    spaceBetween: 15,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".qureSlider-swiper-next",
-        prevEl: ".qureSlider-swiper-prev",
-    },
-    breakpoints: {
-        556: {
-            slidesPerView: 1,
+document.addEventListener('DOMContentLoaded', function() {
+    //result slider
+    var swiper = new Swiper(".result_slider", {
+        spaceBetween: 15,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
         },
-        768: {
-            slidesPerView: 2,
+        navigation: {
+            nextEl: ".qureSlider-swiper-next",
+            prevEl: ".qureSlider-swiper-prev",
         },
-        1024: {
-            slidesPerView: 3,
+        breakpoints: {
+            556: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
         },
-    },
+    });
+
+
+    //micro infusion-lp result slider
+    var swiper = new Swiper(".result_slides_2", {
+        spaceBetween: 62,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            556: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+        },
+    });
+
+    //testimonial result slider
+    var swiper = new Swiper(".result_slider_2", {
+        spaceBetween: 15,
+        slidesPerView: 1,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+
+    var swiper = new Swiper(".result_slider_3", {
+        spaceBetween: 15,
+        // centeredSlides: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                centeredSlides: false,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 2.6,
+            },
+        },
+    });
 });
-
-
-//micro infusion-lp result slider
-var swiper = new Swiper(".result_slides_2", {
-    spaceBetween: 62,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    breakpoints: {
-        556: {
-            slidesPerView: 1,
-        },
-        768: {
-            slidesPerView: 2,
-        },
-    },
-});
-
-//testimonial result slider
-var swiper = new Swiper(".result_slider_2", {
-    spaceBetween: 15,
-    slidesPerView: 1,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-});
-
-var swiper = new Swiper(".result_slider_3", {
-    spaceBetween: 15,
-    // centeredSlides: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            centeredSlides: false,
-        },
-        768: {
-            slidesPerView: 2,
-        },
-        1024: {
-            slidesPerView: 2.6,
-        },
-    },
-});
-
 
 
 // =================

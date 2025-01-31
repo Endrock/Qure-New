@@ -12,7 +12,8 @@
     "liquid_7eJk8K": {
       "type": "liquid",
       "settings": {
-        "code": "<div id=\"shower_filter\"></div>"
+        "code": "<div id=\"shower_filter\"></div>",
+        "popup_micro_infusion_enabled": true
       }
     },
     "main": {
@@ -34,15 +35,15 @@
         "supply_CTrVRQ": {
           "type": "supply",
           "settings": {
-            "heading": "Next batch ships 28th of January 2025:",
-            "heading_mobile": "Next batch ships 01/28:",
+            "heading": "Next batch ships 17th of February 2025:",
+            "heading_mobile": "Next batch ships 02/17:",
             "text": "<p>Order now and secure yours from the next shipment.</p>",
             "first_option_date": "November 20th",
             "first_option_text": "SOLD OUT",
             "first_option_percent": 100,
-            "second_option_date": "January 28th",
-            "second_option_text": "32% Reserved",
-            "second_option_percent": 35,
+            "second_option_date": "February 17th",
+            "second_option_text": "54% Reserved",
+            "second_option_percent": 55,
             "third_option_date": "March 30th",
             "third_option_text": "In Production",
             "third_option_percent": 0
@@ -63,6 +64,16 @@
             "image": "shopify://shop_images/filter_black.webp",
             "variant_id": 45909763490031
           }
+        },
+        "subscribe_EyrzEb": {
+          "type": "subscribe",
+          "settings": {
+            "heading": "Subscribe & save 30%",
+            "text": "<p>3 month replacement filter delivers every 90 days for just [discount_price]. Skip or cancel anytime.<a href=\"https://crm.aronwebsolutions.com/Qure-Html-2.0/Qure-Html-2.0/shower-filter.html\">See more details</a></p>",
+            "product": "",
+            "plan": "6286115055",
+            "discount": 30
+          }
         }
       },
       "block_order": [
@@ -70,7 +81,8 @@
         "list_azYRbY",
         "supply_CTrVRQ",
         "variant_7PWWak",
-        "variant_7nqQxD"
+        "variant_7nqQxD",
+        "subscribe_EyrzEb"
       ],
       "settings": {
         "seo_heading": "SHOWER FILTER",
@@ -84,7 +96,7 @@
         "reserve": true,
         "underbutton_text_left": "Dermatologist Approved",
         "underbutton_text_right": "Free Shipping Over US$100",
-        "selected_design": "old",
+        "selected_design": "new",
         "text_label_real_result_1": "",
         "text_label_real_result_2": "",
         "text_label_real_result_3": ""
@@ -610,9 +622,9 @@
         "content_8EyDRi": {
           "type": "content",
           "settings": {
-            "icon": "shopify://shop_images/spray.svg",
+            "icon": "shopify://shop_images/fi_17745189_45b0d3ea-9d2a-4579-8f04-14847e53747a.png",
             "text": "<p><strong>Step 4:<br/></strong>Turn on the water and check for leaks. And that’s it—enjoy your filtered water!</p>",
-            "iconMob": "shopify://shop_images/spray.svg",
+            "iconMob": "shopify://shop_images/fi_17745189_45b0d3ea-9d2a-4579-8f04-14847e53747a.png",
             "textMob": "<p><strong>It’s Super Versatile:</strong></p><p>From your face and body to your devices, this mist fits effortlessly into different parts of your day.</p>"
           }
         }
@@ -694,7 +706,7 @@
           "type": "object",
           "settings": {
             "heading": "Is it easy to install?",
-            "text": "<p>Yes, the Qure Shower Filter is designed for easy, tool-free installation. It fits most standard showerheads, so you can quickly start enjoying clean, filtered water.</p>",
+            "text": "<p>Yes, the Qure Shower Filter is designed for easy installation with included tools. It fits most standard shower heads, so you can quickly start enjoying clean, filtered water.</p>",
             "code": ""
           }
         },

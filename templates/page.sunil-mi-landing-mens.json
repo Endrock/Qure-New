@@ -186,6 +186,7 @@
         "video_HWTjXH"
       ],
       "settings": {
+        "seo_heading": "",
         "heading": "Boost Your Confidence",
         "heading_mobile": "Boost Your Confidence",
         "product": "",
@@ -198,7 +199,9 @@
         "selected_design": "old",
         "text_label_real_result_1": "Product",
         "text_label_real_result_2": "Real Results",
-        "text_label_real_result_3": "Dermatologist"
+        "text_label_real_result_3": "Dermatologist",
+        "enable_jump_to_section": true,
+        "text_jump_to_section": "Jump To"
       }
     },
     "featuredin_zWyY3U": {
@@ -275,7 +278,8 @@
         "science_section_block_zcp3g7"
       ],
       "settings": {
-        "heading": ""
+        "heading": "",
+        "custom_cls": ""
       }
     },
     "two_column_box_DFqCGG": {
@@ -457,6 +461,7 @@
             "image": "shopify://shop_images/results_david-men.webp",
             "heading": "Amazing product",
             "text": "<p>“I was skeptical at first, but after using the Micro Infusion Device for a few weeks, I'm blown away by the results. My skin looks and feels noticeably smoother. Highly recommend giving it a try!”</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/australia_f.webp",
             "text_country": "Australia",
             "client": "David G.",
@@ -469,6 +474,7 @@
             "image": "shopify://shop_images/results_john-men.webp",
             "heading": "My skin looks so healthy!",
             "text": "<p>First time trying micro-infusion and wow, what a difference! Haven’t tried any other treatments but one day after Qure’s and my skin already feels firmer, looks plumper, and definitely healthier. Big fan already. Highly recommend giving it a go!</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
             "text_country": "United States",
             "client": "John M.",
@@ -481,6 +487,7 @@
             "image": "shopify://shop_images/results_aj.webp",
             "heading": "Strengthened skin",
             "text": "<p>\"My skin has definitely improved and strengthened since using the Micro-infusion device with serum as well. It is less costly than going to a cosmetic dermatologist and it is easy-to-use at home. So far I’m loving this! Didn’t hurt, skin wasn’t irritated after, feels and looks great! Looking forward to my next treatment!\"</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/philippines_f.webp",
             "text_country": "Philippines",
             "client": "AJ B.",
@@ -493,6 +500,7 @@
             "image": "shopify://shop_images/results_dylan.webp",
             "heading": "Acne scars faded",
             "text": "<p>“Qure Micro Infusion has been a game-changer for me. After struggling with acne scarring and dark spots for years, I can finally say goodbye to them. I feel more confident than ever before. It's a must-try for anyone dealing with similar skin concerns.”</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
             "text_country": "United States",
             "client": "Dylan B.",
@@ -505,9 +513,23 @@
             "image": "shopify://shop_images/results_jay.webp",
             "heading": "Clearer skin overnight",
             "text": "<p>I noticed huge improvements after using Qure’s micro infusion system with clearer skin overnight. It did hurt a little at the start but I got use to it quickly. Would definitely recommend this 👏🏽</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/australia_f.webp",
             "text_country": "Australia",
             "client": "Jay",
+            "code": ""
+          }
+        },
+        "result_489UHe": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/paul.png",
+            "heading": "WOW I want more!",
+            "text": "<p>“A couple days after my 1st micro infusion treatment, one of my employees who’d been on holiday came into my office and literally screamed “oh my god, you look so young!” Well that clinched it for me&gt;  I’m male, 65, and take great care of my skin….these will never last 3 months because I can’t wait to turn back the clock even more! :)”</p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Paul W.",
             "code": ""
           }
         }
@@ -517,7 +539,8 @@
         "result_EDVcg7",
         "result_mpxEzN",
         "result_GGg7Kj",
-        "result_eTqtdF"
+        "result_eTqtdF",
+        "result_489UHe"
       ],
       "settings": {
         "classname": "mi_landing_result",
@@ -715,9 +738,13 @@
       ],
       "settings": {
         "heading": "Confident skin starts here",
+        "sub_heading": "",
         "classname": "section videosQure",
         "btn": "",
-        "btn_url": ""
+        "btn_url": "",
+        "desk_slide": 6,
+        "mob_slide": 1.7,
+        "slide_space": 10
       }
     },
     "compare_products_Ugcftq": {
@@ -824,10 +851,12 @@
       ],
       "settings": {
         "classname": "beauty_skincare section",
+        "sub_head": "",
         "heading": "Typically more effective and safer than other at-home needling devices",
         "heading_reduced": "",
         "text": "<p>Unlike at-home needle roller devices, Micro-infusion requires little to <strong>no downtime,</strong>is <strong>virtually painless, </strong>and minimizes risk of infection and irritation.</p>",
-        "text_reduced": ""
+        "text_reduced": "",
+        "design": false
       }
     },
     "guide_xibEe6": {

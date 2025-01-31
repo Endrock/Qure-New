@@ -84,20 +84,20 @@
         "supply_for_refill_VM6N4V": {
           "type": "supply_for_refill",
           "settings": {
-            "heading": "Next batch ships 26th of December 2024:",
-            "heading_mobile": "Next batch ships 12/26:",
+            "heading": "Next batch ships 15th of March 2025:",
+            "heading_mobile": "Next batch ships 03/15:",
             "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.</p>",
-            "first_option_date": "December 5th",
-            "first_option_text": "SOLD OUT",
+            "first_option_date": "January 5th",
+            "first_option_text": "Sold Out",
             "first_option_percent": 100,
-            "second_option_date": "January 10th",
-            "second_option_text": "81% Reserved",
-            "second_option_percent": 81,
-            "third_option_date": "January 30th",
+            "second_option_date": "March 15th",
+            "second_option_text": "51% Reserved",
+            "second_option_percent": 52,
+            "third_option_date": "April 30th",
             "third_option_text": "In Production",
             "third_option_percent": 0,
             "option_wrinkles_darkspots": false,
-            "option_wrinkles": false,
+            "option_wrinkles": true,
             "option_darkspots": false
           }
         }
@@ -775,6 +775,45 @@
             "client": "Nue V.",
             "code": ""
           }
+        },
+        "result_VFw8Mj": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/ANONYMUS.png",
+            "heading": "First Treatment Successful!",
+            "text": "<p>“I was very nervous at first that it would be painful but if anything it was oddly satisfying and didn't hurt in the slightest! I was also nervous that it would further irritate my skin because my skin is very sensitive but all I had was temporary redness from the pressure and needles which faded within a few hours. The next day I immediately noticed how smooth and rejuvenated my face looked and was relieved to see that my skin didn't have a terrible reaction to the product and there was actually results which has never happened in my life.</p>",
+            "see-more": "So excited to continue this journey and see what the skin will looks like in the coming months after more treatments especially after how this first treatment went!”",
+            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Anonymous",
+            "code": ""
+          }
+        },
+        "result_qKjLeC": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/paul.png",
+            "heading": "WOW I want more!",
+            "text": "<p>“A couple days after my 1st micro infusion treatment, one of my employees who’d been on holiday came into my office and literally screamed “oh my god, you look so young!” Well that clinched it for me&gt;  I’m male, 65, and take great care of my skin….these will never last 3 months because I can’t wait to turn back the clock even more! :)”</p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Paul W.",
+            "code": ""
+          }
+        },
+        "result_JNFBGF": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/Tami_trump.png",
+            "heading": "Definitely pleased with the product",
+            "text": "<p>“I've started seeing a lot of changes to my face it's softer and much more nourished making some of the lines around my mouth softer and fuller. I've even gotten my color tone and glow back. Definitely pleased with the product and will be continuing to use the products. Also purchased the face serum and the micro dart patches. We'll see how they work as well. I'm still in the beginning stages this weekend will be my 4th treatment and using the patches as well. Stay tuned another update soon.”</p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Tami T.",
+            "code": ""
+          }
         }
       },
       "block_order": [
@@ -797,7 +836,10 @@
         "result_RgmxFK",
         "result_EfPNCF",
         "result_eLJa6L",
-        "result_DYbUAd"
+        "result_DYbUAd",
+        "result_VFw8Mj",
+        "result_qKjLeC",
+        "result_JNFBGF"
       ],
       "settings": {
         "classname": "mi_landing_result pt-0",
@@ -993,7 +1035,7 @@
             "mark2": "tick",
             "point7": "Minimal downtime & Virtually Painless",
             "mark3": "tick",
-            "point8": "Less than $20 per treatment",
+            "point8": "Less than $25 per treatment",
             "mark4": "tick"
           }
         },
@@ -1058,7 +1100,7 @@
             "background": "bg-yellow",
             "pd_img": "shopify://shop_images/serhum.png",
             "name": "",
-            "serum_type": "Dark Spots & Uneven Skin Tone",
+            "serum_type": "Rejuvenating",
             "benefit1": "Brightens  discolouration",
             "icon1": "shopify://shop_images/brightens-even-skin-tone_1.png",
             "benefit2": "Fades  dark spots",
@@ -1123,7 +1165,8 @@
     "liquid_JJikgW": {
       "type": "liquid",
       "settings": {
-        "code": "{% render 'serums-months-image-form' with section_id: section.id %}"
+        "code": "{% render 'serums-months-image-form' with section_id: section.id %}",
+        "popup_micro_infusion_enabled": true
       }
     },
     "faq_4hnCjw": {

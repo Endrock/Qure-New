@@ -592,6 +592,7 @@
 
 .progress-container.pdm-gamification .progress-container__message > p strong{
   font-weight: 600;
+  text-transform: capitalize;
 }
 
 .progress-container.pdm-gamification .progress-bar-container {
@@ -651,14 +652,6 @@
   line-height: 14px;
   letter-spacing: 0.6px;
   text-transform: uppercase;
-}
-
-.progress-container.pdm-gamification .progress-bar-container .milestone.first-milestone {
-  left: 20%;
-}
-
-.progress-container.pdm-gamification .progress-bar-container .milestone.second-milestone {
-  left: 80%;
 }
 
 /* End gamification */
@@ -883,7 +876,7 @@
   width: max-content;
 }
 .announcement_bar.site-gamification-active .pdm-gamification .progress-bar-container {
-  max-width: 374px;
+  width: fit-content;
   height: 40px;
   background-color: #fff;
   border-radius: 100px;
@@ -892,7 +885,7 @@
   gap: 20px;
 }
 .announcement_bar.site-gamification-active .pdm-gamification .progress-bar-container .milestones-container { 
-  max-width: 100%;
+  width: 100%;
   height: 100%;
   border-radius: 100px;
   display: flex;
@@ -909,7 +902,7 @@
 .announcement_bar.site-gamification-active .pdm-gamification .progress-bar-container .milestones-container .progress-bar__bar { 
   height: 30px;
   width: 0%;
-  max-width: 300px;
+  max-width: calc(100% - 10px);
   border-radius: 100px;
   background-color: rgba(199, 231, 220, 1);
   transition: width 0.4s ease;

@@ -21,7 +21,9 @@
         {% endif %}
         {% if video %}
           <div class="src how-work hidden">
-            {{ video | video_tag: autoplay: false, loop: false, muted: false, controls: true }}
+            <div class="cont-video">
+              {{ video | video_tag: autoplay: true, loop: false, muted: true, controls: true }}
+            </div>
           </div>
         {% endif %}
       </div>

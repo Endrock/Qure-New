@@ -2523,9 +2523,3 @@ body[data-confidence-test][class~="page.sunil-mi-landing-special2"] .pdm-section
 
 }  
 /* end confidence slider */
-
-/* start jump to section Test */
-.jump_to_section {
-  display: none;
-}
-/* End jump to section Test */

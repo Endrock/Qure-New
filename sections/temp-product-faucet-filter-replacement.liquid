@@ -1,0 +1,19 @@
+<script src="https://fast.wistia.com/embed/medias/3ahwzg8wjz.jsonp" async></script>
+<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        $('.read-more').click(function () {
+            $(this).prev().slideToggle();
+            if (($(this).text()) == "See Less") {
+                $(this).text("See More");
+            } else {
+                $(this).text("See Less");
+            }
+        });
+
+        const container = document.querySelector('.comparsion_inner');
+        document.querySelector('.slider').addEventListener('input', (e) => {
+            container.style.setProperty('--position', `${e.target.value}%`);
+        })
+    });
+</script>

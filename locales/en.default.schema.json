@@ -101,10 +101,26 @@
     }
   },
   "common": {
-    "nozzle_option":{
+    "setting": {
+      "label": "Richtext"
+    },
+    "nozzle_option": {
       "label": "Nozzle Option",
       "image": "Nozzle Image",
       "text": "Nozzle Text"
+    },
+    "display": {
+      "type": "Display Type",
+      "tabs": "Tabs",
+      "slider": "Slider",
+      "thumb": "Thumbnail",
+      "single_slide": "Single Slide"
+    },
+    "banner": {
+      "label": "Banner"
+    },
+    "banner_14feb": {
+      "label": "14feb banner"
     },
     "banner_holiday": {
       "label": "Holiday banner"
@@ -184,7 +200,11 @@
       "label": "Blog"
     },
     "title": {
-      "label": "Title"
+      "label": "Title",
+      "size": {
+        "large": "Large",
+        "xl": "Extra Large"
+      }
     },
     "percentage": {
       "label": "Percentage"
@@ -252,7 +272,9 @@
     },
     "heading": {
       "label": "Heading",
+      "right": "Right Heading",
       "info": "Info Heading",
+      "size": "Heading Size",
       "mobile": {
         "label": "Heading for mobile"
       },
@@ -277,6 +299,12 @@
       "mobile": {
         "label": "Subheading for mobile"
       }
+    },
+    "Product-guide": {
+      "label":"Product Guide"
+    },
+    "Block": {
+      "label":"Block"
     },
     "recommended": {
       "label": "Recommended",
@@ -1224,6 +1252,9 @@
     "slidecart": {
       "name": "Slidecart",
       "settings": {
+        "header_product_gift": {
+          "label": "Product gift"
+        },
         "enable_free_shipping": {
           "label": "Enable Free Shipping Treshold"
         },
@@ -1247,7 +1278,12 @@
         "copy_congrats": {
           "label": "Copy Congrats Gift",
           "info": "If you want put the name of a product gift add '&product-title&' to the copy"
+        },
+        "dont_enable_gift_urls": {
+          "label": "Add the URLs where you want to disable the free product gift.",
+          "info": "Add one URL per line, without the domain. Example: \/collections\/all"
         }
+
       },
       "blocks": {
         "gift": {
@@ -1406,8 +1442,11 @@
     "perfect_for": {
       "label": "Perfect For Section"
     },
-    "product_feature":{
+    "product_feature": {
       "label": "Product Feature"
+    },
+    "Replacement_Info":{
+      "label": "Replacement Info"
     }
   }
 }

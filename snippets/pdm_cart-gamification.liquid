@@ -6,13 +6,21 @@
   assign enableFreeShipping = settingsGamification.enable_free_shipping_treshold
   assign freeShippingTreshold = shop.metaobjects['sidecart_gamification_tresholds']['sidecart-gamification-tresholds-swspsm6c']['free_shipping'].value
 
-  assign enableProductGift = settingsGamification.enable_product_gift 
+  assign enableProductGift = settingsGamification.enable_product_gift
+
+  capture url_dont_enable_gift
+    render 'pdm-product-gift-urls'
+  endcapture
+
+  assign url_dont_enable_gift = url_dont_enable_gift | strip
+
   assign giftTresholdPdm = shop.metaobjects['sidecart_gamification_tresholds']['sidecart-gamification-tresholds-swspsm6c']['product_gift'].value
+  assign giftProduct = settingsGamification.product_free_gift
 
   assign differenceFreeShipping = freeShippingTreshold | minus: cartTotal
   assign differenceFreeGift = giftTresholdPdm | minus: cartTotal
 
-  if enableProductGift
+  if enableProductGift and url_dont_enable_gift == 'true' and giftProduct.available
     assign treshold = giftTresholdPdm
   elsif enableFreeShipping
     assign treshold = freeShippingTreshold
@@ -20,9 +28,23 @@
 
   assign progress_percentage = cartTotal | times: 100 | divided_by: treshold
   assign progress_percentage_free_shipping = freeShippingTreshold | times: 100 | divided_by: treshold
+
   if enableFreeShipping and cartTotal < freeShippingTreshold
-    if progress_percentage >= progress_percentage_free_shipping
+
+    if enableProductGift and url_dont_enable_gift == 'true' and freeShippingTreshold > cartTotal and progress_percentage >= 20
       assign progress_percentage = 20
+    endif
+
+    assign has_product_gift = false
+
+    if enableProductGift and url_dont_enable_gift == 'true' and giftProduct.available == false
+      assign has_product_gift = true
+    endif
+
+    if has_product_gift or enableProductGift == false
+      if progress_percentage >= 80 and cartTotal > 0 and cartTotal < freeShippingTreshold
+        assign progress_percentage = 80
+      endif
     endif
   else
     if treshold > cartTotal and progress_percentage > 80
@@ -37,13 +59,12 @@
   assign copyFreeShipping = settingsGamification.copy_get_free_shipping
   assign copyProductGift = settingsGamification.copy_get_product_free
   assign copyCongrats = settingsGamification.copy_congrats
-  assign giftProduct = settingsGamification.product_free_gift
 
   assign remainingAmount = freeShippingTreshold | minus: cartTotal
   assign remainingAmountMoney = remainingAmount | money_without_trailing_zeros
 %}
 
-{% if enableFreeShipping or enableProductGift %}
+{% if enableFreeShipping or enableProductGift and giftProduct.available %}
   <div class="progress-container pdm-gamification">
     <div class="progress-container__message">
         {% if enableFreeShipping and differenceFreeShipping > 0 %}
@@ -51,7 +72,7 @@
             {% assign textToShow = "<i class='money' style='font-style: normal;'>" | append: remainingAmountMoney | append: "</i>" %}
             {{ copyFreeShipping | replace: "&price-left&", textToShow }}
           {% endif %}
-        {% elsif enableProductGift %}
+        {% elsif  enableProductGift and url_dont_enable_gift == 'true' and giftProduct.available %}
           {% assign remainingGiftAmount = giftTresholdPdm | minus: cartTotal %}
           {% assign remainingGiftAmountMoney = remainingGiftAmount | money_without_trailing_zeros %}
           {% if differenceFreeGift > 0 %}
@@ -70,6 +91,8 @@
             {% assign textCongrats = "<strong>" | append:textProductTitle | append: "!</strong>" %}
             {{ copyCongrats |  replace: "&product-title&", textCongrats }}
           {% endif %}
+        {% elsif enableFreeShipping and differenceFreeShipping <= 0 %}
+          <p>Congrats you have <strong> Free Shipping! </strong></p>
         {% endif %}
     </div>
 
@@ -77,7 +100,12 @@
     <div class="progress-bar">
       <div class="progress" style="width: {{ progress_percentage }}%;"></div>
     </div>
-    <div class="milestone first-milestone">
+    {% if enableProductGift and url_dont_enable_gift == 'true' and giftProduct.available %}
+      {% assign left_value_align = "20" %}
+    {% else %}
+      {% assign left_value_align = "80" %}
+    {% endif %}
+    <div class="milestone first-milestone" style="left: {{ left_value_align }}%;">
       <div class="milestone-icon {% if differenceFreeShipping <= 0 and cartTotal > 0 %} backgound-black {% endif %}">
         {% if differenceFreeShipping > 0 %}
           {% render 'pdm_svg-car-gamification-gray' %}
@@ -88,17 +116,19 @@
       </div>
       <span class="milestone-label">{{ freeShippingTreshold  | money_without_trailing_zeros }}</span>
     </div>
-    <div class="milestone second-milestone">
-      <div class="milestone-icon {% if differenceFreeGift <= 0 %} backgound-black {% endif %}">
-        {% if differenceFreeGift > 0 %}
-          {{ settingsGamification.icon_product_gift_clean | image_url: width: settingsGamification.icon_gift_width, height: settingsGamification.icon_gift_height | image_tag }}
-        {% endif %}
-        {% if differenceFreeGift <= 0 %}
-          {{ settingsGamification.icon_product_gift_full | image_url:  width: settingsGamification.icon_gift_width, height: settingsGamification.icon_gift_height | image_tag }}
-        {% endif %}
+    {% if enableProductGift and url_dont_enable_gift == 'true' and giftProduct.available %}
+      <div class="milestone second-milestone"  style="left:80%;">
+        <div class="milestone-icon {% if differenceFreeGift <= 0 %} backgound-black {% endif %}">
+          {% if differenceFreeGift > 0 %}
+            {{ settingsGamification.icon_product_gift_clean | image_url: width: settingsGamification.icon_gift_width, height: settingsGamification.icon_gift_height | image_tag }}
+          {% endif %}
+          {% if differenceFreeGift <= 0 %}
+            {{ settingsGamification.icon_product_gift_full | image_url:  width: settingsGamification.icon_gift_width, height: settingsGamification.icon_gift_height | image_tag }}
+          {% endif %}
+        </div>
+        <span class="milestone-label">{{ giftTresholdPdm |  money_without_trailing_zeros }}</span>
       </div>
-      <span class="milestone-label">{{ giftTresholdPdm |  money_without_trailing_zeros }}</span>
-    </div>
+    {% endif %}
   </div>
 
   </div>

@@ -172,11 +172,12 @@
                         {% if subscribe_count > 0 %}
                             {%- for block in section.blocks -%}
                                 {% if block.type == 'subscribe' %}
-                                    {% assign discount_value = block.settings.discount | divided_by: 100.0 | times: product.price | minus: product.price | abs %}
-                                    {% if product.compare_at_price %}
-                                        {% assign product_price_discount = product.compare_at_price %}
-                                    {% else %}
-                                        {% assign product_price_discount = discount_value %}
+                                    {% include 'product-extended-subscription-product' product: product, product_custom: false %}
+
+                                    {% assign discount_price_additional = 0 %}
+
+                                    {% if block.settings.product != blank %}
+                                        {%- assign discount_price_additional = all_products[block.settings.product.handle].price | times: 0.7 | money_without_trailing_zeros %}
                                     {% endif %}
 
                                     <div class="subscribe_save_wrapper with_subscription mt-2">
@@ -191,19 +192,17 @@
                                                             <h6>{{ block.settings.heading }}</h6>
                                                         {% endif %}
                                                         
-                                                        {%- if product.handle contains 'q-urify-water-filter' -%}
-                                                            {%- assign future_price = all_products['q-rify-replacement-water-filter'].price | times: 0.7 | money_without_trailing_zeros %}
-                                                        {%- else -%}
-                                                            {%- assign future_price = discount_value | money_without_trailing_zeros -%}
-                                                        {%- endif -%}
-
                                                         {% if block.settings.text != blank %}
-                                                            {{ block.settings.text | replace: '[future_price]', future_price }}
+                                                            {{ block.settings.text 
+                                                                | replace: '[future_price]', future_price 
+                                                                | replace: '[discount_price]', discount_price
+                                                                | replace: '[discount_price_additional]', discount_price_additional
+                                                            }}
                                                         {% endif %}
                                                     </label>
                                                 </div>
                                                 <div class="subscribePrice">
-                                                    <p><span>{{ product.price | money_without_trailing_zeros }}</span>{{ product_price_discount | money_without_trailing_zeros  }}</p>
+                                                    <p><span>{{ product_price }}</span>{{ discount_price }}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -247,12 +246,12 @@
                                         {% unless supply_count > 0 %}
                                             {% render 'pdm_orderby' %}
                                         {% endunless %}
-                                        <form method="post" action="/cart/add" accept-charset="UTF-8" id="SubscriptionForm" class="shopify-product-form buy-form-{{ section_id }} form-test-id" enctype="multipart/form-data" data-form-id="{{ product.id }}">
+                                        <form method="post" action="/cart/add" accept-charset="UTF-8" id="SubscriptionForm" class="shopify-product-form buy-form-{{ section_id }} form-test-id" enctype="multipart/form-data" data-form-id="{{ product_id }}">
                                             <input type="hidden" name="selling_plan" value="{{ block.settings.plan }}">
                                             <button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn" onclick="setEventProductHandler('{{ product.handle | escape }}')" name="Submit" value="Submit">
                                                 Subscribe Now
                                             </button>
-                                            <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+                                            <input type="hidden" name="id" value="{{ product_variant_id }}" />
                                         </form>
 
                                         {% capture sticky-button-form-classname %}buy-form-{{ section_id }}{% endcapture %}
@@ -310,6 +309,19 @@
                             </div>
                         {% endif %}
 
+                        {% assign array_products_to_exclude = "" %}
+                        {% assign products_to_exclude = "" %}
+                        {% for excluded_product in settings.frontrow_product_list_to_exclude %}
+                            {% assign products_to_exclude = products_to_exclude | append: excluded_product.handle %}
+                            {% unless forloop.last  %}
+                                {% assign products_to_exclude = products_to_exclude | append: "," %}
+                            {% endunless %}
+                        {% endfor %}
+                        {% assign array_products_to_exclude = products_to_exclude | split: "," %}
+                        {% unless array_products_to_exclude contains product.handle  %}
+                            {% render 'pdm_pdp-frontrow-health' %}
+                        {% endunless %}
+
                         <div class="shipping shipping_bg bg-transparent mt-2">
                             <div class="s_bx">
                                 <img src="{{ 'dermatologist.svg' | asset_url }}" alt="">
@@ -328,7 +340,7 @@
             {% comment %} component-original {% endcomment %}
             <div class="col-md-6  order-1 order-md-2">
                 {% if new_design == false %}
-                <div class="refill_slider mw-mob-100 pt-md-5">
+                <div class="refill_slider mw-mob-100 pt-md-5 slider-old-design">
                     <div {% if section.settings.before_after_images_limit > 0 %}class="refill_s_tab_content"{% endif %}>
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
@@ -472,7 +484,8 @@
                 {% endif %}
                 {% comment %} end component original {% endcomment %}
                 {% if new_design == true %}
-                    {% render 'pdm_before_after', data: section.blocks, dataSection: section.settings %}
+                     {% comment %} pdp caroulsel redesign {% endcomment %}
+                    {% render 'pdm_before_after_carousel', settings: section.settings%}
                 {% endif %}
                 {% render 'pdm_cross-sell', cross-sell-products: product.metafields.custom.cross_sell.value, visibility: "desktop" %}
             </div>
@@ -827,6 +840,11 @@
                         "type": "richtext",
                         "id": "text",
                         "label": "t:common.text.label"
+                    },
+                    {
+                        "type": "product",
+                        "id": "product",
+                        "label": "t:common.product.label"
                     },
                     {
                         "type": "text",

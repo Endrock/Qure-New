@@ -63,12 +63,11 @@
     var swiper_press1 = new Swiper('.app_press_{{ random_number }}img_three', {
       spaceBetween: 20,
       initialSlide: 1,
-      touchRatio: 0,
       loop: true,
-      slidesPerView: 3,
+      slidesPerView: {{ section.settings.slide_per_view_mobile }},
       breakpoints: {
         640: {
-          slidesPerView: 3,
+          slidesPerView: {{ section.settings.slide_per_view_desktop }},
           spaceBetween: 20,
         },
       },
@@ -81,7 +80,6 @@
       thumbs: {
         swiper: swiper_press1,
       },
-      touchRatio: 0,
     });
 
     var swiper_press = new Swiper('.app_press_{{ random_number }}img_five', {
@@ -100,7 +98,6 @@
         768: {
           slidesPerView: 5,
           spaceBetween: 20,
-          touchRatio: 0,
         },
       },
     });
@@ -117,6 +114,7 @@
     });
   });
 </script>
+
 
 {% schema %}
 {
@@ -144,6 +142,24 @@
         }
       ],
       "default": "five_slides"
+    },
+    {
+      "type": "range",
+      "id": "slide_per_view_desktop",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "label": "t:sections.slider.settings.desktop",
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "slide_per_view_mobile",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "label": "t:sections.slider.settings.mobile",
+      "default": 3
     }
   ],
   "blocks": [

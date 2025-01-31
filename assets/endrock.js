@@ -1145,6 +1145,15 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('cartUpdated', event => {
     setTimeout(updateSideWideGamification, 2000);
   });
+
+ 
+  // pdp-carousel-image
+  initPDPCarouselImage();
+
+   // frontrow-health 
+   const frontrowHealthContainer = document.querySelector('.frontrow-health-container');
+   const trustedSection = document.querySelector('.trustedVerified');
+   initFrontrowHealth(frontrowHealthContainer, trustedSection);
 });
 
 
@@ -1261,6 +1270,7 @@ function updateSideWideGamification() {
  * engagement with rewards during the shopping process.
  */
 function updateSiteWideGamification (cartTotal) { 
+
   const progressContainer = document.querySelector('.progress-container.pdm-gamification');
 
   if (!progressContainer) return;
@@ -1277,6 +1287,9 @@ function updateSiteWideGamification (cartTotal) {
   const giftProductVariantPrice = parseInt(progressContainer.dataset.giftProductVariantPrice, 10);
   const threshold = parseInt(progressContainer.dataset.threshold, 10);
   const currencySymbol = progressContainer.dataset.currencySymbol;
+  const giftProductIsAvailable = progressContainer.dataset.isAvailableGiftProduct;
+  const urlGiftProductIsAvailable = progressContainer.dataset.urlIsAvailableGiftProduct;
+
 
   // Calculate differences
   const differenceFreeShipping = freeShippingThreshold - cartTotal;
@@ -1288,9 +1301,11 @@ function updateSiteWideGamification (cartTotal) {
 
   if (enableFreeShipping && cartTotal < freeShippingThreshold) {
     progressPercentageFreeShipping = (cartTotal / freeShippingThreshold) * 100;
+
     if (progressPercentage > progressPercentageFreeShipping) {
       progressPercentage = 20;
     }
+
   } else {
     if (threshold > cartTotal && progressPercentage > 80) {
       progressPercentage = 80;
@@ -1302,11 +1317,12 @@ function updateSiteWideGamification (cartTotal) {
 
   // Render progress message
   const progressContainerMessage = progressContainer.querySelector('.progress-container__message');
+
   if (progressContainerMessage) {
     if (enableFreeShipping && differenceFreeShipping > 0 && cartTotal >= 0) {
       const remainingAmountMoney = (differenceFreeShipping / 100).toFixed(0);
       progressContainerMessage.innerHTML = copyFreeShipping.replace("&price-left&", `<i class='money' style='font-style: normal;'>${currencySymbol.replace(/[0-9]+/, remainingAmountMoney)}</i>`);
-    } else if (enableProductGift && differenceFreeGift > 0) {
+    } else if (enableProductGift && urlGiftProductIsAvailable=="true" && giftProductIsAvailable && differenceFreeGift > 0) {
       const remainingGiftAmountMoney = (differenceFreeGift / 100).toFixed(0);
       let message = copyProductGift.replace("&price-left&", `<i class='money' style='font-style: normal;'>${currencySymbol.replace(/[0-9]+/, remainingGiftAmountMoney)}</i>`);
       if (!isNaN(giftProductVariantPrice)) {
@@ -1318,9 +1334,13 @@ function updateSiteWideGamification (cartTotal) {
         message = message.replace("&product-title&", giftProductTitle);
       }
       progressContainerMessage.innerHTML = message;
-    } else if (enableProductGift && differenceFreeGift <= 0) {
+    } else if (enableProductGift && giftProductIsAvailable && urlGiftProductIsAvailable=="true" && differenceFreeGift <= 0) {
       const congratsMessage = copyCongrats.replace("&product-title&", `<strong>${giftProductTitle}!</strong>`);
       progressContainerMessage.innerHTML = congratsMessage;
+    } else if ((!enableProductGift || !giftProductIsAvailable || urlGiftProductIsAvailable=="false") &&
+        enableFreeShipping &&
+        cartTotal >= differenceFreeShipping){
+      progressContainerMessage.innerHTML = "<p>Congrats you have <strong> Free Shipping!</strong></p>";
     }
   }
 
@@ -1330,7 +1350,7 @@ function updateSiteWideGamification (cartTotal) {
   const secondMilestone = progressContainer.querySelector('.second-milestone');
   const progressBar = progressContainer.querySelector('.progress-bar__bar');
 
-  if (milestonesContainer && firstMilestone && secondMilestone && progressBar) {
+  if (milestonesContainer && firstMilestone && progressBar) {
     // Update progress bar width
     progressBar.style.width = `${progressPercentage}%`;
 
@@ -1353,6 +1373,7 @@ function updateSiteWideGamification (cartTotal) {
     }
 
     // Second Milestone - Free Gift
+    if (secondMilestone)  {
     if (differenceFreeGift <= 0) {
       secondMilestone.classList.add('reach-threshold');
       secondMilestone.classList.remove('gradient');
@@ -1363,6 +1384,7 @@ function updateSiteWideGamification (cartTotal) {
       } else {
         secondMilestone.classList.remove('gradient');
       }
+    }
     }
 
     // Update milestone icons based on thresholds
@@ -1387,13 +1409,14 @@ function updateSiteWideGamification (cartTotal) {
       }
     }
 
+  if (secondMilestone) {
     const secondMilestoneIconEmpty = secondMilestone.querySelector('.icon-empty-pillow');
     const secondMilestoneIconGradient = secondMilestone.querySelector('.icon-empty-gradient');
     const secondMilestoneIconFull = secondMilestone.querySelector('.icon-full-pillow');
     const secondMilestoneIconCheck = secondMilestone.querySelector('.icon-check__second-milestone');
     const secondMilestoneProgressBarWrapper = secondMilestone.querySelector('.progress-bar-wrapper');
     const secondMilestoneProgressBarWrapperBar = secondMilestone.querySelector('.progress-bar-wrapper__bar');
-
+  
     const bothThresholdUncompleted = differenceFreeShipping > 0 && differenceFreeGift > 0;
     const bothThresholdCompleted = differenceFreeShipping <= 0 && differenceFreeGift <= 0;
 
@@ -1423,5 +1446,268 @@ function updateSiteWideGamification (cartTotal) {
       }
     }
   }
+  }
 }
-    
+
+
+/**
+ * Initializes the Product Detail Page (PDP) carousel images.
+ * This function sets up two synchronized Swiper sliders: one for product media (main slider)
+ * and one for product thumbnails (thumbnail slider), including mousewheel navigation and responsive settings.
+ */
+
+function initPDPCarouselImage () {
+  const productThumbsContainer = document.querySelector('.swiper-products-thumbs__container');
+  const productMediaContainer = document.querySelector('.swiper-products-carousel');
+
+  if (!productThumbsContainer || !productMediaContainer) return;
+
+  let thumbSlider = new Swiper(productThumbsContainer, {
+    loop: true,
+    spaceBetween: 8,
+    slidesPerView: 4.3,
+    slidesPerGroup: 1,
+    watchSlidesProgress: true,
+    mousewheel: {
+      forceToAxis: true,
+    },
+    breakpoints: {
+      767: {
+        spaceBetween: 12,
+        slidesPerView: 6.3,
+        slidesPerGroup: 1,
+      },
+    },
+  });
+
+  let mainSlider = new Swiper(productMediaContainer, {
+    loop: true,
+    slidesPerView: 1,
+    mousewheel: {
+      forceToAxis: true,
+    },
+    thumbs: {
+      swiper: thumbSlider,
+    },
+    navigation: {
+      nextEl: ".swiper-products-thumbs-next",
+      prevEl: ".swiper-products-thumbs-prev",
+    },
+  });
+}
+
+
+/**
+ * Initializes the functionality for the Frontrow Health section.
+ * This function sets up a smooth scroll behavior to a trusted section when the "see more" link is clicked.
+ * If the frontrow container or trusted section is not present, it safely exits without errors.
+ * Scrolls the viewport to 100px above the trusted section for better visibility.
+ *
+ * @param {HTMLElement} frontrowContainer - The container element for the Frontrow Health section.
+ * @param {HTMLElement} trustedSection - The target section to scroll to when the link is clicked.
+ */
+
+function initFrontrowHealth (frontrowContainer, trustedSection) {
+  if (!frontrowContainer || !trustedSection) return;
+
+  const { link:seeMoreLink} = frontrowContainer.dataset;
+  //if the feature has a link in the theme settings, exit the function
+  if (seeMoreLink) return;
+  
+  const seeMoreElement = frontrowContainer.querySelector('.frontrow-health-container__content-link');
+  seeMoreElement.addEventListener('click', e => {
+    e.preventDefault();
+    const trustedSectionPositon = trustedSection.getBoundingClientRect().top + window.scrollY;
+
+    window.scrollTo({
+      top: trustedSectionPositon - 100,
+      behavior: 'smooth'
+    });
+  });
+}
+
+
+/*  upsell popup micro-infusion-offer and affiliate*/
+// DOM elements for controlling the upsell popup
+const openPopupUpsell = document.querySelector("#openPopupUpsell");
+
+if(openPopupUpsell && openPopupUpsell.dataset?.popupEnabled) {
+  const closePopupUpsell = document.querySelector("#closePopupUpsell")
+  const popupUpsell = document.querySelector("#popupUpsell");
+  const popupUpsellWrapper = document.querySelector('.popupsell-wrapper');
+  // DOM elements related to serum offers
+  const serumOfferContainer = document.querySelector('.supply-detail.offer_active1');
+  const serumOfferLabel = document.querySelectorAll('.step_content.step_serum');
+  // Buttons within the upsell popup
+  const popupUpsellButtons = document.querySelectorAll('.popupUpsellButtons');
+  const popupUpsellNothanks = document.querySelectorAll('.popupUpsellNoThanks');
+
+  // Data for upsell logic, including product IDs and categories
+  const dataInformationUpsell = [
+    {
+      id: 8015038873839,
+      name: "dark-spots + wrinkles",
+      products: [43216489513199,45951933022447,45951935217903]
+    },
+    {
+      id: 8015049621743,
+      name: "dark-spots",
+      products: [43216457203951,45951954419951,45951948947695]
+    },
+    {
+      id: 8015039496431,
+      name: "wrinkles",
+      products: [43216483942639,45951928860911,45951945474287]
+    },
+  ]
+
+  /**
+   * Extracts the product ID from the anchor element in the step content.
+   * @returns {number|null} The extracted product ID, or null if not found.
+   */
+  function processLinkAnchor() {
+    let linkAnchorLandingProcces = document.querySelector('.step_content .btn-atc.submit_btn');
+    if(linkAnchorLandingProcces){
+      const href = linkAnchorLandingProcces.getAttribute('href');
+      const productId = href.match(/id=(\d+)/)[1];
+      return Number(productId);
+    } else {
+      return null;
+    }
+  
+  }
+
+  /**
+   * Updates the active upsell element based on the product ID.
+   * @param {Array} dataInformation - The upsell data array.
+   */
+
+  const handleUpsellElement = (dataInformation) => {
+    const productId = processLinkAnchor();
+    if (!productId) return;
+
+    // Find matching upsell data based on product ID
+    const { id } = dataInformation.find(item => item.products.includes(productId)) ?? {};
+
+    // Remove 'active' class from all upsell elements
+    const allUpsellElements = document.querySelectorAll('.popupsell-card.active');
+    allUpsellElements.forEach((element) => element.classList.remove('active'));
+
+    // Activate the corresponding upsell card
+    const upsellElement = document.querySelector(`.popupsell-card[data-product-id="${id}"]`);
+    upsellElement?.classList.add('active');
+  }
+
+    /**
+   * Adds a product to the cart via AJAX.
+   * @param {number} productId - The ID of the product to add.
+   */
+  const addToCartUpsell = async (productId) => {
+    let formData = {
+      'items': [{
+        'id': productId,
+        'quantity': 1,
+        "properties": {
+            "_popup_uspell": "true",
+          }
+      }]
+    };;
+
+    const response = await fetch('/cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    });
+
+    if (response.ok) {
+      let linkAnchorLandingProcces = document.querySelector('.step_content .btn-atc.submit_btn');
+      linkAnchorLandingProcces.click();
+      popupUpsell.style.display = 'none';
+
+    } else {
+      console.error('Error adding product to cart');
+    }
+
+  };
+
+  // Event listener for upsell buttons to add a product to the cart
+  if(popupUpsellButtons && popupUpsellButtons.length > 0){
+    popupUpsellButtons.forEach((button) => {
+      button.addEventListener('click', (event) => {
+        const target = event.target.closest('[data-product-id]'); // Find the closest element with the data-product-id attribute
+        let productId = null;
+  
+        if (!target || !target.dataset.productId) {
+          productId = 43821069435119; // ID of the default product
+        } else {
+          productId = Number(target.dataset.productId);
+        }
+        addToCartUpsell(productId);
+      });
+    });
+  }
+
+  // Initial handling of the upsell element
+  handleUpsellElement(dataInformationUpsell);
+
+  /**
+   * Closes the upsell popup and triggers the anchor button click if it exists.
+   */
+  const closePopup = () => {
+    const linkAnchorLandingProcess = document.querySelector('.step_content .btn-atc.submit_btn');
+    if (linkAnchorLandingProcess) {
+      linkAnchorLandingProcess.click();
+    }
+    popupUpsell.style.display = 'none';
+  };
+
+  // Update upsell elements when the serum offer container changes
+  if (serumOfferContainer) {
+    serumOfferContainer.addEventListener('change', (event) => {
+      handleUpsellElement(dataInformationUpsell);
+    });
+  }
+
+  // Update upsell elements when a serum offer label is clicked
+  if (serumOfferLabel && serumOfferLabel.length > 0) {
+    serumOfferLabel.forEach((container) => {
+      container.addEventListener('click', () => {
+        handleUpsellElement(dataInformationUpsell);
+      });
+    });
+  }
+
+  // Open the upsell popup
+  if (openPopupUpsell) {
+    openPopupUpsell.addEventListener('click', () => {
+      if (popupUpsell) {
+        popupUpsell.style.display = 'flex';
+      }
+    });
+  }
+
+  // Close the upsell popup
+  if (closePopupUpsell) {
+    closePopupUpsell.addEventListener('click', closePopup);
+  }
+
+  // Close the upsell popup when the "no thanks" buttons are clicked
+  if (popupUpsellNothanks && popupUpsellNothanks.length > 0) {
+    popupUpsellNothanks.forEach((button) => {
+      button.addEventListener('click', closePopup);
+    });
+  }
+
+  // Close the upsell popup when clicking outside the wrapper
+  if (popupUpsell) {
+    popupUpsell.addEventListener('click', (e) => {
+      if (popupUpsellWrapper && !popupUpsellWrapper.contains(e.target)) {
+        closePopup();
+      }
+    });
+  }
+}
+
+/* end upsell popup micro-infusion-offer and affiliate */

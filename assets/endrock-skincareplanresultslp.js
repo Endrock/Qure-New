@@ -468,33 +468,11 @@ const productsBundleInit = ()=>{
 
             console.log('items', items )
             if(items.length < 1) return;
-            const data = { items }
-            console.log('data', data )
 
             window.cartRequestAdd({
               items
             }, {} )
-            const endpoint = `/cart/add.js`;
-            const options = {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify(data)
-            };
-            console.log('options', options)
-
-            //fetch(endpoint, options)
-            //  .then(response => response.json())
-            //  .then(data => {
-            //    console.log('Items added to the cart:', data);
-            //    this.setAttribute('data-bundle-used', 'true') 
-
-            //    document.querySelector('header [data-ajax-cart-toggle-class-button="js-my-cart-open"]').click()
-            //  })
-            //  .catch(error => {
-            //    console.error('Error adding items to the cart:', error);
-            //  });
+            this.setAttribute('data-bundle-used', 'true') 
           })
         }
 
@@ -618,29 +596,12 @@ const flatingBundleInit = ()=>{
 
             console.log('items', items )
             if(items.length < 1) return;
-            const data = { items }
-            console.log('data', data )
 
-            const endpoint = `/cart/add.js`;
-            const options = {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify(data)
-            };
-            console.log('options', options)
-
-            fetch(endpoint, options)
-              .then(response => response.json())
-              .then(data => {
-                console.log('Items added to the cart:', data);
-                this.setAttribute('data-bundle-used', 'true') 
-              })
-              .catch(error => {
-                console.error('Error adding items to the cart:', error);
-              });
-
+            window.cartRequestAdd({
+              items
+            }, {} )
+            this.setAttribute('data-bundle-used', 'true') 
+            
           })
         }
         changeArrayBundle(oldValue, newValue){

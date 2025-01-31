@@ -134,7 +134,7 @@
     </div>
     <!-- -- can't decide start -- -->
     {% if section.settings.bottom_txt != blank%}
-    <div class="cant_decide section">
+    <div class="cant_decide section {% if template.suffix == 'sunil-mi-landing-special2-reorder' %} test-reorder-landing {% endif %}">
         <div class="container">
             <div class="section_header text-center">
                 <h3>{{ section.settings.bottom_txt }}</h3>

@@ -81,6 +81,36 @@
     }
 }
 /* -- Black Friday Nov 2024 css End -- */
+
+/* -- Recommended By Dermatoligist css start -- */
+.certified_derm {
+    border-radius: 4px;
+background: #F6F6F6;
+    display: flex;
+    align-items: center;
+    padding: 4px 14px;
+    margin-top: 30px;
+}
+.certified_derm img {
+    max-width: 78px;
+    margin-right: 15px;
+}
+main .certified_derm p {
+    font-size: 11px;
+    line-height: 17px;
+    padding: 0;
+    font-weight: 400;
+}
+@media(max-width:767px) {
+    .certified_derm p {
+        font-size: 10px;
+    }
+    .certified_derm p br{
+        display: none;
+    }
+}
+/* -- Recommended By Dermatoligist css end -- */
+
 /* -- common css for star gp start --  */
 @media (max-width: 767px) {
     .star_gp svg {
@@ -346,6 +376,9 @@
         line-height: 24px;
         font-weight: 600;
         letter-spacing: 0.12px;
+    }
+    .available_bar {
+        padding: 6px 0;
     }
 }
 
@@ -1351,6 +1384,7 @@
 
 .subscribe_save_wrapper .subscriptionType.active>div:first-child {
     background: #c7e7dc;
+    border: 1px solid transparent;
 }
 
 .subscribe_save_wrapper .subscribeInfo p {
@@ -3545,6 +3579,7 @@
 .trusted_bl .trust_item .trust_item_info .quote {
     position: absolute;
     left: 10px;
+    z-index: -1;
 }
 
 .trusted_bl .trust_item .trust_img img {
@@ -8982,13 +9017,14 @@ p.title_mob {
     text-decoration: line-through;
 }
 
-.black_friday .upgrade_routine .ur_price_btn {
-    margin-top: 0;
+.upgrade_routine .ur_price_btn {
+    margin-top: 10px;
     gap:4px;
+    justify-content: space-between;
 }
 
 .black_friday .upgrade_routine .ur_btn {
-    margin-top: 10px;
+    margin-top: 0px;
 }
 .black_friday .upgrade_routine .ur_price{
     font-size: 14px;

@@ -56,18 +56,17 @@
         },
         "supply_xAX9bT": {
           "type": "supply",
-          "disabled": true,
           "settings": {
-            "heading": "Next batch ships 19th of December                                    2024:",
-            "heading_mobile": "Next batch ships 12/19:",
+            "heading": "Next batch ships on the 31st of January:",
+            "heading_mobile": "Next batch ships 01/31:",
             "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.</p>",
-            "first_option_date": "November 15th",
+            "first_option_date": "December 15th",
             "first_option_text": "SOLD OUT",
             "first_option_percent": 100,
-            "second_option_date": "December 19th",
-            "second_option_text": "61% Reserved",
-            "second_option_percent": 61,
-            "third_option_date": "January 30th",
+            "second_option_date": "January 31st",
+            "second_option_text": "73% Reserved",
+            "second_option_percent": 73,
+            "third_option_date": "March 30th",
             "third_option_text": "In Production",
             "third_option_percent": 0
           }
@@ -90,7 +89,7 @@
         "product_button_label": "Product",
         "before_after_images_limit": 2,
         "before_after_button_label": "Before & After",
-        "reserve": false,
+        "reserve": true,
         "underbutton_text_left": "Dermatologist Reviewed",
         "underbutton_text_right": "Free Shipping Over $100",
         "selected_design": "new",
@@ -111,7 +110,7 @@
         "text_49pB7c": {
           "type": "text",
           "settings": {
-            "text": "<p>\"Changes you’ll see are positive ones, like plumper and more taut skin and an improved skin tone.</p>"
+            "text": "<p>\"Changes you’ll see are positive ones, like plumper and more taut skin and an improved skin tone.\"</p>"
           }
         },
         "image_MHDmTx": {
@@ -137,6 +136,18 @@
           "settings": {
             "text": "<p>\"Changes you’ll see are positive ones, like plumper and more taut skin and an improved skin tone.</p>"
           }
+        },
+        "image_4MVELB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Grazia-1_fa0b86d0-ae9a-454c-bbdd-7b475d0d0cdd.webp"
+          }
+        },
+        "text_YnDmgg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"It complements the face mask and targets areas that age first. I think it is more important for your first step for LED treatment.\"</p>"
+          }
         }
       },
       "block_order": [
@@ -145,11 +156,15 @@
         "image_MHDmTx",
         "text_tGWG9p",
         "image_zYixkn",
-        "text_GQ3CEw"
+        "text_GQ3CEw",
+        "image_4MVELB",
+        "text_YnDmgg"
       ],
       "settings": {
         "heading": "FEATURED IN",
-        "slider_type": "one_slides"
+        "slider_type": "one_slides",
+        "slide_per_view_desktop": 4,
+        "slide_per_view_mobile": 3
       }
     },
     "image_text_DddWnn": {

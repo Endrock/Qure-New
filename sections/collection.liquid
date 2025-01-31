@@ -6,6 +6,8 @@
             {%- assign banner_count = banner_count | plus: 1 -%}
         {%- when 'banner_holiday' -%}
             {%- assign banner_count = banner_count | plus: 1 -%}
+        {%- when 'banner_14feb' -%}
+            {%- assign banner_count = banner_count | plus: 1 -%}
     {%- endcase -%}
 {%- endfor -%}
 
@@ -176,6 +178,38 @@
                             </div>
                         </div>
                     </div>
+                {% when 'banner_14feb' %}
+                    <link rel="stylesheet" href="{{ 'collection-banner-14feb.css' | asset_url }}">
+
+                    <div class="bf_sale-banners">
+                        <div class="collection_banner">
+                            <div class="container-fluid px-0">
+                                <div class="collection_grid d-grid">
+                                    <div class="banner_text">
+                                        <div>
+                                            <h6><span><img src="https://qureskincaredns.com/new/assets/heart.svg" alt=""></span>{% if block.settings.heading != ''  %}{{ block.settings.heading }}{% endif %}<span><img src="https://qureskincaredns.com/new/assets/heart.svg" alt=""></span></h6>
+                                            {% if block.settings.subheading != blank %}
+                                                <h1>
+                                                    {{ block.settings.subheading 
+                                                        | replace: '<p>', '' 
+                                                        | replace: '</p>', '' 
+                                                    }}
+                                                </h1>
+                                            {% endif %}
+
+                                            {% if block.settings.link_url != blank %}
+                                                <a href="{{ block.settings.link_url }}" class="btn_black btn mb-0 mt-3" aria-label="{{ block.settings.link_label | escape }}">{{ block.settings.link_label }}</a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src="https://qureskincaredns.com/new/assets/c_valantine-banner.webp" class="img-fluid d-md-block d-none" alt="">
+                                        <img src="https://qureskincaredns.com/new/assets/c_valantine-bannerMob.webp" class="img-fluid d-md-none" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
         {% endcase %}
     {% endfor %}
 {% else %}
@@ -279,6 +313,33 @@
             }
         ],
         "blocks": [
+            {
+                "type": "banner_14feb",
+                "name": "t:common.banner_14feb.label",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "t:common.heading.label"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "subheading",
+                        "label": "t:common.subheading.label"
+                    },
+                    {
+                        "type": "url",
+                        "id": "link_url",
+                        "label": "t:common.link.url.label"
+                    },
+                    {
+                        "type": "text",
+                        "id": "link_label",
+                        "label": "t:common.link.label"
+                    }
+                ]
+		    },
             {
                 "type": "banner_holiday",
                 "name": "t:common.banner_holiday.label",

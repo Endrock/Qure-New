@@ -15,8 +15,8 @@
         "announcement_68YDyx": {
           "type": "announcement",
           "settings": {
-            "heading": "[Limited Time Offer] SAVE $50 | Use Code: GLOWON50",
-            "heading_mobile": "SAVE $50 | Use Code: GLOWON50",
+            "heading": "[Limited Time Offer] SAVE UP TO $250",
+            "heading_mobile": "[Limited Time Offer] SAVE UP TO $250",
             "color": "green",
             "font_size_desktop": 14,
             "font_size_mobile": 13
@@ -95,14 +95,20 @@
         "tab_nUG7QA"
       ],
       "settings": {
+        "display_type": "tab",
+        "seo_heading": "",
         "heading": "Feel Confident Makeup-Free with Q-Rejuvalight Pro",
+        "heading_size": "title-lg",
         "desc": "<ul><li>FDA-cleared at-home LED mask</li><li>Treat acne, fine lines, wrinkles & more</li><li>Customize, track & schedule treatments with app</li><li>Quick & convenient 3-minute wireless treatments</li></ul>",
         "rating_text": "43,893+ Happy Customers",
         "stars": "shopify://shop_images/star-half_fill_d51f6801-2e35-487c-89d0-130f978da1e8.svg",
         "btn_txt": "Save Up To $250",
         "btn_url": "#shop",
         "d_icon": "shopify://shop_images/derma-sm.svg",
-        "recomand": "Dermatologist-Reviewed"
+        "recomand": "Dermatologist-Reviewed",
+        "underbutton_text_left": "Dermatologist Reviewed",
+        "underbutton_text_right": "Free Shipping Over $100",
+        "order_mob": false
       }
     },
     "liquid_P3wypt": {

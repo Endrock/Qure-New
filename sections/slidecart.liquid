@@ -87,10 +87,15 @@
 						{% assign item_old_price = item.quantity | times: item.variant.compare_at_price  %}
 
 						{% assign free_gift = false %}
+						{% assign popup_discount = false %}
 
 						{% if item.properties._free_product == 'true' %}
 							{% assign free_gift = true %}
 						{%- endif -%}
+
+						{% if item.properties._popup_uspell == 'true' %}
+							{% assign popup_discount = true %}
+						{% endif %}
 
 
 						{%- if item.title contains 'Gift Card' -%}
@@ -192,7 +197,7 @@
 													<a href="javascript:;" style="color:#e4e0e0">
 														+
 													</a>
-												</div>
+												</div>													
 											{% else %}
 												<div class="drawer__cart-quantity">
 													<a data-ajax-cart-request-button href="{{ routes.cart_change_url }}?line={{ item.index | plus: 1 }}&quantity={{ item.quantity | minus: 1 }}">
@@ -213,6 +218,25 @@
 										{% elsif item.id == 46199907123439 %}
 											<div class="drawer__cart-item-price">
 												<p class="new-price test"><span class="money">{{ item.price | money_without_trailing_zeros }}</span></p>
+											</div>
+											{% elsif popup_discount %}
+												<div class="drawer__cart-item-price">
+													{% liquid
+													assign product_hanlde_popup = ""
+														if item.id == 43821035290863
+															 #"Micro-Infusion 3 Month Refill (For Wrinkles)"
+															assign product_hanlde_popup = "micro-infusion-3-month-refill-6x-hydra-soothing-serum"
+														elsif item.id == 43821069435119
+															 #"Micro-Infusion 3 Month Refill (For Dark Spots)"
+															assign product_hanlde_popup = "micro-infusion-3-month-refill-6x-rejuvenating-serum"
+														elsif item.id == 43821031031023
+															 #"Micro-Infusion 3 Month Refill (For Wrinkles + Dark Spots)"
+															assign product_hanlde_popup = "micro-infusion-3-month-refill-3x-b-g-serum-3x-e-g-f-serum"
+														endif
+													assign product_moded = all_products[product_hanlde_popup]
+													%}
+												<p class="old-price"><span class="money">{{- product_moded.price | money_without_trailing_zeros -}}</span></p>
+												<p class="new-price test"><span class="money">{{- item.line_price | money_without_trailing_zeros -}}</span></p>
 											</div>
 										{% else %}
 											<div class="drawer__cart-item-price">
@@ -340,15 +364,6 @@
 
 			<div class="custom-shadow">
 
-				{% comment %} trust pilot {% endcomment %}
-					{% if  cart.item_count > 0  %}
-						{% for block in section.blocks %}
-							{% if block.type == 'trustpilot' %}
-								{% render 'pdm_sidcart-trustpilot', block: block, test_trustpilot: 'b' %}
-							{% endif %}
-						{% endfor %}
-					{% endif %}
-				{% comment %} end trust pilot {% endcomment %}
 				{% assign price_checkInsurance = price_check %}
 				{%- assign insPrice = 0 -%}
 
@@ -524,12 +539,6 @@
 						</button>
 					</div>
 				</form>
-
-				{% for block in section.blocks %}
-					{% if block.type == 'trustpilot' %}
-						{% render 'pdm_sidcart-trustpilot', block: block, test_trustpilot: 'c' %}
-					{% endif %}
-				{% endfor %}
 
 				<div class="payment_info">
 					<p>

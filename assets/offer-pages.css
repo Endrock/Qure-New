@@ -104,7 +104,13 @@
     letter-spacing: 0.14px;
     text-transform: uppercase;
 }
+.btn_green{
+    font-size: 22px;
+}
 @media(max-width: 767px){
+    .btn_green{
+        font-size: 22px;
+    }
     .choose_bundle-offer h2 {
         font-size: 28px;
         line-height: 38px;

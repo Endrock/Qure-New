@@ -31,21 +31,35 @@
       "micro-infusion-3-month-bundle-6x-beta-glucan-serum",
       "micro-infusion-3-month-bundle"
     ],
+    "frontrow_health_image_1": "shopify://shop_images/frontrow-health1.png",
+    "frontrow_health_image_2": "shopify://shop_images/User_Image_1.png",
+    "frontrow_health_count_circle_color": "#c8e6dc",
+    "frontrow_health_link": "https://qureskincare.com/pages/derm-reviews",
+    "frontrow_product_list_to_exclude": [
+      "silk-pillowcase",
+      "dermal-mist",
+      "shower-filter",
+      "faucet-filter-refill",
+      "faucet-filter"
+    ],
     "show_order_by_receive_by": true,
     "today_text": "Order today",
     "start_time_order": "2024-10-30T23:00",
     "end_time_order": "2024-11-04T23:59",
     "show_order_by_receive_by_us": false,
     "enable_corner_treatment_bfcm": false,
-    "enable_site_gamification": true,
-    "enable_free_shipping_treshold": true,
-    "enable_product_gift": true,
-    "product_free_gift": "silk-pillowcase",
+    "enable_site_gamification": false,
+    "enable_free_shipping_treshold": false,
+    "enable_product_gift": false,
+    "product_free_gift": "face-serum",
+    "dont_enable_gift_urls": "/pages/led-mask-offer-2\n/pages/q-rejuvalight-pro-offer",
     "copy_get_product_free": "<p>You’re &price-left& away from  <strong>Free &product-title& </strong>worth &product-price&!</p>",
-    "icon_product_gift_clean": "shopify://shop_images/site_gamification_pillow_empty.svg",
-    "icon_product_gift_gradient": "shopify://shop_images/site_gamification_pillow_gradient.svg",
-    "icon_product_gift_full": "shopify://shop_images/site_gamification_pillow_full.svg",
-    "enable_site_wide_timer": true,
+    "icon_product_gift_clean": "shopify://shop_images/Gift-grey1.svg",
+    "icon_product_gift_gradient": "shopify://shop_images/Gift-grey2.svg",
+    "icon_product_gift_full": "shopify://shop_images/Gift-black.svg",
+    "icon_gift_width": 20,
+    "icon_gift_height": 20,
+    "enable_site_wide_timer": false,
     "start_date": "11-20-2024 22:00",
     "finish_date": "12-02-2024 11:59",
     "promotion": "promotion",
@@ -56,9 +70,9 @@
           "announcement_TPxBgi": {
             "type": "announcement",
             "settings": {
-              "heading": "<p><strong>Get $50 OFF on the Q-Rejuvalight Mask with the code: SPOOKY50</strong></p>",
+              "heading": "<p><strong>FREE SHIPPING ON ALL ORDERS OVER $100</strong></p>",
               "button_label": "SHOP NOW",
-              "button_url": "shopify://products/q-rejuvalight-pro-facewear"
+              "button_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal"
             }
           },
           "tab_3Wyyea": {
@@ -71,7 +85,7 @@
             "type": "banner",
             "settings": {
               "image": "shopify://shop_images/Navigation.png",
-              "button_label": "Save up to 55% on [Holiday Bundles]",
+              "button_label": "Save up to 66% on [Holiday Bundles]",
               "button_url": "https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal"
             }
           },
@@ -251,15 +265,6 @@
               "upsell_product_thid_description": "Plump, smooth & brighten in just one step"
             }
           },
-          "trustpilot_a3exnp": {
-            "type": "trustpilot",
-            "settings": {
-              "text_area_first": "<p>Excellent <b>4.5</b></p>",
-              "starts": "shopify://shop_images/stars-4.5_2.svg",
-              "second_text_content": "reviews on",
-              "logo": "shopify://shop_images/logo_truspilot.svg"
-            }
-          },
           "upsell_GiyUV9": {
             "type": "upsell",
             "settings": {
@@ -340,7 +345,6 @@
           "upsell_DQMajg",
           "upsell_a74n8t",
           "upsell_ej4ULU",
-          "trustpilot_a3exnp",
           "upsell_GiyUV9",
           "upsell_UiGexh",
           "upsell_MBrVMA",
@@ -348,6 +352,7 @@
           "upsell_qRXtDN",
           "upsell_pDFytd"
         ],
+        "custom_css": [],
         "settings": {
           "upsell_heading": "Achieve your skin goals faster",
           "upsell_product_first": "q-rejuvalight-pro-facewear",
@@ -367,14 +372,14 @@
           "label_seconds": "SECONDS",
           "enable_free_shipping_treshold": true,
           "enable_product_gift": true,
-          "product_free_gift": "silk-pillowcase",
-          "icon_product_gift_clean": "shopify://shop_images/Vector.svg",
-          "icon_product_gift_full": "shopify://shop_images/Vector_1_dc2b4cda-33fe-4597-8230-931c4ab65f69.svg",
+          "product_free_gift": "face-serum",
+          "icon_product_gift_clean": "shopify://shop_images/Layer_1_1.svg",
+          "icon_product_gift_full": "shopify://shop_images/Layer_1_0f98f0bb-ebbd-41bc-96dc-f905b2948e10.svg",
           "icon_gift_width": 18,
           "icon_gift_height": 26,
           "enable_show_gift_price": true,
           "copy_get_free_shipping": "<p>You are &price-left& away from <strong>Free Shipping!</strong></p>",
-          "copy_get_product_free": "<p>You’re &price-left& away from a <strong>FREE Silk Pillowcase worth</strong> &product-price&</p>",
+          "copy_get_product_free": "<p>You’re &price-left& away from a <strong>FREE Face Serum </strong>worth &product-price&</p>",
           "copy_congrats": "<p>Congrats! You've unlocked your Free &product-title&</p>",
           "show_urgency_note": true,
           "urgency_note_content": "Due to high demand, [] $quantity_label only saved for 30 minutes.",
@@ -409,11 +414,6 @@
         "disabled": true,
         "settings": {}
       },
-      "1291562577487733835": {
-        "type": "shopify://apps/black-crow-more-new-customers/blocks/blackcrow_ai_script/3e73f597-cb71-47a1-8a06-0c931482ecd2",
-        "disabled": false,
-        "settings": {}
-      },
       "11945366711752539959": {
         "type": "shopify://apps/zendesk/blocks/zendesk_web_widget/c0b417b1-b90b-4754-baaf-f55627e6acd4",
         "disabled": true,
@@ -424,13 +424,13 @@
         "disabled": false,
         "settings": {}
       },
-      "2728461494843721857": {
-        "type": "shopify://apps/amped-email-sms-popups/blocks/app-embed/d9d8f140-4443-4f6c-a16a-95357ecc2125",
+      "471852632697159186": {
+        "type": "shopify://apps/stamped-loyalty-referrals/blocks/rewards-launcher/93b8fd18-14d4-464f-a49a-0093afb7e10a",
         "disabled": false,
         "settings": {}
       },
-      "471852632697159186": {
-        "type": "shopify://apps/stamped-loyalty-referrals/blocks/rewards-launcher/93b8fd18-14d4-464f-a49a-0093afb7e10a",
+      "1291562577487733835": {
+        "type": "shopify://apps/black-crow-ai-that-delivers/blocks/blackcrow_ai_script/3e73f597-cb71-47a1-8a06-0c931482ecd2",
         "disabled": false,
         "settings": {}
       }

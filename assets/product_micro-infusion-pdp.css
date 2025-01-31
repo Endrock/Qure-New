@@ -508,3 +508,11 @@
         font-size: 9px;
     }
 }
+@media (max-width: 575px) {
+    .mi_landing_result .pagination_navigation .swiper-button-prev {
+        left: 0px !important; 
+    }
+    .mi_landing_result .swiper-button-next {
+        right: 0px !important;  
+    }
+}

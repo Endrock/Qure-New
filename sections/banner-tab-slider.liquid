@@ -1,5 +1,6 @@
+{% assign random_number = 'now' | date: '%s' | modulo: 100 | plus: 1 %}
 <!-- -- main banner start -- -->
-<div class="refill_bl py-3 py-md-4 tabSlider">
+<div class="refill_bl py-3 py-md-4 tabSlider offer-lp">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -15,31 +16,45 @@
                         </p>
                         {% endif %}
                     </div>
-                    <div class="section_header text-center text-md-start">
+                    <div class="section_header text-md-start">
+                        {% if section.settings.seo_heading != blank %}
+                            <h1 class="seo_heading">{{ section.settings.seo_heading }}</h1>
+                        {% endif %}
                         {%- if section.settings.heading != blank -%}
-                        <h2 class="title-lg">{{ section.settings.heading }}</h2>
+                        <h2 class="{{ section.settings.heading_size }}">{{ section.settings.heading }}</h2>
                         {%- endif -%}
                     </div>
-                    <div class="d-none d-md-block">
+                    <div class="{% if section.settings.order_mob == true %}d-block{% else %}none{% endif %}">
                         {%- if section.settings.desc != blank -%}
-                        <div class="ss_list mw-452 pt-4 pb-4">
+                        <div class="ss_list mw-452 pt-3 pb-4">
                             {{ section.settings.desc }}
                         </div>
                         {%- endif -%}
-                        <div class="get_clearer_wrapper text-center ms-0 mt-md-3">
+                        <div class="get_clearer_wrapper text-center ms-0 mt-md-2">
                             {%- if section.settings.btn_txt != blank -%}
-                            <a class="btn btn-lg btn-primary btn_green" href="{{ section.settings.btn_url }}">{{ section.settings.btn_txt }}</span>
+                            <a class="btn btn-lg btn-primary btn_green" href="{{ section.settings.btn_url }}"><span>{{ section.settings.btn_txt }}</span>
                             </a>
                             {%- endif -%}
                             {%- if section.settings.recomand != blank -%}
-                            <p><span><img src="{{ section.settings.d_icon | image_url: width: 16 }}" alt=""></span>{{ section.settings.recomand }}
+                            <p><span><img src="{{ section.settings.d_icon | image_url: width: 16 }}" alt=""></span>{{ section.settings.recomand }} 
                             </p>
                             {% endif %}
+                        </div>
+                        <div class="shipping shipping_bg bg-transparent mt-2">
+                            <div class="s_bx">
+                                <img src="{{ 'dermatologist.svg' | asset_url }}" alt="">
+                                <p>{{ section.settings.underbutton_text_left }}</p>
+                            </div>
+                            <div class="s_bx">
+                                <img src="{{ 'shipping.svg' | asset_url }}" alt="">
+                                <p>{{ section.settings.underbutton_text_right }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6  order-1 order-md-2">
+            <div class="col-md-6 {% if section.settings.order_mob == true %}order-first order-md-last{% endif %}">
+                {% if section.settings.display_type == 'tab' %}
                 <div class="refill_slider refill_slider_3 mw-mob-100">
                     <div class="refill_s_tab_content">
                         <div class="tab-content" id="pills-tabContent">
@@ -152,7 +167,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="d-block d-md-none">
+                <div class="{% if section.settings.order_mob == true %}d-none{% else %}d-md-none{% endif %}">
                     <div class="ss_list mw-452 pt-2 pb-4">
                         {%- if section.settings.desc != blank -%}
                             <div class="ss_list mw-452 pt-4 pb-4">
@@ -162,7 +177,7 @@
                     </div>
                     <div class="get_clearer_wrapper text-center ms-0 mt-md-3">
                         {%- if section.settings.btn_txt != blank -%}
-                        <a class="btn btn-lg btn-primary btn_green" href="{{ section.settings.btn_url }}">{{ section.settings.btn_txt }}</span>
+                        <a class="btn btn-lg btn-primary btn_green" href="{{ section.settings.btn_url }}"><span>{{ section.settings.btn_txt }}</span>
                         </a>
                         {%- endif -%}
                         {%- if section.settings.recomand != blank -%}
@@ -171,20 +186,149 @@
                         {% endif %}
                     </div>
                 </div>
+                
+            {% elsif section.settings.display_type == 'slider' %}
+                    <div class="bfs_mb_slider pt-md-4">
+                        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper sl2-{{ random_number }}">
+                            <div class="swiper-wrapper">
+                                {% for block in section.blocks %}
+                                {% if block.type == 'slider' %}
+                                <div class="swiper-slide">
+                                    <a class="bfs_mb_wrap">
+                                        {% if block.settings.s_image != blank %}
+                                        <img src="{{ block.settings.s_image | img_url: 'master' }}" class="img-fluid" />
+                                        {% else %}
+                                        <div class="banner_img position-relative">
+                                            <img src="{{ 'led-lp-transparent.webp' | asset_url }}" alt=""
+                                                class="img-fluid tab_img d-none d-md-block">
+                                            <img src="{{ 'led-lp-transparentmob.webp' | asset_url }}" alt=""
+                                                class="img-fluid d-block d-md-none">
+                                            <a
+                                                class="popup-youtube1 position-absolute top-0 bottom-0 start-0 end-0">
+                                                <div class="wistia_responsive_padding" style="position:relative;">
+                                                    <div class="wistia_responsive_wrapper"
+                                                        style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                                                        <div class="wistia_embed wistia_async_{{ block.settings.wistia_id }} seo=false videoFoam=true  h-100 rounded"
+                                                            style="height:100%;position:relative;width:100%;display:flex;align-items:center;">
+                                                            <div class="wistia_swatch"
+                                                                style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                                                                <img src="https://fast.wistia.com/embed/medias/{{ block.settings.wistia_id }}/swatch"
+                                                                    style="filter:blur(5px);height:100%;object-fit:contain;width:100%;"
+                                                                    alt="" aria-hidden="true"
+                                                                    onload="this.parentNode.style.opacity=1;" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        {% endif %}
+                                    </a>
+                                </div>
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="thumbsSlider_wrap mt-3">
+                            <div thumbsSlider="" class="swiper sl-{{ random_number }} pagination_navigation1">
+                                <div class="swiper-wrapper">
+                                    {% for block in section.blocks %}
+                                    {% if block.type == 'slider' %}
+                                    <div class="swiper-slide">
+                                        <div class="bfs_mb_wrapThumb">
+                                            <img src="{{ block.settings.thumbnail | img_url: 'master' }}" class="img-fluid" />
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="thumb-next-{{ random_number }} swiper-button-next swiper-button"></div>
+                            <div class="thumb-prev-{{ random_number }} swiper-button-prev swiper-button"></div>
+                        </div>
+                        <div class="bfs_mb_btn d-block d-md-none justify-content-between mw-499 bfBundle__content">
+                            <div class="d-none d-md-block bfs_mb_btn_img">
+                                <img src="{{ 'q_uses_1.webp' | asset_url }}" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+            {% endif %}
             </div>
         </div>
     </div>
 </div>
 <!-- -- main banner end -- -->
+<script>
+    var swiper = new Swiper(".sl-{{ random_number }}", {
+        spaceBetween: 8,
+        slidesPerView: 4.4,
+        freeMode: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+            768: {
+                spaceBetween: 0,
+                slidesPerView: 6.3,
+            },
 
+        },
+    });
+    var swiper2 = new Swiper(".sl2-{{ random_number }}", {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".thumb-next-{{ random_number }}",
+            prevEl: ".thumb-prev-{{ random_number }}",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+
+</script>
 {% schema %}
 {
     "name": "t:sections.banner_tabs.name",
     "settings":[
         {
+            "type": "select",
+            "id": "display_type",
+            "label": "t:common.display.type",
+            "options": [
+              {
+                "value": "tab",
+                "label": "t:common.display.tabs"
+              },
+              {
+                "value": "slider",
+                "label": "t:common.display.slider"
+              }
+            ],
+            "default": "tab"
+        }, 
+        {
+            "type": "text",
+            "id": "seo_heading",
+            "label": "t:common.heading.seo_heading.label"
+        },         
+        {
             "type": "text",
             "id": "heading",
             "label": "t:common.heading.label"
+        },
+        {
+            "type": "select",
+            "id": "heading_size",
+            "label": "t:common.heading.size",
+            "options": [
+              {
+                "value": "title-lg",
+                "label": "t:common.title.size.large"
+              },
+              {
+                "value": "title-xl",
+                "label": "t:common.title.size.xl"
+              }
+            ],
+            "default": "title-lg"
         },
         {
             "type": "richtext",
@@ -220,6 +364,24 @@
           "type": "text",
           "id": "recomand",
           "label": "t:common.recommended.label"
+        },
+        {
+            "type": "text",
+            "id": "underbutton_text_left",
+            "label": "t:common.text.label",
+            "default": "Dermatologist Reviewed"
+        },
+        {
+            "type": "text",
+            "id": "underbutton_text_right",
+            "label": "t:common.text.label",
+            "default": "Free Shipping Over $100"
+        },
+        {
+            "type": "checkbox",
+            "id": "order_mob",
+            "label": "t:commonMob.order.label",
+            "default": false
         }
     ],
     "blocks":[
@@ -252,6 +414,27 @@
                     "type": "text",
                     "id": "wistia",
                     "label": "t:common.wistia.label"
+                }
+            ]
+        },
+        {
+            "type": "slider",
+            "name": "t:common.display.single_slide",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "s_image",
+                    "label": "t:common.image.label"
+                },
+                {
+                    "type": "text",
+                    "id": "wistia_id",
+                    "label": "t:common.wistia.id.label"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "thumbnail",
+                    "label": "t:common.display.thumb"
                 }
             ]
         }

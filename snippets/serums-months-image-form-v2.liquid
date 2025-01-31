@@ -324,7 +324,19 @@
                                     </div>
                                 </div>
 
-                                <div class="step_content mb-3 pt-0 step_btn">
+                                {% render 'pdm-popup-upsell-landing' %}
+
+                                <div class="step_content mb-3 pt-0 step_btn upsell_popup_anchor_hover">
+
+                                    {% if section.settings.popup_micro_infusion_enabled %}     
+                                        {% if page.handle == 'qure-microinfusion-offer' or page.handle == 'qure-micro-infusion-landing-page-affiliate' %}
+                                            <button 
+                                                data-popup-enabled="{{ section.settings.popup_micro_infusion_enabled }}"
+                                                id="openPopupUpsell" 
+                                                class="upsell_popup_btn"></button>
+                                        {% endif %}
+                                    {% endif %}
+                                      
                                     <a class="btn btn-atc submit_btn {{ section_id }}_productButtonObject" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>
                                         <span class="btn_value">Buy Now & SAVE {{ discount_percentage }}%</span>
                                     </a>
