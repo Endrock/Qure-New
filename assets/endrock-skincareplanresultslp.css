@@ -204,7 +204,11 @@
 .section-lifestyle-tips {
   padding: 64px 16px 80px;
 }
-
+@media (max-width: 768px) {
+  .section-lifestyle-tips {
+    padding: 40px 16px;
+  }
+}
 .section-lifestyle-tips .section-header {
   margin: 0px auto 40px;
   text-align: center;
@@ -377,6 +381,12 @@
 .section-regimen-steps {
   background: #EAF5F2;
   padding: 72px 16px;
+}
+@media (max-width: 768px) {
+  .section-regimen-steps {
+    padding: 40px 16px;
+
+  }
 }
 
 .section-regimen-steps .regimen-steps {
@@ -2066,6 +2076,11 @@
     gap: 16px;
     margin: 0 16px 16px;
   }
+  @media (max-width: 768px) {
+    .header {
+      margin: 0 16px 24px;
+    }
+  }
   .const-subtitle {
     max-width: 732px;
     text-align: center;
@@ -2078,6 +2093,12 @@
       font-weight: 400;
       line-height: 26px;
     }
+    @media (max-width: 768px) {
+      p {       
+        font-size: 12px;
+        line-height: 16px; 
+      } 
+    } 
   }
   .title{
     color: #000;
@@ -2087,6 +2108,13 @@
     font-style: normal;
     font-weight: 500;
     line-height: 46px;
+  }
+  @media (max-width: 768px) {
+    .title {       
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 32px;
+    } 
   }
   .closure-bundle{
     padding:48px 3.0%;
@@ -2103,6 +2131,15 @@
     font-style: normal;
     font-weight: 500;
     line-height: 40px;
+  }
+  @media (max-width: 768px) {
+    .info-title{
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 24px;
+      max-width:200px;
+      margin:auto;
+    }
   }
   .info-closure {
     display: grid;
