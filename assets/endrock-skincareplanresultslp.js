@@ -13,7 +13,23 @@ const getUserName = () => {
     }
   })
 }
-
+function getShopifyCart () {
+  return fetch('/cart.js', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
+};
 
 const lifestyleInit = ()=>{
   window.addEventListener("load", () => {
@@ -433,7 +449,7 @@ const productsBundleInit = ()=>{
             const arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
             const bundleId = this.getAttribute('data-bundle-id')
             const bundleInfoLiquid = JSON.parse(this.getAttribute('bundle-info'));
-            const bundleInfo = `{"id":"${ bundleId }" ,"name":"${ bundleInfoLiquid.name }", "discounts":${JSON.stringify(bundleInfoLiquid.discounts)}, "parentId": "${ bundleInfoLiquid.parentId }", "image":"https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Breakpoint_Gift_Status_On.png?v=1735674773" }`
+            const bundleInfo = `{"id":"${ bundleId }" ,"name":"${ bundleInfoLiquid.name }", "discounts":${JSON.stringify(bundleInfoLiquid.discounts)}, "parentId": "${ bundleInfoLiquid.parentId }", "image":"https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Icon_ca2ca798-4d5f-48c4-9d07-ac219c7dc598.svg?v=1738177012" }`
 
             console.log('arrayBundle', arrayBundle)
             console.log('bundleInfo', bundleInfo )
@@ -455,6 +471,9 @@ const productsBundleInit = ()=>{
             const data = { items }
             console.log('data', data )
 
+            window.cartRequestAdd({
+              items
+            }, {} )
             const endpoint = `/cart/add.js`;
             const options = {
               method: 'POST',
@@ -465,15 +484,17 @@ const productsBundleInit = ()=>{
             };
             console.log('options', options)
 
-            fetch(endpoint, options)
-              .then(response => response.json())
-              .then(data => {
-                console.log('Items added to the cart:', data);
-                this.setAttribute('data-bundle-used', 'true') 
-              })
-              .catch(error => {
-                console.error('Error adding items to the cart:', error);
-              });
+            //fetch(endpoint, options)
+            //  .then(response => response.json())
+            //  .then(data => {
+            //    console.log('Items added to the cart:', data);
+            //    this.setAttribute('data-bundle-used', 'true') 
+
+            //    document.querySelector('header [data-ajax-cart-toggle-class-button="js-my-cart-open"]').click()
+            //  })
+            //  .catch(error => {
+            //    console.error('Error adding items to the cart:', error);
+            //  });
           })
         }
 
@@ -581,7 +602,7 @@ const flatingBundleInit = ()=>{
             const bundleId = this.getAttribute('data-bundle-id')
             const arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
             const bundleInfoLiquid = JSON.parse(this.getAttribute('bundle-info'));
-            const bundleInfo = `{"id":"${ bundleId }" ,"name":"${ bundleInfoLiquid.name }", "discounts":${JSON.stringify(bundleInfoLiquid.discounts)}, "parentId": "${ bundleInfoLiquid.parentId }", "image":"https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Breakpoint_Gift_Status_On.png?v=1735674773" }`
+            const bundleInfo = `{"id":"${ bundleId }" ,"name":"${ bundleInfoLiquid.name }", "discounts":${JSON.stringify(bundleInfoLiquid.discounts)}, "parentId": "${ bundleInfoLiquid.parentId }", "image":"https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Icon_ca2ca798-4d5f-48c4-9d07-ac219c7dc598.svg?v=1738177012" }`
 
             const items = []
             arrayBundle.forEach((item) => {
