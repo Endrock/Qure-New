@@ -1,5 +1,10 @@
 {% assign icon_check =  section.settings.icon_img | image_url: width: 16, crop: 'center' %}
 {% assign main_image =  section.settings.dual_img | image_url: width: 416, crop: 'center' %}
+<style>
+#shopify-section-{{ section.id }}{
+  margin-top:-{{ section.settings.margin_top }}px;
+}
+</style>
 <div class="dual-transformation container">
     <div class="container-image">
       {% render 'pdm_image-tranformation', 
@@ -110,6 +115,16 @@
       "id": "footer_link",
       "label": "Button Url"
     },   
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Megative Margin top",
+      "default": 0
+    }
   ],
   "blocks": [],
   "presets": [
