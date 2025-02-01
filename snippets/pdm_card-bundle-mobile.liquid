@@ -6,6 +6,12 @@
   <div class="cont-card-bundle mb">
     <div class="pdm-gallery mb">
       <div class="media mb">
+        {% if show-badge %}
+        <div class="badge-dermatologist">
+          <img class="badge-check" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Layer_1_be2f32cf-e586-4583-9959-fb3a68b642d0.svg" alt="check">
+          <p class="text-badge">Trusted by dermatologists</p>
+        </div>
+        {% endif %}
         {% if product-img %}
           <img class="src product" src="{{ product-img | image_url }}" alt="image {{ product.title }}">
         {% else %}
@@ -14,7 +20,9 @@
       </div>
     </div>
     <div class="product-info mb"> 
-      <div class="title mb"><h3>{{ product.title }}</h3></div>
+      <div class="title mb">
+        <h3>{% if product-name != blank %}{{ product-name }}{% else %}{{ product.title }}{% endif %}</h3>
+      </div>
     </div>
     <div class="bundle-button mb">
         <div class="price mb">

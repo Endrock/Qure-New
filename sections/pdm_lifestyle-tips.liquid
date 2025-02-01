@@ -13,7 +13,8 @@
         active-card:1,
         image: block.settings.image_card,
         title: block.settings.title,
-        description: block.settings.description %}
+        description: block.settings.description 
+        sources: block.settings.sources %}
     {% endfor %}
     </cards-tips>
   </div>
@@ -61,6 +62,11 @@
           "type": "image_picker",
           "id": "image_card",
           "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "sources",
+          "label": "Sources"
         }
       ]
     }

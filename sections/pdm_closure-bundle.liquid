@@ -75,7 +75,7 @@
             {% endif %}
           </div>
           <div class="product-info">
-            <div class="product-title">{{ product.title }}</div>
+          <div class="product-title">{% if card.settings.custom_name != blank %}{{ card.settings.custom_name }}{% else %}{{ product.title }}{% endif %}</div>
             <div class="btn-bundle" data-product-id="{{ product.selected_or_first_available_variant.id }}">
               <span class="uncheck desktop">{{ section.settings.button_card }}</span>
               <span class="uncheck mobile">Add</span>
@@ -136,6 +136,11 @@
       "type": "card",
       "name": "Card Product",
       "settings": [
+        {
+          "type": "text",
+          "id": "custom_name",
+          "label": "custom Product Name"
+        },
         {
           "type": "image_picker",
           "id": "image_product",
