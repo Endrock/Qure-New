@@ -24,7 +24,6 @@
     {% if settings.show_bf_price == true %}
         {% render 'bf-price-displaying', product: product %}
     {% endif %}
-
     <div class="mw-402">
 
     <div class="serum_bl">
@@ -229,10 +228,27 @@
     {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
     {% assign divided_price = product.price | divided_by: 4 %}
     {% render 'pdm_orderby' %}
-    
-    <a class="btn btn-lg btn-primary buy_btn mt-3 {{ section_id }}_productButtonObject" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>Buy Now <span
-            class="savedAmount">& SAVE {{ discount_percentage }}%</span><img src="{{ 'arrow_right.svg' | asset_url }}" alt="">
-    </a>
+
+    {% if section.settings.popup_enabled %}
+        {% render 'pdm-popup-upsell-landing' 
+        referrer: "pdm_serums_m_form", 
+        ajax_selector: ".pdp-ajax-container .btn.buy_btn "
+        %}
+    {% endif %}
+   
+    <div class="upsell_popup_anchor_hover pdp-ajax-container">
+        {% if section.settings.popup_enabled %}
+            <button
+            data-popup-enabled="true"
+            data-popup-referrer="pdm_serums_m_form"
+            data-ajax-selector=".pdp-ajax-container .btn.buy_btn"
+            class="upsell_popup_btn openPopupUpsell"></button>
+        {% endif %}
+
+        <a class="btn btn-lg btn-primary buy_btn mt-3 {{ section_id }}_productButtonObject" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>Buy Now <span
+                class="savedAmount">& SAVE {{ discount_percentage }}%</span><img src="{{ 'arrow_right.svg' | asset_url }}" alt="">
+        </a>
+    </div>
 
     <a class="btn btn-lg btn-primary buy_btn_soldout mt-3 {{ section_id }}_productButtonObject" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button style="display: none">Reserve</a>
 

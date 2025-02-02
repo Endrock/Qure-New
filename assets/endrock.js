@@ -1527,17 +1527,16 @@ function initFrontrowHealth (frontrowContainer, trustedSection) {
 }
 
 
-/*  upsell popup micro-infusion-offer and affiliate*/
-// DOM elements for controlling the upsell popup
-const openPopupUpsell = document.querySelector("#openPopupUpsell");
+/*  upsell popup micro-infusion-offer and affiliate start */
 
-if(openPopupUpsell && openPopupUpsell.dataset?.popupEnabled) {
-  const closePopupUpsell = document.querySelector("#closePopupUpsell")
-  const popupUpsell = document.querySelector("#popupUpsell");
+// DOM elements for controlling the upsell popup
+const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
+
+ if(openPopupUpsell.length > 0) {
+  const closePopupUpsell = document.querySelectorAll(".popupsell-close")
+  const popupUpsellMain = document.querySelectorAll('.popupsell-main');
   const popupUpsellWrapper = document.querySelector('.popupsell-wrapper');
-  // DOM elements related to serum offers
-  const serumOfferContainer = document.querySelector('.supply-detail.offer_active1');
-  const serumOfferLabel = document.querySelectorAll('.step_content.step_serum');
+
   // Buttons within the upsell popup
   const popupUpsellButtons = document.querySelectorAll('.popupUpsellButtons');
   const popupUpsellNothanks = document.querySelectorAll('.popupUpsellNoThanks');
@@ -1547,65 +1546,74 @@ if(openPopupUpsell && openPopupUpsell.dataset?.popupEnabled) {
     {
       id: 8015038873839,
       name: "dark-spots + wrinkles",
-      products: [43216489513199,45951933022447,45951935217903]
+      products: [43216489513199,45951933022447,45951935217903,43216377217263,43216449208559,43216489513199]
     },
     {
       id: 8015049621743,
       name: "dark-spots",
-      products: [43216457203951,45951954419951,45951948947695]
+      products: [43216457203951,45951954419951,45951948947695,43216299819247,43216398450927,43216457203951]
     },
     {
       id: 8015039496431,
       name: "wrinkles",
-      products: [43216483942639,45951928860911,45951945474287]
+      products: [43216483942639,45951928860911,45951945474287,43216359555311,43216434069743,43216483942639]
     },
   ]
 
   /**
    * Extracts the product ID from the anchor element in the step content.
+   * @param {string} selector - The CSS selector to find the anchor element.
    * @returns {number|null} The extracted product ID, or null if not found.
    */
-  function processLinkAnchor() {
-    let linkAnchorLandingProcces = document.querySelector('.step_content .btn-atc.submit_btn');
-    if(linkAnchorLandingProcces){
-      const href = linkAnchorLandingProcces.getAttribute('href');
+
+  function processLinkAnchor( selector ) {
+    let proccessLinkAnchor = document.querySelector(selector);
+    if(proccessLinkAnchor){
+      const href = proccessLinkAnchor.getAttribute('href');
       const productId = href.match(/id=(\d+)/)[1];
       return Number(productId);
     } else {
       return null;
     }
-  
   }
 
   /**
    * Updates the active upsell element based on the product ID.
-   * @param {Array} dataInformation - The upsell data array.
+   * @param {Array} dataInformation - The array containing upsell data.
+   * @param {string} selector - The CSS selector to identify the anchor element.
+   * @param {HTMLElement} popupElement - The popup element containing upsell cards.
    */
 
-  const handleUpsellElement = (dataInformation) => {
-    const productId = processLinkAnchor();
+  const handleUpsellElement = (dataInformation, selector, popupElement) => {
+    const productId = processLinkAnchor(selector);
     if (!productId) return;
 
     // Find matching upsell data based on product ID
     const { id } = dataInformation.find(item => item.products.includes(productId)) ?? {};
-
+  
     // Remove 'active' class from all upsell elements
-    const allUpsellElements = document.querySelectorAll('.popupsell-card.active');
+    const allUpsellElements = popupElement.querySelectorAll('.popupsell-card.active');
     allUpsellElements.forEach((element) => element.classList.remove('active'));
 
     // Activate the corresponding upsell card
-    const upsellElement = document.querySelector(`.popupsell-card[data-product-id="${id}"]`);
-    upsellElement?.classList.add('active');
+    const upsellElement = popupElement.querySelector(`.popupsell-card[data-product-id="${id}"]`);
+    if (upsellElement) {
+      upsellElement.classList.add('active');
+    } else {
+      console.error(`Upsell card with product ID ${id} not found in the active popup.`);
+    }
   }
 
     /**
-   * Adds a product to the cart via AJAX.
-   * @param {number} productId - The ID of the product to add.
+   * Adds a product to the cart using AJAX.
+   * @param {number} productIdFirstVariant - The ID of the product to add to the cart.
+   * @param {string} ajaxSelector - The selector for triggering the cart refresh.
    */
-  const addToCartUpsell = async (productId) => {
+  const addToCartUpsell = async (productIdFirstVariant, ajaxSelector) => {
+    console.log('productId add to cart', productIdFirstVariant)
     let formData = {
       'items': [{
-        'id': productId,
+        'id': productIdFirstVariant,
         'quantity': 1,
         "properties": {
             "_popup_uspell": "true",
@@ -1622,9 +1630,9 @@ if(openPopupUpsell && openPopupUpsell.dataset?.popupEnabled) {
     });
 
     if (response.ok) {
-      let linkAnchorLandingProcces = document.querySelector('.step_content .btn-atc.submit_btn');
-      linkAnchorLandingProcces.click();
-      popupUpsell.style.display = 'none';
+      let ajaxContainer = document.querySelector(ajaxSelector);
+      ajaxContainer.click();
+      popupUpsellMain.forEach((element) => element.style.display = '');
 
     } else {
       console.error('Error adding product to cart');
@@ -1632,82 +1640,82 @@ if(openPopupUpsell && openPopupUpsell.dataset?.popupEnabled) {
 
   };
 
+   /**
+   * Closes the upsell popup and optionally triggers a click on an anchor element.
+   * @param {string} ajaxSelector - The selector for triggering the cart refresh.
+   */
+   const closePopup = ( ajaxSelector ) => {
+    let ajaxContainer = document.querySelector(ajaxSelector);
+    if (ajaxContainer) {
+      ajaxContainer.click();
+    }
+    popupUpsellMain.forEach((element) => element.style.display = '');
+  };
+
   // Event listener for upsell buttons to add a product to the cart
   if(popupUpsellButtons && popupUpsellButtons.length > 0){
     popupUpsellButtons.forEach((button) => {
       button.addEventListener('click', (event) => {
         const target = event.target.closest('[data-product-id]'); // Find the closest element with the data-product-id attribute
-        let productId = null;
+        const ajaxSelector = button.dataset.ajaxSelector;
   
         if (!target || !target.dataset.productId) {
           productId = 43821069435119; // ID of the default product
         } else {
           productId = Number(target.dataset.productId);
         }
-        addToCartUpsell(productId);
-      });
-    });
-  }
-
-  // Initial handling of the upsell element
-  handleUpsellElement(dataInformationUpsell);
-
-  /**
-   * Closes the upsell popup and triggers the anchor button click if it exists.
-   */
-  const closePopup = () => {
-    const linkAnchorLandingProcess = document.querySelector('.step_content .btn-atc.submit_btn');
-    if (linkAnchorLandingProcess) {
-      linkAnchorLandingProcess.click();
-    }
-    popupUpsell.style.display = 'none';
-  };
-
-  // Update upsell elements when the serum offer container changes
-  if (serumOfferContainer) {
-    serumOfferContainer.addEventListener('change', (event) => {
-      handleUpsellElement(dataInformationUpsell);
-    });
-  }
-
-  // Update upsell elements when a serum offer label is clicked
-  if (serumOfferLabel && serumOfferLabel.length > 0) {
-    serumOfferLabel.forEach((container) => {
-      container.addEventListener('click', () => {
-        handleUpsellElement(dataInformationUpsell);
+        addToCartUpsell(productId, ajaxSelector);
       });
     });
   }
 
   // Open the upsell popup
   if (openPopupUpsell) {
-    openPopupUpsell.addEventListener('click', () => {
-      if (popupUpsell) {
-        popupUpsell.style.display = 'flex';
-      }
+    openPopupUpsell.forEach((button) => {
+      button.addEventListener('click', () => {
+        const { popupReferrer, ajaxSelector } = button.dataset;
+        const popupElement = document.querySelector(`[data-popup-referrer="${popupReferrer}"]`);
+        if (popupElement) {
+          popupElement.style.display = 'flex';
+          handleUpsellElement(dataInformationUpsell, ajaxSelector, popupElement);
+        } else {
+          console.error('Popup element not found');
+        }
+      });
     });
   }
 
   // Close the upsell popup
   if (closePopupUpsell) {
-    closePopupUpsell.addEventListener('click', closePopup);
+    closePopupUpsell.forEach((button) => {
+      const { ajaxSelector } = button.dataset;
+      button.addEventListener('click', () => {
+        closePopup(ajaxSelector);
+      });
+    });
   }
 
   // Close the upsell popup when the "no thanks" buttons are clicked
   if (popupUpsellNothanks && popupUpsellNothanks.length > 0) {
     popupUpsellNothanks.forEach((button) => {
-      button.addEventListener('click', closePopup);
+      const { ajaxSelector } = button.dataset;
+      button.addEventListener('click', () =>{
+        closePopup(ajaxSelector);
+      });
     });
   }
 
   // Close the upsell popup when clicking outside the wrapper
-  if (popupUpsell) {
-    popupUpsell.addEventListener('click', (e) => {
-      if (popupUpsellWrapper && !popupUpsellWrapper.contains(e.target)) {
-        closePopup();
-      }
+  if (popupUpsellMain) {
+    popupUpsellMain.forEach((element) => {
+      element.addEventListener('click', (event) => {
+        const { ajaxSelector } = element.dataset;
+        if (popupUpsellWrapper && !popupUpsellWrapper.contains(event.target)) {
+          closePopup(ajaxSelector);
+        }
+      });
     });
   }
 }
 
-/* end upsell popup micro-infusion-offer and affiliate */
+/* upsell popup micro-infusion-offer and affiliate end */

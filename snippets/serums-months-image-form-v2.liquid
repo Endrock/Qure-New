@@ -324,18 +324,24 @@
                                     </div>
                                 </div>
 
-                                {% render 'pdm-popup-upsell-landing' %}
+                                {% if section.settings.popup_micro_infusion_enabled and page.handle == 'qure-microinfusion-offer' or page.handle == 'qure-micro-infusion-landing-page-affiliate' %}
+                                    {% render 'pdm-popup-upsell-landing' 
+                                        referrer: "pdm_serums_m_image_form_v2", 
+                                        ajax_selector:".image-ajax-v2-container .btn.btn-atc" 
+                                    %}
+                                {% endif %}
 
-                                <div class="step_content mb-3 pt-0 step_btn upsell_popup_anchor_hover">
+                                
+                                <div class="step_content mb-3 pt-0 step_btn upsell_popup_anchor_hover image-ajax-v2-container">
 
-                                    {% if section.settings.popup_micro_infusion_enabled %}     
-                                        {% if page.handle == 'qure-microinfusion-offer' or page.handle == 'qure-micro-infusion-landing-page-affiliate' %}
-                                            <button 
-                                                data-popup-enabled="{{ section.settings.popup_micro_infusion_enabled }}"
-                                                id="openPopupUpsell" 
-                                                class="upsell_popup_btn"></button>
-                                        {% endif %}
-                                    {% endif %}
+                                {% if section.settings.popup_micro_infusion_enabled and page.handle == 'qure-microinfusion-offer' or page.handle == 'qure-micro-infusion-landing-page-affiliate' %}
+                                    <button
+                                        data-popup-enabled="{{ section.settings.popup_micro_infusion_enabled }}"
+                                        data-popup-referrer="pdm_serums_m_image_form_v2"
+                                        data-ajax-selector=".image-ajax-v2-container .btn.btn-atc"
+                                        class="upsell_popup_btn openPopupUpsell">
+                                        </button>
+                                {% endif %}
                                       
                                     <a class="btn btn-atc submit_btn {{ section_id }}_productButtonObject" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>
                                         <span class="btn_value">Buy Now & SAVE {{ discount_percentage }}%</span>

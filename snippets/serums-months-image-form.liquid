@@ -65,7 +65,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="supply-detail">
+                    <div class="supply-detail" data-form-reference="pdm_serums_m_form">
                         <div class="supply_steps">
                             <div class="step_counter active"><span>1</span></div>
                             <div class="step_block">
@@ -256,17 +256,32 @@
                             </div>
                         </div>
 
+                        {% if section.settings.popup_micro_infusion_enabled %} 
+                            {% render 'pdm-popup-upsell-landing' 
+                                referrer: "pdm_serums_m_image_form", 
+                                ajax_selector: ".image-ajax-container .btn.buy_btn" 
+                            %}
+                        {% endif %}
                         
                         {% assign product = all_products['micro-infusion-3-month-bundle-3x-b-g-serum-3x-e-g-f-serum'] %}
                         {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
                         {% assign divided_price = product.price | divided_by: 4 %}
                         
                         <div class="step_content my-3 step_btn">
-                            <a class="btn btn-lg btn-primary buy_btn mt-3 {{ section_id }}_productButtonObject" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>Buy Now <span
-                                class="savedAmount">& SAVE {{ discount_percentage }}%</span><img src="{{ 'arrow_right.svg' | asset_url }}"
-                                alt="">
-                            </a>
-
+                            <div class="upsell_popup_anchor_hover image-ajax-container">
+                                {% if section.settings.popup_micro_infusion_enabled %}     
+                                    <button 
+                                        data-popup-enabled="{{ section.settings.popup_micro_infusion_enabled }}"
+                                        data-popup-referrer="pdm_serums_m_image_form"
+                                        data-ajax-selector=".image-ajax-container .btn.buy_btn"
+                                        class="upsell_popup_btn openPopupUpsell">
+                                        </button>
+                                {% endif %}
+                                <a class="btn btn-lg btn-primary buy_btn mt-3 {{ section_id }}_productButtonObject" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>Buy Now <span
+                                    class="savedAmount">& SAVE {{ discount_percentage }}%</span><img src="{{ 'arrow_right.svg' | asset_url }}"
+                                    alt="">
+                                </a>
+                            </div>
                             <div class="payment_method">
                                 <p>OR pay 4 monthly payments of <span class="payment_price">{{ divided_price | money_without_trailing_zeros }}</span> with</p>
                                 <div class="pmt_img ps-2">
