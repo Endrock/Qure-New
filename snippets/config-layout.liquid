@@ -28,6 +28,9 @@
     {% when 'page.led-mask-offer-2' %}
         {% assign main_class = 'qurify_lp led_lp' %}
         <link rel="stylesheet" href="{{ 'led_mask_lp.css' | asset_url }}">
+    {% when 'page.led-mask-free-m-i' %}
+        {% assign main_class = 'qurify_lp led_lp led_mask-offer' %}
+        <link rel="stylesheet" href="{{ 'led_mask_lp.css' | asset_url }}">
     {% when 'page.products-guide-page' %}
         {% assign main_class = 'product_guide' %}
         <link rel="stylesheet" href="{{ 'products-guide-page.css' | asset_url }}">

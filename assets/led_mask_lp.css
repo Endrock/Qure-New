@@ -640,16 +640,7 @@
 .offer-lp .thumbsSlider_wrap {
     position: relative;
 }
-.thumbsSlider_wrap .swiper-thumbs .swiper-slide-thumb-active img {
-    border: 1px solid #000;
-    border-radius: 8px;
-    opacity: 1;
-}
-.thumbsSlider_wrap .swiper-thumbs img {
-    border: 1px solid transparent;
-    margin: 0 4px;
-    max-width: 56px;
-}
+
 /* ........... product bundle end............. */
 .led_mask2 .popup_pd-info h4 span.you_save {
     background: #CB0000;
@@ -672,6 +663,21 @@
 .led_mask2 .popup_pd-info h2 {
     margin-top: 5px;
 }
+.see_it_in_action{
+    font-size: 13px;
+}
+.available_until_specific_month{
+    font-size: 13px;
+}
+.free_months{
+    color: #000;
+    font-family: "Canela light";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 40px;
+    letter-spacing: 0.3px;
+}
 /* .include .include_wrap .include_pd-detail .preorder_txt {
     font-family: Poppins;
     font-style: italic;
@@ -684,6 +690,13 @@
     color: #CB0000;
 } */
 @media(max-width:767px) {
+    .green_txt{
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+        letter-spacing: 0.12px;
+    }
     .next_batch_bl.next_batch_highlight h5 {
         font-size: 12px;
     }
@@ -777,7 +790,7 @@
         font-size: 12px;
     }
     .product_bundle .product_details .holiday_spcl p span{
-        font-size: 10px;
+        font-size: 11px;
     }
     .include .product_details {
         padding-top: 30px;
@@ -791,6 +804,11 @@
     }
     .qurify_lp.led_lp .include .product_details p{
         font-size: 12px;
+    }
+    .led_mask-offer.qurify_lp .include .product_details .save_txt {
+        font-size: 11px;
+        width: 100%;
+        text-align: center;
     }
     .include .product-section{
         padding-top: 25px;

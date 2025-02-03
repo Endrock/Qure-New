@@ -172,10 +172,12 @@
                         {% if subscribe_count > 0 %}
                             {%- for block in section.blocks -%}
                                 {% if block.type == 'subscribe' %}
+                                    {% include 'product-extended-subscription-product' product: product, product_custom: false %}
+
+                                    {% assign discount_price_additional = 0 %}
+
                                     {% if block.settings.product != blank %}
-                                        {% include 'product-extended-subscription-product' product: all_products[block.settings.product], product_custom: true %}
-                                    {% else %}
-                                        {% include 'product-extended-subscription-product' product: product, product_custom: false %}
+                                        {%- assign discount_price_additional = all_products[block.settings.product.handle].price | times: 0.7 | money_without_trailing_zeros %}
                                     {% endif %}
 
                                     <div class="subscribe_save_wrapper with_subscription mt-2">
@@ -194,6 +196,7 @@
                                                             {{ block.settings.text 
                                                                 | replace: '[future_price]', future_price 
                                                                 | replace: '[discount_price]', discount_price
+                                                                | replace: '[discount_price_additional]', discount_price_additional
                                                             }}
                                                         {% endif %}
                                                     </label>

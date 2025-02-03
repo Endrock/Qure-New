@@ -8270,6 +8270,10 @@ fieldset:disabled .btn {
     color: rgba(255, 255, 255, .5) !important
 }
 
+.text-grey{
+    color: #b3b3b3;
+}
+
 .text-reset {
     color: inherit !important
 }
@@ -30152,7 +30156,9 @@ p {
 .fw-medium {
     font-weight: 500;
 }
-
+.fw-semibold{
+    font-weight: 600;
+}
 .text-sm {
     font-size: 12px;
 }
@@ -30160,7 +30166,9 @@ p {
 .rounded-20 {
     border-radius: 20px !important;
 }
-
+.rounded-12 {
+    border-radius: 12px !important;
+}
 
 @media(max-width:767px) {
     .title-lg {
@@ -32325,3 +32333,4 @@ picture img {
     max-height: 388px;
     object-fit: contain
 }
+

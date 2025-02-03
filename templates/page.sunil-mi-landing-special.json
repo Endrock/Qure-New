@@ -15,8 +15,8 @@
         "announcement_QmXGJK": {
           "type": "announcement",
           "settings": {
-            "heading": "BUY ONE & GET ONE FREE | Limited Time Offer",
-            "heading_mobile": "Special Offer | BUY ONE & GET ONE FREE",
+            "heading": "Save up to 59% |  Limited time offer",
+            "heading_mobile": "Save up to 59% |  Limited time offer",
             "color": "green",
             "font_size_desktop": 14,
             "font_size_mobile": 13
@@ -171,6 +171,7 @@
         "video_GAjMEW"
       ],
       "settings": {
+        "seo_heading": "",
         "heading": "Ditch The Make-up: Embrace a New Level of Confidence with Micro-Infusion",
         "heading_mobile": "Ditch The Make-up: Embrace a New Level of Confidence with Micro-Infusion",
         "product": "",
@@ -183,7 +184,9 @@
         "selected_design": "old",
         "text_label_real_result_1": "Product",
         "text_label_real_result_2": "Real Results",
-        "text_label_real_result_3": "Dermatologist"
+        "text_label_real_result_3": "Dermatologist",
+        "enable_jump_to_section": true,
+        "text_jump_to_section": "Jump To"
       }
     },
     "featuredin_zWyY3U": {
@@ -268,7 +271,8 @@
         "science_section_block_zcp3g7"
       ],
       "settings": {
-        "heading": ""
+        "heading": "",
+        "custom_cls": ""
       }
     },
     "line_M99hQR": {
@@ -429,9 +433,13 @@
       ],
       "settings": {
         "heading": "Confident skin starts here",
+        "sub_heading": "",
         "classname": "section videosQure",
         "btn": "",
-        "btn_url": ""
+        "btn_url": "",
+        "desk_slide": 6,
+        "mob_slide": 1.7,
+        "slide_space": 10
       }
     },
     "two_column_box_f67akQ": {
@@ -673,6 +681,7 @@
             "image": "shopify://shop_images/results_ellie.webp",
             "heading": "my skin RETURNED to LIFE!",
             "text": "<p>\"I just turned 57 years. My skin was extremely dry and while using this product my skin RETURNED to LIFE! I am so impressed with it! My Coworkers ask me what I use in my skin.. and I tell them. Product easy to use and the needles are better that using a pen for microneedling. This is an amazing product that you will not regret in purchasing it. I really see the change in my skin. Outstanding job QURE!”</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
             "text_country": "United States",
             "client": "Ellie V.",
@@ -685,6 +694,7 @@
             "image": "shopify://shop_images/results_glorija.webp",
             "heading": "The best natural glow",
             "text": "<p>“I was hesitant at first as I didn’t know how much it would hurt but to my surprise it was pretty painless. The 2nd day after the treatment, my skin has the best natural glow!</p><p>I was also happy to to see how much my pigmentation had lightened after 3rd treatment :) I switch between the serums depending on how my skin is before the treatment.”</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/australia_f.webp",
             "text_country": "Australia",
             "client": "Glorija",
@@ -697,6 +707,7 @@
             "image": "shopify://shop_images/results_mona.webp",
             "heading": "Fade after just two treatments",
             "text": "<p>“I personally think my products absorbed better, my skin looks a bit brighter and that larger acne scar on my right cheek has started to fade after just TWO treatments!”</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
             "text_country": "United States",
             "client": "Mona P.",
@@ -709,6 +720,7 @@
             "image": "shopify://shop_images/results_ann.webp",
             "heading": "How easy it is to use",
             "text": "<p>\"I heard about micro-infusion in clinics but couldn’t afford to fork out hundreds of dollars for a treatment. So when I saw this online I jumped at buying it instantly. Yes, it doesn’t stamp in botox and filler BUT personally I LOVE the results and how easy it is to use myself at home. It works great for my skin, I have noticed my skin texture is much smoother and brighter.”</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/australia_f.webp",
             "text_country": "Australia",
             "client": "Ann",
@@ -721,6 +733,7 @@
             "image": "shopify://shop_images/Jenn_Nay_b_a.png",
             "heading": "Works better then I imagined!",
             "text": "<p>“I am really stunned by how well this product works. I have had professional micro-needling and I wanted the benefits without the downtime. I did my treatment, went to bed and woke up the next morning and was ready to go. My skin looks better than it has in years.”</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
             "text_country": "United States",
             "client": "Jennifer Nay",
@@ -733,6 +746,7 @@
             "image": "shopify://shop_images/results-Ramandeep.png",
             "heading": "I definitely see a difference",
             "text": "<p>“I have done 2 treatments - 1 for rejuvenating and 2 for hydration with 3 week gap in between treatments. I definitely see a difference in before and after pictures. I am sure I need 4-8 more treatments but this did make a difference.”</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
             "text_country": "United States",
             "client": "Ramandeep",
@@ -745,6 +759,7 @@
             "image": "shopify://shop_images/results_ela.webp",
             "heading": "Shocked at the results",
             "text": "<p>\"Shocked at the results after just one treatment! I’m not one to usually leave reviews... but I was shocked at how my skin looked the morning after my first treatment!</p><p>Texture was soooo much smoother, my skin looked clear, glowy and healthy. The system was so easy to use and I can’t wait until my next treatment.”</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
             "text_country": "United States",
             "client": "Ela O.",
@@ -757,6 +772,7 @@
             "image": "shopify://shop_images/results_jess1.webp",
             "heading": "Totally worth it!!!",
             "text": "<p>“I committed to the 3 month saver bundle and after 6 treatments (2 weeks apart) I’m SO happy with the results!!! My pores are smaller and I have mainly noticed a difference in my skin texture.</p><p>My skin goes a little red straight after the treatment but that quickly goes away. It’s a little uncomfortable when I do it on my forehead but it’s fine everywhere else. Totally worth it!!!”</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
             "text_country": "United States",
             "client": "Jess",
@@ -769,6 +785,7 @@
             "image": "shopify://shop_images/results_andrea-a.webp",
             "heading": "Absolutely love it!",
             "text": "<p>“I have used many topicals to help with post acne marks. This micro-infusion system has given me the most consistent results. Absolutely love it!”</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
             "text_country": "United States",
             "client": "Andrea A.",
@@ -781,6 +798,7 @@
             "image": "shopify://shop_images/results_priya.webp",
             "heading": "Plumper, more hydrated!",
             "text": "<p>“After the first use of EGF, my skin was plumper, more hydrated and skin tone improved radically, literally the next day. Love this product, will definitely be purchasing more as its really helped smooth out the fine lines also”</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/england_f.webp",
             "text_country": "United Kingdom",
             "client": "Priya P.",
@@ -793,6 +811,7 @@
             "image": "shopify://shop_images/results_chelsea.webp",
             "heading": "Amazing results!",
             "text": "<p>\"Amazing results. I am just in shock at how great my skin is looking. This stuff has been amazing for hyperpigmentation and also some hormonal cystic acne. I will be continuing to support this business because it has brought the skin I know back. I was at my wits end with a hormonal breakout and bad hyperpigmentation.\"</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
             "text_country": "United States",
             "client": "Chelsea J.",
@@ -805,6 +824,7 @@
             "image": "shopify://shop_images/Shelby_F.png",
             "heading": "Wow amazing",
             "text": "<p>\"Just using this product once my skin looks and feels healthy! I’ve also had acne scars for about 5 years now and this fixed them I couldn’t believe it! Can’t wait to do it again in 2 weeks!\"</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
             "text_country": "United States",
             "client": "Shelby F.",
@@ -817,6 +837,7 @@
             "image": "shopify://shop_images/Audrey_M.png",
             "heading": "Microneedling has been a skin saver!",
             "text": "<p>\"I bought the refill after I initially ran out of my infusion vials. I am so impressed with the results! As an acne sufferer with minor scarring this has been great in reducing overall texture and making my skin truly glow!\"</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
             "text_country": "United States",
             "client": "Audrey M.",
@@ -829,6 +850,7 @@
             "image": "shopify://shop_images/Shelly_S.png",
             "heading": "Looking better and better",
             "text": "<p>\"I have used the Qure Microneedleing system for 3 monthly treatments. The results are clearer, plumper and firmer skin. With further treatments I am looking forward to looking better and better.\"</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
             "text_country": "United States",
             "client": "Shelly S.",
@@ -841,6 +863,7 @@
             "image": "shopify://shop_images/Jessica_K_b_a.png",
             "heading": "Thrilled with the results!",
             "text": "<p>\"I have been using the mask & microneedling for 6 weeks & am truly impressed with the results. I have noticed a dramatic reduction in redness, an improvement in my dark spots, scars & overall skin tone & firmness, and a smoothing of fine lines & wrinkles.\"</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
             "text_country": "US",
             "client": "Jessica K.",
@@ -853,6 +876,7 @@
             "image": "shopify://shop_images/Linda_b_a_ed1683c6-3cff-4b8a-a7b0-1888bcf2d475.png",
             "heading": "Great “At Home” Treatment",
             "text": "<p>\"I have read extensively on the positive effects of micro needling and have been wanting to try it. The Qure Micro-Infusion (Hydra-Soothing) option is an excellent at home way to get the benefits of micro needling without having to leave home! I have been doing a treatment about every 2 - 3 weeks for a few months and am gradually noticing an improvement in the overall appearance of my skiing, reduction in fine lines as well as a softening with the vertical wrinkles around my mouth. I love it!!\"</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
             "text_country": "United States",
             "client": "Linda L.",
@@ -865,6 +889,7 @@
             "image": "shopify://shop_images/Petrina.png",
             "heading": "Rejuvenating Micro Infusion System",
             "text": "<p>\"I’m thrilled with the Qure Rejuvenating Micro Infusion System! After just three months of use, I’ve seen a noticeable reduction in fine lines on my forehead and a significant improvement in the depth of a deep scar on my face. The results have been so impressive that I’ve already purchased a refill to continue the treatment for another three months. Highly recommend this product for anyone looking to enhance their skin’s appearance.\"</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
             "text_country": "United States",
             "client": "Petrina Y.",
@@ -877,6 +902,7 @@
             "image": "shopify://shop_images/Before_and_after_m.i.png",
             "heading": "Finally! A product that actually works!",
             "text": "<p>\"I can't say enough good things about Qure! I have tried everything to even my skin tone, minimize pores and skin texture, & reduce sun spots on my face. I was very skeptical upon ordering Qure products--let's face it, lots of products say they are the miracle cure we have all been looking for, but and they do literally nothing! Qure does exactly what it says it will do and quickly! The process is easy and pretty painless. I will be a product buyer for life!\"</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
             "text_country": "United States",
             "client": "Melanie B.",
@@ -889,6 +915,7 @@
             "image": "shopify://shop_images/B_A_alexandra.png",
             "heading": "Cured my PP skin!",
             "text": "<p>\"Tried top shelf skin routines but none of them were able to help me with my PP skin issues (severe acne, scaring, dark spots, you name it! It was worse then puberty! But it's my second month and my skin is already 90% back to normal! Subscribe to this and stick with it! Customer service is also top notch the best!\"</p>",
+            "see-more": "",
             "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
             "text_country": "United States",
             "client": "Alexandra R.",
@@ -928,7 +955,8 @@
     "liquid_9GnXBn": {
       "type": "liquid",
       "settings": {
-        "code": "<!-- Difference table with slider start-->\n<div class=\"compare_section section bg-yellow\">\n    <div class=\"container\">\n        <div class=\"section_header text-start text-md-center\">\n            <h2 class=\"title-lg\">\n                Give yourself a “Clinic Quality” glow up without the “Clinical Prices”\n            </h2>\n        </div>\n        <div class=\"compare_listRow\">\n            <div class=\"compare_listHeadings\">\n                <div class=\"compare_listHeader\">\n                    <div class=\"compare__img\"></div>\n                </div>\n                <div class=\"compare__titleBlock\">\n                    <h4 class=\"compare__title\"><strong>Let’s Compare</strong></h4>\n                </div>\n                <div class=\"compare_listitems\">\n                    <div class=\"compare_listBlock\">Results in</div>\n                    <div class=\"compare_listBlock\">Customized</div>\n                    <div class=\"compare_listBlock active\">Skin Safe</div>\n                    <div class=\"compare_listBlock\">Cost</div>\n                </div>\n            </div>\n            <div class=\"compare_list_column\">\n                <div class=\"swiper-container compare-slider twa__swiper\" id=\"twa__swiper-compareSlider\"\n                    data-section-id=\"compareSlider\" data-autoplay=\"false\" data-loop=\"true\"\n                    data-centerslide=\"false\" data-mobile=\"1\" data-tablet=\"3\" data-desktop=\"3\" data-spacing=\"0\"\n                    data-arrowleft=\"compareSlider-swiper-prev\" data-arrowright=\"compareSlider-swiper-next\">\n                    <div class=\"swiper-wrapper\">\n                        <!-- slide start -->\n                        <div class=\"swiper-slide\">\n                            <div class=\"compare_list_elements active\">\n                                <div class=\"compare_listHeader\">\n                                    <div class=\"compare__img\"><img src=\"{{ 'compare_micro.webp' | asset_url }}\" alt=\"\"\n                                            class=\"img-fluid d-block mx-auto\"></div>\n                                </div>\n                                <div class=\"compareTxt__element\">\n                                    <div class=\"compare__titleBlock\">\n                                        <h4 class=\"compare__title text-center\"><strong>Qure</strong><br />\n                                            Micro-Infusion System</h4>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>As little as 1-2 days</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Tailored to your skin needs</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Minimal downtime & Virtually Painless</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Less than $20 per treatment</h5>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"swiper-slide\">\n                            <div class=\"compare_list_elements\">\n                                <div class=\"compare_listHeader\">\n                                    <div class=\"compare__img\"><img src=\"{{ 'compare_cs_1.png' | asset_url }}\" alt=\"\"\n                                            class=\"img-fluid d-block mx-auto\"></div>\n\n                                </div>\n                                <div class=\"compareTxt__element\">\n                                    <div class=\"compare__titleBlock\">\n                                        <h4 class=\"compare__title text-center\">Micro-Infusion\n                                            <br /><strong>Clinic</strong> Treatment\n                                        </h4>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>As little as 1-2 days</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Tailored to your skin needs</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Minimal downtime</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'cross_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Around $300 per treatment</h5>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"swiper-slide\">\n                            <div class=\"compare_list_elements\">\n                                <div class=\"compare_listHeader\">\n                                    <div class=\"compare__img\"><img src=\"{{ 'compare_cs_2.png' | asset_url }}\" alt=\"\"\n                                            class=\"img-fluid d-block mx-auto\"></div>\n                                </div>\n                                <div class=\"compareTxt__element\">\n                                    <div class=\"compare__titleBlock\">\n                                        <h4 class=\"compare__title text-center\">Derma Roller <br />At-Home\n                                            Treatment</h4>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'cross_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>A few days to see results</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'cross_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Not customised to skin</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'cross_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Potential side effects</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>\n                                            < $10 per treatment</h5>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n\n                    </div>\n                    <div class=\"swiper-pagination\"></div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n<!-- Difference table with slider end-->"
+        "code": "<!-- Difference table with slider start-->\n<div class=\"compare_section section bg-yellow\">\n    <div class=\"container\">\n        <div class=\"section_header text-start text-md-center\">\n            <h2 class=\"title-lg\">\n                Give yourself a “Clinic Quality” glow up without the “Clinical Prices”\n            </h2>\n        </div>\n        <div class=\"compare_listRow\">\n            <div class=\"compare_listHeadings\">\n                <div class=\"compare_listHeader\">\n                    <div class=\"compare__img\"></div>\n                </div>\n                <div class=\"compare__titleBlock\">\n                    <h4 class=\"compare__title\"><strong>Let’s Compare</strong></h4>\n                </div>\n                <div class=\"compare_listitems\">\n                    <div class=\"compare_listBlock\">Results in</div>\n                    <div class=\"compare_listBlock\">Customized</div>\n                    <div class=\"compare_listBlock active\">Skin Safe</div>\n                    <div class=\"compare_listBlock\">Cost</div>\n                </div>\n            </div>\n            <div class=\"compare_list_column\">\n                <div class=\"swiper-container compare-slider twa__swiper\" id=\"twa__swiper-compareSlider\"\n                    data-section-id=\"compareSlider\" data-autoplay=\"false\" data-loop=\"true\"\n                    data-centerslide=\"false\" data-mobile=\"1\" data-tablet=\"3\" data-desktop=\"3\" data-spacing=\"0\"\n                    data-arrowleft=\"compareSlider-swiper-prev\" data-arrowright=\"compareSlider-swiper-next\">\n                    <div class=\"swiper-wrapper\">\n                        <!-- slide start -->\n                        <div class=\"swiper-slide\">\n                            <div class=\"compare_list_elements active\">\n                                <div class=\"compare_listHeader\">\n                                    <div class=\"compare__img\"><img src=\"{{ 'compare_micro.webp' | asset_url }}\" alt=\"\"\n                                            class=\"img-fluid d-block mx-auto\"></div>\n                                </div>\n                                <div class=\"compareTxt__element\">\n                                    <div class=\"compare__titleBlock\">\n                                        <h4 class=\"compare__title text-center\"><strong>Qure</strong><br />\n                                            Micro-Infusion System</h4>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>As little as 1-2 days</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Tailored to your skin needs</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Minimal downtime & Virtually Painless</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Less than $20 per treatment</h5>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"swiper-slide\">\n                            <div class=\"compare_list_elements\">\n                                <div class=\"compare_listHeader\">\n                                    <div class=\"compare__img\"><img src=\"{{ 'compare_cs_1.png' | asset_url }}\" alt=\"\"\n                                            class=\"img-fluid d-block mx-auto\"></div>\n\n                                </div>\n                                <div class=\"compareTxt__element\">\n                                    <div class=\"compare__titleBlock\">\n                                        <h4 class=\"compare__title text-center\">Micro-Infusion\n                                            <br /><strong>Clinic</strong> Treatment\n                                        </h4>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>As little as 1-2 days</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Tailored to your skin needs</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Minimal downtime</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'cross_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Around $300 per treatment</h5>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"swiper-slide\">\n                            <div class=\"compare_list_elements\">\n                                <div class=\"compare_listHeader\">\n                                    <div class=\"compare__img\"><img src=\"{{ 'compare_cs_2.png' | asset_url }}\" alt=\"\"\n                                            class=\"img-fluid d-block mx-auto\"></div>\n                                </div>\n                                <div class=\"compareTxt__element\">\n                                    <div class=\"compare__titleBlock\">\n                                        <h4 class=\"compare__title text-center\">Derma Roller <br />At-Home\n                                            Treatment</h4>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'cross_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>A few days to see results</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'cross_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Not customised to skin</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'cross_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Potential side effects</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>\n                                            < $10 per treatment</h5>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n\n                    </div>\n                    <div class=\"swiper-pagination\"></div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n<!-- Difference table with slider end-->",
+        "popup_micro_infusion_enabled": true
       }
     },
     "compare_rGUQ9y": {
@@ -965,10 +993,12 @@
       ],
       "settings": {
         "classname": "beauty_skincare section",
+        "sub_head": "",
         "heading": "Typically more effective and safer than other at-home needling devices",
         "heading_reduced": "",
         "text": "<p>Unlike at-home needle roller devices, Micro-infusion requires little to <strong>no downtime,</strong>is <strong>virtually painless, </strong>and minimizes risk of infection and irritation.</p>",
-        "text_reduced": ""
+        "text_reduced": "",
+        "design": false
       }
     },
     "guide_xibEe6": {
@@ -1180,7 +1210,8 @@
     "liquid_86wfLd": {
       "type": "liquid",
       "settings": {
-        "code": "{% render 'serums-months-image-landing-form-special' with section_id: section.id %}"
+        "code": "{% render 'serums-months-image-landing-form-special' with section_id: section.id %}",
+        "popup_micro_infusion_enabled": true
       }
     },
     "compare_box_p4B7wy": {

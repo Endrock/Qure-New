@@ -30,7 +30,12 @@
                         </div>
                        
                         <div class="fav_pdt_name">{{ block.settings.pd_name }}</div>
-                        <div class="fav_pdt_price">{% if block.settings.from != blank %} from {% endif %} <span>{{ block.settings.price }}</span></div>
+                        <div class="fav_pdt_price">{% if block.settings.from != blank %} from {% endif %} 
+                            {% if block.settings.product != blank %}
+                                {% assign product = all_products[block.settings.product.handle] %}
+                                <span>{{ product.price | money_without_trailing_zeros }}</span>
+                            {% endif %}
+                        </div>
                     </div>
                     {% if block.settings.bestseller != blank %}
                     <div class="fav_best_seller">Bestseller</div>
@@ -89,9 +94,9 @@
                     "default" :false
                 },
                 {
-                    "type": "text",
-                    "id": "price",
-                    "label": "t:common.price.label"
+                    "type": "product",
+                    "id": "product",
+                    "label": "t:common.product.label"
                 },
                 {
                     "type": "checkbox",

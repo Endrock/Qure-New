@@ -12,7 +12,8 @@
     "liquid_7eJk8K": {
       "type": "liquid",
       "settings": {
-        "code": "<div id=\"shower_filter\"></div>"
+        "code": "<div id=\"shower_filter\"></div>",
+        "popup_micro_infusion_enabled": true
       }
     },
     "main": {
@@ -34,15 +35,15 @@
         "supply_CTrVRQ": {
           "type": "supply",
           "settings": {
-            "heading": "Next batch ships 28th of January 2025:",
-            "heading_mobile": "Next batch ships 01/28:",
+            "heading": "Next batch ships 17th of February 2025:",
+            "heading_mobile": "Next batch ships 02/17:",
             "text": "<p>Order now and secure yours from the next shipment.</p>",
             "first_option_date": "November 20th",
             "first_option_text": "SOLD OUT",
             "first_option_percent": 100,
-            "second_option_date": "January 28th",
-            "second_option_text": "32% Reserved",
-            "second_option_percent": 35,
+            "second_option_date": "February 17th",
+            "second_option_text": "54% Reserved",
+            "second_option_percent": 55,
             "third_option_date": "March 30th",
             "third_option_text": "In Production",
             "third_option_percent": 0
@@ -69,6 +70,7 @@
           "settings": {
             "heading": "Subscribe & save 30%",
             "text": "<p>3 month replacement filter delivers every 90 days for just [discount_price]. Skip or cancel anytime.<a href=\"https://crm.aronwebsolutions.com/Qure-Html-2.0/Qure-Html-2.0/shower-filter.html\">See more details</a></p>",
+            "product": "",
             "plan": "6286115055",
             "discount": 30
           }

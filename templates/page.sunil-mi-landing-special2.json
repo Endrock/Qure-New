@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "header_landing_yzqaEc": {
       "type": "header-landing",
@@ -15,8 +15,8 @@
         "announcement_QmXGJK": {
           "type": "announcement",
           "settings": {
-            "heading": "SAVE UP TO 50% | Holiday Offer",
-            "heading_mobile": "SAVE UP TO 50% | Holiday Offer",
+            "heading": "SAVE UP TO 59% | Limited time Offer",
+            "heading_mobile": "SAVE UP TO 59% | Limited time Offer",
             "color": "green",
             "font_size_desktop": 14,
             "font_size_mobile": 13
@@ -54,7 +54,7 @@
         "navigation_link_wMtKmt"
       ],
       "settings": {
-        "button_label": "HOLIDAY OFFER SAVE 50%",
+        "button_label": "HOLIDAY OFFER SAVE 59%",
         "button_url": "#productSubscription"
       }
     },
@@ -72,7 +72,7 @@
         "button_L9q6wE": {
           "type": "button",
           "settings": {
-            "button_label": "HOLIDAY OFFER SAVE 50%",
+            "button_label": "HOLIDAY OFFER SAVE 59%",
             "button_url": "#productSubscription"
           }
         },
@@ -379,7 +379,7 @@
         "button_rznYjF": {
           "type": "button",
           "settings": {
-            "button_label": "HOLIDAY OFFER SAVE 50%",
+            "button_label": "HOLIDAY OFFER SAVE 59%",
             "button_url": "#productSubscription"
           }
         }
@@ -1303,7 +1303,7 @@
       "settings": {
         "heading": "We make science-backed skincare easily accessible and affordable",
         "text": "<p><strong>“Even my esthetician is hooked!</strong> And I can now visit beauty clinics less often.”</p><ul><li>Helps <strong>boost</strong> serum absorption</li><li>Minimal to <strong>no downtime</strong></li><li>Virtually <strong>painless</strong></li><li><strong>Easy to use,</strong> 5-minute treatment</li><li><strong>2-in-1 action:</strong> stimulate & infuse</li></ul>",
-        "button_label": "HOLIDAY OFFER SAVE 50%",
+        "button_label": "HOLIDAY OFFER SAVE 59%",
         "button_url": "#productSubscription",
         "underbutton_text_left": "90-Day Money Back Guarantee",
         "underbutton_text_right": "Free World-Wide Shipping Over $100"
@@ -1684,7 +1684,7 @@
         "code_fXbXkm": {
           "type": "code",
           "settings": {
-            "code": "<div class=\"mw-486 mb-3 mb-md-0 mt-4 mt-md-0\">\n                        <a class=\"btn btn-lg btn-primary mb-3 d-flex justify-content-center\"\n                            href=\"#productSubscription\">BUY NOW &amp; SAVE UP TO 50% </a>\n                        <div class=\"progress_bar d-block d-md-block\">\n                            <div class=\"loading_bar_wrap\">\n                                <div class=\"loading_bar\" style=\"width:52%\">\n                                </div>\n                            </div>\n                            <p>Selling Out FAST</p>\n                        </div>\n                        <div class=\"shipping shipping_bg bg-transparent my-3 pe-0  ps-2\">\n                            <div class=\"s_bx\">\n                                <img src=\"{{ '90_days.svg' | asset_url }}\" alt=\"\">\n                                <p>90-Day Money Back<br> Guarantee </p>\n                            </div>\n                            <div class=\"s_bx\">\n                                <img src=\"{{ 'shipping.svg' | asset_url }}\" alt=\"\">\n                                <p>Free World-Wide<br> Shipping Over $100</p>\n                            </div>\n                        </div>\n                    </div>"
+            "code": "<div class=\"mw-486 mb-3 mb-md-0 mt-4 mt-md-0\">\n                        <a class=\"btn btn-lg btn-primary mb-3 d-flex justify-content-center\"\n                            href=\"#productSubscription\">BUY NOW &amp; SAVE UP TO 59% </a>\n                        <div class=\"progress_bar d-block d-md-block\">\n                            <div class=\"loading_bar_wrap\">\n                                <div class=\"loading_bar\" style=\"width:52%\">\n                                </div>\n                            </div>\n                            <p>Selling Out FAST</p>\n                        </div>\n                        <div class=\"shipping shipping_bg bg-transparent my-3 pe-0  ps-2\">\n                            <div class=\"s_bx\">\n                                <img src=\"{{ '90_days.svg' | asset_url }}\" alt=\"\">\n                                <p>90-Day Money Back<br> Guarantee </p>\n                            </div>\n                            <div class=\"s_bx\">\n                                <img src=\"{{ 'shipping.svg' | asset_url }}\" alt=\"\">\n                                <p>Free World-Wide<br> Shipping Over $100</p>\n                            </div>\n                        </div>\n                    </div>"
           }
         }
       },

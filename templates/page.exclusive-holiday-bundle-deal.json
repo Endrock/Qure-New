@@ -16,7 +16,7 @@
           "type": "announcement",
           "settings": {
             "heading": "Limited Time Only:",
-            "timer": "2025-01-14T23:59:59",
+            "timer": "2025-02-14T23:59:59",
             "timer_next": 7
           }
         },
@@ -90,7 +90,7 @@
           "settings": {
             "heading": "Exclusive Valentine's day bundle",
             "discount": 66,
-            "image": "shopify://shop_images/Exclusive_Valentines_day_bundle.png",
+            "image": "shopify://shop_images/VD-Bundle-hero.png",
             "product_url": "#Pro-Aging-Bundles"
           }
         },
@@ -560,11 +560,11 @@
         "include_njjqWt": {
           "type": "include",
           "settings": {
-            "heading": "Micro-Infusion 3 Month Rejuvenating Bundle",
+            "heading": "Micro-Infusion 3 Month for Dark Spots Bundle",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/MI_6x-rejuv.jpg",
-            "text": "<h5>Rejuvenating Serum Concentrate Ingredients:</h5><p>ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, NIACINAMIDE, PANTHENOL, TRANEXAMIC ACID, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
+            "text": "<h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -574,11 +574,11 @@
         "include_xEBYB3": {
           "type": "include",
           "settings": {
-            "heading": "4 Refill  Rejuvenating Treatments FREE",
+            "heading": "4 Refill Treatments for Dark Spots FREE",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/Rejuvenating.png",
-            "text": "<h5>Rejuvenating Serum Concentrate Ingredients:</h5><p>ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, NIACINAMIDE, PANTHENOL, TRANEXAMIC ACID, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
+            "text": "<h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -621,7 +621,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs_mask.webp",
             "text": "",
-            "count": "91 left",
+            "count": "",
             "hide": false,
             "hide_variants": false,
             "code": ""
@@ -876,14 +876,14 @@
           "type": "product",
           "settings": {
             "product": "fade-firm-bundle-pro",
-            "percent": 28,
+            "percent": 22,
             "media_limit": 0,
             "hide_us": false,
             "recommended_heading": "",
             "recommended_text": "",
             "is_top_rated": false,
-            "is_preorder": true,
-            "preorder_text": "SHIPS LATE JANUARY",
+            "is_preorder": false,
+            "preorder_text": "",
             "classname": "",
             "code": ""
           }
@@ -896,7 +896,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs_mask.webp",
             "text": "",
-            "count": "91 left",
+            "count": "",
             "hide": false,
             "hide_variants": false,
             "code": ""
@@ -980,7 +980,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs_mask.webp",
             "text": "",
-            "count": "91 left",
+            "count": "",
             "hide": false,
             "hide_variants": false,
             "code": ""
@@ -1176,7 +1176,7 @@
             "recommended_text": "",
             "is_top_rated": false,
             "is_preorder": true,
-            "preorder_text": "SHIPS LATE JANUARY",
+            "preorder_text": "SHIPS MID FEBRUARY",
             "classname": "",
             "code": ""
           }
@@ -1203,7 +1203,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs_shower_f.webp",
             "text": "",
-            "count": "Ships Late January",
+            "count": "Ships Mid February",
             "hide": false,
             "hide_variants": false,
             "code": "<div class=\"bfs_tbx_color\">\n                                                <select class=\"form-select form-select-second colorSelector\"\n                                                    aria-label=\"Default select example\">\n                                                    <option value=\"1\" selected>White</option>\n                                                    <option value=\"2\">Black</option>\n                                                </select>\n                                            </div>"
@@ -1315,8 +1315,8 @@
             "recommended_heading": "",
             "recommended_text": "",
             "is_top_rated": false,
-            "is_preorder": false,
-            "preorder_text": "SHIPS LATE JANUARY",
+            "is_preorder": true,
+            "preorder_text": "SHIPS MID FEBRUARY",
             "classname": "",
             "code": ""
           }
@@ -1329,7 +1329,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs_mask.webp",
             "text": "",
-            "count": "91 left",
+            "count": "",
             "hide": false,
             "hide_variants": true,
             "code": ""
@@ -1357,7 +1357,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs-derma-mist.webp",
             "text": "<h5>Dermal Mist</h5><p>Dermatologically Tested, Clinically Tested, Hypoallergenic, Suitable for sensitive skin, Dermatologist approved, Allergy Tested, Non-Irritating</p><h5>Dermal Mist Ingredients List</h5><p>WATER (Aqua)*, CHRYSANTHELLUM INDICUM FLOWER WATER, SODIUM CHLORIDE, SODIUM PHOSPHATE, DISODIUM PHOSPHATE, HYPOCHLOROUS ACID. *Ultra Pure Water.</p>",
-            "count": "",
+            "count": "Ships Mid February",
             "hide": false,
             "hide_variants": false,
             "code": ""
@@ -1398,8 +1398,8 @@
             "recommended_heading": "",
             "recommended_text": "",
             "is_top_rated": true,
-            "is_preorder": false,
-            "preorder_text": "SHIPS LATE JANUARY",
+            "is_preorder": true,
+            "preorder_text": "SHIPS MID FEBRUARY",
             "classname": "",
             "code": ""
           }
@@ -1412,7 +1412,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs_mask.webp",
             "text": "",
-            "count": "91 left",
+            "count": "",
             "hide": false,
             "hide_variants": false,
             "code": ""
@@ -1426,7 +1426,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs-derma-mist.webp",
             "text": "<h5>Dermal Mist</h5><p>Dermatologically Tested, Clinically Tested, Hypoallergenic, Suitable for sensitive skin, Dermatologist approved, Allergy Tested, Non-Irritating.</p><h5>Dermal Mist Ingredients</h5><p>WATER (Aqua)*, CHRYSANTHELLUM INDICUM FLOWER WATER, SODIUM CHLORIDE, SODIUM PHOSPHATE, DISODIUM PHOSPHATE, HYPOCHLOROUS ACID. *Ultra Pure Water.</p>",
-            "count": "",
+            "count": "Ships Mid February",
             "hide": false,
             "hide_variants": false,
             "code": ""
@@ -1462,7 +1462,7 @@
             "recommended_text": "",
             "is_top_rated": false,
             "is_preorder": true,
-            "preorder_text": "SHIPS LATE JANUARY",
+            "preorder_text": "SHIPS MID FEBRUARY",
             "classname": "",
             "code": ""
           }
@@ -1489,7 +1489,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs_shower_f.webp",
             "text": "",
-            "count": "Ships Late January",
+            "count": "Ships Mid February",
             "hide": false,
             "hide_variants": false,
             "code": "<div class=\"bfs_tbx_color\">\n                                                <select class=\"form-select form-select-second colorSelector\"\n                                                    aria-label=\"Default select example\">\n                                                    <option value=\"1\" selected>White</option>\n                                                    <option value=\"2\">Black</option>\n                                                </select>\n                                            </div>"
@@ -1523,8 +1523,8 @@
             "recommended_heading": "",
             "recommended_text": "",
             "is_top_rated": false,
-            "is_preorder": false,
-            "preorder_text": "SHIPS LATE JANUARY",
+            "is_preorder": true,
+            "preorder_text": "SHIPS MID FEBRUARY",
             "classname": "",
             "code": ""
           }
@@ -1537,7 +1537,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs-derma-mist.webp",
             "text": "<h5>Dermal Mist</h5><p>Dermatologically Tested, Clinically Tested, Hypoallergenic, Suitable for sensitive skin, Dermatologist approved, Allergy Tested, Non-Irritating.</p><h5>Dermal Mist Ingredients</h5><p>WATER (Aqua)*, CHRYSANTHELLUM INDICUM FLOWER WATER, SODIUM CHLORIDE, SODIUM PHOSPHATE, DISODIUM PHOSPHATE, HYPOCHLOROUS ACID. *Ultra Pure Water.</p>",
-            "count": "",
+            "count": "Ships Mid February",
             "hide": false,
             "hide_variants": false,
             "code": ""
