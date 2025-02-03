@@ -1709,5 +1709,59 @@ if(openPopupUpsell && openPopupUpsell.dataset?.popupEnabled) {
     });
   }
 }
-
+  
 /* end upsell popup micro-infusion-offer and affiliate */
+
+/* test high contrast mode micro infusion offer and affiliate */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const serum3Month = document.getElementById('3_month');
+  const elementPriceStock = document.querySelector('.pdm_price-stock-left-quantity');
+  const { testHighContrast } = document.body.dataset
+  if ( serum3Month && testHighContrast && elementPriceStock ) {
+    
+    const pdmPriceDifferenceContainer = document.querySelector('#pdm_price-difference-container')
+    const productId = serum3Month.dataset.productId;
+
+     const updatePrices = (htmlContainer) => {
+      const { priceFirst, priceSecond } = htmlContainer.dataset;
+      const textElementPrice3Month = document.querySelector('.pdm_plan-bundle-detail__money.item-1');
+      const textElementPrice2Month = document.querySelector('.pdm_plan-bundle-detail__money.item-2');
+
+      if (textElementPrice3Month) {
+        textElementPrice3Month.textContent = priceFirst;
+      }
+
+      if (textElementPrice2Month) {
+        textElementPrice2Month.textContent = priceSecond;
+      }
+    }
+
+    const getDataStock = async (url) => {
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        console.error("Error fetching stock data:", error);
+        return null;
+      }
+    };
+
+    const updateValueStock = async (element, url) => {
+      const dataStock = await getDataStock(url);
+      if (dataStock) {
+        const message = `${dataStock.data} kits `;
+        element.textContent = message;
+      }
+    };
+
+    updatePrices(pdmPriceDifferenceContainer);
+    const urlStock = `https://webhooks.endrock.software/endrockapi/qureskincare/stock/${productId}`;
+    updateValueStock(elementPriceStock, urlStock);
+
+  }
+
+});
+
+/* end test high contrast mode micro infusion offer and affiliate */
