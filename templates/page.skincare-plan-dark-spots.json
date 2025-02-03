@@ -152,13 +152,23 @@
             "image_card": "shopify://shop_images/image_f0011aed-1bf8-49f4-83a7-4dc18495fcca.jpg",
             "sources": ""
           }
+        },
+        "tip_mRnVgk": {
+          "type": "tip",
+          "settings": {
+            "title": "Exfoliate 1-2 times per week",
+            "description": "<p>With an at-home peel that contains Alpha-Hydroxy Acids (AHAs) like glycolic and lactic acids. This will help remove dead skin that has settled into fine lines, making them less visible.</p>",
+            "image_card": "shopify://shop_images/image_1_30bd618b-5073-4caf-84d2-1a8d30bcf4da.jpg",
+            "sources": ""
+          }
         }
       },
       "block_order": [
         "tip_qdCXLz",
         "tip_8x8iED",
         "tip_WqzmXT",
-        "tip_ChLfdj"
+        "tip_ChLfdj",
+        "tip_mRnVgk"
       ],
       "settings": {
         "section_title": "Skincare is a Lifestyle",
