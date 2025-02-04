@@ -1589,7 +1589,9 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
     if (!productId) return;
 
     // Find matching upsell data based on product ID
-    const { id } = dataInformation.find(item => item.products.includes(productId)) ?? {};
+    const { name, id } = dataInformation.find(item => item.products.includes(productId)) ?? {};
+    
+    // console.log({'productId': productId, "name": name, "id": id})
   
     // Remove 'active' class from all upsell elements
     const allUpsellElements = popupElement.querySelectorAll('.popupsell-card.active');
@@ -1630,9 +1632,10 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
     });
 
     if (response.ok) {
-      let ajaxContainer = document.querySelector(ajaxSelector);
-      ajaxContainer.click();
       popupUpsellMain.forEach((element) => element.style.display = '');
+      let ajaxContainer = document.querySelector(ajaxSelector);
+      // console.log(ajaxContainer)
+      ajaxContainer.click();
 
     } else {
       console.error('Error adding product to cart');
