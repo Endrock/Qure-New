@@ -51,7 +51,7 @@
     "enable_site_gamification": false,
     "enable_free_shipping_treshold": false,
     "enable_product_gift": false,
-    "product_free_gift": "face-serum",
+    "product_free_gift": "",
     "dont_enable_gift_urls": "/pages/led-mask-offer-2\n/pages/q-rejuvalight-pro-offer",
     "copy_get_product_free": "<p>You’re &price-left& away from  <strong>Free &product-title& </strong>worth &product-price&!</p>",
     "icon_product_gift_clean": "shopify://shop_images/Gift-grey1.svg",
@@ -69,10 +69,11 @@
         "blocks": {
           "announcement_TPxBgi": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
-              "heading": "<p><strong>FREE SHIPPING ON ALL ORDERS OVER $100</strong></p>",
+              "heading": "<p><strong>SAVE 66% WITH OUR EXCLUSIVE VALENTINE'S DAY BUNDLE</strong></p>",
               "button_label": "SHOP NOW",
-              "button_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal"
+              "button_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal#Pro-Aging-Bundles"
             }
           },
           "tab_3Wyyea": {
