@@ -539,6 +539,7 @@ const flatingBundleInit = ()=>{
           this.deleteProduct();
           this.showBarresponsive();
           this.bundleToCart();
+          this.updateButtonBundleSavePrice();
         }
         attributeChangedCallback(name, oldValue, newValue) {
           if(name == 'data-bundle-array'){
@@ -678,21 +679,74 @@ const flatingBundleInit = ()=>{
           const price = (this.totalPrice / 100).toFixed(2);
           const discount = (this.totalPrice * this.discount ) / 100;
           const bundlePrice = (price - discount / 100).toFixed(2) ;
+          const saveAmountCalc = Math.abs(bundlePrice - price).toFixed(2);
 
-          const totalPrice = new Intl.NumberFormat('en-US', {
+          const currencySymbol = document.querySelector('[data-card-bundle-product-price-money]').dataset.cardBundleProductPriceMoney;
+
+          const store_currency = window['__cvg_shopify_info']['currency'];
+
+          const totalPrice = new Intl.NumberFormat(window.Shopify.locale, {
             style: 'currency',
-            currency: 'USD',
+            currency: store_currency,
           }).format(price);
 
-          const totalBudle = new Intl.NumberFormat('en-US', {
+          const totalBudle = new Intl.NumberFormat(window.Shopify.locale, {
             style: 'currency',
-            currency: 'USD',
+            currency: store_currency,
           }).format(bundlePrice);
 
-          const elemFullPrice = this.querySelector('.full-price').innerHTML = totalPrice ;
-          const elemBundlePrice = this.querySelector('.discount-price').innerHTML = totalBudle ;
+          const saveBundlePrice = new Intl.NumberFormat(window.Shopify.locale, {
+            style: 'currency',
+            currency: store_currency,
+          }).format(saveAmountCalc);
 
+          const cleanTotalPrice = totalPrice.replace('$', '');
+          const totalPriceWithCurrency = currencySymbol.replace(/\d*\.?\d+/, cleanTotalPrice);
+
+          const cleanTotalBudle = totalBudle.replace('$', '');
+          const totalBundleWithCurrency = currencySymbol.replace(/\d*\.?\d+/, cleanTotalBudle);
+
+          const cleanSaveBundlePrice = saveBundlePrice.replace('$', '');
+          const totalSaveBundlePriceWithCurrency = currencySymbol.replace(/\d*\.?\d+/, cleanSaveBundlePrice);
+
+          this.querySelector('.price-discount').classList.toggle('hidden-price', price == 0);
+          this.querySelector('.full-price').innerHTML = price != 0 ? totalPriceWithCurrency :  '-';
+          this.querySelector('.discount-price').innerHTML = bundlePrice != 0 ? totalBundleWithCurrency : '';
+          this.querySelector('.bundle-discount__save-price').innerHTML = saveAmountCalc != 0 ? totalSaveBundlePriceWithCurrency : '';
         }
+
+        updateButtonBundleSavePrice () {
+          let price = 0;
+          let discount = 0;
+          document.querySelectorAll('[data-card-bundle-product-price]').forEach((card) => {
+              const productPrice = card.getAttribute('data-card-bundle-product-price')
+              price += parseInt(productPrice);
+          });
+
+          const discountCards = this.querySelectorAll('[data-discount-percentage]');
+          const lastDiscountCard = discountCards[discountCards.length - 1];
+          discount = lastDiscountCard.getAttribute('data-discount-percentage');
+
+          const priceCalc = (price / 100).toFixed(2);
+          const discountCalc = (price * discount ) / 100;
+          const bundlePriceCalc = (priceCalc - discountCalc / 100).toFixed(2) ;
+          const saveAmountCalc = Math.abs(bundlePriceCalc - priceCalc).toFixed(2);
+
+          const currencySymbol = document.querySelector('[data-card-bundle-product-price-money]').dataset.cardBundleProductPriceMoney;
+          const store_currency = window['__cvg_shopify_info']['currency'];
+
+          const totalDiscount = new Intl.NumberFormat(window.Shopify.locale, {
+            style: 'currency',
+            currency: store_currency,
+          }).format(saveAmountCalc);
+
+          const cleanTotalDiscount = totalDiscount.replace('$', '');
+          const totalDiscountWithCurrency = currencySymbol.replace(/\d*\.?\d+/, cleanTotalDiscount);
+
+          const buttonSectionPrice = document.querySelector('.btn-section .price');
+          if(buttonSectionPrice) buttonSectionPrice.innerHTML = totalDiscountWithCurrency;
+        }
+
       }
       window.customElements.define('flating-bundle', flatingBundle );
     }

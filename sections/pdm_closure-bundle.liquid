@@ -68,10 +68,11 @@
             {{ card.settings.text_check_strong }}
           </div>
           <div class="cont-img">
+            {% assign image_alt = "image" |  append: product.title %}
             {% if card.settings.image_product %}
-              <img class="product-img" src="{{ card.settings.image_product | image_url: width: 208, height: 208, crop: 'center' }}" alt="image {{ product.title }}">
+              {{ card.settings.image_product | image_url: width: 480 | image_tag: alt: image_alt , class: 'product-img' }}
             {% else %}
-              <img class="product-img" src="{{ product.featured_image | image_url: width: 208, height: 208, crop: 'center' }}" alt="image {{ product.title }}">
+              {{ product.featured_image | image_url: width: 480 | image_tag: alt: image_alt , class: 'product-img' }}
             {% endif %}
           </div>
           <div class="product-info">

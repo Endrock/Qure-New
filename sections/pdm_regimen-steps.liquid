@@ -1,7 +1,11 @@
 <div class="regimen-steps">
   <div class="section-header">  
     <h2>{{ section.settings.section_title }}</h2>
-    <p>{{ section.settings.section_description }}</p>
+    {% assign description_value = section.settings.section_description %}
+    {% if description_value != blank %}  
+      {% assign description_text = section.settings.section_description |  replace:'(User Name)' , '<span class="user-name hidden"><span class="name"></span></span>' %}
+      <p>{{ description_text }}</p>
+    {% endif %}
   </div>
   <div class="container-rs">
     <regimen-steps active-step="1">

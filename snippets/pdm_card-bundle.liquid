@@ -1,5 +1,5 @@
 {% if product %}
-<div class="card-bundle hidden-mobile" data-product-id="{{ product.selected_or_first_available_variant.id }}">
+<div class="card-bundle hidden-mobile" data-product-id="{{ product.selected_or_first_available_variant.id }}" data-card-bundle-product-price="{{ product.price }}" data-card-bundle-product-price-money="{{ product.price | money_without_trailing_zeros }}">
     <div class="rate desktop" data-show="{{ show-rated }}" {% if show-rated == false %}style="visibility: hidden;"{% endif %} >
     Top Rated *
   </div>

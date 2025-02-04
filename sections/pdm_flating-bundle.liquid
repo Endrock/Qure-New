@@ -38,7 +38,8 @@
                 </svg>
               </div>
               <div class="cont-img">
-                <img class="src product" src="{{ product.featured_image | image_url: width: 48, height: 44, crop: 'center' }}" alt="image {{ product.title }}">
+                {% assign image_alt = "image" |  append: product.title %}
+                {{ product.featured_image | image_url: width: 256 | image_tag: alt: image_alt , class: 'src product cont-img__img' }}
               </div>
             </div>
           {% endfor %}
@@ -55,6 +56,7 @@
     </div>
     <div class="bundle-discount">
       <span class="btn-discount disabled">Bundle and save</span>
+      <span class="bundle-discount__save-price"></span>
     </div>
   </div>
 </flating-bundle>
