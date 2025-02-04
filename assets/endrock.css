@@ -2968,3 +2968,678 @@ body[class~="page.sunil-mi-landing-special2-reorder"] #see_it_section{
 
 }
 /* end test upsell popup */
+
+/* test high contrast mode micro infusion offer and affiliate */
+
+/* left panel icons */
+
+body[data-test-high-contrast='true'] .qure__treatments .title-lg{
+  color: #000;
+  font-family: "Canela Web";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 38px; /* 135.714% */
+  letter-spacing: 0.28px;
+}
+
+@media screen and (min-width: 769px) {
+  body[data-test-high-contrast='true'] .qure__treatments .title-lg{
+    padding-top: 16px;
+    font-size: 36px;
+    line-height: 55px; /* 152.778% */
+    letter-spacing: 0.36px;
+  }
+}
+
+.tmtFtrs.icons-serum-pdm-test{
+  display: none !important;
+}
+
+body[data-test-high-contrast='true'] .tmtFtrs.icons-serum-original{
+  display: none !important;
+}
+
+body[data-test-high-contrast='true'] .tmtFtrs.icons-serum-pdm-test{
+  display: none !important;
+}
+
+
+@media screen and (min-width: 769px) {
+  body[data-test-high-contrast='true'] .tmtFtrs_image{
+    display: flex;
+    justify-content: center;
+  }
+
+  body[data-test-high-contrast='true'] .tmtFtrs.icons-serum-pdm-test{
+    display: flex !important;
+  }
+  
+}
+
+/* right panel */
+
+body[data-test-high-contrast='true'] .supply_steps .step_block .serum_prd {
+  border: 1px solid #D6D6D6;
+}
+
+body[data-test-high-contrast='true'] .supply_steps .step_block .serum_prd .serum_ttl {
+  border: 1px solid #D6D6D6;
+}
+
+body[data-test-high-contrast='true'] .supply_steps .step_block input:checked+.serum_prd .serum_ttl {
+  border: 1px solid black;
+  background-color: #EAF5F2;
+}
+
+body[data-test-high-contrast='true'] .supply_steps .step_block input:checked+.serum_prd {
+  border: 1px solid black;
+}
+
+body[data-test-high-contrast='true'] .step_block .step_header h3 span{
+  display: none;
+}
+
+/* items choose serums */
+
+body[data-test-high-contrast='true'] .supply_steps .step_block .serum_prd {
+  padding: 0;
+  width: 104px;
+  height: 100px;
+  border-radius: 15px;
+}
+
+@media screen and (min-width: 769px) {
+  body[data-test-high-contrast='true'] .supply_steps .step_block .serum_prd {
+    width: 147.67px;
+    height: 141px;
+  }
+}
+
+body[data-test-high-contrast='true'] .supply_steps .step_block .serum_prd .serum_ttl{
+  bottom: -16px;
+  height: 40px;
+}
+
+body[data-test-high-contrast='true'] .supply_steps .step_block .serum_prd .serum_img{
+  width: 70px;
+  height: 56px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  transform: translateX(22%);
+}
+
+@media screen and (min-width: 769px) {
+  body[data-test-high-contrast='true'] .supply_steps .step_block .serum_prd .serum_img{
+    width: 100px;
+    height: 85px;
+    top: 16px;
+  }
+}
+
+
+body[data-test-high-contrast='true'] .supply_steps .step_block .serum_prd .serum_img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+body[data-test-high-contrast='true'] .step_block .step_header h3{
+  color: #000;
+  font-family: Canela;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 26px */
+  letter-spacing: 0.2px;
+}
+
+@media screen and (min-width: 769px) {
+  body[data-test-high-contrast='true'] .step_block .step_header h3{
+    font-size: 22px;
+    letter-spacing: 0.22px;
+  }
+  
+}
+
+body[data-test-high-contrast='true'] .choose_serum .cs_item__accordion {
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 15px; /* 125% */
+  letter-spacing: 0.12px;
+}
+
+.pdm_plan-choosen{
+  display: none;
+}
+body[data-test-high-contrast='true'] .plan_choosed-original{
+  display: none;
+}
+
+body[data-test-high-contrast='true'] .pdm_plan-choosen{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdm_plan-choosen p{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: fit-content;
+  background-color: black;
+  color: white;
+  display: flex;
+  height: 22px;
+  padding: 0px 16px;
+  gap: 4px;
+  border-radius: 16px 16px 0px 0px;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 240% */
+  letter-spacing: 0.5px;
+}
+
+@media screen and (min-width: 769px) {
+  .pdm_plan-choosen p{
+    font-size: 11px;
+    letter-spacing: 0.55px;
+  }
+}
+
+body[data-test-high-contrast='true'] .planBlock .monthly_plans {
+  padding: 0;
+  border: 1px solid #D6D6D6;
+}
+
+body[data-test-high-contrast='true'] .planBlock .monthly_plans {
+  border-radius: 16px;
+}
+
+body[data-test-high-contrast='true'] .planBlock input:checked+.monthly_plans {
+  border: 1px solid black;
+  background-color: #EAF5F2;
+}
+
+body[data-test-high-contrast='true'] .planBlock .monthly_plans .plan_des{
+  padding-top: 6px;
+  padding-left: 6px;
+  padding-bottom: 6px;
+}
+
+@media screen and (min-width: 376px) {
+  body[data-test-high-contrast='true'] .planBlock .monthly_plans .plan_des{
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  body[data-test-high-contrast='true'] .planBlock .monthly_plans .plan_des{
+    padding-left: 24px;
+  }
+}
+
+body[data-test-high-contrast='true'] .planBlock .monthly_plans .plan_des > .plan_des{
+  padding: 0;
+}
+
+body[data-test-high-contrast='true'] .planBlock .monthly_plans .price{
+  gap: 2px;
+  padding-right: 6px;
+}
+
+@media screen and (min-width: 376px) {
+  body[data-test-high-contrast='true'] .planBlock .monthly_plans .price{
+    padding-right: 16px;
+  }
+}
+
+
+@media screen and (min-width: 769px) {
+  body[data-test-high-contrast='true'] .planBlock .monthly_plans .price{
+    padding-right: 24px;
+  }
+}
+
+
+@media screen and (min-width: 769px) {
+  body[data-test-high-contrast='true'] .planBlock .monthly_plans {
+    border: 1px solid #D6D6D6;
+  }
+}
+/* general adition */
+.pdm_plan-bundle-detail{
+  display: none;
+}
+
+body[data-test-high-contrast='true'] .pdm_plan-bundle-detail{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 8px 3px 4px;
+  border-radius: 0 0 16px 16px;
+  height: 24px;
+}
+
+body[data-test-high-contrast='true'] .pdm_plan-bundle-detail p{
+  font-family: Poppins;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 13.2px */
+  letter-spacing: 0.11px;
+}
+
+@media screen and (min-width: 355px){
+  body[data-test-high-contrast='true'] .pdm_plan-bundle-detail p{
+    font-size: 11px;
+  }
+  
+}
+
+body[data-test-high-contrast='true'] .pdm_plan-bundle-detail strong{
+  font-family: Poppins;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.11px;
+}
+
+body[data-test-high-contrast='true'] .pdm_plan-bundle-detail.item-1{
+  background: linear-gradient(90deg, #000 0%, #494949 50%, #000 100%), linear-gradient(0deg, #000 0%, #000 100%), linear-gradient(90deg, #FFE0E1 0%, #FFF 100%);
+}
+
+body[data-test-high-contrast='true'] .pdm_plan-bundle-detail.item-1 p,
+body[data-test-high-contrast='true'] .pdm_plan-bundle-detail.item-1 p strong{
+  color: white;
+}
+
+body[data-test-high-contrast='true'] .pdm_plan-bundle-detail.item-2{
+  background: linear-gradient(90deg, rgba(255, 224, 225, 0.60) 0%, rgba(255, 240, 241, 0.60) 50%, rgba(255, 224, 225, 0.60) 100%), #FFF;
+}
+
+body[data-test-high-contrast='true'] .pdm_plan-bundle-detail.item-2 p,
+body[data-test-high-contrast='true'] .pdm_plan-bundle-detail.item-2 p strong{
+  color: black;
+}
+
+/* information */
+body[data-test-high-contrast='true'] .supply_steps .step_block .step_serum {
+  padding-bottom: 32px !important;
+}
+
+@media screen and (min-width: 769px){
+  body[data-test-high-contrast='true'] .supply_steps .step_block .step_serum {
+    padding-bottom: 40px !important;
+    gap: 16px !important;
+  }
+}
+
+body[data-test-high-contrast='true'] .planBlock .monthly_plans .plan_hdr h3 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+  letter-spacing: 0.16px;
+}
+
+@media screen and (min-width: 360px){
+  body[data-test-high-contrast='true'] .planBlock .monthly_plans .plan_hdr h3 {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  body[data-test-high-contrast='true'] .planBlock .monthly_plans .plan_hdr h3 {
+    font-size: 18px;
+    letter-spacing: 0.18px;
+  }  
+}
+
+body[data-test-high-contrast='true'] .planBlock .monthly_plans .plan_des{
+  color: #000;
+  font-family: Poppins;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15px; /* 125% */
+  letter-spacing: 0.12px;
+}
+
+@media screen and (min-width: 360px){
+  body[data-test-high-contrast='true'] .planBlock .monthly_plans .plan_des{
+    font-size: 12px;
+  }
+}
+
+
+
+/* discount */
+body[data-test-high-contrast='true'] .planBlock .monthly_plans .saved_price.item-1 {
+  border-radius: 40px;
+  background-color: #C4121A;
+  padding: 0px 4px;
+  color: #FFF;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 218.182% */
+  letter-spacing: 0.11px;
+  text-transform: uppercase;
+}
+
+body[data-test-high-contrast='true'] .planBlock .monthly_plans .saved_price.item-2 {
+  display: block !important;
+  border-radius: 40px;
+  background-color: #FFE0E1;
+  padding: 0px 4px;
+  color: #C4121A;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 218.182% */
+  letter-spacing: 0.11px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 366px) {
+  body[data-test-high-contrast='true'] .planBlock .monthly_plans .saved_price.item-1 
+  body[data-test-high-contrast='true'] .planBlock .monthly_plans .saved_price.item-2 {
+    font-size: 11px;
+    padding: 0px 8px;
+
+  }
+}
+
+@media screen and (min-width: 769px) {
+  body[data-test-high-contrast='true'] .planBlock .monthly_plans .saved_price.item-1,
+  body[data-test-high-contrast='true'] .planBlock .monthly_plans .saved_price.item-2{
+    height: 24px;
+    padding: 1px 12px;
+  }
+}
+
+/* prices */
+
+body[data-test-high-contrast='true'] .saved_price.saved_price50{
+  display: none !important;
+}
+
+.pdm_price-stock-left{
+  display: none;
+}
+
+.monthly_plans .price .price-row{
+  display: flex;
+  flex-direction: row;
+}
+
+body[data-test-high-contrast='true'] .price.pmd_price-first-elemnt{
+  flex-direction: column;
+  gap: 2px;
+}
+
+@media screen and (min-width: 769px) {
+  body[data-test-high-contrast='true'] .price.pmd_price-first-elemnt{
+    padding-top: 16px;
+    padding-bottom: 16px;
+    gap: 4px;
+  }
+}
+
+body[data-test-high-contrast='true'] .price.pmd_price-first-elemnt .price-row{
+  display: flex;
+  flex-direction: row;
+}
+
+body[data-test-high-contrast='true'] .pdm_price-stock-left{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  gap: 2px;
+}
+
+body[data-test-high-contrast='true'] .pdm_price-stock-left p{
+  color: #000;
+  font-family: Poppins;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0.11px;
+}
+
+body[data-test-high-contrast='true'] .pdm_price-stock-left p strong{
+  color: black;
+  font-family: Poppins;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 13.2px */
+  letter-spacing: 0.11px;
+}
+
+body[data-test-high-contrast='true'] .planBlock .monthly_plans .price .regular_price {
+  color: rgba(0, 0, 0, 0.30);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+  letter-spacing: 0.3px;
+  text-decoration: line-through;
+}
+
+@media screen and (min-width: 356px) {
+  body[data-test-high-contrast='true'] .planBlock .monthly_plans .price .regular_price {
+    font-size: 16px;
+  }
+}
+
+body[data-test-high-contrast='true'] .planBlock .monthly_plans .price .plan_prc+.plan_prc{
+  color: #C4121A;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 12px !important;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 112.5% */
+  letter-spacing: 0.3px;
+}
+
+@media screen and (min-width: 356px) {
+  body[data-test-high-contrast='true'] .planBlock .monthly_plans .price .plan_prc+.plan_prc{
+    font-size: 16px !important;
+  }
+}
+
+body[data-test-high-contrast='true'] .price .plan_prc.sale_price{
+  color: black;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 112.5% */
+  letter-spacing: 0.3px;
+}
+
+@media screen and (min-width: 356px) {
+  body[data-test-high-contrast='true'] .price .plan_prc.sale_price{
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  body[data-test-high-contrast='true'] .planBlock .monthly_plans .price .regular_price,
+  body[data-test-high-contrast='true'] .planBlock .monthly_plans .price .plan_prc+.plan_prc,
+  body[data-test-high-contrast='true'] .price .plan_prc.sale_price{
+    font-size: 18px !important;
+  }
+}
+
+/* 3 step */
+
+body[data-test-high-contrast='true'] .pmt_plans {
+  padding: 13px 6px;
+  border-radius: 16px;
+  border: 1px solid #D6D6D6;
+  align-items: baseline;
+}
+
+@media screen and (min-width: 356px) {
+  body[data-test-high-contrast='true'] .pmt_plans {
+    padding: 13px 16px;
+  }
+  
+}
+
+body[data-test-high-contrast='true'] .pmtBlock input:checked+.pmt_plans{
+  border: 1px solid black;
+  background-color: #EAF5F2;
+}
+
+@media screen and (min-width: 769px) {
+  body[data-test-high-contrast='true'] .pmt_plans {
+    padding: 13px 24px;
+    border-radius: 80px;
+    align-items: center;
+  }
+}
+
+/* 3 step */
+
+
+body[data-test-high-contrast='true'] .pmt_options__image{
+  display: none;
+}
+
+body[data-test-high-contrast='true'] .pmt_options{
+  width: 159px;
+  height: 18px;
+}
+
+body[data-test-high-contrast='true'] .pmt_options.item-2{
+  width: 93.5px;
+  height: 18px;
+}
+
+.pmt_options .pmt_options__image-test{
+  display: none;
+}
+
+body[data-test-high-contrast='true'] .pmt_options .pmt_options__image-test{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+body[data-test-high-contrast='true'] .pmt_des .pmt_row-test{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+@media screen and (min-width: 769px) {
+  body[data-test-high-contrast='true'] .pmt_des .pmt_row-test{
+    padding-top: 4px;
+  }
+  
+  body[data-test-high-contrast='true'] .pmt_des .pmt_row-test{
+    align-items: center;
+    flex-direction: row;
+    gap: 6px;
+  }
+}
+
+body[data-test-high-contrast='true'] .pmtBlock .pmt_plans .price .regular_price{
+  color: rgba(0, 0, 0, 0.30);
+  text-align: right;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+  letter-spacing: 0.3px;
+  text-decoration: line-through;
+}
+
+body[data-test-high-contrast='true'] .pmtBlock .pmt_plans .price .pmt_prc+.pmt_prc
+body[data-test-high-contrast='true'] .pmtBlock .pmt_plans .price .pmt_prc.pay_today{
+  color: black;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 112.5% */
+  letter-spacing: 0.3px;
+}
+
+@media screen and (min-width: 769px) {
+  body[data-test-high-contrast='true'] .pmtBlock .pmt_plans .price .regular_price,
+  body[data-test-high-contrast='true'] .pmtBlock .pmt_plans .price .pmt_prc+.pmt_prc,
+  body[data-test-high-contrast='true'] .pmtBlock .pmt_plans .price .pmt_prc.pay_today{
+    font-size: 18px;
+  }
+}
+
+
+/* footer */
+.c_s_wrapper.cs_wrapper-test-pdm{
+  display: none;
+}
+
+body[data-test-high-contrast='true'] .c_s_wrapper.cs_wrapper-original{
+  display: none;
+}
+
+body[data-test-high-contrast='true'] .c_s_wrapper.cs_wrapper-test-pdm{
+  display: flex;
+}
+
+@media screen and (min-width: 769px) {
+  body[data-test-high-contrast='true'] .c_s_wrapper.cs_wrapper-test-pdm{
+    display: none;
+  }
+}
+
+
+body[data-test-high-contrast='true'] .supply_steps .step_block .step_content.upsell_popup_anchor_hover{
+  padding-bottom: 0 !important;
+  margin-bottom: 30px !important;
+}
+
+@media screen and (min-width: 769px) {
+  body[data-test-high-contrast='true'] .supply_steps .step_block .step_content.upsell_popup_anchor_hover{
+    margin-bottom: 0 !important;
+  }
+
+  body[data-test-high-contrast='true'] .supply_steps .step_block .step_content.item-3{
+    padding-bottom: 24px !important;
+  }
+  
+}
+
+/* end test high contrast mode micro infusion offer and affiliate */
