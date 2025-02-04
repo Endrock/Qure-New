@@ -1527,10 +1527,11 @@ function initFrontrowHealth (frontrowContainer, trustedSection) {
 }
 
 
-/* test upsell popup */
-document.addEventListener('DOMContentLoaded', () => {
-  // DOM elements for controlling the upsell popup
-  const openPopupUpsell = document.querySelector("#openPopupUpsell");
+/*  upsell popup micro-infusion-offer and affiliate*/
+// DOM elements for controlling the upsell popup
+const openPopupUpsell = document.querySelector("#openPopupUpsell");
+
+if(openPopupUpsell && openPopupUpsell.dataset?.popupEnabled) {
   const closePopupUpsell = document.querySelector("#closePopupUpsell")
   const popupUpsell = document.querySelector("#popupUpsell");
   const popupUpsellWrapper = document.querySelector('.popupsell-wrapper');
@@ -1586,7 +1587,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!productId) return;
 
     // Find matching upsell data based on product ID
-    const {name, id} = dataInformation.find(item => item.products.includes(productId)) ?? {};
+    const { id } = dataInformation.find(item => item.products.includes(productId)) ?? {};
 
     // Remove 'active' class from all upsell elements
     const allUpsellElements = document.querySelectorAll('.popupsell-card.active');
@@ -1631,82 +1632,136 @@ document.addEventListener('DOMContentLoaded', () => {
 
   };
 
-    // Event listener for upsell buttons to add a product to the cart
-    if(popupUpsellButtons && popupUpsellButtons.length > 0){
-      popupUpsellButtons.forEach((button) => {
-        button.addEventListener('click', (event) => {
-          const target = event.target.closest('[data-product-id]'); // Find the closest element with the data-product-id attribute
-          let productId = null;
-    
-          if (!target || !target.dataset.productId) {
-            productId = 43821069435119; // ID of the default product
-          } else {
-            productId = Number(target.dataset.productId);
-          }
-          addToCartUpsell(productId);
-        });
+  // Event listener for upsell buttons to add a product to the cart
+  if(popupUpsellButtons && popupUpsellButtons.length > 0){
+    popupUpsellButtons.forEach((button) => {
+      button.addEventListener('click', (event) => {
+        const target = event.target.closest('[data-product-id]'); // Find the closest element with the data-product-id attribute
+        let productId = null;
+  
+        if (!target || !target.dataset.productId) {
+          productId = 43821069435119; // ID of the default product
+        } else {
+          productId = Number(target.dataset.productId);
+        }
+        addToCartUpsell(productId);
       });
+    });
+  }
+
+  // Initial handling of the upsell element
+  handleUpsellElement(dataInformationUpsell);
+
+  /**
+   * Closes the upsell popup and triggers the anchor button click if it exists.
+   */
+  const closePopup = () => {
+    const linkAnchorLandingProcess = document.querySelector('.step_content .btn-atc.submit_btn');
+    if (linkAnchorLandingProcess) {
+      linkAnchorLandingProcess.click();
     }
-  
-    // Initial handling of the upsell element
-    handleUpsellElement(dataInformationUpsell);
-  
-    /**
-     * Closes the upsell popup and triggers the anchor button click if it exists.
-     */
-    const closePopup = () => {
-      const linkAnchorLandingProcess = document.querySelector('.step_content .btn-atc.submit_btn');
-      if (linkAnchorLandingProcess) {
-        linkAnchorLandingProcess.click();
-      }
-      popupUpsell.style.display = 'none';
-    };
-  
-    // Update upsell elements when the serum offer container changes
-    if (serumOfferContainer) {
-      serumOfferContainer.addEventListener('change', (event) => {
+    popupUpsell.style.display = 'none';
+  };
+
+  // Update upsell elements when the serum offer container changes
+  if (serumOfferContainer) {
+    serumOfferContainer.addEventListener('change', (event) => {
+      handleUpsellElement(dataInformationUpsell);
+    });
+  }
+
+  // Update upsell elements when a serum offer label is clicked
+  if (serumOfferLabel && serumOfferLabel.length > 0) {
+    serumOfferLabel.forEach((container) => {
+      container.addEventListener('click', () => {
         handleUpsellElement(dataInformationUpsell);
       });
-    }
+    });
+  }
+
+  // Open the upsell popup
+  if (openPopupUpsell) {
+    openPopupUpsell.addEventListener('click', () => {
+      if (popupUpsell) {
+        popupUpsell.style.display = 'flex';
+      }
+    });
+  }
+
+  // Close the upsell popup
+  if (closePopupUpsell) {
+    closePopupUpsell.addEventListener('click', closePopup);
+  }
+
+  // Close the upsell popup when the "no thanks" buttons are clicked
+  if (popupUpsellNothanks && popupUpsellNothanks.length > 0) {
+    popupUpsellNothanks.forEach((button) => {
+      button.addEventListener('click', closePopup);
+    });
+  }
+
+  // Close the upsell popup when clicking outside the wrapper
+  if (popupUpsell) {
+    popupUpsell.addEventListener('click', (e) => {
+      if (popupUpsellWrapper && !popupUpsellWrapper.contains(e.target)) {
+        closePopup();
+      }
+    });
+  }
+}
   
-    // Update upsell elements when a serum offer label is clicked
-    if (serumOfferLabel && serumOfferLabel.length > 0) {
-      serumOfferLabel.forEach((container) => {
-        container.addEventListener('click', () => {
-          handleUpsellElement(dataInformationUpsell);
-        });
-      });
+/* end upsell popup micro-infusion-offer and affiliate */
+
+/* test high contrast mode micro infusion offer and affiliate */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const serum3Month = document.getElementById('3_month');
+  const elementPriceStock = document.querySelector('.pdm_price-stock-left-quantity');
+  const { testHighContrast } = document.body.dataset
+  if ( serum3Month && testHighContrast && elementPriceStock ) {
+    
+    const pdmPriceDifferenceContainer = document.querySelector('#pdm_price-difference-container')
+    const productId = serum3Month.dataset.productId;
+
+     const updatePrices = (htmlContainer) => {
+      const { priceFirst, priceSecond } = htmlContainer.dataset;
+      const textElementPrice3Month = document.querySelector('.pdm_plan-bundle-detail__money.item-1');
+      const textElementPrice2Month = document.querySelector('.pdm_plan-bundle-detail__money.item-2');
+
+      if (textElementPrice3Month) {
+        textElementPrice3Month.textContent = priceFirst;
+      }
+
+      if (textElementPrice2Month) {
+        textElementPrice2Month.textContent = priceSecond;
+      }
     }
-  
-    // Open the upsell popup
-    if (openPopupUpsell) {
-      openPopupUpsell.addEventListener('click', () => {
-        if (popupUpsell) {
-          popupUpsell.style.display = 'flex';
-        }
-      });
-    }
-  
-    // Close the upsell popup
-    if (closePopupUpsell) {
-      closePopupUpsell.addEventListener('click', closePopup);
-    }
-  
-    // Close the upsell popup when the "no thanks" buttons are clicked
-    if (popupUpsellNothanks && popupUpsellNothanks.length > 0) {
-      popupUpsellNothanks.forEach((button) => {
-        button.addEventListener('click', closePopup);
-      });
-    }
-  
-    // Close the upsell popup when clicking outside the wrapper
-    if (popupUpsell) {
-      popupUpsell.addEventListener('click', (e) => {
-        if (popupUpsellWrapper && !popupUpsellWrapper.contains(e.target)) {
-          closePopup();
-        }
-      });
-    }
+
+    const getDataStock = async (url) => {
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        console.error("Error fetching stock data:", error);
+        return null;
+      }
+    };
+
+    const updateValueStock = async (element, url) => {
+      const dataStock = await getDataStock(url);
+      if (dataStock) {
+        const message = `${dataStock.data} kits `;
+        element.textContent = message;
+      }
+    };
+
+    updatePrices(pdmPriceDifferenceContainer);
+    const urlStock = `https://webhooks.endrock.software/endrockapi/qureskincare/stock/${productId}`;
+    updateValueStock(elementPriceStock, urlStock);
+
+  }
+
 });
 
 /* end test upsell popup */

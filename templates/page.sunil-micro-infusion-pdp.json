@@ -801,6 +801,19 @@
             "client": "Paul W.",
             "code": ""
           }
+        },
+        "result_JNFBGF": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/Tami_trump.png",
+            "heading": "Definitely pleased with the product",
+            "text": "<p>“I've started seeing a lot of changes to my face it's softer and much more nourished making some of the lines around my mouth softer and fuller. I've even gotten my color tone and glow back. Definitely pleased with the product and will be continuing to use the products. Also purchased the face serum and the micro dart patches. We'll see how they work as well. I'm still in the beginning stages this weekend will be my 4th treatment and using the patches as well. Stay tuned another update soon.”</p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Tami T.",
+            "code": ""
+          }
         }
       },
       "block_order": [
@@ -825,7 +838,8 @@
         "result_eLJa6L",
         "result_DYbUAd",
         "result_VFw8Mj",
-        "result_qKjLeC"
+        "result_qKjLeC",
+        "result_JNFBGF"
       ],
       "settings": {
         "classname": "mi_landing_result pt-0",
@@ -1151,7 +1165,8 @@
     "liquid_JJikgW": {
       "type": "liquid",
       "settings": {
-        "code": "{% render 'serums-months-image-form' with section_id: section.id %}"
+        "code": "{% render 'serums-months-image-form' with section_id: section.id %}",
+        "popup_micro_infusion_enabled": true
       }
     },
     "faq_4hnCjw": {
