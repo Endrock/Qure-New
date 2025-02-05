@@ -19,7 +19,7 @@
 </div>
   <div class="lock-discount show-responsive">
     <img class="unlock-icon" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/unlock.svg" alt="unlock icon">
-    Add Item to unlock your discount
+    Add item to unlock your discount!
     <img class="cart-mobile" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/system-uicons_chevron-up.svg" alt="cart icon">
   </div>
   <div class="hbar show-responsive">
@@ -28,7 +28,7 @@
       {% for discount in section.settings.bundle_info.discounts.value %}
         <div class="cube-discount" data-discount-percentage="{{ discount }}">
           <div class="child cont-text">
-            <p class="cube-discount-text">{{ discount }}%<br/><span class="off">OFF</span></p>
+            <p class="cube-discount-text"><span class="percent">{{ discount }}%</span><span class="off">OFF</span></p>
           </div>
           {% for product in section.settings.bundle_products.list_products.value %}
             <div class="child cube-discount-product hidden" data-product-id="{{ product.selected_or_first_available_variant.id }}" data-product-price="{{ product.price }}">
