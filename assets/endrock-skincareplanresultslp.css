@@ -2045,7 +2045,6 @@
   .grid-discount {
     display: flex;
     flex-direction: row;
-    gap: 12px;
   }
   .cube-discount{
     width: 48px;
@@ -2127,6 +2126,11 @@
     line-height: 150%;
     letter-spacing: -0.5px;
   }
+
+  .price-discount .icon-arrow-close{
+    display: none;
+  }
+
   .cart-icon{
     width: 24px;
     height: 24px;
@@ -2165,11 +2169,22 @@
     text-decoration: line-through;
   }
 }
+@media (max-width: 450px) {
+  .section-flating-bundle{
+    max-width:none;
+  }
+}
+
+@media (min-width: 451px) and (max-width: 768px) {
+  .section-flating-bundle{
+    max-width:450px;
+  }
+}
+
 @media (max-width: 768px) {
   .section-flating-bundle{
     bottom:0px;
     width:100%;
-    max-width:none;
     .btn-mobile{
       display: flex;
       height: 36px;
@@ -2207,6 +2222,19 @@
     .price-discount.hidden-price {
       display: none;
     }
+
+    .price-discount .bundleprice {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .price-discount .icon-arrow-close{
+      display: block;
+      margin-left: 6px;
+    }
+
     .cart-icon{
       display:none;
     }
@@ -2549,11 +2577,30 @@
   }
 }
 
-
 @media screen and (min-width: 768px) {
   .section-dual-text-img .cont-btn {
     font-size: 14px;
     line-height: 26px;
     justify-content: start;
   }
+}
+
+.grid-discount__progress-bar {
+  flex: 1;
+  height: 1px;
+  background: #797D7C;
+  position: relative;
+  align-self: center;
+  margin: 0;
+  min-width: 40px;
+  max-width: 100px;
+}
+.grid-discount__progress-fill {
+  position: absolute;
+  left: 0;
+  top: -0.5px;
+  height: 2px;
+  background: #C8E6DC;
+  width: 0;
+  transition: width 0.3s ease;
 }

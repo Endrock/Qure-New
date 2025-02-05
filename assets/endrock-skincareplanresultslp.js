@@ -546,6 +546,7 @@ const flatingBundleInit = ()=>{
             this.changeArrayBundle(oldValue,newValue);
             this.availableButton(newValue)
             this.updatePrice()
+            this.updateProgressBars()
           }
           if(name == 'data-bundle-used'){
             this.isUsedBundle(newValue);
@@ -565,6 +566,8 @@ const flatingBundleInit = ()=>{
         showBarresponsive(){
           const btnShow = this.querySelector('.btn-mobile')
           const lockDiscount = this.querySelector('.lock-discount')
+          const hideBundleSelector = this.querySelector('.bundleprice');
+
           const hBar = this.querySelector('.hbar')
           btnShow.addEventListener('click', () => {
             btnShow.classList.add('show-responsive')
@@ -577,6 +580,15 @@ const flatingBundleInit = ()=>{
             lockDiscount.classList.add('show-responsive')
             hBar.classList.add('show-responsive')
           })
+
+          if(window.innerWidth < 768){
+            hideBundleSelector.addEventListener('click', () => {
+              btnShow.classList.remove('show-responsive')
+              lockDiscount.classList.add('show-responsive')
+              hBar.classList.add('show-responsive')
+            })
+          }
+
         }
         bundleToCart(){
           const btnSubmit = this.querySelector('.btn-discount')
@@ -710,6 +722,7 @@ const flatingBundleInit = ()=>{
           const totalSaveBundlePriceWithCurrency = currencySymbol.replace(/\d*\.?\d+/, cleanSaveBundlePrice);
 
           this.querySelector('.price-discount').classList.toggle('hidden-price', price == 0);
+          this.querySelector('.lock-discount').classList.toggle('hidden', price != 0);
           this.querySelector('.full-price').innerHTML = price != 0 ? totalPriceWithCurrency :  '-';
           this.querySelector('.discount-price').innerHTML = bundlePrice != 0 ? totalBundleWithCurrency : '';
           this.querySelector('.bundle-discount__save-price').innerHTML = saveAmountCalc != 0 ? totalSaveBundlePriceWithCurrency : '';
@@ -745,6 +758,36 @@ const flatingBundleInit = ()=>{
 
           const buttonSectionPrice = document.querySelector('.btn-section .price');
           if(buttonSectionPrice) buttonSectionPrice.innerHTML = totalDiscountWithCurrency;
+        }
+
+        updateProgressBars() {
+
+          const progressBars = document.querySelectorAll('.grid-discount__progress-bar');
+          const cards = document.querySelectorAll('.cube-discount');
+          
+          progressBars.forEach((progressBar, index) => {
+            const currentCard = cards[index];
+            const nextCard = cards[index + 1];
+            
+            if (currentCard && nextCard) {
+              const currentHasProduct = Array.from(currentCard.querySelectorAll('.cube-discount-product'))
+                .some(product => !product.classList.contains('hidden'));
+                
+              const nextHasProduct = Array.from(nextCard.querySelectorAll('.cube-discount-product'))
+                .some(product => !product.classList.contains('hidden'));
+              
+              const progressFill = progressBar.querySelector('.grid-discount__progress-fill');
+              
+              if (currentHasProduct && nextHasProduct) {
+                progressFill.style.width = '100%';
+              } else if (currentHasProduct) {
+                progressFill.style.width = '50%';
+              } else {
+                progressFill.style.width = '0%';
+              }
+            }
+          });
+
         }
 
       }
