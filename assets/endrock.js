@@ -1668,9 +1668,6 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
           productId = Number(target.dataset.productId);
         }
 
-        console.log('Product ID:', productId);
-        console.log('Ajax Selector:', ajaxSelector);
-
         addToCartUpsell(productId, ajaxSelector);
       });
     });
