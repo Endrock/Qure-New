@@ -385,6 +385,20 @@
             "product": "q-rejuvalight-pro-facewear"
           }
         },
+        "slide_nN9pJj": {
+          "type": "slide",
+          "settings": {
+            "heading": "my skin RETURNED to LIFE!",
+            "before": "BEFORE",
+            "after": "AFTER 6 TREATMENTS",
+            "image": "shopify://shop_images/before-after_03b483f7-04ee-4a6b-a887-ee3a4a1bf436.jpg",
+            "text": "<p>\"I just turned 57 years. My skin was extremely dry and while using this product my skin RETURNED to LIFE! I am so impressed with it! My Coworkers ask me what I use in my skin.. and I tell them. Product easy to use and the needles are better that using a pen for microneedling. This is an amazing product that you will not regret in purchasing it. really see the change in my skin. Outstanding job QURE!\"</p>",
+            "image_country": "shopify://shop_images/Flag_of_the_United_States_1.svg",
+            "client": "Ellie V.",
+            "verified": true,
+            "product": "micro-infusion-3-month-bundle-6x-beta-glucan-serum"
+          }
+        },
         "slide_EcpCWr": {
           "type": "slide",
           "settings": {
@@ -399,25 +413,26 @@
             "product": "neck-decolletage-led"
           }
         },
-        "slide_nN9pJj": {
+        "slide_6aBjTc": {
           "type": "slide",
           "settings": {
-            "heading": "my skin RETURNED to LIFE!",
+            "heading": "I SEE A DIFFERENCE!!",
             "before": "BEFORE",
-            "after": "AFTER 6 TREATMENTS",
-            "image": "shopify://shop_images/before-after_03b483f7-04ee-4a6b-a887-ee3a4a1bf436.jpg",
-            "text": "<p>\"I just turned 57 years. My skin was extremely dry and while using this product my skin RETURNED to LIFE! I am so impressed with it! My Coworkers ask me what I use in my skin.. and I tell them. Product easy to use and the needles are better that using a pen for microneedling. This is an amazing product that you will not regret in purchasing it. really see the change in my skin. Outstanding job QURE!\"</p>",
+            "after": "AFTER 4 WEEKS",
+            "image": "shopify://shop_images/before_and_after_wrinkles_all_in_one_face_serum.png",
+            "text": "<p>\"I SEE A DIFFERENCE!! This product is a keeper. I've been using it for 2 weeks now and there is definitely a big difference in my skin!! I noticed my sun spots have lighten especially on the backs of my hands. Facial redness and discolorations have lessened! Very happy with this serum.\"</p>",
             "image_country": "shopify://shop_images/Flag_of_the_United_States_1.svg",
-            "client": "Ellie V.",
+            "client": "Cheryl T.",
             "verified": true,
-            "product": "micro-infusion-3-month-bundle-6x-beta-glucan-serum"
+            "product": "face-serum"
           }
         }
       },
       "block_order": [
         "slide_BP6FNR",
+        "slide_nN9pJj",
         "slide_EcpCWr",
-        "slide_nN9pJj"
+        "slide_6aBjTc"
       ],
       "settings": {
         "heading": "No promises, just proof"
