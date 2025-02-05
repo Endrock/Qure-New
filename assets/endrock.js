@@ -1632,10 +1632,9 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
     });
 
     if (response.ok) {
-      popupUpsellMain.forEach((element) => element.style.display = '');
       let ajaxContainer = document.querySelector(ajaxSelector);
+      popupUpsellMain.forEach((element) => element.style.display = '');
       ajaxContainer.click();
-
     } else {
       console.error('Error adding product to cart');
     }
@@ -1657,7 +1656,9 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
   // Event listener for upsell buttons to add a product to the cart
   if(popupUpsellButtons && popupUpsellButtons.length > 0){
     popupUpsellButtons.forEach((button) => {
-      button.addEventListener('click', (event) => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         const target = event.target.closest('[data-product-id]'); // Find the closest element with the data-product-id attribute
         const ajaxSelector = button.dataset.ajaxSelector;
   
@@ -1666,6 +1667,7 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
         } else {
           productId = Number(target.dataset.productId);
         }
+
         addToCartUpsell(productId, ajaxSelector);
       });
     });
@@ -1674,7 +1676,9 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
   // Open the upsell popup
   if (openPopupUpsell) {
     openPopupUpsell.forEach((button) => {
-      button.addEventListener('click', () => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         const { popupReferrer, ajaxSelector } = button.dataset;
         const popupElement = document.querySelector(`[data-popup-referrer="${popupReferrer}"]`);
         if (popupElement) {
