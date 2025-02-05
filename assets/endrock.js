@@ -1585,7 +1585,9 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
    */
 
   const handleUpsellElement = (dataInformation, selector, popupElement) => {
+    console.log({selector, popupElement})
     const productId = processLinkAnchor(selector);
+    console.log('first productId', productId)
     if (!productId) return;
 
     // Find matching upsell data based on product ID

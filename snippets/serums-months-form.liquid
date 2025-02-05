@@ -249,9 +249,17 @@
                 class="savedAmount">& SAVE {{ discount_percentage }}%</span><img src="{{ 'arrow_right.svg' | asset_url }}" alt="">
         </a>
     </div>
-
-    <a class="btn btn-lg btn-primary buy_btn_soldout mt-3 {{ section_id }}_productButtonObject" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button style="display: none">Reserve</a>
-
+    <div class="upsell_popup_anchor_hover pdp-ajax-container-reserve">
+        {% if section.settings.popup_enabled %}
+            <button
+            data-popup-enabled="true"
+            data-popup-referrer="pdm_serums_m_form"
+            data-ajax-selector=".pdp-ajax-container-reserve .btn.buy_btn_soldout"
+            class="upsell_popup_btn openPopupUpsell"></button>
+        {% endif %}
+        <a class="btn btn-lg btn-primary buy_btn_soldout mt-3 {{ section_id }}_productButtonObject" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button style="display: none">Reserve</a>
+    </div>
+    
     <div class="payment_method">
         <p>OR 4 monthly payments of <span class="payment_price">{{ divided_price | money_without_trailing_zeros }}</span> with</p>
         <div class="pmt_img ps-2">
