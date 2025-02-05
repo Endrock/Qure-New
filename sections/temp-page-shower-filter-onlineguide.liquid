@@ -58,7 +58,7 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="see_work swiper-slide video_popup">
-                                        <img src="https://qureskincaredns.com/new/assets/install_faucet-guide.webp" alt="" class="img-fluid">
+                                        <img src="https://qureskincaredns.com/new/assets/shower_filter-install2.webp" alt="" class="img-fluid">
                                         <div class="play_btn">
                                             <a class="popup-youtube">
                                                 <div class="wistia_responsive_padding"
@@ -93,7 +93,7 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="see_work swiper-slide video_popup">
-                                        <img src="https://qureskincaredns.com/new/assets/install_faucet-guide.webp" alt="" class="img-fluid">
+                                        <img src="https://qureskincaredns.com/new/assets/shower_filter-install.webp" alt="" class="img-fluid">
                                         <div class="play_btn">
                                             <a class="popup-youtube">
                                                 <div class="wistia_responsive_padding"
@@ -964,7 +964,7 @@
                                 <div class="row pt-4">
                                     <div class="col-md-6">
                                         <div class="see_work swiper-slide video_popup">
-                                            <img src="https://qureskincaredns.com/new/assets/install_faucet-guide.webp" alt=""
+                                            <img src="https://qureskincaredns.com/new/assets/shower_filter-install2.webp" alt=""
                                                 class="img-fluid">
                                             <div class="play_btn">
                                                 <a class="popup-youtube">
@@ -1197,7 +1197,7 @@
                                 <div class="row pt-4">
                                     <div class="col-md-6">
                                         <div class="see_work swiper-slide video_popup">
-                                            <img src="https://qureskincaredns.com/new/assets/install_faucet-guide.webp" alt=""
+                                            <img src="https://qureskincaredns.com/new/assets/shower_filter-install.webp" alt=""
                                                 class="img-fluid">
                                             <div class="play_btn">
                                                 <a class="popup-youtube">
@@ -1235,7 +1235,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-12">
-                                        <p class="fw-medium pt-2">Install the Qure Shower Filter
+                                        <p class="fw-medium pt-2">Replace the Filter Cartridge
                                         </p>
                                     </div>
                                 </div>
@@ -1421,66 +1421,7 @@
 
 <script src="https://fast.wistia.com/embed/medias/3ahwzg8wjz.jsonp" async></script>
 <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // IDs of elements to handle click events
-        const elementIds = ['hs_1', 'hs_2', 'hs_3'];
-
-        // Function to handle click events
-        const handleElementClick = (event) => {
-        event.preventDefault(); // Prevent default action (e.g., link navigation)
-
-        const targetElement = event.currentTarget; // The element that triggered the event
-        const sectionValue = targetElement.getAttribute('href')?.split('#')[1]; // Extract the value after #
-
-        if (!sectionValue) {
-            console.error('Failed to extract value after # in href.');
-            return;
-        }
-
-        // Find the link with the corresponding data-section and trigger a click
-        const targetLink = document.querySelector(`a[data-section="${sectionValue}"]`);
-            if (targetLink) {
-                console.log(`Clicking link with data-section="${sectionValue}"`);
-                targetLink.click();
-            } else {
-                console.error(`Link with data-section="${sectionValue}" not found.`);
-            }
-        };
-
-        // Function to check the URL for a hash parameter on page load
-        const checkUrlForSection = () => {
-        const hash = window.location.hash.slice(1); // Get the value after # in the URL
-            if (hash) {
-                console.log(`Checking URL hash: "${hash}"`);
-                const targetLink = document.querySelector(`a[data-section="${hash}"]`);
-                if (targetLink) {
-                    console.log(`Clicking link with data-section="${hash}" from URL.`);
-                    targetLink.click();
-                } else {
-                    console.error(`Link with data-section="${hash}" from URL not found.`);
-                }
-            }
-        };
-
-        // Add click event listeners to all elements in the array
-        elementIds.forEach((id) => {
-            const element = document.getElementById(id);
-            if (element) {
-                console.log(`Adding click listener to element with id="${id}"`);
-                element.addEventListener('click', handleElementClick);
-            } else {
-                console.warn(`Element with id="${id}" not found.`);
-            }
-        });
-
-        // Check the URL for a hash parameter when the page loads
-        setTimeout(() => {
-            checkUrlForSection();
-        }, 600);
-    });
-</script>
+<script src="{{ '__app-quides.js' | asset_url }}"></script>
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
