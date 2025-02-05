@@ -1585,9 +1585,7 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
    */
 
   const handleUpsellElement = (dataInformation, selector, popupElement) => {
-    console.log({selector, popupElement})
     const productId = processLinkAnchor(selector);
-    console.log('first productId', productId)
     if (!productId) return;
 
     // Find matching upsell data based on product ID
@@ -1614,7 +1612,7 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
    * @param {string} ajaxSelector - The selector for triggering the cart refresh.
    */
   const addToCartUpsell = async (productIdFirstVariant, ajaxSelector) => {
-    console.log('productId add to cart', productIdFirstVariant)
+    // console.log('productId add to cart', productIdFirstVariant)
     let formData = {
       'items': [{
         'id': productIdFirstVariant,
@@ -1636,7 +1634,6 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
     if (response.ok) {
       popupUpsellMain.forEach((element) => element.style.display = '');
       let ajaxContainer = document.querySelector(ajaxSelector);
-      // console.log(ajaxContainer)
       ajaxContainer.click();
 
     } else {
