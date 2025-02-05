@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "main": {
       "type": "mobile-product-slider",
@@ -442,13 +442,13 @@
         "slide_xWKmb6": {
           "type": "Slide",
           "settings": {
-            "heading": "Renewed Skin!",
-            "product": "Q-Rejuvalight Pro LED Mask",
+            "heading": "Definitely pleased with the product",
+            "product": "Micro-Infusion System",
             "stars_img": "shopify://shop_images/results_star-full.svg",
-            "text": "<p>“My Qure mask has been amazing! As someone who struggles with acne and rosacea, your LED light therapy mask has improved my skin so much that I can now feel comfortable without any makeup. I’m very happy with this product!”</p>",
-            "image": "shopify://shop_images/results_tiffany_d43313a3-80f7-4452-a45b-c864ceedae03.webp",
+            "text": "<p>“I've started seeing a lot of changes to my face it's softer and much more nourished making some of the lines around my mouth softer and fuller. I've even gotten my color tone and glow back. Definitely pleased with the product and will be continuing to use the products. Also purchased the face serum and the micro dart patches. We'll see how they work as well. I'm still in the beginning stages this weekend will be my 4th treatment and using the patches as well. Stay tuned another update soon.”</p>",
+            "image": "shopify://shop_images/review_home_page.png",
             "image_country": "shopify://shop_images/america_f_92cbd39d-f0e3-42b9-a692-c714420fbe53.webp",
-            "client": "Tiffany L.",
+            "client": "Tami T.",
             "concerns": "",
             "verified": true
           }
