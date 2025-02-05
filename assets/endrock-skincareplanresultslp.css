@@ -1870,15 +1870,21 @@
       width:100%;
       max-width:377px;
       height: min-content;
+    
       margin: auto;
       position: relative;
       
       .cont-card-bundle{
         background:#FFF;
         padding: 12px 12px 16px 12px;
+        height: calc(var(--vh, 1vh) * 100 - 139px);
+        position: relative;
+        max-height: 100vh;
+        overflow-y: auto;
       }
       .pdm-gallery{
         aspect-ratio: 1 / 1;
+        min-height: 200px;
       }
       .product-info{
         margin: 8px 12px 0;
@@ -1912,6 +1918,13 @@
       .bundle-button{
         flex-direction:column;
         margin: 16px 12px 0;
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 15px;
+        z-index: 10;
       }
       .price{
         width:100%;
@@ -1921,6 +1934,10 @@
         width:100%;
       }
     }
+    .card-bundle.active.show-mobile .bundle-button{
+      background: #f4faf8;
+    }
+
     .container-mb-pb {
       display:grid;
       grid-template-columns: 50% 50%;

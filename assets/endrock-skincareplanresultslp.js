@@ -358,6 +358,9 @@ const productsBundleInit = ()=>{
 
         constructor() {
           super();
+          window.addEventListener('resize', () => {
+            this.updateViewportHeight();
+          });
         }
 
         connectedCallback() {
@@ -365,6 +368,7 @@ const productsBundleInit = ()=>{
           this.addProductToBundle();
           this.bundleToCart();
           this.displayPopup();
+          this.updateViewportHeight();
         }
         attributeChangedCallback(name, oldValue, newValue) {
           if(name == 'data-bundle-array'){
@@ -514,6 +518,11 @@ const productsBundleInit = ()=>{
             }
           })
         }
+
+        updateViewportHeight() {
+          const vh = window.innerHeight * 0.01;
+          document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
       }
       window.customElements.define('products-bundle', productsBundle );
     }
@@ -533,6 +542,9 @@ const flatingBundleInit = ()=>{
           super();
           this.discount = 0;
           this.totalPrice = 0;
+          document.addEventListener('cartRemoveBundle', () => {
+            this.resetProductBundle();
+          });
         }
 
         connectedCallback() {
@@ -787,6 +799,23 @@ const flatingBundleInit = ()=>{
               }
             }
           });
+
+        }
+
+        resetProductBundle(){
+
+          this.dataset.bundleUsed = 'false';
+          const productBundleGrid = document.querySelector('products-bundle');
+          if (productBundleGrid) {
+            productBundleGrid.setAttribute('data-bundle-used', 'false');
+            productBundleGrid.querySelector('.btn-section').classList.remove('disabled');
+          }
+
+          const btnSubmit = this.querySelector('.btn-discount')
+          btnSubmit.classList.remove('disabled');
+
+          const btnsClose = this.querySelectorAll('.close');
+          btnsClose.forEach(btn => btn.click());
 
         }
 

@@ -187,9 +187,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // urgent note 
       initSidecartUrgencyNote();
+
+      initEventRemovebundle();
 	});
 
   subscribeToCartStateUpdate( state => {
+    initEventRemovebundle();
     if ( state.status.cartStateSet && !state.status.requestInProgress ) {
       const cart = state.cart;
       if (window.location.href.includes("q-rejuvalight-pro-offer")) {
@@ -403,5 +406,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
   }
+
+  function initEventRemovebundle() {
+    const btnRemoveBundle = document.querySelector('.bundle-product-remove');
+    if (!btnRemoveBundle) return;
+    btnRemoveBundle.addEventListener('click', () => {
+      const customEvent = new CustomEvent('cartRemoveBundle', {
+        detail: { message: 'cart updated' }
+      });
+      document.dispatchEvent(customEvent);
+    }, { once: true });
+  }
+
 });
 </script>
