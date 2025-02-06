@@ -640,7 +640,9 @@
             "special_offer_text": "<p><strong>SPECIAL OFFER</strong> - Limited Time</p>",
             "discount_product_text": "/each",
             "discount_text": "save",
-            "discount_suffix": "%"
+            "discount_suffix": "%",
+            "discount_extra_text_desktop": "- GET ONE FREE",
+            "discount_extra_text_mobile": "GET ONE FREE"
           }
         },
         "product_fm3HF3": {
@@ -656,7 +658,9 @@
             "special_offer_text": "",
             "discount_product_text": "/each",
             "discount_text": "save",
-            "discount_suffix": "%"
+            "discount_suffix": "%",
+            "discount_extra_text_desktop": "- GET ONE FREE",
+            "discount_extra_text_mobile": "GET ONE FREE"
           }
         },
         "product_mBUti7": {
@@ -672,7 +676,9 @@
             "special_offer_text": "",
             "discount_product_text": "/each",
             "discount_text": "save",
-            "discount_suffix": "%"
+            "discount_suffix": "%",
+            "discount_extra_text_desktop": "- GET ONE FREE",
+            "discount_extra_text_mobile": "GET ONE FREE"
           }
         }
       },
@@ -681,6 +687,7 @@
         "product_fm3HF3",
         "product_mBUti7"
       ],
+      "disabled": true,
       "settings": {
         "rating": "5.0/5.0 Rated by Customers",
         "rating_image": "shopify://shop_images/results_star-full.svg",
@@ -695,9 +702,9 @@
     },
     "liquid_EH7JLe2": {
       "type": "liquid",
-      "disabled": true,
       "settings": {
-        "code": "{% render 'serums-allin-months-image-form' with section_id: section.id %}"
+        "code": "{% render 'serums-allin-months-image-form' with section_id: section.id %}",
+        "popup_micro_infusion_enabled": true
       }
     },
     "icons_list_RxBdg4": {
