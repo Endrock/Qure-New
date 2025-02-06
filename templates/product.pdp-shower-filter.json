@@ -644,37 +644,6 @@
         "background": "bg_clr_transparent"
       }
     },
-    "heading_yqCqEx": {
-      "type": "heading",
-      "disabled": true,
-      "settings": {
-        "heading": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>",
-        "heading_mobile": "<h2>Real reviews, real results<br/>from people just like you.</h2>"
-      }
-    },
-    "1734645565f89cc5d5": {
-      "type": "apps",
-      "blocks": {
-        "stamped_reviews_main_widget_yikkrw": {
-          "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
-          "settings": {
-            "take_questions": 2,
-            "animation": true,
-            "tags_exclude": "",
-            "tags_include": "",
-            "search": "",
-            "linkify": true,
-            "use_metafields": false,
-            "sku_tagtype": "sku"
-          }
-        }
-      },
-      "block_order": [
-        "stamped_reviews_main_widget_yikkrw"
-      ],
-      "disabled": true,
-      "settings": {}
-    },
     "faq_rYy7XW": {
       "type": "faq",
       "blocks": {
@@ -753,6 +722,36 @@
         "button_hide_label": "Hide More Questions"
       }
     },
+    "heading_yqCqEx": {
+      "type": "heading",
+      "disabled": true,
+      "settings": {
+        "heading": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>",
+        "heading_mobile": "<h2>Real reviews, real results<br/>from people just like you.</h2>"
+      }
+    },
+    "1734645565f89cc5d5": {
+      "type": "apps",
+      "blocks": {
+        "stamped_reviews_main_widget_yikkrw": {
+          "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "take_questions": 2,
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true,
+            "use_metafields": false,
+            "sku_tagtype": "sku"
+          }
+        }
+      },
+      "block_order": [
+        "stamped_reviews_main_widget_yikkrw"
+      ],
+      "settings": {}
+    },
     "second": {
       "type": "temp-product-shower-filter",
       "disabled": true,
@@ -772,9 +771,9 @@
     "product_features_apR78j",
     "results_FbRcfY",
     "product_benefits_WjQdXQ",
+    "faq_rYy7XW",
     "heading_yqCqEx",
     "1734645565f89cc5d5",
-    "faq_rYy7XW",
     "second"
   ]
 }
