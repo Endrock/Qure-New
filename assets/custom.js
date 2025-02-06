@@ -174,3 +174,48 @@ function openChat() {
       console.error('Iframe not found');
     }
 }
+
+
+/*
+function addEventListenerStamped(el, eventName, handler) {
+    if (el.addEventListener) { el.addEventListener(eventName, handler); }
+    else { el.attachEvent('on' + eventName, function () { handler.call(el); }); }
+}
+
+addEventListenerStamped(document, 'stamped:launcher:loaded', function(e) {
+
+    setTimeout(() => {
+        const parentElement = document.querySelector('[data-campaign-event="custom"]');
+
+        if (parentElement) {
+            const targetElement = parentElement.querySelector('[data-type="view"]');
+            if (targetElement) {
+                targetElement.style.display = "inline";
+                targetElement.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    fetch("https://stamped.io/api/v3/loyalty/shops/198244/activities?campaignId=9412190f-966a-4efe-a76c-9f1d793ea605&email=" + window.customer_email, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.error("Success:", data);                        
+                        setTimeout(() => {
+                            //window.location.href = "https://qureskincare.com/pages/reviews";
+                        }, 1000);
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+
+                        setTimeout(() => {
+                            //window.location.href = "https://qureskincare.com/pages/reviews";
+                        }, 1000);
+                    });
+                });
+            }
+        }
+    }, 500)
+});
+*/
