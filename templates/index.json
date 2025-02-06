@@ -78,6 +78,7 @@
         },
         "slide_tNrDjD": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Ellipse_80.png",
             "link_label": "Silk Pillowcase",
