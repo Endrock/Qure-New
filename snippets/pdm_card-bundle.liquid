@@ -48,7 +48,7 @@
     <div class="doctor-info">
         <div class="photo">
           {% if doctor-image %}
-            <img class="photo-doctor" src="{{ doctor-image | image_url: width: 44, height: 44 }}" alt="{{ doctor-name }}">
+            {{ doctor-image |  image_url: width: 256 |  image_tag: alt: doctor-name, class: 'photo-doctor' }}
           {% endif %}
         </div>
         <div class="doctor-text">

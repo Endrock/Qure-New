@@ -69,13 +69,28 @@
                               </div>
                             </div>
                             {% if block.settings.product != blank %}
-                              <a href="{{ block.settings.product.url }}">
-                              <div class="product">
-                                {% assign image_product = block.settings.product.featured_image %} 
-                                {% assign name_product = block.settings.product.title %} 
-                                <img src="{{ image_product | img_url: 'small' }}" alt="{{ name_product }}">
-                                <p class="producto-name">{{ name_product }}</p>
-                              </div>
+                              {% assign cta_link = block.settings.product.url %}
+                              {% assign enable_go_to_product =  block.settings.cta_go_to_product %}
+                              {% assign cta_url = block.settings.cta_url %}
+
+                                {% if enable_go_to_product == false and cta_url != blank %}
+                                  {% assign cta_link = cta_url %}
+                                {% endif %}
+
+                              <a href="{{ cta_link }}">
+                                <div class="product">
+                                  {% assign image_product = block.settings.product.featured_image %} 
+                                  {% assign name_product = block.settings.product.title %} 
+                                  {% assign show_product_name = block.settings.show_product_name %}
+                                  {% assign cta_text = block.settings.cta_text %}
+
+                                  {% if show_product_name == false and cta_text != blank %}
+                                    {% assign name_product = cta_text %}
+                                  {% endif %}
+
+                                  <img src="{{ image_product | img_url: 'small' }}" alt="{{ name_product }}">
+                                  <p class="producto-name">{{ name_product }}</p>
+                                </div>
                               </a>
                             {% endif %}
                                     
@@ -164,6 +179,28 @@
           "id": "product",
           "label": "t:common.product.label"
         },
+        {
+          "type": "checkbox",
+          "id": "cta_go_to_product",
+          "label": "CTA go to product",
+          "default": true
+        },
+        {
+          "type": "url",
+          "id": "cta_url",
+          "label": "CTA URL"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_product_name",
+          "label": "Show product name",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "cta_text",
+          "label": "Product CTA text",
+        }
       ]
     }
   ],
