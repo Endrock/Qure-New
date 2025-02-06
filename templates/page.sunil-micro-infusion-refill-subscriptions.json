@@ -54,17 +54,17 @@
             "wistia_id": ""
           }
         },
-        "media_dzeM9L": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/mi_refill-result-1.webp",
-            "wistia_id": ""
-          }
-        },
         "media_8Qj7Ce": {
           "type": "media",
           "settings": {
             "image": "shopify://shop_images/review_home_page.png",
+            "wistia_id": ""
+          }
+        },
+        "media_dzeM9L": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/mi_refill-result-1.webp",
             "wistia_id": ""
           }
         },
@@ -163,8 +163,8 @@
         "media_4UEJzg",
         "media_7YEfkX",
         "media_TzgLy6",
-        "media_dzeM9L",
         "media_8Qj7Ce",
+        "media_dzeM9L",
         "media_8nG6mE",
         "media_efznbh",
         "liquid_a4mkYA",
