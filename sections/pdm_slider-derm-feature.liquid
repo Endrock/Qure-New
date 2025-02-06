@@ -1,4 +1,4 @@
-<div class="slider-derm-feature">
+<div class="slider-derm-feature container">
   <h2 class="section-title">{{ section.settings.title }}</h2>
 
   <slider-df class="slider-container">
@@ -6,7 +6,7 @@
       <div class="swiper-wrapper">
         {% for block in section.blocks %}
 
-          {% render 'pdm_derm-feature-slide' 
+          {% render 'pdm_derm-feature-slide'
           video: block.settings.video,
           img_ovl: block.settings.img,
           img_play: section.settings.icon_play,
@@ -36,6 +36,8 @@
 </div>
   </slider-df>
 </div>
+
+{% comment %} {% render 'test-swiper' %} {% endcomment %}
 
 {% schema %}
 {

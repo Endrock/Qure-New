@@ -230,10 +230,13 @@ const resultsSliderInit = () => {
   window.addEventListener("load", () => {
     let swiper = new Swiper(".pwd-result_slider", {
       spaceBetween: 38,
+      centeredSlides:true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
-        centeredSlides:true,
+      },
+      mousewheel: {
+        forceToAxis: true,
       },
       breakpoints: {
         556: {
@@ -262,19 +265,23 @@ const dermFeatureInit = () => {
         }
         connectedCallback() {
           const swiper = new Swiper(this.querySelector(".sdf"), {
-            slidesPerView: 'auto',
-            spaceBetween: 40,
-            loop:true,
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 10,
             centeredSlides: true,
-            breakpoints:{
+            mousewheel: {
+              forceToAxis: true,
+            },
+            breakpoints: {
               600:{
-                centeredSlides: false,
-                loop:true
+                slidesPerView: 2,
+                spaceBetween: 40,
+                centeredSlides: true,
               }
             },
             pagination: {
               el: ".sdf-pagination",
-              clickable: true,
+              clickable: false,
             }
           });
           this.clickVideo()
