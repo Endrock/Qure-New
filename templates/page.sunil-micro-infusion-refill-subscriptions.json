@@ -54,17 +54,17 @@
             "wistia_id": ""
           }
         },
+        "media_8Qj7Ce": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/review_home_page.png",
+            "wistia_id": ""
+          }
+        },
         "media_dzeM9L": {
           "type": "media",
           "settings": {
             "image": "shopify://shop_images/mi_refill-result-1.webp",
-            "wistia_id": ""
-          }
-        },
-        "media_8Qj7Ce": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/mi_refill-result-2.webp",
             "wistia_id": ""
           }
         },
@@ -163,8 +163,8 @@
         "media_4UEJzg",
         "media_7YEfkX",
         "media_TzgLy6",
-        "media_dzeM9L",
         "media_8Qj7Ce",
+        "media_dzeM9L",
         "media_8nG6mE",
         "media_efznbh",
         "liquid_a4mkYA",
@@ -328,16 +328,29 @@
     "results_RAwjmJ": {
       "type": "results",
       "blocks": {
-        "result_EpL9mk": {
+        "result_Udy8Y3": {
           "type": "result",
           "settings": {
-            "image": "shopify://shop_images/Shelly_S.png",
-            "heading": "Looking better and better",
-            "text": "<p>\"I have used the Qure Microneedling system for 3 monthly treatments. The results are clearer, plumper and firmer skin. With further treatments I am looking forward to looking better and better.\"</p>",
+            "image": "shopify://shop_images/Tami_trump.png",
+            "heading": "Definitely pleased with the product",
+            "text": "<p>“I've started seeing a lot of changes to my face it's softer and much more nourished making some of the lines around my mouth softer and fuller. I've even gotten my color tone and glow back. Definitely pleased with the product and will be continuing to use the products. Also purchased the face serum and the micro dart patches. We'll see how they work as well. I'm still in the beginning stages this weekend will be my 4th treatment and using the patches as well. Stay tuned another update soon.”</p>",
             "see-more": "",
             "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
             "text_country": "United States",
-            "client": "Shelly S.",
+            "client": "Tami T.",
+            "code": ""
+          }
+        },
+        "result_zHPFqU": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/Jenn_Nay_b_a.png",
+            "heading": "Works better then I imagined!",
+            "text": "<p>“I am really stunned by how well this product works. I have had professional micro-needling and I wanted the benefits without the downtime. I did my treatment, went to bed and woke up the next morning and was ready to go. My skin looks better than it has in years.”</p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
+            "text_country": "United States",
+            "client": "Jennifer Nay",
             "code": ""
           }
         },
@@ -354,8 +367,22 @@
             "code": ""
           }
         },
+        "result_EpL9mk": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/Shelly_S.png",
+            "heading": "Looking better and better",
+            "text": "<p>\"I have used the Qure Microneedling system for 3 monthly treatments. The results are clearer, plumper and firmer skin. With further treatments I am looking forward to looking better and better.\"</p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Shelly S.",
+            "code": ""
+          }
+        },
         "result_eP4AeV": {
           "type": "result",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/results_glorija.webp",
             "heading": "The best natural glow",
@@ -434,6 +461,7 @@
         },
         "result_rwc7kD": {
           "type": "result",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/results_jess1.webp",
             "heading": "Totally worth it!!!",
@@ -447,6 +475,7 @@
         },
         "result_bkVjix": {
           "type": "result",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/results_andrea-a.webp",
             "heading": "Absolutely love it!",
@@ -473,6 +502,7 @@
         },
         "result_wpVmYH": {
           "type": "result",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/results_ann.webp",
             "heading": "How easy it is to use",
@@ -486,6 +516,7 @@
         },
         "result_tLFegp": {
           "type": "result",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/results_mona.webp",
             "heading": "After just TWO treatments!",
@@ -507,19 +538,6 @@
             "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
             "text_country": "United States",
             "client": "Chelsea J.",
-            "code": ""
-          }
-        },
-        "result_zHPFqU": {
-          "type": "result",
-          "settings": {
-            "image": "shopify://shop_images/Jenn_Nay_b_a.png",
-            "heading": "Works better then I imagined!",
-            "text": "<p>“I am really stunned by how well this product works. I have had professional micro-needling and I wanted the benefits without the downtime. I did my treatment, went to bed and woke up the next morning and was ready to go. My skin looks better than it has in years.”</p>",
-            "see-more": "",
-            "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
-            "text_country": "United States",
-            "client": "Jennifer Nay",
             "code": ""
           }
         },
@@ -588,19 +606,6 @@
             "code": ""
           }
         },
-        "result_Tg3Ag9": {
-          "type": "result",
-          "settings": {
-            "image": "shopify://shop_images/Group_1299mi-pdp-RAMANDEEPresults_a5607477-fd56-4e3a-9a6d-19ac2c74d56a.png",
-            "heading": "Loving it!",
-            "text": "<p>“As you can see from my before and after photos (two treatments thus far) that my skin has tightened and my pores are diminishing. Can’t wait to see the results after 6 weeks.”</p>",
-            "see-more": "",
-            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
-            "text_country": "United States",
-            "client": "Nue V.",
-            "code": ""
-          }
-        },
         "result_inFnDQ": {
           "type": "result",
           "settings": {
@@ -613,24 +618,13 @@
             "client": "Anonymous",
             "code": ""
           }
-        },
-        "result_Udy8Y3": {
-          "type": "result",
-          "settings": {
-            "image": "shopify://shop_images/Tami_trump.png",
-            "heading": "Definitely pleased with the product",
-            "text": "<p>“I've started seeing a lot of changes to my face it's softer and much more nourished making some of the lines around my mouth softer and fuller. I've even gotten my color tone and glow back. Definitely pleased with the product and will be continuing to use the products. Also purchased the face serum and the micro dart patches. We'll see how they work as well. I'm still in the beginning stages this weekend will be my 4th treatment and using the patches as well. Stay tuned another update soon.”</p>",
-            "see-more": "",
-            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
-            "text_country": "United States",
-            "client": "Tami T.",
-            "code": ""
-          }
         }
       },
       "block_order": [
-        "result_EpL9mk",
+        "result_Udy8Y3",
+        "result_zHPFqU",
         "result_JNEbr4",
+        "result_EpL9mk",
         "result_eP4AeV",
         "result_Wz8gak",
         "result_nmtgEE",
@@ -643,15 +637,12 @@
         "result_wpVmYH",
         "result_tLFegp",
         "result_g6zQgr",
-        "result_zHPFqU",
         "result_djxhNa",
         "result_gDzAyP",
         "result_UYzMEq",
         "result_yQPg9y",
         "result_BEHANt",
-        "result_Tg3Ag9",
-        "result_inFnDQ",
-        "result_Udy8Y3"
+        "result_inFnDQ"
       ],
       "settings": {
         "classname": "mi_landing_result",

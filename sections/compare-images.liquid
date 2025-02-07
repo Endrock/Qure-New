@@ -1,4 +1,4 @@
-<div class="advanced-filtration section">
+<div class="advanced-filtration section {{ section.settings.ctm_cls }}">
   <div class="container">
     <div class="section_header text-center ms-0 m-md-auto">
       {% if section.settings.heading != blank %}
@@ -127,6 +127,11 @@
 {
   "name": "t:sections.image_comapre.label",
   "settings": [
+    {
+      "type": "text",
+      "id": "ctm_cls",
+      "label": "t:common.classname.custom"
+    },
     {
       "type": "text",
       "id": "heading",

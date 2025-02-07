@@ -1,11 +1,11 @@
 {% assign random_number = 'now' | date: '%s' | modulo: 100 | plus: 1 %}
-<div class="advanced-filtration section">
+<div class="advanced-filtration section {{ section.settings.ctm_cls }}">
   <div class="container">
+    {% if section.settings.section_heading != blank %}
     <div class="section_header text-md-center ms-0 m-md-auto mb-4">
-      {% if section.settings.section_heading != blank %}
         <h2 class="title-lg">{{ section.settings.section_heading }}</h2>
-      {% endif %}
     </div>
+  {% endif %}
     <div>
       <div class="row gy-3">
         {% for block in section.blocks %}
@@ -29,6 +29,14 @@
         {% endfor %}
       </div>
     </div>
+
+  {% assign has_accordion = false %}
+  {% for block in section.blocks %}
+    {% if block.type == 'accordion' and block.settings.accordion_title != blank %}
+      {% assign has_accordion = true %}
+    {% endif %}
+  {% endfor %}
+{% if has_accordion %}
     <div class="filter_details faq">
       <div class="accordion" id="details_drop">
         {% for block in section.blocks %}
@@ -81,6 +89,7 @@
       </picture>
       {% endif %}
     </div>
+  {% endif %}
   </div>
 </div>
 
@@ -88,6 +97,11 @@
 {
   "name": "t:sections.filtration.label",
   "settings": [
+    {
+      "type": "text",
+      "id": "ctm_cls",
+      "label": "t:common.classname.custom"
+    },
     {
       "type": "text",
       "id": "section_heading",

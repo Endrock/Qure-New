@@ -84,7 +84,17 @@
 
           {%- when 'text' -%}
             <div class="col-md-{% assign dashoffset = 12 | minus: section.settings.column %}{{ dashoffset }}">
-              <div class="single_step return_ftrs ps-md-3 mt-3 mt-md-0">
+              <div class="single_step return_ftrs ps-md-3 mt-3 mt-md-0 {{ block.settings.ctm_cls }}">
+               
+               
+                {% if block.settings.heading_first != blank %}
+                  <div class="heading_fir mb-3 mb-md-4">
+                      <h2 class="title-lg">{{ block.settings.heading_first }}</h2>
+                  </div>
+                {% endif %}
+
+
+
                 {% if block.settings.heading2 != blank %}
                   <div class="rtn_ftr mb-3 mb-md-5">
                     <div class="section_header align-items-center d-flex gap-1 gap-md-2">
@@ -379,6 +389,16 @@
       "name": "t:common.text.label",
       "limit": 1,
       "settings": [
+        {
+          "type": "textarea",
+          "id": "ctm_cls",
+          "label": "t:common.classname.custom"
+        },
+        {
+          "type": "text",
+          "id": "heading_first",
+          "label": "t:common.heading.label"
+        },
         {
           "type": "richtext",
           "id": "text",
