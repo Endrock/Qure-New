@@ -90,7 +90,7 @@
           "settings": {
             "heading": "Exclusive Valentine's day bundle",
             "discount": 66,
-            "image": "shopify://shop_images/VD-Bundle-hero.png",
+            "image": "shopify://shop_images/VD-Bundle-hero-02.png",
             "product_url": "#Pro-Aging-Bundles"
           }
         },
@@ -560,11 +560,11 @@
         "include_njjqWt": {
           "type": "include",
           "settings": {
-            "heading": "Micro-Infusion 3 Month for Dark Spots Bundle",
+            "heading": "Micro-Infusion 2 Month Bundle (For Wrinkles + Dark Spots)",
             "is_limited": false,
             "type": "",
-            "image": "shopify://shop_images/MI_6x-rejuv.jpg",
-            "text": "<h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
+            "image": "shopify://shop_images/2monthmix_1_0201c796-fb83-44b6-a71b-800e642105a7_1.png",
+            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p><h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -574,10 +574,10 @@
         "include_xEBYB3": {
           "type": "include",
           "settings": {
-            "heading": "4 Refill Treatments for Dark Spots FREE",
+            "heading": "Micro-Infusion 3 Month Refill (For Dark Spots) FREE",
             "is_limited": false,
             "type": "",
-            "image": "shopify://shop_images/Rejuvenating.png",
+            "image": "shopify://shop_images/3monthrefilldarkspots_dcb3e6df-a294-40f8-afc5-ead3f74b22c1.png",
             "text": "<h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
             "count": "",
             "hide": false,
@@ -589,7 +589,7 @@
           "type": "how-to-use",
           "settings": {
             "image": "shopify://shop_images/bfs_mi_sm.svg",
-            "text": "<h5>Micro-Infusion 3 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Use the 2 month refills after 3 month bundle.</li></ul>"
+            "text": "<h5>Micro-Infusion 5 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Use the 3 month refills after 2 month bundle.</li></ul>"
           }
         },
         "bundle_wpXFFy": {
@@ -1175,8 +1175,8 @@
             "recommended_heading": "",
             "recommended_text": "",
             "is_top_rated": false,
-            "is_preorder": true,
-            "preorder_text": "SHIPS MID FEBRUARY",
+            "is_preorder": false,
+            "preorder_text": "",
             "classname": "",
             "code": ""
           }
@@ -1203,7 +1203,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs_shower_f.webp",
             "text": "",
-            "count": "Ships Mid February",
+            "count": "",
             "hide": false,
             "hide_variants": false,
             "code": "<div class=\"bfs_tbx_color\">\n                                                <select class=\"form-select form-select-second colorSelector\"\n                                                    aria-label=\"Default select example\">\n                                                    <option value=\"1\" selected>White</option>\n                                                    <option value=\"2\">Black</option>\n                                                </select>\n                                            </div>"
@@ -1461,8 +1461,8 @@
             "recommended_heading": "",
             "recommended_text": "",
             "is_top_rated": false,
-            "is_preorder": true,
-            "preorder_text": "SHIPS MID FEBRUARY",
+            "is_preorder": false,
+            "preorder_text": "",
             "classname": "",
             "code": ""
           }
@@ -1489,7 +1489,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs_shower_f.webp",
             "text": "",
-            "count": "Ships Mid February",
+            "count": "",
             "hide": false,
             "hide_variants": false,
             "code": "<div class=\"bfs_tbx_color\">\n                                                <select class=\"form-select form-select-second colorSelector\"\n                                                    aria-label=\"Default select example\">\n                                                    <option value=\"1\" selected>White</option>\n                                                    <option value=\"2\">Black</option>\n                                                </select>\n                                            </div>"

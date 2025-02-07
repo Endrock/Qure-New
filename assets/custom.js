@@ -93,154 +93,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, 750);
 
-    //https://www.qureskincare.com/pages/q-urify-water-filter-guide
-    if (template == 'page.sunil-q-urify-safety') {
-        document.querySelector('#hs_1').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.step6');
-        });
-        document.querySelector('#hs_2').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.step8');
-        });
-        document.querySelector('#hs_3').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.step10');
-        });
-        document.querySelector('#hsm_1').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.step6');
-            triggerClick('.hamburger-container');
-        });
-        document.querySelector('#hsm_2').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.step8');
-            triggerClick('.hamburger-container');
-        });
-        document.querySelector('#hsm_3').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.step10');
-            triggerClick('.hamburger-container');
-        });
-    }
-    //https://www.qureskincare.com/pages/faucet-online-guide
-    if (template == 'page.faucet-online-guide') {
-        document.querySelector('#hs_1').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.step7');
-        });
-        document.querySelector('#hs_2').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.step8');
-        });
-        document.querySelector('#hs_3').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.step10');
-        });
-        document.querySelector('#hsm_1').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.step7');
-            triggerClick('.hamburger-container');
-        });
-        document.querySelector('#hsm_2').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.step8');
-            triggerClick('.hamburger-container');
-        });
-        document.querySelector('#hsm_3').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.step10');
-            triggerClick('.hamburger-container');
-        });
-    }
-
-    //https://www.qureskincare.com/pages/microinfusion-safety-guide
-    if (template == 'page.sunil-micro-infusion-safety') {
-        document.querySelector('#hs_1').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.step6');
-        });
-        document.querySelector('#hs_2').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.step4');
-        });
-        document.querySelector('#hs_3').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.step10');
-        });
-        document.querySelector('#hsm_1').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.step6');
-            triggerClick('.hamburger-container');
-        });
-        document.querySelector('#hsm_2').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.step4');
-            triggerClick('.hamburger-container');
-        });
-        document.querySelector('#hsm_3').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.step10');
-            triggerClick('.hamburger-container');
-        });
-    }
-
-    //https://www.qureskincare.com/pages/q-rejuvalight-pro-LED-mask-guide
-    if (template == 'page.sunil-micro-mask-guide') {
-
-        if (window.location.hash) {
-            switch (window.location.hash) {
-                case '#how-to-use':
-                    triggerClick('.how-to-use');
-                    break;
-                case '#getting-started':
-                    triggerClick('.getting-started');
-                    break;
-                case '#troubleshooting':
-                    triggerClick('.troubleshooting');
-                    break;
-                case '#take-care':
-                    triggerClick('.take-care');
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        document.querySelector('#hs_1').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.how-to-use');
-        });
-        document.querySelector('#hsm_1').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.how-to-use');
-        });
-        document.querySelector('#hs_2').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.getting-started');
-        });
-        document.querySelector('#hsm_2').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.getting-started');
-        });
-        document.querySelector('#hs_3').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.troubleshooting');
-        });
-        document.querySelector('#hsm_3').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.troubleshooting');
-        });
-        document.querySelector('#hs_4').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.take-care');
-        });
-        document.querySelector('#hsm_4').addEventListener('click', function() {
-            event.preventDefault();
-            triggerClick('.take-care');
-        });
-    }
-
     //https://www.qureskincare.com/products/micro-infusion-targeted-patches
     var swiper = new Swiper(".combat_slider", {
         slidesPerView: 3.6,
@@ -303,11 +155,6 @@ function getCookie(name) {
     return null;
 }
 
-function testabc()
-{
-    console.log('abc test');
-}
-
 function openChat() {
     var iframe = document.getElementById('launcher');
   
@@ -327,3 +174,48 @@ function openChat() {
       console.error('Iframe not found');
     }
 }
+
+
+/*
+function addEventListenerStamped(el, eventName, handler) {
+    if (el.addEventListener) { el.addEventListener(eventName, handler); }
+    else { el.attachEvent('on' + eventName, function () { handler.call(el); }); }
+}
+
+addEventListenerStamped(document, 'stamped:launcher:loaded', function(e) {
+
+    setTimeout(() => {
+        const parentElement = document.querySelector('[data-campaign-event="custom"]');
+
+        if (parentElement) {
+            const targetElement = parentElement.querySelector('[data-type="view"]');
+            if (targetElement) {
+                targetElement.style.display = "inline";
+                targetElement.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    fetch("https://stamped.io/api/v3/loyalty/shops/198244/activities?campaignId=9412190f-966a-4efe-a76c-9f1d793ea605&email=" + window.customer_email, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.error("Success:", data);                        
+                        setTimeout(() => {
+                            //window.location.href = "https://qureskincare.com/pages/reviews";
+                        }, 1000);
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+
+                        setTimeout(() => {
+                            //window.location.href = "https://qureskincare.com/pages/reviews";
+                        }, 1000);
+                    });
+                });
+            }
+        }
+    }, 500)
+});
+*/
