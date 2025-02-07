@@ -32,116 +32,113 @@ function getShopifyCart () {
 };
 
 const lifestyleInit = ()=>{
-  window.addEventListener("load", () => {
-    if (!window.customElements.get('cards-tips')) {
-      class CardsTips extends HTMLElement {
+  if (!window.customElements.get('cards-tips')) {
+    class CardsTips extends HTMLElement {
 
-        static get observedAttributes() {
-          return ['active-card'];
-        }
+      static get observedAttributes() {
+        return ['active-card'];
+      }
 
-        constructor() {
-          super();
-          this.cards = [];
-        }
+      constructor() {
+        super();
+        this.cards = [];
+      }
 
-        connectedCallback() {
-          this.updateCards();
-          this.paginationClick();
-          this.arrowsClick();
-          this.popupClick();
-        }
-        attributeChangedCallback(name, oldValue, newValue) {
-          if (name === 'active-card') {
-            this.changeCard(oldValue, newValue);
-          }
-        }
-
-        updateCards() {
-          this.cards = Array.from(this.querySelectorAll('.card'));
-        }
-
-        paginationClick() {
-          const btnsCards = this.querySelectorAll('.pagination .num');
-          if(btnsCards.length < 1) return ;
-          btnsCards.forEach((btn) => {
-            btn.addEventListener('click',() => {
-              this.setAttribute('active-card', btn.dataset.card);
-            })
-          })
-        }
-
-        arrowsClick() {
-          const btnsNext = this.querySelectorAll('.next')
-          const btnsPrevieus = this.querySelectorAll('.previous')
-
-          if( btnsNext.length < 1 && btnsPrevieus < 1) return ;
-
-          btnsNext.forEach((btn) => {
-            btn.addEventListener('click',() => {
-              const nextCard = parseInt(this.getAttribute('active-card')) + 1;
-              if( nextCard > this.cards.length ) return ;
-              this.setAttribute('active-card', nextCard)
-            })
-          });
-
-          btnsPrevieus.forEach((btn) => {
-            btn.addEventListener('click',() => {
-              const previousCard = parseInt(this.getAttribute('active-card')) - 1;
-              if( previousCard < 1 ) return ;
-              this.setAttribute('active-card', previousCard)
-            })
-          });
-        }
-        popupClick(){
-          const btns = this.querySelectorAll('.btn-popup');
-          if(btns.length < 1) return;
-          btns.forEach((btn) => {
-            const popup = this.querySelector(`.popup-source[data-index="${ btn.dataset.index }"]`)
-            if(!popup) return;
-            btn.addEventListener('click',() => {
-              popup.classList.remove('hidden');
-            })
-            const close = popup.querySelector('.close');
-            if(!close) return;
-            close.addEventListener('click',() => {
-              popup.classList.add('hidden');
-            })
-          })
-        }
-
-        changeCard(oldValue, newValue) {
-
-          if (!newValue || !oldValue || newValue === oldValue) return ;
-
-          if (!this.cards.length) this.updateCards();
-
-          const activatedCard = this.querySelector(`.card[index="${newValue}"]`);
-          const desactivatedCard = this.querySelector(`.card[index="${oldValue}"]`);
-
-          if (activatedCard === desactivatedCard) return;
-          if (!activatedCard) return;
-
-          if (!desactivatedCard) {
-            this.cards.forEach((card) => {
-              card.classList.remove('active');
-            });
-          } else {
-            desactivatedCard.classList.remove('active');
-          }
-
-          if (activatedCard) {
-            activatedCard.classList.add('active');
-          }
+      connectedCallback() {
+        this.updateCards();
+        this.paginationClick();
+        this.arrowsClick();
+        this.popupClick();
+      }
+      attributeChangedCallback(name, oldValue, newValue) {
+        if (name === 'active-card') {
+          this.changeCard(oldValue, newValue);
         }
       }
-      window.customElements.define('cards-tips', CardsTips);
+
+      updateCards() {
+        this.cards = Array.from(this.querySelectorAll('.card'));
+      }
+
+      paginationClick() {
+        const btnsCards = this.querySelectorAll('.pagination .num');
+        if(btnsCards.length < 1) return ;
+        btnsCards.forEach((btn) => {
+          btn.addEventListener('click',() => {
+            this.setAttribute('active-card', btn.dataset.card);
+          })
+        })
+      }
+
+      arrowsClick() {
+        const btnsNext = this.querySelectorAll('.next')
+        const btnsPrevieus = this.querySelectorAll('.previous')
+
+        if( btnsNext.length < 1 && btnsPrevieus < 1) return ;
+
+        btnsNext.forEach((btn) => {
+          btn.addEventListener('click',() => {
+            const nextCard = parseInt(this.getAttribute('active-card')) + 1;
+            if( nextCard > this.cards.length ) return ;
+            this.setAttribute('active-card', nextCard)
+          })
+        });
+
+        btnsPrevieus.forEach((btn) => {
+          btn.addEventListener('click',() => {
+            const previousCard = parseInt(this.getAttribute('active-card')) - 1;
+            if( previousCard < 1 ) return ;
+            this.setAttribute('active-card', previousCard)
+          })
+        });
+      }
+      popupClick(){
+        const btns = this.querySelectorAll('.btn-popup');
+        if(btns.length < 1) return;
+        btns.forEach((btn) => {
+          const popup = this.querySelector(`.popup-source[data-index="${ btn.dataset.index }"]`)
+          if(!popup) return;
+          btn.addEventListener('click',() => {
+            popup.classList.remove('hidden');
+          })
+          const close = popup.querySelector('.close');
+          if(!close) return;
+          close.addEventListener('click',() => {
+            popup.classList.add('hidden');
+          })
+        })
+      }
+
+      changeCard(oldValue, newValue) {
+
+        if (!newValue || !oldValue || newValue === oldValue) return ;
+
+        if (!this.cards.length) this.updateCards();
+
+        const activatedCard = this.querySelector(`.card[index="${newValue}"]`);
+        const desactivatedCard = this.querySelector(`.card[index="${oldValue}"]`);
+
+        if (activatedCard === desactivatedCard) return;
+        if (!activatedCard) return;
+
+        if (!desactivatedCard) {
+          this.cards.forEach((card) => {
+            card.classList.remove('active');
+          });
+        } else {
+          desactivatedCard.classList.remove('active');
+        }
+
+        if (activatedCard) {
+          activatedCard.classList.add('active');
+        }
+      }
     }
-  });
+    window.customElements.define('cards-tips', CardsTips);
+  }
 }
 
 const regimenInit = () => {
-  window.addEventListener("load", () => {
     if (!window.customElements.get('regimen-steps')) {
       class RegimenSteps extends HTMLElement {
         static get observedAttributes() {
@@ -223,11 +220,9 @@ const regimenInit = () => {
       }
       window.customElements.define('regimen-steps', RegimenSteps);
     }
-  });
 }
 
 const resultsSliderInit = () => {
-  window.addEventListener("load", () => {
     let swiper = new Swiper(".pwd-result_slider", {
       spaceBetween: 38,
       centeredSlides:true,
@@ -253,11 +248,9 @@ const resultsSliderInit = () => {
         },
       },
     });
-  });
 }
 
 const dermFeatureInit = () => {
-  window.addEventListener("load", () => {
     if (!window.customElements.get('slider-df')) {
       class SliderDermFeature extends HTMLElement {
         constructor() {
@@ -268,20 +261,21 @@ const dermFeatureInit = () => {
             loop: true,
             slidesPerView: 1,
             spaceBetween: 10,
-            centeredSlides: true,
+            centeredSlides: false,
             mousewheel: {
               forceToAxis: true,
             },
             breakpoints: {
               600:{
-                slidesPerView: 2,
+                loop: false,
+                slidesPerView: 'auto',
                 spaceBetween: 40,
-                centeredSlides: true,
+                centeredSlides: false,
               }
             },
             pagination: {
               el: ".sdf-pagination",
-              clickable: false,
+              clickable: true,
             }
           });
           this.clickVideo()
@@ -333,11 +327,9 @@ const dermFeatureInit = () => {
       }
       window.customElements.define('slider-df', SliderDermFeature);
     }
-  });
 }
 
 const dualTextImgInit = () => {
-  window.addEventListener("load", () => { 
     const btns = document.querySelectorAll('.cont-btn')
     if(btns.length < 1 ) return ;
     btns.forEach((btn) => {
@@ -351,11 +343,9 @@ const dualTextImgInit = () => {
         }
       })
     })
-  })
 }
 
 const productsBundleInit = ()=>{
-  window.addEventListener("load", () => {
     if (!window.customElements.get('products-bundle')) {
       class productsBundle extends HTMLElement {
 
@@ -533,11 +523,9 @@ const productsBundleInit = ()=>{
       }
       window.customElements.define('products-bundle', productsBundle );
     }
-  });
 }
 
 const flatingBundleInit = ()=>{
-  window.addEventListener("load", () => {
     if (!window.customElements.get('flating-bundle')) {
       class flatingBundle extends HTMLElement {
 
@@ -550,6 +538,8 @@ const flatingBundleInit = ()=>{
           this.discount = 0;
           this.totalPrice = 0;
           document.addEventListener('cartRemoveBundle', () => {
+console.log('entra en el evento');
+
             this.resetProductBundle();
           });
         }
@@ -615,6 +605,8 @@ const flatingBundleInit = ()=>{
           btnSubmit.addEventListener('click',() => {
             if( this.getAttribute('data-bundle-used') === 'true' )return;
             if(btnSubmit.classList.contains('disabled')) return;
+            
+            btnSubmit.parentElement.classList.add('loading');
             btnSubmit.classList.add('disabled')
             const bundleId = this.getAttribute('data-bundle-id')
             const arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
@@ -638,6 +630,9 @@ const flatingBundleInit = ()=>{
             window.cartRequestAdd({
               items
             }, {} )
+            setTimeout(() => {
+              btnSubmit.parentElement.classList.remove('loading');
+            }, 1000);
             this.setAttribute('data-bundle-used', 'true') 
             
           })
@@ -822,18 +817,20 @@ const flatingBundleInit = ()=>{
           btnSubmit.classList.remove('disabled');
 
           const btnsClose = this.querySelectorAll('.close');
-          btnsClose.forEach(btn => btn.click());
+          btnsClose.forEach(btn => {
+            setTimeout(() => {
+              btn.click()
+            },500);
+          });
 
         }
 
       }
       window.customElements.define('flating-bundle', flatingBundle );
     }
-  });
 }
 
 const  closureBundleInit = ()=>{
-  window.addEventListener("load", () => {
     if (!window.customElements.get('closure-bundle')) {
       class closureBundle extends HTMLElement {
 
@@ -919,15 +916,16 @@ const  closureBundleInit = ()=>{
       }
       window.customElements.define('closure-bundle', closureBundle );
     }
-  });
 }
 
-getUserName()
-closureBundleInit()
-flatingBundleInit()
-productsBundleInit()
-dualTextImgInit();
-dermFeatureInit();
-resultsSliderInit();
-regimenInit();
-lifestyleInit();
+document.addEventListener('DOMContentLoaded', () => {
+  getUserName();
+  closureBundleInit();
+  flatingBundleInit();
+  productsBundleInit();
+  dualTextImgInit();
+  dermFeatureInit();
+  resultsSliderInit();
+  regimenInit();
+  lifestyleInit();
+});
