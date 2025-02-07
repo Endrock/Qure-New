@@ -183,9 +183,9 @@
     font-weight: 400;
 }
 
-.result_s_wrapper .pagination_navigation {
+/* .result_s_wrapper .pagination_navigation {
     max-width: fit-content;
-}
+} */
 
 .result_s_wrapper .swiper-button-prev {
     left: -60px;

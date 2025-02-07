@@ -589,7 +589,7 @@
           "type": "how-to-use",
           "settings": {
             "image": "shopify://shop_images/bfs_mi_sm.svg",
-            "text": "<h5>Micro-Infusion 3 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Use the 2 month refills after 3 month bundle.</li></ul>"
+            "text": "<h5>Micro-Infusion 5 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Use the 3 month refills after 2 month bundle.</li></ul>"
           }
         },
         "bundle_wpXFFy": {
@@ -1175,8 +1175,8 @@
             "recommended_heading": "",
             "recommended_text": "",
             "is_top_rated": false,
-            "is_preorder": true,
-            "preorder_text": "SHIPS MID FEBRUARY",
+            "is_preorder": false,
+            "preorder_text": "",
             "classname": "",
             "code": ""
           }
@@ -1203,7 +1203,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs_shower_f.webp",
             "text": "",
-            "count": "Ships Mid February",
+            "count": "",
             "hide": false,
             "hide_variants": false,
             "code": "<div class=\"bfs_tbx_color\">\n                                                <select class=\"form-select form-select-second colorSelector\"\n                                                    aria-label=\"Default select example\">\n                                                    <option value=\"1\" selected>White</option>\n                                                    <option value=\"2\">Black</option>\n                                                </select>\n                                            </div>"
@@ -1461,8 +1461,8 @@
             "recommended_heading": "",
             "recommended_text": "",
             "is_top_rated": false,
-            "is_preorder": true,
-            "preorder_text": "SHIPS MID FEBRUARY",
+            "is_preorder": false,
+            "preorder_text": "",
             "classname": "",
             "code": ""
           }
@@ -1489,7 +1489,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs_shower_f.webp",
             "text": "",
-            "count": "Ships Mid February",
+            "count": "",
             "hide": false,
             "hide_variants": false,
             "code": "<div class=\"bfs_tbx_color\">\n                                                <select class=\"form-select form-select-second colorSelector\"\n                                                    aria-label=\"Default select example\">\n                                                    <option value=\"1\" selected>White</option>\n                                                    <option value=\"2\">Black</option>\n                                                </select>\n                                            </div>"

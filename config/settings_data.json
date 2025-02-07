@@ -238,8 +238,8 @@
               "upsell_product_first_description": "Reduces appearance of fine lines and wrinkles.",
               "upsell_product_second": "nec-and-deck-extended-1-year-warranty",
               "upsell_product_second_description": "Protect your LED Device for 1 more year.",
-              "upsell_product_third": "face-serum",
-              "upsell_product_thid_description": "Plump, smooth & brighten in just one step."
+              "upsell_product_third": "fade-firm-bundle-advance",
+              "upsell_product_thid_description": "Complete your treatment & treat multiple skin concerns."
             }
           },
           "upsell_a74n8t": {
@@ -250,8 +250,8 @@
               "upsell_product_first_description": "Rejuvenate skin where the first signs of aging show",
               "upsell_product_second": "micro-infusion-1-month-bundle-2x-beta-glucan-serum",
               "upsell_product_second_description": "Reveal smoother, radiant skin",
-              "upsell_product_third": "neck-decolletage-led",
-              "upsell_product_thid_description": "Evens skin tone and boosts firmness"
+              "upsell_product_third": "line-refine-bundle-pro",
+              "upsell_product_thid_description": "Complete your treatment & treat multiple skin concerns."
             }
           },
           "upsell_ej4ULU": {
@@ -262,8 +262,8 @@
               "upsell_product_first_description": "Reveal smoother, radiant skin",
               "upsell_product_second": "dermal-mist",
               "upsell_product_second_description": "Purifies and refreshes",
-              "upsell_product_third": "face-serum",
-              "upsell_product_thid_description": "Plump, smooth & brighten in just one step"
+              "upsell_product_third": "fade-firm-bundle-essentials",
+              "upsell_product_thid_description": "Complete your treatment & treat multiple skin concerns."
             }
           },
           "upsell_GiyUV9": {
@@ -282,8 +282,8 @@
             "type": "upsell",
             "settings": {
               "page_url": "https://qureskincare.com/products/faucet-filter",
-              "upsell_product_first": "dermal-mist",
-              "upsell_product_first_description": "Purifies and refreshes",
+              "upsell_product_first": "fade-firm-bundle-advance",
+              "upsell_product_first_description": "Complete your treatment & treat multiple skin concerns.",
               "upsell_product_second": "shower-filter",
               "upsell_product_second_description": "Reduces irritants in water for clearer, hydrated skin.",
               "upsell_product_third": "face-serum",
@@ -296,8 +296,8 @@
               "page_url": "https://qureskincare.com/products/dermal-mist",
               "upsell_product_first": "q-rejuvalight-pro-facewear",
               "upsell_product_first_description": "Rejuvenate skin where the first signs of aging show",
-              "upsell_product_second": "micro-infusion-targeted-patches",
-              "upsell_product_second_description": "Reduces appearance of fine lines and wrinkles.",
+              "upsell_product_second": "fade-firm-bundle-essentials",
+              "upsell_product_second_description": "Complete your treatment & treat multiple skin concerns.2",
               "upsell_product_third": "face-serum",
               "upsell_product_thid_description": "Plump, smooth & brighten in just one step."
             }
@@ -308,22 +308,10 @@
               "page_url": "https://qureskincare.com/pages/microinfusion",
               "upsell_product_first": "micro-infusion-darkspots-treatments",
               "upsell_product_first_description": "Reveal smoother, radiant skin.",
-              "upsell_product_second": "micro-infusion-targeted-patches-single",
+              "upsell_product_second": "breakout-control-advanced",
               "upsell_product_second_description": "Reduces appearance of fine lines and wrinkles.",
               "upsell_product_third": "dermal-mist",
-              "upsell_product_thid_description": "Purifies and refreshes."
-            }
-          },
-          "upsell_qRXtDN": {
-            "type": "upsell",
-            "settings": {
-              "page_url": "https://qureskincare.com/products/face-serum",
-              "upsell_product_first": "q-rejuvalight-pro-facewear",
-              "upsell_product_first_description": "Rejuvenate skin where the first signs of aging show",
-              "upsell_product_second": "micro-infusion-targeted-patches",
-              "upsell_product_second_description": "Reduces appearance of fine lines and wrinkles.",
-              "upsell_product_third": "dermal-mist",
-              "upsell_product_thid_description": "Purifies and refreshes"
+              "upsell_product_thid_description": "Complete your treatment & treat multiple skin concerns."
             }
           },
           "upsell_pDFytd": {
@@ -332,8 +320,8 @@
               "page_url": "https://qureskincare.com/products/shower-filter",
               "upsell_product_first": "q-rejuvalight-pro-facewear",
               "upsell_product_first_description": "Rejuvenate skin where the first signs of aging show",
-              "upsell_product_second": "dermal-mist",
-              "upsell_product_second_description": "Purifies and refreshes",
+              "upsell_product_second": "line-refine-bundle-advanced",
+              "upsell_product_second_description": "Complete your treatment & treat multiple skin concerns.",
               "upsell_product_third": "face-serum",
               "upsell_product_thid_description": "Plump, smooth & brighten in just one step."
             }
@@ -350,7 +338,6 @@
           "upsell_UiGexh",
           "upsell_MBrVMA",
           "upsell_zaLtWh",
-          "upsell_qRXtDN",
           "upsell_pDFytd"
         ],
         "custom_css": [],

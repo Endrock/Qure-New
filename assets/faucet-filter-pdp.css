@@ -503,7 +503,12 @@
 .faucet_filter_replacement .refill_info {
     max-width: 100% !important;
 }
-
+.ctm_rch_txt a {
+    text-decoration: underline;
+}
+.ctm_rch_txt a:hover {
+    color: #000;
+}
 
 
 
