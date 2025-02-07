@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "product-landing": {
       "type": "product-landing",
@@ -54,7 +54,8 @@
         "text_label_real_result_2": "Real Results",
         "text_label_real_result_3": "Dermatologist",
         "enable_jump_to_section": true,
-        "text_jump_to_section": "Jump To"
+        "text_jump_to_section": "Jump To",
+        "popup_enabled": false
       }
     },
     "featuredin_Xdfftn": {
@@ -275,8 +276,8 @@
           "type": "object",
           "settings": {
             "heading": "<p><strong>Actiwhite™ </strong>(Vitamin A)</p>",
-            "text": "<p>Encourages new cells to the surface to help reduce the visibility of wrinkles and age spots, and smooth skin texture.</p>",
-            "feedback": "<p><strong>…Reduction of facial wrinkles by up to 63.74%</strong>was experienced by<strong>100% of subjects,</strong>from induction of collagen production.</p>",
+            "text": "<p>Visibly brighten and even skin tone for a more radiant complexion. Actiwhite™ reduces the appearance of dark spots and prevents discoloration (by inhibiting melanin) with continued use.</p>",
+            "feedback": "<p>…100% of subjects demonstrated a significant reduction of pigmented age spots, and visible improvement of skin clarity and brightness.</p>",
             "popup_content": "<p>Topical retinol improves fine wrinkles associated with natural aging. Significant induction of increased collagen production, retinol-treated aged skin offers greater skin matrix synthesis and improved appearance. Facial wrinkles were reduced by 63.74% at the cheeks and 38.74% in the eye areas after 12 weeks of treatment.</p><p><strong>About the clinical trial</strong></p><p>Clinical trial was conducted and included subjects between the ages of 35 and 55. A retinol formulation was applied for 12 weeks on the participants. The efficacy and results in improving skin appearance was assessed using digital image-based wrinkle analysis after 12 weeks of retinol application.</p><p>Reference: Rong Kong, PhD,1 Yilei Cui, PhD,2 Gary J. Fisher, PhD,2 Xiaojuan Wang, BS,3 Yinbei Chen, MS,3. Journal of Cosmetic Dermatology (2015).</p>"
           }
         }
@@ -520,7 +521,8 @@
     "liquid_EH7JLe2": {
       "type": "liquid",
       "settings": {
-        "code": "{% render 'serums-allin-months-image-form' with section_id: section.id %}"
+        "code": "{% render 'serums-allin-months-image-form' with section_id: section.id %}",
+        "popup_micro_infusion_enabled": true
       }
     },
     "icons_list_RxBdg4": {
