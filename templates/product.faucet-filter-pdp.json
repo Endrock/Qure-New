@@ -276,115 +276,6 @@
         "text_reviewed": "Reviewed in"
       }
     },
-    "ingredients_list_kx7Yjh": {
-      "type": "ingredients-list",
-      "blocks": {
-        "column_7mEigp": {
-          "type": "column",
-          "settings": {
-            "flag": "Known irritant",
-            "flag-color": "#f9c91d",
-            "i-heading": "Chlorine",
-            "i-text": "Traditionally added to kill bacteria. Chlorine can deplete the skin of the natural oils that hold moisture in, leading to dry and itchy skin.",
-            "i_icon": "shopify:\/\/shop_images\/rust.svg",
-            "ingredient1": "Rust",
-            "i_icon2": "shopify:\/\/shop_images\/Algae.svg",
-            "ingredient2": "Algae",
-            "ingredient_text": "Mud, rust and micro-contaminants in water can irritate sensitive skin.",
-            "column_class": ""
-          }
-        },
-        "column_cBkfRK": {
-          "type": "column",
-          "settings": {
-            "flag": "Long-term damage!",
-            "flag-color": "#fa6f0b",
-            "i-heading": "Magnesium",
-            "i-text": "Magnesium can result in the formation of free radicals which damage healthy skin cells and break down collagen, resulting in fine lines and wrinkles.",
-            "i_icon": "shopify:\/\/shop_images\/Micro-plastics.svg",
-            "ingredient1": "Micro-plastics",
-            "i_icon2": "shopify:\/\/shop_images\/micro-organisms.svg",
-            "ingredient2": "Micro-organisms",
-            "ingredient_text": "Microplastics can cause micro-abrasions and damage sensitive skin.",
-            "column_class": "pt-5 pt-md-0"
-          }
-        },
-        "column_xrKbBE": {
-          "type": "column",
-          "settings": {
-            "flag": "Most harmful",
-            "flag-color": "#c92127",
-            "i-heading": "Calcium",
-            "i-text": "Calcium can irritate the skin, causing dry, scaly, pinkish patches. It can also clog pores, which can lead to blackheads, blemishes, and\/or rosacea.",
-            "i_icon": "shopify:\/\/shop_images\/lead-particles.svg",
-            "ingredient1": "Lead particles",
-            "i_icon2": "shopify:\/\/shop_images\/many-more.svg",
-            "ingredient2": "Many more",
-            "ingredient_text": "Hard water can have hard metals or excess Mg2+ and Ca2+ that can clog and irritate the skin.",
-            "column_class": "pt-5 pt-md-0"
-          }
-        },
-        "heading_c7QX6H": {
-          "type": "heading",
-          "settings": {
-            "heading2": "Perfect for"
-          }
-        },
-        "skin_image_hdTUgC": {
-          "type": "skin_image",
-          "settings": {
-            "skin_problem": "shopify:\/\/shop_images\/acne_skin.webp",
-            "problem_text": "Acne prone skin"
-          }
-        },
-        "skin_image_FEFYdf": {
-          "type": "skin_image",
-          "settings": {
-            "skin_problem": "shopify:\/\/shop_images\/rosacea.webp",
-            "problem_text": "Rosacea"
-          }
-        },
-        "skin_image_LCDYMx": {
-          "type": "skin_image",
-          "settings": {
-            "skin_problem": "shopify:\/\/shop_images\/dry_skin.webp",
-            "problem_text": "Dry skin"
-          }
-        },
-        "skin_image_eXjAJL": {
-          "type": "skin_image",
-          "settings": {
-            "skin_problem": "shopify:\/\/shop_images\/sensitive_skin.webp",
-            "problem_text": "Sensitive skin"
-          }
-        }
-      },
-      "block_order": [
-        "column_7mEigp",
-        "column_cBkfRK",
-        "column_xrKbBE",
-        "heading_c7QX6H",
-        "skin_image_hdTUgC",
-        "skin_image_FEFYdf",
-        "skin_image_LCDYMx",
-        "skin_image_eXjAJL"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".section_header p a {text-decoration: underline;}",
-        ".ingredients_img img {min-height: 49px;}"
-      ],
-      "settings": {
-        "heading": "It’s time to look toward your faucet, not (just) your ingredients list.",
-        "subtext": "<p>Research has shown tap water is contaminated with over 320* chemicals that your skin is absorbing daily. That water hardness is a contributor to <a href=\"https:\/\/www.sciencedirect.com\/science\/article\/pii\/S0022202X1732938X\">skin barrier impairment, <\/a>including worsened atopic <a href=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/33259122\/\">eczema <\/a>and <a href=\"https:\/\/pubmed.ncbi.nlm.nih.gov\/27241890\/\">atopic dermatitis. <\/a>And not just from the well-known culprit chlorine – but also calcium and magnesium.<\/p>",
-        "custom_class": "section pt-md-2"
-      }
-    },
-    "temp-faucet-filter-section4": {
-      "type": "temp-faucet-filter-section4",
-      "disabled": true,
-      "settings": {}
-    },
     "ingredients_list_Cj4m3e": {
       "type": "ingredients-list",
       "blocks": {
@@ -591,11 +482,6 @@
         "padding_bottom": 0
       }
     },
-    "temp-faucet-filter-section1": {
-      "type": "temp-faucet-filter-section1",
-      "disabled": true,
-      "settings": {}
-    },
     "image_text_8pHUQm": {
       "type": "image-text",
       "blocks": {
@@ -642,11 +528,6 @@
         "show_comment": false,
         "custom_class": ""
       }
-    },
-    "temp-faucet-filter-section2": {
-      "type": "temp-faucet-filter-section2",
-      "disabled": true,
-      "settings": {}
     },
     "compare_images_kJ9QKX": {
       "type": "compare-images",
@@ -778,11 +659,6 @@
         "background": "trasnparent",
         "custom_class": "section"
       }
-    },
-    "temp-faucet-filter-section3": {
-      "type": "temp-faucet-filter-section3",
-      "disabled": true,
-      "settings": {}
     },
     "confidence_slider_TTtUDV": {
       "type": "confidence-slider",
@@ -1215,18 +1091,13 @@
     "featuredin_FdCAV8",
     "reasons_Y4QGUa",
     "results_B6nDgh",
-    "ingredients_list_kx7Yjh",
-    "temp-faucet-filter-section4",
     "ingredients_list_Cj4m3e",
     "icons_list_KDdcxw",
     "text_with_video_MH3gBb",
-    "temp-faucet-filter-section1",
     "image_text_8pHUQm",
-    "temp-faucet-filter-section2",
     "compare_images_kJ9QKX",
     "product_details_banner_ryaLi8",
     "image_text_2_jnEkpL",
-    "temp-faucet-filter-section3",
     "confidence_slider_TTtUDV",
     "how_to_install_L9i7VN",
     "compare_images_TNaVYJ",

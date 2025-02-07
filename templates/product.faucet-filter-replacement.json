@@ -338,9 +338,52 @@
         "text": ""
       }
     },
-    "temp-faucet-filter-refill-section": {
-      "type": "temp-faucet-filter-refill-section",
-      "settings": {}
+    "confidence_slider_TTtUDV": {
+      "type": "confidence-slider",
+      "blocks": {
+        "option_4fabBn": {
+          "type": "option",
+          "settings": {
+            "text": "<p>reported <strong>reduced tightness<\/strong> after washing with filtered water.<\/p>",
+            "percent_bar": 77
+          }
+        },
+        "option_X6xrLB": {
+          "type": "option",
+          "settings": {
+            "text": "<p>noticed <strong>less dryness<\/strong> after 4 weeks.<\/p>",
+            "percent_bar": 83
+          }
+        },
+        "option_9xi8Jq": {
+          "type": "option",
+          "settings": {
+            "text": "<p><strong>would recommend<\/strong> Qure Faucet Filter to a friend.<\/p>",
+            "percent_bar": 83
+          }
+        },
+        "single_image_X3QJ6y": {
+          "type": "single_image",
+          "settings": {
+            "single_image_id": "shopify:\/\/shop_images\/sn_8_1.webp",
+            "proven_res": "Proven results in",
+            "hydration": "Hydration",
+            "wrinkles": "Wrinkles",
+            "acne": "Acne",
+            "skin_texture": " Skin Texture"
+          }
+        }
+      },
+      "block_order": [
+        "option_4fabBn",
+        "option_X6xrLB",
+        "option_9xi8Jq",
+        "single_image_X3QJ6y"
+      ],
+      "settings": {
+        "heading": "No promises, just results.",
+        "text": "<p>In an independent user study, the Qure Faucet Filter was evaluated for its effects on skin hydration and wrinkle appearance under real-life conditions. Participants demonstrated significant visible improvements after just one month. <\/p>"
+      }
     },
     "how_to_install_TGHB6t": {
       "type": "how-to-install",
@@ -452,11 +495,8 @@
         "button_label": "Show More Questions",
         "button_hide_label": "Hide More Questions"
       }
-    },
-    "second": {
-      "type": "temp-product-faucet-filter-replacement",
-      "settings": {}
-    }},
+    }
+  },
  "order": [
     "main",
     "liquid_FrGCjn",
@@ -465,9 +505,8 @@
     "results_ecFjqn",
     "two_column_box_EVdxzB",
     "reasons_8MA7ba",
-    "temp-faucet-filter-refill-section",
+    "confidence_slider_TTtUDV",
     "how_to_install_TGHB6t",
-    "faq_EaJwa6",
-    "second"
+    "faq_EaJwa6"
   ]
 }
