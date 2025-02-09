@@ -538,8 +538,6 @@ const flatingBundleInit = ()=>{
           this.discount = 0;
           this.totalPrice = 0;
           document.addEventListener('cartRemoveBundle', () => {
-console.log('entra en el evento');
-
             this.resetProductBundle();
           });
         }
@@ -812,17 +810,9 @@ console.log('entra en el evento');
             productBundleGrid.setAttribute('data-bundle-used', 'false');
             productBundleGrid.querySelector('.btn-section').classList.remove('disabled');
           }
-
-          const btnSubmit = this.querySelector('.btn-discount')
+          const btnSubmit = this.querySelector('.btn-discount');
           btnSubmit.classList.remove('disabled');
-
-          const btnsClose = this.querySelectorAll('.close');
-          btnsClose.forEach(btn => {
-            setTimeout(() => {
-              btn.click()
-            },500);
-          });
-
+          this.setAttribute('data-bundle-array', JSON.stringify([]));
         }
 
       }

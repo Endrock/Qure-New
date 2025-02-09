@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
     subscribeToResult( myRequestCallback => {
       if (myRequestCallback.requestType === 'change'){
         const initiatorData = myRequestCallback.info.initiator
-        if(initiatorData.classList.contains('bundle-product-remove')) {
+        if(initiatorData && initiatorData?.classList.contains('bundle-product-remove')) {
           const customEvent = new CustomEvent('cartRemoveBundle', {
             detail: { message: 'cart updated' }
           });
