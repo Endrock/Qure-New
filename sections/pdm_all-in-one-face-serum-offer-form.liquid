@@ -124,7 +124,7 @@
                               {{- block.settings.discount_product_text -}}
                             {% endif %}
                           </p>
-                          {% if number_of_products > 1 %}
+                          {% if block.settings.show_discount %}
                             <p
                               class="pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-price-save"
                             >
@@ -132,7 +132,7 @@
                               {{ discount_percent_divided }}
                               {{- block.settings.discount_suffix -}}
                               <span class="pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-price-save-desktop">{{ block.settings.discount_extra_text_desktop }}</span>
-                              <span class="pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-price-save-mobile">{{ block.settings.discount_extra_text_desktop }}</span>
+                              <span class="pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-price-save-mobile">{{ block.settings.discount_extra_text_mobile }}</span>
                             </p>
                           {% endif %}
                         </div>
@@ -298,7 +298,8 @@
           "type": "number",
           "id": "input_quantity",
           "label": "Number of Products",
-          "placeholder": "0"
+          "placeholder": "0",
+          "info": "Enter 1 to display the full price, or if you want to show the price per item, enter the total number of items."
         },
         {
           "type": "checkbox",
@@ -311,6 +312,13 @@
           "type": "richtext",
           "id": "special_offer_text",
           "label": "Special Offer Text"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_discount",
+          "label": "Show Discount",
+          "default": true,
+          "info": "mark if the product has a discount"
         },
         {
           "type": "text",
