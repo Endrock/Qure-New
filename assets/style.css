@@ -32337,3 +32337,9 @@ div#subscription del {
     margin-right: 5px;
     color: #babdbc;
 }
+main.faucet_filter .price_wrap, main.shower_filter .price_wrap{
+    padding: 10px 0;
+}
+main.faucet_filter .price .new_price, main.shower_filter .price .new_price{
+    font-weight: 400;
+}
