@@ -54,7 +54,8 @@
         "text_label_real_result_2": "Real Results",
         "text_label_real_result_3": "Dermatologist",
         "enable_jump_to_section": true,
-        "text_jump_to_section": "Jump To"
+        "text_jump_to_section": "Jump To",
+        "popup_enabled": false
       }
     },
     "featuredin_Xdfftn": {
@@ -533,14 +534,17 @@
             "image": "shopify://shop_images/serum_893cdaf8-0efe-4ef9-b7fc-23921de3c90e.png",
             "class_image": "active",
             "product": "all-in-one-face-serum-6-month-bundle-1",
-            "offer_general": "Buy 2, Get 1 <span style=\"color: #C4121A\">FREE</span>",
+            "offer_general": "Buy 2, Get 1 FREE",
             "offer_description": "6 Months Supply | FREE Shipping",
-            "input_quantity": 3,
+            "input_quantity": 1,
             "show_special_offer": true,
             "special_offer_text": "<p><strong>SPECIAL OFFER</strong> - Limited Time</p>",
+            "show_discount": true,
             "discount_product_text": "/each",
             "discount_text": "save",
-            "discount_suffix": "%"
+            "discount_suffix": "%",
+            "discount_extra_text_desktop": "- GET ONE FREE",
+            "discount_extra_text_mobile": "GET ONE FREE"
           }
         },
         "product_Mj6zia": {
@@ -554,9 +558,12 @@
             "input_quantity": 1,
             "show_special_offer": false,
             "special_offer_text": "",
+            "show_discount": false,
             "discount_product_text": "/each",
             "discount_text": "save",
-            "discount_suffix": "%"
+            "discount_suffix": "%",
+            "discount_extra_text_desktop": "- GET ONE FREE",
+            "discount_extra_text_mobile": "GET ONE FREE"
           }
         }
       },

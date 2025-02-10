@@ -12,13 +12,51 @@
                     <div class="step_block">
                         <div class="step_content">
                             <div class="step_conten_blocks">
-
+                                
                                 {% assign product = all_products['all-in-one-face-serum-6-month-bundle'] %}
                                 {% assign product_price_divided = product.price | divided_by: 4 %}
                                 {% assign product_variant_id = product.variants.first.id %}
                                 {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
 
-                                <div class="planBlock planBlockTop" data-variantid="{{ product_variant_id }}">
+                                <div class="planBlock planBlockTop pdm-product-original-pdp" data-variantid="{{ product_variant_id }}">
+                                    <div class="plan_choosed text-end">
+                                        <span class="text-1">Over 13,000 people chose this supply</span>
+                                        <span class="text-2"><strong>SPECIAL OFFER</strong> - Limited Time</span>
+                                    </div>
+                                    <input type="radio" name="mBanner_monthlyPlan" id="mBanner_3_month" checked="">
+                                    <label class="monthly_plans" for="mBanner_3_month" payment-price="{{ product_price_divided | money_without_trailing_zeros }}">
+                                        <div class="plan_des plan_des_top-original">
+                                            <div class="plan_hdr">
+                                                <h3>6 Month Supply</h3>
+                                                <span class="saved_price">{{ discount_percentage }}% OFF</span>
+                                            </div>
+                                            <div class="plan_des">3 Serums + Free Shipping</div>
+                                        </div>
+
+                                        <div class="plan_des plan_des_top-test">
+                                            <div class="plan_hdr">
+                                                <h3>Buy 2, Get 1 <span>FREE</span></h3>
+                                                <p>6 Months Supply | FREE Shipping</p>
+                                            </div>
+                                        </div>
+                                        <div class="price plan_des_top-original">
+                                            <div class="plan_prc regular_price">{{ product.compare_at_price | money_without_trailing_zeros }}</div>
+                                            <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
+                                        </div>
+                                        <div class="price plan_des_top-test">
+                                            <p class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</p>
+                                            <p class="saved_price saved_price-desktop">SAVE {{ discount_percentage }}% - GET ONE FREE</p>
+                                            <p class="saved_price saved_price-mobile">SAVE {{ discount_percentage }}% <span>GET ONE FREE</span></p>
+                                        </div>
+                                    </label>
+                                </div>
+                         
+                                {% assign product = all_products['all-in-one-face-serum-6-month-bundle-1'] %}
+                                {% assign product_price_divided = product.price | divided_by: 4 %}
+                                {% assign product_variant_id = product.variants.first.id %}
+                                {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
+
+                                <div class="planBlock planBlockTop pdm-product-test-pdp" data-variantid="{{ product_variant_id }}">
                                     <div class="plan_choosed text-end">
                                         <span class="text-1">Over 13,000 people chose this supply</span>
                                         <span class="text-2"><strong>SPECIAL OFFER</strong> - Limited Time</span>

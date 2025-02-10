@@ -3724,6 +3724,14 @@ body[data-test-pdm-serum] .plan_des.plan_des_bottom-test{
   display: block;
 }
 
+.pdm-product-test-pdp{
+  display: none;
+}
+
+body[data-test-pdm-serum] .pdm-product-test-pdp{
+  display: block;
+}
+
 .plan_des.plan_des_top-test span{
   color: #C4121A;
   text-transform: uppercase;

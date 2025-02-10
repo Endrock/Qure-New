@@ -1784,6 +1784,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Check if the face serum container exists and if the test flag is enabled in the dataset
 const faceSerumBuyBlockContainer = document.querySelector('.pdm_all-in-one-face-serum-offer-form');
+console.log("wp", window.location.pathname)
+if(window.location.pathname.includes("/products/face-serum")){
+
+  const testPdpElement = document.querySelector(".pdm-product-test-pdp");
+  const originalPdpElement = document.querySelector(".pdm-product-original-pdp");
+  const body = document.body;
+
+  if (!body.hasAttribute("data-test-pdm-serum")) {
+    if (testPdpElement) {
+      testPdpElement.remove();
+    }
+    const originalRadio = originalPdpElement?.querySelector('input[type="radio"]');
+    if (originalRadio) {
+      originalRadio.checked = true;
+    }
+  } else {
+    if (originalPdpElement) {
+      originalPdpElement.remove();
+      const buyButton = document.querySelector(
+        ".btn.buy_btn.submit_btn_top.reserve_btn[data-ajax-cart-request-button]"
+      );
+      if (buyButton) {
+        const newVariantId = "46201466650863";
+        const newProductHandle = "all-in-one-face-serum-6-month-bundle-1";
+        buyButton.setAttribute(
+          "href",
+          `/cart/add?id=${newVariantId}&quantity=1`
+        );
+        buyButton.setAttribute(
+          "onclick",
+          `setEventProductHandler('${newProductHandle}')`
+        );
+      }
+    }
+  }
+}
+
 
 if (faceSerumBuyBlockContainer) {
   // Get all radio buttons for selecting the monthly plan
