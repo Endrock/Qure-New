@@ -277,6 +277,11 @@
     {% when 'page.bf-early-access' %}
         {% assign main_class = 'early_acess_sale' %}
         <link rel="stylesheet" href="{{ 'early-acess-password-bf-bundle.css' | asset_url }}">
+    {% when 'page.micro-infusion-blog' %}
+        {% assign main_class = 'blogs article_blog article_blog-new micro_infusion_blog' %}
+        <link rel="stylesheet" href="https://qureskincaredns.com/new/assets/blogs.css">
+        <link rel="stylesheet" href="https://qureskincaredns.com/new/assets/event_home_banner.css">
+        <link rel="stylesheet" href="{{ 'micro-infusion-blog.css' | asset_url }}">
     {% when 'blog' %}
         {% assign main_class = 'blogs' %}
         <link rel="stylesheet" href="{{ 'blogs.css' | asset_url }}">
