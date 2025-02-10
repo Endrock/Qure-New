@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "product-landing": {
       "type": "product-landing",
@@ -188,7 +188,7 @@
           "settings": {
             "heading": "<p><strong>Argireline® Peptides</strong></p>",
             "text": "<p>The most trusted anti-aging peptide in the world. Stimulates collagen, reduces fine lines and boosts moisture for a firmer, youthful complexion!</p>",
-            "feedback": "<p><strong>…Argireline</strong>has been found to be effective in<strong>reducing wrinkles,</strong>with efficacies<strong>up to 48%</strong>upon 4 weeks of twice daily treatment.</p>",
+            "feedback": "<p><strong>…Argireline </strong>has been found to be effective in<strong>reducing wrinkles,</strong>with efficacies<strong>up to 48%</strong>upon 4 weeks of twice daily treatment.</p>",
             "popup_content": "<p>Argireline, a mimetic of Botox, has been found to be safer than Botox and effective in reducing wrinkles, with efficacies up to 48% upon 4 weeks of twice daily treatment. The total anti wrinkle efficiency in the Argireline group was 48.9%, the depth of the wrinkles was notably reduced.</p><p><strong>About the clinical trial</strong></p><p>Clinical trial was conducted and included 60 subjects that received a randomized treatment of Argireline or placebo in a ratio of 3:1. Argireline or placebo was applied to their periorbital wrinkles twice daily for 4 weeks, and then evaluations were made for the improvements in wrinkles. Silicone replicas of the skin at the application area were made before and after the treatment, which were analyzed by a wrinkle-analysis apparatus.</p><p>Reference: Am J Clin Dermatol. 2013 Apr;14(2):147-53. The anti-wrinkle efficacy of argireline, a synthetic hexapeptide, in Chinese subjects: a randomized, placebo-controlled study. doi: 10.1007/s40257-013-0009-9.</p>"
           }
         },
@@ -197,7 +197,7 @@
           "settings": {
             "heading": "<p><strong>Bakuchiol</strong></p>",
             "text": "<p>Get all the benefits of retinol without the risk of irritation. Bakuchiol increases cell turnover and stimulates collagen production to make your skin look smooth and firm.</p>",
-            "feedback": "<p><strong>…100% of subjects</strong>saw significant improvement in lines and wrinkles, pigmentation, elasticity, firmness and overall reduction in photo‐damage.</p>",
+            "feedback": "<p><strong>…100% of subjects </strong>saw significant improvement in lines and wrinkles, pigmentation, elasticity, firmness and overall reduction in photo‐damage.</p>",
             "popup_content": "<p>Subjects saw significant improvement in lines and wrinkles, pigmentation, elasticity, firmness and overall reduction in photo‐damage without usual retinol therapy‐associated undesirable side effects.</p><p><strong>About the clinical trial</strong></p><p>Clinical trial was conducted and included healthy subjects between the ages of 30 and 55. A cream containing Bakuchiol was applied daily for 12 weeks on the participants. Change in wrinkle and skin pigmentation appearance were assessed at weeks 4, 8, and 12.</p><p>Reference: University of California, Davis. (2017). Comparison of the Cosmetic Effects of Bakuchiol and Retinol.NCT03112863.</p>"
           }
         },
@@ -276,9 +276,9 @@
           "type": "object",
           "settings": {
             "heading": "<p><strong>Actiwhite™ </strong>(Vitamin A)</p>",
-            "text": "<p>Encourages new cells to the surface to help reduce the visibility of wrinkles and age spots, and smooth skin texture.</p>",
-            "feedback": "<p><strong>…Reduction of facial wrinkles by up to 63.74%</strong>was experienced by<strong>100% of subjects,</strong>from induction of collagen production.</p>",
-            "popup_content": "<p>Topical retinol improves fine wrinkles associated with natural aging. Significant induction of increased collagen production, retinol-treated aged skin offers greater skin matrix synthesis and improved appearance. Facial wrinkles were reduced by 63.74% at the cheeks and 38.74% in the eye areas after 12 weeks of treatment.</p><p><strong>About the clinical trial</strong></p><p>Clinical trial was conducted and included subjects between the ages of 35 and 55. A retinol formulation was applied for 12 weeks on the participants. The efficacy and results in improving skin appearance was assessed using digital image-based wrinkle analysis after 12 weeks of retinol application.</p><p>Reference: Rong Kong, PhD,1 Yilei Cui, PhD,2 Gary J. Fisher, PhD,2 Xiaojuan Wang, BS,3 Yinbei Chen, MS,3. Journal of Cosmetic Dermatology (2015).</p>"
+            "text": "<p>Visibly brighten and even skin tone for a more radiant complexion. Actiwhite™ reduces the appearance of dark spots and prevents discoloration (by inhibiting melanin) with continued use.</p>",
+            "feedback": "<p>…100% of subjects demonstrated a significant reduction of pigmented age spots, and visible improvement of skin clarity and brightness.</p>",
+            "popup_content": "<p><strong>After 2 weeks</strong></p><p>Dermatologists evaluated skin was more luminous in 100% of subjects.Dermatologists evaluated lightened pigmented spots in 100% of subjects.</p><p><strong>After 8 weeks</strong></p><p>Dermatologists evaluated significant reduction of pigmented spots in 100% of subjects.</p><p><strong>After 12 weeks</strong></p><p>Significant reduction of tyrosinase activity and released melanin quantity.</p><p>Dermatologists evaluated lighter skin appearance.</p><p>Dermatologists evaluated improved skin clarity and brighter complexion.</p><p><strong>About the clinical trial</strong></p><p>Clinical trial was conducted and included subjects between the ages of 18 and 45. The specific requirement was the presence of well-defined pigmented spots on each side of the faceassociated to a spotless area.</p><p>An emulsion containing 2% Actiwhite™ was applied twice daily for 8 weeks. Evaluation was conducted with colorimetric measurement (∆ITA☐), dermatologist, self-assessment and macro photograph of visibility, size and number of the age spot, skin complexion. </p><p>Reference: Actiwhite. by Beauty Creations. The tailor-made whitener and spot preventer to improve skin appearance</p><p><em>November 26, 2016.Author: Morgan Griffith</em></p><p></p>"
           }
         }
       },
