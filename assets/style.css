@@ -32333,4 +32333,7 @@ picture img {
     max-height: 388px;
     object-fit: contain
 }
-
+div#subscription del {
+    margin-right: 5px;
+    color: #babdbc;
+}
