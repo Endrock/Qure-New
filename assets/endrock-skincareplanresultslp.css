@@ -664,15 +664,22 @@
   list-style: none;
 }
 
-.section-regimen-steps .step .regimen_paragraph:not(.every-day-1) .metafield-rich_text_field ul li::before {
+.section-regimen-steps .step .regimen_paragraph .metafield-rich_text_field ul li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.section-regimen-steps .step .regimen_paragraph .metafield-rich_text_field ul li::before {
   content: "";
   background: #000;
   color: white;
-  width: .5rem;
-  height: .5rem;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 50%;
-  display: inline-block;
-  margin-right: 4px;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  transform: translateY(-50%);
 }
 
 .section-regimen-steps .step .regimen_paragraph {
@@ -684,7 +691,7 @@
   margin-right: 4px;
 }
 
-.section-regimen-steps .step .regimen_paragraph:not(.every-day-1) ul {
+.section-regimen-steps .step .regimen_paragraph ul {
   padding-left: 20px;
 }
 
@@ -1880,7 +1887,7 @@
     padding: 8px 32px;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 8px;
     border-radius: 100px;
     background: #000;
     color:#FFF;
@@ -1941,7 +1948,7 @@
     .show-mobile{
       display:block;
       width:100%;
-      max-width:377px;
+      max-width:477px;
       height: min-content;
     
       margin: auto;
@@ -1949,7 +1956,7 @@
       
       .cont-card-bundle{
         background:#FFF;
-        padding: 12px 12px 0 12px;
+        padding: 6px 6px 0 6px;
         height: calc(var(--vh, 1vh) * 100 - 45px);
         position: relative;
         max-height: fit-content;
@@ -1976,6 +1983,7 @@
         min-height: 200px;
         display: flex;
         flex-direction: column;
+        gap: 4px;
       }
       .product-info{
         margin: 8px 12px 0;
@@ -1986,8 +1994,8 @@
         gap: 8px;
       }
       .title h3{
-        font-size: 22px;
-        line-height:26px;
+        font-size: 20px;
+        line-height:100%;
         margin-bottom: 16px;
       }
       .text-checks{
@@ -2008,7 +2016,7 @@
       }
       .bundle-button{
         flex-direction:column;
-        margin: 16px 12px 0;
+        margin: 0;
         position: sticky;
         bottom: 0;
         left: 0;
@@ -2019,7 +2027,7 @@
       }
       .price{
         width:100%;
-        margin-bottom:16px;
+        margin-bottom:5px;
       }
       .bundle-btn{
         width:100%;
