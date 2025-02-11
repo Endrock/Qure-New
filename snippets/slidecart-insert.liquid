@@ -141,10 +141,19 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
     document.dispatchEvent(customEvent);
-    {% comment %} urgency note  
-      Subscribes to cart actions to manage urgency products, setting a timeout to remove them after 30 minutes.
-    {% endcomment %}
+    // urgency note
+    // Subscribes to cart actions to manage urgency products, setting a timeout to remove them after 30 minutes.
+
     subscribeToResult( myRequestCallback => {
+      if (myRequestCallback.requestType === 'change'){
+        const initiatorData = myRequestCallback.info.initiator
+        if(initiatorData && initiatorData?.classList.contains('bundle-product-remove')) {
+          const customEvent = new CustomEvent('cartRemoveBundle', {
+            detail: { message: 'cart updated' }
+          });
+          document.dispatchEvent(customEvent);
+        }
+      }
       if(myRequestCallback.requestType === 'add') {
 
         setTimeout(() => {
@@ -187,12 +196,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // urgent note 
       initSidecartUrgencyNote();
-
-      initEventRemovebundle();
 	});
 
   subscribeToCartStateUpdate( state => {
-    initEventRemovebundle();
     if ( state.status.cartStateSet && !state.status.requestInProgress ) {
       const cart = state.cart;
       if (window.location.href.includes("q-rejuvalight-pro-offer")) {
@@ -405,17 +411,6 @@ document.addEventListener('DOMContentLoaded', () => {
           shouldDeleteUrgencyNoteProducts = false;
         }
       });
-  }
-
-  function initEventRemovebundle() {
-    const btnRemoveBundle = document.querySelector('.bundle-product-remove');
-    if (!btnRemoveBundle) return;
-    btnRemoveBundle.addEventListener('click', () => {
-      const customEvent = new CustomEvent('cartRemoveBundle', {
-        detail: { message: 'cart updated' }
-      });
-      document.dispatchEvent(customEvent);
-    }, { once: true });
   }
 
 });
