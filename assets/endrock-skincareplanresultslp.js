@@ -366,6 +366,7 @@ const productsBundleInit = ()=>{
           this.bundleToCart();
           this.displayPopup();
           this.updateViewportHeight();
+          this.setBundleArray();
         }
         attributeChangedCallback(name, oldValue, newValue) {
           if(name == 'data-bundle-array'){
@@ -405,6 +406,7 @@ const productsBundleInit = ()=>{
                 //card.classList.remove('active')
                 const arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
                 const newArrayBundle = arrayBundle.filter((id) => id != idProduct )
+                localStorage.setItem('bundleArray', JSON.stringify(newArrayBundle));
                 this.setAttribute('data-bundle-array', JSON.stringify(newArrayBundle))
 
               }else{
@@ -414,6 +416,8 @@ const productsBundleInit = ()=>{
                 if(arrayBundle.includes(idProduct))return;
 
                 arrayBundle.push(idProduct)
+
+                localStorage.setItem('bundleArray', JSON.stringify(arrayBundle));
                 this.setAttribute('data-bundle-array', JSON.stringify(arrayBundle) )
               }
             })
@@ -430,6 +434,8 @@ const productsBundleInit = ()=>{
               container.classList.add('popup-show')
               cardPopup.classList.remove('hidden-mobile')
               cardPopup.classList.add('show-mobile')
+              document.body.style.overflow = 'hidden';
+              document.body.style.height = '100dvh';
 
             })
           })
@@ -441,6 +447,8 @@ const productsBundleInit = ()=>{
               container.classList.add('popup-hidden')
               cardPopup.classList.remove('show-mobile')
               cardPopup.classList.add('hidden-mobile')
+              document.body.style.removeProperty('overflow');
+              document.body.style.removeProperty('height');
             })
           })
         }
@@ -520,6 +528,13 @@ const productsBundleInit = ()=>{
           const vh = window.innerHeight * 0.01;
           document.documentElement.style.setProperty('--vh', `${vh}px`);
         }
+
+        setBundleArray(){
+          const arrayBundleStorage = localStorage.getItem('bundleArray');
+          if(!arrayBundleStorage) return;
+          this.setAttribute('data-bundle-array', arrayBundleStorage);
+        }
+
       }
       window.customElements.define('products-bundle', productsBundle );
     }
@@ -566,6 +581,7 @@ const flatingBundleInit = ()=>{
               const idProduct = btn.dataset.productId
               const arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
               const newArrayBundle = arrayBundle.filter((id) => id != idProduct )
+              localStorage.setItem('bundleArray', JSON.stringify(newArrayBundle));
               this.setAttribute('data-bundle-array', JSON.stringify(newArrayBundle))
             })
           })
@@ -812,6 +828,7 @@ const flatingBundleInit = ()=>{
           }
           const btnSubmit = this.querySelector('.btn-discount');
           btnSubmit.classList.remove('disabled');
+          localStorage.setItem('bundleArray', JSON.stringify([]));
           this.setAttribute('data-bundle-array', JSON.stringify([]));
         }
 
