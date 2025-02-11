@@ -205,7 +205,7 @@
 
 /* End Dual tranformation Section */
 
-/* Lifestyle Tips Section */
+/* Start Lifestyle Tips Section */
 .section-lifestyle-tips {
   padding: 64px 16px 80px;
 }
@@ -214,6 +214,7 @@
     padding: 40px 16px;
   }
 }
+
 .section-lifestyle-tips .section-header {
   margin: 0px auto 40px;
   text-align: center;
@@ -253,13 +254,14 @@
 
 .cards-tips {
   position:relative;
-  .card {
-    display: none;
-    grid-template-columns: 50% 50%;
-    border: 1px solid rgba(0, 0, 0, 1);
-    border-radius: 8px;
-    overflow: hidden;
-  }
+}
+
+.cards-tips .card {
+  display: none;
+  grid-template-columns: 50% 50%;
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .popup-source {
@@ -281,6 +283,7 @@
 
   }
 }
+
 .cont-source {
   grid-area: b;
   display: inline-flex;
@@ -295,41 +298,42 @@
   margin: auto;
   border-radius: 16px;
   position:relative;
-  .close{
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    cursor:pointer;
-  }
-  .source-text{
-    .reference{
-      color: #000;
-      font-family: Canela;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 20px;
-      text-transform: capitalize;
-      margin-bottom:10px;
-    }
-    ul{
-      margin-left: 15px;
-    }
-    li{
-      list-style: disc;
-      color: #000;
-      font-family: Poppins;
-      font-size: 13px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 20px;
-    }
-    a {
-      color:#008763;
-      cursor:pointer;
-    }
-  }
 }
+
+.cont-source .close{
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor:pointer;
+}
+
+.cont-source .source-text .reference{
+  color: #000;
+  font-family: Canela;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: capitalize;
+  margin-bottom:10px;
+}
+.cont-source .source-text ul{
+  margin-left: 15px;
+}
+.cont-source .source-text li{
+  list-style: disc;
+  color: #000;
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.cont-source .source-text a {
+  color:#008763;
+  cursor:pointer;
+}
+
 @media (max-width: 768px) {
   .cont-source {
     width:90%;
@@ -382,7 +386,7 @@
 
 .section-lifestyle-tips .pagination .num {
   border-radius: 24px;
-  border: 1px solid #C8E6DC; /* var(--Turquoise) */
+  border: 1px solid #C8E6DC;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -406,17 +410,16 @@
   line-height: 32px;
 }
 
-.section-lifestyle-tips .full-text .description {
-  .btn-popup{
-    color: #008763;
-    font-family: Poppins;
-    font-size: 14px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 26px;
-    letter-spacing: -0.014px;
-  }
+.section-lifestyle-tips .full-text .description .btn-popup{
+  color: #008763;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.014px;
 }
+
 .section-lifestyle-tips .full-text .btn-popup{
   color: #008763;
   font-family: Poppins;
