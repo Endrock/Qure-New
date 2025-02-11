@@ -1955,6 +1955,22 @@
         max-height: fit-content;
         overflow-y: auto;
       }
+      .cont-card-bundle::-webkit-scrollbar {
+        -webkit-appearance: none;
+      }
+      .cont-card-bundle::-webkit-scrollbar:vertical {
+          width: 8px;
+      }
+      .cont-card-bundle::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, .8);
+        border-radius: 10px;
+        border: 2px solid #ffffff;
+      }
+      .cont-card-bundle::-webkit-scrollbar-track {
+          border-radius: 10px;
+          background-color: #ffffff;
+      }
+
       .pdm-gallery{
         aspect-ratio: 1 / 1;
         min-height: 200px;
@@ -1998,7 +2014,7 @@
         left: 0;
         right: 0;
         background: white;
-        padding: 15px;
+        padding: 15px 15px 30px;
         z-index: 10;
       }
       .price{
