@@ -1066,6 +1066,371 @@
         "btn_text": "Claim Free Consultation",
         "btn_url": "https://www.qureskincare.com/pages/skin-consultation"
       }
+    },
+    "pdm_dual_section_transformation_ribqCq": {
+      "type": "pdm_dual-section-transformation",
+      "settings": {
+        "section_title": "[Username], your results are in.  Let’s transform your signs of aging!",
+        "section_text": "We put together a straightforward, no-nonsense program just for you and your skin. It’s aimed to help you reduce the signs of aging, fine lines and wrinkles, keep your skin smooth, and your confidence high.",
+        "button_text": "Discover Now",
+        "button_link": "#",
+        "before_text": "before",
+        "after_text": "After",
+        "dual_img": "shopify://shop_images/before-after_03b483f7-04ee-4a6b-a887-ee3a4a1bf436.jpg",
+        "user_name": "Ellie V.",
+        "icon_img": "shopify://shop_images/Layer_1_be2f32cf-e586-4583-9959-fb3a68b642d0.svg",
+        "validation_text": "verified customer",
+        "footer_text": "See more transformation",
+        "footer_link": ""
+      }
+    },
+    "pdm_lifestyle_tips_gMj4KD": {
+      "type": "pdm_lifestyle-tips",
+      "blocks": {
+        "tip_xxyirB": {
+          "type": "tip",
+          "settings": {
+            "title": "Exfoliate 1-2 times per week",
+            "description": "<p>With an at-home peel that contains Alpha-Hydroxy Acids (AHAs) like glycolic and lactic acids. This will help remove dead skin that has settled into fine lines, making them less visible.</p>",
+            "image_card": "shopify://shop_images/image.jpg"
+          }
+        },
+        "tip_9bNLXi": {
+          "type": "tip",
+          "settings": {
+            "title": "2 Exfoliate 1-2 times per week",
+            "description": "<p>With an at-home peel that contains Alpha-Hydroxy Acids (AHAs) like glycolic and lactic acids. This will help remove dead skin that has settled into fine lines, making them less visible.</p>",
+            "image_card": "shopify://shop_images/image.jpg"
+          }
+        },
+        "tip_hLEBXy": {
+          "type": "tip",
+          "settings": {
+            "title": "3 Exfoliate 1-2 times per week",
+            "description": "<p>With an at-home peel that contains Alpha-Hydroxy Acids (AHAs) like glycolic and lactic acids. This will help remove dead skin that has settled into fine lines, making them less visible.</p>",
+            "image_card": "shopify://shop_images/image.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "tip_xxyirB",
+        "tip_9bNLXi",
+        "tip_hLEBXy"
+      ],
+      "settings": {
+        "section_title": "Skincare is a Lifestyle",
+        "section_description": "Caring for your skin goes beyond the products you use. It’s about adopting habits that support your skin’s health every day. Our dermatologists recommend these expert tips to help you reach your skin goals even faster."
+      }
+    },
+    "pdm_regimen_steps_WJeqDE": {
+      "type": "pdm_regimen-steps",
+      "blocks": {
+        "step_8YWLJN": {
+          "type": "step",
+          "settings": {
+            "tab_icon_dark": "shopify://shop_images/ph_sun_1.svg",
+            "tab_icon_light": "shopify://shop_images/ph_sun.svg",
+            "title": "Daily",
+            "regimen_informartion": "every-day",
+            "video_step": "shopify://files/videos/0424(1).mov"
+          }
+        },
+        "step_wnWUBW": {
+          "type": "step",
+          "settings": {
+            "tab_icon_dark": "shopify://shop_images/icon.svg",
+            "tab_icon_light": "shopify://shop_images/icon_2_e3c8c5b4-6565-4b84-adf1-c6fe7ae24072.svg",
+            "title": "Weekly",
+            "regimen_informartion": "every-week",
+            "image_step": "shopify://shop_images/video-2.gif"
+          }
+        },
+        "step_gAEfmA": {
+          "type": "step",
+          "settings": {
+            "tab_icon_dark": "shopify://shop_images/icon_1_edbe5a96-bc85-43c7-bbc4-82064c5ceffe.svg",
+            "tab_icon_light": "shopify://shop_images/icon_3_27b85ba6-24db-4ca7-8e11-d8350e12b6ee.svg",
+            "title": "Fortnight",
+            "regimen_informartion": "every-two-weeks",
+            "image_step": "shopify://shop_images/microneedling_freckle.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "step_8YWLJN",
+        "step_wnWUBW",
+        "step_gAEfmA"
+      ],
+      "settings": {
+        "section_title": "Take charge of your skincare with this personalized program",
+        "section_description": "Here’s What you’ll need  (User Name)"
+      }
+    },
+    "pdm_slider_derm_feature_9bDxDk": {
+      "type": "pdm_slider-derm-feature",
+      "blocks": {
+        "slide_df_6QrJUq": {
+          "type": "slide-df",
+          "settings": {
+            "review_doctor": "“Qure has a really good serum. It probably has the best-known peptide complex. It’s an amazing serum. This product is always sold out from Qure. So get it when you see it.”",
+            "name_doctor": "Dr Shah and Dr Maxfield",
+            "certified_doctor": "Board-Certified Dermatologists",
+            "video": "shopify://files/videos/f5de3c2a52ec4df78271943cbd8804d3.mp4",
+            "video_external": "",
+            "img": "shopify://shop_images/what_microneedling_look_like.jpg",
+            "product": "face-serum"
+          }
+        },
+        "slide_df_jG3aiD": {
+          "type": "slide-df",
+          "settings": {
+            "review_doctor": "“Qure has a really good serum. It probably has the best-known peptide complex. It’s an amazing serum. This product is always sold out from Qure. So get it when you see it.”",
+            "name_doctor": "Dr Shah and Dr Maxfield",
+            "certified_doctor": "Board-Certified Dermatologists",
+            "video": "shopify://files/videos/3bfaeed943a04820bad76f54b3c97c35.mp4",
+            "video_external": "",
+            "img": "shopify://shop_images/what_does_microneedling_feel_like.jpg",
+            "product": "breakout-control-advanced"
+          }
+        },
+        "slide_df_9dzrk3": {
+          "type": "slide-df",
+          "settings": {
+            "review_doctor": "“Qure has a really good serum. It probably has the best-known peptide complex. It’s an amazing serum. This product is always sold out from Qure. So get it when you see it.”",
+            "name_doctor": "Dr Shah and Dr Maxfield",
+            "certified_doctor": "Board-Certified Dermatologists",
+            "video": "shopify://files/videos/-afc6-4003-b682-4e808c7172b1.mov",
+            "video_external": "",
+            "img": "shopify://shop_images/does_microneedling_remove_freckles.jpg",
+            "product": "q-rejuvalight-pro-led-mask-neck-decolletage-led-extended-1-year-warranty"
+          }
+        }
+      },
+      "block_order": [
+        "slide_df_6QrJUq",
+        "slide_df_jG3aiD",
+        "slide_df_9dzrk3"
+      ],
+      "settings": {
+        "title": "Slider Derm Feature",
+        "icon_play": "shopify://shop_images/video_-_icon_3738742f-5e8c-4865-85d0-2542dd518ef6.svg"
+      }
+    },
+    "pdm_table_three_columns_aL9bew": {
+      "type": "pdm_table-three-columns",
+      "blocks": {
+        "row_e6wfKb": {
+          "type": "row",
+          "settings": {
+            "row_feature": "Effective, Proven Results",
+            "row_qure": "Targets root causes for lasting change",
+            "qure_check": true,
+            "row_others": "Often only treat symptoms",
+            "others_check": false
+          }
+        },
+        "row_FJYzyK": {
+          "type": "row",
+          "settings": {
+            "row_feature": "Effective, Proven Results",
+            "row_qure": "Targets root causes for lasting change",
+            "qure_check": true,
+            "row_others": "Often only treat symptoms",
+            "others_check": false
+          }
+        }
+      },
+      "block_order": [
+        "row_e6wfKb",
+        "row_FJYzyK"
+      ],
+      "settings": {
+        "section_title": "Why choose Qure?",
+        "table_feature_title": "Feature",
+        "table_feature_title_mobile": "Why Qure?",
+        "table_qure_title": "shopify://shop_images/logo.svg",
+        "table_others_title": "Others",
+        "check_good": "shopify://shop_images/check-green.svg",
+        "check_error": "shopify://shop_images/check-red.svg"
+      }
+    },
+    "pdm_table_two_columns_tPBr69": {
+      "type": "pdm_table-two-columns",
+      "blocks": {
+        "row_m4DJTw": {
+          "type": "row",
+          "settings": {
+            "row_title": "Retinol/Tretinoin",
+            "row_content_strong": "Long-Lasting, Root-Cause Solutions",
+            "row_content": "Qure’s targeted products address the  underlying issues for results that last, unlike other treatments that only offer temporary fixes our general solutions."
+          }
+        },
+        "row_4iLpck": {
+          "type": "row",
+          "settings": {
+            "row_title": "Retinol/Tretinoin",
+            "row_content_strong": "Long-Lasting, Root-Cause Solutions",
+            "row_content": "Qure’s targeted products address the  underlying issues for results that last, unlike other treatments that only offer temporary fixes our general solutions."
+          }
+        }
+      },
+      "block_order": [
+        "row_m4DJTw",
+        "row_4iLpck"
+      ],
+      "settings": {
+        "section_title": "Think You’ve Tried It All?  Here’s Why Qure Is Different.",
+        "table_left_title": "What You May Have Tried Before",
+        "table_right_title": "Why Qure Stands Out"
+      }
+    },
+    "pdm_results_slider_7RmJxH": {
+      "type": "pdm_results-slider",
+      "blocks": {
+        "slide_wCemgD": {
+          "type": "slide",
+          "settings": {
+            "heading": "1 Wish I had this technology years ago!",
+            "before": "BEFORE",
+            "after": "AFTER 6 WEEKS",
+            "image": "shopify://shop_images/before-after_03b483f7-04ee-4a6b-a887-ee3a4a1bf436.jpg",
+            "text": "<p>After two weeks I began to see results and after six weeks the changes in my skin were dramatic. I have now been using Qure six months and loving the compliments! I bought masks for my daughters for Christmas so they could start at a younger age.... I wish this technology had been available when I was younger. I am 76 years old!</p>",
+            "image_country": "shopify://shop_images/Flag_of_the_United_States_1.svg",
+            "client": "Carlos Carlos",
+            "verified": true,
+            "product": "face-serum"
+          }
+        },
+        "slide_kchwtQ": {
+          "type": "slide",
+          "settings": {
+            "heading": "2 Wish I had this technology years ago!",
+            "before": "BEFORE",
+            "after": "AFTER 16 WEEKS",
+            "image": "shopify://shop_images/before-after_03b483f7-04ee-4a6b-a887-ee3a4a1bf436.jpg",
+            "text": "<p>After two weeks I began to see results and after six weeks the changes in my skin were dramatic. I have now been using Qure six months and loving the compliments! I bought masks for my daughters for Christmas so they could start at a younger age.... I wish this technology had been available when I was younger. I am 76 years old!</p>",
+            "image_country": "shopify://shop_images/Flag_of_the_United_States_1.svg",
+            "client": "David David",
+            "verified": true,
+            "product": "breakout-control-advanced"
+          }
+        },
+        "slide_PwRyUM": {
+          "type": "slide",
+          "settings": {
+            "heading": "3 Wish I had this technology years ago!",
+            "before": "BEFORE",
+            "after": "AFTER",
+            "image": "shopify://shop_images/before-after_03b483f7-04ee-4a6b-a887-ee3a4a1bf436.jpg",
+            "text": "<p>After two weeks I began to see results and after six weeks the changes in my skin were dramatic. I have now been using Qure six months and loving the compliments! I bought masks for my daughters for Christmas so they could start at a younger age.... I wish this technology had been available when I was younger. I am 76 years old!</p>",
+            "image_country": "shopify://shop_images/Flag_of_Croatia_svg.png",
+            "client": "Miller Miller",
+            "verified": true,
+            "product": "q-rejuvalight-pro-led-mask-neck-decolletage-led-extended-1-year-warranty"
+          }
+        },
+        "slide_Rq8VD9": {
+          "type": "slide",
+          "settings": {
+            "heading": "4 Wish I had this technology years ago!",
+            "before": "BEFORE",
+            "after": "AFTER",
+            "image": "shopify://shop_images/before-after_03b483f7-04ee-4a6b-a887-ee3a4a1bf436.jpg",
+            "text": "<p>After two weeks I began to see results and after six weeks the changes in my skin were dramatic. I have now been using Qure six months and loving the compliments! I bought masks for my daughters for Christmas so they could start at a younger age.... I wish this technology had been available when I was younger. I am 76 years old!</p>",
+            "image_country": "shopify://shop_images/Flag_of_the_United_States_1.svg",
+            "client": "Gerson Gerson",
+            "verified": true,
+            "product": "face-serum"
+          }
+        }
+      },
+      "block_order": [
+        "slide_wCemgD",
+        "slide_kchwtQ",
+        "slide_PwRyUM",
+        "slide_Rq8VD9"
+      ],
+      "settings": {
+        "heading": "No promises, just proof"
+      }
+    },
+    "pdm_dual_section_text_image_jeULx9": {
+      "type": "pdm_dual-section-text-image",
+      "settings": {
+        "section_title": "Feeling you look younger and having positive aging experiences are linked,",
+        "section_subtitle": "say 59% of participants in a study by the University of Oklahoma",
+        "paragraph": "<p>A recent study by the University of Oklahoma found t that those who felt they looked younger than they were also reported having more positive experiences related to aging, such as being asked for advice and wisdom and having a strong sense of purpose.</p>",
+        "button_text": "Road More",
+        "dual_img": "shopify://shop_images/image_2_20e2716f-1990-40f6-b709-090f1113a0ab.jpg"
+      }
+    },
+    "pdm_products_bundle_jTVxhe": {
+      "type": "pdm_products-bundle",
+      "blocks": {
+        "card_b3Uffm": {
+          "type": "card",
+          "settings": {
+            "image_results": "shopify://shop_images/targeted-patches-blue.webp",
+            "video": "shopify://files/videos/f5de3c2a52ec4df78271943cbd8804d3.mp4",
+            "show_top_rated": false,
+            "text_check": "<ul><li>Clinically-proven red light therapy stimulates collagen for firmer, fuller skin, penetrating where topicals can’t.</li><li>87% reported smoother facial wrinkles and fine lines.<br/></li><li>Quick daily 3 minute treatments.</li><li>Dermatologist-recommended and FDA-cleared.</li></ul>",
+            "doctor_name": "Dr. Maxfield",
+            "doctor_image": "shopify://shop_images/frontrow-health1.png",
+            "doctor_text": "“This is my absolute favorite mask. It’s quick, effective and patients see great results with consistent use”.Dr. Maxfield  |  Board Certified Dermatologists",
+            "doctor_certificated": "Board Certified Dermatologists"
+          }
+        },
+        "card_TwAjQM": {
+          "type": "card",
+          "settings": {
+            "image_results": "shopify://shop_images/mtp_thumb-8.webp",
+            "video": "shopify://files/videos/Qure micro infusion Watermark (1).mp4",
+            "show_top_rated": false,
+            "text_check": "<ul><li>Transforms dull-looking skin, reduces appearance of fine lines & smooths texture.</li><li>Active ingredients (Peptides, Niacinamide) penetrate deep into the skin for faster and better results.</li><li>90% agreed their skin looked better after Micro-Infusion treatments.</li></ul>",
+            "doctor_name": "Dr. Shah",
+            "doctor_image": "shopify://shop_images/Frame_3594.webp",
+            "doctor_text": "“I recommend this treatment to so many of my patients who are looking for a glowing, fresh looking complexion”",
+            "doctor_certificated": "Board Certified Dermatologists"
+          }
+        },
+        "card_g84y9c": {
+          "type": "card",
+          "settings": {
+            "image_results": "shopify://shop_images/does_microneedling_make_you_bleed.jpg",
+            "video": "shopify://files/videos/-afc6-4003-b682-4e808c7172b1.mov",
+            "show_top_rated": false,
+            "text_check": "<ul><li>Helps to brighten, plump, and smooth the look of skin.</li><li>Simplifies your routine, addresses various concerns in just one step.</li><li>Powerful Ingredients: Argireline® Peptides, Retinol, Bakuchiol, Niacinamide.</li></ul>",
+            "doctor_name": "Dr Shah",
+            "doctor_image": "shopify://shop_images/User_Image_1.png",
+            "doctor_text": "\"Qure has a really good serum, probably is the best known peptide complex…it can really help simplify and consolidate routine steps.\"",
+            "doctor_certificated": "Board Certified Dermatologists"
+          }
+        },
+        "card_KFPVEh": {
+          "type": "card",
+          "settings": {
+            "image_results": "shopify://shop_images/LineRefineBundlePro_9a6dfac7-96b2-450a-8079-9cd2f28865a4.png",
+            "show_top_rated": false,
+            "text_check": "<ul><li>Rejuvenates the delicate skin area where the first signs of aging show.</li><li>Repairs sun-damaged skin, reduces the appearance of dark spots, fine lines & wrinkles.</li><li>80% of users report smoother, rejuvenated skin.</li></ul>",
+            "doctor_name": "Dr Shah & Dr Maxfield",
+            "doctor_image": "shopify://shop_images/frontrow-health1.png",
+            "doctor_text": "\"LED light targets fibroblasts to increase collagen production and has anti-aging benefits especially if you are seeing wrinkles and lines on your neck...\"",
+            "doctor_certificated": "Board Certified Dermatologists"
+          }
+        }
+      },
+      "block_order": [
+        "card_b3Uffm",
+        "card_TwAjQM",
+        "card_g84y9c",
+        "card_KFPVEh"
+      ],
+      "settings": {
+        "bundle_info": "bundle-discount",
+        "bundle_products": "219840343",
+        "text_button_section": "Bundle all 4 and save",
+        "button_card": "Add to your bundle"
+      }
     }
   },
   "order": [
@@ -1084,6 +1449,15 @@
     "compare_pPhPQJ",
     "tile_JERe9p",
     "community_QPpfkf",
-    "solution_form_wVyepN"
+    "solution_form_wVyepN",
+    "pdm_dual_section_transformation_ribqCq",
+    "pdm_lifestyle_tips_gMj4KD",
+    "pdm_regimen_steps_WJeqDE",
+    "pdm_slider_derm_feature_9bDxDk",
+    "pdm_table_three_columns_aL9bew",
+    "pdm_table_two_columns_tPBr69",
+    "pdm_results_slider_7RmJxH",
+    "pdm_dual_section_text_image_jeULx9",
+    "pdm_products_bundle_jTVxhe"
   ]
 }
