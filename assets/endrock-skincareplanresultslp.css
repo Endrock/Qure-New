@@ -1716,7 +1716,6 @@
 }
 
 .section-products-bundle .pdm-gallery .badge-dermatologist {
-  position: absolute;
   display: flex ;
   width:100%;
   gap: 3px;
