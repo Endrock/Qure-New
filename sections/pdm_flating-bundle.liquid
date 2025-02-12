@@ -39,7 +39,7 @@
               </div>
               <div class="cont-img">
                 {% assign image_alt = "image" |  append: product.title %}
-                {{ product.featured_image | image_url: width: 256 | image_tag: alt: image_alt , class: 'src product cont-img__img' }}
+                {{ product.featured_image | image_url: width: 256 | image_tag: alt: image_alt , class: 'src product cont-img__img', loading:"eager" }}
               </div>
             </div>
           {% endfor %}

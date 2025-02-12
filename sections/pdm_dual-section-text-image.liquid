@@ -12,7 +12,7 @@
         </div>
     </div>
     <div class="container-img">
-      {{ section.settings.dual_img | image_url: width: 840 |  image_tag: alt: 'img' }}
+      {{ section.settings.dual_img | image_url: width: 840 |  image_tag: alt: 'img',loading:"eager" }}
     </div>
 </div>
 

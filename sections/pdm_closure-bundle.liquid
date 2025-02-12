@@ -70,9 +70,9 @@
           <div class="cont-img">
             {% assign image_alt = "image" |  append: product.title %}
             {% if card.settings.image_product %}
-              {{ card.settings.image_product | image_url: width: 480 | image_tag: alt: image_alt , class: 'product-img' }}
+              {{ card.settings.image_product | image_url: width: 480 | image_tag: alt: image_alt , class: 'product-img', loading:"eager" }}
             {% else %}
-              {{ product.featured_image | image_url: width: 480 | image_tag: alt: image_alt , class: 'product-img' }}
+              {{ product.featured_image | image_url: width: 480 | image_tag: alt: image_alt , class: 'product-img',loading:"eager" }}
             {% endif %}
           </div>
           <div class="product-info">
