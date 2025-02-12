@@ -62,7 +62,7 @@
     </div>
     <div class="bundle-button">
         <div class="price">
-          {{ product.price | money }}
+          {{ product.price | money_without_trailing_zeros }}
         </div>
         <div class="bundle-btn" data-product-id="{{ product.selected_or_first_available_variant.id }}">
             <span class="uncheck">{{ btn-text }}</span>
