@@ -1492,9 +1492,8 @@
   height: 100%;
 }
 /* End Slider Derm Feature Section */
-#TODO: Revisar
 
-/*Dual Text e Imagen Section */
+/*Start Dual Text e Imagen Section */
 .section-dual-text-img .dual-text-img {
   max-width: 1440px;
   width: 100%;
@@ -1619,503 +1618,568 @@
   height: 100%;
   object-fit: cover;
 }
-.section-products-bundle{
+
+/*End Dual Text e Imagen Section */
+
+/*Start Products Bundle Section */
+
+.section-products-bundle {
   padding:48px 4.05% 64px;
   max-width:1440px;
   margin: auto;
-  .container-pb{
-    display: grid;
-    gap: 40px;
-    grid-template-columns: repeat(2, calc(50% - 20px));
-    margin-bottom:48px;
+}
+
+.section-products-bundle .container-pb{
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(2, calc(50% - 20px));
+  margin-bottom:48px;
+}
+
+.section-products-bundle .container-mb-pb {
+  display:none;
+}
+
+.section-products-bundle .rate{
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 16px 16px 0px 0px;
+  background: #000;
+  color:#FFF;
+  margin:auto;
+  font-size: 12px;
+}
+
+.section-products-bundle .card-bundle .cont-card-bundle {
+  border: 2px solid #D7D9D9;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 12px 12px 32px 12px;
+  height:100%;
+  display:flex;
+  flex-direction: column;
+}
+
+.section-products-bundle .card-bundle .uncheck{
+  display:block;
+}
+
+.section-products-bundle .card-bundle .check{
+  display:none;
+}
+
+.section-products-bundle .card-bundle.active .cont-card-bundle {
+  border-radius: 8px;
+  border: 2px solid var(--Turquoise, #C8E6DC);
+  background: #F4FAF8;
+}
+
+.section-products-bundle .card-bundle.active .media-btns .product, .results, .how-work{
+  background: #F4FAF8;
+}
+
+.section-products-bundle .card-bundle.active .media-btns .active{
+  color: #FFF;
+  background: #000;
+}
+
+.section-products-bundle .card-bundle.active .bundle-btn{
+  background: #008763;
+  cursor: auto;
+}
+
+.section-products-bundle .card-bundle.active .uncheck{
+  display:none;
+}
+
+.section-products-bundle .card-bundle.active .check{
+  display:block;
+}
+
+.section-products-bundle .cont-card-bundle.mb{
+  background:#F5F5F5;
+}
+
+.section-products-bundle .pdm-gallery {
+  aspect-ratio: 3 / 2;
+  position:relative;
+  margin-bottom:12px;
+  overflow:hidden;
+}
+
+.section-products-bundle .pdm-gallery .badge-dermatologist {
+  display: flex ;
+  width:100%;
+  gap: 3px;
+  height: 20px;
+  padding: 2px 2px;
+  justify-content: center;
+  align-items: center;
+  background: #DFF1EB;
+}
+
+.section-products-bundle .pdm-gallery .badge-dermatologist .badge-check{
+  width:14px;
+  height:auto;
+}
+
+.section-products-bundle .pdm-gallery .badge-dermatologist .text-badge{
+  color: #000;
+  font-family: Poppins;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.section-products-bundle .how-work .cont-video{
+  border-radius: 16px;
+  margin-bottom: 32.5px;
+  overflow:hidden;
+}
+
+.section-products-bundle .how-work video{
+  height:100%;
+  width: 100%;
+  border-radius: 16px;
+  background:#000;
+}
+
+.section-products-bundle .media {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0 ;
+  position:relative;
+}
+
+.section-products-bundle .media .how-work{
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+}
+
+.section-products-bundle .media-btns {
+  position: absolute;
+  bottom: 2.5px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.section-products-bundle .media-btns .product,
+.section-products-bundle .media-btns .results,
+.section-products-bundle .media-btns .how-work{
+  background:#FFF;
+  color: #000;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 0 8px;
+  border: solid 1px #000;
+  border-radius: 40px;
+  width:106px;
+  display:flex;
+  justify-content:center;
+  cursor:pointer;
+}
+
+.section-products-bundle .media-btns .active{
+  color: #FFF;
+  background: #000;
+}
+
+.section-products-bundle .product-info{
+  margin: 36px 42px 0;
+}
+
+.section-products-bundle .title h3 {
+  color: #000 ;
+  font-family: "Canela Web";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  margin-bottom:18px;
+}
+
+.section-products-bundle .text-checks{
+  margin:18px 0;
+}
+
+.section-products-bundle .text-checks li{
+  display: grid;
+  grid-template-columns: 20px auto;
+  gap: 8px;
+  color: #000;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom:8px;
+}
+
+.section-products-bundle .text-checks li::before {
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-image: url(https://cdn.shopify.com/s/files/1/0441/1431/3365/files/check-green.svg);
+  background-size:cover;
+}
+
+.section-products-bundle .doctor-info {
+  margin: 0 42px 28px;
+  padding:12px 24px;
+  border-top: 1px solid #D7D9D9;
+  border-bottom: 1px solid #D7D9D9;
+  display: grid;
+  grid-template-columns: 44px auto;
+  gap:16px;
+  align-items:center;
+}
+
+.section-products-bundle .photo {
+  width: 44px;
+  height: 44px;
+}
+
+.section-products-bundle .photo-doctor {
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .section-products-bundle .photo {
+    width: 42px;
+    height: 42px;
   }
-  .container-mb-pb {
+  .section-products-bundle .photo-doctor {
+    border-radius: 80px;
+  }
+}
+
+.section-products-bundle .review{
+  margin-bottom:5px;
+}
+
+.section-products-bundle .review,
+.section-products-bundle .doctor-data {
+  color: #000 ;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.section-products-bundle .bundle-button {
+  margin: auto 42px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.section-products-bundle .price{
+  color: #000;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; 
+}
+
+.section-products-bundle .bundle-btn{
+  display: flex;
+  height: 40px;
+  padding: 8px 24px;
+  justify-content: center;
+  align-items: center;
+  background:#000;
+  color:#FFF;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  border-radius:40px;
+  min-width: 134px;
+  cursor: pointer;
+}
+
+.section-products-bundle .btn-section{
+  display: flex;
+  width: fit-content;
+  height: 56px;
+  padding: 8px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  background: #000;
+  color:#FFF;
+  justify-self:center;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.section-products-bundle span.price {
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  background: #000;
+  color:#FFF;
+  justify-self:center;
+}
+
+.section-products-bundle .close-popup{
+  display:none;
+}
+
+@media (max-width: 1000px) {
+  .section-products-bundle .popup-hidden{
+    width:100%;
     display:none;
   }
 
-  .rate{
-    display: flex;
-    width: 200px;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    border-radius: 16px 16px 0px 0px;
-    background: #000;
-    color:#FFF;
-    margin:auto;
-    font-size: 12px;
-  }
-  .card-bundle{
-    .cont-card-bundle {
-      border: 2px solid #D7D9D9;
-      border-radius: 8px;
-      overflow: hidden;
-      padding: 12px 12px 32px 12px;
-      height:100%;
-      display:flex;
-      flex-direction: column;
-    }
-    .uncheck{
-      display:block;
-    }
-    .check{
-      display:none;
-    }
-  }
-  .card-bundle.active{
-    .cont-card-bundle {
-      border-radius: 8px;
-      border: 2px solid var(--Turquoise, #C8E6DC);
-      background: #F4FAF8;
-    }
-    .media-btns{    
-      .product, .results, .how-work{
-        background: #F4FAF8;
-      }
-    }
-    .media-btns .active{
-      color: #FFF;
-      background: #000;
-    }
-    .bundle-btn{
-      background: #008763;
-      cursor: auto;
-    }
-    .uncheck{
-      display:none;
-    }
-    .check{
-      display:block;
-    }
-  }
-  .cont-card-bundle.mb{
-    background:#F5F5F5;
-  }
-  .pdm-gallery {
-    aspect-ratio: 3 / 2;
-    position:relative;
-    margin-bottom:12px;
-    overflow:hidden;
+  .section-products-bundle .container-pb{
+    transition: all 0.5s ease-in-out;
   }
 
-  .pdm-gallery .badge-dermatologist {
-    display: flex ;
+  .section-products-bundle .popup-show{
+    grid-template-columns: 100%;
     width:100%;
-    gap: 3px;
-    height: 20px;
-    padding: 2px 2px;
+    height:100%;
+    display:flex;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:100;
+    background:rgba(0,0,0,.5);
+    overflow:auto;
+  }
+
+  .section-products-bundle .hidden-mobile{
+    display:none;
+  }
+
+  .section-products-bundle .close-popup{
+    display: flex;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border: 1px solid #797D7C;
+    border-radius: 40px;
+    width: 18px;
+    height: 18px;
     justify-content: center;
     align-items: center;
-    background: #DFF1EB;
+    z-index:1;
   }
-  .pdm-gallery .badge-dermatologist .badge-check{
-    width:14px;
-    height:auto;
+
+  .section-products-bundle .show-mobile{
+    display:block;
+    width:100%;
+    max-width:477px;
+    height: min-content;
+    margin: auto;
+    position: relative;
   }
-  .pdm-gallery .badge-dermatologist .text-badge{
-    color: #000;
+
+  .section-products-bundle .show-mobile .cont-card-bundle{
+    background:#FFF;
+    padding: 6px 6px 0 6px;
+    height: calc(var(--vh, 1vh) * 100 - 45px);
+    position: relative;
+    max-height: fit-content;
+    overflow-y: auto;
+  }
+
+  .section-products-bundle .show-mobile .cont-card-bundle::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+
+  .section-products-bundle .show-mobile .cont-card-bundle::-webkit-scrollbar:vertical {
+      width: 8px;
+  }
+
+  .section-products-bundle .show-mobile .cont-card-bundle::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+  }
+
+  .section-products-bundle .show-mobile .cont-card-bundle::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #ffffff;
+  }
+
+  .section-products-bundle .show-mobile .pdm-gallery{
+    aspect-ratio: 1 / 1;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .section-products-bundle .show-mobile .product-info{
+    margin: 8px 12px 0;
+  }
+
+  .section-products-bundle .show-mobile .doctor-info{
+    margin:0 12px;
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .section-products-bundle .show-mobile .title h3{
+    font-size: 20px;
+    line-height:100%;
+    margin-bottom: 16px;
+  }
+
+  .section-products-bundle .show-mobile .text-checks {
+    margin:16px 0;
+  }
+
+  .section-products-bundle .show-mobile .text-checks li{
+    font-size: 12px;
+    line-height:17px;
+    grid-template-columns: 16px auto;
+  }
+
+  .section-products-bundle .show-mobile .text-checks li::before{
+    width: 16px;
+    height: 16px;
+    margin-top:2px
+  }
+
+  .section-products-bundle .show-mobile .review,
+  .section-products-bundle .show-mobile .doctor-data {
+    font-size:9px;
+  }
+
+  .section-products-bundle .show-mobile .bundle-button{
+    flex-direction:column;
+    margin: 0;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 15px 15px 30px;
+    z-index: 10;
+  }
+
+  .section-products-bundle .show-mobile .price{
+    width:100%;
+    margin-bottom:5px;
+  }
+
+  .section-products-bundle .show-mobile .bundle-btn{
+    width:100%;
+  }
+
+  .section-products-bundle .card-bundle.active.show-mobile .bundle-button{
+    background: #f4faf8;
+  }
+
+  .section-products-bundle .container-mb-pb {
+    display:grid;
+    grid-template-columns: 50% 50%;
+    gap:8px;
+    margin-bottom:36px;
+  }
+
+  .section-products-bundle .card-bundle .rate.desktop {
+    display:none;
+  }
+
+  .section-products-bundle .rate.mb{
     font-family: Poppins;
-    font-size: 9px;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    width:99px;
+  }
+
+  .section-products-bundle .cont-card-bundle.mb{
+    padding:0;
+  }
+
+  .section-products-bundle .product-info.mb{
+    margin: 0 12px;
+  }
+
+  .section-products-bundle .title.mb h3{
+    text-align: center;
+    font-family: "Canela Web";
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 4px;
+  }
+
+  .section-products-bundle .price.mb{
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 12px;
     font-style: normal;
     font-weight: 500;
     line-height: 16px;
+    margin-bottom:8px;
   }
 
-
-  .how-work .cont-video{
-    border-radius: 16px;
-    margin-bottom: 32.5px;
-    overflow:hidden;
-  }
-  .how-work video{
-    height:100%;
-    width: 100%;
-    border-radius: 16px;
-    background:#000;
-  }
-  .media {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    border-radius: 8px 8px 0 0 ;
-    position:relative;
-    .how-work{
-      width:100%;
-      height:100%;
-      display:flex;
-      justify-content:center;
-    }
-  }
-  .media-btns {
-    position: absolute;
-    bottom: 2.5px;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    .product, .results, .how-work{
-      background:#FFF;
-      color: #000;
-      font-family: Poppins;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 24px;
-      padding: 0 8px;
-      border: solid 1px #000;
-      border-radius: 40px;
-      width:106px;
-      display:flex;
-      justify-content:center;
-      cursor:pointer;
-    }
-  }
-  .media-btns .active{
-    color: #FFF;
-    background: #000;
-  }
-  .product-info{
-    margin: 36px 42px 0; 
-  } 
-  .title h3 {
-    color: #000 ;
-    font-family: "Canela Web";
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 32px;
-    margin-bottom:18px;
-  }
-  .text-checks{
-    margin:18px 0;
-    li{
-      display: grid;
-      grid-template-columns: 20px auto;
-      gap: 8px;
-      color: #000;
-      font-family: Poppins;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 24px;
-      margin-bottom:8px;
-    }
-    li::before {
-      content: '';
-      display: inline-block;
-      height: 20px;
-      width: 20px;
-      background-image: url(https://cdn.shopify.com/s/files/1/0441/1431/3365/files/check-green.svg);
-      background-size:cover;
-    }
-  }
-  .doctor-info {
-    margin: 0 42px 28px;
-    padding:12px 24px;
-    border-top: 1px solid #D7D9D9;
-    border-bottom: 1px solid #D7D9D9;
-    display: grid;
-    grid-template-columns: 44px auto;
-    gap:16px;
+  .section-products-bundle .bundle-button.mb {
+    flex-direction: column;
     align-items:center;
-  }
-  .photo {
-    width: 44px;
-    height: 44px;
-  }
-  .photo-doctor {
-    width: 100%;
-    height: 100%;
-    border-radius: 100px;
-    object-fit: cover;
-  }
-  @media screen and (max-width: 768px) {
-    .photo {
-      width: 42px;
-      height: 42px;
-    }
-    .photo-doctor {
-      border-radius: 80px;
-    }
+    margin: auto 12px 0;
   }
 
-  .review{
-    margin-bottom:5px;
+  .section-products-bundle .bundle-btn.mb{
+    height: 32px;
+    padding: 8px 14px;
+    gap: 8px;
+    font-size: 11px;
+    line-height: 16px;
+    margin-bottom:4px;
+    text-align:center;
   }
-  .review, .doctor-data {
-    color: #000 ;
+
+  .section-products-bundle .more{
+    display: flex;
+    padding: 2px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #000;
     font-family: Poppins;
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
-  }
-  .bundle-button {
-    margin: auto 42px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-  }
-  .price{
-    color: #000;
-    font-family: Poppins;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 16px; 
-  }
-  .bundle-btn{
-    display: flex;
-    height: 40px;
-    padding: 8px 24px;
-    justify-content: center;
-    align-items: center;
-    background:#000;
-    color:#FFF;
-    font-family: Poppins;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
-    border-radius:40px;
-    min-width: 134px;
-    cursor: pointer;
-  }
-
-  .btn-section{
-    display: flex;
-    width: fit-content;
-    height: 56px;
-    padding: 8px 32px;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    border-radius: 100px;
-    background: #000;
-    color:#FFF;
-    justify-self:center;
-    margin: 0 auto;
-    cursor: pointer;
-  }
-
-  span.price {
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    background: #000;
-    color:#FFF;
-    justify-self:center;
-  }
-
-  .close-popup{
-    display:none;
-  }
-
-  @media (max-width: 1000px) {
-    .popup-hidden{
-      width:100%;
-      display:none;
-    }
-    .container-pb{
-      transition: all 0.5s ease-in-out; 
-    }
-    .popup-show{
-      grid-template-columns: 100%;
-      width:100%;
-      height:100%;
-      display:flex;
-      position:fixed;
-      top:0;
-      left:0;
-      z-index:100;
-      background:rgba(0,0,0,.5);
-      overflow:auto;
-    }
-    .hidden-mobile{
-      display:none;
-    }
-    .close-popup{
-      display: flex;
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      border: 1px solid #797D7C;
-      border-radius: 40px;
-      width: 18px;
-      height: 18px;
-      justify-content: center;
-      align-items: center;
-      z-index:1;
-    }
-    .show-mobile{
-      display:block;
-      width:100%;
-      max-width:477px;
-      height: min-content;
-    
-      margin: auto;
-      position: relative;
-      
-      .cont-card-bundle{
-        background:#FFF;
-        padding: 6px 6px 0 6px;
-        height: calc(var(--vh, 1vh) * 100 - 45px);
-        position: relative;
-        max-height: fit-content;
-        overflow-y: auto;
-      }
-      .cont-card-bundle::-webkit-scrollbar {
-        -webkit-appearance: none;
-      }
-      .cont-card-bundle::-webkit-scrollbar:vertical {
-          width: 8px;
-      }
-      .cont-card-bundle::-webkit-scrollbar-thumb {
-        background-color: rgba(0, 0, 0, .8);
-        border-radius: 10px;
-        border: 2px solid #ffffff;
-      }
-      .cont-card-bundle::-webkit-scrollbar-track {
-          border-radius: 10px;
-          background-color: #ffffff;
-      }
-
-      .pdm-gallery{
-        aspect-ratio: 1 / 1;
-        min-height: 200px;
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-      }
-      .product-info{
-        margin: 8px 12px 0;
-      }
-      .doctor-info{
-        margin:0 12px;
-        padding: 8px;
-        gap: 8px;
-      }
-      .title h3{
-        font-size: 20px;
-        line-height:100%;
-        margin-bottom: 16px;
-      }
-      .text-checks{
-        margin:16px 0;
-        li{
-          font-size: 12px;
-          line-height:17px;
-          grid-template-columns: 16px auto;
-        }
-        li::before{
-          width: 16px;
-          height: 16px;
-          margin-top:2px
-        }
-      }
-      .review, .doctor-data {
-        font-size:9px;
-      }
-      .bundle-button{
-        flex-direction:column;
-        margin: 0;
-        position: sticky;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: white;
-        padding: 15px 15px 30px;
-        z-index: 10;
-      }
-      .price{
-        width:100%;
-        margin-bottom:5px;
-      }
-      .bundle-btn{
-        width:100%;
-      }
-    }
-    .card-bundle.active.show-mobile .bundle-button{
-      background: #f4faf8;
-    }
-
-    .container-mb-pb {
-      display:grid;
-      grid-template-columns: 50% 50%;
-      gap:8px;
-      margin-bottom:36px;
-    }
-    .card-bundle .rate.desktop {
-      display:none;
-      /*height: min-content;*/
-    }
-    .rate.mb{
-      font-family: Poppins;
-      font-size: 10px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 24px;
-      letter-spacing: 0.5px;
-      width:99px;
-    }
-    .cont-card-bundle.mb{
-      padding:0;
-    }
-    .product-info.mb{
-      margin: 0 12px;
-    }
-    .title.mb h3{
-      text-align: center;
-      font-family: "Canela Web";
-      font-size: 13px;
-      line-height: 20px;
-      margin-bottom: 4px;
-    }
-    .price.mb{
-      color: #000;
-      text-align: center;
-      font-family: Poppins;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 16px; 
-      margin-bottom:8px;
-    }
-    .bundle-button.mb {
-      flex-direction: column;
-      align-items:center;
-      margin: auto 12px 0;
-    }
-    .bundle-btn.mb{
-      height: 32px;
-      padding: 8px 14px;
-      gap: 8px;
-      font-size: 11px;
-      line-height: 16px;
-      margin-bottom:4px;
-      text-align:center;
-    }
-
-    .more{
-      display: flex;
-      padding: 2px 0px;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-      color: #000;
-      font-family: Poppins;
-      font-size: 10px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 14px;
-      border-bottom: 0.5px solid #000;
-      margin-bottom: 12px;
-    }
+    line-height: 14px;
+    border-bottom: 0.5px solid #000;
+    margin-bottom: 12px;
   }
 }
+
+
+/*End Products Bundle Section */
 .section-flating-bundle{
   max-width: 840px;
   width: 100%;
