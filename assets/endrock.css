@@ -3648,20 +3648,21 @@ body[data-test-high-contrast='true'] .supply_steps .step_block .step_content.ups
 /* start test pdm all in one face serum */
 
 /* pdp face serum */
-
-body[data-test-pdm-serum] .block-offer-test-original{
+body[data-test-pdm-serum="a"] .block-offer-test-original,
+body[data-test-pdm-serum="b"] .block-offer-test-original{
   display: none;
 }
 
-body[data-test-pdm-serum] .plan_choosed.text-end .text-1{
+body[data-test-pdm-serum="a"] .plan_choosed.text-end .text-1,
+body[data-test-pdm-serum="b"] .plan_choosed.text-end .text-1{
   display: none;
 }
 
 .plan_choosed.text-end .text-2{
   display: none;
 }
-
-body[data-test-pdm-serum] .plan_choosed.text-end .text-2{
+body[data-test-pdm-serum="a"] .plan_choosed.text-end .text-2,
+body[data-test-pdm-serum="b"] .plan_choosed.text-end .text-2{
   display: inline;
   font-family: Poppins;
   font-size: 10.11px;
@@ -3695,16 +3696,18 @@ body[data-test-pdm-serum] .plan_choosed.text-end .text-2{
   }
 }
 /* missin style txt-2*/
-
-body[data-test-pdm-serum] .plan_des.plan_des_top-original{
+body[data-test-pdm-serum="a"] .plan_des.plan_des_top-original,
+body[data-test-pdm-serum="b"] .plan_des.plan_des_top-original{
   display: none;
 }
 
-body[data-test-pdm-serum] .planBlock.planBlockTop.hidde-second-step{
+body[data-test-pdm-serum="a"] .planBlock.planBlockTop.hidde-second-step,
+body[data-test-pdm-serum="b"] .planBlock.planBlockTop.hidde-second-step{
   display: none;
 }
 
-body[data-test-pdm-serum] .plan_des.plan_des_bottom-original{
+body[data-test-pdm-serum="a"] .plan_des.plan_des_bottom-original,
+body[data-test-pdm-serum="b"] .plan_des.plan_des_bottom-original{
   display: none;
 }
 
@@ -3716,11 +3719,13 @@ body[data-test-pdm-serum] .plan_des.plan_des_bottom-original{
   display: none;
 }
 
-body[data-test-pdm-serum] .plan_des.plan_des_top-test{
+body[data-test-pdm-serum="a"] .plan_des.plan_des_top-test,
+body[data-test-pdm-serum="b"] .plan_des.plan_des_top-test{
   display: block;
 }
 
-body[data-test-pdm-serum] .plan_des.plan_des_bottom-test{
+body[data-test-pdm-serum="a"] .plan_des.plan_des_bottom-test,
+body[data-test-pdm-serum="b"] .plan_des.plan_des_bottom-test{
   display: block;
 }
 
@@ -3728,7 +3733,8 @@ body[data-test-pdm-serum] .plan_des.plan_des_bottom-test{
   display: none;
 }
 
-body[data-test-pdm-serum] .pdm-product-test-pdp{
+body[data-test-pdm-serum="a"] .pdm-product-test-pdp,
+body[data-test-pdm-serum="b"] .pdm-product-test-pdp{
   display: block;
 }
 
@@ -3795,11 +3801,13 @@ body[data-test-pdm-serum] .pdm-product-test-pdp{
 }
 
 /* price pdp */
-body[data-test-pdm-serum] .planBlock .monthly_plans .price.plan_des_top-original{
+body[data-test-pdm-serum="a"] .planBlock .monthly_plans .price.plan_des_top-original,
+body[data-test-pdm-serum="b"] .planBlock .monthly_plans .price.plan_des_top-original{
   display: none;
 }
 
-body[data-test-pdm-serum] .planBlock .monthly_plans .price.plan_des_bottom-original{
+body[data-test-pdm-serum="a"] .planBlock .monthly_plans .price.plan_des_bottom-original,
+body[data-test-pdm-serum="b"] .planBlock .monthly_plans .price.plan_des_bottom-original{
   display: none;
 }
 
@@ -3807,7 +3815,8 @@ body[data-test-pdm-serum] .planBlock .monthly_plans .price.plan_des_bottom-origi
   display: none;
 }
 
-body[data-test-pdm-serum] .planBlock .monthly_plans .price.plan_des_top-test{
+body[data-test-pdm-serum="a"] .planBlock .monthly_plans .price.plan_des_top-test,
+body[data-test-pdm-serum="b"] .planBlock .monthly_plans .price.plan_des_top-test{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3818,7 +3827,8 @@ body[data-test-pdm-serum] .planBlock .monthly_plans .price.plan_des_top-test{
   display: none;
 }
 
-body[data-test-pdm-serum] .planBlock .monthly_plans .price.plan_des_bottom-test{
+body[data-test-pdm-serum="a"] .planBlock .monthly_plans .price.plan_des_bottom-test,
+body[data-test-pdm-serum="b"] .planBlock .monthly_plans .price.plan_des_bottom-test{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3847,7 +3857,8 @@ body[data-test-pdm-serum] .planBlock .monthly_plans .price.plan_des_bottom-test{
 }
 
 @media screen and (min-width: 769px) { 
-  body[data-test-pdm-serum] .planBlock .monthly_plans .price.plan_des_top-test{
+  body[data-test-pdm-serum="a"] .planBlock .monthly_plans .price.plan_des_top-test,
+  body[data-test-pdm-serum="b"] .planBlock .monthly_plans .price.plan_des_top-test{
     align-items: flex-end;
     gap: 5px;
   }
@@ -3919,7 +3930,8 @@ body[data-test-pdm-serum] .planBlock .monthly_plans .price.plan_des_bottom-test{
   display: none 
 }
 
-body[data-test-pdm-serum] .pdm_all-in-one-face-serum-offer-form{
+body[data-test-pdm-serum="a"] .pdm_all-in-one-face-serum-offer-form,
+body[data-test-pdm-serum="b"] .pdm_all-in-one-face-serum-offer-form{
   display: block
 }
 

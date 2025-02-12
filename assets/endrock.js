@@ -1784,41 +1784,60 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Check if the face serum container exists and if the test flag is enabled in the dataset
 const faceSerumBuyBlockContainer = document.querySelector('.pdm_all-in-one-face-serum-offer-form');
-console.log("wp", window.location.pathname)
-if(window.location.pathname.includes("/products/face-serum")){
 
+if (window.location.pathname.includes("/products/face-serum")) {
   const testPdpElement = document.querySelector(".pdm-product-test-pdp");
   const originalPdpElement = document.querySelector(".pdm-product-original-pdp");
   const body = document.body;
+  const buyButton = document.querySelector(
+    ".btn.buy_btn.submit_btn_top.reserve_btn[data-ajax-cart-request-button]"
+  );
+  const testRadio = testPdpElement?.querySelector('input[type="radio"]');
+  const originalRadio = originalPdpElement?.querySelector('input[type="radio"]');
+  const testType = body.getAttribute("data-test-pdm-serum"); // "a", "b" o null
 
-  if (!body.hasAttribute("data-test-pdm-serum")) {
+  function updateBuyButton(isTestSelected) {
+    if (!buyButton) return;
+    if (isTestSelected) {
+      if (testType === "a") {
+        buyButton.textContent = "Buy Now & Save 34%";
+      } else if (testType === "b") {
+        buyButton.textContent = "Buy Two, Get One FREE";
+      }
+    } else {
+      buyButton.textContent = "Buy Now"; 
+    }
+  }
+
+  if (testType === "a" || testType === "b") {
+    if (originalPdpElement) {
+      originalPdpElement.remove();
+    }
+  } else {
     if (testPdpElement) {
       testPdpElement.remove();
     }
-    const originalRadio = originalPdpElement?.querySelector('input[type="radio"]');
     if (originalRadio) {
       originalRadio.checked = true;
     }
-  } else {
-    if (originalPdpElement) {
-      originalPdpElement.remove();
-      const buyButton = document.querySelector(
-        ".btn.buy_btn.submit_btn_top.reserve_btn[data-ajax-cart-request-button]"
-      );
-      if (buyButton) {
-        const newVariantId = "46201466650863";
-        const newProductHandle = "all-in-one-face-serum-6-month-bundle-1";
-        buyButton.setAttribute(
-          "href",
-          `/cart/add?id=${newVariantId}&quantity=1`
-        );
-        buyButton.setAttribute(
-          "onclick",
-          `setEventProductHandler('${newProductHandle}')`
-        );
-      }
+  }
+
+  if (testType === "a" || testType === "b") {
+    if (buyButton) {
+      const newVariantId = "46201466650863";
+      const newProductHandle = "all-in-one-face-serum-6-month-bundle-1";
+      buyButton.setAttribute("href", `/cart/add?id=${newVariantId}&quantity=1`);
+      buyButton.setAttribute("onclick", `setEventProductHandler('${newProductHandle}')`);
     }
   }
+
+  document.querySelectorAll('input[type="radio"]').forEach((radio) => {
+    radio.addEventListener("change", () => {
+      updateBuyButton(testRadio?.checked);
+    });
+  });
+
+  updateBuyButton(testRadio?.checked);
 }
 
 
@@ -1890,9 +1909,19 @@ if (faceSerumBuyBlockContainer) {
     const anchorAjaxElement = document.querySelector('.pdm_serum-anchor-ajax');
     const anchorAjaxTextElement = document.querySelector('.pdm_serum-anchor-ajax-text');
 
+    const body = document.body;
+    const testType = body.getAttribute("data-test-pdm-serum");
+
     if (anchorAjaxElement && variantId) {
       anchorAjaxElement.href = `/cart/add?id=${variantId}&quantity=1`;
-      anchorAjaxTextElement.textContent = discountMessage;
+      
+      if (testType === "b" && discountMessage) {
+        anchorAjaxTextElement.textContent = "Get One FREE";
+        anchorAjaxElement.childNodes[0].nodeValue = "Buy Two, ";
+      } else {
+        anchorAjaxTextElement.textContent = discountMessage;
+        anchorAjaxElement.childNodes[0].nodeValue = "buy now ";
+      }
 
       anchorAjaxElement.addEventListener('click', () => {
         setEventProductHandler(productHandle);

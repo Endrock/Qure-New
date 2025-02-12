@@ -91,7 +91,7 @@
                   data-compare-at-price="{{ block.settings.product.compare_at_price |  money_without_trailing_zeros }}"
                   data-price="{{ block.settings.product.price | money_without_trailing_zeros }}"
                   data-saving-price="{{ saving_price | money_without_trailing_zeros }}"
-                  data-discount-message="{% if number_of_products > 1 %}& {{ block.settings.discount_text }} {{ discount_percent_divided }}{{-block.settings.discount_suffix-}}{% endif %}"
+                  data-discount-message="{% if block.settings.show_discount %}& {{ block.settings.discount_text }} {{ discount_percent_divided }}{{-block.settings.discount_suffix-}}{% endif %}"
                 >
                   <input
                     type="radio"
