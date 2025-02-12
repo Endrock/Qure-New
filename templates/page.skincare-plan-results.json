@@ -21,7 +21,7 @@
       "settings": {
         "section_title": "your results are in.  Let’s transform your signs of aging!",
         "section_text": "We put together a straightforward, no-nonsense program just for you and your skin. It’s aimed to help you reduce the signs of aging, fine lines and wrinkles, keep your skin smooth, and your confidence high.",
-        "button_text": "Discover Now",
+        "button_text": "Shop Now & Save 20%",
         "button_link": "#products_bundle_custom_section",
         "before_text": "before",
         "after_text": "After",
@@ -382,7 +382,11 @@
             "image_country": "shopify://shop_images/Flag_of_the_United_States_1.svg",
             "client": "Terri P.",
             "verified": true,
-            "product": "q-rejuvalight-pro-facewear"
+            "product": "q-rejuvalight-pro-facewear",
+            "cta_go_to_product": true,
+            "cta_url": "",
+            "show_product_name": true,
+            "cta_text": ""
           }
         },
         "slide_nN9pJj": {
@@ -396,7 +400,11 @@
             "image_country": "shopify://shop_images/Flag_of_the_United_States_1.svg",
             "client": "Ellie V.",
             "verified": true,
-            "product": "micro-infusion-3-month-bundle-6x-beta-glucan-serum"
+            "product": "micro-infusion-3-month-bundle-6x-beta-glucan-serum",
+            "cta_go_to_product": true,
+            "cta_url": "",
+            "show_product_name": true,
+            "cta_text": ""
           }
         },
         "slide_EcpCWr": {
@@ -410,7 +418,11 @@
             "image_country": "shopify://shop_images/Flag_of_the_United_States_1.svg",
             "client": "Mary R.M.",
             "verified": true,
-            "product": "neck-decolletage-led"
+            "product": "neck-decolletage-led",
+            "cta_go_to_product": true,
+            "cta_url": "",
+            "show_product_name": true,
+            "cta_text": ""
           }
         },
         "slide_6aBjTc": {
@@ -424,7 +436,11 @@
             "image_country": "shopify://shop_images/Flag_of_the_United_States_1.svg",
             "client": "Cheryl T.",
             "verified": true,
-            "product": "face-serum"
+            "product": "face-serum",
+            "cta_go_to_product": true,
+            "cta_url": "",
+            "show_product_name": true,
+            "cta_text": ""
           }
         }
       },
