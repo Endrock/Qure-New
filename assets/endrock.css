@@ -3643,3 +3643,280 @@ body[data-test-high-contrast='true'] .supply_steps .step_block .step_content.ups
 }
 
 /* end test high contrast mode micro infusion offer and affiliate */
+
+/* start free-shiping guarantee emphasize */
+.free-shipping-guarentee-variant {
+  display: none !important;
+}
+body[data-free-shipping-guarentee] {
+  .free-shipping-guarentee-original {
+    display: none !important;
+  }
+
+  .free-shipping-guarentee-variant {
+    display: flex !important;
+  }
+
+  /* .supply-detail .supply_steps .planBlock .plan_choosed.text-end {  */
+  .supply-detail .supply_steps .planBlock .plan_choosed { 
+    max-width: unset;
+    left: -15px !important;
+    bottom: -1px;
+    border-radius: 13.158px 13.158px 0px 0px;
+  }
+  .supply-detail .plan_choosed span {
+    display: inline-block;
+    height: 100%;
+    padding: 3px 10px 2px;
+    color: #FFF;
+    text-align: right;
+    font-family: Poppins, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 11px; 
+    letter-spacing: 0.1px;
+    text-transform: initial;
+  }
+
+  .supply-detail .monthly_plans { 
+    justify-content: unset;
+    padding: 14px 16px 14px 16px;
+    border-radius: 12px !important;
+    position: relative;
+  }
+  .supply-detail .planBlock.active .monthly_plans { 
+    border: 1px solid #000;
+  }
+  .supply-detail .monthly_plans.background-white {
+    background-color: #fff;
+    padding-bottom: 32px;
+  }
+  .supply-detail .monthly_plans__circle { 
+    margin-right: 10px;
+    position: relative;
+    top: -10px;
+  }
+  .supply-detail .monthly_plans__circle .circle-full {
+    display: none;
+  }
+  .supply-detail .planBlock.active .monthly_plans__circle .circle-full {
+    display: block;
+  }
+  .supply-detail .planBlock.active .monthly_plans__circle .circle-empty { 
+    display: none;
+  }
+  .supply-detail .monthly_plans .plan_des {
+    font-family: Poppins, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 15px; 
+    letter-spacing: 0.12px;
+    margin-top: 8px;
+   }
+  .supply-detail .monthly_plans .plan_des .plan_hdr h3 { 
+    font-size: 14px;
+    line-height: 13px; 
+    letter-spacing: 0.14px;
+  }
+  .supply-detail .monthly_plans .plan_des .plan_hdr .saved_price { 
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.11px;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    margin-left: 8px;
+  } 
+  .supply-detail .monthly_plans .price {
+    margin-left: auto;
+  }
+  .supply-detail .monthly_plans .price .regular_price { 
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+  }
+  .supply-detail .monthly_plans .price .sale_price { 
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.3px;
+  } 
+  .supply-detail .free-shipping-icon {
+    width: 100%;
+    background-color: #C7E7CD;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .supply-detail .free-shipping-icon .free-shipping-icon__label { 
+    font-family: Poppins, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.11px;
+    margin-left: 4px;
+  }
+  .shipping-badges-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .shipping-badges-container .shipping-badges-container__money-back .shipping-badges-container__money-back--label {
+    color: #000;
+    font-family: Poppins, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; 
+    opacity: 0.8;
+  }
+  .shipping-badges-container .shipping-badges-container__free-return .shipping-badges-container__free-return--label { 
+    color: #000;
+    font-family: Poppins, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0.11px;
+  }
+  .shipping-badges-container .shipping-badges-container__money-back, 
+  .shipping-badges-container .shipping-badges-container__free-return {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* product: microinfusion-targeted-patches */
+  .mi_patches_pdp .supply-detail .monthly_plans .plan_des {
+    width: calc(100% - 30px);
+  }
+  .mi_patches_pdp .supply-detail .monthly_plans .monthly_plans__circle { 
+    top: 4px;
+  }
+  .mi_patches_pdp .supply-detail .monthly_plans .plan_des.free-shipping-guarentee-variant, 
+  .mi_patches_pdp .supply-detail .monthly_plans[for="mBanner_2_month"] .plan_des.d-md-block { 
+    margin-left: 28px;
+  }
+  .mi_patches_pdp .supply-detail .monthly_plans[for="mBanner_1_month"] .monthly_plans__circle { 
+    top: -10px;
+  }
+  .mi_patches_pdp .supply-detail .monthly_plans .plan_des_indiv { 
+    width: 80%;
+  }
+  /* qrejuvalight */
+  .free-shipping-badge-container {
+    width: 100%;
+    height: 26px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    background: #EDF7F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  .free-shipping-badge-container svg { 
+    width: 26px;
+    height: 26px;
+  }
+  .free-shipping-badge-container .free-shipping-badge-container__label { 
+    color: #000;
+    font-family: Poppins, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0.12px;
+  }
+  .free-shipping-badge-container .free-shipping-badge-container__label span { 
+    color: #008763;
+    font-family: Poppins, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0.12px;
+  } 
+  .shipping-badges-container__money-back svg {
+    width: 32px;
+    height: 32px;
+  }
+  .shipping-badges-container__money-back .shipping-badges-container__money-back--label { 
+    width: max-content;
+    color: #000;
+    font-family: Poppins, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    opacity: 0.8;
+    padding-left: 6px;
+    display: flex;
+    align-items: center;
+  }
+  .led_mask .shipping {
+    display: flex;
+    justify-content: space-between;
+  }
+  .led_mask .shipping p { 
+    color: #000;
+    font-family: Poppins, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; 
+    letter-spacing: 0.3px;
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 768px) {
+  body[data-free-shipping-guarentee] { 
+    .supply-detail .monthly_plans { 
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    .shipping-badges-container { 
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+    .shipping-badges-container svg {
+      width: 32px;
+      height: 32px;
+    }
+    .shipping-badges-container .shipping-badges-container__money-back .shipping-badges-container__money-back--label { 
+      width: 100px;
+    }
+    .shipping-badges-container .shipping-badges-container__free-return .shipping-badges-container__free-return--label { 
+      width: 80px;
+    }
+    .supply-detail .planBlock .monthly_plans__circle .circle-full, 
+    .supply-detail .planBlock .monthly_plans__circle .circle-empty { 
+      width: 14px;
+      height: 14px;
+    }
+
+     /* product: microinfusion-targeted-patches */
+    .mi_patches_pdp .supply-detail .monthly_plans .plan_des.d-md-none {
+      display: none;
+    }
+    .mi_patches_pdp .supply-detail .monthly_plans[for="mBanner_1_month"] .monthly_plans__circle { 
+      top: 0;
+    }
+
+    .shipping-badges-container__money-back .shipping-badges-container__money-back--label { 
+      width: auto;
+    }
+  }
+}
+
+/* end free-shiping guarantee emphasize */
