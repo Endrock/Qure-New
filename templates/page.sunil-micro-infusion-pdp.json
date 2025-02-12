@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "main": {
       "type": "product-landing",
@@ -65,12 +65,13 @@
           "settings": {
             "image_new_section_1": "shopify://shop_images/before_and_after_-_m4_b6e97509-f180-4a38-a367-e9deeacf3a0c.png",
             "image_new_section_text_1": "micro infusion one",
-            "image_new_section_2": "shopify://shop_images/before_and_after_-_m2.png",
+            "image_new_section_2": "shopify://shop_images/B_a_micro.png",
             "image_new_section_text_2": "micro infusion two",
             "image_new_section_3": "shopify://shop_images/before_and_after_-_m3.png",
             "image_new_section_text_3": "micro infusion three",
             "image_new_section_4": "shopify://shop_images/before_and_after_-_m1_d489fd6a-0d41-4ef1-8531-ff2925a28c60.png",
             "image_new_section_text_4": "micro infusion four",
+            "image_new_section_5": "shopify://shop_images/before_and_after_-_m2.png",
             "image_new_section_text_5": "",
             "image_new_section_text_6": ""
           }
@@ -241,6 +242,8 @@
         "text_BHGBe4": {
           "type": "text",
           "settings": {
+            "ctm_cls": "",
+            "heading_first": "",
             "text": "<p>Its tiny, almost painless, 24K gold plated 0.5mm microneedles penetrate <strong>beyond the skin’s surface</strong> to gently create controlled trauma in your skin which help boost the feel of <strong>firmness, smooth texture and reduce the look of fine lines and wrinkles.</strong><br/><br/>The invisible micro-channels then <strong>infuse science-backed serums</strong> into your skin that are tailored to treat your specific skin concerns, increasing absorption and <strong>delivering powerful active ingredients EXACTLY where they’re needed!</strong></p>",
             "btn_text": "Shop Now",
             "btn_url": "",
