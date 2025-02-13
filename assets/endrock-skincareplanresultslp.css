@@ -284,6 +284,10 @@
   }
 }
 
+.popup-source.hidden {
+  display: none;
+}
+
 .cont-source {
   grid-area: b;
   display: inline-flex;
