@@ -789,12 +789,25 @@
           "type": "result",
           "settings": {
             "image": "shopify://shop_images/results_ann.webp",
-            "heading": "How easy it is to use",
+            "heading": "I LOVE the results",
             "text": "<p>\"I heard about micro-infusion in clinics but couldn’t afford to fork out hundreds of dollars for a treatment. So when I saw this online I jumped at buying it instantly. Yes, it doesn’t stamp in botox and filler BUT personally I LOVE the results and how easy it is to use myself at home. It works great for my skin, I have noticed my skin texture is much smoother and brighter.”</p>",
             "see-more": "",
             "image_country": "shopify://shop_images/australia_f.webp",
             "text_country": "Australia",
             "client": "Ann",
+            "code": ""
+          }
+        },
+        "result_JjTHyx": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/Jenn_Nay_b_a.png",
+            "heading": "Works better then I imagined!",
+            "text": "<p>“I am really stunned by how well this product works. I have had professional micro-needling and I wanted the benefits without the downtime. I did my treatment, went to bed and woke up the next morning and was ready to go. My skin looks better than it has in years.”</p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
+            "text_country": "United States",
+            "client": "Jennifer Nay",
             "code": ""
           }
         },
@@ -821,19 +834,6 @@
             "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
             "text_country": "United States",
             "client": "Mona P.",
-            "code": ""
-          }
-        },
-        "result_JjTHyx": {
-          "type": "result",
-          "settings": {
-            "image": "shopify://shop_images/Jenn_Nay_b_a.png",
-            "heading": "Works better then I imagined!",
-            "text": "<p>“I am really stunned by how well this product works. I have had professional micro-needling and I wanted the benefits without the downtime. I did my treatment, went to bed and woke up the next morning and was ready to go. My skin looks better than it has in years.”</p>",
-            "see-more": "",
-            "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
-            "text_country": "United States",
-            "client": "Jennifer Nay",
             "code": ""
           }
         },
@@ -1070,9 +1070,9 @@
         "result_VCJwgD",
         "result_UVLAG4",
         "result_ThnNPK",
+        "result_JjTHyx",
         "result_DckD68",
         "result_YbRNi7",
-        "result_JjTHyx",
         "result_cGAEkd",
         "result_URKRDq",
         "result_TJXM8n",
