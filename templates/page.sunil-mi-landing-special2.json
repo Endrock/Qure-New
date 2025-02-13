@@ -759,6 +759,19 @@
             "code": ""
           }
         },
+        "result_UVLAG4": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/Jessica_K_b_a.png",
+            "heading": "Thrilled with the results!",
+            "text": "<p>\"I have been using the mask & microneedling for 6 weeks & am truly impressed with the results. I have noticed a dramatic reduction in redness, an improvement in my dark spots, scars & overall skin tone & firmness, and a smoothing of fine lines & wrinkles.\"</p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "US",
+            "client": "Jessica K.",
+            "code": ""
+          }
+        },
         "result_DckD68": {
           "type": "result",
           "settings": {
@@ -918,19 +931,6 @@
             "code": ""
           }
         },
-        "result_UVLAG4": {
-          "type": "result",
-          "settings": {
-            "image": "shopify://shop_images/Jessica_K_b_a.png",
-            "heading": "Thrilled with the results!",
-            "text": "<p>\"I have been using the mask & microneedling for 6 weeks & am truly impressed with the results. I have noticed a dramatic reduction in redness, an improvement in my dark spots, scars & overall skin tone & firmness, and a smoothing of fine lines & wrinkles.\"</p>",
-            "see-more": "",
-            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
-            "text_country": "US",
-            "client": "Jessica K.",
-            "code": ""
-          }
-        },
         "result_Wj9mKr": {
           "type": "result",
           "settings": {
@@ -1054,6 +1054,7 @@
       },
       "block_order": [
         "result_VCJwgD",
+        "result_UVLAG4",
         "result_DckD68",
         "result_YbRNi7",
         "result_ThnNPK",
@@ -1066,7 +1067,6 @@
         "result_Eb4G8W",
         "result_h4ehch",
         "result_xtFHnk",
-        "result_UVLAG4",
         "result_Wj9mKr",
         "result_Nz6N9D",
         "result_xHhxHq",
