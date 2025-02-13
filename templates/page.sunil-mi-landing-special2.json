@@ -824,19 +824,6 @@
             "code": ""
           }
         },
-        "result_DckD68": {
-          "type": "result",
-          "settings": {
-            "image": "shopify://shop_images/results_glorija.webp",
-            "heading": "The best natural glow",
-            "text": "<p>“I was hesitant at first as I didn’t know how much it would hurt but to my surprise it was pretty painless. The 2nd day after the treatment, my skin has the best natural glow!</p><p>I was also happy to to see how much my pigmentation had lightened after 3rd treatment :) I switch between the serums depending on how my skin is before the treatment.”</p>",
-            "see-more": "",
-            "image_country": "shopify://shop_images/australia_f.webp",
-            "text_country": "Australia",
-            "client": "Glorija",
-            "code": ""
-          }
-        },
         "result_YbRNi7": {
           "type": "result",
           "settings": {
@@ -847,6 +834,19 @@
             "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
             "text_country": "United States",
             "client": "Mona P.",
+            "code": ""
+          }
+        },
+        "result_DckD68": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/results_glorija.webp",
+            "heading": "The best natural glow",
+            "text": "<p>“I was hesitant at first as I didn’t know how much it would hurt but to my surprise it was pretty painless. The 2nd day after the treatment, my skin has the best natural glow!</p><p>I was also happy to to see how much my pigmentation had lightened after 3rd treatment :) I switch between the serums depending on how my skin is before the treatment.”</p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/australia_f.webp",
+            "text_country": "Australia",
+            "client": "Glorija",
             "code": ""
           }
         },
@@ -1085,8 +1085,8 @@
         "result_ThnNPK",
         "result_9hgNpy",
         "result_JjTHyx",
-        "result_DckD68",
         "result_YbRNi7",
+        "result_DckD68",
         "result_cGAEkd",
         "result_URKRDq",
         "result_TJXM8n",
