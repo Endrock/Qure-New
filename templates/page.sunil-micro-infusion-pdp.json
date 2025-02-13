@@ -440,6 +440,19 @@
             "client_details": "<strong>Dr Greeney,</strong> Certified Dermatologist"
           }
         },
+        "testimonial_4LEMPb": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/alexis.png",
+            "video_type": "youtube",
+            "video_link": "",
+            "youtube_link": "https://www.youtube.com/watch?v=ZMGm5PmWzF0",
+            "wistia_id": "",
+            "badge_txt": "53k Followers",
+            "title": "You can get a Clinical treatment at home safely and conveniently... It is particularly beneficial for those with melanin rich Skin",
+            "client_details": "<strong>Dr Alexis Stephens,</strong>  Board-Certified Dermatologist"
+          }
+        },
         "testimonial_G9GFj9": {
           "type": "testimonial",
           "settings": {
@@ -478,28 +491,15 @@
             "title": "\"...safe for generally all skin tones and types to perform at home without any risk of infection or trauma.\"",
             "client_details": "<strong>Dr Prasanthi,</strong>  General Practitioner & Cosmetic Doctor"
           }
-        },
-        "testimonial_4LEMPb": {
-          "type": "testimonial",
-          "settings": {
-            "image": "shopify://shop_images/alexis.png",
-            "video_type": "youtube",
-            "video_link": "",
-            "youtube_link": "https://www.youtube.com/watch?v=ZMGm5PmWzF0",
-            "wistia_id": "",
-            "badge_txt": "53k Followers",
-            "title": "You can get a Clinical treatment at home safely and conveniently... It is particularly beneficial for those with melanin rich Skin",
-            "client_details": "<strong>Dr Alexis Stephens,</strong>  Board-Certified Dermatologist"
-          }
         }
       },
       "block_order": [
         "testimonial_9P9P6e",
         "testimonial_be7XRp",
+        "testimonial_4LEMPb",
         "testimonial_G9GFj9",
         "testimonial_NBUAU8",
-        "testimonial_6bYEdV",
-        "testimonial_4LEMPb"
+        "testimonial_6bYEdV"
       ],
       "settings": {
         "enable_autoplay": false,
