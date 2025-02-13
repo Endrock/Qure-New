@@ -1748,6 +1748,7 @@
   border-radius: 16px;
   margin-bottom: 32.5px;
   overflow:hidden;
+  aspect-ratio: auto;
 }
 
 .section-products-bundle .how-work video{
@@ -1878,6 +1879,11 @@
   }
   .section-products-bundle .photo-doctor {
     border-radius: 80px;
+  }
+
+  .section-products-bundle .how-work .cont-video{
+    margin: auto;
+    aspect-ratio: 16 / 9;
   }
 }
 
@@ -2042,6 +2048,13 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+    margin-top: 8%;
+    height: 100%;
+  }
+
+  .section-products-bundle .media-btns {
+    position: relative;
+    margin-top: 4px;
   }
 
   .section-products-bundle .show-mobile .product-info{

@@ -751,6 +751,7 @@ const flatingBundleInit = ()=>{
 
           this.querySelector('.price-discount').classList.toggle('hidden-price', price == 0);
           this.querySelector('.lock-discount').classList.toggle('hidden', price != 0);
+          if(price != 0) this.openFloatingBundle();
           this.querySelector('.full-price').innerHTML = price != 0 ? totalPriceWithCurrency :  '-';
           this.querySelector('.discount-price').innerHTML = bundlePrice != 0 ? totalBundleWithCurrency : '';
           this.querySelector('.bundle-discount__save-price').innerHTML = saveAmountCalc != 0 ? totalSaveBundlePriceWithCurrency : '';
@@ -832,6 +833,13 @@ const flatingBundleInit = ()=>{
           this.setAttribute('data-bundle-array', JSON.stringify([]));
         }
 
+        openFloatingBundle(){
+          const btnShow = this.querySelector('.btn-mobile')
+          const hBar = this.querySelector('.hbar')
+          if (btnShow) btnShow.classList.add('show-responsive')
+          if(hBar) hBar.classList.remove('show-responsive')
+          this.querySelector('.lock-discount').classList.remove('show-responsive')
+        }
       }
       window.customElements.define('flating-bundle', flatingBundle );
     }
