@@ -558,6 +558,16 @@
             "text": "<p>\"The Qure micro-infusion system takes it a step further by not only increasing hydration but also delivering growth factors right where they need to be.”</p><h6><strong>Dr Dylan Greeney</strong> Board-Certified Dermatologist</h6>"
           }
         },
+        "video_Miea9D": {
+          "type": "video",
+          "settings": {
+            "image": "shopify://shop_images/alexis.png",
+            "video_url": "https://youtu.be/ZMGm5PmWzF0?t=649",
+            "video_label": "Watch Video",
+            "wistia_id": "",
+            "text": "<p>“ You can get a Clinical treatment at home safely and conveniently... It is particularly beneficial for those with melanin Rich Skin”</p><p><strong>Dr Alexis Stephens,</strong>  Board-Certified Dermatologist</p>"
+          }
+        },
         "video_jPYhQi": {
           "type": "video",
           "settings": {
@@ -632,30 +642,20 @@
             "wistia_id": "",
             "text": "<p>”..safe for generally all skin tones and types to perform at home without any risk of infection or trauma.” </p><h6><strong>Dr Prasanthi Purusothman, </strong>General Practitioner & Cosmetic Doctor</h6>"
           }
-        },
-        "video_Miea9D": {
-          "type": "video",
-          "settings": {
-            "image": "shopify://shop_images/alexis.png",
-            "video_url": "https://youtu.be/ZMGm5PmWzF0?t=649",
-            "video_label": "Watch Video",
-            "wistia_id": "",
-            "text": "<p>“ You can get a Clinical treatment at home safely and conveniently... It is particularly beneficial for those with melanin Rich Skin”</p><p><strong>Dr Alexis Stephens,</strong>  Board-Certified Dermatologist</p>"
-          }
         }
       },
       "block_order": [
         "feedback_9Aa4j6",
         "feedback_NVbkWM",
         "video_C6tFxe",
+        "video_Miea9D",
         "video_jPYhQi",
         "video_PECKPL",
         "video_pEM9DL",
         "video_XF3pgt",
         "video_cBVzEm",
         "video_dyArxL",
-        "video_BMBJXV",
-        "video_Miea9D"
+        "video_BMBJXV"
       ],
       "settings": {
         "classname": "trusted_bl",
