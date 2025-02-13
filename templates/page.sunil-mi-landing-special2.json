@@ -1036,19 +1036,6 @@
             "code": ""
           }
         },
-        "result_nCtze6": {
-          "type": "result",
-          "settings": {
-            "image": "shopify://shop_images/New_review.png",
-            "heading": "Great Purchase",
-            "text": "<p>“I've been struggling with skin issues like hyperpigmentation, breakouts, and recently, I've noticed my skin looking dull. I've tried countless skincare products, but nothing seemed to work long-term. Although a few products showed some promise, the results were never lasting.  Recently, I came across Qure on my feeds, but I was hesitant to try it because I thought it would be just another product that wouldn’t make a difference. However, I was pleasantly surprised! This is now my fourth vial, and I absolutely love the results.</p>",
-            "see-more": "I used to get microneedling treatments because I loved the results, but Qure Micro-Infusion offers a similar effect right at home, and it's much more affordable than professional microneedling sessions.   I highly recommend giving it a try; I'm 99.99% sure you'll love it just as much as I do.\nI don’t usually write product reviews, but this one truly deserves it!”",
-            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
-            "text_country": "United States",
-            "client": "Jasmine K.",
-            "code": ""
-          }
-        },
         "result_EmYzR8": {
           "type": "result",
           "disabled": true,
@@ -1060,6 +1047,19 @@
             "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
             "text_country": "United States",
             "client": "Anonymous",
+            "code": ""
+          }
+        },
+        "result_nCtze6": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/New_review.png",
+            "heading": "Great Purchase",
+            "text": "<p>“I've been struggling with skin issues like hyperpigmentation, breakouts, and recently, I've noticed my skin looking dull. I've tried countless skincare products, but nothing seemed to work long-term. Although a few products showed some promise, the results were never lasting.  Recently, I came across Qure on my feeds, but I was hesitant to try it because I thought it would be just another product that wouldn’t make a difference. However, I was pleasantly surprised! This is now my fourth vial, and I absolutely love the results.</p>",
+            "see-more": "I used to get microneedling treatments because I loved the results, but Qure Micro-Infusion offers a similar effect right at home, and it's much more affordable than professional microneedling sessions.   I highly recommend giving it a try; I'm 99.99% sure you'll love it just as much as I do.\nI don’t usually write product reviews, but this one truly deserves it!”",
+            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Jasmine K.",
             "code": ""
           }
         },
@@ -1101,8 +1101,8 @@
         "result_xHhxHq",
         "result_aNmxXq",
         "result_fgAPpt",
-        "result_nCtze6",
         "result_EmYzR8",
+        "result_nCtze6",
         "result_LfGYkG"
       ],
       "settings": {
