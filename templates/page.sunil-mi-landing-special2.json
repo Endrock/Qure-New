@@ -1063,6 +1063,19 @@
             "client": "Paul W.",
             "code": ""
           }
+        },
+        "result_9hgNpy": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/M.I_B_A.png",
+            "heading": "Definitely be re-ordering",
+            "text": "<p>“Still a newbie but so far so great! I have dermarolled for more than a decade -still do with .25 at least one a week. I’ve avoided getting a pen because there’s so much involved- but the Qure system is just awesome. So easy and user friendly and my skin loves the serum! Doing my third treatment Saturday and will definitely be re-ordering 🤗\"</p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Andrea G.",
+            "code": ""
+          }
         }
       },
       "block_order": [
@@ -1089,7 +1102,8 @@
         "result_fgAPpt",
         "result_nCtze6",
         "result_EmYzR8",
-        "result_LfGYkG"
+        "result_LfGYkG",
+        "result_9hgNpy"
       ],
       "settings": {
         "classname": "mi_landing_result",
