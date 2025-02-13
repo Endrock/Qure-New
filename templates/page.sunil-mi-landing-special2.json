@@ -772,19 +772,6 @@
             "code": ""
           }
         },
-        "result_nCtze6": {
-          "type": "result",
-          "settings": {
-            "image": "shopify://shop_images/New_review.png",
-            "heading": "Great Purchase",
-            "text": "<p>“I've been struggling with skin issues like hyperpigmentation, breakouts, and recently, I've noticed my skin looking dull. I've tried countless skincare products, but nothing seemed to work long-term. Although a few products showed some promise, the results were never lasting.  Recently, I came across Qure on my feeds, but I was hesitant to try it because I thought it would be just another product that wouldn’t make a difference. However, I was pleasantly surprised! This is now my fourth vial, and I absolutely love the results.</p>",
-            "see-more": "I used to get microneedling treatments because I loved the results, but Qure Micro-Infusion offers a similar effect right at home, and it's much more affordable than professional microneedling sessions.   I highly recommend giving it a try; I'm 99.99% sure you'll love it just as much as I do.\nI don’t usually write product reviews, but this one truly deserves it!”",
-            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
-            "text_country": "United States",
-            "client": "Jasmine K.",
-            "code": ""
-          }
-        },
         "result_YbRNi7": {
           "type": "result",
           "settings": {
@@ -837,19 +824,6 @@
             "code": ""
           }
         },
-        "result_BU6egp": {
-          "type": "result",
-          "settings": {
-            "image": "shopify://shop_images/results_ela.webp",
-            "heading": "Shocked at the results",
-            "text": "<p>\"Shocked at the results after just one treatment! I’m not one to usually leave reviews... but I was shocked at how my skin looked the morning after my first treatment!</p><p>Texture was soooo much smoother, my skin looked clear, glowy and healthy. The system was so easy to use and I can’t wait until my next treatment.”</p>",
-            "see-more": "",
-            "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
-            "text_country": "United States",
-            "client": "Ela O.",
-            "code": ""
-          }
-        },
         "result_URKRDq": {
           "type": "result",
           "settings": {
@@ -892,6 +866,7 @@
         },
         "result_xgWrGm": {
           "type": "result",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/results_chelsea.webp",
             "heading": "Amazing results!",
@@ -1008,8 +983,22 @@
             "code": ""
           }
         },
+        "result_BU6egp": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/results_ela.webp",
+            "heading": "Shocked at the results",
+            "text": "<p>\"Shocked at the results after just one treatment! I’m not one to usually leave reviews... but I was shocked at how my skin looked the morning after my first treatment!</p><p>Texture was soooo much smoother, my skin looked clear, glowy and healthy. The system was so easy to use and I can’t wait until my next treatment.”</p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
+            "text_country": "United States",
+            "client": "Ela O.",
+            "code": ""
+          }
+        },
         "result_fgAPpt": {
           "type": "result",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Group_1299mi-pdp-RAMANDEEPresults_a5607477-fd56-4e3a-9a6d-19ac2c74d56a.png",
             "heading": "Loving it!",
@@ -1021,8 +1010,22 @@
             "code": ""
           }
         },
+        "result_nCtze6": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/New_review.png",
+            "heading": "Great Purchase",
+            "text": "<p>“I've been struggling with skin issues like hyperpigmentation, breakouts, and recently, I've noticed my skin looking dull. I've tried countless skincare products, but nothing seemed to work long-term. Although a few products showed some promise, the results were never lasting.  Recently, I came across Qure on my feeds, but I was hesitant to try it because I thought it would be just another product that wouldn’t make a difference. However, I was pleasantly surprised! This is now my fourth vial, and I absolutely love the results.</p>",
+            "see-more": "I used to get microneedling treatments because I loved the results, but Qure Micro-Infusion offers a similar effect right at home, and it's much more affordable than professional microneedling sessions.   I highly recommend giving it a try; I'm 99.99% sure you'll love it just as much as I do.\nI don’t usually write product reviews, but this one truly deserves it!”",
+            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Jasmine K.",
+            "code": ""
+          }
+        },
         "result_EmYzR8": {
           "type": "result",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/ANONYMUS.png",
             "heading": "First Treatment Successful!",
@@ -1036,6 +1039,7 @@
         },
         "result_LfGYkG": {
           "type": "result",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/paul.png",
             "heading": "WOW I want more!",
@@ -1051,12 +1055,10 @@
       "block_order": [
         "result_VCJwgD",
         "result_DckD68",
-        "result_nCtze6",
         "result_YbRNi7",
         "result_ThnNPK",
         "result_JjTHyx",
         "result_cGAEkd",
-        "result_BU6egp",
         "result_URKRDq",
         "result_TJXM8n",
         "result_6FrBJW",
@@ -1069,7 +1071,9 @@
         "result_Nz6N9D",
         "result_xHhxHq",
         "result_aNmxXq",
+        "result_BU6egp",
         "result_fgAPpt",
+        "result_nCtze6",
         "result_EmYzR8",
         "result_LfGYkG"
       ],
