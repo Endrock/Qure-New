@@ -26,7 +26,7 @@
                                 {% assign product_variant_id = product.variants.first.id %}
                                 {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
 
-                                <div class="planBlock planBlockTop" data-variantid="{{ product_variant_id }}">
+                                <div class="planBlock planBlockTop {% if show_free_shiping_guarantee_test %}active{% endif %}" data-variantid="{{ product_variant_id }}">
                                     <div class="plan_choosed text-end">
                                         <span>Over 13,000 people chose this supply</span>
                                     </div>
@@ -77,7 +77,8 @@
                                                 <h3>4 Month Supply</h3>
                                                 <span class="saved_price">{{ discount_percentage }}% OFF</span>
                                             </div>
-                                            <div class="plan_des">2 Serums + Free Shipping</div>
+                                            <div class="plan_des free-shipping-guarentee-original">2 Serums + Free Shipping</div>
+                                            <div class="plan_des free-shipping-guarentee-variant">{{ 'products.product.2_Serums_label' | t }}</div>
                                         </div>
                                         <div class="price">
                                             <div class="plan_prc regular_price">{{ product.compare_at_price | money_without_trailing_zeros }}</div>

@@ -26,7 +26,7 @@
                                 {% assign product_variant_id = product.variants.first.id %}
                                 {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
 
-                                <div class="planBlock planBlockTop" data-variantid="{{ product_variant_id }}">
+                                <div class="planBlock planBlockTop {% if show_free_shiping_guarantee_test %}active{% endif %}" data-variantid="{{ product_variant_id }}">
                                     <div class="plan_choosed">
                                         <span>Over 7,000 people chose this supply</span>
                                     </div>
@@ -78,7 +78,8 @@
                                                 <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
                                             </div>
                                         </div>
-                                        <div class="plan_des d-none d-md-block"><span>2 Boxes / 16 pairs pairs of patches + <b> Free Shipping </b></span></div>
+                                        <div class="plan_des d-none d-md-block free-shipping-guarentee-original"><span>2 Boxes / 16 pairs pairs of patches + <b> Free Shipping </b></span></div>
+                                        <div class="plan_des d-none d-md-block free-shipping-guarentee-variant"><span> {{ 'products.product.2_boxes_label' | t }}</span></div>
                                         <div class="plan_des d-md-none"><span>2 Boxes /32 patches (16 pairs) + <b> Free Shipping </b></span></div>
                                     </label>
                                 </div>

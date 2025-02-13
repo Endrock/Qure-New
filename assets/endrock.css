@@ -3684,6 +3684,7 @@ body[data-free-shipping-guarentee] {
     padding: 14px 16px 14px 16px;
     border-radius: 12px !important;
     position: relative;
+    background-color: #fff;
   }
   .supply-detail .planBlock.active .monthly_plans { 
     border: 1px solid #000;
@@ -3695,7 +3696,7 @@ body[data-free-shipping-guarentee] {
   .supply-detail .monthly_plans__circle { 
     margin-right: 10px;
     position: relative;
-    top: -10px;
+    top: -6px;
   }
   .supply-detail .monthly_plans__circle .circle-full {
     display: none;
@@ -3713,8 +3714,11 @@ body[data-free-shipping-guarentee] {
     font-weight: 300;
     line-height: 15px; 
     letter-spacing: 0.12px;
-    margin-top: 8px;
-   }
+    margin-top: 0;
+  }
+  .supply-detail .monthly_plans .plan_des .plan_des { 
+    margin-top: 0;
+  }
   .supply-detail .monthly_plans .plan_des .plan_hdr h3 { 
     font-size: 14px;
     line-height: 13px; 
@@ -3747,7 +3751,7 @@ body[data-free-shipping-guarentee] {
   } 
   .supply-detail .free-shipping-icon {
     width: 100%;
-    background-color: #C7E7CD;
+    background-color: #C8E6DC;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -3762,7 +3766,7 @@ body[data-free-shipping-guarentee] {
     font-size: 11px;
     font-style: normal;
     font-weight: 500;
-    line-height: 22px;
+    line-height: 20px;
     letter-spacing: 0.11px;
     margin-left: 4px;
   }
@@ -3800,7 +3804,7 @@ body[data-free-shipping-guarentee] {
     width: calc(100% - 30px);
   }
   .mi_patches_pdp .supply-detail .monthly_plans .monthly_plans__circle { 
-    top: 4px;
+    top: 3px;
   }
   .mi_patches_pdp .supply-detail .monthly_plans .plan_des.free-shipping-guarentee-variant, 
   .mi_patches_pdp .supply-detail .monthly_plans[for="mBanner_2_month"] .plan_des.d-md-block { 
