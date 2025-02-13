@@ -168,12 +168,6 @@
         </script>
     {% endif %}
 
-    {% if customer.id %}
-        <script>
-            window.customer_email = '{{ customer.email }}';
-        </script>
-    {% endif %}
-
     <!--======================= Scripts ============================-->
     <script src="{{ 'jquery.min.js' | asset_url }}"></script>
     <script src="{{ 'vendor.js' | asset_url }}"></script>
