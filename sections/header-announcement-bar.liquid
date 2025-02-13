@@ -2,7 +2,7 @@
     <p>
         {{ section.settings.heading |  replace: '<p>', '' |  replace: '</p>', '' }}
         {% if section.settings.button_label %}
-            <a href="{{ section.settings.button_url }}" aria-label="{{ section.settings.button_label | escape }}" class="green_coloured">{{ section.settings.button_label }}</a>
+            <a href="{{ section.settings.button_url }}" aria-label="{{ section.settings.button_label | escape }}" class="bar_shop-btn text-white">{{ section.settings.button_label }}</a>
         {% endif %}
     </p>
 </div>
