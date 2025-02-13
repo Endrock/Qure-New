@@ -426,20 +426,6 @@
             "verified": true
           }
         },
-        "slide_8TxkNC": {
-          "type": "Slide",
-          "settings": {
-            "heading": "Best natural glow",
-            "product": "Micro-Infusion System",
-            "stars_img": "shopify://shop_images/results_star-full.svg",
-            "text": "<p>“I was hesitant at first as I didn’t know how much it would hurt but to my surprise it was pretty painless. The 2nd day after the treatment, my skin has the best natural glow! I was also happy to to see how much my pigmentation had lightened after 3rd treatment :) I switch between the serums depending on how my skin is before the treatment.”</p>",
-            "image": "shopify://shop_images/results_glorija.webp",
-            "image_country": "shopify://shop_images/australia_f_35e9b6f0-d77f-4184-afaf-224d96562185.webp",
-            "client": "Glorija",
-            "concerns": "",
-            "verified": true
-          }
-        },
         "slide_xWKmb6": {
           "type": "Slide",
           "settings": {
@@ -450,6 +436,20 @@
             "image": "shopify://shop_images/review_home_page.png",
             "image_country": "shopify://shop_images/america_f_92cbd39d-f0e3-42b9-a692-c714420fbe53.webp",
             "client": "Tami T.",
+            "concerns": "",
+            "verified": true
+          }
+        },
+        "slide_8TxkNC": {
+          "type": "Slide",
+          "settings": {
+            "heading": "Best natural glow",
+            "product": "Micro-Infusion System",
+            "stars_img": "shopify://shop_images/results_star-full.svg",
+            "text": "<p>“I was hesitant at first as I didn’t know how much it would hurt but to my surprise it was pretty painless. The 2nd day after the treatment, my skin has the best natural glow! I was also happy to to see how much my pigmentation had lightened after 3rd treatment :) I switch between the serums depending on how my skin is before the treatment.”</p>",
+            "image": "shopify://shop_images/results_glorija.webp",
+            "image_country": "shopify://shop_images/australia_f_35e9b6f0-d77f-4184-afaf-224d96562185.webp",
+            "client": "Glorija",
             "concerns": "",
             "verified": true
           }
@@ -501,8 +501,8 @@
         "slide_ApYVrJ",
         "slide_8DpTJn",
         "slide_wwBJ3B",
-        "slide_8TxkNC",
         "slide_xWKmb6",
+        "slide_8TxkNC",
         "slide_hFbVVd",
         "slide_yWqyRW",
         "slide_PmixWy"
