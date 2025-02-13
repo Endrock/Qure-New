@@ -27,440 +27,64 @@
 </div>
 <!-- -- main banner end -- -->
 
-<!-- -- already member start -- -->
-{% comment %} <div class="already_member">
-    <div class="container">
-        <div class="already_member-content mw-860">
-            <div class="row justify-content-between">
-                <div class="col-md-7">
-                    <div class="text_content">
-                        <p>Get more from your skincare routine with Qure. Shop your favorite products and earn
-                            rewards like exclusive discounts and free products. The more you interact, the more
-                            you earn.
-                        </p>
-                        <p>It’s time to drown out all the noise, forget all the hype and start listening to your
-                            skin.
-                        </p>
-                        <p>With our Loyalty Qoins, you’ll keep earning rewards every time you shop with Qure.
-                        </p>
-                        <p>Create an account and start collecting Qoins to help you on your way to confident,
-                            radiant skin.</p>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <div class="button_content">
-                        <a class="btn btn-primary rounded-pill mb-2"
-                            href="https://www.qureskincare.com/account/register">Create your account</a>
-                        <p class="mb-md-0 mb-3">Takes less than 5 minutes</p>
-                        <div class="login_here mw-mob-100">
-                            <h2>Already a member?</h2>
-                            <a href="https://www.qureskincare.com/account/login">Login here</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> {% endcomment %}
-<!-- -- already member end -- -->
+{% if customer.id %}
 
-<!-- -- what do i get start -- -->
-{% comment %} <div class="what_do-get section">
-    <div class="container">
-        <div class="section_header text-md-center mw-100 pb-5">
-            <h2 class="title-lg">What do I get?</h2>
-        </div>
-        <div class="what_do-get-content mw-860">
-            <div class="row gy-md-4 gy-2">
-                <div class="col-md-6">
-                    <div class="get_pd-content">
-                        <picture>
-                            <source media="(min-width:1920px)" srcset="https://qureskincaredns.com/new/assets/reward_face-serum.webp"
-                                class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:1600px)" srcset="https://qureskincaredns.com/new/assets/reward_face-serum.webp"
-                                class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:1100px)" srcset="https://qureskincaredns.com/new/assets/reward_face-serum.webp"
-                                class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:720px)" srcset="https://qureskincaredns.com/new/assets/reward_face-serum.webp"
-                                class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:540px)" srcset="https://qureskincaredns.com/new/assets/reward_face-serum.webp" class="img-fluid bg_banner"
-                                width="125" height="173">
-                            <img src="https://qureskincaredns.com/new/assets/reward_face-serum.webp" width="125" height="173" alt="" class="img-fluid bg_banner">
-                        </picture>
-                        <div class="get_content-inner">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="product">
-                                        <h6><del>$79</del> <span>FREE</span></h6>
-                                        <p>All-In-One Face Serum</p>
-                                        <div class="qoins">
-                                            <img src="https://qureskincaredns.com/new/assets/qoins.svg" alt="">
-                                            <p>400 Qoins</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="get_pd-content d-md-inline d-none">
-                        <picture>
-                            <source media="(min-width:1920px)" srcset="https://qureskincaredns.com/new/assets/reward_target-patches.webp"
-                                class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:1600px)" srcset="https://qureskincaredns.com/new/assets/reward_target-patches.webp"
-                                class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:1100px)" srcset="https://qureskincaredns.com/new/assets/reward_target-patches.webp"
-                                class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:720px)" srcset="https://qureskincaredns.com/new/assets/reward_target-patches.webp"
-                                class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:540px)" srcset="https://qureskincaredns.com/new/assets/reward_target-patches.webp" class="img-fluid bg_banner"
-                                width="125" height="173">
-                            <img src="https://qureskincaredns.com/new/assets/reward_target-patches.webp" width="125" height="173" alt="" class="img-fluid bg_banner">
-                        </picture>
-                        <div class="get_content-inner">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="product">
-                                        <h6><del>$79</del> <span>FREE</span></h6>
-                                        <p>Micro-Infusion Targeted Patches</p>
-                                        <div class="qoins">
-                                            <img src="https://qureskincaredns.com/new/assets/qoins.svg" alt="">
-                                            <p>400 Qoins</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="get_pd-content d-md-none">
-                        <picture>
-                            <source media="(min-width:1920px)" srcset="https://qureskincaredns.com/new/assets/reward_1month-bundle.webp" class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:1600px)" srcset="https://qureskincaredns.com/new/assets/reward_1month-bundle.webp" class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:1100px)" srcset="https://qureskincaredns.com/new/assets/reward_1month-bundle.webp" class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:720px)" srcset="https://qureskincaredns.com/new/assets/reward_1month-bundle.webp" class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:540px)" srcset="https://qureskincaredns.com/new/assets/reward_1month-bundle-mob.webp" class="img-fluid bg_banner" width="125" height="173">
-                            <img src="https://qureskincaredns.com/new/assets/reward_1month-bundle-mob.webp" width="125" height="173" alt="" class="img-fluid bg_banner">
-                        </picture>
-                        <div class="get_content-inner">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="product">
-                                        <h6><del>$99</del> <span>FREE</span></h6>
-                                        <p>Micro-Infusion 1 Month Bundle<br>(Hydra-Soothing + Rejuvenating)</p>
-                                        <div class="qoins">
-                                            <img src="https://qureskincaredns.com/new/assets/qoins.svg" alt="">
-                                            <p>400 Qoins</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="get_pd-content d-md-inline d-none">
-                        <picture>
-                            <source media="(min-width:1920px)" srcset="https://qureskincaredns.com/new/assets/reward_1month-bundle.webp"
-                                class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:1600px)" srcset="https://qureskincaredns.com/new/assets/reward_1month-bundle.webp"
-                                class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:1100px)" srcset="https://qureskincaredns.com/new/assets/reward_1month-bundle.webp"
-                                class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:720px)" srcset="https://qureskincaredns.com/new/assets/reward_1month-bundle.webp"
-                                class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:540px)" srcset="https://qureskincaredns.com/new/assets/reward_1month-bundle-mob.webp" class="img-fluid bg_banner"
-                                width="125" height="173">
-                            <img src="https://qureskincaredns.com/new/assets/reward_1month-bundle-mob.webp" width="125" height="173" alt="" class="img-fluid bg_banner">
-                        </picture>
-                        <div class="get_content-inner">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="product">
-                                        <h6><del>$99</del> <span>FREE</span></h6>
-                                        <p>Micro-Infusion 1 Month Bundle<br>(Hydra-Soothing + Rejuvenating)</p>
-                                        <div class="qoins">
-                                            <img src="https://qureskincaredns.com/new/assets/qoins.svg" alt="">
-                                            <p>400 Qoins</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="get_pd-content d-md-none">
-                        <picture>
-                            <source media="(min-width:1920px)" srcset="https://qureskincaredns.com/new/assets/reward_target-patches.webp"
-                                class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:1600px)" srcset="https://qureskincaredns.com/new/assets/reward_target-patches.webp"
-                                class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:1100px)" srcset="https://qureskincaredns.com/new/assets/reward_target-patches.webp"
-                                class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:720px)" srcset="https://qureskincaredns.com/new/assets/reward_target-patches.webp"
-                                class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:540px)" srcset="https://qureskincaredns.com/new/assets/reward_target-patches.webp" class="img-fluid bg_banner"
-                                width="125" height="173">
-                            <img src="https://qureskincaredns.com/new/assets/reward_target-patches.webp" width="125" height="173" alt="" class="img-fluid bg_banner">
-                        </picture>
-                        <div class="get_content-inner">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="product">
-                                        <h6><del>$79</del> <span>FREE</span></h6>
-                                        <p>Micro-Infusion Targeted Patches</p>
-                                        <div class="qoins">
-                                            <img src="https://qureskincaredns.com/new/assets/qoins.svg" alt="">
-                                            <p>400 Qoins</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="get_pd-content">
-                        <picture>
-                            <source media="(min-width:1920px)" srcset="https://qureskincaredns.com/new/assets/reward_voucher.webp"
-                                class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:1600px)" srcset="https://qureskincaredns.com/new/assets/reward_voucher.webp"
-                                class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:1100px)" srcset="https://qureskincaredns.com/new/assets/reward_voucher.webp"
-                                class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:720px)" srcset="https://qureskincaredns.com/new/assets/reward_voucher.webp"
-                                class="img-fluid bg_banner" width="432" height="167">
-                            <source media="(min-width:540px)" srcset="https://qureskincaredns.com/new/assets/reward_voucher-mob.png" class="img-fluid bg_banner"
-                                width="125" height="173">
-                            <img src="https://qureskincaredns.com/new/assets/reward_voucher-mob.png" width="125" height="173" alt="" class="img-fluid bg_banner">
-                        </picture>
-                        <div class="get_content-inner">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="product">
-                                        <h6><span>FREE</span></h6>
-                                        <p>10% Voucher</p>
-                                        <div class="qoins">
-                                            <img src="https://qureskincaredns.com/new/assets/qoins.svg" alt="">
-                                            <p>400 Qoins</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> {% endcomment %}
-<!-- -- what do i get end -- -->
+    <style>
+        [data-campaign-event="custom"]:has([data-type="view"]) [data-type="view"] {
+            display: inline !important;
+        }
+    </style>
 
-<!-- -- how it works start -- -->
-{% comment %} <div class="how_it-works section">
-    <div class="container">
-        <div class="section_header text-md-center mw-100">
-            <h2 class="title-lg">How it works?</h2>
-            <p>It's simple!</p>
-            <p>Create an account and you're good to go.</p>
-            <p>The more you interact with Qure, the bigger and better the rewards!</p>
-            <p>Here’s how you can get started in minutes…</p>
-        </div>
-        <div class="row gy-4 flex-md-nowrap gap-2">
-            <div class="col-md-4">
-                <div class="return_step">
-                    <div class="return_step_header d-flex gap-3 align-items-center mb-3">
-                        <div class="return_step_bx">1</div>
-                        <h6>STEP</h6>
-                    </div>
-                    <div class="return_step-body">
-                        <img src="https://qureskincaredns.com/new/assets/user.svg" alt="">
-                        <h5>Create Your Account</h5>
-                    </div>
-                    <p>Sign up today in just a few minutes and join the Skin I-Q Club!</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="return_step">
-                    <div class="return_step_header d-flex gap-3 align-items-center mb-3">
-                        <div class="return_step_bx">2</div>
-                        <h6>STEP</h6>
-                    </div>
-                    <div class="return_step-body">
-                        <img src="https://qureskincaredns.com/new/assets/2-qoins.svg" alt="">
-                        <h5>Earn Qoins </h5>
-                    </div>
-                    <p>Every time you shop with Qure or share our message about skincare that respects and
-                        celebrates everyone’s beauty, you’ll earn more Qoins.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="return_step">
-                    <div class="return_step_header d-flex gap-3 align-items-center mb-3">
-                        <div class="return_step_bx">3</div>
-                        <h6>STEP</h6>
-                    </div>
-                    <div class="return_step-body">
-                        <img src="https://qureskincaredns.com/new/assets/4-qoins.svg" alt="">
-                        <h5>Redeem Your Qoins</h5>
-                    </div>
-                    <p>We believe in choice which is why you can choose what to do with your Qoins. Save them up
-                        for free products or redeem them for their cash value.  </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> {% endcomment %}
-<!-- -- how it works end -- -->
+    <script>
+        function addEventListenerStamped(el, eventName, handler) {
+            if (el.addEventListener) { el.addEventListener(eventName, handler); }
+            else { el.attachEvent('on' + eventName, function () { handler.call(el); }); }
+        }
 
-<!-- -- Club tiers & rewards start -- -->
-{% comment %} <div class="club_tier-reward">
-    <div class="container">
-        <div class="section_header text-md-center mw-100 pb-5">
-            <h2 class="title-lg">Club tiers & rewards</h2>
-        </div>
-        <div class="row gy-md-0 gy-4 flex-md-nowrap gap-2">
-            <div class="col-md-4">
-                <div class="return_step">
-                    <div class="return_step-body">
-                        <h5>Skingenue</h5>
-                    </div>
-                    <div class="return_step_header mb-3">
-                        <div class="return_step_bx"><img src="https://qureskincaredns.com/new/assets/qoins.svg" alt=""> $1=1 Qoin</div>
-                    </div>
-                    <span class="line"></span>
-                    <div class="ss_list">
-                        <ul>
-                            <li>Free express shipping over 79$<span>*only available for US customers</span></li>
-                            <li>Early access to new products</li>
-                            <li>Extra 100 Qoins on your birthday purchase</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="return_step">
-                    <div class="return_step-body">
-                        <h5>Skinthusiast</h5>
-                    </div>
-                    <div class="return_step_header mb-3">
-                        <div class="return_step_bx"><img src="https://qureskincaredns.com/new/assets/qoins.svg" alt=""> $1=1.25 Qoin</div>
-                    </div>
-                    <span class="line"></span>
-                    <div class="ss_list">
-                        <ul>
-                            <li>Free express shipping over 79$<span>*only available for US customers</span></li>
-                            <li>Early access to new products</li>
-                            <li>Extra 100 Qoins on your birthday purchase</li>
-                            <li>A birthday gift </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="return_step">
-                    <div class="return_step-body">
-                        <h5>Skintellectual</h5>
-                    </div>
-                    <div class="return_step_header mb-3">
-                        <div class="return_step_bx"><img src="https://qureskincaredns.com/new/assets/qoins.svg" alt=""> $1=1.5 Qoins</div>
-                    </div>
-                    <span class="line"></span>
-                    <div class="ss_list">
-                        <ul>
-                            <li>Free express shipping over 79$<span>*only available for US customers</span></li>
-                            <li>Early access to new products</li>
-                            <li>Extra 100 Qoins on your birthday purchase</li>
-                            <li>A birthday gift</li>
-                            <li>Exclusive discounts</li>
-                            <li>Free samples</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <p class="qoins_desc">*All Qoins will be equivalent to USD and will be converted to the customer's local currency.</p>
-    </div>
-</div> {% endcomment %}
-<!-- -- Club tiers & rewards end -- -->
+        addEventListenerStamped(document, 'stamped:launcher:loaded', function(e) {
 
-<!-- -- way to earn start -- -->
-{% comment %} <div class="way_to-earn section">
-    <div class="container">
-        <div class="section_header text-md-center mw-100 mb-md-5">
-            <h2 class="title-lg">Ways to earn Qure Qoins</h2>
-        </div>
-        <div class="way_to-earn-content">
-            <div class="way">
-                <img src="https://qureskincaredns.com/new/assets/way-shop.svg" alt="">
-                <p>Shop with<br>Qure</p>
-                <div class="return_step_bx bg-white"><img src="https://qureskincaredns.com/new/assets/qoins.svg" alt=""> $1=1 Qoin</div>
-                <a class="btn btn-primary mt-3"
-                    href="">Shop Now<img
-                        src="https://qureskincaredns.com/new/assets/arrow_right.svg" alt="">
-                </a>
-            </div>
-            <div class="way">
-                <img src="https://qureskincaredns.com/new/assets/way-envlop.svg" alt="">
-                <p>Subscribe to our<br> Newsletter</p>
-                <div class="return_step_bx bg-white"><img src="https://qureskincaredns.com/new/assets/qoins.svg" alt=""> 50 Qoins</div>
-                <a class="btn btn-primary mt-3"
-                    href="">Subscribe<img
-                        src="https://qureskincaredns.com/new/assets/arrow_right.svg" alt="">
-                </a>
-            </div>
-            <div class="way">
-                <img src="https://qureskincaredns.com/new/assets/way-camera.svg" alt="">
-                <p>Submit Before and<br> After photos</p>
-                <div class="return_step_bx bg-white"><img src="https://qureskincaredns.com/new/assets/qoins.svg" alt=""> 50 Qoins</div>
-                <a class="btn btn-primary mt-3"
-                    href="/pages/reviews">Submit Here<img
-                        src="https://qureskincaredns.com/new/assets/arrow_right.svg" alt="">
-                </a>
-            </div>
-            <div class="way">
-                <img src="https://qureskincaredns.com/new/assets/way-tiktok.svg" alt="">
-                <p>Follow us on<br>TikTok</p>
-                <div class="return_step_bx bg-white"><img src="https://qureskincaredns.com/new/assets/qoins.svg" alt=""> 10 Qoins</div>
-                <a class="btn btn-primary mt-3"
-                    href="">Follow Now<img
-                        src="https://qureskincaredns.com/new/assets/arrow_right.svg" alt="">
-                </a>
-            </div>
-            <div class="way">
-                <img src="https://qureskincaredns.com/new/assets/way-ig.svg" alt="">
-                <p>Join our IG<br> community</p>
-                <div class="return_step_bx bg-white"><img src="https://qureskincaredns.com/new/assets/qoins.svg" alt=""> 10 Qoins</div>
-                <a class="btn btn-primary mt-3"
-                    href="">Join Now<img
-                        src="https://qureskincaredns.com/new/assets/arrow_right.svg" alt="">
-                </a>
-            </div>
-            <div class="way">
-                <img src="https://qureskincaredns.com/new/assets/way-youtube.svg" alt="">
-                <p>Subscribe on <br>YouTube</p>
-                <div class="return_step_bx bg-white"><img src="https://qureskincaredns.com/new/assets/qoins.svg" alt=""> 20 Qoins</div>
-                <a class="btn btn-primary mt-3"
-                    href="">Subscribe<img
-                        src="https://qureskincaredns.com/new/assets/arrow_right.svg" alt="">
-                </a>
-            </div>
-        </div>
-    </div>
-</div> {% endcomment %}
-<!-- -- way to earn end -- -->
+            setTimeout(() => {
+                const parentElement = document.querySelector('[data-campaign-event="custom"]');
 
-<!-- -- Refer a Friend start -- -->
-{% comment %} <div class="refer_friend py-5">
-    <div class="container">
-        <div class="section_header text-md-center mw-525">
-            <h2 class="title-lg">Refer a Friend</h2>
-            <p>Give your friend 10% off on their first skin-vestment and get <strong>150 Qoins</strong> for each member you introduce to the Skin I-Q Club.</p>
-        </div>
-        <div class="refer_friend-content mw-423 mx-auto">
-            <form action="">
-                <input type="email" class="w-100" placeholder="linktoshare">
-            </form>
-        </div>
-    </div>
-</div> {% endcomment %}
-<!-- -- Refer a Friend end -- -->
+                if (parentElement) {
+                    const targetElement = parentElement.querySelector('[data-type="view"]');
+                    if (targetElement) {
+                        targetElement.addEventListener("click", function(event) {
+                            event.preventDefault();
+
+                            let key = '356d1e80e7a736ba8c1d6a4693becab6b4b229130a74a8c746aeecdde9f6f350'
+                            let customer_email = '{{ customer.email }}';
+                            let shopId = 198244;
+                            let campaignId = '9412190f-966a-4efe-a76c-9f1d793ea605';
+
+                            const options = {
+                                method: 'POST',
+                                headers: {
+                                accept: 'application/json',
+                                'stamped-api-key': key
+                                }
+                            };
+                            
+                            fetch('https://stamped.io/api/v3/loyalty/shops/' + shopId + '/activities?email='+ customer_email + '&campaignId=' + campaignId, options)
+                                .then(res => res.json())
+                                .then(res => {
+                                    setTimeout(() => {
+                                        const button = document.querySelector('.stamped-rewards-widget-modal-button[data-campaign-event="custom"][data-type="earn"]');
+
+                                        if (button) {
+                                            button.addEventListener("click", function (event) {
+                                                event.preventDefault();
+                                                event.stopPropagation();
+                                                window.location.href = "https://qureskincare.com/pages/reviews";
+                                            });
+                                        }
+                                    }, 500);
+                                })
+                                .catch(err => console.error(err));
+                        });
+                    }
+                }
+            }, 500)
+        });
+    </script>
+{% endif %}
