@@ -628,14 +628,14 @@
             "text": "<p>\"The Qure micro-infusion system takes it a step further by not only increasing hydration but also delivering growth factors right where they need to be.”</p><h6><strong>Dr Dylan Greeney</strong> Board-Certified Dermatologist</h6>"
           }
         },
-        "video_jPYhQi": {
+        "video_Miea9D": {
           "type": "video",
           "settings": {
-            "image": "shopify://shop_images/trusted_davim.webp",
-            "video_url": "https://www.youtube.com/watch?v=0Lxofv19620",
+            "image": "shopify://shop_images/alexis.png",
+            "video_url": "https://youtu.be/ZMGm5PmWzF0?t=649",
             "video_label": "Watch Video",
             "wistia_id": "",
-            "text": "<p>\"Unlike using harsh micro needles or Derma rollers, this one is super safe...\"</p><h6><strong>Dr Davin Lim</strong> Board-Certified Dermatologist</h6>"
+            "text": "<p>“ You can get a Clinical treatment at home safely and conveniently... It is particularly beneficial for those with melanin Rich Skin”</p><p><strong>Dr Alexis Stephens,</strong>  Board-Certified Dermatologist</p>"
           }
         },
         "video_PECKPL": {
@@ -646,6 +646,16 @@
             "video_label": "Watch Video",
             "wistia_id": "",
             "text": "<p>\"You'll see a kind of dewy glowy look after you use it but within a couple of days your skin really looks quite amazing.\"</p><h6><strong>Dr Mona Patel</strong> Internal Medicine</h6>"
+          }
+        },
+        "video_jPYhQi": {
+          "type": "video",
+          "settings": {
+            "image": "shopify://shop_images/trusted_davim.webp",
+            "video_url": "https://www.youtube.com/watch?v=0Lxofv19620",
+            "video_label": "Watch Video",
+            "wistia_id": "",
+            "text": "<p>\"Unlike using harsh micro needles or Derma rollers, this one is super safe...\"</p><h6><strong>Dr Davin Lim</strong> Board-Certified Dermatologist</h6>"
           }
         },
         "video_pEM9DL": {
@@ -702,30 +712,20 @@
             "wistia_id": "",
             "text": "<p>”..safe for generally all skin tones and types to perform at home without any risk of infection or trauma.” </p><h6><strong>Dr Prasanthi Purusothman, </strong>General Practitioner & Cosmetic Doctor</h6>"
           }
-        },
-        "video_Miea9D": {
-          "type": "video",
-          "settings": {
-            "image": "shopify://shop_images/alexis.png",
-            "video_url": "https://youtu.be/ZMGm5PmWzF0?t=649",
-            "video_label": "Watch Video",
-            "wistia_id": "",
-            "text": "<p>“ You can get a Clinical treatment at home safely and conveniently... It is particularly beneficial for those with melanin Rich Skin”</p><p><strong>Dr Alexis Stephens,</strong>  Board-Certified Dermatologist</p>"
-          }
         }
       },
       "block_order": [
         "feedback_9Aa4j6",
         "feedback_NVbkWM",
         "video_C6tFxe",
-        "video_jPYhQi",
+        "video_Miea9D",
         "video_PECKPL",
+        "video_jPYhQi",
         "video_pEM9DL",
         "video_XF3pgt",
         "video_cBVzEm",
         "video_dyArxL",
-        "video_BMBJXV",
-        "video_Miea9D"
+        "video_BMBJXV"
       ],
       "settings": {
         "classname": "trusted_bl",
