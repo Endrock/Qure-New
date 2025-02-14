@@ -1204,6 +1204,81 @@
   });
 </script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+          console.log('click');
+          // Add click event listener to checkbox
+          checkbox.addEventListener('click', updateURL);
+
+          // Add click event listener to closest parent li of the checkbox
+          const parentLi = checkbox.closest('li');
+          if (parentLi) {
+              parentLi.addEventListener('click', function(event) {
+                  // Prevent triggering the event twice if the checkbox itself was clicked
+                  if (event.target !== checkbox) {
+                      checkbox.checked = !checkbox.checked;
+                      updateURL.call(checkbox);
+                  }
+              });
+          }
+      });
+
+      function updateURL() {
+          const paramName = this.name;
+          const paramValue = this.checked ? this.value : '';
+          const newUrl = new URL(window.location.href);
+
+          if (paramValue) {
+              newUrl.searchParams.set(paramName, paramValue);
+          } else {
+              newUrl.searchParams.delete(paramName);
+          }
+
+          window.location.href = newUrl.toString();
+      }
+
+      // Add existing sort parameters to current URL
+      document.querySelector('.sort-by').addEventListener('change', function(e) {
+          var value = e.currentTarget.value;
+          Shopify.queryParams.sort_by = value;
+          location.search = new URLSearchParams(Shopify.queryParams).toString();
+      });
+
+      setInterval(
+          function () {
+              var classNameRaman = document.getElementById("offcanvasBottom").classList;
+
+              if (classNameRaman.contains('show')) {
+                  $('html').addClass('filterActive');
+              }
+              else {
+                  $('html').removeClass('filterActive');
+              }
+      })
+
+      document.querySelectorAll('.clear_filter_text').forEach(link => {
+          link.addEventListener('click', function(e) {
+              e.preventDefault();
+              const url = new URL(window.location);
+              const baseUrl = url.origin + url.pathname;
+              window.location.href = baseUrl;
+          });
+      });
+
+  });
+
+  Shopify.queryParams = {};
+  if(location.search.length) {
+      for(var aKeyValue, i = 0, aCouples = location.search.substr(1).split('&'); i < aCouples.length; i++) {
+      aKeyValue = aCouples[i].split('=');
+      if (aKeyValue.length > 1) {
+          Shopify.queryParams[decodeURIComponent(aKeyValue[0])] = decodeURIComponent(aKeyValue[1]);
+      }
+      }
+  }
+</script>
+
 {% schema %}
 {
   "name": "CC Drops Section",
