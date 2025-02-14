@@ -143,59 +143,12 @@
         "columns_mobile": "2",
         "columns_desktop": "4",
         "product_grid_gap": 10,
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_top": 8,
+        "padding_bottom": 0,
         "padding_left": 20,
         "padding_right": 20,
         "padding_left_mobile": 12,
         "padding_right_mobile": 12
-      }
-    },
-    "promotion_main_banner_48gkNr": {
-      "type": "promotion-main-banner",
-      "blocks": {
-        "link_GirQqh": {
-          "type": "link",
-          "settings": {
-            "link_label": "Shop & Save",
-            "link_label_mobile": "Shop & Save",
-            "link_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal#Pro-Aging-Bundles"
-          }
-        },
-        "product_BANXY7": {
-          "type": "product",
-          "settings": {
-            "heading": "<p>Micro-Infusion Bundle</p>",
-            "image": "shopify://shop_images/mi_bundle.webp",
-            "product_url": "shopify://products/exclusive"
-          }
-        },
-        "banner_6wgzUN": {
-          "type": "banner",
-          "settings": {
-            "heading": "Save up to 66% on Exclusive Bundles",
-            "image": "shopify://shop_images/sub_banner.webp",
-            "image_mobile": "shopify://shop_images/sub_banner-mob.webp",
-            "link_label": "Buy Now",
-            "link_url": "https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal"
-          }
-        }
-      },
-      "block_order": [
-        "link_GirQqh",
-        "product_BANXY7",
-        "banner_6wgzUN"
-      ],
-      "settings": {
-        "heading": "LOVE YOUR SKIN",
-        "heading_mobile": "LOVE YOUR SKIN",
-        "heading_tag": "h1",
-        "subheading": "<p>on Exclusive <strong>Valentine’s Day </strong>Micro-Infusion Bundle</p>",
-        "subheading_mobile": "<p>Exclusive <strong>Valentine’s Day </strong>Micro-Infusion Bundle</p>",
-        "text": "<p>66% Off</p>",
-        "image": "shopify://shop_images/hero_valentine_banner_desktop.webp",
-        "image_mobile": "shopify://shop_images/hero_valentine_banner_mob.webp",
-        "wistia_id": ""
       }
     },
     "promotion_main_banner_second_jCUkqh": {
@@ -1114,7 +1067,6 @@
   "order": [
     "main",
     "cc_drops_section_datcYL",
-    "promotion_main_banner_48gkNr",
     "promotion_main_banner_second_jCUkqh",
     "featuredin_extended_P7BNDN",
     "results_slider_w6BARa",
