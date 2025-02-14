@@ -174,14 +174,3 @@ function openChat() {
       console.error('Iframe not found');
     }
 }
-
-if (window.location.href.includes("exclusive-holiday-bundle-deal")) {
-    const CACHE_DAYS = 7;
-    const lastUpdate = localStorage.getItem("shopify_cache_date");
-    const now = Date.now();
-    
-    if (!lastUpdate || now - lastUpdate > CACHE_DAYS * 86400000) {
-        localStorage.setItem("shopify_cache_date", now);
-        window.location.href = window.location.pathname + "?_=" + new Date().getTime();
-    }
-}
