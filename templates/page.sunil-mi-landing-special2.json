@@ -746,6 +746,19 @@
     "results_3LEkF7": {
       "type": "results",
       "blocks": {
+        "result_rycBDU": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/review_home_page.png",
+            "heading": "Definitely pleased with the product",
+            "text": "<p>“I've started seeing a lot of changes to my face it's softer and much more nourished making some of the lines around my mouth softer and fuller. I've even gotten my color tone and glow back. Definitely pleased with the product and will be continuing to use the products. Also purchased the face serum and the micro dart patches. We'll see how they work as well. I'm still in the beginning stages this weekend will be my 4th treatment and using the patches as well. Stay tuned another update soon.”</p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Tami T.",
+            "code": ""
+          }
+        },
         "result_VCJwgD": {
           "type": "result",
           "settings": {
@@ -772,42 +785,29 @@
             "code": ""
           }
         },
-        "result_DckD68": {
-          "type": "result",
-          "settings": {
-            "image": "shopify://shop_images/results_glorija.webp",
-            "heading": "The best natural glow",
-            "text": "<p>“I was hesitant at first as I didn’t know how much it would hurt but to my surprise it was pretty painless. The 2nd day after the treatment, my skin has the best natural glow!</p><p>I was also happy to to see how much my pigmentation had lightened after 3rd treatment :) I switch between the serums depending on how my skin is before the treatment.”</p>",
-            "see-more": "",
-            "image_country": "shopify://shop_images/australia_f.webp",
-            "text_country": "Australia",
-            "client": "Glorija",
-            "code": ""
-          }
-        },
-        "result_YbRNi7": {
-          "type": "result",
-          "settings": {
-            "image": "shopify://shop_images/results_mona.webp",
-            "heading": "Fade after just two treatments",
-            "text": "<p>“I personally think my products absorbed better, my skin looks a bit brighter and that larger acne scar on my right cheek has started to fade after just TWO treatments!”</p>",
-            "see-more": "",
-            "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
-            "text_country": "United States",
-            "client": "Mona P.",
-            "code": ""
-          }
-        },
         "result_ThnNPK": {
           "type": "result",
           "settings": {
             "image": "shopify://shop_images/results_ann.webp",
-            "heading": "How easy it is to use",
+            "heading": "I LOVE the results",
             "text": "<p>\"I heard about micro-infusion in clinics but couldn’t afford to fork out hundreds of dollars for a treatment. So when I saw this online I jumped at buying it instantly. Yes, it doesn’t stamp in botox and filler BUT personally I LOVE the results and how easy it is to use myself at home. It works great for my skin, I have noticed my skin texture is much smoother and brighter.”</p>",
             "see-more": "",
             "image_country": "shopify://shop_images/australia_f.webp",
             "text_country": "Australia",
             "client": "Ann",
+            "code": ""
+          }
+        },
+        "result_9hgNpy": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/M.I_B_A.png",
+            "heading": "Definitely be re-ordering",
+            "text": "<p>“Still a newbie but so far so great! I have dermarolled for more than a decade -still do with .25 at least one a week. I’ve avoided getting a pen because there’s so much involved- but the Qure system is just awesome. So easy and user friendly and my skin loves the serum! Doing my third treatment Saturday and will definitely be re-ordering 🤗\"</p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Andrea G.",
             "code": ""
           }
         },
@@ -824,16 +824,16 @@
             "code": ""
           }
         },
-        "result_cGAEkd": {
+        "result_YbRNi7": {
           "type": "result",
           "settings": {
-            "image": "shopify://shop_images/results-Ramandeep.png",
-            "heading": "I definitely see a difference",
-            "text": "<p>“I have done 2 treatments - 1 for rejuvenating and 2 for hydration with 3 week gap in between treatments. I definitely see a difference in before and after pictures. I am sure I need 4-8 more treatments but this did make a difference.”</p>",
+            "image": "shopify://shop_images/results_mona.webp",
+            "heading": "Fade after just two treatments",
+            "text": "<p>“I personally think my products absorbed better, my skin looks a bit brighter and that larger acne scar on my right cheek has started to fade after just TWO treatments!”</p>",
             "see-more": "",
             "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
             "text_country": "United States",
-            "client": "Ramandeep",
+            "client": "Mona P.",
             "code": ""
           }
         },
@@ -847,6 +847,45 @@
             "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
             "text_country": "United States",
             "client": "Jess",
+            "code": ""
+          }
+        },
+        "result_BU6egp": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/results_ela.webp",
+            "heading": "Shocked at the results",
+            "text": "<p>\"Shocked at the results after just one treatment! I’m not one to usually leave reviews... but I was shocked at how my skin looked the morning after my first treatment!</p><p>Texture was soooo much smoother, my skin looked clear, glowy and healthy. The system was so easy to use and I can’t wait until my next treatment.”</p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
+            "text_country": "United States",
+            "client": "Ela O.",
+            "code": ""
+          }
+        },
+        "result_DckD68": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/results_glorija.webp",
+            "heading": "The best natural glow",
+            "text": "<p>“I was hesitant at first as I didn’t know how much it would hurt but to my surprise it was pretty painless. The 2nd day after the treatment, my skin has the best natural glow!</p><p>I was also happy to to see how much my pigmentation had lightened after 3rd treatment :) I switch between the serums depending on how my skin is before the treatment.”</p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/australia_f.webp",
+            "text_country": "Australia",
+            "client": "Glorija",
+            "code": ""
+          }
+        },
+        "result_cGAEkd": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/results-Ramandeep.png",
+            "heading": "I definitely see a difference",
+            "text": "<p>“I have done 2 treatments - 1 for rejuvenating and 2 for hydration with 3 week gap in between treatments. I definitely see a difference in before and after pictures. I am sure I need 4-8 more treatments but this did make a difference.”</p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
+            "text_country": "United States",
+            "client": "Ramandeep",
             "code": ""
           }
         },
@@ -983,19 +1022,6 @@
             "code": ""
           }
         },
-        "result_BU6egp": {
-          "type": "result",
-          "settings": {
-            "image": "shopify://shop_images/results_ela.webp",
-            "heading": "Shocked at the results",
-            "text": "<p>\"Shocked at the results after just one treatment! I’m not one to usually leave reviews... but I was shocked at how my skin looked the morning after my first treatment!</p><p>Texture was soooo much smoother, my skin looked clear, glowy and healthy. The system was so easy to use and I can’t wait until my next treatment.”</p>",
-            "see-more": "",
-            "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
-            "text_country": "United States",
-            "client": "Ela O.",
-            "code": ""
-          }
-        },
         "result_fgAPpt": {
           "type": "result",
           "disabled": true,
@@ -1010,19 +1036,6 @@
             "code": ""
           }
         },
-        "result_nCtze6": {
-          "type": "result",
-          "settings": {
-            "image": "shopify://shop_images/New_review.png",
-            "heading": "Great Purchase",
-            "text": "<p>“I've been struggling with skin issues like hyperpigmentation, breakouts, and recently, I've noticed my skin looking dull. I've tried countless skincare products, but nothing seemed to work long-term. Although a few products showed some promise, the results were never lasting.  Recently, I came across Qure on my feeds, but I was hesitant to try it because I thought it would be just another product that wouldn’t make a difference. However, I was pleasantly surprised! This is now my fourth vial, and I absolutely love the results.</p>",
-            "see-more": "I used to get microneedling treatments because I loved the results, but Qure Micro-Infusion offers a similar effect right at home, and it's much more affordable than professional microneedling sessions.   I highly recommend giving it a try; I'm 99.99% sure you'll love it just as much as I do.\nI don’t usually write product reviews, but this one truly deserves it!”",
-            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
-            "text_country": "United States",
-            "client": "Jasmine K.",
-            "code": ""
-          }
-        },
         "result_EmYzR8": {
           "type": "result",
           "disabled": true,
@@ -1034,6 +1047,19 @@
             "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
             "text_country": "United States",
             "client": "Anonymous",
+            "code": ""
+          }
+        },
+        "result_nCtze6": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/New_review.png",
+            "heading": "Great Purchase",
+            "text": "<p>“I've been struggling with skin issues like hyperpigmentation, breakouts, and recently, I've noticed my skin looking dull. I've tried countless skincare products, but nothing seemed to work long-term. Although a few products showed some promise, the results were never lasting.  Recently, I came across Qure on my feeds, but I was hesitant to try it because I thought it would be just another product that wouldn’t make a difference. However, I was pleasantly surprised! This is now my fourth vial, and I absolutely love the results.</p>",
+            "see-more": "I used to get microneedling treatments because I loved the results, but Qure Micro-Infusion offers a similar effect right at home, and it's much more affordable than professional microneedling sessions.   I highly recommend giving it a try; I'm 99.99% sure you'll love it just as much as I do.\nI don’t usually write product reviews, but this one truly deserves it!”",
+            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Jasmine K.",
             "code": ""
           }
         },
@@ -1053,14 +1079,17 @@
         }
       },
       "block_order": [
+        "result_rycBDU",
         "result_VCJwgD",
         "result_UVLAG4",
-        "result_DckD68",
-        "result_YbRNi7",
         "result_ThnNPK",
+        "result_9hgNpy",
         "result_JjTHyx",
-        "result_cGAEkd",
+        "result_YbRNi7",
         "result_URKRDq",
+        "result_BU6egp",
+        "result_DckD68",
+        "result_cGAEkd",
         "result_TJXM8n",
         "result_6FrBJW",
         "result_xgWrGm",
@@ -1071,10 +1100,9 @@
         "result_Nz6N9D",
         "result_xHhxHq",
         "result_aNmxXq",
-        "result_BU6egp",
         "result_fgAPpt",
-        "result_nCtze6",
         "result_EmYzR8",
+        "result_nCtze6",
         "result_LfGYkG"
       ],
       "settings": {
