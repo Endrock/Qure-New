@@ -3821,11 +3821,8 @@ body[data-free-shipping-guarentee] {
   .mi_patches_pdp .supply-detail .monthly_plans .plan_des_indiv { 
     width: 80%;
   }
-  .mi_patches_pdp .supply-detail .monthly_plans[for="mBanner_1_month"] .plan_des_indiv .plan_des_indiv__label-one-month { 
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 13px;
-    letter-spacing: 0.14px;
+  .mi_patches_pdp .supply-detail .monthly_plans[for="mBanner_1_month"] .plan_des_indiv .plan_des_indiv__label-one-month--subtitle.free-shipping-guarentee-variant { 
+    margin-left: 0;
   }
   /* qrejuvalight */
   .free-shipping-badge-container {
