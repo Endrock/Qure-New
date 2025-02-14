@@ -1,0 +1,790 @@
+{%- style -%}
+    .section-container {
+          padding-top: {{ section.settings.padding_top }}px;
+          padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+
+          .segmented-control {
+            margin: 20px 0;
+            margin-bottom: {{ section.settings.tabs_margin_bottom }}px;
+            border-bottom: {{ section.settings.tab_section_border_width }}px solid {{section.settings.tab_section_border_color}};
+        display: flex; /* Enables Flexbox */
+        justify-content: {{section.settings.tab_alignment}}; /* Horizontally center the content */
+            gap: {{section.settings.tab_spacing}}px;
+            overflow: hidden;
+          }
+
+      .segmented-control-dropdown {
+            margin: 20px 0;
+            overflow: hidden;
+            margin-bottom: {{ section.settings.tabs_margin_bottom }}px;
+
+        display: flex; /* Enables Flexbox */
+        justify-content: {{section.settings.tab_alignment}}; /* Horizontally center the content */
+
+          }
+
+          .segmented-control .tab {
+            padding: 10px 20px;
+            background-color: {{section.settings.tab_background_color_default}};
+            color:{{section.settings.tab_text_color_default}};
+            cursor: pointer;
+            font-size: {{ section.settings.tab_text_size }}px;
+            text-align: center;
+            border-radius:{{section.settings.tab_radius}}px;
+            border-bottom: {{ section.settings.tab_border_bottom_width_default }}px solid {{section.settings.tab_border_color_default}};
+            border-left: {{ section.settings.tab_border_top_left_right_width_default }}px solid {{section.settings.tab_border_color_default}};
+            border-top: {{ section.settings.tab_border_top_left_right_width_default }}px solid {{section.settings.tab_border_color_default}};
+            border-right: {{ section.settings.tab_border_top_left_right_width_default }}px solid {{section.settings.tab_border_color_default}};
+          }
+
+          .segmented-control .tab.active {
+            border-bottom: {{ section.settings.tab_border_bottom_width_active }}px solid {{section.settings.tab_border_color_active}};
+            border-left: {{ section.settings.tab_border_top_left_right_width_active }}px solid {{section.settings.tab_border_color_active}};
+            border-top: {{ section.settings.tab_border_top_left_right_width_active }}px solid {{section.settings.tab_border_color_active}};
+            border-right: {{ section.settings.tab_border_top_left_right_width_active }}px solid {{section.settings.tab_border_color_active}};
+            background-color: {{section.settings.tab_background_color_active}};
+            color:{{section.settings.tab_text_color_active}};
+          }
+
+    /* Dropdown Styling */
+  .segmented-control-dropdown select {
+    padding-right: 50px;
+    width: 600px;
+    padding: 10px 15px;
+    background-color: {{section.settings.tab_background_color_default}};
+    color:{{section.settings.tab_text_color_default}};
+    font-size: {{ section.settings.tab_text_size }}px;
+    border-bottom: {{ section.settings.tab_border_bottom_width_default }}px solid {{section.settings.tab_border_color_default}};
+    border-left: {{ section.settings.tab_border_top_left_right_width_default }}px solid {{section.settings.tab_border_color_default}};
+    border-top: {{ section.settings.tab_border_top_left_right_width_default }}px solid {{section.settings.tab_border_color_default}};
+    border-right: {{ section.settings.tab_border_top_left_right_width_default }}px solid {{section.settings.tab_border_color_default}};
+    border-radius:{{section.settings.tab_radius}}px;
+    margin: 20px 0;
+  }
+
+    /* Dropdown Styling */
+  #segmentedDropdown:focus {
+    border-bottom: {{ section.settings.tab_border_bottom_width_active }}px solid {{section.settings.tab_border_color_active}};
+    border-left: {{ section.settings.tab_border_top_left_right_width_active }}px solid {{section.settings.tab_border_color_active}};
+    border-top: {{ section.settings.tab_border_top_left_right_width_active }}px solid {{section.settings.tab_border_color_active}};
+    border-right: {{ section.settings.tab_border_top_left_right_width_active }}px solid {{section.settings.tab_border_color_active}};
+    background-color: {{section.settings.tab_background_color_active}};
+    color:{{section.settings.tab_text_color_active}};
+    outline:none;
+  }
+
+          /* Content Sections */
+          .tabbed-content .content {
+            display: none;
+          }
+
+          .tabbed-content .content.active {
+            display: flex;
+            flex-direction: column;
+          }
+
+  .page-width {
+    padding-left:{{ section.settings.padding_left }}px;
+    padding-right:{{ section.settings.padding_right }}px;
+  }
+
+  .title-attributes {
+    font-weight:{{ section.settings.heading_font_weight }};
+    font-size:{{ section.settings.heading_font_size }}px;
+    font-style:{{section.settings.heading_style}};
+    text-align:{{section.settings.heading_alignment}};
+    margin-bottom:{{section.settings.header_margin_bottom}}px;
+  }
+
+  .drop-description {
+    font-weight:{{ section.settings.description_font_weight }};
+    font-size:{{ section.settings.description_font_size }}px;
+    font-style:{{section.settings.description_style}};
+    text-align:{{section.settings.description_alignment}};
+    margin-bottom:{{section.settings.description_margin_bottom}}px;
+  }
+
+  .product-grid {
+    display: grid;
+  grid-template-columns: repeat({{ section.settings.columns_desktop }}, 1fr); /* Creates 4 equal columns */
+  grid-gap: {{ section.settings.product_grid_gap }}px;
+  }
+
+        @media (max-width: 600px) {
+        .features-grid {
+          grid-template-columns: repeat(2, 150px);
+        }
+            .product-grid {
+  grid-template-columns: repeat({{ section.settings.columns_mobile }}, 1fr); /* Creates 4 equal columns */
+  }
+
+                    .segmented-control {
+
+                      flex-direction:column;
+
+          }
+
+           .page-width {
+    padding-left:{{ section.settings.padding_left_mobile }}px;
+    padding-right:{{ section.settings.padding_right_mobile }}px;
+  }
+
+              /* Dropdown Styling */
+  .segmented-control-dropdown select {
+    width: 80%;
+
+  }
+      }
+{%- endstyle -%}
+{% if metaobject.data.value['cc-creator-drops'][0] %}
+  <div class="section-container" id="drops-anchor">
+    <div class="page-width">
+      <{{ section.settings.heading_size }} class="title-attributes">
+        {{ section.settings.header }}
+      </{{ section.settings.heading_size }}>
+
+      <!-- Drop/collection selection -->
+      {% assign droplength = 0 %}
+      {% for drop in metaobject['cc-creator-drops'].value %}
+        {% assign droplength = droplength | plus: 1 %}
+      {% endfor %}
+
+      {% if droplength < 5 %}
+        <div class="segmented-control">
+          {% assign tabstyle = 'tab active' %}
+          {% for drop in metaobject['cc-creator-drops'].value %}
+            <button class="{{ tabstyle }}" class="tab" data-target="{{ drop.handle }}">
+              {{ drop.title }}
+            </button>
+            {% assign tabstyle = 'tab' %}
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="segmented-control-dropdown">
+          <select id="segmentedDropdown">
+            {% for drop in metaobject['cc-creator-drops'].value %}
+              <option value="{{ drop.handle }}">{{ drop.title }}</option>
+            {% endfor %}
+          </select>
+        </div>
+      {% endif %}
+
+      <!-- Content shown within each tab -->
+      <div class="tabbed-content">
+        {% assign tabstyle = 'content active' %}
+        {% for drop in metaobject['cc-creator-drops'].value %}
+          <!-- Each tab's content is identified by its unique 'id' -->
+          <div id="{{ drop.handle }}" class="{{ tabstyle }}">
+            <!-- Drop Description -->
+            <div class="title-wrapper{% if drop.title == blank %} title-wrapper--no-heading{% endif %} {{ section.settings.heading_alignment }}">
+              <p class="drop-description">
+                {{ drop.description }}
+              </p>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid">
+              {% for product in drop.products %}
+                {% assign product = product %}
+                {%- render 'product-card', product: product -%}
+              {% endfor %}
+            </div>
+          </div>
+
+          {% assign tabstyle = 'content' %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('.segmented-control .tab');
+    const contents = document.querySelectorAll('.tabbed-content .content');
+    const dropdown = document.getElementById('segmentedDropdown');
+
+    // Handle tabs
+    if (tabs.length) {
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+          // Remove active class from all tabs and contents
+          tabs.forEach(t => t.classList.remove('active'));
+          contents.forEach(c => c.classList.remove('active'));
+
+          // Add active class to the clicked tab and its content
+          this.classList.add('active');
+          const target = this.getAttribute('data-target');
+          document.getElementById(target).classList.add('active');
+        });
+      });
+    }
+
+    // Handle dropdown
+    if (dropdown) {
+      dropdown.addEventListener('change', function () {
+        const target = this.value;
+
+        // Remove active class from all contents
+        contents.forEach(c => c.classList.remove('active'));
+
+        // Show the selected content
+        document.getElementById(target).classList.add('active');
+      });
+    }
+
+
+    
+
+    console.log('Script is running');
+
+    const descriptions = document.querySelectorAll('.drop-description');
+    if (descriptions.length === 0) {
+        console.warn('No elements with class .drop-description found.');
+        return;
+    }
+
+    descriptions.forEach(descriptionElement => {
+        console.log('Found description:', descriptionElement);
+
+        const descriptionText = descriptionElement.textContent;
+        console.log('Original text:', descriptionText);
+
+        const tagPattern = /#\[(.*?)\]/g;
+        let match;
+        const tags = [];
+
+        // Extract tags and remove them from the description
+        while ((match = tagPattern.exec(descriptionText)) !== null) {
+            tags.push(match[1]);
+        }
+
+        console.log('Extracted tags:', tags);
+
+        // Update the description text
+        const updatedDescription = descriptionText.replace(tagPattern, '').trim();
+        descriptionElement.textContent = updatedDescription;
+        console.log('Updated description:', updatedDescription);
+
+        // Find the features-grid
+        const sibling = descriptionElement.closest('.title-wrapper').nextElementSibling;
+        if (sibling) {
+            const benefitsContainer = sibling.querySelector('.features-grid');
+            if (benefitsContainer) {
+                console.log('Adding tags to features-grid:', benefitsContainer);
+
+                tags.forEach(tag => {
+                    const tagElement = document.createElement('div');
+                    tagElement.style.display = 'flex';
+                    tagElement.style.alignItems = 'center';
+                    tagElement.innerHTML = `
+                        <img
+                            src="https://cdn.shopify.com/s/files/1/0872/4345/6800/files/check-circle_1.svg?v=1734074498"
+                            alt="Icon"
+                            style="width: 20px; height: 20px; margin-right: 10px;"
+                        >
+                        <p style="margin: 0; line-height: 1.2">${tag}</p>
+                    `;
+                    benefitsContainer.appendChild(tagElement);
+                });
+            } else {
+                console.warn('No features-grid found for:', descriptionElement);
+            }
+        } else {
+            console.warn('No sibling container found for:', descriptionElement);
+        }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "CC Drops Section",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+        {
+  "type": "header",
+  "content": "Heading Settings",
+  "info": "Edit settings for the main header in the section"
+},
+        {
+      "type": "text",
+         "id":"header" ,
+     "label": "Section Header"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h1",
+          "label": "h1"
+        },
+        {
+          "value": "h2",
+          "label": "h2"
+        },
+        {
+          "value": "h3",
+          "label": "h3"
+        }
+      ],
+      "default": "h1",
+      "label": "Header Size"
+    },
+            {
+      "type": "range",
+      "id": "heading_font_size",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading Size",
+      "default": 36
+    },
+    {
+      "type": "select",
+      "id": "heading_font_weight",
+      "label": "Font Weight",
+      "options": [
+        {
+          "value": "100",
+          "label": "100"
+        },
+        {
+          "value": "200",
+          "label": "200"
+        },
+        {
+          "value": "300",
+          "label": "300"
+        },
+               {
+          "value": "400",
+          "label": "400"
+        },
+               {
+          "value": "500",
+          "label": "500"
+        },
+               {
+          "value": "600",
+          "label": "600"
+        },
+               {
+          "value": "700",
+          "label": "700"
+        },
+               {
+          "value": "800",
+          "label": "800"
+        },
+               {
+          "value": "900",
+          "label": "900"
+        }
+      ],
+      "default": "400"
+    },
+      {
+      "type": "select",
+      "id": "heading_style",
+      "label": "Heading Font Style",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "italic",
+          "label": "Italic"
+        }
+      ],
+      "default": "normal"
+    },
+    {
+   "type": "text_alignment",
+   "id": "heading_alignment",
+   "label": "Heading Alignment",
+   "default": "left"
+},
+            {
+      "type": "range",
+      "id": "header_margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 32
+    },
+        {
+  "type": "header",
+  "content": "Tab Settings",
+  "info": "Edit tab settings for selecting different drops in the section"
+},
+   {
+      "type": "range",
+      "id": "tab_radius",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Tab Corner Radius",
+      "default": 0
+    },
+            {
+      "type": "range",
+      "id": "tab_spacing",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Tab Spacing",
+      "default": 5
+    },
+        {
+      "type": "range",
+      "id": "tab_border_top_left_right_width_default",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Tab Border Overall Width Default",
+      "default": 0
+    },
+            {
+      "type": "range",
+      "id": "tab_border_bottom_width_default",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Tab Border Bottom Width Default",
+      "default": 0
+    },
+            {
+      "type": "range",
+      "id": "tab_border_top_left_right_width_active",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Tab Border Overall Width Active",
+      "default": 0
+    },
+            {
+      "type": "range",
+      "id": "tab_border_bottom_width_active",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Tab Border Bottom Width Active",
+      "default": 3
+    },
+                    {
+      "type": "color",
+      "id": "tab_border_color_default",
+      "label": "Tab Border Default",
+      "default": "#000000"
+    },
+                {
+      "type": "color",
+      "id": "tab_border_color_active",
+      "label": "Tab Border Active",
+      "default": "#000000"
+    },
+            {
+      "type": "color",
+      "id": "tab_background_color_active",
+      "label": "Tab Background Active",
+      "default": "#ffffff"
+    },
+                {
+      "type": "color",
+      "id": "tab_background_color_default",
+      "label": "Tab Background Default",
+      "default": "#ffffff"
+    },
+                {
+      "type": "color",
+      "id": "tab_text_color_active",
+      "label": "Tab Text Active",
+      "default": "#000000"
+    },
+                {
+      "type": "color",
+      "id": "tab_text_color_default",
+      "label": "Tab Text Default",
+      "default": "#000000"
+    },
+                {
+      "type": "range",
+      "id": "tab_text_size",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Tab Text Size",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "tab_alignment",
+      "label": "Tab Alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "end",
+          "label": "Right"
+        }
+      ],
+      "default": "start"
+    },
+    {
+      "type": "range",
+      "id": "tab_section_border_width",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Tab Border Width",
+      "default": 0
+    },
+        {
+      "type": "color",
+      "id": "tab_section_border_color",
+      "label": "Tab Section Border Color",
+      "default": "#a1a1a1"
+    },
+                {
+      "type": "range",
+      "id": "tabs_margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 32
+    },
+            {
+  "type": "header",
+  "content": "Description Settings",
+  "info": "Edit settings for how drop descriptions are displayed in the section"
+},
+               {
+      "type": "range",
+      "id": "description_font_size",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Description Size",
+      "default": 18
+    },
+    {
+      "type": "select",
+      "id": "description_font_weight",
+      "label": "Font Weight",
+      "options": [
+        {
+          "value": "100",
+          "label": "100"
+        },
+        {
+          "value": "200",
+          "label": "200"
+        },
+        {
+          "value": "300",
+          "label": "300"
+        },
+               {
+          "value": "400",
+          "label": "400"
+        },
+               {
+          "value": "500",
+          "label": "500"
+        },
+               {
+          "value": "600",
+          "label": "600"
+        },
+               {
+          "value": "700",
+          "label": "700"
+        },
+               {
+          "value": "800",
+          "label": "800"
+        },
+               {
+          "value": "900",
+          "label": "900"
+        }
+      ],
+      "default": "500"
+    },
+      {
+      "type": "select",
+      "id": "description_style",
+      "label": "Description Font Style",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "italic",
+          "label": "Italic"
+        }
+      ],
+      "default": "normal"
+    },
+    {
+   "type": "text_alignment",
+   "id": "description_alignment",
+   "label": "Description Alignment",
+   "default": "left"
+},
+                   {
+      "type": "range",
+      "id": "description_margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 20
+    },
+                {
+  "type": "header",
+  "content": "Product Settings",
+  "info": "Edit settings for how products are displayed in the section"
+},
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "2",
+      "label": "Mobile Columns"
+    },
+        {
+      "type": "select",
+      "id": "columns_desktop",
+      "options": [
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        }
+      ],
+      "default": "4",
+      "label": "Desktop Columns"
+    },
+                       {
+      "type": "range",
+      "id": "product_grid_gap",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Grid Gap",
+      "default": 10
+    },
+                {
+  "type": "header",
+  "content": "Section Settings",
+  "info": "Edit settings for how the section displays"
+},
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 36
+    },
+        {
+      "type": "range",
+      "id": "padding_left",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Left",
+      "default": 20
+    },
+        {
+      "type": "range",
+      "id": "padding_right",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Right",
+      "default": 20
+    },
+            {
+      "type": "range",
+      "id": "padding_left_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Mobile Padding Left",
+      "default": 12
+    },
+        {
+      "type": "range",
+      "id": "padding_right_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Mobile Padding Right",
+      "default": 12
+    },
+  ],
+  "presets": [
+    {
+      "name": "CC Drops Section"
+    }
+  ]
+}
+{% endschema %}
