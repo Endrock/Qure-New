@@ -1,0 +1,11 @@
+.shopify
+/.shopify
+**/.shopify
+
+.vscode
+/.vscode
+**/.vscode
+
+node_modules
+/node_modules
+**/node_modules
