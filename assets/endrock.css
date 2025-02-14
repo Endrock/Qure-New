@@ -3696,7 +3696,7 @@ body[data-free-shipping-guarentee] {
   .supply-detail .monthly_plans__circle { 
     margin-right: 10px;
     position: relative;
-    top: -6px;
+    top: -11px;
   }
   .supply-detail .monthly_plans__circle .circle-full {
     display: none;
@@ -3717,7 +3717,7 @@ body[data-free-shipping-guarentee] {
     margin-top: 0;
   }
   .supply-detail .monthly_plans .plan_des .plan_des { 
-    margin-top: 0;
+    margin-top: 8px;
   }
   .supply-detail .monthly_plans .plan_des .plan_hdr h3 { 
     font-size: 14px;
@@ -3731,6 +3731,7 @@ body[data-free-shipping-guarentee] {
     text-transform: uppercase;
     padding: 4px 8px;
     margin-left: 8px;
+    line-height: 0.8;
   } 
   .supply-detail .monthly_plans .price {
     margin-left: auto;
@@ -3804,17 +3805,27 @@ body[data-free-shipping-guarentee] {
     width: calc(100% - 30px);
   }
   .mi_patches_pdp .supply-detail .monthly_plans .monthly_plans__circle { 
-    top: 3px;
+    top: 0;
   }
   .mi_patches_pdp .supply-detail .monthly_plans .plan_des.free-shipping-guarentee-variant, 
   .mi_patches_pdp .supply-detail .monthly_plans[for="mBanner_2_month"] .plan_des.d-md-block { 
     margin-left: 28px;
+    margin-top: 8px;
   }
   .mi_patches_pdp .supply-detail .monthly_plans[for="mBanner_1_month"] .monthly_plans__circle { 
-    top: -10px;
+    top: -8px;
   }
+  .mi_patches_pdp .supply-detail .monthly_plans[for="mBanner_1_month"] .plan_des { 
+    margin-top: 8px;
+  } 
   .mi_patches_pdp .supply-detail .monthly_plans .plan_des_indiv { 
     width: 80%;
+  }
+  .mi_patches_pdp .supply-detail .monthly_plans[for="mBanner_1_month"] .plan_des_indiv .plan_des_indiv__label-one-month { 
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 13px;
+    letter-spacing: 0.14px;
   }
   /* qrejuvalight */
   .free-shipping-badge-container {
@@ -3871,7 +3882,8 @@ body[data-free-shipping-guarentee] {
     display: flex;
     justify-content: space-between;
   }
-  .led_mask .shipping p { 
+  .led_mask .shipping p,  
+  .chest_pdp .shipping p { 
     color: #000;
     font-family: Poppins, sans-serif;
     font-size: 11px;
@@ -3916,9 +3928,15 @@ body[data-free-shipping-guarentee] {
     .mi_patches_pdp .supply-detail .monthly_plans[for="mBanner_1_month"] .monthly_plans__circle { 
       top: 0;
     }
-
     .shipping-badges-container__money-back .shipping-badges-container__money-back--label { 
       width: auto;
+    }
+    .supply-detail .monthly_plans .plan_des .plan_hdr .saved_price { 
+      font-size: 10px;
+    } 
+    .mi_patches_pdp .supply-detail .monthly_plans .plan_des.free-shipping-guarentee-variant, 
+    .mi_patches_pdp .supply-detail .monthly_plans[for="mBanner_2_month"] .plan_des.d-md-block { 
+      margin-left: 24px;
     }
   }
 }
