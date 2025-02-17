@@ -106,15 +106,16 @@
         "btn_url": "#shop",
         "d_icon": "shopify://shop_images/derma-sm.svg",
         "recomand": "Dermatologist-Reviewed",
-        "underbutton_text_left": "Dermatologist Reviewed",
-        "underbutton_text_right": "Free Shipping Over $100",
+        "underbutton_text_left": "",
+        "underbutton_text_right": "",
         "order_mob": false
       }
     },
     "liquid_P3wypt": {
       "type": "liquid",
       "settings": {
-        "code": "<script>\ndocument.addEventListener('DOMContentLoaded', function() {\n    var event = new Event('click', {\n        'bubbles': true,\n        'cancelable': true\n    });\n    document.querySelector(\"#pills-tab_iyUgHm\").dispatchEvent(event);\n});\n</script>"
+        "code": "<script>\ndocument.addEventListener('DOMContentLoaded', function() {\n    var event = new Event('click', {\n        'bubbles': true,\n        'cancelable': true\n    });\n    document.querySelector(\"#pills-tab_iyUgHm\").dispatchEvent(event);\n});\n</script>",
+        "popup_micro_infusion_enabled": true
       }
     },
     "featuredin_extended_kPLtYV": {
@@ -195,7 +196,9 @@
       ],
       "settings": {
         "heading": "FEATURED IN",
-        "slider_type": "five_slides"
+        "slider_type": "five_slides",
+        "slide_per_view_desktop": 3,
+        "slide_per_view_mobile": 3
       }
     },
     "uses_w3CMA7": {
