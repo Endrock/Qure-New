@@ -14,6 +14,7 @@
       "blocks": {
         "banner_afzGAP": {
           "type": "banner",
+          "disabled": true,
           "settings": {
             "heading": "",
             "subheading": "",
@@ -25,6 +26,7 @@
         },
         "banner_holiday_EEUPJR": {
           "type": "banner_holiday",
+          "disabled": true,
           "settings": {
             "heading": "<p>Exclusive Bundles</p>",
             "link_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal",
@@ -50,9 +52,9 @@
       "settings": {
         "heading": "",
         "heading_mobile": "",
-        "image": "shopify://shop_images/collection_page_banner.png",
-        "image_mobile": "shopify://shop_images/COLLECTIONm_banner.png",
-        "link_url": "https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal"
+        "image": "shopify://shop_images/banner_best_sellers.png",
+        "image_mobile": "shopify://shop_images/banner_best_sellers_mobile.png",
+        "link_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal-new"
       }
     },
     "icons_list_BUTDmx": {
