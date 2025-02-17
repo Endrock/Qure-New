@@ -40,6 +40,7 @@
                             </p>
                             {% endif %}
                         </div>
+                        {%  if section.settings.underbutton_text_left !=blank %}
                         <div class="shipping shipping_bg bg-transparent mt-2">
                             <div class="s_bx">
                                 <img src="{{ 'dermatologist.svg' | asset_url }}" alt="">
@@ -50,6 +51,7 @@
                                 <p>{{ section.settings.underbutton_text_right }}</p>
                             </div>
                         </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>

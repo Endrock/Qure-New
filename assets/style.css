@@ -32348,3 +32348,13 @@ main.faucet_filter .price_wrap, main.shower_filter .price_wrap{
 main.faucet_filter .price .new_price, main.shower_filter .price .new_price{
     font-weight: 400;
 }
+/* updated css on 17 feb 25 for led-mask-offer-2*/
+.led_mask_offer_img_text .section_header {
+    padding-bottom: 10px;
+}
+.led_mask_offer_img_text p{
+    padding-bottom: 15px;
+}
+.price_lg_weight .bs_price .sale_p {
+    font-weight: 500;
+}
