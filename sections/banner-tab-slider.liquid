@@ -24,7 +24,7 @@
                         <h2 class="{{ section.settings.heading_size }}">{{ section.settings.heading }}</h2>
                         {%- endif -%}
                     </div>
-                    <div class="{% if section.settings.order_mob == true %}d-block{% else %}none{% endif %}">
+                    <div class="{% if section.settings.order_mob == true %}d-block{% else %}none{% endif %}  d-none d-md-block">
                         {%- if section.settings.desc != blank -%}
                         <div class="ss_list mw-452 pt-3 pb-4">
                             {{ section.settings.desc }}
