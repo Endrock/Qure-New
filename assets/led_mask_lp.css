@@ -968,3 +968,8 @@
 .announcement_bar p {
     font-weight: 600;
 }
+.ctm_banner_tab_slider .dot_pagination .swiper-pagination-bullet {
+    margin: 0 11px !important;
+    height: 14px;
+    width: 14px;
+}
