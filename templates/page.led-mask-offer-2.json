@@ -582,7 +582,7 @@
         "ctm_cls_btn": "mw-402",
         "desk_slide": 4,
         "mob_slide": 1.7,
-        "slide_space": 10
+        "slide_space": 16
       }
     },
     "image_text_B6hJMx": {
@@ -624,7 +624,7 @@
       "settings": {
         "background": "bg-lightGrey",
         "heading": "Why Light Therapy Is Proven To Work",
-        "hide_on_mob": false,
+        "hide_on_mob": true,
         "column": 6,
         "padding_top": 40,
         "padding_bottom": 40,
