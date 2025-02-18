@@ -1626,6 +1626,9 @@
         "object_jkgKEm",
         "button_F67Uh4"
       ],
+      "custom_css": [
+        ".faq {background-color: f5f5f5 !important;}"
+      ],
       "settings": {
         "background": "bg_yellow",
         "classname": "",
