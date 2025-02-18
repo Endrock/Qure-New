@@ -63,7 +63,7 @@
                                     <div class="accordion" id="accordionExample{{ block.id }}">
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="heading{{ block.id }}">
-                                                <button class="accordion-button {% if block.settings.collapsed == true %} collapsed {% endif %}" type="button" data-bs-toggle="collapse"
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapse{{ block.id }}" aria-expanded="true"
                                                     aria-controls="collapse{{ block.id }}">
                                                     <div class="vQ_name">{{ block.settings.dr_name }}</div>
@@ -148,20 +148,6 @@
 {% endif %}
 
 
-
-<script>
-    // JavaScript to handle tab switching
-    document.addEventListener('DOMContentLoaded', function () {
-      const tabs = document.querySelectorAll('.accordion-button');
-      tabs.forEach((tab) => {
-        tab.addEventListener('click', function () {
-          const targetId = this.getAttribute('aria-controls');
-          console.log(targetId);
-          tabs.forEach((t) => t.classList.remove('collapsed'));
-        });
-      });
-    });
-  </script>
 
 {% schema %}
     {
@@ -252,12 +238,6 @@
                         "type": "richtext",
                         "id": "desc",
                         "label": "t:common.desc.label"
-                    },
-                    {
-                        "type": "checkbox",
-                        "id": "collapsed",
-                        "label": "Keep this tab open",
-                        "info": "Use this option only once in a section not multiple times"
                     }
                 ]
 		    },
