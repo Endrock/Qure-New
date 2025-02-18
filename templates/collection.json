@@ -12,29 +12,30 @@
     "main": {
       "type": "collection",
       "blocks": {
-        "banner_MmtDKQ": {
+        "banner_afzGAP": {
           "type": "banner",
           "disabled": true,
           "settings": {
-            "heading": "BLACK FRIDAY SALE",
-            "subheading": "21% Off",
-            "text": "SITEWIDE",
-            "wistia_id": "7dqki9g4sz",
-            "wistia_id_mobile": "o6in7qx104",
-            "link_url": "shopify://collections/fine-line-wrinkles"
+            "heading": "",
+            "subheading": "",
+            "text": "",
+            "wistia_id": "",
+            "wistia_id_mobile": "",
+            "link_url": ""
           }
         },
         "banner_holiday_EEUPJR": {
           "type": "banner_holiday",
           "disabled": true,
           "settings": {
-            "heading": "<p>Exclusive <strong>Holiday</strong> Bundles</p>",
+            "heading": "<p>Exclusive Bundles</p>",
             "link_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal",
             "link_label": "Save up to 55% Off"
           }
         },
         "banner_14feb_BxBLkb": {
           "type": "banner_14feb",
+          "disabled": true,
           "settings": {
             "heading": "LOVE YOUR SKIN",
             "subheading": "<p>Exclusive <strong>Valentine’s Day</strong> Micro-Infusion Bundle</p>",
@@ -44,16 +45,16 @@
         }
       },
       "block_order": [
-        "banner_MmtDKQ",
+        "banner_afzGAP",
         "banner_holiday_EEUPJR",
         "banner_14feb_BxBLkb"
       ],
       "settings": {
         "heading": "",
         "heading_mobile": "",
-        "image": "shopify://shop_images/collection_page_banner.png",
-        "image_mobile": "shopify://shop_images/COLLECTIONm_banner.png",
-        "link_url": "https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal"
+        "image": "shopify://shop_images/banner_best_sellers.png",
+        "image_mobile": "shopify://shop_images/banner_best_sellers_mobile.png",
+        "link_url": "https://qureskincare.com/collections/best-sellers"
       }
     },
     "icons_list_BUTDmx": {

@@ -289,7 +289,7 @@
             </div>
         {% endif %}
         <div class="amazing_content_wrap d-none d-md-block">
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
                 {%- for block in section.blocks -%}
                     {% if block.type == 'header' %}
                         {% assign header_count_desktop = header_count_desktop |  plus: 1 %}

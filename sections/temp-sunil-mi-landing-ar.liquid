@@ -93,7 +93,8 @@
                     <div class="icon-section icon-section-landing">
                         <ul class="nav nav_e-commerce">
                             <li class="nav__item header_gift_btn pe-md-0 pe-3">
-                                <a href="javascript:;" class="nav__url" onclick="StampedFn.toggleRewardsModal()">
+                                <a href="{{ routes.root_url }}pages/loyalty-program" class="nav__url">
+                                {% comment %} <a href="javascript:;" class="nav__url" onclick="StampedFn.toggleRewardsModal()"> {% endcomment %}
                                     <img src="{{ 'header-gift.svg' | asset_url }}" class="fa fa-shopping-cart nav__icon cart-mb-icon" alt="navigation">
                                 </a>
                             </li>

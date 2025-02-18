@@ -129,7 +129,7 @@
         "text_label_real_result_3": "Plastic Surgeon",
         "enable_jump_to_section": true,
         "text_jump_to_section": "Jump To",
-        "popup_enabled": true
+        "popup_enabled": false
       }
     },
     "custom_qurify_filter_lp_featuredin_iXk4TL": {
@@ -433,7 +433,7 @@
             "image": "shopify://shop_images/trusted_dylan.webp",
             "video_type": "youtube",
             "video_link": "",
-            "youtube_link": "https://www.youtube.com/watch?v=1iXBgh7WPOY",
+            "youtube_link": "https://www.youtube.com/watch?v=mVdncsTAXiA",
             "wistia_id": "",
             "badge_txt": "9.77K Subscribers",
             "title": "The Qure micro-infusion system takes it a step further by not only increasing hydration but also delivering growth factors right where they need to be.",
@@ -1170,7 +1170,7 @@
       "type": "liquid",
       "settings": {
         "code": "{% render 'serums-months-image-form' with section_id: section.id %}",
-        "popup_micro_infusion_enabled": true
+        "popup_micro_infusion_enabled": false
       }
     },
     "faq_4hnCjw": {
