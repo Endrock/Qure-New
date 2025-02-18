@@ -3658,13 +3658,13 @@ body[data-free-shipping-guarentee] {
   }
 
   /* .supply-detail .supply_steps .planBlock .plan_choosed.text-end {  */
-  .supply-detail .supply_steps .planBlock .plan_choosed { 
+  .free-shiping-guarantee-test .supply-detail .supply_steps .planBlock .plan_choosed { 
     max-width: unset;
     left: -15px !important;
     bottom: -1px;
     border-radius: 13.158px 13.158px 0px 0px;
   }
-  .supply-detail .plan_choosed span {
+  .free-shiping-guarantee-test .supply-detail .plan_choosed span {
     display: inline-block;
     height: 100%;
     padding: 3px 10px 2px;
@@ -3679,35 +3679,35 @@ body[data-free-shipping-guarentee] {
     text-transform: initial;
   }
 
-  .supply-detail .monthly_plans { 
+  .free-shiping-guarantee-test .supply-detail .monthly_plans { 
     justify-content: unset;
     padding: 14px 16px 14px 16px;
     border-radius: 12px !important;
     position: relative;
     background-color: #fff;
   }
-  .supply-detail .planBlock.active .monthly_plans { 
+  .free-shiping-guarantee-test .supply-detail .planBlock.active .monthly_plans { 
     border: 1px solid #000;
   }
-  .supply-detail .monthly_plans.background-white {
+  .free-shiping-guarantee-test .supply-detail .monthly_plans.background-white {
     background-color: #fff;
     padding-bottom: 32px;
   }
-  .supply-detail .monthly_plans__circle { 
+  .free-shiping-guarantee-test .supply-detail .monthly_plans__circle { 
     margin-right: 10px;
     position: relative;
     top: -11px;
   }
-  .supply-detail .monthly_plans__circle .circle-full {
+  .free-shiping-guarantee-test .supply-detail .monthly_plans__circle .circle-full {
     display: none;
   }
-  .supply-detail .planBlock.active .monthly_plans__circle .circle-full {
+  .free-shiping-guarantee-test .supply-detail .planBlock.active .monthly_plans__circle .circle-full {
     display: block;
   }
-  .supply-detail .planBlock.active .monthly_plans__circle .circle-empty { 
+  .free-shiping-guarantee-test .supply-detail .planBlock.active .monthly_plans__circle .circle-empty { 
     display: none;
   }
-  .supply-detail .monthly_plans .plan_des {
+  .free-shiping-guarantee-test .supply-detail .monthly_plans .plan_des {
     font-family: Poppins, sans-serif;
     font-size: 12px;
     font-style: normal;
@@ -3716,15 +3716,15 @@ body[data-free-shipping-guarentee] {
     letter-spacing: 0.12px;
     margin-top: 0;
   }
-  .supply-detail .monthly_plans .plan_des .plan_des { 
+  .free-shiping-guarantee-test .supply-detail .monthly_plans .plan_des .plan_des { 
     margin-top: 8px;
   }
-  .supply-detail .monthly_plans .plan_des .plan_hdr h3 { 
+  .free-shiping-guarantee-test .supply-detail .monthly_plans .plan_des .plan_hdr h3 { 
     font-size: 14px;
     line-height: 13px; 
     letter-spacing: 0.14px;
   }
-  .supply-detail .monthly_plans .plan_des .plan_hdr .saved_price { 
+  .free-shiping-guarantee-test .supply-detail .monthly_plans .plan_des .plan_hdr .saved_price { 
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.11px;
@@ -3733,24 +3733,24 @@ body[data-free-shipping-guarentee] {
     margin-left: 8px;
     line-height: 0.8;
   } 
-  .supply-detail .monthly_plans .price {
+  .free-shiping-guarantee-test .supply-detail .monthly_plans .price {
     margin-left: auto;
   }
-  .supply-detail .monthly_plans .price .regular_price { 
+  .free-shiping-guarantee-test .supply-detail .monthly_plans .price .regular_price { 
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
     letter-spacing: 0.3px;
   }
-  .supply-detail .monthly_plans .price .sale_price { 
+  .free-shiping-guarantee-test .supply-detail .monthly_plans .price .sale_price { 
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: 18px;
     letter-spacing: 0.3px;
   } 
-  .supply-detail .free-shipping-icon {
+  .free-shiping-guarantee-test .supply-detail .free-shipping-icon {
     width: 100%;
     background-color: #C8E6DC;
     position: absolute;
@@ -3762,7 +3762,7 @@ body[data-free-shipping-guarentee] {
     justify-content: center;
     align-items: center;
   }
-  .supply-detail .free-shipping-icon .free-shipping-icon__label { 
+  .free-shiping-guarantee-test .supply-detail .free-shipping-icon .free-shipping-icon__label { 
     font-family: Poppins, sans-serif;
     font-size: 11px;
     font-style: normal;
@@ -3801,27 +3801,27 @@ body[data-free-shipping-guarentee] {
   }
 
   /* product: microinfusion-targeted-patches */
-  .mi_patches_pdp .supply-detail .monthly_plans .plan_des {
+  .mi_patches_pdp.free-shiping-guarantee-test .supply-detail .monthly_plans .plan_des {
     width: calc(100% - 30px);
   }
-  .mi_patches_pdp .supply-detail .monthly_plans .monthly_plans__circle { 
+  .mi_patches_pdp.free-shiping-guarantee-test .supply-detail .monthly_plans .monthly_plans__circle { 
     top: 0;
   }
-  .mi_patches_pdp .supply-detail .monthly_plans .plan_des.free-shipping-guarentee-variant, 
-  .mi_patches_pdp .supply-detail .monthly_plans[for="mBanner_2_month"] .plan_des.d-md-block { 
+  .mi_patches_pdp.free-shiping-guarantee-test .supply-detail .monthly_plans .plan_des.free-shipping-guarentee-variant, 
+  .mi_patches_pdp.free-shiping-guarantee-test .supply-detail .monthly_plans[for="mBanner_2_month"] .plan_des.d-md-block { 
     margin-left: 28px;
     margin-top: 8px;
   }
-  .mi_patches_pdp .supply-detail .monthly_plans[for="mBanner_1_month"] .monthly_plans__circle { 
+  .mi_patches_pdp.free-shiping-guarantee-test .supply-detail .monthly_plans[for="mBanner_1_month"] .monthly_plans__circle { 
     top: -8px;
   }
-  .mi_patches_pdp .supply-detail .monthly_plans[for="mBanner_1_month"] .plan_des { 
+  .mi_patches_pdp.free-shiping-guarantee-test .supply-detail .monthly_plans[for="mBanner_1_month"] .plan_des { 
     margin-top: 8px;
   } 
-  .mi_patches_pdp .supply-detail .monthly_plans .plan_des_indiv { 
+  .mi_patches_pdp.free-shiping-guarantee-test .supply-detail .monthly_plans .plan_des_indiv { 
     width: 80%;
   }
-  .mi_patches_pdp .supply-detail .monthly_plans[for="mBanner_1_month"] .plan_des_indiv .plan_des_indiv__label-one-month--subtitle.free-shipping-guarentee-variant { 
+  .mi_patches_pdp.free-shiping-guarantee-test .supply-detail .monthly_plans[for="mBanner_1_month"] .plan_des_indiv .plan_des_indiv__label-one-month--subtitle.free-shipping-guarentee-variant { 
     margin-left: 0;
   }
   /* qrejuvalight */
@@ -3912,27 +3912,27 @@ body[data-free-shipping-guarentee] {
     .shipping-badges-container .shipping-badges-container__free-return .shipping-badges-container__free-return--label { 
       width: 80px;
     }
-    .supply-detail .planBlock .monthly_plans__circle .circle-full, 
-    .supply-detail .planBlock .monthly_plans__circle .circle-empty { 
+    .free-shiping-guarantee-test .supply-detail .planBlock .monthly_plans__circle .circle-full, 
+    .free-shiping-guarantee-test .supply-detail .planBlock .monthly_plans__circle .circle-empty { 
       width: 14px;
       height: 14px;
     }
 
      /* product: microinfusion-targeted-patches */
-    .mi_patches_pdp .supply-detail .monthly_plans .plan_des.d-md-none {
+    .mi_patches_pdp.free-shiping-guarantee-test .supply-detail .monthly_plans .plan_des.d-md-none {
       display: none;
     }
-    .mi_patches_pdp .supply-detail .monthly_plans[for="mBanner_1_month"] .monthly_plans__circle { 
+    .mi_patches_pdp.free-shiping-guarantee-test .supply-detail .monthly_plans[for="mBanner_1_month"] .monthly_plans__circle { 
       top: 0;
     }
     .shipping-badges-container__money-back .shipping-badges-container__money-back--label { 
       width: auto;
     }
-    .supply-detail .monthly_plans .plan_des .plan_hdr .saved_price { 
+    .free-shiping-guarantee-test .supply-detail .monthly_plans .plan_des .plan_hdr .saved_price { 
       font-size: 10px;
     } 
-    .mi_patches_pdp .supply-detail .monthly_plans .plan_des.free-shipping-guarentee-variant, 
-    .mi_patches_pdp .supply-detail .monthly_plans[for="mBanner_2_month"] .plan_des.d-md-block { 
+    .mi_patches_pdp.free-shiping-guarantee-test .supply-detail .monthly_plans .plan_des.free-shipping-guarentee-variant, 
+    .mi_patches_pdp.free-shiping-guarantee-test .supply-detail .monthly_plans[for="mBanner_2_month"] .plan_des.d-md-block { 
       margin-left: 24px;
     }
   }
