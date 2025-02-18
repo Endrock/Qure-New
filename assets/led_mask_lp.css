@@ -994,3 +994,6 @@
 .ctm_cls_glowing h2.title-lg {
     margin-bottom: 25px;
 }
+.worthy ul#pills-tab-skin {
+    justify-content: left !important;
+}

@@ -1,5 +1,5 @@
 <!-- -- get compliment worthy skin start -- -->
-<div class="affect_skin section affect_howToUse">
+<div class="affect_skin section affect_howToUse {{ section.settings.ctm_cls_use }}">
     <div class="dsn-right-container">
         <div class="section_header ms-0 d-block d-md-none">
             <h2 class="title-lg paddingB">{{ section.settings.heading }}</h2>
@@ -136,6 +136,11 @@
 {
     "name": "t:sections.how_to_use.name",
     "settings": [
+        {
+            "type": "text",
+            "id": "ctm_cls_use",
+            "label": "t:common.classname.custom"
+        },
         {
             "type": "text",
             "id": "heading",
