@@ -31,7 +31,7 @@
                         <div class="tooltip_wrap">
                             <div class="tooltip_btn">
                                 <div class="tootltip_text {{ block.settings.block_className }}" style="--heading-font-size: {{ block.settings.font_size | append:'px' }}">
-                                    {{ block.settings.toolip_hed }}
+                                    {{ block.settings.toolip_hed | strip_html}}
                                     
                                     <img src="{{ 'info_lg.svg' | asset_url }}" alt="">
                                     <div class="tooltip_info">

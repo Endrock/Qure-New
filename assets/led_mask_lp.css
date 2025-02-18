@@ -973,3 +973,6 @@
     height: 14px;
     width: 14px;
 }
+.ctm_cls_glowing .refill_review p {
+    text-decoration: none;
+}
