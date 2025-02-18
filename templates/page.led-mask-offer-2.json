@@ -624,7 +624,7 @@
       "settings": {
         "background": "bg-lightGrey",
         "heading": "Why Light Therapy Is Proven To Work",
-        "hide_on_mob": true,
+        "hide_on_mob": false,
         "column": 6,
         "padding_top": 40,
         "padding_bottom": 40,
