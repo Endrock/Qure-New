@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "header_landing_pFmaRH": {
       "type": "header-landing-simple",
@@ -50,8 +50,8 @@
         "button_LUpm3B": {
           "type": "button",
           "settings": {
-            "button_label": "Learn more about Micro-Infusion Targeted Patches",
-            "button_url": "https://www.qureskincare.com/products/micro-infusion-targeted-patches"
+            "button_label": "Learn more about Shower Filter",
+            "button_url": "https://qureskincare.com/products/shower-filter"
           }
         }
       },
@@ -59,15 +59,15 @@
         "button_LUpm3B"
       ],
       "settings": {
-        "heading": "Micro-Infusion Targeted Patches Creative Content Guide",
-        "text": "<p>Hey skincare enthusiasts!</p><p>Ready to take your content to the next level?</p><p>Our creative guide will help you showcase the magic of the Qure Micro-Infusion Targeted Patches. Let's create stunning, engaging content that highlights how this game-changing product transforms skincare routines!</p>",
-        "wistia_id": "0gi4vtjhzc"
+        "heading": "Shower Filter Creative Content Guide",
+        "text": "<p>Hey skincare enthusiasts!</p><p>Ready to take your content to the next level?</p><p>Unlock the full potential of the Qure Shower Filter with our creative content guide. This brief will help you craft engaging content that showcases how our innovative tool transforms skincare and haircare routines.</p>",
+        "wistia_id": "lz3wlopem0"
       }
     },
     "qure_founder_LkfQUT": {
       "type": "qure-founder",
       "settings": {
-        "heading": "“To have argireline in a very targeted patch is GENIUS; it’s a botox-like peptide that really helps with fine lines”",
+        "heading": "“Throughout my life… living in Wilmington, [my] skin was great. Then I… move to Charlotte and… every week my skin would get irritated especially after showering. Even my hair wouldn't cooperate. I was convinced it was the water I was exposed to... Turns out, there’s an overwhelming amount of data that the water hardness could affect your skin.”",
         "sub_heading": "<p><strong>- Dr. Muneeb Shah, MD</strong>, Board certified dermatologist</p>",
         "image": "shopify://shop_images/dr.shah_new.webp",
         "trust_des": "Trusted and recommended by world leading Dermatologists",
@@ -82,67 +82,37 @@
           "settings": {
             "heading": "STEP 1",
             "text": "Merge Qure into your creatives",
-            "image": "shopify://shop_images/ac_pro4.webp",
+            "image": "shopify://shop_images/step1_img.webp",
             "button_label": "Content Requirements"
           }
         },
         "description_mHnPFA": {
           "type": "description",
           "settings": {
-            "classname": "faq",
+            "classname": "",
             "heading": "Key Messages",
             "image": "shopify://shop_images/key_message.svg",
-            "content": "<p>Key Points to include in the messaging:</p>",
+            "content": "<p>Key Points to include in the messaging:</p><p></p><ul><li>Easy installation of the triple-filter showerhead for the purest head-to-toe hydration.</li><li>Reduces chlorine, heavy metals & contaminants that irritate the skin, for an overall more hydrated, clearer skin.</li><li>Reduces limescale buildup which can dry out skin & hair, for smoother & softer skin and tresses.</li><li>Customizable water flow settings: Rainfall, Massage and Power Spray</li></ul>",
             "wistia_id": ""
-          }
-        },
-        "collapsed_aNzhwA": {
-          "type": "collapsed",
-          "settings": {
-            "heading": "Deeper Delivery",
-            "content": "<ul><li>Self-dissolving micro-darts infuse serum below the skin's surface for enhanced absorption and faster results.</li></ul>",
-            "show": true
-          }
-        },
-        "collapsed_aNzhwB": {
-          "type": "collapsed",
-          "settings": {
-            "heading": "Quick Application",
-            "content": "<ul><li>Patches self-dissolve in as little as two hours, providing powerful results quickly.</li></ul>",
-            "show": false
-          }
-        },
-        "collapsed_aNzhwC": {
-          "type": "collapsed",
-          "settings": {
-            "heading": "Target Multiple Concerns",
-            "content": "<ul><li>Effectively treats fine lines, wrinkles, dark circles, puffiness, and under-eye bags. </li></ul>",
-            "show": false
-          }
-        },
-        "collapsed_aNzhwD": {
-          "type": "collapsed",
-          "settings": {
-            "heading": "Versatile Treatment",
-            "content": "<ul><li>Ultimate all-in-one patches that contain <strong>science backed,</strong> age-defying ingredients such as <strong>retinol, caffeine, niacinamide, licorice, and peptides</strong> for brighter-looking, smoother-feeling skin.</li></ul>",
-            "show": false
           }
         },
         "description_tVQDHe": {
           "type": "description",
           "settings": {
+            "classname": "",
             "heading": "Creative Direction",
             "image": "shopify://shop_images/direction.svg",
-            "content": "<ul><li>High quality, bright lighting and high-resolution imagery/videography to be supplied. No obvious filters.</li><li>Micro-Infusion Targeted Patches to be the feature of the post. The background must be clean and bright.</li><li>When wearing the product, please do not wear any make-up, or no visible/noticeable makeup.</li><li>Before and after imaging to showcase the results, if possible</li></ul>",
+            "content": "<ul><li>High-quality, bright lighting and high-resolution imagery/ videography to be supplied. No obvious filters.</li><li>Qure Shower filter to be the feature of the post. The background must be clean and bright.</li><li>When using the product, please do not wear any makeup, or no visible/noticeable makeup. Please include a clip of the filter installation and a before and after of your hair/skin.</li><li>In cover photos for video content always show yourself using the Qure Shower filter, unless otherwise agreed on with Qure’s team.</li></ul>",
             "wistia_id": ""
           }
         },
         "description_cpREQp": {
           "type": "description",
           "settings": {
+            "classname": "",
             "heading": "Inclusion",
             "image": "shopify://shop_images/inclusion.svg",
-            "content": "<ul><li>Tag and mention @qureskincare, #qureskincare, #microinfusion, #eyepatches, #targetedpatches, #skincare, #skincaretips, #skincarehacks, #qurepatches for a chance to be featured on Qure Skincare social media pages.</li><li>Please include your affiliate link or link provided by Qure in Instagram stories and in captions of YouTube videos. If can’t be placed in BIO then please include in linktr.ee or similar.</li></ul>",
+            "content": "<ul><li>Tag and mention @qureskincare #QureSkincare #showerfilter #Skincare #qureshowerfilter #qurefilter</li><li>Include your affiliate or other links provided by Qure in Instagram Stories and content captions. If the link can’t be placed in BIO, include it in linktr.ee or similar.</li></ul>",
             "wistia_id": ""
           }
         },
@@ -151,35 +121,63 @@
           "settings": {
             "heading": "STEP 2",
             "text": "Get to know Micro-Infusion Targeted Patches",
-            "image": "shopify://shop_images/ac_pro5.webp",
+            "image": "shopify://shop_images/step2_img.webp",
             "button_label": "Product Information"
           }
         },
         "description_6WtF8b": {
           "type": "description",
           "settings": {
+            "classname": "",
             "heading": "Product Details",
             "image": "shopify://shop_images/search.svg",
-            "content": "<ul><li>80 self-dissolving micro-darts in each patch that melt into the skin for deeper ingredient delivery</li><li>Stay comfortably for 2-6 hours, or overnight for best results</li><li>Continually works to give a rejuvenated look to your skin</li></ul><p><br/><a href=\"https://www.qureskincare.com/products/micro-infusion-targeted-patches\" title=\"https://www.qureskincare.com/products/micro-infusion-targeted-patches\">Learn more about Micro-Infusion Targeted Patches &gt;</a></p>",
+            "content": "<p>Triple the Filtration Tech (for Triple the Clean)</p><ul><li>Carbon Fiber Layer - Removes up to 99% of chlorine, reducing skin irritation and dryness, leaving your skin and hair healthier.</li><li>KDF Layer - Targets and removes heavy metals like lead and mercury, providing cleaner water for your shower.</li><li>FOF (Filter of Future) - Helps reduce the buildup of hard water minerals such as calcium and magnesium, preventing scale and improving water flow.</li></ul>",
             "wistia_id": ""
           }
         },
         "description_BNpxL3": {
           "type": "description",
           "settings": {
+            "classname": "faq",
             "heading": "Usage Instructions",
             "image": "shopify://shop_images/usage_dir.svg",
-            "content": "<ul><li>After cleansing, simply peel off the adhesive strips.</li><li>Gently press for 5-10 seconds. The micro-cones dissolve the concentrated serum directly into the skin!</li><li>Wear for at least two hours. For best results, leave them on overnight!</li></ul>",
-            "wistia_id": "yy9nv8vwsn"
+            "content": "",
+            "wistia_id": ""
+          }
+        },
+        "collapsed_JkHeKT": {
+          "type": "collapsed",
+          "settings": {
+            "show": false,
+            "style": "default",
+            "heading": "Preparing Your Shower Head",
+            "content": "<ul><li>Remove the old shower head and clean the pipe. The Qure Shower Filter has a 2.5 GPM restrictor pre-installed. For compliance with stricter regulations in California, Colorado, Hawaii, Massachusetts, New York, Oregon, Rhode Island, Vermont, and Washington, replace it with the included 1.8 GPM restrictor. Check local guidelines for water flow requirements.</li></ul>",
+            "code": ""
+          }
+        },
+        "collapsed_EYEMK6": {
+          "type": "collapsed",
+          "settings": {
+            "show": false,
+            "style": "default",
+            "heading": "Installation steps",
+            "content": "<ul><li>Remove the Old Shower Head - Use the provided wrench or your hands to unscrew the old shower head by turning it counterclockwise. Discard the old head or keep it for future use.</li><li>Check the Qure Shower Filter - Inspect the neck of the Qure Shower Filter to ensure the filter is properly installed. The filter is already placed inside for convenience, but double-checking will help prevent issues.</li><li>Wrap the Pipe Threads - Use the plumber tape provided in the Qure Shower Filter kit. Wrap it around the pipe threads where the new shower head will attach. Wrap it twice to ensure a watertight seal, then tear the tape.</li><li>Install the Qure Shower Filter - Twist the Qure Shower Filter onto the prepared pipe until it’s securely fastened. Use the wrench to ensure it is tightly secured, but avoid over-tightening.</li><li>Test the Water Flow - Turn on the water and check for any leaks. If no leaks are present, you’re ready to enjoy your new, purified shower experience.</li></ul>",
+            "code": ""
+          }
+        },
+        "video_pCNrp9": {
+          "type": "video",
+          "settings": {
+            "wistia_id": "fsw2ted2a8"
           }
         },
         "description_GE3PNL": {
           "type": "description",
           "settings": {
-            "classname": "ingredient_text",
-            "heading": "Ingredient Details",
+            "classname": "",
+            "heading": "Product Claims",
             "image": "shopify://shop_images/product_claims.svg",
-            "content": "<p><strong>Retinol</strong><br/>A natural derivative of vitamin A, this hero ingredient speeds up the removal of old skin cells to reveal your best, most rejuvenated skin underneath.</p><p><strong>Niacinamide</strong><br/>A type of vitamin B3, this powerhouse ingredient helps maintain skin health for a brighter, more even skin tone. It also helps smooth the look of wrinkles – especially when combined with retinol.</p><p><strong>Caffeine</strong><br/>Caffeine works through micro-circulation, helping to fade the look of dark circles and under-eye bags – like a pick-me-up for the skin.</p><p><strong>Acetyl Hexapeptide-8-Peptides</strong><br/>This safe, synthetic form of Botox visibly reduces the appearance of fine lines and wrinkles & boosts collagen production. It’s the first peptide designed to target expression lines.</p><p><strong>Copper Peptides</strong><br/>Copper peptides promote collagen and elastin production which helps plump and tighten the skin. They also serve as an antioxidant, working to protect the skin against further barrier damage.</p><p><strong>Licorice</strong><br/>Licorice boasts anti-inflammatory properties that work wonders in reducing puffiness and soothing irritated skin.</p><p><a href=\"https://www.qureskincare.com/products/micro-infusion-targeted-patches\" title=\"https://www.qureskincare.com/products/micro-infusion-targeted-patches\">See FAQs for more information here</a></p>",
+            "content": "<ul><li>Fewer breakouts</li><li>Happier, hydrated skin</li><li>Less redness & irritation</li><li>Shinier & buildup free hair</li><li>Less green hues on dyed hair</li></ul>",
             "wistia_id": ""
           }
         },
@@ -188,7 +186,7 @@
           "settings": {
             "heading": "STEP 3",
             "text": "Get inspired by other content creators",
-            "image": "shopify://shop_images/ac_pro6.webp",
+            "image": "shopify://shop_images/step3_img.webp",
             "button_label": "Inspiring Content"
           }
         },
@@ -201,78 +199,69 @@
         "video_4Jjjcm": {
           "type": "video",
           "settings": {
-            "image": "shopify://shop_images/ac_video28.webp",
-            "wistia_id": "3u50hzflb5"
+            "image": "shopify://shop_images/sfc_vid1.webp",
+            "wistia_id": "11vsfrk9uy"
           }
         },
         "video_iHceHC": {
           "type": "video",
           "settings": {
-            "image": "shopify://shop_images/ac_video29.webp",
-            "wistia_id": "x7arp1lpjb"
+            "image": "shopify://shop_images/sfc_vid2.webp",
+            "wistia_id": "3c8vr0fdr8"
           }
         },
         "video_DmtewU": {
           "type": "video",
           "settings": {
-            "image": "shopify://shop_images/ac_video31.webp",
-            "wistia_id": "lssl9248yq"
-          }
-        },
-        "video_aRhpbz": {
-          "type": "video",
-          "settings": {
-            "image": "shopify://shop_images/ac_video30.webp",
-            "wistia_id": "f7bqwcqxef"
+            "image": "shopify://shop_images/sfc_vid3.webp",
+            "wistia_id": "hoizwwxble"
           }
         },
         "heading_fUcJta": {
           "type": "heading",
           "settings": {
-            "heading": "Explain the science behind"
+            "heading": "Show how it works for you"
           }
         },
         "video_H9fmrV": {
           "type": "video",
           "settings": {
-            "image": "shopify://shop_images/ac_video32.webp",
-            "wistia_id": "627d3cjaf0"
+            "image": "shopify://shop_images/sfc_vid4.webp",
+            "wistia_id": "u23jz8krro"
           }
         },
         "video_dpGpUm": {
           "type": "video",
           "settings": {
-            "image": "shopify://shop_images/ac_video33.webp",
-            "wistia_id": "9bv0lzoi1d"
+            "image": "shopify://shop_images/sfc_vid5.webp",
+            "wistia_id": "r525h71wj2"
           }
         },
         "video_6gLP6V": {
           "type": "video",
           "settings": {
-            "image": "shopify://shop_images/ac_video34.webp",
-            "wistia_id": "o80k9gu5x2"
+            "image": "shopify://shop_images/sfc_vid6.webp",
+            "wistia_id": "x74iuwbtwm"
           }
         }
       },
       "block_order": [
         "header_RA46tw",
         "description_mHnPFA",
-        "collapsed_aNzhwA",
-        "collapsed_aNzhwB",
-        "collapsed_aNzhwC",
-        "collapsed_aNzhwD",
         "description_tVQDHe",
         "description_cpREQp",
         "header_LhpN6x",
         "description_6WtF8b",
         "description_BNpxL3",
+        "collapsed_JkHeKT",
+        "collapsed_EYEMK6",
+        "video_pCNrp9",
         "description_GE3PNL",
         "header_AwT6ji",
         "heading_YiyFGP",
         "video_4Jjjcm",
         "video_iHceHC",
         "video_DmtewU",
-        "video_aRhpbz",
         "heading_fUcJta",
         "video_H9fmrV",
         "video_dpGpUm",

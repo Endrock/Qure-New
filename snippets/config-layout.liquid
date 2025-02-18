@@ -204,6 +204,10 @@
         {% assign main_class = 'review_and-results' %}
         <link rel="stylesheet" href="{{ 'reviews-and-results.css' | asset_url }}">
     {% when 'page.patches-content-guide' %}
+        {% assign main_class = 'content_instructions' %}
+        <link rel="stylesheet" href="{{ 'content-instructions.css' | asset_url }}">
+        <link rel="stylesheet" href="{{ 'affiliate.css' | asset_url }}">
+    {% when 'page.shower-filter-creative-br' %}
         {% assign main_class = 'content_instructions content_instructions_patches' %}
         <link rel="stylesheet" href="{{ 'content-instructions.css' | asset_url }}">
         <link rel="stylesheet" href="{{ 'affiliate.css' | asset_url }}">
