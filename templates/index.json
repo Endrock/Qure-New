@@ -114,9 +114,9 @@
         "link_GirQqh": {
           "type": "link",
           "settings": {
-            "link_label": "Shop & Save",
-            "link_label_mobile": "Shop & Save",
-            "link_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal#Pro-Aging-Bundles"
+            "link_label": "Shop Best Sellers",
+            "link_label_mobile": "Shop Best Sellers",
+            "link_url": "shopify://collections/best-sellers"
           }
         },
         "product_BANXY7": {
@@ -130,7 +130,7 @@
         "banner_6wgzUN": {
           "type": "banner",
           "settings": {
-            "heading": "Save up to 66% on Exclusive Bundles",
+            "heading": "Save up to 55% on Exclusive Bundles",
             "image": "shopify://shop_images/sub_banner.webp",
             "image_mobile": "shopify://shop_images/sub_banner-mob.webp",
             "link_label": "Buy Now",
@@ -143,16 +143,15 @@
         "product_BANXY7",
         "banner_6wgzUN"
       ],
-      "disabled": true,
       "settings": {
-        "heading": "LOVE YOUR SKIN",
-        "heading_mobile": "LOVE YOUR SKIN",
+        "heading": "",
+        "heading_mobile": "",
         "heading_tag": "h1",
-        "subheading": "<p>on Exclusive <strong>Valentine’s Day </strong>Micro-Infusion Bundle</p>",
-        "subheading_mobile": "<p>Exclusive <strong>Valentine’s Day </strong>Micro-Infusion Bundle</p>",
-        "text": "<p>66% Off</p>",
-        "image": "shopify://shop_images/hero_valentine_banner_desktop.webp",
-        "image_mobile": "shopify://shop_images/hero_valentine_banner_mob.webp",
+        "subheading": "<h3>Get clinic-level results</h3><h4>from home- minus</h4><h5>the ‘clinical’ costs.</h5>",
+        "subheading_mobile": "<h3>Get clinic-level results</h3><h4>from home- minus</h4><h5>the ‘clinical’ costs.</h5>",
+        "text": "<p><strong>50,000+ </strong>customers feel more confident in their own skin.</p>",
+        "image": "shopify://shop_images/hm_banner_clinic_results.webp",
+        "image_mobile": "shopify://shop_images/hm_banner_clinic_results.png_mob.webp",
         "wistia_id": ""
       }
     },
@@ -273,6 +272,7 @@
         "product_4ArLn3",
         "product_BA8d6X"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Rediscover Your Confidence \\n",
         "heading_mobile": "",
