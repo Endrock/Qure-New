@@ -964,3 +964,7 @@
 .led_lp .result_slider {
     overflow: unset;
 }
+/* updated css on 17 feb 25 for led-mask-offer-2*/
+.announcement_bar p {
+    font-weight: 600;
+}

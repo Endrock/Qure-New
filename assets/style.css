@@ -30805,12 +30805,6 @@ p {
     background-color: #fff;
 }
 
-.dot_pagination .swiper-pagination-bullet {
-    margin: 0 11px !important;
-    height: 14px;
-    width: 14px;
-}
-
 .pagination_navigation {
     position: relative;
     display: grid;
@@ -32362,3 +32356,14 @@ main.faucet_filter .price .new_price, main.shower_filter .price .new_price{
     padding: 13px 0;
     font-size: 18px;
 } 
+.ctm_banner_tab_slider .dot_pagination .swiper-pagination-bullet {
+    margin: 0 11px !important;
+    height: 14px;
+    width: 14px;
+}
+.ctm_banner_tab_slider .get_clearer_wrapper p {
+    padding: 8px 0;
+}
+.header-new .menu {
+    justify-content: left !important;
+}

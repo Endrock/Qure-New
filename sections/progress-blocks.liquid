@@ -5,7 +5,7 @@
         {%- if section.settings.section_heading != blank -%}
             <div class="section_header mb-3 text-center">
                 <h2 class="title-lg paddingB">{{ section.settings.section_heading }}</h2>
-                <p>{{ section.settings.subheading }}</p>
+                {{ section.settings.subheading }}
             </div>
         {% endif %}
         <div class="user_report_wrap">

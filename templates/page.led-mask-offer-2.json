@@ -9,8 +9,8 @@
             "heading": "SAVE $100 | FREE Worldwide Shipping",
             "heading_mobile": "SAVE $100 | FREE Worldwide Shipping",
             "color": "white",
-            "font_size_desktop": 14,
-            "font_size_mobile": 13
+            "font_size_desktop": 12,
+            "font_size_mobile": 12
           }
         },
         "navigation_link_enLf8t": {
@@ -62,8 +62,10 @@
           "settings": {
             "btn_text": "Product",
             "image": "shopify:\/\/shop_images\/led-lp-product-1.webp",
-            "image2": "shopify:\/\/shop_images\/led_large_3.webp",
-            "image3": "shopify:\/\/shop_images\/led_large_4.webp",
+            "image2": "shopify:\/\/shop_images\/led-lp-product-2_a34438d7-0aba-4590-a45d-39a24ddb1753.webp",
+            "image3": "shopify:\/\/shop_images\/led-lp-product-3.webp",
+            "image4": "shopify:\/\/shop_images\/led-lp-product-5_1.webp",
+            "image5": "shopify:\/\/shop_images\/led-lp-product-6.webp",
             "wistia": ""
           }
         },
@@ -74,6 +76,7 @@
             "image": "shopify:\/\/shop_images\/led-lp-result-1.webp",
             "image2": "shopify:\/\/shop_images\/led-lp-result-2-2.png",
             "image3": "shopify:\/\/shop_images\/led-lp-result-3.png",
+            "image4": "shopify:\/\/shop_images\/led-lp-result-4_1.webp",
             "wistia": ""
           }
         },
