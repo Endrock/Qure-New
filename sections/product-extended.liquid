@@ -343,7 +343,7 @@
                                 <img src="{{ 'dermatologist.svg' | asset_url }}" alt="">
                                 <p>{{ section.settings.underbutton_text_left }}</p>
                             </div>
-                            <div class="s_bx free-shipping-guarentee-original">
+                            <div class="s_bx {% if render_qrejuvalight_shipping_badge or render_neck_decotellage_shipping_badge %}free-shipping-guarentee-original{% endif %}">
                                 <img src="{{ 'shipping.svg' | asset_url }}" alt="">
                                 <p>{{ section.settings.underbutton_text_right }}</p>
                             </div>
