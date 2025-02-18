@@ -690,6 +690,9 @@
     color: #CB0000;
 } */
 @media(max-width:767px) {
+    .ctm_banner_tab_slider .title-lg, .ctm_cls_glowing .title-lg, .videosQure_dropdown .title-lg, .ctm_cls_therapy .title-lg, .ctm_cls_clinical .title-lg{
+        text-align: center;
+    }
     .green_txt{
         font-size: 12px;
         font-style: normal;

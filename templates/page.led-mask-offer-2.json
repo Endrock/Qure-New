@@ -333,19 +333,6 @@
             "verified": true
           }
         },
-        "slide_adRrEq": {
-          "type": "Slide",
-          "settings": {
-            "heading": "Thrilled with the results!",
-            "product": "",
-            "text": "<p>“I am 45 so I am fighting signs of aging, but also still dealing with acne flare ups. I haven’t had a single breakout since I started using the mask, plus I notice a definite smoothing of fine wrinkles on my cheeks & around my eyes. I recommend this product to anyone. Well worth the investment”<\/p>",
-            "image": "shopify:\/\/shop_images\/results_jessica1.webp",
-            "image_country": "shopify:\/\/shop_images\/USA_07.png",
-            "client": "Jessica K.",
-            "concerns": "Acne",
-            "verified": true
-          }
-        },
         "slide_DX9Rxd": {
           "type": "Slide",
           "settings": {
@@ -385,6 +372,19 @@
             "verified": true
           }
         },
+        "slide_adRrEq": {
+          "type": "Slide",
+          "settings": {
+            "heading": "Thrilled with the results!",
+            "product": "",
+            "text": "<p>“I am 45 so I am fighting signs of aging, but also still dealing with acne flare ups. I haven’t had a single breakout since I started using the mask, plus I notice a definite smoothing of fine wrinkles on my cheeks & around my eyes. I recommend this product to anyone. Well worth the investment”<\/p>",
+            "image": "shopify:\/\/shop_images\/results_jessica1.webp",
+            "image_country": "shopify:\/\/shop_images\/USA_07.png",
+            "client": "Jessica K.",
+            "concerns": "Acne",
+            "verified": true
+          }
+        },
         "slide_QJnzg7": {
           "type": "Slide",
           "settings": {
@@ -411,19 +411,6 @@
             "verified": true
           }
         },
-        "slide_BdQDkC": {
-          "type": "Slide",
-          "settings": {
-            "heading": "Best Investment in my skin",
-            "product": "",
-            "text": "<p>“It has been amazing, so easy to use for a start. And I am already noticing massive improvements, the texture of my skin has gone from rough and bumpy to silky smooth and I have stopped breaking out since using the blue light feature. I love it, couldn’t recommend it highly enough!”<\/p>",
-            "image": "shopify:\/\/shop_images\/Group_1299_f3874fc3-3157-48c1-b479-be960ef088b4.png",
-            "image_country": "shopify:\/\/shop_images\/uk.png",
-            "client": "Saskia Z.",
-            "concerns": "Acne",
-            "verified": true
-          }
-        },
         "button_AqAqD3": {
           "type": "button",
           "settings": {
@@ -436,13 +423,12 @@
         "slide_DCrhFV",
         "slide_VMg3Un",
         "slide_gi4QAF",
-        "slide_adRrEq",
         "slide_DX9Rxd",
         "slide_qyDEze",
         "slide_mDCRUy",
+        "slide_adRrEq",
         "slide_QJnzg7",
         "slide_3jCVqe",
-        "slide_BdQDkC",
         "button_AqAqD3"
       ],
       "settings": {
@@ -502,7 +488,7 @@
         "wistia_prGGCT"
       ],
       "settings": {
-        "heading": "How To Use & Get Compliment-Worthy Skin"
+        "heading": "Get Compliment-Worthy Skin"
       }
     },
     "services_slider_kERVyr": {
@@ -590,6 +576,7 @@
         "classname": "section videosQure videosQure_dropdown",
         "btn": "Transform My Skin & Save $299",
         "btn_url": "#shop",
+        "ctm_cls_btn": "mw-402",
         "desk_slide": 4,
         "mob_slide": 1.7,
         "slide_space": 10
@@ -639,7 +626,7 @@
         "padding_top": 40,
         "padding_bottom": 40,
         "show_comment": false,
-        "custom_class": ""
+        "custom_class": "ctm_cls_therapy"
       }
     },
     "compare_ET6dtG": {
@@ -648,7 +635,7 @@
         "object_ErPtzb": {
           "type": "object",
           "settings": {
-            "image": "shopify:\/\/shop_images\/beauty_ledmask1.webp",
+            "image": "shopify:\/\/shop_images\/beauty_ledmask1_7162818b-1c00-4d06-9205-9db7248329dd.webp",
             "heading": "Q-Rejuvalight Pro LED Mask",
             "mob_text": "",
             "text": "<p><strong>one-time cost<\/strong><\/p>",
@@ -660,7 +647,7 @@
         "object_EpBLnG": {
           "type": "object",
           "settings": {
-            "image": "shopify:\/\/shop_images\/beauty_derma1.webp",
+            "image": "shopify:\/\/shop_images\/beauty_derma1_90642ea5-ff15-455f-b874-a3a8a051ae4a.webp",
             "heading": "Derm\/ Clinic Treatments",
             "mob_text": "",
             "text": "<p><strong>per 6 session treatment <\/strong><\/p>",
@@ -675,7 +662,7 @@
         "object_EpBLnG"
       ],
       "settings": {
-        "classname": "beauty_skincare section bg-white price_lg_weight",
+        "classname": "beauty_skincare section bg-white price_lg_weight ctm_cls_clinical",
         "sub_head": "",
         "heading": "Clinical Results Without The Clinical Price Tag",
         "heading_reduced": "",
@@ -755,7 +742,8 @@
           "type": "button",
           "settings": {
             "ext_btn": "Transform My Skin & Save $299",
-            "ext_url": "#shop"
+            "ext_url": "#shop",
+            "ctm_cls_btn": "mw-402"
           }
         }
       },
@@ -773,8 +761,8 @@
       "settings": {
         "background": "bg-lightGrey",
         "classname": "mw-932",
-        "heading": "The answers to your questions",
-        "text": "",
+        "heading": "Have questions?",
+        "text": "<p>We have answers.<\/p>",
         "button_label": "",
         "button_hide_label": ""
       }
