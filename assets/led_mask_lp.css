@@ -1001,3 +1001,6 @@
     height: 100%;
     width: 100%;
 }
+.ctm_cls_glowing .result_item_info {
+    padding: 0 15px;
+}
