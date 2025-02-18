@@ -997,3 +997,7 @@
 .worthy ul#pills-tab-skin {
     justify-content: left !important;
 }
+.ctm_cls_glowing .flag_img img {
+    height: 100%;
+    width: 100%;
+}
