@@ -981,3 +981,6 @@
 .ctm_cls_glowing .refill_review p {
     text-decoration: none;
 }
+.ctm_cls_glowing .result_learnMore .skin_concerns {
+    padding: 0 13px;
+}
