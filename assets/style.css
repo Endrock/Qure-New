@@ -31480,7 +31480,7 @@ p {
 /* ------------------ Press Slider End ------------------- */
 .press_bl {
     padding: 44px 0;
-    background-color: var(--clr-yellow);
+    background-color: var(--clr-grey);
     overflow: hidden;
 }
 
