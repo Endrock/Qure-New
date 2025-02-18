@@ -987,3 +987,10 @@
 .ctm_banner_tab_slider .refill_review p {
     font-size: 13px;
 }
+.tootltip_text {
+    display: flex;
+    justify-content: center;
+}
+.ctm_cls_glowing h2.title-lg {
+    margin-bottom: 25px;
+}
