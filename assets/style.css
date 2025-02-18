@@ -32358,3 +32358,7 @@ main.faucet_filter .price .new_price, main.shower_filter .price .new_price{
 .price_lg_weight .bs_price .sale_p {
     font-weight: 500;
 }
+.btn_green{
+    padding: 13px 0;
+    font-size: 18px;
+} 
