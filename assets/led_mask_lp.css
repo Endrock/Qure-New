@@ -959,6 +959,13 @@
         margin: 0 20px;
     }
 }
+@media(min-width:768px){
+    .ctm_banner_tab_slider .dot_pagination .swiper-pagination-bullet {
+        margin: 0 11px !important;
+        height: 14px;
+        width: 14px;
+    }
+}
 
 .led_lp .result_s {
     overflow: hidden;
@@ -970,11 +977,6 @@
 /* updated css on 17 feb 25 for led-mask-offer-2*/
 .announcement_bar p {
     font-weight: 600;
-}
-.ctm_banner_tab_slider .dot_pagination .swiper-pagination-bullet {
-    margin: 0 11px !important;
-    height: 14px;
-    width: 14px;
 }
 .ctm_cls_glowing .refill_review p {
     text-decoration: none;
