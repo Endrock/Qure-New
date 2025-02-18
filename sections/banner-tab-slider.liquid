@@ -36,7 +36,8 @@
                             </a>
                             {%- endif -%}
                             {%- if section.settings.recomand != blank -%}
-                            <p><span><img class="me-1"src="{{ section.settings.d_icon | image_url: width: 16 }}" alt=""></span>{{ section.settings.recomand }} 
+                            <p><span><img class="me-1"src="{{ section.settings.d_icon | image_url: width: 16 }}" alt=""></span>
+                            {{ section.settings.recomand }}
                             </p>
                             {% endif %}
                         </div>
@@ -216,7 +217,7 @@
                     </div>
                 </div>
                 <div class="{% if section.settings.order_mob == true %}d-none{% else %}d-md-none{% endif %}">
-                    <div class="ss_list mw-452 pt-2 pb-4">
+                    <div class="ss_list mw-452 pt-2 pb-2">
                         {%- if section.settings.desc != blank -%}
                             <div class="ss_list mw-452 pt-2 pt-md-4 pb-4">
                                 {{ section.settings.desc }}
@@ -228,8 +229,8 @@
                         <a class="btn btn-lg btn-primary btn_green" href="{{ section.settings.btn_url }}"><span>{{ section.settings.btn_txt }}</span>
                         </a>
                         {%- endif -%}
-                        {%- if section.settings.recomand != blank -%}
-                        <p><span><img src="{{ section.settings.d_icon | image_url: width: 16 }}" alt=""></span>{{ section.settings.recomand }}
+                        {%- if section.settings.recomand_mob != blank -%}
+                        <p><span><img src="{{ section.settings.d_icon | image_url: width: 16 }}" alt=""></span>{{ section.settings.recomand_mob }}
                         </p>
                         {% endif %}
                     </div>
@@ -412,6 +413,11 @@
           "type": "text",
           "id": "recomand",
           "label": "t:common.recommended.label"
+        },
+        {
+          "type": "text",
+          "id": "recomand_mob",
+          "label": "t:common.recommended_mob.label"
         },
         {
             "type": "text",

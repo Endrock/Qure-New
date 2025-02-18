@@ -984,3 +984,6 @@
 .ctm_cls_glowing .result_learnMore .skin_concerns {
     padding: 0 13px;
 }
+.ctm_banner_tab_slider .refill_review p {
+    font-size: 13px;
+}
