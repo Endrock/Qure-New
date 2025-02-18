@@ -130,23 +130,35 @@
                     </div>
             {% endcase %}
         {% when 'video' %}
-            <div class="banner_img position-relative">
-                <img src="{{ block.settings.image | img_url: '400x' }}" alt="" class="img-fluid tab_img">
-                <a class="popup-youtube position-absolute top-0 bottom-0 start-0 end-0">
-                    <div class="wistia_responsive_padding"
-                        style="position:relative;">
+            {% if block.settings.image != blank %}
+                <div class="banner_img position-relative">
+                    <img src="{{ block.settings.image | img_url: '400x' }}" alt="" class="img-fluid tab_img">
+                    <a class="popup-youtube position-absolute top-0 bottom-0 start-0 end-0">
+                        <div class="wistia_responsive_padding"
+                            style="position:relative;">
+                            <div class="wistia_responsive_wrapper"
+                                style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                                <span
+                                    class="wistia_embed wistia_async_{{ block.settings.wistia_id }} popover=true videoFoam=true"
+                                    style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span>
+                            </div>
+                            <span class="d-flex justify-content-end" style="padding-right: 25px;">
+                                <img src="{{ 'trusted_play_eesm.svg' | asset_url }}" alt="" class="w-auto">
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            {% else %}
+                <div class="usage_instructions_video">
+                    <div class="wistia_responsive_padding" style="position:relative;">
                         <div class="wistia_responsive_wrapper"
                             style="height:100%;left:0;position:absolute;top:0;width:100%;">
-                            <span
-                                class="wistia_embed wistia_async_{{ block.settings.wistia_id }} popover=true videoFoam=true"
-                                style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span>
+                            <div class="wistia_embed wistia_async_{{ block.settings.wistia_id }} seo=false videoFoam=true"
+                                style="height:100%;position:relative;width:100%">&nbsp;</div>
                         </div>
-                        <span class="d-flex justify-content-end p-2">
-                            <img src="{{ 'trusted_play_eesm.svg' | asset_url }}" alt="" class="w-auto">
-                        </span>
                     </div>
-                </a>
-            </div>
+                </div>
+            {% endif %}
         {% when 'heading' %}
             {% if block.settings.heading != blank %}
                 {{ block.settings.heading }}
