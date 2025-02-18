@@ -1004,3 +1004,6 @@
 .ctm_cls_glowing .result_item_info {
     padding: 0 15px;
 }
+.tootltip_text p {
+    font-size: 11px;
+}
