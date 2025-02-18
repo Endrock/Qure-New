@@ -990,6 +990,7 @@
 .tootltip_text {
     display: flex;
     justify-content: center;
+    align-self: center;
 }
 .ctm_cls_glowing h2.title-lg {
     margin-bottom: 25px;
