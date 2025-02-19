@@ -12,6 +12,56 @@
         "name": "url",
         "category": "URL"
       }
+    },
+    {
+      "key": "cc-creator-drop-data",
+      "namespace": "creator",
+      "name": "CC Drop Data",
+      "description": null,
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    },
+    {
+      "key": "cc-creator-drop-product-enhancement-notes",
+      "namespace": "creator",
+      "name": "CC Drop Product Enhancement Notes",
+      "description": null,
+      "type": {
+        "name": "list.single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "cc-creator-drop-products",
+      "namespace": "creator",
+      "name": "CC Drop Products",
+      "description": null,
+      "type": {
+        "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "cc-creator-drop-creator",
+      "namespace": "creator",
+      "name": "CC Drop Creator",
+      "description": null,
+      "type": {
+        "name": "metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "cc-creator-drop-product-enhancement-media",
+      "namespace": "creator",
+      "name": "CC Drop Product Enhancement Media",
+      "description": null,
+      "type": {
+        "name": "list.single_line_text_field",
+        "category": "TEXT"
+      }
     }
   ],
   "company": [],
