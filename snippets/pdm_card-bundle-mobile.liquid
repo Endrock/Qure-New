@@ -1,3 +1,15 @@
+{% comment %}
+this snippets is used in pdm_products-bundle.liquid section, render card product in mobile
+  Usage:
+  {% render 'pdm_card-bundle-mobile'
+    product: product_object,
+    product-name: card.settings.custom_name,
+    product-img: card.settings.image_product,
+    show-rated: card.settings.show_top_rated,
+    show-badge: card.settings.show_badge,
+    btn-text: section.settings.button_card%}
+{% endcomment %}
+
 {% if product %}
 <div class="card-bundle mb" data-product-id="{{ product.selected_or_first_available_variant.id }}">
   <div class="rate mb" data-show="{{ show-rated }}" {% if show-rated == false %}style="visibility: hidden;"{% endif %} >

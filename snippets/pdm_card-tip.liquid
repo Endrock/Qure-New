@@ -1,3 +1,16 @@
+{% comment %}
+this snippets is used in pdm_lifestyle-tips.liquid section, render each tip in section
+  Usage:
+  {% render 'pdm_card-tip'
+    class: "test",
+    index: forloop.index,
+    length: forloop.length,
+    active-card:1,
+    image: block.settings.image_card,
+    title: block.settings.title,
+    description: block.settings.description
+    sources: block.settings.sources %}
+{% endcomment %}
 <div class="card {{ class }} {% if active-card == index %}active{% endif %}" index="{{ index }}" length="{{ length }}" > 
     <div class="cont-image">
         <img src="{{ image | img_url: "original" }}" alt="picture for {{ title }}" />
