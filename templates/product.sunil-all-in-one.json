@@ -29,7 +29,7 @@
         "liquid_EH7JLe": {
           "type": "liquid",
           "settings": {
-            "code": "{% render 'serums-allin-months-form' with section_id: section.id %}"
+            "code": "{% render 'serums-allin-months-form' with section_id: section.id, product: product %}"
           }
         }
       },
