@@ -117,6 +117,13 @@
             "wistia_id": ""
           }
         },
+        "media_kjtYgA": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/B_a_mi_atf.png",
+            "wistia_id": ""
+          }
+        },
         "media_7jTHzN": {
           "type": "media",
           "settings": {
@@ -142,13 +149,6 @@
           "type": "media",
           "settings": {
             "image": "shopify://shop_images/m.i_above_the_fold.png",
-            "wistia_id": ""
-          }
-        },
-        "media_kjtYgA": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/B_a_mi_atf.png",
             "wistia_id": ""
           }
         },
@@ -213,11 +213,11 @@
         "media_BGGnJg",
         "media_ewbVL3",
         "media_yDrJ3B",
+        "media_kjtYgA",
         "media_7jTHzN",
         "media_JqRMtg",
         "media_Hb9Dce",
         "media_LaQVR8",
-        "media_kjtYgA",
         "video_GAjMEW",
         "jump_to_section_fVDdbe",
         "jump_to_section_GE4tfE",
