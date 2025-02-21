@@ -31,6 +31,30 @@ function getShopifyCart () {
     });
 };
 
+const removeProductBundle = async () => {
+  try {
+    const cart = await getShopifyCart();
+    const getBundleInCart = cart.items.find(item => item.id === +(46199907123439));
+
+    if (!getBundleInCart) {
+      return { success: true, message: 'No bundle to remove' };
+    }
+
+    await window.cartRequestChange({
+      id: getBundleInCart.key,
+      quantity: 0
+    }, {} );
+
+    setTimeout(() => {
+      return { success: true,message: 'Bundle remove' };
+    }, 2000);
+
+  } catch (error) {
+    console.error('Error removing bundle:', error);
+    throw error;
+  }
+}
+
 const lifestyleInit = ()=>{
   if (!window.customElements.get('cards-tips')) {
     class CardsTips extends HTMLElement {
@@ -455,11 +479,19 @@ const productsBundleInit = ()=>{
         bundleToCart(){
           const btnSubmit = this.querySelector('.btn-section')
           if(!btnSubmit) return;
-          btnSubmit.addEventListener('click',() => {
-            if( this.getAttribute('data-bundle-used') === 'true' )return;
-            if(btnSubmit.classList.contains('disabled')) return;
+          btnSubmit.addEventListener('click',async () => {
+            const cartBundleMessage = document.querySelector('.cart-bundle-message');
+            if(cartBundleMessage) cartBundleMessage.classList.remove('hidden');
 
-            btnSubmit.classList.add('disabled')
+            if(this.getAttribute('data-bundle-used') === 'true') {
+              const usedMessage = document.querySelector('.cart-bundle-message__used-bundle');
+              if(usedMessage) usedMessage.classList.remove('hidden')
+              await removeProductBundle();
+            }else {
+              const unusedMessage = document.querySelector('.cart-bundle-message__unused-bundle')
+              if(unusedMessage) unusedMessage.classList.remove('hidden')
+            }
+
             const cards = this.querySelectorAll('.container-pb .card-bundle')
             cards.forEach((card) => {
               if(!card.classList.contains('active')){
@@ -490,6 +522,15 @@ const productsBundleInit = ()=>{
             window.cartRequestAdd({
               items
             }, {} )
+
+            setTimeout(() => {
+              if(cartBundleMessage) cartBundleMessage.classList.add('hidden');
+              const usedMessage = document.querySelector('.cart-bundle-message__used-bundle');
+              if(usedMessage) usedMessage.classList.add('hidden')
+              const unusedMessage = document.querySelector('.cart-bundle-message__unused-bundle')
+              if(unusedMessage) unusedMessage.classList.add('hidden')
+            }, 4000);
+
             this.setAttribute('data-bundle-used', 'true') 
           })
         }
@@ -534,7 +575,6 @@ const productsBundleInit = ()=>{
           if(!arrayBundleStorage) return;
           this.setAttribute('data-bundle-array', arrayBundleStorage);
         }
-
       }
       window.customElements.define('products-bundle', productsBundle );
     }
@@ -566,7 +606,6 @@ const flatingBundleInit = ()=>{
         attributeChangedCallback(name, oldValue, newValue) {
           if(name == 'data-bundle-array'){
             this.changeArrayBundle(oldValue,newValue);
-            this.availableButton(newValue)
             this.updatePrice()
             this.updateProgressBars()
           }
@@ -616,12 +655,20 @@ const flatingBundleInit = ()=>{
         bundleToCart(){
           const btnSubmit = this.querySelector('.btn-discount')
           if(!btnSubmit) return;
-          btnSubmit.addEventListener('click',() => {
-            if( this.getAttribute('data-bundle-used') === 'true' )return;
-            if(btnSubmit.classList.contains('disabled')) return;
-            
+          btnSubmit.addEventListener('click',async () => {
+            const cartBundleMessage = document.querySelector('.cart-bundle-message');
+            if(cartBundleMessage) cartBundleMessage.classList.remove('hidden');
+
+            if(this.getAttribute('data-bundle-used') === 'true') {
+              const usedMessage = document.querySelector('.cart-bundle-message__used-bundle');
+              if(usedMessage) usedMessage.classList.remove('hidden')
+              await removeProductBundle();
+            }else {
+              const unusedMessage = document.querySelector('.cart-bundle-message__unused-bundle')
+              if(unusedMessage) unusedMessage.classList.remove('hidden')
+            }
+
             btnSubmit.parentElement.classList.add('loading');
-            btnSubmit.classList.add('disabled')
             const bundleId = this.getAttribute('data-bundle-id')
             const arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
             const bundleInfoLiquid = JSON.parse(this.getAttribute('bundle-info'));
@@ -645,9 +692,17 @@ const flatingBundleInit = ()=>{
               items
             }, {} )
             setTimeout(() => {
+              if(cartBundleMessage) cartBundleMessage.classList.add('hidden');
+
               btnSubmit.parentElement.classList.remove('loading');
-            }, 1000);
-            this.setAttribute('data-bundle-used', 'true') 
+
+              const usedMessage = document.querySelector('.cart-bundle-message__used-bundle');
+              if(usedMessage) usedMessage.classList.add('hidden')
+              const unusedMessage = document.querySelector('.cart-bundle-message__unused-bundle')
+              if(unusedMessage) unusedMessage.classList.add('hidden')
+
+            }, 4000);
+            this.setAttribute('data-bundle-used', 'true')
             
           })
         }
@@ -705,16 +760,7 @@ const flatingBundleInit = ()=>{
             }
           })
         }
-        availableButton(newValue){
-          const arrayBundle = JSON.parse(newValue);
-          const btnSubmit = this.querySelector('.btn-discount')
-          if( this.getAttribute('data-bundle-used') === 'true' )return;
-          if(arrayBundle.length > 0){
-            btnSubmit.classList.remove('disabled')
-          }else{
-            btnSubmit.classList.add('disabled')
-          }
-        }
+
         updatePrice(){
           const price = (this.totalPrice / 100).toFixed(2);
           const discount = (this.totalPrice * this.discount ) / 100;

@@ -22,6 +22,25 @@
     Add item to unlock your discount!
     <img class="cart-mobile" src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/system-uicons_chevron-up.svg" alt="cart icon">
   </div>
+
+  <div class="cart-bundle-message hidden">
+    <div class="cart-bundle-message__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+        <path d="M35 20C35 28.2843 28.2843 35 20 35C11.7157 35 5 28.2843 5 20C5 11.7157 11.7157 5 20 5C28.2843 5 35 11.7157 35 20Z" stroke="#008763" stroke-width="2"/>
+        <path d="M12 19.5454L17.6471 25L28 15" stroke="#008763" stroke-width="2"/>
+      </svg>
+    </div>
+    <div class="cart-bundle-message__wrapper">
+      <div class="cart-bundle-message__unused-bundle hidden">
+        {% assign text_unused_bundle = section.settings.text_bubble_bundle_unused | replace: "${bundle-title}", "<strong>Personalized Skincare Bundle</strong>" %}
+        {{ text_unused_bundle }}
+      </div>
+      <div class="cart-bundle-message__used-bundle hidden">
+        {% assign text_used_bundle = section.settings.text_bubble_bundle_used %}
+        {{ text_used_bundle }}
+      </div>
+    </div>
+  </div>
   <div class="hbar show-responsive">
     <div class="grid-discount">
       {% assign products = section.settings.bundle_products.list_products.value | reverse | reverse %} 
@@ -86,10 +105,28 @@
       "label": "Bundle Products",
       "metaobject_type": "products_for_bundle_skincare_plan"
     },
+    {
+      "type": "header",
+      "content": "Message added bubble"
+    },
+    {
+      "type": "text",
+      "id": "text_bubble_bundle_unused",
+      "label": "Text Bubble Bundle Unused",
+      "default": "${bundle-title} <br> successfully added to your cart.",
+      "info": "Use ${bundle-title} to set the product title, This message will be displayed when the bundle is added to the cart."
+    },
+    {
+      "type": "text",
+      "id": "text_bubble_bundle_used",
+      "label": "Text Bubble Bundle Used",
+      "default": "Your Personalized Skincare Bundle <br> has been replaced with your updated selection.",
+      "info": "This message will be displayed when the bundle is updated in the cart."
+    }
   ],
   "presets": [
     {
-      "name": "Flating Bundle (PDM)",
+      "name": "Flating Bundle (PDM)"
     }
   ]
 }
