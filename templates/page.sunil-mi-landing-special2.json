@@ -696,15 +696,29 @@
             "client_details": "<strong>Dr Mona Patel,</strong> Internal Medicine"
           }
         },
+        "testimonial_6hYj9C": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/trusted_davim.webp",
+            "video_type": "video",
+            "video_link": "",
+            "youtube_link": "https://www.youtube.com/watch?v=0Lxofv19620",
+            "wistia_id": "",
+            "badge_txt": "654K Followers",
+            "title": "\"Unlike using harsh micro needles or Derma rollers, this one is super safe...\"",
+            "client_details": "<strong>Dr Davin Lim,</strong> Board-Certified Dermatologist"
+          }
+        },
         "testimonial_x78feU": {
           "type": "testimonial",
           "settings": {
+            "image": "shopify://shop_images/Dr._Prasanthi_Purusothaman_1.png",
             "video_type": "video",
             "video_link": "",
-            "wistia_id": "",
-            "badge_txt": "Subscriber/Views/Followers",
-            "title": "You'll see a kind of dewy glowy look after you use it but within a couple of days your skin really looks quite amazing.",
-            "client_details": "<strong>Dr Mona Patel,</strong> Internal Medicine"
+            "wistia_id": "47prunzk1h",
+            "badge_txt": "3,694 Followers",
+            "title": "\"...safe for generally all skin tones and types to perform at home without any risk of infection or trauma.\"",
+            "client_details": "<strong>Dr Prasanthi,</strong>  General Practitioner & Cosmetic Doctor"
           }
         }
       },
@@ -713,6 +727,7 @@
         "testimonial_WXBtL4",
         "testimonial_rqmcMA",
         "testimonial_RCq9Db",
+        "testimonial_6hYj9C",
         "testimonial_x78feU"
       ],
       "settings": {
