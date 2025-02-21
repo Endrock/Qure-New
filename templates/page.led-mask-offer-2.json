@@ -49,11 +49,6 @@
         "button_url": "#shop"
       }
     },
-    "main": {
-      "type": "temp-page-led-mask-offer-2",
-      "disabled": true,
-      "settings": {}
-    },
     "banner_tab_slider_yN96Cm": {
       "type": "banner-tab-slider",
       "blocks": {
@@ -114,7 +109,7 @@
     "liquid_QdAfKJ": {
       "type": "liquid",
       "settings": {
-        "code": "<script>\ndocument.addEventListener('DOMContentLoaded', function() {\n    var event = new Event('click', {\n        'bubbles': true,\n        'cancelable': true\n    });\n    document.querySelector(\"#pills-tab_iyUgHm\").dispatchEvent(event);\n});\n<\/script>",
+        "code": "<script>\ndocument.addEventListener('DOMContentLoaded', function() {\n    var event = new Event('click', {\n        'bubbles': true,\n        'cancelable': true\n    });\n    document.querySelector(\"#pills-tab_NMdxwM\").dispatchEvent(event);\n});\n<\/script>",
         "popup_micro_infusion_enabled": true
       }
     },
@@ -585,6 +580,12 @@
         "slide_space": 16
       }
     },
+    "liquid_6AqWXk": {
+      "type": "liquid",
+      "settings": {
+        "code": "{% render 'led-mask-offer-2-form' with section: section %}"
+      }
+    },
     "image_text_B6hJMx": {
       "type": "image-text",
       "blocks": {
@@ -773,7 +774,6 @@
   },
   "order": [
     "header_landing_SSnaTx",
-    "main",
     "banner_tab_slider_yN96Cm",
     "liquid_QdAfKJ",
     "featuredin_extended_KJygWt",
@@ -783,6 +783,7 @@
     "how_to_use_CQkLpj",
     "services_slider_kERVyr",
     "videos_list_yCa8iW",
+    "liquid_6AqWXk",
     "image_text_B6hJMx",
     "compare_ET6dtG",
     "faq_F7Vec6"
