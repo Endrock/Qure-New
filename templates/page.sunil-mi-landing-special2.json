@@ -687,6 +687,7 @@
         "testimonial_RCq9Db": {
           "type": "testimonial",
           "settings": {
+            "image": "shopify://shop_images/trusted_mona.webp",
             "video_type": "wistia",
             "video_link": "https://cdn.shopify.com/videos/c/o/v/71857fdec6b0497294117ed84cab480e.mp4",
             "wistia_id": "yuqb3gno7g",
