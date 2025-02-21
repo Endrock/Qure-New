@@ -682,6 +682,9 @@
     height: auto;
 }
 @media(max-width:767px) {
+    .ctm_banner_tab_slider .title-lg, .ctm_cls_glowing .title-lg, .videosQure_dropdown .title-lg, .ctm_cls_therapy .title-lg, .ctm_cls_clinical .title-lg{
+        text-align: center;
+    }
     .green_txt{
         font-size: 12px;
         font-style: normal;
@@ -951,6 +954,13 @@
         margin: 0 20px;
     }
 }
+@media(min-width:768px){
+    .ctm_banner_tab_slider .dot_pagination .swiper-pagination-bullet {
+        margin: 0 11px !important;
+        height: 14px;
+        width: 14px;
+    }
+}
 
 .led_lp .result_s {
     overflow: hidden;
@@ -958,4 +968,38 @@
 
 .led_lp .result_slider {
     overflow: unset;
+}
+/* updated css on 17 feb 25 for led-mask-offer-2*/
+.announcement_bar p {
+    font-weight: 600;
+}
+.ctm_cls_glowing .refill_review p {
+    text-decoration: none;
+}
+.ctm_cls_glowing .result_learnMore .skin_concerns {
+    padding: 0 13px;
+}
+.ctm_banner_tab_slider .refill_review p {
+    font-size: 13px;
+}
+.tootltip_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ctm_cls_glowing h2.title-lg {
+    margin-bottom: 25px;
+}
+.worthy ul#pills-tab-skin {
+    justify-content: left !important;
+}
+.ctm_cls_glowing .flag_img img {
+    height: 100%;
+    width: 100%;
+}
+.ctm_cls_glowing .result_item_info {
+    padding: 0 15px;
+}
+.tootltip_text p {
+    font-size: 11px;
 }

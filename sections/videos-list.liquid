@@ -132,7 +132,7 @@
 
                 {% if section.settings.btn != blank %}
                     <div class="get_clearer_wrapper text-center mt-5">
-                        <a class="btn btn-lg btn-primary btn_green" href="{% if section.settings.btn_url != blank%} {{ section.settings.btn_url }} {% endif %}">{{ section.settings.btn }}</a>
+                        <a class="btn btn-lg btn-primary btn_green {{ section.settings.ctm_cls_btn }}" href="{% if section.settings.btn_url != blank%} {{ section.settings.btn_url }} {% endif %}">{{ section.settings.btn }}</a>
                     </div>
                 {% endif %}
             </div>
@@ -146,6 +146,8 @@
     <script src="https://fast.wistia.com/embed/medias/3ahwzg8wjz.jsonp" async></script>
     <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 {% endif %}
+
+
 
 {% schema %}
     {
@@ -177,6 +179,11 @@
                 "type": "url",
                 "id": "btn_url",
                 "label": "t:common.button.url.label"
+            },
+            {
+                "type": "text",
+                "id": "ctm_cls_btn",
+                "label": "t:common.classname.label"
             },
             {
                 "type": "range",

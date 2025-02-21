@@ -30805,12 +30805,6 @@ p {
     background-color: #fff;
 }
 
-.dot_pagination .swiper-pagination-bullet {
-    margin: 0 11px !important;
-    height: 14px;
-    width: 14px;
-}
-
 .pagination_navigation {
     position: relative;
     display: grid;
@@ -32347,4 +32341,24 @@ main.faucet_filter .price_wrap, main.shower_filter .price_wrap{
 }
 main.faucet_filter .price .new_price, main.shower_filter .price .new_price{
     font-weight: 400;
+}
+/* updated css on 17 feb 25 for led-mask-offer-2*/
+.led_mask_offer_img_text .section_header {
+    padding-bottom: 10px;
+}
+.led_mask_offer_img_text p{
+    padding-bottom: 15px;
+}
+.price_lg_weight .bs_price .sale_p {
+    font-weight: 500;
+}
+.btn_green{
+    padding: 13px 0;
+    font-size: 18px;
+} 
+.ctm_banner_tab_slider .get_clearer_wrapper p {
+    padding: 8px 0;
+}
+.header-new .menu {
+    justify-content: left !important;
 }

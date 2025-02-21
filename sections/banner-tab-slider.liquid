@@ -1,6 +1,6 @@
 {% assign random_number = 'now' | date: '%s' | modulo: 100 | plus: 1 %}
 <!-- -- main banner start -- -->
-<div class="refill_bl py-3 py-md-4 tabSlider offer-lp">
+<div class="refill_bl py-3 py-md-4 tabSlider offer-lp ctm_banner_tab_slider">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -24,22 +24,24 @@
                         <h2 class="{{ section.settings.heading_size }}">{{ section.settings.heading }}</h2>
                         {%- endif -%}
                     </div>
-                    <div class="{% if section.settings.order_mob == true %}d-block{% else %}none{% endif %}">
+                    <div class="{% if section.settings.order_mob == true %}d-block{% else %}none{% endif %}  d-none d-md-block">
                         {%- if section.settings.desc != blank -%}
                         <div class="ss_list mw-452 pt-3 pb-4">
                             {{ section.settings.desc }}
                         </div>
                         {%- endif -%}
-                        <div class="get_clearer_wrapper text-center ms-0 mt-md-2">
+                        <div class="get_clearer_wrapper text-center ms-0 mt-md-2 mw-402">
                             {%- if section.settings.btn_txt != blank -%}
                             <a class="btn btn-lg btn-primary btn_green" href="{{ section.settings.btn_url }}"><span>{{ section.settings.btn_txt }}</span>
                             </a>
                             {%- endif -%}
                             {%- if section.settings.recomand != blank -%}
-                            <p><span><img src="{{ section.settings.d_icon | image_url: width: 16 }}" alt=""></span>{{ section.settings.recomand }} 
+                            <p><span><img class="me-1"src="{{ section.settings.d_icon | image_url: width: 16 }}" alt=""></span>
+                            {{ section.settings.recomand }}
                             </p>
                             {% endif %}
                         </div>
+                        {%  if section.settings.underbutton_text_left !=blank %}
                         <div class="shipping shipping_bg bg-transparent mt-2">
                             <div class="s_bx">
                                 <img src="{{ 'dermatologist.svg' | asset_url }}" alt="">
@@ -50,6 +52,7 @@
                                 <p>{{ section.settings.underbutton_text_right }}</p>
                             </div>
                         </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -137,9 +140,55 @@
                                             </picture>
                                         </div>
                                         {%- endif -%}
+                                        {%- if block.settings.image4 != blank -%}
+                                        <div class="swiper-slide">
+                                            <picture id="image-id">
+                                                <source media="(min-width:1920px)"
+                                                    srcset="{{ block.settings.image4 | img_url: 'master' }}"
+                                                    class="img-fluid tab_img">
+                                                <source media="(min-width:1600px)"
+                                                    srcset="{{ block.settings.image4 | img_url: 'master' }}"
+                                                    class="img-fluid tab_img">
+                                                <source media="(min-width:1100px)"
+                                                    srcset="{{ block.settings.image4 | img_url: 'master' }}"
+                                                    class="img-fluid tab_img">
+                                                <source media="(min-width:720px)"
+                                                    srcset="{{ block.settings.image4 | img_url: 'master' }}"
+                                                    class="img-fluid tab_img">
+                                                <source media="(min-width:540px)"
+                                                    srcset="{{ block.settings.image4 | img_url: 'master' }}"
+                                                    class="img-fluid tab_img">
+                                                <img src="{{ block.settings.image4 | img_url: 'master' }}" alt=""
+                                                    class="img-fluid tab_img" width="100" height="100">
+                                            </picture>
+                                        </div>
+                                        {%- endif -%}
+                                        {%- if block.settings.image5 != blank -%}
+                                        <div class="swiper-slide">
+                                            <picture id="image-id">
+                                                <source media="(min-width:1920px)"
+                                                    srcset="{{ block.settings.image5 | img_url: 'master' }}"
+                                                    class="img-fluid tab_img">
+                                                <source media="(min-width:1600px)"
+                                                    srcset="{{ block.settings.image5 | img_url: 'master' }}"
+                                                    class="img-fluid tab_img">
+                                                <source media="(min-width:1100px)"
+                                                    srcset="{{ block.settings.image5 | img_url: 'master' }}"
+                                                    class="img-fluid tab_img">
+                                                <source media="(min-width:720px)"
+                                                    srcset="{{ block.settings.image5 | img_url: 'master' }}"
+                                                    class="img-fluid tab_img">
+                                                <source media="(min-width:540px)"
+                                                    srcset="{{ block.settings.image5 | img_url: 'master' }}"
+                                                    class="img-fluid tab_img">
+                                                <img src="{{ block.settings.image5 | img_url: 'master' }}" alt=""
+                                                    class="img-fluid tab_img" width="100" height="100">
+                                            </picture>
+                                        </div>
+                                        {%- endif -%}
                                         {%- if block.settings.wistia != blank -%}
                                             <div class="swiper-slide">
-                                                <div class="wistia_responsive_padding" style="position:relative;">
+                                                <div class="wistia_responsive_padding my-5 " style="position:relative;">
                                                     <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
                                                         <div class="wistia_embed wistia_async_{{ block.settings.wistia }} seo=false videoFoam=true" style="height:100%;position:relative;width:100%">
                                                             <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/pdqr8phbrl/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div>
@@ -168,9 +217,9 @@
                     </div>
                 </div>
                 <div class="{% if section.settings.order_mob == true %}d-none{% else %}d-md-none{% endif %}">
-                    <div class="ss_list mw-452 pt-2 pb-4">
+                    <div class="ss_list mw-452 pt-2 pb-2">
                         {%- if section.settings.desc != blank -%}
-                            <div class="ss_list mw-452 pt-4 pb-4">
+                            <div class="ss_list mw-452 pt-2 pt-md-4 pb-4">
                                 {{ section.settings.desc }}
                             </div>
                         {%- endif -%}
@@ -180,8 +229,8 @@
                         <a class="btn btn-lg btn-primary btn_green" href="{{ section.settings.btn_url }}"><span>{{ section.settings.btn_txt }}</span>
                         </a>
                         {%- endif -%}
-                        {%- if section.settings.recomand != blank -%}
-                        <p><span><img src="{{ section.settings.d_icon | image_url: width: 16 }}" alt=""></span>{{ section.settings.recomand }}
+                        {%- if section.settings.recomand_mob != blank -%}
+                        <p><span><img class="me-1" src="{{ section.settings.d_icon | image_url: width: 16 }}" alt=""></span>{{ section.settings.recomand_mob }}
                         </p>
                         {% endif %}
                     </div>
@@ -366,6 +415,11 @@
           "label": "t:common.recommended.label"
         },
         {
+          "type": "text",
+          "id": "recomand_mob",
+          "label": "t:common.recommended_mob.label"
+        },
+        {
             "type": "text",
             "id": "underbutton_text_left",
             "label": "t:common.text.label",
@@ -408,6 +462,16 @@
                 {
                     "type": "image_picker",
                     "id": "image3",
+                    "label": "t:common.image.label"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image4",
+                    "label": "t:common.image.label"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image5",
                     "label": "t:common.image.label"
                 },
                 {
