@@ -674,13 +674,14 @@
         "testimonial_rqmcMA": {
           "type": "testimonial",
           "settings": {
+            "image": "shopify://shop_images/alexis.png",
             "video_type": "youtube",
             "video_link": "",
-            "youtube_link": "https://www.youtube.com/watch?v=1iXBgh7WPOY",
+            "youtube_link": "https://www.youtube.com/watch?v=ZMGm5PmWzF0",
             "wistia_id": "",
-            "badge_txt": "Subscriber/Views/Followers",
-            "title": "I’ve liked using this in between my in-office treatments. It’s convenient and you get all the benefits of micro-needling treatment from the comfort of your home...",
-            "client_details": "<strong>Dr Mona Patel,</strong> Internal Medicine"
+            "badge_txt": "53k Followers",
+            "title": "You can get a Clinical treatment at home safely and conveniently... It is particularly beneficial for those with melanin rich Skin",
+            "client_details": "<strong>Dr Alexis Stephens,</strong>  Board-Certified Dermatologist"
           }
         },
         "testimonial_RCq9Db": {
