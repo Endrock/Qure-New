@@ -117,17 +117,17 @@
             "wistia_id": ""
           }
         },
-        "media_kjtYgA": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/B_a_mi_atf.png",
-            "wistia_id": ""
-          }
-        },
         "media_7jTHzN": {
           "type": "media",
           "settings": {
             "image": "shopify://shop_images/mi_refill-result-1.webp",
+            "wistia_id": ""
+          }
+        },
+        "media_kjtYgA": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/B_a_mi_atf.png",
             "wistia_id": ""
           }
         },
@@ -213,8 +213,8 @@
         "media_BGGnJg",
         "media_ewbVL3",
         "media_yDrJ3B",
-        "media_kjtYgA",
         "media_7jTHzN",
+        "media_kjtYgA",
         "media_JqRMtg",
         "media_Hb9Dce",
         "media_LaQVR8",
