@@ -1,11 +1,11 @@
 <!-- -- user report start -- -->
 
-<div class="user_report bg-lightGrey section" id="{{ section.id }}">
+<div class="user_report bg-lightGrey section {{ section.settings.ctm_cls_prog }}" id="{{ section.id }}">
     <div class="container">
         {%- if section.settings.section_heading != blank -%}
             <div class="section_header mb-3 text-center">
                 <h2 class="title-lg paddingB">{{ section.settings.section_heading }}</h2>
-                <p>{{ section.settings.subheading }}</p>
+                {{ section.settings.subheading }}
             </div>
         {% endif %}
         <div class="user_report_wrap">
@@ -31,8 +31,7 @@
                         <div class="tooltip_wrap">
                             <div class="tooltip_btn">
                                 <div class="tootltip_text {{ block.settings.block_className }}" style="--heading-font-size: {{ block.settings.font_size | append:'px' }}">
-                                    {{ block.settings.toolip_hed }}
-                                    
+                                    {{ block.settings.toolip_hed}}
                                     <img src="{{ 'info_lg.svg' | asset_url }}" alt="">
                                     <div class="tooltip_info">
                                         <div>{{ block.settings.toolip_desc }}</div>
@@ -63,6 +62,11 @@
                 "id": "section_heading",
                 "label": "t:common.heading.label",
                 "default": "Proof In Numbers"
+            },
+            {
+                "type": "text",
+                "id": "ctm_cls_prog",
+                "label": "t:common.classname.custom"
             },
             {
                 "type": "richtext",

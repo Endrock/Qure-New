@@ -85,7 +85,7 @@
         "media_bfYhdk": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/awardMI.png",
+            "image": "shopify://shop_images/Untitled_design_14.png",
             "wistia_id": ""
           }
         },
@@ -244,40 +244,41 @@
         "image_CMHyhX": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/vogue.svg",
+            "image": "shopify://shop_images/Vogue.png",
             "mobile_hide": false
           }
         },
         "image_CE8JHg": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/elle.svg",
+            "image": "shopify://shop_images/Cosmo.png",
             "mobile_hide": false
           }
         },
         "image_DGN3zc": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/glamour.svg",
+            "image": "shopify://shop_images/Elle_7eb4d785-0830-467f-baf5-cb994c781b5b.png",
             "mobile_hide": false
           }
         },
         "image_wdPDGq": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/grazia.svg",
+            "image": "shopify://shop_images/Glamour_89c5300c-369d-48d9-9f30-103893398848.png",
             "mobile_hide": false
           }
         },
         "image_TXKk7A": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/cosmopolitan.svg",
+            "image": "shopify://shop_images/Group_1000004024.png",
             "mobile_hide": true
           }
         },
         "image_k7aY9B": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bazaar_889503c3-d4d6-4eb0-b7be-dd1212b56c58.png",
             "mobile_hide": true
@@ -519,7 +520,7 @@
         "image_HGqFfY": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Group_1000003894_5c2b2ed5-126e-4722-901a-5c4fd7ed532b.png",
+            "image": "shopify://shop_images/Dual_action.png",
             "classname": "mw-mob-100 pt-4"
           }
         },
