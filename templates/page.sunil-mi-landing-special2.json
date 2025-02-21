@@ -85,7 +85,7 @@
         "media_bfYhdk": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/awardMI.png",
+            "image": "shopify://shop_images/Untitled_design_14.png",
             "wistia_id": ""
           }
         },
@@ -244,40 +244,41 @@
         "image_CMHyhX": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/vogue.svg",
+            "image": "shopify://shop_images/Vogue.png",
             "mobile_hide": false
           }
         },
         "image_CE8JHg": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/elle.svg",
+            "image": "shopify://shop_images/Cosmo.png",
             "mobile_hide": false
           }
         },
         "image_DGN3zc": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/glamour.svg",
+            "image": "shopify://shop_images/Elle_7eb4d785-0830-467f-baf5-cb994c781b5b.png",
             "mobile_hide": false
           }
         },
         "image_wdPDGq": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/grazia.svg",
+            "image": "shopify://shop_images/Glamour_89c5300c-369d-48d9-9f30-103893398848.png",
             "mobile_hide": false
           }
         },
         "image_TXKk7A": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/cosmopolitan.svg",
+            "image": "shopify://shop_images/Group_1000004024.png",
             "mobile_hide": true
           }
         },
         "image_k7aY9B": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bazaar_889503c3-d4d6-4eb0-b7be-dd1212b56c58.png",
             "mobile_hide": true
@@ -519,7 +520,7 @@
         "image_HGqFfY": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Group_1000003894_5c2b2ed5-126e-4722-901a-5c4fd7ed532b.png",
+            "image": "shopify://shop_images/Dual_action.png",
             "classname": "mw-mob-100 pt-4"
           }
         },
@@ -1113,14 +1114,6 @@
         "text_reviewed": "Reviewed in"
       }
     },
-    "liquid_9GnXBn": {
-      "type": "liquid",
-      "disabled": true,
-      "settings": {
-        "code": "<!-- Difference table with slider start-->\n<div class=\"compare_section section bg-yellow\">\n    <div class=\"container\">\n        <div class=\"section_header text-start text-md-center\">\n            <h2 class=\"title-lg\">\n                Give yourself a “Clinic Quality” glow up without the “Clinical Prices”\n            </h2>\n        </div>\n        <div class=\"compare_listRow\">\n            <div class=\"compare_listHeadings\">\n                <div class=\"compare_listHeader\">\n                    <div class=\"compare__img\"></div>\n                </div>\n                <div class=\"compare__titleBlock\">\n                    <h4 class=\"compare__title\"><strong>Let’s Compare</strong></h4>\n                </div>\n                <div class=\"compare_listitems\">\n                    <div class=\"compare_listBlock\">Results in</div>\n                    <div class=\"compare_listBlock\">Customized</div>\n                    <div class=\"compare_listBlock active\">Skin Safe</div>\n                    <div class=\"compare_listBlock\">Cost</div>\n                </div>\n            </div>\n            <div class=\"compare_list_column\">\n                <div class=\"swiper-container compare-slider twa__swiper\" id=\"twa__swiper-compareSlider\"\n                    data-section-id=\"compareSlider\" data-autoplay=\"false\" data-loop=\"true\"\n                    data-centerslide=\"false\" data-mobile=\"1\" data-tablet=\"3\" data-desktop=\"3\" data-spacing=\"0\"\n                    data-arrowleft=\"compareSlider-swiper-prev\" data-arrowright=\"compareSlider-swiper-next\">\n                    <div class=\"swiper-wrapper\">\n                        <!-- slide start -->\n                        <div class=\"swiper-slide\">\n                            <div class=\"compare_list_elements active\">\n                                <div class=\"compare_listHeader\">\n                                    <div class=\"compare__img\"><img src=\"{{ 'compare_micro.webp' | asset_url }}\" alt=\"\"\n                                            class=\"img-fluid d-block mx-auto\"></div>\n                                </div>\n                                <div class=\"compareTxt__element\">\n                                    <div class=\"compare__titleBlock\">\n                                        <h4 class=\"compare__title text-center\"><strong>Qure</strong><br />\n                                            Micro-Infusion System</h4>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>As little as 1-2 days</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Tailored to your skin needs</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Minimal downtime & Virtually Painless</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Less than $20 per treatment</h5>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"swiper-slide\">\n                            <div class=\"compare_list_elements\">\n                                <div class=\"compare_listHeader\">\n                                    <div class=\"compare__img\"><img src=\"{{ 'compare_cs_1.png' | asset_url }}\" alt=\"\"\n                                            class=\"img-fluid d-block mx-auto\"></div>\n\n                                </div>\n                                <div class=\"compareTxt__element\">\n                                    <div class=\"compare__titleBlock\">\n                                        <h4 class=\"compare__title text-center\">Micro-Infusion\n                                            <br /><strong>Clinic</strong> Treatment\n                                        </h4>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>As little as 1-2 days</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Tailored to your skin needs</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Minimal downtime</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'cross_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Around $300 per treatment</h5>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"swiper-slide\">\n                            <div class=\"compare_list_elements\">\n                                <div class=\"compare_listHeader\">\n                                    <div class=\"compare__img\"><img src=\"{{ 'compare_cs_2.png' | asset_url }}\" alt=\"\"\n                                            class=\"img-fluid d-block mx-auto\"></div>\n                                </div>\n                                <div class=\"compareTxt__element\">\n                                    <div class=\"compare__titleBlock\">\n                                        <h4 class=\"compare__title text-center\">Derma Roller <br />At-Home\n                                            Treatment</h4>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'cross_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>A few days to see results</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'cross_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Not customised to skin</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'cross_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>Potential side effects</h5>\n                                    </div>\n                                    <div class=\"compare_list_Block\">\n                                        <div class=\"compare_list_icon\">\n                                            <img src=\"{{ 'tick_circle.svg' | asset_url }}\" alt=\"\" class=\"img-fluid\">\n                                        </div>\n                                        <h5>\n                                            < $10 per treatment</h5>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n\n                    </div>\n                    <div class=\"swiper-pagination\"></div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n<!-- Difference table with slider end-->",
-        "popup_micro_infusion_enabled": false
-      }
-    },
     "compare_products_Cnaxxx": {
       "type": "compare-products",
       "blocks": {
@@ -1634,6 +1627,9 @@
         "object_jkgKEm",
         "button_F67Uh4"
       ],
+      "custom_css": [
+        ".faq {background-color: #f5f5f5 !important;}"
+      ],
       "settings": {
         "background": "bg_yellow",
         "classname": "",
@@ -1745,7 +1741,6 @@
     "reasons_khXbp7",
     "trusted_qGtbnC",
     "results_3LEkF7",
-    "liquid_9GnXBn",
     "compare_products_Cnaxxx",
     "compare_rGUQ9y",
     "guide_xibEe6",

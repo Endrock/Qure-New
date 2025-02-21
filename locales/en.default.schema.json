@@ -310,6 +310,9 @@
       "label": "Recommended",
       "icon": "Recommended Icon"
     },
+    "recommended_mob": {
+      "label": "Recommended mob",
+    },
     "option": {
       "name": "Option",
       "label": "Option"

@@ -28,6 +28,9 @@
     {% when 'page.led-mask-offer-2' %}
         {% assign main_class = 'qurify_lp led_lp' %}
         <link rel="stylesheet" href="{{ 'led_mask_lp.css' | asset_url }}">
+    {% when 'page.international-women-offer' %}
+        {% assign main_class = 'qurify_lp led_lp led_mask-offer' %}
+        <link rel="stylesheet" href="{{ 'led_mask_lp.css' | asset_url }}">
     {% when 'page.led-mask-free-m-i' %}
         {% assign main_class = 'qurify_lp led_lp led_mask-offer' %}
         <link rel="stylesheet" href="{{ 'led_mask_lp.css' | asset_url }}">
@@ -204,6 +207,10 @@
         {% assign main_class = 'review_and-results' %}
         <link rel="stylesheet" href="{{ 'reviews-and-results.css' | asset_url }}">
     {% when 'page.patches-content-guide' %}
+        {% assign main_class = 'content_instructions' %}
+        <link rel="stylesheet" href="{{ 'content-instructions.css' | asset_url }}">
+        <link rel="stylesheet" href="{{ 'affiliate.css' | asset_url }}">
+    {% when 'page.shower-filter-creative-br' %}
         {% assign main_class = 'content_instructions content_instructions_patches' %}
         <link rel="stylesheet" href="{{ 'content-instructions.css' | asset_url }}">
         <link rel="stylesheet" href="{{ 'affiliate.css' | asset_url }}">
