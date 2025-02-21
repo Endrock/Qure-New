@@ -509,6 +509,7 @@
         "classname": "section videosQure",
         "btn": "",
         "btn_url": "",
+        "ctm_cls_btn": "",
         "desk_slide": 6,
         "mob_slide": 1.7,
         "slide_space": 10
@@ -1429,7 +1430,7 @@
       "type": "liquid",
       "settings": {
         "code": "{% render 'serums-months-image-form-v2' with section_id: section.id %}",
-        "popup_micro_infusion_enabled": true,
+        "popup_micro_infusion_enabled": false,
         "payment_icons": "shopify://shop_images/logos_full_qure_0d060a66-5fb6-4e6c-a740-55552a43bb10.png",
         "payment_icons_today_only": "shopify://shop_images/payments_today.png"
       }
@@ -1604,7 +1605,8 @@
           "type": "button",
           "settings": {
             "ext_btn": "",
-            "ext_url": ""
+            "ext_url": "",
+            "ctm_cls_btn": ""
           }
         }
       },
