@@ -1681,7 +1681,7 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
       button.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        const target = event.target.closest('[data-product-id]'); // Find the closest element with the data-product-id attribute
+        const target = e.target.closest('[data-product-id]'); // Find the closest element with the data-product-id attribute
         const ajaxSelector = button.dataset.ajaxSelector;
   
         if (!target || !target.dataset.productId) {
