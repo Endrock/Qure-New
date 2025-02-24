@@ -60,33 +60,7 @@
                             </div>
                             <img src="{{ 'MI6x-mixed_blue.webp' | asset_url }}" class="img-fluid" alt="" id="choosen_image" />
                         </div>
-                        <div class="tmtFtrs d-none d-md-flex justify-content-between mb-4 mt-5 icons-serum-original">
-                            <div class="tmtFtrs_block text-center"> <!-- Ftr Block -->
-                                <div class="tmtFtr_icon">
-                                    <img src="{{ 'money-back.svg' | asset_url }}" alt=""> 
-                                </div>
-                                <div class="tmtFtr_des">
-                                    Money Back Guarantee
-                                </div> 
-                            </div> <!-- Ftr Block end-->
-                            <div class="tmtFtrs_block text-center"> <!-- Ftr Block -->
-                                <div class="tmtFtr_icon">
-                                    <img src="{{ 'shipping.svg' | asset_url }}" alt="">
-                                </div>
-                                <div class="tmtFtr_des">
-                                    Free World-Wide Shipping over $100
-                                </div>
-                            </div> <!-- Ftr Block end-->
-                            <div class="tmtFtrs_block text-center"> <!-- Ftr Block -->
-                                <div class="tmtFtr_icon">
-                                    <img src="{{ 'derma-ftr.svg' | asset_url }}" alt="">
-                                </div>
-                                <div class="tmtFtr_des">
-                                    Dermatologist Reviewed
-                                </div>
-                            </div> <!-- Ftr Block end-->
-                        </div>
-                        <div class="tmtFtrs d-none d-md-flex justify-content-between mb-4 mt-5 icons-serum-pdm-test">
+                        <div class="tmtFtrs d-none d-md-flex justify-content-between mb-4 mt-5">
                             <div class="tmtFtrs_block text-center"> <!-- Ftr Block -->
                                 {% render "serums-months-svg-low-contrast", icon: "thumbs_up" %} 
                             </div> <!-- Ftr Block end-->
@@ -109,9 +83,9 @@
                             <div class="step_counter active"><span>1</span></div>
                             <div class="step_block">
                                 <div class="step_header">
-                                    <h3><span>Step 1/3</span> Choose your Serum:</h3>
+                                    <h3>Choose your Serum:</h3>
                                 </div>
-                                <div class="step_content step_serum pb-3">
+                                <div class="step_content step_serum pb-3 pdm-step_content_v2">
                                     <div class="serumBlock {{ section_id }}_productTypeObject">
                                         <input type="radio" class="active" name="serum" id="rejuvenating" checked />
                                         <label class="serum_prd" for="rejuvenating">
@@ -158,10 +132,10 @@
                             <div class="step_counter"><span>2</span></div>
                             <div class="step_block">
                                 <div class="step_header">
-                                    <h3 class="d-none d-md-block"><span>Step 2/3</span> Choose your supply:</h3>
-                                    <h3 class="d-block d-md-none"><span>Step 2/3</span> Choose the Bundle:</h3>
+                                    <h3 class="d-none d-md-block">Choose your supply:</h3>
+                                    <h3 class="d-block d-md-none">Choose the Bundle:</h3>
                                 </div>
-                                <div class="step_content">
+                                <div class="step_content pdm-step_content_v2">
                                     <div class="step_conten_blocks">
 
                                         {% assign product = all_products['micro-infusion-3-month-bundle-rejuvenating'] %}
@@ -173,10 +147,7 @@
                                         data-pay="{{ divided_price | money_without_trailing_zeros }}"
                                         data-per="Buy Now & SAVE {{ discount_percentage }}%" 
                                         data-image="{{ 'MI2x-mixed.webp' | asset_url }}"
-                                            >
-                                            <div class="plan_choosed mw-100 plan_choosed-original">
-                                                <span>MOST POPULAR</span>
-                                            </div>
+                                            >                                       
                                             <div class="pdm_plan-choosen">
                                                 <p>
                                                     Best Value
@@ -198,7 +169,7 @@
                                                         <h3>3 Month Supply</h3>
                                                         <span class="saved_price item-1">SAVE {{ discount_percentage }}%</span>
                                                     </div>
-                                                    <div class="plan_des">6 Micro-Infusion Treatments</div>
+                                                    <div class="plan_des">(6 Micro-Infusion Treatments)</div>
                                                 </div>
                                                 <div class="price pmd_price-first-elemnt">
                                                     <div class="price-row">
@@ -240,10 +211,9 @@
                                                         <h3>2 Month Supply</h3>
                                                         <span class="saved_price d-none d-md-block item-2">SAVE {{ discount_percentage }}%</span>
                                                     </div>
-                                                    <div class="plan_des">4 Micro-Infusion Treatments</div>
+                                                    <div class="plan_des">(4 Micro-Infusion Treatments)</div>
                                                 </div>
                                                 <div>
-                                                    <span class="saved_price ms-auto d-block d-md-none mb-1 saved_price50">SAVE {{ discount_percentage }}%</span>
                                                     <div class="price">
                                                         <div class="plan_prc regular_price">{{ product.compare_at_price | money_without_trailing_zeros }}</div>
                                                         <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
@@ -271,7 +241,7 @@
                                                     <div class="plan_hdr">
                                                         <h3>1 Month Supply</h3>
                                                     </div>
-                                                    <div class="plan_des">2 Micro-Infusion Treatments</div>
+                                                    <div class="plan_des">(2 Micro-Infusion Treatments)</div>
                                                 </div>
                                                 <div class="price">
                                                     <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
@@ -344,10 +314,9 @@
                             <div class="step_counter step_counter_before"><span>3</span></div>
                             <div class="step_block">
                                 <div class="step_header">
-                                    <h3 class="align-items-baseline"><span>Step 3/3</span> Choose a payment option:
-                                    </h3>
+                                    <h3 class="align-items-baseline">Choose a payment option:</h3>
                                 </div>
-                                <div class="step_content item-3">
+                                <div class="step_content item-3 pdm-step_content_v2">
                                     <div class="pmtBlock">
                                         <input type="radio" name="pmtPlan" id="pay_in_full" checked>
                                         <label class="pmt_plans" for="pay_in_full">
@@ -355,16 +324,13 @@
                                                 <div class="pmt_hdr">
                                                     <h3>Pay in full</h3>
                                                 </div>
-                                                <div class="pmt_row-test">
+                                                <div class="pmt_row">
                                                     <div class="pmt_des">One-time payment with</div>
                                                     <div class="pmt_options">
-                                                        <img 
-                                                        class="pmt_options__image"
-                                                        src="{{ 'payment-bl-1-hq.png' | asset_url }}" width="150px" alt="" />
                                                         {{
                                                             section.settings.payment_icons
                                                             | image_url: width: 350
-                                                            | image_tag: alt: 'Payment Icons', class: 'pmt_options__image-test'
+                                                            | image_tag: alt: 'Payment Icons', class: 'pmt_options__image'
                                                          }}
     
                                                     </div>
@@ -383,16 +349,13 @@
                                                 <div class="pmt_hdr">
                                                     <h3>Pay today only</h3>
                                                 </div>
-                                                <div class="pmt_row-test">
+                                                <div class="pmt_row">
                                                     <div class="pmt_des">Monthly interest-free payments with</div>
                                                     <div class="pmt_options item-2">
-                                                        <img 
-                                                        class="pmt_options__image"
-                                                        src="{{ 'payment-bl-3-hq.png' | asset_url }}" width="150px" alt="" />
                                                         {{
                                                             section.settings.payment_icons_today_only
                                                             | image_url: width: 150
-                                                            | image_tag: alt: 'Payment Icons Today Only', class: 'pmt_options__image-test'
+                                                            | image_tag: alt: 'Payment Icons Today Only', class: 'pmt_options__image'
                                                         }}
                                                     </div>
                                                 </div>
@@ -433,21 +396,7 @@
                             </div>
                         </div>
                         <div class="c_s_shipping d-block d-md-none">
-                            <div class="c_s_wrapper cs_wrapper-original">
-                                <div class="c_s_bx">
-                                    <img src="{{ 'money-back.svg' | asset_url }}" alt="">
-                                    <p>Money Back <br>Guarantee</p>
-                                </div>
-                                <div class="c_s_bx">
-                                    <img src="{{ 'shipping.svg' | asset_url }}" alt="">
-                                    <p>Free World-Wide<br> Shipping Over $100</p>
-                                </div>
-                                <div class="c_s_bx">
-                                    <img src="{{ 'derma-ftr.svg' | asset_url }}" alt="">
-                                    <p>Dermatologist <br>Reviewed</p>
-                                </div>
-                            </div>
-                            <div class="c_s_wrapper cs_wrapper-test-pdm">
+                            <div class="c_s_wrapper cs_wrapper-pdm">
                                 <div class="c_s_bx">
                                     {% render "serums-months-svg-low-contrast", icon: "thumbs_up" %} 
                                 </div>
