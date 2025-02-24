@@ -69,7 +69,6 @@
         "blocks": {
           "announcement_TPxBgi": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
               "heading": "<p><strong>FREE World-Wide Shipping</strong> All Orders Above $100</p>",
               "button_label": "SHOP NOW",
@@ -78,14 +77,12 @@
           },
           "tab_3Wyyea": {
             "type": "tab",
-            "disabled": true,
             "settings": {
               "heading": "🤍 Rediscover The Qure"
             }
           },
           "banner_jrcxU4": {
             "type": "banner",
-            "disabled": true,
             "settings": {
               "image": "shopify://shop_images/Navigation.png",
               "button_label": "Save up to 55% on [Exclusive Bundles]",
@@ -94,7 +91,6 @@
           },
           "banner_CiNYWN": {
             "type": "banner",
-            "disabled": true,
             "settings": {
               "image": "shopify://shop_images/header_drop3.webp",
               "button_label": "Q-Rejuvalight Pro [Quick Start Guide]",
@@ -103,7 +99,6 @@
           },
           "banner_9fKdQK": {
             "type": "banner",
-            "disabled": true,
             "settings": {
               "image": "shopify://shop_images/header_drop4.webp",
               "button_label": "See Micro-Infusion [Detailed Guide]",
@@ -112,7 +107,6 @@
           },
           "banner_jibKaz": {
             "type": "banner",
-            "disabled": true,
             "settings": {
               "image": "shopify://shop_images/header_drop1.webp",
               "button_label": "Shop [Micro-Infusion]: reduce look of wrinkles",
@@ -121,7 +115,6 @@
           },
           "banner_pe7PzR": {
             "type": "banner",
-            "disabled": true,
             "settings": {
               "image": "shopify://shop_images/header_drop2.webp",
               "button_label": "Shipping & Exchanges",
@@ -138,7 +131,6 @@
           "banner_jibKaz",
           "banner_pe7PzR"
         ],
-        "disabled": true,
         "settings": {}
       },
       "newsletter": {
