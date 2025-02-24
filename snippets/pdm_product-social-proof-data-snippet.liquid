@@ -16,12 +16,13 @@
     or product.id == 8111729049839 
     or page.handle contains "qure-microinfusion-offer" 
     or page.handle contains "micro-infusion-refill"
+    or page.handle contains "microinfusion"
      %} 
     <div class="social-proof-data-container hidden" 
       data-suffix="{{ suffix }}"
       data-product-id="{{ product.id }}"
-      data-product-handle="{% if page.handle contains "microinfusion" or page.handle contains "micro-infusion" %}{{page.handle}}{% endif %}" 
-      data-product-list="{% if page.handle contains "micro-infusion-refill" %}{{ product_list_micro_infusion_refill | join: ', ' }}{% elsif page.handle contains "qure-microinfusion-offer" %}{{ product_list_micro_infusion | join: ', ' }}{% endif %}"
+      data-page-handle="{% if page.handle contains "microinfusion" or page.handle contains "qure-microinfusion-offer" or page.handle contains "micro-infusion-refill" %}{{page.handle}}{% endif %}" 
+      data-product-list="{% if page.handle contains "micro-infusion-refill" %}{{ product_list_micro_infusion_refill | join: ', ' }}{% elsif page.handle contains "qure-microinfusion-offer" or page.handle contains "microinfusion" %}{{ product_list_micro_infusion | join: ', ' }}{% endif %}"
     >
       <div class="circle-container">
        {%- render 'icon-social-proof-circle' -%}
