@@ -28,17 +28,11 @@
         }  
     </style>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            v2__selectProduct('{{ section_id }}_');
-        });
-    </script>
-
     <!-- treatment section start -->
     <div class="available_bar">
         <p>SOLD OUT 10X - AVAILABLE UNTIL STOCK LASTS </p>
     </div>
-    <div class="section productSubscription choose_serum" id="productSubscription">
+    <div class="section productSubscription choose_serum serums-months-image-form-v2" id="productSubscription">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -230,6 +224,7 @@
                                         {% assign product = all_products['micro-infusion-2-month-bundle-rejuvenating'] %}
                                         {% assign divided_price = product.price | divided_by: 4 %}
                                         {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
+                                        {% assign soldout_percentage = discount_percentage %}
 
                                         <a class="planBlock {{ section_id }}_productPeriodObject" href="month_2" data-tab="month_2" data-pay="{{ divided_price | money_without_trailing_zeros}}"
                                             data-per="Buy Now & SAVE {{ discount_percentage }}%" data-image="{{ 'MI4x-mixed.webp' | asset_url }}">
@@ -412,7 +407,7 @@
 
                                 {% if section.settings.popup_micro_infusion_enabled and page.handle == 'qure-microinfusion-offer' or page.handle == 'qure-micro-infusion-landing-page-affiliate' %}
                                     {% render 'pdm-popup-upsell-landing' 
-                                        referrer: "pdm_serums_m_image_form_v2", 
+                                        referrer: "pdm_serums_m_image", 
                                         ajax_selector:".image-ajax-v2-container .btn.btn-atc" 
                                     %}
                                 {% endif %}
@@ -423,15 +418,17 @@
                                 {% if section.settings.popup_micro_infusion_enabled and page.handle == 'qure-microinfusion-offer' or page.handle == 'qure-micro-infusion-landing-page-affiliate' %}
                                     <button
                                         data-popup-enabled="{{ section.settings.popup_micro_infusion_enabled }}"
-                                        data-popup-referrer="pdm_serums_m_image_form_v2"
+                                        data-popup-referrer="pdm_serums_m_image"
                                         data-ajax-selector=".image-ajax-v2-container .btn.btn-atc"
                                         class="upsell_popup_btn openPopupUpsell">
                                         </button>
                                 {% endif %}
                                       
-                                    <a class="btn btn-atc submit_btn {{ section_id }}_productButtonObject" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>
-                                        <span class="btn_value">Buy Now & SAVE {{ discount_percentage }}%</span>
+                                    <a class="btn btn-atc buy_btn submit_btn {{ section_id }}_productButtonObject" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>
+                                        Buy Now <span class="savedAmount">& SAVE {{ discount_percentage }}%</span>
                                     </a>
+
+                                    <a class="btn btn-atc submit_btn buy_btn_soldout {{ section_id }}_productButtonObject" href="#" style="display: none;">Sold Out</a>
                                 </div>
                             </div>
                         </div>
@@ -482,5 +479,33 @@
         ></div>
 
     <script src="{{ '__app_serums-months-form-v2.js' | asset_url }}"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            v2__selectProduct('{{ section_id }}_');
+
+            const v2__buyButton = document.querySelector(".serums-months-image-form-v2 .buy_btn");
+            const v2__buyButtonSoldOut = document.querySelector(".serums-months-image-form-v2 .buy_btn_soldout");
+            const v2__savedAmount = document.querySelector(".serums-months-image-form-v2 .savedAmount");
+
+            const toggleSoldOutButton = () => {    
+                if (v2__savedAmount && v2__buyButton && v2__buyButtonSoldOut) {
+                    if (v2__savedAmount.textContent.trim() === "& SAVE {{ soldout_percentage }}%") {
+                        v2__buyButton.style.display = "none";
+                        v2__buyButtonSoldOut.style.display = "block";
+                    } else {
+                        v2__buyButton.style.display = "block";
+                        v2__buyButtonSoldOut.style.display = "none";
+                    }
+                }
+            }
+
+            const v2__observer = new MutationObserver(toggleSoldOutButton);
+            if (v2__savedAmount) {
+                v2__observer.observe(v2__savedAmount, { childList: true, subtree: true });
+            }
+
+        });
+    </script>
 
 {% endif %}
