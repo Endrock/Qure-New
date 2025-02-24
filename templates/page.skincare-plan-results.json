@@ -523,7 +523,9 @@
       "type": "pdm_flating-bundle",
       "settings": {
         "bundle_info": "bundle-discount",
-        "bundle_products": "219840343"
+        "bundle_products": "219840343",
+        "text_bubble_bundle_unused": "${bundle-title}  successfully added to your cart.",
+        "text_bubble_bundle_used": "Your Personalized Skincare Bundle  has been updated."
       }
     }
   },
