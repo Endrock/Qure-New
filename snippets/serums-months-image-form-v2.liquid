@@ -327,12 +327,13 @@
                                                 <div class="pmt_row">
                                                     <div class="pmt_des">One-time payment with</div>
                                                     <div class="pmt_options">
-                                                        {{
-                                                            section.settings.payment_icons
-                                                            | image_url: width: 350
-                                                            | image_tag: alt: 'Payment Icons', class: 'pmt_options__image'
-                                                         }}
-    
+                                                        {% if section.settings.payment_icons != blank %}
+                                                            {{
+                                                                section.settings.payment_icons
+                                                                | image_url: width: 350
+                                                                | image_tag: alt: 'Payment Icons', class: 'pmt_options__image'
+                                                            }}
+                                                        {% endif %}
                                                     </div>
                                                 </div>
                                             </div>
@@ -352,11 +353,13 @@
                                                 <div class="pmt_row">
                                                     <div class="pmt_des">Monthly interest-free payments with</div>
                                                     <div class="pmt_options item-2">
-                                                        {{
-                                                            section.settings.payment_icons_today_only
-                                                            | image_url: width: 150
-                                                            | image_tag: alt: 'Payment Icons Today Only', class: 'pmt_options__image'
-                                                        }}
+                                                        {% if section.settings.payment_icons_today_only != blank %}
+                                                            {{
+                                                                section.settings.payment_icons_today_only
+                                                                | image_url: width: 150
+                                                                | image_tag: alt: 'Payment Icons Today Only', class: 'pmt_options__image'
+                                                            }}
+                                                        {% endif %}
                                                     </div>
                                                 </div>
                                                 
