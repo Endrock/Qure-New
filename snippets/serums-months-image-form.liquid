@@ -2,18 +2,11 @@
     <p>Please provide section_id property to use this snippet</p>
 {% else %}
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            selectProduct('{{ section_id }}_');
-        });
-    </script>
-
-    <!-- -- choose serum section start -- -->
     <div class="available_bar">
         <p>AVAILABLE UNTIL STOCK LASTS</p>
     </div>
 
-    <div class="section productSubscription choose_serum" id="productSubscription">
+    <div class="section productSubscription choose_serum serums-months-image-form" id="productSubscription">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -277,10 +270,12 @@
                                         class="upsell_popup_btn openPopupUpsell">
                                         </button>
                                 {% endif %}
+
                                 <a class="btn btn-lg btn-primary buy_btn mt-3 {{ section_id }}_productButtonObject" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>Buy Now <span
-                                    class="savedAmount">& SAVE {{ discount_percentage }}%</span><img src="{{ 'arrow_right.svg' | asset_url }}"
-                                    alt="">
+                                    class="savedAmount">& SAVE {{ discount_percentage }}%</span><img src="{{ 'arrow_right.svg' | asset_url }}" alt="">
                                 </a>
+
+                                <a class="btn btn-lg btn-primary buy_btn buy_btn_soldout mt-3 {{ section_id }}_productButtonObject" style="display: none;">Sold Out<img src="{{ 'arrow_right.svg' | asset_url }}" alt=""></a>
                             </div>
                             <div class="payment_method">
                                 <p>OR pay 4 monthly payments of <span class="payment_price">{{ divided_price | money_without_trailing_zeros }}</span> with</p>
@@ -318,5 +313,33 @@
             </div>
         </div>
     </div>
-    <!-- -- choose serum section end -- -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            selectProduct('{{ section_id }}_');
+
+            const bf__buyButton = document.querySelector(".serums-months-image-form .buy_btn");
+            const bf__buyButtonSoldOut = document.querySelector(".serums-months-image-form .buy_btn_soldout");
+            const bf__savedAmount = document.querySelector(".serums-months-image-form .savedAmount");
+
+            const bf__toggleSoldOutButton = () => {    
+                if (bf__savedAmount && bf__buyButton && bf__buyButtonSoldOut) {
+                    if (bf__savedAmount.textContent.trim() === "& SAVE 30%") {
+                        bf__buyButton.style.display = "none";
+                        bf__buyButtonSoldOut.style.display = "block";
+                    } else {
+                        bf__buyButton.style.display = "block";
+                        bf__buyButtonSoldOut.style.display = "none";
+                    }
+                }
+            }
+
+            const bf__observer = new MutationObserver(bf__toggleSoldOutButton);
+            if (bf__savedAmount) {
+                bf__observer.observe(bf__savedAmount, { childList: true, subtree: true });
+            }
+
+        });
+    </script>
+
 {% endif %}
