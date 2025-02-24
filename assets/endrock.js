@@ -1753,8 +1753,7 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
 document.addEventListener('DOMContentLoaded', () => {
   const serum3Month = document.getElementById('3_month');
   const elementPriceStock = document.querySelector('.pdm_price-stock-left-quantity');
-  const { testHighContrast } = document.body.dataset
-  if ( serum3Month && testHighContrast && elementPriceStock ) {
+  if ( serum3Month && elementPriceStock ) {
     
     const pdmPriceDifferenceContainer = document.querySelector('#pdm_price-difference-container')
     const productId = serum3Month.dataset.productId;
