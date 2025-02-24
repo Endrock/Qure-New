@@ -413,8 +413,8 @@
         {% assign drop_count = metaobject.data.value['cc-creator-drops'].size | minus: 1 %}
         "{{ section.settings.subtitle }}
         {%- if metaobject.data.value['cc-creator-drops'] -%}
-          {{ metaobject.data.value['cc-creator-drops'][drop_count]['cc-creator-drop-description'] }} —
-          {{ metaobject['cc-creator-first-name'] }}"
+          {{ metaobject.data.value['cc-creator-drops'][drop_count]['cc-creator-drop-description'] }}" —
+          {{ metaobject['cc-creator-first-name'] }}
         {%- endif %}
       </p>
 
