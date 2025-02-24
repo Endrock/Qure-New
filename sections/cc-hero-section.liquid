@@ -411,9 +411,10 @@
       {% endif %}
       <p style="font-size: {{ section.settings.description_text_size }}px; margin: 10px 0; max-width:650px; font-style:italic;">
         {% assign drop_count = metaobject.data.value['cc-creator-drops'].size | minus: 1 %}
-        "{{ section.settings.subtitle -}}
+        "{{ section.settings.subtitle }}
         {%- if metaobject.data.value['cc-creator-drops'] -%}
-          {{- metaobject.data.value['cc-creator-drops'][drop_count]['cc-creator-drop-description'] }}"
+          {{ metaobject.data.value['cc-creator-drops'][drop_count]['cc-creator-drop-description'] }} —
+          {{ metaobject['cc-creator-first-name'] }}"
         {%- endif %}
       </p>
 
