@@ -311,9 +311,13 @@ const dermFeatureInit = () => {
               slide.addEventListener('click', () => {
                 const overlay = this.querySelector('.overlay-popup-sdf')
                 const videoCont = this.querySelector(`.pwd-video[data-index="${ slide.dataset.index }"]`)
+                const video = videoCont.querySelector('video');
                 videoCont.dataset.active = 'true';
                 overlay.classList.remove('hidden')
-                videoCont.classList.remove('hidden')
+                videoCont.classList.remove('hidden');
+                video.play();
+                const floatingBundle = document.querySelector('flating-bundle');
+                if (floatingBundle) floatingBundle.classList.add('hidden');
               })
             })
           }
@@ -345,6 +349,9 @@ const dermFeatureInit = () => {
             overlay.classList.add('hidden')
             videoCont.classList.add('hidden')
             videoCont.dataset.active = 'false';
+
+            const floatingBundle = document.querySelector('flating-bundle');
+            if (floatingBundle) floatingBundle.classList.remove('hidden');
           })
 
         }
@@ -362,8 +369,10 @@ const dualTextImgInit = () => {
         if(!textBody)return;
         if(textBody.dataset.open === "false"){
           textBody.dataset.open = "true"
+          btn.textContent = "Read Less";
         }else{
           textBody.dataset.open = "false"
+          btn.textContent = "Read More";
         }
       })
     })

@@ -15,6 +15,8 @@
 
 .section-dual-transformation .img {
   width: 100%;
+  height: 100%;
+  object-fit: contain;
   background: azure;
   aspect-ratio: 1.58 / 1;
   background-size: contain;
@@ -461,6 +463,10 @@
   width: 40px;
   height: 40px;
   opacity: 0.3;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .section-lifestyle-tips .arrows .next {
@@ -903,7 +909,8 @@
 }
 
 .section-table-thc .row-feature {
-  padding: 24px 48px 16px 48px;
+  margin: auto;
+  padding: 0 48px;
   font-size: 16px;
   font-weight: 700;
   line-height: 26px;
@@ -912,7 +919,8 @@
 
 @media (max-width: 768px) {
   .section-table-thc .row-feature {
-    padding: 16px;
+    padding: 0 16px;
+    line-height: 100%;
     color: #000;
     font-size: 12px;
     font-weight: 500;
@@ -1076,6 +1084,7 @@
     font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.12px;
+    line-height: 100%;
   }
 }
 
@@ -1092,6 +1101,7 @@
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.12px;
+    line-height: 100%;
   }
 
   .section-table-tc .row-content span {
@@ -1497,6 +1507,21 @@
   max-width: 100%;
   max-height: 100%;
   height: 100%;
+}
+
+@media (max-width: 768px) {
+  .section-slider-derm-feature .popup-sdf {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  
+  .section-slider-derm-feature .popup-sdf .close {
+    position: relative;
+    margin: 0 4px 0 auto;
+    padding: 0;
+    width: fit-content;
+  }
 }
 /* End Slider Derm Feature Section */
 
@@ -2997,6 +3022,7 @@
   border: 1px solid var(--Turquoise, #C8E6DC);
   background: #F4FAF8;
   width: fit-content;
+  margin-bottom: 10px;
 }
 
 .cart-bundle-message__icon {

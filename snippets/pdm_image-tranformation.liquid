@@ -7,7 +7,7 @@
             <p>{{ after-text }}</p>
         </div>
     </div>
-    <div class="img" style=" background-image: url('{{ image }}');"></div>
+    {{ image |  image_url: width: 800 |  image_tag: alt: "image", class: "img" }}
     <div class="buttom-text">
         <p class="section_caption">
             <strong>{{ user-name}}</strong>
