@@ -144,6 +144,7 @@
                                         {% assign product = all_products['micro-infusion-2-month-bundle-2x-b-g-serum-2x-e-g-f-serum'] %}
                                         {% assign divided_price = product.price | divided_by: 4 %}
                                         {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
+                                        {% assign soldout_percentage = discount_percentage %}
                                         
                                         <a class="planBlock {{ section_id }}_productPeriodObject new_block active" href="month_2" data-tab="month_2"
                                             data-per="& SAVE {{ discount_percentage }}%" data-image="{{ 'MI4x-mixed.jpg' | asset_url }}">
@@ -324,7 +325,7 @@
 
             const bf__toggleSoldOutButton = () => {    
                 if (bf__savedAmount && bf__buyButton && bf__buyButtonSoldOut) {
-                    if (bf__savedAmount.textContent.trim() === "& SAVE 30%") {
+                    if (bf__savedAmount.textContent.trim() === "& SAVE {{ soldout_percentage }}%") {
                         bf__buyButton.style.display = "none";
                         bf__buyButtonSoldOut.style.display = "block";
                     } else {
