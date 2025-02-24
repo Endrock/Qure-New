@@ -32,8 +32,8 @@ this snippets is used in pdm_lifestyle-tips.liquid section, render each tip in s
         </div>
         <div class="arrows">
         {% if length > 1 %}
-                <div class="previous {% if index > 1 %}active{% endif %}">{% render "pdm_svg-arrow" %}</div> 
-                <div class="next {% if index < length %}active{% endif %}">{% render "pdm_svg-arrow" %}</div> 
+                <button class="previous {% if index > 1 %}active{% endif %}">{% render "pdm_svg-arrow" %}</button> 
+                <button class="next {% if index < length %}active{% endif %}">{% render "pdm_svg-arrow" %}</button> 
         {% endif %}
         </div>
     </div>
