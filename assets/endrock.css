@@ -3579,3 +3579,915 @@ body[class~="page.sunil-mi-landing-special2-reorder"] #see_it_section{
 }
 
 /* high contrast mode micro infusion offer and affiliate Release */
+
+/* start test pdm all in one face serum */
+
+/* pdp face serum */
+body[data-test-pdm-serum="a"] .block-offer-test-original,
+body[data-test-pdm-serum="b"] .block-offer-test-original{
+  display: none;
+}
+
+body[data-test-pdm-serum="a"] .plan_choosed.text-end .text-1,
+body[data-test-pdm-serum="b"] .plan_choosed.text-end .text-1{
+  display: none;
+}
+
+.plan_choosed.text-end .text-2{
+  display: none;
+}
+body[data-test-pdm-serum="a"] .plan_choosed.text-end .text-2,
+body[data-test-pdm-serum="b"] .plan_choosed.text-end .text-2{
+  display: inline;
+  font-family: Poppins;
+  font-size: 10.11px;
+  font-weight: 500;
+  line-height: 14.7px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.plan_choosed.text-end .text-2 strong{
+  font-family: Poppins;
+  font-size: 10.11px;
+  font-weight: 700;
+  line-height: 14.7px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+@media screen and (min-width: 769px) {
+  .plan_choosed.text-end .text-2{
+    font-size: 11.92px;
+    line-height: 17.34px;
+
+  }
+
+  .plan_choosed.text-end .text-2 strong{
+    font-size: 11.92px;
+    line-height: 17.34px;
+  }
+}
+/* missin style txt-2*/
+body[data-test-pdm-serum="a"] .plan_des.plan_des_top-original,
+body[data-test-pdm-serum="b"] .plan_des.plan_des_top-original{
+  display: none;
+}
+
+body[data-test-pdm-serum="a"] .planBlock.planBlockTop.hidde-second-step,
+body[data-test-pdm-serum="b"] .planBlock.planBlockTop.hidde-second-step{
+  display: none;
+}
+
+body[data-test-pdm-serum="a"] .plan_des.plan_des_bottom-original,
+body[data-test-pdm-serum="b"] .plan_des.plan_des_bottom-original{
+  display: none;
+}
+
+.plan_des.plan_des_top-test{
+  display: none;
+}
+
+.plan_des.plan_des_bottom-test{
+  display: none;
+}
+
+body[data-test-pdm-serum="a"] .plan_des.plan_des_top-test,
+body[data-test-pdm-serum="b"] .plan_des.plan_des_top-test{
+  display: block;
+}
+
+body[data-test-pdm-serum="a"] .plan_des.plan_des_bottom-test,
+body[data-test-pdm-serum="b"] .plan_des.plan_des_bottom-test{
+  display: block;
+}
+
+.pdm-product-test-pdp{
+  display: none;
+}
+
+body[data-test-pdm-serum="a"] .pdm-product-test-pdp,
+body[data-test-pdm-serum="b"] .pdm-product-test-pdp{
+  display: block;
+}
+
+.plan_des.plan_des_top-test span{
+  color: #C4121A;
+  text-transform: uppercase;
+}
+
+.plan_des.plan_des_top-test .plan_hdr{
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.plan_des.plan_des_top-test .plan_hdr h3{
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+}
+
+.plan_des.plan_des_bottom-test .plan_hdr h3{
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 13px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+@media screen and (min-width: 769px) {
+  .plan_des.plan_des_top-test .plan_hdr h3{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16.55px;
+  }
+}
+
+
+.plan_des.plan_des_top-test .plan_hdr p{
+  font-family: Poppins;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 16px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+}
+
+.plan_des.plan_des_bottom-test .plan_hdr p{
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 15px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+@media screen and (min-width: 769px) {
+  .plan_des.plan_des_top-test .plan_hdr p{
+    font-size: 12px;
+    line-height: 19.1px;
+    letter-spacing: 0.01em;
+  }
+}
+
+/* price pdp */
+body[data-test-pdm-serum="a"] .planBlock .monthly_plans .price.plan_des_top-original,
+body[data-test-pdm-serum="b"] .planBlock .monthly_plans .price.plan_des_top-original{
+  display: none;
+}
+
+body[data-test-pdm-serum="a"] .planBlock .monthly_plans .price.plan_des_bottom-original,
+body[data-test-pdm-serum="b"] .planBlock .monthly_plans .price.plan_des_bottom-original{
+  display: none;
+}
+
+.planBlock .monthly_plans .price.plan_des_top-test{
+  display: none;
+}
+
+body[data-test-pdm-serum="a"] .planBlock .monthly_plans .price.plan_des_top-test,
+body[data-test-pdm-serum="b"] .planBlock .monthly_plans .price.plan_des_top-test{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.planBlock .monthly_plans .price.plan_des_bottom-test{
+  display: none;
+}
+
+body[data-test-pdm-serum="a"] .planBlock .monthly_plans .price.plan_des_bottom-test,
+body[data-test-pdm-serum="b"] .planBlock .monthly_plans .price.plan_des_bottom-test{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.planBlock .monthly_plans .price.plan_des_bottom-test .plan_prc.sale_price{
+  width: 68px;
+  font-family: Poppins;
+  font-size: 12.86px;
+  font-weight: 700;
+  line-height: 14.7px;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+@media screen and (min-width: 769px) {
+  .planBlock .monthly_plans .price.plan_des_bottom-test .plan_prc.sale_price{
+    font-family: Poppins;
+    font-size: 15.17px;
+    font-weight: 700;
+    line-height: 17.34px;
+    letter-spacing: 0.01em;
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 769px) { 
+  body[data-test-pdm-serum="a"] .planBlock .monthly_plans .price.plan_des_top-test,
+  body[data-test-pdm-serum="b"] .planBlock .monthly_plans .price.plan_des_top-test{
+    align-items: flex-end;
+    gap: 5px;
+  }
+}
+
+.planBlock .monthly_plans .price.plan_des_top-test .plan_prc.sale_price{
+  font-family: Poppins;
+  font-size: 12.86px;
+  font-weight: 700;
+  line-height: 14.04px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+@media screen and (min-width: 769px) {
+  .planBlock .monthly_plans .price.plan_des_top-test .plan_prc.sale_price{
+    font-size: 15.17px;
+    font-weight: 700;
+    line-height: 17.34px;
+    letter-spacing: 0.01em;
+  }
+}
+
+.planBlock .monthly_plans .price.plan_des_top-test .saved_price.saved_price-desktop{
+  display: none;
+}
+
+.planBlock .monthly_plans .price.plan_des_top-test .saved_price.saved_price-mobile{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex-direction: column;
+  width: 80px;
+  height: 24px;
+  font-family: Poppins;
+  font-size: 7.46px;
+  font-weight: 700;
+  line-height: 6.63px;
+  letter-spacing: 0.01em;
+  margin: 0;
+  padding: 5px 8px;
+}
+
+@media screen and (min-width: 769px) {
+  .planBlock .monthly_plans .price.plan_des_top-test .saved_price.saved_price-desktop{
+    display: block;
+    margin: 0;
+    font-family: Poppins;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 13.07px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .planBlock .monthly_plans .price.plan_des_top-test .saved_price.saved_price-mobile{
+    display: none;
+  }
+}
+
+
+/* pdp face serum */
+.pdm_all-in-one-face-serum-offer-form{
+  display: none 
+}
+
+body[data-test-pdm-serum="a"] .pdm_all-in-one-face-serum-offer-form,
+body[data-test-pdm-serum="b"] .pdm_all-in-one-face-serum-offer-form{
+  display: block
+}
+
+.pdm_all-in-one-face-main{
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .pdm_all-in-one-face-main{
+    margin-top: 60px;
+  }
+}
+
+
+.pdm_all-in-one-face-serum-mobile-description-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.pdm_all-in-one-face-serum-mobile-description-reviews{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pdm_all-in-one-face-serum-mobile-description-reviews p{
+  font-family: Poppins;
+  font-size: 11.54px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.pdm_all-in-one-face-serum-mobile-description-subtitle{
+  font-family: Poppins;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.pdm_all-in-one-face-serum-mobile-description-title{
+  font-family: 'Canela Web';
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.pdm_all-in-one-face-serum-mobile-description-info{
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.pdm_all-in-one-face-serum-offer-form-container{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+.pdm_all-in-one-face-serum-offer-form-images{
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.pdm_all-in-one-face-serum-offer-form-images-container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.pdm_all-in-one-face-serum-offer-form-images-container__img{
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.pdm_all-in-one-face-serum-offer-form-images-container__img.active{
+  display: block;
+}
+
+.pdm_all-in-one-face-serum-desktop-description-container{
+  width: 100%;
+}
+
+.pdm_all-in-one-face-serum-desktop-description-info{
+  display: none;
+}
+
+.pdm_all-in-one-face-serum-description-form-wrapper__description{
+  padding-bottom: 20px;
+}
+
+.pdm_all-in-one-face-serum-description-form-wrapper__description p{
+  display: flex;
+  flex-direction: column;
+  font-family: Poppins;
+  font-size: 11.03px;
+  font-weight: 300;
+  line-height: 16.2px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.pdm_all-in-one-face-serum-description-form-wrapper__description strong{
+  font-family: Poppins;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.pdm_all-in-one-face-serum-description-form-wrapper__form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 21px;
+}
+
+.pdm_all-in-one-face-serum-description-form-wrapper__form-input input[type="radio"]{
+  display: none;
+}
+
+label[for^="pdm_monthly-plan"]{
+  width: 100%;
+  border: 1px solid #DBDBDB;
+  border-radius: 10.18px
+}
+
+input[type="radio"]:checked + label[for^="pdm_monthly-plan"]{
+  border: 2px solid #008763;
+}
+
+.pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__special-offer{
+  background-color: #DBDBDB;
+  padding: 3px 13.87px;
+  border-radius: 5.5px 5.5px 0 0;
+}
+
+input[type="radio"]:checked + label[for^="pdm_monthly-plan"] .pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__special-offer{
+  background-color: #008763;
+  border-radius: 5.5px 5.5px 0 0;
+}
+
+.pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__special-offer p{
+  font-family: Poppins;
+  font-size: 10.11px;
+  font-weight: 500;
+  line-height: 14.7px;
+  text-align: left;
+  color: white;
+}
+
+.pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__special-offer strong{
+  font-family: Poppins;
+  font-size: 10.11px;
+  font-weight: 700;
+  line-height: 14.7px;
+  text-align: left;
+  color: white;
+}
+
+label[for^="pdm_monthly-plan"] .pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 5px;
+  padding-right: 11px;
+  padding-bottom: 5px;
+}
+ 
+
+label[for^="pdm_monthly-plan"] .pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 36%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc; 
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+
+input[type="radio"]:checked + label[for^="pdm_monthly-plan"] .pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info::after {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 36%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #008763;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked + label[for^="pdm_monthly-plan"] .pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info::before {
+  border-color: #008763; 
+}
+
+.pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-offer{
+  display: flex;
+  flex-direction: column;
+}
+
+.pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-offer .serum-offer{
+  font-family: Poppins;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-offer .serum-time{
+  font-family: Poppins;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 16px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+}
+
+.pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-price{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: end;
+}
+
+.pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-price-product{
+  font-family: Poppins;
+  font-size: 11.02px;
+  font-weight: 400;
+  line-height: 14.04px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-price-product strong{
+  font-family: Poppins;
+  font-size: 12.86px;
+  font-weight: 700;
+  line-height: 14.04px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-price-save{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #C4121A;
+  width: 94px;
+  color: white;
+  font-family: Poppins;
+  font-size: 10.08px;
+  font-weight: 700;
+  line-height: 11.09px;
+  letter-spacing: 0.01em;
+  border-radius: 46.31px;
+  text-transform: uppercase;
+  padding: 2.55px 7.5px;;
+}
+
+.pdm_all-in-one-face-serum-description-form-wrapper__total{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8px;
+  padding-bottom: 15px;
+}
+
+.pdm_all-in-one-face-serum-description-form-wrapper__total-price p{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 6px;
+  font-family: Poppins;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.pdm_all-in-one-face-serum-description-form-wrapper__total-price .pdm_serum-total-price{
+  font-family: Poppins;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #797D7C;
+  text-decoration: line-through;
+}
+
+.pdm_all-in-one-face-serum-description-form-wrapper__total-price .pdm_serum-discount-price{
+  font-family: Poppins;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.pdm_all-in-one-face-serum-description-form-wrapper__total-saving p{
+  font-family: Poppins;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #008763;
+}
+
+.pdm_all-in-one-face-serum-description-form-wrapper__anchor {
+  display: block;
+  padding: 15px 23px;
+  background: #000;
+  width: 100%;
+  border-radius: 100px;
+  color: #fff;
+  position: relative;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.30000001192092896px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.pdm_all-in-one-face-serum-description-form-wrapper__anchor .pdm_serum-anchor-ajax-text{
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.30000001192092896px;
+  text-align: center;
+}
+
+.pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-price-save-desktop{
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .pdm_all-in-one-face-serum-mobile-description-container{
+    display: none;
+  }
+  
+  .pdm_all-in-one-face-serum-offer-form-container{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 80px;
+  }
+
+  .pdm_all-in-one-face-serum-offer-form-images{
+    width: 50%;
+    padding-bottom: 0;
+  }
+  
+  .pdm_all-in-one-face-serum-desktop-description-container{
+    width: 50%;
+  }
+
+  .pdm_all-in-one-face-serum-desktop-description-info{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+
+  .pdm_all-in-one-face-serum-desktop-description-info__reviews{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 22px;
+  }
+
+  .pdm_all-in-one-face-serum-desktop-description-info__reviews p{
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    text-align: left;
+  }
+
+  .pdm_all-in-one-face-serum-desktop-description-info__subtitle{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 15.27px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    padding-bottom: 16px;
+  }
+
+  .pdm_all-in-one-face-serum-desktop-description-info__title{
+    font-family: "Canela Web";
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    padding-bottom: 30px;
+  }
+
+  .pdm_all-in-one-face-serum-desktop-description-info__description{
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    text-align: left;
+  }
+
+  .pdm_all-in-one-face-serum-offer-form-images-container{
+    max-width: 530px;
+    max-height: 512px;
+  }
+
+  .pdm_all-in-one-face-serum-description-form{
+    border-radius: 8px;
+    border: 1px solid #C7E7DC;
+    box-shadow: 0px 5px 15px 0px #a3969640;
+  }
+
+  .pdm_all-in-one-face-serum-description-form-wrapper{
+    padding: 24px 30px 30px;
+  }
+
+  .pdm_all-in-one-face-serum-description-form-wrapper__description{
+    padding-bottom: 22px;
+  }
+
+  .pdm_all-in-one-face-serum-description-form-wrapper__description p{
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 19.1px;
+    letter-spacing: 0.01em;
+    text-align: left;
+  }
+
+  .pdm_all-in-one-face-serum-description-form-wrapper__description strong{
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 15.27px;
+    letter-spacing: 0.01em;
+    text-align: left;
+  }
+
+  .pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__special-offer p{
+    font-size: 11.92px;
+    font-weight: 500;
+    line-height: 17.34px;
+
+  }
+  
+  .pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__special-offer strong{
+    font-size: 11.92px;
+    font-weight: 700;
+    line-height: 17.34px;
+  }
+
+  
+
+  label[for^="pdm_monthly-plan"] .pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info::before {
+    left: 15px;
+    top: 29%;
+    width: 17px;
+    height: 17px;
+  }
+  
+  
+  input[type="radio"]:checked + label[for^="pdm_monthly-plan"] .pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info::after {
+    left: 18px;
+    top: 29%;
+    width: 11px;
+    height: 11px;
+  }
+  
+  label[for^="pdm_monthly-plan"] .pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info{
+    padding-top: 12px;
+    padding-bottom: 14px;
+    padding-left: 47px;
+    padding-right: 10.25px;
+  }
+  
+  .pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-offer{
+    gap: 8px;
+  }
+  
+  .pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-offer .serum-offer{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16.55px;
+    letter-spacing: 0.01em;
+    text-align: left;
+  }
+  
+  .pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-offer .serum-time{
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 19.1px;
+    letter-spacing: 0.01em;
+    text-align: left;
+  }
+
+  .pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-price-product{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16.55px;
+    letter-spacing: 0.01em;
+
+  }
+  
+  .pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-price-product strong{
+    font-size: 15.17px;
+    font-weight: 700;
+    line-height: 16.55px;
+    letter-spacing: 0.01em;
+  }
+  
+  .pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-price-save{
+    flex-direction: row;
+    font-size: 11.88px;
+    font-weight: 700;
+    line-height: 13.07px;
+    letter-spacing: 0.01em;
+    padding: 3px 7.5px;
+    width: 195.53px;
+  }
+
+  .pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-price-save-desktop{
+    display: block;
+  }
+
+  .pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-price-save-mobile{
+    display: none;
+  }
+
+  .pdm_all-in-one-face-serum-description-form-wrapper__total{
+    padding-bottom: 20px;
+  }
+
+  .pdm_all-in-one-face-serum-description-form-wrapper__total-price p{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15.27px;
+    letter-spacing: 0.01em;
+
+  }
+  
+  .pdm_all-in-one-face-serum-description-form-wrapper__total-price .pdm_serum-total-price{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15.27px;
+    letter-spacing: 0.01em;
+  }
+  
+  .pdm_all-in-one-face-serum-description-form-wrapper__total-price .pdm_serum-discount-price{
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15.27px;
+    letter-spacing: 0.01em;
+  }
+
+  .pdm_all-in-one-face-serum-description-form-wrapper__total-saving p{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    text-align: left;
+  }
+
+  .pdm_all-in-one-face-serum-description-form-wrapper__anchor {
+    padding: 19px 15px 21px;
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    text-align: center;
+  }
+  
+  .pdm_all-in-one-face-serum-description-form-wrapper__anchor .pdm_serum-anchor-ajax-text{
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    text-align: center;
+  }
+}
+
+/* end test pdm all in one face serum */

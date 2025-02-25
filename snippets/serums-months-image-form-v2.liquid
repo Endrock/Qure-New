@@ -32,7 +32,7 @@
     <div class="available_bar">
         <p>SOLD OUT 10X - AVAILABLE UNTIL STOCK LASTS </p>
     </div>
-    <div class="section productSubscription choose_serum serums-months-image-form-v2" id="productSubscription">
+    <div class="section productSubscription choose_serum form-{{ section_id }}" id="productSubscription">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -436,9 +436,10 @@
         document.addEventListener('DOMContentLoaded', function() {
             v2__selectProduct('{{ section_id }}_');
 
-            const v2__buyButton = document.querySelector(".serums-months-image-form-v2 .buy_btn");
-            const v2__buyButtonSoldOut = document.querySelector(".serums-months-image-form-v2 .buy_btn_soldout");
-            const v2__savedAmount = document.querySelector(".serums-months-image-form-v2 .savedAmount");
+            const v2__parent = '.form-{{ section_id }}';
+            const v2__buyButton = document.querySelector(v2__parent + ' .buy_btn');
+            const v2__buyButtonSoldOut = document.querySelector(v2__parent + ' .buy_btn_soldout');
+            const v2__savedAmount = document.querySelector(v2__parent + ' .savedAmount');
 
             const toggleSoldOutButton = () => {    
                 if (v2__savedAmount && v2__buyButton && v2__buyButtonSoldOut) {

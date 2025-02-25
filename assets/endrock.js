@@ -1777,4 +1777,178 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-/* end test high contrast mode micro infusion offer and affiliate */
+/* end test upsell popup */
+
+/* start test Face Serum Buy Block Test */
+
+// Check if the face serum container exists and if the test flag is enabled in the dataset
+const faceSerumBuyBlockContainer = document.querySelector('.pdm_all-in-one-face-serum-offer-form');
+
+if (window.location.pathname.includes("/products/face-serum")) {
+  const testPdpElement = document.querySelector(".pdm-product-test-pdp");
+  const originalPdpElement = document.querySelector(".pdm-product-original-pdp");
+  const body = document.body;
+  const buyButton = document.querySelector(
+    ".btn.buy_btn.submit_btn_top.reserve_btn[data-ajax-cart-request-button]"
+  );
+  const testRadio = testPdpElement?.querySelector('input[type="radio"]');
+  const originalRadio = originalPdpElement?.querySelector('input[type="radio"]');
+  const testType = body.getAttribute("data-test-pdm-serum"); // "a", "b" o null
+
+  function updateBuyButton(isTestSelected) {
+    if (!buyButton) return;
+    if (isTestSelected) {
+      if (testType === "a") {
+        buyButton.textContent = "Buy Now & Save 34%";
+      } else if (testType === "b") {
+        buyButton.textContent = "Buy Two, Get One FREE";
+      }
+    } else {
+      buyButton.textContent = "Buy Now"; 
+    }
+  }
+
+  if (testType === "a" || testType === "b") {
+    if (originalPdpElement) {
+      originalPdpElement.remove();
+    }
+  } else {
+    if (testPdpElement) {
+      testPdpElement.remove();
+    }
+    if (originalRadio) {
+      originalRadio.checked = true;
+    }
+  }
+
+  if (testType === "a" || testType === "b") {
+    if (buyButton) {
+      const newVariantId = "46201466650863";
+      const newProductHandle = "all-in-one-face-serum-6-month-bundle-1";
+      buyButton.setAttribute("href", `/cart/add?id=${newVariantId}&quantity=1`);
+      buyButton.setAttribute("onclick", `setEventProductHandler('${newProductHandle}')`);
+    }
+  }
+
+  document.querySelectorAll('input[type="radio"]').forEach((radio) => {
+    radio.addEventListener("change", () => {
+      updateBuyButton(testRadio?.checked);
+    });
+  });
+
+  updateBuyButton(testRadio?.checked);
+}
+
+
+if (faceSerumBuyBlockContainer) {
+  // Get all radio buttons for selecting the monthly plan
+  const faceSerumRadioButtons = document.querySelectorAll('input[name="pdm_monthly-plan"]');
+
+  const updateSerumInformation = (radiobutton) => {
+    const parentDiv = radiobutton.closest('.pdm_plan-one-face-serum');
+
+    if (parentDiv) {
+      const {
+        compareAtPrice,
+        price,
+        savingPrice,
+        variantId,
+        discountMessage,
+        paymentMethods,
+        productHandle,
+      } = parentDiv.dataset;
+
+      updateImages(variantId);
+      updatePrices(compareAtPrice, price, savingPrice);
+      updateAnchorElement(variantId, discountMessage, productHandle);
+      updatePaymentMethods(paymentMethods);
+    }
+  };
+
+  /**
+ * Updates the active image in the serum image gallery based on the selected variant.
+ * @param {string} variantId - The ID of the selected variant.
+ */
+  const updateImages = (variantId) => {
+    const imagesSerums = document.querySelectorAll('.pdm_all-in-one-face-serum-offer-form-images-container__img');
+    imagesSerums.forEach((image) => {
+      image.classList.toggle('active', image.dataset.variantidImage === variantId);
+    });
+  };
+
+  /**
+ * Updates the displayed prices, including total price, discount price, and saving details.
+ * @param {string} compareAtPrice - The original price.
+ * @param {string} price - The discounted price.
+ * @param {string} savingPrice - The amount saved.
+ */
+  const updatePrices = (compareAtPrice, price, savingPrice) => {
+    const totalPriceElement = document.querySelector('.pdm_serum-total-price');
+    const discountPriceElement = document.querySelector('.pdm_serum-discount-price');
+    const savingPriceContainer = document.querySelector('.pdm_serum-saving-container');
+    const savingPriceElement = document.querySelector('.pdm_serum-saving-price');
+
+    if (totalPriceElement) totalPriceElement.textContent = compareAtPrice;
+    if (discountPriceElement) discountPriceElement.textContent = price;
+
+    if (savingPriceElement) {
+      const isSavingVisible = compareAtPrice !== "";
+      savingPriceContainer.style.display = isSavingVisible ? 'block' : 'none';
+      if (isSavingVisible) savingPriceElement.textContent = savingPrice;
+    }
+  };
+
+  /**
+   * Updates the anchor element with the correct URL, discount message, and event listener for tracking.
+   * @param {string} variantId - The ID of the selected variant.
+   * @param {string} discountMessage - The discount message to display.
+   * @param {string} productHandle - The product handle for tracking purposes.
+   */
+  const updateAnchorElement = (variantId, discountMessage, productHandle) => {
+    const anchorAjaxElement = document.querySelector('.pdm_serum-anchor-ajax');
+    const anchorAjaxTextElement = document.querySelector('.pdm_serum-anchor-ajax-text');
+
+    const body = document.body;
+    const testType = body.getAttribute("data-test-pdm-serum");
+
+    if (anchorAjaxElement && variantId) {
+      anchorAjaxElement.href = `/cart/add?id=${variantId}&quantity=1`;
+      
+      if (testType === "b" && discountMessage) {
+        anchorAjaxTextElement.textContent = "Get One FREE";
+        anchorAjaxElement.childNodes[0].nodeValue = "Buy Two, ";
+      } else {
+        anchorAjaxTextElement.textContent = discountMessage;
+        anchorAjaxElement.childNodes[0].nodeValue = "buy now ";
+      }
+
+      anchorAjaxElement.addEventListener('click', () => {
+        setEventProductHandler(productHandle);
+      });
+    }
+  };
+
+  /**
+   * Updates the payment methods displayed.
+   * @param {string} paymentMethods - The payment methods to display.
+   */
+  const updatePaymentMethods = (paymentMethods) => {
+    const paymentMethodElement = document.querySelector('.pdm_payment-methods-serum');
+    if (paymentMethodElement) paymentMethodElement.textContent = paymentMethods;
+  };
+
+  // Initialize with the default selected radio button
+  const defaultCheckedRadioButton = document.querySelector('input[name="pdm_monthly-plan"]:checked');
+  if (defaultCheckedRadioButton) {
+    updateSerumInformation(defaultCheckedRadioButton);
+  }
+
+  // Add event listeners to each radio button to update information on selection change
+  faceSerumRadioButtons.forEach((radioButton) => {
+    radioButton.addEventListener('change', () => {
+      updateSerumInformation(radioButton);
+    });
+  });
+}
+
+/* end test Face Serum Buy Block Test */
