@@ -2844,7 +2844,6 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  height: 100%;
 }
 
 .section-closure-bundle .product-title{
@@ -2978,8 +2977,10 @@
   }
 
   .section-closure-bundle .cont-img {
-    margin:4px 4px 8px 4px;
+    padding:4px 4px 0 4px;
     overflow:hidden;
+    width: 100%;
+    height: 100%;
   }
 
   .section-closure-bundle .product-title {
