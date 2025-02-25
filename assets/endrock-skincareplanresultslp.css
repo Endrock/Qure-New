@@ -1675,9 +1675,9 @@
 .section-products-bundle .rate{
   display: flex;
   width: 200px;
-  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 4px;
   border-radius: 16px 16px 0px 0px;
   background: #000;
   color:#FFF;
@@ -1742,6 +1742,9 @@
   position:relative;
   margin-bottom:12px;
   overflow:hidden;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
 }
 
 .section-products-bundle .pdm-gallery .badge-dermatologist {
@@ -1801,9 +1804,7 @@
 }
 
 .section-products-bundle .media-btns {
-  position: absolute;
-  bottom: 2.5px;
-  left: 0;
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -2075,6 +2076,7 @@
     gap: 4px;
     margin-top: 8%;
     height: 100%;
+    min-height: 300px;
   }
 
   .section-products-bundle .media-btns {
@@ -2147,8 +2149,48 @@
   .section-products-bundle .container-mb-pb {
     display:grid;
     grid-template-columns: 50% 50%;
+    grid-template-rows: max-content;
     gap:8px;
     margin-bottom:36px;
+  }
+
+  .section-products-bundle .container-mb-pb .card-bundle.mb {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-products-bundle .container-mb-pb .card-bundle.mb .cont-card-bundle.mb {
+    position: relative;
+    flex: 1;
+  }
+
+  .section-products-bundle .container-mb-pb .card-bundle.mb .cont-card-bundle.mb .pdm-gallery.mb {
+    margin-bottom: 0;
+    flex: 1;
+  }
+
+  .section-products-bundle .container-mb-pb .card-bundle.mb .cont-card-bundle.mb .product-info.mb {
+    margin: 0;
+    padding: 0 12px;
+  }
+
+  .section-products-bundle .container-mb-pb .card-bundle.mb .cont-card-bundle.mb .bundle-button.mb {
+    margin: 0;
+    padding: 0 12px 12px 12px;
+  }
+
+  .section-products-bundle .container-mb-pb .card-bundle.mb .cont-card-bundle.mb .bundle-button.mb .price.mb {
+    margin-bottom: 8px;
+  }
+
+  .section-products-bundle .container-mb-pb .card-bundle.mb .cont-card-bundle.mb .bundle-button.mb .bundle-btn.mb {
+    margin-bottom: 4px;
+  }
+
+  .section-products-bundle .container-mb-pb .card-bundle.mb .cont-card-bundle.mb .bundle-button.mb .more {
+    margin-bottom: 0;
   }
 
   .section-products-bundle .card-bundle .rate.desktop {
@@ -2160,9 +2202,15 @@
     font-size: 10px;
     font-style: normal;
     font-weight: 500;
-    line-height: 24px;
+    line-height: 100%;
     letter-spacing: 0.5px;
     width:99px;
+    padding: 4px 0;
+    position: relative;
+  }
+
+  .section-products-bundle .rate.mb svg {
+    margin-bottom: 2px;
   }
 
   .section-products-bundle .cont-card-bundle.mb{
