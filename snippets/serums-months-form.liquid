@@ -19,7 +19,7 @@
         {% render 'bf-price-displaying', product: product %}
     {% endif %}
 
-    <div class="mw-402 serums-months-form">
+    <div class="mw-402 form-{{ section_id }}">
 
         <div class="serum_bl">
             <div class="s_bl_wrapper">
@@ -191,7 +191,7 @@
                     class="savedAmount">& SAVE {{ discount_percentage }}%</span><img src="{{ 'arrow_right.svg' | asset_url }}" alt="">
             </a>
 
-            <a class="btn btn-lg btn-primary buy_btn buy_btn_soldout mt-3 {{ section_id }}_productButtonSoldOutObject" style="display: none;">Sold Out<img src="{{ 'arrow_right.svg' | asset_url }}" alt=""></a>
+            <a class="btn btn-lg btn-primary buy_btn_soldout mt-3 {{ section_id }}_productButtonSoldOutObject" style="display: none;">Sold Out</a>
         </div>
 
         <div class="upsell_popup_anchor_hover pdp-ajax-container-reserve">
@@ -242,20 +242,21 @@
     
             selectProduct('{{ section_id }}_');
     
-            const serumOptions = document.querySelectorAll('.serums-months-form input[name="mBanner_serum"]');
-            const supplySteps = document.querySelector(".serums-months-form .supply_steps.month_plan_steps");
-            const nextBatchBl = document.querySelector(".serums-months-form .next_batch_bl");
-            const buyButton = document.querySelector(".serums-months-form .buy_btn");
-            const buyButtonSoldOut = document.querySelector(".serums-months-form .buy_btn_soldout");
-            const buyButtonReserve = document.querySelector(".serums-months-form .buy_btn_reserve");
-            const savedAmount = document.querySelector(".serums-months-form .savedAmount");
+            const parent = '.form-{{ section_id }}';
+            const serumOptions = document.querySelectorAll(parent + ' input[name="mBanner_serum"]');
+            const supplySteps = document.querySelector(parent + ' .supply_steps.month_plan_steps');
+            const nextBatchBl = document.querySelector(parent + ' .next_batch_bl');
+            const buyButton = document.querySelector(parent + ' .buy_btn');
+            const buyButtonSoldOut = document.querySelector(parent + ' .buy_btn_soldout');
+            const buyButtonReserve = document.querySelector(parent + ' .buy_btn_reserve');
+            const savedAmount = document.querySelector(parent + ' .savedAmount');
             
             let isOptionForWrinklesDarkSpots = false;
             let isOptionForWrinkles = false;
             let isOptionForDarkSpots = false;
     
             const handleSerumChange = () => {
-                let selectedSerum = document.querySelector('.serums-months-form input[name="mBanner_serum"]:checked');
+                let selectedSerum = document.querySelector(parent + ' input[name="mBanner_serum"]:checked');
     
                 if(selectedSerum)
                 {
@@ -272,6 +273,9 @@
                     {% endif %}
     
                     toogleBuySection(isOptionForWrinklesDarkSpots || isOptionForWrinkles || isOptionForDarkSpots);
+                    setTimeout(() => {
+                        toggleSoldOutButton();
+                    }, 100)
                 }
             };
     
@@ -285,24 +289,32 @@
                     nextBatchBl.style.display = "none";
                     buyButton.style.display = "block";
                     buyButtonReserve.style.display = "none";
-    
-                    toggleSoldOutButton();
                 }
             }
     
             const toggleSoldOutButton = () => {
-                if(buyButtonReserve.style.display == 'block')
+                if(document.querySelector('.serum_img.product_type[data-product-type="3"]').classList.contains('active'))
                 {
-                    return;
+                    if (savedAmount && buyButtonReserve && buyButtonSoldOut) {
+                        if (savedAmount.textContent.trim() === "& SAVE {{ soldout_percentage }}%") {
+                            buyButtonReserve.style.display = "none";
+                            buyButtonSoldOut.style.display = "block";
+                        } else {
+                            buyButtonReserve.style.display = "block";
+                            buyButtonSoldOut.style.display = "none";
+                        }
+                    }                    
                 }
-    
-                if (savedAmount && buyButton && buyButtonSoldOut) {
-                    if (savedAmount.textContent.trim() === "& SAVE {{ soldout_percentage }}%") {
-                        buyButton.style.display = "none";
-                        buyButtonSoldOut.style.display = "block";
-                    } else {
-                        buyButton.style.display = "block";
-                        buyButtonSoldOut.style.display = "none";
+                else
+                {
+                    if (savedAmount && buyButton && buyButtonSoldOut) {
+                        if (savedAmount.textContent.trim() === "& SAVE {{ soldout_percentage }}%") {
+                            buyButton.style.display = "none";
+                            buyButtonSoldOut.style.display = "block";
+                        } else {
+                            buyButton.style.display = "block";
+                            buyButtonSoldOut.style.display = "none";
+                        }
                     }
                 }
             }
