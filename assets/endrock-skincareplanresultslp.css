@@ -2849,7 +2849,7 @@
 .section-closure-bundle .product-title{
   display:flex;
   justify-content:center;
-  align-items:center;
+  align-items:stretch;
   color: #000;
   text-align: center;
   font-family: "Canela Web";
