@@ -238,97 +238,110 @@
     %}
     
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
+        const parent = '.form-{{ section_id }}';
+        const serumOptions = document.querySelectorAll(parent + ' input[name="mBanner_serum"]');
+        const supplySteps = document.querySelector(parent + ' .supply_steps.month_plan_steps');
+        const nextBatchBl = document.querySelector(parent + ' .next_batch_bl');
+        const buyButton = document.querySelector(parent + ' .buy_btn');
+        const buyButtonSoldOut = document.querySelector(parent + ' .buy_btn_soldout');
+        const buyButtonReserve = document.querySelector(parent + ' .buy_btn_reserve');
+        const savedAmount = document.querySelector(parent + ' .savedAmount');
+        
+        let isOptionForWrinklesDarkSpots = false;
+        let isOptionForWrinkles = false;
+        let isOptionForDarkSpots = false;
+
+        const selectSerum = () => {
+            toogleSectionSupply();
+            setTimeout(() => {
+                toogleButtonSoldOut();
+            }, 100)
+        };
     
-            selectProduct('{{ section_id }}_');
-    
-            const parent = '.form-{{ section_id }}';
-            const serumOptions = document.querySelectorAll(parent + ' input[name="mBanner_serum"]');
-            const supplySteps = document.querySelector(parent + ' .supply_steps.month_plan_steps');
-            const nextBatchBl = document.querySelector(parent + ' .next_batch_bl');
-            const buyButton = document.querySelector(parent + ' .buy_btn');
-            const buyButtonSoldOut = document.querySelector(parent + ' .buy_btn_soldout');
-            const buyButtonReserve = document.querySelector(parent + ' .buy_btn_reserve');
-            const savedAmount = document.querySelector(parent + ' .savedAmount');
-            
-            let isOptionForWrinklesDarkSpots = false;
-            let isOptionForWrinkles = false;
-            let isOptionForDarkSpots = false;
-    
-            const handleSerumChange = () => {
-                let selectedSerum = document.querySelector(parent + ' input[name="mBanner_serum"]:checked');
-    
-                if(selectedSerum)
-                {
-                    {% if supply_for_refill.settings.option_wrinkles_darkspots %}
-                        let isOptionForWrinklesDarkSpots = selectedSerum.id === "option_for_wrinkles_darkspots";
-                    {% endif %}
-    
-                    {% if supply_for_refill.settings.option_wrinkles %}
-                        let isOptionForWrinkles = selectedSerum.id === "option_for_wrinkles";
-                    {% endif %}
-    
-                    {% if supply_for_refill.settings.option_darkspots %}
-                        let isOptionForDarkSpots = selectedSerum.id === "option_for_darkspots";
-                    {% endif %}
-    
-                    toogleBuySection(isOptionForWrinklesDarkSpots || isOptionForWrinkles || isOptionForDarkSpots);
-                    setTimeout(() => {
-                        toggleSoldOutButton();
-                    }, 100)
-                }
-            };
-    
-            const toogleBuySection = (is_target) => {
-                if (is_target === true) {
-                    nextBatchBl.style.display = "block";
-                    buyButtonSoldOut.style.display = "none";
-                    buyButton.style.display = "none";
-                    buyButtonReserve.style.display = "block";
-                } else {
-                    nextBatchBl.style.display = "none";
-                    buyButton.style.display = "block";
-                    buyButtonReserve.style.display = "none";
-                }
+        const toogleSectionSupply = () => {
+            if (isSectionSupply()) {
+                nextBatchBl.style.display = "block";
+                buyButtonSoldOut.style.display = "none";
+                buyButton.style.display = "none";
+                buyButtonReserve.style.display = "block";
+            } else {
+                nextBatchBl.style.display = "none";
+                buyButton.style.display = "block";
+                buyButtonReserve.style.display = "none";
             }
+        }
     
-            const toggleSoldOutButton = () => {
-                if(document.querySelector('.serum_img.product_type[data-product-type="3"]').classList.contains('active'))
-                {
-                    if (savedAmount && buyButtonReserve && buyButtonSoldOut) {
-                        if (savedAmount.textContent.trim() === "& SAVE {{ soldout_percentage }}%") {
-                            buyButtonReserve.style.display = "none";
-                            buyButtonSoldOut.style.display = "block";
-                        } else {
-                            buyButtonReserve.style.display = "block";
-                            buyButtonSoldOut.style.display = "none";
-                        }
-                    }                    
-                }
-                else
-                {
-                    if (savedAmount && buyButton && buyButtonSoldOut) {
-                        if (savedAmount.textContent.trim() === "& SAVE {{ soldout_percentage }}%") {
-                            buyButton.style.display = "none";
-                            buyButtonSoldOut.style.display = "block";
-                        } else {
-                            buyButton.style.display = "block";
-                            buyButtonSoldOut.style.display = "none";
-                        }
+        const toogleButtonSoldOut = () => {
+
+            if(isSectionSupply())
+            {
+                if (savedAmount && buyButtonReserve && buyButtonSoldOut) {
+                    if (savedAmount.textContent.trim() === "& SAVE {{ soldout_percentage }}%") {
+                        buyButtonReserve.style.display = "none";
+                        buyButtonSoldOut.style.display = "block";
+                    } else {
+                        buyButtonReserve.style.display = "block";
+                        buyButtonSoldOut.style.display = "none";
+                    }
+                }                    
+            }
+            else
+            {
+                if (savedAmount && buyButton && buyButtonSoldOut) {
+                    if (savedAmount.textContent.trim() === "& SAVE {{ soldout_percentage }}%") {
+                        buyButton.style.display = "none";
+                        buyButtonSoldOut.style.display = "block";
+                    } else {
+                        buyButton.style.display = "block";
+                        buyButtonSoldOut.style.display = "none";
                     }
                 }
             }
+        }
+
+        const isSectionSupply = () => {
+
+            let selectedSerum = document.querySelector('.form-{{ section_id }} input[name="mBanner_serum"]:checked');
+
+            if(selectedSerum.id == 'option_for_wrinkles_darkspots')
+            {
+                {% if supply_for_refill.settings.option_wrinkles_darkspots %}
+                    return true;
+                {% endif %}
+            }
+
+            if(selectedSerum.id == 'option_for_wrinkles')
+            {
+                {% if supply_for_refill.settings.option_wrinkles %}
+                    return true;
+                {% endif %}
+            }
+
+            if(selectedSerum.id == 'option_for_darkspots')
+            {
+                {% if supply_for_refill.settings.option_darkspots %}
+                    return true;
+                {% endif %}
+            }
+
+            return false;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
     
-            serumOptions.forEach((option) => {
-                option.addEventListener("change", handleSerumChange);
-            });
+            selectProduct('{{ section_id }}_');
+            selectSerum();
     
-            handleSerumChange();
-    
-            const observer = new MutationObserver(toggleSoldOutButton);
+            const observer = new MutationObserver(toogleButtonSoldOut);
+            
             if (savedAmount) {
                 observer.observe(savedAmount, { childList: true, subtree: true });
             }
+
+            serumOptions.forEach((option) => {
+                option.addEventListener("change", selectSerum);
+            });
+
         });
     </script>
 {% endif %}
