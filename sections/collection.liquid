@@ -4,10 +4,6 @@
 	{%- case block.type -%}
         {%- when 'banner' -%}
             {%- assign banner_count = banner_count | plus: 1 -%}
-        {%- when 'banner_holiday' -%}
-            {%- assign banner_count = banner_count | plus: 1 -%}
-        {%- when 'banner_14feb' -%}
-            {%- assign banner_count = banner_count | plus: 1 -%}
     {%- endcase -%}
 {%- endfor -%}
 
@@ -65,151 +61,90 @@
     {%- for block in section.blocks -%}
         {% case block.type %}
             {% when 'banner' %}
-                <link rel="stylesheet" href="{{ 'collection-banner-bf.css' | asset_url }}">
+                {% when 'banner' %}
+                    <link rel="stylesheet" href="{{ 'collection-banner-bf.css' | asset_url }}">
 
-                <div class="bf_sale-banners">
-                    <div class="discount_banner"{% if block.settings.link_url != blank %} onclick="location.href='{{ block.settings.link_url }}';" style="cursor: pointer"{% endif %}>
-                        <div class="container-fluid px-0">
-                            <div class="row mx-0">
-                                <div class="col-lg-7 col-7 px-0">
-                                    <div class="collection_text text-center">
-                                        <div>
-                                            {% if block.settings.heading != blank %}
-                                                <h6>{{ block.settings.heading }}</h6>
-                                            {% endif %}
-                                            {% if block.settings.subheading != blank %}
-                                                <h1>{{ block.settings.subheading }}</h1>
-                                            {% endif %}
-                                            {% if block.settings.text != blank %}
-                                                <p>{{ block.settings.text }}</p>
-                                            {% endif %}
-                                        </div>
+                    {% capture banner %}
+                        <div class="bf_sale-banners">
+                            <div class="hero_valentine_banner position-relative main_banner womens_day_offer_collec">
+                                <div class="container-fluid px-0">
+                                    <div class="desk_banner_collec d-none d-md-block">
+                                        <img src="https://qureskincaredns.com/new/assets/banner_bg_clr.webp" alt="" class="img-fluid">
                                     </div>
-                                </div>
-                                <div class="col-lg-5 col-5 px-0">
-                                    {% if block.settings.wistia_id != blank %}
-                                        <div class="collection_img pe-none d-lg-block d-none">
-                                            <div class="wistia_responsive_padding" style="position:relative;">
-                                                <div class="wistia_responsive_wrapper"
-                                                    style="height:100%;left:0;position:absolute;top:0;width:100%;">
-                                                    <div class="wistia_embed wistia_async_{{ block.settings.wistia_id }} seo=false videoFoam=true"
-                                                        style="height:100%;position:relative;width:100%">&nbsp;</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <script src="https://fast.wistia.com/embed/medias/{{ block.settings.wistia_id }}.jsonp" async></script>
-                                    {% endif %}
+                                    <div class="mob_banner_collec d-md-none">
+                                        <img src="https://qureskincaredns.com/new/assets/collec_banner.webp" alt="" class="img-fluid">
+                                    </div>
+                                    
+                                    
+                                    <div class="collection_grid d-md-grid main_b_wrapper py-3">
+                                        <div class="banner_text w-100 womens_day_offer pt-2">
+                                            <div class="womens_day_banner women_day_bnr_collec"> 
+                                                {% if block.settings.heading != blank %}
+                                                    <p>{{ block.settings.heading }}</p>
+                                                {% endif %}
+                                                {% if block.settings.subheading != blank %}
+                                                    {{ 
+                                                        block.settings.subheading 
+                                                        |  replace: '<p>', ''
+                                                        |  replace: '</p>', ''
+                                                        |  replace: '<h3>', '<h3 class="claim_free">'
+                                                    }}
+                                                {% endif %}
     
-                                    {% if block.settings.wistia_id_mobile != blank %}
-                                        <div class="collection_img pe-none d-lg-none">
-                                            <div class="wistia_responsive_padding" style="position:relative;">
-                                                <div class="wistia_responsive_wrapper"
-                                                    style="height:100%;left:0;position:absolute;top:0;width:100%;">
-                                                    <div class="wistia_embed wistia_async_{{ block.settings.wistia_id_mobile }} seo=false videoFoam=true"
-                                                        style="height:100%;position:relative;width:100%">&nbsp;</div>
+                                                {% if block.settings.link_url != blank %}
+                                                    <a href="{{ block.settings.link_url }}" class="btn_black btn mb-0 mt-2" aria-label="{{ block.settings.link_label | escape }}">{{ block.settings.link_label }}</a>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        <div class="img_dv_collec">
+                                            <div class="holiday_banner womens_day_holiday">
+                                                <div class="collec_bundle">
+                                                    <div class="bf_sale-slider pt-3 mt-0 px-0">
+                                                        <div class="swiper holiday_bundle dot_pagination">
+                                                            <div class="swiper-wrapper">
+                                                                <div class="swiper-slide">
+                                                                    <div class="new-slide_ctm">
+                                                                        <div class="new_img">
+                                                                            <img src="https://qureskincaredns.com/new/assets/collec_wmn_new.png" alt="" class="img-fluid coll_mi_bndl">
+                                                                        </div>
+                                                                        <div class="new_img">
+                                                                            <img src="https://qureskincaredns.com/new/assets/plus.webp" alt="" class="img-fluid plus_collec_icon">
+                                                                        </div>
+                                                                        <div class="position-relative">
+                                                                            <div class="new_img">
+                                                                                <img src="https://qureskincaredns.com/new/assets/collec_wmn_new2.png" alt="" class="img-fluid coll_mi_bndl2">
+                                                                            </div>
+                                                                            <div class="mi_bndl_women">
+                                                                                <div class="mi_bndl_dv mb-1">
+                                                                                    <h4 class="mi_bndl_text">Micro-Infusion Bundle</h4>
+                                                                                    <p class="valued_at">VALUED AT <strong>$357</strong></p>
+                                                                                </div>
+                                                                                <p class="free_text justify-content-start"><span class="discount_badge">FREE</span></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="holiday_bundle-swiper-prev swiper-button-prev swiper-button d-none">
+                                                        </div>
+                                                        <div
+                                                            class="holiday_bundle-swiper-next  swiper-button-next swiper-button d-none">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <script src="https://fast.wistia.com/embed/medias/{{ block.settings.wistia_id_mobile }}.jsonp" async></script>
-                                    {% endif %}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-            
-                {% when 'banner_holiday' %}
-                    <link rel="stylesheet" href="{{ 'collection-banner-holiday.css' | asset_url }}">
-
-                    <div class="bf_sale-banners">
-                        <div class="collection_banner position-relative">
-                            <div class="container-fluid px-0">
-                                <div class="collection_grid d-lg-grid d-none">
-                                    <div>
-                                        <img src="https://qureskincaredns.com/new/assets/collection_b1.webp" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="banner_text">
-                                        <div>
-                                            {% if block.settings.heading != blank %}
-                                                <h1>
-                                                    {{ block.settings.heading 
-                                                        | replace: '<p>', '' 
-                                                        | replace: '</p>', '' 
-                                                    }}
-                                                </h1>
-                                            {% endif %}
-
-                                            {% if block.settings.link_url != blank %}
-                                                <a href="{{ block.settings.link_url }}" class="btn_black btn mb-0 mt-3" aria-label="Support now">{{ block.settings.link_label }}</a>
-                                            {% endif %}
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <img src="https://qureskincaredns.com/new/assets/collection_b2.webp" class="img-fluid" alt="">
-                                    </div>
-                                </div>
-                                <div class="d-lg-none">
-                                    <img src="https://qureskincaredns.com/new/assets/collection_b-mob.webp" class="img-fluid" alt="">
-                                    <div class="bfBundle__bannerBlock">
-                                        <div class="container">
-                                        <div class="row justify-content-end">
-                                            <div class="col-6">
-                                                <div class="banner_bf-text text-center pt-0 ps-2">
-                                                    {% if block.settings.heading != blank %}
-                                                        <h1>
-                                                            {{ block.settings.heading 
-                                                                | replace: '<p>', '' 
-                                                                | replace: '</p>', '' 
-                                                            }}
-                                                        </h1>
-                                                    {% endif %}
-
-                                                    {% if block.settings.link_url != blank %}
-                                                        <a href="{{ block.settings.link_url }}" class="btn_black btn mt-2 mb-0 px-3 px-md-4 w-auto" aria-label="Support now">{{ block.settings.link_label }}</a>
-                                                    {% endif %}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                {% when 'banner_14feb' %}
-                    <link rel="stylesheet" href="{{ 'collection-banner-14feb.css' | asset_url }}">
+                        </div>                        
+                    {% endcapture %}
 
-                    <div class="bf_sale-banners">
-                        <div class="collection_banner">
-                            <div class="container-fluid px-0">
-                                <div class="collection_grid d-grid">
-                                    <div class="banner_text">
-                                        <div>
-                                            <h6><span><img src="https://qureskincaredns.com/new/assets/heart.svg" alt=""></span>{% if block.settings.heading != ''  %}{{ block.settings.heading }}{% endif %}<span><img src="https://qureskincaredns.com/new/assets/heart.svg" alt=""></span></h6>
-                                            {% if block.settings.subheading != blank %}
-                                                <h1>
-                                                    {{ block.settings.subheading 
-                                                        | replace: '<p>', '' 
-                                                        | replace: '</p>', '' 
-                                                    }}
-                                                </h1>
-                                            {% endif %}
+                    {% assign amount = 357 | times: 100 | money_without_trailing_zeros %}
 
-                                            {% if block.settings.link_url != blank %}
-                                                <a href="{{ block.settings.link_url }}" class="btn_black btn mb-0 mt-3" aria-label="{{ block.settings.link_label | escape }}">{{ block.settings.link_label }}</a>
-                                            {% endif %}
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <img src="https://qureskincaredns.com/new/assets/c_valantine-banner.webp" class="img-fluid d-md-block d-none" alt="">
-                                        <img src="https://qureskincaredns.com/new/assets/c_valantine-bannerMob.webp" class="img-fluid d-md-none" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {{ banner |  replace: '$357', amount }}
         {% endcase %}
     {% endfor %}
 {% else %}
@@ -314,55 +249,6 @@
         ],
         "blocks": [
             {
-                "type": "banner_14feb",
-                "name": "t:common.banner_14feb.label",
-                "limit": 1,
-                "settings": [
-                    {
-                        "type": "text",
-                        "id": "heading",
-                        "label": "t:common.heading.label"
-                    },
-                    {
-                        "type": "richtext",
-                        "id": "subheading",
-                        "label": "t:common.subheading.label"
-                    },
-                    {
-                        "type": "url",
-                        "id": "link_url",
-                        "label": "t:common.link.url.label"
-                    },
-                    {
-                        "type": "text",
-                        "id": "link_label",
-                        "label": "t:common.link.label"
-                    }
-                ]
-		    },
-            {
-                "type": "banner_holiday",
-                "name": "t:common.banner_holiday.label",
-                "limit": 1,
-                "settings": [
-                    {
-                        "type": "richtext",
-                        "id": "heading",
-                        "label": "t:common.heading.label"
-                    },
-                    {
-                        "type": "url",
-                        "id": "link_url",
-                        "label": "t:common.link.url.label"
-                    },
-                    {
-                        "type": "text",
-                        "id": "link_label",
-                        "label": "t:common.link.label"
-                    }
-                ]
-		    },
-            {
                 "type": "banner",
                 "name": "t:common.banner.label",
                 "limit": 1,
@@ -373,29 +259,19 @@
                         "label": "t:common.heading.label"
                     },
                     {
-                        "type": "text",
+                        "type": "richtext",
                         "id": "subheading",
                         "label": "t:common.subheading.label"
-                    },
-                    {
-                        "type": "text",
-                        "id": "text",
-                        "label": "t:common.text.label"
-                    },
-                    {
-                        "type": "text",
-                        "id": "wistia_id",
-                        "label": "t:common.wistia.id.label"
-                    },
-                    {
-                        "type": "text",
-                        "id": "wistia_id_mobile",
-                        "label": "t:common.wistia.id.mobile"
                     },
                     {
                         "type": "url",
                         "id": "link_url",
                         "label": "t:common.link.url.label"
+                    },
+                    {
+                        "type": "text",
+                        "id": "link_label",
+                        "label": "t:common.link.label"
                     }
                 ]
 		    }
