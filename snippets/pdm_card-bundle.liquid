@@ -65,21 +65,23 @@ this snippets is used in pdm_products-bundle.liquid section, render card product
           {{ text-checks }}
       </div>
     </div>
-    <div class="doctor-info">
-        <div class="photo">
-          {% if doctor-image %}
-            {{ doctor-image |  image_url: width: 256 |  image_tag: alt: doctor-name, class: 'photo-doctor' }}
-          {% endif %}
-        </div>
-        <div class="doctor-text">
-            <div class="review">
-                {{ doctor-text }}
-            </div>
-            <div class="doctor-data">
-                <strong>{{ doctor-name }}</strong> | {{ doctor-certificated }}
-            </div>
-        </div>
-    </div>
+    {% if doctor-image and  doctor-text %}
+      <div class="doctor-info">
+          <div class="photo">
+            {% if doctor-image %}
+              {{ doctor-image |  image_url: width: 256 |  image_tag: alt: doctor-name, class: 'photo-doctor' }}
+            {% endif %}
+          </div>
+          <div class="doctor-text">
+              <div class="review">
+                  {{ doctor-text }}
+              </div>
+              <div class="doctor-data">
+                  <strong>{{ doctor-name }}</strong> | {{ doctor-certificated }}
+              </div>
+          </div>
+      </div>
+    {% endif %}
     <div class="bundle-button">
         <div class="price">
           {{ product.price | money_without_trailing_zeros }}
