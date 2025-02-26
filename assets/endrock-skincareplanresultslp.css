@@ -2073,15 +2073,20 @@
     min-height: 200px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 0;
     margin-top: 8%;
     height: 100%;
     min-height: 300px;
   }
 
+  .section-products-bundle .show-mobile .pdm-gallery .media {
+    padding-bottom: 10px;
+  }
+
   .section-products-bundle .media-btns {
     position: relative;
-    margin-top: 4px;
+    margin-top: 0;
+    padding-bottom: 4px;
   }
 
   .section-products-bundle .show-mobile .product-info{
@@ -3091,6 +3096,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+  max-width: 210px;
 }
 .cart-bundle-message__unused-bundle.hidden,
 .cart-bundle-message__used-bundle.hidden {
