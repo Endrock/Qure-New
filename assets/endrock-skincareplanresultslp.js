@@ -439,7 +439,8 @@ const productsBundleInit = ()=>{
                 //card.classList.remove('active')
                 const arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
                 const newArrayBundle = arrayBundle.filter((id) => id != idProduct )
-                localStorage.setItem('bundleArray', JSON.stringify(newArrayBundle));
+
+                localStorage.setItem(`${window.templateName}-bundleArray`, JSON.stringify(newArrayBundle));
                 this.setAttribute('data-bundle-array', JSON.stringify(newArrayBundle))
 
               }else{
@@ -450,7 +451,7 @@ const productsBundleInit = ()=>{
 
                 arrayBundle.push(idProduct)
 
-                localStorage.setItem('bundleArray', JSON.stringify(arrayBundle));
+                localStorage.setItem(`${window.templateName}-bundleArray`, JSON.stringify(arrayBundle));
                 this.setAttribute('data-bundle-array', JSON.stringify(arrayBundle) )
               }
             })
@@ -580,7 +581,7 @@ const productsBundleInit = ()=>{
         }
 
         setBundleArray(){
-          const arrayBundleStorage = localStorage.getItem('bundleArray');
+          const arrayBundleStorage = localStorage.getItem(`${window.templateName}-bundleArray`);
           if(!arrayBundleStorage) return;
           this.setAttribute('data-bundle-array', arrayBundleStorage);
         }
@@ -629,7 +630,7 @@ const flatingBundleInit = ()=>{
               const idProduct = btn.dataset.productId
               const arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
               const newArrayBundle = arrayBundle.filter((id) => id != idProduct )
-              localStorage.setItem('bundleArray', JSON.stringify(newArrayBundle));
+              localStorage.setItem(`${window.templateName}-bundleArray`, JSON.stringify(newArrayBundle));
               this.setAttribute('data-bundle-array', JSON.stringify(newArrayBundle))
             })
           })
@@ -884,7 +885,7 @@ const flatingBundleInit = ()=>{
           }
           const btnSubmit = this.querySelector('.btn-discount');
           btnSubmit.classList.remove('disabled');
-          localStorage.setItem('bundleArray', JSON.stringify([]));
+          localStorage.setItem(`${window.templateName}-bundleArray`, JSON.stringify([]));
           this.setAttribute('data-bundle-array', JSON.stringify([]));
         }
 
