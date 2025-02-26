@@ -489,7 +489,7 @@
             const v2__buyButtonSoldOut = document.querySelector(v2__parent + ' .buy_btn_soldout');
             const v2__savedAmount = document.querySelector(v2__parent + ' .savedAmount');
 
-            const toggleSoldOutButton = () => {    
+            const v2__stoggleSoldOutButton = () => {    
                 if (v2__savedAmount && v2__buyButton && v2__buyButtonSoldOut) {
                     if (v2__savedAmount.textContent.trim() === "& SAVE {{ soldout_percentage }}%") {
                         v2__buyButton.style.display = "none";
@@ -501,7 +501,7 @@
                 }
             }
 
-            const v2__observer = new MutationObserver(toggleSoldOutButton);
+            const v2__observer = new MutationObserver(v2__stoggleSoldOutButton);
             if (v2__savedAmount) {
                 v2__observer.observe(v2__savedAmount, { childList: true, subtree: true });
             }

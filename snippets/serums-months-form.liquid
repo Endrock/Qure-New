@@ -246,6 +246,7 @@
         const buyButtonSoldOut = document.querySelector(parent + ' .buy_btn_soldout');
         const buyButtonReserve = document.querySelector(parent + ' .buy_btn_reserve');
         const savedAmount = document.querySelector(parent + ' .savedAmount');
+        const buyButtonSticky = document.querySelector('.button_sticky');
         
         let isOptionForWrinklesDarkSpots = false;
         let isOptionForWrinkles = false;
@@ -278,9 +279,11 @@
                 if (savedAmount && buyButtonReserve && buyButtonSoldOut) {
                     if (savedAmount.textContent.trim() === "& SAVE {{ soldout_percentage }}%") {
                         buyButtonReserve.style.display = "none";
+                        buyButtonSticky.style.display = "none";
                         buyButtonSoldOut.style.display = "block";
                     } else {
                         buyButtonReserve.style.display = "block";
+                        buyButtonSticky.style.display = "block";
                         buyButtonSoldOut.style.display = "none";
                     }
                 }                    
@@ -290,9 +293,11 @@
                 if (savedAmount && buyButton && buyButtonSoldOut) {
                     if (savedAmount.textContent.trim() === "& SAVE {{ soldout_percentage }}%") {
                         buyButton.style.display = "none";
+                        buyButtonSticky.style.display = "none";
                         buyButtonSoldOut.style.display = "block";
                     } else {
                         buyButton.style.display = "block";
+                        buyButtonSticky.style.display = "block";
                         buyButtonSoldOut.style.display = "none";
                     }
                 }
