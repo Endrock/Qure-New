@@ -2020,8 +2020,8 @@
   .section-products-bundle .close-popup{
     display: flex;
     position: absolute;
-    top: 12px;
-    right: 12px;
+    top: 6px;
+    right: 2px;
     border: 1px solid #797D7C;
     border-radius: 40px;
     width: 18px;
@@ -2074,7 +2074,7 @@
     display: flex;
     flex-direction: column;
     gap: 0;
-    margin-top: 8%;
+    margin-top: 5%;
     height: 100%;
     min-height: 300px;
   }
@@ -2090,7 +2090,7 @@
   }
 
   .section-products-bundle .show-mobile .product-info{
-    margin: 8px 12px 0;
+    margin: 10px 12px 0;
   }
 
   .section-products-bundle .show-mobile .doctor-info{
@@ -2102,11 +2102,11 @@
   .section-products-bundle .show-mobile .title h3{
     font-size: 20px;
     line-height:100%;
-    margin-bottom: 16px;
+    margin-bottom: 0;
   }
 
   .section-products-bundle .show-mobile .text-checks {
-    margin:16px 0;
+    margin:14px 0;
   }
 
   .section-products-bundle .show-mobile .text-checks li{
