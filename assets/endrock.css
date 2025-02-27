@@ -3336,7 +3336,7 @@ body[class~="page.sunil-mi-landing-special2-reorder"] #see_it_section{
 }
 
 @media screen and (min-width: 366px) {
-  .pdm-step_content_v2 .planBlock .monthly_plans .saved_price.item-1 
+  .pdm-step_content_v2 .planBlock .monthly_plans .saved_price.item-1, 
   .pdm-step_content_v2 .planBlock .monthly_plans .saved_price.item-2 {
     font-size: 11px;
     padding: 0px 8px;
