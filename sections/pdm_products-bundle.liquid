@@ -7,7 +7,7 @@
   endfor
 %}
 <products-bundle id="products_bundle_custom_section"
-                 class="products-bundle"
+                 class="products-bundle {{ template.suffix }}"
                  data-bundle-name="{{ section.settings.bundle_info.name }}"
                  data-bundle-id="{{ section.settings.bundle_products.local_storage_name }}"
                  data-bundle-array="[]"
@@ -20,7 +20,7 @@
     {% assign product_object = products[index_product] %}
     {% render 'pdm_card-bundle-mobile'
     product: product_object,
-    product-name: card.settings.custom_name,
+    product-name: card.settings.custom_name_mobile,
     product-img: card.settings.image_product,
     show-rated: card.settings.show_top_rated,
     show-badge: card.settings.show_badge,
@@ -96,7 +96,12 @@
         {
           "type": "text",
           "id": "custom_name",
-          "label": "custom Product Name"
+          "label": "custom Product Name Desktop"
+        },
+        {
+          "type": "text",
+          "id": "custom_name_mobile",
+          "label": "custom Product Name Mobile"
         },
         {
           "type": "image_picker",

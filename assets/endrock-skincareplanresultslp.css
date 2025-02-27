@@ -3156,11 +3156,18 @@
   line-height: 12px;
 }
 .regimen-steps.skincare-plan-dark-spots .step[index="2"] .cont-text .full-text .metaobject-content .regimen_subtitle.display-block.paragraph-index2 ~ .regimen_paragraph { 
-  margin-top: 10px;
+  margin-top: 16px;
   margin-bottom: 24px !important;
 }
 .regimen-steps.skincare-plan-dark-spots .step[index="3"] .cont-text .full-text .metaobject-content .regimen_subtitle.display-block.paragraph-index3 ~ .regimen_paragraph { 
-  margin-top: 8px;
+  margin-top: 16px;
+} 
+.regimen-steps.skincare-plan-dark-spots .step[index="3"] .cont-text .full-text .metaobject-content .regimen_subtitle.display-block.paragraph-index3 ~ .regimen_paragraph img { 
+  width: 12px !important;
+  height: 12px !important;
+  object-fit: none;
+  position: relative;
+  top: 4px;
 } 
 .table-tc.skincare-plan-dark-spots .table .row-title {
   color: #000;
@@ -3171,13 +3178,70 @@
   line-height: 20px;
   letter-spacing: 0.14px;
 }
+.table-tc.skincare-plan-dark-spots .section-title p { 
+  color: #000;
+  text-align: center;
+  font-family: Canela Web, sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 52px; 
+}
 @media (max-width: 768px) {
+  .table-tc.skincare-plan-dark-spots .section-title p { 
+    font-size: 24px;
+    line-height: 32px; 
+  }
   .table-tc.skincare-plan-dark-spots .table .row-content { 
     padding: 16px 8px;
     line-height: 17px;
   }
   .table-tc.skincare-plan-dark-spots .table .row-content span { 
     display: block;
+    color: #000;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; 
+    letter-spacing: 0.12px;
+  }
+  .table-tc.skincare-plan-dark-spots .table { 
+    table-layout: fixed;
+  }
+  .table-tc.skincare-plan-dark-spots .table tr { 
+    min-height: 76px;
+    height: 76px;
+  } 
+  .table-tc.skincare-plan-dark-spots .table td { 
+    min-height: 100%;
+    height: 100%;
+    padding-top: unset !important;
+    padding-bottom: unset !important;
+  } 
+  .table-tc.skincare-plan-dark-spots .table td.row-content { 
+    line-height: 7px !important;
+  } 
+  .table-tc.skincare-plan-dark-spots .table .row-title {
+    text-align: start;
+    color: #000;
+    font-family: Poppins, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; 
+    letter-spacing: 0.12px;
+  }
+  .products-bundle.skincare-plan-dark-spots .pdm-gallery {
+    margin-bottom: 0;
+    width: 100%;
+    height: 166px;
+  }
+  .products-bundle.skincare-plan-dark-spots .card-bundle .cont-card-bundle { 
+    height: calc(100% - 24px);
+  } 
+  .products-bundle.skincare-plan-dark-spots .bundle-button { 
+    margin-top: 8px;
   }
 }
 /* end dark spots*/

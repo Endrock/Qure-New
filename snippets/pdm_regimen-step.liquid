@@ -23,7 +23,7 @@
                         {% endif %}
                     {% endif %}
                     <div class="{{ block.system.type }} {{ block.system.handle }} {% if font_size == true %}big-text{% endif %} {% if render_badge_green %}display-block{% endif %} {% if render_badge_green and index == 2 %}paragraph-index2{% endif %} {% if render_badge_green and index == 3 %}paragraph-index3{% endif %}" 
-                        style="margin-bottom:{{ block_space }}px;">
+                        {% if block_space != blank %}style="margin-bottom:{{ block_space }}px;" {% endif %}>
                         {% if img_icon != blank %}
                             <img src="{{ img_icon  | img_url: 'original' }}" alt="icon"/>
                         {% endif %}
