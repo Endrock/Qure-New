@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "main": {
       "type": "page",
@@ -58,8 +58,8 @@
           "settings": {
             "custom_name": "Qure Faucet Filter",
             "image_product": "shopify://shop_images/images_D_3_2___M_1_1_0c2b9a2e-b3fa-4f14-947e-46550af17294.png",
-            "image_results": "shopify://shop_images/images_1.png",
-            "video": "shopify://files/videos/dr_tripathi.mov",
+            "image_results": "shopify://shop_images/images_c340acae-b999-4a73-bab4-f7f206ce0e97.png",
+            "video": "shopify://files/videos/Water Filter Refill Edit.mov",
             "show_top_rated": false,
             "show_badge": false,
             "text_check": "<ul><li>Advanced water filter reduces breakout-causing irritants like chlorine and heavy metals, giving you clearer, hydrated skin.</li><li>Protects against pore-clogging contaminants and helps prevent premature aging—without any extra steps in your routine.</li><li>Optimizes the effectiveness of your skincare by providing the purest cleanse your skin will love.</li></ul>",
@@ -74,7 +74,6 @@
           "settings": {
             "custom_name": "Dermal Mist",
             "image_product": "shopify://shop_images/images_D_3_2___M_1_1_1_b3c07719-e89f-40cb-9e01-83562b89df8d.png",
-            "video": "shopify://files/videos/Serum edit.mov",
             "show_top_rated": false,
             "show_badge": false,
             "text_check": "<ul><li>Gently purifies your skin, reducing breakout-causing bacteria without stripping or drying it out.</li><li>Helps calm inflammation and keeps your skin refreshed throughout the day.</li><li>Versatile and safe to use on your face, body, and even on devices that touch your skin (like your phone!).</li></ul>",
@@ -188,8 +187,7 @@
             "review_doctor": "\"You wanna look for something that’s gonna reduce both calcium carbonate and chlorine from your water.\"",
             "name_doctor": "Dr Shah",
             "certified_doctor": "Board-Certified Dermatologists",
-            "video": "shopify://files/videos/Download_3f033eae-717f-4164-9097-ae309c3f15bf.mp4",
-            "video_external": "",
+            "video_external": "https://youtu.be/QuJ3puVLKzU",
             "img": "shopify://shop_images/33f70160899439358345931c065c1c3b.jpg",
             "product": "faucet-filter"
           }
@@ -200,9 +198,8 @@
             "review_doctor": "\"The best LED mask on the market in my opinion at this time, that being said you do need to use this consistently to see results…\"",
             "name_doctor": "Dr Shah and Dr Maxfield",
             "certified_doctor": "Board-Certified Dermatologists",
-            "video": "shopify://files/videos/This is how you make simple skincare = effective. Packed with retinol, bakuchiol, antioxidants, the world’s most trusted anti-aging peptide, our All-In-One powerhouse Face Serum is a one step multitasker for all things aging skin. Don’.mp4",
-            "video_external": "",
-            "img": "shopify://shop_images/video_1.png",
+            "video_external": "https://youtu.be/I2Fe-kP-2Jg",
+            "img": "shopify://shop_images/0ffb9cf591a08f801143068d395a1e35.png",
             "product": "q-rejuvalight-pro-facewear"
           }
         }
@@ -413,7 +410,9 @@
       "type": "pdm_flating-bundle",
       "settings": {
         "bundle_info": "personalized-skincare-bundle-acne",
-        "bundle_products": "2200"
+        "bundle_products": "2200",
+        "text_bubble_bundle_unused": "${bundle-title} successfully added to your cart.",
+        "text_bubble_bundle_used": "Your Personalized Skincare Bundle  has been updated."
       }
     }
   },
