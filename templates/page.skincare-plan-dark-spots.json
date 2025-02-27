@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "main": {
       "type": "page",
@@ -41,6 +41,7 @@
           "type": "card",
           "settings": {
             "custom_name": "Q-Rejuvalight Pro LED Mask",
+            "custom_name_mobile": "Q-Rejuvalight LED Mask",
             "image_product": "shopify://shop_images/images_D_3_2___M_1_1_3ab94360-bb60-40f0-b32c-fd24115b141e.png",
             "image_results": "shopify://shop_images/dark-spots-5.jpg",
             "video": "shopify://files/videos/0424(1).mov",
@@ -57,6 +58,7 @@
           "type": "card",
           "settings": {
             "custom_name": "Micro-Infusion System for Dark Spots",
+            "custom_name_mobile": "Micro-Infusion System",
             "image_product": "shopify://shop_images/MI_Dark_Spots_Personalized_Sking_Care.png",
             "image_results": "shopify://shop_images/dark-spots-6.jpg",
             "video": "shopify://files/videos/dr_tripathi.mov",
@@ -73,6 +75,7 @@
           "type": "card",
           "settings": {
             "custom_name": "",
+            "custom_name_mobile": "All-In-One Face Serum",
             "image_product": "shopify://shop_images/images_D_3_2___M_1_1_2.png",
             "image_results": "shopify://shop_images/dark-spots-7.jpg",
             "video": "shopify://files/videos/Serum edit.mov",
@@ -89,6 +92,7 @@
           "type": "card",
           "settings": {
             "custom_name": "Neck & Décolletage LED Light Therapy",
+            "custom_name_mobile": "Neck & Déc LED",
             "image_product": "shopify://shop_images/Neck_Deck_Darks_Spots_Results.png",
             "image_results": "shopify://shop_images/dark-spots-8.jpg",
             "video": "shopify://files/videos/Neck edit_b34038da-2489-4c95-af0a-0a486968f588.mov",
@@ -372,7 +376,7 @@
         "row_yytDew"
       ],
       "settings": {
-        "section_title": "Think You’ve Tried It All?  Here’s Why Qure Is Different.",
+        "section_title": "<p>Think You’ve Tried It All?  </p><p>Here’s Why Qure Is Different.</p>",
         "table_left_title": "What You May Have Tried Before",
         "table_right_title": "Why Qure Stands Out"
       }

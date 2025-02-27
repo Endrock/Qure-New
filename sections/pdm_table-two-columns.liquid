@@ -1,5 +1,5 @@
 <div class="table-tc container {{ template.suffix }}">
-  <h2 class="section-title">{{ section.settings.section_title | raw }}</h2>
+  <h2 class="section-title">{{ section.settings.section_title }}</h2>
     <table class="table">
         <thead class="header">
             <tr>
@@ -10,7 +10,7 @@
         <tbody class="body">
           {% for block in section.blocks %}
             <tr class="table-row">
-              <td class="row-title">{{ block.settings.row_title | raw }} </td>
+              <td class="row-title">{{ block.settings.row_title }} </td>
               <td class="row-content"> <strong>{{ block.settings.row_content_strong}}</strong> <br/> <span>{{ block.settings.row_content | raw }}</span></td>
             </tr>
           {% endfor %}
@@ -27,10 +27,9 @@
   "class": "section-table-tc",
   "settings": [
     {
-      "type": "text",
+      "type": "richtext",
       "id": "section_title",
-      "label": "Heading",
-      "default": "Think You’ve Tried It All? <br/> Here’s Why Qure Is Different."
+      "label": "Heading"
     },
     {
       "type": "text",
