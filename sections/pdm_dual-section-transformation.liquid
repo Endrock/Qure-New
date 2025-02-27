@@ -1,5 +1,4 @@
 {% assign icon_check =  section.settings.icon_img | image_url: width: 16, crop: 'center' %}
-{% assign main_image =  section.settings.dual_img | image_url: width: 416, crop: 'center' %}
 <style>
 #shopify-section-{{ section.id }}{
   margin-top:-{{ section.settings.margin_top }}px;
@@ -9,7 +8,7 @@
     <div class="container-image">
       {% render 'pdm_image-tranformation', 
         wrapper-class: 'cont-img'
-        image: main_image,
+        image: section.settings.dual_img,
         before-text: section.settings.before_text,
         after-text: section.settings.after_text,
         user-name: section.settings.user_name,
