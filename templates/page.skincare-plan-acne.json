@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "main": {
       "type": "page",
@@ -21,7 +21,7 @@
       "settings": {
         "section_title": "We’ve created a personalized skincare program just for you!",
         "section_text": "Let’s kick those breakouts to the curb. We know how confidence destroying acne can be, but with the right plan in place, you're just a few steps away from clearer, happier, healthier-looking skin.  We've crafted a personalized routine just for you to help tackle acne at its source while keeping your skin radiant and glowing.",
-        "button_text": "Discover Now",
+        "button_text": "Shop Now & Save 15%",
         "button_link": "#products_bundle_custom_section",
         "before_text": "before",
         "after_text": "After 4 weeks",
@@ -41,6 +41,7 @@
           "type": "card",
           "settings": {
             "custom_name": "Q-Rejuvalight Pro LED Mask",
+            "custom_name_mobile": "",
             "image_product": "shopify://shop_images/images_D_3_2___M_1_1_3ab94360-bb60-40f0-b32c-fd24115b141e.png",
             "image_results": "shopify://shop_images/images_689d76bf-ac51-472c-9c7c-aad71486e263.png",
             "video": "shopify://files/videos/0424(1).mov",
@@ -57,6 +58,7 @@
           "type": "card",
           "settings": {
             "custom_name": "Qure Faucet Filter",
+            "custom_name_mobile": "",
             "image_product": "shopify://shop_images/images_D_3_2___M_1_1_0c2b9a2e-b3fa-4f14-947e-46550af17294.png",
             "image_results": "shopify://shop_images/images_c340acae-b999-4a73-bab4-f7f206ce0e97.png",
             "video": "shopify://files/videos/Water Filter Refill Edit.mov",
@@ -73,6 +75,7 @@
           "type": "card",
           "settings": {
             "custom_name": "Dermal Mist",
+            "custom_name_mobile": "",
             "image_product": "shopify://shop_images/images_D_3_2___M_1_1_1_b3c07719-e89f-40cb-9e01-83562b89df8d.png",
             "show_top_rated": false,
             "show_badge": false,
