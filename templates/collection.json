@@ -7,18 +7,17 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "main": {
       "type": "collection",
       "blocks": {
         "banner_he7ceb": {
           "type": "banner",
-          "disabled": true,
           "settings": {
             "heading": "INTERNATIONAL WOMEN’S DAY",
             "subheading": "<h3>Claim a FREE Micro-Infusion Bundle</h3>",
-            "link_url": "shopify://collections/best-sellers",
+            "link_url": "https://qureskincare.com/pages/international-womens-offer",
             "link_label": "SHOP & SAVE $357"
           }
         }
