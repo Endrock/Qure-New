@@ -28,16 +28,16 @@
         "supply_CTrVRQ": {
           "type": "supply",
           "settings": {
-            "heading": "Next batch ships 30th of March 2025:",
-            "heading_mobile": "Next batch ships 03/30:",
+            "heading": "Next batch ships 15th of April 2025:",
+            "heading_mobile": "Next batch ships 04/15:",
             "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.</p>",
             "first_option_date": "January 20th",
             "first_option_text": "SOLD OUT",
             "first_option_percent": 100,
-            "second_option_date": "March 30th",
+            "second_option_date": "April 15th",
             "second_option_text": "67% Reserved",
             "second_option_percent": 67,
-            "third_option_date": "April 30th",
+            "third_option_date": "May 30th",
             "third_option_text": "In Production",
             "third_option_percent": 0
           }

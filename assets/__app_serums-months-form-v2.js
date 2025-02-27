@@ -1,6 +1,6 @@
-let v2__product_type = 2; //default type
+let v2__product_type = 1; //default type
 let v2__product_period = 3; //default period
-let v2__product_variant = 45951954419951; //default product variant
+let v2__product_variant = 45951935217903; //default product variant
 
 let v2__product_variants = [];
 

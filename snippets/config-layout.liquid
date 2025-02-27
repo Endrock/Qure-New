@@ -289,6 +289,9 @@
         <link rel="stylesheet" href="https://qureskincaredns.com/new/assets/blogs.css">
         <link rel="stylesheet" href="https://qureskincaredns.com/new/assets/event_home_banner.css">
         <link rel="stylesheet" href="{{ 'micro-infusion-blog.css' | asset_url }}">
+    {% when 'page.slayborcon' %}
+        {% assign main_class = 'slayborcon' %}
+        <link rel="stylesheet" href="https://qureskincaredns.com/new/assets/slayborcon.css">
     {% when 'blog' %}
         {% assign main_class = 'blogs' %}
         <link rel="stylesheet" href="{{ 'blogs.css' | asset_url }}">
