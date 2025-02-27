@@ -1172,7 +1172,7 @@
       "type": "liquid",
       "settings": {
         "code": "{% render 'serums-months-image-form' with section_id: section.id %}",
-        "popup_micro_infusion_enabled": true
+        "popup_micro_infusion_enabled": false
       }
     },
     "faq_4hnCjw": {
