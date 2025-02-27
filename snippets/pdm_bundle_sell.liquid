@@ -1,0 +1,36 @@
+{% liquid
+  assign product_bundle = product_bundle.product_bundle.value
+  assign normal_product = bundle_product.product_with_discount.value
+
+  assign normal_product_discount = normal_product.price | times: bundle_product.discount_percent | divided_by: 100
+  assign product_with_discount = normal_product.price | minus: normal_product_discount
+%}
+
+<script>
+  console.log("product_bundle", {{ product_bundle | json }});
+</script>
+<div class="pdm_product-bundle-container {{ device_visibility }}">
+  <label class="pdm_product-bundle-label">
+    <input type="checkbox" name="product_bundle" value="{{ product_bundle.id }}" class="hidden-checkbox">
+    <span class="custom-checkbox"></span>
+    <div class="pdm_product-bundle-content">
+      <div class="pdm_product-bundle-content_info">
+        <h3>Title: {{ product_bundle.description | metafield_tag }}</h3>
+        <div class="pdm_product-bundle-price">
+          <p class="pdm_product-bundle-price__save">
+            {{ bundle_product.discount_text }} {{ normal_product_discount | money_without_trailing_zeros }}
+          </p>
+          <span class="pdm_product-bundle-price__full"> {{ normal_product.price | money_without_trailing_zeros }}</span>
+          <span class="pdm_product-bundle-price__discount">
+            {{ product_with_discount | money_without_trailing_zeros -}}
+          </span>
+        </div>
+      </div>
+      <div class="pdm_product-bundle-content_image">
+        <div class="pdm_product-bundle-content_image__bundle">
+          {{ normal_product.featured_image | image_url: width: 400 | image_tag: alt: normal_product.title }}
+        </div>
+      </div>
+    </div>
+  </label>
+</div>

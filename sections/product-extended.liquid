@@ -488,6 +488,13 @@
                     {% render 'pdm_before_after_carousel', settings: section.settings%}
                 {% endif %}
                 {% render 'pdm_cross-sell', cross-sell-products: product.metafields.custom.cross_sell.value, visibility: "desktop" %}
+
+                <script>
+                    console.log('product-extended', {{ product.metafields.custom.bundle_product.value | json }});
+                </script>
+                {% if product.metafields.custom.bundle_product %}
+                    {% render 'pdm_bundle_sell', bundle_product: product.metafields.custom.bundle_product.value, device_visibility: "desktop"  %}
+                {% endif %}                
             </div>
         </div>
     </div>
@@ -984,7 +991,7 @@
                         "default": "<p>Get a FREE All-In-One Face Serum ($79) with purchase</p>"
                     }
                 ]
-            }        
+            }       
         ]
     }
 {% endschema %}
