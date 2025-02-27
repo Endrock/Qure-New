@@ -22,8 +22,15 @@
     <div class="mw-402 form-{{ section_id }}">
 
         <div class="serum_bl">
+
+            <div class="facial_system">
+                <h3>Micro-Infusion Facial System </h3>
+                <p>(for Dark Spots and Wrinkles)</p>
+            </div>
+
             <div class="s_bl_wrapper">
                 <div class="supply-detail supply-detail-without-counter pb-0">
+                    <!--
                     <div class="supply_steps">
                         <div class="step_block">
                             <p class="pb-3">Choose serums:</p>
@@ -60,6 +67,7 @@
                             </div>
                         </div>
                     </div>
+                    -->
 
                     <div class="supply_steps month_plan_steps mt-4">
                         <div class="step_block">
@@ -132,6 +140,7 @@
                         </div>
                     </div>
 
+                    <!--
                     {% if supply_for_refill != blank %}
                         <div class="next_batch_bl next_batch_highlight mt-4">
                             {% if supply_for_refill.settings.heading != blank %}
@@ -161,6 +170,7 @@
                             </div>
                         </div>
                     {% endif %}
+                    -->
                 </div>
             </div>
 
@@ -246,6 +256,7 @@
         const buyButtonSoldOut = document.querySelector(parent + ' .buy_btn_soldout');
         const buyButtonReserve = document.querySelector(parent + ' .buy_btn_reserve');
         const savedAmount = document.querySelector(parent + ' .savedAmount');
+        const buyButtonSticky = document.querySelector('.button_sticky');
         
         let isOptionForWrinklesDarkSpots = false;
         let isOptionForWrinkles = false;
@@ -278,9 +289,11 @@
                 if (savedAmount && buyButtonReserve && buyButtonSoldOut) {
                     if (savedAmount.textContent.trim() === "& SAVE {{ soldout_percentage }}%") {
                         buyButtonReserve.style.display = "none";
+                        buyButtonSticky.style.display = "none";
                         buyButtonSoldOut.style.display = "block";
                     } else {
                         buyButtonReserve.style.display = "block";
+                        buyButtonSticky.style.display = "block";
                         buyButtonSoldOut.style.display = "none";
                     }
                 }                    
@@ -290,9 +303,11 @@
                 if (savedAmount && buyButton && buyButtonSoldOut) {
                     if (savedAmount.textContent.trim() === "& SAVE {{ soldout_percentage }}%") {
                         buyButton.style.display = "none";
+                        buyButtonSticky.style.display = "none";
                         buyButtonSoldOut.style.display = "block";
                     } else {
                         buyButton.style.display = "block";
+                        buyButtonSticky.style.display = "block";
                         buyButtonSoldOut.style.display = "none";
                     }
                 }
@@ -330,6 +345,8 @@
         document.addEventListener("DOMContentLoaded", () => {
     
             selectProduct('{{ section_id }}_');
+
+            /*
             selectSerum();
     
             const observer = new MutationObserver(toogleButtonSoldOut);
@@ -341,7 +358,7 @@
             serumOptions.forEach((option) => {
                 option.addEventListener("change", selectSerum);
             });
-
+            */
         });
     </script>
 {% endif %}
