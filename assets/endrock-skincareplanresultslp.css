@@ -3216,11 +3216,11 @@
   .table-tc.skincare-plan-dark-spots .table td { 
     min-height: 100%;
     height: 100%;
-    padding-top: unset !important;
-    padding-bottom: unset !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
   } 
   .table-tc.skincare-plan-dark-spots .table td.row-content { 
-    line-height: 7px !important;
+    line-height: 0;
   } 
   .table-tc.skincare-plan-dark-spots .table .row-title {
     text-align: start;
@@ -3244,4 +3244,17 @@
     margin-top: 8px;
   }
 }
+
 /* end dark spots*/
+
+/* start general changes */
+.section-table-thc .table-thc .table-row .text {
+  font-size: 12px;
+}
+.section-table-tc .table-tc .row-content { 
+  line-height: 0.6;
+}
+.section-table-tc .table-tc .row-content span {
+  font-size: 14px;
+}
+/* end general changes */
