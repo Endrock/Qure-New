@@ -373,6 +373,7 @@
 
 .section-lifestyle-tips .cont-text .full-text {
   height: 260px;
+  margin-top: auto;
 }
 
 @media (max-width: 768px) {
@@ -381,6 +382,7 @@
   }
   .section-lifestyle-tips .cont-text .full-text {
     height: 340px;
+    margin-top: 0;
   }
 }
 
@@ -2975,7 +2977,8 @@
     line-height: 18px;
     background: rgba(169, 214, 202, 0.20);
     padding:4px 24px;
-    height:44px;
+    height:fit-content;
+    min-height:44px;
   }
 
   .section-closure-bundle .cont-products {
