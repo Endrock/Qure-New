@@ -3151,7 +3151,13 @@ body[class~="page.sunil-mi-landing-special2-reorder"] #see_it_section{
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 749px) {
+  .pdm-step_content_v2 .planBlock .monthly_plans .plan_des{
+    padding-left: 4px;
+  }
+}
+
+@media screen and (min-width: 932px) {
   .pdm-step_content_v2 .planBlock .monthly_plans .plan_des{
     padding-left: 24px;
   }
@@ -3173,12 +3179,17 @@ body[class~="page.sunil-mi-landing-special2-reorder"] #see_it_section{
 }
 
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 749px) {
+  .pdm-step_content_v2 .planBlock .monthly_plans .price{
+    padding-right: 4px;
+  }
+}
+
+@media screen and (min-width: 932px) {
   .pdm-step_content_v2 .planBlock .monthly_plans .price{
     padding-right: 24px;
   }
 }
-
 
 @media screen and (min-width: 769px) {
   .pdm-step_content_v2 .planBlock .monthly_plans {
@@ -3296,7 +3307,7 @@ body[class~="page.sunil-mi-landing-special2-reorder"] #see_it_section{
 .pdm-step_content_v2 .planBlock .monthly_plans .saved_price.item-1 {
   border-radius: 40px;
   background-color: #C4121A;
-  padding: 0px 4px;
+  padding: 0px 7px;
   color: #FFF;
   text-align: right;
   font-family: Poppins;
@@ -3312,7 +3323,7 @@ body[class~="page.sunil-mi-landing-special2-reorder"] #see_it_section{
   display: block !important;
   border-radius: 40px;
   background-color: #FFE0E1;
-  padding: 0px 4px;
+  padding: 0px 7px;
   color: #C4121A;
   text-align: right;
   font-family: Poppins;
@@ -3325,7 +3336,7 @@ body[class~="page.sunil-mi-landing-special2-reorder"] #see_it_section{
 }
 
 @media screen and (min-width: 366px) {
-  .pdm-step_content_v2 .planBlock .monthly_plans .saved_price.item-1 
+  .pdm-step_content_v2 .planBlock .monthly_plans .saved_price.item-1, 
   .pdm-step_content_v2 .planBlock .monthly_plans .saved_price.item-2 {
     font-size: 11px;
     padding: 0px 8px;
@@ -3501,7 +3512,7 @@ body[class~="page.sunil-mi-landing-special2-reorder"] #see_it_section{
 }
 
 
-.pdm-step_content_v2  .pmt_des .pmt_row-test{
+.pdm-step_content_v2 .pmt_des .pmt_row-test{
   display: flex;
   flex-direction: column;
   gap: 3px;
