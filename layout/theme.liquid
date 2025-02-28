@@ -82,6 +82,12 @@
         {% when 'page.sunil-mi-landing' %}
             {{ 'endrock-landing.css' | asset_url | stylesheet_tag }}
         {% when 'page.sunil-mi-landing-de' %}
+
+        {% when 'page.skincare-plan-results' or
+            'page.skincare-plan-dark-spots' or
+            'page.skincare-plan-acne' %}
+          {{ 'endrock-skincareplanresultslp.css' | asset_url | stylesheet_tag }}
+
     {% else %}
         {{ 'endrock.css' | asset_url | stylesheet_tag }}
     {% endcase %}
@@ -97,7 +103,11 @@
 </head>
 
 <body class="{{ template }}">
-
+    {% if product.handle == 'personalized-skincare-plan' %}
+      <script>
+        window.location.href = "/";
+      </script>
+    {% endif %}
     {% comment %} Edgemesh Performance: Stale cart refresher {% endcomment %}
     {% render 'cart-refresher' %}
 
@@ -122,6 +132,7 @@
     {% include 'slidelogin' %}
 
     <script>
+        window.templateName = "{{template}}";
         let template = '{{ template }}';
         
         if (document.querySelector('a[href="#faq_section"]')) {
@@ -230,7 +241,12 @@
     </script>
 
     <script defer src="{{ 'endrock.js' | asset_url }}"></script>
-
+    {% case template %}
+        {% when 'page.skincare-plan-results' or
+            'page.skincare-plan-dark-spots' or
+            'page.skincare-plan-acne' %}
+    <script defer src="{{ 'endrock-skincareplanresultslp.js' | asset_url }}"></script>
+    {% endcase %}
     <script type="text/javascript" src="https://s.skimresources.com/js/200448X1678823.skimlinks.js"></script>
     <script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=4c00ac67-4d68-4b44-95c1-190a7b67b92a"></script>
     <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=4a846202-05f3-48b3-a077-4d4a2eacbe6a"> </script>

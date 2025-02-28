@@ -15,7 +15,7 @@
 <div class="single_step {% if section.settings.show_comment == true %}technology_light {% endif %} section-{{ section.id }}-padding {{ section.settings.background }} {{ section.settings.custom_class }}">
   <div class="container">
     {%- if section.settings.heading != blank -%}
-      <div class="section_header d-md-none {% if section.settings.hide_on_mob == true %} d-block {% else %}d-none {% endif %} text-center">
+      <div class="section_header d-md-none {% if section.settings.hide_on_mob == true %} d-block {% else %}d-none {% endif %} text-center mb-0 pb-0 pb-md-4">
         <h2 class="title-lg paddingB">{{ section.settings.heading }}</h2>
       </div>
     {%- endif -%}
@@ -23,7 +23,7 @@
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'image' -%}
-            <div class="col-md-{{ section.settings.column }} {% if block.settings.order_mob == true %} order-1 order-md-0 {% endif %}">
+            <div class="col-md-{{ section.settings.column }} {% if block.settings.order_mob == true %} order-first order-md-0 {% endif %}">
               <div class="single-step_img">
                 <img
                   src="{{ block.settings.image | img_url: '400x' }}"

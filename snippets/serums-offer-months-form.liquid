@@ -78,7 +78,7 @@
                                                 <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
                                             </div>
                                         </div>
-                                        <div class="plan_des d-none d-md-block free-shipping-guarentee-original"><span>2 Boxes / 16 pairs pairs of patches + <b> Free Shipping </b></span></div>
+                                        <div class="plan_des d-none d-md-block free-shipping-guarentee-original"><span>2 Boxes / 16 pairs of patches + <b> Free Shipping </b></span></div>
                                         <div class="plan_des d-md-none free-shipping-guarentee-variant"><span>{{ 'products.product.2_boxes_label' | t }}</span></div>
                                     </label>
                                 </div>
@@ -128,12 +128,18 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const submitBtnTop = document.querySelector('.submit_btn_top');
+            const stickyBtn = document.querySelector('.button_sticky');
+            
             $('.planBlockTop').click(function () {
                 
                 const variantIdTop = $(this).data('variantid');
 
                 if (submitBtnTop && variantIdTop) {
                     submitBtnTop.href = submitBtnTop.href.replace(/id=\d+/, `id=${variantIdTop}`);
+                }
+
+                if (stickyBtn && variantIdTop) {
+                    stickyBtn.href = stickyBtn.href.replace(/id=\d+/, `id=${variantIdTop}`);
                 }
             });
         });
@@ -173,3 +179,17 @@
         </div>
     {% endif %}
 </div>
+
+{% if product.compare_at_price != blank %}
+    {% render 'product-sticky-button' with
+        variant_id: product.variants.first.id, 
+        current_price: product.price, 
+        original_price: product.compare_at_price, 
+    %}                    
+{% else %}
+    {% render 'product-sticky-button' with
+        variant_id: product.variants.first.id, 
+        current_price: product.price, 
+        original_price: product.price, 
+    %}
+{% endif %}

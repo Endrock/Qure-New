@@ -1536,29 +1536,51 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
   const closePopupUpsell = document.querySelectorAll(".popupsell-close")
   const popupUpsellMain = document.querySelectorAll('.popupsell-main');
   const popupUpsellWrapper = document.querySelector('.popupsell-wrapper');
+  const popupElementsIds = document.querySelectorAll('[data-popup-products-id]');
+  let dataInformationUpsell = [];
 
   // Buttons within the upsell popup
   const popupUpsellButtons = document.querySelectorAll('.popupUpsellButtons');
   const popupUpsellNothanks = document.querySelectorAll('.popupUpsellNoThanks');
 
   // Data for upsell logic, including product IDs and categories
-  const dataInformationUpsell = [
-    {
-      id: 8015038873839,
-      name: "dark-spots + wrinkles",
-      products: [43216489513199,45951933022447,45951935217903,43216377217263,43216449208559,43216489513199]
-    },
-    {
-      id: 8015049621743,
-      name: "dark-spots",
-      products: [43216457203951,45951954419951,45951948947695,43216299819247,43216398450927,43216457203951]
-    },
-    {
-      id: 8015039496431,
-      name: "wrinkles",
-      products: [43216483942639,45951928860911,45951945474287,43216359555311,43216434069743,43216483942639]
-    },
-  ]
+
+  /**
+   * Creates an array containing upsell product information based on dataset attributes.
+   *
+   * @param {NodeList} dataElement - A NodeList of elements containing dataset attributes for upsell logic.
+   * @returns {Array<Object>} An array of objects, each representing a category of upsell products.
+   * 
+   * Each object in the returned array contains:
+   * - `id` {string}: The category identifier from the dataset.
+   * - `name` {string}: The category name.
+   * - `products` {Array<number>}: A list of product IDs belonging to the category.
+   */
+  function createArrayPopupUpsellProductsId(dataElement) {
+    if (!dataElement) return;
+    let arrayInfo = [];
+    const { darkAndWrinkles, darkSpots, wrinkles } = dataElement[0].dataset;
+    arrayInfo = [
+      {
+        id: darkAndWrinkles,
+        name: "dark-spots + wrinkles",
+        products: [43216489513199, 45951933022447, 45951935217903, 43216377217263, 43216449208559, 43216489513199]
+      },
+      {
+        id: darkSpots,
+        name: "dark-spots",
+        products: [43216457203951, 45951954419951, 45951948947695, 43216299819247, 43216398450927, 43216457203951]
+      },
+      {
+        id: wrinkles,
+        name: "wrinkles",
+        products: [43216483942639, 45951928860911, 45951945474287, 43216359555311, 43216434069743, 43216483942639]
+      },
+    ];
+    return arrayInfo
+  }
+
+  dataInformationUpsell = createArrayPopupUpsellProductsId(popupElementsIds);
 
   /**
    * Extracts the product ID from the anchor element in the step content.
@@ -1659,7 +1681,7 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
       button.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        const target = event.target.closest('[data-product-id]'); // Find the closest element with the data-product-id attribute
+        const target = e.target.closest('[data-product-id]'); // Find the closest element with the data-product-id attribute
         const ajaxSelector = button.dataset.ajaxSelector;
   
         if (!target || !target.dataset.productId) {
@@ -1731,8 +1753,7 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
 document.addEventListener('DOMContentLoaded', () => {
   const serum3Month = document.getElementById('3_month');
   const elementPriceStock = document.querySelector('.pdm_price-stock-left-quantity');
-  const { testHighContrast } = document.body.dataset
-  if ( serum3Month && testHighContrast && elementPriceStock ) {
+  if ( serum3Month && elementPriceStock ) {
     
     const pdmPriceDifferenceContainer = document.querySelector('#pdm_price-difference-container')
     const productId = serum3Month.dataset.productId;
@@ -1778,4 +1799,178 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-/* end test high contrast mode micro infusion offer and affiliate */
+/* end test upsell popup */
+
+/* start test Face Serum Buy Block Test */
+
+// Check if the face serum container exists and if the test flag is enabled in the dataset
+const faceSerumBuyBlockContainer = document.querySelector('.pdm_all-in-one-face-serum-offer-form');
+
+if (window.location.pathname.includes("/products/face-serum")) {
+  const testPdpElement = document.querySelector(".pdm-product-test-pdp");
+  const originalPdpElement = document.querySelector(".pdm-product-original-pdp");
+  const body = document.body;
+  const buyButton = document.querySelector(
+    ".btn.buy_btn.submit_btn_top.reserve_btn[data-ajax-cart-request-button]"
+  );
+  const testRadio = testPdpElement?.querySelector('input[type="radio"]');
+  const originalRadio = originalPdpElement?.querySelector('input[type="radio"]');
+  const testType = body.getAttribute("data-test-pdm-serum"); // "a", "b" o null
+
+  function updateBuyButton(isTestSelected) {
+    if (!buyButton) return;
+    if (isTestSelected) {
+      if (testType === "a") {
+        buyButton.textContent = "Buy Now & Save 34%";
+      } else if (testType === "b") {
+        buyButton.textContent = "Buy Two, Get One FREE";
+      }
+    } else {
+      buyButton.textContent = "Buy Now"; 
+    }
+  }
+
+  if (testType === "a" || testType === "b") {
+    if (originalPdpElement) {
+      originalPdpElement.remove();
+    }
+  } else {
+    if (testPdpElement) {
+      testPdpElement.remove();
+    }
+    if (originalRadio) {
+      originalRadio.checked = true;
+    }
+  }
+
+  if (testType === "a" || testType === "b") {
+    if (buyButton) {
+      const newVariantId = "46201466650863";
+      const newProductHandle = "all-in-one-face-serum-6-month-bundle-1";
+      buyButton.setAttribute("href", `/cart/add?id=${newVariantId}&quantity=1`);
+      buyButton.setAttribute("onclick", `setEventProductHandler('${newProductHandle}')`);
+    }
+  }
+
+  document.querySelectorAll('input[type="radio"]').forEach((radio) => {
+    radio.addEventListener("change", () => {
+      updateBuyButton(testRadio?.checked);
+    });
+  });
+
+  updateBuyButton(testRadio?.checked);
+}
+
+
+if (faceSerumBuyBlockContainer) {
+  // Get all radio buttons for selecting the monthly plan
+  const faceSerumRadioButtons = document.querySelectorAll('input[name="pdm_monthly-plan"]');
+
+  const updateSerumInformation = (radiobutton) => {
+    const parentDiv = radiobutton.closest('.pdm_plan-one-face-serum');
+
+    if (parentDiv) {
+      const {
+        compareAtPrice,
+        price,
+        savingPrice,
+        variantId,
+        discountMessage,
+        paymentMethods,
+        productHandle,
+      } = parentDiv.dataset;
+
+      updateImages(variantId);
+      updatePrices(compareAtPrice, price, savingPrice);
+      updateAnchorElement(variantId, discountMessage, productHandle);
+      updatePaymentMethods(paymentMethods);
+    }
+  };
+
+  /**
+ * Updates the active image in the serum image gallery based on the selected variant.
+ * @param {string} variantId - The ID of the selected variant.
+ */
+  const updateImages = (variantId) => {
+    const imagesSerums = document.querySelectorAll('.pdm_all-in-one-face-serum-offer-form-images-container__img');
+    imagesSerums.forEach((image) => {
+      image.classList.toggle('active', image.dataset.variantidImage === variantId);
+    });
+  };
+
+  /**
+ * Updates the displayed prices, including total price, discount price, and saving details.
+ * @param {string} compareAtPrice - The original price.
+ * @param {string} price - The discounted price.
+ * @param {string} savingPrice - The amount saved.
+ */
+  const updatePrices = (compareAtPrice, price, savingPrice) => {
+    const totalPriceElement = document.querySelector('.pdm_serum-total-price');
+    const discountPriceElement = document.querySelector('.pdm_serum-discount-price');
+    const savingPriceContainer = document.querySelector('.pdm_serum-saving-container');
+    const savingPriceElement = document.querySelector('.pdm_serum-saving-price');
+
+    if (totalPriceElement) totalPriceElement.textContent = compareAtPrice;
+    if (discountPriceElement) discountPriceElement.textContent = price;
+
+    if (savingPriceElement) {
+      const isSavingVisible = compareAtPrice !== "";
+      savingPriceContainer.style.display = isSavingVisible ? 'block' : 'none';
+      if (isSavingVisible) savingPriceElement.textContent = savingPrice;
+    }
+  };
+
+  /**
+   * Updates the anchor element with the correct URL, discount message, and event listener for tracking.
+   * @param {string} variantId - The ID of the selected variant.
+   * @param {string} discountMessage - The discount message to display.
+   * @param {string} productHandle - The product handle for tracking purposes.
+   */
+  const updateAnchorElement = (variantId, discountMessage, productHandle) => {
+    const anchorAjaxElement = document.querySelector('.pdm_serum-anchor-ajax');
+    const anchorAjaxTextElement = document.querySelector('.pdm_serum-anchor-ajax-text');
+
+    const body = document.body;
+    const testType = body.getAttribute("data-test-pdm-serum");
+
+    if (anchorAjaxElement && variantId) {
+      anchorAjaxElement.href = `/cart/add?id=${variantId}&quantity=1`;
+      
+      if (testType === "b" && discountMessage) {
+        anchorAjaxTextElement.textContent = "Get One FREE";
+        anchorAjaxElement.childNodes[0].nodeValue = "Buy Two, ";
+      } else {
+        anchorAjaxTextElement.textContent = discountMessage;
+        anchorAjaxElement.childNodes[0].nodeValue = "buy now ";
+      }
+
+      anchorAjaxElement.addEventListener('click', () => {
+        setEventProductHandler(productHandle);
+      });
+    }
+  };
+
+  /**
+   * Updates the payment methods displayed.
+   * @param {string} paymentMethods - The payment methods to display.
+   */
+  const updatePaymentMethods = (paymentMethods) => {
+    const paymentMethodElement = document.querySelector('.pdm_payment-methods-serum');
+    if (paymentMethodElement) paymentMethodElement.textContent = paymentMethods;
+  };
+
+  // Initialize with the default selected radio button
+  const defaultCheckedRadioButton = document.querySelector('input[name="pdm_monthly-plan"]:checked');
+  if (defaultCheckedRadioButton) {
+    updateSerumInformation(defaultCheckedRadioButton);
+  }
+
+  // Add event listeners to each radio button to update information on selection change
+  faceSerumRadioButtons.forEach((radioButton) => {
+    radioButton.addEventListener('change', () => {
+      updateSerumInformation(radioButton);
+    });
+  });
+}
+
+/* end test Face Serum Buy Block Test */
