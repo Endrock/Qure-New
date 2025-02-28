@@ -373,7 +373,9 @@
 
 .section-lifestyle-tips .cont-text .full-text {
   height: 260px;
-  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
 }
 
 @media (max-width: 768px) {
@@ -382,7 +384,7 @@
   }
   .section-lifestyle-tips .cont-text .full-text {
     height: 340px;
-    margin-top: 0;
+    display: block;
   }
 }
 
