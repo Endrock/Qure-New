@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "main": {
       "type": "mobile-product-slider",
@@ -143,6 +143,7 @@
         "product_BANXY7",
         "banner_6wgzUN"
       ],
+      "disabled": true,
       "settings": {
         "heading": "",
         "heading_mobile": "",
@@ -163,7 +164,7 @@
           "settings": {
             "link_label": "SHOP & SAVE $357",
             "link_label_mobile": "SHOP & SAVE $357",
-            "link_url": "shopify://collections/best-sellers"
+            "link_url": "https://qureskincare.com/pages/international-womens-offer"
           }
         },
         "banner_6wgzUN": {
@@ -181,7 +182,6 @@
         "link_Pk3LH6",
         "banner_6wgzUN"
       ],
-      "disabled": true,
       "settings": {
         "heading": "INTERNATIONAL WOMEN’S DAY",
         "heading_mobile": "",
@@ -190,7 +190,7 @@
         "text": "",
         "image": "shopify://shop_images/hm_womens_day_banner_desk.webp",
         "image_mobile": "shopify://shop_images/hm_womens_day_banner_mob.webp",
-        "link_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal"
+        "link_url": "https://qureskincare.com/pages/international-womens-offer"
       }
     },
     "featuredin_extended_P7BNDN": {

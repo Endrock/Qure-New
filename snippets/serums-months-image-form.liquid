@@ -59,6 +59,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="supply-detail" data-form-reference="pdm_serums_m_form">
+                        <!--
                         <div class="supply_steps">
                             <div class="step_counter active"><span>1</span></div>
                             <div class="step_block">
@@ -107,11 +108,12 @@
                                 </div>
                             </div>
                         </div>
+                        -->
                         <div class="supply_steps">
-                            <div class="step_counter"><span>2</span></div>
+                            <div class="step_counter"><span>1</span></div>
                             <div class="step_block">
                                 <div class="step_header">
-                                    <h3><span>Step 2/3</span> Choose the Bundle:</h3>
+                                    <h3><span>Step 1/2</span> Choose the Bundle:</h3>
                                 </div>
                                 <div class="step_content">
                                     <div class="step_conten_blocks">
@@ -121,7 +123,7 @@
                                         {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
 
                                         <a class="planBlock active {{ section_id }}_productPeriodObject" href="month_3" data-tab="month_3"
-                                            data-per="& SAVE {{ discount_percentage }}%" data-image="{{ 'MI2x-mixed-1.jpg' | asset_url }}">
+                                            data-per="& SAVE {{ discount_percentage }}%" data-image="https://qureskincaredns.com/new/assets/MI6x-mixed_blue.webp">
                                             <div class="plan_choosed">
                                                 <span>Over 5,000 people chose this supply</span>
                                             </div>
@@ -147,7 +149,7 @@
                                         {% assign soldout_percentage = discount_percentage %}
                                         
                                         <a class="planBlock {{ section_id }}_productPeriodObject new_block active" href="month_2" data-tab="month_2"
-                                            data-per="& SAVE {{ discount_percentage }}%" data-image="{{ 'MI4x-mixed.jpg' | asset_url }}">
+                                            data-per="& SAVE {{ discount_percentage }}%" data-image="https://qureskincaredns.com/new/assets/MI4x-rejuv_blue.webp">
                                             <input type="radio" name="monthlyPlan" id="2_month" data-product-period="2">
                                             <label class="monthly_plans" for="2_month" payment-price="{{ divided_price | money_without_trailing_zeros }}">
                                                 <div class="plan_des">
@@ -168,7 +170,7 @@
                                         {% assign divided_price = product.price | divided_by: 4 %}
                                         
                                         <a class="planBlock {{ section_id }}_productPeriodObject new_block" href="month_1" data-tab="month_1"
-                                            data-per="- $99" data-image="{{ 'treatment.png' | asset_url }}">
+                                            data-per="- $99" data-image="https://qureskincaredns.com/new/assets/MI2x-rejuv_blue.webp">
                                             <input type="radio" name="monthlyPlan" id="1_month" data-product-period="1">
                                             <label class="monthly_plans" for="1_month" payment-price="{{ divided_price | money_without_trailing_zeros }}">
                                                 <div class="plan_des">
@@ -242,10 +244,10 @@
                             </div>
                         </div>
                         <div class="supply_steps">
-                            <div class="step_counter"><span>3</span></div>
+                            <div class="step_counter"><span>2</span></div>
                             <div class="step_block">
                                 <div class="step_header">
-                                    <h3><span>Step 3/3</span></h3>
+                                    <h3><span>Step 2/2</span></h3>
                                 </div>
                             </div>
                         </div>
@@ -319,6 +321,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             selectProduct('{{ section_id }}_');
 
+            /*
             const bf__parent = '.form-{{ section_id }}';
             const bf__buyButton = document.querySelector(bf__parent + ' .buy_btn');
             const bf__buyButtonSoldOut = document.querySelector(bf__parent + ' .buy_btn_soldout');
@@ -340,6 +343,7 @@
             if (bf__savedAmount) {
                 bf__observer.observe(bf__savedAmount, { childList: true, subtree: true });
             }
+            */
         });
     </script>
 

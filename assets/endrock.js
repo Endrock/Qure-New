@@ -1536,29 +1536,51 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
   const closePopupUpsell = document.querySelectorAll(".popupsell-close")
   const popupUpsellMain = document.querySelectorAll('.popupsell-main');
   const popupUpsellWrapper = document.querySelector('.popupsell-wrapper');
+  const popupElementsIds = document.querySelectorAll('[data-popup-products-id]');
+  let dataInformationUpsell = [];
 
   // Buttons within the upsell popup
   const popupUpsellButtons = document.querySelectorAll('.popupUpsellButtons');
   const popupUpsellNothanks = document.querySelectorAll('.popupUpsellNoThanks');
 
   // Data for upsell logic, including product IDs and categories
-  const dataInformationUpsell = [
-    {
-      id: 8015038873839,
-      name: "dark-spots + wrinkles",
-      products: [43216489513199,45951933022447,45951935217903,43216377217263,43216449208559,43216489513199]
-    },
-    {
-      id: 8015049621743,
-      name: "dark-spots",
-      products: [43216457203951,45951954419951,45951948947695,43216299819247,43216398450927,43216457203951]
-    },
-    {
-      id: 8015039496431,
-      name: "wrinkles",
-      products: [43216483942639,45951928860911,45951945474287,43216359555311,43216434069743,43216483942639]
-    },
-  ]
+
+  /**
+   * Creates an array containing upsell product information based on dataset attributes.
+   *
+   * @param {NodeList} dataElement - A NodeList of elements containing dataset attributes for upsell logic.
+   * @returns {Array<Object>} An array of objects, each representing a category of upsell products.
+   * 
+   * Each object in the returned array contains:
+   * - `id` {string}: The category identifier from the dataset.
+   * - `name` {string}: The category name.
+   * - `products` {Array<number>}: A list of product IDs belonging to the category.
+   */
+  function createArrayPopupUpsellProductsId(dataElement) {
+    if (!dataElement) return;
+    let arrayInfo = [];
+    const { darkAndWrinkles, darkSpots, wrinkles } = dataElement[0].dataset;
+    arrayInfo = [
+      {
+        id: darkAndWrinkles,
+        name: "dark-spots + wrinkles",
+        products: [43216489513199, 45951933022447, 45951935217903, 43216377217263, 43216449208559, 43216489513199]
+      },
+      {
+        id: darkSpots,
+        name: "dark-spots",
+        products: [43216457203951, 45951954419951, 45951948947695, 43216299819247, 43216398450927, 43216457203951]
+      },
+      {
+        id: wrinkles,
+        name: "wrinkles",
+        products: [43216483942639, 45951928860911, 45951945474287, 43216359555311, 43216434069743, 43216483942639]
+      },
+    ];
+    return arrayInfo
+  }
+
+  dataInformationUpsell = createArrayPopupUpsellProductsId(popupElementsIds);
 
   /**
    * Extracts the product ID from the anchor element in the step content.
@@ -1659,7 +1681,7 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
       button.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        const target = event.target.closest('[data-product-id]'); // Find the closest element with the data-product-id attribute
+        const target = e.target.closest('[data-product-id]'); // Find the closest element with the data-product-id attribute
         const ajaxSelector = button.dataset.ajaxSelector;
   
         if (!target || !target.dataset.productId) {
@@ -1731,8 +1753,7 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
 document.addEventListener('DOMContentLoaded', () => {
   const serum3Month = document.getElementById('3_month');
   const elementPriceStock = document.querySelector('.pdm_price-stock-left-quantity');
-  const { testHighContrast } = document.body.dataset
-  if ( serum3Month && testHighContrast && elementPriceStock ) {
+  if ( serum3Month && elementPriceStock ) {
     
     const pdmPriceDifferenceContainer = document.querySelector('#pdm_price-difference-container')
     const productId = serum3Month.dataset.productId;
