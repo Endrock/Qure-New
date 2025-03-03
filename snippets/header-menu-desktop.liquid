@@ -76,7 +76,7 @@
         {% else %}
             <li class="dropdown mega-dropdown new-menu">
                 {% if link.url != blank %}
-                    <a href="{{ link.url }}" class="mega-drop-tag"{% if link.title == 'Help center' %} target="_blank"{% endif %}>
+                    <a href="{{ link.url }}" class="mega-drop-tag">
                         {{ link.title | escape }}
                     </a>   
                 {% else %}
@@ -122,7 +122,7 @@
                                                 <ul>
                                                     {% for childChildlink in childlink.links %}
                                                         <li>
-                                                            <a href="{{ childChildlink.url }}" aria-label="{{ childChildlink.title | escape }}">
+                                                            <a href="{{ childChildlink.url }}" aria-label="{{ childChildlink.title | escape }}" {% if childChildlink.title == 'Help center' %} target="_blank"{% endif %}>
                                                                 <span>{{ childChildlink.title | escape }}</span>
                                                             </a>
                                                         </li>
