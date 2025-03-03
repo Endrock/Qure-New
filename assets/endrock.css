@@ -3605,7 +3605,6 @@ body[data-free-shipping-guarentee] {
     display: flex !important;
   }
 
-  /* .supply-detail .supply_steps .planBlock .plan_choosed.text-end {  */
   .free-shiping-guarantee-test .supply-detail .supply_steps .planBlock .plan_choosed { 
     max-width: unset;
     left: -15px !important;
@@ -3842,7 +3841,8 @@ body[data-free-shipping-guarentee] {
 
 @media (max-width: 768px) {
   body[data-free-shipping-guarentee] { 
-    .supply-detail .monthly_plans { 
+    .all_in_one_face_serum_offer.free-shiping-guarantee-test .supply-detail .monthly_plans,
+    .mi_patches_pdp.free-shiping-guarantee-test .supply-detail .monthly_plans { 
       padding-left: 12px;
       padding-right: 12px;
     }

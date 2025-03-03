@@ -122,7 +122,7 @@
                                                 <ul>
                                                     {% for childChildlink in childlink.links %}
                                                         <li>
-                                                            <a href="{{ childChildlink.url }}" aria-label="{{ childChildlink.title | escape }}">
+                                                            <a href="{{ childChildlink.url }}" aria-label="{{ childChildlink.title | escape }}" {% if childChildlink.title == 'Help center' %} target="_blank"{% endif %}>
                                                                 <span>{{ childChildlink.title | escape }}</span>
                                                             </a>
                                                         </li>
@@ -212,11 +212,13 @@
                 <img src="{{ 'header-gift.svg' | asset_url }}" class="fa fa-shopping-cart nav__icon cart-mb-icon" alt="navigation">
             </a>
         </li>
+        <!--
         <li class="nav__item d-only">
             <a href="{{ routes.root_url }}pages/contact-us" aria-label="Contact us" class="nav__url">
                 <img src="{{ 'support.svg' | asset_url }}" class="fa cus-support" alt="support">
             </a>
         </li>
+        -->
         <li class="nav__item d-only" data-bs-toggle="offcanvas" data-bs-target="#offcanvasAccount" aria-controls="offcanvasAccount">
             <a class="nav__url">
                 <img src="{{ 'login.svg' | asset_url }}" class="fa fa-user nav__icon" alt="navigation">
