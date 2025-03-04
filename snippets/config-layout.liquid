@@ -96,6 +96,10 @@
         {% assign main_class = 'bf_sale black_friday_sale' %}
         <link rel="stylesheet" href="{{ 'product-bf-sales.css' | asset_url }}">
         <link rel="stylesheet" href="{{ 'exclusive-holiday-bundle-deal.css' | asset_url }}"> 
+    {% when 'page.exclusive-holiday-bundle-deal-uk' %}
+        {% assign main_class = 'bf_sale black_friday_sale' %}
+        <link rel="stylesheet" href="{{ 'product-bf-sales.css' | asset_url }}">
+        <link rel="stylesheet" href="{{ 'exclusive-holiday-bundle-deal.css' | asset_url }}"> 
     {% when 'page.sunil-bf-sales-us' %}
         {% assign main_class = 'bf_sale' %}
         <link rel="stylesheet" href="{{ 'product-bf-sales.css' | asset_url }}">
@@ -289,6 +293,9 @@
         <link rel="stylesheet" href="https://qureskincaredns.com/new/assets/blogs.css">
         <link rel="stylesheet" href="https://qureskincaredns.com/new/assets/event_home_banner.css">
         <link rel="stylesheet" href="{{ 'micro-infusion-blog.css' | asset_url }}">
+    {% when 'page.slayborcon' %}
+        {% assign main_class = 'slayborcon' %}
+        <link rel="stylesheet" href="https://qureskincaredns.com/new/assets/slayborcon.css">
     {% when 'blog' %}
         {% assign main_class = 'blogs' %}
         <link rel="stylesheet" href="{{ 'blogs.css' | asset_url }}">

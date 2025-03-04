@@ -15,6 +15,8 @@
 
 .section-dual-transformation .img {
   width: 100%;
+  height: 100%;
+  object-fit: contain;
   background: azure;
   aspect-ratio: 1.58 / 1;
   background-size: contain;
@@ -461,6 +463,10 @@
   width: 40px;
   height: 40px;
   opacity: 0.3;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .section-lifestyle-tips .arrows .next {
@@ -903,7 +909,8 @@
 }
 
 .section-table-thc .row-feature {
-  padding: 24px 48px 16px 48px;
+  margin: auto;
+  padding: 0 48px;
   font-size: 16px;
   font-weight: 700;
   line-height: 26px;
@@ -912,7 +919,8 @@
 
 @media (max-width: 768px) {
   .section-table-thc .row-feature {
-    padding: 16px;
+    padding: 0 16px;
+    line-height: 100%;
     color: #000;
     font-size: 12px;
     font-weight: 500;
@@ -1076,6 +1084,7 @@
     font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.12px;
+    line-height: 100%;
   }
 }
 
@@ -1092,6 +1101,7 @@
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.12px;
+    line-height: 100%;
   }
 
   .section-table-tc .row-content span {
@@ -1498,6 +1508,21 @@
   max-height: 100%;
   height: 100%;
 }
+
+@media (max-width: 768px) {
+  .section-slider-derm-feature .popup-sdf {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  
+  .section-slider-derm-feature .popup-sdf .close {
+    position: relative;
+    margin: 0 4px 0 auto;
+    padding: 0;
+    width: fit-content;
+  }
+}
 /* End Slider Derm Feature Section */
 
 /*Start Dual Text e Imagen Section */
@@ -1650,9 +1675,9 @@
 .section-products-bundle .rate{
   display: flex;
   width: 200px;
-  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 4px;
   border-radius: 16px 16px 0px 0px;
   background: #000;
   color:#FFF;
@@ -1717,6 +1742,9 @@
   position:relative;
   margin-bottom:12px;
   overflow:hidden;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
 }
 
 .section-products-bundle .pdm-gallery .badge-dermatologist {
@@ -1776,9 +1804,7 @@
 }
 
 .section-products-bundle .media-btns {
-  position: absolute;
-  bottom: 2.5px;
-  left: 0;
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1994,8 +2020,8 @@
   .section-products-bundle .close-popup{
     display: flex;
     position: absolute;
-    top: 12px;
-    right: 12px;
+    top: 6px;
+    right: 2px;
     border: 1px solid #797D7C;
     border-radius: 40px;
     width: 18px;
@@ -2047,18 +2073,24 @@
     min-height: 200px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    margin-top: 8%;
+    gap: 0;
+    margin-top: 5%;
     height: 100%;
+    min-height: 300px;
+  }
+
+  .section-products-bundle .show-mobile .pdm-gallery .media {
+    padding-bottom: 10px;
   }
 
   .section-products-bundle .media-btns {
     position: relative;
-    margin-top: 4px;
+    margin-top: 0;
+    padding-bottom: 4px;
   }
 
   .section-products-bundle .show-mobile .product-info{
-    margin: 8px 12px 0;
+    margin: 10px 12px 0;
   }
 
   .section-products-bundle .show-mobile .doctor-info{
@@ -2070,11 +2102,11 @@
   .section-products-bundle .show-mobile .title h3{
     font-size: 20px;
     line-height:100%;
-    margin-bottom: 16px;
+    margin-bottom: 0;
   }
 
   .section-products-bundle .show-mobile .text-checks {
-    margin:16px 0;
+    margin:14px 0;
   }
 
   .section-products-bundle .show-mobile .text-checks li{
@@ -2126,6 +2158,50 @@
     margin-bottom:36px;
   }
 
+  .section-products-bundle .container-mb-pb .card-bundle.mb {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-products-bundle .container-mb-pb .card-bundle.mb .cont-card-bundle.mb {
+    position: relative;
+  }
+
+  .section-products-bundle .container-mb-pb .card-bundle.mb .cont-card-bundle.mb .pdm-gallery.mb {
+    margin-bottom: 0;
+  }
+
+  .section-products-bundle .container-mb-pb .card-bundle.mb .cont-card-bundle.mb .pdm-gallery.mb .media.mb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .section-products-bundle .container-mb-pb .card-bundle.mb .cont-card-bundle.mb .product-info.mb {
+    margin: 0;
+    padding: 0 12px;
+  }
+
+  .section-products-bundle .container-mb-pb .card-bundle.mb .cont-card-bundle.mb .bundle-button.mb {
+    margin: 0;
+    padding: 0 12px 12px 12px;
+    margin-top: auto;
+  }
+
+  .section-products-bundle .container-mb-pb .card-bundle.mb .cont-card-bundle.mb .bundle-button.mb .price.mb {
+    margin-bottom: 8px;
+  }
+
+  .section-products-bundle .container-mb-pb .card-bundle.mb .cont-card-bundle.mb .bundle-button.mb .bundle-btn.mb {
+    margin-bottom: 4px;
+  }
+
+  .section-products-bundle .container-mb-pb .card-bundle.mb .cont-card-bundle.mb .bundle-button.mb .more {
+    margin-bottom: 0;
+  }
+
   .section-products-bundle .card-bundle .rate.desktop {
     display:none;
   }
@@ -2135,9 +2211,15 @@
     font-size: 10px;
     font-style: normal;
     font-weight: 500;
-    line-height: 24px;
+    line-height: 100%;
     letter-spacing: 0.5px;
     width:99px;
+    padding: 4px 0;
+    position: relative;
+  }
+
+  .section-products-bundle .rate.mb svg {
+    margin-bottom: 2px;
   }
 
   .section-products-bundle .cont-card-bundle.mb{
@@ -2767,13 +2849,12 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  height: 100%;
 }
 
 .section-closure-bundle .product-title{
   display:flex;
   justify-content:center;
-  align-items:center;
+  align-items:stretch;
   color: #000;
   text-align: center;
   font-family: "Canela Web";
@@ -2901,8 +2982,10 @@
   }
 
   .section-closure-bundle .cont-img {
-    margin:4px 4px 8px 4px;
+    padding:4px 4px 0 4px;
     overflow:hidden;
+    width: 100%;
+    height: 100%;
   }
 
   .section-closure-bundle .product-title {
@@ -2945,12 +3028,6 @@
 
 /*Custom style for chat bubble */
 
-[data-bundle-used="true"] .btn-section,
-[data-bundle-used="true"] .btn-discount {
-  filter: brightness(0.5);
-  cursor: no-drop;
-}
-
 @media (min-width: 768px) and (max-width: 910px){
   iframe#launcher {
     bottom:100px !important;
@@ -2990,3 +3067,39 @@
   width: 0;
   transition: width 0.3s ease;
 }
+
+/* start floating bundle message*/
+.cart-bundle-message {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 16px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--Turquoise, #C8E6DC);
+  background: #F4FAF8;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+
+.cart-bundle-message__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.cart-bundle-message__unused-bundle,
+.cart-bundle-message__used-bundle {
+  color: #000;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  max-width: 210px;
+}
+.cart-bundle-message__unused-bundle.hidden,
+.cart-bundle-message__used-bundle.hidden {
+  display: none;
+}
+/* end floating bundle message */

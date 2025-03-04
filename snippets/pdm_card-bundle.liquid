@@ -18,7 +18,10 @@ this snippets is used in pdm_products-bundle.liquid section, render card product
 {% if product %}
 <div class="card-bundle hidden-mobile" data-product-id="{{ product.selected_or_first_available_variant.id }}" data-card-bundle-product-price="{{ product.price }}" data-card-bundle-product-price-money="{{ product.price | money_without_trailing_zeros }}">
     <div class="rate desktop" data-show="{{ show-rated }}" {% if show-rated == false %}style="visibility: hidden;"{% endif %} >
-    Top Rated *
+    Top Rated
+    <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none">
+      <path d="M4.49954 0.381958L5.53404 2.95809L8.30376 3.14589L6.1734 4.92583L6.85068 7.61803L4.49954 6.14196L2.1484 7.61803L2.82568 4.92583L0.695312 3.14589L3.46504 2.95809L4.49954 0.381958Z" fill="#FFFAF0"/>
+    </svg>
   </div>
   <div class="cont-card-bundle">
     <div class="close-popup" data-product-id="{{ product.selected_or_first_available_variant.id }}">
@@ -62,21 +65,23 @@ this snippets is used in pdm_products-bundle.liquid section, render card product
           {{ text-checks }}
       </div>
     </div>
-    <div class="doctor-info">
-        <div class="photo">
-          {% if doctor-image %}
-            {{ doctor-image |  image_url: width: 256 |  image_tag: alt: doctor-name, class: 'photo-doctor' }}
-          {% endif %}
-        </div>
-        <div class="doctor-text">
-            <div class="review">
-                {{ doctor-text }}
-            </div>
-            <div class="doctor-data">
-                <strong>{{ doctor-name }}</strong> | {{ doctor-certificated }}
-            </div>
-        </div>
-    </div>
+    {% if doctor-image and doctor-text %}
+      <div class="doctor-info">
+          <div class="photo">
+            {% if doctor-image %}
+              {{ doctor-image |  image_url: width: 256 |  image_tag: alt: doctor-name, class: 'photo-doctor' }}
+            {% endif %}
+          </div>
+          <div class="doctor-text">
+              <div class="review">
+                  {{ doctor-text }}
+              </div>
+              <div class="doctor-data">
+                  <strong>{{ doctor-name }}</strong> | {{ doctor-certificated }}
+              </div>
+          </div>
+      </div>
+    {% endif %} 
     <div class="bundle-button">
         <div class="price">
           {{ product.price | money_without_trailing_zeros }}

@@ -12,42 +12,18 @@
     "main": {
       "type": "collection",
       "blocks": {
-        "banner_afzGAP": {
+        "banner_he7ceb": {
           "type": "banner",
-          "disabled": true,
           "settings": {
-            "heading": "",
-            "subheading": "",
-            "text": "",
-            "wistia_id": "",
-            "wistia_id_mobile": "",
-            "link_url": ""
-          }
-        },
-        "banner_holiday_EEUPJR": {
-          "type": "banner_holiday",
-          "disabled": true,
-          "settings": {
-            "heading": "<p>Exclusive Bundles</p>",
-            "link_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal",
-            "link_label": "Save up to 55% Off"
-          }
-        },
-        "banner_14feb_BxBLkb": {
-          "type": "banner_14feb",
-          "disabled": true,
-          "settings": {
-            "heading": "LOVE YOUR SKIN",
-            "subheading": "<p>Exclusive <strong>Valentine’s Day</strong> Micro-Infusion Bundle</p>",
-            "link_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal#Pro-Aging-Bundles",
-            "link_label": "Save 66% Off"
+            "heading": "INTERNATIONAL WOMEN’S DAY",
+            "subheading": "<h3>Claim a FREE Micro-Infusion Bundle</h3>",
+            "link_url": "https://qureskincare.com/pages/international-womens-offer",
+            "link_label": "SHOP & SAVE $357"
           }
         }
       },
       "block_order": [
-        "banner_afzGAP",
-        "banner_holiday_EEUPJR",
-        "banner_14feb_BxBLkb"
+        "banner_he7ceb"
       ],
       "settings": {
         "heading": "",
