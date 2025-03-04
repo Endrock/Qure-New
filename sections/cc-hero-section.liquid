@@ -521,7 +521,7 @@
           {% endfor %}
         </div>
       {% else %}
-        {% render ‘cc-serums-months-form’, section: section %}
+        {{ section.settings['featured-product'] }}
       {% endif %}
     </div>
 
@@ -863,12 +863,12 @@
       "default": "Get 20% Off",
       "label": "Product CTA Copy"
     },
-           {
-      "type": "inline_richtext",
-      "id": "featured-product",
-      "default": "featured-product-handle",
-      "label": "Featured Product Handle"
-    },
+    {
+  "type": "liquid",
+  "id": "featured-product",
+  "label": "Liquid to render featured product",
+  "default": "{% render ‘cc-serums-months-form’ with section: section %}"
+},
           {
       "type": "inline_richtext",
       "id": "product_url",
