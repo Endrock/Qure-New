@@ -161,6 +161,14 @@
                       <div class="plan_des">
                         <div class="plan_hdr">
                           <h3>1 Month Supply</h3>
+                          {% if cc_creator['cc-collab-discount-type'] == 'Percentage'
+                            and cc_creator != ''
+                            and cc_creator != null
+                          %}
+                            <span class="saved_price"
+                              >SAVE {{ cc_creator.data.value['cc-collab-discount-amount'] }}%</span
+                            >
+                          {% endif %}
                         </div>
                         <div class="plan_des">2 Micro-Infusion Treatments</div>
                       </div>
