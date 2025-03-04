@@ -165,7 +165,7 @@
           display: none !important;
         }
 
-        .section-{{ section.id }}-padding {
+        .section-hero-padding {
           padding-top: {{ section.settings.padding_top }}px;
           padding-bottom: {{ section.settings.padding_bottom }}px;
 
@@ -352,7 +352,7 @@
         }
 {%- endstyle -%}
 <div id="super-background">
-  <div id="hero-section" class="section-{{ section.id }}-padding">
+  <div id="hero-section" class="section-hero-padding">
     <!-- Right/Top Panel (Now First) -->
     <div class="hero-content">
       <div style="display: flex;align-items: center; margin-bottom: {{ section.settings.eyebrow_margin_bottom }}px; background-color: {{ section.settings.eyebrowbackground }}; border-radius: {{ section.settings.eyebrow_corner_radius }}px; padding: 8px 14px; border: {{section.settings.eyebrow_border_width}}px solid {{section.settings.eyebrowbordercolor}};">
