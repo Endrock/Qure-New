@@ -458,6 +458,14 @@
                     {{ section.settings.productcta }}
                   </button>
                 </a>
+                <a
+                  href="{{ shop.url }}/products/{{ product.handle}}"
+                  style="text-decoration: none;"
+                >
+                  <button style="background-color: {{section.settings.product_cta_background}}; font-weight:600; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; border-radius: {{ section.settings.product_cta_corner_radius }}px; border: {{section.settings.product_cta_border_width}}px solid {{section.settings.product_cta_border_color}};">
+                    {{ section.settings.productcta }}
+                  </button>
+                </a>
               </div>
             </div>
           {% endfor %}
