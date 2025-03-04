@@ -72,6 +72,7 @@
         .product-card-featured {
           display: flex;
           width: 100%;
+          min-width:350px;
           flex-direction: row;
           gap: 20px;
           text-align: left;
@@ -449,20 +450,9 @@
                     (With {{ metaobject['cc-creator-first-name'] }}'s' Code)
                   </p>
                 </div>
-                {% assign product_1 = all_products[section.settings['featured-product']] %}
                 <a
-                  data-ajax-cart-request-button="/cart/add?id={{ product_1.variants.first.id }}&quantity=1"
-                  onclick="setEventProductHandler('{{ product_1 | escape }}')"
-                  style="text-decoration: none;"
-                >
-                  <button style="background-color: {{section.settings.product_cta_background}}; font-weight:600; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; border-radius: {{ section.settings.product_cta_corner_radius }}px; border: {{section.settings.product_cta_border_width}}px solid {{section.settings.product_cta_border_color}};">
-                    {{ section.settings.productcta }}
-                  </button>
-                </a>
-                {% assign product_1 = all_products[section.settings['featured-product']] %}
-                <a
-                  data-ajax-cart-request-button="/cart/add?id={{ product_1.variants.first.id }}&quantity=1"
-                  onclick="setEventProductHandler('{{ product_1 | escape }}')"
+                  data-ajax-cart-request-button="/cart/add?id={{ product.variants.first.id }}&quantity=1"
+                  onclick="setEventProductHandler('{{ product.handle | escape }}')"
                   style="text-decoration: none;background-color: {{section.settings.product_cta_background}}; font-weight:600; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; border-radius: {{ section.settings.product_cta_corner_radius }}px; border: {{section.settings.product_cta_border_width}}px solid {{section.settings.product_cta_border_color}};"
                 >
                   {{ section.settings.productcta }}
@@ -521,10 +511,9 @@
                 <a
                   data-ajax-cart-request-button="/cart/add?id={{ product.variants.first.id }}&quantity=1"
                   onclick="setEventProductHandler('{{ product.handle | escape }}')"
+                  style="text-decoration: none;background-color: {{section.settings.product_cta_background}}; font-weight:600; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; border-radius: {{ section.settings.product_cta_corner_radius }}px; border: {{section.settings.product_cta_border_width}}px solid {{section.settings.product_cta_border_color}};"
                 >
-                  <button style="background-color: {{ section.settings.product_cta_background }}; border: {{ section.settings.product_cta_border_width }}px solid {{ section.settings.product_cta_border_color }}; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; border-radius: {{ section.settings.product_cta_corner_radius }}px;">
-                    {{ section.settings.productcta }}
-                  </button>
+                  {{ section.settings.productcta }}
                 </a>
               </div>
               {% assign productcounter = productcounter | plus: 1 %}
@@ -562,7 +551,7 @@
               <a
                 data-ajax-cart-request-button="/cart/add?id={{ product_1.variants.first.id }}&quantity=1"
                 onclick="setEventProductHandler('{{ product_1 | escape }}')"
-                style="text-decoration: none;background-color: {{section.settings.product_cta_background}}; font-weight:600; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; border-radius: {{ section.settings.product_cta_corner_radius }}px; border: {{section.settings.product_cta_border_width}}px solid {{section.settings.product_cta_border_color}};"
+                style="text-decoration: none;background-color: {{section.settings.product_cta_background}}; font-weight:600; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; margin-top:10px;border-radius: {{ section.settings.product_cta_corner_radius }}px; border: {{section.settings.product_cta_border_width}}px solid {{section.settings.product_cta_border_color}};"
               >
                 {{ section.settings.productcta }}
               </a>
@@ -570,7 +559,7 @@
               <a
                 data-ajax-cart-request-button="/cart/add?id={{ product_1.variants.first.id }}&quantity=1"
                 onclick="setEventProductHandler('{{ product_1 | escape }}')"
-                style="text-decoration: none;background-color: {{section.settings.product_cta_background}}; font-weight:600; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; border-radius: {{ section.settings.product_cta_corner_radius }}px; border: {{section.settings.product_cta_border_width}}px solid {{section.settings.product_cta_border_color}};"
+                style="text-decoration: none;background-color: {{section.settings.product_cta_background}}; font-weight:600; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; margin-top:10px;border-radius: {{ section.settings.product_cta_corner_radius }}px; border: {{section.settings.product_cta_border_width}}px solid {{section.settings.product_cta_border_color}};"
               >
                 {{ section.settings.productcta }}
               </a>
@@ -578,7 +567,7 @@
               <a
                 data-ajax-cart-request-button="/cart/add?id={{ product_1.variants.first.id }}&quantity=1"
                 onclick="setEventProductHandler('{{ product_1 | escape }}')"
-                style="text-decoration: none;background-color: {{section.settings.product_cta_background}}; font-weight:600; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; border-radius: {{ section.settings.product_cta_corner_radius }}px; border: {{section.settings.product_cta_border_width}}px solid {{section.settings.product_cta_border_color}};"
+                style="text-decoration: none;background-color: {{section.settings.product_cta_background}}; font-weight:600; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; margin-top:10px;border-radius: {{ section.settings.product_cta_corner_radius }}px; border: {{section.settings.product_cta_border_width}}px solid {{section.settings.product_cta_border_color}};"
               >
                 {{ section.settings.productcta }}
               </a>
