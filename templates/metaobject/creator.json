@@ -74,7 +74,7 @@
         "eyebrow_margin_bottom": 12,
         "heading_margin_bottom": 18,
         "star_margin_bottom": 5,
-        "show_creator_products": false,
+        "show_creator_products": true,
         "number_of_recommendations": 4,
         "product_corner_radius": 12,
         "product_cta_corner_radius": 4,
