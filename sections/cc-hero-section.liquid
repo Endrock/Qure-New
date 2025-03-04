@@ -109,7 +109,7 @@
 
         .featured-product-image {
   width: 120px;  /* fixed width */
-  height: auto;  /* automatically adjusts to maintain aspect ratio */
+  height: auto !important;  /* automatically adjusts to maintain aspect ratio */
   display: block; /* or inline-block, to ensure predictable sizing in your layout */
           border-radius: {{ section.settings.product_corner_radius }}px;
         }
