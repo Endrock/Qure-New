@@ -567,6 +567,22 @@
               >
                 {{ section.settings.productcta }}
               </a>
+              {% assign product_1 = all_products[section.settings['featured-product']] %}
+              <a
+                data-ajax-cart-request-button="/cart/add?id={{ product_1.variants.first.id }}&quantity=1"
+                onclick="setEventProductHandler('{{ product_1 | escape }}')"
+                style="text-decoration: none;background-color: {{section.settings.product_cta_background}}; font-weight:600; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; border-radius: {{ section.settings.product_cta_corner_radius }}px; border: {{section.settings.product_cta_border_width}}px solid {{section.settings.product_cta_border_color}};"
+              >
+                {{ section.settings.productcta }}
+              </a>
+              {% assign product_1 = all_products[section.settings['featured-product']] %}
+              <a
+                data-ajax-cart-request-button="/cart/add?id={{ product_1.variants.first.id }}&quantity=1"
+                onclick="setEventProductHandler('{{ product_1 | escape }}')"
+                style="text-decoration: none;background-color: {{section.settings.product_cta_background}}; font-weight:600; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; border-radius: {{ section.settings.product_cta_corner_radius }}px; border: {{section.settings.product_cta_border_width}}px solid {{section.settings.product_cta_border_color}};"
+              >
+                {{ section.settings.productcta }}
+              </a>
             </div>
           </div>
         </div>
