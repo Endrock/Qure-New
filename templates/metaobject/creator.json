@@ -74,14 +74,15 @@
         "eyebrow_margin_bottom": 12,
         "heading_margin_bottom": 18,
         "star_margin_bottom": 5,
-        "show_creator_products": true,
+        "show_creator_products": false,
         "number_of_recommendations": 4,
         "product_corner_radius": 12,
         "product_cta_corner_radius": 4,
-        "productcta": "Get 15% Off",
-        "featured-product": "featured-product-handle",
+        "productcta": "Buy Now",
+        "featured-product": "micro-infusion-1-month-bundle-1x-b-g-serum-1x-e-g-f-serum",
         "product_url": "https://productlink.com",
         "discount": 0.9,
+        "full_price": 119,
         "show_compare": "true",
         "product_background": "#f4eded",
         "product_text_color": "#000000",
@@ -372,8 +373,6 @@
         "subheading": "<p><strong>Save up to 55%</strong> on Exclusive Holiday <strong>Bundles</strong></p>",
         "subheading_mobile": "",
         "text": "",
-        "video": "shopify://files/videos/homepage_holiday.webm",
-        "video_mobile": "shopify://files/videos/homepage_holiday-mob.webm",
         "link_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal"
       }
     },
@@ -601,6 +600,7 @@
         "slide_PmixWy"
       ],
       "settings": {
+        "ctm_cls_results": "",
         "heading": "See the results yourself",
         "rating_text": ""
       }
