@@ -55,7 +55,7 @@
         "heading_text_size": 42,
         "heading_size": "h1",
         "subtitle": "Get a discount by shopping from my curated collections.",
-        "description_text_size": 18,
+        "description_text_size": 16,
         "eyebrowcopy": "Recommended by {{ metaobject[\"cc-creator-first-name\"].value }}",
         "eyebrow_text_size": 18,
         "eyebrow_corner_radius": 4,
