@@ -20,11 +20,11 @@ function updateSlideCart() {
               slidecartContainer.replaceWith(newSlidecartNode);
               // new sidecart timer 
               const sidecartTimerContainer = document.querySelector('.slide_cart .sidecart-timer-container');
-              initSidecarTimer(sidecartTimerContainer);
+              if (sidecartTimerContainer) initSidecarTimer(sidecartTimerContainer);
              
               // sitewide timer (header) 
               const siteWideTimerContainer = document.querySelector('.announcement_bar.site-gamification-active .sidecart-timer-container');
-              initSidecarTimer(siteWideTimerContainer);
+              if (siteWideTimerContainer) initSidecarTimer(siteWideTimerContainer);
       
               const customEvent = new CustomEvent('cartUpdated', {
                 detail: {

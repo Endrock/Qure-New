@@ -140,7 +140,7 @@ img.fa.cus-support {
 
 .qure_mob_menu .nav {
     justify-content: space-between;
-    padding: 0 24px;
+    padding: -2px 12px;
     border-bottom: 0.3px solid #959595;
     margin: 0 -24px 0px !important;
 }

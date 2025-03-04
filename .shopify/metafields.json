@@ -312,6 +312,16 @@
         "name": "number_decimal",
         "category": "NUMBER"
       }
+    },
+    {
+      "key": "bundle_product",
+      "namespace": "custom",
+      "name": "bundle product",
+      "description": "",
+      "type": {
+        "name": "metaobject_reference",
+        "category": "REFERENCE"
+      }
     }
   ],
   "variant": [
