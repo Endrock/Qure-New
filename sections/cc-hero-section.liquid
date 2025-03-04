@@ -108,11 +108,14 @@
         }
 
         .featured-product-image {
+  /* Ensure it's treated as a block so width/height work predictably: */
   display: block;
-  max-width: 120px;
-  width: 120px;
+  /* Control the width but keep height auto for correct aspect ratio: */
+  max-width: 140px;
+  width: 100%;
   height: auto;
           border-radius: {{ section.settings.product_corner_radius }}px;
+          object-fit: cover;
         }
 
   .product-image-grid {
