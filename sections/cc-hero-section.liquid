@@ -521,9 +521,7 @@
           {% endfor %}
         </div>
       {% else %}
-        <div id="grid-container">
-          {% render ‘cc-serums-months-form’ %}
-        </div>
+        {% render ‘cc-serums-months-form’, section: section %}
       {% endif %}
     </div>
 
