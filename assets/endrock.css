@@ -4497,11 +4497,17 @@ input[type="radio"]:checked + label[for^="pdm_monthly-plan"] .pdm_all-in-one-fac
 
 .pdm_product-bundle-container.mobile{
   display: block;
+  margin-bottom: 24px;
+}
+
+.pdm_product-bundle-container.desktop{
+  display: none;
 }
 
 .pdm_product-bundle-label {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 10px;
   cursor: pointer;
   padding: 4px 12px;
@@ -4523,6 +4529,7 @@ input[type="radio"]:checked + label[for^="pdm_monthly-plan"] .pdm_all-in-one-fac
 }
 
 .pdm_product-bundle-container .pdm_custom-checkbox {
+  top: -26px;
   display: inline-block;
   width: 18px;
   height: 18px;
@@ -4548,23 +4555,25 @@ input[type="radio"]:checked + label[for^="pdm_monthly-plan"] .pdm_all-in-one-fac
   transform: translate(-50%, -50%);
 }
 
-.pdm_product-bundle-container.desktop{
-  display: none;
-}
-
 .pdm_product-bundle-content{
   display: flex;
   flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
 }
 
 .pdm_product-bundle-content_info{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 8px;
+  flex: 1;
 }
 
 /* title */
-.pdm_product-bundle-content_info h3{
+.pdm_product-bundle-content_info > p{
+  display: flex;
+  flex-direction: column;
   margin: 0;
   color: #000;
   font-family: Poppins;
@@ -4650,15 +4659,22 @@ input[type="radio"]:checked + label[for^="pdm_monthly-plan"] .pdm_all-in-one-fac
     padding: 4px 24px;
   }
 
+  .pdm_product-bundle-container .pdm_custom-checkbox {
+    top: -17px;
+  }
+
   /* title */
-  .pdm_product-bundle-content_info h3{
+  .pdm_product-bundle-content_info > p{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
     font-family: Poppins;
     font-size: 15px;
     font-weight: 400;
     line-height: 140%; /* 21px */
     letter-spacing: 0.15px;
   }
-
+  
   /* price */
   .pdm_product-bundle-price__save{
     font-size: 11px;

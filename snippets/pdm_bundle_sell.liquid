@@ -5,6 +5,9 @@
   assign normal_product_discount = normal_product.price | times: bundle_metafield_data.discount_percent | divided_by: 100
   assign product_with_discount = normal_product.price | minus: normal_product_discount
 %}
+<script>
+  console.log("pdm_bundle_sell.liquid", {{ bundle_metafield_data | json }});
+</script>
 
 <pdm-bundle-upsell
   data-product-bundlet-id="{{ product_bundle.id }}"
@@ -17,7 +20,7 @@
     <span class="pdm_custom-checkbox"></span>
     <div class="pdm_product-bundle-content">
       <div class="pdm_product-bundle-content_info">
-        <h3>{{ product_bundle.description }}</h3>
+        {{ product_bundle.description }}
         <div class="pdm_product-bundle-price">
           <p class="pdm_product-bundle-price__save">
             {{ bundle_metafield_data.discount_text }}
@@ -31,7 +34,11 @@
       </div>
       <div class="pdm_product-bundle-content_image">
         <div class="pdm_product-bundle-content_image__bundle">
-          {{ normal_product.featured_image | image_url: width: 400 | image_tag: alt: normal_product.title }}
+          {{
+            bundle_metafield_data.product_with_discount_image
+            | image_url: width: 400
+            | image_tag: alt: normal_product.title
+          }}
         </div>
       </div>
     </div>
