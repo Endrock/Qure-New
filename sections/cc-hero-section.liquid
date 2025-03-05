@@ -74,7 +74,7 @@
           width: 100%;
           min-width:350px;
           flex-direction: row;
-          gap: 20px;
+          gap: 30px;
           text-align: left;
           padding: 10px;
           border: 0px solid #a1a1a1;
@@ -108,10 +108,10 @@
         }
 
         .featured-product-image {
-          width: 100%;
-          height: 100%;
-          min-width:100px;
-          max-width: 100px;
+  width: 120px;  /* fixed width */
+  height: 120px;  /* automatically adjusts to maintain aspect ratio */
+  margin:auto;
+  display: block; /* or inline-block, to ensure predictable sizing in your layout */
           border-radius: {{ section.settings.product_corner_radius }}px;
         }
 
@@ -451,12 +451,11 @@
                   </p>
                 </div>
                 <a
-                  href="{{ shop.url }}/products/{{ product.handle}}"
-                  style="text-decoration: none;"
+                  data-ajax-cart-request-button="/cart/add?id={{ product.variants.first.id }}&quantity=1"
+                  onclick="setEventProductHandler('{{ product.handle | escape }}')"
+                  style="text-decoration: none;background-color: {{section.settings.product_cta_background}}; font-weight:600; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; border-radius: {{ section.settings.product_cta_corner_radius }}px; border: {{section.settings.product_cta_border_width}}px solid {{section.settings.product_cta_border_color}};"
                 >
-                  <button style="background-color: {{section.settings.product_cta_background}}; font-weight:600; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; border-radius: {{ section.settings.product_cta_corner_radius }}px; border: {{section.settings.product_cta_border_width}}px solid {{section.settings.product_cta_border_color}};">
-                    {{ section.settings.productcta }}
-                  </button>
+                  {{ section.settings.productcta }}
                 </a>
               </div>
             </div>
@@ -509,10 +508,12 @@
                     </p>
                   {% endif %}
                 </div>
-                <a href="{{ shop.url }}/products/{{product.handle}}" style="text-decoration: none; margin-top: auto;">
-                  <button style="background-color: {{ section.settings.product_cta_background }}; border: {{ section.settings.product_cta_border_width }}px solid {{ section.settings.product_cta_border_color }}; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; border-radius: {{ section.settings.product_cta_corner_radius }}px;">
-                    {{ section.settings.productcta }}
-                  </button>
+                <a
+                  data-ajax-cart-request-button="/cart/add?id={{ product.variants.first.id }}&quantity=1"
+                  onclick="setEventProductHandler('{{ product.handle | escape }}')"
+                  style="text-decoration: none;background-color: {{section.settings.product_cta_background}}; font-weight:600; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; border-radius: {{ section.settings.product_cta_corner_radius }}px; border: {{section.settings.product_cta_border_width}}px solid {{section.settings.product_cta_border_color}};"
+                >
+                  {{ section.settings.productcta }}
                 </a>
               </div>
               {% assign productcounter = productcounter | plus: 1 %}
@@ -523,7 +524,7 @@
         <div id="grid-container">
           <div class="product-card-featured">
             <img
-              src="{{ all_products[section.settings.featured-product] | image_url: width: 200 }}"
+              src="{{ all_products[section.settings.featured-product] | image_url: width: 300 }}"
               alt="Product 1"
               class="featured-product-image"
             >
@@ -546,13 +547,29 @@
                   (With {{ metaobject['cc-creator-first-name'] }}'s' Code)
                 </p>
               </div>
+              {% assign product_1 = all_products[section.settings['featured-product']] %}
               <a
-                href="{{ shop.url }}/products/{{ section.settings.featured-product}}"
-                style="text-decoration: none;"
+                data-ajax-cart-request-button="/cart/add?id={{ product_1.variants.first.id }}&quantity=1"
+                onclick="setEventProductHandler('{{ product_1 | escape }}')"
+                style="text-decoration: none;background-color: {{section.settings.product_cta_background}}; font-weight:600; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; margin-top:10px;border-radius: {{ section.settings.product_cta_corner_radius }}px; border: {{section.settings.product_cta_border_width}}px solid {{section.settings.product_cta_border_color}};"
               >
-                <button style="background-color: {{section.settings.product_cta_background}}; font-weight:600; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; border-radius: {{ section.settings.product_cta_corner_radius }}px; border: {{section.settings.product_cta_border_width}}px solid {{section.settings.product_cta_border_color}};">
-                  {{ section.settings.productcta }}
-                </button>
+                {{ section.settings.productcta }}
+              </a>
+              {% assign product_1 = all_products[section.settings['featured-product']] %}
+              <a
+                data-ajax-cart-request-button="/cart/add?id={{ product_1.variants.first.id }}&quantity=1"
+                onclick="setEventProductHandler('{{ product_1 | escape }}')"
+                style="text-decoration: none;background-color: {{section.settings.product_cta_background}}; font-weight:600; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; margin-top:10px;border-radius: {{ section.settings.product_cta_corner_radius }}px; border: {{section.settings.product_cta_border_width}}px solid {{section.settings.product_cta_border_color}};"
+              >
+                {{ section.settings.productcta }}
+              </a>
+              {% assign product_1 = all_products[section.settings['featured-product']] %}
+              <a
+                data-ajax-cart-request-button="/cart/add?id={{ product_1.variants.first.id }}&quantity=1"
+                onclick="setEventProductHandler('{{ product_1 | escape }}')"
+                style="text-decoration: none;background-color: {{section.settings.product_cta_background}}; font-weight:600; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; margin-top:10px;border-radius: {{ section.settings.product_cta_corner_radius }}px; border: {{section.settings.product_cta_border_width}}px solid {{section.settings.product_cta_border_color}};"
+              >
+                {{ section.settings.productcta }}
               </a>
             </div>
           </div>

@@ -98,6 +98,13 @@
       "sku": "SKU",
       "on_sale": "Sale",
       "product_variants": "Product variants",
+      "includes_free_shipping_label":"Includes Free Shipping",
+      "3_serum_label":"3 Serums",
+      "3_serum_label_mi_patches":"3 Boxes / 48 patches (24 pairs)",
+      "unlocks_free_shipping_label":"Unlocks",
+      "2_Serums_label":"2 Serums",
+      "2_boxes_label":"2 Boxes / 32 patches (16 pairs)",
+      "1_box_label":"1 Box / 16 patches (8 pairs)",
       "media": {
         "gallery_viewer": "Gallery Viewer",
         "load_image": "Load image {{ index }} in gallery view",
