@@ -4801,3 +4801,214 @@ input[type="radio"]:checked + label[for^="pdm_monthly-plan"] .pdm_all-in-one-fac
 }
 
 /* end test pdm all in one face serum */
+
+/* QR - LED Mask Neck & Dec Bundle Option AB test  */
+
+body[data-test-bundle="true"] .upgrade_routine{
+  display: none !important;
+}
+
+.pdm_product-bundle-container.mobile{
+  display: none;
+}
+
+.pdm_product-bundle-container.desktop{
+  display: none;
+}
+
+body[data-test-bundle="true"] .pdm_product-bundle-container.mobile{
+  display: block;
+  margin-bottom: 24px;
+}
+
+.pdm_product-bundle-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 4px 12px;
+  border-radius: 8px;
+  border: 1px solid #D7D9D9;
+  background: #FFF;
+}
+
+.pdm_product-bundle-label:hover {
+  border-color: black;
+}
+
+.pdm_product-bundle-label:has(.hidden-checkbox:checked) {
+  background-color: #F6F6F6;
+}
+
+.pdm_product-bundle-container .hidden-checkbox {
+  display: none; 
+}
+
+.pdm_product-bundle-container .pdm_custom-checkbox {
+  top: -26px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.pdm_product-bundle-container .hidden-checkbox:checked + .pdm_custom-checkbox {
+  background-color: #008763;
+  border-color: black;
+}
+
+.pdm_product-bundle-container .hidden-checkbox:checked + .pdm_custom-checkbox::before {
+  content: "✓";
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pdm_product-bundle-content{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.pdm_product-bundle-content_info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  flex: 1;
+}
+
+/* title */
+.pdm_product-bundle-content_info > p{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  color: #000;
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 18.2px */
+  letter-spacing: 0.13px;
+}
+
+/* price */
+
+.pdm_product-bundle-price{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pdm_product-bundle-price__save{
+  display: flex;
+  width: fit-content;
+  padding: 0px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 40px;
+  background: #C4121A;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 218.182% */
+  letter-spacing: 0.11px;
+  margin-right: 8px;
+}
+
+.pdm_product-bundle-price__full{
+  color: black;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: 0.14px;
+  text-decoration: line-through;
+  margin-right: 4px;
+}
+
+.pdm_product-bundle-price__discount{
+  color: #C4121A;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.16px;
+}
+
+/* image */
+
+.pdm_product-bundle-content_image__bundle{
+  width: 88px;
+  height: 88px;
+}
+
+.pdm_product-bundle-content_image__bundle img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media screen and (min-width: 768px) {
+  body[data-test-bundle="true"] .pdm_product-bundle-container.mobile{
+    display: none;
+  }
+
+  body[data-test-bundle="true"] .pdm_product-bundle-container.desktop{
+    display: block;
+  }
+
+  .pdm_product-bundle-label{
+    padding: 4px 24px;
+  }
+
+  .pdm_product-bundle-container .pdm_custom-checkbox {
+    top: -17px;
+  }
+
+  /* title */
+  .pdm_product-bundle-content_info > p{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 140%; /* 21px */
+    letter-spacing: 0.15px;
+  }
+  
+  /* price */
+  .pdm_product-bundle-price__save{
+    font-size: 11px;
+    line-height: 24px; /* 218.182% */
+    letter-spacing: 0.11px;
+  }
+
+  .pdm_product-bundle-price__full{
+    font-size: 14px;
+    line-height: 24px; /* 171.429% */
+    letter-spacing: 0.14px;
+  }
+  
+  .pdm_product-bundle-price__discount{
+    font-size: 18px;
+    line-height: 24px; /* 133.333% */
+    letter-spacing: 0.18px;
+  }
+}
+/* QR - LED Mask Neck & Dec Bundle Option AB test */
