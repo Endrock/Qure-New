@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const containerAtcButtonProdFaceSerum = document.querySelectorAll('.button_sticky_wrapper');
 
   if (socialProofContainer) {
-    let { productId, productHandle, productList } = socialProofContainer.dataset;
+    let { productId, pageHandle, productList } = socialProofContainer.dataset;
     let url = `https://webhooks.endrock.software/endrockapi/v3/app/analytics/reportsGA4.php?filterBy=productId&store=qure&name=Qure: GA4&productId=`;
 
     // render products purchased quantity and show the social proof container 
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // handle requests for 1 product or some of them
-    if (productHandle && productList) {
+    if (pageHandle && productList) {
       let arrProductList = productList.split(', ');
       const requests = arrProductList.map(id => {
         return fetchData(url, id);
