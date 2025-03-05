@@ -139,7 +139,7 @@
                         <ul>
                             {% for childChildlink in childlink.links %}
                                 <li>
-                                    <a href="{{ childChildlink.url }}" aria-label="{{ childChildlink.title | escape }}">
+                                    <a href="{{ childChildlink.url }}" aria-label="{{ childChildlink.title | escape }}" {% if childChildlink.title == 'Help center' %} target="_blank"{% endif %}>
                                         <span>{{ childChildlink.title | escape }}</span>
                                     </a>
                                 </li>
