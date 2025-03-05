@@ -5,9 +5,6 @@
   assign normal_product_discount = normal_product.price | times: bundle_metafield_data.discount_percent | divided_by: 100
   assign product_with_discount = normal_product.price | minus: normal_product_discount
 %}
-<script>
-  console.log("pdm_bundle_sell.liquid", {{ bundle_metafield_data | json }});
-</script>
 
 <pdm-bundle-upsell
   data-product-bundlet-id="{{ product_bundle.id }}"

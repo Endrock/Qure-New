@@ -4495,13 +4495,21 @@ input[type="radio"]:checked + label[for^="pdm_monthly-plan"] .pdm_all-in-one-fac
 
 /* QR - LED Mask Neck & Dec Bundle Option AB test  */
 
+body[data-test-bundle="true"] .upgrade_routine{
+  display: none !important;
+}
+
 .pdm_product-bundle-container.mobile{
-  display: block;
-  margin-bottom: 24px;
+  display: none;
 }
 
 .pdm_product-bundle-container.desktop{
   display: none;
+}
+
+body[data-test-bundle="true"] .pdm_product-bundle-container.mobile{
+  display: block;
+  margin-bottom: 24px;
 }
 
 .pdm_product-bundle-label {
@@ -4647,11 +4655,11 @@ input[type="radio"]:checked + label[for^="pdm_monthly-plan"] .pdm_all-in-one-fac
 }
 
 @media screen and (min-width: 768px) {
-  .pdm_product-bundle-container.mobile{
+  body[data-test-bundle="true"] .pdm_product-bundle-container.mobile{
     display: none;
   }
 
-  .pdm_product-bundle-container.desktop{
+  body[data-test-bundle="true"] .pdm_product-bundle-container.desktop{
     display: block;
   }
 
