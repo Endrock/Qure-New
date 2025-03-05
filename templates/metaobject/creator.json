@@ -54,7 +54,7 @@
         "title": "Discover the routine that change everything for me",
         "heading_text_size": 42,
         "heading_size": "h1",
-        "subtitle": "Get a discount by shopping from my curated collections.",
+        "subtitle": "Get a {{ metaobject[\"cc-collab-discount-amount\"].value }}% discount by shopping from my curated collections.",
         "description_text_size": 16,
         "eyebrowcopy": "Recommended by {{ metaobject[\"cc-creator-first-name\"].value }}",
         "eyebrow_text_size": 18,
