@@ -117,7 +117,7 @@
                           {% assign price = product.price | times: discount_multiplier %}
                           {% assign compare_at_price = product.compare_at_price | money_without_trailing_zeros %}
                           <div class="plan_prc regular_price">
-                            {{ compare_at_price | money_without_trailing_zeros }}
+                            {{ product.compare_at_price | money_without_trailing_zeros }}
                           </div>
                           <div class="plan_prc sale_price">{{ price | money_without_trailing_zeros }}</div>
                         {% elsif cc_creator['cc-collab-discount-type'] == 'Fixed'
@@ -128,7 +128,7 @@
                           {% assign price = product.price | minus: discount %}
                           {% assign compare_at_price = product.compare_at_price | money_without_trailing_zeros %}
                           <div class="plan_prc regular_price">
-                            {{ compare_at_price | money_without_trailing_zeros }}
+                            {{ product.compare_at_price | money_without_trailing_zeros }}
                           </div>
                           <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
                         {% else %}
