@@ -84,6 +84,7 @@
                       | minus: 1
                       | abs
                       | times: 100
+                      | plus: cc_creator['cc-collab-discount-amount']
                       | ceil
                     %}
 
@@ -107,10 +108,32 @@
                         <div class="plan_des">6 Micro-Infusion Treatments</div>
                       </div>
                       <div class="price">
-                        <div class="plan_prc regular_price">
-                          {{ product.compare_at_price | money_without_trailing_zeros }}
-                        </div>
-                        <div class="plan_prc sale_price ">{{ product.price | money_without_trailing_zeros }}</div>
+                        {% if cc_creator['cc-collab-discount-type'] == 'Percentage'
+                          and cc_creator != ''
+                          and cc_creator != null
+                        %}
+                          {% assign discount = cc_creator['cc-collab-discount-amount'] | divided_by: 100 %}
+                          {% assign discount_multiplier = 1 | minus: discount %}
+                          {% assign price = product.price | times: discount_multiplier %}
+                          {% assign compare_at_price = product.compare_at_price | money_without_trailing_zeros %}
+                          <div class="plan_prc regular_price">
+                            {{ product.compare_at_price | money_without_trailing_zeros }}
+                          </div>
+                          <div class="plan_prc sale_price">{{ price | money_without_trailing_zeros }}</div>
+                        {% elsif cc_creator['cc-collab-discount-type'] == 'Fixed'
+                          and cc_creator != ''
+                          and cc_creator != null
+                        %}
+                          {% assign discount = cc_creator['cc-collab-discount-amount'] | plus: 0 %}
+                          {% assign price = product.price | minus: discount %}
+                          {% assign compare_at_price = product.compare_at_price | money_without_trailing_zeros %}
+                          <div class="plan_prc regular_price">
+                            {{ product.compare_at_price | money_without_trailing_zeros }}
+                          </div>
+                          <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
+                        {% else %}
+                          <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
+                        {% endif %}
                       </div>
                     </label>
                   </div>
@@ -123,6 +146,7 @@
                       | minus: 1
                       | abs
                       | times: 100
+                      | plus: cc_creator['cc-collab-discount-amount']
                       | ceil
                     %}
                     {% assign soldout_percentage = discount_percentage %}
@@ -141,10 +165,32 @@
                         <div class="plan_des">4 Micro-Infusion Treatments</div>
                       </div>
                       <div class="price">
-                        <div class="plan_prc regular_price">
-                          {{ product.compare_at_price | money_without_trailing_zeros }}
-                        </div>
-                        <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
+                        {% if cc_creator['cc-collab-discount-type'] == 'Percentage'
+                          and cc_creator != ''
+                          and cc_creator != null
+                        %}
+                          {% assign discount = cc_creator['cc-collab-discount-amount'] | divided_by: 100 %}
+                          {% assign discount_multiplier = 1 | minus: discount %}
+                          {% assign price = product.price | times: discount_multiplier %}
+                          {% assign compare_at_price = product.compare_at_price | money_without_trailing_zeros %}
+                          <div class="plan_prc regular_price">
+                            {{ product.compare_at_price | money_without_trailing_zeros }}
+                          </div>
+                          <div class="plan_prc sale_price">{{ price | money_without_trailing_zeros }}</div>
+                        {% elsif cc_creator['cc-collab-discount-type'] == 'Fixed'
+                          and cc_creator != ''
+                          and cc_creator != null
+                        %}
+                          {% assign discount = cc_creator['cc-collab-discount-amount'] | plus: 0 %}
+                          {% assign price = product.price | minus: discount %}
+                          {% assign compare_at_price = product.compare_at_price | money_without_trailing_zeros %}
+                          <div class="plan_prc regular_price">
+                            {{ product.compare_at_price | money_without_trailing_zeros }}
+                          </div>
+                          <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
+                        {% else %}
+                          <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
+                        {% endif %}
                       </div>
                     </label>
                   </div>
@@ -249,6 +295,7 @@
       | minus: 1
       | abs
       | times: 100
+      | plus: cc_creator['cc-collab-discount-amount']
       | ceil
     %}
     {% assign divided_price = product.price | divided_by: 4 %}
