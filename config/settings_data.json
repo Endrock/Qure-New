@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "current": {
     "show_bf_price": false,
     "favicon": "shopify://shop_images/qure.png",
@@ -42,7 +42,7 @@
       "faucet-filter-refill",
       "faucet-filter"
     ],
-    "face_serum_2_month": "shopify://shop_images/face-serum-contrast-1-month-svg.svg",
+    "face_serum_2_month": "shopify://shop_images/Serum-icon.svg",
     "patches_1_month": "shopify://shop_images/patches-contrast-1-month-svg.svg",
     "show_order_by_receive_by": true,
     "today_text": "Order today",
