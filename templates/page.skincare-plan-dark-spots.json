@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "main": {
       "type": "page",
@@ -259,7 +259,7 @@
             "video": "shopify://files/videos/d5d0c051b43e4117be7b6308e06e8f66.mp4",
             "video_external": "",
             "img": "shopify://shop_images/video_2_d4e699f9-63c0-4a7d-8dc4-70ec89088e7b.png",
-            "product": "micro-infusion-3-month-bundle-6x-beta-glucan-serum"
+            "product": "micro-infusion-3-month-bundle"
           }
         }
       },
@@ -517,7 +517,9 @@
       "type": "pdm_flating-bundle",
       "settings": {
         "bundle_info": "skincare-plan-result-dark-spots",
-        "bundle_products": "2199"
+        "bundle_products": "2199",
+        "text_bubble_bundle_unused": "${bundle-title}  successfully added to your cart.",
+        "text_bubble_bundle_used": "Your Personalized Skincare Bundle  has been updated."
       }
     }
   },
