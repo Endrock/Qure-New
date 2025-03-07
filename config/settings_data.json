@@ -422,6 +422,11 @@
         "type": "shopify://apps/black-crow-ai-that-delivers/blocks/blackcrow_ai_script/3e73f597-cb71-47a1-8a06-0c931482ecd2",
         "disabled": false,
         "settings": {}
+      },
+      "9595312320780652085": {
+        "type": "shopify://apps/creatorcommerce-creator-shops/blocks/ccsdk/4dbde762-1068-4d2d-8b03-4505bf4cf377",
+        "disabled": false,
+        "settings": {}
       }
     }
   },

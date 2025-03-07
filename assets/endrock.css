@@ -4833,14 +4833,6 @@ body[data-test-bundle="true"] .pdm_product-bundle-container.mobile{
   background: #FFF;
 }
 
-.pdm_product-bundle-label:hover {
-  border-color: black;
-}
-
-.pdm_product-bundle-label:has(.hidden-checkbox:checked) {
-  background-color: #F6F6F6;
-}
-
 .pdm_product-bundle-container .hidden-checkbox {
   display: none; 
 }
@@ -4857,19 +4849,31 @@ body[data-test-bundle="true"] .pdm_product-bundle-container.mobile{
   flex-shrink: 0;
 }
 
-.pdm_product-bundle-container .hidden-checkbox:checked + .pdm_custom-checkbox {
-  background-color: #008763;
-  border-color: black;
+.pdm_product-bundle-label:has(.hidden-checkbox:checked) {
+  background-color: #F6F6F6;
+  border-color: black
+}
+
+.pdm_product-bundle-label:has(.hidden-checkbox:not(:checked)) {
+  border-color: #D7D9D9;
 }
 
 .pdm_product-bundle-container .hidden-checkbox:checked + .pdm_custom-checkbox::before {
-  content: "✓";
   position: absolute;
   color: white;
   font-size: 14px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.pdm_product-bundle-container .hidden-checkbox:checked + .pdm_custom-checkbox {
+  background-color: transparent; /* Quita el color de fondo */
+  border: none; /* Quita el borde */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Ccircle cx='9' cy='9' r='9' fill='%23008763'/%3E%3Cpath d='M5 8.41788L7.95882 11.3193L13.3833 6' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .pdm_product-bundle-content{
@@ -5009,6 +5013,12 @@ body[data-test-bundle="true"] .pdm_product-bundle-container.mobile{
     font-size: 18px;
     line-height: 24px; /* 133.333% */
     letter-spacing: 0.18px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .pdm_product-bundle-label:hover {
+    border-color: black !important;
   }
 }
 /* QR - LED Mask Neck & Dec Bundle Option AB test */

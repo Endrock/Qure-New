@@ -687,6 +687,7 @@
         "classname": "section videosQure",
         "btn": "",
         "btn_url": "",
+        "ctm_cls_btn": "",
         "desk_slide": 6,
         "mob_slide": 2,
         "slide_space": 18
@@ -750,6 +751,14 @@
             "text": "<p>Expect better skin. Daily light therapy treatments transform your skin from within, whilst applying Face Serum treats your skin topically.</p><p>Are your skin’s best DEFENSE?? To combat ageing, reduce depth of wrinkles, boost brightness, reduce dark spots for a lit-from-within glow and bring back bouncier, healthy skin. Providing instant, long-lasting brightness, it penetrates multiple layers of the skin to reduce fine lines and improve elasticity.</p><p>Lightweight and easily absorbed without leaving any sticky or greasy residue, it's your triple threat for smooth, bright, healthy skin.</p>",
             "code": ""
           }
+        },
+        "object_Ypi7cX": {
+          "type": "object",
+          "settings": {
+            "heading": "Why Did I Receive a Notice from Border Force About Tranexamic Acid?",
+            "text": "<p>If you have received a notice from Border Force regarding tranexamic acid (TXA) in your order, here’s what you need to know:</p><p><br/><strong>- Is Tranexamic Acid a Prescription-Only Ingredient? </strong>In Australia, TXA is classified as a <strong>Schedule 4 (prescription-only) drug only when used orally or by injection </strong>for treating melasma or other medical conditions. However,<strong>topical TXA in cosmetic formulations is permitted</strong>.</p><p><br/><strong>- Is This Product Considered a Medicine? </strong>No, our serum is <strong>purely for cosmetic use </strong>and does not claim to treat medical conditions. It is <strong>applied topically </strong>(not injected) and is classified as a <strong>cosmetic product </strong>rather than a prescription medicine.</p><p><br/><strong>-Is This Product Compliant with Australian Regulations? </strong>Yes! Facial serums containing up to <strong>3% TXA for cosmetic purposes </strong>are <strong>not classified as prescription-only medicines </strong>and do not require inclusion in the <strong>Australian Register of Therapeutic Goods (ARTG)</strong>.<br/></p><p><strong>-What Should I Do If Border Force Requests More Information? </strong>If Border Force requires clarification, you can provide the information above to confirm that the product complies with Australian regulations. If further details are needed, they can refer to the <strong>Therapeutic Goods Administration (TGA) guidelines </strong>on cosmetic formulations.</p><p><br/>If you need further assistance, feel free to contact our support team—we’re happy to help!</p>",
+            "code": ""
+          }
         }
       },
       "block_order": [
@@ -759,7 +768,8 @@
         "object_rKVaFE",
         "object_pYeAQf",
         "object_FncVUi",
-        "object_RdJmEV"
+        "object_RdJmEV",
+        "object_Ypi7cX"
       ],
       "settings": {
         "background": "bg_yellow",
