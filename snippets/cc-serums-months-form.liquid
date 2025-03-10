@@ -108,7 +108,7 @@
                         <div class="plan_des">6 Micro-Infusion Treatments</div>
                       </div>
                       <div class="price">
-                        {% if cc_creator['cc-collab-discount-type'] == 'Percentage'
+                        {% if cc_creator['cc-collab-discount-typ'] == 'Percentage'
                           and cc_creator != ''
                           and cc_creator != null
                         %}
@@ -120,7 +120,7 @@
                             {{ product.compare_at_price | money_without_trailing_zeros }}
                           </div>
                           <div class="plan_prc sale_price">{{ price | money_without_trailing_zeros }}</div>
-                        {% elsif cc_creator['cc-collab-discount-type'] == 'Fixed'
+                        {% elsif cc_creator['cc-collab-discount-typ'] == 'Fixed'
                           and cc_creator != ''
                           and cc_creator != null
                         %}
@@ -132,6 +132,9 @@
                           </div>
                           <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
                         {% else %}
+                          <div class="plan_prc regular_price">
+                            {{ product.compare_at_price | money_without_trailing_zeros }}
+                          </div>
                           <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
                         {% endif %}
                       </div>
