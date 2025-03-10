@@ -193,7 +193,7 @@
                           <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
                         {% else %}
                           <div class="plan_prc regular_price">
-                            {{ compare_at_price | money_without_trailing_zeros }}
+                            {{ product.compare_at_price | money_without_trailing_zeros }}
                           </div>
                           <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
                         {% endif %}
