@@ -538,6 +538,54 @@
             "image": "shopify://shop_images/bf-ftr-firmer.svg"
           }
         },
+        "bundle_7pMMc9": {
+          "type": "bundle",
+          "settings": {}
+        },
+        "product_WbmMAY": {
+          "type": "product",
+          "settings": {
+            "product": "mothers-day-bundle",
+            "percent": 30,
+            "media_limit": 0,
+            "hide_us": false,
+            "recommended_heading": "",
+            "recommended_text": "",
+            "is_top_rated": false,
+            "is_preorder": false,
+            "preorder_text": "",
+            "classname": "",
+            "code": ""
+          }
+        },
+        "include_yy7k3x": {
+          "type": "include",
+          "settings": {
+            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles + Rejuvenation) ",
+            "is_limited": false,
+            "type": "",
+            "image": "shopify://shop_images/bfs_3-serum.webp",
+            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p><h5>Serum Concentrate for Rejuvenation</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
+            "count": "",
+            "hide": false,
+            "hide_variants": false,
+            "code": ""
+          }
+        },
+        "include_XHK4Kg": {
+          "type": "include",
+          "settings": {
+            "heading": "Silk Pillowcase",
+            "is_limited": false,
+            "type": "",
+            "image": "shopify://shop_images/silk_pillow_product.webp",
+            "text": "",
+            "count": "",
+            "hide": false,
+            "hide_variants": false,
+            "code": ""
+          }
+        },
         "bundle_pxhMjY": {
           "type": "bundle",
           "disabled": true,
@@ -805,58 +853,16 @@
             "image": "shopify://shop_images/bfs_mi_patches_sm_60e1c80a-3980-4bc0-ba25-46ac31703fc0.svg",
             "text": "<h5>Micro-Infusion Targeted Patches</h5><ul><li>Use twice a week.</li><li>Apply to either 11 lines, crow’s feet, under eye or laugh lines and leave overnight or for 2 hours.</li></ul>"
           }
-        },
-        "bundle_7pMMc9": {
-          "type": "bundle",
-          "settings": {}
-        },
-        "product_WbmMAY": {
-          "type": "product",
-          "settings": {
-            "product": "mothers-day-bundle",
-            "percent": 30,
-            "media_limit": 0,
-            "hide_us": false,
-            "recommended_heading": "",
-            "recommended_text": "",
-            "is_top_rated": false,
-            "is_preorder": false,
-            "preorder_text": "",
-            "classname": "",
-            "code": ""
-          }
-        },
-        "include_yy7k3x": {
-          "type": "include",
-          "settings": {
-            "heading": "",
-            "is_limited": false,
-            "type": "",
-            "text": "",
-            "count": "",
-            "hide": false,
-            "hide_variants": false,
-            "code": ""
-          }
-        },
-        "include_XHK4Kg": {
-          "type": "include",
-          "settings": {
-            "heading": "",
-            "is_limited": false,
-            "type": "",
-            "text": "",
-            "count": "",
-            "hide": false,
-            "hide_variants": false,
-            "code": ""
-          }
         }
       },
       "block_order": [
         "icon_AcpYLG",
         "icon_f36jbE",
         "icon_eUd4zy",
+        "bundle_7pMMc9",
+        "product_WbmMAY",
+        "include_yy7k3x",
+        "include_XHK4Kg",
         "bundle_pxhMjY",
         "product_Qck4qG",
         "include_njjqWt",
@@ -881,11 +887,7 @@
         "include_BptJE4",
         "include_pLcfQn",
         "how_to_use_xKrmMc",
-        "how_to_use_afmnQY",
-        "bundle_7pMMc9",
-        "product_WbmMAY",
-        "include_yy7k3x",
-        "include_XHK4Kg"
+        "how_to_use_afmnQY"
       ],
       "settings": {
         "heading": "Pro-Aging Bundles",
