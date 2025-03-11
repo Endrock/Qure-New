@@ -538,6 +538,61 @@
             "image": "shopify://shop_images/bf-ftr-firmer.svg"
           }
         },
+        "bundle_7pMMc9": {
+          "type": "bundle",
+          "settings": {}
+        },
+        "product_WbmMAY": {
+          "type": "product",
+          "settings": {
+            "product": "mothers-day-bundle",
+            "percent": 30,
+            "media_limit": 0,
+            "hide_us": false,
+            "recommended_heading": "",
+            "recommended_text": "",
+            "is_top_rated": false,
+            "is_preorder": false,
+            "preorder_text": "",
+            "classname": "",
+            "code": ""
+          }
+        },
+        "include_yy7k3x": {
+          "type": "include",
+          "settings": {
+            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles + Rejuvenation) ",
+            "is_limited": false,
+            "type": "",
+            "image": "shopify://shop_images/bfs_3-serum.webp",
+            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p><h5>Serum Concentrate for Rejuvenation</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
+            "count": "",
+            "hide": false,
+            "hide_variants": false,
+            "code": ""
+          }
+        },
+        "include_XHK4Kg": {
+          "type": "include",
+          "settings": {
+            "heading": "Silk Pillowcase",
+            "is_limited": false,
+            "type": "",
+            "image": "shopify://shop_images/silk_pillow_product.webp",
+            "text": "",
+            "count": "",
+            "hide": false,
+            "hide_variants": false,
+            "code": ""
+          }
+        },
+        "how_to_use_QQ6ykk": {
+          "type": "how-to-use",
+          "settings": {
+            "image": "shopify://shop_images/bfs_mi_sm.svg",
+            "text": "<h5>Micro-Infusion 3 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Easily purchase 3 month refills via our website.</li></ul>"
+          }
+        },
         "bundle_pxhMjY": {
           "type": "bundle",
           "disabled": true,
@@ -811,6 +866,11 @@
         "icon_AcpYLG",
         "icon_f36jbE",
         "icon_eUd4zy",
+        "bundle_7pMMc9",
+        "product_WbmMAY",
+        "include_yy7k3x",
+        "include_XHK4Kg",
+        "how_to_use_QQ6ykk",
         "bundle_pxhMjY",
         "product_Qck4qG",
         "include_njjqWt",

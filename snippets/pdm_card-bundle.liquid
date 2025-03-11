@@ -13,7 +13,11 @@ this snippets is used in pdm_products-bundle.liquid section, render card product
       doctor-image: card.settings.doctor_image,
       doctor-text: card.settings.doctor_text,
       doctor-certificated: card.settings.doctor_certificated,
-      btn-text: section.settings.button_card%}
+      btn-text: section.settings.button_card,
+      btn-product-img-title: card.settings.btn_image_product_title,
+      btn-result-img-title: card.settings.btn_image_results_title,
+      btn-video-title: card.settings.btn_video_title
+    %}
 {% endcomment %}
 {% if product %}
 <div class="card-bundle hidden-mobile" data-product-id="{{ product.selected_or_first_available_variant.id }}" data-card-bundle-product-price="{{ product.price }}" data-card-bundle-product-price-money="{{ product.price | money_without_trailing_zeros }}">
@@ -48,12 +52,12 @@ this snippets is used in pdm_products-bundle.liquid section, render card product
         {% endif %}
       </div>
       <div class="media-btns">
-        <div data-ref="product" class="product active">Product</div>
+        <div data-ref="product" class="product active"> {{ btn-product-img-title }} </div>
         {% if result-img %}
-        <div data-ref="results" class="results">Real Results</div>
+        <div data-ref="results" class="results">{{ btn-result-img-title }}</div>
         {% endif %}
         {% if video %}
-        <div data-ref="how-work" class="how-work">How It works</div>
+        <div data-ref="how-work" class="how-work">{{ btn-video-title }}</div>
         {% endif %}
       </div>
     </div>

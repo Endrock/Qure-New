@@ -45,7 +45,10 @@
     doctor-image: card.settings.doctor_image,
     doctor-text: card.settings.doctor_text,
     doctor-certificated: card.settings.doctor_certificated,
-    btn-text: section.settings.button_card
+    btn-text: section.settings.button_card,
+    btn-product-img-title: card.settings.btn_image_product_title,
+    btn-result-img-title: card.settings.btn_image_results_title,
+    btn-video-title: card.settings.btn_video_title
     %}
   {% endfor %}
   </div>
@@ -106,7 +109,13 @@
         {
           "type": "image_picker",
           "id": "image_product",
-          "label": "Product' Image"
+          "label": "Product Image"
+        },
+        {
+          "type": "text",
+          "id": "btn_image_product_title",
+          "label": "Button Product Image Title",
+          "default": "Product"
         },
         {
           "type": "image_picker",
@@ -114,9 +123,21 @@
           "label": "Results' Image"
         },
         {
+          "type": "text",
+          "id": "btn_image_results_title",
+          "label": "Button Product Results Title",
+          "default": "Real Results"
+        },
+        {
           "type": "video",
           "id": "video",
           "label": "Video"
+        },
+        {
+          "type": "text",
+          "id": "btn_video_title",
+          "label": "Button Video Title",
+          "default": "Derm Video"
         },
         {
           "type": "checkbox",

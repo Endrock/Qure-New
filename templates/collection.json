@@ -14,6 +14,7 @@
       "blocks": {
         "banner_he7ceb": {
           "type": "banner",
+          "disabled": true,
           "settings": {
             "heading": "INTERNATIONAL WOMEN’S DAY",
             "subheading": "<h3>Claim a FREE Micro-Infusion Bundle</h3>",
