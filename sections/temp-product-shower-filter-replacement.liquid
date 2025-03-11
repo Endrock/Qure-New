@@ -690,3 +690,43 @@
     </div>
 </div>
 <!-- --faq end -- -->
+
+
+<script src="https://fast.wistia.com/embed/medias/3ahwzg8wjz.jsonp" async></script>
+<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        document.querySelectorAll('.accordion-button').forEach(button => {
+            button.addEventListener('click', function () {
+                // Get the closest '.detail' element to the clicked button
+                const detailElement = this.closest('.detail');
+
+                // Get the corresponding accordion collapse element
+                const collapseElement = detailElement.querySelector('.accordion-collapse');
+
+                // Listen for the 'shown.bs.collapse' event
+                collapseElement.addEventListener('shown.bs.collapse', function () {
+                    // Add the 'active' class when the accordion is fully shown
+                    detailElement.classList.add('active');
+                });
+
+                // Listen for the 'hidden.bs.collapse' event to remove the 'active' class
+                collapseElement.addEventListener('hidden.bs.collapse', function () {
+                    // Remove the 'active' class when the accordion is collapsed
+                    detailElement.classList.remove('active');
+                });
+            });
+        });
+
+        $('.read-more').click(function () {
+            $(this).prev().slideToggle();
+            if (($(this).text()) == "See Less") {
+                $(this).text("See More");
+            } else {
+                $(this).text("See Less");
+            }
+        });
+    });
+</script>
