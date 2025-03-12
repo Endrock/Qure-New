@@ -16,7 +16,7 @@
           "type": "announcement",
           "settings": {
             "heading": "Limited Time Only:",
-            "timer": "2025-03-13T23:59:59",
+            "timer": "2025-03-20T23:59:59",
             "timer_next": 7
           }
         },
@@ -876,10 +876,12 @@
         },
         "bundle_yGpQVX": {
           "type": "bundle",
+          "disabled": true,
           "settings": {}
         },
         "product_nxKMQa": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "fade-firm-bundle-pro",
             "percent": 22,
@@ -896,6 +898,7 @@
         },
         "include_VKW6eX": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Q-Rejuvalight Pro LED Mask",
             "is_limited": false,
@@ -910,6 +913,7 @@
         },
         "include_fqrYQr": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Neck & Décolletage LED Device",
             "is_limited": false,
@@ -924,6 +928,7 @@
         },
         "include_3nrQQz": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles + Dark Spots)",
             "is_limited": false,
@@ -938,6 +943,7 @@
         },
         "how_to_use_ty9cVM": {
           "type": "how-to-use",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_sm_mask.svg",
             "text": "<h5>Q-Rejuvalight Pro LED Mask </h5><ul><li>Use daily.</li><li>Cleanse and dry your face, then put it on for just 3 minutes and follow with your skincare routine.</li></ul>"
@@ -945,6 +951,7 @@
         },
         "how_to_use_EYwGQF": {
           "type": "how-to-use",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_neck.svg",
             "text": "<h5>Neck & Décolletage LED Device</h5><ul><li>Use it 3-5 times a week.</li><li>Adjust strap to fit neck and décolletage, wear it for just 10 minutes.</li></ul>"
@@ -952,6 +959,7 @@
         },
         "how_to_use_iCBfwQ": {
           "type": "how-to-use",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_mi_sm.svg",
             "text": "<h5>Micro-Infusion 3 month Bundle (For Dark Spots)</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Easily purchase refills via our website.</li></ul>"
