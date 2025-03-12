@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "product-landing": {
       "type": "product-landing",
@@ -544,7 +544,10 @@
             "discount_text": "save",
             "discount_suffix": "%",
             "discount_extra_text_desktop": "- GET ONE FREE",
-            "discount_extra_text_mobile": "GET ONE FREE"
+            "discount_extra_text_mobile": "GET ONE FREE",
+            "first_message_cta": "Buy Two,",
+            "personalize_text_discount_CTA": true,
+            "personalize_text_discount_CTA_text": "Get one FREE"
           }
         },
         "product_Mj6zia": {
@@ -563,7 +566,10 @@
             "discount_text": "save",
             "discount_suffix": "%",
             "discount_extra_text_desktop": "- GET ONE FREE",
-            "discount_extra_text_mobile": "GET ONE FREE"
+            "discount_extra_text_mobile": "GET ONE FREE",
+            "first_message_cta": "Buy Now",
+            "personalize_text_discount_CTA": false,
+            "personalize_text_discount_CTA_text": "GET ONE FREE"
           }
         }
       },

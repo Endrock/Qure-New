@@ -2,6 +2,10 @@
   <p>AVAILABLE UNTIL STOCK LASTS</p>
 </div>
 
+{% comment %} 
+  if this test win, have to split on snippets 
+{% endcomment %}
+
 <div class="pdm_all-in-one-face-main" id="choose_bundle">
   <div class="container">
     {% comment %} description mobile {% endcomment %}
@@ -46,7 +50,7 @@
         <div class="pdm_all-in-one-face-serum-desktop-description-info">
           <div class="pdm_all-in-one-face-serum-desktop-description-info__reviews">
             {% if section.settings.rating_image != blank %}
-             {{ section.settings.rating_image | image_url: width: 100 | image_tag: alt: 'raiting' }}
+              {{ section.settings.rating_image | image_url: width: 100 | image_tag: alt: 'raiting' }}
             {% endif %}
             <p>{{ section.settings.rating }}</p>
           </div>
@@ -91,7 +95,14 @@
                   data-compare-at-price="{{ block.settings.product.compare_at_price |  money_without_trailing_zeros }}"
                   data-price="{{ block.settings.product.price | money_without_trailing_zeros }}"
                   data-saving-price="{{ saving_price | money_without_trailing_zeros }}"
-                  data-discount-message="{% if block.settings.show_discount %}& {{ block.settings.discount_text }} {{ discount_percent_divided }}{{-block.settings.discount_suffix-}}{% endif %}"
+                  data-discount-first-message="{{ block.settings.first_message_cta }}"
+                  data-discount-message="
+                  {% if block.settings.personalize_text_discount_CTA %}
+                    {{ block.settings.personalize_text_discount_CTA_text }}
+                  {% else %}
+                    {% if block.settings.show_discount %}& {{ block.settings.discount_text }} {{ discount_percent_divided }}{{-block.settings.discount_suffix-}}{% endif %}
+                  {% endif %}
+                  "
                 >
                   <input
                     type="radio"
@@ -131,8 +142,12 @@
                               {{ block.settings.discount_text }}
                               {{ discount_percent_divided }}
                               {{- block.settings.discount_suffix -}}
-                              <span class="pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-price-save-desktop">{{ block.settings.discount_extra_text_desktop }}</span>
-                              <span class="pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-price-save-mobile">{{ block.settings.discount_extra_text_mobile }}</span>
+                              <span class="pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-price-save-desktop">
+                                {{- block.settings.discount_extra_text_desktop -}}
+                              </span>
+                              <span class="pdm_all-in-one-face-serum-description-form-wrapper__form-label__container__info-price-save-mobile">
+                                {{- block.settings.discount_extra_text_mobile -}}
+                              </span>
                             </p>
                           {% endif %}
                         </div>
@@ -160,8 +175,11 @@
             </div>
             {% comment %} end moeny {% endcomment %}
             {% comment %} anochor element {% endcomment %}
-            <a class="pdm_all-in-one-face-serum-description-form-wrapper__anchor pdm_serum-anchor-ajax" data-ajax-cart-request-button>
-              {{ section.settings.form_button }}
+            <a
+              class="pdm_all-in-one-face-serum-description-form-wrapper__anchor pdm_serum-anchor-ajax"
+              data-ajax-cart-request-button
+            >
+              <span class="pdm_serum-anchor-ajax-text-first"></span>
               <span class="pdm_serum-anchor-ajax-text"></span>
             </a>
             {% comment %} payment methods {% endcomment %}
@@ -245,12 +263,6 @@
       "id": "form_savings",
       "label": "Form Savings",
       "default": "Your Savings"
-    },
-    {
-      "type": "text",
-      "id": "form_button",
-      "label": "Form Button",
-      "default": "buy now"
     }
   ],
   "blocks": [
@@ -348,6 +360,30 @@
           "type": "text",
           "id": "discount_extra_text_mobile",
           "label": "Discount Extra Text Mobile",
+          "default": "GET ONE FREE"
+        },
+        {
+          "type": "header",
+          "content": "Discount CTA",
+          "info": "Setting for discount CTA"
+        },
+        {
+          "type": "text",
+          "id": "first_message_cta",
+          "label": "First message cta",
+          "default": "Buy Now"
+        },
+        {
+          "type": "checkbox",
+          "id": "personalize_text_discount_CTA",
+          "label": "personalize text discount CTA",
+          "default": true,
+          "info": "Activate if you want to personalize the discount text on CTA"
+        },
+        {
+          "type": "text",
+          "id": "personalize_text_discount_CTA_text",
+          "label": "personalize text discount CTA text",
           "default": "GET ONE FREE"
         }
       ]
