@@ -1875,6 +1875,7 @@ if (faceSerumBuyBlockContainer) {
         price,
         savingPrice,
         variantId,
+        discountFirstMessage,
         discountMessage,
         paymentMethods,
         productHandle,
@@ -1882,7 +1883,7 @@ if (faceSerumBuyBlockContainer) {
 
       updateImages(variantId);
       updatePrices(compareAtPrice, price, savingPrice);
-      updateAnchorElement(variantId, discountMessage, productHandle);
+      updateAnchorElement(variantId, discountFirstMessage, discountMessage, productHandle);
       updatePaymentMethods(paymentMethods);
     }
   };
@@ -1926,24 +1927,16 @@ if (faceSerumBuyBlockContainer) {
    * @param {string} discountMessage - The discount message to display.
    * @param {string} productHandle - The product handle for tracking purposes.
    */
-  const updateAnchorElement = (variantId, discountMessage, productHandle) => {
+  const updateAnchorElement = (variantId, discountFirstMessage, discountMessage, productHandle) => {
     const anchorAjaxElement = document.querySelector('.pdm_serum-anchor-ajax');
+    const anchorAjaxTextElementFirst = document.querySelector('.pdm_serum-anchor-ajax-text-first');
     const anchorAjaxTextElement = document.querySelector('.pdm_serum-anchor-ajax-text');
 
-    const body = document.body;
-    const testType = body.getAttribute("data-test-pdm-serum");
 
     if (anchorAjaxElement && variantId) {
       anchorAjaxElement.href = `/cart/add?id=${variantId}&quantity=1`;
-      
-      if (testType === "b" && discountMessage) {
-        anchorAjaxTextElement.textContent = "Get One FREE";
-        anchorAjaxElement.childNodes[0].nodeValue = "Buy Two, ";
-      } else {
-        anchorAjaxTextElement.textContent = discountMessage;
-        anchorAjaxElement.childNodes[0].nodeValue = "buy now ";
-      }
-
+      anchorAjaxTextElementFirst.textContent = discountFirstMessage;
+      anchorAjaxTextElement.textContent = discountMessage;
       anchorAjaxElement.addEventListener('click', () => {
         setEventProductHandler(productHandle);
       });
