@@ -34,7 +34,7 @@
     </div>
     <div class="section productSubscription choose_serum form-{{ section_id }}" id="productSubscription">
         <div class="container">
-            <div class="row">
+            <div class="row treatment__row-container">
                 <div class="col-md-6">
                     <div class="qure__treatments">
                         <div class="text-start order-2 order-md-1">
@@ -423,6 +423,7 @@
                     </div>
                 </div>
             </div>
+            {% render 'pdm-treatment-options' %}
         </div>
     </div>
     <div 
@@ -436,6 +437,10 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+          if(document.body.hasAttribute('data-treatment-six-month')) {
+            document.querySelector('.row.treatment__row-container').remove();
+            return;
+          }
             v2__selectProduct('{{ section_id }}_');
 
             
