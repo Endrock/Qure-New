@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "product-landing": {
       "type": "product-landing",
@@ -585,8 +585,7 @@
         "section_description": "<p>The Qure All-in-One Face Serum, formulated with dermatologist-approved ingredients, hydrates, brightens, and reduces aging signs—delivering professional results for all skin types.</p>",
         "form_description": "<p><strong>Choose Your Supply</strong> (Best results come from consistent use)</p>",
         "form_total": "Total",
-        "form_savings": "Your Savings",
-        "form_button": "buy now"
+        "form_savings": "Your Savings"
       }
     },
     "icons_list_RxBdg4": {
