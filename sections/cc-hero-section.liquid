@@ -1,3 +1,5 @@
+{% assign cc_handle = cart.attributes['cc-creator-handle'] %}
+{% assign cc_creator = metaobjects.creator[cc_handle] %}
 <!-- Block Body -->
 {%- style -%}
         #hero-section {
@@ -165,7 +167,7 @@
           display: none !important;
         }
 
-        .section-{{ section.id }}-padding {
+        .section-hero-padding {
           padding-top: {{ section.settings.padding_top }}px;
           padding-bottom: {{ section.settings.padding_bottom }}px;
 
@@ -352,7 +354,7 @@
         }
 {%- endstyle -%}
 <div id="super-background">
-  <div id="hero-section" class="section-{{ section.id }}-padding">
+  <div id="hero-section" class="section-hero-padding">
     <!-- Right/Top Panel (Now First) -->
     <div class="hero-content">
       <div style="display: flex;align-items: center; margin-bottom: {{ section.settings.eyebrow_margin_bottom }}px; background-color: {{ section.settings.eyebrowbackground }}; border-radius: {{ section.settings.eyebrow_corner_radius }}px; padding: 8px 14px; border: {{section.settings.eyebrow_border_width}}px solid {{section.settings.eyebrowbordercolor}};">
@@ -411,7 +413,7 @@
       {% endif %}
       <p style="font-size: {{ section.settings.description_text_size }}px; margin: 10px 0; max-width:650px; font-style:italic;">
         {% assign drop_count = metaobject.data.value['cc-creator-drops'].size | minus: 1 %}
-        "{{ section.settings.subtitle }}
+        "Get a {{ metaobject['cc-collab-discount-amount'].value | round }}% discount by shopping from my favorites.
         {%- if metaobject.data.value['cc-creator-drops'] -%}
           {{ metaobject.data.value['cc-creator-drops'][drop_count]['cc-creator-drop-description'] }}" —
           {{ metaobject['cc-creator-first-name'] }}
@@ -521,59 +523,7 @@
           {% endfor %}
         </div>
       {% else %}
-        <div id="grid-container">
-          <div class="product-card-featured">
-            <img
-              src="{{ all_products[section.settings.featured-product] | image_url: width: 300 }}"
-              alt="Product 1"
-              class="featured-product-image"
-            >
-            <div class="product-info">
-              <p style="font-size: 0.8em; margin: 0 10px 10px 0; -webkit-line-clamp: 3; line-clamp: 3;">
-                {{ all_products[section.settings['featured-product']].title }}
-              </p>
-              <div style="display: flex; flex-direction: row; justify-content: flex-start; gap: 10px;">
-                <p style="font-size: 0.8em; margin: 0 0 10px 0; font-weight: 600;">
-                  $
-                  {{- section.settings.full_price | divided_by: 1.00 | times: section.settings.discount | append: '0' }}
-                </p>
-                {% if section.settings.show_compare == 'true' %}
-                  <p style="font-size: 0.8em; margin: 0 0 10px 0; font-weight: 400; text-decoration: line-through;">
-                    $
-                    {{- section.settings.full_price | divided_by: 1.00 | append: '.00' }}
-                  </p>
-                {% endif %}
-                <p style="font-size: 0.6em; margin: 2px 10px 2px 0px; font-weight: 400;">
-                  (With {{ metaobject['cc-creator-first-name'] }}'s' Code)
-                </p>
-              </div>
-              {% assign product_1 = all_products[section.settings['featured-product']] %}
-              <a
-                data-ajax-cart-request-button="/cart/add?id={{ product_1.variants.first.id }}&quantity=1"
-                onclick="setEventProductHandler('{{ product_1 | escape }}')"
-                style="text-decoration: none;background-color: {{section.settings.product_cta_background}}; font-weight:600; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; margin-top:10px;border-radius: {{ section.settings.product_cta_corner_radius }}px; border: {{section.settings.product_cta_border_width}}px solid {{section.settings.product_cta_border_color}};"
-              >
-                {{ section.settings.productcta }}
-              </a>
-              {% assign product_1 = all_products[section.settings['featured-product']] %}
-              <a
-                data-ajax-cart-request-button="/cart/add?id={{ product_1.variants.first.id }}&quantity=1"
-                onclick="setEventProductHandler('{{ product_1 | escape }}')"
-                style="text-decoration: none;background-color: {{section.settings.product_cta_background}}; font-weight:600; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; margin-top:10px;border-radius: {{ section.settings.product_cta_corner_radius }}px; border: {{section.settings.product_cta_border_width}}px solid {{section.settings.product_cta_border_color}};"
-              >
-                {{ section.settings.productcta }}
-              </a>
-              {% assign product_1 = all_products[section.settings['featured-product']] %}
-              <a
-                data-ajax-cart-request-button="/cart/add?id={{ product_1.variants.first.id }}&quantity=1"
-                onclick="setEventProductHandler('{{ product_1 | escape }}')"
-                style="text-decoration: none;background-color: {{section.settings.product_cta_background}}; font-weight:600; color: {{ section.settings.product_cta_text_color }}; padding: 8px 12px; text-align: center; font-size: 0.7em; cursor: pointer; margin-top:10px;border-radius: {{ section.settings.product_cta_corner_radius }}px; border: {{section.settings.product_cta_border_width}}px solid {{section.settings.product_cta_border_color}};"
-              >
-                {{ section.settings.productcta }}
-              </a>
-            </div>
-          </div>
-        </div>
+        {{ section.settings['featured-product'] }}
       {% endif %}
     </div>
 
@@ -611,6 +561,8 @@
                               <video autoplay loop muted playsinline controls>
                                 <source src="{{media.url}}" type="video/mp4">
                               </video>
+                            {% else %}
+                              <img src="{{media.url}}">
                             {%- endif -%}
                           </div>
                         </div>
@@ -709,12 +661,6 @@
       ],
       "default": "h1",
       "label": "Heading size"
-    },
-        {
-      "type": "inline_richtext",
-      "id": "subtitle",
-      "default": "Get a discount by shopping from my curated collections.",
-      "label": "Hero Subtitle"
     },
                    {
       "type": "range",
@@ -915,12 +861,12 @@
       "default": "Get 20% Off",
       "label": "Product CTA Copy"
     },
-           {
-      "type": "inline_richtext",
-      "id": "featured-product",
-      "default": "featured-product-handle",
-      "label": "Featured Product Handle"
-    },
+    {
+  "type": "liquid",
+  "id": "featured-product",
+  "label": "Liquid to render featured product",
+  "default": "{% render ‘cc-serums-months-form’ with section: section %}"
+},
           {
       "type": "inline_richtext",
       "id": "product_url",
