@@ -9,13 +9,65 @@
  */
 {
   "sections": {
+    "header_landing_Hza7nA": {
+      "type": "header-landing",
+      "blocks": {
+        "announcement_hUapqW": {
+          "type": "announcement",
+          "settings": {
+            "heading": "Subscribe & SAVE 30% | 30-Day Money-Back Guarantee",
+            "heading_mobile": "Subscribe & SAVE 30% | 30-Day Money-Back Guarantee"
+          }
+        },
+        "navigation_link_rCPYUw": {
+          "type": "navigation-link",
+          "settings": {
+            "link_label": "SHOP",
+            "link_url": "https:\/\/www.qureskincare.com\/",
+            "image": "shopify:\/\/shop_images\/header-lp-shop_2a0a39a1-3374-48e7-bcc6-efaebfe132fd.webp"
+          }
+        },
+        "navigation_link_RkBdNW": {
+          "type": "navigation-link",
+          "settings": {
+            "link_label": "WHY SHOWER FILTER",
+            "link_url": "https:\/\/qureskincare.com\/products\/shower-filter",
+            "image": "shopify:\/\/shop_images\/headerLanding-2_2fe2a335-9e17-487c-b0dc-c50a325e0e91.png"
+          }
+        },
+        "navigation_link_hxxTbn": {
+          "type": "navigation-link",
+          "settings": {
+            "link_label": "LOCAL WATER REPORT",
+            "link_url": "https:\/\/www.qureskincare.com\/pages\/free-water-report",
+            "image": "shopify:\/\/shop_images\/header-lp-local_f1e236ac-3a53-41aa-94c5-aa7309579a0d.webp"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_hUapqW",
+        "navigation_link_rCPYUw",
+        "navigation_link_RkBdNW",
+        "navigation_link_hxxTbn"
+      ],
+      "custom_css": [
+        ".header_btn img {display: none;}",
+        ".menu_icon_footer {display: none;}",
+        ".announcement_bar {background-color: #008763 !important; color: #f8f9fa !important;}"
+      ],
+      "settings": {
+        "button_label": "GET CLEARER SKIN",
+        "button_url": "https:\/\/www.qureskincare.com\/"
+      }
+    },
     "main": {
-      "type": "page",
+      "type": "temp-page-free-water-report",
       "custom_css": [],
       "settings": {}
     }
   },
   "order": [
+    "header_landing_Hza7nA",
     "main"
   ]
 }
