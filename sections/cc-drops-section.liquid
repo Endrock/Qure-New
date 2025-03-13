@@ -1,3 +1,5 @@
+{% assign cc_handle = cart.attributes['cc-creator-handle'] %}
+{% assign cc_creator = metaobjects.creator[cc_handle] %}
 {%- style -%}
   .collectio-banner {
       display: flex;
@@ -1143,25 +1145,63 @@
                       <div class="collection-description">{{ product.description | strip_html | truncate: 130 }}</div>
                     </div>
                     <div class="pdt_cln_bottom">
-                      <div class="product-grid__price abtest">
-                        {% if product.compare_at_price != blank %}
-                          <span
-                            class="product-grid__sale-price{% if product.compare_at_price != blank %} text-decoration-line-through{% endif %}"
-                            data-processed-abconvert-price="true"
-                          >
-                            {{- product.compare_at_price | money_without_trailing_zeros -}}
-                          </span>
+                      {% if cc_creator['cc-collab-discount-type'] == 'Percentage'
+                        and cc_creator != ''
+                        and cc_creator != null
+                      %}
+                        <div class="product-grid__price abtest">
                           {% if product.compare_at_price != blank %}
+                            <span
+                              class="product-grid__sale-price text-decoration-line-through"
+                              data-processed-abconvert-price="true"
+                            >
+                              {{- product.compare_at_price | money_without_trailing_zeros -}}
+                            </span>
+                            {% assign discount = cc_creator['cc-collab-discount-amount'] | divided_by: 100 %}
+                            {% assign discount_multiplier = 1 | minus: discount %}
+                            {% assign price = product.price | times: discount_multiplier %}
                             <span class="product-grid__compare-price" data-processed-abconvert-price="true">
+                              {{- price | money_without_trailing_zeros -}}
+                            </span>
+
+                          {% else %}
+                            <span
+                              class="product-grid__sale-price text-decoration-line-through"
+                              data-processed-abconvert-price="true"
+                            >
+                              {{- product.price | money_without_trailing_zeros -}}
+                            </span>
+
+                            {% assign discount = cc_creator['cc-collab-discount-amount'] | divided_by: 100 %}
+                            {% assign discount_multiplier = 1 | minus: discount %}
+                            {% assign price = product.price | times: discount_multiplier %}
+                            <span class="product-grid__compare-price" data-processed-abconvert-price="true">
+                              {{- price | money_without_trailing_zeros -}}
+                            </span>
+                          {% endif %}
+                        </div>
+
+                      {% else %}
+                        <div class="product-grid__price abtest">
+                          {% if product.compare_at_price != blank %}
+                            <span
+                              class="product-grid__sale-price{% if product.compare_at_price != blank %} text-decoration-line-through{% endif %}"
+                              data-processed-abconvert-price="true"
+                            >
+                              {{- product.compare_at_price | money_without_trailing_zeros -}}
+                            </span>
+                            {% if product.compare_at_price != blank %}
+                              <span class="product-grid__compare-price" data-processed-abconvert-price="true">
+                                {{- product.price | money_without_trailing_zeros -}}
+                              </span>
+                            {% endif %}
+                          {% else %}
+                            <span class="product-grid__sale-price" data-processed-abconvert-price="true">
                               {{- product.price | money_without_trailing_zeros -}}
                             </span>
                           {% endif %}
-                        {% else %}
-                          <span class="product-grid__sale-price" data-processed-abconvert-price="true">
-                            {{- product.price | money_without_trailing_zeros -}}
-                          </span>
-                        {% endif %}
-                      </div>
+                        </div>
+                      {% endif %}
                       <div class="product-grid__atc-form-wrapper collection-form">
                         <a
                           class="button_primary"

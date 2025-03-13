@@ -129,7 +129,7 @@
         "text_label_real_result_3": "Plastic Surgeon",
         "enable_jump_to_section": true,
         "text_jump_to_section": "Jump To",
-        "popup_enabled": false
+        "popup_enabled": true
       }
     },
     "custom_qurify_filter_lp_featuredin_iXk4TL": {
@@ -460,7 +460,7 @@
             "video_type": "video",
             "video_link": "https://cdn.shopify.com/videos/c/o/v/71857fdec6b0497294117ed84cab480e.mp4",
             "youtube_link": "",
-            "wistia_id": "yuqb3gno7g",
+            "wistia_id": "",
             "badge_txt": "2.3M Views",
             "title": "\"You'll see a kind of dewy glowy look after you use it but within a couple of days your skin really looks quite amazing.\"",
             "client_details": "<strong>Dr Mona Patel,</strong> Internal Medicine"
@@ -915,6 +915,7 @@
         "classname": "section videosQure",
         "btn": "",
         "btn_url": "",
+        "ctm_cls_btn": "",
         "desk_slide": 6,
         "mob_slide": 1.7,
         "slide_space": 10
@@ -961,6 +962,7 @@
         "wistia_9NFNhM"
       ],
       "settings": {
+        "ctm_cls_use": "",
         "heading": "See how quick and easy it is to use"
       }
     },
@@ -1170,7 +1172,7 @@
       "type": "liquid",
       "settings": {
         "code": "{% render 'serums-months-image-form' with section_id: section.id %}",
-        "popup_micro_infusion_enabled": false
+        "popup_micro_infusion_enabled": true
       }
     },
     "faq_4hnCjw": {
@@ -1292,7 +1294,8 @@
           "type": "button",
           "settings": {
             "ext_btn": "",
-            "ext_url": ""
+            "ext_url": "",
+            "ctm_cls_btn": ""
           }
         }
       },

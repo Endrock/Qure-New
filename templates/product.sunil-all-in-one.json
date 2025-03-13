@@ -525,6 +525,64 @@
         "popup_micro_infusion_enabled": true
       }
     },
+    "pdm_all_in_one_face_serum_offer_form_dAje9z": {
+      "type": "pdm_all-in-one-face-serum-offer-form",
+      "blocks": {
+        "product_fF7TbU": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/serum_893cdaf8-0efe-4ef9-b7fc-23921de3c90e.png",
+            "class_image": "active",
+            "product": "all-in-one-face-serum-6-month-bundle-1",
+            "offer_general": "Buy 2, Get 1 FREE",
+            "offer_description": "6 Months Supply | FREE Shipping",
+            "input_quantity": 1,
+            "show_special_offer": true,
+            "special_offer_text": "<p><strong>SPECIAL OFFER</strong> - Limited Time</p>",
+            "show_discount": true,
+            "discount_product_text": "/each",
+            "discount_text": "save",
+            "discount_suffix": "%",
+            "discount_extra_text_desktop": "- GET ONE FREE",
+            "discount_extra_text_mobile": "GET ONE FREE"
+          }
+        },
+        "product_Mj6zia": {
+          "type": "product",
+          "settings": {
+            "image": "shopify://shop_images/all_in_one-1.webp",
+            "class_image": "",
+            "product": "face-serum",
+            "offer_general": "1 Serum",
+            "offer_description": "2 Months Supply",
+            "input_quantity": 1,
+            "show_special_offer": false,
+            "special_offer_text": "",
+            "show_discount": false,
+            "discount_product_text": "/each",
+            "discount_text": "save",
+            "discount_suffix": "%",
+            "discount_extra_text_desktop": "- GET ONE FREE",
+            "discount_extra_text_mobile": "GET ONE FREE"
+          }
+        }
+      },
+      "block_order": [
+        "product_fF7TbU",
+        "product_Mj6zia"
+      ],
+      "settings": {
+        "rating": "5.0/5.0 Rated by Customers",
+        "rating_image": "shopify://shop_images/results_star-full.svg",
+        "section_subtitle": "Embrace Ageless Confidence",
+        "section_title": "All-In-One Face Serum",
+        "section_description": "<p>The Qure All-in-One Face Serum, formulated with dermatologist-approved ingredients, hydrates, brightens, and reduces aging signs—delivering professional results for all skin types.</p>",
+        "form_description": "<p><strong>Choose Your Supply</strong> (Best results come from consistent use)</p>",
+        "form_total": "Total",
+        "form_savings": "Your Savings",
+        "form_button": "buy now"
+      }
+    },
     "icons_list_RxBdg4": {
       "type": "icons-list",
       "blocks": {
@@ -629,6 +687,7 @@
         "classname": "section videosQure",
         "btn": "",
         "btn_url": "",
+        "ctm_cls_btn": "",
         "desk_slide": 6,
         "mob_slide": 2,
         "slide_space": 18
@@ -692,6 +751,14 @@
             "text": "<p>Expect better skin. Daily light therapy treatments transform your skin from within, whilst applying Face Serum treats your skin topically.</p><p>Are your skin’s best DEFENSE?? To combat ageing, reduce depth of wrinkles, boost brightness, reduce dark spots for a lit-from-within glow and bring back bouncier, healthy skin. Providing instant, long-lasting brightness, it penetrates multiple layers of the skin to reduce fine lines and improve elasticity.</p><p>Lightweight and easily absorbed without leaving any sticky or greasy residue, it's your triple threat for smooth, bright, healthy skin.</p>",
             "code": ""
           }
+        },
+        "object_Ypi7cX": {
+          "type": "object",
+          "settings": {
+            "heading": "Why Did I Receive a Notice from Border Force About Tranexamic Acid?",
+            "text": "<p>If you have received a notice from Border Force regarding tranexamic acid (TXA) in your order, here’s what you need to know:</p><p><br/><strong>- Is Tranexamic Acid a Prescription-Only Ingredient? </strong>In Australia, TXA is classified as a <strong>Schedule 4 (prescription-only) drug only when used orally or by injection </strong>for treating melasma or other medical conditions. However,<strong>topical TXA in cosmetic formulations is permitted</strong>.</p><p><br/><strong>- Is This Product Considered a Medicine? </strong>No, our serum is <strong>purely for cosmetic use </strong>and does not claim to treat medical conditions. It is <strong>applied topically </strong>(not injected) and is classified as a <strong>cosmetic product </strong>rather than a prescription medicine.</p><p><br/><strong>-Is This Product Compliant with Australian Regulations? </strong>Yes! Facial serums containing up to <strong>3% TXA for cosmetic purposes </strong>are <strong>not classified as prescription-only medicines </strong>and do not require inclusion in the <strong>Australian Register of Therapeutic Goods (ARTG)</strong>.<br/></p><p><strong>-What Should I Do If Border Force Requests More Information? </strong>If Border Force requires clarification, you can provide the information above to confirm that the product complies with Australian regulations. If further details are needed, they can refer to the <strong>Therapeutic Goods Administration (TGA) guidelines </strong>on cosmetic formulations.</p><p><br/>If you need further assistance, feel free to contact our support team—we’re happy to help!</p>",
+            "code": ""
+          }
         }
       },
       "block_order": [
@@ -701,7 +768,8 @@
         "object_rKVaFE",
         "object_pYeAQf",
         "object_FncVUi",
-        "object_RdJmEV"
+        "object_RdJmEV",
+        "object_Ypi7cX"
       ],
       "settings": {
         "background": "bg_yellow",
@@ -724,6 +792,7 @@
     "results_Lezjzk",
     "text_with_video_yQFgir",
     "liquid_EH7JLe2",
+    "pdm_all_in_one_face_serum_offer_form_dAje9z",
     "icons_list_RxBdg4",
     "videos_list_zckcnX",
     "faq_LBTFeM"

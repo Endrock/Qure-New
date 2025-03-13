@@ -16,7 +16,7 @@
           "type": "announcement",
           "settings": {
             "heading": "Limited Time Only:",
-            "timer": "2025-02-15T23:59:59",
+            "timer": "2025-03-20T23:59:59",
             "timer_next": 7
           }
         },
@@ -127,7 +127,7 @@
           "settings": {
             "heading": "Fade & Firm Bundle Pro",
             "discount": 55,
-            "image": "shopify://shop_images/Fade_Firm_Bundle_Pro_d288c43f-6584-4789-ab69-cb97defb06eb.png",
+            "image": "shopify://shop_images/Fade_Firm_Bundle_Pro1.png",
             "product_url": "#fade-firm-bundle-pro"
           }
         },
@@ -145,7 +145,7 @@
           "settings": {
             "heading": "Fade & Firm Bundle Essentials",
             "discount": 55,
-            "image": "shopify://shop_images/Fade_Firm_Bundle_Essentials_427c1ab7-6d71-4196-8f9e-c8afc3f525db.png",
+            "image": "shopify://shop_images/Fade_Firm_Bundle_Essentials3.png",
             "product_url": "#fade-firm-bundle-essentials"
           }
         },
@@ -876,10 +876,12 @@
         },
         "bundle_yGpQVX": {
           "type": "bundle",
+          "disabled": true,
           "settings": {}
         },
         "product_nxKMQa": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "fade-firm-bundle-pro",
             "percent": 22,
@@ -896,6 +898,7 @@
         },
         "include_VKW6eX": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Q-Rejuvalight Pro LED Mask",
             "is_limited": false,
@@ -910,6 +913,7 @@
         },
         "include_fqrYQr": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Neck & Décolletage LED Device",
             "is_limited": false,
@@ -924,12 +928,13 @@
         },
         "include_3nrQQz": {
           "type": "include",
+          "disabled": true,
           "settings": {
-            "heading": "Micro-Infusion 3 Month Bundle (for Dark Spots)",
+            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles + Dark Spots)",
             "is_limited": false,
             "type": "",
-            "image": "shopify://shop_images/bfs_serumY.webp",
-            "text": "<h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
+            "image": "shopify://shop_images/bfs_3-serum.webp",
+            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p><h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -938,6 +943,7 @@
         },
         "how_to_use_ty9cVM": {
           "type": "how-to-use",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_sm_mask.svg",
             "text": "<h5>Q-Rejuvalight Pro LED Mask </h5><ul><li>Use daily.</li><li>Cleanse and dry your face, then put it on for just 3 minutes and follow with your skincare routine.</li></ul>"
@@ -945,6 +951,7 @@
         },
         "how_to_use_EYwGQF": {
           "type": "how-to-use",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_neck.svg",
             "text": "<h5>Neck & Décolletage LED Device</h5><ul><li>Use it 3-5 times a week.</li><li>Adjust strap to fit neck and décolletage, wear it for just 10 minutes.</li></ul>"
@@ -952,6 +959,7 @@
         },
         "how_to_use_iCBfwQ": {
           "type": "how-to-use",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_mi_sm.svg",
             "text": "<h5>Micro-Infusion 3 month Bundle (For Dark Spots)</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Easily purchase refills via our website.</li></ul>"
@@ -1043,11 +1051,11 @@
         "include_Ggpxqa": {
           "type": "include",
           "settings": {
-            "heading": "Micro-Infusion 3 Month Bundle (For Dark Spots)",
+            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles + Dark Spots)",
             "is_limited": false,
             "type": "",
-            "image": "shopify://shop_images/bfs_serumY.webp",
-            "text": "<h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
+            "image": "shopify://shop_images/bfs_3-serum.webp",
+            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p><h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -1322,7 +1330,7 @@
             "recommended_text": "",
             "is_top_rated": false,
             "is_preorder": true,
-            "preorder_text": "SHIPS EARLY MARCH",
+            "preorder_text": "SHIPS MID APRIL",
             "classname": "",
             "code": ""
           }
@@ -1363,7 +1371,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs-derma-mist.webp",
             "text": "<h5>Dermal Mist</h5><p>Dermatologically Tested, Clinically Tested, Hypoallergenic, Suitable for sensitive skin, Dermatologist approved, Allergy Tested, Non-Irritating</p><h5>Dermal Mist Ingredients List</h5><p>WATER (Aqua)*, CHRYSANTHELLUM INDICUM FLOWER WATER, SODIUM CHLORIDE, SODIUM PHOSPHATE, DISODIUM PHOSPHATE, HYPOCHLOROUS ACID. *Ultra Pure Water.</p>",
-            "count": "Ships Early March",
+            "count": "Ships Mid April",
             "hide": false,
             "hide_variants": false,
             "code": ""
@@ -1405,7 +1413,7 @@
             "recommended_text": "",
             "is_top_rated": true,
             "is_preorder": true,
-            "preorder_text": "SHIPS EARLY MARCH",
+            "preorder_text": "SHIPS MID APRIL",
             "classname": "",
             "code": ""
           }
@@ -1432,7 +1440,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs-derma-mist.webp",
             "text": "<h5>Dermal Mist</h5><p>Dermatologically Tested, Clinically Tested, Hypoallergenic, Suitable for sensitive skin, Dermatologist approved, Allergy Tested, Non-Irritating.</p><h5>Dermal Mist Ingredients</h5><p>WATER (Aqua)*, CHRYSANTHELLUM INDICUM FLOWER WATER, SODIUM CHLORIDE, SODIUM PHOSPHATE, DISODIUM PHOSPHATE, HYPOCHLOROUS ACID. *Ultra Pure Water.</p>",
-            "count": "Ships Early March",
+            "count": "Ships Mid April",
             "hide": false,
             "hide_variants": false,
             "code": ""
@@ -1530,7 +1538,7 @@
             "recommended_text": "",
             "is_top_rated": false,
             "is_preorder": true,
-            "preorder_text": "SHIPS EARLY MARCH",
+            "preorder_text": "SHIPS MID APRIL",
             "classname": "",
             "code": ""
           }
@@ -1543,7 +1551,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs-derma-mist.webp",
             "text": "<h5>Dermal Mist</h5><p>Dermatologically Tested, Clinically Tested, Hypoallergenic, Suitable for sensitive skin, Dermatologist approved, Allergy Tested, Non-Irritating.</p><h5>Dermal Mist Ingredients</h5><p>WATER (Aqua)*, CHRYSANTHELLUM INDICUM FLOWER WATER, SODIUM CHLORIDE, SODIUM PHOSPHATE, DISODIUM PHOSPHATE, HYPOCHLOROUS ACID. *Ultra Pure Water.</p>",
-            "count": "Ships Early March",
+            "count": "Ships Mid April",
             "hide": false,
             "hide_variants": false,
             "code": ""

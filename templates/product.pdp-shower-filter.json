@@ -23,7 +23,7 @@
           "type": "rating",
           "settings": {
             "image": "shopify://shop_images/star-half_fill.svg",
-            "text": "<p>97% customer satisfaction rate</p>"
+            "text": "<p>Recommended by 99% of customers</p>"
           }
         },
         "list_azYRbY": {
@@ -369,7 +369,7 @@
           "settings": {
             "benefit_image": "shopify://shop_images/fof.svg",
             "benefit_title": "FOF (Filter of Future)",
-            "benefit_description": "Helps reduce the buildup of hard water minerals such as calcium and magnesium, preventing scale and improving water flow."
+            "benefit_description": "Helps with descaling by preventing the buildup of hard water minerals, reducing scale formation and improving water flow."
           }
         }
       },

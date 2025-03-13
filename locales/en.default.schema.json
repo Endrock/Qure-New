@@ -444,6 +444,9 @@
     "reserve": {
       "label": "Reserve"
     },
+    "soldout": {
+      "label": "Sold out"
+    },
     "text": {
       "label": "Text",
       "content": "Text content",

@@ -161,127 +161,36 @@
         "link_Pk3LH6": {
           "type": "link",
           "settings": {
-            "link_label": "Save Up To 55%",
-            "link_label_mobile": "Save Up To 55%",
-            "link_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal"
+            "link_label": "SHOP & SAVE $357",
+            "link_label_mobile": "SHOP & SAVE $357",
+            "link_url": "https://qureskincare.com/pages/international-womens-offer"
           }
         },
-        "product_7GFhjc": {
-          "type": "product",
+        "banner_6wgzUN": {
+          "type": "banner",
           "settings": {
-            "heading": "Pro-Aging Bundles",
-            "subheading": "Line Refine Bundle Pro",
-            "text": "SAVE 47%",
-            "image": "shopify://shop_images/Line_Refine_Bundle_Pro_f1b5a5e8-df9b-45f0-a57e-ee78f3b7a415.png",
-            "product_url": "shopify://products/line-refine-bundle-pro"
-          }
-        },
-        "product_UVjERT": {
-          "type": "product",
-          "settings": {
-            "heading": "Pro Aging & Dark Spots Bundles",
-            "subheading": "Fade & Firm Bundle Pro",
-            "text": "SAVE 55%",
-            "image": "shopify://shop_images/Fade_FirmBundlePro-wo-dermalmist.png",
-            "product_url": "shopify://products/fade-firm-bundle-pro"
-          }
-        },
-        "product_nBnMkh": {
-          "type": "product",
-          "settings": {
-            "heading": "Acne Bundles",
-            "subheading": "Breakout Control Advanced",
-            "text": "SAVE 33%",
-            "image": "shopify://shop_images/Breakout_Control_Advanced_7232df65-e888-4e24-bb23-99b6576cc5b2.png",
-            "product_url": "shopify://products/breakout-control-advanced"
-          }
-        },
-        "product_PEPLML": {
-          "type": "product",
-          "disabled": true,
-          "settings": {
-            "heading": "Pro-Aging Bundles",
-            "subheading": "Line Refine Bundle Advanced",
-            "text": "SAVE 55%",
-            "image": "shopify://shop_images/RefineBundle2_bb90801f-564e-4272-80d6-d975c04c470f.png",
-            "product_url": "shopify://products/line-refine-bundle-advanced-1"
-          }
-        },
-        "product_yLQ7At": {
-          "type": "product",
-          "settings": {
-            "heading": "Pro Aging & Dark Spots Bundles",
-            "subheading": "Fade & Firm Bundle Advanced",
-            "text": "SAVE 43%",
-            "image": "shopify://shop_images/Fade_Firm_Bundle_Advanced.png",
-            "product_url": "shopify://products/fade-firm-bundle-advance"
-          }
-        },
-        "product_KCNhid": {
-          "type": "product",
-          "settings": {
-            "heading": "Pro-Aging Bundles",
-            "subheading": "Line Refine Bundle Essentials",
-            "text": "save 32%",
-            "image": "shopify://shop_images/Line_Refine_Bundle_Essentials_420763d9-bde6-4b81-a7f2-771d23f771d3.png",
-            "product_url": "shopify://products/line-refine-bundle-essentials"
-          }
-        },
-        "product_dYxiCN": {
-          "type": "product",
-          "settings": {
-            "heading": "Pro Aging & Dark Spots Bundles",
-            "subheading": "Fade & Firm Bundle Essentials",
-            "text": "SAVE 55%",
-            "image": "shopify://shop_images/Fade_FirmBundleEssentials-wo-dermalmist-2_30f4ee36-d53d-45ba-a3c1-cbdf57aae073.png",
-            "product_url": "shopify://products/fade-firm-bundle-essentials"
-          }
-        },
-        "product_4ArLn3": {
-          "type": "product",
-          "disabled": true,
-          "settings": {
-            "heading": "Acne Bundles",
-            "subheading": "Breakout Control Pro",
-            "text": "SAVE 40%",
-            "image": "shopify://shop_images/Breakoutcontrol2_747da223-e22b-457a-b300-a8ada35feaa6.png",
-            "product_url": "shopify://products/breakout-control-pro-1"
-          }
-        },
-        "product_BA8d6X": {
-          "type": "product",
-          "disabled": true,
-          "settings": {
-            "heading": "Pro Aging & Dark Spots Bundles",
-            "subheading": "Micro-Infusion Limited Edition Bundle",
-            "text": "SAVE 52%",
-            "image": "shopify://shop_images/Micro-Infusion_Limited_Edition_Bundle_ef0d58d6-84ea-4cb6-be5c-b012bf600186.png",
-            "product_url": "shopify://products/micro-infusion-limited-edition-bundle"
+            "heading": "Save up to 55% on Exclusive Bundles",
+            "image": "shopify://shop_images/sub_banner.webp",
+            "image_mobile": "shopify://shop_images/sub_banner-mob.webp",
+            "link_label": "Buy Now",
+            "link_url": "https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal"
           }
         }
       },
       "block_order": [
         "link_Pk3LH6",
-        "product_7GFhjc",
-        "product_UVjERT",
-        "product_nBnMkh",
-        "product_PEPLML",
-        "product_yLQ7At",
-        "product_KCNhid",
-        "product_dYxiCN",
-        "product_4ArLn3",
-        "product_BA8d6X"
+        "banner_6wgzUN"
       ],
       "disabled": true,
       "settings": {
-        "heading": "Rediscover Your Confidence \\n",
+        "heading": "INTERNATIONAL WOMEN’S DAY",
         "heading_mobile": "",
-        "subheading": "<p><strong>Save up to 55%</strong> on Exclusive <strong>Bundles</strong></p>",
+        "subheading": "<p>Love your skin, own your glow.</p>",
         "subheading_mobile": "",
         "text": "",
-        "video": "shopify://files/videos/homepage_holiday.webm",
-        "video_mobile": "shopify://files/videos/homepage_holiday-mob.webm",
-        "link_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal"
+        "image": "shopify://shop_images/hm_womens_day_banner_desk.webp",
+        "image_mobile": "shopify://shop_images/hm_womens_day_banner_mob.webp",
+        "link_url": "https://qureskincare.com/pages/international-womens-offer"
       }
     },
     "featuredin_extended_P7BNDN": {
@@ -508,6 +417,7 @@
         "slide_PmixWy"
       ],
       "settings": {
+        "ctm_cls_results": "",
         "heading": "See the results yourself",
         "rating_text": ""
       }

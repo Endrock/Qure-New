@@ -51,11 +51,11 @@
         "testimonial_jKzWFJ"
       ],
       "settings": {
-        "title": "Discover the routine that change everything for me",
+        "title": "Discover My Routine",
         "heading_text_size": 42,
         "heading_size": "h1",
-        "subtitle": "Get a discount by shopping from my curated collections.",
-        "description_text_size": 18,
+        "subtitle": "Get a {{ metaobject[\"cc-collab-discount-amount\"].value }}% discount by shopping from my favorites.",
+        "description_text_size": 16,
         "eyebrowcopy": "Recommended by {{ metaobject[\"cc-creator-first-name\"].value }}",
         "eyebrow_text_size": 18,
         "eyebrow_corner_radius": 4,
@@ -63,7 +63,7 @@
         "eyebrowtextcolor": "#ffffff",
         "eyebrowbordercolor": "",
         "eyebrow_border_width": 0,
-        "stars": "Trusted by 100,000 others",
+        "stars": "Trusted by your favorite creators",
         "show_stars": true,
         "star_text_size": 12,
         "star_size": 15,
@@ -74,14 +74,15 @@
         "eyebrow_margin_bottom": 12,
         "heading_margin_bottom": 18,
         "star_margin_bottom": 5,
-        "show_creator_products": true,
+        "show_creator_products": false,
         "number_of_recommendations": 4,
         "product_corner_radius": 12,
         "product_cta_corner_radius": 4,
-        "productcta": "Get 15% Off",
-        "featured-product": "featured-product-handle",
+        "productcta": "Buy Now",
+        "featured-product": "{% render 'cc-serums-months-form' with section: section %}",
         "product_url": "https://productlink.com",
         "discount": 0.9,
+        "full_price": 119,
         "show_compare": "true",
         "product_background": "#f4eded",
         "product_text_color": "#000000",
@@ -99,7 +100,7 @@
         "section_padding_top_bottom_mobile": 0,
         "section_padding_left_right": 0,
         "section_padding_top_bottom": 0,
-        "padding_left": 60,
+        "padding_left": 72,
         "padding_top": 0,
         "padding_bottom": 0,
         "container_border_radius": 0
@@ -240,7 +241,7 @@
         "columns_mobile": "2",
         "columns_desktop": "4",
         "product_grid_gap": 10,
-        "padding_top": 8,
+        "padding_top": 0,
         "padding_bottom": 0,
         "padding_left": 20,
         "padding_right": 20,
@@ -372,8 +373,6 @@
         "subheading": "<p><strong>Save up to 55%</strong> on Exclusive Holiday <strong>Bundles</strong></p>",
         "subheading_mobile": "",
         "text": "",
-        "video": "shopify://files/videos/homepage_holiday.webm",
-        "video_mobile": "shopify://files/videos/homepage_holiday-mob.webm",
         "link_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal"
       }
     },
@@ -601,6 +600,7 @@
         "slide_PmixWy"
       ],
       "settings": {
+        "ctm_cls_results": "",
         "heading": "See the results yourself",
         "rating_text": ""
       }
