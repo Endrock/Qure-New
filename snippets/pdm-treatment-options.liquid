@@ -80,7 +80,7 @@
 
                 {% assign price_first_element = product.price %}
                 <input type="radio" name="monthlyPlan" id="3_month" checked
-                  data-product-period="3"
+                  data-product-period="6"
                   data-product-variant-id="{{ product.variants.first.id }}"
                   data-product-id="{{ product.id }}"
                 >
@@ -125,7 +125,7 @@
               >
                 {% assign price_second_element = product.price %}
                 <input type="radio" name="monthlyPlan" id="2_month" 
-                  data-product-period="2"
+                  data-product-period="3"
                   data-product-variant-id="{{ product.variants.first.id }}"
                   data-product-id="{{ product.id }}"
                 >
