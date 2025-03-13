@@ -3262,4 +3262,13 @@
 .section-table-tc .table-tc .row-content span {
   font-size: 14px;
 }
+@media (min-width: 768px) { 
+  .section-products-bundle .products-bundle .cont-card-bundle .bundle-button {
+    align-items: center;
+  }
+  .section-products-bundle .products-bundle .cont-card-bundle .bundle-button .price { 
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
 /* end general changes */

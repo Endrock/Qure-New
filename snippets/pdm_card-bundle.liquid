@@ -72,9 +72,7 @@ this snippets is used in pdm_products-bundle.liquid section, render card product
     <div class="doctor-info {% if doctor-image == blank %}just-border-top{% endif %}">
         {% if doctor-image != blank %}
           <div class="photo">
-            {% if doctor-image %}
               {{ doctor-image |  image_url: width: 256 |  image_tag: alt: doctor-name, class: 'photo-doctor' }}
-            {% endif %}
           </div>
         {% endif %}
         <div class="doctor-text">
