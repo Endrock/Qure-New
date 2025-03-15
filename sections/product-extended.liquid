@@ -46,6 +46,10 @@
     endif
 %}
 
+{% if section.settings.product != blank %}
+    {% assign product = section.settings.product %}
+{% endif %}
+
 <!-- -- main banner start -- -->
 <div class="refill_bl pt-0 tabSlider">
     <div class="container">
@@ -617,7 +621,7 @@
                 {% comment %} end component original {% endcomment %}
                 {% if new_design == true %}
                      {% comment %} pdp caroulsel redesign {% endcomment %}
-                    {% render 'pdm_before_after_carousel', settings: section.settings%}
+                    {% render 'pdm_before_after_carousel', settings: section.settings, section_name: 'product-extended' %}
                 {% endif %}
                 {% render 'pdm_cross-sell', cross-sell-products: product.metafields.custom.cross_sell.value, visibility: "desktop" %}
 
@@ -695,6 +699,11 @@
                 "type": "text",
                 "id": "heading_mobile",
                 "label": "t:common.heading.mobile.label"
+            },
+            {
+                "type": "product",
+                "id": "product",
+                "label": "t:common.product.label"
             },
             {
                 "type": "text",
