@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "product-landing": {
       "type": "product-landing",
@@ -31,12 +31,31 @@
           "settings": {
             "code": "{% render 'serums-offer-months-form' with section_id: section.id, product: product %}"
           }
+        },
+        "supply_3xp9iR": {
+          "type": "supply",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "heading_mobile": "",
+            "text": "",
+            "first_option_date": "October 15th",
+            "first_option_text": "SOLD OUT",
+            "first_option_percent": 100,
+            "second_option_date": "November 10th",
+            "second_option_text": "81% Reserved",
+            "second_option_percent": 81,
+            "third_option_date": "December 30th",
+            "third_option_text": "In Production",
+            "third_option_percent": 0
+          }
         }
       },
       "block_order": [
         "rating_BgbMYG",
         "list_mMY6Hf",
-        "liquid_EH7JLe"
+        "liquid_EH7JLe",
+        "supply_3xp9iR"
       ],
       "settings": {
         "seo_heading": "Micro-Infusion Dart Patches",
@@ -49,12 +68,14 @@
         "before_after_images_limit": 4,
         "before_after_button_label": "Before & After",
         "reserve": false,
+        "soldout": false,
         "selected_design": "new",
         "text_label_real_result_1": "Product",
         "text_label_real_result_2": "Real Results",
         "text_label_real_result_3": "Dermatologist",
         "enable_jump_to_section": true,
-        "text_jump_to_section": "Jump To"
+        "text_jump_to_section": "Jump To",
+        "popup_enabled": false
       }
     },
     "featuredin_extended_mjJV3b": {
@@ -101,6 +122,8 @@
         "text_NUAcKN": {
           "type": "text",
           "settings": {
+            "ctm_cls": "",
+            "heading_first": "",
             "text": "<p>Fast-acting patches feature 80 self-dissolving micro-darts designed to <strong>target and treat wrinkles, under-eye puffiness and dark circles.</strong></p><p>While traditional patches lay flat on the surface of the skin, these ultra thin micro-darts gently <strong>penetrate the skin</strong>, infusing serum for <strong>deeper delivery.</strong> Precise and powerful, they infuse serum where you need it most and fully absorb into the skin for deeper, better, faster results <strong>– yet gentle enough for sensitive skin!</strong></p>",
             "btn_text": "",
             "btn_url": "",
@@ -382,7 +405,8 @@
     "liquid_EH7JLe2": {
       "type": "liquid",
       "settings": {
-        "code": "{% render 'serums-offer-months-image-form' with section_id: section.id %}"
+        "code": "{% render 'serums-offer-months-image-form' with section_id: section.id %}",
+        "popup_micro_infusion_enabled": true
       }
     },
     "icons_list_hrRbkg": {
@@ -529,6 +553,7 @@
         "classname": "section videosQure",
         "btn": "",
         "btn_url": "",
+        "ctm_cls_btn": "",
         "desk_slide": 6,
         "mob_slide": 2,
         "slide_space": 10
@@ -743,6 +768,7 @@
         "wistia_FDDfkR"
       ],
       "settings": {
+        "ctm_cls_use": "",
         "heading": "How to use"
       }
     },

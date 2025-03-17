@@ -581,6 +581,12 @@
     "code": {
       "label": "Code"
     },
+    "trynow": {
+      "label": "Trynow",
+      "plan": {
+        "label": "Subscribe plan"
+      }
+    },
     "subscribe": {
       "label": "Subscribe",
       "discount": {

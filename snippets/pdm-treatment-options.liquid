@@ -367,6 +367,24 @@
   document.addEventListener('DOMContentLoaded', function() {
     if(!document.body.hasAttribute('data-treatment-six-month')) {
       document.querySelector('.row.treatment-test__row-container').remove();
+      const radioInput = document.querySelector('.step_conten_blocks [data-tab="month_3"] input[type="radio"]');
+      if (radioInput){
+        radioInput.checked = true;
+        const changeEvent = new Event('change', {
+          bubbles: true, 
+          cancelable: true 
+        });
+        radioInput.dispatchEvent(changeEvent);
+      }
+      const radioInputPayFull = document.querySelector('.step_block .step_content.item-3.pdm-step_content_v2 input[type="radio"]');
+      if (radioInputPayFull){
+        radioInputPayFull.checked = true;
+        const changeEvent = new Event('change', {
+          bubbles: true, 
+          cancelable: true 
+        });
+        radioInputPayFull.dispatchEvent(changeEvent);
+      }
       return;
     }
     v2__selectProduct('{{ section_id }}_');
