@@ -606,15 +606,15 @@
           "type": "product",
           "settings": {
             "product": "line-refine-bundle-pro",
-            "percent": 26,
+            "percent": 38,
             "media_limit": 0,
             "hide_us": false,
             "recommended_heading": "<p><strong>Dr Shah, MD </strong>Certified Dermatologist</p>",
             "recommended_text": "<p>\"I recommend this treatment to so many of my patients who are looking for a glowing, fresh looking complexion\"</p>",
             "recommended_image": "shopify://shop_images/cl_shah.webp",
             "is_top_rated": false,
-            "is_preorder": false,
-            "preorder_text": "",
+            "is_preorder": true,
+            "preorder_text": "SHIPS END OF APRIL",
             "classname": "",
             "code": ""
           }
@@ -641,7 +641,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs_blue-patches.webp",
             "text": "<h5>MICRO-INFUSION TARGETED PATCHES INGREDIENTS:</h5><p>Sodium Hyaluronate, Caffeine, Copper-Tripeptide-1, Niacinamide, Cyclodextrin, Water, Glycine Soja (Soybean) Oil, Madecassoside, Macadamia Nut Oil, Allantoin, Retinol, Oil Soluble Licorice(Glycyrrhiza) Extract, Centella Asiatica Extract, Acetyl Hexapeptide-8, BHT.</p>",
-            "count": "",
+            "count": "Ships End of April",
             "hide": false,
             "hide_variants": false,
             "code": ""
