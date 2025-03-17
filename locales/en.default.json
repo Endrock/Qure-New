@@ -159,7 +159,18 @@
       "xr_button": "View in your space",
       "xr_button_label": "View in your space, loads item in augmented reality window",
       "include_taxes": "Tax included.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping<\/a> calculated at checkout."
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
+      "contrast_horizontal":{
+        "top_label":"BEST VALUE",
+        "main_label_1":"Maximum efficacy",
+        "main_label_2":"Impressive change",
+        "main_label_3":"Get started",
+        "six_month_label":"6 Month Supply",
+        "four_month_label":"4 Month Supply",
+        "three_month_label":"3 Month Supply",
+        "two_month_label":"2 Month Supply",
+        "one_month_label":"1 Month Supply"
+      }
     },
     "modal": {
       "label": "Media gallery"

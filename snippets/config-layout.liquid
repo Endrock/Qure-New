@@ -17,6 +17,9 @@
         {% assign main_class = 'shower_filter shower-filter-replacement' %}
         <link rel="stylesheet" href="{{ 'shower-filter.css' | asset_url }}">
         <link rel="stylesheet" href="{{ 'shower-filter-replacement.css' | asset_url }}">
+    {% when 'page.shower-filter-try-now' %}
+        {% assign main_class = 'shower_filter' %}
+        <link rel="stylesheet" href="{{ 'shower-filter.css' | asset_url }}">
     {% when 'product.sunil-led-mask-onyx' %}
         {% assign main_class = 'led_mask' %}
         <link rel="stylesheet" href="{{ 'product-led-mask.css' | asset_url }}">
@@ -112,10 +115,10 @@
         {% assign main_class = 'bf_sale' %}
         <link rel="stylesheet" href="{{ 'product-bf-sales.css' | asset_url }}">
         <link rel="stylesheet" href="{{ 'faq-page.css' | asset_url }}"> 
-    {% when 'page.sunil-free-water-report' %}
+    {% when 'page.free-water-report' %}
         {% assign main_class = 'free_water' %}
-        <link rel="stylesheet" href="{{ 'product-offers.css' | asset_url }}">
-        <link rel="stylesheet" href="{{ 'free-water-report.css' | asset_url }}">
+        <link rel="stylesheet" href="https://qureskincaredns.com/new/assets/product-offers.css">
+        <link rel="stylesheet" href="https://qureskincaredns.com/new/assets/free-water-report.css">
     {% when 'page.sunil_qurify-filter-lp' %}
         {% assign main_class = 'qurify_lp' %}
         <link rel="stylesheet" href="{{ 'qurify-filter-lp.css' | asset_url }}">

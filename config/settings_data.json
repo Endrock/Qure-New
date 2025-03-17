@@ -42,6 +42,8 @@
       "faucet-filter-refill",
       "faucet-filter"
     ],
+    "face_serum_2_month": "shopify://shop_images/Serum-icon.svg",
+    "patches_1_month": "shopify://shop_images/patches-contrast-1-month-svg.svg",
     "show_order_by_receive_by": true,
     "today_text": "Order today",
     "start_time_order": "2024-10-30T23:00",
@@ -359,7 +361,7 @@
           "label_seconds": "SECONDS",
           "enable_free_shipping_treshold": true,
           "enable_product_gift": true,
-          "product_free_gift": "all-in-one-face-serum-8-ml",
+          "product_free_gift": "face-serum",
           "icon_product_gift_clean": "shopify://shop_images/Layer_1_1.svg",
           "icon_product_gift_full": "shopify://shop_images/Layer_1_0f98f0bb-ebbd-41bc-96dc-f905b2948e10.svg",
           "icon_gift_width": 18,
