@@ -89,12 +89,14 @@
         "seo_heading": "SHOWER FILTER",
         "heading": "Save Your Hair & Skin from Dryness and Irritation",
         "heading_mobile": "Save Your Hair & Skin from Dryness and Irritation",
+        "product": "",
         "wistia_id": "",
         "product_images_limit": 5,
         "product_button_label": "Product",
         "before_after_images_limit": 0,
         "before_after_button_label": "Before & After",
         "reserve": false,
+        "soldout": false,
         "underbutton_text_left": "Dermatologist Approved",
         "underbutton_text_right": "Free Shipping Over US$100",
         "selected_design": "new",
@@ -695,7 +697,7 @@
           "type": "object",
           "settings": {
             "heading": "How do I know when it’s time to replace the filter?",
-            "text": "<p>A subtle drop in water pressure or visible buildup on the filter may indicate it’s time for a replacement. We recommend changing the filter every 6 months to maintain its effectiveness.</p>",
+            "text": "<p>A subtle drop in water pressure or visible buildup on the filter may indicate it’s time for a replacement. We recommend changing the filter every 3 months to maintain its effectiveness.</p>",
             "code": ""
           }
         },
