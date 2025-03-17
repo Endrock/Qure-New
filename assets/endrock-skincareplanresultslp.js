@@ -548,6 +548,22 @@ const productsBundleInit = ()=>{
         setBundleArray(){
           const arrayBundleStorage = localStorage.getItem(`${window.templateName}-bundleArray`);
           if(!arrayBundleStorage) return;
+
+          const productElements = this.querySelectorAll('[data-product-id]');
+          const productIds = Array.from(productElements).map(element => {
+            return element.getAttribute('data-product-id');
+          });
+
+          const bundleArray = arrayBundleStorage ? JSON.parse(arrayBundleStorage) : [];
+          const missingItems = bundleArray.filter(item => !productIds.includes(item));
+
+          if( missingItems.length > 0 ){
+            localStorage.setItem(`${window.templateName}-bundleArray`, JSON.stringify([]));
+            this.setAttribute('data-bundle-array', JSON.stringify([]));
+            this.setAttribute('data-bundle-used', 'false');
+            return;
+          }
+
           this.setAttribute('data-bundle-array', arrayBundleStorage);
         }
       }
