@@ -31,10 +31,15 @@ function getShopifyCart () {
     });
 };
 
+const bundleAddedToCart = async () => {
+  const cart = await getShopifyCart();
+  const getBundleInCart = cart.items.find(item => item.id === +(46199907123439));
+  return getBundleInCart;
+}
+
 const removeProductBundle = async () => {
   try {
-    const cart = await getShopifyCart();
-    const getBundleInCart = cart.items.find(item => item.id === +(46199907123439));
+    const getBundleInCart = await bundleAddedToCart();
 
     if (!getBundleInCart) {
       return { success: true, message: 'No bundle to remove' };
@@ -47,7 +52,7 @@ const removeProductBundle = async () => {
 
     setTimeout(() => {
       return { success: true,message: 'Bundle remove' };
-    }, 2000);
+    }, 1500);
 
   } catch (error) {
     console.error('Error removing bundle:', error);
@@ -435,24 +440,29 @@ const productsBundleInit = ()=>{
             const btn = card.querySelector('.bundle-btn')
             btn.addEventListener('click',() => {
               const idProduct = btn.dataset.productId;
+
+              let storedArray = localStorage.getItem(`${window.templateName}-bundleArray`);
+              let arrayBundleStorage = storedArray ? JSON.parse(storedArray) : [];
+
+              let arrayBundle = JSON.parse(this.getAttribute('data-bundle-array') || '[]');
+
               if(card.classList.contains('active')){
-                //card.classList.remove('active')
-                const arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
                 const newArrayBundle = arrayBundle.filter((id) => id != idProduct )
 
+                if (JSON.stringify(arrayBundleStorage) === JSON.stringify(newArrayBundle)) return;
+
                 localStorage.setItem(`${window.templateName}-bundleArray`, JSON.stringify(newArrayBundle));
-                this.setAttribute('data-bundle-array', JSON.stringify(newArrayBundle))
-
+                this.setAttribute('data-bundle-array', JSON.stringify(newArrayBundle));
+                this.setAttribute('data-bundle-used', 'false');
               }else{
-                //card.classList.add('active')
-                let arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
-
                 if(arrayBundle.includes(idProduct))return;
-
                 arrayBundle.push(idProduct)
 
+                if (JSON.stringify(arrayBundleStorage) === JSON.stringify(arrayBundle)) return;
+
                 localStorage.setItem(`${window.templateName}-bundleArray`, JSON.stringify(arrayBundle));
-                this.setAttribute('data-bundle-array', JSON.stringify(arrayBundle) )
+                this.setAttribute('data-bundle-array', JSON.stringify(arrayBundle));
+                this.setAttribute('data-bundle-used', 'false');
               }
             })
           })
@@ -490,18 +500,6 @@ const productsBundleInit = ()=>{
           const btnSubmit = this.querySelector('.btn-section')
           if(!btnSubmit) return;
           btnSubmit.addEventListener('click',async () => {
-            const cartBundleMessage = document.querySelector('.cart-bundle-message');
-            if(cartBundleMessage) cartBundleMessage.classList.remove('hidden');
-
-            if(this.getAttribute('data-bundle-used') === 'true') {
-              const usedMessage = document.querySelector('.cart-bundle-message__used-bundle');
-              if(usedMessage) usedMessage.classList.remove('hidden')
-              await removeProductBundle();
-            }else {
-              const unusedMessage = document.querySelector('.cart-bundle-message__unused-bundle')
-              if(unusedMessage) unusedMessage.classList.remove('hidden')
-            }
-
             const cards = this.querySelectorAll('.container-pb .card-bundle')
             cards.forEach((card) => {
               if(!card.classList.contains('active')){
@@ -509,39 +507,6 @@ const productsBundleInit = ()=>{
                 btn.click()
               }
             })
-
-            const arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
-            const bundleId = this.getAttribute('data-bundle-id')
-            const bundleInfoLiquid = JSON.parse(this.getAttribute('bundle-info'));
-            const bundleInfo = `{"id":"${ bundleId }" ,"name":"${ bundleInfoLiquid.name }", "discounts":${JSON.stringify(bundleInfoLiquid.discounts)}, "parentId": "${ bundleInfoLiquid.parentId }", "image":"https://cdn.shopify.com/s/files/1/0441/1431/3365/files/Icon_ca2ca798-4d5f-48c4-9d07-ac219c7dc598.svg?v=1738177012" }`
-
-            const items = []
-            arrayBundle.forEach((item) => {
-              items.push({
-                id: item,
-                quantity: 1,
-                properties:{
-                  _pack_id: bundleId,
-                  _bundleInfo: bundleInfo
-                }
-              })
-            })
-
-            if(items.length < 1) return;
-
-            window.cartRequestAdd({
-              items
-            }, {} )
-
-            setTimeout(() => {
-              if(cartBundleMessage) cartBundleMessage.classList.add('hidden');
-              const usedMessage = document.querySelector('.cart-bundle-message__used-bundle');
-              if(usedMessage) usedMessage.classList.add('hidden')
-              const unusedMessage = document.querySelector('.cart-bundle-message__unused-bundle')
-              if(unusedMessage) unusedMessage.classList.add('hidden')
-            }, 4000);
-
-            this.setAttribute('data-bundle-used', 'true') 
           })
         }
 
@@ -583,6 +548,22 @@ const productsBundleInit = ()=>{
         setBundleArray(){
           const arrayBundleStorage = localStorage.getItem(`${window.templateName}-bundleArray`);
           if(!arrayBundleStorage) return;
+
+          const productElements = this.querySelectorAll('[data-product-id]');
+          const productIds = Array.from(productElements).map(element => {
+            return element.getAttribute('data-product-id');
+          });
+
+          const bundleArray = arrayBundleStorage ? JSON.parse(arrayBundleStorage) : [];
+          const missingItems = bundleArray.filter(item => !productIds.includes(item));
+
+          if( missingItems.length > 0 ){
+            localStorage.setItem(`${window.templateName}-bundleArray`, JSON.stringify([]));
+            this.setAttribute('data-bundle-array', JSON.stringify([]));
+            this.setAttribute('data-bundle-used', 'false');
+            return;
+          }
+
           this.setAttribute('data-bundle-array', arrayBundleStorage);
         }
       }
@@ -632,6 +613,7 @@ const flatingBundleInit = ()=>{
               const newArrayBundle = arrayBundle.filter((id) => id != idProduct )
               localStorage.setItem(`${window.templateName}-bundleArray`, JSON.stringify(newArrayBundle));
               this.setAttribute('data-bundle-array', JSON.stringify(newArrayBundle))
+              this.setAttribute('data-bundle-used', 'false');
             })
           })
         }
@@ -666,10 +648,14 @@ const flatingBundleInit = ()=>{
           const btnSubmit = this.querySelector('.btn-discount')
           if(!btnSubmit) return;
           btnSubmit.addEventListener('click',async () => {
+            if(this.getAttribute('data-bundle-used') === 'true') return;
+
             const cartBundleMessage = document.querySelector('.cart-bundle-message');
             if(cartBundleMessage) cartBundleMessage.classList.remove('hidden');
 
-            if(this.getAttribute('data-bundle-used') === 'true') {
+            const bundleIsAdded = await bundleAddedToCart();
+
+            if(bundleIsAdded) {
               const usedMessage = document.querySelector('.cart-bundle-message__used-bundle');
               if(usedMessage) usedMessage.classList.remove('hidden')
               await removeProductBundle();
@@ -887,6 +873,7 @@ const flatingBundleInit = ()=>{
           btnSubmit.classList.remove('disabled');
           localStorage.setItem(`${window.templateName}-bundleArray`, JSON.stringify([]));
           this.setAttribute('data-bundle-array', JSON.stringify([]));
+          this.setAttribute('data-bundle-used', 'false');
         }
 
         openFloatingBundle(){
@@ -927,20 +914,30 @@ const  closureBundleInit = ()=>{
             const btn = card.querySelector('.btn-bundle')
             btn.addEventListener('click',() => {
               const idProduct = btn.dataset.productId;
+
+              let storedArray = localStorage.getItem(`${window.templateName}-bundleArray`);
+              let arrayBundleStorage = storedArray ? JSON.parse(storedArray) : [];
+              let arrayBundle = JSON.parse(this.getAttribute('data-bundle-array') || '[]');
+
               if(card.classList.contains('active')){
-                //card.classList.remove('active')
-                const arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
+
                 const newArrayBundle = arrayBundle.filter((id) => id != idProduct )
-                this.setAttribute('data-bundle-array', JSON.stringify(newArrayBundle))
+                if (JSON.stringify(arrayBundleStorage) === JSON.stringify(newArrayBundle)) return;
+
+                localStorage.setItem(`${window.templateName}-bundleArray`, JSON.stringify(newArrayBundle));
+                this.setAttribute('data-bundle-array', JSON.stringify(newArrayBundle));
+                this.setAttribute('data-bundle-used', 'false');
 
               }else{
-                //card.classList.add('active')
-                let arrayBundle = JSON.parse(this.getAttribute('data-bundle-array'));
 
                 if(arrayBundle.includes(idProduct))return;
-
                 arrayBundle.push(idProduct)
-                this.setAttribute('data-bundle-array', JSON.stringify(arrayBundle) )
+
+                if (JSON.stringify(arrayBundleStorage) === JSON.stringify(arrayBundle)) return;
+
+                localStorage.setItem(`${window.templateName}-bundleArray`, JSON.stringify(arrayBundle));
+                this.setAttribute('data-bundle-array', JSON.stringify(arrayBundle));
+                this.setAttribute('data-bundle-used', 'false');
               }
             })
           })
