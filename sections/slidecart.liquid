@@ -187,7 +187,7 @@
 								</div>
 
 									<div class="drawer__cart-price-quantity">
-                    {% unless item.properties['_required_validation'] %} {% comment %} validation for free gift test {% endcomment %}
+										{% unless item.properties['_required_validation'] %} {% comment %} validation for free gift test {% endcomment %}
 											{% if free_gift or item.id == 46199907123439 %}
 												<div class="drawer__cart-quantity">
 													<a href="javascript:;" style="color:#e4e0e0">
@@ -210,74 +210,79 @@
 												</div>
 											{% endif %}
 										
-										{% if free_gift %}
-											<div class="drawer__cart-item-price">
-												<p class="old-price"><span class="money">{{ item.original_line_price | money_without_trailing_zeros }}</span></p>
-												<p class="new-price test"><span class="money">$0</span></p>
-											</div>
-										{% elsif item.id == 46199907123439 %}
-											<div class="drawer__cart-item-price">
-												<p class="new-price test"><span class="money">{{ item.price | money_without_trailing_zeros }}</span></p>
-											</div>
-											{% elsif popup_discount %}
+											{% if free_gift %}
 												<div class="drawer__cart-item-price">
-													{% liquid
-													assign product_hanlde_popup = ""
-														if item.id == 43821035290863
-															 #"Micro-Infusion 3 Month Refill (For Wrinkles)"
-															assign product_hanlde_popup = "micro-infusion-3-month-refill-6x-hydra-soothing-serum"
-														elsif item.id == 43821069435119
-															 #"Micro-Infusion 3 Month Refill (For Dark Spots)"
-															assign product_hanlde_popup = "micro-infusion-3-month-refill-6x-rejuvenating-serum"
-														elsif item.id == 43821031031023
-															 #"Micro-Infusion 3 Month Refill (For Wrinkles + Dark Spots)"
-															assign product_hanlde_popup = "micro-infusion-3-month-refill-3x-b-g-serum-3x-e-g-f-serum"
-														endif
-													assign product_moded = all_products[product_hanlde_popup]
-													%}
-												<p class="old-price"><span class="money">{{- product_moded.price | money_without_trailing_zeros -}}</span></p>
-												<p class="new-price test"><span class="money">{{- item.line_price | money_without_trailing_zeros -}}</span></p>
-											</div>
-										{% else %}
-											<div class="drawer__cart-item-price">
-												{% comment %} Subscription for product {% endcomment %}
-												{%- if item.selling_plan_allocation.price > 0 -%}
-													<p class="new-price test igPrice" data-price-multiplier="{{ item.quantity }}">
-														<span class="money">{{ item.selling_plan_allocation.price | money_without_trailing_zeros }}</span>
-													</p>
-													<p class="old-price igComparePrice" data-price-multiplier="{{ item.quantity }}">
-														<span class="money">{{ item_new_price | money_without_trailing_zeros }}</span>
-													</p>
-												{%- else -%}
-													{% if item.original_price > item.discounted_price %}
-														<p class="new-price test igPrice" data-price-multiplier="{{ item.quantity }}">
-															<span class="money">{{ item.discounted_price | money_without_trailing_zeros }}</span>
-														</p>
+													<p class="old-price"><span class="money">{{ item.original_line_price | money_without_trailing_zeros }}</span></p>
+													<p class="new-price test"><span class="money">$0</span></p>
+												</div>
+											{% elsif item.id == 46199907123439 %}
+												<div class="drawer__cart-item-price">
+													<p class="new-price test"><span class="money">{{ item.price | money_without_trailing_zeros }}</span></p>
+												</div>
+												{% elsif popup_discount %}
+													<div class="drawer__cart-item-price">
+														{% liquid
+														assign product_hanlde_popup = ""
+															if item.id == 43821035290863
+																#"Micro-Infusion 3 Month Refill (For Wrinkles)"
+																assign product_hanlde_popup = "micro-infusion-3-month-refill-6x-hydra-soothing-serum"
+															elsif item.id == 43821069435119
+																#"Micro-Infusion 3 Month Refill (For Dark Spots)"
+																assign product_hanlde_popup = "micro-infusion-3-month-refill-6x-rejuvenating-serum"
+															elsif item.id == 43821031031023
+																#"Micro-Infusion 3 Month Refill (For Wrinkles + Dark Spots)"
+																assign product_hanlde_popup = "micro-infusion-3-month-refill-3x-b-g-serum-3x-e-g-f-serum"
+															endif
+														assign product_moded = all_products[product_hanlde_popup]
+														%}
+													<p class="old-price"><span class="money">{{- product_moded.price | money_without_trailing_zeros -}}</span></p>
+													<p class="new-price test"><span class="money">{{- item.line_price | money_without_trailing_zeros -}}</span></p>
+												</div>
+											{% else %}
+												<div class="drawer__cart-item-price">
+													{% comment %} Subscription for product {% endcomment %}
+													{%- if item.selling_plan_allocation.price > 0 -%}
+														 {% if item.selling_plan_allocation.selling_plan.name contains 'Try Before You Buy' %}
+															<p class="new-price test igPrice" data-price-multiplier="{{ item.quantity }}">
+																<span class="money">0$</span>
+															</p>
+														{% else %}
+															<p class="new-price test igPrice" data-price-multiplier="{{ item.quantity }}">
+																<span class="money">{{ item.selling_plan_allocation.price | money_without_trailing_zeros }}</span>
+															</p>
+														{% endif %}
 														<p class="old-price igComparePrice" data-price-multiplier="{{ item.quantity }}">
-															<span class="money">{{ item.original_price | money_without_trailing_zeros }}</span>
-														</p>
-														{% assign comparedPrices = item.original_price | minus: item.discounted_price | times: item.quantity %}
-														{% assign savings = savings | plus: comparedPrices %}
-													{% else %}
-														<p class="new-price test igPrice" data-price-multiplier="{{ item.quantity }}">
 															<span class="money">{{ item_new_price | money_without_trailing_zeros }}</span>
 														</p>
-														{% if item.variant.compare_at_price > item.variant.price %}
-															<p class="old-price igComparePrice" data-price-multiplier="{{ item.quantity }}">
-																<span class="money">{{ item_old_price | money_without_trailing_zeros }}</span>
+													{%- else -%}
+														{% if item.original_price > item.discounted_price %}
+															<p class="new-price test igPrice" data-price-multiplier="{{ item.quantity }}">
+																<span class="money">{{ item.discounted_price | money_without_trailing_zeros }}</span>
 															</p>
-															{% assign comparedPrices = item.variant.compare_at_price | minus: item.variant.price | times: item.quantity %}
+															<p class="old-price igComparePrice" data-price-multiplier="{{ item.quantity }}">
+																<span class="money">{{ item.original_price | money_without_trailing_zeros }}</span>
+															</p>
+															{% assign comparedPrices = item.original_price | minus: item.discounted_price | times: item.quantity %}
 															{% assign savings = savings | plus: comparedPrices %}
+														{% else %}
+															<p class="new-price test igPrice" data-price-multiplier="{{ item.quantity }}">
+																<span class="money">{{ item_new_price | money_without_trailing_zeros }}</span>
+															</p>
+															{% if item.variant.compare_at_price > item.variant.price %}
+																<p class="old-price igComparePrice" data-price-multiplier="{{ item.quantity }}">
+																	<span class="money">{{ item_old_price | money_without_trailing_zeros }}</span>
+																</p>
+																{% assign comparedPrices = item.variant.compare_at_price | minus: item.variant.price | times: item.quantity %}
+																{% assign savings = savings | plus: comparedPrices %}
+															{% endif %}
 														{% endif %}
-													{% endif %}
-												{%- endif -%}
-											</div>
+													{%- endif -%}
+												</div>
+											{% endif %}
+                  						{% endunless %}
+										{% if item.properties['_required_validation'] %}
+										{% render 'pdm_free-gift-cart', itemCart: item %}
 										{% endif %}
-                  {% endunless %}
-                    {% if item.properties['_required_validation'] %}
-                      {% render 'pdm_free-gift-cart', itemCart: item %}
-                    {% endif %}
-
 									</div>									
 							</div>
 

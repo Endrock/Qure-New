@@ -148,6 +148,20 @@
       },
       {
         "type": "header",
+        "content": "Contrast Horizontal Layout",
+      },
+      {
+        "type": "image_picker",
+        "id": "face_serum_2_month",
+        "label": "Image Face Serum Single Unit"
+      },
+      {
+        "type": "image_picker",
+        "id": "patches_1_month",
+        "label": "Image Patches Single Unit"
+      },
+      {
+        "type": "header",
         "content": "Free Shipping + Guarantee Emphasize",
       },
       {

@@ -12,7 +12,15 @@
     endif
 %}
 
-<div class="mw-402 all_in_one_face_serum_offer {% if show_free_shiping_guarantee_test %}free-shiping-guarantee-test{% endif %}">
+{% liquid
+    assign show_contrast_horizontal_layout_test = false
+    assign products_handles_to_include = "face-serum, micro-infusion-targeted-patches" | split: ", "
+    if products_handles_to_include contains product.handle
+        assign show_contrast_horizontal_layout_test = true
+    endif
+%}
+
+<div class="mw-402 all_in_one_face_serum_offer {% if show_free_shiping_guarantee_test %}free-shiping-guarantee-test{% endif %} {% if show_contrast_horizontal_layout_test %}contrast-horizontal-layout-test {% endif %}">
     <div class="serum_bl pt-0">
         <div class="s_bl_wrapper">
             <div class="supply-detail supply-detail-without-counter pb-0 d-block">
@@ -26,10 +34,13 @@
                                 {% assign product_variant_id = product.variants.first.id %}
                                 {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
 
-                                <div class="planBlock planBlockTop pdm-product-original-pdp {% if show_free_shiping_guarantee_test %}active{% endif %}" data-variantid="{{ product_variant_id }}">
-                                    <div class="plan_choosed text-end">
+                                <div class="planBlock planBlockTop pdm-product-original-pdp {% if show_free_shiping_guarantee_test %}active{% endif %} {% if show_contrast_horizontal_layout_test %}active{% endif %}" data-variantid="{{ product_variant_id }}">
+                                    <div class="plan_choosed text-end contrast-horizontal-layout-test-original">
                                         <span class="text-1">Over 13,000 people chose this supply</span>
                                         <span class="text-2 free-shipping-guarentee-original"><strong>SPECIAL OFFER</strong> - Limited Time</span>
+                                    </div>
+                                    <div class="top-label contrast-horizontal-layout-test-variant">
+                                        <span class="top-label__label">{{ 'products.product.contrast_horizontal.top_label' | t }}</span>
                                     </div>
                                     <input type="radio" name="mBanner_monthlyPlan" id="mBanner_3_month" checked="">
                                     <label class="monthly_plans {% if show_free_shiping_guarantee_test %}background-white{% endif %}" for="mBanner_3_month" payment-price="{{ product_price_divided | money_without_trailing_zeros }}">
@@ -39,13 +50,24 @@
                                         </div>
                                         <div class="plan_des plan_des_top-original">
                                             <div class="plan_hdr">
-                                                <h3>6 Month Supply</h3>
+                                                <h3 class="contrast-horizontal-layout-test-original">6 Month Supply</h3>
                                                 <span class="saved_price">{{ discount_percentage }}% OFF</span>
                                             </div>
-                                            <div class="plan_des free-shipping-guarentee-original">3 Serums + Free Shipping</div>
+                                            <div class="plan_des free-shipping-guarentee-original contrast-horizontal-layout-test-original">3 Serums + Free Shipping</div>
                                             <div class="plan_des free-shipping-guarentee-variant">{{ 'products.product.3_serum_label' | t }}</div>
                                         </div>
 
+                                        <div class="contrast-container contrast-horizontal-layout-test-variant">
+                                            <div class="contrast-container__main-label">{{ 'products.product.contrast_horizontal.main_label_1' | t }}</div>
+                                            <div class="contrast-container__images">
+                                                {{ settings.face_serum_2_month | image_url: width: 14, height: 48 | image_tag: class: 'contrast-container__image', alt: settings.face_serum_2_month  }}
+                                                {{ settings.face_serum_2_month | image_url: width: 14, height: 48 | image_tag: class: 'contrast-container__image', alt: settings.face_serum_2_month  }}
+                                                {{ settings.face_serum_2_month | image_url: width: 14, height: 48 | image_tag: class: 'contrast-container__image', alt: settings.face_serum_2_month  }}
+                                            </div>
+                                            <div class="contrast-container__time desktop-only">{{ 'products.product.contrast_horizontal.six_month_label' | t }}</div>
+                                            <div class="contrast-container__time mobile-only">{{ 'products.product.contrast_horizontal.six_month_label' | t | split: 'Supply' | first }}</div>
+                                        </div>
+                                        
                                         <div class="plan_des plan_des_top-test">
                                             <div class="plan_hdr">
                                                 <h3>Buy 2, Get 1 <span>FREE</span></h3>
@@ -122,12 +144,23 @@
                                         </div>
                                         <div class="plan_des">
                                             <div class="plan_hdr">
-                                                <h3>4 Month Supply</h3>
+                                                <h3 class="contrast-horizontal-layout-test-original contrast-horizontal-layout-test-original">4 Month Supply</h3>
                                                 <span class="saved_price">{{ discount_percentage }}% OFF</span>
                                             </div>
-                                            <div class="plan_des free-shipping-guarentee-original">2 Serums + Free Shipping</div>
+                                            <div class="plan_des free-shipping-guarentee-original contrast-horizontal-layout-test-original">2 Serums + Free Shipping</div>
                                             <div class="plan_des free-shipping-guarentee-variant">{{ 'products.product.2_Serums_label' | t }}</div>
                                         </div>
+
+                                        <div class="contrast-container contrast-horizontal-layout-test-variant">
+                                            <div class="contrast-container__main-label">{{ 'products.product.contrast_horizontal.main_label_2' | t }}</div>
+                                            <div class="contrast-container__images">
+                                                {{ settings.face_serum_2_month | image_url: width: 14, height: 48 | image_tag: class: 'contrast-container__image', alt: settings.face_serum_2_month  }}
+                                                {{ settings.face_serum_2_month | image_url: width: 14, height: 48 | image_tag: class: 'contrast-container__image', alt: settings.face_serum_2_month  }}
+                                            </div>
+                                            <div class="contrast-container__time desktop-only">{{ 'products.product.contrast_horizontal.four_month_label' | t }}</div>
+                                            <div class="contrast-container__time mobile-only">{{ 'products.product.contrast_horizontal.four_month_label' | t | split: 'Supply' | first }}</div>
+                                        </div>
+
                                         <div class="price">
                                             <div class="plan_prc regular_price">{{ product.compare_at_price | money_without_trailing_zeros }}</div>
                                             <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
@@ -148,10 +181,20 @@
                                         </div>
                                         <div class="plan_des plan_des_bottom-original">
                                             <div class="plan_hdr">
-                                                <h3>2 Month Supply</h3>
+                                                <h3 class="contrast-horizontal-layout-test-original">2 Month Supply</h3>
                                             </div>
-                                            <div class="plan_des">1 Serum</div>
+                                            <div class="plan_des contrast-horizontal-layout-test-original">1 Serum</div>
                                         </div>
+
+                                        <div class="contrast-container contrast-horizontal-layout-test-variant">
+                                            <div class="contrast-container__main-label">{{ 'products.product.contrast_horizontal.main_label_3' | t }}</div>
+                                            <div class="contrast-container__images">
+                                                {{ settings.face_serum_2_month | image_url: width: 14, height: 48 | image_tag: class: 'contrast-container__image', alt: settings.face_serum_2_month  }}
+                                            </div>
+                                            <div class="contrast-container__time desktop-only">{{ 'products.product.contrast_horizontal.two_month_label' | t }}</div>
+                                            <div class="contrast-container__time mobile-only">{{ 'products.product.contrast_horizontal.two_month_label' | t | split: 'Supply' | first }}</div>
+                                        </div>
+
                                         <div class="price plan_des_bottom-original">
                                             <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
                                         </div>

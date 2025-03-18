@@ -373,6 +373,9 @@
 
 .section-lifestyle-tips .cont-text .full-text {
   height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
 }
 
 @media (max-width: 768px) {
@@ -381,6 +384,7 @@
   }
   .section-lifestyle-tips .cont-text .full-text {
     height: 340px;
+    display: block;
   }
 }
 
@@ -1794,6 +1798,7 @@
   overflow: hidden;
   border-radius: 8px 8px 0 0 ;
   position:relative;
+  padding: 20px;
 }
 
 .section-products-bundle .media .how-work{
@@ -2974,7 +2979,8 @@
     line-height: 18px;
     background: rgba(169, 214, 202, 0.20);
     padding:4px 24px;
-    height:44px;
+    height:fit-content;
+    min-height:44px;
   }
 
   .section-closure-bundle .cont-products {
