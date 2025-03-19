@@ -400,7 +400,7 @@
                                 <a class="btn btn-lg btn-primary buy_btn" href="#">Sold Out</a>
                             {% else %}
     
-                                {% if product.metafields.custom.bundle_product and %}
+                                {% if product.metafields.custom.bundle_product and product.metafields.custom.bundle_product.value.available %}
                                     {% render 'pdm_bundle_sell', 
                                     bundle_metafield_data: product.metafields.custom.bundle_product.value,
                                     device_visibility: "mobile"
@@ -637,7 +637,7 @@
                     {% render 'trynow_faq' %}
                 {% endif %}
 
-                {% if product.metafields.custom.bundle_product %}
+                {% if product.metafields.custom.bundle_product and product.metafields.custom.bundle_product.value.available %}
                     {% render 'pdm_bundle_sell', 
                     bundle_metafield_data: product.metafields.custom.bundle_product.value,
                     device_visibility: "desktop"  
