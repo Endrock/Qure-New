@@ -6,7 +6,7 @@
   assign product_with_discount = normal_product.price | minus: normal_product_discount
 %}
 
-<pdm-bundle-upsell
+<div
   data-product-bundlet-id="{{ product_bundle.id }}"
   data-product-bundle-variant-id="{{ product_bundle.variants.first.id }}"
   data-product-bundle-handle="{{ product_bundle.handle }}"
@@ -40,4 +40,4 @@
       </div>
     </div>
   </label>
-</pdm-bundle-upsell>
+</div>

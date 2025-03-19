@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin language editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "password_page": {
@@ -16,7 +16,7 @@
       "login_form_password_placeholder": "Your password",
       "login_form_error": "Wrong password!",
       "login_form_submit": "Enter",
-      "admin_link_html": "Are you the store owner? <a href=\"\/admin\" class=\"link underlined-link\">Log in here<\/a>",
+      "admin_link_html": "Are you the store owner? <a href=\"/admin\" class=\"link underlined-link\">Log in here</a>",
       "powered_by_shopify_html": "This shop will be powered by {{ shopify }}"
     },
     "continue_shopping": "Continue shopping",
@@ -98,13 +98,13 @@
       "sku": "SKU",
       "on_sale": "Sale",
       "product_variants": "Product variants",
-      "includes_free_shipping_label":"Includes Free Shipping",
-      "3_serum_label":"3 Serums",
-      "3_serum_label_mi_patches":"3 Boxes / 48 patches (24 pairs)",
-      "unlocks_free_shipping_label":"Unlocks",
-      "2_Serums_label":"2 Serums",
-      "2_boxes_label":"2 Boxes / 32 patches (16 pairs)",
-      "1_box_label":"1 Box / 16 patches (8 pairs)",
+      "includes_free_shipping_label": "Includes Free Shipping",
+      "3_serum_label": "3 Serums",
+      "3_serum_label_mi_patches": "3 Boxes / 48 patches (24 pairs)",
+      "unlocks_free_shipping_label": "Unlocks",
+      "2_Serums_label": "2 Serums",
+      "2_boxes_label": "2 Boxes / 32 patches (16 pairs)",
+      "1_box_label": "1 Box / 16 patches (8 pairs)",
       "media": {
         "gallery_viewer": "Gallery Viewer",
         "load_image": "Load image {{ index }} in gallery view",
@@ -123,22 +123,22 @@
         "minimum_of": "Minimum of {{ quantity }}",
         "maximum_of": "Maximum of {{ quantity }}",
         "multiples_of": "Increments of {{ quantity }}",
-        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}<\/span> in cart",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> in cart",
         "note": "View quantity rules"
       },
       "volume_pricing": {
         "title": "Volume Pricing",
         "note": "Volume pricing available",
         "minimum": "{{ quantity }}+",
-        "price_at_each": "at {{ price }}\/ea",
+        "price_at_each": "at {{ price }}/ea",
         "price_range": "{{ minimum }} - {{ maximum }}"
       },
       "pickup_availability": {
         "view_store_info": "View store information",
         "check_other_stores": "Check availability at other stores",
         "pick_up_available": "Pickup available",
-        "pick_up_available_at_html": "Pickup available at <span class=\"color-foreground\">{{ location_name }}<\/span>",
-        "pick_up_unavailable_at_html": "Pickup currently unavailable at <span class=\"color-foreground\">{{ location_name }}<\/span>",
+        "pick_up_available_at_html": "Pickup available at <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Pickup currently unavailable at <span class=\"color-foreground\">{{ location_name }}</span>",
         "unavailable": "Couldn't load pickup availability",
         "refresh": "Refresh"
       },
@@ -159,17 +159,17 @@
       "xr_button": "View in your space",
       "xr_button_label": "View in your space, loads item in augmented reality window",
       "include_taxes": "Tax included.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
-      "contrast_horizontal":{
-        "top_label":"BEST VALUE",
-        "main_label_1":"Maximum efficacy",
-        "main_label_2":"Impressive change",
-        "main_label_3":"Get started",
-        "six_month_label":"6 Month Supply",
-        "four_month_label":"4 Month Supply",
-        "three_month_label":"3 Month Supply",
-        "two_month_label":"2 Month Supply",
-        "one_month_label":"1 Month Supply"
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
+      "contrast_horizontal": {
+        "top_label": "BEST VALUE",
+        "main_label_1": "Maximum efficacy",
+        "main_label_2": "Impressive change",
+        "main_label_3": "Get started",
+        "six_month_label": "6 Month Supply",
+        "four_month_label": "4 Month Supply",
+        "three_month_label": "3 Month Supply",
+        "two_month_label": "2 Month Supply",
+        "one_month_label": "1 Month Supply"
       }
     },
     "modal": {
@@ -284,9 +284,9 @@
       "empty": "Your cart is empty",
       "cart_error": "There was an error while updating your cart. Please try again.",
       "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",
-      "taxes_and_shipping_policy_at_checkout_html": "Taxes, Discounts and <a href=\"{{ link }}\">shipping<\/a> calculated at checkout",
+      "taxes_and_shipping_policy_at_checkout_html": "Taxes, Discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout",
       "taxes_included_but_shipping_at_checkout": "Tax included and shipping and discounts calculated at checkout",
-      "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping<\/a> and discounts calculated at checkout.",
+      "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping</a> and discounts calculated at checkout.",
       "taxes_and_shipping_at_checkout": "Taxes, discounts and shipping calculated at checkout",
       "headings": {
         "product": "Product",
@@ -298,7 +298,7 @@
       "update": "Update",
       "login": {
         "title": "Have an account?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in<\/a> to check out faster."
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in</a> to check out faster."
       },
       "upsell_add": "Add +"
     },
@@ -320,7 +320,7 @@
     "collection_template": {
       "empty": "No products found",
       "title": "Collection",
-      "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">remove all<\/a>"
+      "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">remove all</a>"
     },
     "video": {
       "load_video": "Load video: {{ description }}"
@@ -340,7 +340,7 @@
     "quick_order_list": {
       "product_total": "Product subtotal",
       "view_cart": "View cart",
-      "each": "{{ money }}\/ea",
+      "each": "{{ money }}/ea",
       "product": "Product",
       "variant": "Variant",
       "variant_total": "Variant total",
@@ -364,13 +364,13 @@
     }
   },
   "localization": {
-    "country_label": "Country\/region",
+    "country_label": "Country/region",
     "language_label": "Language",
     "update_language": "Update language",
-    "update_country": "Update country\/region",
+    "update_country": "Update country/region",
     "search": "Search",
-    "popular_countries_regions": "Popular countries\/regions",
-    "country_results_count": "{{ count }} countries\/regions found"
+    "popular_countries_regions": "Popular countries/regions",
+    "country_results_count": "{{ count }} countries/regions found"
   },
   "customer": {
     "account": {
@@ -399,9 +399,9 @@
       "address1": "Address 1",
       "address2": "Address 2",
       "city": "City",
-      "country": "Country\/region",
+      "country": "Country/region",
       "province": "Province",
-      "zip": "Postal\/ZIP code",
+      "zip": "Postal/ZIP code",
       "phone": "Phone",
       "set_default": "Set as default address",
       "add": "Add address",
@@ -533,7 +533,7 @@
         }
       },
       "marketing": {
-        "accept_sms_checkbox_label": "Get Skincare Hacks & Exclusive Deals to Your Phone"
+        "accept_sms_checkbox_label": "Sign up for texts and get a FREE All-In-One Face Serum (8ml) on your next order + product launches, exclusive offers, and more!"
       },
       "contact": {
         "address2_label": "Apartment, suite, etc ",
@@ -560,9 +560,12 @@
     "free_pillow_case": {
       "label": "Free Pillowcase"
     }
+<<<<<<< HEAD
   },
   "landing_dark_spots": {
     "use_twice_a_week_label": "Use twice a week",
     "every_two_weeks_label": "every two weeks",
+=======
+>>>>>>> feature/led-mask-and-deck-bundle
   }
 }

@@ -16,7 +16,7 @@
           "type": "announcement",
           "settings": {
             "heading": "Limited Time Only:",
-            "timer": "2025-03-20T23:59:59",
+            "timer": "2025-03-30T23:59:59",
             "timer_next": 7
           }
         },
@@ -609,9 +609,8 @@
             "percent": 46,
             "media_limit": 0,
             "hide_us": false,
-            "recommended_heading": "<p><strong>Dr Shah, MD </strong>Certified Dermatologist</p>",
-            "recommended_text": "<p>\"I recommend this treatment to so many of my patients who are looking for a glowing, fresh looking complexion\"</p>",
-            "recommended_image": "shopify://shop_images/cl_shah.webp",
+            "recommended_heading": "",
+            "recommended_text": "",
             "is_top_rated": false,
             "is_preorder": true,
             "preorder_text": "SHIPS END OF APRIL",
@@ -693,8 +692,9 @@
             "percent": 35,
             "media_limit": 0,
             "hide_us": true,
-            "recommended_heading": "",
-            "recommended_text": "",
+            "recommended_heading": "<p><strong>Dr Shah, MD </strong>Certified Dermatologist</p>",
+            "recommended_text": "<p>\"I recommend this treatment to so many of my patients who are looking for a glowing, fresh looking complexion\"</p>",
+            "recommended_image": "shopify://shop_images/cl_shah.webp",
             "is_top_rated": false,
             "is_preorder": false,
             "preorder_text": "",
