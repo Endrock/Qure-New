@@ -562,8 +562,19 @@
                                 <source src="{{media.url}}" type="video/mp4">
                               </video>
                             {% else %}
-                              <div style="height:100%;,width:100%;object-position: center;object-fit: cover;">
-                                <img src="{{media.url}}" style="height:100%;object-position: center center;">
+                              <div style="height:100%;,width:100%;object-position: center;object-fit: cover;position: relative;">
+                                <img
+                                  src="{{media.url}}"
+                                  style="
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    transform: translate(-50%, -50%); /* Perfect center */
+                                  "
+                                >
                               </div>
                             {%- endif -%}
                           </div>
