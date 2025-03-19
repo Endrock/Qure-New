@@ -562,7 +562,9 @@
                                 <source src="{{media.url}}" type="video/mp4">
                               </video>
                             {% else %}
-                              <img src="{{media.url}}" style="height:100%;margin:auto;object-position: center;">
+                              <div style="height:100%;,width:100%;object-position: center;object-fit: cover;">
+                                <img src="{{media.url}}" style="height:100%">
+                              </div>
                             {%- endif -%}
                           </div>
                         </div>
