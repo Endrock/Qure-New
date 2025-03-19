@@ -1,0 +1,20 @@
+{% comment %} 
+  Usage:
+  - Add template name to the case statement to include the css file
+  
+{% endcomment %}
+
+{% case template %}
+  {% when 'page.sunil-mi-landing' %}
+    {{ 'endrock-landing.css' | asset_url | stylesheet_tag }}
+  {% when 'page.sunil-mi-landing-de' %}
+
+  {% when 'page.skincare-plan-results', 'page.skincare-plan-dark-spots', 'page.skincare-plan-acne' %}
+    {{ 'endrock-skincareplanresultslp.css' | asset_url | stylesheet_tag }}
+
+  {% else %}
+    {{ 'endrock.css' | asset_url | stylesheet_tag }}
+{% endcase %}
+
+{% comment %} general styles {% endcomment %}
+{{ 'endrock-sidecart.css' | asset_url | stylesheet_tag }}
