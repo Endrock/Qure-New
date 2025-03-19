@@ -101,17 +101,21 @@
                 {% endif %}
 
                 <div class="bundle_quantity_wrap">
-                    {% if product.variants.first.available %}
-                        {% unless section.settings.reserve %}
-                            <div class="bundle_quantity">
-                                <a href="#">-</a>
-                                <p>1</p>
-                                <a href="#">+</a>
-                            </div>
-                        {% endunless %}
-                        <a class="btn btn-lg btn-primary buy_btn" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" onclick="setEventProductHandler('{{ product.handle | escape }}')" data-ajax-cart-request-button>{% if section.settings.reserve == true %}Reserve now{% else %}Buy Now{% endif %}</a>
+                    {% if section.settings.soldout == true %}
+                        <a class="btn btn-lg btn-primary buy_btn" href="#">Sold Out</a>
                     {% else %}
-                        <a class="btn btn-lg btn-primary buy_btn" href="#">{% if section.settings.reserve == true %}Reserve now{% else %}Sold Out{% endif %}</a>
+                        {% if product.variants.first.available %}
+                            {% unless section.settings.reserve %}
+                                <div class="bundle_quantity">
+                                    <a href="#">-</a>
+                                    <p>1</p>
+                                    <a href="#">+</a>
+                                </div>
+                            {% endunless %}
+                            <a class="btn btn-lg btn-primary buy_btn" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" onclick="setEventProductHandler('{{ product.handle | escape }}')" data-ajax-cart-request-button>{% if section.settings.reserve == true %}Reserve now{% else %}Buy Now{% endif %}</a>
+                        {% else %}
+                            <a class="btn btn-lg btn-primary buy_btn" href="#">{% if section.settings.reserve == true %}Reserve now{% else %}Sold Out{% endif %}</a>
+                        {% endif %}
                     {% endif %}
                 </div>
 
@@ -360,6 +364,12 @@
                 "type": "checkbox",
                 "id": "reserve",
                 "label": "t:common.reserve.label",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "soldout",
+                "label": "t:common.soldout.label",
                 "default": false
             },
             {

@@ -444,6 +444,9 @@
     "reserve": {
       "label": "Reserve"
     },
+    "soldout": {
+      "label": "Sold out"
+    },
     "text": {
       "label": "Text",
       "content": "Text content",
@@ -577,6 +580,12 @@
     },
     "code": {
       "label": "Code"
+    },
+    "trynow": {
+      "label": "Trynow",
+      "plan": {
+        "label": "Subscribe plan"
+      }
     },
     "subscribe": {
       "label": "Subscribe",

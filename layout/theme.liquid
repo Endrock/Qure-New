@@ -86,7 +86,16 @@
         {% when 'page.skincare-plan-results' or
             'page.skincare-plan-dark-spots' or
             'page.skincare-plan-acne' %}
+
           {{ 'endrock-skincareplanresultslp.css' | asset_url | stylesheet_tag }}
+          <meta name="robots" content="noindex, nofollow">
+
+        {% when 'page.content-instructions' %}
+            <meta name="robots" content="noindex, nofollow">
+        {% when 'page.neck-decolletage-led-pro-content-guide' %}
+            <meta name="robots" content="noindex, nofollow">
+        {% when 'page.sunil-mi-landing-special2' %}
+            <meta name="robots" content="noindex, nofollow">
 
     {% else %}
         {{ 'endrock.css' | asset_url | stylesheet_tag }}

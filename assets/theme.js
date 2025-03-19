@@ -214,7 +214,7 @@ window.addEventListener('load', function () {
 // =================================== js for same height ===============================
 $(function () {
     //setTimeout(function () {
-    $('.q_uses_header, .dfrc__hdr, .s_name, .result_item, .trust_item, .serum_bx, .bs_content, .skin_item, .safety_content, .mc_desc, .blog_wrap, .see_item img, .menu li a, .return_step1, .result_tabs .rt_wrap_header .nav-link').matchHeight({
+    $('.q_uses_header, .dfrc__hdr, .s_name, .result_item, .serum_bx, .bs_content, .skin_item, .safety_content, .mc_desc, .blog_wrap, .see_item img, .menu li a, .return_step1, .result_tabs .rt_wrap_header .nav-link').matchHeight({
         property: 'height',
         target: null,
         remove: false
@@ -329,80 +329,79 @@ if ($(".plan_bundle_hdr")[0]) {
 
 // =================================== js for slider ===============================
 
-document.addEventListener('DOMContentLoaded', function() {
-    //result slider
-    var swiper = new Swiper(".result_slider", {
-        spaceBetween: 15,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
+//result slider
+var swiper = new Swiper(".result_slider", {
+    spaceBetween: 15,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".qureSlider-swiper-next",
+        prevEl: ".qureSlider-swiper-prev",
+    },
+    breakpoints: {
+        556: {
+            slidesPerView: 1,
         },
-        navigation: {
-            nextEl: ".qureSlider-swiper-next",
-            prevEl: ".qureSlider-swiper-prev",
+        768: {
+            slidesPerView: 2,
         },
-        breakpoints: {
-            556: {
-                slidesPerView: 1,
-            },
-            768: {
-                slidesPerView: 2,
-            },
-            1024: {
-                slidesPerView: 3,
-            },
+        1024: {
+            slidesPerView: 3,
         },
-    });
-
-
-    //micro infusion-lp result slider
-    var swiper = new Swiper(".result_slides_2", {
-        spaceBetween: 62,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            556: {
-                slidesPerView: 1,
-            },
-            768: {
-                slidesPerView: 2,
-            },
-        },
-    });
-
-    //testimonial result slider
-    var swiper = new Swiper(".result_slider_2", {
-        spaceBetween: 15,
-        slidesPerView: 1,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-    });
-
-    var swiper = new Swiper(".result_slider_3", {
-        spaceBetween: 15,
-        // centeredSlides: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-                centeredSlides: false,
-            },
-            768: {
-                slidesPerView: 2,
-            },
-            1024: {
-                slidesPerView: 2.6,
-            },
-        },
-    });
+    },
 });
+
+
+//micro infusion-lp result slider
+var swiper = new Swiper(".result_slides_2", {
+    spaceBetween: 62,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        556: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+    },
+});
+
+//testimonial result slider
+var swiper = new Swiper(".result_slider_2", {
+    spaceBetween: 15,
+    slidesPerView: 1,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+
+var swiper = new Swiper(".result_slider_3", {
+    spaceBetween: 15,
+    // centeredSlides: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            centeredSlides: false,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        1024: {
+            slidesPerView: 2.6,
+        },
+    },
+});
+
 
 
 // =================
@@ -949,7 +948,11 @@ var swiper = new Swiper(".howUSe_slider", {
 $('.monthly_plans').click(function () {
     var savedTxt = $(this).find('.saved_price').html();
     if (savedTxt !== undefined) {
-        $('.savedAmount').html('& ' + savedTxt);
+        if (document.body.hasAttribute('data-contrast-horizontal-layout')) {
+            $('.savedAmount').html('& SAVE ' + savedTxt.replace(/\bOFF\b/, "").trim());
+        } else {
+            $('.savedAmount').html('& ' + savedTxt);
+        }
     } else {
         $('.savedAmount').html('');
     }
@@ -994,10 +997,9 @@ $(".serumBlock").click(function () {
 $(document).ready(function () {
     $('.tab_content').hide(); // Hide all tab contents initially
     $('.tab_content').eq(0).show(); // Show the second tab content by default
-
     $('.step_conten_blocks .planBlock').click(function () {
         var regular_price = $(this).find(".regular_price").text();
-        var sale_price = $(this).find(".sale_price").text();
+        var sale_price = $(this).find(".sale_price:visible").text().trim();
         console.log(regular_price);
         var imageLink = $(this).attr("data-image");
         var data_per = $(this).attr("data-per");
@@ -1023,6 +1025,7 @@ $(document).ready(function () {
 
     //product subscription
 
+
     var data_month1_image = $(".serum_img.active").attr('data-month1-image');
     var data_month2_image = $(".serum_img.active").attr('data-month2-image');
     var data_month3_image = $(".serum_img.active").attr('data-month3-image');
@@ -1039,6 +1042,7 @@ $(document).ready(function () {
     });
 
     $(".serumBlock").click(function () {
+        
         var imageLinkss = $(".step_conten_blocks a.planBlock.active").attr('data-image');
         $("#choosen_image").attr("src", imageLinkss);
         $(".serum_img").removeClass("active");
@@ -1624,13 +1628,42 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+// Thumb Slider Start
+var swiper = new Swiper(".bfs_mb_sl", {
+    spaceBetween: 8,
+    slidesPerView: 4.4,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+        768: {
+            spaceBetween: 12,
+            slidesPerView: 6.5,
+        },
+
+    },
+});
+var swiper2 = new Swiper(".bfs_mb_sl2", {
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".thumb-next",
+        prevEl: ".thumb-prev",
+    },
+    thumbs: {
+        swiper: swiper,
+    },
+});
+
 $(document).ready(function () {
-    $('.read-more2').click(function () {
-        $(this).prev().slideToggle();
-        if ($(this).text() === "See Less") {
-            $(this).text("See More");
-        } else {
-            $(this).text("See Less");
-        }
+    // When a planBlock is clicked
+    $('.planBlock').click(function () {
+        // Get the image path from the selected plan
+        var selectedImage = $(this).data('image');  // Retrieve the data-image attribute
+
+        // Update the image source of the first column's image
+        $('#bundleImage').attr('src', selectedImage);  // Update image src
     });
 });
+
+// Thumb Slider End
+

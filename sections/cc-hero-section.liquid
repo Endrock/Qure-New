@@ -413,7 +413,7 @@
       {% endif %}
       <p style="font-size: {{ section.settings.description_text_size }}px; margin: 10px 0; max-width:650px; font-style:italic;">
         {% assign drop_count = metaobject.data.value['cc-creator-drops'].size | minus: 1 %}
-        "{{ section.settings.subtitle }}
+        "Get a {{ metaobject['cc-collab-discount-amount'].value | round }}% discount by shopping from my favorites.
         {%- if metaobject.data.value['cc-creator-drops'] -%}
           {{ metaobject.data.value['cc-creator-drops'][drop_count]['cc-creator-drop-description'] }}" —
           {{ metaobject['cc-creator-first-name'] }}
@@ -561,6 +561,21 @@
                               <video autoplay loop muted playsinline controls>
                                 <source src="{{media.url}}" type="video/mp4">
                               </video>
+                            {% else %}
+                              <div style="height:100%;,width:100%;object-position: center;object-fit: cover;position: relative;">
+                                <img
+                                  src="{{media.url}}"
+                                  style="
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    transform: translate(-50%, -50%); /* Perfect center */
+                                  "
+                                >
+                              </div>
                             {%- endif -%}
                           </div>
                         </div>
@@ -659,12 +674,6 @@
       ],
       "default": "h1",
       "label": "Heading size"
-    },
-        {
-      "type": "inline_richtext",
-      "id": "subtitle",
-      "default": "Get a discount by shopping from my curated collections.",
-      "label": "Hero Subtitle"
     },
                    {
       "type": "range",

@@ -1,11 +1,12 @@
 {% if 
     template == 'page.qurify-offer' 
     or template == 'page.why-qurify'
-    or template == 'page.sunil-free-water-report'
+    or template == 'page.free-water-report'
     or template == 'page.sunil-bf-sales'
     or template == 'page.bf-sales-v2'
     or template == 'page.exclusive-holiday-bundle-deal'
     or template == 'page.exclusive-holiday-bundle-deal-uk'
+    or template == 'page.shower-filter-try-now'
 %}
     <script src="{{ '__app-redirect.js' | asset_url }}"></script>
 {% endif %}
@@ -22,6 +23,7 @@
     or product.handle == 'breakout-control-starter'
     or product.handle == 'filter-family-bundle'
     or product.handle == 'line-refine-bundle-advanced-1'
+    or product.handle == 'shower-filter'
 %}
     <script src="{{ '__app-redirect.js' | asset_url }}"></script>
 {% endif %}

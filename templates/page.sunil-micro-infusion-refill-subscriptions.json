@@ -138,16 +138,16 @@
         "supply_for_refill_a4qUrk": {
           "type": "supply_for_refill",
           "settings": {
-            "heading": "Next batch ships 15th of March 2025:",
-            "heading_mobile": "Next batch ships 03/15:",
+            "heading": "Next batch ships 15th of April 2025:",
+            "heading_mobile": "Next batch ships 04/15:",
             "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.</p>",
             "first_option_date": "January 5th",
             "first_option_text": "SOLD OUT",
             "first_option_percent": 100,
-            "second_option_date": "March 15th",
+            "second_option_date": "April 15th",
             "second_option_text": "51% Reserved",
             "second_option_percent": 51,
-            "third_option_date": "April 30th",
+            "third_option_date": "May 30th",
             "third_option_text": "In Production",
             "third_option_percent": 0,
             "option_wrinkles_darkspots": false,
@@ -184,12 +184,14 @@
         "before_after_images_limit": 4,
         "before_after_button_label": "Before & After",
         "reserve": false,
+        "soldout": false,
         "selected_design": "new",
         "text_label_real_result_1": "Product",
         "text_label_real_result_2": "Real Results",
         "text_label_real_result_3": "Dermatologist",
         "enable_jump_to_section": true,
-        "text_jump_to_section": "Jump To"
+        "text_jump_to_section": "Jump To",
+        "popup_enabled": false
       }
     },
     "featuredin_EpYUrH": {
@@ -829,6 +831,7 @@
         "wistia_x77pgc"
       ],
       "settings": {
+        "ctm_cls_use": "",
         "heading": "How to use"
       }
     },
@@ -1120,7 +1123,8 @@
           "type": "button",
           "settings": {
             "ext_btn": "",
-            "ext_url": ""
+            "ext_url": "",
+            "ctm_cls_btn": ""
           }
         }
       },

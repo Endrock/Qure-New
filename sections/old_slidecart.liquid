@@ -1,8 +1,14 @@
-{% assign subtotal_price = cart.items_subtotal_price %}
-{% assign price_check = subtotal_price | divided_by: 100 %}
-{% assign shipping_charge = 1000 %}
-{% assign custom_saving = blank %}
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+{%- assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image-%}
+
+{% assign progress_Q = 0 %}
+{% assign progress_A =0 %}
+{% assign progress_M = 0 %}
 {% assign is_only_gift = false %}
+{% assign price_check=cart.items_subtotal_price | divided_by: 100 %}
+{% assign shipping_charge =  1000 %}
+
+{% assign custom_saving = blank %}
 
 {%- for block in section.blocks -%}
     {% if block.type == 'saving' %}
@@ -23,9 +29,30 @@
 	<div class="drawer__wrapper" data-ajax-cart-section>
 
 		<form action="{{ routes.cart_url }}" method="post" class="my-cart cart_empty_class">
+
+			{% for item in cart.items %}
+				{% if item.title contains 'Q-Rejuvalight Pro Facewear'    %}
+					{% assign progress_Q = 1 %}
+				{% endif %}
+
+				{% if  item.title contains 'All-In-One Face Serum'  %}
+					{% assign  progress_A = 1  %}
+				{% endif %}
+					
+				{% if item.title contains "Micro-Infusion" %}
+					{% assign  progress_M = 1  %}
+				{% endif %}
+			{% endfor %}
+				
+			{% if price_check > 100 %}
+				{% assign progress_percentage = 100 %}
+			{% else %}
+				{% assign progress_percentage = price_check %}
+			{% endif %}
+
 			<div class="drawer_top_sticky">
 				<div class="drawer__count">
-					<p class="your-cart" >Your Cart (<span class="your-cart" data-ajax-cart-bind-state="cart.item_count">{{ cart.item_count }}</span>)</p>
+					<p class="your-cart" >Your Cart (<span class="your-cart" data-ajax-cart-bind-state="cart.item_count">{{ cart.item_count  }}</span>)</p>
 					<a href="{{ routes.cart_url }}" data-ajax-cart-toggle-class-button="js-my-cart-open">
 						<button class="drawer__close drawer__close-header">
 							<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +62,7 @@
 						</button>
 					</a>
 				</div>
-        		{% render 'pdm_cart-gamification', settingsGamification: section.settings, cartTotal: subtotal_price %}
+        {% render 'pdm_cart-gamification', settingsGamification: section.settings, cartTotal: cart.items_subtotal_price %}
 			</div>
 
 			{% if section.settings.sidecart_timer_old_enable %}
@@ -70,6 +97,7 @@
 							{% assign popup_discount = true %}
 						{% endif %}
 
+
 						{%- if item.title contains 'Gift Card' -%}
 							{%- unless is_not_only_gift -%}
 								{%- assign is_only_gift = true -%}
@@ -84,6 +112,8 @@
 						{%- else -%}
 							{%- assign compare_price = item.variant.price -%}
 						{%- endif -%}
+
+						{% assign total_cart_compare_price = total_cart_compare_price | plus: compare_price %}
 
 						<div class="drawer__cart-product">
 							<div class="drawer__cart-product-image">
@@ -212,13 +242,7 @@
 												<div class="drawer__cart-item-price">
 													{% comment %} Subscription for product {% endcomment %}
 													{%- if item.selling_plan_allocation.price > 0 -%}
-														
-														{% comment %} TryNow subscription {% endcomment %}
 														 {% if item.selling_plan_allocation.selling_plan.name contains 'Try Before You Buy' %}
-															
-															{%- assign subtotal_price = subtotal_price | minus: item.selling_plan_allocation.price -%}
-															{%- assign savings = savings | plus: item.selling_plan_allocation.price -%}
-															
 															<p class="new-price test igPrice" data-price-multiplier="{{ item.quantity }}">
 																<span class="money">0$</span>
 															</p>
@@ -257,7 +281,7 @@
 											{% endif %}
                   						{% endunless %}
 										{% if item.properties['_required_validation'] %}
-											{% render 'pdm_free-gift-cart', itemCart: item %}
+										{% render 'pdm_free-gift-cart', itemCart: item %}
 										{% endif %}
 									</div>									
 							</div>
@@ -267,7 +291,7 @@
 										<path d="M17.75 9C17.75 13.8325 13.8325 17.75 9 17.75C4.16751 17.75 0.25 13.8325 0.25 9C0.25 4.16751 4.16751 0.25 9 0.25C13.8325 0.25 17.75 4.16751 17.75 9Z" stroke="#5C5C5C" stroke-width="0.5"></path>
 										<path d="M5.37891 12.95L12.322 5.75" stroke="#5C5C5C" stroke-width="0.5"></path>
 										<path d="M12.45 12.8213L5.25 5.8782" stroke="#5C5C5C" stroke-width="0.5"></path>
-								</svg></span>
+									</svg></span>
 							</a>
 						</div>
 
@@ -344,10 +368,59 @@
       		{% render 'pdm_upsell_cards',cart:cart, section:section %}
 
 			<div class="custom-shadow">
+
+				{% assign price_checkInsurance = price_check %}
+				{%- assign insPrice = 0 -%}
+
+				{% if price_check > 388 %}
+					{% assign price_checkInsurance = price_check %}
+				{% endif %}
+				{% assign insPrice = 0 %}
+				{% if price_checkInsurance > 0 and price_checkInsurance <= 75 %}
+					{% assign insPrice = 1.05 %}
+				{% elsif price_checkInsurance >= 76 and price_checkInsurance <= 100 %}
+					{% assign insPrice = 1.50 %}
+				{% elsif price_checkInsurance >= 101 and price_checkInsurance <= 200 %}
+					{% assign insPrice = 2.80 %}
+				{% elsif price_checkInsurance >= 201 and price_checkInsurance <= 250 %}
+					{% assign insPrice = 3.25 %}
+				{% elsif price_checkInsurance >= 251 and price_checkInsurance <= 300 %}
+					{% assign insPrice = 3.90 %}
+				{% elsif price_checkInsurance >= 301 and price_checkInsurance <= 400 %}
+					{% assign insPrice = 4.20 %}
+				{% elsif price_checkInsurance >= 401 and price_checkInsurance <= 1000 %}
+					{% assign insPrice1 = cart.total_price | divided_by: 100 | round: 2 %}
+					{% assign insPrice2 = insPrice1 |divided_by: 50 | times: 50| round: 2| ceil %}
+					{% assign insPrice3 =  insPrice2 |times: 0.011 | round:2 %}
+					{% assign insPrice4 = insPrice3 | round:2 %}
+					{% assign insPrice = insPrice4 %}
+				{% elsif price_checkInsurance >= 1001  %}
+					{% assign insPrice = 18.00 %}
+				{% endif %}
+
+				{%- assign subtotal_price = 0 -%}
+
+				{% if price_check < 100 and price_check > 0 %}
+					{%- assign insPrice = insPrice | times: 100 -%}
+
+					{%- if is_only_gift == true -%}
+						{%- assign shipping_charge = 0 -%}
+					{% endif %}
+
+					{%- assign subtotal_price_temp = cart.items_subtotal_price | money_without_trailing_zeros -%}
+					{%- assign subtotal_price = cart.items_subtotal_price | plus: shipping_charge | money_without_trailing_zeros -%}
+					{%- assign subtotal_price_nocurrency_temp = cart.items_subtotal_price | money_without_currency -%}
+					{%- assign subtotal_price_nocurrency = cart.items_subtotal_price | plus: shipping_charge | money_without_currency -%}
+				{%- else -%}
+						{%- assign subtotal_price = cart.items_subtotal_price |  money_without_trailing_zeros -%}
+						{%- assign subtotal_price_nocurrency = cart.items_subtotal_price |  money_without_currency -%}
+				{%- endif -%}
+
 				<div class="drawer__cart-subtotal">
 					<div>
 						<p>Subtotal</p>
 						{% if cart.item_count > 0  %}
+							{%- if total_cart_compare_price > 0 -%}
 								{% if savings %}
 									{% if custom_saving != blank %}
 										<p class="drawer_savings" style="color: {{ custom_saving.settings.color }}">{{ custom_saving.settings.text }}</p>
@@ -355,36 +428,43 @@
 										<p class="drawer_savings">You're saving</p>
 									{% endif %}
 								{% endif %}
+							{%- endif -%}
 						{% endif %}
 
-						<p style class="drawer_shipping">{% if is_only_gift == true %}&nbsp;{% else %}{% endif %}Shipping</p>
+						{%- if is_only_gift == true -%}
+							<p class="drawer_shipping">&nbsp;</p>
+						{%- else -%}
+							<p style class="drawer_shipping">Shipping</p>
+						{%- endif -%}
 					</div>
 
 					<div class="drawer__cart-subtotal-end">
 						<div class="sub_total_og">
-							<p class="drawer__cart-subtotal-price-end">
-								{% if savings %}
-									<span class="drawer_original_price pe-1 money" style="text-decoration: line-through;color: #C4C4C4;">{{ subtotal_price | plus: savings | money_without_trailing_zeros }}</span>
+							<p class="drawer__cart-subtotal-price-end" data-total_price="{% if subtotal_price_temp %}{{ subtotal_price_nocurrency_temp }}{% else %}{{ subtotal_price_nocurrency }}{% endif %}">
+								{% if total_cart_compare_price > cart.items_subtotal_price %}
+									<span class="drawer_original_price pe-1 money" style="text-decoration: line-through;color: #C4C4C4;">{{ total_cart_compare_price | money_without_trailing_zeros | remove:'USD' }}</span>
 								{% endif %}
-								{%- if is_only_gift == true -%}
-									<span class="money">{{ subtotal_price | plus: shipping_charge | money_without_trailing_zeros }}</span>
-								{% else %}
-									<span class="money">{{ subtotal_price | money_without_trailing_zeros }}</span>
-								{% endif %}
+								{%- if subtotal_price_temp -%}
+									<span class="money">{{ subtotal_price_temp }}</span>
+								{%- else -%}
+									<span class="money">{{ subtotal_price }}</span>
+								{%- endif -%}
 							</p>
 						</div>
 						{% if cart.item_count > 0  %}
-							{% if savings %}
-								<div class="drawer_savings">
-									<p>-<span id="savings-amount money">{{ savings | money_without_trailing_zeros }}</span></p>
-								</div>
-							{% endif %}
+							{%- if total_cart_compare_price > 0 -%}
+								{% if savings %}
+									<div class="drawer_savings">
+										<p>-<span id="savings-amount money">{{ savings | money_without_trailing_zeros }}</span></p>
+									</div>
+								{% endif %}
+							{%- endif -%}
 						{% endif %}
 
 						{%- if is_only_gift == true -%}
 							<div class="drawer_shipping"><p>&nbsp;</p></div>
 						{%- else -%}
-              				{% render 'pdm_cart-shipping-ammount', settingsGamification: section.settings, cartTotal: cart.total_price  %}
+              {% render 'pdm_cart-shipping-ammount', settingsGamification: section.settings, cartTotal: cart.total_price  %}
 						{%- endif -%}
 					</div>
 				</div>
@@ -448,7 +528,7 @@
 			<div class="cart_total-checkout">
 				<div class="drawer__cart-total">
 					<p class="cart_items_subtotal_price">Your Total</p>
-					{% render 'pdm-cart-total-checkout' price_check:price_check, shipping_charge: shipping_charge, subtotal_price: subtotal_price, savings: savings, is_only_gift:is_only_gift %}
+          {% render 'pdm-cart-total-checkout' cartData:cart, totalCartComparePrice: total_cart_compare_price, is_only_gift:is_only_gift %}
 				</div>
 
 				<form action="https://qureskincaredns.com/checkout" method="post" class="insurance-form" id="insuranceForm"></form>
