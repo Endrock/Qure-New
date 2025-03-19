@@ -212,7 +212,6 @@
           height: 600px;
           width: 400px;
           overflow: hidden;
-          object-position: center;
           border-radius: {{section.settings.video_corner_radius}}px;
           position: relative;
         }
@@ -563,7 +562,7 @@
                                 <source src="{{media.url}}" type="video/mp4">
                               </video>
                             {% else %}
-                              <img src="{{media.url}}" style="height:100%;">
+                              <img src="{{media.url}}" style="height:100%;margin:auto;object-position: center;">
                             {%- endif -%}
                           </div>
                         </div>
