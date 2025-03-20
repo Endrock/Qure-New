@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "main": {
       "type": "page",
@@ -19,10 +19,10 @@
     "pdm_dual_section_transformation_NpMqKG": {
       "type": "pdm_dual-section-transformation",
       "settings": {
-        "section_title": "your results are in. <br>Let’s transform your dark spots!",
+        "section_title": "your results are in. Let’s transform your dark spots!",
         "section_text": "We put together a straightforward, no-nonsense program just for you and your skin. It’s aimed to help reveal a brighter, more even complexion to build back your confidence.",
-        "button_text": "Discover Now",
-        "button_link": "#",
+        "button_text": "Shop Now & Save 20%",
+        "button_link": "#products_bundle_custom_section",
         "before_text": "before",
         "after_text": "After 12 weeks",
         "dual_img": "shopify://shop_images/plan-resuts-dark-spots-dual-transformation.jpg",
@@ -30,7 +30,7 @@
         "icon_img": "shopify://shop_images/Layer_1_be2f32cf-e586-4583-9959-fb3a68b642d0.svg",
         "validation_text": "verified customer",
         "footer_text": "See more transformations",
-        "footer_link": "",
+        "footer_link": "#result_section",
         "margin_top": 70
       }
     },
@@ -41,8 +41,9 @@
           "type": "card",
           "settings": {
             "custom_name": "Q-Rejuvalight Pro LED Mask",
+            "custom_name_mobile": "Q-Rejuvalight LED Mask",
             "image_product": "shopify://shop_images/images_D_3_2___M_1_1_3ab94360-bb60-40f0-b32c-fd24115b141e.png",
-            "image_results": "shopify://shop_images/images_D_3_2___M_1_1_6.png",
+            "image_results": "shopify://shop_images/dark-spots-5.jpg",
             "video": "shopify://files/videos/0424(1).mov",
             "show_top_rated": true,
             "show_badge": false,
@@ -57,8 +58,9 @@
           "type": "card",
           "settings": {
             "custom_name": "Micro-Infusion System for Dark Spots",
-            "image_product": "shopify://shop_images/plan-resuts-dark-spots-card-product-2.jpg",
-            "image_results": "shopify://shop_images/images_D_3_2___M_1_1_7.png",
+            "custom_name_mobile": "Micro-Infusion System",
+            "image_product": "shopify://shop_images/MI_Dark_Spots_Personalized_Sking_Care.png",
+            "image_results": "shopify://shop_images/dark-spots-6.jpg",
             "video": "shopify://files/videos/dr_tripathi.mov",
             "show_top_rated": false,
             "show_badge": false,
@@ -73,8 +75,9 @@
           "type": "card",
           "settings": {
             "custom_name": "",
+            "custom_name_mobile": "All-In-One Face Serum",
             "image_product": "shopify://shop_images/images_D_3_2___M_1_1_2.png",
-            "image_results": "shopify://shop_images/images_D_3_2___M_1_1_4.png",
+            "image_results": "shopify://shop_images/dark-spots-7.jpg",
             "video": "shopify://files/videos/Serum edit.mov",
             "show_top_rated": false,
             "show_badge": false,
@@ -89,8 +92,9 @@
           "type": "card",
           "settings": {
             "custom_name": "Neck & Décolletage LED Light Therapy",
-            "image_product": "shopify://shop_images/images_D_3_2___M_1_1_3.png",
-            "image_results": "shopify://shop_images/images_D_3_2___M_1_1_8.png",
+            "custom_name_mobile": "Neck & Déc LED",
+            "image_product": "shopify://shop_images/Neck_Deck_Darks_Spots_Results.png",
+            "image_results": "shopify://shop_images/dark-spots-8.jpg",
             "video": "shopify://files/videos/Neck edit_b34038da-2489-4c95-af0a-0a486968f588.mov",
             "show_top_rated": false,
             "show_badge": false,
@@ -120,7 +124,7 @@
         "tip_qdCXLz": {
           "type": "tip",
           "settings": {
-            "title": " Reduce Sugar And Processed Food",
+            "title": "Reduce Sugar And Processed Food",
             "description": "<p>Studies show that excess sugar and processed food can lead to increased inflammation which may worsen pigmentation.</p>",
             "image_card": "shopify://shop_images/image_-_2025-01-20T164516.349.png",
             "sources": ""
@@ -129,7 +133,7 @@
         "tip_8x8iED": {
           "type": "tip",
           "settings": {
-            "title": " Improve Your Sleep Routine",
+            "title": "Improve Your Sleep Routine",
             "description": "<p>Sleep is when your skin does most of its repair work. Elevating your head slightly and using a silk pillowcase can reduce puffiness and inflammation.</p>",
             "image_card": "shopify://shop_images/image_-_2025-01-20T164637.583.png",
             "sources": ""
@@ -194,7 +198,7 @@
             "tab_icon_dark": "shopify://shop_images/icon.svg",
             "tab_icon_light": "shopify://shop_images/icon_2_e3c8c5b4-6565-4b84-adf1-c6fe7ae24072.svg",
             "title": "Weekly",
-            "regimen_informartion": "every-week",
+            "regimen_informartion": "regimen-informartion-oef7cmu3",
             "image_step": "shopify://shop_images/302a30a7da5854ef2f6ab3c4da4783b8.gif"
           }
         },
@@ -204,7 +208,7 @@
             "tab_icon_dark": "shopify://shop_images/icon_1_edbe5a96-bc85-43c7-bbc4-82064c5ceffe.svg",
             "tab_icon_light": "shopify://shop_images/icon_3_27b85ba6-24db-4ca7-8e11-d8350e12b6ee.svg",
             "title": "Fortnight",
-            "regimen_informartion": "every-two-weeks",
+            "regimen_informartion": "micro-infusion-system-with-dark-spot-serum-concentrate",
             "image_step": "shopify://shop_images/image_-_2025-01-29T085125.622.png"
           }
         }
@@ -335,33 +339,33 @@
         "row_wNQqHc": {
           "type": "row",
           "settings": {
-            "row_title": "Retinol/Tretinoin",
-            "row_content_strong": "Gentle on Your Skin, No Downtime ",
-            "row_content": "Qure delivers effective results without the harsh side effects or downtime often associated with retinoids."
+            "row_title": "Hydroquinone & Bleaching Creams",
+            "row_content_strong": "",
+            "row_content": "Effective, gentle brightening without harsh chemicals"
           }
         },
         "row_VUqdx4": {
           "type": "row",
           "settings": {
-            "row_title": "Serums and Topical Creams",
-            "row_content_strong": "Long-Lasting, Root-Cause Solutions",
-            "row_content": "Qure’s targeted products address the  underlying issues for results that last, unlike other treatments that only offer temporary fixes our general solutions."
+            "row_title": "Over-the-Counter Brightening Serums",
+            "row_content_strong": "",
+            "row_content": "Deep penetration and lasting effects targeting the root causes of dark spots"
           }
         },
         "row_Wp4LeM": {
           "type": "row",
           "settings": {
             "row_title": "Laser Treatments  & Microneedling",
-            "row_content_strong": "Dermatologist-Approved & Safe",
-            "row_content": "Qure’s solutions are reviewed and recommended by Dermatologists, ensuring both safety and effectiveness without the high costs and recovery time of in-office treatments."
+            "row_content_strong": "",
+            "row_content": "Non-invasive, dermatologist-approved solutions without the drawbacks"
           }
         },
         "row_yytDew": {
           "type": "row",
           "settings": {
-            "row_title": "Over-the-Counter Topical Products",
-            "row_content_strong": "Visible, Proven Results",
-            "row_content": "Qure combines advanced technology and targeted serums to offer results that are visible and lasting, something many over-the-counter products can’t promise."
+            "row_title": "Spot Treatments & Concealers",
+            "row_content_strong": "",
+            "row_content": "Real, lasting skin transformation instead of just masking spots"
           }
         }
       },
@@ -372,7 +376,7 @@
         "row_yytDew"
       ],
       "settings": {
-        "section_title": "Think You’ve Tried It All?  Here’s Why Qure Is Different.",
+        "section_title": "<p>Think You’ve Tried It All?  </p><p>Here’s Why Qure Is Different.</p>",
         "table_left_title": "What You May Have Tried Before",
         "table_right_title": "Why Qure Stands Out"
       }
@@ -383,43 +387,55 @@
         "slide_BP6FNR": {
           "type": "slide",
           "settings": {
-            "heading": "Wish I had this technology years ago!",
+            "heading": "IT REALLY WORKS!!",
             "before": "BEFORE",
-            "after": "AFTER 6 WEEKS",
-            "image": "shopify://shop_images/0f0d15b0558ca653c511583399e295a3.png",
-            "text": "<p>After two weeks I began to see results and after six weeks the changes in my skin were dramatic. I have now been using Qure six months and loving the compliments! I bought masks for my daughters for Christmas so they could start at a younger age.... I wish this technology had been available when I was younger. I am 76 years old!</p>",
+            "after": "AFTER 12 WEEKS",
+            "image": "shopify://shop_images/dark-spots-before-after-1.jpg",
+            "text": "<p>\"I was very skeptical when my husband bought this mask for me. But after 6mo the results are amazing!! I've tried numerous serums for my sun spots but nothing worked until I used this mask. Definitely worth the money.\"</p>",
             "image_country": "shopify://shop_images/Flag_of_the_United_States_1.svg",
-            "client": "Terri P.",
+            "client": "Teresa S.",
             "verified": true,
-            "product": "q-rejuvalight-pro-facewear"
+            "product": "q-rejuvalight-pro-facewear",
+            "cta_go_to_product": true,
+            "cta_url": "",
+            "show_product_name": true,
+            "cta_text": ""
           }
         },
         "slide_EcpCWr": {
           "type": "slide",
           "settings": {
-            "heading": "Outstanding!",
+            "heading": "Best natural glow",
             "before": "BEFORE",
-            "after": "AFTER 16 WEEKS",
-            "image": "shopify://shop_images/neck_and_deck_signs_of_aging_ba.png",
-            "text": "<p>\"I'm so impressed with the results! I noticed a difference after a few weeks however when comparing photos I am so surprised at how much younger the skin on my neck and chest looks. Wrinkles have significantly reduced, sun spots are lighter and my skin looks and feels more rejuvenated. Device is easy to use, I love that I can clip the controller to my robe and multitask around the house whilst the treatment is on.\"</p>",
-            "image_country": "shopify://shop_images/Flag_of_the_United_States_1.svg",
-            "client": "Mary R.M.",
+            "after": "AFTER 2 TREATMENTS",
+            "image": "shopify://shop_images/dark-spots-before-after-2.jpg",
+            "text": "<p>\"I was hesitant at first as I didn't know how much it would hurt but to my surprise it was pretty painless. The 2nd day after the treatment, my skin has the best natural glow! I was also happy to to see how much my pigmentation had lightened after 3rd treatment :) I switch between the serums depending on how my skin is before the treatment.\"</p>",
+            "image_country": "shopify://shop_images/flag.jpg",
+            "client": "Glorija",
             "verified": true,
-            "product": "neck-decolletage-led"
+            "product": "micro-infusion-3-month-bundle-rejuvenating",
+            "cta_go_to_product": true,
+            "cta_url": "",
+            "show_product_name": true,
+            "cta_text": ""
           }
         },
         "slide_nN9pJj": {
           "type": "slide",
           "settings": {
-            "heading": "my skin RETURNED to LIFE!",
+            "heading": "All in for All in one face serum",
             "before": "BEFORE",
-            "after": "AFTER 6 TREATMENTS",
-            "image": "shopify://shop_images/before-after_03b483f7-04ee-4a6b-a887-ee3a4a1bf436.jpg",
-            "text": "<p>\"I just turned 57 years. My skin was extremely dry and while using this product my skin RETURNED to LIFE! I am so impressed with it! My Coworkers ask me what I use in my skin.. and I tell them. Product easy to use and the needles are better that using a pen for microneedling. This is an amazing product that you will not regret in purchasing it. really see the change in my skin. Outstanding job QURE!\"</p>",
+            "after": "AFTER 6 WEEKS",
+            "image": "shopify://shop_images/dark-spots-before-after-3.jpg",
+            "text": "<p>\"I purchased this as part of my nightly routine as a few dark spots and some fine lines showing up. After using it consistently now for 6-8 weeks, I can honestly say the darker spots are lighter. My skin feels smooth and I see less fine lines! I will continue on this journey in hopes to see even more benefits like brighter, plump skin!\"</p>",
             "image_country": "shopify://shop_images/Flag_of_the_United_States_1.svg",
-            "client": "Ellie V.",
+            "client": "Johanna Young",
             "verified": true,
-            "product": "breakout-control-pro-1"
+            "product": "face-serum",
+            "cta_go_to_product": true,
+            "cta_url": "",
+            "show_product_name": true,
+            "cta_text": ""
           }
         }
       },
@@ -429,15 +445,15 @@
         "slide_nN9pJj"
       ],
       "settings": {
-        "heading": "No promises, just proof"
+        "heading": "Proof in every picture"
       }
     },
     "pdm_dual_section_text_image_aTMNRM": {
       "type": "pdm_dual-section-text-image",
       "settings": {
-        "section_title": "Feeling you look younger and having positive aging experiences are linked,",
-        "section_subtitle": "say 59% of participants in a study by the University of Oklahoma",
-        "paragraph": "<p><strong>A </strong><a href=\"https://www.ou.edu/news/articles/2024/february/from-wrinkles-to-wisdom-new-research-explores-the-complex-relationship-between-age-appearance-and-health\" target=\"_blank\" title=\"https://www.ou.edu/news/articles/2024/february/from-wrinkles-to-wisdom-new-research-explores-the-complex-relationship-between-age-appearance-and-health\"><strong>recent</strong></a><strong> study by the University of Oklahoma </strong>found t that those who felt they looked younger than they were also reported having more positive experiences related to aging, such as being asked for advice and wisdom and having a strong sense of purpose. Conversely, those who felt older had more negative experiences related to ageism, which can cause chronic stress and even be harmful to health. <br/>While several factors beyond dermatological care impact self-esteem, taking care of ourselves, protecting, nurturing, and rejuvenating our skin can greatly impact how we present ourselves to the world and, in turn, our experiences.<br/>In this personalized skincare plan, you will find a step-by-step guide and all the necessary products to reduce fine lines and wrinkles in your skin so that you can feel comfortable and joyful going out into the world.<br/><br/></p>",
+        "section_title": "Embrace the skin you’re in",
+        "section_subtitle": "",
+        "paragraph": "<p>Dark spots may be a part of your skin's journey, but they don’t have to define how you feel. <br/>Fading those spots isn’t just about appearances—it’s about restoring your confidence and embracing your natural beauty. <br/>A clear, even complexion can boost your self-esteem and help you feel your best at any age.</p>",
         "button_text": "Read More",
         "dual_img": "shopify://shop_images/image_2_20e2716f-1990-40f6-b709-090f1113a0ab.jpg"
       }
@@ -448,36 +464,36 @@
         "card_xCwg4V": {
           "type": "card",
           "settings": {
-            "custom_name": "",
+            "custom_name": "Q-Rejuvalight LED Mask",
             "image_product": "shopify://shop_images/images_D_3_2___M_1_1_3ab94360-bb60-40f0-b32c-fd24115b141e.png",
-            "text_check_strong": "Loss of Volume & Wrinkles",
+            "text_check_strong": "Uneven Skin Tone",
             "text_check": "Q-Rejuvalight Pro LED Mask"
           }
         },
         "card_eXhJmY": {
           "type": "card",
           "settings": {
-            "custom_name": "",
+            "custom_name": "Micro-Infusion System for Dark Spots",
             "image_product": "shopify://shop_images/images_D_3_2___M_1_1_1.png",
-            "text_check_strong": "Fine Lines & Dull Complexion",
+            "text_check_strong": "Dark Spots & PIH",
             "text_check": "Micro-Infusion System"
           }
         },
         "card_87yRjf": {
           "type": "card",
           "settings": {
-            "custom_name": "",
+            "custom_name": "All-In-One Face Serum",
             "image_product": "shopify://shop_images/images_D_3_2___M_1_1_2.png",
-            "text_check_strong": "Rough Texture",
+            "text_check_strong": "Dull Skin",
             "text_check": "All-In-One Face Serum"
           }
         },
         "card_krEHjr": {
           "type": "card",
           "settings": {
-            "custom_name": "",
+            "custom_name": "Neck & Décolletage LED Light Therapy",
             "image_product": "shopify://shop_images/images_D_3_2___M_1_1_3.png",
-            "text_check_strong": "Sun Damage & Dark Spots",
+            "text_check_strong": "Sunspots & Age Spots",
             "text_check": "Neck & Décolletage LED Light Therapy"
           }
         }

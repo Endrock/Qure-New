@@ -16,12 +16,31 @@
                     {% assign block_text = shop.metaobjects[ block.system.type ][ block.system.handle ].text %}
                     {% assign block_space = shop.metaobjects[ block.system.type ][ block.system.handle ].space %}
                     {% assign font_size = shop.metaobjects[ block.system.type ][ block.system.handle ].big_subtitle %}
-                    <div class="{{ block.system.type }} {{ block.system.handle }} {% if font_size == true %}big-text{% endif %}" style="margin-bottom:{{ block_space }}px;">
+                    {% assign render_badge_green = false %}
+                    {% if template.suffix == "skincare-plan-dark-spots" and forloop.index == 1 %}
+                        {% if index == 2 or index == 3 %}
+                            {% assign render_badge_green = true %}
+                        {% endif %}
+                    {% endif %}
+                    <div class="{{ block.system.type }} {{ block.system.handle }} {% if font_size == true %}big-text{% endif %} {% if render_badge_green %}display-block{% endif %} {% if render_badge_green and index == 2 %}paragraph-index2{% endif %} {% if render_badge_green and index == 3 %}paragraph-index3{% endif %}" 
+                        {% if block_space != blank %}style="margin-bottom:{{ block_space }}px;" {% endif %}>
                         {% if img_icon != blank %}
                             <img src="{{ img_icon  | img_url: 'original' }}" alt="icon"/>
                         {% endif %}
                         {% if block_text != blank %}
                             {{ block_text | metafield_tag }}
+                        {% endif %}
+                        {% if render_badge_green and index == 2 %}
+                            <div class="regimen_subtitle__green-badge">
+                                {% render 'pdm_icons', icon: 'dark-spots-loop' %}
+                                <span class="regimen_subtitle__green-badge--label">{{ 'landing_dark_spots.use_twice_a_week_label' | t }}</span>
+                            </div>
+                        {% endif %}
+                        {% if render_badge_green and index == 3 %}
+                            <div class="regimen_subtitle__green-badge">
+                                {% render 'pdm_icons', icon: 'dark-spots-loop' %}
+                                <span class="regimen_subtitle__green-badge--label">{{ 'landing_dark_spots.every_two_weeks_label' | t }}</span>
+                            </div>
                         {% endif %}
                     </div>
                 {% endfor %}
