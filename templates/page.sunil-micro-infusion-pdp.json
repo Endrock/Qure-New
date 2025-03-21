@@ -123,6 +123,7 @@
         "before_after_images_limit": 3,
         "before_after_button_label": "Before & After",
         "reserve": false,
+        "soldout": false,
         "selected_design": "new",
         "text_label_real_result_1": "Product",
         "text_label_real_result_2": "Real Results",
@@ -858,6 +859,7 @@
       "blocks": {
         "video_LiYg4t": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/videosQure_img7.webp",
             "video": "shopify://files/videos/8eecfa9e425c4fde9e8f70da1a50e313.HD-1080p-2.5Mbps-12316975.mp4"
@@ -865,6 +867,7 @@
         },
         "wistia_YhkkGb": {
           "type": "wistia",
+          "disabled": true,
           "settings": {
             "wistia_id": "ren04vix0l",
             "dr_name": "",
@@ -874,6 +877,7 @@
         },
         "video_bGjGML": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/videosQure_img9.webp",
             "video": "shopify://files/videos/insta_3.mp4"
@@ -881,9 +885,54 @@
         },
         "video_AQpPgP": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/videosQure_img10.webp",
             "video": "shopify://files/videos/71857fdec6b0497294117ed84cab480e.HD-1080p-2.5Mbps-13573985.mp4"
+          }
+        },
+        "video_HxLAYW": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/videosQure_img12.webp",
+            "video": "shopify://files/videos/video-9.mp4"
+          }
+        },
+        "wistia_mnTHFW": {
+          "type": "wistia",
+          "settings": {
+            "wistia_id": "zs3ddb0qly",
+            "dr_name": "",
+            "board": "",
+            "desc": ""
+          }
+        },
+        "wistia_fDDgek": {
+          "type": "wistia",
+          "settings": {
+            "wistia_id": "v5e5op6ap7",
+            "dr_name": "",
+            "board": "",
+            "desc": ""
+          }
+        },
+        "wistia_KaipmC": {
+          "type": "wistia",
+          "settings": {
+            "wistia_id": "zhb1w8ise9",
+            "dr_name": "",
+            "board": "",
+            "desc": ""
+          }
+        },
+        "wistia_NdPNqe": {
+          "type": "wistia",
+          "settings": {
+            "wistia_id": "opfbh936fc",
+            "dr_name": "",
+            "board": "",
+            "desc": ""
           }
         },
         "video_NbRpiD": {
@@ -893,11 +942,13 @@
             "video": "shopify://files/videos/63d872e61dac42fd9e5ff1c04c1ae1d5.HD-720p-1.6Mbps-12319287.mp4"
           }
         },
-        "video_HxLAYW": {
-          "type": "video",
+        "wistia_VrNiA7": {
+          "type": "wistia",
           "settings": {
-            "image": "shopify://shop_images/videosQure_img12.webp",
-            "video": "shopify://files/videos/video-9.mp4"
+            "wistia_id": "jcgxarsfbj",
+            "dr_name": "",
+            "board": "",
+            "desc": ""
           }
         }
       },
@@ -906,8 +957,13 @@
         "wistia_YhkkGb",
         "video_bGjGML",
         "video_AQpPgP",
+        "video_HxLAYW",
+        "wistia_mnTHFW",
+        "wistia_fDDgek",
+        "wistia_KaipmC",
+        "wistia_NdPNqe",
         "video_NbRpiD",
-        "video_HxLAYW"
+        "wistia_VrNiA7"
       ],
       "settings": {
         "heading": "Confident skin starts here",

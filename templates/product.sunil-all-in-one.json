@@ -49,6 +49,7 @@
         "before_after_images_limit": 4,
         "before_after_button_label": "Before & After",
         "reserve": false,
+        "soldout": false,
         "selected_design": "new",
         "text_label_real_result_1": "Product",
         "text_label_real_result_2": "Real Results",
@@ -577,6 +578,7 @@
         "product_fF7TbU",
         "product_Mj6zia"
       ],
+      "disabled": true,
       "settings": {
         "rating": "5.0/5.0 Rated by Customers",
         "rating_image": "shopify://shop_images/results_star-full.svg",

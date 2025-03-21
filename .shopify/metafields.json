@@ -244,16 +244,6 @@
       }
     },
     {
-      "key": "category",
-      "namespace": "custom",
-      "name": "Category",
-      "description": "",
-      "type": {
-        "name": "list.single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
       "key": "cross_sell_header",
       "namespace": "custom",
       "name": "Cross Sell Header",
@@ -321,6 +311,16 @@
       "type": {
         "name": "metaobject_reference",
         "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "category",
+      "namespace": "custom",
+      "name": "Category",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
       }
     }
   ],

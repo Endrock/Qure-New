@@ -1806,6 +1806,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Check if the face serum container exists and if the test flag is enabled in the dataset
 const faceSerumBuyBlockContainer = document.querySelector('.pdm_all-in-one-face-serum-offer-form');
 
+<<<<<<< HEAD
 if (window.location.pathname.includes("/products/face-serum")) {
   const testPdpElement = document.querySelector(".pdm-product-test-pdp");
   const originalPdpElement = document.querySelector(".pdm-product-original-pdp");
@@ -1862,6 +1863,8 @@ if (window.location.pathname.includes("/products/face-serum")) {
 }
 
 
+=======
+>>>>>>> cleanup/face-serum-buy-block
 if (faceSerumBuyBlockContainer) {
   // Get all radio buttons for selecting the monthly plan
   const faceSerumRadioButtons = document.querySelectorAll('input[name="pdm_monthly-plan"]');
@@ -1924,6 +1927,7 @@ if (faceSerumBuyBlockContainer) {
   /**
    * Updates the anchor element with the correct URL, discount message, and event listener for tracking.
    * @param {string} variantId - The ID of the selected variant.
+   * @param {string} discountFirstMessage - The discount message to display.
    * @param {string} discountMessage - The discount message to display.
    * @param {string} productHandle - The product handle for tracking purposes.
    */
