@@ -123,6 +123,7 @@
         "before_after_images_limit": 3,
         "before_after_button_label": "Before & After",
         "reserve": false,
+        "soldout": false,
         "selected_design": "new",
         "text_label_real_result_1": "Product",
         "text_label_real_result_2": "Real Results",
@@ -899,6 +900,15 @@
             "image": "shopify://shop_images/videosQure_img12.webp",
             "video": "shopify://files/videos/video-9.mp4"
           }
+        },
+        "wistia_mnTHFW": {
+          "type": "wistia",
+          "settings": {
+            "wistia_id": "zs3ddb0qly",
+            "dr_name": "",
+            "board": "",
+            "desc": ""
+          }
         }
       },
       "block_order": [
@@ -907,7 +917,8 @@
         "video_bGjGML",
         "video_AQpPgP",
         "video_NbRpiD",
-        "video_HxLAYW"
+        "video_HxLAYW",
+        "wistia_mnTHFW"
       ],
       "settings": {
         "heading": "Confident skin starts here",
