@@ -435,8 +435,11 @@
     "revers_mobile": {
       "label": "Revers on mobile"
     },
-    "supply": {
+    "out_of_stock": {
       "label": "Out of stock"
+    },
+    "supply": {
+      "label": "Supply"
     },
     "supply_for_refill": {
       "label": "Out of stock"

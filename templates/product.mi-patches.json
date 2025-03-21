@@ -29,11 +29,11 @@
         "liquid_EH7JLe": {
           "type": "liquid",
           "settings": {
-            "code": "{% render 'serums-offer-months-form' with section_id: section.id, product: product %}"
+            "code": "{% render 'serums-offer-months-form' with section_id: section.id, section: section, product: product %}"
           }
         },
-        "supply_3xp9iR": {
-          "type": "supply",
+        "out_of_stock_3xp9iR": {
+          "type": "out_of_stock",
           "settings": {
             "heading": "Next batch ships end of April 2025:",
             "heading_mobile": "Next batch ships end of April 2025:",
@@ -54,7 +54,7 @@
         "rating_BgbMYG",
         "list_mMY6Hf",
         "liquid_EH7JLe",
-        "supply_3xp9iR"
+        "out_of_stock_3xp9iR"
       ],
       "settings": {
         "seo_heading": "Micro-Infusion Dart Patches",

@@ -20,6 +20,17 @@
     endif
 %}
 
+{%- assign out_of_stock_count = 0 -%}
+
+{% if section != blank %}
+    {%- for block in section.blocks -%}
+        {%- case block.type -%}
+            {%- when 'out_of_stock' -%}
+                {%- assign out_of_stock_count = out_of_stock_count | plus: 1 -%}
+        {%- endcase -%}
+    {%- endfor -%}
+{% endif %}
+
 <div class="mw-402 mi_patches_pdp {% if show_free_shiping_guarantee_test %}free-shiping-guarantee-test{% endif %} {% if show_contrast_horizontal_layout_test %}contrast-horizontal-layout-test {% endif %}">
     <div class="serum_bl pt-0">
         <div class="s_bl_wrapper">
@@ -167,8 +178,59 @@
     {% assign product_variant_id = product.variants.first.id %}
     {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
 
-    <a class="btn btn-lg btn-primary buy_btn submit_btn_top reserve_btn mt-4" href="/cart/add?id={{ product_variant_id }}&amp;quantity=1" onclick="setEventProductHandler('{{ product.handle }}')" data-ajax-cart-request-button>
-        Buy Now <span class="savedAmount">& SAVE {{ discount_percentage }}%</span><img src="https://qureskincaredns.com/new/assets/arrow_right.svg" alt="">
+    {% if out_of_stock_count > 0 %}
+        <div class="next_batch_bl next_batch_highlight" style="margin-top: 20px">
+            {%- for block in section.blocks -%}
+                {% if block.type == 'out_of_stock' %}
+                    {% if block.settings.heading != blank %}
+                        <h6 class="d-none d-md-block">{{ block.settings.heading }}</h6>
+                    {% endif %}
+    
+                    {% if block.settings.heading_mobile != blank %}
+                        <h6 class="d-md-none">{{ block.settings.heading_mobile }}</h6>
+                    {% endif %}
+                    
+                    {% if block.settings.text != blank %}
+                        {{ block.settings.text }}
+                    {% endif %}
+    
+                    {% if block.settings.first_option_text != blank %}
+                        <div class="batch_h batch_h_fade mt-3 mt-md-4">
+                            <div class="batch_h_month">{{ block.settings.first_option_date }}</div>
+                            <div class="batch_h_info sold_out_h" style="--bgPercent:{{ block.settings.first_option_percent }}%;"><span>{{ block.settings.first_option_text }}</span></div>
+                        </div>
+                    {% endif %}
+    
+                    {% if block.settings.second_option_text != blank %}
+                        <div class="batch_h my-2">
+                            <div class="batch_h_month">{{ block.settings.second_option_date }}</div>
+                            <div class="batch_h_info" style="--bgPercent:{{ block.settings.second_option_percent }}%;">{{ block.settings.second_option_text }}</div>
+                        </div>
+                    {% endif %}
+    
+                    {% if block.settings.third_option_text != blank %}
+                        <div class="batch_h batch_h_fade">
+                            <div class="batch_h_month">{{ block.settings.third_option_date }}</div>
+                            <div class="batch_h_info" style="--bgPercent:{{ block.settings.third_option_percent }}%;"><span>{{ block.settings.third_option_text }}</span></div>
+                        </div>
+                    {% endif %}
+                {% endif %}
+            {%- endfor -%}
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const btn = document.querySelector('.btn_text_value');
+                if (btn) {
+                    btn.textContent = 'Reserve now';
+                }
+            });
+        </script>
+        
+    {% endif %}
+
+    <a class="btn btn-lg btn-primary buy_btn submit_btn_top reserve_btn {% if out_of_stock_count == 0 %}mt-4{% endif %}" href="/cart/add?id={{ product_variant_id }}&amp;quantity=1" onclick="setEventProductHandler('{{ product.handle }}')" data-ajax-cart-request-button>
+        {% if out_of_stock_count > 0 %}Reserve now{% else %}Buy Now{% endif %} <span class="savedAmount">& SAVE {{ discount_percentage }}%</span><img src="https://qureskincaredns.com/new/assets/arrow_right.svg" alt="">
     </a>
 
     <script>
@@ -224,6 +286,7 @@
             </div>
         </div>
     {% endif %}
+
 </div>
 
 {% if product.compare_at_price != blank %}
