@@ -63,7 +63,11 @@
                                             <div class="plan_des">
                                             <div class="plan_hdr">
                                                 <h3 class="contrast-horizontal-layout-test-original">3 Month Supply</h3>
-                                                <span class="saved_price">{{ discount_percentage }}% OFF</span>
+                                                {% if out_of_stock_count > 0 %}
+                                                    <span class="saved_price">SAVE {{ discount_percentage }}%</span>
+                                                {% else %}
+                                                    <span class="saved_price">{{ discount_percentage }}% OFF</span>
+                                                {% endif %}
                                             </div>
 
                                             <div class="contrast-container contrast-horizontal-layout-test-variant">
@@ -107,7 +111,11 @@
                                             <div class="plan_des">
                                             <div class="plan_hdr">
                                                 <h3 class="contrast-horizontal-layout-test-original">2 Month Supply</h3>
-                                                <span class="saved_price">{{ discount_percentage }}% OFF</span>
+                                                {% if out_of_stock_count > 0 %}
+                                                    <span class="saved_price">SAVE {{ discount_percentage }}%</span>
+                                                {% else %}
+                                                    <span class="saved_price">{{ discount_percentage }}% OFF</span>
+                                                {% endif %}
                                             </div>
 
                                             <div class="contrast-container contrast-horizontal-layout-test-variant">
