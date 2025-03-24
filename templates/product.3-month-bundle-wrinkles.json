@@ -15,15 +15,15 @@
         "supply_WTEM6R": {
           "type": "supply",
           "settings": {
-            "heading": "Next batch ships mid-May 2025:",
-            "heading_mobile": "Next batch ships mid-May 2025:",
+            "heading": "Next batch ships mid-April 2025:",
+            "heading_mobile": "Next batch ships mid-April 2025:",
             "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.</p>",
             "first_option_date": "March 21st",
             "first_option_text": "SOLD OUT",
             "first_option_percent": 100,
-            "second_option_date": "May 15th",
-            "second_option_text": "42% Reserved",
-            "second_option_percent": 42,
+            "second_option_date": "April 17th",
+            "second_option_text": "44% Reserved",
+            "second_option_percent": 44,
             "third_option_date": "May 2025",
             "third_option_text": "In Production",
             "third_option_percent": 0
