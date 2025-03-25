@@ -1,0 +1,28 @@
+<!-- accordions shower filter  -->
+<div class="faq accordions_shower_filter faq_under_product">
+    <div class="accordion" id="accordion_collapsed">
+        {%- for block in section.blocks -%}
+            {% if block.type == 'collapsed' %}
+                <div class="accordion-item">
+                    {% if block.settings.heading != blank %}
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsed_{{ forloop.index }}" aria-expanded="true" aria-controls="accFAQOne">
+                                <div class="container"><p class="fw-normal">{{ block.settings.heading }}</p></div>
+                            </button>
+                        </h2>
+                    {% endif %}
+                    {% if block.settings.text != blank %}
+                        <div id="collapsed_{{ forloop.index }}" class="accordion-collapse collapse" data-bs-parent="#accordion_collapsed" style="">
+                            <div class="accordion-body">
+                                <div class="container">
+                                    {{ block.settings.text }}
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+<!-- accordions shower filter  -->
