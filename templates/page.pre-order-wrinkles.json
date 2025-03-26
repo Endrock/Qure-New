@@ -12,18 +12,16 @@
     "main": {
       "type": "page",
       "custom_css": [
-        ".subscriptions_header {display: none;}"
+        ".subscriptions_header {display:none}"
       ],
       "settings": {}
     },
     "17115385750c73305f": {
       "type": "apps",
-      "disabled": true,
       "settings": {}
     },
     "1723811635f4799cbc": {
       "type": "apps",
-      "disabled": true,
       "settings": {}
     }
   },
