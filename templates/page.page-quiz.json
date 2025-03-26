@@ -1,0 +1,32 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "custom_css": [
+        ".subscriptions_header {display: none;}"
+      ],
+      "settings": {}
+    },
+    "liquid_x4kyD8": {
+      "type": "liquid",
+      "settings": {
+        "code": "<style>\n    .tf-v1-widget{width:100%;height:100%;min-height:inherit;position:relative}.tf-v1-widget iframe{width:100%;height:100%;border:none;overflow:hidden;border-radius:8px;min-height:inherit}.tf-v1-widget-close{display:none}.tf-v1-widget-iframe-overlay{width:100%;height:100%;border:none;overflow:hidden;border-radius:8px;position:absolute;top:0;left:0}.tf-v1-widget-fullscreen{position:fixed;top:0;left:0;right:0;bottom:0;z-index:10001;width:100% !important;height:100% !important}.tf-v1-widget-fullscreen .tf-v1-widget-close{display:block;display:block;padding:0;margin:0;position:absolute;font-size:32px;font-weight:normal;line-height:24px;width:24px;height:24px;text-align:center;text-transform:none;cursor:pointer;opacity:.75;transition:opacity .25s ease-in-out;text-decoration:none;color:#000;top:6px;right:8px;background:none;border:none;border-radius:0;z-index:1}.tf-v1-widget-fullscreen .tf-v1-widget-close:hover{opacity:1}@media(min-width: 481px){.tf-v1-widget-fullscreen .tf-v1-widget-close{color:#fff !important}}.tf-v1-widget-fullscreen iframe{border-radius:0}\n</style>\n<div class=\"subscriptions_section\">\n    <div class=\"container\">\n        <div data-tf-live=\"01JNQ3JZ7GPXWW64MM31N4GKX6\" data-tf-loaded=\"true\"><div data-tf-widget=\"ZqoPPdku\" data-tf-opacity=\"100\" data-tf-iframe-props=\"title=Micro-Infusion LP Qualification Quiz\" data-tf-transitive-search-params=\"\" data-tf-medium=\"snippet\" data-tf-hidden=\"utm_source=,utm_medium=,utm_campaign=,utm_term=,utm_content=\" style=\"width:100%;height:500px;\" data-tf-loaded=\"true\"><div class=\"tf-v1-widget\" data-testid=\"tf-v1-widget\"><iframe src=\"https://form.typeform.com/to/ZqoPPdku?typeform-embed-id=6119137135792596&amp;typeform-embed=embed-widget&amp;typeform-source=qureskincare.com&amp;typeform-medium=snippet&amp;typeform-medium-version=next&amp;embed-opacity=100&amp;typeform-embed-handles-redirect=1&amp;typeform-embed-no-heading=true\" data-testid=\"iframe\" allow=\"microphone; camera\" title=\"Micro-Infusion LP Qualification Quiz\" style=\"border: 0px; transform: translateZ(0px);\"></iframe></div></div></div>\n    </div>\n</div>",
+        "popup_micro_infusion_enabled": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "liquid_x4kyD8"
+  ]
+}
