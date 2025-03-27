@@ -49,6 +49,7 @@
         "before_after_images_limit": 4,
         "before_after_button_label": "Before & After",
         "reserve": false,
+        "soldout": false,
         "selected_design": "new",
         "text_label_real_result_1": "Product",
         "text_label_real_result_2": "Real Results",
@@ -577,6 +578,7 @@
         "product_fF7TbU",
         "product_Mj6zia"
       ],
+      "disabled": true,
       "settings": {
         "rating": "5.0/5.0 Rated by Customers",
         "rating_image": "shopify://shop_images/results_star-full.svg",
@@ -585,8 +587,7 @@
         "section_description": "<p>The Qure All-in-One Face Serum, formulated with dermatologist-approved ingredients, hydrates, brightens, and reduces aging signs—delivering professional results for all skin types.</p>",
         "form_description": "<p><strong>Choose Your Supply</strong> (Best results come from consistent use)</p>",
         "form_total": "Total",
-        "form_savings": "Your Savings",
-        "form_button": "buy now"
+        "form_savings": "Your Savings"
       }
     },
     "icons_list_RxBdg4": {
