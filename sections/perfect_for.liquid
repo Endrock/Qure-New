@@ -1,8 +1,11 @@
-<div class="ingredients_list {{ section.settings.custom_class }}">
+<div class="ingredients_list {{ section.settings.custom_class }} ingredients_list-{{ section.id }}">
     <div class="container">
         <div class="section_header text-start pb-md-5 pb-4 text-md-center ms-0 m-md-auto">
             {% if section.settings.sub_heading != blank %}
                 <h6 class="n_sub-heading">{{ section.settings.sub_heading }}</h6>
+            {% endif %}
+            {% if section.settings.discrition != blank %}
+              {{ section.settings.discrition }}
             {% endif %}
         </div>
         <div class="skin_problems">
@@ -28,7 +31,20 @@
         </div>
     </div>
 </div>
-
+{% style %}
+.ingredients_list-{{ section.id }} .skin_problems {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.desk_column }}, 1fr);
+    gap: 38px;
+    text-align: center;
+}
+@media(max-width: 768px){
+  .ingredients_list-{{ section.id }} .skin_problems {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+{% endstyle %}
 {% schema %}
 {
   "name": "t:sections.perfect_for.label",
@@ -39,9 +55,23 @@
       "label": "t:common.heading.label"
     },
     {
+      "type": "richtext",
+      "id": "discrition",
+      "label": "t:common.text.content"
+    },
+    {
       "type": "textarea",
       "id": "custom_class",
       "label": "t:common.classname.custom"
+    },
+    {
+      "type": "range",
+      "id": "desk_column",
+      "label": "t:common.column.label",
+      "max": 5,
+      "min": 2,
+      "step": 1,
+      "default": 5
     }
   ],
   "blocks": [

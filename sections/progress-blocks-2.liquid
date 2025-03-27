@@ -1,0 +1,115 @@
+<div class="did_you_know {{ section.settings.ctm_cls_prog }}">
+  <div class="container">
+    {%- if section.settings.section_heading != blank -%}
+      <div class="section_header mb-3 text-center">
+        <h2 class="title-lg paddingB">{{ section.settings.section_heading }}</h2>
+        {{ section.settings.subheading }}
+      </div>
+    {% endif %}
+    <div class="row">
+      <div class="dyk_wrapper">
+        {%- for block in section.blocks -%}
+          {% if block.type == 'column' %}
+            <div class="dyk_item order-1">
+              <div class="progressCont">
+                <span class="progressWrapper">
+                  <span class="progessInfo text-dark">{{ block.settings.percent_text }}%</span>
+                  <svg class="vMQQx" height="80" width="80" viewBox="-29 -29 58 58">
+                    <defs>
+                        <linearGradient id="gradient" x1="0" x2="0" y1="1" y2="0">
+                            <stop offset="0%" stop-color="#C92127"></stop>
+                            <stop offset="100%" stop-color="#C92127"></stop>
+                        </linearGradient>
+                    </defs>
+                    <circle stroke="rgba(221, 224, 228, 1)" fill="none" pathLength="100"
+                        class="K4v4P" r="24" style="stroke-width: 1px;"></circle>
+                    <circle visibility="visible" fill="none" pathLength="100"
+                        transform="rotate(-90)" class="OKwUu" r="24" stroke="url(#gradient)"
+                        style="stroke-dasharray: 100; {% assign dashoffset = 100 | minus: block.settings.percent_bar %} stroke-dashoffset: {{ dashoffset }}; stroke-width: 5px;">
+                    </circle>
+                  </svg>
+                </span>
+              </div>
+              <div>
+                <h6>{{ block.settings.percent_text }}% {{ block.settings.toolip_hed}}</h6>
+                <p>{{ block.settings.toolip_desc }}</p>
+              </div>
+            </div>
+          {% endif %}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.progress_blocks-2.label",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "t:common.heading.label",
+      "default": "Proof In Numbers"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "t:common.subheading.label"
+    },
+    {
+      "type": "text",
+      "id": "ctm_cls_prog",
+      "label": "t:common.classname.custom",
+      "default": "section"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "t:common.column.label",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "percent_text",
+          "label": "t:progressBlock.column.percent_text"
+        },
+        {
+          "type": "range",
+          "id": "percent_bar",
+          "min": 0,
+          "max": 100,
+          "default": 10,
+          "step": 1,
+          "label": "t:progressBlock.column.percent_bars"
+        },
+        {
+          "type": "textarea",
+          "id": "toolip_hed",
+          "label": "t:common.heading.info"
+        },
+        {
+          "type": "richtext",
+          "id": "toolip_desc",
+          "label": "t:common.desc.label"
+        },
+        {
+          "type": "range",
+          "id": "font_size",
+          "min": 0,
+          "max": 100,
+          "default": 12,
+          "step": 1,
+          "label": "t:common.font.size"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.progress_blocks-2.label"
+    }
+  ]
+}
+{% endschema %}

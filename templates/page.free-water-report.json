@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "header_landing_Hza7nA": {
@@ -16,7 +7,10 @@
           "type": "announcement",
           "settings": {
             "heading": "Subscribe & SAVE 30% | 30-Day Money-Back Guarantee",
-            "heading_mobile": "Subscribe & SAVE 30% | 30-Day Money-Back Guarantee"
+            "heading_mobile": "Subscribe & SAVE 30% | 30-Day Money-Back Guarantee",
+            "color": "white",
+            "font_size_desktop": 12,
+            "font_size_mobile": 12
           }
         },
         "navigation_link_rCPYUw": {
@@ -60,14 +54,293 @@
         "button_url": "https:\/\/www.qureskincare.com\/"
       }
     },
+    "banner_VnhCAx": {
+      "type": "banner",
+      "blocks": {
+        "button_DBgFXE": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get my FREE Water Report",
+            "button_url": "",
+            "classname": "btn_white m-0 bg-black text-white"
+          }
+        }
+      },
+      "block_order": [
+        "button_DBgFXE"
+      ],
+      "settings": {
+        "heading": "Do you know what is lurking in your water?",
+        "text": "<p>See what chemicals are in your water and how they are<br\/>affecting your skin and heath hair.<\/p>",
+        "image": "shopify:\/\/shop_images\/free-water-banner-desk-new.webp",
+        "image_mobile": "shopify:\/\/shop_images\/free-water-banner-mob-new.webp",
+        "align_center": false,
+        "align_right": false,
+        "classname": "bg_gradient_mob text-light"
+      }
+    },
+    "image_text_PHM9ha": {
+      "type": "image-text",
+      "blocks": {
+        "image_jH6wEB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/frizzy_hair.webp",
+            "custom_img": "",
+            "order_mob": false,
+            "color1": "#000000",
+            "comment1": "",
+            "color2": "#000000",
+            "comment2": "",
+            "comment_txt": ""
+          }
+        },
+        "text_t3Tzne": {
+          "type": "text",
+          "settings": {
+            "ctm_cls": "pe-md-5 pb-3",
+            "heading_first": "Dry, frizzy hair.Dull, irritated skin. Your water quality could be the cause!",
+            "text": "<h2><\/h2><p>At Qure, we believe great skin starts at the source – and that’s the water you use every day. The Qure Shower Filter helps remove sneaky chemicals and minerals that live in your water and linger on your skin.<\/p>",
+            "txt_order_mob": true,
+            "btn_text": "",
+            "btn_url": "",
+            "custom_class": "",
+            "heading2": "",
+            "text2": "",
+            "heading3": "",
+            "text3": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_jH6wEB",
+        "text_t3Tzne"
+      ],
+      "settings": {
+        "background": "bg_clr_transparent",
+        "heading": "",
+        "hide_on_mob": false,
+        "column": 6,
+        "padding_top": 60,
+        "padding_bottom": 39,
+        "show_comment": false,
+        "custom_class": ""
+      }
+    },
+    "perfect_for_RUYUT3": {
+      "type": "perfect_for",
+      "blocks": {
+        "problem_V3zd9e": {
+          "type": "problem",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/acne_skin_97647a70-4a51-40e8-81d3-edee350bc43f.webp",
+            "icon": "shopify:\/\/shop_images\/tick-green_2.svg",
+            "description": "Breakouts"
+          }
+        },
+        "problem_8cXHdD": {
+          "type": "problem",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/irritated_skin_1.webp",
+            "icon": "shopify:\/\/shop_images\/tick-green_2.svg",
+            "description": "Irritated Skin & Scalp"
+          }
+        },
+        "problem_jYUdaA": {
+          "type": "problem",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dry_skin.webp",
+            "icon": "shopify:\/\/shop_images\/tick-green_2.svg",
+            "description": "Dry, Dull Skin"
+          }
+        },
+        "problem_bnfexT": {
+          "type": "problem",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sensitive_skin_20386b7d-d5b0-433d-818a-f39a91f909b9.webp",
+            "icon": "shopify:\/\/shop_images\/tick-green_2.svg",
+            "description": "Sensitive Skin"
+          }
+        },
+        "problem_aNDNtL": {
+          "type": "problem",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Color-treated_hair.webp",
+            "icon": "shopify:\/\/shop_images\/tick-green_2.svg",
+            "description": "Frizzy, Dry Hair"
+          }
+        }
+      },
+      "block_order": [
+        "problem_V3zd9e",
+        "problem_8cXHdD",
+        "problem_jYUdaA",
+        "problem_bnfexT",
+        "problem_aNDNtL"
+      ],
+      "settings": {
+        "sub_heading": "",
+        "discrition": "<h1>What tap water does to your skin and hair.<\/h1><p>Chlorine, heavy metals and other impurities found in tap water rain down on you with every drop – draining the life from your skin and hair, and may be contributing to<\/p>",
+        "custom_class": "section",
+        "desk_column": 5
+      }
+    },
+    "progress_blocks_2_PbVfrF": {
+      "type": "progress-blocks-2",
+      "blocks": {
+        "column_nWgNYq": {
+          "type": "column",
+          "settings": {
+            "percent_text": "95",
+            "percent_bar": 95,
+            "toolip_hed": "of tap water is chlorinated",
+            "toolip_desc": "<p>known for its drying effects that can leave the skin dehydrated, hair dry and fizzy.<\/p>",
+            "font_size": 12
+          }
+        },
+        "column_n73AgR": {
+          "type": "column",
+          "settings": {
+            "percent_text": "60",
+            "percent_bar": 60,
+            "toolip_hed": "of tap water has turbidity",
+            "toolip_desc": "<p>Mud, rust and micro- contaminants in water can irritate sensitive skin.<\/p>",
+            "font_size": 12
+          }
+        },
+        "column_LcAqhU": {
+          "type": "column",
+          "settings": {
+            "percent_text": "95",
+            "percent_bar": 95,
+            "toolip_hed": "of tap water has micro-plastics",
+            "toolip_desc": "<p>These can cause micro- abrasions and damage sensitive skin.<\/p>",
+            "font_size": 12
+          }
+        },
+        "column_jMnGFe": {
+          "type": "column",
+          "settings": {
+            "percent_text": "85",
+            "percent_bar": 85,
+            "toolip_hed": "of tap water is too hard",
+            "toolip_desc": "<p>Hard water can have hard metals or excess Mg2+ and Ca2+ that can clog and the irritate skin.<\/p>",
+            "font_size": 12
+          }
+        }
+      },
+      "block_order": [
+        "column_nWgNYq",
+        "column_n73AgR",
+        "column_LcAqhU",
+        "column_jMnGFe"
+      ],
+      "settings": {
+        "section_heading": "The truth about tap water you are washing your face with",
+        "subheading": "<p>Tap water is contaminated with over <a href=\"https:\/\/crm.aronwebsolutions.com\/Qure-Html-2.0\/Qure-Html-2.0\/free-water-report.html#\">320 chemicals<\/a>, according to the Environmental Working Group. Is the truth about what’s affecting your complexion hiding just beyond your shower? Read on to find out!<\/p>",
+        "ctm_cls_prog": "section"
+      }
+    },
     "main": {
       "type": "temp-page-free-water-report",
       "custom_css": [],
       "settings": {}
+    },
+    "product_detail_9hPwA6": {
+      "type": "product-detail",
+      "blocks": {
+        "slide_9npBjg": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shower_pd-3.webp",
+            "thumbnail": "shopify:\/\/shop_images\/shower_filter_thumb_3.webp"
+          }
+        },
+        "slide_JzMtHH": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shower_pd-1.webp",
+            "thumbnail": "shopify:\/\/shop_images\/shower_filter_thumb_1_1.webp"
+          }
+        },
+        "slide_P8Mwmx": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shower_pd-2.webp",
+            "thumbnail": "shopify:\/\/shop_images\/shower_filter_thumb_2_1.webp"
+          }
+        },
+        "slide_6kRRFE": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/head_wash_women.webp",
+            "thumbnail": "shopify:\/\/shop_images\/head_wash_women_thumb_7017e9e6-bb3b-4f4b-ad2e-6bee3ead1a7a.webp"
+          }
+        },
+        "slide_cyzj4X": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shwr_img.webp",
+            "thumbnail": "shopify:\/\/shop_images\/shwr_thumb_144444ec-5a50-4e9e-9cca-c0709beb5252.webp"
+          }
+        },
+        "feature_3TJnAr": {
+          "type": "feature",
+          "settings": {
+            "feature_image": "shopify:\/\/shop_images\/adjustable_angle.webp",
+            "feature_text": "Adjustable Angle"
+          }
+        },
+        "feature_nRMG9E": {
+          "type": "feature",
+          "settings": {
+            "feature_image": "shopify:\/\/shop_images\/water_flow.png",
+            "feature_text": "3 water flow settings"
+          }
+        },
+        "feature_CUrYK4": {
+          "type": "feature",
+          "settings": {
+            "feature_image": "shopify:\/\/shop_images\/life_warranty.png",
+            "feature_text": "99% Shower-Fit"
+          }
+        },
+        "feature_DmTQaA": {
+          "type": "feature",
+          "settings": {
+            "feature_image": "shopify:\/\/shop_images\/shower_fit.png",
+            "feature_text": "Lifetime Warranty"
+          }
+        }
+      },
+      "block_order": [
+        "slide_9npBjg",
+        "slide_JzMtHH",
+        "slide_P8Mwmx",
+        "slide_6kRRFE",
+        "slide_cyzj4X",
+        "feature_3TJnAr",
+        "feature_nRMG9E",
+        "feature_CUrYK4",
+        "feature_DmTQaA"
+      ],
+      "settings": {
+        "heading": "Qure Shower Filter",
+        "in_study_text": "IN A STUDY...",
+        "study_highlight": "90% of users prefer filtered water",
+        "description": "Triple-filter showerhead removes up to 99% of chlorine, heavy metals and other impurities found in tap water, reducing skin irritation and dryness, leaving your skin clear, hydrated and hair shinier with less frizz.",
+        "button_link": "",
+        "button_text": "Learn More"
+      }
     }
   },
   "order": [
     "header_landing_Hza7nA",
-    "main"
+    "banner_VnhCAx",
+    "image_text_PHM9ha",
+    "perfect_for_RUYUT3",
+    "progress_blocks_2_PbVfrF",
+    "main",
+    "product_detail_9hPwA6"
   ]
 }
