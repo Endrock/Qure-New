@@ -84,12 +84,14 @@
         "seo_heading": "Red Light Mask Q-Rejuvalight Pro",
         "heading": "Repair & rejuvenate your skin with our Light Therapy Mask",
         "heading_mobile": "Repair & rejuvenate your skin with our Light Therapy Mask",
+        "product": "",
         "wistia_id": "",
         "product_images_limit": 5,
         "product_button_label": "Product",
         "before_after_images_limit": 2,
         "before_after_button_label": "Before & After",
         "reserve": false,
+        "soldout": false,
         "underbutton_text_left": "Dermatologist Reviewed",
         "underbutton_text_right": "Free Shipping Over $100",
         "selected_design": "new",
@@ -666,6 +668,19 @@
             "client": "Kayla T.",
             "code": ""
           }
+        },
+        "result_dM9Lij": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/B_A_led_mask.png",
+            "heading": "Helping replenish my skin faster",
+            "text": "<p>“The mask is very easy to use and quick! Most masks you have to wear for 20 minutes, not this one! 3 minutes and your done. I start mine as soon as I sit down to drink my morning coffee and it’s done before my coffee even cools off!”</p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/canada_f_86ff77c5-0cf3-4351-a4e1-6329f56f151f.svg",
+            "text_country": "Canada",
+            "client": "Jodi W.",
+            "code": ""
+          }
         }
       },
       "block_order": [
@@ -683,7 +698,8 @@
         "result_TkKNU8",
         "result_jtGKYb",
         "result_H93Rhe",
-        "result_Ude8aB"
+        "result_Ude8aB",
+        "result_dM9Lij"
       ],
       "settings": {
         "classname": "mi_landing_result",
@@ -945,6 +961,7 @@
         "classname": "section videosQure",
         "btn": "",
         "btn_url": "",
+        "ctm_cls_btn": "",
         "desk_slide": 6,
         "mob_slide": 1.7,
         "slide_space": 10
