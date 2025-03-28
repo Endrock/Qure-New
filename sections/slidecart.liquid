@@ -216,9 +216,10 @@
 														{% comment %} TryNow subscription {% endcomment %}
 														 {% if item.selling_plan_allocation.selling_plan.name contains 'Try Before You Buy' %}
 															
-															{%- assign subtotal_price = subtotal_price | minus: item.selling_plan_allocation.price -%}
-															{%- assign savings = savings | plus: item.selling_plan_allocation.price -%}
-															
+															{%- assign item_new_price = item.discounted_price -%} 
+															{%- assign subtotal_price = subtotal_price | minus: item.discounted_price -%}
+															{%- assign savings = savings | plus: item.discounted_price -%}
+
 															<p class="new-price test igPrice" data-price-multiplier="{{ item.quantity }}">
 																<span class="money">0$</span>
 															</p>

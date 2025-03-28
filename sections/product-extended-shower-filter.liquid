@@ -2,6 +2,9 @@
     .subscribe_save_wrapper .subscribe_save_bx {
         grid-template-columns: 67% 33%;
     }
+    .button_sticky_wrapper .button_sticky {
+        font-size: 13px !important;
+    }
 </style>
 
 {%- assign rating_count = 0 -%}
@@ -9,6 +12,8 @@
 {%- assign supply_count = 0 -%}
 {%- assign variant_count = 0 -%}
 {%- assign subscribe_count = 0 -%}
+{%- assign collapsed_count = 0 -%}
+{%- assign trynow_count = 0 -%}
 {%- assign timer = blank -%}
 {%- assign free_gift = blank -%}
 {%- assign list_count_reduced = 0 -%}
@@ -27,6 +32,10 @@
             {%- assign variant_count = variant_count | plus: 1 -%}
         {%- when 'subscribe' -%}
             {%- assign subscribe_count = subscribe_count | plus: 1 -%}
+        {%- when 'collapsed' -%}
+            {%- assign collapsed_count = collapsed_count | plus: 1 -%}
+        {%- when 'trynow' -%}
+            {%- assign trynow_count = trynow_count | plus: 1 -%}
         {%- when 'timer' -%}
             {%- assign timer = block -%}
         {%- when 'free_gift' -%}
@@ -47,12 +56,14 @@
     {% assign product = section.settings.product %}
 {% endif %}
 
+
 <!-- -- main banner start -- -->
 <div class="refill_bl pt-0 tabSlider">
     <div class="container">
         <div class="row">
             <div class="col-md-6 order-2 order-md-1">
                 <div class="refill_info pt-0 pt-md-3">
+
                     {% if rating_count %}
                         {%- for block in section.blocks -%}
                             {% if block.type == 'rating' %}
@@ -194,68 +205,78 @@
                             </div>
                         {% endif %}
 
-                        {% if subscribe_count > 0 %}
+                        {% if subscribe_count > 0 or trynow_count > 0 %}
                             {%- for block in section.blocks -%}
+                                {% if block.type == 'trynow' %}
 
-                                {% if block.type == 'subscribe' %}
                                     {% include 'product-extended-subscription-product' product: product, product_custom: false %}
-
-                                    {% assign discount_price_additional = 0 %}
-
-                                    {% if block.settings.product != blank %}
-                                        {%- assign discount_price_additional = all_products[block.settings.product.handle].price | times: 0.7 | money_without_trailing_zeros %}
-                                    {% endif %}
+                                    
+                                    <link rel="stylesheet" href="https://qureskincaredns.com/new/assets/shower-filter-trynow.css">
+                                    <style>.price_wrap { display: none; }</style>
 
                                     <div class="subscribe_save_wrapper with_subscription mt-2">
-                                        <div class="subscribeTopInfo">
-                                            <p>Over 1,000 people chose subscription</p>
+                                        <div class="subscribeTopInfo d-none">
+                                            <p class="px-md-5">MOST POPULAR CHOICE</p>
                                         </div>
                                         <div class="subscriptionType active" data-subscription="subscription">
-                                            <div class="subscribe_save_bx">
+                                            <div class="subscribe_save_bx d-block">
                                                 <div class="subscribeInfo">
                                                     <label class="form-check-label" for="flexCheckDefault">
-                                                        {% if block.settings.heading != blank %}
-                                                            <h6>{{ block.settings.heading }}</h6>
-                                                        {% endif %}
-                                                        
-                                                        {% if block.settings.text != blank %}
-                                                            {{ block.settings.text 
-                                                                | replace: '[future_price]', future_price 
-                                                                | replace: '[discount_price]', discount_price
-                                                                | replace: '[discount_price_additional]', discount_price_additional
-                                                            }}
-                                                        {% endif %}
+                                                        <div class="d-flex flex-wrap justify-content-between">
+                                                            <div>
+                                                                <div class="d-flex justify-content-start gap-2 align-items-center sub_try_free">
+                                                                    <p class="try_free"> TRY FREE FOR 30 DAYS </p>  
+                                                                    <h6>{{ block.settings.heading }}</h6>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div class="subscribePrice">
+                                                                    <p>$0</p>
+                                                                    <p><span class="">{{ product.price | times: 0.7 | money_without_trailing_zeros }}</span></p>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div class="shower_head">
+                                                                    {% if block.settings.text != blank %}
+                                                                        {{ block.settings.text 
+                                                                            | replace: '<strong>', '<del class="me-1">'
+                                                                            | replace: '</strong>', '</del>'
+                                                                            | replace: '<a>', '<a class="ms-1">' 
+                                                                            | replace: '<p>', '<p class="subscribe_txt mt-1 skip_text">' 
+                                                                        }}
+                                                                    {% endif %}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
                                                     </label>
                                                 </div>
-                                                {% comment %} <div class="subscribePrice">
-                                                    <p><span>{{ product_price }}</span>{{ discount_price }}</p>
-                                                </div> {% endcomment %}
-                                                <div class="subscribePrice">
-                                                    <p>{{ discount_price }}</p>
-                                                    <p><span class="">{{ product_price }}</span></p>
-                                                </div>
                                             </div>
+                                        </div>
+                                        <div class="try_free_days mt-2">
+                                            <h6><span class="fw-medium">TRY FREE FOR 30 DAYS</span> | Only pay if you keep it. </h6>
                                         </div>
                                         <div class="subscriptionType" data-subscription="no-subscription">
                                             <div class="noSubscription">
                                                 <div class="noSubscriptionText">
-                                                    One time purchase
+
+                                                   <h6 class="mb-0 one_time_purchase"> One-time purchase </h6>
+                                                   <p>Showerhead + 1 Filter</p>
                                                 </div>
                                                 <div class="noSubscriptionPrice">
                                                     {{ product.price | money_without_trailing_zeros }}
                                                 </div>
                                             </div>
-                                            {% unless supply_count > 0 %}
-                                                {% render 'pdm_orderby' %}
-                                            {% endunless %}
+
+                                            {% include 'product-extended-shower-filter-outofstock' %}
 
                                             {% if section.settings.soldout == true %}
-                                                <a class="btn btn-lg btn-primary without_subscription buy_btn" href="#">Sold Out</a>   
+                                                <a class="btn btn-lg btn-primary without_subscription buy_btn mt-4" href="#">Sold Out</a>   
                                             {% else %}
                                                 {% if product.variants.first.available %}
-                                                    <a class="btn btn-lg btn-primary without_subscription buy_btn" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" onclick="setEventProductHandler('{{ product.handle | escape }}')" data-ajax-cart-request-button>{% if section.settings.reserve == true %}Reserve now{% else %}Buy Now{% endif %}</a>
+                                                    <a class="btn btn-lg btn-primary without_subscription buy_btn mt-4 btn_text_value" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" onclick="setEventProductHandler('{{ product.handle | escape }}')" data-ajax-cart-request-button>{% if section.settings.reserve == true %}Reserve now{% else %}Buy Now{% endif %}</a>
                                                 {% else %}
-                                                    <a class="btn btn-lg btn-primary without_subscription buy_btn" href="#">{% if section.settings.reserve == true %}Reserve now{% else %}Sold Out{% endif %}</a>
+                                                    <a class="btn btn-lg btn-primary without_subscription buy_btn mt-4 btn_text_value" href="#">{% if section.settings.reserve == true %}Reserve now{% else %}Sold Out{% endif %}</a>
                                                 {% endif %}
                                             {% endif %}
 
@@ -277,12 +298,115 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <form method="post" action="/cart/add" accept-charset="UTF-8" id="SubscriptionForm" class="shopify-product-form buy-form-{{ section_id }} form-test-id" enctype="multipart/form-data" data-form-id="{{ product_id }}">
+                                            <input type="hidden" name="selling_plan" value="{{ block.settings.plan }}">
+                                            <button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn mt-4" onclick="setEventProductHandler('{{ product.handle | escape }}')" name="Submit" value="Submit">
+                                                Add To Cart &nbsp; – &nbsp; $0 <span class="del_price">{{ product.price | times: 0.7 | money_without_trailing_zeros }}</span>
+                                            </button>
+                                            <input type="hidden" name="id" value="{{ product_variant_id }}" />
+                                        </form>
+                                    </div>
+                                {% endif %}
+
+                                {% if block.type == 'subscribe' %}
+                                    {% include 'product-extended-subscription-product' product: product, product_custom: false %}
+
+                                    {% assign discount_price_additional = 0 %}
+
+                                    {% if block.settings.product != blank %}
+                                        {%- assign discount_price_additional = all_products[block.settings.product.handle].price | times: 0.7 | money_without_trailing_zeros %}
+                                    {% endif %}
+
+                                    <div class="subscribe_save_wrapper with_subscription mt-2">
+                                        <div class="subscribeTopInfo d-none">
+                                            <p class="px-md-5">MOST POPULAR CHOICE</p>
+                                        </div>
+                                        <div class="subscriptionType active" data-subscription="subscription">
+                                            <div class="subscribe_save_bx d-block">
+                                                <div class="subscribeInfo">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        <div class="d-flex flex-wrap justify-content-between">
+                                                            <div>
+                                                                <div class="d-flex justify-content-start gap-2 align-items-center sub_try_free">
+                                                                    <h6>Subscribe &amp;</h6>
+                                                                    <p class="try_free"> SAVE 30% </p>  
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div class="subscribePrice">
+                                                                    <p>{{ discount_price }}</p>
+                                                                    <p><span class="">{{ product_price }}</span></p>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div class="shower_head">
+                                                                    <h6>One Time: Showerhead + 1 Filter</h6>
+                                                                    <h6>Every 90 days: Filter Refill (<del class="me-1">$50</del>$35)</h6>
+                                                                    <p class="subscribe_txt mt-1 skip_text">Skip, pause or cancel anytime.
+                                                                        <a href="https://qureskincare.com/pages/subscriptions" class="ms-1"> See more details </a></p> 
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="subscriptionType mt-3" data-subscription="no-subscription">
+                                            <div class="noSubscription">
+                                                <div class="noSubscriptionText">
+
+                                                   <h6 class="mb-0 one_time_purchase"> One-Time Purchase </h6>
+                                                   <p>Showerhead + 1 Filter</p>
+                                                </div>
+                                                <div class="noSubscriptionPrice">
+                                                    {{ product_price }}
+                                                </div>
+                                            </div>
+
+                                            {% unless supply_count > 0 %}
+                                                {% render 'pdm_orderby' %}
+                                            {% endunless %}
+
+                                            {% include 'product-extended-shower-filter-outofstock' %}
+
+                                            {% if section.settings.soldout == true %}
+                                                <a class="btn btn-lg btn-primary without_subscription buy_btn mt-4" href="#">Sold Out</a>   
+                                            {% else %}
+                                                {% if product.variants.first.available %}
+                                                    <a class="btn btn-lg btn-primary without_subscription buy_btn mt-4 btn_text_value" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" onclick="setEventProductHandler('{{ product.handle | escape }}')" data-ajax-cart-request-button>{% if section.settings.reserve == true %}Reserve now{% else %}Buy Now{% endif %}</a>
+                                                {% else %}
+                                                    <a class="btn btn-lg btn-primary without_subscription buy_btn mt-4 btn_text_value" href="#">{% if section.settings.reserve == true %}Reserve now{% else %}Sold Out{% endif %}</a>
+                                                {% endif %}
+                                            {% endif %}
+
+                                            {% capture sticky-button-classname %}without_subscription{% endcapture %}
+
+                                            {% render 'product-sticky-button' with 
+                                                variant_id: product.variants.first.id, 
+                                                current_price: product.price, 
+                                                original_price: product.price, 
+                                                classname: sticky-button-classname
+                                            %}
+
+                                            <div class="payment_method without_subscription">
+                                                <p>OR 4 monthly payments of {{ product.price | divided_by: 4 | money_without_trailing_zeros }} with</p>
+                                                <div class="pmt_img ps-2">
+                                                    <img src="{{ 'klarna.svg' | asset_url }}" alt="klarna">
+                                                    <img src="{{ 'sezzle.svg' | asset_url }}" alt="sezzle">
+                                                    <img src="{{ 'afterpay.svg' | asset_url }}" alt="afterpay">
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         {% unless supply_count > 0 %}
                                             {% render 'pdm_orderby' %}
                                         {% endunless %}
+
                                         <form method="post" action="/cart/add" accept-charset="UTF-8" id="SubscriptionForm" class="shopify-product-form buy-form-{{ section_id }} form-test-id" enctype="multipart/form-data" data-form-id="{{ product_id }}">
                                             <input type="hidden" name="selling_plan" value="{{ block.settings.plan }}">
-                                            <button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn" onclick="setEventProductHandler('{{ product.handle | escape }}')" name="Submit" value="Submit">
+                                            <button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn mt-4" onclick="setEventProductHandler('{{ product.handle | escape }}')" name="Submit" value="Submit">
                                                 Subscribe Now
                                             </button>
                                             <input type="hidden" name="id" value="{{ product_variant_id }}" />
@@ -297,7 +421,7 @@
                                             form_classname: sticky-button-form-classname
                                             button_classname: sticky-button-classname
                                         %}
-                                    </div> 
+                                    </div>
                                 {% endif %}
                             {%- endfor -%}
                         {% else %}
@@ -308,14 +432,6 @@
                             {% if section.settings.soldout == true %}
                                 <a class="btn btn-lg btn-primary buy_btn" href="#">Sold Out</a>
                             {% else %}
-    
-                                {% if product.metafields.custom.bundle_product and product.metafields.custom.bundle_product.value.available %}
-                                    {% render 'pdm_bundle_sell', 
-                                    bundle_metafield_data: product.metafields.custom.bundle_product.value,
-                                    device_visibility: "mobile"
-                                    %}
-                                {% endif %}
-
                                 {% if product.variants.first.available %}
                                     <a class="btn btn-lg btn-primary buy_btn" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" onclick="setEventProductHandler('{{ product.handle | escape }}')" data-ajax-cart-request-button>{% if section.settings.reserve == true %}Reserve now{% else %}Buy Now{% endif %}</a>
                                 {% else %}
@@ -543,15 +659,8 @@
                 {% render 'pdm_cross-sell', cross-sell-products: product.metafields.custom.cross_sell.value, visibility: "desktop" %}
 
                 {% if collapsed_count > 0 %}
-                    {% render 'product-extended-collapsed' %}
+                    {% render 'product-extended-shower-filter-collapsed' %}
                 {% endif %}
-
-                {% if product.metafields.custom.bundle_product and product.metafields.custom.bundle_product.value.available %}
-                    {% render 'pdm_bundle_sell', 
-                    bundle_metafield_data: product.metafields.custom.bundle_product.value,
-                    device_visibility: "desktop"  
-                    %}
-                {% endif %}                
             </div>
         </div>
     </div>
@@ -606,8 +715,8 @@
 </script>
 {% schema %}
     {
-        "name": "t:sections.product-extended.name",
-        "class": "section-product-extended",
+        "name": "t:sections.product-extended-shower-filter.name",
+        "class": "section-product-extended-shower-filter",
         "settings": [
             {
                 "type": "text",
@@ -640,8 +749,8 @@
                 "min": 1,
                 "max": 8,
                 "step": 1,
-                "unit": "t:sections.product-extended.settings.product_images_limit.unit",
-                "label": "t:sections.product-extended.settings.product_images_limit.label",
+                "unit": "t:sections.product-extended-shower-filter.settings.product_images_limit.unit",
+                "label": "t:sections.product-extended-shower-filter.settings.product_images_limit.label",
                 "default": 5
             },
             {
@@ -657,8 +766,8 @@
                 "min": 0,
                 "max": 5,
                 "step": 1,
-                "unit": "t:sections.product-extended.settings.before_after_images_limit.unit",
-                "label": "t:sections.product-extended.settings.before_after_images_limit.label",
+                "unit": "t:sections.product-extended-shower-filter.settings.before_after_images_limit.unit",
+                "label": "t:sections.product-extended-shower-filter.settings.before_after_images_limit.label",
                 "default": 2
             },
             {
@@ -802,6 +911,106 @@
                 ]
 		    },
             {
+                "type": "out_of_stock",
+                "name": "t:common.out_of_stock.label",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "t:common.heading.label"
+                    },
+                    {
+                        "type": "text",
+                        "id": "heading_mobile",
+                        "label": "t:common.heading.mobile.label"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "t:common.text.label"
+                    },
+                    {
+                        "type": "header",
+                        "content": "First option"
+                    },
+                    {
+                        "type": "text",
+                        "id": "first_option_date",
+                        "label": "t:common.date.label",
+                        "default": "October 15th"
+                    },
+                    {
+                        "type": "text",
+                        "id": "first_option_text",
+                        "label": "t:common.text.label",
+                        "default": "SOLD OUT"
+                    },
+                    {
+                        "type": "range",
+                        "id": "first_option_percent",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1,
+                        "unit": "%",
+                        "label": "t:common.percent.label",
+                        "default": 100
+                    },
+                    {
+                        "type": "header",
+                        "content": "Second option"
+                    },
+                    {
+                        "type": "text",
+                        "id": "second_option_date",
+                        "label": "t:common.date.label",
+                        "default": "November 10th"
+                    },
+                    {
+                        "type": "text",
+                        "id": "second_option_text",
+                        "label": "t:common.text.label",
+                        "default": "81% Reserved"
+                    },
+                    {
+                        "type": "range",
+                        "id": "second_option_percent",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1,
+                        "unit": "%",
+                        "label": "t:common.percent.label",
+                        "default": 81
+                    },
+                    {
+                        "type": "header",
+                        "content": "Third option"
+                    },
+                    {
+                        "type": "text",
+                        "id": "third_option_date",
+                        "label": "t:common.date.label",
+                        "default": "December 30th"
+                    },
+                    {
+                        "type": "text",
+                        "id": "third_option_text",
+                        "label": "t:common.text.label",
+                        "default": "In Production"
+                    },
+                    {
+                        "type": "range",
+                        "id": "third_option_percent",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1,
+                        "unit": "%",
+                        "label": "t:common.percent.label",
+                        "default": 0
+                    }
+                ]
+		    },
+            {
                 "type": "supply",
                 "name": "t:common.supply.label",
                 "limit": 1,
@@ -898,6 +1107,50 @@
                         "unit": "%",
                         "label": "t:common.percent.label",
                         "default": 0
+                    }
+                ]
+		    },
+            {
+                "type": "collapsed",
+                "name": "t:common.collapsed.label",
+                "limit": 5,
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "t:common.heading.label"
+                    },
+                    {
+                        "type": "text",
+                        "id": "heading_mobile",
+                        "label": "t:common.heading.label"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "t:common.text.label"
+                    }
+                ]
+		    },
+            {
+                "type": "trynow",
+                "name": "t:common.trynow.label",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "t:common.heading.label"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "t:common.text.label"
+                    },
+                    {
+                        "type": "text",
+                        "id": "plan",
+                        "label": "t:common.subscribe.plan.label"
                     }
                 ]
 		    },
@@ -1059,7 +1312,7 @@
                         "default": "<p>Get a FREE All-In-One Face Serum ($79) with purchase</p>"
                     }
                 ]
-            }       
+            }        
         ]
     }
 {% endschema %}

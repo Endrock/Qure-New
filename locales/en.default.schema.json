@@ -759,6 +759,20 @@
       },
       "blocks": {}
     },
+    "product-extended-shower-filter": {
+      "name": "Product extended shower filter",
+      "settings": {
+        "product_images_limit": {
+          "label": "Product images limit",
+          "unit": "unit"
+        },
+        "before_after_images_limit": {
+          "label": "Before after images limit",
+          "unit": "unit"
+        }
+      },
+      "blocks": {}
+    },
     "product-landing": {
       "name": "Product landing",
       "settings": {

@@ -3225,7 +3225,7 @@
     padding-bottom: 5px;
   } 
   .table-tc.skincare-plan-dark-spots .table td.row-content { 
-    line-height: 0;
+    line-height: 100%;
   } 
   .table-tc.skincare-plan-dark-spots .table .row-title {
     text-align: start;
@@ -3257,7 +3257,7 @@
   font-size: 12px;
 }
 .section-table-tc .table-tc .row-content { 
-  line-height: 0.6;
+  line-height: 100%;
 }
 .section-table-tc .table-tc .row-content span {
   font-size: 14px;
