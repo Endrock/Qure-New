@@ -101,6 +101,10 @@
     }
   },
   "common": {
+    "highlighted":{
+      "text": "Study Highlight Text",
+      "study": "In Study Text"
+    },
     "setting": {
       "label": "Richtext"
     },
