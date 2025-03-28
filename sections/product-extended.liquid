@@ -204,6 +204,7 @@
                         {% if subscribe_count > 0 or trynow_count > 0 %}
                             {%- for block in section.blocks -%}
                                 {% if block.type == 'trynow' %}
+
                                     {% include 'product-extended-subscription-product' product: product, product_custom: false %}
                                     
                                     <link rel="stylesheet" href="https://qureskincaredns.com/new/assets/shower-filter-trynow.css">
@@ -294,7 +295,7 @@
                                         <form method="post" action="/cart/add" accept-charset="UTF-8" id="SubscriptionForm" class="shopify-product-form buy-form-{{ section_id }} form-test-id" enctype="multipart/form-data" data-form-id="{{ product_id }}">
                                             <input type="hidden" name="selling_plan" value="{{ block.settings.plan }}">
                                             <button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn mt-4" onclick="setEventProductHandler('{{ product.handle | escape }}')" name="Submit" value="Submit">
-                                                Add To Cart &nbsp; – &nbsp; $0 <span class="del_price">{{ product.price | money_without_trailing_zeros }}</span>
+                                                Add To Cart &nbsp; – &nbsp; $0 <span class="del_price">{{ product.price | times: 0.7 | money_without_trailing_zeros }}</span>
                                             </button>
                                             <input type="hidden" name="id" value="{{ product_variant_id }}" />
                                         </form>
