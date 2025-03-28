@@ -985,7 +985,8 @@
   padding: 24px 16px 80px 16px !important;
 }
 
-.section-table-tc .section-title {
+.section-table-tc .section-title,
+.section-table-tc .section-title p {
   font-family: "Canela Web", sans-serif;
   font-size: 36px;
   line-height: 52px;
@@ -995,7 +996,8 @@
 }
 
 @media (max-width: 768px) {
-  .section-table-tc .section-title {
+  .section-table-tc .section-title,
+  .section-table-tc .section-title p {
     font-size: 24px;
     margin-top: 12px;
     margin-bottom: 24px;
