@@ -69,6 +69,10 @@
       "block_order": [
         "button_DBgFXE"
       ],
+      "custom_css": [
+        ".section_header {padding: 0;}",
+        "@media (max-width: 575px) {.section_header {text-align: center; } .section_header p br {display: none; } .main_banner .main_b_wrapper {align-items: start; } .banner_content {padding-top: 20px; }}"
+      ],
       "settings": {
         "heading": "Do you know what is lurking in your water?",
         "text": "<p>See what chemicals are in your water and how they are<br\/>affecting your skin and heath hair.<\/p>",
@@ -99,12 +103,12 @@
           "type": "text",
           "settings": {
             "ctm_cls": "pe-md-5 pb-3",
-            "heading_first": "Dry, frizzy hair.Dull, irritated skin. Your water quality could be the cause!",
+            "heading_first": "Dry, frizzy hair. <br> Dull, irritated skin. Your water quality could be the cause!",
             "text": "<h2><\/h2><p>At Qure, we believe great skin starts at the source – and that’s the water you use every day. The Qure Shower Filter helps remove sneaky chemicals and minerals that live in your water and linger on your skin.<\/p>",
             "txt_order_mob": true,
             "btn_text": "",
             "btn_url": "",
-            "custom_class": "",
+            "custom_class": "pe-md-5",
             "heading2": "",
             "text2": "",
             "heading3": "",
@@ -178,12 +182,20 @@
         "problem_bnfexT",
         "problem_aNDNtL"
       ],
+      "custom_css": [
+        "@media (max-width: 575px) {.ingredients_list .skin_problems {display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; } .ingredients_list .problem_inner {width: 30%; }}"
+      ],
       "settings": {
         "sub_heading": "",
         "discrition": "<h1>What tap water does to your skin and hair.<\/h1><p>Chlorine, heavy metals and other impurities found in tap water rain down on you with every drop – draining the life from your skin and hair, and may be contributing to<\/p>",
         "custom_class": "section",
         "desk_column": 5
       }
+    },
+    "main": {
+      "type": "temp-page-free-water-report",
+      "custom_css": [],
+      "settings": {}
     },
     "progress_blocks_2_PbVfrF": {
       "type": "progress-blocks-2",
@@ -235,16 +247,14 @@
         "column_LcAqhU",
         "column_jMnGFe"
       ],
+      "custom_css": [
+        "@media (max-width: 575px) {.section_header {text-align: left !important; }}"
+      ],
       "settings": {
         "section_heading": "The truth about tap water you are washing your face with",
         "subheading": "<p>Tap water is contaminated with over <a href=\"https:\/\/crm.aronwebsolutions.com\/Qure-Html-2.0\/Qure-Html-2.0\/free-water-report.html#\">320 chemicals<\/a>, according to the Environmental Working Group. Is the truth about what’s affecting your complexion hiding just beyond your shower? Read on to find out!<\/p>",
         "ctm_cls_prog": "section"
       }
-    },
-    "main": {
-      "type": "temp-page-free-water-report",
-      "custom_css": [],
-      "settings": {}
     },
     "text_content_TtmRgP": {
       "type": "text-content",
@@ -322,6 +332,13 @@
             "feature_image": "shopify:\/\/shop_images\/shower_fit.png",
             "feature_text": "Lifetime Warranty"
           }
+        },
+        "popup_BAdcgw": {
+          "type": "popup",
+          "settings": {
+            "video_btn": "Watch the Video",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=X9KXJPv6rno"
+          }
         }
       },
       "block_order": [
@@ -333,7 +350,8 @@
         "feature_3TJnAr",
         "feature_nRMG9E",
         "feature_CUrYK4",
-        "feature_DmTQaA"
+        "feature_DmTQaA",
+        "popup_BAdcgw"
       ],
       "settings": {
         "heading": "Qure Shower Filter",

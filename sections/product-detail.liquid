@@ -50,12 +50,18 @@
               <div class="thumb-prev swiper-button-prev swiper-button"></div>
             </div>
           </div>
-          <a class="see_action d-flex justify-content-center popup-youtube pt-3 pb-2 text-black" href="https://www.youtube.com/watch?v=X9KXJPv6rno">
+          {% for block in section.blocks %}
+            {% if block.type == 'popup' %}
+              {% if block.settings.video_btn !=blank %}
+          <a class="see_action d-flex justify-content-center popup-youtube pt-3 pb-2 text-black" href="{{ block.settings.video_url }}">
             <p>
-                <img src="assets/play_circle-green.svg" alt="" class="img-fluid">
-                    Watch the video
+                <img src="{{ 'play_circle-green.svg' | asset_url }}" alt="" class="img-fluid">
+                    {{ block.settings.video_btn }}
             </p>
         </a>
+      {% endif %}
+      {% endif %}
+    {% endfor %}
         </div>
         <div class="col-md-6">
           <div class="bundle_select-main include ps-md-3">
