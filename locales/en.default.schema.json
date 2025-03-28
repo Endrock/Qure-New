@@ -1472,6 +1472,9 @@
     },
     "product_detail":{
       "label": "Product Detail"
+    },
+      "text_background": {
+        "label": "Text with BG Image"
     }
   }
 }
