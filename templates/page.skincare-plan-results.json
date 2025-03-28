@@ -426,6 +426,7 @@
         },
         "slide_EcpCWr": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "heading": "Outstanding!",
             "before": "BEFORE",
