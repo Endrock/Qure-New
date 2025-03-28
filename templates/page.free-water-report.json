@@ -246,6 +246,17 @@
       "custom_css": [],
       "settings": {}
     },
+    "text_content_TtmRgP": {
+      "type": "text-content",
+      "settings": {
+        "desktop_image": "shopify:\/\/shop_images\/water_skincare_routine.webp",
+        "mobile_image": "shopify:\/\/shop_images\/water_skincare_routine-mob.webp",
+        "title": "Clean water is “step zero” in your skincare routine.",
+        "description": "Take control at the source – stop the cause of majority of your skin concerns by filtering your water, and fortify your skin from within.",
+        "button_link": "",
+        "button_text": "Get my FREE Water Report"
+      }
+    },
     "product_detail_9hPwA6": {
       "type": "product-detail",
       "blocks": {
@@ -339,8 +350,9 @@
     "banner_VnhCAx",
     "image_text_PHM9ha",
     "perfect_for_RUYUT3",
-    "progress_blocks_2_PbVfrF",
     "main",
+    "progress_blocks_2_PbVfrF",
+    "text_content_TtmRgP",
     "product_detail_9hPwA6"
   ]
 }
