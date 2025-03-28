@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "main": {
       "type": "page",
@@ -43,8 +43,11 @@
             "custom_name": "Q-Rejuvalight Pro LED Mask",
             "custom_name_mobile": "Q-Rejuvalight LED Mask",
             "image_product": "shopify://shop_images/images_D_3_2___M_1_1_3ab94360-bb60-40f0-b32c-fd24115b141e.png",
+            "btn_image_product_title": "Product",
             "image_results": "shopify://shop_images/dark-spots-5.jpg",
+            "btn_image_results_title": "Real Results",
             "video": "shopify://files/videos/0424(1).mov",
+            "btn_video_title": "Derm Video",
             "show_top_rated": true,
             "show_badge": false,
             "text_check": "<ul><li>Red and amber light therapy targets dark spots and evens skin tone from within, where creams can’t reach.</li><li>Quick 3-minute treatments with hands-free use.</li><li>Dermatologist-recommended and FDA-cleared.</li></ul>",
@@ -60,8 +63,11 @@
             "custom_name": "Micro-Infusion System for Dark Spots",
             "custom_name_mobile": "Micro-Infusion System",
             "image_product": "shopify://shop_images/MI_Dark_Spots_Personalized_Sking_Care.png",
+            "btn_image_product_title": "Product",
             "image_results": "shopify://shop_images/dark-spots-6.jpg",
+            "btn_image_results_title": "Real Results",
             "video": "shopify://files/videos/dr_tripathi.mov",
+            "btn_video_title": "Derm Video",
             "show_top_rated": false,
             "show_badge": false,
             "text_check": "<ul><li>Brightens discoloration, fades dark spots, and promotes even skin tone.</li><li>Key ingredients (EGF, Niacinamide, Tranexamic Acid) work at a cellular level for faster, more effective results.</li><li>Over 70% agreed their skin looked brighter and more even after just one treatment.</li></ul>",
@@ -77,8 +83,11 @@
             "custom_name": "",
             "custom_name_mobile": "All-In-One Face Serum",
             "image_product": "shopify://shop_images/images_D_3_2___M_1_1_2.png",
+            "btn_image_product_title": "Product",
             "image_results": "shopify://shop_images/dark-spots-7.jpg",
+            "btn_image_results_title": "Real Results",
             "video": "shopify://files/videos/Serum edit.mov",
+            "btn_video_title": "Derm Video",
             "show_top_rated": false,
             "show_badge": false,
             "text_check": "<ul><li>Brightens and evens out skin tone while fading look of dark spots.</li><li>Simplifies your routine by addressing multiple concerns in one step.</li><li>Science-backed brightening Ingredients: Vitamin C, Ferulic Acid, ActiWhite™,Niacinamide, and Retinol.</li></ul>",
@@ -90,12 +99,16 @@
         },
         "card_gX4hay": {
           "type": "card",
+          "disabled": true,
           "settings": {
             "custom_name": "Neck & Décolletage LED Light Therapy",
             "custom_name_mobile": "Neck & Déc LED",
             "image_product": "shopify://shop_images/Neck_Deck_Darks_Spots_Results.png",
+            "btn_image_product_title": "Product",
             "image_results": "shopify://shop_images/dark-spots-8.jpg",
+            "btn_image_results_title": "Real Results",
             "video": "shopify://files/videos/Neck edit_b34038da-2489-4c95-af0a-0a486968f588.mov",
+            "btn_video_title": "Derm Video",
             "show_top_rated": false,
             "show_badge": false,
             "text_check": "<ul><li>Reduces dark spots and evens out skin tone on the neck and chest.</li><li>Repairs sun-damaged skin while boosting collagen for firmer skin.</li><li>82% of users notice brighter, more even skin tone.</li></ul>",
@@ -517,7 +530,9 @@
       "type": "pdm_flating-bundle",
       "settings": {
         "bundle_info": "skincare-plan-result-dark-spots",
-        "bundle_products": "2199"
+        "bundle_products": "2199",
+        "text_bubble_bundle_unused": "${bundle-title}  successfully added to your cart.",
+        "text_bubble_bundle_used": "Your Personalized Skincare Bundle  has been updated."
       }
     }
   },
