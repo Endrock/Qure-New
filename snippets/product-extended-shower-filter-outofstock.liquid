@@ -53,15 +53,23 @@
             const urlParams = new URLSearchParams(window.location.search);
             const variantParam = urlParams.get('variant');
             const targetDiv = document.querySelector('div.out_of_stock');
-            const btn = document.querySelector('.btn_text_value');
+            const buttons = document.querySelectorAll('.btn_text_value');
 
             if (targetDiv) {
                 if (variantParam === '45909763490031') {
                     targetDiv.style.display = 'none';
-                    btn.textContent = 'Buy now';
+                    buttons.forEach(btn => {
+                        if (btn.classList.contains('with_subscription')) {
+                            btn.textContent = 'Subscribe now';
+                        } else {
+                            btn.textContent = 'Buy now';
+                        }
+                    });
                 } else {
                     targetDiv.style.display = '';
-                    btn.textContent = 'Reserve now';
+                    buttons.forEach(btn => {
+                        btn.textContent = 'Reserve now';
+                    });
                 }
             }
         }
