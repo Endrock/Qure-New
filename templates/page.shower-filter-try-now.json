@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -53,7 +62,7 @@
           "type": "trynow",
           "settings": {
             "heading": "Subscribe & save",
-            "text": "<h6>One Time: Showerhead + 1 Filter<\/h6><h6>Every 90 days: Replacement Filter (<strong>50$</strong>35$)<\/h6><p>Skip, pause or cancel anytime. <a href=\"https://qureskincare.com/pages/subscriptions\" title=\"skip\">See more details<\/a><\/p>",
+            "text": "<h6>One Time: Showerhead + 1 Filter</h6><h6>Every 90 days: Replacement Filter (<strong>50$</strong>35$)</h6><p>Skip, pause or cancel anytime. <a href=\"https://qureskincare.com/pages/subscriptions\" title=\"skip\">See more details</a></p>",
             "plan": "6323011823"
           }
         },
@@ -110,7 +119,8 @@
       }
     },
     "second": {
-      "type": "temp-page-shower-filter-try-now"
+      "type": "temp-page-shower-filter-try-now",
+      "settings": {}
     }
   },
   "order": [

@@ -5,6 +5,10 @@
     .button_sticky_wrapper .button_sticky {
         font-size: 13px !important;
     }
+    button.with_subscription {
+        font-size: 22px !important;
+        font-weight: 600 !important;
+    }
 </style>
 
 {%- assign rating_count = 0 -%}
@@ -300,7 +304,7 @@
                                         </div>
                                         <form method="post" action="/cart/add" accept-charset="UTF-8" id="SubscriptionForm" class="shopify-product-form buy-form-{{ section_id }} form-test-id" enctype="multipart/form-data" data-form-id="{{ product_id }}">
                                             <input type="hidden" name="selling_plan" value="{{ block.settings.plan }}">
-                                            <button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn mt-4" onclick="setEventProductHandler('{{ product.handle | escape }}')" name="Submit" value="Submit">
+                                            <button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn mt-4 btn_text_value" onclick="setEventProductHandler('{{ product.handle | escape }}')" name="Submit" value="Submit">
                                                 Add To Cart &nbsp; – &nbsp; $0 <span class="del_price">{{ product.price | times: 0.7 | money_without_trailing_zeros }}</span>
                                             </button>
                                             <input type="hidden" name="id" value="{{ product_variant_id }}" />
@@ -406,7 +410,7 @@
 
                                         <form method="post" action="/cart/add" accept-charset="UTF-8" id="SubscriptionForm" class="shopify-product-form buy-form-{{ section_id }} form-test-id" enctype="multipart/form-data" data-form-id="{{ product_id }}">
                                             <input type="hidden" name="selling_plan" value="{{ block.settings.plan }}">
-                                            <button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn mt-4" onclick="setEventProductHandler('{{ product.handle | escape }}')" name="Submit" value="Submit">
+                                            <button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn mt-4 btn_text_value" onclick="setEventProductHandler('{{ product.handle | escape }}')" name="Submit" value="Submit">
                                                 Subscribe Now
                                             </button>
                                             <input type="hidden" name="id" value="{{ product_variant_id }}" />

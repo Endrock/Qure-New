@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "main": {
       "type": "product-extended-shower-filter",
@@ -31,7 +31,7 @@
             "heading": "Next batch ships end of April 2025:",
             "heading_mobile": "Next batch ships end of April 2025:",
             "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.</p>",
-            "first_option_date": "March 21st",
+            "first_option_date": "March 28st",
             "first_option_text": "SOLD OUT",
             "first_option_percent": 100,
             "second_option_date": "April 25th",
@@ -72,6 +72,7 @@
           "type": "collapsed",
           "settings": {
             "heading": "Key Benefits",
+            "heading_mobile": "",
             "text": "<p>Healthy skin starts in the shower – we're tackling skin issues at the source. The Qure Shower Filter removes harmful impurities that can cause dryness, irritation, and brittleness. By filtering your shower water, you're creating the perfect canvas for the rest of your skincare routine and helping your hair and skin stay hydrated and happy.</p>"
           }
         },
@@ -79,6 +80,7 @@
           "type": "collapsed",
           "settings": {
             "heading": "How It Works",
+            "heading_mobile": "",
             "text": "<p>Our Triple-Filtration System targets up to 99% of chlorine, heavy metals, and contaminants in your water. Here's what happens:</p><ul><li>Water passes through our multi-stage filter</li><li>Impurities get trapped in the specialized filtration media</li><li>Clean, filtered water flows through your shower head</li></ul><p>The result? Water that's gentler on your skin and hair, without the stuff that can strip away natural moisture.</p>"
           }
         },
@@ -86,6 +88,7 @@
           "type": "collapsed",
           "settings": {
             "heading": "What’s Included In The Box",
+            "heading_mobile": "",
             "text": "<p>Inside the box, you'll find:</p><ul><li>The Qure Shower Filter with a replaceable filter cartridge (lasts up to 3 months)</li><li>A universal shower head wrench for easy installation</li><li>Clear setup instructions that won't leave you scratching your head</li></ul>"
           }
         }

@@ -425,7 +425,7 @@
                     </div>
                 </div>
             </div>
-            {% render 'pdm-treatment-options' %}
+            {% render 'pdm-ba-treatment-options' %}
         </div>
     </div>
     <div 
@@ -439,7 +439,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-          if(document.body.hasAttribute('data-treatment-six-month')) {
+          if(document.body.hasAttribute('data-ba-treatment-options')) {
             document.querySelector('.row.treatment__row-container').remove();
             return;
           }
