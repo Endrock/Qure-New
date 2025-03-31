@@ -4,6 +4,11 @@
         color: #212529!important;
         margin-top: 1rem!important;
     }
+    .ac_desc.faq .btn {
+        color: #ffffff !important;
+        padding: 10px 40px;
+        text-decoration: none !important;
+    }
 </style>
 
 {% include 'guide-assoc-array', section: section, __parent_title: 'header', __separator: '###' %}
@@ -566,6 +571,24 @@
                         "type": "url",
                         "id": "button_url",
                         "label": "t:common.button.url.label"
+                    }
+                ]
+		    },
+            {
+                "type": "link",
+                "name": "t:common.link.label",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "link_label",
+                        "default": "Link label",
+                        "label": "t:common.link.label",
+                        "info": "t:common.link.info"
+                    },
+                    {
+                        "type": "url",
+                        "id": "link_url",
+                        "label": "t:common.link.url.label"
                     }
                 ]
 		    }
