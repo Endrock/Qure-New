@@ -15,7 +15,7 @@
                 </div>
             {% endif %}
             {% if block.settings.content != blank %}
-                {{ block.settings.content }}
+                {{ block.settings.content |  replace: '<ul>', '<ul class="mt-0 mt-md-3">'  }}
             {% endif %}
 
             {% if block.settings.wistia_id != blank %}
@@ -167,6 +167,12 @@
             {% if block.settings.button_label != blank %}
                 <a class="btn btn-lg btn-primary buy_btn see_detailed" href="{{ block.settings.button_url }}">
                     {{ block.settings.button_label }}<img src="{{ 'arrow_right.svg' | asset_url }}" alt="">
+                </a>
+            {% endif %}
+        {% when 'link' %}
+            {% if block.settings.link_label != blank %}
+                <a class="text-decoration-underline mt-3 text-dark" href="{{ block.settings.link_url }}">
+                    {{ block.settings.link_label }}<img src="{{ 'arrow_right.svg' | asset_url }}" alt="">
                 </a>
             {% endif %}
         {% when 'content' %}
