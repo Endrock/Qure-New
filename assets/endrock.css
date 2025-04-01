@@ -4948,8 +4948,19 @@ body[data-treatment-six-month] .row.treatment-test__row-container .pdm-step_cont
 
 /* start test B&A micro-infusion */
 body[data-ba-treatment-options] .row.treatment-ba-test__row-container .qure__treatments {
-  margin-bottom: 0;
+  margin-bottom: 2rem;
+  padding: 0;
 }
+
+body[data-ba-treatment-options] .row.treatment-ba-test__row-container .qure__treatments .tmtFtrs_image .section__header,
+body[data-ba-treatment-options] .row.treatment-ba-test__row-container .qure__treatments .tmtFtrs_image .container-pdm-ba-treatment {
+  padding: 0 24px;
+}
+
+body[data-ba-treatment-options] .row.treatment-ba-test__row-container .qure__treatments .tmtFtrs_image .container-pdm-ba-treatment {
+  margin-top: 2rem !important;
+}
+
 body[data-ba-treatment-options] .c_s_wrapper.cs_wrapper-pdm .value-props-ba {
   display: inline-flex;
   flex-direction: column;
@@ -5104,6 +5115,28 @@ body[data-ba-treatment-options] .row.treatment-ba-test__row-container .tmtFtrs_i
 }
 
 @media screen and (min-width:768px) {
+  body[data-ba-treatment-options] .row.treatment-ba-test__row-container .qure__treatments {
+    margin-bottom: 0;
+    padding: 0 24px;
+  }
+
+  body[data-ba-treatment-options] .row.treatment-ba-test__row-container .qure__treatments .text-start .des {
+    margin-bottom: 40px;
+  }
+
+  body[data-ba-treatment-options] .row.treatment-ba-test__row-container .qure__treatments .tmtFtrs_image .section__header,
+  body[data-ba-treatment-options] .row.treatment-ba-test__row-container .qure__treatments .tmtFtrs_image .container-pdm-ba-treatment {
+    padding: 0;
+  }
+
+  body[data-ba-treatment-options] .row.treatment-ba-test__row-container .qure__treatments .tmtFtrs_image .container-pdm-ba-treatment {
+    margin-top: 0 !important;
+  }
+
+  body[data-ba-treatment-options] .row.treatment-ba-test__row-container .tmtFtrs_image.order-1.order-md-2 .testimonial-card {
+    margin: 0px;
+  }
+
   body[data-ba-treatment-options] .row.treatment-ba-test__row-container .step_content.step_btn.upsell_popup_anchor_hover.atc-btn {
     padding-bottom: 0;
     margin-bottom: 8px;
