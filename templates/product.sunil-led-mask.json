@@ -49,11 +49,10 @@
         },
         "timer_abVU3e": {
           "type": "timer",
-          "disabled": true,
           "settings": {
-            "heading": "Halloween Limited Time Offer! 👻",
-            "text": "<p>Get <em><strong>$50 OFF</strong></em><strong> </strong>with code: <strong>SPOOKY50</strong></p>",
-            "timer": "2024-10-31T23:59:59"
+            "heading": "EASTER SALE",
+            "text": "<p>Get <em><strong>$79 OFF</strong></em><strong> </strong>with code: <strong>EASTER</strong></p>",
+            "timer": "2025-04-20T23:59:59"
           }
         },
         "list_reduced_yep6j9": {
