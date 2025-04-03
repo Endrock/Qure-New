@@ -60,6 +60,7 @@
 						{% assign item_old_price = item.quantity | times: item.variant.compare_at_price  %}
 
 						{% assign free_gift = false %}
+						{% assign trynow = false %}
 						{% assign popup_discount = false %}
 
 						{% if item.properties._free_product == 'true' %}
@@ -78,6 +79,10 @@
 							{%- assign is_only_gift = false -%}
 							{%- assign is_not_only_gift = true -%}
 						{%- endif -%}
+
+						{% if item.selling_plan_allocation.selling_plan.name contains 'Try Before You Buy' or item.title contains 'Trynow' %}
+							{% assign trynow = true %}
+						{% endif %}
 
 						{%- if item.variant.compare_at_price -%}
 							{% assign compare_price = item.variant.compare_at_price | times: item.quantity %} 
@@ -158,7 +163,7 @@
 
 									<div class="drawer__cart-price-quantity">
 										{% unless item.properties['_required_validation'] %} {% comment %} validation for free gift test {% endcomment %}
-											{% if free_gift or item.id == 46199907123439 %}
+											{% if free_gift or trynow or item.id == 46199907123439 %}
 												<div class="drawer__cart-quantity">
 													<a href="javascript:;" style="color:#e4e0e0">
 														-
@@ -213,8 +218,7 @@
 													{% comment %} Subscription for product {% endcomment %}
 													{%- if item.selling_plan_allocation.price > 0 -%}
 														
-														{% comment %} TryNow subscription {% endcomment %}
-														 {% if item.selling_plan_allocation.selling_plan.name contains 'Try Before You Buy' %}
+														 {% if trynow %}
 															
 															{%- assign item_new_price = item.discounted_price -%} 
 															{%- assign subtotal_price = subtotal_price | minus: item.discounted_price -%}
