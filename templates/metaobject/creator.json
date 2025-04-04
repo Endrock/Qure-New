@@ -54,7 +54,6 @@
         "title": "Discover My Routine",
         "heading_text_size": 42,
         "heading_size": "h1",
-        "subtitle": "Get a {{ metaobject[\"cc-collab-discount-amount\"].value }}% discount by shopping from my favorites.",
         "description_text_size": 16,
         "eyebrowcopy": "Recommended by {{ metaobject[\"cc-creator-first-name\"].value }}",
         "eyebrow_text_size": 18,
@@ -209,7 +208,7 @@
     "cc_drops_section_datcYL": {
       "type": "cc-drops-section",
       "settings": {
-        "header": "Favorites from {{ metaobject[\"cc-creator-first-name\"].value }}",
+        "header": "Recommendations from {{ metaobject[\"cc-creator-first-name\"].value }}",
         "heading_size": "h1",
         "heading_font_size": 36,
         "heading_font_weight": "400",
