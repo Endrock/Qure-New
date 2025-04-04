@@ -133,7 +133,9 @@
           "banner_jibKaz",
           "banner_pe7PzR"
         ],
-        "settings": {}
+        "settings": {
+          "upsell_content": "navigation-bundle-list-zlkfo3tn"
+        }
       },
       "newsletter": {
         "type": "newsletter",

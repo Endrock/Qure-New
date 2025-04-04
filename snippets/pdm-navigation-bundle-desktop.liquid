@@ -1,0 +1,47 @@
+{% comment %}
+  Usage: {% render 'pdm-navigation-bundle-desktop', upsells_data: section.settings.upsell_content %}
+{% endcomment %}
+
+{% assign bundle_content = upsells_data.bundle_item.value %}
+
+<div class="pdm-upsell-nav-container-desktop">
+  <div class="swiper pdm-upsell-nav-container__swiper">
+    <div class="swiper-wrapper pdm-upsell-nav-container__swiper-wrapper">
+      {% for item in bundle_content %}
+        <div class="swiper-slide pdm-upsell-nav-container__swiper-slide">
+          <a href="{{ item.url }}" class="product-upsell-card">
+            <div class="product-upsell-card__image-container">
+              {% if item.compare_at_price %}
+                {% assign discount_percentage = item.price
+                  | times: 1.0
+                  | divided_by: item.compare_at_price
+                  | minus: 1
+                  | abs
+                  | times: 100
+                  | ceil
+                %}
+                <span class="product-upsell-card__badge"> -{{ discount_percentage }}% </span>
+              {% endif %}
+              {{
+                item.featured_image
+                | image_url: width: 100, height: 100
+                | image_tag: alt: item.title, class: 'product-upsell-card__image'
+              }}
+            </div>
+            <p>{{ item.title }}</p>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="swiper-button-next pdm-upsell-nav-container__swiper-button-next">
+    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+      <path d="M0.5 8.77772L4.5 4.77772L0.5 1.22217" stroke="white" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="swiper-button-prev pdm-upsell-nav-container__swiper-button-prev">
+    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+      <path d="M5.5 1.22228L1.5 5.22228L5.5 8.77783" stroke="white" stroke-linecap="round"/>
+    </svg>
+  </div>
+</div>
