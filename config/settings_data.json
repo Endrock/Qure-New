@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "current": {
     "show_bf_price": false,
     "favicon": "shopify://shop_images/qure.png",
@@ -134,7 +134,17 @@
           "banner_pe7PzR"
         ],
         "settings": {
-          "upsell_content": "navigation-bundle-list-zlkfo3tn"
+          "upsell_content": [
+            "fade-firm-bundle-pro",
+            "fade-firm-bundle-essentials",
+            "line-refine-bundle-advanced",
+            "line-refine-bundle-pro-pre-order",
+            "fade-firm-bundle-advanced",
+            "breakout-control-pro",
+            "breakout-control-advanced",
+            "line-refine-bundle-essentials-pre-order",
+            "breakout-control-essentials"
+          ]
         }
       },
       "newsletter": {
