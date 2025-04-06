@@ -2,20 +2,38 @@
   Usage: {% render 'pdm-navigation-bundle-desktop', upsells_data: section.settings.upsell_content %}
 {% endcomment %}
 
-{% assign bundle_content = upsells_data.upsell_list.value %}
-
-{% if bundle_content != blank %}
+{% if upsells_data != blank %}
   <div class="pdm-upsell-nav-container-desktop">
     <div class="swiper pdm-upsell-nav-container__swiper">
       <div class="swiper-wrapper pdm-upsell-nav-container__swiper-wrapper">
-        {% for item in bundle_content %}
+        {% for item in upsells_data %}
           {% liquid
+            assign show_product_title = item.show_product_title.value
             assign upsell_title = item.title.value
+
+            assign show_product_image = item.show_product_image.value
             assign upsell_image = item.image.value
+
             assign upsell_product = item.product.value
+
+            assign link_cta = item.link_cta.value
+            assign go_to_product_link = item.go_to_product_link.value
+
+            if show_product_title
+              assign upsell_title = upsell_product.title
+            endif
+
+            if show_product_image or upsell_image == blank
+              assign upsell_image = upsell_product.featured_image
+            endif
+
+            if go_to_product_link or link_cta == blank
+              assign link_cta = upsell_product.url
+            endif
+
           %}
           <div class="swiper-slide pdm-upsell-nav-container__swiper-slide">
-            <a href="{{ upsell_product.url }}" class="product-upsell-card">
+            <a href="{{ link_cta }}" class="product-upsell-card">
               <div class="product-upsell-card__image-container">
                 {% if upsell_product.compare_at_price %}
                   {% assign discount_percentage = upsell_product.price
