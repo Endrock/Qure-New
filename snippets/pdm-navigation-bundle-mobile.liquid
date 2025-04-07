@@ -3,13 +3,11 @@
   {% render 'pdm-navigation-bundle-mobile', upsells_data: section.settings.upsell_content %}
 {% endcomment %}
 
-{% assign bundle_content = upsells_data.upsell_list.value %}
-
-{% if bundle_content != blank %}
+{% if upsells_data != blank %}
   <div class="pdm-upsell-nav-container-mobile">
     <div class="swiper pdm-upsell-nav-container-mobile__swiper">
       <div class="swiper-wrapper pdm-upsell-nav-container-mobile__swiper-wrapper">
-        {% for item in bundle_content %}
+        {% for item in upsells_data %}
           {% liquid
           assign show_product_title = item.show_product_title.value
           assign upsell_title = item.title.value
