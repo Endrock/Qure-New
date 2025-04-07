@@ -34,7 +34,7 @@
     </div>
     <div class="section productSubscription choose_serum form-{{ section_id }}" id="productSubscription">
         <div class="container">
-            {% comment %} <div class="row treatment__row-container">
+            <div class="row">
                 <div class="col-md-6">
                     <div class="qure__treatments">
                         <div class="text-start order-2 order-md-1">
@@ -78,7 +78,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 p-0">
-                    <div class="supply-detail offer_active1"> {% endcomment %}
+                    <div class="supply-detail offer_active1">
                         <!--
                         <div class="supply_steps">
                             <div class="step_counter active"><span>1</span></div>
@@ -130,7 +130,7 @@
                             </div>
                         </div>
                         -->
-                        {% comment %} <div class="supply_steps pdm-step_content_v2">
+                        <div class="supply_steps pdm-step_content_v2">
                             <div class="step_counter"><span>1</span></div>
                             <div class="step_block">
                                 <div class="step_header">
@@ -192,7 +192,7 @@
                                             </label>
                                          
 
-                                        </a> {% endcomment %}
+                                        </a>
 
                                         {% comment %} 
                                         {% assign product = all_products['micro-infusion-2-month-bundle-rejuvenating-hydra-soothing'] %}
@@ -229,7 +229,7 @@
                                         </a> 
                                         {% endcomment %}
 
-                                        {% comment %} {% assign product = all_products['micro-infusion-1-month-bundle-1x-b-g-serum-1x-e-g-f-serum'] %}
+                                        {% assign product = all_products['micro-infusion-1-month-bundle-1x-b-g-serum-1x-e-g-f-serum'] %}
                                         {% assign divided_price = product.price | divided_by: 4 %}
 
                                         <a class="planBlock {{ section_id }}_productPeriodObject" href="month_1" data-tab="month_1" data-pay="{{ divided_price | money_without_trailing_zeros}}"
@@ -424,8 +424,7 @@
                         </div>
                     </div>
                 </div>
-            </div> {% endcomment %}
-            {% render 'pdm-treatment-options' %}
+            </div>
         </div>
     </div>
     <div 
@@ -440,7 +439,6 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             v2__selectProduct('{{ section_id }}_');
-
             const v2__parent = '.form-{{ section_id }}';
             const v2__buyButton = document.querySelector(v2__parent + ' .buy_btn');
             const v2__buyButtonSoldOut = document.querySelector(v2__parent + ' .buy_btn_soldout');
