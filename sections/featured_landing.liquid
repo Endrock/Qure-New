@@ -1,0 +1,135 @@
+<!-- -- press slider app out start -- -->
+
+<div class="app_press section">
+    <div class="container1">
+        <div class="press_bl py-2 mw-mob-100">
+            <div class="p_bl_header text-center p-0">
+                <p>{{ section.settings.heading }}</p>
+            </div>
+            <div class="app_press_slider">
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                    class="swiper app_press_sl_content app_press_sl_content_landing">
+                    <div class="swiper-wrapper">
+                        {%- for block in section.blocks -%}
+                            {% if block.type == 'text' %}
+                                <div class="swiper-slide">
+                                    <div class="app_subhheading">
+                                        {{ block.settings.text }}
+                                    </div>
+                                </div>
+                            {% endif %}
+                          {% endfor %}
+                    </div>
+                </div>
+                <div thumbsSlider="" class="swiper app_press_sl_img app_press_sl_img_landing">
+                    <div class="swiper-wrapper ">
+                        {%- for block in section.blocks -%}
+                            {% if block.type == 'image' %}
+                                <div class="swiper-slide">
+                                    <div class="app_press_info">
+                                        {% if block.settings.image != blank %}
+                                            <img src="{{ block.settings.image | img_url: '300x' }}" alt="">
+                                          {% endif %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -- press slider app out end -- -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var swiper_press = new Swiper(".app_press_sl_img_landing", {
+            spaceBetween: 0,
+            slidesPerView: 2,
+            autoplay: {
+                delay: 2000, // Initial delay
+                disableOnInteraction: false,
+            },
+            loop: true,
+            breakpoints: {
+                640: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 5,
+                    spaceBetween: 20,
+                    touchRatio: 0
+                }
+            },
+        });
+
+        var swiper_press2 = new Swiper(".app_press_sl_content_landing", {
+            spaceBetween: 10,
+            loop: true,
+            autoplay: {
+                delay: 8000, // Default to first slide delay
+                disableOnInteraction: false,
+            },
+            thumbs: {
+                swiper: swiper_press,
+            },
+            on: {
+                slideChangeTransitionStart: function () {
+                    let activeIndex = this.realIndex;
+                    let newDelay = activeIndex === 0 ? 8000 : 4000; // 8s for Forbes, 4s for PS
+                    
+                    this.params.autoplay.delay = newDelay;
+                    this.autoplay.start();
+                }
+            }
+        });
+    });
+</script>
+
+{% schema %}
+    {
+        "name": "t:sections.feature_landing.label",
+        "class": "section-featured-in-landing",
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "t:common.heading.label",
+                "default": "FEATURED IN"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "text",
+                "name": "t:common.text.label",
+                "limit": 6,
+                "settings": [
+                    {
+                    "type": "textarea",
+                    "id": "text",
+                    "label": "t:common.text.label"
+                    }
+                ]
+            },
+            {
+                "type": "image",
+                "name": "t:common.image.label",
+                "limit": 6,
+                "settings": [
+                    {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "t:common.image.label"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+			{
+				"name": "t:sections.feature_landing.label"
+			}
+        ]
+    }
+{% endschema %}
