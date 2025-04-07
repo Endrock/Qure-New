@@ -3,7 +3,7 @@
   Usage:  {% render 'pdm-treatment-options' %}
 {%- endcomment -%}
 
-<div class="row treatment-test__row-container">
+<div class="row pdm-treatment__row-container">
   <div class="col-md-6">
     <div class="qure__treatments">
       <div class="text-start order-2 order-md-1">
@@ -362,53 +362,3 @@
     </div>
   </div>
 </div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    if(!document.body.hasAttribute('data-treatment-six-month')) {
-      document.querySelector('.row.treatment-test__row-container').remove();
-      const radioInput = document.querySelector('.step_conten_blocks [data-tab="month_3"] input[type="radio"]');
-      if (radioInput){
-        radioInput.checked = true;
-        const changeEvent = new Event('change', {
-          bubbles: true, 
-          cancelable: true 
-        });
-        radioInput.dispatchEvent(changeEvent);
-      }
-      const radioInputPayFull = document.querySelector('.step_block .step_content.item-3.pdm-step_content_v2 input[type="radio"]');
-      if (radioInputPayFull){
-        radioInputPayFull.checked = true;
-        const changeEvent = new Event('change', {
-          bubbles: true, 
-          cancelable: true 
-        });
-        radioInputPayFull.dispatchEvent(changeEvent);
-      }
-      return;
-    }
-    v2__selectProduct('{{ section_id }}_');
-
-    const v2__parent = '.form-{{ section_id }}';
-    const v2__buyButton = document.querySelector(v2__parent + ' .buy_btn');
-    const v2__buyButtonSoldOut = document.querySelector(v2__parent + ' .buy_btn_soldout');
-    const v2__savedAmount = document.querySelector(v2__parent + ' .savedAmount');
-
-    const v2__stoggleSoldOutButton = () => {
-      if (v2__savedAmount && v2__buyButton && v2__buyButtonSoldOut) {
-        if (v2__savedAmount.textContent.trim() === "& SAVE {{ soldout_percentage }}%") {
-          v2__buyButton.style.display = "none";
-          v2__buyButtonSoldOut.style.display = "block";
-        } else {
-          v2__buyButton.style.display = "block";
-          v2__buyButtonSoldOut.style.display = "none";
-        }
-      }
-    }
-
-    const v2__observer = new MutationObserver(v2__stoggleSoldOutButton);
-    if (v2__savedAmount) {
-      v2__observer.observe(v2__savedAmount, { childList: true, subtree: true });
-    }
-  });
-</script>
