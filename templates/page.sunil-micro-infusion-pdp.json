@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "main": {
       "type": "product-landing",
@@ -133,49 +133,42 @@
         "popup_enabled": true
       }
     },
-    "custom_qurify_filter_lp_featuredin_iXk4TL": {
-      "type": "custom-qurify-filter-lp-featuredin",
+    "featured_landing": {
+      "type": "featured_landing",
       "blocks": {
-        "image_Wi4wcU": {
-          "type": "image",
+        "text_cYhaYn": {
+          "type": "text",
           "settings": {
-            "image": "shopify://shop_images/vogue_1.png"
+            "text": "\"Few beauty trends are actually worth adopting, but Qure’s take on at-home micro-infusion is a viral skin trend with merit.\""
           }
         },
-        "image_cQERBP": {
-          "type": "image",
+        "text_dHpn33": {
+          "type": "text",
           "settings": {
-            "image": "shopify://shop_images/cosmopolitan.svg"
+            "text": "\"This microneedling alternative is my secret to glowing skin.\""
           }
         },
-        "image_9PheVN": {
+        "image_FpcTmy": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/elle_779c74e6-3113-46fb-bb11-0d3e478cc869.png"
+            "image": "shopify://shop_images/forbes.svg"
           }
         },
-        "image_TgGLHw": {
+        "image_zXYJ3q": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/glamour.svg"
-          }
-        },
-        "image_cQpzgw": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/grazia.svg"
+            "image": "shopify://shop_images/ps.svg"
           }
         }
       },
       "block_order": [
-        "image_Wi4wcU",
-        "image_cQERBP",
-        "image_9PheVN",
-        "image_TgGLHw",
-        "image_cQpzgw"
+        "text_cYhaYn",
+        "text_dHpn33",
+        "image_FpcTmy",
+        "image_zXYJ3q"
       ],
       "settings": {
-        "custom_class": ""
+        "heading": "FEATURED IN"
       }
     },
     "reasons_zpLx7x": {
@@ -1396,7 +1389,7 @@
   },
   "order": [
     "main",
-    "custom_qurify_filter_lp_featuredin_iXk4TL",
+    "featured_landing",
     "reasons_zpLx7x",
     "image_text_k9WAez",
     "confidence_slider_gTU9GE",
