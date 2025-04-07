@@ -15,8 +15,8 @@
         "announcement_QmXGJK": {
           "type": "announcement",
           "settings": {
-            "heading": "SAVE UP TO 59% | Limited time Offer",
-            "heading_mobile": "SAVE UP TO 59% | Limited time Offer",
+            "heading": "SAVE UP TO 59% | Limited Time Easter Sale",
+            "heading_mobile": "SAVE UP TO 59% | Easter Offer",
             "color": "green",
             "font_size_desktop": 14,
             "font_size_mobile": 13
@@ -237,6 +237,7 @@
         "before_after_images_limit": 3,
         "before_after_button_label": "Before & After",
         "reserve": false,
+        "soldout": false,
         "selected_design": "old",
         "text_label_real_result_1": "Product",
         "text_label_real_result_2": "Real Results",
