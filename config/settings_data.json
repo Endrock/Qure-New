@@ -133,7 +133,19 @@
           "banner_jibKaz",
           "banner_pe7PzR"
         ],
-        "settings": {}
+        "settings": {
+          "upsell_content": [
+            "fade-firm-bundle-pro",
+            "fade-firm-bundle-essentials",
+            "line-refine-bundle-advanced",
+            "line-refine-bundle-pro-pre-order",
+            "fade-firm-bundle-advanced",
+            "breakout-control-pro",
+            "breakout-control-advanced",
+            "line-refine-bundle-essentials-pre-order",
+            "breakout-control-essentials"
+          ]
+        }
       },
       "newsletter": {
         "type": "newsletter",

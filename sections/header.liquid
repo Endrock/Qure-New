@@ -1,74 +1,77 @@
 <div class="wrapper home-default-wrapper header-wrapperBlock">
-    <div id="shopify-section-header" class="shopify-section site-header">
-        <div class="header-wrapper">
-            {% if settings.enable_site_gamification %}
-                <div class="announcement_bar site-gamification-active">
-                    {% render 'pdm_site-wide-gamification', settingsGamification: settings, cartTotal: cart.items_subtotal_price  %}
-                    {% if settings.enable_site_wide_timer %}
-                        <div class="announcement_bar__timer">
-                            {% render 'pdm_site-wide-timer' %}
-                        </div>
-                    {% endif %}
-                </div>
-            {% else %}
-                {% for block in section.blocks limit: 1 %}
-                    {%- case block.type -%}
-                        {% when 'announcement' %}
-                            {% render 'header-announcement-bar', section: section, block: block %}
-                        {% when 'announcement-promotion' %}
-                            {% render 'promotion-header-announcement-bar', section: section, block: block %}
-                    {%- endcase -%}
-                {% endfor %}
-            {% endif %}
-            <header>
-                <div class="header-new new-hp-header">
-                    {% render 'header-menu-mobile', section: section %}
-                    {% render 'header-menu-desktop', section: section %}
-                </div>
-            </header>
+  <div id="shopify-section-header" class="shopify-section site-header">
+    <div class="header-wrapper">
+      {% if settings.enable_site_gamification %}
+        <div class="announcement_bar site-gamification-active">
+          {% render 'pdm_site-wide-gamification',
+            settingsGamification: settings,
+            cartTotal: cart.items_subtotal_price
+          %}
+          {% if settings.enable_site_wide_timer %}
+            <div class="announcement_bar__timer">
+              {% render 'pdm_site-wide-timer' %}
+            </div>
+          {% endif %}
         </div>
+      {% else %}
+        {% for block in section.blocks limit: 1 %}
+          {%- case block.type -%}
+            {% when 'announcement' %}
+              {% render 'header-announcement-bar', section: section, block: block %}
+            {% when 'announcement-promotion' %}
+              {% render 'promotion-header-announcement-bar', section: section, block: block %}
+          {%- endcase -%}
+        {% endfor %}
+      {% endif %}
+      <header>
+        <div class="header-new new-hp-header">
+          {% render 'header-menu-mobile', section: section %}
+          {% render 'header-menu-desktop', section: section %}
+        </div>
+      </header>
     </div>
+  </div>
 </div>
 
 {% for block in section.blocks %}
-    {%- case block.type -%}
-        {% when 'tab' %}
-            {% if block.settings.heading != blank %}
-                <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                        $(function() {
-                            var origTitle, animatedTitle, timer;
-                            origTitle = document.title;
-                
-                            function animateTitle(newTitle) {
-                            var currentState = false;
-                            origTitle = document.title; 
-                            animatedTitle = "{{ block.settings.heading }}";
-                            timer = setInterval(startAnimation, 2000);
-                
-                            function startAnimation() {
-                                document.title = currentState ? origTitle : animatedTitle;
-                                currentState = !currentState;
-                                }
-                            }
-                
-                            function restoreTitle() {
-                                clearInterval(timer);
-                                document.title = origTitle; 
-                            }
-                
-                            $(window).blur(function() {
-                                animateTitle();
-                            });
-                
-                            $(window).focus(function() {
-                                restoreTitle();
-                            });
-                        });
-                    });
-                </script> 
-            {% endif %}
-    {%- endcase -%}
+  {%- case block.type -%}
+    {% when 'tab' %}
+      {% if block.settings.heading != blank %}
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              $(function() {
+                  var origTitle, animatedTitle, timer;
+                  origTitle = document.title;
+
+                  function animateTitle(newTitle) {
+                  var currentState = false;
+                  origTitle = document.title;
+                  animatedTitle = "{{ block.settings.heading }}";
+                  timer = setInterval(startAnimation, 2000);
+
+                  function startAnimation() {
+                      document.title = currentState ? origTitle : animatedTitle;
+                      currentState = !currentState;
+                      }
+                  }
+
+                  function restoreTitle() {
+                      clearInterval(timer);
+                      document.title = origTitle;
+                  }
+
+                  $(window).blur(function() {
+                      animateTitle();
+                  });
+
+                  $(window).focus(function() {
+                      restoreTitle();
+                  });
+              });
+          });
+        </script>
+      {% endif %}
+  {%- endcase -%}
 {% endfor %}
 
 {% schema %}
@@ -81,10 +84,10 @@
         "content": "Upsell Navigation"
       },
       {
-        "type": "metaobject",
+         "type": "metaobject_list",
         "id": "upsell_content",
-        "label": "Upsell Content",
-        "metaobject_type": "navigation_bundle_list"
+        "label": "Upsell List Content",
+        "metaobject_type": "nav_upsell_card_item"
       }
     ],
 	"blocks": [
