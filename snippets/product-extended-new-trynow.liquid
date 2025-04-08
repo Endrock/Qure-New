@@ -50,14 +50,16 @@
             <div class="noSubscriptionText">
 
                <h6 class="mb-0 one_time_purchase"> One-time purchase </h6>
-               <p>Showerhead + 1 Filter</p>
+                {% if section.settings.one_time_purchase != blank %}
+                    <p>{{ section.settings.one_time_purchase }}</p>
+                {% endif %}
             </div>
             <div class="noSubscriptionPrice">
                 {{ product.price | money_without_trailing_zeros }}
             </div>
         </div>
 
-        {% include 'product-extended-shower-filter-outofstock' %}
+        {% include 'product-extended-new-outofstock' %}
 
         {% if section.settings.soldout == true %}
             <a class="btn btn-lg btn-primary without_subscription buy_btn mt-4" href="#">Sold Out</a>   

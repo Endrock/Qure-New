@@ -10,7 +10,7 @@
 {
   "sections": {
     "main": {
-      "type": "product-extended-shower-filter",
+      "type": "product-extended-new",
       "blocks": {
         "rating_KDB67x": {
           "type": "rating",
@@ -62,7 +62,7 @@
           "type": "subscribe",
           "settings": {
             "heading": "Subscribe & save 30%",
-            "text": "<p>3 month replacement filter delivers every 90 days for just [discount_price_additional]. Skip or cancel anytime.<a href=\"https://qureskincare.com/pages/subscriptions\" title=\"https://qureskincare.com/pages/subscriptions\">See more details</a></p>",
+            "text": "<h6>One Time: Showerhead + 1 Filter</h6><h6>Every 90 days: Filter Refill (<strong>[price_additional]</strong>[discount_price_additional])</h6><p>Skip, pause or cancel anytime. <a href=\"https://qureskincare.com/pages/subscriptions\" title=\"skip\">See more details</a></p>",
             "product": "shower-filter-replacement",
             "plan": "6286115055",
             "discount": 30
@@ -108,6 +108,7 @@
         "seo_heading": "SHOWER FILTER",
         "heading": "Save Your Hair & Skin from Dryness and Irritation",
         "heading_mobile": "Save Your Hair & Skin from Dryness and Irritation",
+        "one_time_purchase": "Showerhead + 1 Filter",
         "product": "",
         "wistia_id": "",
         "product_images_limit": 5,

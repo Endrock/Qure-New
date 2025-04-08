@@ -10,7 +10,7 @@
 {
   "sections": {
     "main": {
-      "type": "product-extended-shower-filter",
+      "type": "product-extended-new",
       "blocks": {
         "rating_KDB67x": {
           "type": "rating",
@@ -103,6 +103,7 @@
         "seo_heading": "SHOWER FILTER",
         "heading": "Save Your Hair & Skin from Dryness and Irritation",
         "heading_mobile": "Save Your Hair & Skin from Dryness and Irritation",
+        "one_time_purchase": "Showerhead + 1 Filter",
         "product": "shower-filter",
         "wistia_id": "",
         "product_images_limit": 5,

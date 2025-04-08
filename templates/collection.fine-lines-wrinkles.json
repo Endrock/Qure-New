@@ -17,37 +17,16 @@
           "disabled": true,
           "settings": {
             "heading": "BLACK FRIDAY SALE",
-            "subheading": "21% Off",
+            "subheading": "<p>21% Off</p>",
             "text": "SITEWIDE",
             "wistia_id": "7dqki9g4sz",
             "wistia_id_mobile": "o6in7qx104",
             "link_url": "shopify://collections/best-sellers"
           }
-        },
-        "banner_holiday_EEUPJR": {
-          "type": "banner_holiday",
-          "disabled": true,
-          "settings": {
-            "heading": "<p>Exclusive <strong>Holiday</strong> Bundles</p>",
-            "link_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal",
-            "link_label": "Save up to 55% Off"
-          }
-        },
-        "banner_14feb_pggrQJ": {
-          "type": "banner_14feb",
-          "disabled": true,
-          "settings": {
-            "heading": "LOVE YOUR SKIN",
-            "subheading": "<p>Exclusive <strong>Valentine’s Day</strong> Micro-Infusion Bundle</p>",
-            "link_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal#Pro-Aging-Bundles",
-            "link_label": "Save 66% Off"
-          }
         }
       },
       "block_order": [
-        "banner_cX4xRD",
-        "banner_holiday_EEUPJR",
-        "banner_14feb_pggrQJ"
+        "banner_cX4xRD"
       ],
       "settings": {
         "heading": "",
