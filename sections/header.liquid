@@ -33,6 +33,8 @@
   </div>
 </div>
 
+{{ 'pdm-styles-carousel-nav.css' | asset_url | stylesheet_tag }}
+
 {% for block in section.blocks %}
   {%- case block.type -%}
     {% when 'tab' %}
