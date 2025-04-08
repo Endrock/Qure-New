@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "main": {
       "type": "product-extended-shower-filter",
@@ -127,10 +127,15 @@
     "second": {
       "type": "temp-product-shower-filter",
       "settings": {}
+    },
+    "pdm_product_social_proof_data_DkmUak": {
+      "type": "pdm_product-social-proof-data",
+      "settings": {}
     }
   },
   "order": [
     "main",
-    "second"
+    "second",
+    "pdm_product_social_proof_data_DkmUak"
   ]
 }

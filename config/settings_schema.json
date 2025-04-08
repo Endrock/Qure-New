@@ -80,10 +80,40 @@
         "limit": 12
       },
       {
+        "type": "textarea",
+        "id": "product_list_microinfusion_refill_allowlist",
+        "label": "Product List MicroInfusion Refill Allowlist",
+        "info": "Products that will be shown in the product list. Use the page handle to add products to the list. Example: micro-infusion-refill",
+      },
+      {
         "type": "product_list",
         "id": "product_list_microinfusion",
         "label": "MicroInfusion Products",
         "limit": 12
+      },
+      {
+        "type": "textarea",
+        "id": "product_list_microinfusion_allowlist",
+        "label": "Product List MicroInfusion Allowlist",
+        "info": "Products that will be shown in the product list. Use the page handle to add products to the list. Example: qure-microinfusion-offer, microinfusion",
+      },
+      {
+        "type": "product_list",
+        "id": "product_list_targeted_patches",
+        "label": "Targeted Patches Products",
+        "limit": 12
+      },
+      {
+        "type": "textarea",
+        "id": "product_list_targeted_patches_allowlist",
+        "label": "Product List Targeted Patches Allowlist",
+        "info": "Products that will be shown in the product list. Use the product handle to add products to the list. Example: micro-infusion-targeted-patches",
+      },
+      {
+        "type": "textarea",
+        "id": "product_list_allowlist",
+        "label": "Product List Allowlist",
+        "info": "Products that will be shown in the product list. Use the product id to add products to the list. Example: 6153582215317,6153582215318",
       },
       {
         "type": "header",
