@@ -91,6 +91,7 @@
         "heading": "Get clearer skin, on tap, with Qure Faucet Filter",
         "heading_mobile": "Get clearer skin, on tap, with Qure Faucet Filter",
         "one_time_purchase": "Faucet + 1 Filter",
+        "product": "",
         "wistia_id": "tev066z6pv",
         "product_images_limit": 6,
         "product_button_label": "Product",
@@ -110,9 +111,14 @@
       "type": "temp-product-faucet-filter",
       "settings": {}
     },
+    "pdm_product_social_proof_data_67Dn4q": {
+      "type": "pdm_product-social-proof-data",
+      "settings": {}
+    }
   },
   "order": [
     "main",
-    "second"
+    "second",
+    "pdm_product_social_proof_data_67Dn4q"
   ]
 }
