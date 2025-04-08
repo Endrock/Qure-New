@@ -282,6 +282,9 @@
         "label": "Seo Heading"
       }
     },
+    "one-time_purchase": {
+      "label": "One-time purchase"
+    },
     "announcement": {
       "label": "Announcement",
       "color": {
@@ -759,8 +762,8 @@
       },
       "blocks": {}
     },
-    "product-extended-shower-filter": {
-      "name": "Product extended shower filter",
+    "product-extended-new": {
+      "name": "Product extended new",
       "settings": {
         "product_images_limit": {
           "label": "Product images limit",

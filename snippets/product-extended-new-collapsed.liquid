@@ -1,5 +1,14 @@
+{% if visibility == 'mobile' %}
+    <style>
+        .faq.accordions_shower_filter {
+            padding: 15px !important;
+        }
+    </style>
+{% endif %}
+
+
 <!-- accordions shower filter  -->
-<div class="faq accordions_shower_filter faq_under_product">
+<div class="faq accordions_shower_filter faq_under_product{% if visibility == "desktop" %} d-none d-md-block{% else %} d-md-none order-4{% endif %}">
     <div class="accordion" id="accordion_collapsed">
         {% if template == 'page.shower-filter-try-now' %}
             <div class="accordion-item">

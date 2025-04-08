@@ -163,8 +163,15 @@ document.addEventListener('DOMContentLoaded', function () {
   const closeIcon = document.querySelector('.social-proof-data-container .close-icon');
   const containerAtcButton = document.querySelector('.nav_e-commerce .cart-custom');
   const containerAtcButtonProdFaceSerum = document.querySelectorAll('.button_sticky_wrapper');
-
+  console.log('hola mundo');
   if (socialProofContainer) {
+    console.group('Social Proof Data');
+     console.log('productHandle', socialProofContainer.dataset.productHandle);
+     console.log('productId', socialProofContainer.dataset.productId);
+     console.log('pageHandle', socialProofContainer.dataset.pageHandle);
+     console.log('productList', socialProofContainer.dataset.productList);
+    console.groupEnd();
+
     let { productId, pageHandle, productList } = socialProofContainer.dataset;
     let url = `https://webhooks.endrock.software/endrockapi/v3/app/analytics/reportsGA4.php?filterBy=productId&store=qure&name=Qure: GA4&productId=`;
 
@@ -193,6 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // handle requests for 1 product or some of them
     if (pageHandle && productList) {
+      console.log('entre aqui ph y pl')
       let arrProductList = productList.split(', ');
       const requests = arrProductList.map(id => {
         return fetchData(url, id);
@@ -208,6 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .catch(error => console.log('error', error));
     } else if (productId) {
+      console.log('entre aqui product')
       fetchData(url, productId)
         .then(response => {
           if (response.code == 200) {
