@@ -194,90 +194,42 @@
         "popup_enabled": false
       }
     },
-    "featuredin_EpYUrH": {
-      "type": "featuredin",
+    "featured_landing": {
+      "type": "featured_landing",
       "blocks": {
-        "image_fjFU8U": {
-          "type": "image",
+        "text_cYhaYn": {
+          "type": "text",
           "settings": {
-            "image": "shopify://shop_images/vogue.svg",
-            "mobile_hide": false
+            "text": "\"Few beauty trends are actually worth adopting, but Qure’s take on at-home micro-infusion is a viral skin trend with merit.\""
           }
         },
-        "image_zfFyfC": {
-          "type": "image",
+        "text_dHpn33": {
+          "type": "text",
           "settings": {
-            "image": "shopify://shop_images/elle.svg",
-            "mobile_hide": false
+            "text": "\"This microneedling alternative is my secret to glowing skin.\""
           }
         },
-        "image_ykidCK": {
+        "image_FpcTmy": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/glamour.svg",
-            "mobile_hide": false
+            "image": "shopify://shop_images/forbes.svg"
           }
         },
-        "image_LyFtki": {
+        "image_zXYJ3q": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/grazia.svg",
-            "mobile_hide": false
-          }
-        },
-        "image_jKRrXf": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/cosmopolitan.svg",
-            "mobile_hide": true
-          }
-        },
-        "image_Pq6YUh": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/bazaar_889503c3-d4d6-4eb0-b7be-dd1212b56c58.png",
-            "mobile_hide": true
-          }
-        },
-        "science_section_block_CWnWGB": {
-          "type": "science_section_block",
-          "settings": {
-            "video_science_section": "shopify://files/videos/-f2d8-4301-becc-9db87b3963fa.mp4",
-            "video_science_section_vertical": "shopify://files/videos/-35ec-494e-a74a-4c3407b738c8.mp4",
-            "science_heading": "Qure’s Micro-Infusion Goes Where Your Skin Cream Can’t…",
-            "new_science_heading": "Qure’s Micro-Infusion goes where your skin cream can’t",
-            "science_subheading": "Its tiny, almost painless, microneedles penetrate beyond the skin’s surface increasing serum absorption and delivering powerful active ingredients EXACTLY where they’re needed!",
-            "value_prop_img_1": "shopify://shop_images/percent.png",
-            "value_prop_text_1": "<p>Agreed their <strong>skin looked better</strong> after Micro-Infusion treatments</p>",
-            "value_prop_img_2": "shopify://shop_images/percent_1.png",
-            "value_prop_text_2": "<p>Agreed their <strong>fine lines looked smoother</strong></p>",
-            "value_prop_img_3": "shopify://shop_images/percent_2.png",
-            "value_prop_text_3": "<p>Reported skin appeared more <strong>hydrated and glowy</strong></p>",
-            "value_prop_img_4": "shopify://shop_images/percent_3.png",
-            "value_prop_text_4": "<p>Prefer this <strong>convenient Micro-Infusion treatment</strong> over going to clinic treatments</p>",
-            "new_value_prop_title_1": "",
-            "new_value_prop_text_1": "",
-            "new_value_prop_title_2": "",
-            "new_value_prop_text_2": "",
-            "new_value_prop_title_3": "",
-            "new_value_prop_text_3": "",
-            "cta_text": "Shop Now",
-            "cta_link": "productSubscription"
+            "image": "shopify://shop_images/ps.svg"
           }
         }
       },
       "block_order": [
-        "image_fjFU8U",
-        "image_zfFyfC",
-        "image_ykidCK",
-        "image_LyFtki",
-        "image_jKRrXf",
-        "image_Pq6YUh",
-        "science_section_block_CWnWGB"
+        "text_cYhaYn",
+        "text_dHpn33",
+        "image_FpcTmy",
+        "image_zXYJ3q"
       ],
       "settings": {
-        "heading": "",
-        "custom_cls": ""
+        "heading": "FEATURED IN"
       }
     },
     "uses_NQxTEY": {
@@ -1166,7 +1118,7 @@
   },
   "order": [
     "main",
-    "featuredin_EpYUrH",
+    "featured_landing",
     "uses_NQxTEY",
     "results_RAwjmJ",
     "liquid_KHpx4x",

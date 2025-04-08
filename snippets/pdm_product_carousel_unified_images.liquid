@@ -76,7 +76,7 @@
             </div>
           {% else %}
             <div class="swiper-slide" data-media="{{ media.media_type }}" data-index="{{ index }}" data-wistia_id="{{ wistia_id }}" data-forloopindex0={{ forloop.index0 }}>
-              <picture class="swiper-products-carousel__image-container {% if product.handle == "dermal-mist" or product.handle == "faucet-filter" or product.handle == "shower-filter" %}margin-auto{% endif %}">
+              <picture class="swiper-products-carousel__image-container {% if product.handle == "dermal-mist" %}margin-auto{% endif %}">
                 <source media="(min-width:1920px)" srcset="{{ media | img_url: 'master' }}">
                 <source media="(min-width:1600px)" srcset="{{ media | img_url: '1600x' }}">
                 <source media="(min-width:1100px)" srcset="{{ media | img_url: '1100x' }}">

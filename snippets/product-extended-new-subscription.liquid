@@ -1,0 +1,124 @@
+{% include 'product-extended-subscription-product' product: product, product_custom: false %}
+
+{% assign discount_price_additional = 0 %}
+
+{% if block.settings.product != blank %}
+    {%- assign price_additional = all_products[block.settings.product.handle].price | money_without_trailing_zeros %}
+    {%- assign discount_price_additional = all_products[block.settings.product.handle].price | times: 0.7 | money_without_trailing_zeros %}
+{% endif %}
+
+<style>.price_wrap { display: none; }</style>
+
+<div id="productSubscription" class="subscribe_save_wrapper with_subscription mt-2">
+    <div class="subscribeTopInfo d-none">
+        <p class="px-md-5">MOST POPULAR CHOICE</p>
+    </div>
+    <div class="subscriptionType active" data-subscription="subscription">
+        <div class="subscribe_save_bx d-block">
+            <div class="subscribeInfo">
+                <label class="form-check-label" for="flexCheckDefault">
+                    <div class="d-flex flex-wrap justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-start gap-2 align-items-center sub_try_free">
+                                <h6>Subscribe &amp;</h6>
+                                <p class="try_free"> SAVE 30% </p>  
+                            </div>
+                        </div>
+                        <div>
+                            <div class="subscribePrice">
+                                <p>{{ discount_price }}</p>
+                                <p><span class="">{{ product_price }}</span></p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="shower_head">
+                                {% if block.settings.text != blank %}
+                                    {{ block.settings.text 
+                                        | replace: '[future_price]', future_price 
+                                        | replace: '[discount_price]', discount_price
+                                        | replace: '[price_additional]', price_additional 
+                                        | replace: '[discount_price_additional]', discount_price_additional
+                                        | replace: '<strong>', '<del class="me-1">'
+                                        | replace: '</strong>', '</del>'
+                                    }}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+
+                </label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="subscriptionType mt-3" data-subscription="no-subscription">
+        <div class="noSubscription">
+            <div class="noSubscriptionText">
+
+               <h6 class="mb-0 one_time_purchase"> One-Time Purchase </h6>
+                {% if section.settings.one_time_purchase != blank %}
+                    <p>{{ section.settings.one_time_purchase }}</p>
+                {% endif %}
+            </div>
+            <div class="noSubscriptionPrice">
+                {{ product_price }}
+            </div>
+        </div>
+
+        {% unless supply_count > 0 %}
+            {% render 'pdm_orderby' %}
+        {% endunless %}
+
+        {% include 'product-extended-new-outofstock' %}
+
+        {% if section.settings.soldout == true %}
+            <a class="btn btn-lg btn-primary without_subscription buy_btn mt-4" href="#">Sold Out</a>   
+        {% else %}
+            {% if product.variants.first.available %}
+                <a class="btn btn-lg btn-primary without_subscription buy_btn mt-4 btn_text_value" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" onclick="setEventProductHandler('{{ product.handle | escape }}')" data-ajax-cart-request-button>{% if section.settings.reserve == true %}Reserve now{% else %}Buy Now{% endif %}</a>
+            {% else %}
+                <a class="btn btn-lg btn-primary without_subscription buy_btn mt-4 btn_text_value" href="#">{% if section.settings.reserve == true %}Reserve now{% else %}Sold Out{% endif %}</a>
+            {% endif %}
+        {% endif %}
+
+        {% capture sticky-button-classname %}without_subscription{% endcapture %}
+
+        {% render 'product-sticky-button' with 
+            variant_id: product.variants.first.id, 
+            current_price: product.price, 
+            original_price: product.price, 
+            classname: sticky-button-classname
+        %}
+
+        <div class="payment_method without_subscription">
+            <p>OR 4 monthly payments of {{ product.price | divided_by: 4 | money_without_trailing_zeros }} with</p>
+            <div class="pmt_img ps-2">
+                <img src="{{ 'klarna.svg' | asset_url }}" alt="klarna">
+                <img src="{{ 'sezzle.svg' | asset_url }}" alt="sezzle">
+                <img src="{{ 'afterpay.svg' | asset_url }}" alt="afterpay">
+            </div>
+        </div>
+    </div>
+
+    {% unless supply_count > 0 %}
+        {% render 'pdm_orderby' %}
+    {% endunless %}
+
+    <form method="post" action="/cart/add" accept-charset="UTF-8" id="SubscriptionForm" class="shopify-product-form buy-form-{{ section_id }} form-test-id" enctype="multipart/form-data" data-form-id="{{ product_id }}">
+        <input type="hidden" name="selling_plan" value="{{ block.settings.plan }}">
+        <button type="submit" class="btn btn-lg btn-primary with_subscription buy_btn mt-4 btn_text_value" onclick="setEventProductHandler('{{ product.handle | escape }}')" name="Submit" value="Submit">
+            Subscribe Now
+        </button>
+        <input type="hidden" name="id" value="{{ product_variant_id }}" />
+    </form>
+
+    {% capture sticky-button-form-classname %}buy-form-{{ section_id }}{% endcapture %}
+    {% capture sticky-button-classname %}buy-button-{{ section_id }} with_subscription{% endcapture %}
+
+    {% render 'product-sticky-button-form' with 
+        current_price: product_price_discount, 
+        original_price: product.price, 
+        form_classname: sticky-button-form-classname
+        button_classname: sticky-button-classname
+    %}
+</div>
