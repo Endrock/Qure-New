@@ -71,7 +71,7 @@
                     {% if rating_count %}
                         {%- for block in section.blocks -%}
                             {% if block.type == 'rating' %}
-                                {% if product.metafields.reviews.rating_count.value > 5 %}
+                                {% if product.metafields.reviews.rating_count.value > 10 %}
                                     {% render 'product-rating', rating_value: product.metafields.reviews.rating.value, rating_count: product.metafields.reviews.rating_count.value %}
                                 {% else %}
                                     <div class="refill_review">
@@ -220,10 +220,6 @@
                                 {% endif %}
                             {%- endfor -%}
                         {% else %}
-                        {% unless supply_count > 0 %}
-                            {% render 'pdm_orderby' %}
-                        {% endunless %}
-
                             {% if section.settings.soldout == true %}
                                 <a class="btn btn-lg btn-primary buy_btn" href="#">Sold Out</a>
                             {% else %}
@@ -255,16 +251,6 @@
                             {% if free_gift != blank %}
                                 {% render 'product-free-gift' with block: free_gift %}
                             {% endif %}
-
-                            <div class="payment_method">
-                                <p class="d-none d-md-block">OR pay 4 monthly payments of <span class="igInstallmentPrice" data-product-id="{{ product.id }}"> {{ product.price | divided_by: 4 | money_without_trailing_zeros }}</span> with</p>
-                                <p class="d-block d-md-none">OR 4 monthly payments of {{ product.price | divided_by: 4 | money_without_trailing_zeros }} with</p>
-                                <div class="pmt_img ps-2">
-                                    <img src="{{ 'klarna.svg' | asset_url }}" alt="">
-                                    <img src="{{ 'sezzle.svg' | asset_url }}" alt="">
-                                    <img src="{{ 'afterpay.svg' | asset_url }}" alt="">
-                                </div>
-                            </div>
                         {% endif %}
 
                         {% assign array_products_to_exclude = "" %}
@@ -280,21 +266,22 @@
                             {% render 'pdm_pdp-frontrow-health' %}
                         {% endunless %}
 
-                        <div class="shipping shipping_bg bg-transparent mt-2">
-                            <div class="s_bx">
+                        <div class="shipping shipping_bg bg-transparent d-flex pt-3">
+                            <div class="s_bx gap-2">
                                 <img src="{{ 'dermatologist.svg' | asset_url }}" alt="">
-                                <p>{{ section.settings.underbutton_text_left }}</p>
+                                <p class="d-none d-md-block p-0">Dermatologist<br>Reviewed</p>
+                                <p class="d-md-none p-0">Dermatologist <br>Reviewed</p>
                             </div>
-                            <div class="s_bx {% if render_qrejuvalight_shipping_badge or render_neck_decotellage_shipping_badge %}free-shipping-guarentee-original{% endif %}">
-                                <img src="{{ 'shipping.svg' | asset_url }}" alt="">
-                                <p>{{ section.settings.underbutton_text_right }}</p>
+                            <div class="s_bx gap-2">
+                                <img src="{{ '90_days.svg' | asset_url }}" alt="">
+                                <p class="d-none d-md-block p-0">90-day supply</p>
+                                <p class="d-md-none p-0">90-day supply</p>
                             </div>
-                            {% if render_qrejuvalight_shipping_badge or render_neck_decotellage_shipping_badge  %}
-                                <div class="shipping-badges-container__money-back free-shipping-guarentee-variant">
-                                    {% render 'pdm_icons', icon: 'money-back-guarantee' %}
-                                    <div class="shipping-badges-container__money-back--label">{{ settings.money_back_guarantee_label }}</div>
-                                </div>
-                            {% endif %}
+                            <div class="s_bx gap-2">
+                                <img src="{{ 'free_shipping_new.svg' | asset_url }}" alt="">
+                                <p class="d-none d-md-block p-0">Free Shipping <br>Over $100</p>
+                                <p class="d-md-none p-0">Free Shipping <br>Over $100</p>
+                            </div>
                         </div>
                     </div>
                 </div>
