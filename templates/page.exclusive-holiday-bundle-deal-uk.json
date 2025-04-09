@@ -16,7 +16,7 @@
           "type": "announcement",
           "settings": {
             "heading": "Limited Time Only:",
-            "timer": "2025-03-30T23:59:59",
+            "timer": "2025-04-30T23:59:59",
             "timer_next": 7
           }
         },
@@ -87,6 +87,7 @@
         },
         "product_L8TbkG": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "heading": "Mother's day bundle",
             "discount": 60,
@@ -539,10 +540,12 @@
         },
         "bundle_7pMMc9": {
           "type": "bundle",
+          "disabled": true,
           "settings": {}
         },
         "product_WbmMAY": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "mothers-day-bundle-1",
             "percent": 30,
@@ -559,6 +562,7 @@
         },
         "include_yy7k3x": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles + Rejuvenation) ",
             "is_limited": false,
@@ -573,6 +577,7 @@
         },
         "include_XHK4Kg": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Silk Pillowcase",
             "is_limited": false,
@@ -587,6 +592,7 @@
         },
         "how_to_use_QQ6ykk": {
           "type": "how-to-use",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_mi_sm.svg",
             "text": "<h5>Micro-Infusion 3 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Easily purchase 3 month refills via our website.</li></ul>"
