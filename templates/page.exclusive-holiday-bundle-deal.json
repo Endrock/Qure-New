@@ -543,12 +543,15 @@
           "disabled": true,
           "settings": {}
         },
-        "product_Qck4qG": {
+        "bundle_fhATMn": {
+          "type": "bundle",
+          "settings": {}
+        },
+        "product_6Nmeyc": {
           "type": "product",
-          "disabled": true,
           "settings": {
             "product": "exclusive-easter-bundle",
-            "percent": 39,
+            "percent": 30,
             "media_limit": 0,
             "hide_us": false,
             "recommended_heading": "",
@@ -560,14 +563,13 @@
             "code": ""
           }
         },
-        "include_njjqWt": {
+        "include_jkXtYb": {
           "type": "include",
-          "disabled": true,
           "settings": {
             "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles + Dark Spots)",
             "is_limited": false,
             "type": "",
-            "image": "shopify://shop_images/2monthmix_1_0201c796-fb83-44b6-a71b-800e642105a7_1.png",
+            "image": "shopify://shop_images/3_month_mix_2.png",
             "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p><h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
             "count": "",
             "hide": false,
@@ -575,14 +577,13 @@
             "code": ""
           }
         },
-        "include_xEBYB3": {
+        "include_6bW3Ra": {
           "type": "include",
-          "disabled": true,
           "settings": {
-            "heading": "Micro-Infusion 2 Month Supply (For Wrinkles)  FREE",
+            "heading": "Micro-Infusion 2 Month Supply (For Wrinkles)",
             "is_limited": false,
             "type": "",
-            "image": "shopify://shop_images/3monthrefilldarkspots_dcb3e6df-a294-40f8-afc5-ead3f74b22c1.png",
+            "image": "shopify://shop_images/2_month_for_wrinkles.png",
             "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p>",
             "count": "",
             "hide": false,
@@ -590,9 +591,8 @@
             "code": ""
           }
         },
-        "how_to_use_qEXdXL": {
+        "how_to_use_nRp9HV": {
           "type": "how-to-use",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_mi_sm.svg",
             "text": "<h5>Micro-Infusion 5 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Use the 3 month refills after 2 month bundle.</li></ul>"
@@ -812,10 +812,11 @@
         "icon_f36jbE",
         "icon_eUd4zy",
         "bundle_pxhMjY",
-        "product_Qck4qG",
-        "include_njjqWt",
-        "include_xEBYB3",
-        "how_to_use_qEXdXL",
+        "bundle_fhATMn",
+        "product_6Nmeyc",
+        "include_jkXtYb",
+        "include_6bW3Ra",
+        "how_to_use_nRp9HV",
         "bundle_wpXFFy",
         "product_aL9V3J",
         "include_cUEVxj",
