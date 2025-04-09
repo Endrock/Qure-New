@@ -540,10 +540,12 @@
         },
         "bundle_cbzdzp": {
           "type": "bundle",
+          "disabled": true,
           "settings": {}
         },
         "product_parXfC": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "exclusive-easter-bundle-uk",
             "percent": 30,
@@ -560,6 +562,7 @@
         },
         "include_qRtqAD": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles + Dark Spots)",
             "is_limited": false,
@@ -574,6 +577,7 @@
         },
         "include_tDM4Ca": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Micro-Infusion 2 Month Supply (For Wrinkles)",
             "is_limited": false,
@@ -588,6 +592,7 @@
         },
         "how_to_use_q6TN3B": {
           "type": "how-to-use",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_mi_sm.svg",
             "text": "<h5>Micro-Infusion 5 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Use the 3 month refills after 2 month bundle.</li></ul>"
