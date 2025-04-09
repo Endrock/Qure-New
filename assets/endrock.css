@@ -4706,8 +4706,8 @@ body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test.mi_patche
 }
 /* end contrast-horizontal layout - face serum + patches */
 
-/* start test micro-infusion 6 months */
-body[data-treatment-six-month] .row.treatment-test__row-container .pdm-step_content_v2 .step_conten_blocks .pdm_plan-bundle-detail p {
+/* start micro-infusion 6 months */
+.row.pdm-treatment__row-container .pdm-step_content_v2 .step_conten_blocks .pdm_plan-bundle-detail p {
   font-family: Poppins;
   font-size: 11px;
   font-style: normal;
@@ -4717,9 +4717,9 @@ body[data-treatment-six-month] .row.treatment-test__row-container .pdm-step_cont
 }
 
 @media screen and (min-width: 768px) {
-  body[data-treatment-six-month] .row.treatment-test__row-container .pdm-step_content_v2 .step_conten_blocks .pdm_plan-bundle-detail p {
+  .row.pdm-treatment__row-container .pdm-step_content_v2 .step_conten_blocks .pdm_plan-bundle-detail p {
     font-size: 12px;
     letter-spacing: 0.12px;
   }
 }
-/* End test micro-infusion 6 months */
+/* End micro-infusion 6 months */
