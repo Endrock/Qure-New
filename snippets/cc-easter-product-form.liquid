@@ -27,7 +27,7 @@
   <div class="mw-402 form-{{ section_id }}">
     <div class="serum_bl">
       <div class="facial_system">
-        <h5>Get started with Qure's Easter sales</h5>
+        <h5>Get Started with Qure's Easter Bundles</h5>
       </div>
     </div>
 
@@ -85,20 +85,6 @@
         style="display: none"
         >Reserve</a
       >
-    </div>
-
-    <div class="payment_method">
-      <p>
-        OR 4 monthly payments of
-        <span class="payment_price">{{ divided_price | money_without_trailing_zeros }}</span> with
-      </p>
-      <div class="pmt_img ps-2">
-        <img src="{{ 'klarna.svg' | asset_url }}" alt=""><img src="{{ 'afterpay.svg' | asset_url }}" alt=""
-        ><img
-          src="{{ 'sezzle.svg' | asset_url }}"
-          alt=""
-        >
-      </div>
     </div>
 
     {% render 'pdm_pdp-frontrow-health' %}
