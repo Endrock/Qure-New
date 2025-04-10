@@ -494,6 +494,7 @@
           </div>
         </div>
       </div>
+      {% render 'pdm-ba-treatment-options' %}
     </div>
   </div>
   <div
@@ -507,6 +508,10 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
+      if(document.body.hasAttribute('data-ba-treatment-options')) {
+        document.querySelector('.row.pdm-treatment__row-container').remove();
+        return;
+      }
       v2__selectProduct('{{ section_id }}_');
 
       const v2__parent = '.form-{{ section_id }}';
