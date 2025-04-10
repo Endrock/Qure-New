@@ -564,9 +564,9 @@
                   {% for drop in metaobject.data.value['cc-creator-drops'] %}
                     {% for product in metaobject.data.value['cc-creator-drops'][forloop.index0]['cc-creator-drop-products'] %}
                       {% for media in product.enhancement.medi %}
-                        {% if media.mimeType contains 'video' %}
-                          <div class="unique-video-slider-item">
-                            <div class="unique-testimonial__image media-wrapper media-wrapper--small">
+                        <div class="unique-video-slider-item">
+                          <div class="unique-testimonial__image media-wrapper media-wrapper--small">
+                            {% if media.mimeType contains 'video' %}
                               <video muted autoplay playsinline loop>
                                 <source src="{{media.url}}" type="video/mp4">
                               </video>
@@ -588,24 +588,24 @@
                                 🔇
                               </button>
                               {%- assign has_ugc_videos = true -%}
-                            </div>
+                            {% else %}
+                              <div style="height:100%;,width:100%;object-position: center;object-fit: cover;position: relative;">
+                                <img
+                                  src="{{media.url}}"
+                                  style="
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    transform: translate(-50%, -50%); /* Perfect center */
+                                  "
+                                >
+                              </div>
+                            {%- endif -%}
                           </div>
-                        {% else %}
-                          <div style="height:100%;,width:100%;object-position: center;object-fit: cover;position: relative;">
-                            <img
-                              src="{{media.url}}"
-                              style="
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                width: 100%;
-                                height: 100%;
-                                object-fit: cover;
-                                transform: translate(-50%, -50%); /* Perfect center */
-                              "
-                            >
-                          </div>
-                        {%- endif -%}
+                        </div>
                       {% endfor %}
                     {% endfor %}
                   {% endfor %}
