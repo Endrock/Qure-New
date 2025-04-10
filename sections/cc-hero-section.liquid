@@ -522,6 +522,8 @@
             {% endif %}
           {% endfor %}
         </div>
+      {% elsif metaobject['cc-featured-product'] %}
+        {{ section.settings['featured-product-custom'] }}
       {% else %}
         {{ section.settings['featured-product'] }}
       {% endif %}
@@ -882,15 +884,9 @@
 },
         {
   "type": "liquid",
-  "id": "featured-product-mask",
-  "label": "Liquid to render featured mask product",
-  "default": "{% render ‘cc-masks-form’ with section: section %}"
-},
-        {
-  "type": "liquid",
-  "id": "featured-product-patches",
-  "label": "Liquid to render patches product",
-  "default": "{% render ‘cc-patches-form’ with section: section %}"
+  "id": "featured-product-custom",
+  "label": "Liquid to render custom products",
+  "default": "{% render ‘cc-custom-product-form’ with section: section %}"
 },
           {
       "type": "inline_richtext",
