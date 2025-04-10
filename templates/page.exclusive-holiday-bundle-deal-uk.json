@@ -555,7 +555,6 @@
         },
         "product_parXfC": {
           "type": "product",
-          "disabled": true,
           "settings": {
             "product": "exclusive-easter-bundle-uk",
             "percent": 30,
