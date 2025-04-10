@@ -670,7 +670,12 @@
                         <div class="unique-testimonial__image media-wrapper media-wrapper--small" style="">
                           <img
                             src="{{ block.settings.image | img_url: 'master'}}"
-                            style="height:100%;width:auto;object-fit: cover;"
+                            style="
+                              height:100%;width:auto;object-fit: cover;position: absolute;
+                              top: 50%;
+                              left: 50%;
+                              transform: translate(-50%, -50%); /* Perfect center */
+                            "
                           >
                         </div>
                       </div>
