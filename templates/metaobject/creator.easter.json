@@ -50,8 +50,11 @@
         "testimonial_pbGGFr",
         "testimonial_jKzWFJ"
       ],
+      "custom_css": [
+        "{margin-top: -60px;}"
+      ],
       "settings": {
-        "title": "Discover My Routine",
+        "title": "Swap Chocolate for Self-care this Easter",
         "heading_text_size": 42,
         "heading_size": "h1",
         "description_text_size": 16,
@@ -68,7 +71,7 @@
         "star_size": 15,
         "star_adjustment_spacing": 2,
         "star_color": "#000000",
-        "background": "#ffffff",
+        "background": "#c7e7dd",
         "textcolor": "#000000",
         "eyebrow_margin_bottom": 12,
         "heading_margin_bottom": 18,
@@ -101,7 +104,7 @@
         "section_padding_left_right": 0,
         "section_padding_top_bottom": 0,
         "padding_left": 72,
-        "padding_top": 0,
+        "padding_top": 48,
         "padding_bottom": 0,
         "container_border_radius": 0
       }
