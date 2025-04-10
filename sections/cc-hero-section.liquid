@@ -563,7 +563,7 @@
                 <div class="unique-video-slider-list" id="Testimonials-{{ section.id }}">
                   {% for drop in metaobject.data.value['cc-creator-drops'] %}
                     {% for product in metaobject.data.value['cc-creator-drops'][forloop.index0]['cc-creator-drop-products'] %}
-                      {% for media in product.enhancement.medi %}
+                      {% for media in product.enhancement.media %}
                         <div class="unique-video-slider-item">
                           <div class="unique-testimonial__image media-wrapper media-wrapper--small">
                             {% if media.mimeType contains 'video' %}
