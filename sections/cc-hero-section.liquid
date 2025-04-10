@@ -543,7 +543,14 @@
       <!-- Video Slider -->
       <div class="unique-video-slider">
         <div class="unique-testimonials">
-          {%- assign block_count = section.blocks.size -%}
+          {%- assign block_count = 0 -%}
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'testimonial' -%}
+              {%- assign block_count = block_count | plus: 1 -%}
+            {%- endif -%}
+          {%- endfor -%}
+
+          {%- assign has_ugc_videos = false -%}
           {%- if block_count > 0 -%}
             {% assign counter = 0 %}
             <testimonials-component
@@ -556,68 +563,103 @@
                 <div class="unique-video-slider-list" id="Testimonials-{{ section.id }}">
                   {% for drop in metaobject.data.value['cc-creator-drops'] %}
                     {% for product in metaobject.data.value['cc-creator-drops'][forloop.index0]['cc-creator-drop-products'] %}
-                      {% for media in product.enhancement.media %}
-                        <div class="unique-video-slider-item">
-                          <div class="unique-testimonial__image media-wrapper media-wrapper--small">
-                            {% if media.mimeType contains 'video' %}
-                              <video autoplay loop muted playsinline controls>
+                      {% for media in product.enhancement.medi %}
+                        {% if media.mimeType contains 'video' %}
+                          <div class="unique-video-slider-item">
+                            <div class="unique-testimonial__image media-wrapper media-wrapper--small">
+                              <video muted autoplay playsinline loop>
                                 <source src="{{media.url}}" type="video/mp4">
                               </video>
-                            {% else %}
-                              <div style="height:100%;,width:100%;object-position: center;object-fit: cover;position: relative;">
-                                <img
-                                  src="{{media.url}}"
-                                  style="
-                                    position: absolute;
-                                    top: 50%;
-                                    left: 50%;
-                                    width: 100%;
-                                    height: 100%;
-                                    object-fit: cover;
-                                    transform: translate(-50%, -50%); /* Perfect center */
-                                  "
-                                >
-                              </div>
-                            {%- endif -%}
+                              <button
+                                class="mute-toggle"
+                                style="
+                                  position: absolute;
+                                  bottom: 10px;
+                                  right: 10px;
+                                  z-index: 10;
+                                  padding: 6px 10px;
+                                  background: rgba(0,0,0,0.5);
+                                  color: white;
+                                  border: none;
+                                  border-radius: 16px;
+                                  cursor: pointer;
+                                "
+                              >
+                                🔇
+                              </button>
+                              {%- assign has_ugc_videos = true -%}
+                            </div>
                           </div>
-                        </div>
+                        {%- endif -%}
                       {% endfor %}
                     {% endfor %}
                   {% endfor %}
 
                   {%- for block in section.blocks -%}
-                    <div
-                      class="unique-video-slider-item{% if section.blocks.first == true or block_count == 1 %} is-selected{% endif %}"
-                      {{ block.shopify_attributes }}
-                    >
-                      <div class="unique-testimonial__image media-wrapper media-wrapper--small">
-                        {% if block.settings.video != blank and counter == 0 %}
-                          {{
-                            block.settings.video
-                            | video_tag:
-                              image_size: '3840px',
-                              autoplay: true,
-                              loop: true,
-                              controls: true,
-                              muted: true,
-                              playsinline: true
-                          }}
+                    {% if block.type == 'testimonial' %}
+                      <div
+                        class="unique-video-slider-item{% if section.blocks.first == true or block_count == 1 %} is-selected{% endif %}"
+                        style="{% if section.blocks.first == true or block_count == 1 and has_ugc_videos == false%}margin-left:0;margin:auto{% endif %}"
+                        {{ block.shopify_attributes }}
+                      >
+                        <div class="unique-testimonial__image media-wrapper media-wrapper--small">
+                          {% if block.settings.video != blank and counter == 0 %}
+                            {{
+                              block.settings.video
+                              | video_tag:
+                                image_size: '3840px',
+                                muted: true,
+                                autoplay: true,
+                                loop: true,
+                                playsinline: true
+                            }}
 
-                        {%- else -%}
-                          {{
-                            block.settings.video
-                            | video_tag:
-                              image_size: '3840px',
-                              autoplay: false,
-                              loop: true,
-                              controls: true,
-                              muted: true,
-                              playsinline: true
-                          }}
-                        {%- endif -%}
+                          {%- else -%}
+                            {{
+                              block.settings.video
+                              | video_tag:
+                                image_size: '3840px',
+                                muted: true,
+                                autoplay: true,
+                                loop: true,
+                                playsinline: true
+                            }}
+                          {%- endif -%}
+                          <button
+                            class="mute-toggle"
+                            style="
+                              position: absolute;
+                              bottom: 10px;
+                              right: 10px;
+                              z-index: 10;
+                              padding: 6px 10px;
+                              background: rgba(0,0,0,0.5);
+                              color: white;
+                              border: none;
+                              border-radius: 16px;
+                              cursor: pointer;
+                            "
+                          >
+                            🔇
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                    {% assign counter = counter | plus: 1 %}
+                      {% assign counter = counter | plus: 1 %}
+                    {% elsif block.type == 'testimonial-image' %}
+                      <div
+                        class="unique-video-slider-item{% if section.blocks.first == true or block_count == 1 %} is-selected{% endif %}"
+                        style="{% if section.blocks.first == true or block_count == 1 and has_ugc_videos == false%}margin-left:0;margin:auto{% endif %}"
+                        {{ block.shopify_attributes }}
+                      >
+                        <div class="unique-testimonial__image media-wrapper media-wrapper--small" style="">
+                          <img
+                            src="{{ block.settings.image | img_url: 'master'}}"
+                            style="height:100%;width:auto;object-fit: cover;"
+                          >
+                        </div>
+                      </div>
+                      {% assign counter = counter | plus: 1 %}
+                    {% endif %}
                   {%- endfor -%}
                 </div>
               </div>
@@ -1105,7 +1147,18 @@
           "label": "Video link"
         }
       ]
-    }
+    },
+    {
+      "type": "testimonial-image",
+      "name": "image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image File"
+        }
+      ]
+    },
   ],
   "presets": [
     {
