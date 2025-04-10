@@ -65,10 +65,6 @@
             </div>
         </div>
 
-        {% unless supply_count > 0 %}
-            {% render 'pdm_orderby' %}
-        {% endunless %}
-
         {% include 'product-extended-new-outofstock' %}
 
         {% if section.settings.soldout == true %}
@@ -89,20 +85,7 @@
             original_price: product.price, 
             classname: sticky-button-classname
         %}
-
-        <div class="payment_method without_subscription">
-            <p>OR 4 monthly payments of {{ product.price | divided_by: 4 | money_without_trailing_zeros }} with</p>
-            <div class="pmt_img ps-2">
-                <img src="{{ 'klarna.svg' | asset_url }}" alt="klarna">
-                <img src="{{ 'sezzle.svg' | asset_url }}" alt="sezzle">
-                <img src="{{ 'afterpay.svg' | asset_url }}" alt="afterpay">
-            </div>
-        </div>
     </div>
-
-    {% unless supply_count > 0 %}
-        {% render 'pdm_orderby' %}
-    {% endunless %}
 
     <form method="post" action="/cart/add" accept-charset="UTF-8" id="SubscriptionForm" class="shopify-product-form buy-form-{{ section_id }} form-test-id" enctype="multipart/form-data" data-form-id="{{ product_id }}">
         <input type="hidden" name="selling_plan" value="{{ block.settings.plan }}">
