@@ -877,8 +877,20 @@
     {
   "type": "liquid",
   "id": "featured-product",
-  "label": "Liquid to render featured product",
+  "label": "Liquid to render default featured product",
   "default": "{% render ‘cc-serums-months-form’ with section: section %}"
+},
+        {
+  "type": "liquid",
+  "id": "featured-product-mask",
+  "label": "Liquid to render featured mask product",
+  "default": "{% render ‘cc-masks-form’ with section: section %}"
+},
+        {
+  "type": "liquid",
+  "id": "featured-product-patches",
+  "label": "Liquid to render patches product",
+  "default": "{% render ‘cc-patches-form’ with section: section %}"
 },
           {
       "type": "inline_richtext",
