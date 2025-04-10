@@ -12,6 +12,12 @@
     "cc_hero_section_LFebGr": {
       "type": "cc-hero-section",
       "blocks": {
+        "testimonial_image_xTkegg": {
+          "type": "testimonial-image",
+          "settings": {
+            "image": "shopify://shop_images/Easter2_1.png"
+          }
+        },
         "testimonial_JbDzzr": {
           "type": "testimonial",
           "settings": {
@@ -44,6 +50,7 @@
         }
       },
       "block_order": [
+        "testimonial_image_xTkegg",
         "testimonial_JbDzzr",
         "testimonial_YcYFUt",
         "testimonial_C9hVCQ",
