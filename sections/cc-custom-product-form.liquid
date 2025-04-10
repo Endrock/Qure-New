@@ -1,6 +1,242 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
-{% endschema %}
+{% assign cc_handle = cart.attributes['cc-creator-handle'] %}
+{% assign cc_creator = metaobjects.creator[cc_handle] %}
+{% if section == blank %}
+  <p>Please provide section_id property to use this snippet</p>
+{% else %}
+  <link rel="stylesheet" href="{{ 'product_micro-infusion-pdp.css' | asset_url }}">
+
+  {% assign section_id = section.id %}
+
+  {%- assign supply_for_refill = 0 -%}
+
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'supply_for_refill' -%}
+        {%- assign supply_for_refill = block -%}
+    {%- endcase -%}
+  {%- endfor -%}
+
+  {% if settings.show_bf_price == true %}
+    {% render 'bf-price-displaying', product: product %}
+  {% endif %}
+  {% assign handle = metaobject['cc-featured-product'] %}
+  {% assign product = all_products[handle] %}
+  {% assign discount_percentage = metaobject.data.value['cc-collab-discount-amount'] %}
+  {% assign divided_price = product.price | divided_by: 4 %}
+
+  <div class="mw-402 form-{{ section_id }}">
+    <div class="serum_bl">
+      <div class="facial_system">
+        <h5>Get started with the {{ product.title }} that {{ metaobject['cc-creator-first-name'] }} loves</h5>
+      </div>
+    </div>
+
+    {% render 'pdm_orderby' %}
+
+    {% if section.settings.popup_enabled %}
+      {% render 'pdm-popup-upsell-landing',
+        referrer: 'pdm_serums_m_form',
+        ajax_selector: '.pdp-ajax-container .btn.buy_btn '
+      %}
+    {% endif %}
+
+    <div class="upsell_popup_anchor_hover pdp-ajax-container">
+      {% if section.settings.popup_enabled %}
+        <button
+          data-popup-enabled="true"
+          data-popup-referrer="pdm_serums_m_form"
+          data-ajax-selector=".pdp-ajax-container .btn.buy_btn"
+          class="upsell_popup_btn openPopupUpsell"
+        ></button>
+      {% endif %}
+
+      <a
+        class="btn btn-lg btn-primary buy_btn mt-3 {{ section_id }}_productButtonObject"
+        href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1"
+        data-ajax-cart-request-button
+        >Buy Now
+        <span
+          class="savedAmount"
+          >& SAVE {{ discount_percentage }}%</span
+        ><img src="{{ 'arrow_right.svg' | asset_url }}" alt="">
+      </a>
+
+      <a
+        class="btn btn-lg btn-primary buy_btn_soldout mt-3 {{ section_id }}_productButtonSoldOutObject"
+        style="display: none;"
+        >Sold Out</a
+      >
+    </div>
+
+    <div class="upsell_popup_anchor_hover pdp-ajax-container-reserve">
+      {% if section.settings.popup_enabled %}
+        <button
+          data-popup-enabled="true"
+          data-popup-referrer="pdm_serums_m_form"
+          data-ajax-selector=".pdp-ajax-container-reserve .btn.buy_btn_reserve"
+          class="upsell_popup_btn openPopupUpsell"
+        ></button>
+      {% endif %}
+      <a
+        class="btn btn-lg btn-primary buy_btn_reserve mt-3 {{ section_id }}_productButtonObject"
+        href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1"
+        data-ajax-cart-request-button
+        style="display: none"
+        >Reserve</a
+      >
+    </div>
+
+    <div class="payment_method">
+      <p>
+        OR 4 monthly payments of
+        <span class="payment_price">{{ divided_price | money_without_trailing_zeros }}</span> with
+      </p>
+      <div class="pmt_img ps-2">
+        <img src="{{ 'klarna.svg' | asset_url }}" alt=""><img src="{{ 'afterpay.svg' | asset_url }}" alt=""
+        ><img
+          src="{{ 'sezzle.svg' | asset_url }}"
+          alt=""
+        >
+      </div>
+    </div>
+
+    {% render 'pdm_pdp-frontrow-health' %}
+
+    <div class="shipping shipping_bg bg-transparent py-0">
+      <div class="s_bx">
+        <img src="{{ 'dermatologist.svg' | asset_url }}" alt="">
+        <p>Dermatologist Reviewed</p>
+      </div>
+      <div class="s_bx">
+        <img src="{{ 'shipping.svg' | asset_url }}" alt="">
+        <p class="d-none d-md-block">Free Shipping Over $100</p>
+        <p class="d-block d-md-none">Free World-Wide Shipping Over $100</p>
+      </div>
+    </div>
+  </div>
+
+  {% capture sticky-button-classname %}{{ section_id }}_productButtonObject{% endcapture %}
+
+  {%
+    render 'product-sticky-button' with
+    variant_id: product.variants.first.id,
+    current_price: product.price,
+    original_price: product.compare_at_price,
+    classname: sticky-button-classname
+  %}
+
+  <script>
+    const parent = '.form-{{ section_id }}';
+    const serumOptions = document.querySelectorAll(parent + ' input[name="mBanner_serum"]');
+    const supplySteps = document.querySelector(parent + ' .supply_steps.month_plan_steps');
+    const nextBatchBl = document.querySelector(parent + ' .next_batch_bl');
+    const buyButton = document.querySelector(parent + ' .buy_btn');
+    const buyButtonSoldOut = document.querySelector(parent + ' .buy_btn_soldout');
+    const buyButtonReserve = document.querySelector(parent + ' .buy_btn_reserve');
+    const savedAmount = document.querySelector(parent + ' .savedAmount');
+    const buyButtonSticky = document.querySelector('.button_sticky');
+
+    let isOptionForWrinklesDarkSpots = false;
+    let isOptionForWrinkles = false;
+    let isOptionForDarkSpots = false;
+
+    const selectSerum = () => {
+        toogleSectionSupply();
+        setTimeout(() => {
+            toogleButtonSoldOut();
+        }, 100)
+    };
+
+    const toogleSectionSupply = () => {
+        if (isSectionSupply()) {
+            nextBatchBl.style.display = "block";
+            buyButtonSoldOut.style.display = "none";
+            buyButton.style.display = "none";
+            buyButtonReserve.style.display = "block";
+        } else {
+            nextBatchBl.style.display = "none";
+            buyButton.style.display = "block";
+            buyButtonReserve.style.display = "none";
+        }
+    }
+
+    const toogleButtonSoldOut = () => {
+
+        if(isSectionSupply())
+        {
+            if (savedAmount && buyButtonReserve && buyButtonSoldOut) {
+                if (savedAmount.textContent.trim() === "& SAVE {{ soldout_percentage }}%") {
+                    buyButtonReserve.style.display = "none";
+                    buyButtonSticky.style.display = "none";
+                    buyButtonSoldOut.style.display = "block";
+                } else {
+                    buyButtonReserve.style.display = "block";
+                    buyButtonSticky.style.display = "block";
+                    buyButtonSoldOut.style.display = "none";
+                }
+            }
+        }
+        else
+        {
+            if (savedAmount && buyButton && buyButtonSoldOut) {
+                if (savedAmount.textContent.trim() === "& SAVE {{ soldout_percentage }}%") {
+                    buyButton.style.display = "none";
+                    buyButtonSticky.style.display = "none";
+                    buyButtonSoldOut.style.display = "block";
+                } else {
+                    buyButton.style.display = "block";
+                    buyButtonSticky.style.display = "block";
+                    buyButtonSoldOut.style.display = "none";
+                }
+            }
+        }
+    }
+
+    const isSectionSupply = () => {
+
+        let selectedSerum = document.querySelector('.form-{{ section_id }} input[name="mBanner_serum"]:checked');
+
+        if(selectedSerum.id == 'option_for_wrinkles_darkspots')
+        {
+            {% if supply_for_refill.settings.option_wrinkles_darkspots %}
+                return true;
+            {% endif %}
+        }
+
+        if(selectedSerum.id == 'option_for_wrinkles')
+        {
+            {% if supply_for_refill.settings.option_wrinkles %}
+                return true;
+            {% endif %}
+        }
+
+        if(selectedSerum.id == 'option_for_darkspots')
+        {
+            {% if supply_for_refill.settings.option_darkspots %}
+                return true;
+            {% endif %}
+        }
+
+        return false;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+        selectProduct('{{ section_id }}_');
+
+        /*
+        selectSerum();
+
+        const observer = new MutationObserver(toogleButtonSoldOut);
+
+        if (savedAmount) {
+            observer.observe(savedAmount, { childList: true, subtree: true });
+        }
+
+        serumOptions.forEach((option) => {
+            option.addEventListener("change", selectSerum);
+        });
+        */
+    });
+  </script>
+{% endif %}
