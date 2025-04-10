@@ -80,8 +80,8 @@
         "link_Xz3LeQ": {
           "type": "link",
           "settings": {
-            "link_label": "Shop & SAVE UP TO 72%",
-            "link_label_mobile": "Shop & SAVE UP TO 72%",
+            "link_label": "Shop & SAVE UP TO 60%",
+            "link_label_mobile": "Shop & SAVE UP TO 60%",
             "link_url": "#bf-bundles"
           }
         },
@@ -101,7 +101,7 @@
             "heading": "Exclusive Easter Bundle",
             "discount": 72,
             "image": "shopify://shop_images/Easter2_1.png",
-            "product_url": ""
+            "product_url": "shopify://products/exclusive-easter-bundle-uk"
           }
         },
         "product_YzAr6q": {
