@@ -394,15 +394,6 @@
             "image": "shopify://shop_images/results.svg"
           }
         },
-        "object_iinakB": {
-          "type": "object",
-          "settings": {
-            "before_text": "Before",
-            "before_image": "shopify://shop_images/tr_item3_before.webp",
-            "after_text": "After 1 treatment",
-            "after_image": "shopify://shop_images/tr_item3_after.webp"
-          }
-        },
         "object_rKT6dw": {
           "type": "object",
           "settings": {
@@ -419,6 +410,15 @@
             "before_image": "shopify://shop_images/tr_item2_before.webp",
             "after_text": "After 2 treatment",
             "after_image": "shopify://shop_images/tr_item2_after.webp"
+          }
+        },
+        "object_iinakB": {
+          "type": "object",
+          "settings": {
+            "before_text": "Before",
+            "before_image": "shopify://shop_images/tr_item3_before.webp",
+            "after_text": "After 1 treatment",
+            "after_image": "shopify://shop_images/tr_item3_after.webp"
           }
         },
         "object_7QbjiT": {
@@ -462,9 +462,9 @@
         "icon_8RMchx",
         "icon_6EgyHw",
         "icon_fNt3y4",
-        "object_iinakB",
         "object_rKT6dw",
         "object_H9wTAE",
+        "object_iinakB",
         "object_7QbjiT",
         "object_9cTrHQ",
         "object_XYAjAV",
