@@ -383,15 +383,6 @@
             "image": "shopify://shop_images/results.svg"
           }
         },
-        "object_iinakB": {
-          "type": "object",
-          "settings": {
-            "before_text": "Before",
-            "before_image": "shopify://shop_images/tr_item3_before.webp",
-            "after_text": "After 1 treatment",
-            "after_image": "shopify://shop_images/tr_item3_after.webp"
-          }
-        },
         "object_rKT6dw": {
           "type": "object",
           "settings": {
@@ -401,6 +392,15 @@
             "after_image": "shopify://shop_images/tr_item1_after.webp"
           }
         },
+        "object_iinakB": {
+          "type": "object",
+          "settings": {
+            "before_text": "Before",
+            "before_image": "shopify://shop_images/tr_item3_before.webp",
+            "after_text": "After 1 treatment",
+            "after_image": "shopify://shop_images/tr_item3_after.webp"
+          }
+        },
         "object_H9wTAE": {
           "type": "object",
           "settings": {
@@ -408,6 +408,15 @@
             "before_image": "shopify://shop_images/tr_item2_before.webp",
             "after_text": "After 2 treatment",
             "after_image": "shopify://shop_images/tr_item2_after.webp"
+          }
+        },
+        "object_XYAjAV": {
+          "type": "object",
+          "settings": {
+            "before_text": "Before",
+            "before_image": "shopify://shop_images/tr_item6_before.webp",
+            "after_text": "After Qure",
+            "after_image": "shopify://shop_images/tr_item6_after.webp"
           }
         },
         "object_7QbjiT": {
@@ -428,15 +437,6 @@
             "after_image": "shopify://shop_images/tr_item5_after.webp"
           }
         },
-        "object_XYAjAV": {
-          "type": "object",
-          "settings": {
-            "before_text": "Before",
-            "before_image": "shopify://shop_images/tr_item6_before.webp",
-            "after_text": "After Qure",
-            "after_image": "shopify://shop_images/tr_item6_after.webp"
-          }
-        },
         "link_fCqURh": {
           "type": "link",
           "settings": {
@@ -451,12 +451,12 @@
         "icon_8RMchx",
         "icon_6EgyHw",
         "icon_fNt3y4",
-        "object_iinakB",
         "object_rKT6dw",
+        "object_iinakB",
         "object_H9wTAE",
+        "object_XYAjAV",
         "object_7QbjiT",
         "object_9cTrHQ",
-        "object_XYAjAV",
         "link_fCqURh"
       ],
       "settings": {
