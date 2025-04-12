@@ -12,7 +12,9 @@
                     <h2 class="mb-0">Choose Your Bundle</h2>
                 </div>
                 <div class="pe-md-4">
-                    <img src="https://qureskincaredns.com/new/assets/offer_patches-11.webp" alt="" id="bundleImage" class="img-fluid">
+                    {% assign buy_block_image = "https://qureskincaredns.com/new/assets/offer_patches-11.webp" %}
+                    {% render 'pdm_before-after-patches-buy-block-carousel',image: buy_block_image %}
+                    <img src="{{ buy_block_image }}" alt="" id="bundleImage" class="img-fluid original-buy-block__image">
                 </div>
             </div>
             <div class="col-md-6">
