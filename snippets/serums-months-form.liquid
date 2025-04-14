@@ -19,6 +19,17 @@
         {% render 'bf-price-displaying', product: product %}
     {% endif %}
 
+    {%- assign out_of_stock_count = 0 -%}
+
+    {% if section != blank %}
+        {%- for block in section.blocks -%}
+            {%- case block.type -%}
+                {%- when 'out_of_stock' -%}
+                    {%- assign out_of_stock_count = out_of_stock_count | plus: 1 -%}
+            {%- endcase -%}
+        {%- endfor -%}
+    {% endif %}
+
     <div class="mw-402 form-{{ section_id }}">
 
         <div class="serum_bl">
@@ -185,6 +196,74 @@
         {% assign divided_price = product.price | divided_by: 4 %}
         {% render 'pdm_orderby' %}
 
+        {% if out_of_stock_count > 0 %}
+            <div class="next_batch_bl next_batch_highlight" style="margin-top: 20px; display:none">
+                {%- for block in section.blocks -%}
+                    {% if block.type == 'out_of_stock' %}
+                        {% if block.settings.heading != blank %}
+                            <h6 class="d-none d-md-block">{{ block.settings.heading }}</h6>
+                        {% endif %}
+        
+                        {% if block.settings.heading_mobile != blank %}
+                            <h6 class="d-md-none">{{ block.settings.heading_mobile }}</h6>
+                        {% endif %}
+                        
+                        {% if block.settings.text != blank %}
+                            {{ block.settings.text }}
+                        {% endif %}
+        
+                        {% if block.settings.first_option_text != blank %}
+                            <div class="batch_h batch_h_fade mt-3 mt-md-4">
+                                <div class="batch_h_month">{{ block.settings.first_option_date }}</div>
+                                <div class="batch_h_info sold_out_h" style="--bgPercent:{{ block.settings.first_option_percent }}%;"><span>{{ block.settings.first_option_text }}</span></div>
+                            </div>
+                        {% endif %}
+        
+                        {% if block.settings.second_option_text != blank %}
+                            <div class="batch_h my-2">
+                                <div class="batch_h_month">{{ block.settings.second_option_date }}</div>
+                                <div class="batch_h_info" style="--bgPercent:{{ block.settings.second_option_percent }}%;">{{ block.settings.second_option_text }}</div>
+                            </div>
+                        {% endif %}
+        
+                        {% if block.settings.third_option_text != blank %}
+                            <div class="batch_h batch_h_fade">
+                                <div class="batch_h_month">{{ block.settings.third_option_date }}</div>
+                                <div class="batch_h_info" style="--bgPercent:{{ block.settings.third_option_percent }}%;"><span>{{ block.settings.third_option_text }}</span></div>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                {%- endfor -%}
+            </div>
+    
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+
+                    let outOfStock = document.querySelector('.form-{{ section_id }} .next_batch_bl');
+
+                    $('.step_conten_blocks .planBlock').click(function () {
+                        if(!$(this).find(".regular_price").text())
+                        {
+                            outOfStock.style.display = "block";
+                            
+                            document.querySelectorAll('.btn_text_value').forEach(btn => {
+                                btn.textContent = 'Reserve now';
+                            });
+                        }
+                        else
+                        {
+                            outOfStock.style.display = "none";
+
+                            document.querySelectorAll('.btn_text_value').forEach(btn => {
+                                btn.textContent = 'Buy now';
+                            });
+                        }
+                    });
+                });
+            </script>
+            
+        {% endif %}
+
         {% if section.settings.popup_enabled %}
             {% render 'pdm-popup-upsell-landing' 
             referrer: "pdm_serums_m_form", 
@@ -201,8 +280,8 @@
                 class="upsell_popup_btn openPopupUpsell"></button>
             {% endif %}
 
-            <a class="btn btn-lg btn-primary buy_btn mt-3 {{ section_id }}_productButtonObject" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>Buy Now <span
-                    class="savedAmount">& SAVE {{ discount_percentage }}%</span><img src="{{ 'arrow_right.svg' | asset_url }}" alt="">
+            <a class="btn btn-lg btn-primary buy_btn mt-3 {{ section_id }}_productButtonObject" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" data-ajax-cart-request-button>
+                <span class="btn_text_value">Buy Now</span> <span class="savedAmount">& SAVE {{ discount_percentage }}%</span><img src="{{ 'arrow_right.svg' | asset_url }}" alt="">
             </a>
 
             <a class="btn btn-lg btn-primary buy_btn_soldout mt-3 {{ section_id }}_productButtonSoldOutObject" style="display: none;">Sold Out</a>
