@@ -4733,7 +4733,7 @@ body[data-patches-buy-block] .patches-before-after-carousel-container.before-aft
 }
 
 body[data-patches-buy-block] .patches-before-after-carousel-container.before-after-carousel-container .swiper-products-thumbs__container {
-  max-width: calc(100% - 50px);
+  max-width: calc(100% - 60px);
 }
 
 body[data-patches-buy-block] .patches-before-after-carousel-container.before-after-carousel-container .swiper-products-carousel {
@@ -4744,12 +4744,18 @@ body[data-patches-buy-block] .patches-before-after-carousel-container.before-aft
 
 body[data-patches-buy-block] .patches-before-after-carousel-container.before-after-carousel-container .swiper-products-thumbs-prev,
 body[data-patches-buy-block] .patches-before-after-carousel-container.before-after-carousel-container .swiper-products-thumbs-next {
-    bottom: 0;
-    transform: translateY(-98%);
-    -webkit-transform: translateY(-98%);
-    -moz-transform: translateY(-98%);
-    -ms-transform: translateY(-98%);
-    -o-transform: translateY(-98%);
+  bottom: 0;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+body[data-patches-buy-block] .patches-before-after-carousel-container.before-after-carousel-container .swiper-products-thumbs-prev svg ,
+body[data-patches-buy-block] .patches-before-after-carousel-container.before-after-carousel-container .swiper-products-thumbs-next svg {
+  width: 7px;
+  height: 13.222px;
 }
 
 body[data-patches-buy-block] .patches-before-after-carousel-container.before-after-carousel-container .swiper-products-carousel .swiper-wrapper {
@@ -4767,6 +4773,20 @@ body[data-patches-buy-block] .patches-before-after-carousel-container.before-aft
   body[data-patches-buy-block] .patches-before-after-carousel-container.before-after-carousel-container .swiper-products-carousel {
     width: 530px;
     height: 512px;
+  }
+
+  body[data-patches-buy-block] .patches-before-after-carousel-container.before-after-carousel-container .swiper-products-thumbs__container {
+    max-width: calc(100% - 92px);
+  }
+
+  body[data-patches-buy-block] .patches-before-after-carousel-container.before-after-carousel-container .swiper-products-thumbs-prev,
+  body[data-patches-buy-block] .patches-before-after-carousel-container.before-after-carousel-container .swiper-products-thumbs-next {
+    bottom: 0;
+    transform: translateY(-98%);
+    -webkit-transform: translateY(-98%);
+    -moz-transform: translateY(-98%);
+    -ms-transform: translateY(-98%);
+    -o-transform: translateY(-98%);
   }
 }
 /* End patches buy block carousel */
