@@ -61,7 +61,7 @@
         "navigation_link_rmYfWw"
       ],
       "settings": {
-        "button_label": "SAVE UP TO 55%",
+        "button_label": "SAVE UP TO 72%",
         "button_url": "#bf-bundles"
       }
     },
@@ -80,18 +80,17 @@
         "link_Xz3LeQ": {
           "type": "link",
           "settings": {
-            "link_label": "Shop & SAVE UP TO 55%",
-            "link_label_mobile": "Shop & SAVE UP TO 55%",
+            "link_label": "Shop & SAVE UP TO 72%",
+            "link_label_mobile": "Shop & SAVE UP TO 72%",
             "link_url": "#bf-bundles"
           }
         },
         "product_L8TbkG": {
           "type": "product",
-          "disabled": true,
           "settings": {
             "heading": "Exclusive Easter bundle",
             "discount": 72,
-            "image": "shopify://shop_images/VD-Bundle-hero-02.png",
+            "image": "shopify://shop_images/Easter1_1.png",
             "product_url": "#Pro-Aging-Bundles"
           }
         },
@@ -224,7 +223,7 @@
       ],
       "settings": {
         "seo_heading": "",
-        "heading": "Save Up to 55% on \\n Certified Skincare Solutions",
+        "heading": "Save Up to 72% on \\n Certified Skincare Solutions",
         "text": "<p>Backed by the most respected peer-reviewed <strong>Dermatologist Journals </strong>and <strong>scientific studies </strong>that prove; Qure’s skincare <strong>works.</strong></p>"
       }
     },
@@ -384,15 +383,6 @@
             "image": "shopify://shop_images/results.svg"
           }
         },
-        "object_iinakB": {
-          "type": "object",
-          "settings": {
-            "before_text": "Before",
-            "before_image": "shopify://shop_images/tr_item3_before.webp",
-            "after_text": "After 1 treatment",
-            "after_image": "shopify://shop_images/tr_item3_after.webp"
-          }
-        },
         "object_rKT6dw": {
           "type": "object",
           "settings": {
@@ -402,6 +392,15 @@
             "after_image": "shopify://shop_images/tr_item1_after.webp"
           }
         },
+        "object_iinakB": {
+          "type": "object",
+          "settings": {
+            "before_text": "Before",
+            "before_image": "shopify://shop_images/tr_item3_before.webp",
+            "after_text": "After 1 treatment",
+            "after_image": "shopify://shop_images/tr_item3_after.webp"
+          }
+        },
         "object_H9wTAE": {
           "type": "object",
           "settings": {
@@ -409,6 +408,15 @@
             "before_image": "shopify://shop_images/tr_item2_before.webp",
             "after_text": "After 2 treatment",
             "after_image": "shopify://shop_images/tr_item2_after.webp"
+          }
+        },
+        "object_XYAjAV": {
+          "type": "object",
+          "settings": {
+            "before_text": "Before",
+            "before_image": "shopify://shop_images/tr_item6_before.webp",
+            "after_text": "After Qure",
+            "after_image": "shopify://shop_images/tr_item6_after.webp"
           }
         },
         "object_7QbjiT": {
@@ -429,15 +437,6 @@
             "after_image": "shopify://shop_images/tr_item5_after.webp"
           }
         },
-        "object_XYAjAV": {
-          "type": "object",
-          "settings": {
-            "before_text": "Before",
-            "before_image": "shopify://shop_images/tr_item6_before.webp",
-            "after_text": "After Qure",
-            "after_image": "shopify://shop_images/tr_item6_after.webp"
-          }
-        },
         "link_fCqURh": {
           "type": "link",
           "settings": {
@@ -452,12 +451,12 @@
         "icon_8RMchx",
         "icon_6EgyHw",
         "icon_fNt3y4",
-        "object_iinakB",
         "object_rKT6dw",
+        "object_iinakB",
         "object_H9wTAE",
+        "object_XYAjAV",
         "object_7QbjiT",
         "object_9cTrHQ",
-        "object_XYAjAV",
         "link_fCqURh"
       ],
       "settings": {
@@ -540,12 +539,10 @@
         },
         "bundle_fhATMn": {
           "type": "bundle",
-          "disabled": true,
           "settings": {}
         },
         "product_6Nmeyc": {
           "type": "product",
-          "disabled": true,
           "settings": {
             "product": "exclusive-easter-bundle",
             "percent": 30,
@@ -562,7 +559,6 @@
         },
         "include_jkXtYb": {
           "type": "include",
-          "disabled": true,
           "settings": {
             "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles + Dark Spots)",
             "is_limited": false,
@@ -577,7 +573,6 @@
         },
         "include_6bW3Ra": {
           "type": "include",
-          "disabled": true,
           "settings": {
             "heading": "Micro-Infusion 2 Month Supply (For Wrinkles)",
             "is_limited": false,
@@ -592,7 +587,6 @@
         },
         "how_to_use_nRp9HV": {
           "type": "how-to-use",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_mi_sm.svg",
             "text": "<h5>Micro-Infusion 5 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Use the 3 month refills after 2 month bundle.</li></ul>"

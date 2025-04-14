@@ -1465,9 +1465,9 @@ function updateSiteWideGamification(cartTotal) {
  * and one for product thumbnails (thumbnail slider), including mousewheel navigation and responsive settings.
  */
 
-function initPDPCarouselImage() {
-  const productThumbsContainer = document.querySelector('.swiper-products-thumbs__container');
-  const productMediaContainer = document.querySelector('.swiper-products-carousel');
+function initPDPCarouselImage () {
+  const productThumbsContainer = document.querySelector('.before-after-carousel-container:not(.patches-before-after-carousel-container) .swiper-products-thumbs__container');
+  const productMediaContainer = document.querySelector('.before-after-carousel-container:not(.patches-before-after-carousel-container) .swiper-products-carousel');
 
   if (!productThumbsContainer || !productMediaContainer) return;
 
@@ -1499,8 +1499,8 @@ function initPDPCarouselImage() {
       swiper: thumbSlider,
     },
     navigation: {
-      nextEl: ".swiper-products-thumbs-next",
-      prevEl: ".swiper-products-thumbs-prev",
+      nextEl: ".before-after-carousel-container:not(.patches-before-after-carousel-container) .swiper-products-thumbs-next",
+      prevEl: ".before-after-carousel-container:not(.patches-before-after-carousel-container) .swiper-products-thumbs-prev",
     },
   });
 }
@@ -2009,3 +2009,98 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 });
 /* End QR - Navigation Bundle Features AB test */
+
+/* start patches buy block carousel */
+/**
+ * Initializes the main carousel for the patches before/after gallery in the buy block
+ * Creates two synchronized Swiper instances: a thumbnail slider and a main image slider
+ * 
+ * @function initPatchesCarouselBuyBlock
+ * @returns {void}
+ */
+function initPatchesCarouselBuyBlock() {
+  // Select DOM elements for thumbnail container and media container
+  const productThumbsContainer = document.querySelector('.patches-before-after-carousel-container.before-after-carousel-container .swiper-products-thumbs__container');
+  const productMediaContainer = document.querySelector('.patches-before-after-carousel-container.before-after-carousel-container .swiper-products-carousel');
+
+  // Exit function if required elements don't exist
+  if (!productThumbsContainer || !productMediaContainer) return;
+
+  // Initialize thumbnail slider
+  let thumbSlider = new Swiper(productThumbsContainer, {
+    loop: false,
+    spaceBetween: 8,
+    slidesPerView: 4.3,
+    slidesPerGroup: 1,
+    watchSlidesProgress: true,
+    mousewheel: {
+      forceToAxis: true,
+    },
+    // Responsive breakpoints
+    breakpoints: {
+      767: {
+        spaceBetween: 12,
+        slidesPerView: 6.3,
+        slidesPerGroup: 1,
+      },
+    },
+  });
+
+  // Initialize main image slider connected to thumbnail slider
+  let mainSlider = new Swiper(productMediaContainer, {
+    loop: false,
+    slidesPerView: 1,
+    mousewheel: {
+      forceToAxis: true,
+    },
+    // Connect to thumbnail slider
+    thumbs: {
+      swiper: thumbSlider,
+    },
+    // Navigation arrows
+    navigation: {
+      nextEl: ".patches-before-after-carousel-container.before-after-carousel-container .swiper-products-thumbs-next",
+      prevEl: ".patches-before-after-carousel-container.before-after-carousel-container .swiper-products-thumbs-prev",
+    },
+  });
+
+  // Expose slider control to global scope for external access
+  window.patchesCarousel = {
+    /**
+     * Navigate to a specific slide in the carousel
+     * 
+     * @param {number} slideIndex - Index of the slide to navigate to
+     * @returns {void}
+     */
+    goToSlide: function(slideIndex) {
+      mainSlider.slideTo(slideIndex);
+    }
+  };
+}
+
+/**
+ * Conditional initialization for patches carousel in buy block based on test flag
+ * Handles A/B testing scenario for the patches carousel feature
+ * 
+ * @function initPatchesCarouselBuyBlockTest
+ * @returns {void}
+ */
+function initPatchesCarouselBuyBlockTest() {
+  // Check if the test flag is present on the body element
+  const bodyHasPatchesBuyBlockTest = document.body.hasAttribute('data-patches-buy-block');
+  
+  if(bodyHasPatchesBuyBlockTest) {
+    // Test variant: Remove original image and initialize carousel
+    const originalBuyBlockImage = document.querySelector('.img-fluid.original-buy-block__image');
+    if(originalBuyBlockImage) originalBuyBlockImage.remove();
+    initPatchesCarouselBuyBlock();
+  } else {
+    // Control variant: Remove test carousel if it exists
+    const testPatchesCarousel = document.querySelector('.patches-before-after-carousel-container');
+    if(testPatchesCarousel) testPatchesCarousel.remove();
+  }
+}
+
+// Initialize the carousel test when DOM is fully loaded
+document.addEventListener('DOMContentLoaded', initPatchesCarouselBuyBlockTest);
+// end patches buy block carousel

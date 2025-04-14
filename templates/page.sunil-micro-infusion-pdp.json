@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "main": {
       "type": "product-landing",
@@ -30,6 +30,23 @@
           "type": "liquid",
           "settings": {
             "code": "{% render 'serums-months-form' with section: section %}"
+          }
+        },
+        "out_of_stock_3xp9iR": {
+          "type": "out_of_stock",
+          "settings": {
+            "heading": "Next batch ships end of April 2025:",
+            "heading_mobile": "Next batch ships end of April 2025:",
+            "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.</p>",
+            "first_option_date": "March 21st",
+            "first_option_text": "SOLD OUT",
+            "first_option_percent": 100,
+            "second_option_date": "April 25th",
+            "second_option_text": "54% Reserved",
+            "second_option_percent": 54,
+            "third_option_date": "May 2025",
+            "third_option_text": "In Production",
+            "third_option_percent": 0
           }
         },
         "product_in_page_x33rFD": {
@@ -85,16 +102,16 @@
         "supply_for_refill_VM6N4V": {
           "type": "supply_for_refill",
           "settings": {
-            "heading": "Next batch ships 15th of March 2025:",
-            "heading_mobile": "Next batch ships 03/15:",
+            "heading": "Next batch ships 6th of May 2025:",
+            "heading_mobile": "Next batch ships 05/6:",
             "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.</p>",
-            "first_option_date": "January 5th",
+            "first_option_date": "March 5th",
             "first_option_text": "Sold Out",
             "first_option_percent": 100,
-            "second_option_date": "March 15th",
+            "second_option_date": "May 6th",
             "second_option_text": "51% Reserved",
             "second_option_percent": 52,
-            "third_option_date": "April 30th",
+            "third_option_date": "June 30th",
             "third_option_text": "In Production",
             "third_option_percent": 0,
             "option_wrinkles_darkspots": false,
@@ -107,6 +124,7 @@
         "rating_eLjGX8",
         "list_FatCgk",
         "liquid_6AqWXk",
+        "out_of_stock_3xp9iR",
         "product_in_page_x33rFD",
         "before_and_after_i7mAeJ",
         "video_before_and_after_ww3Xa3",
@@ -122,7 +140,7 @@
         "product_button_label": "Product",
         "before_after_images_limit": 3,
         "before_after_button_label": "Before & After",
-        "reserve": false,
+        "reserve": true,
         "soldout": false,
         "selected_design": "new",
         "text_label_real_result_1": "Product",

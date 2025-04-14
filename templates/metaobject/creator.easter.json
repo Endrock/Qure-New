@@ -9,6 +9,113 @@
  */
 {
   "sections": {
+    "cc_hero_section_LFebGr": {
+      "type": "cc-hero-section",
+      "blocks": {
+        "testimonial_image_Rm4FfP": {
+          "type": "testimonial-image",
+          "settings": {
+            "image": "shopify://shop_images/Frame_485963easter29.png"
+          }
+        },
+        "testimonial_JbDzzr": {
+          "type": "testimonial",
+          "settings": {
+            "video": "shopify://files/videos/PATCHES_how to use.mp4"
+          }
+        },
+        "testimonial_YcYFUt": {
+          "type": "testimonial",
+          "settings": {
+            "video": "shopify://files/videos/-afc6-4003-b682-4e808c7172b1 (1).mov"
+          }
+        },
+        "testimonial_C9hVCQ": {
+          "type": "testimonial",
+          "settings": {
+            "video": "shopify://files/videos/f5de3c2a52ec4df78271943cbd8804d3.mp4"
+          }
+        },
+        "testimonial_pbGGFr": {
+          "type": "testimonial",
+          "settings": {
+            "video": "shopify://files/videos/Snapinsta.app_video_An-zPuKMEldgDdItZPmS1z8PtOGTmDvK86ZUxNVs13gpvQ0ErxsmxN2EhomtOTtPITVnvDlYWVR39GEcXVtNfro.mp4"
+          }
+        },
+        "testimonial_jKzWFJ": {
+          "type": "testimonial",
+          "settings": {
+            "video": "shopify://files/videos/Dr Alexandra Hunter.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_image_Rm4FfP",
+        "testimonial_JbDzzr",
+        "testimonial_YcYFUt",
+        "testimonial_C9hVCQ",
+        "testimonial_pbGGFr",
+        "testimonial_jKzWFJ"
+      ],
+      "custom_css": [
+        "{margin-top: -60px;}"
+      ],
+      "settings": {
+        "title": "Swap Chocolate for Self-care this Easter",
+        "heading_text_size": 42,
+        "heading_size": "h1",
+        "description_text_size": 16,
+        "eyebrowcopy": "Recommended by {{ metaobject[\"cc-creator-first-name\"].value }}",
+        "eyebrow_text_size": 18,
+        "eyebrow_corner_radius": 4,
+        "eyebrowbackground": "#c8e6dc",
+        "eyebrowtextcolor": "#000000",
+        "eyebrowbordercolor": "",
+        "eyebrow_border_width": 0,
+        "stars": "Trusted by your favorite creators",
+        "show_stars": true,
+        "star_text_size": 12,
+        "star_size": 15,
+        "star_adjustment_spacing": 2,
+        "star_color": "#000000",
+        "background": "#ffffff",
+        "textcolor": "#000000",
+        "eyebrow_margin_bottom": 12,
+        "heading_margin_bottom": 18,
+        "star_margin_bottom": 5,
+        "show_creator_products": false,
+        "number_of_recommendations": 4,
+        "product_corner_radius": 12,
+        "product_cta_corner_radius": 4,
+        "productcta": "Buy Now",
+        "featured-product": "{% render 'cc-easter-product-form' with section: section %}",
+        "featured-product-custom": "{% render 'cc-easter-product-form' with section: section %}",
+        "product_url": "https://productlink.com",
+        "discount": 0.9,
+        "full_price": 119,
+        "show_compare": "true",
+        "product_background": "#f4eded",
+        "product_text_color": "#000000",
+        "product_border_color": "",
+        "product_cta_background": "#000000",
+        "product_cta_text_color": "#ffffff",
+        "product_cta_border_color": "",
+        "product_border_width": 0,
+        "product_cta_border_width": 0,
+        "border_color": "#000000",
+        "border_width": 0,
+        "video_corner_radius": 8,
+        "section_background": "#000000",
+        "section_padding_left_right_mobile": 0,
+        "section_padding_top_bottom_mobile": 0,
+        "section_padding_left_right": 0,
+        "section_padding_top_bottom": 0,
+        "padding_left": 72,
+        "padding_top": 48,
+        "padding_bottom": 0,
+        "container_border_radius": 0
+      }
+    },
     "main": {
       "type": "mobile-product-slider",
       "blocks": {
@@ -106,53 +213,50 @@
         "slide_tNrDjD",
         "slide_xdAzha"
       ],
+      "disabled": true,
       "settings": {}
     },
-    "promotion_main_banner_48gkNr": {
-      "type": "promotion-main-banner",
-      "blocks": {
-        "link_GirQqh": {
-          "type": "link",
-          "settings": {
-            "link_label": "Shop Best Sellers",
-            "link_label_mobile": "Shop Best Sellers",
-            "link_url": "shopify://collections/best-sellers"
-          }
-        },
-        "product_BANXY7": {
-          "type": "product",
-          "settings": {
-            "heading": "<p>Micro-Infusion Bundle</p>",
-            "image": "shopify://shop_images/mi_bundle.webp",
-            "product_url": "shopify://products/exclusive"
-          }
-        },
-        "banner_6wgzUN": {
-          "type": "banner",
-          "settings": {
-            "heading": "Save up to 72% on Exclusive Bundles",
-            "image": "shopify://shop_images/sub_banner.webp",
-            "image_mobile": "shopify://shop_images/sub_banner-mob.webp",
-            "link_label": "Buy Now",
-            "link_url": "https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal"
-          }
-        }
-      },
-      "block_order": [
-        "link_GirQqh",
-        "product_BANXY7",
-        "banner_6wgzUN"
-      ],
+    "cc_drops_section_datcYL": {
+      "type": "cc-drops-section",
       "settings": {
-        "heading": "",
-        "heading_mobile": "",
-        "heading_tag": "h1",
-        "subheading": "<h3>Get clinic-level results</h3><h4>from home- minus</h4><h5>the ‘clinical’ costs.</h5>",
-        "subheading_mobile": "<h3>Get clinic-level results</h3><h4>from home- minus</h4><h5>the ‘clinical’ costs.</h5>",
-        "text": "<p><strong>300,000+ </strong>customers feel more confident in their own skin.</p>",
-        "image": "shopify://shop_images/Banner_57c19f02-06bd-42fa-ac3a-6ebd0393ecc4.png",
-        "image_mobile": "shopify://shop_images/hm_banner_clinic_results.png_mob.webp",
-        "wistia_id": ""
+        "header": "Recommendations from {{ metaobject[\"cc-creator-shop-title\"].value }}",
+        "heading_size": "h1",
+        "heading_font_size": 36,
+        "heading_font_weight": "400",
+        "heading_style": "normal",
+        "heading_alignment": "center",
+        "header_margin_bottom": 32,
+        "tab_radius": 0,
+        "tab_spacing": 0,
+        "tab_border_top_left_right_width_default": 0,
+        "tab_border_bottom_width_default": 1,
+        "tab_border_top_left_right_width_active": 0,
+        "tab_border_bottom_width_active": 4,
+        "tab_border_color_default": "#000000",
+        "tab_border_color_active": "#000000",
+        "tab_background_color_active": "#ffffff",
+        "tab_background_color_default": "#ffffff",
+        "tab_text_color_active": "#000000",
+        "tab_text_color_default": "#000000",
+        "tab_text_size": 16,
+        "tab_alignment": "center",
+        "tab_section_border_width": 1,
+        "tab_section_border_color": "#f4eded",
+        "tabs_margin_bottom": 32,
+        "description_font_size": 18,
+        "description_font_weight": "400",
+        "description_style": "italic",
+        "description_alignment": "center",
+        "description_margin_bottom": 20,
+        "columns_mobile": "2",
+        "columns_desktop": "4",
+        "product_grid_gap": 10,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 20,
+        "padding_right": 20,
+        "padding_left_mobile": 12,
+        "padding_right_mobile": 12
       }
     },
     "promotion_main_banner_second_jCUkqh": {
@@ -161,36 +265,125 @@
         "link_Pk3LH6": {
           "type": "link",
           "settings": {
-            "link_label": "SHOP & SAVE $357",
-            "link_label_mobile": "SHOP & SAVE $357",
-            "link_url": "https://qureskincare.com/pages/international-womens-offer"
+            "link_label": "Save Up To 55%",
+            "link_label_mobile": "Save Up To 55%",
+            "link_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal"
           }
         },
-        "banner_6wgzUN": {
-          "type": "banner",
+        "product_7GFhjc": {
+          "type": "product",
           "settings": {
-            "heading": "Save up to 55% on Exclusive Bundles",
-            "image": "shopify://shop_images/sub_banner.webp",
-            "image_mobile": "shopify://shop_images/sub_banner-mob.webp",
-            "link_label": "Buy Now",
-            "link_url": "https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal"
+            "heading": "Pro-Aging Bundles",
+            "subheading": "Line Refine Bundle Pro",
+            "text": "SAVE 47%",
+            "image": "shopify://shop_images/Line_Refine_Bundle_Pro_f1b5a5e8-df9b-45f0-a57e-ee78f3b7a415.png",
+            "product_url": "shopify://products/line-refine-bundle-pro"
+          }
+        },
+        "product_UVjERT": {
+          "type": "product",
+          "settings": {
+            "heading": "Pro Aging & Dark Spots Bundles",
+            "subheading": "Fade & Firm Bundle Pro",
+            "text": "SAVE 55%",
+            "image": "shopify://shop_images/Fade_FirmBundlePro-wo-dermalmist.png",
+            "product_url": "shopify://products/fade-firm-bundle-pro"
+          }
+        },
+        "product_nBnMkh": {
+          "type": "product",
+          "settings": {
+            "heading": "Acne Bundles",
+            "subheading": "Breakout Control Advanced",
+            "text": "SAVE 33%",
+            "image": "shopify://shop_images/Breakout_Control_Advanced_7232df65-e888-4e24-bb23-99b6576cc5b2.png",
+            "product_url": "shopify://products/breakout-control-advanced"
+          }
+        },
+        "product_PEPLML": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "heading": "Pro-Aging Bundles",
+            "subheading": "Line Refine Bundle Advanced",
+            "text": "SAVE 55%",
+            "image": "shopify://shop_images/RefineBundle2_bb90801f-564e-4272-80d6-d975c04c470f.png",
+            "product_url": "shopify://products/line-refine-bundle-advanced-1"
+          }
+        },
+        "product_yLQ7At": {
+          "type": "product",
+          "settings": {
+            "heading": "Pro Aging & Dark Spots Bundles",
+            "subheading": "Fade & Firm Bundle Advanced",
+            "text": "SAVE 43%",
+            "image": "shopify://shop_images/Fade_Firm_Bundle_Advanced.png",
+            "product_url": "shopify://products/fade-firm-bundle-advance"
+          }
+        },
+        "product_KCNhid": {
+          "type": "product",
+          "settings": {
+            "heading": "Pro-Aging Bundles",
+            "subheading": "Line Refine Bundle Essentials",
+            "text": "save 32%",
+            "image": "shopify://shop_images/Line_Refine_Bundle_Essentials_420763d9-bde6-4b81-a7f2-771d23f771d3.png",
+            "product_url": "shopify://products/line-refine-bundle-essentials"
+          }
+        },
+        "product_dYxiCN": {
+          "type": "product",
+          "settings": {
+            "heading": "Pro Aging & Dark Spots Bundles",
+            "subheading": "Fade & Firm Bundle Essentials",
+            "text": "SAVE 55%",
+            "image": "shopify://shop_images/Fade_FirmBundleEssentials-wo-dermalmist-2_30f4ee36-d53d-45ba-a3c1-cbdf57aae073.png",
+            "product_url": "shopify://products/fade-firm-bundle-essentials"
+          }
+        },
+        "product_4ArLn3": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "heading": "Acne Bundles",
+            "subheading": "Breakout Control Pro",
+            "text": "SAVE 40%",
+            "image": "shopify://shop_images/Breakoutcontrol2_747da223-e22b-457a-b300-a8ada35feaa6.png",
+            "product_url": "shopify://products/breakout-control-pro-1"
+          }
+        },
+        "product_BA8d6X": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "heading": "Pro Aging & Dark Spots Bundles",
+            "subheading": "Micro-Infusion Limited Edition Bundle",
+            "text": "SAVE 52%",
+            "image": "shopify://shop_images/Micro-Infusion_Limited_Edition_Bundle_ef0d58d6-84ea-4cb6-be5c-b012bf600186.png",
+            "product_url": "shopify://products/micro-infusion-limited-edition-bundle"
           }
         }
       },
       "block_order": [
         "link_Pk3LH6",
-        "banner_6wgzUN"
+        "product_7GFhjc",
+        "product_UVjERT",
+        "product_nBnMkh",
+        "product_PEPLML",
+        "product_yLQ7At",
+        "product_KCNhid",
+        "product_dYxiCN",
+        "product_4ArLn3",
+        "product_BA8d6X"
       ],
       "disabled": true,
       "settings": {
-        "heading": "INTERNATIONAL WOMEN’S DAY",
+        "heading": "Rediscover Your Confidence \\n This Holiday",
         "heading_mobile": "",
-        "subheading": "<p>Love your skin, own your glow.</p>",
+        "subheading": "<p><strong>Save up to 55%</strong> on Exclusive Holiday <strong>Bundles</strong></p>",
         "subheading_mobile": "",
         "text": "",
-        "image": "shopify://shop_images/hm_womens_day_banner_desk.webp",
-        "image_mobile": "shopify://shop_images/hm_womens_day_banner_mob.webp",
-        "link_url": "https://qureskincare.com/pages/international-womens-offer"
+        "link_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal"
       }
     },
     "featuredin_extended_P7BNDN": {
@@ -979,8 +1172,9 @@
     }
   },
   "order": [
+    "cc_hero_section_LFebGr",
     "main",
-    "promotion_main_banner_48gkNr",
+    "cc_drops_section_datcYL",
     "promotion_main_banner_second_jCUkqh",
     "featuredin_extended_P7BNDN",
     "results_slider_w6BARa",
