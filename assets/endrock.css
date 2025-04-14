@@ -4739,7 +4739,7 @@ body[data-patches-buy-block] .patches-before-after-carousel-container.before-aft
 body[data-patches-buy-block] .patches-before-after-carousel-container.before-after-carousel-container .swiper-products-carousel {
   height: 316px;
   width: 100%;
-  padding: 0 24px;
+  padding: 0;
 }
 
 body[data-patches-buy-block] .patches-before-after-carousel-container.before-after-carousel-container .swiper-products-thumbs-prev,
@@ -4767,7 +4767,6 @@ body[data-patches-buy-block] .patches-before-after-carousel-container.before-aft
   body[data-patches-buy-block] .patches-before-after-carousel-container.before-after-carousel-container .swiper-products-carousel {
     width: 530px;
     height: 512px;
-    padding: 0;
   }
 }
 /* End patches buy block carousel */
