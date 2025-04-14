@@ -89,7 +89,7 @@
         "product_cta_corner_radius": 4,
         "productcta": "Buy Now",
         "featured-product": "{% render 'cc-easter-product-form' with section: section %}",
-        "featured-product-custom": "{% render 'cc-easter-product-form' with section: section %}",
+        "featured-product-custom": "{% render 'cc-custom-product-form' with section: section %}",
         "product_url": "https://productlink.com",
         "discount": 0.9,
         "full_price": 119,
