@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "current": {
     "show_bf_price": false,
     "favicon": "shopify://shop_images/qure.png",
@@ -87,7 +87,7 @@
             "type": "banner",
             "settings": {
               "image": "shopify://shop_images/Navigation.png",
-              "button_label": "Save up to 55% on [Exclusive Bundles]",
+              "button_label": "Save up to 72% on [Exclusive Bundles]",
               "button_url": "https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal"
             }
           },
