@@ -2030,18 +2030,14 @@ function initPatchesCarouselBuyBlock() {
   let thumbSlider = new Swiper(productThumbsContainer, {
     loop: false,
     spaceBetween: 8,
-    slidesPerView: 4.3,
-    slidesPerGroup: 1,
-    watchSlidesProgress: true,
+    slidesPerView: 'auto',
     mousewheel: {
       forceToAxis: true,
     },
     // Responsive breakpoints
     breakpoints: {
       767: {
-        spaceBetween: 12,
-        slidesPerView: 6.3,
-        slidesPerGroup: 1,
+        spaceBetween: 12
       },
     },
   });
