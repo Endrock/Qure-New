@@ -25,9 +25,12 @@
   {% assign divided_price = product.price | divided_by: 4 %}
 
   <div class="mw-402 form-{{ section_id }}">
-    <div class="serum_bl">
+    <div class="serum_bl" style="display:flex;flex-direction:row;gap:10px;align-items:center">
+      {{ product | image_url: width: 95 | image_tag: alt: "My image's alt text" }}
       <div class="facial_system">
-        <h5>Get started with the {{ product.title }} that {{ metaobject['cc-creator-first-name'] }} loves</h5>
+        <h5 style="text-align:left">
+          Get started with the {{ product.title }} that {{ metaobject['cc-creator-first-name'] }} loves
+        </h5>
       </div>
     </div>
 
