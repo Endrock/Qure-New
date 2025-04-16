@@ -47,14 +47,14 @@
       data-product-list="{% if is_microinfusion_page_refill %}{{ product_list_micro_infusion_refill | join: ', ' }}{% elsif is_microinfusion_page %}{{ product_list_micro_infusion | join: ', ' }}{% elsif is_target_patches_page %}{{ product_list_infusion_target_patches |  join: ', ' }}{% endif %}"
     >
       <div class="circle-container">
-        {%- render 'icon-social-proof', icon: 'circle' -%}
-        {%- render 'icon-social-proof', icon: 'shine' -%}
+        {%- render 'pdm_icon-social-proof', icon: 'circle' -%}
+        {%- render 'pdm_icon-social-proof', icon: 'shine' -%}
       </div>
       <div class="text-container">
         <span id="quantity" class="quantity"></span>
         <span class="label">{{ settings.social_proof_label }}</span>
       </div>
-      {% render 'icon-social-proof', icon: 'cross' %}
+      {% render 'pdm_icon-social-proof', icon: 'cross' %}
     </div>
   {% endif %}
 {% endif %}
