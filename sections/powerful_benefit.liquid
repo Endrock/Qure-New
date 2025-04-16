@@ -1,0 +1,95 @@
+ <!-- powerful benefit start -- -->
+
+<div class="ingredients_list ingredient_shwr_filter_rep py-3">
+  <div class="container">
+    <div class="shwr_ben_heading mb-4 mb-md-5">
+      <h3>{{ section.settings.heading }}</h3>
+    </div>
+    <div class="skin_problems">
+      {% for block in section.blocks %}
+        {% if block.type == 'benefit' %}
+          <div class="powerful_benefit">
+            {% if block.settings.image %}
+              <img src="{{ block.settings.image | image_url: width: 150 }}" class="img-fluid" alt="">
+            {% endif %}
+            {{ block.settings.text }}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Powerful Benefits",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Powerful benefits you’ll never want to lose"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Benefit Icon"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Benefit Text",
+          "default": "<p>Enhances the <strong>effectiveness of topical products</strong> with a clean skin base & stronger barrier.</p>"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+  {
+    "name": "Powerful Benefits",
+    "category": "Custom",
+    "blocks": [
+      {
+        "type": "benefit",
+        "settings": {
+          "text": "<p>Enhances the <strong>effectiveness of topical products</strong> with a clean skin base & stronger barrier.</p>"
+        }
+      },
+      {
+        "type": "benefit",
+        "settings": {
+          "text": "<p>Reduces minerals that linger on the skin, helping to <strong>eliminate itchiness and breakouts.</strong></p>"
+        }
+      },
+      {
+        "type": "benefit",
+        "settings": {
+          "text": "<p>Targets chemicals that cause redness & irritation, effective for <strong>sensitive or dry skin & scalp.</strong></p>"
+        }
+      },
+      {
+        "type": "benefit",
+        "settings": {
+          "text": "<p>Protects your skin’s moisture barrier by filtering drying chlorine & <strong>retaining natural hydration.</strong></p>"
+        }
+      },
+      {
+        "type": "benefit",
+        "settings": {
+          "text": "<p>Improves the health and appearance of your skin and hair for a <strong>natural, healthy glow.</strong></p>"
+        }
+      }
+    ]
+  }
+]
+}
+{% endschema %}

@@ -149,6 +149,193 @@
         "custom_cls": "bg-lightGrey mt-4"
       }
     },
+    "maximum_filtration_r4D6jm": {
+      "type": "maximum_filtration",
+      "name": "Maximum Filtration",
+      "settings": {
+        "heading": "Maximum filtration, minimal effort",
+        "paragraph_1": "<p>The Qure Shower Filter is designed to remove up to 99% of chlorine – and other hard water nasties like copper, calcium, and lead – for healthy skin and hair.<\/p>",
+        "paragraph_2": "<p>For optimized showering that leaves you feeling (and looking) your best, swap out the filter cartridge every 3 months.<\/p>",
+        "paragraph_3": "<p>This Refill seamlessly fits the Qure Shower Filter system, providing long-lasting filtration benefits.<\/p>",
+        "desktop_image": "shopify:\/\/shop_images\/maximum_filtration.webp",
+        "mobile_image": "shopify:\/\/shop_images\/maximum_filtration_mob.webp",
+        "icon_1_img": "shopify:\/\/shop_images\/ninety_day_supply_icon_4e272ea2-a224-4fe5-85a2-aa41aa234b98.svg",
+        "icon_1_text": "90-day supply",
+        "icon_2_img": "shopify:\/\/shop_images\/easy_rep_icon_96dcbf71-e250-4083-9671-39e5d375789d.svg",
+        "icon_2_text": "Easy replacement",
+        "icon_3_img": "shopify:\/\/shop_images\/dermatologist_tested_icon_7a09a69c-53ce-4a1d-98d3-f339667d32d0.svg",
+        "icon_3_text": "Dermatologist tested"
+      }
+    },
+    "results_LqegqG": {
+      "type": "results",
+      "blocks": {
+        "result_KjXYfm": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/results_kim_l.webp",
+            "heading": "Source of my unclear skin",
+            "text": "<p>\"I didn’t realize how big impact water has on our skin... I almost got used to my skin never getting better than mediocre, but this Water Filter is a game changer in my skincare routine.”<\/p>",
+            "see-more": "",
+            "image_country": "shopify:\/\/shop_images\/australia_f.webp",
+            "text_country": "Australia",
+            "client": "Kim L.",
+            "code": ""
+          }
+        },
+        "result_TAhnnk": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/results_hanna.webp",
+            "heading": "Hydrated more than ever",
+            "text": "<p>\"I never had any major issues with skin before I moved. Then I started to get irritation and my makeup would look cakey cause my skin was always so dry no matter what moisturiser I used.<br\/>I didn’t change anything in my skincare routine except filtered water. I’m never washing my face with anything less than Q-urified water because my skin is so much better.”<\/p>",
+            "see-more": "",
+            "image_country": "shopify:\/\/shop_images\/england_f.webp",
+            "text_country": "United Kingdom",
+            "client": "Hanna",
+            "code": ""
+          }
+        },
+        "result_XdFah8": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/results_josie.webp",
+            "heading": "Reduced acne scars",
+            "text": "<p>“My skin has cleared up so much thanks to Qure! I use the LED mask and water filter daily, and it’s reduced my acne scars, making my complexion so much smoother and less red! My skin feels soft and hydrated. I can actually walk out of the house without makeup now. THANK YOU QURE!!!”<\/p>",
+            "see-more": "",
+            "image_country": "shopify:\/\/shop_images\/usa_89e25711-f730-4521-8931-83b3307204af.png",
+            "text_country": "United States",
+            "client": "Josie",
+            "code": ""
+          }
+        }
+      },
+      "block_order": [
+        "result_KjXYfm",
+        "result_TAhnnk",
+        "result_XdFah8"
+      ],
+      "name": "t:sections.results.name",
+      "settings": {
+        "classname": "mi_landing_result",
+        "heading": "Let the results pour in",
+        "heading_reduced": "",
+        "text_verified_customer": "Verified customer",
+        "text_reviewed": "Reviewed in"
+      }
+    },
+    "powerful_benefit_iWnR8b": {
+      "type": "powerful_benefit",
+      "blocks": {
+        "benefit_36RtNB": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pwr_bnft1.svg",
+            "text": "<p>Enhances the <strong>effectiveness of topical products<\/strong> with a clean skin base & stronger barrier.<\/p>"
+          }
+        },
+        "benefit_kfH8GW": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pwr_bnft2.svg",
+            "text": "<p>Reduces minerals that linger on the skin, helping to <strong>eliminate itchiness and breakouts.<\/strong><\/p>"
+          }
+        },
+        "benefit_Jtt8aK": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pwr_bnft3.svg",
+            "text": "<p>Targets chemicals that cause redness & irritation, effective for <strong>sensitive or dry skin & scalp.<\/strong><\/p>"
+          }
+        },
+        "benefit_LthJ3T": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pwr_bnft4.svg",
+            "text": "<p>Protects your skin’s moisture barrier by filtering drying chlorine & <strong>retaining natural hydration.<\/strong><\/p>"
+          }
+        },
+        "benefit_N466Dn": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pwr_bnft5.svg",
+            "text": "<p>Improves the health and appearance of your skin and hair for a <strong>natural, healthy glow.<\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_36RtNB",
+        "benefit_kfH8GW",
+        "benefit_Jtt8aK",
+        "benefit_LthJ3T",
+        "benefit_N466Dn"
+      ],
+      "name": "Powerful Benefits",
+      "settings": {
+        "heading": "Powerful benefits you’ll never want to lose"
+      }
+    },
+    "triple_filtration_cK9cit": {
+      "type": "triple-filtration",
+      "blocks": {
+        "accordion_item_XaNPkj": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "KDF Layer",
+            "accordion_description": "Reduces harmful heavy metals"
+          }
+        },
+        "accordion_item_KpbLx9": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Carbon Fiber Layer",
+            "accordion_description": "Removes up to 99% of chlorine & contaminants"
+          }
+        },
+        "accordion_item_VDhDLV": {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "FOF Descaling",
+            "accordion_description": "Reduces hard water mineral buildup"
+          }
+        },
+        "feature_item_3EFA6R": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Carbon Fiber Layer",
+            "description": "Removes up to 99% of chlorine, reducing skin irritation and dryness, leaving your skin and hair healthier."
+          }
+        },
+        "feature_item_g6Yi8z": {
+          "type": "feature_item",
+          "settings": {
+            "title": "KDF Layer",
+            "description": "Targets and removes heavy metals like lead and mercury, providing cleaner water for your shower."
+          }
+        },
+        "feature_item_9TAjxN": {
+          "type": "feature_item",
+          "settings": {
+            "title": "FOF (Filter of Future)",
+            "description": "Helps reduce the buildup of hard water minerals such as calcium and magnesium, preventing scale and improving water flow."
+          }
+        }
+      },
+      "block_order": [
+        "accordion_item_XaNPkj",
+        "accordion_item_KpbLx9",
+        "accordion_item_VDhDLV",
+        "feature_item_3EFA6R",
+        "feature_item_g6Yi8z",
+        "feature_item_9TAjxN"
+      ],
+      "name": "Triple Filtration",
+      "settings": {
+        "section_title": "Triple the filtration tech (for triple the clean)",
+        "desktop_image": "shopify:\/\/shop_images\/shower_filter-rep-banner.webp",
+        "mobile_image": "shopify:\/\/shop_images\/shower_filter-rep-banner-mob.webp"
+      }
+    },
     "second": {
       "type": "temp-product-shower-filter-replacement",
       "settings": {}
@@ -157,6 +344,10 @@
   "order": [
     "main",
     "featuredin_jTrQCV",
+    "maximum_filtration_r4D6jm",
+    "results_LqegqG",
+    "powerful_benefit_iWnR8b",
+    "triple_filtration_cK9cit",
     "second"
   ]
 }
