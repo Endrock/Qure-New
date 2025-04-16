@@ -189,58 +189,6 @@
         "type": "image_picker",
         "id": "patches_1_month",
         "label": "Image Patches Single Unit"
-      },
-      {
-        "type": "header",
-        "content": "Free Shipping + Guarantee Emphasize",
-      },
-      {
-        "type": "checkbox",
-        "id": "show_icons_product_face_serum",
-        "label": "Show Icons Free Shipping Product Face Serum",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "show_icons_product_microinfusion_targeted",
-        "label": "Show Icons Free Shipping  Product MicroInfusion Targeted Patches",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "show_icons_product_q_rejuvalight",
-        "label": "Show Icons Free Shipping Product Q-rejuvalight",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "show_icons_product_neck_decolletage_led",
-        "label": "Show Icons Free Shipping Neck Decolletage Led",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "show_badge_free_shipping_qrejuvalight",
-        "label": "Show Badge Free Shipping Qrejuvalight",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "show_badge_free_shipping_neck_decolletage",
-        "label": "Show Badge Free Shipping Neck Decolletage",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "money_back_guarantee_label",
-        "label": "Money Back Guarantee Label",
-        "default": "30 day money back guarantee"
-      },
-      {
-        "type": "text",
-        "id": "free_returns_label",
-        "label": "Free Returns Label",
-        "default": "Simple hassle free returns"
       }
     ]
   },
