@@ -4222,29 +4222,23 @@ input[type="radio"]:checked + label[for^="pdm_monthly-plan"] .pdm_all-in-one-fac
 
 /* pdp face serum section in one face serum */
 
-/* start contrast-horizontal layout - face serum + patches */
+/* contrast-horizontal layout - face serum + patches */
 
-.contrast-horizontal-layout-test-variant {
-  display: none;
-} 
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test-original {
-  display: none !important;
-}
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test-variant {
+.contrast-horizontal-layout-variant {
   display: block;
 }
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks { 
+.contrast-horizontal-layout .step_conten_blocks { 
   display: flex;
   gap: 6px;
   margin-top: 8px;
   margin-bottom: 32px;
 }
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock { 
+.contrast-horizontal-layout .step_conten_blocks .planBlock { 
   width: calc(100% / 3 - 4px);
   margin-top: 0;
   position: relative;
 } 
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock .top-label { 
+.contrast-horizontal-layout .step_conten_blocks .planBlock .top-label { 
   width: 100%;
   height: 18px;
   display: flex;
@@ -4254,10 +4248,10 @@ body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_con
   border-radius: 12px 12px 0 0;
   background-color: #d7d9d9;
 }
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock.active .top-label { 
+.contrast-horizontal-layout .step_conten_blocks .planBlock.active .top-label { 
   background-color: #000;
 }
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock .top-label .top-label__label { 
+.contrast-horizontal-layout .step_conten_blocks .planBlock .top-label .top-label__label { 
   color: #000;
   text-align: right;
   font-family: Poppins, sans-serif;
@@ -4267,32 +4261,32 @@ body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_con
   line-height: 18.72px; 
   letter-spacing: 0.101px;
 } 
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock.active .top-label .top-label__label { 
+.contrast-horizontal-layout .step_conten_blocks .planBlock.active .top-label .top-label__label { 
   color: #fff;
 }
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock label.monthly_plans { 
+.contrast-horizontal-layout .step_conten_blocks .planBlock label.monthly_plans { 
   display: block;
   border-radius: 12px !important;
   background-color: #fff;
   padding: 0;
   border-color: #d7d9d9;
 }
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock.active label.monthly_plans { 
+.contrast-horizontal-layout .step_conten_blocks .planBlock.active label.monthly_plans { 
   background-color: #eaf5f2;
   border-color: #000;
 }
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock:first-child label.monthly_plans {
+.contrast-horizontal-layout .step_conten_blocks .planBlock:first-child label.monthly_plans {
   border-radius: 0 0 12px 12px !important;
 }
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock label.monthly_plans .plan_des { 
+.contrast-horizontal-layout .step_conten_blocks .planBlock label.monthly_plans .plan_des { 
   margin-top: 0;
 } 
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock label.monthly_plans .contrast-container { 
+.contrast-horizontal-layout .step_conten_blocks .planBlock label.monthly_plans .contrast-container { 
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock label.monthly_plans .contrast-container .contrast-container__main-label { 
+.contrast-horizontal-layout .step_conten_blocks .planBlock label.monthly_plans .contrast-container .contrast-container__main-label { 
   width: 100%;
   height: 19px;
   display: flex;
@@ -4308,19 +4302,19 @@ body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_con
   font-weight: 500;
   line-height: 10px; 
 }
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock label.monthly_plans .contrast-container .contrast-container__images { 
+.contrast-horizontal-layout .step_conten_blocks .planBlock label.monthly_plans .contrast-container .contrast-container__images { 
   display: flex;
   gap: 10px;
   margin-top: 12px;
   margin-bottom: 12px;
 }
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock:first-child label.monthly_plans .contrast-container .contrast-container__main-label { 
+.contrast-horizontal-layout .step_conten_blocks .planBlock:first-child label.monthly_plans .contrast-container .contrast-container__main-label { 
   border-radius: 0;
 }
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock.active label.monthly_plans .contrast-container .contrast-container__main-label { 
+.contrast-horizontal-layout .step_conten_blocks .planBlock.active label.monthly_plans .contrast-container .contrast-container__main-label { 
   background-color: #d9eee9;
 }
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock label.monthly_plans .contrast-container .contrast-container__time { 
+.contrast-horizontal-layout .step_conten_blocks .planBlock label.monthly_plans .contrast-container .contrast-container__time { 
   color: #000;
   text-align: center;
   font-family: Poppins, sans-serif;
@@ -4330,15 +4324,15 @@ body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_con
   line-height: 13px; 
   letter-spacing: 0.13px;
 }
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock label.monthly_plans .contrast-container .contrast-container__time.mobile-only { 
+.contrast-horizontal-layout .step_conten_blocks .planBlock label.monthly_plans .contrast-container .contrast-container__time.mobile-only { 
   display: none;
 }
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock label.monthly_plans .price { 
+.contrast-horizontal-layout .step_conten_blocks .planBlock label.monthly_plans .price { 
   margin-top: 10px;
   margin-bottom: 20px;
   justify-content: center;
 }
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock label.monthly_plans .price .regular_price {
+.contrast-horizontal-layout .step_conten_blocks .planBlock label.monthly_plans .price .regular_price {
   color: rgba(0, 0, 0, 0.30);
   text-align: right;
   font-family: Poppins, sans-serif;
@@ -4348,7 +4342,7 @@ body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_con
   line-height: 14px; 
   letter-spacing: 0.3px;
 }
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock label.monthly_plans .price .sale_price { 
+.contrast-horizontal-layout .step_conten_blocks .planBlock label.monthly_plans .price .sale_price { 
   color: #000;
   text-align: right;
   font-family: Poppins;
@@ -4358,7 +4352,7 @@ body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_con
   line-height: 14px; 
   letter-spacing: 0.3px;
 }
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock label.monthly_plans .saved_price { 
+.contrast-horizontal-layout .step_conten_blocks .planBlock label.monthly_plans .saved_price { 
   width: 63px;
   max-width: unset;
   height: 20px;
@@ -4373,43 +4367,43 @@ body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_con
   transform: translateX(-50%);
 } 
 /* mi patches*/
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test.mi_patches_pdp .step_conten_blocks .planBlock label.monthly_plans .plan_des {
+.contrast-horizontal-layout.mi_patches_pdp .step_conten_blocks .planBlock label.monthly_plans .plan_des {
   flex-direction: column; 
 }
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test.mi_patches_pdp .step_conten_blocks .planBlock label.monthly_plans .contrast-container .contrast-container__images { 
+.contrast-horizontal-layout.mi_patches_pdp .step_conten_blocks .planBlock label.monthly_plans .contrast-container .contrast-container__images { 
   gap: 4px;
   margin-top: 14px;
   margin-bottom: 16px;
 }
-body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test.mi_patches_pdp .step_conten_blocks .planBlock label.monthly_plans .saved_price { 
+.contrast-horizontal-layout.mi_patches_pdp .step_conten_blocks .planBlock label.monthly_plans .saved_price { 
   bottom: -9px;
 }
 @media (max-width: 768px) {
-  body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks { 
+  .contrast-horizontal-layout .step_conten_blocks { 
     gap: 4px;
   }
-  body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock { 
+  .contrast-horizontal-layout .step_conten_blocks .planBlock { 
     width: calc(100% / 3 - 2px);
   } 
-  body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock label.monthly_plans .contrast-container .contrast-container__time.desktop-only { 
+  .contrast-horizontal-layout .step_conten_blocks .planBlock label.monthly_plans .contrast-container .contrast-container__time.desktop-only { 
     display: none;
   }
-  body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock label.monthly_plans .contrast-container .contrast-container__time.mobile-only { 
+  .contrast-horizontal-layout .step_conten_blocks .planBlock label.monthly_plans .contrast-container .contrast-container__time.mobile-only { 
     display: block;
   }
-  body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock label.monthly_plans .contrast-container .contrast-container__main-label { 
+  .contrast-horizontal-layout .step_conten_blocks .planBlock label.monthly_plans .contrast-container .contrast-container__main-label { 
     letter-spacing: normal;
   }
-  body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock label.monthly_plans .contrast-container .contrast-container__images { 
+  .contrast-horizontal-layout .step_conten_blocks .planBlock label.monthly_plans .contrast-container .contrast-container__images { 
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  body[data-contrast-horizontal-layout] .contrast-horizontal-layout-test .step_conten_blocks .planBlock label.monthly_plans .price { 
+  .contrast-horizontal-layout .step_conten_blocks .planBlock label.monthly_plans .price { 
     margin-top: 6px;
     margin-bottom: 18px;
   }
 }
-/* end contrast-horizontal layout - face serum + patches */
+/*contrast-horizontal layout - face serum + patches */
 
 /* start micro-infusion 6 months */
 .row.pdm-treatment__row-container .pdm-step_content_v2 .step_conten_blocks .pdm_plan-bundle-detail p {
