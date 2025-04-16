@@ -43,17 +43,14 @@
                                     </div>
                                     <input type="radio" name="mBanner_monthlyPlan" id="mBanner_3_month" checked="">
                                     <label class="monthly_plans {% if show_free_shiping_guarantee_test %}background-white{% endif %}" for="mBanner_3_month" payment-price="{{ product_price_divided | money_without_trailing_zeros }}">
-                                        <div class="monthly_plans__circle free-shipping-guarentee-variant">
-                                            {% render 'pdm_icons', icon: 'circle-empty' %}
-                                            {% render 'pdm_icons', icon: 'circle-full' %}
-                                        </div>
+
                                         <div class="plan_des">
                                             <div class="plan_hdr">
                                                 <h3 class="contrast-horizontal-layout-test-original">6 Month Supply</h3>
                                                 <span class="saved_price">{{ discount_percentage }}% OFF</span>
                                             </div>
-                                            <div class="plan_des free-shipping-guarentee-original contrast-horizontal-layout-test-original">3 Serums + Free Shipping</div>
-                                            <div class="plan_des free-shipping-guarentee-variant">{{ 'products.product.3_serum_label' | t }}</div>
+                                            <div class="plan_des contrast-horizontal-layout-test-original">3 Serums + Free Shipping</div>
+
                                         </div>
 
                                         <div class="contrast-container contrast-horizontal-layout-test-variant">
@@ -72,10 +69,7 @@
                                             <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
                                         </div>
 
-                                        <div class="free-shipping-guarentee-variant free-shipping-icon">
-                                            {% render 'pdm_icons', icon: "free-shipping-truck" %}
-                                            <span class="free-shipping-icon__label">{{ 'products.product.includes_free_shipping_label' | t }}</span>
-                                        </div>
+                                       
                                     </label>
                                 </div>
                          
@@ -87,17 +81,14 @@
                                 <div class="planBlock planBlockTop" data-variantid="{{ product_variant_id }}">
                                     <input type="radio" name="mBanner_monthlyPlan" id="mBanner_2_month">
                                     <label class="monthly_plans" for="mBanner_2_month" payment-price="{{ product_price_divided | money_without_trailing_zeros }}">
-                                        <div class="monthly_plans__circle free-shipping-guarentee-variant">
-                                            {% render 'pdm_icons', icon: 'circle-empty' %}
-                                            {% render 'pdm_icons', icon: 'circle-full' %}
-                                        </div>
+                                    
                                         <div class="plan_des">
                                             <div class="plan_hdr">
                                                 <h3 class="contrast-horizontal-layout-test-original contrast-horizontal-layout-test-original">4 Month Supply</h3>
                                                 <span class="saved_price">{{ discount_percentage }}% OFF</span>
                                             </div>
-                                            <div class="plan_des free-shipping-guarentee-original contrast-horizontal-layout-test-original">2 Serums + Free Shipping</div>
-                                            <div class="plan_des free-shipping-guarentee-variant">{{ 'products.product.2_Serums_label' | t }}</div>
+                                            <div class="plan_des contrast-horizontal-layout-test-original">2 Serums + Free Shipping</div>
+                                          
                                         </div>
 
                                         <div class="contrast-container contrast-horizontal-layout-test-variant">
@@ -124,10 +115,7 @@
                                 <div class="planBlock planBlockTop" data-variantid="{{ product_variant_id }}">
                                     <input type="radio" name="mBanner_monthlyPlan" id="mBanner_1_month">
                                     <label class="monthly_plans" for="mBanner_1_month" payment-price="{{ product_price_divided | money_without_trailing_zeros }}">
-                                        <div class="monthly_plans__circle free-shipping-guarentee-variant">
-                                            {% render 'pdm_icons', icon: 'circle-empty' %}
-                                            {% render 'pdm_icons', icon: 'circle-full' %}
-                                        </div>
+
                                         <div class="plan_des">
                                             <div class="plan_hdr">
                                                 <h3 class="contrast-horizontal-layout-test-original">2 Month Supply</h3>
@@ -198,7 +186,7 @@
         <img src="{{ 'certified_derma.webp' | asset_url }}" alt="">
         <p><b>50+ Board Certified Dermatologists</b> recommended Qure to their patients. <a href="https://qureskincare.com/pages/derm-reviews" class="text-black text-decoration-underline">See More</a> </p>
     </div>
-    <div class="shipping shipping_bg bg-transparent py-md-0 free-shipping-guarentee-original">
+    <div class="shipping shipping_bg bg-transparent py-md-0">
         <div class="s_bx">
             <img src="{{ 'dermatologist.svg' | asset_url }}" alt="">
             <p>Dermatologist<br class="d-md-none"> Reviewed</p>
@@ -209,18 +197,6 @@
             <p class="d-block d-md-none">Free World-Wide Shipping Over $100</p>
         </div>
     </div>
-    {% if settings.show_icons_product_face_serum %}
-        <div class="shipping-badges-container free-shipping-guarentee-variant">
-            <div class="shipping-badges-container__money-back">
-                {% render 'pdm_icons', icon: 'money-back-guarantee' %}
-                <div class="shipping-badges-container__money-back--label">{{ settings.money_back_guarantee_label }}</div>
-            </div>
-            <div class="shipping-badges-container__free-return">
-                {% render 'pdm_icons', icon: 'free-returns' %}
-                <div class="shipping-badges-container__free-return--label">{{ settings.free_returns_label }}</div>
-            </div>
-        </div>
-    {% endif %}
 </div>
 
 {% if product.compare_at_price != blank %}
