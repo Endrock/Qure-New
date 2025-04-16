@@ -1,6 +1,6 @@
 <!-- -- press slider app out start -- -->
 
-<div class="app_press section">
+<div class="app_press section {{ section.settings.bg_clr }}">
     <div class="container1">
         <div class="press_bl py-2 mw-mob-100">
             <div class="p_bl_header text-center p-0">
@@ -93,6 +93,12 @@
         "name": "t:sections.feature_landing.label",
         "class": "section-featured-in-landing",
         "settings": [
+            {
+                "type": "color_background",
+                "id": "bg_clr",
+                "label": "Background Color",
+                "default": "#fffaf1"
+            },
             {
                 "type": "text",
                 "id": "heading",
