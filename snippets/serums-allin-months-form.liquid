@@ -5,14 +5,6 @@
 </style>
 
 {% liquid
-    assign show_free_shiping_guarantee_test = false
-    assign products_free_shipping_guarantee = "face-serum, micro-infusion-targeted-patches" | split: ", "
-    if products_free_shipping_guarantee contains product.handle
-        assign show_free_shiping_guarantee_test = true
-    endif
-%}
-
-{% liquid
     assign show_contrast_horizontal_layout_test = false
     assign products_handles_to_include = "face-serum, micro-infusion-targeted-patches" | split: ", "
     if products_handles_to_include contains product.handle
@@ -20,7 +12,7 @@
     endif
 %}
 
-<div class="mw-402 all_in_one_face_serum_offer {% if show_free_shiping_guarantee_test %}free-shiping-guarantee-test{% endif %} {% if show_contrast_horizontal_layout_test %}contrast-horizontal-layout-test {% endif %}">
+<div class="mw-402 all_in_one_face_serum_offer{% if show_contrast_horizontal_layout_test %}contrast-horizontal-layout-test {% endif %}">
     <div class="serum_bl pt-0">
         <div class="s_bl_wrapper">
             <div class="supply-detail supply-detail-without-counter pb-0 d-block">
@@ -34,7 +26,7 @@
                                 {% assign product_variant_id = product.variants.first.id %}
                                 {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
 
-                                <div class="planBlock planBlockTop {% if show_free_shiping_guarantee_test %}active{% endif %} {% if show_contrast_horizontal_layout_test %}active{% endif %}" data-variantid="{{ product_variant_id }}">
+                                <div class="planBlock planBlockTop {% if show_contrast_horizontal_layout_test %}active{% endif %}" data-variantid="{{ product_variant_id }}">
                                     <div class="plan_choosed text-end contrast-horizontal-layout-test-original">
                                         <span>Over 13,000 people chose this supply</span>
                                     </div>
@@ -42,7 +34,7 @@
                                         <span class="top-label__label">{{ 'products.product.contrast_horizontal.top_label' | t }}</span>
                                     </div>
                                     <input type="radio" name="mBanner_monthlyPlan" id="mBanner_3_month" checked="">
-                                    <label class="monthly_plans {% if show_free_shiping_guarantee_test %}background-white{% endif %}" for="mBanner_3_month" payment-price="{{ product_price_divided | money_without_trailing_zeros }}">
+                                    <label class="monthly_plans" for="mBanner_3_month" payment-price="{{ product_price_divided | money_without_trailing_zeros }}">
 
                                         <div class="plan_des">
                                             <div class="plan_hdr">
