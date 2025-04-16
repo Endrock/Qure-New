@@ -4692,10 +4692,11 @@ body[data-ba-treatment-options] .row.treatment-ba-test__row-container .qure__tre
 }
 
 body[data-ba-treatment-options] .row.treatment-ba-test__row-container .qure__treatments .tmtFtrs_image .container-pdm-ba-treatment {
-  margin-top: 2rem !important;
+  margin-top: 24px !important;
 }
 body[data-ba-treatment-options] .row.treatment-ba-test__row-container .qure__treatments .tmtFtrs_image .container-pdm-ba-treatment > div {
   margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 body[data-ba-treatment-options] .row.treatment-ba-test__row-container .c_s_wrapper.cs_wrapper-pdm .value-props-ba {
   display: inline-flex;
@@ -4856,6 +4857,27 @@ body[data-ba-treatment-options] .row.treatment-ba-test__row-container .supply_st
   padding-bottom: 0;
 }
 
+@media screen and (max-width: 767px) {
+
+  body[data-ba-treatment-options] .row.treatment-ba-test__row-container .tmtFtrs_image.order-1.order-md-2{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  body[data-ba-treatment-options] .section__header.d-block.d-md-none {
+    order: 1;
+  }
+  
+  body[data-ba-treatment-options] .container-pdm-ba-treatment {
+    order: 3;
+  }
+  
+  body[data-ba-treatment-options] .testimonial-card {
+    order: 2;
+    margin-top: 32px !important;
+  }
+  
+}
 @media screen and (min-width:768px) {
 
   body[data-ba-treatment-options] .row.treatment-ba-test__row-container .supply_steps.pdm-step_content_v2 .step_block .step_content.step_btn.upsell_popup_anchor_hover {
