@@ -51,6 +51,7 @@
         },
         "product_in_page_x33rFD": {
           "type": "product_in_page",
+          "disabled": true,
           "settings": {
             "image_product_1": "shopify://shop_images/Group_1000008507.png",
             "image_product_text_1": "product one",
@@ -79,6 +80,7 @@
         },
         "before_and_after_i7mAeJ": {
           "type": "before_and_after",
+          "disabled": true,
           "settings": {
             "image_new_section_1": "shopify://shop_images/ba_images_mi.png",
             "image_new_section_text_1": "micro infusion one",
