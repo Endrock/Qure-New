@@ -16,7 +16,7 @@
           "type": "announcement",
           "settings": {
             "heading": "Limited Time Only:",
-            "timer": "2025-04-05T23:59:59",
+            "timer": "2025-04-21T23:59:59",
             "timer_next": 7
           }
         },
@@ -61,7 +61,7 @@
         "navigation_link_rmYfWw"
       ],
       "settings": {
-        "button_label": "SAVE UP TO 55%",
+        "button_label": "SAVE UP TO 72%",
         "button_url": "#bf-bundles"
       }
     },
@@ -71,7 +71,7 @@
         "badge_bNNHbU": {
           "type": "badge",
           "settings": {
-            "heading": "HOLIDAY",
+            "heading": "EXCLUSIVE",
             "text": "BUNDLES",
             "color_main": "#c4121a",
             "color": "#0a0a0a"
@@ -80,18 +80,17 @@
         "link_Xz3LeQ": {
           "type": "link",
           "settings": {
-            "link_label": "Shop & SAVE UP TO 55%",
-            "link_label_mobile": "Shop & SAVE UP TO 55%",
+            "link_label": "Shop & SAVE UP TO 72%",
+            "link_label_mobile": "Shop & SAVE UP TO 72%",
             "link_url": "#bf-bundles"
           }
         },
         "product_L8TbkG": {
           "type": "product",
-          "disabled": true,
           "settings": {
-            "heading": "Exclusive Valentine's day bundle",
-            "discount": 66,
-            "image": "shopify://shop_images/VD-Bundle-hero-02.png",
+            "heading": "Exclusive Easter bundle",
+            "discount": 72,
+            "image": "shopify://shop_images/Easter1_1.png",
             "product_url": "#Pro-Aging-Bundles"
           }
         },
@@ -224,7 +223,7 @@
       ],
       "settings": {
         "seo_heading": "",
-        "heading": "Save Up to 55% on \\n Certified Skincare Solutions",
+        "heading": "Save Up to 72% on \\n Certified Skincare Solutions",
         "text": "<p>Backed by the most respected peer-reviewed <strong>Dermatologist Journals </strong>and <strong>scientific studies </strong>that prove; Qure’s skincare <strong>works.</strong></p>"
       }
     },
@@ -384,15 +383,6 @@
             "image": "shopify://shop_images/results.svg"
           }
         },
-        "object_iinakB": {
-          "type": "object",
-          "settings": {
-            "before_text": "Before",
-            "before_image": "shopify://shop_images/tr_item3_before.webp",
-            "after_text": "After 1 treatment",
-            "after_image": "shopify://shop_images/tr_item3_after.webp"
-          }
-        },
         "object_rKT6dw": {
           "type": "object",
           "settings": {
@@ -402,6 +392,15 @@
             "after_image": "shopify://shop_images/tr_item1_after.webp"
           }
         },
+        "object_iinakB": {
+          "type": "object",
+          "settings": {
+            "before_text": "Before",
+            "before_image": "shopify://shop_images/tr_item3_before.webp",
+            "after_text": "After 1 treatment",
+            "after_image": "shopify://shop_images/tr_item3_after.webp"
+          }
+        },
         "object_H9wTAE": {
           "type": "object",
           "settings": {
@@ -409,6 +408,15 @@
             "before_image": "shopify://shop_images/tr_item2_before.webp",
             "after_text": "After 2 treatment",
             "after_image": "shopify://shop_images/tr_item2_after.webp"
+          }
+        },
+        "object_XYAjAV": {
+          "type": "object",
+          "settings": {
+            "before_text": "Before",
+            "before_image": "shopify://shop_images/tr_item6_before.webp",
+            "after_text": "After Qure",
+            "after_image": "shopify://shop_images/tr_item6_after.webp"
           }
         },
         "object_7QbjiT": {
@@ -429,15 +437,6 @@
             "after_image": "shopify://shop_images/tr_item5_after.webp"
           }
         },
-        "object_XYAjAV": {
-          "type": "object",
-          "settings": {
-            "before_text": "Before",
-            "before_image": "shopify://shop_images/tr_item6_before.webp",
-            "after_text": "After Qure",
-            "after_image": "shopify://shop_images/tr_item6_after.webp"
-          }
-        },
         "link_fCqURh": {
           "type": "link",
           "settings": {
@@ -452,12 +451,12 @@
         "icon_8RMchx",
         "icon_6EgyHw",
         "icon_fNt3y4",
-        "object_iinakB",
         "object_rKT6dw",
+        "object_iinakB",
         "object_H9wTAE",
+        "object_XYAjAV",
         "object_7QbjiT",
         "object_9cTrHQ",
-        "object_XYAjAV",
         "link_fCqURh"
       ],
       "settings": {
@@ -471,7 +470,7 @@
         "badge_TwBcgj": {
           "type": "badge",
           "settings": {
-            "heading": "HOLIDAY",
+            "heading": "EXCLUSIVE",
             "text": "BUNDLES",
             "color_main": "#c4121a",
             "color": "#0a0a0a"
@@ -538,17 +537,15 @@
             "image": "shopify://shop_images/bf-ftr-firmer.svg"
           }
         },
-        "bundle_pxhMjY": {
+        "bundle_fhATMn": {
           "type": "bundle",
-          "disabled": true,
           "settings": {}
         },
-        "product_Qck4qG": {
+        "product_6Nmeyc": {
           "type": "product",
-          "disabled": true,
           "settings": {
-            "product": "exclusive",
-            "percent": 57,
+            "product": "exclusive-easter-bundle",
+            "percent": 30,
             "media_limit": 0,
             "hide_us": false,
             "recommended_heading": "",
@@ -560,14 +557,13 @@
             "code": ""
           }
         },
-        "include_njjqWt": {
+        "include_jkXtYb": {
           "type": "include",
-          "disabled": true,
           "settings": {
-            "heading": "Micro-Infusion 2 Month Bundle (For Wrinkles + Dark Spots)",
+            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles + Dark Spots)",
             "is_limited": false,
             "type": "",
-            "image": "shopify://shop_images/2monthmix_1_0201c796-fb83-44b6-a71b-800e642105a7_1.png",
+            "image": "shopify://shop_images/3_month_mix_2.png",
             "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p><h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
             "count": "",
             "hide": false,
@@ -575,24 +571,22 @@
             "code": ""
           }
         },
-        "include_xEBYB3": {
+        "include_6bW3Ra": {
           "type": "include",
-          "disabled": true,
           "settings": {
-            "heading": "Micro-Infusion 3 Month Refill (For Dark Spots)  FREE",
+            "heading": "Micro-Infusion 2 Month Supply (For Wrinkles)",
             "is_limited": false,
             "type": "",
-            "image": "shopify://shop_images/3monthrefilldarkspots_dcb3e6df-a294-40f8-afc5-ead3f74b22c1.png",
-            "text": "<h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
+            "image": "shopify://shop_images/2_month_for_wrinkles.png",
+            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p>",
             "count": "",
             "hide": false,
             "hide_variants": false,
             "code": ""
           }
         },
-        "how_to_use_qEXdXL": {
+        "how_to_use_nRp9HV": {
           "type": "how-to-use",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_mi_sm.svg",
             "text": "<h5>Micro-Infusion 5 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Use the 3 month refills after 2 month bundle.</li></ul>"
@@ -811,11 +805,11 @@
         "icon_AcpYLG",
         "icon_f36jbE",
         "icon_eUd4zy",
-        "bundle_pxhMjY",
-        "product_Qck4qG",
-        "include_njjqWt",
-        "include_xEBYB3",
-        "how_to_use_qEXdXL",
+        "bundle_fhATMn",
+        "product_6Nmeyc",
+        "include_jkXtYb",
+        "include_6bW3Ra",
+        "how_to_use_nRp9HV",
         "bundle_wpXFFy",
         "product_aL9V3J",
         "include_cUEVxj",

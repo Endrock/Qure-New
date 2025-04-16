@@ -33,6 +33,8 @@
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))
 }
 
+
+
 *,
 ::after,
 ::before {
@@ -30426,7 +30428,12 @@ p {
 .mw-268 {
     max-width: 268px !important;
 }
-
+.mw-290{
+   max-width: 290px !important; 
+}
+.mw-300{
+    max-width: 300px !important;
+}
 .mw-359 {
     max-width: 359px !important;
 }
@@ -30506,9 +30513,15 @@ p {
 .mw-525 {
     max-width: 525px !important;
 }
+.mw-542{
+    max-width: 542px !important;
+}
 
 .mw-546 {
     max-width: 546px !important;
+}
+.mw-560 {
+    max-width: 560px !important;
 }
 
 .mw-590 {
@@ -30528,7 +30541,10 @@ p {
     max-width: 680px !important;
     margin: 0 auto;
 }
-
+.mw-715{
+    max-width: 715px !important;
+    margin: 0 auto;
+}
 .mw-736 {
     max-width: 736px !important;
     margin: 0 auto;
@@ -30641,6 +30657,10 @@ p {
 .app_press_sl_img .swiper-slide-thumb-active {
     opacity: 1;
 }
+.app_press_slider .app_press_sl_img .swiper-wrapper{
+    display: flex;
+    justify-content: center;
+}
 
 .app_press_slider .swiper-slide {
     text-align: center;
@@ -30650,6 +30670,9 @@ p {
 }
 
 @media(max-width:767px) {
+    .app_press_sl_img{
+        max-width:80%;
+    }
     .app_slider {
         overflow: hidden;
     }
@@ -30803,6 +30826,12 @@ p {
 
 .result_slider_2.dot_pagination .swiper-pagination-bullet-active {
     background-color: #fff;
+}
+
+.dot_pagination .swiper-pagination-bullet {
+    margin: 0 11px !important;
+    height: 14px;
+    width: 14px;
 }
 
 .pagination_navigation {
@@ -31480,7 +31509,7 @@ p {
 /* ------------------ Press Slider End ------------------- */
 .press_bl {
     padding: 44px 0;
-    background-color: var(--clr-grey);
+    background-color: var(--clr-yellow);
     overflow: hidden;
 }
 
@@ -31916,7 +31945,7 @@ p {
     border-radius: 20px;
     text-decoration: none;
     padding: 0 10px;
-    margin-left: 10px;
+    margin-left: 20px;
     font-size: 15px;
 }
 .announcement_bar .bar_shop-btn{
@@ -31978,6 +32007,12 @@ p {
 @media(max-width:991px) {
     .fp-wrapper {
         grid-template-columns: repeat(4, 25%);
+    }
+    .mw-715 {
+        max-width: 600px !important;
+    }
+    .qure_founder_wrap {
+        gap: 20px !important;
     }
 }
 
@@ -32326,39 +32361,13 @@ picture img {
     .custom__block {
         padding: calc(var(--column-gap-mobile, var(--column-gap))/2)
     }
+    .order-first-mob{
+        order: -1;
+    }
 }
 
 .blog_banner_wrap .blog_banner_img img {
     max-height: 388px;
     object-fit: contain
 }
-div#subscription del {
-    margin-right: 5px;
-    color: #babdbc;
-}
-main.faucet_filter .price_wrap, main.shower_filter .price_wrap{
-    padding: 10px 0;
-}
-main.faucet_filter .price .new_price, main.shower_filter .price .new_price{
-    font-weight: 400;
-}
-/* updated css on 17 feb 25 for led-mask-offer-2*/
-.led_mask_offer_img_text .section_header {
-    padding-bottom: 10px;
-}
-.led_mask_offer_img_text p{
-    padding-bottom: 15px;
-}
-.price_lg_weight .bs_price .sale_p {
-    font-weight: 500;
-}
-.btn_green{
-    padding: 13px 0;
-    font-size: 18px;
-} 
-.ctm_banner_tab_slider .get_clearer_wrapper p {
-    padding: 8px 0;
-}
-.header-new .menu {
-    justify-content: left !important;
-}
+

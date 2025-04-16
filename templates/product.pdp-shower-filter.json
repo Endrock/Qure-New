@@ -7,10 +7,10 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "main": {
-      "type": "product-extended",
+      "type": "product-extended-new",
       "blocks": {
         "rating_KDB67x": {
           "type": "rating",
@@ -25,20 +25,19 @@
             "text": "<ul><li>Triple-filter showerhead for the purest head-to-toe hydration.</li><li>Removes up to 99% of chlorine, heavy metals & contaminants that irritate the skin, for an overall more hydrated, clearer skin and hair.</li><li>Reduces limescale buildup, which can dry out skin and hair, for smoother, softer results.</li></ul>"
           }
         },
-        "supply_CTrVRQ": {
-          "type": "supply",
-          "disabled": true,
+        "out_of_stock_3xp9iR": {
+          "type": "out_of_stock",
           "settings": {
-            "heading": "Next batch ships 17th of February 2025:",
-            "heading_mobile": "Next batch ships 02/17:",
-            "text": "<p>Order now and secure yours from the next shipment.</p>",
-            "first_option_date": "November 20th",
+            "heading": "Next batch ships end of April 2025:",
+            "heading_mobile": "Next batch ships end of April 2025:",
+            "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.</p>",
+            "first_option_date": "March 28st",
             "first_option_text": "SOLD OUT",
             "first_option_percent": 100,
-            "second_option_date": "February 17th",
-            "second_option_text": "54% Reserved",
-            "second_option_percent": 55,
-            "third_option_date": "March 30th",
+            "second_option_date": "April 25th",
+            "second_option_text": "42% Reserved",
+            "second_option_percent": 42,
+            "third_option_date": "May 2025",
             "third_option_text": "In Production",
             "third_option_percent": 0
           }
@@ -63,7 +62,7 @@
           "type": "subscribe",
           "settings": {
             "heading": "Subscribe & save 30%",
-            "text": "<p>3 month replacement filter delivers every 90 days for just [discount_price_additional]. Skip or cancel anytime.<a href=\"https://qureskincare.com/pages/subscriptions\" title=\"https://qureskincare.com/pages/subscriptions\">See more details</a></p>",
+            "text": "<h6>One Time: Showerhead + 1 Filter</h6><h6>Every 90 days: Filter Refill (<strong>[price_additional]</strong>[discount_price_additional])</h6><p>Skip, pause or cancel anytime. <a href=\"https://qureskincare.com/pages/subscriptions\" title=\"skip\">See more details</a></p>",
             "product": "shower-filter-replacement",
             "plan": "6286115055",
             "discount": 30
@@ -73,6 +72,7 @@
           "type": "collapsed",
           "settings": {
             "heading": "Key Benefits",
+            "heading_mobile": "",
             "text": "<p>Healthy skin starts in the shower – we're tackling skin issues at the source. The Qure Shower Filter removes harmful impurities that can cause dryness, irritation, and brittleness. By filtering your shower water, you're creating the perfect canvas for the rest of your skincare routine and helping your hair and skin stay hydrated and happy.</p>"
           }
         },
@@ -80,6 +80,7 @@
           "type": "collapsed",
           "settings": {
             "heading": "How It Works",
+            "heading_mobile": "",
             "text": "<p>Our Triple-Filtration System targets up to 99% of chlorine, heavy metals, and contaminants in your water. Here's what happens:</p><ul><li>Water passes through our multi-stage filter</li><li>Impurities get trapped in the specialized filtration media</li><li>Clean, filtered water flows through your shower head</li></ul><p>The result? Water that's gentler on your skin and hair, without the stuff that can strip away natural moisture.</p>"
           }
         },
@@ -87,6 +88,7 @@
           "type": "collapsed",
           "settings": {
             "heading": "What’s Included In The Box",
+            "heading_mobile": "",
             "text": "<p>Inside the box, you'll find:</p><ul><li>The Qure Shower Filter with a replaceable filter cartridge (lasts up to 3 months)</li><li>A universal shower head wrench for easy installation</li><li>Clear setup instructions that won't leave you scratching your head</li></ul>"
           }
         }
@@ -94,7 +96,7 @@
       "block_order": [
         "rating_KDB67x",
         "list_azYRbY",
-        "supply_CTrVRQ",
+        "out_of_stock_3xp9iR",
         "variant_7PWWak",
         "variant_7nqQxD",
         "subscribe_EyrzEb",
@@ -106,6 +108,7 @@
         "seo_heading": "SHOWER FILTER",
         "heading": "Save Your Hair & Skin from Dryness and Irritation",
         "heading_mobile": "Save Your Hair & Skin from Dryness and Irritation",
+        "one_time_purchase": "Showerhead + 1 Filter",
         "product": "",
         "wistia_id": "",
         "product_images_limit": 5,

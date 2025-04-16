@@ -140,7 +140,7 @@ img.fa.cus-support {
 
 .qure_mob_menu .nav {
     justify-content: space-between;
-    padding: -2px 12px;
+    padding: 0 24px;
     border-bottom: 0.3px solid #959595;
     margin: 0 -24px 0px !important;
 }
@@ -178,7 +178,7 @@ img.fa.cus-support {
 }
 
 .header_btn a span {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 20px;
     font-weight: 700;
     letter-spacing: 0.4px;
@@ -1684,6 +1684,12 @@ img.fa.fa-user.nav__icon {
         list-style: none;
         gap: 25px;
     }
+    div#include_header_why_qurify .header-new .menu {
+        width: 40.33%;
+    }
+    div#include_header_why_qurify .header-new .header-logo {
+        width: 10.33%;
+    }
 
     .mobile-menu-custome {
         display: none;
@@ -1711,7 +1717,7 @@ img.fa.fa-user.nav__icon {
 
     ul.dropdown-menu-hp.mega-dropdown-menu.row {
         position: absolute;
-        /* top: 100%; */
+        top: 0;
         left: 0;
         width: 100%;
         min-width: 300px;
@@ -2135,10 +2141,9 @@ img.fa.fa-user.nav__icon {
         width: 100%;
     }
 
-    .mi-landing-page .header-new.new-hp-header .mobile-menu-custome {
-        width: max-content;
+    /* .mi-landing-page .header-new.new-hp-header .mobile-menu-custome {
         margin-right: 15px;
-    }
+    } */
 
     .mi-landing-page .header-new.new-hp-header {
         justify-content: unset;
@@ -2146,13 +2151,12 @@ img.fa.fa-user.nav__icon {
     }
 
     .mi-landing-page .header-new.new-hp-header .header-logo {
-        width: max-content;
         position: relative;
         z-index: 99;
     }
 
     .mi-landing-page .icon-section-landing.icon-section .header_btn {
-        margin-right: 15px;
+        margin: 0 10px;
     }
 
     .mi-landing-page .header-new.new-hp-header .icon-section {
@@ -2236,13 +2240,24 @@ img.fa.fa-user.nav__icon {
     width: 33.33%;
     text-align: right;
 }
+.free_water_report_announcement .announcement_bar p{
+    font-size: 13px;
+}
 
 @media(max-width:1199px) {
     .menu.saf-menu {
         display: none;
     }
 }
-
+@media (max-width: 1199px) {
+    nav.mobile-menu-custome #menu.menu_with_icons a .menuBlock img {
+        max-width: 69px;
+        margin-right: 15px;
+        height: 59px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+}
 @media(max-width:767px) {
     .dek-menu {
         padding: 14px 0px 15px 0px !important;
@@ -2251,6 +2266,32 @@ img.fa.fa-user.nav__icon {
     .nav__cart-count {
         right: auto !important;
         top: auto !important;
+    }
+    .header_btn a .ahorra{
+        font-size: 10px;
+    }
+    
+/* button issue fixed css  */
+    .header-new {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 12px;
+    }
+    .header-logo {
+        text-align: center;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+    .header-new.has-button .header-logo {
+        justify-content: flex-start;
+    }
+    li.new-menu:empty {
+        display: none;
+    }
+    .header-new.has-button .mobile-menu-custome {
+        width: 45px;
     }
 }
 

@@ -1,0 +1,92 @@
+{%- assign out_of_stock_count = 0 -%}
+
+{%- for block in section.blocks -%}
+	{%- case block.type -%}
+        {%- when 'out_of_stock' -%}
+            {%- assign out_of_stock_count = out_of_stock_count | plus: 1 -%}
+    {%- endcase -%}
+{%- endfor -%}
+
+{% if out_of_stock_count > 0 %}
+
+    <div class="next_batch_bl next_batch_highlight out_of_stock" style="margin-top: 20px">
+        {%- for block in section.blocks -%}
+            {% if block.type == 'out_of_stock' %}
+                {% if block.settings.heading != blank %}
+                    <h6 class="d-none d-md-block">{{ block.settings.heading }}</h6>
+                {% endif %}
+
+                {% if block.settings.heading_mobile != blank %}
+                    <h6 class="d-md-none">{{ block.settings.heading_mobile }}</h6>
+                {% endif %}
+                
+                {% if block.settings.text != blank %}
+                    {{ block.settings.text }}
+                {% endif %}
+
+                {% if block.settings.first_option_text != blank %}
+                    <div class="batch_h batch_h_fade mt-3 mt-md-4">
+                        <div class="batch_h_month">{{ block.settings.first_option_date }}</div>
+                        <div class="batch_h_info sold_out_h" style="--bgPercent:{{ block.settings.first_option_percent }}%;"><span>{{ block.settings.first_option_text }}</span></div>
+                    </div>
+                {% endif %}
+
+                {% if block.settings.second_option_text != blank %}
+                    <div class="batch_h my-2">
+                        <div class="batch_h_month">{{ block.settings.second_option_date }}</div>
+                        <div class="batch_h_info" style="--bgPercent:{{ block.settings.second_option_percent }}%;">{{ block.settings.second_option_text }}</div>
+                    </div>
+                {% endif %}
+
+                {% if block.settings.third_option_text != blank %}
+                    <div class="batch_h batch_h_fade">
+                        <div class="batch_h_month">{{ block.settings.third_option_date }}</div>
+                        <div class="batch_h_info" style="--bgPercent:{{ block.settings.third_option_percent }}%;"><span>{{ block.settings.third_option_text }}</span></div>
+                    </div>
+                {% endif %}
+            {% endif %}
+        {%- endfor -%}
+    </div>
+
+    <script>
+        function checkVariantInURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const variantParam = urlParams.get('variant');
+            const targetDiv = document.querySelector('div.out_of_stock');
+            const buttons = document.querySelectorAll('.btn_text_value');
+
+            if (targetDiv) {
+                if (variantParam === '45909763490031') {
+                    targetDiv.style.display = 'none';
+                    buttons.forEach(btn => {
+                        if (btn.classList.contains('with_subscription')) {
+                            btn.textContent = 'Subscribe now';
+                        } else {
+                            btn.textContent = 'Buy now';
+                        }
+                    });
+                } else {
+                    targetDiv.style.display = '';
+                    buttons.forEach(btn => {
+                        btn.textContent = 'Reserve now';
+                    });
+                }
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            checkVariantInURL();
+
+            ['pushState', 'replaceState'].forEach(method => {
+                const original = history[method];
+                history[method] = function () {
+                original.apply(this, arguments);
+                checkVariantInURL();
+                };
+            });
+
+            window.addEventListener('popstate', checkVariantInURL);
+        });
+    </script>
+
+{% endif %}

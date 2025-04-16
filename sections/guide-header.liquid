@@ -46,6 +46,13 @@
                             </div>
                         </div>   
                     {% endif %}
+                    {% if section.settings.image != blank %}
+                        <img
+                            src="{{ section.settings.image | img_url: '600x' }}"
+                            alt="{{ section.settings.image.alt }}"
+                            class="img-fluid mw-100"
+                        >
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -73,6 +80,11 @@
                 "type": "text",
                 "id": "wistia_id",
                 "label": "t:common.wistia.id.label"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "t:common.image.label"
             }
         ],
         "blocks": [

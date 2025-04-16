@@ -15,7 +15,7 @@
                 </div>
             {% endif %}
             {% if block.settings.content != blank %}
-                {{ block.settings.content }}
+                {{ block.settings.content |  replace: '<ul>', '<ul class="mt-0 mt-md-3">'  }}
             {% endif %}
 
             {% if block.settings.wistia_id != blank %}
@@ -142,12 +142,25 @@
                                     class="wistia_embed wistia_async_{{ block.settings.wistia_id }} popover=true videoFoam=true"
                                     style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span>
                             </div>
-                            <span class="d-flex justify-content-end" style="padding-right: 25px;">
+                            <span class="d-flex justify-content-end the-play-icon">
                                 <img src="{{ 'trusted_play_eesm.svg' | asset_url }}" alt="" class="w-auto">
                             </span>
                         </div>
                     </a>
                 </div>
+
+                <style>
+                    .wistia_responsive_padding .the-play-icon {
+                        padding-right: 40px;
+                    }
+
+                    @media(max-width: 767px){
+                        .wistia_responsive_padding .the-play-icon {
+                            padding-right: 10px;
+                        }
+                    }
+                </style>
+
             {% else %}
                 <div class="usage_instructions_video">
                     <div class="wistia_responsive_padding" style="position:relative;">
@@ -167,6 +180,12 @@
             {% if block.settings.button_label != blank %}
                 <a class="btn btn-lg btn-primary buy_btn see_detailed" href="{{ block.settings.button_url }}">
                     {{ block.settings.button_label }}<img src="{{ 'arrow_right.svg' | asset_url }}" alt="">
+                </a>
+            {% endif %}
+        {% when 'link' %}
+            {% if block.settings.link_label != blank %}
+                <a class="text-decoration-underline mt-3 text-dark" href="{{ block.settings.link_url }}">
+                    {{ block.settings.link_label }}<img src="{{ 'arrow_right.svg' | asset_url }}" alt="">
                 </a>
             {% endif %}
         {% when 'content' %}

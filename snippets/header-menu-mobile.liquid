@@ -14,11 +14,12 @@
     {%- for block in section.blocks -%}
         {% if block.type == 'banner' %}
             {% if num == 0 %}
-                <div class="menuSlider">
+                <div class="menuSlider pdm-nav-first-img-item-mobile">
                     <a class="dm_imgItem" href="{{ block.settings.button_url }}">
                         <img src="{{ block.settings.image | img_url: '400x' }}" alt="" class="img-fluid">
                         <h6>{{ block.settings.button_label |  replace: '[', '<span>' |  replace: ']', '</span>'  }} <img src="{{ 'header_drop_right.svg' | asset_url }}" alt="" class="ms-1"></h6>
                     </a>
+                    {% render 'pdm-navigation-bundle-mobile', upsells_data: section.settings.upsell_content %}
                 </div>
             {% endif %}
             {%- assign num = num | plus: 1 -%}

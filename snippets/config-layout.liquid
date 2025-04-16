@@ -25,6 +25,7 @@
         <link rel="stylesheet" href="{{ 'product-led-mask.css' | asset_url }}">
     {% when 'product.faucet-filter-pdp' %}
         {% assign main_class = 'faucet_filter' %}
+        <link rel="stylesheet" href="{{ 'shower-filter.css' | asset_url }}">
         <link rel="stylesheet" href="{{ 'faucet-filter-pdp.css' | asset_url }}">
     {% when 'product.faucet-filter-replacement' %}
         {% assign main_class = 'faucet_filter black_friday faucet_replacment' %}
@@ -182,7 +183,7 @@
         {% assign main_class = 'faqs' %}
         <link rel="stylesheet" href="{{ 'faq-page.css' | asset_url }}">
     {% when 'page.Affiliate-page' %}
-        {% assign main_class = 'affiliate' %}
+        {% assign main_class = '' %}
         <link rel="stylesheet" href="{{ 'affiliate.css' | asset_url }}">
         <link rel="stylesheet" href="{{ 'qure_form.css' | asset_url }}">
         <script src="{{ 'affiliate_join_skin.js' | asset_url }}" defer></script>
@@ -222,6 +223,15 @@
         <link rel="stylesheet" href="{{ 'content-instructions.css' | asset_url }}">
         <link rel="stylesheet" href="{{ 'affiliate.css' | asset_url }}">
     {% when 'page.shower-filter-creative-br' %}
+        {% assign main_class = 'content_instructions' %}
+        <link rel="stylesheet" href="{{ 'content-instructions.css' | asset_url }}">
+        <link rel="stylesheet" href="{{ 'affiliate.css' | asset_url }}">
+    {% when 'page.faucet-creative-brief' %}
+        {% assign main_class = 'content_instructions' %}
+        <link rel="stylesheet" href="{{ 'content-instructions.css' | asset_url }}">
+        <link rel="stylesheet" href="{{ 'dermal-mist-creative-brief.css' | asset_url }}">
+        <link rel="stylesheet" href="{{ 'affiliate.css' | asset_url }}">
+    {% when 'page.dermal-mist-creative-brief' %}
         {% assign main_class = 'content_instructions content_instructions_patches' %}
         <link rel="stylesheet" href="{{ 'content-instructions.css' | asset_url }}">
         <link rel="stylesheet" href="{{ 'affiliate.css' | asset_url }}">

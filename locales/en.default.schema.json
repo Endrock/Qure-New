@@ -286,6 +286,9 @@
         "label": "Seo Heading"
       }
     },
+    "one-time_purchase": {
+      "label": "One-time purchase"
+    },
     "announcement": {
       "label": "Announcement",
       "color": {
@@ -751,6 +754,20 @@
     },
     "product-extended": {
       "name": "Product extended",
+      "settings": {
+        "product_images_limit": {
+          "label": "Product images limit",
+          "unit": "unit"
+        },
+        "before_after_images_limit": {
+          "label": "Before after images limit",
+          "unit": "unit"
+        }
+      },
+      "blocks": {}
+    },
+    "product-extended-new": {
+      "name": "Product extended new",
       "settings": {
         "product_images_limit": {
           "label": "Product images limit",
@@ -1398,6 +1415,9 @@
     },
     "feature_extend": {
       "label": "Featured Extended"
+    },
+    "feature_landing": {
+      "label": "Featured Landing"
     },
     "have_ques": {
       "label": "Have Questions"

@@ -1,0 +1,143 @@
+{% include 'product-extended-subscription-product' product: product, product_custom: false %}
+                                    
+<link rel="stylesheet" href="https://qureskincaredns.com/new/assets/shower-filter-trynow.css">
+<style>.price_wrap { display: none; }</style>
+
+<div class="subscribe_save_wrapper with_subscription mt-2">
+    <div class="subscribeTopInfo d-none">
+        <p class="px-md-5">MOST POPULAR CHOICE</p>
+    </div>
+    <div class="subscriptionType active" data-subscription="subscription">
+        <div class="subscribe_save_bx d-block">
+            <div class="subscribeInfo">
+                <label class="form-check-label" for="flexCheckDefault">
+                    <div class="d-flex flex-wrap justify-content-between">
+                        <div>
+                            <div class="d-flex justify-content-start gap-2 align-items-center sub_try_free">
+                                <p class="try_free"> TRY FREE FOR 30 DAYS </p>  
+                                <h6>{{ block.settings.heading }}</h6>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="subscribePrice">
+                                <p>$0</p>
+                                <p><span class="">{{ product.price | times: 0.7 | money_without_trailing_zeros }}</span></p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="shower_head">
+                                {% if block.settings.text != blank %}
+                                    {{ block.settings.text 
+                                        | replace: '<strong>', '<del class="me-1">'
+                                        | replace: '</strong>', '</del>'
+                                        | replace: '<a>', '<a class="ms-1">' 
+                                        | replace: '<p>', '<p class="subscribe_txt mt-1 skip_text">' 
+                                    }}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="try_free_days mt-2">
+        <h6><span class="fw-medium">TRY FREE FOR 30 DAYS</span> | Only pay if you keep it. </h6>
+    </div>
+    <div class="subscriptionType" data-subscription="no-subscription">
+        <div class="noSubscription">
+            <div class="noSubscriptionText">
+
+               <h6 class="mb-0 one_time_purchase"> One-time purchase </h6>
+                {% if section.settings.one_time_purchase != blank %}
+                    <p>{{ section.settings.one_time_purchase }}</p>
+                {% endif %}
+            </div>
+            <div class="noSubscriptionPrice">
+                {{ product.price | money_without_trailing_zeros }}
+            </div>
+        </div>
+
+        {% include 'product-extended-new-outofstock' %}
+
+        {% if section.settings.soldout == true %}
+            <a class="btn btn-lg btn-primary without_subscription buy_btn mt-4" href="#">Sold Out</a>   
+        {% else %}
+            {% if product.variants.first.available %}
+                <a class="btn btn-lg btn-primary without_subscription buy_btn mt-4 btn_text_value" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" onclick="setEventProductHandler('{{ product.handle | escape }}')" data-ajax-cart-request-button>{% if section.settings.reserve == true %}Reserve now{% else %}Buy Now{% endif %}</a>
+            {% else %}
+                <a class="btn btn-lg btn-primary without_subscription buy_btn mt-4 btn_text_value" href="#">{% if section.settings.reserve == true %}Reserve now{% else %}Sold Out{% endif %}</a>
+            {% endif %}
+        {% endif %}
+
+        {% capture sticky-button-classname %}without_subscription{% endcapture %}
+
+        {% render 'product-sticky-button' with 
+            variant_id: product.variants.first.id, 
+            current_price: product.price, 
+            original_price: product.price, 
+            classname: sticky-button-classname
+        %}
+
+        <div class="payment_method without_subscription">
+            <p>OR pay 4 monthly payments of {{ product.price | divided_by: 4 | money_without_trailing_zeros }} with</p>
+            <div class="pmt_img ps-2">
+                <img src="{{ 'klarna.svg' | asset_url }}" alt="">
+                <img src="{{ 'sezzle.svg' | asset_url }}" alt=""><img src="{{ 'afterpay.svg' | asset_url }}"
+                    alt="">
+            </div>
+        </div>
+    </div>
+
+    <button id="try-now-button" type="button" class="btn btn-lg btn-primary with_subscription buy_btn mt-4 btn_text_value" name="Submit" value="Submit">
+        Add To Cart &nbsp; – &nbsp; $0 <span class="del_price">{{ product.price | times: 0.7 | money_without_trailing_zeros }}</span>
+    </button>
+
+    <script>
+        document.getElementById('try-now-button').addEventListener('click', function() {
+            let __items = [];
+            let product_variant_id = '{{ product_variant_id }}';
+            let product_variant_id_trynow_white = 46361549766895;
+            let product_variant_id_trynow_black = 46361549799663;
+            let selling_plan = '{{ block.settings.plan }}';
+            let selling_plan_trynow = 6971687151;
+
+            const newUrl = new URL(window.location.href);
+            let selected_product_variant_id = newUrl.searchParams.get('variant');
+
+            if(selected_product_variant_id && selected_product_variant_id != product_variant_id)
+            {
+                __items.push({
+                    id: selected_product_variant_id,
+                    selling_plan: selling_plan,
+                    quantity: 1
+                });
+
+                __items.push({
+                    id: product_variant_id_trynow_black,
+                    selling_plan: selling_plan_trynow,
+                    quantity: 1
+                });  
+            }
+            else
+            {
+                __items.push({
+                    id: product_variant_id,
+                    selling_plan: selling_plan,
+                    quantity: 1
+                });
+
+                __items.push({
+                    id: product_variant_id_trynow_white,
+                    selling_plan: selling_plan_trynow,
+                    quantity: 1
+                }); 
+            }
+
+            cartRequestAdd({ 
+                items:  __items
+            }, {} )
+        })
+    </script>
+</div>

@@ -1,0 +1,59 @@
+{% if visibility == 'mobile' %}
+    <style>
+        .faq.accordions_shower_filter {
+            padding: 15px !important;
+        }
+    </style>
+{% endif %}
+
+
+<!-- accordions shower filter  -->
+<div class="faq accordions_shower_filter faq_under_product{% if visibility == "desktop" %} d-none d-md-block{% else %} d-md-none order-4{% endif %}">
+    <div class="accordion" id="accordion_collapsed">
+        {% if template == 'page.shower-filter-try-now' %}
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc_shower_One" aria-expanded="true" aria-controls="accFAQOne">
+                        <div class="container">
+                            <div class="d-flex justify-content-start gap-2 align-items-center sub_try_free">
+                                <p class="bg-green"> TRY FREE FOR 30 DAYS </p>  
+                                <h6 class="explained">Explained</h6>
+                            </div>
+                        </div>
+                    </button>
+                </h2>
+                <div id="acc_shower_One" class="accordion-collapse collapse" data-bs-parent="#accordion_shower_filter" style="">
+                    <div class="accordion-body">
+                        <div class="container">
+                            <p>Pay $0 today and try Qure Shower Filter at home, risk-free for 30 days. Only pay if you keep it. </p>
+                            <p>With subscription you will get Shower Filter Refill delivered to you every 90 days for only <span class="clr_faded"> $50 </span> $35.  </p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        {% endif %}
+        {%- for block in section.blocks -%}
+            {% if block.type == 'collapsed' %}
+                <div class="accordion-item">
+                    {% if block.settings.heading != blank %}
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsed_{{ forloop.index }}" aria-expanded="true" aria-controls="accFAQOne">
+                                <div class="container"><p class="fw-normal">{{ block.settings.heading }}</p></div>
+                            </button>
+                        </h2>
+                    {% endif %}
+                    {% if block.settings.text != blank %}
+                        <div id="collapsed_{{ forloop.index }}" class="accordion-collapse collapse" data-bs-parent="#accordion_collapsed" style="">
+                            <div class="accordion-body">
+                                <div class="container">
+                                    {{ block.settings.text }}
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+<!-- accordions shower filter  -->

@@ -72,7 +72,7 @@
           "announcement_TPxBgi": {
             "type": "announcement",
             "settings": {
-              "heading": "<p><strong>FREE World-Wide Shipping</strong> All Orders Above $100</p>",
+              "heading": "<p><strong>72% OFF</strong> on our Exclusive Easter Bundle </p>",
               "button_label": "SHOP NOW",
               "button_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal-new"
             }
@@ -87,7 +87,7 @@
             "type": "banner",
             "settings": {
               "image": "shopify://shop_images/Navigation.png",
-              "button_label": "Save up to 55% on [Exclusive Bundles]",
+              "button_label": "Save up to 72% on [Exclusive Bundles]",
               "button_url": "https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal"
             }
           },
@@ -133,7 +133,19 @@
           "banner_jibKaz",
           "banner_pe7PzR"
         ],
-        "settings": {}
+        "settings": {
+          "upsell_content": [
+            "exclusive-easter-bundle",
+            "fade-firm-bundle-essentials",
+            "line-refine-bundle-advanced",
+            "line-refine-bundle-pro-pre-order",
+            "fade-firm-bundle-advanced",
+            "breakout-control-pro",
+            "breakout-control-advanced",
+            "line-refine-bundle-essentials-pre-order",
+            "breakout-control-essentials"
+          ]
+        }
       },
       "newsletter": {
         "type": "newsletter",
@@ -192,7 +204,7 @@
           "link_wfYX8m"
         ],
         "settings": {
-          "heading": "© 2024 Qure™ Skincare. All rights reserved.",
+          "heading": "© 2025 Qure™ Skincare. All rights reserved.",
           "menu": "footer-bottom-menu",
           "text": "Our products are not intended to diagnose, cure, or prevent specific diseases of medical conditions. The Qure website is for education and information purposes only and is not intended as medical advice or a substitute for medical advice."
         }

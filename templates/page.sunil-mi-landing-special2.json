@@ -15,8 +15,8 @@
         "announcement_QmXGJK": {
           "type": "announcement",
           "settings": {
-            "heading": "SAVE UP TO 59% | Limited time Offer",
-            "heading_mobile": "SAVE UP TO 59% | Limited time Offer",
+            "heading": "SAVE UP TO 59% | Limited Time Easter Sale",
+            "heading_mobile": "SAVE UP TO 59% | Easter Offer",
             "color": "green",
             "font_size_desktop": 14,
             "font_size_mobile": 13
@@ -72,7 +72,7 @@
         "button_L9q6wE": {
           "type": "button",
           "settings": {
-            "button_label": "HOLIDAY OFFER SAVE 59%",
+            "button_label": "EASTER OFFER SAVE 59%",
             "button_url": "#productSubscription"
           }
         },
@@ -237,6 +237,7 @@
         "before_after_images_limit": 3,
         "before_after_button_label": "Before & After",
         "reserve": false,
+        "soldout": false,
         "selected_design": "old",
         "text_label_real_result_1": "Product",
         "text_label_real_result_2": "Real Results",
@@ -389,7 +390,7 @@
         "button_rznYjF": {
           "type": "button",
           "settings": {
-            "button_label": "HOLIDAY OFFER SAVE 59%",
+            "button_label": "EASTER OFFER SAVE 59%",
             "button_url": "#productSubscription"
           }
         }
@@ -1288,7 +1289,7 @@
     "line_a8KbFQ": {
       "type": "line",
       "settings": {
-        "heading": "HOLIDAY OFFER - AVAILABLE UNTIL STOCK LASTS",
+        "heading": "EASTER OFFER - AVAILABLE UNTIL STOCK LASTS",
         "classname": ""
       }
     },
@@ -1330,7 +1331,7 @@
       "settings": {
         "heading": "We make science-backed skincare easily accessible and affordable",
         "text": "<p><strong>“Even my esthetician is hooked!</strong> And I can now visit beauty clinics less often.”</p><ul><li>Helps <strong>boost</strong> serum absorption</li><li>Minimal to <strong>no downtime</strong></li><li>Virtually <strong>painless</strong></li><li><strong>Easy to use,</strong> 5-minute treatment</li><li><strong>2-in-1 action:</strong> stimulate & infuse</li></ul>",
-        "button_label": "HOLIDAY OFFER SAVE 59%",
+        "button_label": "EASTER OFFER SAVE 59%",
         "button_url": "#productSubscription",
         "underbutton_text_left": "90-Day Money Back Guarantee",
         "underbutton_text_right": "Free World-Wide Shipping Over $100"
@@ -1429,7 +1430,7 @@
     "liquid_86wfLd": {
       "type": "liquid",
       "settings": {
-        "code": "{% render 'serums-months-image-form-v2' with section_id: section.id %}",
+        "code": "{% render 'serums-months-image-form-6-month' with section_id: section.id %}",
         "popup_micro_infusion_enabled": true,
         "payment_icons": "shopify://shop_images/logos_full_qure_0d060a66-5fb6-4e6c-a740-55552a43bb10.png",
         "payment_icons_today_only": "shopify://shop_images/payments_today.png"

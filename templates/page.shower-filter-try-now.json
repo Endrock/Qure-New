@@ -1,7 +1,16 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
-      "type": "product-extended",
+      "type": "product-extended-new",
       "blocks": {
         "rating_KDB67x": {
           "type": "rating",
@@ -16,20 +25,19 @@
             "text": "<ul><li>Triple-filter showerhead for the purest head-to-toe hydration.</li><li>Reduces chlorine, heavy metals & contaminants that irritate the skin, for an overall more hydrated, clearer skin.</li><li>Reduces limescale buildup which can dry out skin & hair, for smoother & softer skin and tresses.</li></ul>"
           }
         },
-        "supply_CTrVRQ": {
-          "type": "supply",
-          "disabled": true,
+        "out_of_stock_3xp9iR": {
+          "type": "out_of_stock",
           "settings": {
-            "heading": "Next batch ships 17th of February 2025:",
-            "heading_mobile": "Next batch ships 02/17:",
-            "text": "<p>Order now and secure yours from the next shipment.</p>",
-            "first_option_date": "November 20th",
+            "heading": "Next batch ships end of April 2025:",
+            "heading_mobile": "Next batch ships end of April 2025:",
+            "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.</p>",
+            "first_option_date": "March 21st",
             "first_option_text": "SOLD OUT",
             "first_option_percent": 100,
-            "second_option_date": "February 17th",
-            "second_option_text": "54% Reserved",
-            "second_option_percent": 55,
-            "third_option_date": "March 30th",
+            "second_option_date": "April 25th",
+            "second_option_text": "42% Reserved",
+            "second_option_percent": 42,
+            "third_option_date": "May 2025",
             "third_option_text": "In Production",
             "third_option_percent": 0
           }
@@ -54,15 +62,8 @@
           "type": "trynow",
           "settings": {
             "heading": "Subscribe & save",
-            "text": "<h6>One Time: Showerhead + 1 Filter<\/h6><h6>Every 90 days: Replacement Filter (<strong>50$</strong>35$)<\/h6><p>Skip, pause or cancel anytime. <a href=\"https://qureskincare.com/pages/subscriptions\" title=\"skip\">See more details<\/a><\/p>",
+            "text": "<h6>One Time: Showerhead + 1 Filter</h6><h6>Every 90 days: Replacement Filter (<strong>50$</strong>35$)</h6><p>Skip, pause or cancel anytime. <a href=\"https://qureskincare.com/pages/subscriptions\" title=\"skip\">See more details</a></p>",
             "plan": "6323011823"
-          }
-        },
-        "collapsed_TDJHpS": {
-          "type": "collapsed",
-          "settings": {
-            "heading": "TRY FREE FOR 30 DAYS",
-            "text": "<p>Pay $0 today and try Qure Shower Filter at home, risk-free for 30 days. Only pay if you keep it.</p><p>With subscription you will get Shower Filter Refill delivered to you every 90 days for only 35$</p>"
           }
         },
         "collapsed_TnJHpV": {
@@ -90,11 +91,10 @@
       "block_order": [
         "rating_KDB67x",
         "list_azYRbY",
-        "supply_CTrVRQ",
+        "out_of_stock_3xp9iR",
         "variant_7PWWak",
         "variant_7nqQxD",
         "trynow_EyrzEb",
-        "collapsed_TDJHpS",
         "collapsed_TnJHpV",
         "collapsed_xqBcWj",
         "collapsed_E33cqi"
@@ -103,6 +103,7 @@
         "seo_heading": "SHOWER FILTER",
         "heading": "Save Your Hair & Skin from Dryness and Irritation",
         "heading_mobile": "Save Your Hair & Skin from Dryness and Irritation",
+        "one_time_purchase": "Showerhead + 1 Filter",
         "product": "shower-filter",
         "wistia_id": "",
         "product_images_limit": 5,
@@ -119,7 +120,8 @@
       }
     },
     "second": {
-      "type": "temp-page-shower-filter-try-now"
+      "type": "temp-page-shower-filter-try-now",
+      "settings": {}
     }
   },
   "order": [
