@@ -1912,3 +1912,35 @@ if (faceSerumBuyBlockContainer) {
 }
 
 /* end test Face Serum Buy Block Test */
+
+/* Start QR - Navigation Bundle Features AB test */
+document.addEventListener('DOMContentLoaded', () => {
+  (()=> {
+    const upsellNavSwiperContainer = document.querySelector('.swiper.pdm-upsell-nav-container__swiper');
+    if (upsellNavSwiperContainer) {
+      var swiper = new Swiper(".swiper.pdm-upsell-nav-container__swiper", {
+        slidesPerView: 'auto',
+        spaceBetween: 6,
+        mousewheel: {
+          forceToAxis: true,
+        },
+        navigation: {
+          nextEl: ".pdm-upsell-nav-container__swiper-button-next",
+          prevEl: ".pdm-upsell-nav-container__swiper-button-prev",
+        },
+      });
+    }
+
+    const upsellNavSwiperMobileContainer = document.querySelector('.swiper.pdm-upsell-nav-container-mobile__swiper');
+    if (upsellNavSwiperMobileContainer) {
+      var swiper = new Swiper(".swiper.pdm-upsell-nav-container-mobile__swiper", {
+        slidesPerView: 'auto',
+        spaceBetween: 8,
+        mousewheel: {
+          forceToAxis: true,
+        }
+      });
+    }
+  })();
+});
+/* End QR - Navigation Bundle Features AB test */

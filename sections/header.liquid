@@ -30,6 +30,8 @@
     </div>
 </div>
 
+{{ 'pdm-styles-carousel-nav.css' | asset_url | stylesheet_tag }}
+
 {% for block in section.blocks %}
     {%- case block.type -%}
         {% when 'tab' %}
@@ -76,7 +78,16 @@
     "name": "t:sections.header.name",
     "class": "section-header",
     "settings": [
-
+      {
+        "type": "header",
+        "content": "Upsell Navigation"
+      },
+      {
+        "type": "metaobject_list",
+        "id": "upsell_content",
+        "label": "Upsell List Content",
+        "metaobject_type": "nav_upsell_card_item"
+      }
     ],
 	"blocks": [
 		{
