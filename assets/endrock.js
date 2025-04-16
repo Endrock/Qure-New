@@ -1101,13 +1101,13 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   // Center the buttons initially
-  centerStickyButtonProductHorizontally(greenProductStickyBtn);
-  centerStickyButtonProductHorizontally(greenProductStickyFormBtn);
-
+  // centerStickyButtonProductHorizontally(greenProductStickyBtn);
+  // centerStickyButtonProductHorizontally(greenProductStickyFormBtn);
+  
   // Re-center the buttons when the window is resized
   window.onresize = () => {
-    centerStickyButtonProductHorizontally(greenProductStickyBtn);
-    centerStickyButtonProductHorizontally(greenProductStickyFormBtn);
+    // centerStickyButtonProductHorizontally(greenProductStickyBtn);
+    // centerStickyButtonProductHorizontally(greenProductStickyFormBtn);
   };
 
 
