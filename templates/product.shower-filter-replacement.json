@@ -89,10 +89,6 @@
         "text_label_real_result_3": ""
       }
     },
-    "second": {
-      "type": "temp-product-shower-filter-replacement",
-      "settings": {}
-    },
     "featuredin_jTrQCV": {
       "type": "featuredin",
       "blocks": {
@@ -157,13 +153,17 @@
       "name": "t:sections.featuredin.name",
       "settings": {
         "heading": "",
-        "custom_cls": ""
+        "custom_cls": "bg-lightGrey mt-4"
       }
+    },
+    "second": {
+      "type": "temp-product-shower-filter-replacement",
+      "settings": {}
     }
   },
   "order": [
     "main",
-    "second",
-    "featuredin_jTrQCV"
+    "featuredin_jTrQCV",
+    "second"
   ]
 }
