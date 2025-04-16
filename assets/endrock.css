@@ -4731,6 +4731,41 @@ body[data-ba-treatment-options] .row.treatment-ba-test__row-container .qure__tre
   padding: 0;
 }
 
+body[data-ba-treatment-options] .row.treatment-ba-test__row-container .qure__treatments .section__header.d-block.d-md-none .des {
+  margin-bottom: 0 !important;
+}
+
+body[data-ba-treatment-options] .row.treatment-ba-test__row-container .qure__treatments .section__header.d-block.d-md-none .des p {
+  opacity: 0.8;
+  color: #000;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.12px;
+}
+
+body[data-ba-treatment-options] .row.treatment-ba-test__row-container .qure__treatments .section__header.d-block.d-md-none .des p strong {
+  color: #000;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.12px;
+  white-space: nowrap
+}
+
+body[data-ba-treatment-options] .row.treatment-ba-test__row-container .qure__treatments .section__header.d-none.d-md-block .des p {
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.12px;
+}
+
 body[data-ba-treatment-options] .row.treatment-ba-test__row-container .qure__treatments .tmtFtrs_image .section__header,
 body[data-ba-treatment-options] .row.treatment-ba-test__row-container .qure__treatments .tmtFtrs_image .container-pdm-ba-treatment {
   padding: 0 24px;
@@ -4739,7 +4774,9 @@ body[data-ba-treatment-options] .row.treatment-ba-test__row-container .qure__tre
 body[data-ba-treatment-options] .row.treatment-ba-test__row-container .qure__treatments .tmtFtrs_image .container-pdm-ba-treatment {
   margin-top: 2rem !important;
 }
-
+body[data-ba-treatment-options] .row.treatment-ba-test__row-container .qure__treatments .tmtFtrs_image .container-pdm-ba-treatment > div {
+  margin-top: 0 !important;
+}
 body[data-ba-treatment-options] .row.treatment-ba-test__row-container .c_s_wrapper.cs_wrapper-pdm .value-props-ba {
   display: inline-flex;
   flex-direction: column;
