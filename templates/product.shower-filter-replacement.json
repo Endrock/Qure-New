@@ -92,57 +92,50 @@
     "featuredin_jTrQCV": {
       "type": "featuredin",
       "blocks": {
-        "heading_kRfyBj": {
-          "type": "heading",
-          "settings": {
-            "heading": "FEATURED IN"
-          }
-        },
         "image_iMcrGK": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/vogue.svg",
+            "image": "shopify:\/\/shop_images\/vogue2.svg",
             "mobile_hide": false
           }
         },
         "image_bAPphf": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/elle.svg",
-            "mobile_hide": false
+            "image": "shopify:\/\/shop_images\/women_health.svg",
+            "mobile_hide": true
           }
         },
         "image_6dqk7q": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/glamour.svg",
-            "mobile_hide": false
+            "image": "shopify:\/\/shop_images\/cosmopolitan2.svg",
+            "mobile_hide": true
           }
         },
         "image_LfKgdE": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/grazia.svg",
+            "image": "shopify:\/\/shop_images\/elle2.svg",
             "mobile_hide": false
           }
         },
         "image_eVJbTA": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/cosmopolitan.svg",
+            "image": "shopify:\/\/shop_images\/marie.svg",
             "mobile_hide": false
           }
         },
         "image_P8mBiX": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bazaar_889503c3-d4d6-4eb0-b7be-dd1212b56c58.png",
+            "image": "shopify:\/\/shop_images\/grazia2.svg",
             "mobile_hide": false
           }
         }
       },
       "block_order": [
-        "heading_kRfyBj",
         "image_iMcrGK",
         "image_bAPphf",
         "image_6dqk7q",
