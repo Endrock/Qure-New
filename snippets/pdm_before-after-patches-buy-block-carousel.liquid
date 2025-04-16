@@ -1,0 +1,14 @@
+{% comment %}
+  This snippet invoke the snippet to render the slider
+  parameters:
+  - image: image url @type string
+  Usage:
+  {% render 'pdm_before-after-patches-buy-block-carousel', image: image %}
+{% endcomment %}
+{% if product != blank %}
+<div class="patches-before-after-carousel-container before-after-carousel-container">
+    {% assign product_metaobject = product.metafields.custom.carousel_media.value %}
+    {% render 'pdm_before-after-patches-buy-block-carousel-items', metaobject: product_metaobject, image: image %}
+</div>
+
+{% endif %}
