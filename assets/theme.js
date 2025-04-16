@@ -704,12 +704,17 @@ addEventListener("resize", (event) => {
 
 // === sticky button ===
 $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-        $('.button_sticky_wrapper').addClass("sticky");
+  if ($(this).scrollTop() > 100) {
+    $('.button_sticky_wrapper').addClass("sticky");
+    if (window.innerWidth <= 767) { // Check if it's mobile
+      $('.richpanel-micro .rp-micro-app-dummy-icon-container').css('bottom', '130px');
     }
-    else {
-        $('.button_sticky_wrapper').removeClass("sticky");
+  } else {
+    $('.button_sticky_wrapper').removeClass("sticky");
+    if (window.innerWidth <= 767) { // Check if it's mobile
+      $('.richpanel-micro .rp-micro-app-dummy-icon-container').css('bottom', '');
     }
+  }
 });
 
 document.addEventListener('DOMContentLoaded', function () {
