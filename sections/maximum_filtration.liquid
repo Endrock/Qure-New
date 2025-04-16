@@ -1,0 +1,140 @@
+<!-- Maximum filtration  -->
+<div class="maximum_filtration_outer py-4 pt-md-5 my-0 mt-md-5">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-7">
+        <div class="maximum_filtration_content mw-560 d-none d-md-block">
+            <h3>{{ section.settings.heading }}</h3>
+            {{ section.settings.paragraph_1 }}
+            {{ section.settings.paragraph_2 }}
+            {{ section.settings.paragraph_3 }}
+        </div>
+        <div class="maximum_filtration_content mw-560 d-md-none">
+            <h3>{{ section.settings.heading }}</h3>
+            {{ section.settings.paragraph_1 }}
+            {{ section.settings.paragraph_2 }}
+            {{ section.settings.paragraph_3 }}
+        </div>
+        </div>
+        <div class="col-md-5">
+        <div class="maximum_filtration_img position-relative pt-3">
+            {% if section.settings.desktop_image %}
+            <img src="{{ section.settings.desktop_image | image_url: width: 800 }}" alt="" class="img-fluid d-none d-md-block">
+            {% endif %}
+            {% if section.settings.mobile_image %}
+            <img src="{{ section.settings.mobile_image | image_url: width: 800 }}" alt="" class="img-fluid d-md-none">
+            {% endif %}
+            <div class="max_filter_icons">
+            <div class="max_fil_icon">
+                {% if section.settings.icon_1_img %}
+                <img src="{{ section.settings.icon_1_img | image_url: width: 100 }}" alt="">
+                {% endif %}
+                <span>{{ section.settings.icon_1_text }}</span>
+            </div>
+            <div class="max_fil_icon order-3 order-md-0">
+                {% if section.settings.icon_2_img %}
+                <img src="{{ section.settings.icon_2_img | image_url: width: 100 }}" alt="">
+                {% endif %}
+                <span>{{ section.settings.icon_2_text }}</span>
+            </div>
+            <div class="max_fil_icon">
+                {% if section.settings.icon_3_img %}
+                <img src="{{ section.settings.icon_3_img | image_url: width: 100 }}" alt="">
+                {% endif %}
+                <span>{{ section.settings.icon_3_text }}</span>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Maximum Filtration",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Maximum filtration, minimal effort"
+    },
+    {
+      "type": "richtext",
+      "id": "paragraph_1",
+      "label": "Paragraph 1",
+      "default": "<p>The Qure Shower Filter is designed to remove up to 99% of chlorine – and other hard water nasties like copper, calcium, and lead – for healthy skin and hair.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "paragraph_2",
+      "label": "Paragraph 2",
+      "default": "<p>For optimized showering that leaves you feeling (and looking) your best, swap out the filter cartridge every 3 months.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "paragraph_3",
+      "label": "Paragraph 3",
+      "default": "<p>This Refill seamlessly fits the Qure Shower Filter system, providing long-lasting filtration benefits.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "header",
+      "content": "Icons"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_1_img",
+      "label": "Icon 1 Image"
+    },
+    {
+      "type": "text",
+      "id": "icon_1_text",
+      "label": "Icon 1 Text",
+      "default": "90-day supply"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_2_img",
+      "label": "Icon 2 Image"
+    },
+    {
+      "type": "text",
+      "id": "icon_2_text",
+      "label": "Icon 2 Text",
+      "default": "Easy replacement"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_3_img",
+      "label": "Icon 3 Image"
+    },
+    {
+      "type": "text",
+      "id": "icon_3_text",
+      "label": "Icon 3 Text",
+      "default": "Dermatologist tested"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Maximum Filtration"
+    }
+  ]
+}
+{% endschema %}
+
+
+<!-- Maximum filtration end -->
