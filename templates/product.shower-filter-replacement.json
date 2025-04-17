@@ -390,6 +390,49 @@
     "second": {
       "type": "temp-product-shower-filter-replacement",
       "settings": {}
+    },
+    "how_to_install_i3iPCL": {
+      "type": "how-to-install",
+      "blocks": {
+        "steps_Dxe7Jw": {
+          "type": "steps",
+          "settings": {
+            "step_img": "shopify:\/\/shop_images\/faucet_use_s_1.webp",
+            "text": "Remove faucet aerator. Simply attach and twist it off using the key for removal."
+          }
+        },
+        "steps_V9Ch83": {
+          "type": "steps",
+          "settings": {
+            "step_img": "shopify:\/\/shop_images\/faucet_use_s_2.webp",
+            "text": "Find the faucet thread accessory which best fits your faucet size."
+          }
+        },
+        "steps_UpHTgD": {
+          "type": "steps",
+          "settings": {
+            "step_img": "shopify:\/\/shop_images\/faucet_use_s_3.webp",
+            "text": "Clip Qure Faucet Filter onto the faucet. Once you hear it click it is installed. Turn the toggle button to “Q” mark on the filter ans enjoy healthier, clearer skin!"
+          }
+        },
+        "video_Qnepxz": {
+          "type": "video",
+          "settings": {
+            "wistia": "t0xzq5gdvm"
+          }
+        }
+      },
+      "block_order": [
+        "steps_Dxe7Jw",
+        "steps_V9Ch83",
+        "steps_UpHTgD",
+        "video_Qnepxz"
+      ],
+      "name": "t:sections.how-install.label",
+      "settings": {
+        "heading": "How to install",
+        "custom_class": "section"
+      }
     }
   },
   "order": [
@@ -400,6 +443,7 @@
     "reasons_6hRqtF",
     "triple_filtration_cK9cit",
     "caring_for_your_skin_k4afJk",
+    "how_to_install_i3iPCL",
     "second"
   ]
 }
