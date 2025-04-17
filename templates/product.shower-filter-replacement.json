@@ -302,6 +302,7 @@
         "feature_item_3EFA6R": {
           "type": "feature_item",
           "settings": {
+            "icon": "shopify:\/\/shop_images\/carbon_fiber_layer.svg",
             "title": "Carbon Fiber Layer",
             "description": "Removes up to 99% of chlorine, reducing skin irritation and dryness, leaving your skin and hair healthier."
           }
@@ -309,6 +310,7 @@
         "feature_item_g6Yi8z": {
           "type": "feature_item",
           "settings": {
+            "icon": "shopify:\/\/shop_images\/kdf_layer.svg",
             "title": "KDF Layer",
             "description": "Targets and removes heavy metals like lead and mercury, providing cleaner water for your shower."
           }
@@ -316,6 +318,7 @@
         "feature_item_9TAjxN": {
           "type": "feature_item",
           "settings": {
+            "icon": "shopify:\/\/shop_images\/fof.svg",
             "title": "FOF (Filter of Future)",
             "description": "Helps reduce the buildup of hard water minerals such as calcium and magnesium, preventing scale and improving water flow."
           }
