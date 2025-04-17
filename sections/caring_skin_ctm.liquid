@@ -72,20 +72,6 @@
               </div>
             </div>
   
-            <div class="subscriptionType" data-subscription="no-subscription">
-              <a class="btn btn-lg btn-primary without_subscription buy_btn" href="{{ section.settings.buy_now_link }}">Buy Now</a>
-              <div class="payment_method without_subscription">
-                <p>{{ section.settings.payment_description }}</p>
-                <div class="pmt_img ps-2">
-                  {% for block in section.blocks %}
-                    {% if block.type == 'payment' and block.settings.payment_image %}
-                    <img src="{{ block.settings.payment_image | image_url }}" alt="">
-                    {% endif %}
-                  {% endfor %}
-                </div>
-              </div>
-            </div>
-  
             <a class="btn btn-lg btn-primary with_subscription buy_btn mt-2" href="{{ section.settings.subscribe_now_link }}">Subscribe Now</a>
           </div>
         </div>
