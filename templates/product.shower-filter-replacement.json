@@ -224,39 +224,39 @@
         "text_reviewed": "Reviewed in"
       }
     },
-    "powerful_benefit_iWnR8b": {
-      "type": "powerful_benefit",
+    "reasons_6hRqtF": {
+      "type": "reasons",
       "blocks": {
-        "benefit_36RtNB": {
-          "type": "benefit",
+        "icon_wT8X3k": {
+          "type": "icon",
           "settings": {
             "image": "shopify:\/\/shop_images\/pwr_bnft1.svg",
             "text": "<p>Enhances the <strong>effectiveness of topical products<\/strong> with a clean skin base & stronger barrier.<\/p>"
           }
         },
-        "benefit_kfH8GW": {
-          "type": "benefit",
+        "icon_mVUHgC": {
+          "type": "icon",
           "settings": {
             "image": "shopify:\/\/shop_images\/pwr_bnft2.svg",
             "text": "<p>Reduces minerals that linger on the skin, helping to <strong>eliminate itchiness and breakouts.<\/strong><\/p>"
           }
         },
-        "benefit_Jtt8aK": {
-          "type": "benefit",
+        "icon_Rr3RX9": {
+          "type": "icon",
           "settings": {
             "image": "shopify:\/\/shop_images\/pwr_bnft3.svg",
             "text": "<p>Targets chemicals that cause redness & irritation, effective for <strong>sensitive or dry skin & scalp.<\/strong><\/p>"
           }
         },
-        "benefit_LthJ3T": {
-          "type": "benefit",
+        "icon_P97N9a": {
+          "type": "icon",
           "settings": {
             "image": "shopify:\/\/shop_images\/pwr_bnft4.svg",
             "text": "<p>Protects your skin’s moisture barrier by filtering drying chlorine & <strong>retaining natural hydration.<\/strong><\/p>"
           }
         },
-        "benefit_N466Dn": {
-          "type": "benefit",
+        "icon_RgT8mW": {
+          "type": "icon",
           "settings": {
             "image": "shopify:\/\/shop_images\/pwr_bnft5.svg",
             "text": "<p>Improves the health and appearance of your skin and hair for a <strong>natural, healthy glow.<\/strong><\/p>"
@@ -264,15 +264,17 @@
         }
       },
       "block_order": [
-        "benefit_36RtNB",
-        "benefit_kfH8GW",
-        "benefit_Jtt8aK",
-        "benefit_LthJ3T",
-        "benefit_N466Dn"
+        "icon_wT8X3k",
+        "icon_mVUHgC",
+        "icon_Rr3RX9",
+        "icon_P97N9a",
+        "icon_RgT8mW"
       ],
-      "name": "Powerful Benefits",
+      "name": "t:sections.reasons.name",
       "settings": {
-        "heading": "Powerful benefits you’ll never want to lose"
+        "classname": "bg-transparent pb-4 pt-4",
+        "heading": "Powerful benefits you’ll never want to lose",
+        "text": ""
       }
     },
     "triple_filtration_cK9cit": {
@@ -395,7 +397,7 @@
     "featuredin_jTrQCV",
     "maximum_filtration_r4D6jm",
     "results_LqegqG",
-    "powerful_benefit_iWnR8b",
+    "reasons_6hRqtF",
     "triple_filtration_cK9cit",
     "caring_for_your_skin_k4afJk",
     "second"
