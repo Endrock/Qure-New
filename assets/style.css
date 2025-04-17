@@ -32151,6 +32151,14 @@ p {
     padding-bottom: 10px !important;
     margin-bottom: 0 !important;
 }
+.how_to-install .step_cards {
+    filter: drop-shadow(0px 5px 15px rgba(176, 176, 176, 0.25));
+    border-radius: 8px;
+    background: var(--White, #FFF);
+    padding: 24px 16px;
+    position: relative;
+    height: 100%;
+}
 
 @media screen and (max-width: 768px) {
     .subscriptions_section {
