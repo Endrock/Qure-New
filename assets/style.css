@@ -32207,6 +32207,26 @@ p {
     margin: 0 !important;
 }
 /* ---------- how to install end --------------  */
+/* reasons start */
+.faucet_filter .reasons .reasons_wrapper {
+    justify-content: center;
+    gap: 20px;
+}
+/* reasons end */
+/* ---------- 6 reasons section start --------------  */
+.faucet_filter .reasons .rs_item {
+    border-radius: 10px;
+    border: 2.5px solid rgba(217, 217, 217, 0.50);
+    background: var(--White, #FFF);
+    padding: 20px 7px;
+}
+.reasons .reasons_wrapper .rs_item-main {
+    width: 100%;
+    box-sizing: border-box;
+} 
+
+/* ---------- 6 reasons section end --------------  */
+
 @media screen and (max-width: 768px) {
     .subscriptions_section {
         margin: 40px 0;
