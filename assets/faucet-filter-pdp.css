@@ -972,39 +972,12 @@ p.clinically_para {
         line-height: 40px;
     }
 
-    .reasons .reasons_wrapper {
-        flex-wrap: wrap;
-        gap: 0;
-        row-gap: 20px;
-        padding: 0;
-    }
-
-    .reasons .reasons_wrapper .rs_item-main {
-        width: 50%;
-        padding: 10px 0;
-    }
-
-    .faucet_filter .reasons .rs_item {
+    .reasons .reasons_wrapper .rs_item {
         display: flex;
         flex-direction: column;
         padding: 15px 8px;
         min-height: 133px;
         max-width: 146px;
-    }
-    .reasons_wrapper .rs_item{
-        margin-bottom: 0;
-    }
-
-    .reasons_wrapper .rs_item .rs_item_content p {
-        font-size: 10px;
-        line-height: 16px;
-        letter-spacing: 0.11px;
-        text-align: center;
-    }
-
-    .faucet_filter .reasons .rs_item img {
-        height: 35px;
-        width: 40px;
     }
 
     .mi_landing_result .result_content p {
@@ -1093,9 +1066,7 @@ p.clinically_para {
         padding: 10px 15px;
         grid-template-columns: auto 34%;
     }
-    .faucet_filter .reasons .reasons_wrapper {
-        display: flex;
-    }
+ 
     .replacement_info .replacement_pill p {
         font-size: 12px;
     }

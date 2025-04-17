@@ -32208,17 +32208,17 @@ p {
 }
 /* ---------- how to install end --------------  */
 /* reasons start */
-.faucet_filter .reasons .reasons_wrapper {
+.reasons .reasons_wrapper {
     justify-content: center;
     gap: 20px;
 }
 /* reasons end */
 /* ---------- 6 reasons section start --------------  */
-.faucet_filter .reasons .rs_item {
+.reasons .rs_item {
     border-radius: 10px;
-    border: 2.5px solid rgba(217, 217, 217, 0.50);
+    border: 2.5px solid rgba(217, 217, 217, 0.50) !important;
     background: var(--White, #FFF);
-    padding: 20px 7px;
+    padding: 20px 7px !important;
 }
 .reasons .reasons_wrapper .rs_item-main {
     width: 100%;
@@ -32397,7 +32397,9 @@ picture img {
 .bg_clr_transparent {
     background: transparent !important;
 }
-
+.reasons_wrapper .rs_item{
+    margin-bottom: 0 !important;
+}
 @keyframes progress-animation {
     from {
         stroke-dashoffset: 100;
@@ -32438,6 +32440,37 @@ picture img {
     }
     .order-first-mob{
         order: -1;
+    }
+    .reasons .reasons_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .reasons .reasons_wrapper .rs_item-main {
+        width: 50%;
+        padding: 10px 0;
+    }
+   .reasons .rs_item img{
+        height: 35px !important;
+        width: 40px !important;
+    }
+    .reasons_wrapper .rs_item{
+        margin-bottom: 0 !important;
+    }
+
+    .reasons_wrapper .rs_item .rs_item_content p {
+        font-size: 10px;
+        line-height: 16px;
+        letter-spacing: 0.11px;
+        text-align: center;
+    }
+    .reasons .reasons_wrapper .rs_item {
+        display: flex;
+        flex-direction: column;
+        padding: 15px 8px;
+        min-height: 133px;
+        max-width: 146px !important;
     }
 }
 
