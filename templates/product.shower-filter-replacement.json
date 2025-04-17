@@ -387,38 +387,34 @@
         "subscribe_now_link": ""
       }
     },
-    "second": {
-      "type": "temp-product-shower-filter-replacement",
-      "settings": {}
-    },
     "how_to_install_i3iPCL": {
       "type": "how-to-install",
       "blocks": {
         "steps_Dxe7Jw": {
           "type": "steps",
           "settings": {
-            "step_img": "shopify:\/\/shop_images\/faucet_use_s_1.webp",
-            "text": "Remove faucet aerator. Simply attach and twist it off using the key for removal."
+            "step_img": "shopify:\/\/shop_images\/faucet_filter_1.webp",
+            "text": "Turn off the water. Open the filter housing and remove the old cartridge."
           }
         },
         "steps_V9Ch83": {
           "type": "steps",
           "settings": {
-            "step_img": "shopify:\/\/shop_images\/faucet_use_s_2.webp",
-            "text": "Find the faucet thread accessory which best fits your faucet size."
+            "step_img": "shopify:\/\/shop_images\/faucet_filter_2.webp",
+            "text": "Firmly press the new filter into the housing. Screw the cover back clockwise until it's secure."
           }
         },
         "steps_UpHTgD": {
           "type": "steps",
           "settings": {
-            "step_img": "shopify:\/\/shop_images\/faucet_use_s_3.webp",
-            "text": "Clip Qure Faucet Filter onto the faucet. Once you hear it click it is installed. Turn the toggle button to “Q” mark on the filter ans enjoy healthier, clearer skin!"
+            "step_img": "shopify:\/\/shop_images\/faucet_filter_3.webp",
+            "text": "Turn on the water and let it run for 2-3 minutes before use."
           }
         },
         "video_Qnepxz": {
           "type": "video",
           "settings": {
-            "wistia": "t0xzq5gdvm"
+            "wistia": "bwhqvtar9u"
           }
         }
       },
@@ -430,9 +426,84 @@
       ],
       "name": "t:sections.how-install.label",
       "settings": {
-        "heading": "How to install",
+        "heading": "How to replace your filter refill cartridge",
         "custom_class": "section"
       }
+    },
+    "faq_NtAceL": {
+      "type": "faq",
+      "blocks": {
+        "object_kL8QeM": {
+          "type": "object",
+          "settings": {
+            "heading": "What is the Qure Shower Filter Refill made for?",
+            "text": "<p>The refill cartridge is designed for the Qure Shower Filter, ensuring cleaner water with every shower.<\/p>",
+            "code": ""
+          }
+        },
+        "object_q9neNc": {
+          "type": "object",
+          "settings": {
+            "heading": "What does the Qure Shower Filter do?",
+            "text": "<p>It removes harmful impurities such as heavy metals, chlorine, and unwanted minerals, protecting your skin and hair from damage caused by hard water.<\/p>",
+            "code": ""
+          }
+        },
+        "object_Kqjcf4": {
+          "type": "object",
+          "settings": {
+            "heading": "Does the filter lose effectiveness over time?",
+            "text": "<p>Yes, the filter removes up to 99% of chlorine initially, 95% after 4,000 liters, and 90% after 6,000 liters. For best results, we recommend replacing it after 5,000 liters (around 3 months).<br\/><br\/><\/p>",
+            "code": ""
+          }
+        },
+        "object_UxgwQj": {
+          "type": "object",
+          "settings": {
+            "heading": "How do I know when to replace the filter?",
+            "text": "<p>A slight drop in water pressure or visible buildup on the filter may indicate it’s time for a replacement. We recommend changing it every 3 months to maintain optimal performance.<\/p>",
+            "code": ""
+          }
+        },
+        "object_hqVM4g": {
+          "type": "object",
+          "settings": {
+            "heading": "How do I install the new filter refill?",
+            "text": "<ul><li>Turn off the water.<\/li><li>Open the filter housing and remove the old cartridge.<\/li><li>Unwrap the new cartridge and insert it into the housing.<\/li><li>Secure the cover by screwing it back clockwise.<\/li><li>Turn on the water and let it run for 2–3 minutes to flush out any initial particles.<\/li><\/ul>",
+            "code": ""
+          }
+        },
+        "object_AYpheh": {
+          "type": "object",
+          "settings": {
+            "heading": "Where can I buy filter refills?",
+            "text": "<p>You can purchase filter refills directly from our website, which provides 3 months of pure water. We also offer convenient subscription plans to ensure you never run out—set it and forget it, and we’ll take care of the rest.<\/p>",
+            "code": ""
+          }
+        }
+      },
+      "block_order": [
+        "object_kL8QeM",
+        "object_q9neNc",
+        "object_Kqjcf4",
+        "object_UxgwQj",
+        "object_hqVM4g",
+        "object_AYpheh"
+      ],
+      "name": "t:sections.faq.name",
+      "settings": {
+        "background": "bg-lightGrey",
+        "classname": "",
+        "heading": "The answers to your questions",
+        "text": "",
+        "button_label": "Show More Questions",
+        "button_hide_label": "Hide More Questions"
+      }
+    },
+    "second": {
+      "type": "temp-product-shower-filter-replacement",
+      "disabled": true,
+      "settings": {}
     }
   },
   "order": [
@@ -444,6 +515,7 @@
     "triple_filtration_cK9cit",
     "caring_for_your_skin_k4afJk",
     "how_to_install_i3iPCL",
+    "faq_NtAceL",
     "second"
   ]
 }
