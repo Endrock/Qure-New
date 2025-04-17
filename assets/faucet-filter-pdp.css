@@ -120,7 +120,6 @@
     border: 2.5px solid rgba(217, 217, 217, 0.50);
     background: var(--White, #FFF);
     padding: 20px 7px;
-    height: 100%;
 }
 
 .faucet_filter .reasons .reasons_wrapper {
@@ -255,62 +254,7 @@
 
 /* ---------- ingredients list end --------------  */
 
-/* ---------- how to install start --------------  */
-.how_to-install .step_cards {
-    filter: drop-shadow(0px 5px 15px rgba(176, 176, 176, 0.25));
-    border-radius: 8px;
-    background: var(--White, #FFF);
-    padding: 24px 16px;
-    position: relative;
-    height: 100%;
-}
 
-.how_to-install .step_cards .step_flag {
-    position: absolute;
-    top: -38px;
-    right: 13px;
-    border-radius: 8px 8px 0px 0px;
-    background: #C7E7DC;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.12);
-    padding: 6px 53px;
-}
-
-.how_to-install .step_cards .step_flag p {
-    font-weight: 600;
-    font-size: 13px;
-}
-
-.step_cards .step_text p {
-    padding-top: 20px;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.13px;
-}
-
-.how_to-install .nav-tabs .nav-link.active {
-    background-color: #C7E7DC;
-}
-
-.how_to-install .nav-tabs .nav-link {
-    padding: 6px 30px;
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 24px;
-    letter-spacing: 0.13px;
-    color: #000;
-    border-radius: 8px 8px 0px 0px;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.12);
-}
-
-.how_to-install .steps_tabs {
-    padding-top: 30px;
-}
-.w-css-reset[data-handle="bigPlayButton"] > div {
-    transform: translateX(-50%) translateY(-50%) !important;
-    margin: 0 !important;
-}
-/* ---------- how to install end --------------  */
 
 /* ---------- advanced filtration start --------------  */
 .advanced-filtration .filter_benefit p {
@@ -1062,8 +1006,11 @@ p.clinically_para {
         display: flex;
         flex-direction: column;
         padding: 15px 8px;
-        margin: 0 10px;
         min-height: 133px;
+        max-width: 146px;
+    }
+    .reasons_wrapper .rs_item{
+        margin-bottom: 0;
     }
 
     .reasons_wrapper .rs_item .rs_item_content p {
@@ -1166,7 +1113,6 @@ p.clinically_para {
     }
     .faucet_filter .reasons .reasons_wrapper {
         display: flex;
-        gap: 0;
     }
     .replacement_info .replacement_pill p {
         font-size: 12px;
