@@ -1,4 +1,3 @@
-<!-- caring-for-your-skin.liquid -->
 <div class="caring_for_your_skin">
     <div class="container">
       <div class="row">
@@ -54,7 +53,7 @@
             <div class="subscriptionType active" data-subscription="subscription">
               <div class="subscribe_save_bx d-block">
                 <div class="subscribeInfo">
-                  <label class="form-check-label" for="flexCheckDefault">
+                  <label class="form-check-label">
                     <div class="row justify-content-between">
                       <div class="col-md-8 col-6 pe-0">
                         <h6>{{ section.settings.subscription_heading }}</h6>
@@ -96,18 +95,147 @@
   
   {% schema %}
   {
-    "name": "Caring for skin",
+    "name": "Caring for Your Skin",
     "settings": [
       {
         "type": "text",
         "id": "heading",
         "label": "Main Heading",
         "default": "Caring for your skin & hair just got easier"
+      },
+      {
+        "type": "text",
+        "id": "paragraph_1",
+        "label": "Paragraph 1",
+        "default": "We know it can be hard to remember exactly when to switch out filters. Our convenient subscription plan ensures your replacement filter arrives at your doorstep at just the right time."
+      },
+      {
+        "type": "text",
+        "id": "paragraph_2",
+        "label": "Paragraph 2",
+        "default": "No need to wonder, no need to guess. Just pure, perfectly optimized water for your skin and hair. Set it and forget it!"
+      },
+      {
+        "type": "image_picker",
+        "id": "desktop_image",
+        "label": "Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "Mobile Image"
+      },
+      {
+        "type": "text",
+        "id": "subscription_label",
+        "label": "Subscription Top Label",
+        "default": "MOST POPULAR CHOICE"
+      },
+      {
+        "type": "text",
+        "id": "subscription_heading",
+        "label": "Subscription Heading",
+        "default": "Subscribe & save 30%"
+      },
+      {
+        "type": "text",
+        "id": "price_old",
+        "label": "Old Price",
+        "default": "$50"
+      },
+      {
+        "type": "text",
+        "id": "price_new",
+        "label": "New Price",
+        "default": "$35"
+      },
+      {
+        "type": "text",
+        "id": "subscription_description",
+        "label": "Subscription Description",
+        "default": "Get a new replacement filter delivered every 90 days for just $35. Skip or cancel at any time."
+      },
+      {
+        "type": "text",
+        "id": "payment_description",
+        "label": "Payment Text",
+        "default": "OR pay 4 monthly payments of $12.50 with"
+      },
+      {
+        "type": "url",
+        "id": "buy_now_link",
+        "label": "Buy Now Link",
+        "default": "#productSubscription"
+      },
+      {
+        "type": "url",
+        "id": "subscribe_now_link",
+        "label": "Subscribe Now Link",
+        "default": "#productSubscription"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "icon",
+        "name": "Icon Item",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon_image",
+            "label": "Icon Image"
+          },
+          {
+            "type": "text",
+            "id": "icon_text",
+            "label": "Icon Text"
+          }
+        ]
+      },
+      {
+        "type": "payment",
+        "name": "Payment Logo",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "payment_image",
+            "label": "Payment Image"
+          }
+        ]
       }
     ],
     "presets": [
       {
-        "name": "Caring for skin"
+        "name": "Caring for Your Skin",
+        "category": "Custom",
+        "blocks": [
+          {
+            "type": "icon",
+            "settings": {
+              "icon_text": "90-day supply"
+            }
+          },
+          {
+            "type": "icon",
+            "settings": {
+              "icon_text": "Easy replacement"
+            }
+          },
+          {
+            "type": "icon",
+            "settings": {
+              "icon_text": "Cancel anytime"
+            }
+          },
+          {
+            "type": "payment"
+          },
+          {
+            "type": "payment"
+          },
+          {
+            "type": "payment"
+          }
+        ]
       }
     ]
   }
