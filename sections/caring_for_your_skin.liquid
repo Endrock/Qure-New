@@ -1,21 +1,244 @@
 <!-- caring-for-your-skin.liquid -->
-<h2>{{ section.settings.heading }}</h2>
+<div class="caring_for_your_skin">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="caring_skin mw-542">
+          <h3>{{ section.settings.heading }}</h3>
+          <div>{{ section.settings.paragraph_1 }}</div>
+          <div>{{ section.settings.paragraph_2 }}</div>
+
+          <div class="supply_icons d-none d-md-flex flex-wrap">
+            {% for block in section.blocks %}
+              {% if block.type == 'icon' %}
+              <div class="ninety_easy_icons">
+                {% if block.settings.icon_image %}
+                <img src="{{ block.settings.icon_image | image_url }}" alt="">
+                {% endif %}
+                <span>{{ block.settings.icon_text }}</span>
+              </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <div class="caring_skin_img d-flex justify-content-between gap-2 d-md-block align-items-center">
+          {% if section.settings.desktop_image %}
+          <img src="{{ section.settings.desktop_image | image_url }}" alt="" class="img-fluid d-none d-md-block skin_care_img">
+          {% endif %}
+          {% if section.settings.mobile_image %}
+          <img src="{{ section.settings.mobile_image | image_url }}" alt="" class="img-fluid d-md-none skin_care_img">
+          {% endif %}
+
+          <div class="supply_icons d-md-none flex-wrap">
+            {% for block in section.blocks %}
+              {% if block.type == 'icon' %}
+              <div class="ninety_easy_icons">
+                {% if block.settings.icon_image %}
+                <img src="{{ block.settings.icon_image | image_url }}" alt="">
+                {% endif %}
+                <span>{{ block.settings.icon_text }}</span>
+              </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="subscribe_save_wrapper with_subscription mt-2">
+          <div class="subscribeTopInfo">
+            <p class="px-md-5">{{ section.settings.subscription_label }}</p>
+          </div>
+
+          <div class="subscriptionType active" data-subscription="subscription">
+            <div class="subscribe_save_bx d-block">
+              <div class="subscribeInfo">
+                <label class="form-check-label" for="flexCheckDefault">
+                  <div class="row justify-content-between">
+                    <div class="col-md-8 col-6 pe-0">
+                      <h6>{{ section.settings.subscription_heading }}</h6>
+                    </div>
+                    <div class="col-md-4 col-6">
+                      <div class="subscribePrice">
+                        <p><span>{{ section.settings.price_old }}</span>{{ section.settings.price_new }}</p>
+                      </div>
+                    </div>
+                    <div class="col-md-10">
+                      <p class="subscribe_txt pe-2">{{ section.settings.subscription_description }}</p>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="subscriptionType" data-subscription="no-subscription">
+            <a class="btn btn-lg btn-primary without_subscription buy_btn" href="{{ section.settings.buy_now_link }}">Buy Now</a>
+            <div class="payment_method without_subscription">
+              <p>{{ section.settings.payment_description }}</p>
+              <div class="pmt_img ps-2">
+                {% for block in section.blocks %}
+                  {% if block.type == 'payment' and block.settings.payment_image %}
+                  <img src="{{ block.settings.payment_image | image_url }}" alt="">
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+          <a class="btn btn-lg btn-primary with_subscription buy_btn mt-2" href="{{ section.settings.subscribe_now_link }}">Subscribe Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% schema %}
 {
   "name": "Caring for your skin",
   "tag": "section",
+  "class": "caring_for_your_skin",
   "settings": [
     {
       "type": "text",
       "id": "heading",
-      "label": "Heading",
-      "default": "Hello from custom section"
+      "label": "Main Heading",
+      "default": "Caring for your skin & hair just got easier"
+    },
+    {
+      "type": "richtext",
+      "id": "paragraph_1",
+      "label": "Paragraph 1",
+      "default": "<p>We know it can be hard to remember exactly when to switch out filters. Our convenient subscription plan ensures your replacement filter arrives at your doorstep at just the right time.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "paragraph_2",
+      "label": "Paragraph 2",
+      "default": "<p>No need to wonder, no need to guess. Just pure, perfectly optimized water for your skin and hair. Set it and forget it!</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "text",
+      "id": "subscription_label",
+      "label": "Subscription Top Label",
+      "default": "MOST POPULAR CHOICE"
+    },
+    {
+      "type": "text",
+      "id": "subscription_heading",
+      "label": "Subscription Heading",
+      "default": "Subscribe & save 30%"
+    },
+    {
+      "type": "text",
+      "id": "price_old",
+      "label": "Old Price",
+      "default": "$50"
+    },
+    {
+      "type": "text",
+      "id": "price_new",
+      "label": "New Price",
+      "default": "$35"
+    },
+    {
+      "type": "richtext",
+      "id": "subscription_description",
+      "label": "Subscription Description",
+      "default": "<p>Get a new replacement filter delivered every 90 days for just $35. Skip or cancel at any time. <a href='#'>See more details</a></p>"
+    },
+    {
+      "type": "text",
+      "id": "payment_description",
+      "label": "Payment Text",
+      "default": "OR pay 4 monthly payments of $12.50 with"
+    },
+    {
+      "type": "url",
+      "id": "buy_now_link",
+      "label": "Buy Now Link",
+      "default": "#productSubscription"
+    },
+    {
+      "type": "url",
+      "id": "subscribe_now_link",
+      "label": "Subscribe Now Link",
+      "default": "#productSubscription"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon",
+      "name": "Icon Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Icon Image"
+        },
+        {
+          "type": "text",
+          "id": "icon_text",
+          "label": "Icon Text"
+        }
+      ]
+    },
+    {
+      "type": "payment",
+      "name": "Payment Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "payment_image",
+          "label": "Payment Image"
+        }
+      ]
     }
   ],
   "presets": [
     {
-      "name": "Caring for your skin"
+      "name": "Caring for your skin",
+      "category": "Custom Sections",
+      "blocks": [
+        {
+          "type": "icon",
+          "settings": {
+            "icon_text": "90-day supply"
+          }
+        },
+        {
+          "type": "icon",
+          "settings": {
+            "icon_text": "Easy replacement"
+          }
+        },
+        {
+          "type": "icon",
+          "settings": {
+            "icon_text": "Cancel anytime"
+          }
+        },
+        {
+          "type": "payment"
+        },
+        {
+          "type": "payment"
+        },
+        {
+          "type": "payment"
+        }
+      ]
     }
   ]
 }
