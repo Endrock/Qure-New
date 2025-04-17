@@ -339,6 +339,52 @@
         "mobile_image": "shopify:\/\/shop_images\/shower_filter-rep-banner-mob.webp"
       }
     },
+    "caring_for_your_skin_k4afJk": {
+      "type": "caring_for_your_skin",
+      "blocks": {
+        "icon_LqzKph": {
+          "type": "icon",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/ninety_day_supply_icon_4e272ea2-a224-4fe5-85a2-aa41aa234b98.svg",
+            "icon_text": "90-day supply"
+          }
+        },
+        "icon_jEitHz": {
+          "type": "icon",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/easy_replacement.svg",
+            "icon_text": "Easy replacement"
+          }
+        },
+        "icon_PTRUr6": {
+          "type": "icon",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/cancel_anytime.svg",
+            "icon_text": "Cancel anytime"
+          }
+        }
+      },
+      "block_order": [
+        "icon_LqzKph",
+        "icon_jEitHz",
+        "icon_PTRUr6"
+      ],
+      "name": "Caring for Your Skin",
+      "settings": {
+        "heading": "Caring for your skin & hair just got easier",
+        "paragraph_1": "<p>We know it can be hard to remember exactly when to switch out filters. Our convenient subscription plan ensures your replacement filter arrives at your doorstep at just the right time.<\/p>",
+        "paragraph_2": "<p>No need to wonder, no need to guess. Just pure, perfectly optimized water for your skin and hair. Set it and forget it!<\/p>",
+        "desktop_image": "shopify:\/\/shop_images\/caring_skin.webp",
+        "mobile_image": "shopify:\/\/shop_images\/caring_skin_mob.webp",
+        "subscription_label": "MOST POPULAR CHOICE",
+        "subscription_heading": "Subscribe & save 30%",
+        "price_old": "$50",
+        "price_new": "$35",
+        "subscription_description": "<p>Get a new replacement filter delivered every 90 days for just $35. Skip or cancel at any time. <a href=\"#\">See more details<\/a><\/p>",
+        "subscribe_btn_text": "Subscribe Now",
+        "subscribe_now_link": ""
+      }
+    },
     "second": {
       "type": "temp-product-shower-filter-replacement",
       "settings": {}
@@ -351,6 +397,7 @@
     "results_LqegqG",
     "powerful_benefit_iWnR8b",
     "triple_filtration_cK9cit",
+    "caring_for_your_skin_k4afJk",
     "second"
   ]
 }
