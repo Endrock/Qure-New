@@ -1875,7 +1875,7 @@
           "type": "object",
           "settings": {
             "heading": "Do I need to pay for taxes and duties?",
-            "text": "<p>If you’re in the US, Canada, or Australia, you don’t need to worry about duties. For other countries, you may be liable to pay local taxes and duties on receipt of your order. We recommend contacting your local customs department to find out more.</p>",
+            "text": "<p>If you’re in the US or Australia, you don’t need to worry about duties. For other countries, you may be liable to pay local taxes and duties on receipt of your order. We recommend contacting your local customs department to find out more.</p>",
             "code": ""
           }
         },
