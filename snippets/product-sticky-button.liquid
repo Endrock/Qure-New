@@ -1,20 +1,20 @@
 {% if variant_id %}
   {{  '_pdm_product-sticky-button.css' | asset_url |  stylesheet_tag }}
-  <div id="green-product-sticky-btn" class="button_sticky_wrapper" data-product-id="{{ product.id }}">
+  <div id="green-product-sticky-btn" class="button_sticky_wrapper" data-product-id="{{ product_data.id }}">
     {{
-      product.featured_image
+      product_data.featured_image
       | image_url: width: 700
-      | image_tag: alt: product.title, class: 'button_sticky_wrapper__product-image'
+      | image_tag: alt: product_data.title, class: 'button_sticky_wrapper__product-image'
     }}
     <div class="button_sticky_wrapper__product-info">
       <div class="button_sticky_wrapper__product-info__text">
-        <h4 class="button_sticky_wrapper__title">{{ product.title | escape }}</h4>
+        <h4 class="button_sticky_wrapper__title">{{ product_data.title | escape }}</h4>
         {% render 'pdm_product-social-proof-data-snippet' %}
       </div>
 
       <a
         href="{{ routes.cart_add_url }}?id={{ variant_id }}&quantity=1"
-        onclick="setEventProductHandler('{{ product.handle | escape }}')"
+        onclick="setEventProductHandler('{{ product_data.handle | escape }}')"
         data-ajax-cart-request-button
         class="button_sticky button_sticky_wrapper__button_sticky {{ classname }} event_btn"
       >
