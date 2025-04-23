@@ -146,34 +146,49 @@
                         data-product-id="{{ product.id }}"
                       >
                       <label class="monthly_plans" for="3_month">
-                        <div class="plan_des">
-                          <div class="plan_hdr">
-                            <h3>6 Month Supply</h3>
-                            <span class="saved_price item-1">SAVE {{ discount_percentage }}%</span>
-                          </div>
-                          <div class="plan_des">(12 Micro-infusion Treatments)</div>
-                        </div>
-                        <div class="price pmd_price-first-elemnt">
-                          <div class="price-row">
-                            <div class="plan_prc regular_price">
-                              {{ product.compare_at_price | money_without_trailing_zeros }}
+                        <div class="pdm_plan-with-free-patch">
+                          <div class="plan_des">
+                            <div class="plan_hdr">
+                              <h3>6 Month Supply</h3>
+                              <span class="saved_price item-1">SAVE {{ discount_percentage }}%</span>
                             </div>
-                            <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
+                            <div class="plan_des">(12 Micro-infusion Treatments)</div>
+                            <!-- “Free Patch” badge desktop -->
+                            <div class="pdm_free-patch desktop">
+                              <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/bfs_blue-patches.webp?v=1731751539" width="42" height="26" alt="Micro-Infusion Patch icon" />
+                              <span><strong>Get a Free</strong> Pair of Micro-Infusion Patches</span>
+                            </div>
+                            <!-- End of “Free Patch” badge desktop -->
                           </div>
-                          <div class="pdm_price-stock-left">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14"
-                              height="14"
-                              viewBox="0 0 14 14"
-                              fill="none"
-                            >
-                              <path d="M7 12.25C9.8995 12.25 12.25 9.8995 12.25 7C12.25 4.1005 9.8995 1.75 7 1.75C4.1005 1.75 1.75 4.1005 1.75 7C1.75 9.8995 4.1005 12.25 7 12.25Z" stroke="#C4121A" stroke-linecap="round" stroke-linejoin="round"/>
-                              <path d="M6.41699 4.66797V7.58464H9.33366" stroke="#C4121A" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <p><strong class="pdm_price-stock-left-quantity"></strong>left</p>
+                          <div class="price pmd_price-first-elemnt">
+                            <div class="price-row pdm_price-stock">
+                              <div class="plan_prc regular_price">
+                                {{ product.compare_at_price  |  divided_by: 100 |  round | times: 100 | money_without_trailing_zeros }}
+                              </div>
+
+                              <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
+                            </div>
+                            <div class="pdm_price-stock-left">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 14 14"
+                                fill="none"
+                              >
+                                <path d="M7 12.25C9.8995 12.25 12.25 9.8995 12.25 7C12.25 4.1005 9.8995 1.75 7 1.75C4.1005 1.75 1.75 4.1005 1.75 7C1.75 9.8995 4.1005 12.25 7 12.25Z" stroke="#C4121A" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.41699 4.66797V7.58464H9.33366" stroke="#C4121A" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                              <p><strong class="pdm_price-stock-left-quantity"></strong>left</p>
+                            </div>
                           </div>
                         </div>
+                        <!-- “Free Patch” badge mobile -->
+                        <div class="pdm_free-patch mobile">
+                          <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/bfs_blue-patches.webp?v=1731751539" width="42" height="26" alt="Micro-Infusion Patch icon" />
+                          <span><strong>Get a Free</strong> Pair of Micro-Infusion Patches</span>
+                        </div>
+                        <!-- End of “Free Patch” badge mobile -->
                         <div class="pdm_plan-bundle-detail item-1">
                           <p>🔥 Only $20,75 per treatment</p>
                         </div>
@@ -280,16 +295,16 @@
                           <div class="batch_h_month">June 2025</div>
                           <div class="batch_h_info" style="--bgPercent:0%;"><span>In
                                   Production</span></div>
-                      </div> 
+                      </div>
                     </div>
 
                     <script>
                       document.addEventListener("DOMContentLoaded", function () {
                           const batchMessage = document.querySelector('.ctm_cls_next_batch_mi_lp');
                           const radioButtons = document.querySelectorAll('input[name="monthlyPlan"]');
-                      
+
                           batchMessage.style.display = 'none';
-                      
+
                           radioButtons.forEach(function (radio) {
                               radio.addEventListener('change', function () {
                                   if (document.getElementById('1_month').checked) {
@@ -508,7 +523,7 @@
                   >
                     Buy Now <span class="savedAmount">& SAVE {{ discount_percentage }}%</span>
                   </a>
-                  
+
                 </div>
               </div>
             </div>
