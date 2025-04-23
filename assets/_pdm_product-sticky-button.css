@@ -79,11 +79,13 @@
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
+  font-weight: 500;
+  line-height: 100%;
   letter-spacing: 0.14px;
   width: 100%;
-  min-width: none;
+  height: 34px;
+  min-width: unset;
+  margin: auto;
 }
 
 .button_sticky_wrapper__product-info .button_sticky_wrapper__product-info__text .social-proof-data-container {
@@ -189,6 +191,7 @@
   .button_sticky_wrapper__product-info .button_sticky_wrapper__button_sticky {
     width: 192px;
     min-width: 192px;
+    height: 47px;
     padding: 18px 14px;
     gap: 8px;
     text-align: center;
