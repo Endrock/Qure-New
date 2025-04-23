@@ -191,7 +191,7 @@
             "tab_icon_light": "shopify://shop_images/icon_2_e3c8c5b4-6565-4b84-adf1-c6fe7ae24072.svg",
             "title": "Weekly",
             "regimen_informartion": "regimen-informartion-oef7cmu3",
-            "image_step": "shopify://shop_images/302a30a7da5854ef2f6ab3c4da4783b8.gif"
+            "video_step": "shopify://files/videos/PATCHES_how to use.mp4"
           }
         },
         "step_y4w8Cd": {
@@ -251,7 +251,7 @@
             "video": "shopify://files/videos/d5d0c051b43e4117be7b6308e06e8f66.mp4",
             "video_external": "",
             "img": "shopify://shop_images/video_2_d4e699f9-63c0-4a7d-8dc4-70ec89088e7b.png",
-            "product": "micro-infusion-3-month-bundle-6x-beta-glucan-serum"
+            "product": "micro-infusion-3-month-bundle"
           }
         }
       },
@@ -466,7 +466,7 @@
           "type": "card",
           "settings": {
             "custom_name": "Micro-Infusion System for Dark Spots",
-            "image_product": "shopify://shop_images/images_D_3_2___M_1_1_1.png",
+            "image_product": "shopify://shop_images/MI_Dark_Spots_Personalized_Sking_Care.png",
             "text_check_strong": "Dark Spots & PIH",
             "text_check": "Micro-Infusion System"
           }

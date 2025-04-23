@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "product-landing": {
       "type": "product-landing",
@@ -848,6 +848,10 @@
         "button_label": "Show More Questions",
         "button_hide_label": "Hide More Questions"
       }
+    },
+    "pdm_product_social_proof_data_6ix3pc": {
+      "type": "pdm_product-social-proof-data",
+      "settings": {}
     }
   },
   "order": [
@@ -864,6 +868,7 @@
     "compare_eYNU3L",
     "ingredients_dropdown_7zxb7X",
     "how_to_use_wC7khU",
-    "faq_mw3Aqn"
+    "faq_mw3Aqn",
+    "pdm_product_social_proof_data_6ix3pc"
   ]
 }

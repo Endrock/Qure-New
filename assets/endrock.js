@@ -49,9 +49,9 @@ const deliveryDate = (location, orderByConfig) => {
   const messageContainer = document.querySelector('.orderby-receiveby__shipping-text');
   const nationalMessage = window.nationalText.split('[]');
 
-  if (countryCode == 'US' && !orderByConfig.showOrderByReceiveByUS ) return
+  if (countryCode == 'US' && !orderByConfig.showOrderByReceiveByUS) return
 
-  if (countryCode == 'US' && (nowDate >= orderByConfig.startDateOrder && nowDate <= orderByConfig.endDateOrder )) {
+  if (countryCode == 'US' && (nowDate >= orderByConfig.startDateOrder && nowDate <= orderByConfig.endDateOrder)) {
     return;
   }
 
@@ -118,11 +118,11 @@ const verifyCustomer = () => {
 
 /* ATC NO PRICES PDP */
 const atcNoPricesPdp = () => {
-  const subscriptionTypes = document.querySelectorAll('.subscriptionType'); 
+  const subscriptionTypes = document.querySelectorAll('.subscriptionType');
   console.log(subscriptionTypes);
   if (subscriptionTypes) {
     subscriptionTypes.forEach((element) => {
-      element.addEventListener('click', function(e) {
+      element.addEventListener('click', function (e) {
 
         const subscriptionType = e.currentTarget.getAttribute('data-subscription');
         const subscriptionPrices = document.querySelectorAll('.subscriptions-prices')
@@ -134,7 +134,7 @@ const atcNoPricesPdp = () => {
   }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   atcNoPricesPdp();
 
 
@@ -163,8 +163,15 @@ document.addEventListener('DOMContentLoaded', function() {
   const closeIcon = document.querySelector('.social-proof-data-container .close-icon');
   const containerAtcButton = document.querySelector('.nav_e-commerce .cart-custom');
   const containerAtcButtonProdFaceSerum = document.querySelectorAll('.button_sticky_wrapper');
-
+  console.log('hola mundo');
   if (socialProofContainer) {
+    console.group('Social Proof Data');
+     console.log('productHandle', socialProofContainer.dataset.productHandle);
+     console.log('productId', socialProofContainer.dataset.productId);
+     console.log('pageHandle', socialProofContainer.dataset.pageHandle);
+     console.log('productList', socialProofContainer.dataset.productList);
+    console.groupEnd();
+
     let { productId, pageHandle, productList } = socialProofContainer.dataset;
     let url = `https://webhooks.endrock.software/endrockapi/v3/app/analytics/reportsGA4.php?filterBy=productId&store=qure&name=Qure: GA4&productId=`;
 
@@ -193,6 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // handle requests for 1 product or some of them
     if (pageHandle && productList) {
+      console.log('entre aqui ph y pl')
       let arrProductList = productList.split(', ');
       const requests = arrProductList.map(id => {
         return fetchData(url, id);
@@ -208,6 +216,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => console.log('error', error));
     } else if (productId) {
+      console.log('entre aqui product')
       fetchData(url, productId)
         .then(response => {
           if (response.code == 200) {
@@ -1077,7 +1086,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Select the green product sticky button element
   const greenProductStickyBtn = document.querySelector('#green-product-sticky-btn');
   const greenProductStickyFormBtn = document.querySelector('#green-product-sticky-form-btn');
-  
+
   /**
    * Centers the given button horizontally within the window.
    * @param {HTMLElement} btn - The button element to be centered.
@@ -1090,15 +1099,15 @@ document.addEventListener('DOMContentLoaded', function() {
       btn.style.left = `${totalLeft}px`;
     }
   };
-  
+
   // Center the buttons initially
-  centerStickyButtonProductHorizontally(greenProductStickyBtn);
-  centerStickyButtonProductHorizontally(greenProductStickyFormBtn);
+  // centerStickyButtonProductHorizontally(greenProductStickyBtn);
+  // centerStickyButtonProductHorizontally(greenProductStickyFormBtn);
   
   // Re-center the buttons when the window is resized
   window.onresize = () => {
-    centerStickyButtonProductHorizontally(greenProductStickyBtn);
-    centerStickyButtonProductHorizontally(greenProductStickyFormBtn);
+    // centerStickyButtonProductHorizontally(greenProductStickyBtn);
+    // centerStickyButtonProductHorizontally(greenProductStickyFormBtn);
   };
 
 
@@ -1136,7 +1145,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // new sidecart timer 
   const sidecartTimerContainer = document.querySelector('.slide_cart .sidecart-timer-container');
   initSidecarTimer(sidecartTimerContainer);
- 
+
   // sitewide timer (header) 
   const siteWideTimerContainer = document.querySelector('.announcement_bar.site-gamification-active .sidecart-timer-container');
   initSidecarTimer(siteWideTimerContainer);
@@ -1146,67 +1155,67 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(updateSideWideGamification, 2000);
   });
 
- 
+
   // pdp-carousel-image
   initPDPCarouselImage();
 
-   // frontrow-health 
-   const frontrowHealthContainer = document.querySelector('.frontrow-health-container');
-   const trustedSection = document.querySelector('.trustedVerified');
-   initFrontrowHealth(frontrowHealthContainer, trustedSection);
+  // frontrow-health 
+  const frontrowHealthContainer = document.querySelector('.frontrow-health-container');
+  const trustedSection = document.querySelector('.trustedVerified');
+  initFrontrowHealth(frontrowHealthContainer, trustedSection);
 });
 
 
- /**
- * Initializes the sidecar timer on the page.
- *
- * This function checks if the sidecar timer is within the valid date range
- * and displays the countdown timer accordingly. If the current date is outside
- * the specified start and finish dates, the timer container is hidden. The timer
- * updates every second to show the remaining time in days, hours, minutes, and seconds.
- *
- * @function initSidecarTimer
- * @returns {void} - The function does not return a value.
- */
- function initSidecarTimer (sidecartTimerContainer) {
+/**
+* Initializes the sidecar timer on the page.
+*
+* This function checks if the sidecar timer is within the valid date range
+* and displays the countdown timer accordingly. If the current date is outside
+* the specified start and finish dates, the timer container is hidden. The timer
+* updates every second to show the remaining time in days, hours, minutes, and seconds.
+*
+* @function initSidecarTimer
+* @returns {void} - The function does not return a value.
+*/
+function initSidecarTimer(sidecartTimerContainer) {
   if (!sidecartTimerContainer) return;
 
   let { finishDate, startDate } = sidecartTimerContainer.dataset;
 
-   // parse dates
-   startDate = parseCustomDate(startDate); 
-   finishDate = parseCustomDate(finishDate);
+  // parse dates
+  startDate = parseCustomDate(startDate);
+  finishDate = parseCustomDate(finishDate);
 
-   if (isNaN(startDate) || isNaN(finishDate)) {
-     console.error('Invalid date format:', { startDate, finishDate });
-     sidecartTimerContainer.style.display = 'none';
-     return;
-   }
- 
-   let now = new Date().getTime();
- 
-   // Hide timer if out of date
-   if (now < startDate || now > finishDate) {
-     sidecartTimerContainer.style.display = 'none';
-     return;
-   }
-  
-  const countdown = setInterval(function() {
+  if (isNaN(startDate) || isNaN(finishDate)) {
+    console.error('Invalid date format:', { startDate, finishDate });
+    sidecartTimerContainer.style.display = 'none';
+    return;
+  }
+
+  let now = new Date().getTime();
+
+  // Hide timer if out of date
+  if (now < startDate || now > finishDate) {
+    sidecartTimerContainer.style.display = 'none';
+    return;
+  }
+
+  const countdown = setInterval(function () {
     now = new Date().getTime();
-    
+
     // Find the time remaining until the target date
     const remainingTime = finishDate - now;
-    
+
     // Time calculations for days, hours, minutes, and seconds
     const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
     const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-    
-    setTimer(sidecartTimerContainer.querySelector('.sidecart-timer-container__timer--days-amount'),days);
-    setTimer(sidecartTimerContainer.querySelector('.sidecart-timer-container__timer--hours-amount'),hours);
-    setTimer(sidecartTimerContainer.querySelector('.sidecart-timer-container__timer--minutes-amount'),minutes);
-    setTimer(sidecartTimerContainer.querySelector('.sidecart-timer-container__timer--seconds-amount'),seconds);
+
+    setTimer(sidecartTimerContainer.querySelector('.sidecart-timer-container__timer--days-amount'), days);
+    setTimer(sidecartTimerContainer.querySelector('.sidecart-timer-container__timer--hours-amount'), hours);
+    setTimer(sidecartTimerContainer.querySelector('.sidecart-timer-container__timer--minutes-amount'), minutes);
+    setTimer(sidecartTimerContainer.querySelector('.sidecart-timer-container__timer--seconds-amount'), seconds);
 
     // clearInterval
     if (remainingTime < 0) {
@@ -1225,7 +1234,7 @@ document.addEventListener('DOMContentLoaded', function() {
 * @param {number} amount - The numerical value to be displayed in the timer (days, hours, minutes, or seconds).
 * @returns {void}
 */
-function setTimer (selector, amount) {
+function setTimer(selector, amount) {
   if (!selector || !amount) return;
 
   let amountFixed = amount < 10 ? `0${amount}` : amount;
@@ -1269,7 +1278,7 @@ function updateSideWideGamification() {
  * progress bar, and milestone visuals accordingly. Intended to enhance user
  * engagement with rewards during the shopping process.
  */
-function updateSiteWideGamification (cartTotal) { 
+function updateSiteWideGamification(cartTotal) {
 
   const progressContainer = document.querySelector('.progress-container.pdm-gamification');
 
@@ -1322,7 +1331,7 @@ function updateSiteWideGamification (cartTotal) {
     if (enableFreeShipping && differenceFreeShipping > 0 && cartTotal >= 0) {
       const remainingAmountMoney = (differenceFreeShipping / 100).toFixed(0);
       progressContainerMessage.innerHTML = copyFreeShipping.replace("&price-left&", `<i class='money' style='font-style: normal;'>${currencySymbol.replace(/[0-9]+/, remainingAmountMoney)}</i>`);
-    } else if (enableProductGift && urlGiftProductIsAvailable=="true" && giftProductIsAvailable && differenceFreeGift > 0) {
+    } else if (enableProductGift && urlGiftProductIsAvailable == "true" && giftProductIsAvailable && differenceFreeGift > 0) {
       const remainingGiftAmountMoney = (differenceFreeGift / 100).toFixed(0);
       let message = copyProductGift.replace("&price-left&", `<i class='money' style='font-style: normal;'>${currencySymbol.replace(/[0-9]+/, remainingGiftAmountMoney)}</i>`);
       if (!isNaN(giftProductVariantPrice)) {
@@ -1334,12 +1343,12 @@ function updateSiteWideGamification (cartTotal) {
         message = message.replace("&product-title&", giftProductTitle);
       }
       progressContainerMessage.innerHTML = message;
-    } else if (enableProductGift && giftProductIsAvailable && urlGiftProductIsAvailable=="true" && differenceFreeGift <= 0) {
+    } else if (enableProductGift && giftProductIsAvailable && urlGiftProductIsAvailable == "true" && differenceFreeGift <= 0) {
       const congratsMessage = copyCongrats.replace("&product-title&", `<strong>${giftProductTitle}!</strong>`);
       progressContainerMessage.innerHTML = congratsMessage;
-    } else if ((!enableProductGift || !giftProductIsAvailable || urlGiftProductIsAvailable=="false") &&
-        enableFreeShipping &&
-        cartTotal >= differenceFreeShipping){
+    } else if ((!enableProductGift || !giftProductIsAvailable || urlGiftProductIsAvailable == "false") &&
+      enableFreeShipping &&
+      cartTotal >= differenceFreeShipping) {
       progressContainerMessage.innerHTML = "<p>Congrats you have <strong> Free Shipping!</strong></p>";
     }
   }
@@ -1373,18 +1382,18 @@ function updateSiteWideGamification (cartTotal) {
     }
 
     // Second Milestone - Free Gift
-    if (secondMilestone)  {
-    if (differenceFreeGift <= 0) {
-      secondMilestone.classList.add('reach-threshold');
-      secondMilestone.classList.remove('gradient');
-    } else {
-      secondMilestone.classList.remove('reach-threshold');
-      if (differenceFreeShipping <= 0 && cartTotal > 0) {
-        secondMilestone.classList.add('gradient');
-      } else {
+    if (secondMilestone) {
+      if (differenceFreeGift <= 0) {
+        secondMilestone.classList.add('reach-threshold');
         secondMilestone.classList.remove('gradient');
+      } else {
+        secondMilestone.classList.remove('reach-threshold');
+        if (differenceFreeShipping <= 0 && cartTotal > 0) {
+          secondMilestone.classList.add('gradient');
+        } else {
+          secondMilestone.classList.remove('gradient');
+        }
       }
-    }
     }
 
     // Update milestone icons based on thresholds
@@ -1409,43 +1418,43 @@ function updateSiteWideGamification (cartTotal) {
       }
     }
 
-  if (secondMilestone) {
-    const secondMilestoneIconEmpty = secondMilestone.querySelector('.icon-empty-pillow');
-    const secondMilestoneIconGradient = secondMilestone.querySelector('.icon-empty-gradient');
-    const secondMilestoneIconFull = secondMilestone.querySelector('.icon-full-pillow');
-    const secondMilestoneIconCheck = secondMilestone.querySelector('.icon-check__second-milestone');
-    const secondMilestoneProgressBarWrapper = secondMilestone.querySelector('.progress-bar-wrapper');
-    const secondMilestoneProgressBarWrapperBar = secondMilestone.querySelector('.progress-bar-wrapper__bar');
-  
-    const bothThresholdUncompleted = differenceFreeShipping > 0 && differenceFreeGift > 0;
-    const bothThresholdCompleted = differenceFreeShipping <= 0 && differenceFreeGift <= 0;
+    if (secondMilestone) {
+      const secondMilestoneIconEmpty = secondMilestone.querySelector('.icon-empty-pillow');
+      const secondMilestoneIconGradient = secondMilestone.querySelector('.icon-empty-gradient');
+      const secondMilestoneIconFull = secondMilestone.querySelector('.icon-full-pillow');
+      const secondMilestoneIconCheck = secondMilestone.querySelector('.icon-check__second-milestone');
+      const secondMilestoneProgressBarWrapper = secondMilestone.querySelector('.progress-bar-wrapper');
+      const secondMilestoneProgressBarWrapperBar = secondMilestone.querySelector('.progress-bar-wrapper__bar');
 
-    if (secondMilestoneIconEmpty && secondMilestoneIconGradient && secondMilestoneIconFull && secondMilestoneIconCheck && secondMilestoneProgressBarWrapper && secondMilestoneProgressBarWrapperBar) {
-      if (bothThresholdCompleted) {
-        secondMilestoneIconEmpty.classList.add('hidden');
-        secondMilestoneIconGradient.classList.add('hidden');
-        secondMilestoneIconFull.classList.remove('hidden');
-        secondMilestoneIconCheck.classList.remove('hidden');
-        secondMilestoneProgressBarWrapper.classList.add('hidden');
-      } else if (bothThresholdUncompleted) {
-        secondMilestoneIconEmpty.classList.remove('hidden');
-        secondMilestoneIconGradient.classList.add('hidden');
-        secondMilestoneIconFull.classList.add('hidden');
-        secondMilestoneIconCheck.classList.add('hidden');
-      } else {
-        secondMilestoneIconEmpty.classList.add('hidden');
-        secondMilestoneIconGradient.classList.remove('hidden');
-        secondMilestoneIconFull.classList.add('hidden');
-        secondMilestoneIconCheck.classList.add('hidden');
-        secondMilestoneProgressBarWrapper.classList.remove('hidden');
-      }
-      if (differenceFreeShipping <= 0) {
-        secondMilestoneProgressBarWrapperBar.style.width = progressPercentage + '%';
-      } else {
-        secondMilestoneProgressBarWrapperBar.style.width = 0;
+      const bothThresholdUncompleted = differenceFreeShipping > 0 && differenceFreeGift > 0;
+      const bothThresholdCompleted = differenceFreeShipping <= 0 && differenceFreeGift <= 0;
+
+      if (secondMilestoneIconEmpty && secondMilestoneIconGradient && secondMilestoneIconFull && secondMilestoneIconCheck && secondMilestoneProgressBarWrapper && secondMilestoneProgressBarWrapperBar) {
+        if (bothThresholdCompleted) {
+          secondMilestoneIconEmpty.classList.add('hidden');
+          secondMilestoneIconGradient.classList.add('hidden');
+          secondMilestoneIconFull.classList.remove('hidden');
+          secondMilestoneIconCheck.classList.remove('hidden');
+          secondMilestoneProgressBarWrapper.classList.add('hidden');
+        } else if (bothThresholdUncompleted) {
+          secondMilestoneIconEmpty.classList.remove('hidden');
+          secondMilestoneIconGradient.classList.add('hidden');
+          secondMilestoneIconFull.classList.add('hidden');
+          secondMilestoneIconCheck.classList.add('hidden');
+        } else {
+          secondMilestoneIconEmpty.classList.add('hidden');
+          secondMilestoneIconGradient.classList.remove('hidden');
+          secondMilestoneIconFull.classList.add('hidden');
+          secondMilestoneIconCheck.classList.add('hidden');
+          secondMilestoneProgressBarWrapper.classList.remove('hidden');
+        }
+        if (differenceFreeShipping <= 0) {
+          secondMilestoneProgressBarWrapperBar.style.width = progressPercentage + '%';
+        } else {
+          secondMilestoneProgressBarWrapperBar.style.width = 0;
+        }
       }
     }
-  }
   }
 }
 
@@ -1507,13 +1516,13 @@ function initPDPCarouselImage () {
  * @param {HTMLElement} trustedSection - The target section to scroll to when the link is clicked.
  */
 
-function initFrontrowHealth (frontrowContainer, trustedSection) {
+function initFrontrowHealth(frontrowContainer, trustedSection) {
   if (!frontrowContainer || !trustedSection) return;
 
-  const { link:seeMoreLink} = frontrowContainer.dataset;
+  const { link: seeMoreLink } = frontrowContainer.dataset;
   //if the feature has a link in the theme settings, exit the function
   if (seeMoreLink) return;
-  
+
   const seeMoreElement = frontrowContainer.querySelector('.frontrow-health-container__content-link');
   seeMoreElement.addEventListener('click', e => {
     e.preventDefault();
@@ -1532,7 +1541,7 @@ function initFrontrowHealth (frontrowContainer, trustedSection) {
 // DOM elements for controlling the upsell popup
 const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
 
- if(openPopupUpsell.length > 0) {
+if (openPopupUpsell.length > 0) {
   const closePopupUpsell = document.querySelectorAll(".popupsell-close")
   const popupUpsellMain = document.querySelectorAll('.popupsell-main');
   const popupUpsellWrapper = document.querySelector('.popupsell-wrapper');
@@ -1588,9 +1597,9 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
    * @returns {number|null} The extracted product ID, or null if not found.
    */
 
-  function processLinkAnchor( selector ) {
+  function processLinkAnchor(selector) {
     let proccessLinkAnchor = document.querySelector(selector);
-    if(proccessLinkAnchor){
+    if (proccessLinkAnchor) {
       const href = proccessLinkAnchor.getAttribute('href');
       const productId = href.match(/id=(\d+)/)[1];
       return Number(productId);
@@ -1612,9 +1621,9 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
 
     // Find matching upsell data based on product ID
     const { name, id } = dataInformation.find(item => item.products.includes(productId)) ?? {};
-    
+
     // console.log({'productId': productId, "name": name, "id": id})
-  
+
     // Remove 'active' class from all upsell elements
     const allUpsellElements = popupElement.querySelectorAll('.popupsell-card.active');
     allUpsellElements.forEach((element) => element.classList.remove('active'));
@@ -1628,11 +1637,11 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
     }
   }
 
-    /**
-   * Adds a product to the cart using AJAX.
-   * @param {number} productIdFirstVariant - The ID of the product to add to the cart.
-   * @param {string} ajaxSelector - The selector for triggering the cart refresh.
-   */
+  /**
+ * Adds a product to the cart using AJAX.
+ * @param {number} productIdFirstVariant - The ID of the product to add to the cart.
+ * @param {string} ajaxSelector - The selector for triggering the cart refresh.
+ */
   const addToCartUpsell = async (productIdFirstVariant, ajaxSelector) => {
     // console.log('productId add to cart', productIdFirstVariant)
     let formData = {
@@ -1640,8 +1649,8 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
         'id': productIdFirstVariant,
         'quantity': 1,
         "properties": {
-            "_popup_uspell": "true",
-          }
+          "_popup_uspell": "true",
+        }
       }]
     };;
 
@@ -1663,11 +1672,11 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
 
   };
 
-   /**
-   * Closes the upsell popup and optionally triggers a click on an anchor element.
-   * @param {string} ajaxSelector - The selector for triggering the cart refresh.
-   */
-   const closePopup = ( ajaxSelector ) => {
+  /**
+  * Closes the upsell popup and optionally triggers a click on an anchor element.
+  * @param {string} ajaxSelector - The selector for triggering the cart refresh.
+  */
+  const closePopup = (ajaxSelector) => {
     let ajaxContainer = document.querySelector(ajaxSelector);
     if (ajaxContainer) {
       ajaxContainer.click();
@@ -1676,14 +1685,14 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
   };
 
   // Event listener for upsell buttons to add a product to the cart
-  if(popupUpsellButtons && popupUpsellButtons.length > 0){
+  if (popupUpsellButtons && popupUpsellButtons.length > 0) {
     popupUpsellButtons.forEach((button) => {
       button.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
         const target = e.target.closest('[data-product-id]'); // Find the closest element with the data-product-id attribute
         const ajaxSelector = button.dataset.ajaxSelector;
-  
+
         if (!target || !target.dataset.productId) {
           productId = 43821069435119; // ID of the default product
         } else {
@@ -1727,7 +1736,7 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
   if (popupUpsellNothanks && popupUpsellNothanks.length > 0) {
     popupUpsellNothanks.forEach((button) => {
       const { ajaxSelector } = button.dataset;
-      button.addEventListener('click', () =>{
+      button.addEventListener('click', () => {
         closePopup(ajaxSelector);
       });
     });
@@ -1753,12 +1762,12 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
 document.addEventListener('DOMContentLoaded', () => {
   const serum3Month = document.getElementById('3_month');
   const elementPriceStock = document.querySelector('.pdm_price-stock-left-quantity');
-  if ( serum3Month && elementPriceStock ) {
-    
+  if (serum3Month && elementPriceStock) {
+
     const pdmPriceDifferenceContainer = document.querySelector('#pdm_price-difference-container')
     const productId = serum3Month.dataset.productId;
 
-     const updatePrices = (htmlContainer) => {
+    const updatePrices = (htmlContainer) => {
       const { priceFirst, priceSecond } = htmlContainer.dataset;
       const textElementPrice3Month = document.querySelector('.pdm_plan-bundle-detail__money.item-1');
       const textElementPrice2Month = document.querySelector('.pdm_plan-bundle-detail__money.item-2');
@@ -1913,6 +1922,62 @@ if (faceSerumBuyBlockContainer) {
 
 /* end test Face Serum Buy Block Test */
 
+/* QR - LED Mask Neck & Dec Bundle Option AB test  */
+
+/**
+ * Initializes the bundle upsell functionality by adding event listeners to checkboxes
+ * inside the given product bundle elements. Updates the "Buy Now" button's href and
+ * onclick attributes based on the selected checkboxes.
+ * 
+ * @param {NodeList} pdmProductBundleElements - A NodeList containing all product bundle checkboxes.
+ */
+function initBundleUpsell(pdmProductBundleElements) {
+  // Get the "Buy Now" button
+  const buyNowButton = document.querySelector(".btn.buy_btn");
+  if (!buyNowButton) return; 
+
+  // Store default values for href and onclick attributes of the "Buy Now" button
+  const defaultHref = buyNowButton.getAttribute("href");
+  const defaultOnClick = buyNowButton.getAttribute("onclick");
+
+  /**
+   * Handles the checkbox change event by updating the "Buy Now" button's attributes
+   * based on whether the checkbox is checked or not.
+   */
+  const handleCheckboxChange = function () {
+    // Find the closest parent pdm-bundle-upsell container and get its product handle
+    const pdmBundleContainer = this.closest("pdm-bundle-upsell");
+    const productHandle = pdmBundleContainer.getAttribute("data-product-bundle-handle");
+
+    // Update the "Buy Now" button's href and onclick based on the checkbox state
+    if (this.checked) {
+      buyNowButton.setAttribute("href", `/cart/add?id=${this.value}&quantity=1`);
+      buyNowButton.setAttribute("onclick", `setEventProductHandler("${productHandle}")`);
+    } else {
+      buyNowButton.setAttribute("href", defaultHref);
+      buyNowButton.setAttribute("onclick", defaultOnClick);
+    }
+  };
+
+  // Iterate through each checkbox and add an event listener for the "change" event
+  pdmProductBundleElements.forEach((checkbox) => {
+    checkbox.addEventListener("change", handleCheckboxChange);
+  });
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Select all checkboxes inside product bundle containers
+  const pdmProductBundleElements = document.querySelectorAll(".pdm_product-bundle-container input[type='checkbox']");
+
+  // If checkboxes are found, initialize the upsell functionality
+  if (pdmProductBundleElements.length > 0) {
+    initBundleUpsell(pdmProductBundleElements);
+  }
+});
+
+
+/* QR - LED Mask Neck & Dec Bundle Option AB test  */
 /* Start QR - Navigation Bundle Features AB test */
 document.addEventListener('DOMContentLoaded', () => {
   (()=> {

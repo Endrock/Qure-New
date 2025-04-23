@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "main": {
       "type": "product-extended",
@@ -501,6 +501,10 @@
         "stamped_reviews_main_widget_3nURCk"
       ],
       "settings": {}
+    },
+    "pdm_product_social_proof_data_qWrJJP": {
+      "type": "pdm_product-social-proof-data",
+      "settings": {}
     }
   },
   "order": [
@@ -513,6 +517,7 @@
     "benefits_slider_G6Lxbd",
     "faq_UUdrDJ",
     "heading_gcGk9w",
-    "17303964104bda0932"
+    "17303964104bda0932",
+    "pdm_product_social_proof_data_qWrJJP"
   ]
 }

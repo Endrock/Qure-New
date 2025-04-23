@@ -20,6 +20,8 @@
       "micro-infusion-3-month-refill-6x-hydra-soothing-serum",
       "micro-infusion-3-month-refill-6x-rejuvenating-serum"
     ],
+    "product_list_microinfusion_refill_allowlist": "micro-infusion-refill",
+    "product_list_microinfusion_refill_allowlist": "micro-infusion-refill",
     "product_list_microinfusion": [
       "micro-infusion-1-month-bundle-1x-b-g-serum-1x-e-g-f-serum",
       "micro-infusion-1-month-bundle-2x-beta-glucan-serum",
@@ -31,6 +33,14 @@
       "micro-infusion-3-month-bundle-6x-beta-glucan-serum",
       "micro-infusion-3-month-bundle"
     ],
+    "product_list_microinfusion_allowlist": "qure-microinfusion-offer, microinfusion, qure-micro-infusion-landing-page-affiliate",
+    "product_list_targeted_patches": [
+      "micro-infusion-targeted-patches",
+      "micro-infusion-targeted-patches-2-month-supply-16-pairs",
+      "micro-infusion-targeted-patches-3-month-supply-24-pairs"
+    ],
+    "product_list_targeted_patches_allowlist": "micro-infusion-targeted-patches",
+    "product_list_allowlist": "6153582215317,5657784025237,8111729049839,8754874941679",
     "frontrow_health_image_1": "shopify://shop_images/frontrow-health1.png",
     "frontrow_health_image_2": "shopify://shop_images/User_Image_1.png",
     "frontrow_health_count_circle_color": "#c8e6dc",

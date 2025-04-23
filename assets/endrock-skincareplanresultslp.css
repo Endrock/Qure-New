@@ -3078,8 +3078,43 @@
   transition: width 0.3s ease;
 }
 
-/* start dark spots*/
+/* start floating bundle message*/
+.cart-bundle-message {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 16px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--Turquoise, #C8E6DC);
+  background: #F4FAF8;
+  width: fit-content;
+  margin-bottom: 10px;
+}
 
+.cart-bundle-message__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.cart-bundle-message__unused-bundle,
+.cart-bundle-message__used-bundle {
+  color: #000;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  max-width: 210px;
+}
+.cart-bundle-message__unused-bundle.hidden,
+.cart-bundle-message__used-bundle.hidden {
+  display: none;
+}
+/* end floating bundle message */
+
+/* start dark spots*/
 .section-products-bundle .doctor-info.just-border-top {
   border-bottom: unset;
 }
@@ -3221,7 +3256,7 @@
 
 /* end dark spots*/
 
-/* general changes */
+/* start general changes */
 .section-table-thc .table-thc .table-row .text {
   font-size: 12px;
 }
@@ -3240,39 +3275,4 @@
     line-height: 24px;
   }
 }
-
-/* start floating bundle message*/
-.cart-bundle-message {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  padding: 16px;
-  align-items: center;
-  gap: 8px;
-  border-radius: 8px;
-  border: 1px solid var(--Turquoise, #C8E6DC);
-  background: #F4FAF8;
-  width: fit-content;
-  margin-bottom: 10px;
-}
-
-.cart-bundle-message__icon {
-  width: 40px;
-  height: 40px;
-}
-
-.cart-bundle-message__unused-bundle,
-.cart-bundle-message__used-bundle {
-  color: #000;
-  font-family: Poppins;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-  max-width: 210px;
-}
-.cart-bundle-message__unused-bundle.hidden,
-.cart-bundle-message__used-bundle.hidden {
-  display: none;
-}
-/* end floating bundle message */
+/* end general changes */

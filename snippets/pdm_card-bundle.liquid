@@ -70,23 +70,23 @@ this snippets is used in pdm_products-bundle.liquid section, render card product
       </div>
     </div>
     <div class="doctor-info {% if doctor-image == blank %}just-border-top{% endif %}">
-      {% if doctor-image %}
-        <div class="photo">
-          {% if doctor-image %}
-            {{ doctor-image |  image_url: width: 256 |  image_tag: alt: doctor-name, class: 'photo-doctor' }}
-          {% endif %}
-        </div>
-        {% endif %}
-        {% if doctor-text != blank and doctor-name != blank %}
-          <div class="doctor-text">
-              <div class="review">
-                  {{ doctor-text }}
-              </div>
-              <div class="doctor-data">
-                  <strong>{{ doctor-name }}</strong> | {{ doctor-certificated }}
-              </div>
+        {% if doctor-image != blank %}
+          <div class="photo">
+              {{ doctor-image |  image_url: width: 256 |  image_tag: alt: doctor-name, class: 'photo-doctor' }}
           </div>
         {% endif %}
+        <div class="doctor-text">
+          {% if doctor-text != blank %}
+            <div class="review">
+                {{ doctor-text }}
+            </div>
+          {% endif %}
+          {% if doctor-name != blank %}
+            <div class="doctor-data">
+                <strong>{{ doctor-name }}</strong> | {{ doctor-certificated }}
+            </div>
+          {% endif %}
+        </div>
     </div>
     <div class="bundle-button">
         <div class="price">
