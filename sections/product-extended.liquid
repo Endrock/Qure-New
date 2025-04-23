@@ -248,7 +248,8 @@
                                                 variant_id: product.variants.first.id, 
                                                 current_price: product.price, 
                                                 original_price: product.price, 
-                                                classname: sticky-button-classname
+                                                classname: sticky-button-classname,
+                                                product_data: product,
                                             %}
 
                                             <div class="payment_method without_subscription">
@@ -311,12 +312,14 @@
                                     variant_id: product.variants.first.id, 
                                     current_price: product.price, 
                                     original_price: product.compare_at_price, 
+                                    product_data: product,
                                 %}                    
                             {% else %}
                                 {% render 'product-sticky-button' with
                                     variant_id: product.variants.first.id, 
                                     current_price: product.price, 
                                     original_price: product.price, 
+                                    product_data: product,
                                 %}
                             {% endif %}
 
