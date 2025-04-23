@@ -1664,10 +1664,11 @@ $(document).ready(function () {
     $('.planBlock').click(function () {
         // Get the image path from the selected plan
         var selectedImage = $(this).data('image');  // Retrieve the data-image attribute
-
-        // Update the image source of the first column's image
-        $('#bundleImage').attr('src', selectedImage);  // Update image src
-    });
+ 
+    // Update the image source of all elements with the id bundleImage
+    $('[id="bundleImage"]').attr('src', selectedImage);  // Update image src for all matching elements
+    if (window.patchesCarousel) window.patchesCarousel.goToSlide(0);
+  });
 });
 
 // Thumb Slider End
