@@ -29968,7 +29968,7 @@ p {
     border-radius: 100px;
     font-size: 20px;
     line-height: 22px;
-    max-width: 400px;
+    max-width: 452px;
     width: 100%;
 }
 
@@ -30150,7 +30150,9 @@ p {
     letter-spacing: 0.36px;
     font-family: 'Canela Web';
 }
-
+.ff_poppins{
+    font-family: Poppins;
+}
 .text-md {
     font-size: 22px;
 }
@@ -30424,7 +30426,9 @@ p {
 
 /* -- commom css for shipping with bg end -- */
 /* -- common css for max width start --- */
-
+.mw-150 {
+    max-width: 150px !important;
+}
 .mw-268 {
     max-width: 268px !important;
 }
@@ -30585,6 +30589,10 @@ p {
     max-width: 949px;
     margin: 0 auto;
 }
+.mw-960 {
+    max-width: 960px;
+    margin: 0 auto;
+}
 
 .mw-970 {
     max-width: 970px;
@@ -30610,7 +30618,9 @@ p {
 .bs_vs_item .bs_versace span {
     font-weight: 400;
 }
-
+.opacity-0{
+    opacity: 0;
+}
 .opacity-8 {
     opacity: 0.8;
 }
@@ -32151,81 +32161,6 @@ p {
     padding-bottom: 10px !important;
     margin-bottom: 0 !important;
 }
-/* ---------- how to install start --------------  */
-.how_to-install .step_cards {
-    filter: drop-shadow(0px 5px 15px rgba(176, 176, 176, 0.25));
-    border-radius: 8px;
-    background: var(--White, #FFF);
-    padding: 24px 16px;
-    position: relative;
-    height: 100%;
-}
-
-.how_to-install .step_cards .step_flag {
-    position: absolute;
-    top: -38px;
-    right: 13px;
-    border-radius: 8px 8px 0px 0px;
-    background: #C7E7DC;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.12);
-    padding: 6px 53px;
-}
-
-.how_to-install .step_cards .step_flag p {
-    font-weight: 600;
-    font-size: 13px;
-}
-
-.step_cards .step_text p {
-    padding-top: 20px;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.13px;
-}
-
-.how_to-install .nav-tabs .nav-link.active {
-    background-color: #C7E7DC;
-}
-
-.how_to-install .nav-tabs .nav-link {
-    padding: 6px 30px;
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 24px;
-    letter-spacing: 0.13px;
-    color: #000;
-    border-radius: 8px 8px 0px 0px;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.12);
-}
-
-.how_to-install .steps_tabs {
-    padding-top: 30px;
-}
-.w-css-reset[data-handle="bigPlayButton"] > div {
-    transform: translateX(-50%) translateY(-50%) !important;
-    margin: 0 !important;
-}
-/* ---------- how to install end --------------  */
-/* reasons start */
-.reasons .reasons_wrapper {
-    justify-content: center;
-    gap: 20px;
-}
-/* reasons end */
-/* ---------- 6 reasons section start --------------  */
-.reasons .rs_item {
-    border-radius: 10px;
-    border: 2.5px solid rgba(217, 217, 217, 0.50) !important;
-    background: var(--White, #FFF);
-    padding: 20px 7px !important;
-}
-.reasons .reasons_wrapper .rs_item-main {
-    width: 100%;
-    box-sizing: border-box;
-} 
-
-/* ---------- 6 reasons section end --------------  */
 
 @media screen and (max-width: 768px) {
     .subscriptions_section {
@@ -32397,9 +32332,7 @@ picture img {
 .bg_clr_transparent {
     background: transparent !important;
 }
-.reasons_wrapper .rs_item{
-    margin-bottom: 0 !important;
-}
+
 @keyframes progress-animation {
     from {
         stroke-dashoffset: 100;
@@ -32440,37 +32373,6 @@ picture img {
     }
     .order-first-mob{
         order: -1;
-    }
-    .reasons .reasons_wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0;
-    }
-
-    .reasons .reasons_wrapper .rs_item-main {
-        width: 50%;
-        padding: 10px 0;
-    }
-   .reasons .rs_item img{
-        height: 35px !important;
-        width: 40px !important;
-    }
-    .reasons_wrapper .rs_item{
-        margin-bottom: 0 !important;
-    }
-
-    .reasons_wrapper .rs_item .rs_item_content p {
-        font-size: 10px;
-        line-height: 16px;
-        letter-spacing: 0.11px;
-        text-align: center;
-    }
-    .reasons .reasons_wrapper .rs_item {
-        display: flex;
-        flex-direction: column;
-        padding: 15px 8px;
-        min-height: 133px;
-        max-width: 146px !important;
     }
 }
 
@@ -32513,3 +32415,48 @@ picture img {
     right: 0;
     transform: translate(6%, -50%);
 }
+/* css for endless slider start */
+.marquee-row {
+    width: 100%;
+    overflow-x: hidden;
+    padding: 20px 0;
+}
+.marquee-block {
+    position: relative;
+    display: flex;
+    width: 100%;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    justify-content: space-between;
+}
+.marquee-item-list {
+    display: inline-flex;
+}
+.marquee-item-list li {
+    width: 100%;
+    list-style: none;
+    padding-right: 90px;
+    font-size: 40px;
+    white-space: nowrap;
+}
+.marquee-row img {
+    height: 25px;
+}
+@media(max-width:767px){
+    .marquee1{
+        animation-name: marquee1;
+    }
+    @keyframes marquee1 {
+      0% { left: 0; }
+      100% {left: -100%;}
+    }
+    .marquee-item-list li {
+        padding-right: 50px;
+    }
+    .marquee-row img {
+        height: 22px;
+    }
+}
+/* css for endless slider  */
+
