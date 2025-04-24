@@ -83,7 +83,7 @@
             </div>
 
           {%- when 'text' -%}
-            <div class="col-md-{% assign dashoffset = 12 | minus: section.settings.column %}{{ dashoffset }}">
+            <div class="col-md-{% assign dashoffset = 12 | minus: section.settings.column %}{{ dashoffset }} {% if block.settings.txt_order_mob == true %} order-first order-md-0 {% endif %}">
               <div class="single_step return_ftrs ps-md-3 mt-3 mt-md-0 {{ block.settings.ctm_cls }}">
                
                
@@ -403,6 +403,12 @@
           "type": "richtext",
           "id": "text",
           "label": "t:common.text.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "txt_order_mob",
+          "label": "t:commonMob.order.bottom",
+          "default": false
         },
         {
           "type": "image_picker",

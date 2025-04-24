@@ -32151,6 +32151,81 @@ p {
     padding-bottom: 10px !important;
     margin-bottom: 0 !important;
 }
+/* ---------- how to install start --------------  */
+.how_to-install .step_cards {
+    filter: drop-shadow(0px 5px 15px rgba(176, 176, 176, 0.25));
+    border-radius: 8px;
+    background: var(--White, #FFF);
+    padding: 24px 16px;
+    position: relative;
+    height: 100%;
+}
+
+.how_to-install .step_cards .step_flag {
+    position: absolute;
+    top: -38px;
+    right: 13px;
+    border-radius: 8px 8px 0px 0px;
+    background: #C7E7DC;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.12);
+    padding: 6px 53px;
+}
+
+.how_to-install .step_cards .step_flag p {
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.step_cards .step_text p {
+    padding-top: 20px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.13px;
+}
+
+.how_to-install .nav-tabs .nav-link.active {
+    background-color: #C7E7DC;
+}
+
+.how_to-install .nav-tabs .nav-link {
+    padding: 6px 30px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.13px;
+    color: #000;
+    border-radius: 8px 8px 0px 0px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.12);
+}
+
+.how_to-install .steps_tabs {
+    padding-top: 30px;
+}
+.w-css-reset[data-handle="bigPlayButton"] > div {
+    transform: translateX(-50%) translateY(-50%) !important;
+    margin: 0 !important;
+}
+/* ---------- how to install end --------------  */
+/* reasons start */
+.reasons .reasons_wrapper {
+    justify-content: center;
+    gap: 20px;
+}
+/* reasons end */
+/* ---------- 6 reasons section start --------------  */
+.reasons .rs_item {
+    border-radius: 10px;
+    border: 2.5px solid rgba(217, 217, 217, 0.50) !important;
+    background: var(--White, #FFF);
+    padding: 20px 7px !important;
+}
+.reasons .reasons_wrapper .rs_item-main {
+    width: 100%;
+    box-sizing: border-box;
+} 
+
+/* ---------- 6 reasons section end --------------  */
 
 @media screen and (max-width: 768px) {
     .subscriptions_section {
@@ -32322,7 +32397,9 @@ picture img {
 .bg_clr_transparent {
     background: transparent !important;
 }
-
+.reasons_wrapper .rs_item{
+    margin-bottom: 0 !important;
+}
 @keyframes progress-animation {
     from {
         stroke-dashoffset: 100;
@@ -32363,6 +32440,37 @@ picture img {
     }
     .order-first-mob{
         order: -1;
+    }
+    .reasons .reasons_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .reasons .reasons_wrapper .rs_item-main {
+        width: 50%;
+        padding: 10px 0;
+    }
+   .reasons .rs_item img{
+        height: 35px !important;
+        width: 40px !important;
+    }
+    .reasons_wrapper .rs_item{
+        margin-bottom: 0 !important;
+    }
+
+    .reasons_wrapper .rs_item .rs_item_content p {
+        font-size: 10px;
+        line-height: 16px;
+        letter-spacing: 0.11px;
+        text-align: center;
+    }
+    .reasons .reasons_wrapper .rs_item {
+        display: flex;
+        flex-direction: column;
+        padding: 15px 8px;
+        min-height: 133px;
+        max-width: 146px !important;
     }
 }
 
