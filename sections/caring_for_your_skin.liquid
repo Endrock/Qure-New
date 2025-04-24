@@ -78,6 +78,15 @@
       </div>
     </div>
   </div>
+
+  <script>
+    document.querySelector('.caring_for_your_skin .buy_btn.with_subscription')?.addEventListener('click', function (e) {
+      const el = document.querySelector('[data-subscription="subscription"]');
+      if (el) {
+        el.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+      }
+    });
+  </script>
   
   {% schema %}
   {

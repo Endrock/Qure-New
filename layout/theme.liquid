@@ -126,7 +126,7 @@
 
     {% render 'config-header' %}
 
-    <main {% if main_class != blank %}class="{{ main_class }}"{% endif %}>
+    <main id="main" {% if main_class != blank %}class="{{ main_class }}"{% endif %}>
         {{ content_for_layout }}
     </main>
 
