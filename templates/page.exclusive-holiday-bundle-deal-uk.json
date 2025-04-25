@@ -97,6 +97,7 @@
         },
         "product_TawFDR": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "heading": "Exclusive Easter Bundle",
             "discount": 72,
@@ -234,7 +235,7 @@
       ],
       "settings": {
         "seo_heading": "",
-        "heading": "Save Up to 72% on \\n Certified Skincare Solutions",
+        "heading": "Save Up to 55% on \\n Certified Skincare Solutions",
         "text": "<p>Backed by the most respected peer-reviewed <strong>Dermatologist Journals </strong>and <strong>scientific studies </strong>that prove; Qure’s skincare <strong>works.</strong></p>"
       }
     },
