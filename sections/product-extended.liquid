@@ -291,6 +291,13 @@
                             {% if section.settings.soldout == true %}
                                 <a class="btn btn-lg btn-primary buy_btn" href="#">Sold Out</a>
                             {% else %}
+                                {% if product.metafields.custom.bundle_product %}
+                                    {% render 'pdm_bundle-led-mask-and-deck', 
+                                        bundle_metafield_data: product.metafields.custom.bundle_product.value,
+                                        device_visibility: "mobile"
+                                    %}
+                                {% endif %}
+
                                 {% if product.variants.first.available %}
                                     <a class="btn btn-lg btn-primary buy_btn" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" onclick="setEventProductHandler('{{ product.handle | escape }}')" data-ajax-cart-request-button>{% if section.settings.reserve == true %}Reserve now{% else %}Buy Now{% endif %}</a>
                                 {% else %}
@@ -510,6 +517,13 @@
                     {% render 'pdm_before_after_carousel', settings: section.settings, section_name: 'product-extended' %}
                 {% endif %}
                 {% render 'pdm_cross-sell', cross-sell-products: product.metafields.custom.cross_sell.value, visibility: "desktop" %}
+
+                {% if product.metafields.custom.bundle_product %}
+                    {% render 'pdm_bundle-led-mask-and-deck', 
+                        bundle_metafield_data: product.metafields.custom.bundle_product.value,
+                        device_visibility: "desktop"  
+                    %}
+                {% endif %} 
             </div>
         </div>
     </div>
