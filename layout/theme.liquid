@@ -105,7 +105,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
-<body data-test-bundle="true" class="{{ template }}">
+<body class="{{ template }}">
     {% assign blocked_products = 'led-mask-neck-dec-bundle-option,personalized-skincare-plan' | split: ',' %}
     {% if blocked_products contains product.handle %}
     <script>
