@@ -3,6 +3,7 @@
   assign price_second_element = ''
   assign price_third_element = ''
 %}
+{{ '_pdm_landing-serums-free-patches.css' |  asset_url |  stylesheet_tag }}
 
 {% if section_id == blank %}
   <p>Please provide section_id property to use this snippet</p>
@@ -147,7 +148,7 @@
                       >
                       <label class="monthly_plans" for="3_month">
                         <div class="pdm_plan-with-free-patch">
-                          <div class="plan_des">
+                          <div class="plan_des container">
                             <div class="plan_hdr">
                               <h3>6 Month Supply</h3>
                               <span class="saved_price item-1">SAVE {{ discount_percentage }}%</span>
@@ -155,7 +156,7 @@
                             <div class="plan_des">(12 Micro-infusion Treatments)</div>
                             <!-- “Free Patch” badge desktop -->
                             <div class="pdm_free-patch desktop">
-                              <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/bfs_blue-patches.webp?v=1731751539" width="42" height="26" alt="Micro-Infusion Patch icon" />
+                              <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/patches_168px.png?v=1745556105" width="42" height="26" alt="Micro-Infusion Patch icon" />
                               <span><strong>Get a Free</strong> Pair of Micro-Infusion Patches</span>
                             </div>
                             <!-- End of “Free Patch” badge desktop -->
@@ -166,7 +167,7 @@
                                 {{ product.compare_at_price  |  divided_by: 100 |  round | times: 100 | money_without_trailing_zeros }}
                               </div>
 
-                              <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
+                              <div class="plan_prc sale_price">{{ product.price |  divided_by: 100 |  round | times: 100 | money_without_trailing_zeros }}</div>
                             </div>
                             <div class="pdm_price-stock-left">
                               <svg
@@ -185,7 +186,7 @@
                         </div>
                         <!-- “Free Patch” badge mobile -->
                         <div class="pdm_free-patch mobile">
-                          <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/bfs_blue-patches.webp?v=1731751539" width="42" height="26" alt="Micro-Infusion Patch icon" />
+                          <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/patches_168px.png?v=1745556105" width="42" height="26" alt="Micro-Infusion Patch icon" />
                           <span><strong>Get a Free</strong> Pair of Micro-Infusion Patches</span>
                         </div>
                         <!-- End of “Free Patch” badge mobile -->

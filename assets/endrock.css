@@ -3380,7 +3380,7 @@ body[class~="page.sunil-mi-landing-special2-reorder"] #see_it_section{
 .pdm-step_content_v2 .pdm_price-stock-left{
   width: 100%;
   display: flex;
-  flex-direction: row;
+    flex-direction: row;
   align-items: center;
   justify-content: end;
   gap: 2px;
@@ -4254,7 +4254,7 @@ body[data-test-bundle="true"] .pdm_product-bundle-container.mobile{
 }
 
 .pdm_product-bundle-container .hidden-checkbox {
-  display: none; 
+  display: none;
 }
 
 .pdm_product-bundle-container .pdm_custom-checkbox {
@@ -4416,7 +4416,7 @@ body[data-test-bundle="true"] .pdm_product-bundle-container.mobile{
     line-height: 140%; /* 21px */
     letter-spacing: 0.15px;
   }
-  
+
   /* price */
   .pdm_product-bundle-price__save{
     font-size: 11px;
@@ -4429,7 +4429,7 @@ body[data-test-bundle="true"] .pdm_product-bundle-container.mobile{
     line-height: 24px; /* 171.429% */
     letter-spacing: 0.14px;
   }
-  
+
   .pdm_product-bundle-price__discount{
     font-size: 18px;
     line-height: 24px; /* 133.333% */
@@ -4681,20 +4681,20 @@ body[data-ba-treatment-options] .row.treatment-ba-test__row-container .supply_st
     display: flex;
     flex-direction: column;
   }
-  
+
   body[data-ba-treatment-options] .section__header.d-block.d-md-none {
     order: 1;
   }
-  
+
   body[data-ba-treatment-options] .container-pdm-ba-treatment {
     order: 3;
   }
-  
+
   body[data-ba-treatment-options] .testimonial-card {
     order: 2;
     margin-top: 32px !important;
   }
-  
+
 }
 @media screen and (min-width:768px) {
 
@@ -4874,80 +4874,3 @@ body[data-patches-buy-block] .patches-before-after-carousel-container.before-aft
   }
 }
 /* End patches buy block carousel */
-
-/* Start patches free offer */
-.pdm_free-patch {
-  display: flex;
-  align-items: center;
-  margin: 8px 0;          /* space above/below */
-  padding: 4px 12px 4px 8px;           /* inner padding */
-  border: 1px dashed var(--Turquoise, #C8E6DC);
-  background: #FFF;
-  border-radius: 2px;            /* slight rounding */
-}
-.pdm_free-patch.desktop{
-  display: none;
-}
-.pdm_free-patch.mobile{
-  display: flex;
-  width: 100%;
-  margin: 0px 16px 12px;
-}
-
-.pdm_plan-with-free-patch{
-  display: flex;
-  gap: 6px;
-  justify-content: space-between;
-  width: 100%;
-}
-.pdm-step_content_v2 .planBlock .monthly_plans .pdm_plan-with-free-patch .price{
-  justify-content: space-between;
-  padding-top: 19px;
-  padding-bottom: 16px;
-}
-
-.pdm_free-patch img {
-  width: 42px;
-  height: 26px;
-  object-fit: cover;
-  margin-right: 6px;
-}
-
-.pdm_free-patch span {
-  color: var(--Black, #000);
-font-family: Poppins;
-font-size: 11px;
-font-style: normal;
-font-weight: 600;
-line-height: 15px;
-letter-spacing: 0.12px;
-}
-
-.pdm_free-patch span strong {
-  font-weight: 600;
-  color: #008763;
-}
-
-@media screen and (min-width: 768px) {
-  .pdm_free-patch.desktop{
-    display: flex;
-  }
-  .pdm_free-patch.mobile{
-    display: none;
-  }
-  .pdm-step_content_v2 .planBlock .monthly_plans .pdm_plan-with-free-patch .price{
-    position: relative;
-    justify-content: end;
-  }
-
-  .pdm_free-patch span{
-    font-size: 12px;
-  }
-
-  .pdm-step_content_v2 .planBlock .monthly_plans .pdm_plan-with-free-patch .price .pdm_price-stock{
-    position: absolute;
-    top: 19px;
-    right: 24px;
-  }
-}
-/* End patches free offer */
