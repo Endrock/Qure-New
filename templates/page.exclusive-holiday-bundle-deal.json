@@ -87,6 +87,7 @@
         },
         "product_L8TbkG": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "heading": "Exclusive Easter bundle",
             "discount": 72,
@@ -223,7 +224,7 @@
       ],
       "settings": {
         "seo_heading": "",
-        "heading": "Save Up to 72% on \\n Certified Skincare Solutions",
+        "heading": "Save Up to 55% on \\n Certified Skincare Solutions",
         "text": "<p>Backed by the most respected peer-reviewed <strong>Dermatologist Journals </strong>and <strong>scientific studies </strong>that prove; Qure’s skincare <strong>works.</strong></p>"
       }
     },
@@ -543,6 +544,7 @@
         },
         "product_6Nmeyc": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "exclusive-easter-bundle",
             "percent": 30,
