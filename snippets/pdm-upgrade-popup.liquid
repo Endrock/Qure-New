@@ -1,0 +1,60 @@
+{{ '_pdm_product-upgrade-popup.css' | asset_url | stylesheet_tag  }}  
+<script src="{{'_pdm_product-upgrade-popup.js' | asset_url }}" defer >
+</script>
+
+<!-- pdm-upgrade-popup.liquid -->
+<div class="pdm-popup-overlay hidden" id="pdm-popup-overlay"></div>
+
+<div class="pdm-popup-container hidden" id="pdm-popup">
+
+  <button class="pdm-popup-close" id="pdm-popup-close" aria-label="Close popup">×</button>
+  <!-- Top Selected Product -->
+
+  {% assign pop_up = product.metafields.custom.pop_up_promotion.value %}
+
+  <div class="pdm-popup-product-border-wrapper">
+    <div class="pdm-popup-product-selected">
+      <img src="{{ pop_up.image.value | image_url: width: 200 }}" alt="{{ pop_up.title.value }}" />
+      <div class="pdm-popup-product-text">
+        <h4>{{ pop_up.title.value }}</h4>
+        <p>{{ product.price | money_without_trailing_zeros }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Headline -->
+  <div class="pdm-popup-headline">
+    <h3>{{  pop_up.monthly.value }}</h3>
+  </div>
+
+  <!-- Offer Block -->
+  <div class="pdm-popup-offer">
+    <div class="pdm-popup-image">
+      <img src="{{ pop_up.image_upgrade.value | image_url: width: 560 }}" alt="{{ pop_up.title.value }}" />
+    </div>
+    <div class="pdm-popup-offer-content">
+      <h4>{{  pop_up.text_primary.value }}</h4>
+      <p class="pdm-popup-subtitle">{{ pop_up.text_secondary.value }}</p> 
+      {% assign price_full = product.price | times: 2  %}
+      {% assign discount_percentage = price_full | times: 0.19 %}
+      {% assign discount_amount =  price_full | minus: discount_percentage | divided_by: 100 | round %}
+
+      <p class="pdm-popup-price">
+        <del>{{ price_full | money_without_trailing_zeros }}</del> <span class="discounted-price">${{ discount_amount }}</span> <span class="discount-tag">19% OFF</span>
+      </p>
+      <ul class="pdm-popup-benefits">
+        {% assign svg = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                          <path d="M4.08703 8.06541L2.01589 5.99427C1.90429 5.88267 1.75292 5.81997 1.59509 5.81997C1.43726 5.81997 1.2859 5.88267 1.1743 5.99427C1.0627 6.10587 1 6.25724 1 6.41507C1 6.49322 1.01539 6.5706 1.0453 6.6428C1.07521 6.715 1.11904 6.7806 1.1743 6.83586L3.66922 9.33078C3.902 9.56356 4.27803 9.56356 4.51081 9.33078L10.8257 3.01589C10.9373 2.90429 11 2.75292 11 2.59509C11 2.43726 10.9373 2.2859 10.8257 2.1743C10.7141 2.0627 10.5627 2 10.4049 2C10.2471 2 10.0957 2.0627 9.98411 2.1743L4.08703 8.06541Z" fill="#3B8566"/>
+                          </svg>' %}
+        {% assign checklist = pop_up.checklist.value | newline_to_br %}
+        {{ checklist | replace: "-", svg  }}
+      </ul>
+    </div>
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="pdm-popup-actions">
+    <button class="pdm-upgrade-btn" onclick="addUpgradeVariantToCart()">UPGRADE NOW</button>
+    <button class="pdm-decline-btn" id="pdm-decline">No thanks, keep my choice</button>
+  </div>
+</div>

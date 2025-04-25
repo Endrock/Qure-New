@@ -1,0 +1,273 @@
+/* 
+START PDM UPGRADE POPUP - FACE SERUM 
+*/
+
+.pdm-popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9998;
+  }
+  
+  .pdm-popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f4f6ef;
+    border-radius: 12px;
+    max-width: 720px;
+    width: 90%;
+    padding: 0rem 2rem 2rem;
+    z-index: 9999;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    padding-bottom: 3rem;
+  }
+
+  .pdm-popup-close {
+    position: absolute;
+    top: -0.5rem;
+    right: 0.2rem;
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    color: #6B7280;
+    cursor: pointer;
+    z-index: 10;
+    font-weight: 200;
+  }
+
+  .pdm-popup-product-border-wrapper {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 5px 15px -10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .pdm-popup-product-selected {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 2rem ;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  
+  .pdm-popup-product-selected img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 6px;
+  }
+  
+  .pdm-popup-product-text h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .pdm-popup-product-text p {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .pdm-popup-headline h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-family: 'Canela', serif;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .pdm-popup-offer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .pdm-popup-image img {
+    width: 280px;
+    height: 272px;
+    object-fit: contain; 
+    border-radius: 8px;
+  }
+
+  .pdm-popup-offer-content {
+    padding-top: 2.1rem;
+  }
+  
+  .pdm-popup-offer-content h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: 'Canela', serif;
+    margin-bottom: 0;
+  }
+
+  .pdm-popup-subtitle {
+    margin-bottom: 1rem;
+  }
+  
+  .pdm-popup-price {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .pdm-popup-price del {
+    color: #080101;
+    font-weight: 300;
+    font-size: 1.2rem;
+  }
+  
+  .discounted-price {
+    color: #b91c1c;
+    font-weight: 550;
+    font-size: 1.5rem;
+  }
+  
+  .discount-tag {
+    background: #b91c1c;
+    color: white;
+    font-size: 0.85rem;
+    padding: 2px 6px;
+    border-radius: 5rem;
+    width: 6rem;
+    text-align: center;
+  }
+  
+  .pdm-popup-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+  }
+  
+  .pdm-popup-benefits li::before {
+    content: '✓';
+    color: green;
+    margin-right: 8px;
+  }
+  
+  .pdm-popup-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .pdm-upgrade-btn {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0.75rem 1.25rem;
+    border-radius: 5rem; 
+    font-weight: 600;
+    font-size: 0.875rem; 
+    text-transform: uppercase; 
+    letter-spacing: 0.05em; 
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    width: auto;               
+    min-width: 250px;          
+    max-width: fit-content;    
+    margin: 0 auto;
+  }
+  
+  
+  .pdm-decline-btn {
+    background: transparent;
+    border: none;
+    text-decoration: underline;
+    color: #050000;
+    font-size: 0.875rem;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  @media(min-width: 768px) {
+    .pdm-popup-offer {
+      flex-direction: row;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .pdm-popup-container {
+      height: 90%;
+      z-index: 999999;
+    }
+
+    .pdm-popup-headline h3 {
+      font-size: 19px;
+      text-align: center;
+      font-weight: 500;
+      white-space: nowrap;
+      margin-top: 15px;
+    }
+  
+    .pdm-popup-image img {
+      display: flex;
+      width: 100%;
+      height: 160px;
+      max-width: 230px;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+
+    .pdm-popup-offer-content {
+      padding-top: 0px;
+      padding-bottom: 15px;
+    }
+
+    .pdm-popup-offer-content h4 {
+      font-size: 17px;
+      margin-top: 10px;
+    }
+
+    .pdm-popup-subtitle {
+      font-size: 12px;
+    }
+
+    .pdm-popup-price del {
+      font-size: 14px;
+    }
+
+    .pdm-popup-price del {
+      font-size: 18px;
+    }
+
+    .pdm-popup-price del {
+      font-size: 12px;
+    }
+
+
+
+    .pdm-popup-offer {
+      gap: 0px;
+      margin-bottom: -15px;
+    }
+
+    .pdm-popup-product-text h4 {
+      font-size: 14px;
+    }
+
+    .pdm-popup-product-text p {
+      font-size: 14px;
+    }
+
+    .pdm-popup-product-selected{
+      display: flex;
+      height: 96px;
+      padding: 14px 32px;
+      align-items: center;
+      align-self: stretch;
+    }
+  }
+/* END PDM UPGRADE POPUP - FACE SERUM */
