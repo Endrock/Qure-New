@@ -133,20 +133,20 @@ async function main() {
         }
         else if(window.location.href.includes('/products/shower-filter'))
         {
-            //window.location = 'https://www.qureskincare.com/pages/shower-filter-trynow';
+            window.location = 'https://www.qureskincare.com/pages/shower-filter-trynow';
         }
         else
         {
             if(!window.location.href.includes('/pages/shower-filter-trynow'))
             {
-                //window.location = 'https://www.qureskincare.com/collections/best-sellers';
+                window.location = 'https://www.qureskincare.com/collections/best-sellers';
             }
         }
     }
     else {
         if(window.location.href.includes('/pages/shower-filter-trynow'))
         {
-            //window.location = 'https://www.qureskincare.com/products/shower-filter';
+            window.location = 'https://www.qureskincare.com/products/shower-filter';
         }
     }
 }
