@@ -65,7 +65,7 @@ const deliveryDate = (location, orderByConfig) => {
 }
 
 
-// swiper PDP: Before & After First Image 
+// swiper PDP: Before & After First Image
 
 const swiperBeforeAfter = (selector, paginationClass) => {
   const swiperInstance = new Swiper(`${selector}`, {
@@ -118,7 +118,7 @@ const verifyCustomer = () => {
 
 /* ATC NO PRICES PDP */
 const atcNoPricesPdp = () => {
-  const subscriptionTypes = document.querySelectorAll('.subscriptionType'); 
+  const subscriptionTypes = document.querySelectorAll('.subscriptionType');
   console.log(subscriptionTypes);
   if (subscriptionTypes) {
     subscriptionTypes.forEach((element) => {
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let { productId, pageHandle, productList } = socialProofContainer.dataset;
     let url = `https://webhooks.endrock.software/endrockapi/v3/app/analytics/reportsGA4.php?filterBy=productId&store=qure&name=Qure: GA4&productId=`;
 
-    // render products purchased quantity and show the social proof container 
+    // render products purchased quantity and show the social proof container
     const renderQuantity = (quantity) => {
       setTimeout(() => {
         const chatIcon = document.querySelector('iframe#launcher');
@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function() {
     userLocationIP();
   }
 
-  //  PDP: Before & After First Image 
+  //  PDP: Before & After First Image
 
   const productComponent = document.getElementById('info-product');
   const resultComponent = document.getElementById('info-result');
@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // end PDP: Before & After First Image 
+  // end PDP: Before & After First Image
 
   // Micro-Infusion Landing Page Purchase Process
   const newMicroInfusionLandingPagePurchaseProcess = document.querySelector('#new-landing-purchase')
@@ -1077,7 +1077,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Select the green product sticky button element
   const greenProductStickyBtn = document.querySelector('#green-product-sticky-btn');
   const greenProductStickyFormBtn = document.querySelector('#green-product-sticky-form-btn');
-  
+
   /**
    * Centers the given button horizontally within the window.
    * @param {HTMLElement} btn - The button element to be centered.
@@ -1090,11 +1090,11 @@ document.addEventListener('DOMContentLoaded', function() {
       btn.style.left = `${totalLeft}px`;
     }
   };
-  
+
   // Center the buttons initially
   centerStickyButtonProductHorizontally(greenProductStickyBtn);
   centerStickyButtonProductHorizontally(greenProductStickyFormBtn);
-  
+
   // Re-center the buttons when the window is resized
   window.onresize = () => {
     centerStickyButtonProductHorizontally(greenProductStickyBtn);
@@ -1133,24 +1133,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // end pdm product landing sales
 
-  // new sidecart timer 
+  // new sidecart timer
   const sidecartTimerContainer = document.querySelector('.slide_cart .sidecart-timer-container');
   initSidecarTimer(sidecartTimerContainer);
- 
-  // sitewide timer (header) 
+
+  // sitewide timer (header)
   const siteWideTimerContainer = document.querySelector('.announcement_bar.site-gamification-active .sidecart-timer-container');
   initSidecarTimer(siteWideTimerContainer);
 
-  // site-wide-gamification 
+  // site-wide-gamification
   document.addEventListener('cartUpdated', event => {
     setTimeout(updateSideWideGamification, 2000);
   });
 
- 
+
   // pdp-carousel-image
   initPDPCarouselImage();
 
-   // frontrow-health 
+   // frontrow-health
    const frontrowHealthContainer = document.querySelector('.frontrow-health-container');
    const trustedSection = document.querySelector('.trustedVerified');
    initFrontrowHealth(frontrowHealthContainer, trustedSection);
@@ -1174,7 +1174,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let { finishDate, startDate } = sidecartTimerContainer.dataset;
 
    // parse dates
-   startDate = parseCustomDate(startDate); 
+   startDate = parseCustomDate(startDate);
    finishDate = parseCustomDate(finishDate);
 
    if (isNaN(startDate) || isNaN(finishDate)) {
@@ -1182,27 +1182,27 @@ document.addEventListener('DOMContentLoaded', function() {
      sidecartTimerContainer.style.display = 'none';
      return;
    }
- 
+
    let now = new Date().getTime();
- 
+
    // Hide timer if out of date
    if (now < startDate || now > finishDate) {
      sidecartTimerContainer.style.display = 'none';
      return;
    }
-  
+
   const countdown = setInterval(function() {
     now = new Date().getTime();
-    
+
     // Find the time remaining until the target date
     const remainingTime = finishDate - now;
-    
+
     // Time calculations for days, hours, minutes, and seconds
     const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
     const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-    
+
     setTimer(sidecartTimerContainer.querySelector('.sidecart-timer-container__timer--days-amount'),days);
     setTimer(sidecartTimerContainer.querySelector('.sidecart-timer-container__timer--hours-amount'),hours);
     setTimer(sidecartTimerContainer.querySelector('.sidecart-timer-container__timer--minutes-amount'),minutes);
@@ -1269,7 +1269,7 @@ function updateSideWideGamification() {
  * progress bar, and milestone visuals accordingly. Intended to enhance user
  * engagement with rewards during the shopping process.
  */
-function updateSiteWideGamification (cartTotal) { 
+function updateSiteWideGamification (cartTotal) {
 
   const progressContainer = document.querySelector('.progress-container.pdm-gamification');
 
@@ -1416,7 +1416,7 @@ function updateSiteWideGamification (cartTotal) {
     const secondMilestoneIconCheck = secondMilestone.querySelector('.icon-check__second-milestone');
     const secondMilestoneProgressBarWrapper = secondMilestone.querySelector('.progress-bar-wrapper');
     const secondMilestoneProgressBarWrapperBar = secondMilestone.querySelector('.progress-bar-wrapper__bar');
-  
+
     const bothThresholdUncompleted = differenceFreeShipping > 0 && differenceFreeGift > 0;
     const bothThresholdCompleted = differenceFreeShipping <= 0 && differenceFreeGift <= 0;
 
@@ -1513,7 +1513,7 @@ function initFrontrowHealth (frontrowContainer, trustedSection) {
   const { link:seeMoreLink} = frontrowContainer.dataset;
   //if the feature has a link in the theme settings, exit the function
   if (seeMoreLink) return;
-  
+
   const seeMoreElement = frontrowContainer.querySelector('.frontrow-health-container__content-link');
   seeMoreElement.addEventListener('click', e => {
     e.preventDefault();
@@ -1550,7 +1550,7 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
    *
    * @param {NodeList} dataElement - A NodeList of elements containing dataset attributes for upsell logic.
    * @returns {Array<Object>} An array of objects, each representing a category of upsell products.
-   * 
+   *
    * Each object in the returned array contains:
    * - `id` {string}: The category identifier from the dataset.
    * - `name` {string}: The category name.
@@ -1612,9 +1612,9 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
 
     // Find matching upsell data based on product ID
     const { name, id } = dataInformation.find(item => item.products.includes(productId)) ?? {};
-    
+
     // console.log({'productId': productId, "name": name, "id": id})
-  
+
     // Remove 'active' class from all upsell elements
     const allUpsellElements = popupElement.querySelectorAll('.popupsell-card.active');
     allUpsellElements.forEach((element) => element.classList.remove('active'));
@@ -1683,7 +1683,7 @@ const openPopupUpsell = document.querySelectorAll(".openPopupUpsell");
         e.stopPropagation();
         const target = e.target.closest('[data-product-id]'); // Find the closest element with the data-product-id attribute
         const ajaxSelector = button.dataset.ajaxSelector;
-  
+
         if (!target || !target.dataset.productId) {
           productId = 43821069435119; // ID of the default product
         } else {
@@ -1754,7 +1754,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const serum3Month = document.getElementById('3_month');
   const elementPriceStock = document.querySelector('.pdm_price-stock-left-quantity');
   if ( serum3Month && elementPriceStock ) {
-    
+
     const pdmPriceDifferenceContainer = document.querySelector('#pdm_price-difference-container')
     const productId = serum3Month.dataset.productId;
 
@@ -1949,7 +1949,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /**
  * Initializes the main carousel for the patches before/after gallery in the buy block
  * Creates two synchronized Swiper instances: a thumbnail slider and a main image slider
- * 
+ *
  * @function initPatchesCarouselBuyBlock
  * @returns {void}
  */
@@ -1999,7 +1999,7 @@ function initPatchesCarouselBuyBlock() {
   window.patchesCarousel = {
     /**
      * Navigate to a specific slide in the carousel
-     * 
+     *
      * @param {number} slideIndex - Index of the slide to navigate to
      * @returns {void}
      */
@@ -2012,14 +2012,14 @@ function initPatchesCarouselBuyBlock() {
 /**
  * Conditional initialization for patches carousel in buy block based on test flag
  * Handles A/B testing scenario for the patches carousel feature
- * 
+ *
  * @function initPatchesCarouselBuyBlockTest
  * @returns {void}
  */
 function initPatchesCarouselBuyBlockTest() {
   // Check if the test flag is present on the body element
   const bodyHasPatchesBuyBlockTest = document.body.hasAttribute('data-patches-buy-block');
-  
+
   if(bodyHasPatchesBuyBlockTest) {
     // Test variant: Remove original image and initialize carousel
     const originalBuyBlockImage = document.querySelector('.img-fluid.original-buy-block__image');
@@ -2035,3 +2035,14 @@ function initPatchesCarouselBuyBlockTest() {
 // Initialize the carousel test when DOM is fully loaded
 document.addEventListener('DOMContentLoaded', initPatchesCarouselBuyBlockTest);
 // end patches buy block carousel
+
+// Initialize QR - MI LP 3 Month Option By Default
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.location.pathname === "/pages/qure-microinfusion-offer") {
+      setTimeout(() => {
+          document.querySelectorAll(".planBlock input")[1].click();
+      }, 300);
+  }
+}
+);
+// end QR - MI LP 3 Month Option By Default
