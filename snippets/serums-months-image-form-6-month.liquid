@@ -140,7 +140,6 @@
                         type="radio"
                         name="monthlyPlan"
                         id="3_month"
-                        checked
                         data-product-period="6"
                         data-product-variant-id="{{ product.variants.first.id }}"
                         data-product-id="{{ product.id }}"
@@ -203,6 +202,7 @@
                       <input
                         type="radio"
                         name="monthlyPlan"
+                        checked
                         id="2_month"
                         data-product-period="3"
                         data-product-variant-id="{{ product.variants.first.id }}"
@@ -280,16 +280,16 @@
                           <div class="batch_h_month">June 2025</div>
                           <div class="batch_h_info" style="--bgPercent:0%;"><span>In
                                   Production</span></div>
-                      </div> 
+                      </div>
                     </div>
 
                     <script>
                       document.addEventListener("DOMContentLoaded", function () {
                           const batchMessage = document.querySelector('.ctm_cls_next_batch_mi_lp');
                           const radioButtons = document.querySelectorAll('input[name="monthlyPlan"]');
-                      
+
                           batchMessage.style.display = 'none';
-                      
+
                           radioButtons.forEach(function (radio) {
                               radio.addEventListener('change', function () {
                                   if (document.getElementById('1_month').checked) {
@@ -508,7 +508,7 @@
                   >
                     Buy Now <span class="savedAmount">& SAVE {{ discount_percentage }}%</span>
                   </a>
-                  
+
                 </div>
               </div>
             </div>
