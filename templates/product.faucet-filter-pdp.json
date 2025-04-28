@@ -30,7 +30,9 @@
           "settings": {
             "heading": "White",
             "image": "shopify://shop_images/water-fIlter-white.webp",
-            "variant_id": 45852978348271
+            "variant_id": 45852978348271,
+            "reserve": false,
+            "soldout": false
           }
         },
         "variant_8RVKyP": {
@@ -38,7 +40,9 @@
           "settings": {
             "heading": "Black",
             "image": "shopify://shop_images/water-fIlter-black.webp",
-            "variant_id": 45852978315503
+            "variant_id": 45852978315503,
+            "reserve": false,
+            "soldout": false
           }
         },
         "subscribe_tnLCRQ": {
