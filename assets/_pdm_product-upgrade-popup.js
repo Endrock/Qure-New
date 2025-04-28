@@ -3,6 +3,14 @@
  * START - PDM UPGRADE POPUP LOGIC - FACE SERUM
  * ============================================
  */
+
+/**
+ * Opens the upgrade popup when a specific plan label is clicked.
+ *
+ * @param {HTMLElement} selector - The label element that triggers the popup.
+ * @param {HTMLElement} overlay - The popup overlay element.
+ * @param {HTMLElement} popup - The popup container element.
+ */
    function openPopUpPromotion(selector, overlay, popup) {
     if (selector && popup && overlay) { 
       selector.addEventListener("click", function () {
@@ -10,10 +18,16 @@
         overlay.classList.remove("hidden");
       });
     } else {
-      console.warn(" No se encontró el label o el popup/overlay.");
+      console.warn("No se encontró el label o eLabel or popup/overlay not found");
     }
   }
 
+  /**
+ * Waits for the DOM to be fully loaded before initializing popup event listeners.
+ * 
+ * Sets up click handlers to open and close the upgrade popup
+ * when interacting with plan labels, the overlay, decline button, or close button.
+ */
    document.addEventListener("DOMContentLoaded", function () {
     const labelTwoMonth = document.querySelector('label[for="mBanner_1_month"]');
     const labelOneMonth = document.querySelector('label[for="1_month"]');
