@@ -1,3 +1,11 @@
+{% comment %}
+Snippet for upgrade popup used on product-landing.liquid
+Params:
+- product: The current product object where the metafield "pop_up_promotion" is defined.
+Usage:
+{% render 'pdm-upgrade-popup', product: product %}
+{% endcomment %}
+
 {{ '_pdm_product-upgrade-popup.css' | asset_url | stylesheet_tag  }}  
 <script src="{{'_pdm_product-upgrade-popup.js' | asset_url }}" defer >
 </script>
