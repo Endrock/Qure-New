@@ -18,7 +18,7 @@
         overlay.classList.remove("hidden");
       });
     } else {
-      console.warn("No se encontró el label o eLabel or popup/overlay not found");
+      console.warn("Label or popup/overlay not found");
     }
   }
 
