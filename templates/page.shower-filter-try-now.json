@@ -47,7 +47,9 @@
           "settings": {
             "heading": "White",
             "image": "shopify://shop_images/filter-white.webp",
-            "variant_id": 45909763522799
+            "variant_id": 45909763522799,
+            "reserve": false,
+            "soldout": true
           }
         },
         "variant_7nqQxD": {
@@ -55,7 +57,9 @@
           "settings": {
             "heading": "Black",
             "image": "shopify://shop_images/filter_black.webp",
-            "variant_id": 45909763490031
+            "variant_id": 45909763490031,
+            "reserve": false,
+            "soldout": false
           }
         },
         "trynow_EyrzEb": {
