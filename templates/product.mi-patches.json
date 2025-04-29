@@ -34,6 +34,7 @@
         },
         "out_of_stock_3xp9iR": {
           "type": "out_of_stock",
+          "disabled": true,
           "settings": {
             "heading": "Next batch ships end of April 2025:",
             "heading_mobile": "Next batch ships end of April 2025:",
@@ -66,7 +67,7 @@
         "product_button_label": "Product",
         "before_after_images_limit": 4,
         "before_after_button_label": "Before & After",
-        "reserve": true,
+        "reserve": false,
         "soldout": false,
         "selected_design": "new",
         "text_label_real_result_1": "Product",
@@ -124,6 +125,7 @@
             "ctm_cls": "",
             "heading_first": "",
             "text": "<p>Fast-acting patches feature 80 self-dissolving micro-darts designed to <strong>target and treat wrinkles, under-eye puffiness and dark circles.</strong></p><p>While traditional patches lay flat on the surface of the skin, these ultra thin micro-darts gently <strong>penetrate the skin</strong>, infusing serum for <strong>deeper delivery.</strong> Precise and powerful, they infuse serum where you need it most and fully absorb into the skin for deeper, better, faster results <strong>– yet gentle enough for sensitive skin!</strong></p>",
+            "txt_order_mob": false,
             "btn_text": "",
             "btn_url": "",
             "custom_class": "",

@@ -1,8 +1,11 @@
-<div class="ingredients_list {{ section.settings.custom_class }}">
+<div class="ingredients_list {{ section.settings.custom_class }} ingredients_list-{{ section.id }}">
     <div class="container">
         <div class="section_header text-start pb-md-5 pb-4 text-md-center ms-0 m-md-auto">
             {% if section.settings.sub_heading != blank %}
                 <h6 class="n_sub-heading">{{ section.settings.sub_heading }}</h6>
+            {% endif %}
+            {% if section.settings.discrition != blank %}
+              {{ section.settings.discrition }}
             {% endif %}
         </div>
         <div class="skin_problems">
@@ -28,7 +31,20 @@
         </div>
     </div>
 </div>
-
+{% style %}
+.ingredients_list-{{ section.id }} .skin_problems {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.desk_column }}, 1fr);
+    gap: 38px;
+    text-align: center;
+}
+@media(max-width: 768px){
+  .ingredients_list-{{ section.id }} .skin_problems {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+{% endstyle %}
 {% schema %}
 {
   "name": "t:sections.perfect_for.label",
@@ -39,9 +55,23 @@
       "label": "t:common.heading.label"
     },
     {
+      "type": "richtext",
+      "id": "discrition",
+      "label": "t:common.text.content"
+    },
+    {
       "type": "textarea",
       "id": "custom_class",
       "label": "t:common.classname.custom"
+    },
+    {
+      "type": "range",
+      "id": "desk_column",
+      "label": "t:common.column.label",
+      "max": 5,
+      "min": 2,
+      "step": 1,
+      "default": 5
     }
   ],
   "blocks": [
@@ -70,7 +100,55 @@
   ],
   "presets": [
     {
-      "name": "t:sections.perfect_for.label"
+      "name": "t:sections.perfect_for.label",
+      "settings": {
+        "sub_heading": "",
+        "discrition": "<h1>What tap water does to your skin and hair.<\/h1><p>Chlorine, heavy metals and other impurities found in tap water rain down on you with every drop – draining the life from your skin and hair, and may be contributing to<\/p>",
+        "custom_class": "section",
+        "desk_column": 5
+      },
+      "blocks": [
+        {
+          "type": "problem",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/acne_skin_97647a70-4a51-40e8-81d3-edee350bc43f.webp",
+            "icon": "shopify:\/\/shop_images\/tick-green_2.svg",
+            "description": "Breakouts"
+          }
+        },
+        {
+          "type": "problem",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/irritated_skin_1.webp",
+            "icon": "shopify:\/\/shop_images\/tick-green_2.svg",
+            "description": "Irritated Skin & Scalp"
+          }
+        },
+        {
+          "type": "problem",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dry_skin.webp",
+            "icon": "shopify:\/\/shop_images\/tick-green_2.svg",
+            "description": "Dry, Dull Skin"
+          }
+        },
+        {
+          "type": "problem",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sensitive_skin_20386b7d-d5b0-433d-818a-f39a91f909b9.webp",
+            "icon": "shopify:\/\/shop_images\/tick-green_2.svg",
+            "description": "Sensitive Skin"
+          }
+        },
+        {
+          "type": "problem",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Color-treated_hair.webp",
+            "icon": "shopify:\/\/shop_images\/tick-green_2.svg",
+            "description": "Frizzy, Dry Hair"
+          }
+        }
+      ]
     }
   ]
 }

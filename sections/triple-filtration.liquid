@@ -1,0 +1,193 @@
+<!--Triple Filtration ---->
+
+<div class="triple_filtration py-5 my-0 py-md-5 my-md-5">
+    <div class="container">
+    <div class="d-md-none">
+      <h2 class="title-lg mb-5 mb-md-4">{{ section.settings.section_title }}</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        <div class="filter_details faq">
+          <div class="accordion" id="details_drop">
+            {% for block in section.blocks %}
+              {% if block.type == 'accordion_item' %}
+                <div class="accordion-item detail d-{{ forloop.index }}">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#filter_details-{{ forloop.index }}" aria-expanded="false"
+                      aria-controls="filter_details-{{ forloop.index }}">
+                      <div class="container">{{ block.settings.accordion_title }}</div>
+                    </button>
+                  </h2>
+                  <div id="filter_details-{{ forloop.index }}" class="accordion-collapse collapse"
+                    data-bs-parent="#details_drop">
+                    <div class="accordion-body">
+                      <div class="container">
+                        <p>{{ block.settings.accordion_description }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+  
+          <picture>
+            <source media="(min-width:540px)" srcset="{{ section.settings.desktop_image | image_url: width: 253 }}" width="253" height="109">
+            <img src="{{ section.settings.mobile_image | image_url: width: 332 }}" alt="" class="img-fluid" width="332" height="192">
+          </picture>
+        </div>
+      </div>
+  
+      <div class="col-md-7">
+        <div class="it_info ps-md-5 pe-0 pt-4 pt-md-0 ms-md-2">
+          <div class="d-md-block d-none">
+            <h2 class="title-lg mb-md-4">{{ section.settings.section_title }}</h2>
+          </div>
+          <div class="newside_list mw-100 pt-md-0 pt-2">
+            <ul>
+              {% for block in section.blocks %}
+                {% if block.type == 'feature_item' %}
+                  <li>
+                    {% if block.settings.icon %}
+                      <img src="{{ block.settings.icon | image_url }}" alt="{{ block.settings.title }}">
+                    {% endif %}
+                    <p>{{ block.settings.title }}<br>
+                      <span>{{ block.settings.description }}</span>
+                    </p>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  {% schema %}
+{
+  "name": "Triple Filtration",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Triple the filtration tech (for triple the clean)"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "accordion_item",
+      "name": "Accordion Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "accordion_title",
+          "label": "Title",
+          "default": "KDF Layer"
+        },
+        {
+          "type": "text",
+          "id": "accordion_description",
+          "label": "Description",
+          "default": "Reduces harmful heavy metals"
+        }
+      ]
+    },
+    {
+      "type": "feature_item",
+      "name": "Feature Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Feature Title",
+          "default": "Carbon Fiber Layer"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Feature Description",
+          "default": "Removes up to 99% of chlorine, reducing skin irritation and dryness, leaving your skin and hair healthier."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Triple Filtration",
+      "category": "Custom",
+      "settings": {
+        "section_title": "Triple the filtration tech (for triple the clean)"
+      },
+      "blocks": [
+        {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "KDF Layer",
+            "accordion_description": "Reduces harmful heavy metals"
+          }
+        },
+        {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "Carbon Fiber Layer",
+            "accordion_description": "Removes up to 99% of chlorine & contaminants"
+          }
+        },
+        {
+          "type": "accordion_item",
+          "settings": {
+            "accordion_title": "FOF Descaling",
+            "accordion_description": "Reduces hard water mineral buildup"
+          }
+        },
+        {
+          "type": "feature_item",
+          "settings": {
+            "title": "Carbon Fiber Layer",
+            "description": "Removes up to 99% of chlorine, reducing skin irritation and dryness, leaving your skin and hair healthier."
+          }
+        },
+        {
+          "type": "feature_item",
+          "settings": {
+            "title": "KDF Layer",
+            "description": "Targets and removes heavy metals like lead and mercury, providing cleaner water for your shower."
+          }
+        },
+        {
+          "type": "feature_item",
+          "settings": {
+            "title": "FOF (Filter of Future)",
+            "description": "Helps reduce the buildup of hard water minerals such as calcium and magnesium, preventing scale and improving water flow."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
