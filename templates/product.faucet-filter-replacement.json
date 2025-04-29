@@ -30,7 +30,10 @@
           "settings": {
             "heading": "White",
             "image": "shopify:\/\/shop_images\/filter_replacement_white.webp",
-            "variant_id": 45852989653231
+            "variant_id": 45852989653231,
+            "main": false,
+            "reserve": false,
+            "soldout": false
           }
         },
         "variant_8RVKyP": {
@@ -38,7 +41,10 @@
           "settings": {
             "heading": "Black",
             "image": "shopify:\/\/shop_images\/filter_replacement_black.webp",
-            "variant_id": 45852989620463
+            "variant_id": 45852989620463,
+            "main": false,
+            "reserve": false,
+            "soldout": false
           }
         },
         "before_and_after_KfYL7X": {

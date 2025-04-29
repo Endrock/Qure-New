@@ -451,6 +451,9 @@
     "supply_for_refill": {
       "label": "Out of stock"
     },
+    "main": {
+      "label": "Main"
+    },
     "reserve": {
       "label": "Reserve"
     },
