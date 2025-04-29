@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -6,14 +15,14 @@
         "rating_KDB67x": {
           "type": "rating",
           "settings": {
-            "image": "shopify:\/\/shop_images\/star-half_fill.svg",
-            "text": "<p>4.7\/5 Rated by Customers<\/p>"
+            "image": "shopify://shop_images/star-half_fill.svg",
+            "text": "<p>4.7/5 Rated by Customers</p>"
           }
         },
         "list_azYRbY": {
           "type": "list",
           "settings": {
-            "text": "<ul><li>Replace Shower Filter cartridge every 3 months for consistently hydrated, healthier hair and skin.<\/li><li>Removes up to 99% chlorine, heavy metals &<br\/>contaminants that harms your skin and hair.<\/li><li>Easy to refill, only 2 minutes, no tools needed.<\/li><\/ul>"
+            "text": "<ul><li>Replace Shower Filter cartridge every 3 months for consistently hydrated, healthier hair and skin.</li><li>Removes up to 99% chlorine, heavy metals &<br/>contaminants that harms your skin and hair.</li><li>Easy to refill, only 2 minutes, no tools needed.</li></ul>"
           }
         },
         "supply_CTrVRQ": {
@@ -21,8 +30,8 @@
           "disabled": true,
           "settings": {
             "heading": "Next batch ships 17th of February 2025:",
-            "heading_mobile": "Next batch ships 02\/17:",
-            "text": "<p>Order now and secure yours from the next shipment.<\/p>",
+            "heading_mobile": "Next batch ships 02/17:",
+            "text": "<p>Order now and secure yours from the next shipment.</p>",
             "first_option_date": "November 20th",
             "first_option_text": "SOLD OUT",
             "first_option_percent": 100,
@@ -38,7 +47,7 @@
           "type": "variant",
           "settings": {
             "heading": "White",
-            "image": "shopify:\/\/shop_images\/Untitleddesign_12.png",
+            "image": "shopify://shop_images/Untitleddesign_12.png",
             "variant_id": 46010772652271
           }
         },
@@ -46,7 +55,7 @@
           "type": "variant",
           "settings": {
             "heading": "Black",
-            "image": "shopify:\/\/shop_images\/Untitleddesign_13.png",
+            "image": "shopify://shop_images/Untitleddesign_13.png",
             "variant_id": 46010772685039
           }
         },
@@ -54,7 +63,7 @@
           "type": "subscribe",
           "settings": {
             "heading": "Subscribe & save 30%",
-            "text": "<p>3 month replacement filter delivers every 90 days for just [discount_price_additional]. Skip or cancel anytime.<a href=\"https:\/\/qureskincare.com\/pages\/subscriptions\" title=\"https:\/\/qureskincare.com\/pages\/subscriptions\">See more details<\/a><\/p>",
+            "text": "<p>3 month replacement filter delivers every 90 days for just [discount_price_additional]. Skip or cancel anytime.<a href=\"https://qureskincare.com/pages/subscriptions\" title=\"https://qureskincare.com/pages/subscriptions\">See more details</a></p>",
             "product": "shower-filter-replacement",
             "plan": "6286082287",
             "discount": 30
@@ -95,42 +104,42 @@
         "image_iMcrGK": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/vogue2.svg",
+            "image": "shopify://shop_images/vogue2.svg",
             "mobile_hide": false
           }
         },
         "image_bAPphf": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/women_health.svg",
+            "image": "shopify://shop_images/women_health.svg",
             "mobile_hide": true
           }
         },
         "image_6dqk7q": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/cosmopolitan2.svg",
+            "image": "shopify://shop_images/cosmopolitan2.svg",
             "mobile_hide": true
           }
         },
         "image_LfKgdE": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/elle2.svg",
+            "image": "shopify://shop_images/elle2.svg",
             "mobile_hide": false
           }
         },
         "image_eVJbTA": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/marie.svg",
+            "image": "shopify://shop_images/marie.svg",
             "mobile_hide": false
           }
         },
         "image_P8mBiX": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/grazia2.svg",
+            "image": "shopify://shop_images/grazia2.svg",
             "mobile_hide": false
           }
         }
@@ -154,16 +163,16 @@
       "name": "Maximum Filtration",
       "settings": {
         "heading": "Maximum filtration, minimal effort",
-        "paragraph_1": "<p>The Qure Shower Filter is designed to remove up to 99% of chlorine – and other hard water nasties like copper, calcium, and lead – for healthy skin and hair.<\/p>",
-        "paragraph_2": "<p>For optimized showering that leaves you feeling (and looking) your best, swap out the filter cartridge every 3 months.<\/p>",
-        "paragraph_3": "<p>This Refill seamlessly fits the Qure Shower Filter system, providing long-lasting filtration benefits.<\/p>",
-        "desktop_image": "shopify:\/\/shop_images\/maximum_filtration.webp",
-        "mobile_image": "shopify:\/\/shop_images\/maximum_filtration_mob.webp",
-        "icon_1_img": "shopify:\/\/shop_images\/ninety_day_supply_icon_4e272ea2-a224-4fe5-85a2-aa41aa234b98.svg",
+        "paragraph_1": "<p>The Qure Shower Filter is designed to remove up to 99% of chlorine – and other hard water nasties like copper, calcium, and lead – for healthy skin and hair.</p>",
+        "paragraph_2": "<p>For optimized showering that leaves you feeling (and looking) your best, swap out the filter cartridge every 3 months.</p>",
+        "paragraph_3": "<p>This Refill seamlessly fits the Qure Shower Filter system, providing long-lasting filtration benefits.</p>",
+        "desktop_image": "shopify://shop_images/maximum_filtration.webp",
+        "mobile_image": "shopify://shop_images/maximum_filtration_mob.webp",
+        "icon_1_img": "shopify://shop_images/ninety_day_supply_icon_4e272ea2-a224-4fe5-85a2-aa41aa234b98.svg",
         "icon_1_text": "90-day supply",
-        "icon_2_img": "shopify:\/\/shop_images\/easy_rep_icon_96dcbf71-e250-4083-9671-39e5d375789d.svg",
+        "icon_2_img": "shopify://shop_images/easy_rep_icon_96dcbf71-e250-4083-9671-39e5d375789d.svg",
         "icon_2_text": "Easy replacement",
-        "icon_3_img": "shopify:\/\/shop_images\/dermatologist_tested_icon_7a09a69c-53ce-4a1d-98d3-f339667d32d0.svg",
+        "icon_3_img": "shopify://shop_images/dermatologist_tested_icon_7a09a69c-53ce-4a1d-98d3-f339667d32d0.svg",
         "icon_3_text": "Dermatologist tested"
       }
     },
@@ -173,11 +182,11 @@
         "result_KjXYfm": {
           "type": "result",
           "settings": {
-            "image": "shopify:\/\/shop_images\/results_kim_l.webp",
+            "image": "shopify://shop_images/results_kim_l.webp",
             "heading": "Source of my unclear skin",
-            "text": "<p>\"I didn’t realize how big impact water has on our skin... I almost got used to my skin never getting better than mediocre, but this Water Filter is a game changer in my skincare routine.”<\/p>",
+            "text": "<p>\"I didn’t realize how big impact water has on our skin... I almost got used to my skin never getting better than mediocre, but this Water Filter is a game changer in my skincare routine.”</p>",
             "see-more": "",
-            "image_country": "shopify:\/\/shop_images\/australia_f.webp",
+            "image_country": "shopify://shop_images/australia_f.webp",
             "text_country": "Australia",
             "client": "Kim L.",
             "code": ""
@@ -186,11 +195,11 @@
         "result_TAhnnk": {
           "type": "result",
           "settings": {
-            "image": "shopify:\/\/shop_images\/results_hanna.webp",
+            "image": "shopify://shop_images/results_hanna.webp",
             "heading": "Hydrated more than ever",
-            "text": "<p>\"I never had any major issues with skin before I moved. Then I started to get irritation and my makeup would look cakey cause my skin was always so dry no matter what moisturiser I used.<br\/>I didn’t change anything in my skincare routine except filtered water. I’m never washing my face with anything less than Q-urified water because my skin is so much better.”<\/p>",
+            "text": "<p>\"I never had any major issues with skin before I moved. Then I started to get irritation and my makeup would look cakey cause my skin was always so dry no matter what moisturiser I used.<br/>I didn’t change anything in my skincare routine except filtered water. I’m never washing my face with anything less than Q-urified water because my skin is so much better.”</p>",
             "see-more": "",
-            "image_country": "shopify:\/\/shop_images\/england_f.webp",
+            "image_country": "shopify://shop_images/england_f.webp",
             "text_country": "United Kingdom",
             "client": "Hanna",
             "code": ""
@@ -199,11 +208,11 @@
         "result_XdFah8": {
           "type": "result",
           "settings": {
-            "image": "shopify:\/\/shop_images\/results_josie.webp",
+            "image": "shopify://shop_images/results_josie.webp",
             "heading": "Reduced acne scars",
-            "text": "<p>“My skin has cleared up so much thanks to Qure! I use the LED mask and water filter daily, and it’s reduced my acne scars, making my complexion so much smoother and less red! My skin feels soft and hydrated. I can actually walk out of the house without makeup now. THANK YOU QURE!!!”<\/p>",
+            "text": "<p>“My skin has cleared up so much thanks to Qure! I use the LED mask and water filter daily, and it’s reduced my acne scars, making my complexion so much smoother and less red! My skin feels soft and hydrated. I can actually walk out of the house without makeup now. THANK YOU QURE!!!”</p>",
             "see-more": "",
-            "image_country": "shopify:\/\/shop_images\/usa_89e25711-f730-4521-8931-83b3307204af.png",
+            "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
             "text_country": "United States",
             "client": "Josie",
             "code": ""
@@ -230,36 +239,36 @@
         "icon_wT8X3k": {
           "type": "icon",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pwr_bnft1.svg",
-            "text": "<p>Enhances the <strong>effectiveness of topical products<\/strong> with a clean skin base & stronger barrier.<\/p>"
+            "image": "shopify://shop_images/pwr_bnft1.svg",
+            "text": "<p>Enhances the <strong>effectiveness of topical products</strong> with a clean skin base & stronger barrier.</p>"
           }
         },
         "icon_mVUHgC": {
           "type": "icon",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pwr_bnft2.svg",
-            "text": "<p>Reduces minerals that linger on the skin, helping to <strong>eliminate itchiness and breakouts.<\/strong><\/p>"
+            "image": "shopify://shop_images/pwr_bnft2.svg",
+            "text": "<p>Reduces minerals that linger on the skin, helping to <strong>eliminate itchiness and breakouts.</strong></p>"
           }
         },
         "icon_Rr3RX9": {
           "type": "icon",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pwr_bnft3.svg",
-            "text": "<p>Targets chemicals that cause redness & irritation, effective for <strong>sensitive or dry skin & scalp.<\/strong><\/p>"
+            "image": "shopify://shop_images/pwr_bnft3.svg",
+            "text": "<p>Targets chemicals that cause redness & irritation, effective for <strong>sensitive or dry skin & scalp.</strong></p>"
           }
         },
         "icon_P97N9a": {
           "type": "icon",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pwr_bnft4.svg",
-            "text": "<p>Protects your skin’s moisture barrier by filtering drying chlorine & <strong>retaining natural hydration.<\/strong><\/p>"
+            "image": "shopify://shop_images/pwr_bnft4.svg",
+            "text": "<p>Protects your skin’s moisture barrier by filtering drying chlorine & <strong>retaining natural hydration.</strong></p>"
           }
         },
         "icon_RgT8mW": {
           "type": "icon",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pwr_bnft5.svg",
-            "text": "<p>Improves the health and appearance of your skin and hair for a <strong>natural, healthy glow.<\/strong><\/p>"
+            "image": "shopify://shop_images/pwr_bnft5.svg",
+            "text": "<p>Improves the health and appearance of your skin and hair for a <strong>natural, healthy glow.</strong></p>"
           }
         }
       },
@@ -304,7 +313,7 @@
         "feature_item_3EFA6R": {
           "type": "feature_item",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/carbon_fiber_layer.svg",
+            "icon": "shopify://shop_images/carbon_fiber_layer.svg",
             "title": "Carbon Fiber Layer",
             "description": "Removes up to 99% of chlorine, reducing skin irritation and dryness, leaving your skin and hair healthier."
           }
@@ -312,7 +321,7 @@
         "feature_item_g6Yi8z": {
           "type": "feature_item",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/kdf_layer.svg",
+            "icon": "shopify://shop_images/kdf_layer.svg",
             "title": "KDF Layer",
             "description": "Targets and removes heavy metals like lead and mercury, providing cleaner water for your shower."
           }
@@ -320,7 +329,7 @@
         "feature_item_9TAjxN": {
           "type": "feature_item",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/fof.svg",
+            "icon": "shopify://shop_images/fof.svg",
             "title": "FOF (Filter of Future)",
             "description": "Helps reduce the buildup of hard water minerals such as calcium and magnesium, preventing scale and improving water flow."
           }
@@ -337,8 +346,8 @@
       "name": "Triple Filtration",
       "settings": {
         "section_title": "Triple the filtration tech (for triple the clean)",
-        "desktop_image": "shopify:\/\/shop_images\/shower_filter-rep-banner.webp",
-        "mobile_image": "shopify:\/\/shop_images\/shower_filter-rep-banner-mob.webp"
+        "desktop_image": "shopify://shop_images/shower_filter-rep-banner.webp",
+        "mobile_image": "shopify://shop_images/shower_filter-rep-banner-mob.webp"
       }
     },
     "caring_for_your_skin_k4afJk": {
@@ -347,21 +356,21 @@
         "icon_LqzKph": {
           "type": "icon",
           "settings": {
-            "icon_image": "shopify:\/\/shop_images\/ninety_day_supply_icon_4e272ea2-a224-4fe5-85a2-aa41aa234b98.svg",
+            "icon_image": "shopify://shop_images/ninety_day_supply_icon_4e272ea2-a224-4fe5-85a2-aa41aa234b98.svg",
             "icon_text": "90-day supply"
           }
         },
         "icon_jEitHz": {
           "type": "icon",
           "settings": {
-            "icon_image": "shopify:\/\/shop_images\/easy_replacement.svg",
+            "icon_image": "shopify://shop_images/easy_replacement.svg",
             "icon_text": "Easy replacement"
           }
         },
         "icon_PTRUr6": {
           "type": "icon",
           "settings": {
-            "icon_image": "shopify:\/\/shop_images\/cancel_anytime.svg",
+            "icon_image": "shopify://shop_images/cancel_anytime.svg",
             "icon_text": "Cancel anytime"
           }
         }
@@ -374,15 +383,15 @@
       "name": "Caring for Your Skin",
       "settings": {
         "heading": "Caring for your skin & hair just got easier",
-        "paragraph_1": "<p>We know it can be hard to remember exactly when to switch out filters. Our convenient subscription plan ensures your replacement filter arrives at your doorstep at just the right time.<\/p>",
-        "paragraph_2": "<p>No need to wonder, no need to guess. Just pure, perfectly optimized water for your skin and hair. Set it and forget it!<\/p>",
-        "desktop_image": "shopify:\/\/shop_images\/caring_skin.webp",
-        "mobile_image": "shopify:\/\/shop_images\/caring_skin_mob.webp",
+        "paragraph_1": "<p>We know it can be hard to remember exactly when to switch out filters. Our convenient subscription plan ensures your replacement filter arrives at your doorstep at just the right time.</p>",
+        "paragraph_2": "<p>No need to wonder, no need to guess. Just pure, perfectly optimized water for your skin and hair. Set it and forget it!</p>",
+        "desktop_image": "shopify://shop_images/caring_skin.webp",
+        "mobile_image": "shopify://shop_images/caring_skin_mob.webp",
         "subscription_label": "MOST POPULAR CHOICE",
         "subscription_heading": "Subscribe & save 30%",
         "price_old": "$50",
         "price_new": "$35",
-        "subscription_description": "<p>Get a new replacement filter delivered every 90 days for just $35. Skip or cancel at any time. <a href=\"#\">See more details<\/a><\/p>",
+        "subscription_description": "<p>Get a new replacement filter delivered every 90 days for just $35. Skip or cancel at any time. <a href=\"#\">See more details</a></p>",
         "subscribe_btn_text": "Subscribe Now",
         "subscribe_now_link": "#product-action"
       }
@@ -393,21 +402,21 @@
         "steps_Dxe7Jw": {
           "type": "steps",
           "settings": {
-            "step_img": "shopify:\/\/shop_images\/faucet_filter_1.webp",
+            "step_img": "shopify://shop_images/faucet_filter_1.webp",
             "text": "Turn off the water. Open the filter housing and remove the old cartridge."
           }
         },
         "steps_V9Ch83": {
           "type": "steps",
           "settings": {
-            "step_img": "shopify:\/\/shop_images\/faucet_filter_2.webp",
+            "step_img": "shopify://shop_images/faucet_filter_2.webp",
             "text": "Firmly press the new filter into the housing. Screw the cover back clockwise until it's secure."
           }
         },
         "steps_UpHTgD": {
           "type": "steps",
           "settings": {
-            "step_img": "shopify:\/\/shop_images\/faucet_filter_3.webp",
+            "step_img": "shopify://shop_images/faucet_filter_3.webp",
             "text": "Turn on the water and let it run for 2-3 minutes before use."
           }
         },
@@ -437,7 +446,7 @@
           "type": "object",
           "settings": {
             "heading": "What is the Qure Shower Filter Refill made for?",
-            "text": "<p>The refill cartridge is designed for the Qure Shower Filter, ensuring cleaner water with every shower.<\/p>",
+            "text": "<p>The refill cartridge is designed for the Qure Shower Filter, ensuring cleaner water with every shower.</p>",
             "code": ""
           }
         },
@@ -445,7 +454,7 @@
           "type": "object",
           "settings": {
             "heading": "What does the Qure Shower Filter do?",
-            "text": "<p>It removes harmful impurities such as heavy metals, chlorine, and unwanted minerals, protecting your skin and hair from damage caused by hard water.<\/p>",
+            "text": "<p>It removes harmful impurities such as heavy metals, chlorine, and unwanted minerals, protecting your skin and hair from damage caused by hard water.</p>",
             "code": ""
           }
         },
@@ -453,7 +462,7 @@
           "type": "object",
           "settings": {
             "heading": "Does the filter lose effectiveness over time?",
-            "text": "<p>Yes, the filter removes up to 99% of chlorine initially, 95% after 4,000 liters, and 90% after 6,000 liters. For best results, we recommend replacing it after 5,000 liters (around 3 months).<br\/><br\/><\/p>",
+            "text": "<p>Yes, the filter removes up to 99% of chlorine initially, 95% after 4,000 liters, and 90% after 6,000 liters. For best results, we recommend replacing it after 5,000 liters (around 3 months).<br/><br/></p>",
             "code": ""
           }
         },
@@ -461,7 +470,7 @@
           "type": "object",
           "settings": {
             "heading": "How do I know when to replace the filter?",
-            "text": "<p>A slight drop in water pressure or visible buildup on the filter may indicate it’s time for a replacement. We recommend changing it every 3 months to maintain optimal performance.<\/p>",
+            "text": "<p>A slight drop in water pressure or visible buildup on the filter may indicate it’s time for a replacement. We recommend changing it every 3 months to maintain optimal performance.</p>",
             "code": ""
           }
         },
@@ -469,7 +478,7 @@
           "type": "object",
           "settings": {
             "heading": "How do I install the new filter refill?",
-            "text": "<ul><li>Turn off the water.<\/li><li>Open the filter housing and remove the old cartridge.<\/li><li>Unwrap the new cartridge and insert it into the housing.<\/li><li>Secure the cover by screwing it back clockwise.<\/li><li>Turn on the water and let it run for 2–3 minutes to flush out any initial particles.<\/li><\/ul>",
+            "text": "<ul><li>Turn off the water.</li><li>Open the filter housing and remove the old cartridge.</li><li>Unwrap the new cartridge and insert it into the housing.</li><li>Secure the cover by screwing it back clockwise.</li><li>Turn on the water and let it run for 2–3 minutes to flush out any initial particles.</li></ul>",
             "code": ""
           }
         },
@@ -477,7 +486,7 @@
           "type": "object",
           "settings": {
             "heading": "Where can I buy filter refills?",
-            "text": "<p>You can purchase filter refills directly from our website, which provides 3 months of pure water. We also offer convenient subscription plans to ensure you never run out—set it and forget it, and we’ll take care of the rest.<\/p>",
+            "text": "<p>You can purchase filter refills directly from our website, which provides 3 months of pure water. We also offer convenient subscription plans to ensure you never run out—set it and forget it, and we’ll take care of the rest.</p>",
             "code": ""
           }
         }

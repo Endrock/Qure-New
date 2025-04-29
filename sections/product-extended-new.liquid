@@ -195,11 +195,11 @@
                         {% if subscribe_count > 0 or trynow_count > 0 %}
                             {%- for block in section.blocks -%}
                                 {% if block.type == 'trynow' %}
-                                    {% include 'product-extended-new-trynow' %}
+                                    {% include 'product-extended-new-trynow' variant_count: variant_count %}
                                 {% endif %}
 
                                 {% if block.type == 'subscribe' %}
-                                    {% include 'product-extended-new-subscription' %}
+                                    {% include 'product-extended-new-subscription' variant_count: variant_count %}
                                 {% endif %}
                             {%- endfor -%}
                         {% else %}
@@ -643,6 +643,24 @@
                         "type": "number",
                         "id": "variant_id",
                         "label": "t:common.variant_id.label"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "main",
+                        "label": "t:common.main.label",
+                        "default": false
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "reserve",
+                        "label": "t:common.reserve.label",
+                        "default": false
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "soldout",
+                        "label": "t:common.soldout.label",
+                        "default": false
                     }
                 ]
 		    },

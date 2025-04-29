@@ -81,7 +81,7 @@
           "announcement_TPxBgi": {
             "type": "announcement",
             "settings": {
-              "heading": "<p><strong>72% OFF</strong> on our Exclusive Easter Bundle </p>",
+              "heading": "<p><strong>FREE World-Wide Shipping </strong>All Orders Above $100</p>",
               "button_label": "SHOP NOW",
               "button_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal-new"
             }
@@ -96,7 +96,7 @@
             "type": "banner",
             "settings": {
               "image": "shopify://shop_images/Navigation.png",
-              "button_label": "Save up to 72% on [Exclusive Bundles]",
+              "button_label": "Save up to 55% on [Exclusive Bundles]",
               "button_url": "https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal"
             }
           },
@@ -144,7 +144,6 @@
         ],
         "settings": {
           "upsell_content": [
-            "exclusive-easter-bundle",
             "fade-firm-bundle-essentials",
             "line-refine-bundle-advanced",
             "line-refine-bundle-pro-pre-order",
@@ -365,9 +364,9 @@
         "custom_css": [],
         "settings": {
           "upsell_heading": "Achieve your skin goals faster",
-          "upsell_product_first": "q-rejuvalight-pro-facewear",
-          "upsell_product_first_description": "Add the ultimate skincare investment to your routine",
-          "upsell_product_second": "neck-decolletage-led",
+          "upsell_product_first": "dermal-mist",
+          "upsell_product_first_description": "Purify your skin anywhere, anytime. No fuss.",
+          "upsell_product_second": "micro-infusion-targeted-patches-single",
           "upsell_product_second_description": "Rejuvenate skin where the first signs of aging show",
           "upsell_product_third": "face-serum",
           "upsell_product_third_description": "Plump, smooth & brighten in just one step",

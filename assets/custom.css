@@ -368,3 +368,6 @@ div.ur_btn {
                 padding-bottom: 5px;
         }
 }
+.unique_c .cant_decide {
+        display: none;
+}
