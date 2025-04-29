@@ -1,4 +1,4 @@
-<div class="row pdm-treatment__row-container">
+<div class="row pdm-treatment__row-container price-bundle-test__row-container">
   <div class="col-md-6">
     <div class="qure__treatments">
       <div class="text-start order-2 order-md-1">
@@ -558,7 +558,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     if (!document.body.hasAttribute('data-test-price-bundle')) {
       console.log('Test price bundle not found');
-      document.querySelector('.row.treatment-ba-test__row-container').remove();
+      document.querySelector('.row.price-bundle-test__row-container').remove();
       const radioInput = document.querySelector('.step_conten_blocks [data-tab="month_3"] input[type="radio"]');
       if (radioInput) {
         radioInput.checked = true;
