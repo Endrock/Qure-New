@@ -10,6 +10,7 @@ v2__product_variants[1][1] = 43216489513199; //1 month
 v2__product_variants[1][2] = 45951933022447; //2 months
 v2__product_variants[1][3] = 45951935217903; //3 months
 v2__product_variants[1][6] = 46314012115183; //6 months original
+v2__product_variants[1][7] = 46414788002031; //6 months original
 
 //Rejuvenating
 v2__product_variants[2] = []; 
@@ -22,11 +23,6 @@ v2__product_variants[3] = [];
 v2__product_variants[3][1] = 43216483942639; //1 month
 v2__product_variants[3][2] = 45951928860911; //2 months
 v2__product_variants[3][3] = 45951945474287; //3 months
-
-// Override 6-month variant if bundle is active
-if (document.body.hasAttribute('data-test-price-bundle')){
-	v2__product_variants[1][6] = 46414788002031;
-}
 
 function v2__selectProduct(destination)
 {
