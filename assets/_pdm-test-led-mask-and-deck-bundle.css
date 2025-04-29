@@ -171,6 +171,8 @@ body[data-test-bundle="true"] .pdm_product-bundle-container.mobile{
 
   body[data-test-bundle="true"] .pdm_product-bundle-container.desktop{
     display: block;
+    max-width: 541px;
+    height: 96px;
   }
 
   .pdm_product-bundle-label{
