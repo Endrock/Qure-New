@@ -536,6 +536,7 @@
         </div>
       </div>
       {% render 'pdm-ba-treatment-options' %}
+      {% render 'pdm-test-6-month-price' %}
     </div>
   </div>
   <div
@@ -549,7 +550,8 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      if(document.body.hasAttribute('data-ba-treatment-options')) {
+      if(document.body.hasAttribute('data-ba-treatment-options') ||
+          document.body.hasAttribute('data-test-price-bundle')) {
         document.querySelector('.row.pdm-treatment__row-container').remove();
         return;
       }
