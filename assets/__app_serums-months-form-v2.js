@@ -24,7 +24,7 @@ v2__product_variants[3][2] = 45951928860911; //2 months
 v2__product_variants[3][3] = 45951945474287; //3 months
 
 // Override 6-month variant if bundle is active
-if (document.body.getAttribute("data-test-price-bundle") === "true") {
+if (document.body.hasAttribute('data-test-price-bundle')){
 	v2__product_variants[1][6] = 46414788002031;
 }
 
