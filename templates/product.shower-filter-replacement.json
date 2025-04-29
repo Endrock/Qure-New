@@ -39,7 +39,10 @@
           "settings": {
             "heading": "White",
             "image": "shopify:\/\/shop_images\/Untitleddesign_12.png",
-            "variant_id": 46010772652271
+            "variant_id": 46010772652271,
+            "main": false,
+            "reserve": false,
+            "soldout": false
           }
         },
         "variant_7nqQxD": {
@@ -47,7 +50,10 @@
           "settings": {
             "heading": "Black",
             "image": "shopify:\/\/shop_images\/Untitleddesign_13.png",
-            "variant_id": 46010772685039
+            "variant_id": 46010772685039,
+            "main": false,
+            "reserve": false,
+            "soldout": false
           }
         },
         "subscribe_EyrzEb": {
