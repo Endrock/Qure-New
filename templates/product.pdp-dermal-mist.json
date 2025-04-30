@@ -121,8 +121,12 @@
         "custom_class": "bg-lightGrey"
       }
     },
+    "product_benefits": {
+      "type": "temp-product-pdp-dermal-mist-benefits"
+    },
     "product_benefits_EhnmRK": {
       "type": "product-benefits",
+      "disabled": true,
       "blocks": {
         "image_yFkfyU": {
           "type": "image",
@@ -506,6 +510,7 @@
   "order": [
     "main",
     "custom_qurify_filter_lp_featuredin_XN4VnN",
+    "product_benefits",
     "product_benefits_EhnmRK",
     "capsule_dropdowns_JnKRb9",
     "text_with_video_tyRqaL",
