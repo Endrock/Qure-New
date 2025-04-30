@@ -65,7 +65,7 @@ const deliveryDate = (location, orderByConfig) => {
 }
 
 
-// swiper PDP: Before & After First Image 
+// swiper PDP: Before & After First Image
 
 const swiperBeforeAfter = (selector, paginationClass) => {
   const swiperInstance = new Swiper(`${selector}`, {
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let { productId, pageHandle, productList } = socialProofContainer.dataset;
     let url = `https://webhooks.endrock.software/endrockapi/v3/app/analytics/reportsGA4.php?filterBy=productId&store=qure&name=Qure: GA4&productId=`;
 
-    // render products purchased quantity and show the social proof container 
+    // render products purchased quantity and show the social proof container
     const renderQuantity = (quantity) => {
       setTimeout(() => {
         const chatIcon = document.querySelector('iframe#launcher');
@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', function () {
     userLocationIP();
   }
 
-  //  PDP: Before & After First Image 
+  //  PDP: Before & After First Image
 
   const productComponent = document.getElementById('info-product');
   const resultComponent = document.getElementById('info-result');
@@ -292,7 +292,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // end PDP: Before & After First Image 
+  // end PDP: Before & After First Image
 
   // Micro-Infusion Landing Page Purchase Process
   const newMicroInfusionLandingPagePurchaseProcess = document.querySelector('#new-landing-purchase')
@@ -1103,7 +1103,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Center the buttons initially
   // centerStickyButtonProductHorizontally(greenProductStickyBtn);
   // centerStickyButtonProductHorizontally(greenProductStickyFormBtn);
-  
+
   // Re-center the buttons when the window is resized
   window.onresize = () => {
     // centerStickyButtonProductHorizontally(greenProductStickyBtn);
@@ -1142,15 +1142,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // end pdm product landing sales
 
-  // new sidecart timer 
+  // new sidecart timer
   const sidecartTimerContainer = document.querySelector('.slide_cart .sidecart-timer-container');
   initSidecarTimer(sidecartTimerContainer);
 
-  // sitewide timer (header) 
+  // sitewide timer (header)
   const siteWideTimerContainer = document.querySelector('.announcement_bar.site-gamification-active .sidecart-timer-container');
   initSidecarTimer(siteWideTimerContainer);
 
-  // site-wide-gamification 
+  // site-wide-gamification
   document.addEventListener('cartUpdated', event => {
     setTimeout(updateSideWideGamification, 2000);
   });
@@ -1159,7 +1159,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // pdp-carousel-image
   initPDPCarouselImage();
 
-  // frontrow-health 
+  // frontrow-health
   const frontrowHealthContainer = document.querySelector('.frontrow-health-container');
   const trustedSection = document.querySelector('.trustedVerified');
   initFrontrowHealth(frontrowHealthContainer, trustedSection);
@@ -1559,7 +1559,7 @@ if (openPopupUpsell.length > 0) {
    *
    * @param {NodeList} dataElement - A NodeList of elements containing dataset attributes for upsell logic.
    * @returns {Array<Object>} An array of objects, each representing a category of upsell products.
-   * 
+   *
    * Each object in the returned array contains:
    * - `id` {string}: The category identifier from the dataset.
    * - `name` {string}: The category name.
@@ -1573,7 +1573,7 @@ if (openPopupUpsell.length > 0) {
       {
         id: darkAndWrinkles,
         name: "dark-spots + wrinkles",
-        products: [43216489513199, 45951933022447, 45951935217903, 43216377217263, 43216449208559, 43216489513199,46314012115183]
+        products: [43216489513199, 45951933022447, 45951935217903, 43216377217263, 43216449208559, 43216489513199,46314012115183, 46427761836271]
       },
       {
         id: darkSpots,
@@ -1928,13 +1928,13 @@ if (faceSerumBuyBlockContainer) {
  * Initializes the bundle upsell functionality by adding event listeners to checkboxes
  * inside the given product bundle elements. Updates the "Buy Now" button's href and
  * onclick attributes based on the selected checkboxes.
- * 
+ *
  * @param {NodeList} pdmProductBundleElements - A NodeList containing all product bundle checkboxes.
  */
 function initBundleUpsell(pdmProductBundleElements) {
   // Get the "Buy Now" button
   const buyNowButton = document.querySelector(".btn.buy_btn");
-  if (!buyNowButton) return; 
+  if (!buyNowButton) return;
 
   // Store default values for href and onclick attributes of the "Buy Now" button
   const defaultHref = buyNowButton.getAttribute("href");
@@ -2014,7 +2014,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /**
  * Initializes the main carousel for the patches before/after gallery in the buy block
  * Creates two synchronized Swiper instances: a thumbnail slider and a main image slider
- * 
+ *
  * @function initPatchesCarouselBuyBlock
  * @returns {void}
  */
@@ -2064,7 +2064,7 @@ function initPatchesCarouselBuyBlock() {
   window.patchesCarousel = {
     /**
      * Navigate to a specific slide in the carousel
-     * 
+     *
      * @param {number} slideIndex - Index of the slide to navigate to
      * @returns {void}
      */
@@ -2077,14 +2077,14 @@ function initPatchesCarouselBuyBlock() {
 /**
  * Conditional initialization for patches carousel in buy block based on test flag
  * Handles A/B testing scenario for the patches carousel feature
- * 
+ *
  * @function initPatchesCarouselBuyBlockTest
  * @returns {void}
  */
 function initPatchesCarouselBuyBlockTest() {
   // Check if the test flag is present on the body element
   const bodyHasPatchesBuyBlockTest = document.body.hasAttribute('data-patches-buy-block');
-  
+
   if(bodyHasPatchesBuyBlockTest) {
     // Test variant: Remove original image and initialize carousel
     const originalBuyBlockImage = document.querySelector('.img-fluid.original-buy-block__image');

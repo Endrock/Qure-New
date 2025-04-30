@@ -1,6 +1,6 @@
 
 /* Start patches free offer */
-.pdm_free-patch {
+ .pdm_free-patch {
     display: flex;
     align-items: center;
     margin: 8px 0 0;          /* space above/below */
@@ -9,35 +9,35 @@
     background: #FFF;
     border-radius: 2px;            /* slight rounding */
   }
-  .pdm_free-patch.desktop{
+   .pdm_free-patch.desktop{
     display: none;
   }
-  .pdm_free-patch.mobile{
+   .pdm_free-patch.mobile{
     display: flex;
     width: 100%;
     margin: 0px 8px 6px;
   }
 
-  .pdm_plan-with-free-patch{
+   .pdm_plan-with-free-patch{
     display: flex;
     gap: 6px;
     justify-content: space-between;
     width: 100%;
   }
-  .pdm-step_content_v2 .planBlock .monthly_plans .pdm_plan-with-free-patch .price{
+   .pdm-step_content_v2 .planBlock .monthly_plans .pdm_plan-with-free-patch .price{
     justify-content: space-between;
     padding-top: 19px;
     padding-bottom: 16px;
   }
 
-  .pdm_free-patch img {
+   .pdm_free-patch img {
     width: 39px;
     height: 26px;
     object-fit: cover;
     margin-right: 6px;
   }
 
-  .pdm_free-patch span {
+   .pdm_free-patch span {
     color: var(--Black, #000);
   font-family: Poppins;
   font-size: 10.5px;
@@ -54,7 +54,7 @@
   .pdm-step_content_v2 .planBlock .monthly_plans .pdm_plan-with-free-patch .price{
     padding-bottom: 4px;
   }
-  .pdm-step_content_v2 .pdm_price-stock-left{
+   .pdm-step_content_v2 .pdm_price-stock-left{
     height: 24px;
     width: 82px;
   }
@@ -68,7 +68,7 @@
     padding-right: 0px !important;
 }
   @media screen and (min-width: 380px) {
-    .pdm-step_content_v2 .pdm_price-stock-left{
+       .pdm-step_content_v2 .pdm_price-stock-left{
         height: 30px;
         width: 82px;
       }
@@ -104,7 +104,7 @@
         padding-bottom: 16px;
     }
 
-    .pdm-step_content_v2 .pdm_price-stock-left{
+     .pdm-step_content_v2 .pdm_price-stock-left{
         height: 36px;
         width: 82px;
       }
