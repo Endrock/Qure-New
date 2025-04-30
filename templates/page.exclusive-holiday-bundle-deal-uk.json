@@ -16,7 +16,7 @@
           "type": "announcement",
           "settings": {
             "heading": "Limited Time Only:",
-            "timer": "2025-04-22T23:59:59",
+            "timer": "2025-05-10T23:59:59",
             "timer_next": 7
           }
         },
@@ -61,7 +61,7 @@
         "navigation_link_rmYfWw"
       ],
       "settings": {
-        "button_label": "SAVE UP TO 72%",
+        "button_label": "SAVE UP TO 55%",
         "button_url": "#bf-bundles"
       }
     },
@@ -80,8 +80,8 @@
         "link_Xz3LeQ": {
           "type": "link",
           "settings": {
-            "link_label": "Shop & SAVE UP TO 72%",
-            "link_label_mobile": "Shop & SAVE UP TO 72%",
+            "link_label": "Shop & SAVE UP TO 55%",
+            "link_label_mobile": "Shop & SAVE UP TO 55%",
             "link_url": "#bf-bundles"
           }
         },
@@ -97,6 +97,7 @@
         },
         "product_TawFDR": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "heading": "Exclusive Easter Bundle",
             "discount": 72,
@@ -234,7 +235,7 @@
       ],
       "settings": {
         "seo_heading": "",
-        "heading": "Save Up to 72% on \\n Certified Skincare Solutions",
+        "heading": "Save Up to 55% on \\n Certified Skincare Solutions",
         "text": "<p>Backed by the most respected peer-reviewed <strong>Dermatologist Journals </strong>and <strong>scientific studies </strong>that prove; Qure’s skincare <strong>works.</strong></p>"
       }
     },
@@ -554,6 +555,7 @@
         },
         "product_parXfC": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "exclusive-easter-bundle-uk",
             "percent": 30,

@@ -1,3 +1,5 @@
+{% assign set_as_main = false %}
+
 <link rel="stylesheet" href="{{ 'product-extended-variants.css' | asset_url }}">
 <script type="text/javascript" src="{{ 'product-extended-variants.js' | asset_url }}" defer="defer"></script>
 
@@ -16,6 +18,18 @@
                         <h6>{{ block.settings.heading }}</h6>
                     </label>
                 </div>
+                {% unless set_as_main %}
+                    {% if block.settings.main == true %}
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                setTimeout(() => {
+                                    product_extended_variants_setAsMain('{{ block.settings.variant_id }}');
+                                }, 1000)
+                            });
+                        </script>
+                        {% assign set_as_main = true %}
+                    {% endif %}
+                {% endunless %}
                 {%- assign variant_num = variant_num | plus: 1 -%} 
             {% endif %}
         {% endfor %}

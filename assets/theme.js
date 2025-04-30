@@ -1220,6 +1220,8 @@ function myFunction() {
 /*
 * countdown js start
 */
+
+/*
 // ============== countdown JS ============
 function createCountdownTimer(targetDate, targetElement) {
     // Update the countdown every 1 second
@@ -1258,6 +1260,8 @@ countdownSections.forEach((section) => {
     const targetElement = section.querySelector(".countdown_block");
     createCountdownTimer(targetDate, targetElement);
 });
+*/
+
 /*
 * countdown js end
 */

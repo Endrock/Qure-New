@@ -1,15 +1,38 @@
 {%- assign out_of_stock_count = 0 -%}
+{%- assign variant_count = 0 -%}
+{%- assign show_out_of_stock = false -%}
 
 {%- for block in section.blocks -%}
 	{%- case block.type -%}
         {%- when 'out_of_stock' -%}
             {%- assign out_of_stock_count = out_of_stock_count | plus: 1 -%}
+        {%- when 'variant' -%}
+            {%- assign variant_count = variant_count | plus: 1 -%}
+
+            {% unless block.settings.soldout %}
+                {% if block.settings.variant_id == product.variants.first.id %}
+                    {% if block.settings.reserve == true %}
+                        {% assign show_out_of_stock = true %}
+                    {% endif %}
+                {% endif %}
+            {% endunless %}
     {%- endcase -%}
 {%- endfor -%}
 
-{% if out_of_stock_count > 0 %}
+<style>
+    .out_of_stock {
+        margin-top: 20px;
+        {% if show_out_of_stock == true %}
+        display: block;
+        {% else %}   
+        display:none;
+        {% endif %}
+    }
+</style>
 
-    <div class="next_batch_bl next_batch_highlight out_of_stock" style="margin-top: 20px">
+
+{% if out_of_stock_count > 0 %}
+    <div class="next_batch_bl next_batch_highlight out_of_stock">
         {%- for block in section.blocks -%}
             {% if block.type == 'out_of_stock' %}
                 {% if block.settings.heading != blank %}
@@ -50,27 +73,93 @@
 
     <script>
         function checkVariantInURL() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const variantParam = urlParams.get('variant');
             const targetDiv = document.querySelector('div.out_of_stock');
             const buttons = document.querySelectorAll('.btn_text_value');
+            const buttons_sticky = document.querySelectorAll('.button_sticky');
+
+            const text_soldout = 'Sold Out';
+            const text_buynow = 'Buy Now';
+            const text_reserve_now = 'Reserve Now';
+            const text_subscribe_now = 'Subscribe Now';
+            const text_add_to_bag = 'ADD TO BAG';
+
+            const urlParams = new URLSearchParams(window.location.search);
+            let variantParam = urlParams.get('variant');
+
+            if(!variantParam)
+            {
+                variantParam = '{{ product.variants.first.id }}';
+            }
 
             if (targetDiv) {
-                if (variantParam === '45909763490031') {
-                    targetDiv.style.display = 'none';
-                    buttons.forEach(btn => {
-                        if (btn.classList.contains('with_subscription')) {
-                            btn.textContent = 'Subscribe now';
-                        } else {
-                            btn.textContent = 'Buy now';
-                        }
-                    });
-                } else {
-                    targetDiv.style.display = '';
-                    buttons.forEach(btn => {
-                        btn.textContent = 'Reserve now';
-                    });
-                }
+                {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                        {%- when 'variant' -%}
+                                {% if block.settings.reserve == true %}
+                                    if(variantParam === '{{ block.settings.variant_id }}')
+                                    {
+                                        {% if block.settings.soldout == true %}
+                                            targetDiv.style.display = 'none';
+
+                                            buttons.forEach(btn => {
+                                                btn.textContent = text_soldout;
+                                                btn.style.pointerEvents = 'none';
+                                            });
+
+                                            buttons_sticky.forEach(btn_s => {
+                                                btn_s.textContent = text_soldout;
+                                                btn_s.style.pointerEvents = 'none';
+                                            });
+                                        {% else %}
+                                            targetDiv.style.display = 'block';
+
+                                            buttons.forEach(btn => {
+                                                btn.textContent = text_reserve_now;
+                                                btn.style.pointerEvents = '';
+                                            });
+
+                                            buttons_sticky.forEach(btn_s => {
+                                                btn_s.textContent = text_add_to_bag;
+                                                btn_s.style.pointerEvents = '';
+                                            });
+
+                                        {% endif %}
+                                    }
+                                {% else %}
+                                    if(variantParam === '{{ block.settings.variant_id }}')
+                                    {
+                                        targetDiv.style.display = 'none';
+
+                                        {% if block.settings.soldout == true %}
+                                            buttons.forEach(btn => {
+                                                btn.textContent = text_soldout;
+                                                btn.style.pointerEvents = 'none';
+                                            });
+
+                                            buttons_sticky.forEach(btn_s => {
+                                                btn_s.textContent = text_soldout;
+                                                btn_s.style.pointerEvents = 'none';
+                                            });
+
+                                        {% else %}
+                                            buttons.forEach(btn => {
+                                                if (btn.classList.contains('with_subscription')) {
+                                                    btn.textContent = text_subscribe_now;
+                                                } else {
+                                                    btn.textContent = text_buynow;
+                                                }
+                                                btn.style.pointerEvents = '';
+                                            });
+
+                                            buttons_sticky.forEach(btn_s => {
+                                                btn_s.textContent = text_add_to_bag;
+                                                btn_s.style.pointerEvents = '';
+                                            });
+                                        {% endif %}
+                                    }
+                                {% endif %}
+                    {%- endcase -%}
+                {%- endfor -%}
             }
         }
 
@@ -87,6 +176,5 @@
 
             window.addEventListener('popstate', checkVariantInURL);
         });
-    </script>
-
+    </script>    
 {% endif %}

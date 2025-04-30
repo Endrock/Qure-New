@@ -16,7 +16,7 @@
           "type": "announcement",
           "settings": {
             "heading": "Limited Time Only:",
-            "timer": "2025-04-21T23:59:59",
+            "timer": "2025-05-10T23:59:59",
             "timer_next": 7
           }
         },
@@ -61,7 +61,7 @@
         "navigation_link_rmYfWw"
       ],
       "settings": {
-        "button_label": "SAVE UP TO 72%",
+        "button_label": "SAVE UP TO 55%",
         "button_url": "#bf-bundles"
       }
     },
@@ -80,13 +80,14 @@
         "link_Xz3LeQ": {
           "type": "link",
           "settings": {
-            "link_label": "Shop & SAVE UP TO 72%",
-            "link_label_mobile": "Shop & SAVE UP TO 72%",
+            "link_label": "Shop & SAVE UP TO 55%",
+            "link_label_mobile": "Shop & SAVE UP TO 55%",
             "link_url": "#bf-bundles"
           }
         },
         "product_L8TbkG": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "heading": "Exclusive Easter bundle",
             "discount": 72,
@@ -223,7 +224,7 @@
       ],
       "settings": {
         "seo_heading": "",
-        "heading": "Save Up to 72% on \\n Certified Skincare Solutions",
+        "heading": "Save Up to 55% on \\n Certified Skincare Solutions",
         "text": "<p>Backed by the most respected peer-reviewed <strong>Dermatologist Journals </strong>and <strong>scientific studies </strong>that prove; Qure’s skincare <strong>works.</strong></p>"
       }
     },
@@ -543,6 +544,7 @@
         },
         "product_6Nmeyc": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "exclusive-easter-bundle",
             "percent": 30,
@@ -606,7 +608,7 @@
             "recommended_heading": "",
             "recommended_text": "",
             "is_top_rated": false,
-            "is_preorder": true,
+            "is_preorder": false,
             "preorder_text": "SHIPS END OF APRIL",
             "classname": "",
             "code": ""
@@ -634,7 +636,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs_blue-patches.webp",
             "text": "<h5>MICRO-INFUSION TARGETED PATCHES INGREDIENTS:</h5><p>Sodium Hyaluronate, Caffeine, Copper-Tripeptide-1, Niacinamide, Cyclodextrin, Water, Glycine Soja (Soybean) Oil, Madecassoside, Macadamia Nut Oil, Allantoin, Retinol, Oil Soluble Licorice(Glycyrrhiza) Extract, Centella Asiatica Extract, Acetyl Hexapeptide-8, BHT.</p>",
-            "count": "Ships End of April",
+            "count": "",
             "hide": false,
             "hide_variants": false,
             "code": ""
@@ -752,7 +754,7 @@
             "recommended_heading": "",
             "recommended_text": "",
             "is_top_rated": false,
-            "is_preorder": true,
+            "is_preorder": false,
             "preorder_text": "SHIPS END OF APRIL",
             "classname": "",
             "code": ""
@@ -780,7 +782,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs_blue-patches_63ddb186-2ec2-4ad0-b37e-80e6a81340fb.webp",
             "text": "<h5>MICRO-INFUSION TARGETED PATCHES INGREDIENTS:</h5><p>Sodium Hyaluronate, Caffeine, Copper-Tripeptide-1, Niacinamide, Cyclodextrin, Water, Glycine Soja (Soybean) Oil, Madecassoside, Macadamia Nut Oil, Allantoin, Retinol, Oil Soluble Licorice(Glycyrrhiza) Extract, Centella Asiatica Extract, Acetyl Hexapeptide-8, BHT.</p>",
-            "count": "Ships End of April",
+            "count": "",
             "hide": false,
             "hide_variants": false,
             "code": ""
@@ -1365,7 +1367,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs-derma-mist.webp",
             "text": "<h5>Dermal Mist</h5><p>Dermatologically Tested, Clinically Tested, Hypoallergenic, Suitable for sensitive skin, Dermatologist approved, Allergy Tested, Non-Irritating</p><h5>Dermal Mist Ingredients List</h5><p>WATER (Aqua)*, CHRYSANTHELLUM INDICUM FLOWER WATER, SODIUM CHLORIDE, SODIUM PHOSPHATE, DISODIUM PHOSPHATE, HYPOCHLOROUS ACID. *Ultra Pure Water.</p>",
-            "count": "Ships Mid April",
+            "count": "",
             "hide": false,
             "hide_variants": false,
             "code": ""
@@ -1434,7 +1436,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs-derma-mist.webp",
             "text": "<h5>Dermal Mist</h5><p>Dermatologically Tested, Clinically Tested, Hypoallergenic, Suitable for sensitive skin, Dermatologist approved, Allergy Tested, Non-Irritating.</p><h5>Dermal Mist Ingredients</h5><p>WATER (Aqua)*, CHRYSANTHELLUM INDICUM FLOWER WATER, SODIUM CHLORIDE, SODIUM PHOSPHATE, DISODIUM PHOSPHATE, HYPOCHLOROUS ACID. *Ultra Pure Water.</p>",
-            "count": "Ships Mid April",
+            "count": "",
             "hide": false,
             "hide_variants": false,
             "code": ""
