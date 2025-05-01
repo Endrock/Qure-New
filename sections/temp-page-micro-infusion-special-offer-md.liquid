@@ -1,4 +1,10 @@
-<link rel="stylesheet" href="https://qureskincaredns.com/new/assets/micro-infusion-special-offer-md.css">
+<link rel="stylesheet" href="https://qureskincaredns.com/new/assets/micro-infusion-special-offer-md.css?rnd=1">
+
+<style>
+    .needsclick {
+        display: none !important;
+    }
+</style>
 
 <div class="wrapper header-wrapperBlock home-default-wrapper mi-landing-page" id="micro-infusion-special-offer-md">
     <div class="mothers_day_header">
@@ -6,7 +12,7 @@
             <div class="offer-banner">
                 <div class="row align-items-center justify-content-between gy-2">
                     <div class="col-md-6 d-flex flex-column align-items-start gap-3">
-                        <a href="#buy_section" class="offer-button">SAVE UP TO 72%</a>
+                        <a href="#buy_section" class="offer-button">SAVE UP TO 70%</a>
                         <div class="offer-text">Mother’s Day Special Offer</div>
                     </div>
                     <div class="col-md-6 text-md-end">
@@ -955,7 +961,7 @@
                     </ul>
                 </div>
                 <div class="col-md-4 text-md-end text-center">
-                    <img src="https://qureskincaredns.com/new/assets/serum_img11.webp" alt="Serum 1" class="img-fluid serum-image" />
+                    <img src="https://qureskincaredns.com/new/assets/serum_img11.webp?rnd=1" alt="Serum 1" class="img-fluid serum-image" />
                 </div>
             </div>
 
@@ -975,7 +981,7 @@
                     </ul>
                 </div>
                 <div class="col-md-4 text-md-end text-center">
-                    <img src="https://qureskincaredns.com/new/assets/serum_img22.webp" alt="Serum 2" class="img-fluid serum-image" />
+                    <img src="https://qureskincaredns.com/new/assets/serum_img22.webp?rnd=1" alt="Serum 2" class="img-fluid serum-image" />
                 </div>
             </div>
         </div>
@@ -1622,7 +1628,7 @@
                                             <div class="compare__titleBlock">
                                                 <h4 class="compare__title text-center"><img src="https://qureskincaredns.com/new/assets/tick_full_green.svg" alt="" class="opacity-0"><strong> Qure Micro-Infusion</strong></h4>
                                             </div><div class="compare__titleBlock">
-                                                <h4 class="compare__title"><img src="https://qureskincaredns.com/new/assets/tick_full_green.svg" alt=""> As little as $16.50 per <br> treatment</h4>
+                                                <h4 class="compare__title"><img src="https://qureskincaredns.com/new/assets/tick_full_green.svg" alt=""> As little as $18.25 per <br> treatment</h4>
                                             </div><div class="compare__titleBlock">
                                                 <h4 class="compare__title"><img src="https://qureskincaredns.com/new/assets/tick_full_green.svg" alt="">Gentle & easy</h4>
                                             </div><div class="compare__titleBlock">
@@ -1737,7 +1743,7 @@
                     <div class="science_backed_formulation_wrapper">
                         <div class="science_backed_formulation_content">
                             <p>As you can see, it’s <strong> extremely affordable… </strong></p>
-                            <p>You can pay <strong> as little as $16.50 per treatment</strong>, that’s <strong> 94% LESS </strong> than you’d pay for a SINGLE microneedling treatment with your dermatologist…</p>
+                            <p>You can pay <strong> as little as $18.25 per treatment</strong>, that’s <strong> 94% LESS </strong> than you’d pay for a SINGLE microneedling treatment with your dermatologist…</p>
                             <p>Making it <strong> easy for you to justify </strong> giving yourself <strong> this Hollywood facial </strong> at home <strong><em>every two weeks! </em></strong></p>
                             <p class="fw-bold">Just 5 Minutes, Twice a Month Is All You Need.</p>
                             <p> ✔ No complicated routines. <br>
@@ -2068,7 +2074,7 @@
             <div class="offer-banner offer_banner_below mb-5">
                 <div class="row align-items-end justify-content-between gy-2">
                     <div class="col-md-7 d-flex flex-column align-items-start gap-1">
-                        <a href="" class="offer-button offer-button_below ">SAVE UP TO 72%</a>
+                        <a href="" class="offer-button offer-button_below ">SAVE UP TO 70%</a>
                         <div class="title-lg ff_poppins">Mother’s Day Special Offer</div>
                         <p class="fst-italic gift_youthful_skin">Give the gift of youthful skin</p>
                     </div>
@@ -2105,14 +2111,37 @@
                                 <p class="mi_treat">(12 Micro-Infusion Treatments)</p>
                             </div>
                             <img src="https://qureskincaredns.com/new/assets/six_months_supply.webp" alt="" class="img-fluid">
+
+                            {% assign product = all_products['micro-infusion-6-month-bundle-for-wrinkles-dark-spots-1'] %}
+                            {% assign product_price_divided = product.price | divided_by: 12 %}
+                            {% assign product_variant_id = product.variants.first.id %}
+                            {% assign discount_difference = product.compare_at_price | minus: product.price %}
+                            {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
+
                             <div class="treat_content">
-                                <p class="treatment_text">$16.50 Per Treatment</p>
-                                <p class="off_text">72% OFF</p>
-                                <p class="you_save">You Save $516</p>
+                                <p class="treatment_text">{{ product_price_divided | money_without_trailing_zeros }} Per Treatment</p>
+                                <p class="off_text">{{ discount_percentage }}% OFF</p>
+                                <p class="you_save">You Save {{ discount_difference | money_without_trailing_zeros }}</p>
                             </div>
                             <div class="btn_dv">
                                 <a href="javascript:;" class="mothers_offer_buy_now" id="buy-now-button-plan3">BUY NOW</a>
                             </div>
+
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    document.getElementById('buy-now-button-plan3').addEventListener('click', function() {
+                                        let __discount = '';
+                                        let __items = [];
+
+                                        __items.push({
+                                            id: {{ product_variant_id }},
+                                            quantity: 1
+                                        });
+
+                                        purchase(__items, __discount)
+                                    });
+                                });
+                            </script>
                         </div>
                     </div>
                 </div>
@@ -2125,14 +2154,37 @@
                             <p class="mi_treat">(6 Micro-Infusion Treatments)</p>
                         </div>
                         <img src="https://qureskincaredns.com/new/assets/three_months_supply.webp" alt="" class="img-fluid">
+
+                        {% assign product = all_products['micro-infusion-3-month-bundle-hydra-soothing-rejuvenating'] %}
+                        {% assign product_price_divided = product.price | divided_by: 6 %}
+                        {% assign product_variant_id = product.variants.first.id %}
+                        {% assign discount_difference = product.compare_at_price | minus: product.price %}
+                        {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
+
                         <div class="treat_content">
-                            <p class="treatment_text">$24.83 Per Treatment</p>
-                            <p class="off_text">58% OFF</p>
-                            <p class="you_save">You Save $208</p>
+                            <p class="treatment_text">{{ product_price_divided | money_without_trailing_zeros }} Per Treatment</p>
+                            <p class="off_text">{{ discount_percentage }}% OFF</p>
+                            <p class="you_save">You Save {{ discount_difference | money_without_trailing_zeros }}</p>
                         </div>
                         <div class="btn_dv">
                             <a href="javascript:;" class="mothers_offer_buy_now" id="buy-now-button-plan2">BUY NOW</a>
                         </div>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                document.getElementById('buy-now-button-plan2').addEventListener('click', function() {
+                                    
+                                    let __discount = '';
+                                    let __items = [];
+
+                                    __items.push({
+                                        id: {{ product_variant_id }},
+                                        quantity: 1
+                                    });
+
+                                    purchase(__items, __discount)
+                                });
+                            });
+                        </script>
                     </div>
                     </div>
                 </div>
@@ -2140,15 +2192,36 @@
                     <div class="choosing_savings_item_wrapper">
                     <p class="best_offer shadow-none"></p>
                     <div class="choosing_your_savings_item border_lime">
+
+                        {% assign product = all_products['micro-infusion-1-month-bundle-1x-b-g-serum-1x-e-g-f-serum'] %}
+                        {% assign product_price_divided = product.price | divided_by: 2 %}
+                        {% assign product_variant_id = product.variants.first.id %}
+
                         <div class="month_system">
                             <h3>1 Month SYSTEM</h3>
                             <p class="mi_treat">(2 Micro-Infusion Treatments)</p>
                             <img src="https://qureskincaredns.com/new/assets/one_month_supply.webp" alt="" class="img-fluid">
-                            <p class="treatment_text">$59.50 Per Treatment</p>
+                            <p class="treatment_text">{{ product_price_divided | money_without_trailing_zeros }} Per Treatment</p>
                         </div>
                         <div class="btn_dv">
                             <a href="javascript:;" class="mothers_offer_buy_now" id="buy-now-button-plan1">BUY NOW</a>
                         </div>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                document.getElementById('buy-now-button-plan1').addEventListener('click', function() {
+                                    
+                                    let __discount = '';
+                                    let __items = [];
+
+                                    __items.push({
+                                        id: {{ product_variant_id }},
+                                        quantity: 1
+                                    });
+
+                                    purchase(__items, __discount)
+                                });
+                            });
+                        </script>
                     </div>
                     </div>
                 </div>
@@ -2398,45 +2471,6 @@
             }, {} )
         }
     }
-
-    document.getElementById('buy-now-button-plan1').addEventListener('click', function() {
-        
-        let __discount = '';
-        let __items = [];
-
-        __items.push({
-            id: 43216489513199,
-            quantity: 1
-        });
-
-        purchase(__items, __discount)
-    });
-
-    document.getElementById('buy-now-button-plan2').addEventListener('click', function() {
-        
-        let __discount = '';
-        let __items = [];
-
-        __items.push({
-            id: 46356912603375,
-            quantity: 1
-        });
-
-        purchase(__items, __discount)
-    });
-
-    document.getElementById('buy-now-button-plan3').addEventListener('click', function() {
-        
-        let __discount = '';
-        let __items = [];
-
-        __items.push({
-            id: 46356912603375,
-            quantity: 2
-        });
-
-        purchase(__items, __discount)
-    });
 </script>
 
 <script src="https://fast.wistia.com/embed/medias/3ahwzg8wjz.jsonp" async></script>
