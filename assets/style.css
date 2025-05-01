@@ -32444,6 +32444,10 @@ picture img {
     height: 25px;
 }
 @media(max-width:767px){
+   .mi_acne .imageText .aboveText {
+        bottom: 40px;
+        top: unset !important;
+    }
     .marquee1{
         animation-name: marquee1;
     }
@@ -32462,4 +32466,7 @@ picture img {
 
 .mi_goes_where .section_header {
     padding-bottom: 0;
+}
+.mi_goes_where .skincare_percent p {
+    font-size: 13px;
 }
