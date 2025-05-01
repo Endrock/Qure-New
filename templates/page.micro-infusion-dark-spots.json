@@ -1,69 +1,160 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "header_landing_yzqaEc": {
-        "type": "header-landing",
-        "blocks": {
-          "announcement_QmXGJK": {
-            "type": "announcement",
-            "settings": {
-              "heading": "SAVE UP TO 59% | Limited time Offer",
-              "heading_mobile": "SAVE UP TO 59% | Limited time Offer",
-              "color": "green",
-              "font_size_desktop": 14,
-              "font_size_mobile": 13
-            }
-          },
-          "navigation_link_97aJVY": {
-            "type": "navigation-link",
-            "settings": {
-              "link_label": "BENEFITS",
-              "link_url": "#reasons_section",
-              "image": "shopify://shop_images/nav_1.png"
-            }
-          },
-          "navigation_link_CmRG9V": {
-            "type": "navigation-link",
-            "settings": {
-              "link_label": "RESULTS",
-              "link_url": "#result_section",
-              "image": "shopify://shop_images/header_2.webp"
-            }
-          },
-          "navigation_link_wMtKmt": {
-            "type": "navigation-link",
-            "settings": {
-              "link_label": "FAQ'S",
-              "link_url": "#faq_section",
-              "image": "shopify://shop_images/header_4.webp"
-            }
+      "type": "header-landing",
+      "blocks": {
+        "announcement_QmXGJK": {
+          "type": "announcement",
+          "settings": {
+            "heading": "SAVE UP TO 59% | Limited time Offer",
+            "heading_mobile": "SAVE UP TO 59% | Limited time Offer",
+            "color": "green",
+            "font_size_desktop": 14,
+            "font_size_mobile": 13
           }
         },
-        "block_order": [
-          "announcement_QmXGJK",
-          "navigation_link_97aJVY",
-          "navigation_link_CmRG9V",
-          "navigation_link_wMtKmt"
-        ],
-        "settings": {
-          "button_label": "SAVE UP TO 59%",
-          "button_url": "#productSubscription"
+        "navigation_link_97aJVY": {
+          "type": "navigation-link",
+          "settings": {
+            "link_label": "BENEFITS",
+            "link_url": "#reasons_section",
+            "image": "shopify:\/\/shop_images\/nav_1.png"
+          }
+        },
+        "navigation_link_CmRG9V": {
+          "type": "navigation-link",
+          "settings": {
+            "link_label": "RESULTS",
+            "link_url": "#result_section",
+            "image": "shopify:\/\/shop_images\/header_2.webp"
+          }
+        },
+        "navigation_link_wMtKmt": {
+          "type": "navigation-link",
+          "settings": {
+            "link_label": "FAQ'S",
+            "link_url": "#faq_section",
+            "image": "shopify:\/\/shop_images\/header_4.webp"
+          }
         }
       },
+      "block_order": [
+        "announcement_QmXGJK",
+        "navigation_link_97aJVY",
+        "navigation_link_CmRG9V",
+        "navigation_link_wMtKmt"
+      ],
+      "settings": {
+        "button_label": "SAVE UP TO 59%",
+        "button_url": "#productSubscription"
+      }
+    },
+    "featuredin_TRUVpW": {
+      "type": "featuredin",
+      "blocks": {
+        "image_97KgG3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vogue_icon_0e2c0d8a-2998-423c-aeda-e708845718ec.png",
+            "mobile_hide": false
+          }
+        },
+        "image_QVNmkF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cosmopolitan_76e124b7-290e-4593-b031-e15242709f0a.svg",
+            "mobile_hide": false
+          }
+        },
+        "image_6crcLq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/elle_e3f3335b-7ad1-476c-b0ba-3da1880ae9a2.svg",
+            "mobile_hide": false
+          }
+        },
+        "image_67GkzM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/glamour_d84111c4-117f-49b6-a938-92e01b686bf0.svg",
+            "mobile_hide": false
+          }
+        },
+        "image_49UEP9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/grazia_707ddcc1-d346-4939-8c2a-b7ae511acfd2.svg",
+            "mobile_hide": false
+          }
+        }
+      },
+      "block_order": [
+        "image_97KgG3",
+        "image_QVNmkF",
+        "image_6crcLq",
+        "image_67GkzM",
+        "image_49UEP9"
+      ],
+      "name": "t:sections.featuredin.name",
+      "settings": {
+        "heading": "",
+        "custom_cls": "bg-lightGrey"
+      }
+    },
+    "image_text_3b878r": {
+      "type": "image-text",
+      "blocks": {
+        "wistia_HK6Gzk": {
+          "type": "wistia",
+          "settings": {
+            "wistia": "a1pykz2tp0",
+            "wistia_m": "6ffu0xdg6l"
+          }
+        },
+        "text_Phbhym": {
+          "type": "text",
+          "settings": {
+            "ctm_cls": "",
+            "heading_first": "",
+            "text": "<p>Its tiny, almost painless, microneedles penetrate beyond the skin's surface to<strong>target pigmentation at the source<\/strong>and deliver powerful active ingredients EXACTLY where they're needed for dark spot improvement!<\/p>",
+            "txt_order_mob": false,
+            "ctm_cls_btn": "mw-455",
+            "btn_text": "HOLIDAY OFFER SAVE 61%",
+            "btn_url": "#productSubscription",
+            "custom_class": "",
+            "heading2": "",
+            "text2": "",
+            "heading3": "",
+            "text3": ""
+          }
+        }
+      },
+      "block_order": [
+        "wistia_HK6Gzk",
+        "text_Phbhym"
+      ],
+      "name": "t:sections.img_txt.name",
+      "settings": {
+        "background": "bg_clr_transparent",
+        "heading": "Qure’s Micro-Infusion Goes Where Your Skin Cream Can’t…",
+        "hide_on_mob": false,
+        "column": 5,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "show_comment": false,
+        "custom_class": "mi_goes_where"
+      }
+    },
     "main": {
-      "type": "temp-page-micro-infusion-dark-spots"
+      "type": "temp-page-micro-infusion-dark-spots",
+      "disabled": true,
+      "settings": {}
     }
   },
   "order": [
     "header_landing_yzqaEc",
+    "featuredin_TRUVpW",
+    "image_text_3b878r",
     "main"
   ]
 }
