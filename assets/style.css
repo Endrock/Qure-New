@@ -32460,3 +32460,8 @@ picture img {
 }
 /* css for endless slider  */
 
+.mi_acne .qure_MI_ftr_wrap .btn-primary {
+    max-width: 452px !important;
+    font-size: 22px;
+}
+
