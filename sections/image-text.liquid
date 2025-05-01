@@ -142,7 +142,7 @@
                   </div>
                 {%- endif -%}
                 {% if block.settings.btn_text != blank %}
-                  <a href="{{ block.settings.btn_url }}" class="mt-4 btn btn-lg btn-primary mw-268 fw-medium">
+                  <a href="{{ block.settings.btn_url }}" class="mt-4 btn btn-lg btn-primary mw-268 fw-medium {{ block.settings.ctm_cls_btn }}">
                     {{- block.settings.btn_text -}}
                   </a>
                 {% endif %}
@@ -414,6 +414,11 @@
           "type": "image_picker",
           "id": "rating",
           "label": "t:common.rating.stars"
+        },
+        {
+          "type": "textarea",
+          "id": "ctm_cls_btn",
+          "label": "t:common.classname.custom"
         },
         {
           "type": "text",
