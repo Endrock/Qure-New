@@ -116,7 +116,7 @@
           "settings": {
             "ctm_cls": "",
             "heading_first": "",
-            "text": "<p>Its tiny, almost painless, microneedles penetrate beyond the skin's surface to<strong>target pigmentation at the source<\/strong>and deliver powerful active ingredients EXACTLY where they're needed for dark spot improvement!<\/p>",
+            "text": "<p>Its tiny, almost painless, microneedles penetrate beyond the skin's surface to <strong>target pigmentation at the source <\/strong>and deliver powerful active ingredients EXACTLY where they're needed for dark spot improvement!<\/p>",
             "txt_order_mob": false,
             "ctm_cls_btn": "mw-455",
             "btn_text": "HOLIDAY OFFER SAVE 61%",
@@ -127,11 +127,19 @@
             "heading3": "",
             "text3": ""
           }
+        },
+        "percent_bar_Hdnmdh": {
+          "type": "percent_bar",
+          "settings": {
+            "percent_bar": 70,
+            "agreed_text": "ccccccccccccccccccccccc"
+          }
         }
       },
       "block_order": [
         "wistia_HK6Gzk",
-        "text_Phbhym"
+        "text_Phbhym",
+        "percent_bar_Hdnmdh"
       ],
       "name": "t:sections.img_txt.name",
       "settings": {
