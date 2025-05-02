@@ -5,14 +5,15 @@ let v2__product_variant = 45951935217903; //default product variant
 let v2__product_variants = [];
 
 //Rejuvenating + Hydra-Soothing
-v2__product_variants[1] = [];  
+v2__product_variants[1] = [];
 v2__product_variants[1][1] = 43216489513199; //1 month
 v2__product_variants[1][2] = 45951933022447; //2 months
 v2__product_variants[1][3] = 45951935217903; //3 months
 v2__product_variants[1][6] = 46314012115183; //6 months
+v2__product_variants[1][61] = 46427761836271; //6 months + free patches
 
 //Rejuvenating
-v2__product_variants[2] = []; 
+v2__product_variants[2] = [];
 v2__product_variants[2][1] = 43216457203951; //1 month
 v2__product_variants[2][2] = 45951954419951; //2 months
 v2__product_variants[2][3] = 45951948947695; //3 months

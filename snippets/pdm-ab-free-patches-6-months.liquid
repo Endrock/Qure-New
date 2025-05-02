@@ -1,39 +1,19 @@
+{% comment %}
+  This section is used to render the treatment options for the MicroInfusion offer.
+  It includes product selection, payment options, and upsell offers.
+  The section is designed to be responsive and includes various design elements.
+  The template uses Liquid objects and filters to dynamically display product information.
+
+  Usage:
+  {% render 'pdm-ab-free-patches-6-months' %}
+{% endcomment %}
 {% liquid
   assign price_first_element = ''
   assign price_second_element = ''
   assign price_third_element = ''
 %}
-
-{% if section_id == blank %}
-  <p>Please provide section_id property to use this snippet</p>
-{% else %}
-  <style>
-    .offer_active .supply_steps .step_block .step_content .serumBlock input.active + .serum_prd:after {
-      display: none !important;
-    }
-
-    .planBlock .plan_choosed span {
-      background: #000 !important;
-    }
-
-    .planBlock .plan_choosed {
-      text-align: left !important;
-      position: relative !important;
-      left: 30px !important;
-      max-width: 100% !important;
-    }
-    .step_counter_before:before {
-      display: none !important;
-    }
-  </style>
-
-  <!-- treatment section start -->
-  <div class="available_bar">
-    <p>SOLD OUT 10X - AVAILABLE UNTIL STOCK LASTS</p>
-  </div>
-  <div class="section productSubscription choose_serum form-{{ section_id }}" id="productSubscription">
-    <div class="container">
-      <div class="row pdm-treatment__row-container">
+      <div class="row six-months-ba-test__row-container">
+        {{ '_pdm_landing-serums-free-patches.css' |  asset_url |  stylesheet_tag }}
         <div class="col-md-6">
           <div class="qure__treatments">
             <div class="text-start order-2 order-md-1">
@@ -102,7 +82,7 @@
                 </div>
                 <div class="step_content pdm-step_content_v2">
                   <div class="step_conten_blocks">
-                    {% assign product = all_products['microinfusion-offer-6-month-supply'] %}
+                    {% assign product = all_products['micro-infusion-6-month-bundle-for-wrinkles-dark-spots-free-patches'] %}
                     {% assign divided_price = product.price | divided_by: 4 %}
                     {% assign discount_percentage = product.price
                       | times: 1.0
@@ -141,24 +121,32 @@
                         name="monthlyPlan"
                         id="3_month"
                         checked
-                        data-product-period="6"
+                        data-product-period="61"
                         data-product-variant-id="{{ product.variants.first.id }}"
                         data-product-id="{{ product.id }}"
                       >
                       <label class="monthly_plans" for="3_month">
-                          <div class="plan_des">
+                        <div class="pdm_plan-with-free-patch">
+                          <div class="plan_des container">
                             <div class="plan_hdr">
                               <h3>6 Month Supply</h3>
                               <span class="saved_price item-1">SAVE {{ discount_percentage }}%</span>
                             </div>
                             <div class="plan_des">(12 Micro-infusion Treatments)</div>
+                            <!-- “Free Patch” badge desktop -->
+                            <div class="pdm_free-patch desktop">
+                              <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/patches_168px.png?v=1745556105" width="42" height="26" alt="Micro-Infusion Patch icon" />
+                              <span><strong>Get a Free</strong> Pair of Micro-Infusion Patches</span>
+                            </div>
+                            <!-- End of “Free Patch” badge desktop -->
                           </div>
                           <div class="price pmd_price-first-elemnt">
-                          <div class="price-row">
+                            <div class="price-row pdm_price-stock">
                               <div class="plan_prc regular_price">
-                              {{ product.compare_at_price | money_without_trailing_zeros }}
+                                {{ product.compare_at_price  |  divided_by: 100 |  round | times: 100 | money_without_trailing_zeros }}
                               </div>
-                            <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
+
+                              <div class="plan_prc sale_price">{{ product.price |  divided_by: 100 |  round | times: 100 | money_without_trailing_zeros }}</div>
                             </div>
                             <div class="pdm_price-stock-left">
                               <svg
@@ -174,6 +162,13 @@
                               <p><strong class="pdm_price-stock-left-quantity"></strong>left</p>
                             </div>
                           </div>
+                        </div>
+                        <!-- “Free Patch” badge mobile -->
+                        <div class="pdm_free-patch mobile">
+                          <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/patches_168px.png?v=1745556105" width="42" height="26" alt="Micro-Infusion Patch icon" />
+                          <span><strong>Get a Free</strong> Pair of Micro-Infusion Patches</span>
+                        </div>
+                        <!-- End of “Free Patch” badge mobile -->
                         <div class="pdm_plan-bundle-detail item-1">
                           <p>🔥 Only $20,75 per treatment</p>
                         </div>
@@ -407,7 +402,7 @@
               </div>
             </div>
 
-            {% assign product = all_products['microinfusion-offer-6-month-supply'] %}
+            {% assign product = all_products['micro-infusion-6-month-bundle-for-wrinkles-dark-spots-free-patches'] %}
             {% assign divided_price = product.price | divided_by: 4 %}
             {% assign discount_percentage = product.price
               | times: 1.0
@@ -535,25 +530,34 @@
           </div>
         </div>
       </div>
-      {% render 'pdm-ba-treatment-options' %}
-      {% render 'pdm-ab-free-patches-6-months', section_id: section_id, section: section %}
-    </div>
-  </div>
-  <div
-    id="pdm_price-difference-container"
-    data-price-first="{{ price_first_element | minus: price_second_element | money_without_trailing_zeros }}"
-    data-price-second="{{ price_second_element | minus: price_third_element | money_without_trailing_zeros }}"
-    hidden
-  ></div>
-
-  <script src="{{ '__app_serums-months-form-v2.js' | asset_url }}"></script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      if(document.body.hasAttribute('data-ba-treatment-options') || document.body.hasAttribute('data-ab-free-patches-6-months')) {
-        document.querySelector('.row.pdm-treatment__row-container').remove();
-        return;
+      if (!document.body.hasAttribute('data-ab-free-patches-6-months')) {
+      document.querySelector('.row.6months-ba-test__row-container').remove();
+    }else{
+      const radioInput = document.querySelector('.six-months-ba-test__row-container [data-tab="month_3"] input[type="radio"]');
+      if (radioInput) {
+        radioInput.checked = true;
+        const changeEvent = new Event('change', {
+          bubbles: true,
+          cancelable: true,
+        });
+        radioInput.dispatchEvent(changeEvent);
       }
+      const radioInputPayFull = document.querySelector(
+        '.six-months-ba-test__row-container .step_content.item-3 input[type="radio"]'
+      );
+      if (radioInputPayFull) {
+        radioInputPayFull.checked = true;
+        const changeEvent = new Event('change', {
+          bubbles: true,
+          cancelable: true,
+        });
+        radioInputPayFull.dispatchEvent(changeEvent);
+      }
+      return;
+    }
       v2__selectProduct('{{ section_id }}_');
 
       const v2__parent = '.form-{{ section_id }}';
@@ -579,4 +583,3 @@
       }
     });
   </script>
-{% endif %}
