@@ -1,5 +1,5 @@
 <!-- -- best results start -- -->
-<div class="best_result bg_yellow section">
+<div class="best_result bg-grey section {{ section.settings.ctm_clss }}">
     <div class="container">
         <div class="section_header text-start text-md-center mb-3">
             {% if section.settings.heading != blank %}
@@ -80,6 +80,11 @@
         "name": "t:sections.compare-box.name",
         "class": "section-personalized",
         "settings": [
+            {
+                "type": "text",
+                "id": "ctm_clss",
+                "label": "t:common.classname.custom"
+            },
             {
                 "type": "text",
                 "id": "heading",

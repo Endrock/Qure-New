@@ -32443,7 +32443,49 @@ picture img {
 .marquee-row img {
     height: 25px;
 }
+
+
+.mi_goes_where .section_header {
+    padding-bottom: 0;
+}
+.mi_goes_where .skincare_percent p {
+    font-size: 13px;
+}
+.img_ser img {
+    height: 130px;
+}
+.rej_ser_dv {
+    gap: 42px;
+    margin-top: -25px !important;
+}
+.icon_ser span {
+    font-size: 14px;
+}
+.mi_acne_accord {
+    margin-top: 30px;
+}
+.mi_acne_accord .u_item_question .accordion-header {
+    border-radius: 20px;
+}
+
+
 @media(max-width:767px){
+    .see_slider_wrapper {
+        padding-bottom: 0 !important;
+    }
+    .img_ser img {
+        height: 80px;
+    }
+    .rej_ser_dv {
+        gap: 20px;
+        margin-top: 25px !important;
+    }
+    .img_ser {
+        margin-top: 0;
+    }
+    .img_ser img {
+        height: 80px;
+    }
    .mi_acne .imageText .aboveText {
         bottom: 40px;
         top: unset !important;
@@ -32464,9 +32506,3 @@ picture img {
 }
 /* css for endless slider  */
 
-.mi_goes_where .section_header {
-    padding-bottom: 0;
-}
-.mi_goes_where .skincare_percent p {
-    font-size: 13px;
-}
