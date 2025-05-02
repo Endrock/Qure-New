@@ -9,27 +9,37 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "page",
-      "custom_css": [
-        ".subscriptions_header {display: none;}"
+    "header_landing_pFmaRH": {
+      "type": "header-landing-simple",
+      "blocks": {
+        "navigation_link_qLHgyD": {
+          "type": "navigation-link",
+          "settings": {
+            "link_label": "HOW TO USE",
+            "link_url": "#step3"
+          }
+        },
+        "navigation_link_DgYaFx": {
+          "type": "navigation-link",
+          "settings": {
+            "link_label": "TROUBLESHOOTING",
+            "link_url": "#step7"
+          }
+        }
+      },
+      "block_order": [
+        "navigation_link_qLHgyD",
+        "navigation_link_DgYaFx"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
-    "17115385750c73305f": {
-      "type": "apps",
-      "disabled": true,
-      "settings": {}
-    },
-    "1723811635f4799cbc": {
-      "type": "apps",
-      "disabled": true,
-      "settings": {}
+    "main": {
+      "type": "temp-page-n-d-quickstart-guide"
     }
   },
   "order": [
-    "main",
-    "17115385750c73305f",
-    "1723811635f4799cbc"
+    "header_landing_pFmaRH",
+    "main"
   ]
 }
