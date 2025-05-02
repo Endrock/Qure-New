@@ -14,7 +14,7 @@ START PDM UPGRADE POPUP - FACE SERUM
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #f4f6ef;
+    background: linear-gradient(180deg, #DBEFE8 -3.91%, #FFF 51.05%), #FFF;
     border-radius: 12px;
     max-width: 720px;
     width: 90%;
@@ -26,15 +26,22 @@ START PDM UPGRADE POPUP - FACE SERUM
 
   .pdm-popup-close {
     position: absolute;
-    top: -0.5rem;
-    right: 0.2rem;
-    font-size: 2rem;
+    top: 8px;
+    right: 8px;
+    font-size: 35px;
     background: transparent;
     border: none;
     color: #6B7280;
     cursor: pointer;
     z-index: 10;
-    font-weight: 200;
+    font-weight: 280;
+    width: 24px;
+    height: 24px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
   }
 
   .pdm-popup-product-border-wrapper {
@@ -45,14 +52,15 @@ START PDM UPGRADE POPUP - FACE SERUM
   }
   
   .pdm-popup-product-selected {
+    height: 104px; /* igual que en Figma */
+    padding: 14px 32px; /* horizontal como en Figma */
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    padding: 1rem 2rem ;
-    box-sizing: border-box;
+    justify-content: flex-start;
     background-color: #f5f5f5;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
+    gap: 24px;
   }
   
   .pdm-popup-product-selected img {
@@ -61,15 +69,29 @@ START PDM UPGRADE POPUP - FACE SERUM
     object-fit: contain;
     border-radius: 6px;
   }
+
+  .pdm-image-check-wrapper {
+    position: relative;
+    width: fit-content;
+  }
+  
+  .pdm-check-icon {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   
   .pdm-popup-product-text h4 {
-    font-size: 1.125rem;
+    font-size: 16px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
   }
   
   .pdm-popup-product-text p {
-    font-size: 1.125rem;
+    font-size: 16px;
     font-weight: 700;
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -77,11 +99,13 @@ START PDM UPGRADE POPUP - FACE SERUM
   
   .pdm-popup-headline h3 {
     text-align: center;
-    font-size: 1.8rem;
-    font-weight: 500;
     font-family: 'Canela', serif;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
   }
   
   .pdm-popup-offer {
@@ -103,14 +127,22 @@ START PDM UPGRADE POPUP - FACE SERUM
   }
   
   .pdm-popup-offer-content h4 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    font-family: 'Canela', serif;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Canela web' , serif;
     margin-bottom: 0;
+    letter-spacing: 0.5px;
+    color: black;
   }
 
   .pdm-popup-subtitle {
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.14px;
   }
   
   .pdm-popup-price {
@@ -143,17 +175,21 @@ START PDM UPGRADE POPUP - FACE SERUM
     width: 6rem;
     text-align: center;
   }
-  
+
   .pdm-popup-benefits {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 2rem;
+    align-items: flex-start;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
   }
   
   .pdm-popup-benefits li::before {
     content: '✓';
     color: green;
-    margin-right: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    
   }
   
   .pdm-popup-actions {
@@ -163,21 +199,22 @@ START PDM UPGRADE POPUP - FACE SERUM
   }
   
   .pdm-upgrade-btn {
-    display: inline-block;
+    display: flex;
+    height: 40px;
+    padding: 0px 42px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
     background-color: black;
     color: white;
-    text-align: center;
-    padding: 0.75rem 1.25rem;
-    border-radius: 5rem; 
-    font-weight: 600;
-    font-size: 0.875rem; 
-    text-transform: uppercase; 
-    letter-spacing: 0.05em; 
-    font-family: 'Poppins', sans-serif;
     border: none;
-    width: auto;               
-    min-width: 250px;          
-    max-width: fit-content;    
+    border-radius: 24px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.64px;
+    text-transform: uppercase;
+    width: fit-content;
     margin: 0 auto;
   }
   
@@ -187,9 +224,10 @@ START PDM UPGRADE POPUP - FACE SERUM
     border: none;
     text-decoration: underline;
     color: #050000;
-    font-size: 0.875rem;
+    font-size: 13px;
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
+    font-weight: 400;
   }
 
   @media(min-width: 768px) {
@@ -210,12 +248,14 @@ START PDM UPGRADE POPUP - FACE SERUM
       font-weight: 500;
       white-space: nowrap;
       margin-top: 15px;
+      line-height: 34px;
+      margin-bottom: 0px;
     }
   
     .pdm-popup-image img {
       display: flex;
       width: 100%;
-      height: 160px;
+      height: 190px;
       max-width: 230px;
       margin: 0 auto;
       object-fit: contain;
@@ -223,12 +263,13 @@ START PDM UPGRADE POPUP - FACE SERUM
 
     .pdm-popup-offer-content {
       padding-top: 0px;
-      padding-bottom: 15px;
+      padding-bottom: 20px;
     }
 
     .pdm-popup-offer-content h4 {
       font-size: 17px;
       margin-top: 10px;
+      font-weight: 500;
     }
 
     .pdm-popup-subtitle {
@@ -246,8 +287,6 @@ START PDM UPGRADE POPUP - FACE SERUM
     .pdm-popup-price del {
       font-size: 12px;
     }
-
-
 
     .pdm-popup-offer {
       gap: 0px;
@@ -268,6 +307,18 @@ START PDM UPGRADE POPUP - FACE SERUM
       padding: 14px 32px;
       align-items: center;
       align-self: stretch;
+    }
+
+    .pdm-popup-actions {
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+      gap: 0.50rem;
+    }
+
+    .pdm-popup-product-selected img {
+      width: 72px;
+      height: 72px;
     }
   }
 /* END PDM UPGRADE POPUP - FACE SERUM */
