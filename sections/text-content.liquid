@@ -1,0 +1,68 @@
+<div class="main_banner skincare_routine">
+    {% if section.settings.desktop_image !=blank %}
+    <picture>
+        <source media="(min-width:1920px)" srcset="{{ section.settings.desktop_image | img_url: 'master' }}" width="90" height="31">
+        <source media="(min-width:1600px)" srcset="{{ section.settings.desktop_image | img_url: 'master' }}" width="90" height="31">
+        <source media="(min-width:1100px)" srcset="{{ section.settings.desktop_image | img_url: 'master' }}" width="90" height="31">
+        <source media="(min-width:720px)" srcset="{{ section.settings.desktop_image | img_url: 'master' }}" width="90" height="31">
+        <source media="(min-width:540px)" srcset="{{ section.settings.mobile_image | img_url: 'master' }}" width="90" height="31">
+        <img src="{{ section.settings.mobile_image | img_url: 'master' }}" width="375" height="424" alt="" class="img-fluid">
+    </picture>
+    {% endif %}
+    <div class="main_b_wrapper">
+        <div class="container">
+            <div class="section_header mw-100">
+                <div class="title-lg text-md-center">{{ section.settings.title }}</div>
+            </div>
+            <p class="mw-600 mx-auto text-center">{{ section.settings.description }}</p>
+            {% if section.settings.button_text !=blank %}
+            <div class="get_report_btn">
+                <a href="{{ section.settings.button_link }}">{{ section.settings.button_text }}</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.text_background.label",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "t:common.image.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "t:commonMob.image.label"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:common.heading.label"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "t:common.description.label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "t:common.button.url.label"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "t:common.button.label"
+    }
+  ],
+  "presets": [
+    {
+        "name": "t:sections.text_background.label"
+    }
+  ]
+}
+{% endschema %}

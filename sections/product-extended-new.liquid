@@ -150,23 +150,6 @@
                             {% render 'product-extended-variants' %}
                         {% endif %}
 
-                        {% assign render_qrejuvalight_shipping_badge = false %}
-                        {% if settings.show_badge_free_shipping_qrejuvalight and product.handle == "q-rejuvalight-pro-facewear" %}
-                            {% assign render_qrejuvalight_shipping_badge = true %}
-                        {% endif %}
-                        {% assign render_neck_decotellage_shipping_badge = false %}
-                        {% if settings.show_badge_free_shipping_neck_decolletage and product.handle == "neck-decolletage-led" %}
-                            {% assign render_neck_decotellage_shipping_badge = true %}
-                        {% endif %}
-                        {% if render_qrejuvalight_shipping_badge or render_neck_decotellage_shipping_badge  %}
-                            <div class="free-shipping-badge-container free-shipping-guarentee-variant" data-products="{{products_to_render_shipping_badge }}">
-                                {% render 'pdm_icons', icon: "free-shipping-truck" %}
-                                <p class="free-shipping-badge-container__label">{{ 'products.product.unlocks_free_shipping_label' | t }}
-                                    <span class="green-color">{{ 'site_gamification.free_shipping.label' | t }}</span>
-                                </p>
-                            </div>
-                        {% endif %}
-
                         {% if supply_count > 0 %}
                             <div class="next_batch_bl next_batch_highlight">
                                 {%- for block in section.blocks -%}
@@ -212,11 +195,11 @@
                         {% if subscribe_count > 0 or trynow_count > 0 %}
                             {%- for block in section.blocks -%}
                                 {% if block.type == 'trynow' %}
-                                    {% include 'product-extended-new-trynow' %}
+                                    {% include 'product-extended-new-trynow' variant_count: variant_count %}
                                 {% endif %}
 
                                 {% if block.type == 'subscribe' %}
-                                    {% include 'product-extended-new-subscription' %}
+                                    {% include 'product-extended-new-subscription' variant_count: variant_count %}
                                 {% endif %}
                             {%- endfor -%}
                         {% else %}
@@ -235,12 +218,14 @@
                                     variant_id: product.variants.first.id, 
                                     current_price: product.price, 
                                     original_price: product.compare_at_price, 
+                                    product_data: product,
                                 %}                    
                             {% else %}
                                 {% render 'product-sticky-button' with
                                     variant_id: product.variants.first.id, 
                                     current_price: product.price, 
                                     original_price: product.price, 
+                                    product_data: product, 
                                 %}
                             {% endif %}
 
@@ -658,6 +643,24 @@
                         "type": "number",
                         "id": "variant_id",
                         "label": "t:common.variant_id.label"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "main",
+                        "label": "t:common.main.label",
+                        "default": false
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "reserve",
+                        "label": "t:common.reserve.label",
+                        "default": false
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "soldout",
+                        "label": "t:common.soldout.label",
+                        "default": false
                     }
                 ]
 		    },

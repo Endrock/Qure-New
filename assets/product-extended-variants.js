@@ -47,3 +47,28 @@ const product_extended_variants_replaceUrl = (buyButton, variantId) => {
         }
     }
 }
+
+const product_extended_variants_setAsMain = function(variantId) {
+    if (variantId) {
+        const targetInput = document.querySelector(
+          `.clr_options input[type="radio"][value="${variantId}"]`
+        );
+        if (targetInput) {
+          targetInput.click();
+        }
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const variantId = urlParams.get("variant");
+  
+    if (variantId) {
+      const targetInput = document.querySelector(
+        `.clr_options input[type="radio"][value="${variantId}"]`
+      );
+      if (targetInput) {
+        targetInput.click();
+      }
+    }
+});

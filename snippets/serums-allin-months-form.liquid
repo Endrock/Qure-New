@@ -1,26 +1,13 @@
+{{ '_pdm-product-horizontal-layout.css' |  asset_url | stylesheet_tag }}
+
 <style>
     .refill_bl .product-price {
         display: none;
     }
 </style>
 
-{% liquid
-    assign show_free_shiping_guarantee_test = false
-    assign products_free_shipping_guarantee = "face-serum, micro-infusion-targeted-patches" | split: ", "
-    if products_free_shipping_guarantee contains product.handle
-        assign show_free_shiping_guarantee_test = true
-    endif
-%}
 
-{% liquid
-    assign show_contrast_horizontal_layout_test = false
-    assign products_handles_to_include = "face-serum, micro-infusion-targeted-patches" | split: ", "
-    if products_handles_to_include contains product.handle
-        assign show_contrast_horizontal_layout_test = true
-    endif
-%}
-
-<div class="mw-402 all_in_one_face_serum_offer {% if show_free_shiping_guarantee_test %}free-shiping-guarantee-test{% endif %} {% if show_contrast_horizontal_layout_test %}contrast-horizontal-layout-test {% endif %}">
+<div class="mw-402 all_in_one_face_serum_offer contrast-horizontal-layout">
     <div class="serum_bl pt-0">
         <div class="s_bl_wrapper">
             <div class="supply-detail supply-detail-without-counter pb-0 d-block">
@@ -34,29 +21,21 @@
                                 {% assign product_variant_id = product.variants.first.id %}
                                 {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
 
-                                <div class="planBlock planBlockTop {% if show_free_shiping_guarantee_test %}active{% endif %} {% if show_contrast_horizontal_layout_test %}active{% endif %}" data-variantid="{{ product_variant_id }}">
-                                    <div class="plan_choosed text-end contrast-horizontal-layout-test-original">
-                                        <span>Over 13,000 people chose this supply</span>
-                                    </div>
-                                    <div class="top-label contrast-horizontal-layout-test-variant">
+                                <div class="planBlock planBlockTop active" data-variantid="{{ product_variant_id }}">
+                                   
+                                    <div class="top-label contrast-horizontal-layout-variant">
                                         <span class="top-label__label">{{ 'products.product.contrast_horizontal.top_label' | t }}</span>
                                     </div>
                                     <input type="radio" name="mBanner_monthlyPlan" id="mBanner_3_month" checked="">
-                                    <label class="monthly_plans {% if show_free_shiping_guarantee_test %}background-white{% endif %}" for="mBanner_3_month" payment-price="{{ product_price_divided | money_without_trailing_zeros }}">
-                                        <div class="monthly_plans__circle free-shipping-guarentee-variant">
-                                            {% render 'pdm_icons', icon: 'circle-empty' %}
-                                            {% render 'pdm_icons', icon: 'circle-full' %}
-                                        </div>
+                                    <label class="monthly_plans" for="mBanner_3_month" payment-price="{{ product_price_divided | money_without_trailing_zeros }}">
+
                                         <div class="plan_des">
                                             <div class="plan_hdr">
-                                                <h3 class="contrast-horizontal-layout-test-original">6 Month Supply</h3>
                                                 <span class="saved_price">{{ discount_percentage }}% OFF</span>
                                             </div>
-                                            <div class="plan_des free-shipping-guarentee-original contrast-horizontal-layout-test-original">3 Serums + Free Shipping</div>
-                                            <div class="plan_des free-shipping-guarentee-variant">{{ 'products.product.3_serum_label' | t }}</div>
                                         </div>
 
-                                        <div class="contrast-container contrast-horizontal-layout-test-variant">
+                                        <div class="contrast-container contrast-horizontal-layout-variant">
                                             <div class="contrast-container__main-label">{{ 'products.product.contrast_horizontal.main_label_1' | t }}</div>
                                             <div class="contrast-container__images">
                                                 {{ settings.face_serum_2_month | image_url: width: 14, height: 48 | image_tag: class: 'contrast-container__image', alt: settings.face_serum_2_month  }}
@@ -72,10 +51,7 @@
                                             <div class="plan_prc sale_price">{{ product.price | money_without_trailing_zeros }}</div>
                                         </div>
 
-                                        <div class="free-shipping-guarentee-variant free-shipping-icon">
-                                            {% render 'pdm_icons', icon: "free-shipping-truck" %}
-                                            <span class="free-shipping-icon__label">{{ 'products.product.includes_free_shipping_label' | t }}</span>
-                                        </div>
+                                       
                                     </label>
                                 </div>
                          
@@ -87,20 +63,14 @@
                                 <div class="planBlock planBlockTop" data-variantid="{{ product_variant_id }}">
                                     <input type="radio" name="mBanner_monthlyPlan" id="mBanner_2_month">
                                     <label class="monthly_plans" for="mBanner_2_month" payment-price="{{ product_price_divided | money_without_trailing_zeros }}">
-                                        <div class="monthly_plans__circle free-shipping-guarentee-variant">
-                                            {% render 'pdm_icons', icon: 'circle-empty' %}
-                                            {% render 'pdm_icons', icon: 'circle-full' %}
-                                        </div>
+                                    
                                         <div class="plan_des">
                                             <div class="plan_hdr">
-                                                <h3 class="contrast-horizontal-layout-test-original contrast-horizontal-layout-test-original">4 Month Supply</h3>
                                                 <span class="saved_price">{{ discount_percentage }}% OFF</span>
                                             </div>
-                                            <div class="plan_des free-shipping-guarentee-original contrast-horizontal-layout-test-original">2 Serums + Free Shipping</div>
-                                            <div class="plan_des free-shipping-guarentee-variant">{{ 'products.product.2_Serums_label' | t }}</div>
                                         </div>
 
-                                        <div class="contrast-container contrast-horizontal-layout-test-variant">
+                                        <div class="contrast-container contrast-horizontal-layout-variant">
                                             <div class="contrast-container__main-label">{{ 'products.product.contrast_horizontal.main_label_2' | t }}</div>
                                             <div class="contrast-container__images">
                                                 {{ settings.face_serum_2_month | image_url: width: 14, height: 48 | image_tag: class: 'contrast-container__image', alt: settings.face_serum_2_month  }}
@@ -124,18 +94,8 @@
                                 <div class="planBlock planBlockTop" data-variantid="{{ product_variant_id }}">
                                     <input type="radio" name="mBanner_monthlyPlan" id="mBanner_1_month">
                                     <label class="monthly_plans" for="mBanner_1_month" payment-price="{{ product_price_divided | money_without_trailing_zeros }}">
-                                        <div class="monthly_plans__circle free-shipping-guarentee-variant">
-                                            {% render 'pdm_icons', icon: 'circle-empty' %}
-                                            {% render 'pdm_icons', icon: 'circle-full' %}
-                                        </div>
-                                        <div class="plan_des">
-                                            <div class="plan_hdr">
-                                                <h3 class="contrast-horizontal-layout-test-original">2 Month Supply</h3>
-                                            </div>
-                                            <div class="plan_des contrast-horizontal-layout-test-original">1 Serum</div>
-                                        </div>
 
-                                        <div class="contrast-container contrast-horizontal-layout-test-variant">
+                                        <div class="contrast-container contrast-horizontal-layout-variant">
                                             <div class="contrast-container__main-label">{{ 'products.product.contrast_horizontal.main_label_3' | t }}</div>
                                             <div class="contrast-container__images">
                                                 {{ settings.face_serum_2_month | image_url: width: 14, height: 48 | image_tag: class: 'contrast-container__image', alt: settings.face_serum_2_month  }}
@@ -198,7 +158,7 @@
         <img src="{{ 'certified_derma.webp' | asset_url }}" alt="">
         <p><b>50+ Board Certified Dermatologists</b> recommended Qure to their patients. <a href="https://qureskincare.com/pages/derm-reviews" class="text-black text-decoration-underline">See More</a> </p>
     </div>
-    <div class="shipping shipping_bg bg-transparent py-md-0 free-shipping-guarentee-original">
+    <div class="shipping shipping_bg bg-transparent py-md-0">
         <div class="s_bx">
             <img src="{{ 'dermatologist.svg' | asset_url }}" alt="">
             <p>Dermatologist<br class="d-md-none"> Reviewed</p>
@@ -209,18 +169,6 @@
             <p class="d-block d-md-none">Free World-Wide Shipping Over $100</p>
         </div>
     </div>
-    {% if settings.show_icons_product_face_serum %}
-        <div class="shipping-badges-container free-shipping-guarentee-variant">
-            <div class="shipping-badges-container__money-back">
-                {% render 'pdm_icons', icon: 'money-back-guarantee' %}
-                <div class="shipping-badges-container__money-back--label">{{ settings.money_back_guarantee_label }}</div>
-            </div>
-            <div class="shipping-badges-container__free-return">
-                {% render 'pdm_icons', icon: 'free-returns' %}
-                <div class="shipping-badges-container__free-return--label">{{ settings.free_returns_label }}</div>
-            </div>
-        </div>
-    {% endif %}
 </div>
 
 {% if product.compare_at_price != blank %}
@@ -228,11 +176,13 @@
         variant_id: product.variants.first.id, 
         current_price: product.price, 
         original_price: product.compare_at_price, 
+        product_data: product,
     %}                    
 {% else %}
     {% render 'product-sticky-button' with
         variant_id: product.variants.first.id, 
         current_price: product.price, 
         original_price: product.price, 
+        product_data: product,
     %}
 {% endif %}

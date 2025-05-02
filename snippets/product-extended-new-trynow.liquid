@@ -59,7 +59,9 @@
             </div>
         </div>
 
-        {% include 'product-extended-new-outofstock' %}
+        {% if variant_count > 1 %}
+            {% include 'product-extended-new-outofstock' %}
+        {% endif %}
 
         {% if section.settings.soldout == true %}
             <a class="btn btn-lg btn-primary without_subscription buy_btn mt-4" href="#">Sold Out</a>   
@@ -78,6 +80,7 @@
             current_price: product.price, 
             original_price: product.price, 
             classname: sticky-button-classname
+            product_data: product,
         %}
 
         <div class="payment_method without_subscription">
