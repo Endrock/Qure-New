@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "header_landing_yzqaEc": {
       "type": "header-landing",
@@ -58,8 +58,124 @@
         "button_url": "#productSubscription"
       }
     },
+    "product-landing": {
+      "type": "product-landing",
+      "blocks": {
+        "rating_TfBQ9X": {
+          "type": "rating",
+          "settings": {
+            "image": "shopify://shop_images/star-half_fill.svg",
+            "text": "<p>4.8/5 Based on 43,893 Users</p>",
+            "product": ""
+          }
+        },
+        "button_L9q6wE": {
+          "type": "button",
+          "settings": {
+            "button_label": "HOLIDAY OFFER SAVE 59%",
+            "button_url": "#productSubscription"
+          }
+        },
+        "list_pQxE9h": {
+          "type": "list",
+          "settings": {
+            "text": "<ul><li>Targets dark spots beneath the surface where topicals can't reach</li><li>Improves uneven skin tone for a <strong>smoother, brighter look</strong></li><li>Minimal to <strong>no downtime</strong>, virtually <strong>painless</strong> & perform conveniently from home</li></ul>"
+          }
+        },
+        "video_GAjMEW": {
+          "type": "video",
+          "settings": {
+            "image": "shopify://shop_images/see_work_acne.webp",
+            "image_mobile": "shopify://shop_images/see_work_acne_mob.webp",
+            "video": "shopify://files/videos/MICRO INFUSION_fin.mp4",
+            "video_label": "See How It Works"
+          }
+        },
+        "jump_to_section_fVDdbe": {
+          "type": "jump_to_section",
+          "settings": {
+            "title": "Results",
+            "section_id": "result_section"
+          }
+        },
+        "jump_to_section_GE4tfE": {
+          "type": "jump_to_section",
+          "settings": {
+            "title": "How To Use",
+            "section_id": "see_it_section"
+          }
+        },
+        "jump_to_section_kYWrYh": {
+          "type": "jump_to_section",
+          "disabled": true,
+          "settings": {
+            "title": "The Science",
+            "section_id": "science-section"
+          }
+        },
+        "jump_to_section_U7LHQK": {
+          "type": "jump_to_section",
+          "disabled": true,
+          "settings": {
+            "title": "Serum Guide",
+            "section_id": "serum_guide_section"
+          }
+        },
+        "jump_to_section_R7UYWE": {
+          "type": "jump_to_section",
+          "disabled": true,
+          "settings": {
+            "title": "Dermatologists",
+            "section_id": "trusted_section"
+          }
+        },
+        "jump_to_section_Dt7YUT": {
+          "type": "jump_to_section",
+          "settings": {
+            "title": "FAQs",
+            "section_id": "faq_section"
+          }
+        }
+      },
+      "block_order": [
+        "rating_TfBQ9X",
+        "button_L9q6wE",
+        "list_pQxE9h",
+        "video_GAjMEW",
+        "jump_to_section_fVDdbe",
+        "jump_to_section_GE4tfE",
+        "jump_to_section_kYWrYh",
+        "jump_to_section_U7LHQK",
+        "jump_to_section_R7UYWE",
+        "jump_to_section_Dt7YUT"
+      ],
+      "custom_css": [
+        ".product-price {display: none;}"
+      ],
+      "settings": {
+        "seo_heading": "",
+        "heading": "Fade dark spots & reveal even complexion with 5 minute at-home treatments",
+        "heading_mobile": "Fade dark spots & reveal even complexion with 5 minute at-home treatments",
+        "product": "",
+        "product_images_offset": 0,
+        "product_images_limit": 6,
+        "product_button_label": "Product",
+        "before_after_images_limit": 3,
+        "before_after_button_label": "Before & After",
+        "reserve": false,
+        "soldout": false,
+        "selected_design": "new",
+        "text_label_real_result_1": "Product",
+        "text_label_real_result_2": "Real Results",
+        "text_label_real_result_3": "Dermatologist",
+        "enable_jump_to_section": true,
+        "text_jump_to_section": "Jump To",
+        "popup_enabled": false
+      }
+    },
     "main_banner": {
       "type": "temp-page-micro-infusion-dark-spots-main-banner",
+      "disabled": true,
       "settings": {}
     },
     "featuredin_TRUVpW": {
@@ -1211,6 +1327,7 @@
   },
   "order": [
     "header_landing_yzqaEc",
+    "product-landing",
     "main_banner",
     "featuredin_TRUVpW",
     "image_text_3b878r",
