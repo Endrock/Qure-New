@@ -247,113 +247,56 @@
         "popup_enabled": false
       }
     },
-    "featuredin_zWyY3U": {
-      "type": "featuredin",
+    "featured_landing": {
+      "type": "featured_landing",
       "blocks": {
-        "image_CMHyhX": {
+        "text_cYhaYn": {
+          "type": "text",
+          "settings": {
+            "text": "\"Few beauty trends are actually worth adopting, but Qure’s take on at-home micro-infusion is a viral skin trend with merit.\""
+          }
+        },
+        "text_YmXCPg": {
+          "type": "text",
+          "settings": {
+            "text": "A true microneedling treatment - creating microchannels that increase collagen and elastin production and product absorption."
+          }
+        },
+        "text_dHpn33": {
+          "type": "text",
+          "settings": {
+            "text": "\"This microneedling alternative is my secret to glowing skin.\""
+          }
+        },
+        "image_FpcTmy": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Vogue.png",
-            "mobile_hide": false
+            "image": "shopify://shop_images/forbes.svg"
           }
         },
-        "image_CE8JHg": {
+        "image_b8kTBX": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Cosmo.png",
-            "mobile_hide": false
+            "image": "shopify://shop_images/bazaar_h.svg"
           }
         },
-        "image_DGN3zc": {
+        "image_zXYJ3q": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Elle_7eb4d785-0830-467f-baf5-cb994c781b5b.png",
-            "mobile_hide": false
-          }
-        },
-        "image_wdPDGq": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Glamour_89c5300c-369d-48d9-9f30-103893398848.png",
-            "mobile_hide": false
-          }
-        },
-        "image_TXKk7A": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Group_1000004024.png",
-            "mobile_hide": true
-          }
-        },
-        "image_k7aY9B": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/bazaar_889503c3-d4d6-4eb0-b7be-dd1212b56c58.png",
-            "mobile_hide": true
-          }
-        },
-        "science_section_block_zcp3g7": {
-          "type": "science_section_block",
-          "settings": {
-            "video_science_section": "shopify://files/videos/-f2d8-4301-becc-9db87b3963fa.mp4",
-            "video_science_section_vertical": "shopify://files/videos/-35ec-494e-a74a-4c3407b738c8.mp4",
-            "science_heading": "Qure’s Micro-Infusion Goes Where Your Skin Cream Can’t…",
-            "new_science_heading": "Qure’s Micro-Infusion goes where your skin cream can’t",
-            "science_subheading": "Its tiny, almost painless, microneedles penetrate beyond the skin’s surface increasing serum absorption and delivering powerful active ingredients EXACTLY where they’re needed!",
-            "value_prop_img_1": "shopify://shop_images/percent.png",
-            "value_prop_text_1": "<p>Agreed their <strong>skin looked better</strong> after Micro-Infusion treatments</p>",
-            "value_prop_img_2": "shopify://shop_images/percent_1.png",
-            "value_prop_text_2": "<p>Agreed their <strong>fine lines looked smoother</strong></p>",
-            "value_prop_img_3": "shopify://shop_images/percent_2.png",
-            "value_prop_text_3": "<p>Reported skin appeared more <strong>hydrated and glowy</strong></p>",
-            "value_prop_img_4": "shopify://shop_images/percent_3.png",
-            "value_prop_text_4": "<p>Prefer this <strong>convenient Micro-Infusion treatment</strong> over going to clinic treatments</p>",
-            "new_value_prop_title_1": "Stamp",
-            "new_value_prop_text_1": "<p>Virtually painless 24K gold-plated, 0.5 mm microneedles stamp your skin to create controlled trauma.</p>",
-            "new_value_prop_title_2": "Infuse",
-            "new_value_prop_text_2": "<p>Microneedles bypass the stratum corneum (the protective outer layer of skin) to infuse science-backed serums.</p>",
-            "new_value_prop_title_3": "Absorb",
-            "new_value_prop_text_3": "<p>Powerful active ingredients  are delivered EXACTLY where they’re needed for increased absorption.</p>",
-            "cta_text": "Shop Now",
-            "cta_link": "productSubscription"
-          }
-        },
-        "confidence_slider_block_TtgA3M": {
-          "type": "confidence_slider_block",
-          "settings": {
-            "heading": "No hype, just evidence.",
-            "text": "<p>The results speak for themselves. In an independent user study, participants' skin was measured and showed proven visible improvement after just 6 fortnightly treatments.</p>",
-            "text_first-info": "<p>of participants say their fine lines<strong>looked smoother.</strong></p>",
-            "percent_bar_first-info": 70,
-            "text_second-info": "<p>noticed <strong>results the next day </strong>after the first Micro-Infusion treatment.</p>",
-            "percent_bar_second-info": 93,
-            "text_third-info": "<p>of participants say their skin looked <strong>brighter and more even toned.</strong></p>",
-            "percent_bar_third-info": 70,
-            "image_slide_first": "shopify://shop_images/sn_1.webp",
-            "text_slide_first": "<p>Proven to visually improve <strong>Fine Lines & Wrinkles</strong></p>",
-            "image_slide_second": "shopify://shop_images/sn_2.webp",
-            "text_slide_second": "<p>Proven to visually improve <strong>Large Pores & Skin Texture</strong></p>",
-            "image_slide_third": "shopify://shop_images/sn_3.webp",
-            "text_slide_third": "<p>Proven to visually improve <strong>Dark Spots & Texture</strong></p>",
-            "image_slide_fourth": "shopify://shop_images/sn_4.webp",
-            "text_slide_fourth": "<p>Proven to visually improve <strong>Uneven Skin Tone</strong></p>"
+            "image": "shopify://shop_images/ps.svg"
           }
         }
       },
       "block_order": [
-        "image_CMHyhX",
-        "image_CE8JHg",
-        "image_DGN3zc",
-        "image_wdPDGq",
-        "image_TXKk7A",
-        "image_k7aY9B",
-        "science_section_block_zcp3g7",
-        "confidence_slider_block_TtgA3M"
+        "text_cYhaYn",
+        "text_YmXCPg",
+        "text_dHpn33",
+        "image_FpcTmy",
+        "image_b8kTBX",
+        "image_zXYJ3q"
       ],
       "settings": {
-        "heading": "",
-        "custom_cls": ""
+        "heading": "FEATURED IN"
       }
     },
     "line_M99hQR": {
@@ -1735,7 +1678,7 @@
   "order": [
     "header_landing_yzqaEc",
     "main",
-    "featuredin_zWyY3U",
+    "featured_landing",
     "line_M99hQR",
     "product_box_b3WBQC",
     "before_after_short_slider_pYmNqR",
