@@ -49,6 +49,9 @@
         "button_url": "#productSubscription"
       }
     },
+    "main_banner": {
+      "type": "temp-page-micro-infusion-dark-spots-main-banner"
+    },
     "featuredin_TRUVpW": {
       "type": "featuredin",
       "blocks": {
@@ -991,6 +994,13 @@
         "read_txt": "<p>If you do not experience any changes in your skin, of <strong>firmer, brighter, smoother skin,<\/strong> if you do not save hours of your time and hundreds of dollars by enjoying your facial treatments in the comfort of your home instead of waiting in line at the beauty clinic – simply contact us, send via email all your before and after photos and we will make it right.<\/p><p>For more information on our money back offer please don’t hesitate to reach out to us.<\/p>"
       }
     },
+    "liquid_EH7JLe2": {
+      "type": "liquid",
+      "settings": {
+        "code": "{% render 'serums-months-image-form-v2' with section_id: section.id %}",
+        "popup_micro_infusion_enabled": true
+      }
+    },
     "compare_box_nCyb79": {
       "type": "compare-box",
       "blocks": {
@@ -1187,15 +1197,11 @@
         "button_label": "Show More Questions",
         "button_hide_label": "Hide More Questions"
       }
-    },
-    "main": {
-      "type": "temp-page-micro-infusion-dark-spots",
-      "disabled": true,
-      "settings": {}
     }
   },
   "order": [
     "header_landing_yzqaEc",
+    "main_banner",
     "featuredin_TRUVpW",
     "image_text_3b878r",
     "line_W9wfH7",
@@ -1213,8 +1219,8 @@
     "guide_iVctW3",
     "clinical_grade_gBqkgq",
     "money_back_guarantee_kffjxf",
+    "liquid_EH7JLe2",
     "compare_box_nCyb79",
-    "faq_djmCEd",
-    "main"
+    "faq_djmCEd"
   ]
 }
