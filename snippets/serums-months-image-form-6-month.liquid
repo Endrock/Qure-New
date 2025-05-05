@@ -550,8 +550,7 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      if(document.body.hasAttribute('data-ba-treatment-options') ||
-          document.body.hasAttribute('data-test-price-bundle')) {
+      if(document.body.hasAttribute('data-ba-treatment-options') || document.body.hasAttribute('data-test-price-bundle')) {
         document.querySelector('.row.pdm-treatment__row-container').remove();
         return;
       }
