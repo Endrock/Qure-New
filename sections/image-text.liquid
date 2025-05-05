@@ -244,12 +244,23 @@
                   </div>
                 {%- endif -%}
 
-                
 
                 {% if block.settings.btn_text != blank %}
-                  <a href="{{ block.settings.btn_url }}" class="mt-4 btn btn-lg btn-primary mw-268 fw-medium {{ block.settings.ctm_cls_btn }}">
+                  <a
+                    href="{{ block.settings.btn_url }}"
+                    class="btn-{{ block.id }} mt-4 btn btn-lg btn-primary mw-268 fw-medium {{ block.settings.ctm_cls_btn }}"
+                    style="font-size: {{ block.settings.btn_font_size_desktop }} !important;"
+                  >
                     {{- block.settings.btn_text -}}
                   </a>
+                
+                  <style>
+                    @media (max-width: 749px) {
+                      .btn-{{ block.id }} {
+                        font-size: {{ block.settings.btn_font_size_mobile }} !important;
+                      }
+                    }
+                  </style>
                 {% endif %}
 
               </div>
@@ -598,6 +609,18 @@
           "type": "text",
           "id": "btn_text",
           "label": "t:common.button.label"
+        },
+        {
+          "type": "text",
+          "id": "btn_font_size_desktop",
+          "label": "Button Font Size (Desktop)",
+          "default": "22px"
+        },
+        {
+          "type": "text",
+          "id": "btn_font_size_mobile",
+          "label": "Button Font Size (Mobile)",
+          "default": "20px"
         },
         {
           "type": "url",

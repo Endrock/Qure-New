@@ -32467,9 +32467,24 @@ picture img {
 .mi_acne_accord .u_item_question .accordion-header {
     border-radius: 20px;
 }
+.trusted_bl.trustedVerified .trust_item {
+    height: 100%;
+}
+.mi_landing_result .section_header{
+    padding-bottom: 15px;
+}
+.clinical_grade .u_item_question .accordion-body p{
+    letter-spacing: 0.15px;
+}
+.img_ser {
+    margin-top: 25px;
+}
 
 
 @media(max-width:767px){
+    .indiv_clinics p{
+        font-size: 10px;
+    }
     .see_slider_wrapper {
         padding-bottom: 0 !important;
     }
