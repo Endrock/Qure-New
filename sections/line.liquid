@@ -1,34 +1,80 @@
 <div class="available_bar {{ section.settings.classname }}">
     {% if section.settings.heading != blank %}
-        <p>{{ section.settings.heading }}</p>
+      <p class="section-{{ section.id }}-heading"
+         style="font-weight: {{ section.settings.font_weight }}{{ ' !important' }}; 
+                font-size: {{ section.settings.font_size_desktop }}">
+        {{ section.settings.heading }}
+      </p>
+  
+      <style>
+        /* Mobile font size with more specific selector */
+        @media (max-width: 749px) {
+          .section-{{ section.id }}-heading {
+            font-size: {{ section.settings.font_size_mobile }} !important;
+          }
+        }
+      </style>
     {% endif %}
-</div>
-
-{% schema %}
+  </div>
+  
+  {% schema %}
+{
+  "name": "t:sections.line.name",
+  "class": "section-line",
+  "settings": [
     {
-        "name": "t:sections.line.name",
-        "class": "section-line",
-        "settings": [
-            {
-                "type": "text",
-                "id": "heading",
-                "label": "t:common.heading.label"
-            },
-            {
-                "type": "text",
-                "id": "classname",
-                "label": "t:common.classname.label",
-                "default": "bg-green text-dark"
-            }
-        ],
-        "presets": [
-			{
-				"name": "t:sections.line.name",
-                "settings": {
-                    "heading": "ONE OF THE ONLY FACIAL TREATMENTS YOUR SKIN NEEDS",
-                    "classname": "bg-green text-dark"
-                }
-			}
-        ]
+      "type": "text",
+      "id": "heading",
+      "label": "t:common.heading.label"
+    },
+    {
+      "type": "select",
+      "id": "font_weight",
+      "label": "Font Weight",
+      "default": "700",
+      "options": [
+        { "value": "100", "label": "100" },
+        { "value": "200", "label": "200" },
+        { "value": "300", "label": "300" },
+        { "value": "400", "label": "400 (Normal)" },
+        { "value": "500", "label": "500" },
+        { "value": "600", "label": "600" },
+        { "value": "700", "label": "700 (Bold)" },
+        { "value": "800", "label": "800" },
+        { "value": "900", "label": "900" }
+      ]
+    },
+    {
+        "type": "text",
+        "id": "font_size_desktop",
+        "label": "Font Size (Desktop)",
+        "default": "13px"
+      },
+      {
+        "type": "text",
+        "id": "font_size_mobile",
+        "label": "Font Size (Mobile)",
+        "default": "12px"
+      },
+      
+    {
+      "type": "text",
+      "id": "classname",
+      "label": "t:common.classname.label",
+      "default": "bg-green text-dark"
     }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.line.name",
+      "settings": {
+        "heading": "ONE OF THE ONLY FACIAL TREATMENTS YOUR SKIN NEEDS",
+        "classname": "bg-green text-dark",
+        "font_weight": "700",
+        "font_size_desktop": "13px",
+        "font_size_mobile": "12px"
+      }
+    }
+  ]
+}
 {% endschema %}
