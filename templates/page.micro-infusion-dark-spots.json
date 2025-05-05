@@ -63,7 +63,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/cosmopolitan_76e124b7-290e-4593-b031-e15242709f0a.svg",
-            "mobile_hide": false
+            "mobile_hide": true
           }
         },
         "image_6crcLq": {
@@ -128,6 +128,8 @@
             "agreed_text_4": "",
             "ctm_cls_btn": "mw-455",
             "btn_text": "HOLIDAY OFFER SAVE 61%",
+            "btn_font_size_desktop": "22px",
+            "btn_font_size_mobile": "20px",
             "btn_url": "#productSubscription",
             "custom_class": "",
             "heading2": "",
@@ -158,7 +160,10 @@
       "name": "t:sections.line.name",
       "settings": {
         "heading": "ONE OF THE ONLY FACIAL TREATMENTS YOUR SKIN NEEDS",
-        "classname": "bg-green text-dark"
+        "font_weight": "700",
+        "font_size_desktop": "13px",
+        "font_size_mobile": "12px",
+        "classname": "bg-green text-dark mt-3"
       }
     },
     "product_box_gtrCmb": {
@@ -174,8 +179,8 @@
         "product_UpUtVN": {
           "type": "product",
           "settings": {
-            "heading": "Introducing the Qure Micro-Infusion System",
-            "text": "<p><strong>“Even my esthetician is hooked!<\/strong>And I can now visit beauty clinics less often.”<\/p><ul><li>Reduce appearance of fine lines, wrinkles, pores and redness.<\/li><li>Wake up to firmer-looking, smoother-feeling skin.<\/li><li>Reveal <strong>more hydrated, fresh<\/strong> looking skin.<\/li><li>Help fade the look of dark spots and <strong>acne scars.<\/strong><\/li><\/ul>",
+            "heading": "Introducing the Qure  Micro-Infusion System",
+            "text": "<p><strong>“Even my esthetician is hooked! <\/strong>And I can now visit beauty clinics less often.”<\/p><p><\/p><ul><li>Works beneath the surface where topicals can't reach to target <strong>stubborn dark spots & uneven tone<\/strong><\/li><li>Wake up with a <strong>more even, radiant complexion<\/strong><\/li><li>Easy to use, <strong>5-minute treatment<\/strong> with 2-in-1 action: stimulate & infuse<\/li><li>Minimal to no downtime and virtually <strong>painless<\/strong><\/li><\/ul>",
             "product": ""
           }
         },
@@ -201,7 +206,7 @@
       ],
       "name": "t:sections.product-box.name",
       "settings": {
-        "classname": "main_banner section pt-0",
+        "classname": "main_banner section pt-0 indiv_clinics",
         "heading": "",
         "text": "",
         "text_reduced": ""
@@ -370,7 +375,7 @@
         "btn_url": "",
         "ctm_cls_btn": "",
         "desk_slide": 6,
-        "mob_slide": 1.7,
+        "mob_slide": 2,
         "slide_space": 10
       }
     },
@@ -383,7 +388,7 @@
             "image": "shopify:\/\/shop_images\/dual_action_new.webp",
             "image_mobile": "shopify:\/\/shop_images\/dual_action_new_mob.webp",
             "dual_action": "Dual action for twice the results",
-            "dual_action_mob": "Dual action  for twice the results",
+            "dual_action_mob": "Dual action <br> for twice the results",
             "classname": "mw-mob-100 pt-4"
           }
         },
@@ -476,7 +481,7 @@
             "image": "shopify:\/\/shop_images\/trusted_3.webp",
             "video": "https:\/\/www.youtube.com\/watch?v=JPWycy8cwN8",
             "title": "Dr Shah & Dr Maxfield,",
-            "des": "Board certified dermatologist"
+            "des": ""
           }
         },
         "text_content_WxPnNR": {
@@ -765,7 +770,7 @@
           "type": "column",
           "settings": {
             "pd_image": "shopify:\/\/shop_images\/compare_micro_qure.webp",
-            "pd_name": "<p><strong>Qure<br\/><\/strong>Micro-Infusion System<\/p>",
+            "pd_name": "<h4><strong>Qure<br\/><\/strong>Micro-Infusion System<\/h4>",
             "point5": "As little as 1-2 days",
             "mark1": "tick",
             "point6": "Tailored to your skin needs",
@@ -814,7 +819,7 @@
       ],
       "name": "t:sections.compare_products.label",
       "settings": {
-        "heading": "Give yourself a “Clinic Quality” glow up without the “Clinical Prices”",
+        "heading": "Give yourself a “Clinic Quality” glow up <br>without the “Clinical Prices”",
         "heading2": "Let’s Compare",
         "point1": "Results in",
         "point2": "Customized",
@@ -830,7 +835,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/beauty_micro.webp",
             "heading": "Qure Micro-Infusion System",
-            "mob_text": "",
+            "mob_text": "Qure Micro-Infusion System",
             "text": "",
             "price": "",
             "style": "correctCircle",
@@ -842,7 +847,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/beauty_needle.webp",
             "heading": "Other At-Home Needling Devices",
-            "mob_text": "",
+            "mob_text": "Other At-Home Needling Devices",
             "text": "",
             "price": "",
             "style": "incorrectCircle",
@@ -858,7 +863,7 @@
       "settings": {
         "classname": "beauty_skincare section bg-white",
         "sub_head": "",
-        "heading": "Typically more effective and safer than other at-home needling devices",
+        "heading": "Typically more effective and safer  than other at-home needling devices",
         "heading_reduced": "",
         "text": "<p>Unlike at-home needle roller devices, Micro-infusion requires little to <strong>no downtime, <\/strong>is <strong>virtually painless, <\/strong>and minimizes risk of infection and irritation.<\/p>",
         "text_reduced": "",
@@ -925,8 +930,9 @@
       ],
       "name": "t:sections.guide.name",
       "settings": {
-        "classname": "pb-0",
+        "classname": "",
         "heading": "See it in action — Quick and easy at-home treatment that works deeper than topicals",
+        "heading_mob": "See it in action — an effortless glow that looks as good as it feels",
         "text": "<h5>5 minutes total, every 2-4 weeks<\/h5>"
       }
     },
