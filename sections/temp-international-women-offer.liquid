@@ -1707,9 +1707,9 @@
 
                                         <!-- Payment Methods -->
                                         <div class="payment_method">
-                                            <p class="d-none d-md-block">or pay 4 monthly payments of {{ 94.75 | times: 100 | money_without_trailing_zeros }} with
+                                            <p class="d-none d-md-block">or pay 4 monthly payments of {{ product_led_mask.price | divided_by: 4 | money_without_trailing_zeros }} with
                                             </p>
-                                            <p class="d-md-none">or pay 4 monthly payments of {{ 94.75 | times: 100 | money_without_trailing_zeros }} with</p>
+                                            <p class="d-md-none">or pay 4 monthly payments of {{ product_led_mask.price | divided_by: 4 | money_without_trailing_zeros }} with</p>
                                             <div class="pmt_img ps-2">
                                                 <img src="https://qureskincaredns.com/new/assets/klarna.svg" alt="Klarna">
                                                 <img src="https://qureskincaredns.com/new/assets/sezzle.svg" alt="Sezzle">
