@@ -141,13 +141,142 @@
                     {{ block.settings.text }}
                   </div>
                 {%- endif -%}
+
+                {%- if block.settings.agreed_text_1 !=blank -%}
+                  {% assign dashoffset = 100 | minus: block.settings.percent_bar_1 %}
+                  <div class="qure_MI_ftr user_report_wrap d-grid mt-3">
+                    {%- if block.settings.agreed_text_1 !=blank -%}
+                    <div class="skincare_percent">
+                      <div class="progressCont">
+                        <span class="progressWrapper">
+                          <span class="progessInfo text-dark">{{ block.settings.percent_bar_1 }}%</span>
+                          <svg class="vMQQx" height="54" width="54" viewBox="-29 -29 58 58">
+                            <defs>
+                              <linearGradient id="gradient" x1="0" x2="0" y1="1" y2="0">
+                                <stop offset="0%" stop-color="#C7E7DC"></stop>
+                                <stop offset="100%" stop-color="#C7E7DC"></stop>
+                              </linearGradient>
+                            </defs>
+                            <circle stroke="rgba(221, 224, 228, 1)" fill="none" pathLength="100"
+                                    class="K4v4P" r="24" style="stroke-width: 1px;"></circle>
+                            <circle visibility="visible" fill="none" pathLength="100"
+                                    transform="rotate(-90)" class="OKwUu" r="24" stroke="url(#gradient)"
+                                    style="stroke-dasharray: 100; stroke-dashoffset: {{ dashoffset }}; stroke-width: 4px;">
+                            </circle>
+                          </svg>
+                        </span>
+                      </div>
+                      {{ block.settings.agreed_text_1 }}
+                    </div>
+                    {% endif %}
+                    {%- if block.settings.agreed_text_2 !=blank -%}
+                    <div class="skincare_percent">
+                      <div class="progressCont">
+                        <span class="progressWrapper">
+                          <span class="progessInfo text-dark">{{ block.settings.percent_bar_2 }}%</span>
+                          <svg class="vMQQx" height="54" width="54" viewBox="-29 -29 58 58">
+                            <defs>
+                              <linearGradient id="gradient" x1="0" x2="0" y1="1" y2="0">
+                                <stop offset="0%" stop-color="#C7E7DC"></stop>
+                                <stop offset="100%" stop-color="#C7E7DC"></stop>
+                              </linearGradient>
+                            </defs>
+                            <circle stroke="rgba(221, 224, 228, 1)" fill="none" pathLength="100"
+                                    class="K4v4P" r="24" style="stroke-width: 1px;"></circle>
+                            <circle visibility="visible" fill="none" pathLength="100"
+                                    transform="rotate(-90)" class="OKwUu" r="24" stroke="url(#gradient)"
+                                    style="stroke-dasharray: 100; stroke-dashoffset: {{ dashoffset }}; stroke-width: 4px;">
+                            </circle>
+                          </svg>
+                        </span>
+                      </div>
+                      {{ block.settings.agreed_text_2 }}
+                    </div>
+                    {% endif %}
+                    {%- if block.settings.agreed_text_3 !=blank -%}
+                    <div class="skincare_percent">
+                      <div class="progressCont">
+                        <span class="progressWrapper">
+                          <span class="progessInfo text-dark">{{ block.settings.percent_bar_3 }}%</span>
+                          <svg class="vMQQx" height="54" width="54" viewBox="-29 -29 58 58">
+                            <defs>
+                              <linearGradient id="gradient" x1="0" x2="0" y1="1" y2="0">
+                                <stop offset="0%" stop-color="#C7E7DC"></stop>
+                                <stop offset="100%" stop-color="#C7E7DC"></stop>
+                              </linearGradient>
+                            </defs>
+                            <circle stroke="rgba(221, 224, 228, 1)" fill="none" pathLength="100"
+                                    class="K4v4P" r="24" style="stroke-width: 1px;"></circle>
+                            <circle visibility="visible" fill="none" pathLength="100"
+                                    transform="rotate(-90)" class="OKwUu" r="24" stroke="url(#gradient)"
+                                    style="stroke-dasharray: 100; stroke-dashoffset: {{ dashoffset }}; stroke-width: 4px;">
+                            </circle>
+                          </svg>
+                        </span>
+                      </div>
+                      {{ block.settings.agreed_text_3 }}
+                    </div>
+                    {% endif %}
+                    {%- if block.settings.agreed_text_4 !=blank -%}
+                    <div class="skincare_percent">
+                      <div class="progressCont">
+                        <span class="progressWrapper">
+                          <span class="progessInfo text-dark">{{ block.settings.percent_bar_4 }}%</span>
+                          <svg class="vMQQx" height="54" width="54" viewBox="-29 -29 58 58">
+                            <defs>
+                              <linearGradient id="gradient" x1="0" x2="0" y1="1" y2="0">
+                                <stop offset="0%" stop-color="#C7E7DC"></stop>
+                                <stop offset="100%" stop-color="#C7E7DC"></stop>
+                              </linearGradient>
+                            </defs>
+                            <circle stroke="rgba(221, 224, 228, 1)" fill="none" pathLength="100"
+                                    class="K4v4P" r="24" style="stroke-width: 1px;"></circle>
+                            <circle visibility="visible" fill="none" pathLength="100"
+                                    transform="rotate(-90)" class="OKwUu" r="24" stroke="url(#gradient)"
+                                    style="stroke-dasharray: 100; stroke-dashoffset: {{ dashoffset }}; stroke-width: 4px;">
+                            </circle>
+                          </svg>
+                        </span>
+                      </div>
+                      {{ block.settings.agreed_text_4 }}
+                    </div>
+                  {%- endif -%}
+                  </div>
+                {%- endif -%}
+
+
                 {% if block.settings.btn_text != blank %}
-                  <a href="{{ block.settings.btn_url }}" class="mt-4 btn btn-lg btn-primary mw-268 fw-medium">
+                  <a
+                    href="{{ block.settings.btn_url }}"
+                    class="btn-{{ block.id }} mt-4 btn btn-lg btn-primary mw-268 fw-medium {{ block.settings.ctm_cls_btn }}"
+                    style="font-size: {{ block.settings.btn_font_size_desktop }} !important;"
+                  >
                     {{- block.settings.btn_text -}}
                   </a>
+                
+                  <style>
+                    @media (max-width: 749px) {
+                      .btn-{{ block.id }} {
+                        font-size: {{ block.settings.btn_font_size_mobile }} !important;
+                      }
+                    }
+                  </style>
                 {% endif %}
+
               </div>
             </div>
+
+
+
+     
+            
+
+
+
+
+
+
+
 
           {%- when 'accordian' -%}
             <div class="col-md-{% assign dashoffset = 12 | minus: section.settings.column %}{{ dashoffset }}">
@@ -287,7 +416,7 @@
       "label": "t:common.classname.custom"
     }
   ],
-  "max_blocks": 2,
+  "max_blocks": 10,
   "blocks": [
     {
       "type": "image",
@@ -416,9 +545,82 @@
           "label": "t:common.rating.stars"
         },
         {
+          "type": "range",
+          "id": "percent_bar_1",
+          "label": "Percentage",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 70
+        },
+        {
+          "type": "richtext",
+          "id": "agreed_text_1",
+          "label": "Description Text"
+        },
+        {
+          "type": "range",
+          "id": "percent_bar_2",
+          "label": "Percentage",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 70
+        },
+        {
+          "type": "richtext",
+          "id": "agreed_text_2",
+          "label": "Description Text"
+        },
+        {
+          "type": "range",
+          "id": "percent_bar_3",
+          "label": "Percentage",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 70
+        },
+        {
+          "type": "richtext",
+          "id": "agreed_text_3",
+          "label": "Description Text"
+        },
+        {
+          "type": "range",
+          "id": "percent_bar_4",
+          "label": "Percentage",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 70
+        },
+        {
+          "type": "richtext",
+          "id": "agreed_text_4",
+          "label": "Description Text"
+        },
+        {
+          "type": "textarea",
+          "id": "ctm_cls_btn",
+          "label": "t:common.classname.custom"
+        },
+        {
           "type": "text",
           "id": "btn_text",
           "label": "t:common.button.label"
+        },
+        {
+          "type": "text",
+          "id": "btn_font_size_desktop",
+          "label": "Button Font Size (Desktop)",
+          "default": "22px"
+        },
+        {
+          "type": "text",
+          "id": "btn_font_size_mobile",
+          "label": "Button Font Size (Mobile)",
+          "default": "20px"
         },
         {
           "type": "url",

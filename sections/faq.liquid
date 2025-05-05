@@ -88,6 +88,9 @@
                     </div>
                   {% endif %}
                 {%- endfor -%}
+                <div class="faq-ask">
+                  <a href="faq.html">Don’t see your question? Ask us</a>
+              </div>
                 {%- for block in section.blocks -%}
                   {% if block.type == 'button' %}
                     {% if block.settings.button_label != blank %}
