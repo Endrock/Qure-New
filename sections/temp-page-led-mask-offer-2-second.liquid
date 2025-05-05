@@ -1,3 +1,6 @@
+{% assign product_led_neck = all_products['neck-decolletage-led'] %}
+{% assign product_led_mask = all_products['q-rejuvalight-pro-facewear-3'] %}
+
 <!-- use three steps starts -->
 <div class="use_three_steps section bg-lightGrey">
     <div class="container">
@@ -830,7 +833,7 @@
 
                 <div class="get_clearer_wrapper text-center mt-5 d-none">
                     <a class="btn btn-lg btn-primary led_mask_btn" href="#shop">Transform My Skin & Save
-                        $299
+                        {{ product_led_neck.price | money_without_trailing_zeros }}
                     </a>
                 </div>
             </div>
@@ -859,7 +862,7 @@
                     <h4 class="d-block d-md-none">Q-Rejuvalight Pro LED <br> Mask + Neck & <br> Décolletage LED
                     </h4>
                     <div class="text-center my-3 my-md-4">
-                        <h2 class="price_ctm">$399</h2>
+                        <h2 class="price_ctm">{{ product_led_mask.price | money_without_trailing_zeros }}</h2>
                         <p>one-time cost </p>
                     </div>
                 </div>
@@ -887,7 +890,7 @@
                     <h4 class="d-none d-md-block">Derm or Clinic Treatments </h4>
                     <h4 class="d-block d-md-none">Derm or Clinic<br> Treatments</h4>
                     <div class="text-center my-3 my-md-4">
-                        <h2 class="price_ctm">$1,200 +</h2>
+                        <h2 class="price_ctm">{{ 1200 | times: 100 | money_without_trailing_zeros }} +</h2>
                         <p>yearly cost</p>
                     </div>
                 </div>
@@ -938,9 +941,9 @@
                     </h2>
 
                     <div class="d-flex align-items-center gap-2 mb-3">
-                        <span class="old-price fw-semibold">$299</span>
+                        <span class="old-price fw-semibold">{{ product_led_neck.price | money_without_trailing_zeros }}</span>
                         <span class="free_text">FREE</span>
-                        <span class="price-badge">YOU SAVE <strong> $299 </strong></span>
+                        <span class="price-badge">YOU SAVE <strong> {{ product_led_neck.price | money_without_trailing_zeros }} </strong></span>
                     </div>
 
                     <p class="mb-4">
@@ -969,7 +972,7 @@
                     </div>
 
                     <a class="btn btn-lg btn-primary led_mask_btn" href="#shop">Shop Now &amp; Save
-                        $299
+                        {{ product_led_neck.price | money_without_trailing_zeros }}
                         <span><img src="https://qureskincaredns.com/new/assets/long_right_black_arrow.svg" alt=""></span>
                     </a>
                 </div>
@@ -1348,7 +1351,7 @@
             </div>
         </div>
         <div class="get_clearer_wrapper text-center mt-5 d-none">
-            <a class="btn btn-lg btn-primary led_mask_btn" href="#shop">Transform My Skin & Save $299
+            <a class="btn btn-lg btn-primary led_mask_btn" href="#shop">Transform My Skin & Save {{ product_led_neck.price | money_without_trailing_zeros }}
             </a>
         </div>
     </div>
@@ -1372,7 +1375,7 @@
                 </div>
                 <div class="popup_pd-info">
                     <h2>Neck & Decolletage LED Device</h2>
-                    <h4><span>$299</span> <span class="free">FREE</span> <span class="you_save">YOU SAVE $299</span>
+                    <h4><span>{{ product_led_neck.price | money_without_trailing_zeros }}</span> <span class="free">FREE</span> <span class="you_save">YOU SAVE {{ product_led_neck.price | money_without_trailing_zeros }}</span>
                     </h4>
                 </div>
                 <div class="bs_feature correctCircle ps-0">

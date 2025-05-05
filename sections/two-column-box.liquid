@@ -19,7 +19,7 @@
             {%- assign image_count = image_count | plus: 1 -%}
             {% capture image %}
                 {% if block.settings.image != blank %}
-                    <div class="{{ block.settings.classname }}">
+                    <div class="position-relative {{ block.settings.classname }}">
                         <picture>
                             <source media="(min-width:1920px)" srcset="{{ block.settings.image | img_url: 'master' }}">
                             <source media="(min-width:1600px)" srcset="{{ block.settings.image | img_url: '1600x' }}">
@@ -34,6 +34,16 @@
                                 <img class="img-fluid pb-3" src="{{ block.settings.image | img_url: '540x' }}" alt="{{ block.settings.image.alt | escape }}" width="125" height="173">
                             {% endif %}
                         </picture>
+                        {% if block.settings.dual_action !=blank %}
+                            <div class="aboveText mw-525 d-none d-md-block mt-3">
+                                <h2 class="title-lg">{{block.settings.dual_action }} </h2>
+                            </div>
+                        {% endif %}
+                        {% if block.settings.dual_action_mob !=blank %}
+                            <div class="aboveText d-md-none mt-3">
+                                <h2 class="title-lg">{{block.settings.dual_action_mob }}</h2>
+                            </div>
+                        {% endif %}
                     </div>
                 {% endif %} 
             {% endcapture %}
@@ -47,7 +57,7 @@
 
 {% if details_count > 0 %}
     {% capture details %}
-        <div class="accordion accordion-flush mt-3 mt-md-5" id="accordionTechnology"></div>
+        <div class="accordion accordion-flush mt-3 mt-md-5" id="accordionTechnology">
         {%- for block in section.blocks -%}
             {% if block.type == 'details' %}
                 <div class="accordion-item u_item_question bg-grey">
@@ -69,6 +79,7 @@
                 </div>
             {% endif %}
         {% endfor %} 
+        </div>
     {% endcapture %}
     {% capture details_desktop %}<div class="header d-none d-md-block">{{ details }}</div>{% endcapture %}
     {% capture details_mobile %}<div class="d-block d-md-none text-start">{{ details }}</div>{% endcapture %}
@@ -265,6 +276,16 @@
                         "type": "image_picker",
                         "id": "image_mobile",
                         "label": "t:common.image_mobile.label"
+                    },
+                    {
+                        "type": "text",
+                        "id": "dual_action",
+                        "label": "t:common.text.label"
+                    },
+                    {
+                        "type": "text",
+                        "id": "dual_action_mob",
+                        "label": "t:common.text.label"
                     },
                     {
                         "type": "text",
