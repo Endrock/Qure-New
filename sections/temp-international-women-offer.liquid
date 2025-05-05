@@ -1,4 +1,8 @@
-{% capture content %}
+{% assign product_led_bundle = all_products['micro-infusion-3-month-bundle-for-wrinkles-dark-spots'] %}
+{% assign product_led_mask = all_products['q-rejuvalight-pro-facewear'] %}
+
+
+
     
     <!-- -- main banner start -- -->
     <div class="refill_bl py-3 py-md-4 tabSlider">
@@ -1674,10 +1678,10 @@
                                         <div class="include_checkout">
                                             <div class="row justify-content-between mb-3">
                                                 <div class="col-auto">
-                                                    <p class="green_txt">INSTANT SAVINGS: {{ 357 | times: 100 | money_without_trailing_zeros }}</p>
+                                                    <p class="green_txt">INSTANT SAVINGS: {{ product_led_bundle.price | money_without_trailing_zeros }}</p>
                                                 </div>
                                                 <div class="col-auto">
-                                                    <h6><del class="text-grey">{{ 756 | times: 100 | money_without_trailing_zeros }}</del> <span>{{ 379 | times: 100 | money_without_trailing_zeros }}</span></h6>
+                                                    <h6><del class="text-grey">{{ product_led_bundle.price | plus: product_led_mask.price | money_without_trailing_zeros }}</del> <span>{{ product_led_mask.price | money_without_trailing_zeros }}</span></h6>
                                                 </div>
                                             </div>
                                             <div class="include_stock">
@@ -1699,7 +1703,7 @@
                                             </div>
                                         </div>
                                         <!-- Buy Now Button -->
-                                        <button class="buy-now fw-semibold" id="buy-now-button">Buy Now & Save {{ 357 | times: 100 | money_without_trailing_zeros }}</button>
+                                        <button class="buy-now fw-semibold" id="buy-now-button">Buy Now & Save {{ product_led_bundle.price | money_without_trailing_zeros }}</button>
 
                                         <!-- Payment Methods -->
                                         <div class="payment_method">
@@ -1774,7 +1778,7 @@
                         <h4 class="d-none d-md-block">Q-Rejuvalight Pro LED Mask</h4>
                         <h4 class="d-block d-md-none">Q-Rejuvalight Pro<br> LED Mask</h4>
                         <div class="text-center my-3 my-md-4">
-                            <h2>$379</h2>
+                            <h2>{{ product_led_mask.price | money_without_trailing_zeros }}</h2>
                             <p><strong>one-time cost </strong></p>
                         </div>
                     </div>
@@ -1802,7 +1806,7 @@
                         <h4 class="d-none d-md-block">Derm or Clinic Treatments </h4>
                         <h4 class="d-block d-md-none">Derm or Clinic<br> Treatments</h4>
                         <div class="text-center my-3 my-md-4">
-                            <h2>$900</h2>
+                            <h2>{{ 900 | times: 100 | money_without_trailing_zeros }}</h2>
                             <p><strong>per 6 session treatment</strong></p>
                         </div>
                     </div>
@@ -2101,11 +2105,7 @@
         </div>
     </div>
     <!-- Product Modal -->
-{% endcapture %}
 
-{% assign amount = 357 | times: 100 | money_without_trailing_zeros %}
-
-{{ content |  replace: '$357', amount }}
 
 <script src="https://fast.wistia.com/embed/medias/3ahwzg8wjz.jsonp" async></script>
 <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
@@ -2230,5 +2230,21 @@
             },
         });
 
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        let find = '$357';
+        let replace = '{{ product_led_bundle.price | money_without_trailing_zeros }}';
+        const spanEl = document.querySelector('.header_btn span');
+        
+        if (spanEl && spanEl.textContent.includes(find)) {
+            spanEl.textContent = spanEl.textContent.replace(find, replace);
+        }
+
+        document.querySelectorAll('a.btn-primary').forEach(aEl => {
+            if (aEl.textContent.includes(find)) {
+                aEl.textContent = aEl.textContent.replace(find, replace);
+            }
+        });
     });
 </script>
