@@ -173,11 +173,6 @@
         "popup_enabled": false
       }
     },
-    "main_banner": {
-      "type": "temp-page-micro-infusion-dark-spots-main-banner",
-      "disabled": true,
-      "settings": {}
-    },
     "featuredin_TRUVpW": {
       "type": "featuredin",
       "blocks": {
@@ -1328,7 +1323,6 @@
   "order": [
     "header_landing_yzqaEc",
     "product-landing",
-    "main_banner",
     "featuredin_TRUVpW",
     "image_text_3b878r",
     "line_W9wfH7",
