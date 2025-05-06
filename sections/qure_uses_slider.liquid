@@ -1,0 +1,132 @@
+
+
+<div class="container">
+  <div class="section_header text-center pb-0 pb-md-5">
+    <h2 class="title-lg">{{ section.settings.heading }}</h2>
+  </div>
+
+  <div
+    class="swiper twa__swiper dot_pagination qureSlider"
+    id="twa__swiper-result_slider"
+    data-section-id="result_slider"
+    data-autoplay="false"
+    data-loop="false"
+    data-centerslide="false"
+    data-mobile="1.4"
+    data-tablet="4"
+    data-desktop="4"
+    data-spacing="20"
+    data-arrowleft="video-swiper-prev"
+    data-arrowright="video-swiper-next"
+  >
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="swiper-slide">
+          <div class="q_uses_item-outer">
+            <div class="q_uses_item px-2">
+              <div class="q_uses_res">
+                <div class="q_use_img">
+                  {% if block.settings.image %}
+                    <img src="{{ block.settings.image | image_url }}" alt="" class="img-fluid">
+                  {% endif %}
+                </div>
+                <div class="q_uses_header">
+                  <p>{{ block.settings.title }}</p>
+                  <div class="arrow text-end d-none">
+                    <img src="https://qureskincaredns.com/new/assets/arrow-down.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="q_uses_desczzz">
+                <p>{{ block.settings.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="pagination_navigation">
+      <div class="swiper-pagination"></div>
+      <div class="video-swiper-prev swiper-button-prev swiper-button"></div>
+      <div class="video-swiper-next swiper-button-next swiper-button"></div>
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Qure Uses Slider",
+  "tag": "section",
+  "class": "q_uses_bl section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Get compliment-worthy skin"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "use_slide",
+      "name": "Use Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Qure Uses Slider",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "use_slide",
+          "settings": {
+            "title": "Trusted by world-leading dermatologists",
+            "description": "Dr. Shah, an MD Board Certified Dermatologist, reviewed that it’s 'the best LED mask on the market, in my opinion.'"
+          }
+        },
+        {
+          "type": "use_slide",
+          "settings": {
+            "title": "Proven results in less than 12 weeks",
+            "description": "Customers have reported reduced redness, diminished fine lines & wrinkles, and a glowing, younger-looking complexion."
+          }
+        },
+        {
+          "type": "use_slide",
+          "settings": {
+            "title": "Alleviates many different skin concerns",
+            "description": "Choose between anti-aging, anti-breakout, or customized modes for each facial area."
+          }
+        },
+        {
+          "type": "use_slide",
+          "settings": {
+            "title": "Track your treatments with Qure mobile app",
+            "description": "Use on its own, or pair with our app to customize treatments, set reminders, and track progress."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

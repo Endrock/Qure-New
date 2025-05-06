@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "header_landing_SSnaTx": {
@@ -27,7 +18,7 @@
           "settings": {
             "link_label": "REVIEWS",
             "link_url": "#result_section",
-            "image": "shopify://shop_images/headerLanding-2.png"
+            "image": "shopify:\/\/shop_images\/headerLanding-2.png"
           }
         },
         "navigation_link_wPNEr9": {
@@ -35,7 +26,7 @@
           "settings": {
             "link_label": "SPECIAL OFFER",
             "link_url": "#shop",
-            "image": "shopify://shop_images/header_specialOffer.webp"
+            "image": "shopify:\/\/shop_images\/header_specialOffer.webp"
           }
         },
         "navigation_link_wVVWXW": {
@@ -43,7 +34,7 @@
           "settings": {
             "link_label": "FAQS",
             "link_url": "#faq_section",
-            "image": "shopify://shop_images/headerLanding-4.png"
+            "image": "shopify:\/\/shop_images\/headerLanding-4.png"
           }
         }
       },
@@ -59,7 +50,8 @@
       }
     },
     "main": {
-      "type": "temp-page-led-mask-offer-2"
+      "type": "temp-page-led-mask-offer-2",
+      "settings": {}
     },
     "liquid_6AqWXk": {
       "type": "liquid",
@@ -69,13 +61,353 @@
       }
     },
     "second": {
-      "type": "temp-page-led-mask-offer-2-second"
+      "type": "temp-page-led-mask-offer-2-second",
+      "settings": {}
+    },
+    "featuredin_extended_b76fXb": {
+      "type": "featuredin_extended",
+      "blocks": {
+        "image_WLHgxA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vogue2.svg"
+          }
+        },
+        "image_HNBEnz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/women_health.svg"
+          }
+        },
+        "image_jFf3wc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/elle2.svg"
+          }
+        },
+        "image_ddAMbt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/si_icon_lp.svg"
+          }
+        },
+        "image_7NWMiA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/showcase_lp.svg"
+          }
+        }
+      },
+      "block_order": [
+        "image_WLHgxA",
+        "image_HNBEnz",
+        "image_jFf3wc",
+        "image_ddAMbt",
+        "image_7NWMiA"
+      ],
+      "name": "t:sections.feature_extend.label",
+      "settings": {
+        "heading": "FEATURED IN",
+        "slider_type": "five_slides",
+        "slide_per_view_desktop": 5,
+        "slide_per_view_mobile": 3
+      }
+    },
+    "qure_uses_slider_hRB7TB": {
+      "type": "qure_uses_slider",
+      "blocks": {
+        "use_slide_kyQiFG": {
+          "type": "use_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cus_acc_1_new.webp",
+            "title": "Trusted by world-leading dermatologists",
+            "description": "Dr. Shah, an MD Board Certified Dermatologist, reviewed that it’s 'the best LED mask on the market, in my opinion.'"
+          }
+        },
+        "use_slide_fbTrwT": {
+          "type": "use_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cus_acc_2_new.webp",
+            "title": "Proven results in less than 12 weeks",
+            "description": "Customers have reported reduced redness, diminished fine lines & wrinkles, and a glowing, younger-looking complexion."
+          }
+        },
+        "use_slide_Hy7YFg": {
+          "type": "use_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cus_acc_3_new.webp",
+            "title": "Alleviates many different skin concerns",
+            "description": "Choose between anti-aging, anti-breakout, or customized modes for each facial area."
+          }
+        },
+        "use_slide_79Hjmc": {
+          "type": "use_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cus_acc_4_new.webp",
+            "title": "Track your treatments with Qure mobile app",
+            "description": "Use on its own, or pair with our app to customize treatments, set reminders, and track progress."
+          }
+        }
+      },
+      "block_order": [
+        "use_slide_kyQiFG",
+        "use_slide_fbTrwT",
+        "use_slide_Hy7YFg",
+        "use_slide_79Hjmc"
+      ],
+      "name": "Qure Uses Slider",
+      "settings": {
+        "heading": "Get compliment-worthy skin"
+      }
+    },
+    "proof_in_numbers_4pTJzE": {
+      "type": "proof_in_numbers",
+      "blocks": {
+        "report_item_kCFUwn": {
+          "type": "report_item",
+          "settings": {
+            "percentage": 87,
+            "main_text": "reported smoother facial wrinkles and fine lines",
+            "tooltip_text": "Clinical trial was conducted to assess reduction in sun damage signs following 12 weeks of LED therapy..."
+          }
+        },
+        "report_item_zWWcrB": {
+          "type": "report_item",
+          "settings": {
+            "percentage": 91,
+            "main_text": "reported improved skin tone and enhanced smoothness",
+            "tooltip_text": "Clinical trial conducted with acne-grade patients alternating blue and near-IR light. Results assessed over 8 weeks."
+          }
+        },
+        "report_item_Lpr7Yz": {
+          "type": "report_item",
+          "settings": {
+            "percentage": 83,
+            "main_text": "reported a reduction in acne breakouts",
+            "tooltip_text": "Clinical trial with 660nm LED light. Results assessed in aged\/photoaged individuals in a split-face study."
+          }
+        }
+      },
+      "block_order": [
+        "report_item_kCFUwn",
+        "report_item_zWWcrB",
+        "report_item_Lpr7Yz"
+      ],
+      "name": "Proof In Numbers",
+      "settings": {
+        "heading": "Proof In Numbers",
+        "subtext": "During clinical studies on LED light therapy, users reported numerous benefits:"
+      }
+    },
+    "result_with_product_wmbwCj": {
+      "type": "result_with_product",
+      "blocks": {
+        "testimonial_RcbDcc": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/results_kayla_new.webp",
+            "title": "Fresher complexion",
+            "review": "“The mask is easy to set up and start using immediately. My primary concern is discoloration from sun exposure and fine line\/wrinkle prevention. I have very dry skin and after 2.5 weeks, I can tell a significant difference in my skin’s moisture. Especially since it is the middle of winter. The discoloration on my forehead is also evening out and the red, patchy spots on my cheeks are not as inflamed.”",
+            "customer_name": "Kayla T.",
+            "country_flag": "shopify:\/\/shop_images\/america_f.webp",
+            "verified_image": "shopify:\/\/shop_images\/verified_design.svg",
+            "verified_text": "Verified customer",
+            "product_image": "shopify:\/\/shop_images\/womens_day_bundle.webp",
+            "customer_name_with_prod": "<p>Kayla uses the<strong> Q-Rejuvalight Pro LED Mask<\/strong><\/p>",
+            "btn_text": "Learn More",
+            "button_link": "#special_offer"
+          }
+        },
+        "testimonial_WcgMFt": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/results_tiffany_new.webp",
+            "title": "Renewed skin!",
+            "review": "My Qure mask has been amazing! As someone who struggles with acne and rosacea, your LED light therapy mask has improved my skin so much that I an now feel comfortable without any makeup. I’m very happy with this product!",
+            "customer_name": "Tiffany L.",
+            "country_flag": "shopify:\/\/shop_images\/america_f.webp",
+            "verified_image": "shopify:\/\/shop_images\/verified_design.svg",
+            "verified_text": "Verified customer",
+            "product_image": "shopify:\/\/shop_images\/womens_day_bundle.webp",
+            "customer_name_with_prod": "<p>Tiffany uses the <strong> Q-Rejuvalight Pro LED Mask<\/strong><\/p>",
+            "btn_text": "Learn More",
+            "button_link": "#special_offer"
+          }
+        },
+        "testimonial_NJp8mh": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/results_healthier.webp",
+            "title": "Healthier-looking glow",
+            "review": "“I was shocked seeing my before and after photos!! I didn’t realise how much my skin improved. I feel so much more confident wearing open tops now. My skin looks much more even, less red and all round healthier. Happy I invested into this device and would definitely recommend it to everyone :)”",
+            "customer_name": "Claudia",
+            "country_flag": "shopify:\/\/shop_images\/canada_f.svg",
+            "verified_image": "shopify:\/\/shop_images\/verified_design.svg",
+            "verified_text": "Verified customer",
+            "product_image": "shopify:\/\/shop_images\/neck_bndl_new.webp",
+            "customer_name_with_prod": "<p>Claudia uses the <strong> Neck & Décollatage LED Device<\/strong><\/p>",
+            "btn_text": "Learn More",
+            "button_link": "#special_offer"
+          }
+        },
+        "testimonial_PXeFfh": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/results_terri_new.webp",
+            "title": "Wish I had this technology years ago!",
+            "review": "“After two weeks I began to see results and after six weeks the changes in my skin were dramatic. I have now been using Qure six months and loving the compliments! I bought masks for my daughters for Christmas so they could start at a younger age…. I wish this technology had been available when I was younger. I am 76 years old! Photos below are after 6 weeks.”",
+            "customer_name": "Terri P.",
+            "country_flag": "shopify:\/\/shop_images\/america_f.webp",
+            "verified_image": "shopify:\/\/shop_images\/verified_design.svg",
+            "verified_text": "Verified customer",
+            "product_image": "shopify:\/\/shop_images\/womens_day_bundle.webp",
+            "customer_name_with_prod": "<p>Terri uses the <strong> Q-Rejuvalight Pro LED Mask<\/strong><\/p>",
+            "btn_text": "Learn More",
+            "button_link": "#special_offer"
+          }
+        },
+        "testimonial_43EBGT": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/results_marry_new.webp",
+            "title": "Outstanding",
+            "review": "“I’m so impressed with the results! I noticed a difference after a few weeks however when comparing photos I am so surprised at how much younger the skin on my neck and chest looks. Wrinkles have significantly reduced, sun spots are lighter and my skin looks and feels more rejuvenated. Device is easy to use, I love that I can clip the controller to my robe and multitask around the house whilst the treatment is on.\"",
+            "customer_name": "Mary R.M.",
+            "country_flag": "shopify:\/\/shop_images\/canada_f.svg",
+            "verified_image": "shopify:\/\/shop_images\/verified_design.svg",
+            "verified_text": "Verified customer",
+            "product_image": "shopify:\/\/shop_images\/neck_bndl_new.webp",
+            "customer_name_with_prod": "<p>Mary uses the<strong> Neck & Décollatage LED Device<\/strong><\/p>",
+            "btn_text": "Learn More",
+            "button_link": "#special_offer"
+          }
+        },
+        "testimonial_WacP6r": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/results_jessica1_new.webp",
+            "title": "Thrilled with the results!",
+            "review": "“I am 45 so I am fighting signs of aging, but also still dealing with acne flare ups. I haven’t had a single breakout since I started using the mask, plus I notice a definite smoothing of fine wrinkles on my cheeks & around my eyes. I recommend this product to anyone. Well worth the investment”",
+            "customer_name": "Jessica K.",
+            "country_flag": "shopify:\/\/shop_images\/america_f.webp",
+            "verified_image": "shopify:\/\/shop_images\/verified_design.svg",
+            "verified_text": "Verified customer",
+            "product_image": "shopify:\/\/shop_images\/womens_day_bundle.webp",
+            "customer_name_with_prod": "<p>Jessica uses the <strong> Q-Rejuvalight Pro LED Mask<\/strong><\/p>",
+            "btn_text": "Learn More",
+            "button_link": "#special_offer"
+          }
+        },
+        "testimonial_KHLarq": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/results_sophia_new.webp",
+            "title": "From sun damage to this",
+            "review": "“After years damage from the strong Aussie sun I wanted to try LED therapy to help rejuvenate and repair my decollate area as I read lots of positive reviews on it. I’m so glad I did because after using it daily, I've witnessed this transformation!!! Skin is firmer, sunspots have faded and texture is so much smoother!! ”",
+            "customer_name": "Sophia N.",
+            "country_flag": "shopify:\/\/shop_images\/australia_f.webp",
+            "verified_image": "shopify:\/\/shop_images\/verified_design.svg",
+            "verified_text": "Verified customer",
+            "product_image": "shopify:\/\/shop_images\/neck_bndl_new.webp",
+            "customer_name_with_prod": "<p>Sophia uses the<strong> Neck & Décollatage LED Device<\/strong><\/p>",
+            "btn_text": "Learn More",
+            "button_link": "#special_offer"
+          }
+        },
+        "testimonial_U74Pwp": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/results_bj_nardi_new.webp",
+            "title": "Completely qured my acne",
+            "review": "“This is the first time in TWO YEARS that I don’t have active acne on my face. I’ve been using my Qure for 1 month now and it has completely qured my acne. It’s gone AND it’s healing all my scars and pox marks. I was literally on the verge of suicide because of my horrible skin. This device SAVED MY LIFE!!!.”",
+            "customer_name": "BJ Nardi",
+            "country_flag": "shopify:\/\/shop_images\/canada_f.svg",
+            "verified_image": "shopify:\/\/shop_images\/verified_design.svg",
+            "verified_text": "Verified customer",
+            "product_image": "shopify:\/\/shop_images\/womens_day_bundle.webp",
+            "customer_name_with_prod": "<p>BJ uses the<strong> Q-Rejuvalight Pro LED Mask<\/strong><\/p>",
+            "btn_text": "Learn More",
+            "button_link": "#special_offer"
+          }
+        },
+        "testimonial_kJgf7X": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/results_josie1_new.webp",
+            "title": "Stubborn inflammation",
+            "review": "“After struggling with acne and the stubborn pigmentation it left behind, I'm thrilled with the results I've seen after using Qure LED chest device. My skin is clearer, and the pigmentation has significantly faded. The most important, I don’t have to cover my neck and chest with foundations and concealers anymore”",
+            "customer_name": "Josie",
+            "country_flag": "shopify:\/\/shop_images\/america_f.webp",
+            "verified_image": "shopify:\/\/shop_images\/verified_design.svg",
+            "verified_text": "Verified customer",
+            "product_image": "shopify:\/\/shop_images\/womens_day_bundle.webp",
+            "customer_name_with_prod": "<p>Josie uses the <strong> Neck & Décollatage LED Device<\/strong><\/p>",
+            "btn_text": "Learn More",
+            "button_link": "#special_offer"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_RcbDcc",
+        "testimonial_WcgMFt",
+        "testimonial_NJp8mh",
+        "testimonial_PXeFfh",
+        "testimonial_43EBGT",
+        "testimonial_WacP6r",
+        "testimonial_KHLarq",
+        "testimonial_U74Pwp",
+        "testimonial_kJgf7X"
+      ],
+      "name": "Result Product Slider",
+      "settings": {
+        "heading": "Thousands are out-glowing their insecurities",
+        "star_image": "shopify:\/\/shop_images\/star4.8.svg",
+        "review_text": "4.8\/5 Based on 48,847 Users"
+      }
+    },
+    "exclusive_offer_bcwJpj": {
+      "type": "exclusive_offer",
+      "blocks": {
+        "led_mask_feature_ANjWdV": {
+          "type": "led_mask_feature",
+          "settings": {
+            "feature_text": "<ul><li>cscsd<\/li><li>csdcscsd<\/li><li>cscsc<\/li><li>scs<\/li><\/ul>"
+          }
+        },
+        "led_neck_feature_DwbhtG": {
+          "type": "led_neck_feature",
+          "settings": {
+            "feature_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "led_mask_feature_ANjWdV",
+        "led_neck_feature_DwbhtG"
+      ],
+      "name": "Exclusive Offer",
+      "settings": {
+        "link_text": "Your Exclusive Offer",
+        "link_url": "",
+        "heading": "Experience face and neck rejuvenation in one bundle",
+        "subheading": "Includes 2 LED Devices:",
+        "mask_product": "",
+        "neck_product": "",
+        "mask_title": "Q–Rejuvalight Pro LED Mask",
+        "neck_title": "Neck & Décolletage LED Device",
+        "included_text": "Included with your purchase"
+      }
     }
   },
   "order": [
     "header_landing_SSnaTx",
     "main",
     "liquid_6AqWXk",
-    "second"
+    "second",
+    "featuredin_extended_b76fXb",
+    "qure_uses_slider_hRB7TB",
+    "proof_in_numbers_4pTJzE",
+    "result_with_product_wmbwCj",
+    "exclusive_offer_bcwJpj"
   ]
 }

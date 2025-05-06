@@ -32479,7 +32479,12 @@ picture img {
 .img_ser {
     margin-top: 25px;
 }
-
+.result_s_wrapper .swiper-slide {
+    height: auto;
+}
+.result_s_wrapper .swiper-slide .result_item {
+    height: 100%;
+}
 
 @media(max-width:767px){
     .indiv_clinics p{

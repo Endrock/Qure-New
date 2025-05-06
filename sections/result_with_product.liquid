@@ -1,0 +1,246 @@
+<!-- -- result section start -- -->
+<div class="result_s section mi_landing_result" id="result_section">
+    <div class="container">
+      <div class="section_header text-center mb-3 mw-100">
+        <h2 class="title-lg paddingB">
+          {{ section.settings.heading }}
+        </h2>
+        <div class="refill_review justify-content-center">
+          <div class="star_gp">
+            {% if section.settings.star_image %}
+              <img src="{{ section.settings.star_image | img_url: 'medium' }}" alt="">
+            {% endif %}
+          </div>
+          <p class="text-sm fw-normal text-decoration-none">{{ section.settings.review_text }}</p>
+        </div>
+      </div>
+  
+      <div class="result_s_wrapper">
+        <div class="swiper dot_pagination result_slider">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              <div class="swiper-slide">
+                <div class="result_item result_item_info_with_fixed">
+                  <div class="result_img_m">
+                    {% if block.settings.image %}
+                      <img src="{{ block.settings.image | img_url: 'medium' }}" alt="" class="img-fluid">
+                    {% endif %}
+                  </div>
+                  <div class="result_c_info pb-0">
+                    <div class="star_gp">
+                      <p>{{ block.settings.title }}</p>
+                    </div>
+                  </div>
+                  <div class="result_item_info">
+                    <div class="result_content">
+                      <p>{{ block.settings.review }}</p>
+                    </div>
+                  </div>
+                  <div class="result_learnMore d-block">
+                    <div class="result_learnMore_wrap">
+                      <div class="result_c_info">
+                        <div class="r_flag">
+                          <div class="flag_img">
+                            {% if block.settings.country_flag %}
+                              <img src="{{ block.settings.country_flag | img_url: 'small' }}" alt="" class="img-fluid">
+                            {% endif %}
+                          </div>
+                          <p class="r_c_name pe-2">{{ block.settings.customer_name }}</p>
+                        </div>
+                        <div class="verified_img">
+                          {% if block.settings.verified_image %}
+                            <img src="{{ block.settings.verified_image | img_url: 'small' }}" alt="">
+                          {% endif %}
+                          <p>{{ block.settings.verified_text }}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-grid prod_uses">
+                      <div class="prod_img">
+                        {% if block.settings.product_image %}
+                          <img src="{{ block.settings.product_image | img_url: 'small' }}" alt="" class="img-fluid">
+                        {% endif %}
+                      </div>
+                      <div class="prod_rev">
+                        <p>{{ block.settings.customer_name_with_prod }}</p> 
+                      </div>
+                      <div class="learn_more_prod">
+                        <a href="{{ block.settings.button_link }}">{{ block.settings.btn_text }}</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %} 
+          </div>
+            <div class="pagination_navigation">
+                <div class="swiper-pagination"></div>
+                <div class="qureSlider-swiper-prev swiper-button-prev swiper-button"></div>
+                <div class="qureSlider-swiper-next  swiper-button-next swiper-button"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  {% schema %}
+  {
+    "name": "Result Product Slider",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Main Heading",
+        "default": "Thousands are out-glowing their insecurities"
+      },
+      {
+        "type": "image_picker",
+        "id": "star_image",
+        "label": "Star Image"
+      },
+      {
+        "type": "text",
+        "id": "review_text",
+        "label": "Review Summary",
+        "default": "4.8/5 Based on 48,847 Users"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "testimonial",
+        "name": "Result Slide",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Before/After Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Result Title",
+            "default": "Glowing Skin"
+          },
+          {
+            "type": "textarea",
+            "id": "review",
+            "label": "Customer Review"
+          },
+          {
+            "type": "text",
+            "id": "customer_name",
+            "label": "Customer Name"
+          },
+          {
+            "type": "image_picker",
+            "id": "country_flag",
+            "label": "Country Flag"
+          },
+          {
+            "type": "image_picker",
+            "id": "verified_image",
+            "label": "Verified Badge"
+          },
+          {
+            "type": "text",
+            "id": "verified_text",
+            "label": "Verified Text",
+            "default": "Verified customer"
+          },
+          {
+            "type": "image_picker",
+            "id": "product_image",
+            "label": "Product Image"
+          },
+          {
+            "type": "richtext",
+            "id": "customer_name_with_prod",
+            "label": "Customer used product"
+          },
+          {
+            "type": "text",
+            "id": "btn_text",
+            "label": "Button Text",
+            "default": "Learn More"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+          }
+        ]
+      }
+    ],
+    "max_blocks": 12,
+    "presets": [
+      {
+        "name": "Result Product Slider",
+        "settings": {
+          "heading": "Thousands are out-glowing their insecurities",
+          "star_image": "shopify://shop_images/star-placeholder.png",
+          "review_text": "4.8/5 Based on 48,847 Users"
+        },
+        "blocks": [
+          {
+            "type": "testimonial",
+            "settings": {
+              "image": "shopify://shop_images/results_kayla_new.webp",
+              "title": "Clearer, Smoother Skin",
+              "review": "I’ve never felt this confident without makeup!",
+              "country_flag": "shopify://shop_images/flag-us.png",
+              "verified_image": "shopify://shop_images/verified-badge.png",
+              "verified_text": "Verified customer",
+              "product_image": "shopify://shop_images/product1.png",
+              "btn_text": "Learn More",
+              "button_link": "#special_offer"
+            }
+          },
+          {
+            "type": "testimonial",
+            "settings": {
+              "image": "shopify://shop_images/results_tiffany_new.webp",
+              "title": "Brighter Complexion",
+              "review": "My skin tone is so even now!",
+              "country_flag": "shopify://shop_images/flag-uk.png",
+              "verified_image": "shopify://shop_images/verified-badge.png",
+              "verified_text": "Verified customer",
+              "product_image": "shopify://shop_images/product2.png",
+              "btn_text": "Learn More",
+              "button_link": "#special_offer"
+            }
+          },
+          {
+            "type": "testimonial",
+            "settings": {
+              "image": "shopify://shop_images/results_healthier.webp",
+              "title": "Healthier Looking Skin",
+              "review": "Now I get compliments on my skin all the time.",
+              "country_flag": "shopify://shop_images/flag-ca.png",
+              "verified_image": "shopify://shop_images/verified-badge.png",
+              "verified_text": "Verified customer",
+              "product_image": "shopify://shop_images/product3.png",
+              "btn_text": "Learn More",
+              "button_link": "#special_offer"
+            }
+          },
+          {
+            "type": "testimonial",
+            "settings": {
+              "image": "shopify://shop_images/results_terri_new.webp",
+              "title": "Youthful Glow",
+              "review": "Even my fine lines have softened.",
+              "country_flag": "shopify://shop_images/flag-au.png",
+              "verified_image": "shopify://shop_images/verified-badge.png",
+              "verified_text": "Verified customer",
+              "product_image": "shopify://shop_images/product4.png",
+              "btn_text": "Learn More",
+              "button_link": "#special_offer"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  {% endschema %}
+  
