@@ -1,0 +1,141 @@
+
+
+<div class="maximize_benefits">
+    <picture>
+        {% if section.settings.desktop_banner %}
+          <source media="(min-width: 720px)" srcset="{{ section.settings.desktop_banner | image_url: width: 1440 }}">
+        {% endif %}
+        {% if section.settings.mobile_banner %}
+          <source media="(max-width: 719px)" srcset="{{ section.settings.mobile_banner | image_url: width: 720 }}">
+        {% endif %}
+        <img 
+          src="{% if section.settings.mobile_banner %}{{ section.settings.mobile_banner | image_url: width: 720 }}{% elsif section.settings.desktop_banner %}{{ section.settings.desktop_banner | image_url: width: 1440 }}{% endif %}" 
+          alt="Maximize Benefits Banner" 
+          class="img-fluid" 
+          width="100%" 
+          height="auto"
+        >
+      </picture>
+      
+
+  <div class="container pt-4 pt-md-0">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7 offset-xl-6">
+        <div class="bg-white py-4 px-3 p-md-5 shadow-sm max_ben">
+          <div class="refill_review justify-content-start my-0">
+            <div class="star_gp">
+              <img src="https://qureskincaredns.com/new/assets/star-half_fill.svg" alt="">
+            </div>
+            <p class="text-sm fw-normal">{{ section.settings.satisfaction_text }}</p>
+          </div>
+
+          <h2 class="title-lg mb-3">{{ section.settings.headline }}</h2>
+
+          {% assign neck_product = all_products[section.settings.product_led_neck] %}
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="old-price fw-semibold">{{ neck_product.price | money_without_trailing_zeros }}</span>
+            <span class="free_text">FREE</span>
+            <span class="price-badge">YOU SAVE <strong>{{ neck_product.price | money_without_trailing_zeros }}</strong></span>
+          </div>
+
+          <p class="mb-4">{{ section.settings.description }}</p>
+
+          <div class="check-list mb-4">
+            {% for block in section.blocks %}
+              <div class="d-flex align-items-start gap-2 mb-3">
+                <img src="https://qureskincaredns.com/new/assets/tick_circle.svg" alt="">
+                <span class="d-none d-md-block">{{ block.settings.desktop_text }}</span>
+                <span class="d-md-none">{{ block.settings.mobile_text }}</span>
+              </div>
+            {% endfor %}
+          </div>
+
+          <a class="btn btn-lg btn-primary led_mask_btn" href="{{ section.settings.cta_url }}">
+            {{ section.settings.cta_text }} {{ neck_product.price | money_without_trailing_zeros }}
+            <span>
+              <img src="https://qureskincaredns.com/new/assets/long_right_black_arrow.svg" alt="">
+            </span>
+          </a>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Maximize Benefits Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "desktop_banner",
+      "label": "Desktop Banner Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_banner",
+      "label": "Mobile Banner Image"
+    },
+    {
+      "type": "text",
+      "id": "satisfaction_text",
+      "label": "Satisfaction Text",
+      "default": "97% customer satisfaction rate"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Main Heading",
+      "default": "Maximize Benefits with a FREE Neck & Decolletage LED Device"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Perfect combination to the Q-Rejuvalight Pro LED mask for the ultimate skin rejuvenation experience."
+    },
+    {
+      "type": "product",
+      "id": "product_led_neck",
+      "label": "LED Neck Product"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "Button Text",
+      "default": "Shop Now & Save"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "check_item",
+      "name": "Checklist Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "desktop_text",
+          "label": "Desktop Text"
+        },
+        {
+          "type": "text",
+          "id": "mobile_text",
+          "label": "Mobile Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Maximize Benefits Banner",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

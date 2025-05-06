@@ -86,6 +86,7 @@
     line-height: 170%;
     letter-spacing: 0.1px;
     padding: 16px;
+    color: #000;
 }
 
 .tootltip_text .tooltip_info {
@@ -1209,6 +1210,9 @@ div#collapseTech1 a{
     text-decoration-line: underline;
     text-decoration-style: solid;
     text-decoration-skip-ink: none;
+}
+div#collapseTech1 a:hover{
+    color: #000;
 }
 
 /* trusted recom */
