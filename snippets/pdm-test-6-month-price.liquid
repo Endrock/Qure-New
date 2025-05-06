@@ -248,25 +248,6 @@
                   <div class="batch_h_info" style="--bgPercent:0%;"><span>In Production</span></div>
                 </div>
               </div>
-
-              <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                  const batchMessage = document.querySelector('.ctm_cls_next_batch_mi_lp');
-                  const radioButtons = document.querySelectorAll('input[name="monthlyPlan"]');
-
-                  batchMessage.style.display = 'none';
-
-                  radioButtons.forEach(function (radio) {
-                    radio.addEventListener('change', function () {
-                      if (document.getElementById('1_month').checked) {
-                        batchMessage.style.display = 'block';
-                      } else {
-                        batchMessage.style.display = 'none';
-                      }
-                    });
-                  });
-                });
-              </script>
             </div>
 
             <div class="tab_content" id="month_3">
@@ -386,7 +367,7 @@
           </div>
           <div class="step_content item-3 pdm-step_content_v2">
             <div class="pmtBlock">
-              <input type="radio" name="pmtPlan" id="pay_in_full" checked>
+              <input type="radio" name="pmtPlan" id="pay_in_full">
               <label class="pmt_plans" for="pay_in_full">
                 <div class="pmt_des">
                   <div class="pmt_hdr">
@@ -501,6 +482,28 @@
     if (!document.body.hasAttribute('data-test-price-bundle')) {
       document.querySelector('.row.price-bundle-test__row-container').remove();
     } else {
+      const batchMessage = document.querySelector('.row.price-bundle-test__row-container .ctm_cls_next_batch_mi_lp');
+      const radioButtons = document.querySelectorAll('input[name="monthlyPlan"]');
+      batchMessage.style.display = 'none';
+
+      radioButtons.forEach(function (radio) {
+        radio.addEventListener('change', function () {
+          if (document.getElementById('1_month').checked) {
+            batchMessage.style.display = 'block';
+          } else {
+            batchMessage.style.display = 'none';
+          }
+        });
+      });
+
+			setTimeout(() => {
+				const payInFullButton = document.querySelector('#pay_in_full');
+				if (payInFullButton) {
+					payInFullButton.checked = true;
+					payInFullButton.dispatchEvent(new Event('change'));
+				}
+			}, 500);
+
       const radioInput = document.querySelector('.row.price-bundle-test__row-container .step_conten_blocks [data-tab="month_3"] input[type="radio"]');
       if (radioInput) {
         radioInput.checked = true;
@@ -547,58 +550,5 @@
       v2__observer.observe(v2__savedAmount, { childList: true, subtree: true });
     }
   });
-</script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    if (!document.body.hasAttribute('data-test-price-bundle')) {
-      console.log('Test price bundle not found');
-      document.querySelector('.row.price-bundle-test__row-container').remove();
-      const radioInput = document.querySelector('.step_conten_blocks [data-tab="month_3"] input[type="radio"]');
-      if (radioInput) {
-        radioInput.checked = true;
-        const changeEvent = new Event('change', {
-          bubbles: true,
-          cancelable: true,
-        });
-        radioInput.dispatchEvent(changeEvent);
-      }
-      const radioInputPayFull = document.querySelector(
-        '.step_block .step_content.item-3.pdm-step_content_v2 input[type="radio"]'
-      );
-      if (radioInputPayFull) {
-        radioInputPayFull.checked = true;
-        const changeEvent = new Event('change', {
-          bubbles: true,
-          cancelable: true,
-        });
-        radioInputPayFull.dispatchEvent(changeEvent);
-      }
-      return;
-    }
-
-    v2__selectProduct('{{ section_id }}_');
-
-    const v2__parent = '.form-{{ section_id }}';
-    const v2__buyButton = document.querySelector(v2__parent + ' .buy_btn');
-    const v2__buyButtonSoldOut = document.querySelector(v2__parent + ' .buy_btn_soldout');
-    const v2__savedAmount = document.querySelector(v2__parent + ' .savedAmount');
-
-    const v2__stoggleSoldOutButton = () => {
-      if (v2__savedAmount && v2__buyButton && v2__buyButtonSoldOut) {
-        if (v2__savedAmount.textContent.trim() === '& SAVE {{ soldout_percentage }}%') {
-          v2__buyButton.style.display = 'none';
-          v2__buyButtonSoldOut.style.display = 'block';
-        } else {
-          v2__buyButton.style.display = 'block';
-          v2__buyButtonSoldOut.style.display = 'none';
-        }
-      }
-    };
-
-    const v2__observer = new MutationObserver(v2__stoggleSoldOutButton);
-    if (v2__savedAmount) {
-      v2__observer.observe(v2__savedAmount, { childList: true, subtree: true });
-    }
-  });
 </script>
