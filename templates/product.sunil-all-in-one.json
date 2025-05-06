@@ -700,6 +700,10 @@
         "slide_space": 18
       }
     },
+    "17465746219b2971f9": {
+      "type": "apps",
+      "settings": {}
+    },
     "faq_LBTFeM": {
       "type": "faq",
       "blocks": {
@@ -786,6 +790,35 @@
         "button_label": "Show More Questions",
         "button_hide_label": "Hide More Questions"
       }
+    },
+    "heading_W6mXHy": {
+      "type": "heading",
+      "name": "t:sections.heading.name",
+      "settings": {
+        "heading": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>",
+        "heading_mobile": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>"
+      }
+    },
+    "1746575117b4e38951": {
+      "type": "apps",
+      "blocks": {
+        "stamped_reviews_main_widget_XxqkkY": {
+          "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true,
+            "use_metafields": false,
+            "sku_tagtype": "sku"
+          }
+        }
+      },
+      "block_order": [
+        "stamped_reviews_main_widget_XxqkkY"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -802,6 +835,9 @@
     "pdm_all_in_one_face_serum_offer_form_dAje9z",
     "icons_list_RxBdg4",
     "videos_list_zckcnX",
-    "faq_LBTFeM"
+    "17465746219b2971f9",
+    "faq_LBTFeM",
+    "heading_W6mXHy",
+    "1746575117b4e38951"
   ]
 }
