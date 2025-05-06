@@ -289,6 +289,7 @@
           },
           "upsell_GiyUV9": {
             "type": "upsell",
+            "disabled": true,
             "settings": {
               "page_url": "https://qureskincare.com/products/micro-infusion-limited-edition-bundle",
               "upsell_product_first": "micro-infusion-darkspots-treatments",
@@ -306,7 +307,7 @@
               "upsell_product_first": "fade-firm-bundle-advance",
               "upsell_product_first_description": "Complete your treatment & treat multiple skin concerns.",
               "upsell_product_second": "shower-filter",
-              "upsell_product_second_description": "Reduces irritants in water for clearer, hydrated skin.",
+              "upsell_product_second_description": "",
               "upsell_product_third": "face-serum",
               "upsell_product_thid_description": "Plump, smooth & brighten in just one step"
             }
@@ -327,7 +328,7 @@
             "type": "upsell",
             "settings": {
               "page_url": "https://qureskincare.com/pages/microinfusion",
-              "upsell_product_first": "micro-infusion-darkspots-treatments",
+              "upsell_product_first": "micro-infusion-hydra-soothing-2-treatments",
               "upsell_product_first_description": "Reveal smoother, radiant skin.",
               "upsell_product_second": "breakout-control-advanced",
               "upsell_product_second_description": "Reduces appearance of fine lines and wrinkles.",
