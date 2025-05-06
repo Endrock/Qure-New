@@ -678,6 +678,333 @@
         "desktop_image": "shopify:\/\/shop_images\/how_it_works_img.webp",
         "mobile_image": "shopify:\/\/shop_images\/how_it_works_img_mob.webp"
       }
+    },
+    "image_with_accordion_text_VUzVhA": {
+      "type": "image_with_accordion_text",
+      "blocks": {
+        "spec_tzYewa": {
+          "type": "spec",
+          "settings": {
+            "accordion_tech_text": "Technical Specifications",
+            "tech_text": "<p> <strong> WAVELENGTH: <\/strong> 415nm (Blue), 605nm (Amber), 630nm<br\/>                                                    (Red), 660nm (Deep Red), 880nm (Infrared)<\/p><p><strong> LEDs: <\/strong> 160 dual core<\/p><p> <strong>TREATMENT TIME: <\/strong> 3 minutes <\/p><p> <strong> OPERATION: <\/strong> Wireless, hands-free <\/p><p><strong> CHARGING TIME: <\/strong> 2 hours<\/p><p><strong> CERTIFICATIONS:<\/strong> FDA, TGA, CE, UKCA<\/p><p><a href=\"#neck-tab-1\" title=\"#neck-tab-1\">See details for Neck & Décolletage LED<\/a><\/p>"
+          }
+        },
+        "treatment_yM8QFD": {
+          "type": "treatment",
+          "settings": {
+            "accordion_treat_text": "Treatment Details",
+            "treat_text": "<p><strong> USE:<\/strong> Use daily after cleansing, before topical<br\/>                                                    skincare<\/p><p><strong> ANTI-AGING TREATMENT:<\/strong> 415nm (Blue), 605nm (Amber),<br\/>                                                    630nm (Red), 660nm (Deep Red), 880nm (Infrared)<\/p><p><strong> ANTI-BREAKOUT TREATMENT:<\/strong> 415nm (Blue), 630nm (Red)<br\/>                                                <\/p><p><strong> CUSTOMIZED TREATMENT: <\/strong>Choose treatment modes for<br\/>                                                    each facial area via app<\/p><p><strong> SKIN TYPE: <\/strong>Most suitable for Fitzpatrick Skin Types<br\/>                                                    I-IV<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "spec_tzYewa",
+        "treatment_yM8QFD"
+      ],
+      "name": "Why Light Therapy Works",
+      "settings": {
+        "heading": "Why light therapy is proven to work",
+        "content_1": "Just as plants need sunlight, our skin craves the rejuvenating power of light...",
+        "content_2": "Enter red light therapy — the ultimate skincare revolution.",
+        "content_3": "Harnessing the transformative energy of LED light...",
+        "content_4": "Embrace the light, embrace the beauty!",
+        "desktop_image": "shopify:\/\/shop_images\/light_therapy.webp",
+        "mobile_image": "shopify:\/\/shop_images\/light_therapy_mob.webp"
+      }
+    },
+    "text_with_video_GKjP3j": {
+      "type": "text-with-video",
+      "blocks": {
+        "video_yaaryT": {
+          "type": "video",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/trusted_22.png",
+            "video": "https:\/\/www.youtube.com\/watch?v=I2Fe-kP-2Jg",
+            "title": "Dr Shah, MD",
+            "des": "Board certified dermatologist"
+          }
+        },
+        "text_content_RNAbTz": {
+          "type": "text_content",
+          "settings": {
+            "trust_icon": "shopify:\/\/shop_images\/verified_design.svg",
+            "trust_des": "Trusted and recommended by world leading Dermatologists",
+            "title": "\"The best LED mask <strong>on the market in my opinion at this time, that being said you do need <\/strong>to use this consistently to see results...\"",
+            "title_clr": "#000000",
+            "title_strong_clr": "#797d7c"
+          }
+        }
+      },
+      "block_order": [
+        "video_yaaryT",
+        "text_content_RNAbTz"
+      ],
+      "name": "t:sections.text_video.label",
+      "settings": {
+        "padding_top": 30,
+        "padding_bottom": 30
+      }
+    },
+    "videos_list_yVLgmh": {
+      "type": "videos-list",
+      "blocks": {
+        "wistia_4dRHf3": {
+          "type": "wistia",
+          "settings": {
+            "wistia_id": "j0mvc1o853",
+            "dr_name": "Dr Maxfield",
+            "board": "Double Board-Certified Dermatologists",
+            "desc": "<p>\"This is one of my faves from @qureskincare. It’s a high quality mask and personalizable\"<\/p>"
+          }
+        },
+        "wistia_JexiR8": {
+          "type": "wistia",
+          "settings": {
+            "wistia_id": "ltv3wi7ayy",
+            "dr_name": "Dr Zeitany",
+            "board": "Board-Certified Dermatologists",
+            "desc": "<p>“It’s the only LED mask on the market that pairs with an app and is customizable”<\/p>"
+          }
+        },
+        "wistia_VyciiX": {
+          "type": "wistia",
+          "settings": {
+            "wistia_id": "lwu2n3u6uc",
+            "dr_name": "Dr Prem",
+            "board": "Board-Certified Dermatologists",
+            "desc": "<p>\"Qure has a fully customized mask which has 5 clinical-grade wavelength for anti-ageing, hyperpigmentation and acne...\"<\/p>"
+          }
+        },
+        "wistia_YPmKg9": {
+          "type": "wistia",
+          "settings": {
+            "wistia_id": "3aru3yqv0d",
+            "dr_name": "Dr Henry",
+            "board": "Medical Doctor",
+            "desc": "<p>\"I like this one because it allows you to customize your treatment... This is a great skin care investment\"<\/p>"
+          }
+        },
+        "wistia_CVPyt6": {
+          "type": "wistia",
+          "settings": {
+            "wistia_id": "clfa0z9apd",
+            "dr_name": "Dr Too",
+            "board": "Medical Doctor",
+            "desc": "<p>“Qure’s LED mask combines red lights and blue lights, meaning it can benefit EVERYONE”<\/p>"
+          }
+        },
+        "wistia_Txg4dH": {
+          "type": "wistia",
+          "settings": {
+            "wistia_id": "wumkizwy48",
+            "dr_name": "Dr Hunter",
+            "board": "NHS & Aesthetics Doctor",
+            "desc": "<p>“The Qure mask is FDA cleared... This means you can reap the benefits of light therapy at home. Previously, this was something only offered in clinics.”<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "wistia_4dRHf3",
+        "wistia_JexiR8",
+        "wistia_VyciiX",
+        "wistia_YPmKg9",
+        "wistia_CVPyt6",
+        "wistia_Txg4dH"
+      ],
+      "name": "t:sections.videos-list.name",
+      "settings": {
+        "heading": "",
+        "sub_heading": "",
+        "classname": "section videosQure videosQure_dropdown",
+        "btn": "",
+        "btn_url": "",
+        "ctm_cls_btn": "",
+        "desk_slide": 4,
+        "mob_slide": 1.7,
+        "slide_space": 10
+      }
+    },
+    "compare_Mb8GKb": {
+      "type": "compare",
+      "blocks": {
+        "object_xm3FQn": {
+          "type": "object",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/beauty_ledmask1_new.webp",
+            "heading": "Q-Rejuvalight Pro LED Mask + <br> Neck & Décolletage LED",
+            "mob_text": "",
+            "text": "<p>one-time cost<\/p>",
+            "price": "$399",
+            "style": "correctCircle",
+            "list": "<ul><li>Complete in just 10 minutes<\/li><li>On your own watch<\/li><li>Comfortable & convenient at home<\/li><li>Simple, one-time payment<\/li><li>Unlimited treatments & maintenance<\/li><\/ul>"
+          }
+        },
+        "object_mw3Ri7": {
+          "type": "object",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/beauty_derma1_new.webp",
+            "heading": "Derm or Clinic Treatments",
+            "mob_text": "",
+            "text": "<p>yearly cost<\/p>",
+            "price": "$1,200 +",
+            "style": "incorrectCircle",
+            "list": "<ul><li>Time-consuming commute to clinic<\/li><li>When (and if) you get an appointment<\/li><li>According to clinic’s availability<\/li><li>Ongoing payments required<\/li><li>Limited treatments <\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "object_xm3FQn",
+        "object_mw3Ri7"
+      ],
+      "name": "t:sections.compare.name",
+      "settings": {
+        "classname": "beauty_skincare section bg-white",
+        "sub_head": "",
+        "heading": "Clinical results without the clinical price tag",
+        "heading_reduced": "",
+        "text": "<p>Buy it once, reap the benefits forever.<br\/><br\/><\/p>",
+        "text_reduced": "",
+        "design": false
+      }
+    },
+    "maximize_benefits_XARLKV": {
+      "type": "maximize_benefits",
+      "blocks": {
+        "check_item_yiEaaa": {
+          "type": "check_item",
+          "settings": {
+            "desktop_text": "Treat beyond the face for an all-over youthful appearance",
+            "mobile_text": "Treat beyond the face for an all-over youthful appearance"
+          }
+        },
+        "check_item_Qe3phj": {
+          "type": "check_item",
+          "settings": {
+            "desktop_text": "Smooth fine lines, reduce appearance of wrinkles and boost firmness",
+            "mobile_text": "Smooth fine lines & wrinkles"
+          }
+        },
+        "check_item_9dXgJc": {
+          "type": "check_item",
+          "settings": {
+            "desktop_text": "Fade dark spots and repair sun-damaged skin for an even-toned complexion",
+            "mobile_text": "Evens skin tone & smooths texture"
+          }
+        }
+      },
+      "block_order": [
+        "check_item_yiEaaa",
+        "check_item_Qe3phj",
+        "check_item_9dXgJc"
+      ],
+      "name": "Maximize Benefits Banner",
+      "settings": {
+        "desktop_banner": "shopify:\/\/shop_images\/maxmize_banner.webp",
+        "mobile_banner": "shopify:\/\/shop_images\/maxmize_banner_mob.webp",
+        "satisfaction_text": "97% customer satisfaction rate",
+        "headline": "Maximize Benefits with a FREE Neck & Decolletage LED Device",
+        "description": "Perfect combination to the Q-Rejuvalight Pro LED mask for the ultimate skin rejuvenation experience.",
+        "product_led_neck": "neck-decolletage-led",
+        "cta_url": "",
+        "cta_text": "Shop Now & Save"
+      }
+    },
+    "faq_GpbA8F": {
+      "type": "faq",
+      "blocks": {
+        "object_LJgT46": {
+          "type": "object",
+          "settings": {
+            "heading": "Technical specifications and treatment details",
+            "text": "",
+            "code": "<div id=\"collapseOnezzz\" class=\"accordion-collapse collapse show\" data-bs-parent=\"#accordionExample\">\n                                <div class=\"accordion-body\">\n\n                                    <!-- Tabs -->\n                                    <ul class=\"nav nav-tabs mb-4\" id=\"productTabs-1\" role=\"tablist\">\n                                        <li class=\"nav-item\" role=\"presentation\">\n                                            <button class=\"nav-link active\" id=\"mask-tab-1\" data-bs-toggle=\"tab\" data-bs-target=\"#mask-1\" type=\"button\" role=\"tab\" aria-controls=\"mask-1\" aria-selected=\"true\">\n                                                Q-Rejuvalight Pro LED Mask\n                                            <\/button>\n                                        <\/li>\n                                        <li class=\"nav-item\" role=\"presentation\">\n                                            <button class=\"nav-link\" id=\"neck-tab-1\" data-bs-toggle=\"tab\" data-bs-target=\"#neck-1\" type=\"button\" role=\"tab\" aria-controls=\"neck-1\" aria-selected=\"false\">\n                                                Neck &amp; Décolletage LED\n                                            <\/button>\n                                        <\/li>\n                                    <\/ul>\n\n                                    <!-- Tab Content -->\n                                    <div class=\"tab-content\" id=\"productTabsContent-1\">\n                                        <!-- Mask Tab -->\n                                        <div class=\"tab-pane fade active show\" id=\"mask-1\" role=\"tabpanel\" aria-labelledby=\"mask-tab-1\" tabindex=\"0\">\n                                            <div class=\"row\">\n                                                <div class=\"col-4 col-md-3\">\n                                                    <p class=\"\"><strong>Treatment details <\/strong><\/p>\n                                                <\/div>\n                                                <div class=\"col-8 col-md-9\">\n                                                    <div class=\"treat_tech_details\">\n                                                        <p><img src=\"assets\/rejuv_icon1.svg\" alt=\"\">\n                                                            <span> <strong>TREATMENT\n                                                                    TIME:<\/strong> 3 minutes <\/span>\n                                                        <\/p>\n                                                        <p><img src=\"assets\/rejuv_icon2.svg\" alt=\"\"><span><strong>TREATMENT\n                                                                    MODES:<\/strong> Anti-Aging, Anti-Breakout,\n                                                                customized\n                                                                treatment <\/span><\/p>\n                                                        <p><img src=\"assets\/rejuv_icon3.svg\" alt=\"\"><span>\n                                                                <strong>USE:<\/strong>\n                                                                Use daily after cleansing, before topical skincare\n                                                            <\/span><\/p>\n                                                        <p><img src=\"assets\/rejuv_icon4.svg\" alt=\"\"><span>\n                                                                <strong>OPERATION:<\/strong> Wireless, hands-free, app\n                                                                (Android and iOS) <\/span><\/p>\n                                                    <\/div>\n                                                <\/div>\n                                            <\/div>\n                                            <div class=\"dark_line\"><\/div>\n                                            <div class=\"row\">\n\n                                                <div class=\"col-4 col-md-3\">\n                                                    <p class=\"\"><strong> Tech specs <\/strong><\/p>\n                                                <\/div>\n                                                <div class=\"col-8 col-md-9\">\n                                                    <div class=\"treat_tech_details\">\n                                                        <p><img src=\"assets\/rejuv_icon5.svg\" alt=\"\"><span><strong>WAVELENGTHS:<\/strong> 415nm, 605nm,\n                                                                630nm,\n                                                                660nm, 880nm <\/span><\/p>\n                                                        <p><img src=\"assets\/rejuv_icon6.svg\" alt=\"\"><span><strong>LEDs:<\/strong>\n                                                                160 dual core <\/span><\/p>\n                                                        <p><img src=\"assets\/rejuv_icon7.svg\" alt=\"\"><span><strong>CERTIFICATIONS:<\/strong> FDA, TGA,\n                                                                CE, UKCA\n                                                            <\/span> <\/p>\n                                                        <p><img src=\"assets\/rejuv_icon8.svg\" alt=\"\"><span><strong>CHARGING\n                                                                    TIME:<\/strong> 2 hours <\/span><\/p>\n                                                    <\/div>\n                                                <\/div>\n                                            <\/div>\n                                        <\/div>\n\n                                        <!-- Neck Tab -->\n                                        <div class=\"tab-pane fade\" id=\"neck-1\" role=\"tabpanel\" aria-labelledby=\"neck-tab-1\" tabindex=\"0\">\n                                            <div class=\"row\">\n                                                <div class=\"col-4 col-md-3\">\n                                                    <p class=\"\"><strong>Treatment details <\/strong><\/p>\n                                                <\/div>\n                                                <div class=\"col-8 col-md-9\">\n                                                    <div class=\"treat_tech_details\">\n                                                        <p><img src=\"assets\/rejuv_icon1.svg\" alt=\"\"><span><strong>TREATMENT\n                                                                    TIME:<\/strong> 10 minutes <\/span><\/p>\n                                                        <p><img src=\"assets\/rejuv_icon3.svg\" alt=\"\"><span><strong>USE:<\/strong>\n                                                                5–7 times per week <\/span><\/p>\n                                                        <p><img src=\"assets\/rejuv_icon4.svg\" alt=\"\"> <span>\n                                                                <strong>OPERATION:<\/strong> Wireless, hands-free with\n                                                                controller <\/span><\/p>\n                                                    <\/div>\n                                                <\/div>\n                                            <\/div>\n                                            <div class=\"dark_line\"><\/div>\n                                            <div class=\"row\">\n                                                <div class=\"col-4 col-md-3\">\n                                                    <p class=\"\"><strong> Tech specs <\/strong><\/p>\n                                                <\/div>\n                                                <div class=\"col-8 col-md-9\">\n                                                    <div class=\"treat_tech_details\">\n                                                        <p><img src=\"assets\/rejuv_icon5.svg\" alt=\"\"><span><strong>WAVELENGTHS:<\/strong> 633nm (Red),\n                                                                830nm\n                                                                (Near-Infrared) <\/span><\/p>\n                                                        <p><img src=\"assets\/rejuv_icon6.svg\" alt=\"\"><span><strong>LEDs:<\/strong>\n                                                                55 dual core <\/span><\/p>\n                                                        <p><img src=\"assets\/rejuv_icon8.svg\" alt=\"\"><span><strong>CHARGING\n                                                                    TIME:<\/strong> 4 hours <\/span><\/p>\n                                                    <\/div>\n                                                <\/div>\n                                            <\/div>\n                                        <\/div>\n                                    <\/div>\n                                <\/div>\n                            <\/div>"
+          }
+        },
+        "object_pDpT7X": {
+          "type": "object",
+          "settings": {
+            "heading": "What colour wavelengths of lights does the Q-Rejuvalight have?",
+            "text": "<p>The Q-Rejuvalight Pro Facewear has a total of 5 clinically-proven wavelengths of light:<\/p><ul><li>Infrared light: Penetrates deepest into the skin for amplified results. Enhances product absorption.<\/li><li>Deep Red: Accelerates skin healing to fade and prevent scarring. Builds collagen to diminish wrinkles. Helps to repair sun damage and age spots.<\/li><li>Red: Anti-Ageing properties. Stimulates collagen and elastin production. Firms and plumps skin. Repairs skin cells and promotes hydration. Reduces inflammation, redness and rosacea.<\/li><li>Amber: Reduces appearance of dark spots. Soothes skin and calms swelling and inflammation.<\/li><li>Blue: Anti-bacterial, eliminates and prevents acne breakouts. Soothes and calms skin.<\/li><\/ul>",
+            "code": ""
+          }
+        },
+        "object_Wk4hXV": {
+          "type": "object",
+          "settings": {
+            "heading": "Is it FDA cleared?",
+            "text": "<p>YES! Our Q-Rejuvalight Pro LED mask is the world’s first customizable, FDA-cleared at-home LED mask that is proven to be an effective and safe treatment for acne, and aging skin issues. You may find more details on the FDA website (K230042).<br\/><br\/><\/p>",
+            "code": ""
+          }
+        },
+        "object_cxTXtw": {
+          "type": "object",
+          "settings": {
+            "heading": "What type of results will I see? How quickly will I see them?",
+            "text": "<p>Every individual may respond differently to specific wavelengths of lights and results will depend on the goal you want to achieve.<\/p><p>Most users see a reduction of acne breakouts and redness quicker than they expect.<\/p><p>Smoother lines, improved skin tone and firmness can take longer.<\/p><p>The day-to-day changes will be subtle, so be sure to take \"before and after\" pictures to document progress. The most important thing to remember is that results are cumulative, so consistent daily treatment is key.<\/p>",
+            "code": ""
+          }
+        },
+        "object_X3efYQ": {
+          "type": "object",
+          "settings": {
+            "heading": "Do I need to wear eye protection when I use the Q-Rejuvalight Pro?",
+            "text": "<p>The Q-Rejuvalight Pro has been tested and cleared for eye safety. It has successfully passed the IEC62471 evaluation for eye safety test, which is used to determine whether a device's light output is safe for the eyes or not.<\/p><p>Regardless, we recommend closing your eyes and wearing protective eyewear during treatment. The light can be bright when powered on and some users may experience sensitivity, even when closing their eyes. <\/p><p>As part of our unwavering commitment to your safety, we decided to take the initiative to include FREE medical grade certified light blocking protective eyewear with our Q-Rejuvalight Pro LED mask that works seamlessly during your treatment.<\/p>",
+            "code": ""
+          }
+        },
+        "object_kKzqwg": {
+          "type": "object",
+          "settings": {
+            "heading": "Is it safe for all skin types?",
+            "text": "<p>It's crucial to note that skin types V and VI (on the fitzpatrick scale) are more sensitive for light therapy as they can absorb more light than other skin types. The reason is that skin type V and VI have higher levels of melanin in the skin. Melanin in the epidermis allows higher absorption of energy which increases the risk of adverse events from epidermal injury in people with skin type V and VI. This is why the FDA recommends caution for individuals with these skin types. <\/p><p>Based on our experience, numerous customers with skin types V and VI have successfully treated their skin with our Q-Rejuvalight Pro Facewear, reporting positive results. <\/p><p>For customers with skin types V and VI, we highly recommend consulting with your dermatologist before using our Q-Rejuvalight Pro Facewear. This step is crucial as skin reactions can vary from person to person, and what works well for one individual may not be suitable for another.<\/p>",
+            "code": ""
+          }
+        },
+        "object_BCz8Ff": {
+          "type": "object",
+          "settings": {
+            "heading": "Does the Q-Rejuvalight Pro comes with warranty?",
+            "text": "<p>Q-Rejuvalight Pro Facewear comes with one (1) year warranty covering any manufacturer related problems resulting from everyday use of the product. However, this device is designed to last years! Proudly designed in Australia.<br\/><br\/><\/p>",
+            "code": ""
+          }
+        },
+        "object_AWhLDg": {
+          "type": "object",
+          "settings": {
+            "heading": "At what age and when is the best time to start using LED light therapy?",
+            "text": "<p>Most people can benefit from the Q-Rejuvalight Pro. Whether the goal is to treat acne, help reduce the visible signs of aging, or both, prevention is better than correction. So the sooner the Q-Rejuvalight Pro becomes part of your routine, the better.<\/p>",
+            "code": ""
+          }
+        },
+        "object_4hzK34": {
+          "type": "object",
+          "settings": {
+            "heading": "Where does the Q-rejuvalight Pro treatment fit into a skincare routine?",
+            "text": "<p>The Q-Rejuvalight Pro Facewear can be used day or night, ideally after cleaning and\/or exfoliation.<\/p><p>After the treatment is complete, follow with your topical skincare products of choice.<\/p>",
+            "code": ""
+          }
+        }
+      },
+      "block_order": [
+        "object_LJgT46",
+        "object_pDpT7X",
+        "object_Wk4hXV",
+        "object_cxTXtw",
+        "object_X3efYQ",
+        "object_kKzqwg",
+        "object_BCz8Ff",
+        "object_AWhLDg",
+        "object_4hzK34"
+      ],
+      "name": "t:sections.faq.name",
+      "settings": {
+        "background": "bg-lightGrey",
+        "classname": "mw-736",
+        "heading": "Have questions?",
+        "text": "<p>We have answers.<\/p>",
+        "button_label": "Show More Questions",
+        "button_hide_label": "Hide More Questions"
+      }
     }
   },
   "order": [
@@ -692,6 +1019,12 @@
     "liquid_6AqWXk",
     "use_three_steps_7TxcHJ",
     "services_slider_jRhij4",
-    "how_it_works_bNMxpm"
+    "how_it_works_bNMxpm",
+    "image_with_accordion_text_VUzVhA",
+    "text_with_video_GKjP3j",
+    "videos_list_yVLgmh",
+    "compare_Mb8GKb",
+    "maximize_benefits_XARLKV",
+    "faq_GpbA8F"
   ]
 }
