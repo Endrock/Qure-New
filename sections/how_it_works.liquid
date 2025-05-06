@@ -1,0 +1,208 @@
+{% schema %}
+{
+  "name": "How It Works",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "How it works"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "The Q-Rejuvalight Pro LED mask uses 5 light wavelengths and two modes for customizable skincare. Our FDA-cleared device targets your skin's needs."
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "tab_content",
+      "name": "Tab Content",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_title",
+          "label": "Tab Title",
+          "default": "Anti-Aging Mode"
+        },
+        {
+          "type": "textarea",
+          "id": "tab_description_1",
+          "label": "Description 1"
+        },
+        {
+          "type": "textarea",
+          "id": "tab_description_2",
+          "label": "Description 2"
+        }
+      ]
+    },
+    {
+      "type": "wavelength",
+      "name": "Wavelength Bar",
+      "settings": [
+        {
+          "type": "text",
+          "id": "mode",
+          "label": "Mode (match with tab title)",
+          "default": "Anti-Aging Mode"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Wavelength Label",
+          "default": "Red"
+        },
+        {
+          "type": "text",
+          "id": "nm_value",
+          "label": "NM Value",
+          "default": "630 nm"
+        },
+        {
+          "type": "text",
+          "id": "css_class",
+          "label": "CSS Class",
+          "default": "red"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "How It Works",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="how_it_works section">
+  <div class="container">
+    <div class="row gy-4 align-items-start">
+      <!-- Left Column -->
+      <div class="col-lg-6">
+        <div class="how_it_left">
+          <h4 class="title-lg mb-3">{{ section.settings.heading }}</h4>
+          <p class="mb-4">{{ section.settings.description }}</p>
+
+          {% for block in section.blocks %}
+            {% if block.type == 'feature' %}
+              <div class="icon-feature">
+                {% if block.settings.icon != blank %}
+                  <img src="{{ block.settings.icon | image_url: width: 50 }}" alt="" class="img-fluid me-2" />
+                {% endif %}
+                {{ block.settings.text }}
+              </div>
+            {% endif %}
+          {% endfor %}
+
+          {% if section.settings.desktop_image %}
+            <div class="d-none d-md-block">
+              <img src="{{ section.settings.desktop_image | image_url }}" alt="" class="img-fluid mt-4">
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-lg-6">
+        <div class="how_it_words_right">
+          <div class="anti_aging_box p-md-4">
+
+            <!-- Nav Pills -->
+            <ul class="nav nav-pills d-flex justify-content-between mb-3" id="modeTabs" role="tablist">
+              {% assign tab_index = 0 %}
+              {% for block in section.blocks %}
+                {% if block.type == 'tab_content' %}
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link {% if tab_index == 0 %}active{% endif %}"
+                      data-bs-toggle="pill"
+                      data-bs-target="#tab-{{ forloop.index }}"
+                      type="button"
+                      role="tab">
+                      {{ block.settings.tab_title }}
+                    </button>
+                  </li>
+                  {% assign tab_index = tab_index | plus: 1 %}
+                {% endif %}
+              {% endfor %}
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="modeTabsContent">
+              {% assign tab_index = 0 %}
+              {% for block in section.blocks %}
+                {% if block.type == 'tab_content' %}
+                  <div class="tab-pane fade {% if tab_index == 0 %}show active{% endif %}" id="tab-{{ forloop.index }}" role="tabpanel">
+                    {% if block.settings.tab_description_1 != blank %}
+                      <p class="mb-3 mb-md-4">{{ block.settings.tab_description_1 }}</p>
+                    {% endif %}
+                    {% if block.settings.tab_description_2 != blank %}
+                      <p class="mb-3 mb-md-5">{{ block.settings.tab_description_2 }}</p>
+                    {% endif %}
+
+                    <!-- Wavelength Bars -->
+                    <div class="wavelength-bar d-flex mb-2 mt-3">
+                      {% for wave in section.blocks %}
+                        {% if wave.type == 'wavelength' and wave.settings.mode == block.settings.tab_title %}
+                          <div class="{{ wave.settings.css_class }} flex-fill"></div>
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+
+                    <div class="d-flex justify-content-between fw-semibold small text-start flex-wrap">
+                      {% for wave in section.blocks %}
+                        {% if wave.type == 'wavelength' and wave.settings.mode == block.settings.tab_title %}
+                          <div class="flex-fill {{ wave.settings.css_class }}_color">
+                            {{ wave.settings.label }}<br>
+                            <small class="fw-normal">({{ wave.settings.nm_value }})</small>
+                          </div>
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+                  </div>
+                  {% assign tab_index = tab_index | plus: 1 %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+
+          {% if section.settings.mobile_image %}
+            <div class="d-md-none">
+              <img src="{{ section.settings.mobile_image | image_url }}" alt="" class="img-fluid mt-4">
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

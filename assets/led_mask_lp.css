@@ -899,6 +899,14 @@
     line-height: 150%;
     letter-spacing: 0.18px;
 }
+.exclusive_desk_bx span p{
+    text-align: start;
+}
+.exclusive_desk_bx ul li, .exclusive_desk_bx ul li span, .exclusive_desk_bx ul li span p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+}
 .exclusive_desk_bx h5 {
     color: var(--Qure-Black, #000);
     text-align: center;
