@@ -51,17 +51,12 @@
     },
     "main": {
       "type": "temp-page-led-mask-offer-2",
+      "disabled": true,
       "settings": {}
-    },
-    "liquid_6AqWXk": {
-      "type": "liquid",
-      "settings": {
-        "code": "{% render 'led-mask-offer-2-form' with section: section %}",
-        "popup_micro_infusion_enabled": true
-      }
     },
     "second": {
       "type": "temp-page-led-mask-offer-2-second",
+      "disabled": true,
       "settings": {}
     },
     "featuredin_extended_b76fXb": {
@@ -108,6 +103,7 @@
       "name": "t:sections.feature_extend.label",
       "settings": {
         "heading": "FEATURED IN",
+        "ctm_cls_heading": "pb-4",
         "slider_type": "five_slides",
         "slide_per_view_desktop": 5,
         "slide_per_view_mobile": 3
@@ -365,49 +361,337 @@
         "review_text": "4.8\/5 Based on 48,847 Users"
       }
     },
-    "exclusive_offer_bcwJpj": {
+    "exclusive_offer_yFYm4j": {
       "type": "exclusive_offer",
       "blocks": {
-        "led_mask_feature_ANjWdV": {
+        "led_mask_feature_Y4dEFL": {
           "type": "led_mask_feature",
           "settings": {
-            "feature_text": "<ul><li>cscsd<\/li><li>csdcscsd<\/li><li>cscsc<\/li><li>scs<\/li><\/ul>"
+            "tick_icon": "shopify:\/\/shop_images\/tick_circle.svg",
+            "feature_text": "<p>Targets the face<\/p>"
           }
         },
-        "led_neck_feature_DwbhtG": {
+        "led_mask_feature_abphA4": {
+          "type": "led_mask_feature",
+          "settings": {
+            "tick_icon": "shopify:\/\/shop_images\/tick_circle.svg",
+            "feature_text": "<p>5 clinically proven wavelengths<\/p>"
+          }
+        },
+        "led_mask_feature_3cYQLe": {
+          "type": "led_mask_feature",
+          "settings": {
+            "tick_icon": "shopify:\/\/shop_images\/tick_circle.svg",
+            "feature_text": "<p>2 treatment modes<br\/><em>(Anti-Aging and Anti-Breakout)<\/em><\/p>"
+          }
+        },
+        "led_mask_feature_itm4BJ": {
+          "type": "led_mask_feature",
+          "settings": {
+            "tick_icon": "shopify:\/\/shop_images\/tick_circle.svg",
+            "feature_text": "<p>Reduces acne & breakouts<\/p>"
+          }
+        },
+        "led_mask_feature_dEiLjK": {
+          "type": "led_mask_feature",
+          "settings": {
+            "tick_icon": "shopify:\/\/shop_images\/tick_circle.svg",
+            "feature_text": "<p>Smooths fine lines & wrinkles<\/p>"
+          }
+        },
+        "led_mask_feature_XXXxXA": {
+          "type": "led_mask_feature",
+          "settings": {
+            "tick_icon": "shopify:\/\/shop_images\/tick_circle.svg",
+            "feature_text": "<p>Improves skin texture & tone<\/p>"
+          }
+        },
+        "led_mask_feature_9teBXr": {
+          "type": "led_mask_feature",
+          "settings": {
+            "tick_icon": "shopify:\/\/shop_images\/tick_circle.svg",
+            "feature_text": "<p>Boosts collagen<\/p>"
+          }
+        },
+        "led_neck_feature_YzFdwN": {
           "type": "led_neck_feature",
           "settings": {
-            "feature_text": ""
+            "tick_icon": "shopify:\/\/shop_images\/tick_circle.svg",
+            "feature_text": "<p>Targets the neck & chest<\/p>"
+          }
+        },
+        "led_neck_feature_e3x7Kj": {
+          "type": "led_neck_feature",
+          "settings": {
+            "tick_icon": "shopify:\/\/shop_images\/tick_circle.svg",
+            "feature_text": "<p>2 clinically proven wavelengths<\/p>"
+          }
+        },
+        "led_neck_feature_UqjgCz": {
+          "type": "led_neck_feature",
+          "settings": {
+            "tick_icon": "shopify:\/\/shop_images\/tick_circle.svg",
+            "feature_text": "<p>1 treatment mode<br\/><em>(Anti-Aging)<\/em><\/p>"
+          }
+        },
+        "led_neck_feature_ap67TR": {
+          "type": "led_neck_feature",
+          "settings": {
+            "tick_icon": "shopify:\/\/shop_images\/tick_circle.svg",
+            "feature_text": "<p>Firms skin & improves texture<\/p>"
+          }
+        },
+        "led_neck_feature_gxKHBH": {
+          "type": "led_neck_feature",
+          "settings": {
+            "tick_icon": "shopify:\/\/shop_images\/tick_circle.svg",
+            "feature_text": "<p>Smooths fine lines & wrinkles<\/p>"
+          }
+        },
+        "led_neck_feature_J9WAqk": {
+          "type": "led_neck_feature",
+          "settings": {
+            "tick_icon": "shopify:\/\/shop_images\/tick_circle.svg",
+            "feature_text": "<p>Fades dark spots<\/p>"
+          }
+        },
+        "led_neck_feature_YK8ydt": {
+          "type": "led_neck_feature",
+          "settings": {
+            "tick_icon": "shopify:\/\/shop_images\/tick_circle.svg",
+            "feature_text": "<p>Improves sun damaged skin<\/p>"
           }
         }
       },
       "block_order": [
-        "led_mask_feature_ANjWdV",
-        "led_neck_feature_DwbhtG"
+        "led_mask_feature_Y4dEFL",
+        "led_mask_feature_abphA4",
+        "led_mask_feature_3cYQLe",
+        "led_mask_feature_itm4BJ",
+        "led_mask_feature_dEiLjK",
+        "led_mask_feature_XXXxXA",
+        "led_mask_feature_9teBXr",
+        "led_neck_feature_YzFdwN",
+        "led_neck_feature_e3x7Kj",
+        "led_neck_feature_UqjgCz",
+        "led_neck_feature_ap67TR",
+        "led_neck_feature_gxKHBH",
+        "led_neck_feature_J9WAqk",
+        "led_neck_feature_YK8ydt"
       ],
       "name": "Exclusive Offer",
       "settings": {
         "link_text": "Your Exclusive Offer",
-        "link_url": "",
+        "link_url": "#bundle_shop",
         "heading": "Experience face and neck rejuvenation in one bundle",
         "subheading": "Includes 2 LED Devices:",
-        "mask_product": "",
-        "neck_product": "",
+        "mask_product": "q-rejuvalight-pro-facewear-3",
+        "neck_product": "neck-decolletage-led",
         "mask_title": "Q–Rejuvalight Pro LED Mask",
+        "mask_image": "shopify:\/\/shop_images\/bundle_face_led.webp",
         "neck_title": "Neck & Décolletage LED Device",
+        "neck_image": "shopify:\/\/shop_images\/bundle_2_new.webp",
+        "plus_icon": "shopify:\/\/shop_images\/plus.webp",
         "included_text": "Included with your purchase"
+      }
+    },
+    "liquid_6AqWXk": {
+      "type": "liquid",
+      "settings": {
+        "code": "{% render 'led-mask-offer-2-form' with section: section %}",
+        "popup_micro_infusion_enabled": true
+      }
+    },
+    "use_three_steps_7TxcHJ": {
+      "type": "use_three_steps",
+      "blocks": {
+        "step_7rLThA": {
+          "type": "step",
+          "settings": {
+            "step_label": "STEP ONE",
+            "step_title": "Prep your skin",
+            "step_description": "Start with clean, dry skin."
+          }
+        },
+        "step_FmBVnf": {
+          "type": "step",
+          "settings": {
+            "step_label": "STEP TWO",
+            "step_title": "Select your treatment",
+            "step_description": "Put on the mask and power it on by holding the button for 2–3 seconds. Choose from 2 modes or customize your routine via the app."
+          }
+        },
+        "step_VtYf7y": {
+          "type": "step",
+          "settings": {
+            "step_label": "STEP THREE",
+            "step_title": "Treatment time and aftercare",
+            "step_description": "Here's where the good stuff happens!\n\nJust 3 minutes is all you need while the light therapy works.\n\nWhen done, remove the mask and continue with your regular skincare routine."
+          }
+        }
+      },
+      "block_order": [
+        "step_7rLThA",
+        "step_FmBVnf",
+        "step_VtYf7y"
+      ],
+      "name": "Use in 3 Steps",
+      "settings": {
+        "section_title": "Use in 3 simple steps",
+        "wistia_id": "j7op01weqs"
+      }
+    },
+    "services_slider_jRhij4": {
+      "type": "services-slider",
+      "name": "Services Slider",
+      "settings": {
+        "slide1": "shopify:\/\/shop_images\/derma-lp.svg",
+        "text1": "Dermatologist Tested & Approved",
+        "slide2": "shopify:\/\/shop_images\/science-ftr.svg",
+        "text2": "Proven Results, Backed by Science",
+        "slide3": "shopify:\/\/shop_images\/free-shipping-ftr.svg",
+        "text3": "FREE World-Wide Shipping",
+        "slide4": "shopify:\/\/shop_images\/buy-now-ftr.svg",
+        "text4": "Buy Now, Pay Later"
+      }
+    },
+    "how_it_works_bNMxpm": {
+      "type": "how_it_works",
+      "blocks": {
+        "feature_ULdH93": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/meet_qure_icon4.svg",
+            "text": " Reduces The Appearance of Wrinkles"
+          }
+        },
+        "feature_8JVhhB": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/meet_qure_icon3.svg",
+            "text": " Prevents Future Breakouts"
+          }
+        },
+        "feature_JBMzVF": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/cloud.svg",
+            "text": "Supports Collagen Production"
+          }
+        },
+        "feature_iqLLkx": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/promotes_even_skin_tone.svg",
+            "text": "Helps Even Out Skin Tone"
+          }
+        },
+        "tab_content_UqmXUU": {
+          "type": "tab_content",
+          "settings": {
+            "tab_title": "Anti-Aging Mode",
+            "tab_description_1": "On anti-aging mode, red and infrared wavelengths work together to help support collagen production, which reduces the appearance of wrinkles and fine lines, as well as to improve skin elasticity and firmness.",
+            "tab_description_2": "Red light stimulates collagen and elastin production, which supports skin renewal. Deep red light penetrates deeper to help with the appearance of wrinkles, while infrared is designed to reach deeper layers for potential long-term benefits."
+          }
+        },
+        "wavelength_YRH4DK": {
+          "type": "wavelength",
+          "settings": {
+            "mode": "Anti-Aging Mode",
+            "label": "Infrared",
+            "nm_value": "(880nm)",
+            "css_class": "infrared"
+          }
+        },
+        "wavelength_KcygnJ": {
+          "type": "wavelength",
+          "settings": {
+            "mode": "Anti-Aging Mode",
+            "label": "Deep Red",
+            "nm_value": "660 nm",
+            "css_class": "deep-red"
+          }
+        },
+        "wavelength_KfmqR8": {
+          "type": "wavelength",
+          "settings": {
+            "mode": "Anti-Aging Mode",
+            "label": "Red",
+            "nm_value": "630 nm",
+            "css_class": "red"
+          }
+        },
+        "wavelength_VnMCYh": {
+          "type": "wavelength",
+          "settings": {
+            "mode": "Anti-Aging Mode",
+            "label": "Amber",
+            "nm_value": "(605nm)",
+            "css_class": "amber"
+          }
+        },
+        "tab_content_Xf33yD": {
+          "type": "tab_content",
+          "settings": {
+            "tab_title": "Anti-Breakout Mode",
+            "tab_description_1": "Our Anti-Breakout Mode combines blue and red light wavelengths. Blue (415 nm) targets acne-causing bacteria on the skin's surface, and red (630 nm) helps calm inflammation and soothes irritated skin.",
+            "tab_description_2": "Together, these wavelengths help reduce breakouts, prevent future flare-ups, and support clearer, healthier-looking skin."
+          }
+        },
+        "wavelength_WbaBJr": {
+          "type": "wavelength",
+          "settings": {
+            "mode": "Anti-Breakout Mode",
+            "label": "Blue Light",
+            "nm_value": "(415nm)",
+            "css_class": "blue"
+          }
+        },
+        "wavelength_zwVaBz": {
+          "type": "wavelength",
+          "settings": {
+            "mode": "Anti-Breakout Mode",
+            "label": "Red",
+            "nm_value": "(630nm)",
+            "css_class": "red"
+          }
+        }
+      },
+      "block_order": [
+        "feature_ULdH93",
+        "feature_8JVhhB",
+        "feature_JBMzVF",
+        "feature_iqLLkx",
+        "tab_content_UqmXUU",
+        "wavelength_YRH4DK",
+        "wavelength_KcygnJ",
+        "wavelength_KfmqR8",
+        "wavelength_VnMCYh",
+        "tab_content_Xf33yD",
+        "wavelength_WbaBJr",
+        "wavelength_zwVaBz"
+      ],
+      "name": "How It Works",
+      "settings": {
+        "heading": "How it works",
+        "description": "The Q-Rejuvalight Pro LED mask uses 5 light wavelengths and two modes for customizable skincare. Our FDA-cleared device targets your skin's needs.",
+        "desktop_image": "shopify:\/\/shop_images\/how_it_works_img.webp",
+        "mobile_image": "shopify:\/\/shop_images\/how_it_works_img_mob.webp"
       }
     }
   },
   "order": [
     "header_landing_SSnaTx",
     "main",
-    "liquid_6AqWXk",
     "second",
     "featuredin_extended_b76fXb",
     "qure_uses_slider_hRB7TB",
     "proof_in_numbers_4pTJzE",
     "result_with_product_wmbwCj",
-    "exclusive_offer_bcwJpj"
+    "exclusive_offer_yFYm4j",
+    "liquid_6AqWXk",
+    "use_three_steps_7TxcHJ",
+    "services_slider_jRhij4",
+    "how_it_works_bNMxpm"
   ]
 }
