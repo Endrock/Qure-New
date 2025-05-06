@@ -256,7 +256,7 @@
             "settings": {
               "page_url": "https://www.qureskincare.com/products/neck-decolletage-led",
               "upsell_product_first": "micro-infusion-targeted-patches-single",
-              "upsell_product_first_description": "Reduces appearance of fine lines and wrinkles.",
+              "upsell_product_first_description": "Elevate your skincare with at-home microneeding treatment.",
               "upsell_product_second": "nec-and-deck-extended-1-year-warranty",
               "upsell_product_second_description": "Protect your LED Device for 1 more year.",
               "upsell_product_third": "fade-firm-bundle-advance",
@@ -285,19 +285,6 @@
               "upsell_product_second_description": "Purifies and refreshes",
               "upsell_product_third": "fade-firm-bundle-essentials",
               "upsell_product_thid_description": "Complete your treatment & treat multiple skin concerns."
-            }
-          },
-          "upsell_GiyUV9": {
-            "type": "upsell",
-            "disabled": true,
-            "settings": {
-              "page_url": "https://qureskincare.com/products/micro-infusion-limited-edition-bundle",
-              "upsell_product_first": "micro-infusion-darkspots-treatments",
-              "upsell_product_first_description": "Reveal Smoother, Radiant Skin",
-              "upsell_product_second": "face-serum",
-              "upsell_product_second_description": "Plump, smooth & brighten in just one step",
-              "upsell_product_third": "q-rejuvalight-pro-facewear",
-              "upsell_product_thid_description": "Rejuvenate skin where the first signs of aging show"
             }
           },
           "upsell_UiGexh": {
@@ -356,7 +343,6 @@
           "upsell_DQMajg",
           "upsell_a74n8t",
           "upsell_ej4ULU",
-          "upsell_GiyUV9",
           "upsell_UiGexh",
           "upsell_MBrVMA",
           "upsell_zaLtWh",
