@@ -32485,6 +32485,12 @@ picture img {
 .result_s_wrapper .swiper-slide .result_item {
     height: 100%;
 }
+body.page\.led-mask-offer-2 .app_press_sl_img .swiper-slide{
+    opacity: 1;
+}
+body.page\.led-mask-offer-2 .app_press_info img {
+    max-height: 25px;
+}
 
 @media(max-width:767px){
     .indiv_clinics p{
