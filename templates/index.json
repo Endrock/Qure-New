@@ -258,12 +258,14 @@
         },
         "image_a8KMPg": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/gq_logo.png"
           }
         },
         "text_dUdLVN": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>“Q-Rejuvalight Pro harnesses the power of lights from blue to infrared to address nearly every skincare concern you could imagine.”</p>"
           }
