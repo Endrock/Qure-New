@@ -122,11 +122,11 @@
       }
     },
     "product_benefits": {
-      "type": "temp-product-pdp-dermal-mist-benefits"
+      "type": "temp-product-pdp-dermal-mist-benefits",
+      "settings": {}
     },
     "product_benefits_EhnmRK": {
       "type": "product-benefits",
-      "disabled": true,
       "blocks": {
         "image_yFkfyU": {
           "type": "image",
@@ -195,6 +195,7 @@
         "content_67QpDY",
         "content_FwmGpt"
       ],
+      "disabled": true,
       "settings": {
         "background": "bg_clr_transparent"
       }
@@ -477,8 +478,9 @@
         "button_hide_label": "Hide More Questions"
       }
     },
-    "heading_gcGk9w": {
+    "heading_3Hn3kU": {
       "type": "heading",
+      "name": "t:sections.heading.name",
       "settings": {
         "heading": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>",
         "heading_mobile": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>"
@@ -486,24 +488,6 @@
     },
     "17303964104bda0932": {
       "type": "apps",
-      "blocks": {
-        "stamped_reviews_main_widget_3nURCk": {
-          "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
-          "settings": {
-            "take_questions": 2,
-            "animation": true,
-            "tags_exclude": "",
-            "tags_include": "",
-            "search": "",
-            "linkify": true,
-            "use_metafields": false,
-            "sku_tagtype": "sku"
-          }
-        }
-      },
-      "block_order": [
-        "stamped_reviews_main_widget_3nURCk"
-      ],
       "settings": {}
     }
   },
@@ -517,7 +501,7 @@
     "compare_tLe6Fj",
     "benefits_slider_G6Lxbd",
     "faq_UUdrDJ",
-    "heading_gcGk9w",
+    "heading_3Hn3kU",
     "17303964104bda0932"
   ]
 }
