@@ -32491,7 +32491,21 @@ body.page\.led-mask-offer-2 .app_press_sl_img .swiper-slide{
 body.page\.led-mask-offer-2 .app_press_info img {
     max-height: 25px;
 }
-
+div#tab-10 .ctm_text_align{
+    text-align: center;
+}
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(-180deg);
+}
+body.page\.led-mask-offer-2 .bs_price .sale_p {
+     font-weight: 600; 
+}
+body.page\.led-mask-offer-2 .bs_content .price__label{
+    font-weight: 300;
+}
+.faq_technical .accordion-button:not(.collapsed) .container:after{
+    content: "-";
+}
 @media(max-width:767px){
     .indiv_clinics p{
         font-size: 10px;

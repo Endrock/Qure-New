@@ -40,6 +40,7 @@
     color: #000;
     font-weight: 400;
     text-align: center;
+    font-size: 13px;
 }
 
 .tooltip_btn {
@@ -72,8 +73,11 @@
     padding-top: 10px;
     letter-spacing: 0.11px;
     position: relative;
+    display: flex;
 }
-
+.offer-lp .thumbsSlider_wrap .swiper-slide {
+    margin-right: 12px;
+}
 .tootltip_text img {
     margin-left: 5px;
     cursor: pointer;
@@ -530,7 +534,7 @@
     font-size: 11px;
     font-weight: 300;
     line-height: 18px;
-    letter-spacing: 0.11px;
+    letter-spacing: 0;
 }
 .include .include_wrap .include_pd-price h6,
 .include .include_checkout h6{

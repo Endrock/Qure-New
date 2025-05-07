@@ -50,12 +50,16 @@
             {% endfor %}
           </div>
 
-          <a class="btn btn-lg btn-primary led_mask_btn" href="{{ section.settings.cta_url }}">
-            {{ section.settings.cta_text }} {{ neck_product.price | money_without_trailing_zeros }}
+         <a class="btn btn-lg btn-primary led_mask_btn" href="{{ section.settings.cta_url }}">
+            <span>{{ section.settings.cta_text }}</span> 
+            {% if neck_product %}
+              <span>{{ neck_product.price | money_without_trailing_zeros }}</span>
+            {% endif %} 
             <span>
-              <img src="https://qureskincaredns.com/new/assets/long_right_black_arrow.svg" alt="">
+              <img src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/long_right_black_arrow.svg?v=1746603325" alt="">
             </span>
-          </a>
+          </a>  
+
         </div> 
       </div>
     </div>

@@ -8,7 +8,7 @@
         <div class="refill_review justify-content-center">
           <div class="star_gp">
             {% if section.settings.star_image %}
-              <img src="{{ section.settings.star_image | img_url: 'medium' }}" alt="">
+              <img src="{{ section.settings.star_image | img_url: 'master' }}" alt="">
             {% endif %}
           </div>
           <p class="text-sm fw-normal text-decoration-none">{{ section.settings.review_text }}</p>
@@ -23,7 +23,7 @@
                 <div class="result_item result_item_info_with_fixed">
                   <div class="result_img_m">
                     {% if block.settings.image %}
-                      <img src="{{ block.settings.image | img_url: 'medium' }}" alt="" class="img-fluid">
+                      <img src="{{ block.settings.image | img_url: 'master' }}" alt="" class="img-fluid">
                     {% endif %}
                   </div>
                   <div class="result_c_info pb-0">
@@ -42,14 +42,14 @@
                         <div class="r_flag">
                           <div class="flag_img">
                             {% if block.settings.country_flag %}
-                              <img src="{{ block.settings.country_flag | img_url: 'small' }}" alt="" class="img-fluid">
+                              <img src="{{ block.settings.country_flag | img_url: 'master' }}" alt="" class="img-fluid">
                             {% endif %}
                           </div>
                           <p class="r_c_name pe-2">{{ block.settings.customer_name }}</p>
                         </div>
                         <div class="verified_img">
                           {% if block.settings.verified_image %}
-                            <img src="{{ block.settings.verified_image | img_url: 'small' }}" alt="">
+                            <img src="{{ block.settings.verified_image | img_url: 'master' }}" alt="">
                           {% endif %}
                           <p>{{ block.settings.verified_text }}</p>
                         </div>
@@ -58,7 +58,7 @@
                     <div class="d-grid prod_uses">
                       <div class="prod_img">
                         {% if block.settings.product_image %}
-                          <img src="{{ block.settings.product_image | img_url: 'small' }}" alt="" class="img-fluid">
+                          <img src="{{ block.settings.product_image | img_url: 'master' }}" alt="" class="img-fluid">
                         {% endif %}
                       </div>
                       <div class="prod_rev">
