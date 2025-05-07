@@ -256,7 +256,7 @@
             "settings": {
               "page_url": "https://www.qureskincare.com/products/neck-decolletage-led",
               "upsell_product_first": "micro-infusion-targeted-patches-single",
-              "upsell_product_first_description": "Reduces appearance of fine lines and wrinkles.",
+              "upsell_product_first_description": "Elevate your skincare with at-home microneeding treatment.",
               "upsell_product_second": "nec-and-deck-extended-1-year-warranty",
               "upsell_product_second_description": "Protect your LED Device for 1 more year.",
               "upsell_product_third": "fade-firm-bundle-advance",
@@ -268,7 +268,7 @@
             "settings": {
               "page_url": "https://www.qureskincare.com/products/face-serum",
               "upsell_product_first": "q-rejuvalight-pro-facewear",
-              "upsell_product_first_description": "Rejuvenate skin where the first signs of aging show",
+              "upsell_product_first_description": "Boost collagen, reduce wrinkles and rejuvenate skin.",
               "upsell_product_second": "micro-infusion-1-month-bundle-2x-beta-glucan-serum",
               "upsell_product_second_description": "Reveal smoother, radiant skin",
               "upsell_product_third": "line-refine-bundle-pro",
@@ -279,24 +279,12 @@
             "type": "upsell",
             "settings": {
               "page_url": "https://www.qureskincare.com/products/micro-infusion-targeted-patches",
-              "upsell_product_first": "micro-infusion-1-month-bundle-1x-b-g-serum-1x-e-g-f-serum",
-              "upsell_product_first_description": "Reveal smoother, radiant skin",
-              "upsell_product_second": "dermal-mist",
-              "upsell_product_second_description": "Purifies and refreshes",
-              "upsell_product_third": "fade-firm-bundle-essentials",
-              "upsell_product_thid_description": "Complete your treatment & treat multiple skin concerns."
-            }
-          },
-          "upsell_GiyUV9": {
-            "type": "upsell",
-            "settings": {
-              "page_url": "https://qureskincare.com/products/micro-infusion-limited-edition-bundle",
-              "upsell_product_first": "micro-infusion-darkspots-treatments",
-              "upsell_product_first_description": "Reveal Smoother, Radiant Skin",
-              "upsell_product_second": "face-serum",
-              "upsell_product_second_description": "Plump, smooth & brighten in just one step",
-              "upsell_product_third": "q-rejuvalight-pro-facewear",
-              "upsell_product_thid_description": "Rejuvenate skin where the first signs of aging show"
+              "upsell_product_first": "face-serum",
+              "upsell_product_first_description": "Plump, smooth & brighten in one step.",
+              "upsell_product_second": "line-refine-bundle-essentials",
+              "upsell_product_second_description": "Bundle & SAVE 32%",
+              "upsell_product_third": "dermal-mist",
+              "upsell_product_thid_description": "Purify your skin - anywhere, anytime."
             }
           },
           "upsell_UiGexh": {
@@ -306,7 +294,7 @@
               "upsell_product_first": "fade-firm-bundle-advance",
               "upsell_product_first_description": "Complete your treatment & treat multiple skin concerns.",
               "upsell_product_second": "shower-filter",
-              "upsell_product_second_description": "Reduces irritants in water for clearer, hydrated skin.",
+              "upsell_product_second_description": "",
               "upsell_product_third": "face-serum",
               "upsell_product_thid_description": "Plump, smooth & brighten in just one step"
             }
@@ -327,12 +315,12 @@
             "type": "upsell",
             "settings": {
               "page_url": "https://qureskincare.com/pages/microinfusion",
-              "upsell_product_first": "micro-infusion-darkspots-treatments",
-              "upsell_product_first_description": "Reveal smoother, radiant skin.",
-              "upsell_product_second": "breakout-control-advanced",
-              "upsell_product_second_description": "Reduces appearance of fine lines and wrinkles.",
-              "upsell_product_third": "dermal-mist",
-              "upsell_product_thid_description": "Complete your treatment & treat multiple skin concerns."
+              "upsell_product_first": "micro-infusion-hydra-soothing-2-treatments",
+              "upsell_product_first_description": "Reduce fine lines & increase hydration.",
+              "upsell_product_second": "dermal-mist",
+              "upsell_product_second_description": "Sanitise & prep your skin for Micro-Infusion.",
+              "upsell_product_third": "face-serum",
+              "upsell_product_thid_description": "Maintain your results post treatment"
             }
           },
           "upsell_pDFytd": {
@@ -346,6 +334,18 @@
               "upsell_product_third": "face-serum",
               "upsell_product_thid_description": "Plump, smooth & brighten in just one step."
             }
+          },
+          "upsell_qdPAET": {
+            "type": "upsell",
+            "settings": {
+              "page_url": "https://qureskincare.com/pages/qure-microinfusion-offer",
+              "upsell_product_first": "dermal-mist",
+              "upsell_product_first_description": "Sanitise & prep your skin for Micro-Infusion.",
+              "upsell_product_second": "micro-infusion-hydra-soothing-2-treatments",
+              "upsell_product_second_description": "Reduce fine lines & boost hydration.",
+              "upsell_product_third": "face-serum",
+              "upsell_product_thid_description": "Enhance and prolong your Micro-Infusion results."
+            }
           }
         },
         "block_order": [
@@ -355,11 +355,11 @@
           "upsell_DQMajg",
           "upsell_a74n8t",
           "upsell_ej4ULU",
-          "upsell_GiyUV9",
           "upsell_UiGexh",
           "upsell_MBrVMA",
           "upsell_zaLtWh",
-          "upsell_pDFytd"
+          "upsell_pDFytd",
+          "upsell_qdPAET"
         ],
         "custom_css": [],
         "settings": {
@@ -447,6 +447,13 @@
         "type": "shopify://apps/creatorcommerce-creator-shops/blocks/ccsdk/4dbde762-1068-4d2d-8b03-4505bf4cf377",
         "disabled": false,
         "settings": {}
+      },
+      "15659862187755629035": {
+        "type": "shopify://apps/bookeasy/blocks/app-embed/865cd10f-9515-4d8b-8e41-efece9c83f71",
+        "disabled": false,
+        "settings": {
+          "enable_cart_validation": true
+        }
       }
     }
   },

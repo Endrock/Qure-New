@@ -82,10 +82,89 @@
         "stamped_loyalty_referrals_rewards_activities_Xr8YHK"
       ],
       "settings": {}
+    },
+    "faq_BgPiYb": {
+      "type": "faq",
+      "blocks": {
+        "object_GPw3Gp": {
+          "type": "object",
+          "settings": {
+            "heading": "1. How to earn points",
+            "text": "<p>You can earn qoins in multiple ways:</p><ul><li><strong> Submit Before & After Photos (50 Points)</strong> – Share your skincare journey with Qure by submitting before and after photos.</li><li><strong> Subscribe to Our Newsletter (50 Points)</strong> – Stay updated and earn points when you sign up.</li><li><strong> Subscribe to YouTube (20 Points)</strong> – Follow us for expert skincare tips and exclusive content.</li><li><strong> Follow Us on TikTok (10 Points)</strong> – Stay connected and discover the latest trends.</li><li><strong> Join Our Instagram Community (10 Points)</strong> – Be part of our skincare community.</li><li><strong> Shop & Earn (1 Point per $1 Spent)</strong> – Earn points with every purchase.</li></ul>",
+            "code": ""
+          }
+        },
+        "object_WzL6if": {
+          "type": "object",
+          "settings": {
+            "heading": "2. How to redeem your points",
+            "text": "",
+            "code": "<div class=\"redeem_steps\"><img src=\"https://qureskincaredns.com/new/assets/redeem_step1.webp\" alt=\"\" class=\"img-fluid d-none d-md-block\"><img src=\"https://qureskincaredns.com/new/assets/redeem_step1_mob.webp\" alt=\"\" class=\"img-fluid d-md-none\"><img src=\"https://qureskincaredns.com/new/assets/redeem_step2.webp\" alt=\"\" class=\"img-fluid d-none d-md-block\"><img src=\"https://qureskincaredns.com/new/assets/redeem_step2_mob.webp\" alt=\"\" class=\"img-fluid d-md-none\"><img src=\"https://qureskincaredns.com/new/assets/redeem_step3.webp\" alt=\"\" class=\"img-fluid d-none d-md-block\"><img src=\"https://qureskincaredns.com/new/assets/redeem_step3_mob.webp\" alt=\"\" class=\"img-fluid d-md-none\"><img src=\"https://qureskincaredns.com/new/assets/redeem_step4.webp\" alt=\"\" class=\"img-fluid d-none d-md-block\"><img src=\"https://qureskincaredns.com/new/assets/redeem_step4_mob.webp\" alt=\"\" class=\"img-fluid d-md-none\"><img src=\"https://qureskincaredns.com/new/assets/redeem_step5.webp\" alt=\"\" class=\"img-fluid d-none d-md-block\"><img src=\"https://qureskincaredns.com/new/assets/redeem_step5_mob.webp\" alt=\"\" class=\"img-fluid d-md-none\"></div>"
+          }
+        },
+        "object_zEjFPh": {
+          "type": "object",
+          "settings": {
+            "heading": "3. How do referrals work?",
+            "text": "<p>Give your friend 10% off their first skin-vestment, and earn 150 points for each new member you introduce to the Skin I-Q Club.</p>",
+            "code": ""
+          }
+        },
+        "object_kwgVxd": {
+          "type": "object",
+          "settings": {
+            "heading": "4. How do I check my balance?",
+            "text": "<p>Your qoins balance is displayed at the top of your rewards page once you're logged into your account. You can also select \"Reward History\" to view your redeemed rewards.</p>",
+            "code": ""
+          }
+        },
+        "object_YiKwdT": {
+          "type": "object",
+          "settings": {
+            "heading": "5. Does it cost anything to begin earning points?",
+            "text": "<p>No, signing up is completely free! You can start earning qoins even without making a purchase.</p>",
+            "code": ""
+          }
+        },
+        "object_R4NqQq": {
+          "type": "object",
+          "settings": {
+            "heading": "6. Can I return an item I redeemed with a reward?",
+            "text": "<p>Once a reward has been redeemed, it cannot be changed or returned.</p>",
+            "code": ""
+          }
+        },
+        "object_XmQVbH": {
+          "type": "object",
+          "settings": {
+            "heading": "7. How long do my points last?",
+            "text": "<p><ul><li>Points expire if there is no transaction activity in your account for 365 days.</li><li>Rewards (points earned) expire 90 days from the date they are earned.</li></ul></p>",
+            "code": ""
+          }
+        }
+      },
+      "block_order": [
+        "object_GPw3Gp",
+        "object_WzL6if",
+        "object_zEjFPh",
+        "object_kwgVxd",
+        "object_YiKwdT",
+        "object_R4NqQq",
+        "object_XmQVbH"
+      ],
+      "settings": {
+        "background": "bg_grey",
+        "classname": "bg_grey",
+        "heading": "The answers to your questions",
+        "text": "",
+        "button_label": "Show More Questions",
+        "button_hide_label": "Hide More Questions"
+      }
     }
   },
   "order": [
     "main",
-    "17333325327bc1f4c8"
+    "17333325327bc1f4c8",
+    "faq_BgPiYb"
   ]
 }
