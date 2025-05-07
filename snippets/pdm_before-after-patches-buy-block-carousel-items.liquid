@@ -21,6 +21,7 @@
   assign index = index | plus: 0
 %}
 
+{{'_pdm-before-after-patches-buy-block-carousel.css' | asset_url | stylesheet_tag }}
 
 <div class="swiper swiper-products-carousel" data-product-handle="{{ product.handle }}">
   <div class="swiper-wrapper {% if product.handle != "neck-decolletage-led" %}reduce-video-size{% endif %}">
@@ -166,3 +167,5 @@
 <div class="swiper-products-thumbs-prev">
   {% render 'pdm_icons', icon: 'arrow-left-black' %}  
 </div>
+
+<script defer src="{{ '_pdm-before-after-patches-buy-block-carousel.js' | asset_url }}"></script>
