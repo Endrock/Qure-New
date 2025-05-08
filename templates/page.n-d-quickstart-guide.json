@@ -27,19 +27,10 @@
     "main": {
       "type": "temp-page-n-d-quickstart-guide",
       "settings": {}
-    },
-    "quickstart_steps_guide_AGc9jm": {
-      "type": "quickstart_steps_guide",
-      "name": "Quick Steps Guide",
-      "settings": {
-        "heading": "Proof In Numbers",
-        "subtext": "During clinical studies on LED light therapy, users reported numerous benefits:"
-      }
     }
   },
   "order": [
     "header_landing_pFmaRH",
-    "main",
-    "quickstart_steps_guide_AGc9jm"
+    "main"
   ]
 }
