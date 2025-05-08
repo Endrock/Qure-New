@@ -30,7 +30,6 @@
     }
 </style>
 
-
 {% if out_of_stock_count > 0 %}
     <div class="next_batch_bl next_batch_highlight out_of_stock">
         {%- for block in section.blocks -%}
@@ -70,111 +69,117 @@
             {% endif %}
         {%- endfor -%}
     </div>
+{% endif %}
 
-    <script>
-        function checkVariantInURL() {
-            const targetDiv = document.querySelector('div.out_of_stock');
-            const buttons = document.querySelectorAll('.btn_text_value');
-            const buttons_sticky = document.querySelectorAll('.button_sticky');
+<script>
+    function checkVariantInURL() {
+        const targetDiv = document.querySelector('div.out_of_stock');
+        const buttons = document.querySelectorAll('.btn_text_value');
+        const buttons_sticky = document.querySelectorAll('.button_sticky');
 
-            const text_soldout = 'Sold Out';
-            const text_buynow = 'Buy Now';
-            const text_reserve_now = 'Reserve Now';
-            const text_subscribe_now = 'Subscribe Now';
-            const text_add_to_bag = 'ADD TO BAG';
+        const text_soldout = 'Sold Out';
+        const text_buynow = 'Buy Now';
+        const text_reserve_now = 'Reserve Now';
+        const text_subscribe_now = 'Subscribe Now';
+        const text_add_to_bag = 'ADD TO BAG';
 
-            const urlParams = new URLSearchParams(window.location.search);
-            let variantParam = urlParams.get('variant');
+        const urlParams = new URLSearchParams(window.location.search);
+        let variantParam = urlParams.get('variant');
 
-            if(!variantParam)
-            {
-                variantParam = '{{ product.variants.first.id }}';
-            }
-
-            if (targetDiv) {
-                {%- for block in section.blocks -%}
-                    {%- case block.type -%}
-                        {%- when 'variant' -%}
-                                {% if block.settings.reserve == true %}
-                                    if(variantParam === '{{ block.settings.variant_id }}')
-                                    {
-                                        {% if block.settings.soldout == true %}
-                                            targetDiv.style.display = 'none';
-
-                                            buttons.forEach(btn => {
-                                                btn.textContent = text_soldout;
-                                                btn.style.pointerEvents = 'none';
-                                            });
-
-                                            buttons_sticky.forEach(btn_s => {
-                                                btn_s.textContent = text_soldout;
-                                                btn_s.style.pointerEvents = 'none';
-                                            });
-                                        {% else %}
-                                            targetDiv.style.display = 'block';
-
-                                            buttons.forEach(btn => {
-                                                btn.textContent = text_reserve_now;
-                                                btn.style.pointerEvents = '';
-                                            });
-
-                                            buttons_sticky.forEach(btn_s => {
-                                                btn_s.textContent = text_add_to_bag;
-                                                btn_s.style.pointerEvents = '';
-                                            });
-
-                                        {% endif %}
-                                    }
-                                {% else %}
-                                    if(variantParam === '{{ block.settings.variant_id }}')
-                                    {
-                                        targetDiv.style.display = 'none';
-
-                                        {% if block.settings.soldout == true %}
-                                            buttons.forEach(btn => {
-                                                btn.textContent = text_soldout;
-                                                btn.style.pointerEvents = 'none';
-                                            });
-
-                                            buttons_sticky.forEach(btn_s => {
-                                                btn_s.textContent = text_soldout;
-                                                btn_s.style.pointerEvents = 'none';
-                                            });
-
-                                        {% else %}
-                                            buttons.forEach(btn => {
-                                                if (btn.classList.contains('with_subscription')) {
-                                                    btn.textContent = text_subscribe_now;
-                                                } else {
-                                                    btn.textContent = text_buynow;
-                                                }
-                                                btn.style.pointerEvents = '';
-                                            });
-
-                                            buttons_sticky.forEach(btn_s => {
-                                                btn_s.textContent = text_add_to_bag;
-                                                btn_s.style.pointerEvents = '';
-                                            });
-                                        {% endif %}
-                                    }
-                                {% endif %}
-                    {%- endcase -%}
-                {%- endfor -%}
-            }
+        if(!variantParam)
+        {
+            variantParam = '{{ product.variants.first.id }}';
         }
 
-        document.addEventListener("DOMContentLoaded", () => {
+        {%- for block in section.blocks -%}
+            {%- case block.type -%}
+                {%- when 'variant' -%}
+                        {% if block.settings.reserve == true %}
+                            if(variantParam === '{{ block.settings.variant_id }}')
+                            {
+                                {% if block.settings.soldout == true %}
+                                    if(targetDiv) {
+                                        targetDiv.style.display = 'none';
+                                    }
+
+                                    buttons.forEach(btn => {
+                                        btn.textContent = text_soldout;
+                                        btn.style.pointerEvents = 'none';
+                                    });
+
+                                    buttons_sticky.forEach(btn_s => {
+                                        btn_s.textContent = text_soldout;
+                                        btn_s.style.pointerEvents = 'none';
+                                    });
+                                {% else %}
+                                    if(targetDiv)
+                                    {
+                                        targetDiv.style.display = 'block';
+                                    }
+
+                                    buttons.forEach(btn => {
+                                        btn.textContent = text_reserve_now;
+                                        btn.style.pointerEvents = '';
+                                    });
+
+                                    buttons_sticky.forEach(btn_s => {
+                                        btn_s.textContent = text_add_to_bag;
+                                        btn_s.style.pointerEvents = '';
+                                    });
+
+                                {% endif %}
+                            }
+                        {% else %}
+                            if(variantParam === '{{ block.settings.variant_id }}')
+                            {
+                                if(targetDiv)
+                                {
+                                    targetDiv.style.display = 'none';
+                                }
+
+                                {% if block.settings.soldout == true %}
+                                    buttons.forEach(btn => {
+                                        btn.textContent = text_soldout;
+                                        btn.style.pointerEvents = 'none';
+                                    });
+
+                                    buttons_sticky.forEach(btn_s => {
+                                        btn_s.textContent = text_soldout;
+                                        btn_s.style.pointerEvents = 'none';
+                                    });
+
+                                {% else %}
+                                    buttons.forEach(btn => {
+                                        if (btn.classList.contains('with_subscription')) {
+                                            btn.textContent = text_subscribe_now;
+                                        } else {
+                                            btn.textContent = text_buynow;
+                                        }
+                                        btn.style.pointerEvents = '';
+                                    });
+
+                                    buttons_sticky.forEach(btn_s => {
+                                        btn_s.textContent = text_add_to_bag;
+                                        btn_s.style.pointerEvents = '';
+                                    });
+                                {% endif %}
+                            }
+                        {% endif %}
+            {%- endcase -%}
+        {%- endfor -%}
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        checkVariantInURL();
+
+        ['pushState', 'replaceState'].forEach(method => {
+            const original = history[method];
+            history[method] = function () {
+            original.apply(this, arguments);
             checkVariantInURL();
-
-            ['pushState', 'replaceState'].forEach(method => {
-                const original = history[method];
-                history[method] = function () {
-                original.apply(this, arguments);
-                checkVariantInURL();
-                };
-            });
-
-            window.addEventListener('popstate', checkVariantInURL);
+            };
         });
-    </script>    
-{% endif %}
+
+        window.addEventListener('popstate', checkVariantInURL);
+    });
+</script>
