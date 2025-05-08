@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "main": {
       "type": "product-extended-new",
@@ -33,7 +33,7 @@
             "variant_id": 45852978348271,
             "main": false,
             "reserve": false,
-            "soldout": false
+            "soldout": true
           }
         },
         "variant_8RVKyP": {
@@ -97,12 +97,14 @@
         "heading": "Get clearer skin, on tap, with Qure Faucet Filter",
         "heading_mobile": "Get clearer skin, on tap, with Qure Faucet Filter",
         "one_time_purchase": "Faucet + 1 Filter",
+        "product": "",
         "wistia_id": "tev066z6pv",
         "product_images_limit": 6,
         "product_button_label": "Product",
         "before_after_images_limit": 2,
         "before_after_button_label": "Before & After",
         "reserve": false,
+        "soldout": false,
         "underbutton_text_left": "Dermatologist Reviewed",
         "underbutton_text_right": "Free Shipping Over $100",
         "selected_design": "new",

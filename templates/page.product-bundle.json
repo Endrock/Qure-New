@@ -10,7 +10,8 @@
 {
   "sections": {
     "main": {
-      "type": "product-bundle"
+      "type": "product-bundle",
+      "settings": {}
     }
   },
   "order": [
