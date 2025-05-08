@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "header_landing_pFmaRH": {
@@ -31,15 +22,25 @@
         "navigation_link_qLHgyD",
         "navigation_link_DgYaFx"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "main": {
-      "type": "temp-page-n-d-quickstart-guide"
+      "type": "temp-page-n-d-quickstart-guide",
+      "settings": {}
+    },
+    "quickstart_steps_guide_AGc9jm": {
+      "type": "quickstart_steps_guide",
+      "disabled": true,
+      "name": "Quick Steps Guide",
+      "settings": {
+        "heading": "Proof In Numbers",
+        "subtext": "During clinical studies on LED light therapy, users reported numerous benefits:"
+      }
     }
   },
   "order": [
     "header_landing_pFmaRH",
-    "main"
+    "main",
+    "quickstart_steps_guide_AGc9jm"
   ]
 }
