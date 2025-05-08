@@ -1,60 +1,4 @@
-{% schema %}
-{
-  "name": "LED Guide Intro",
-  "settings": [
-    {
-      "type": "text",
-      "id": "guide_heading",
-      "label": "Guide Contents Heading",
-      "default": "Guide Contents"
-    },
-    {
-      "type": "text",
-      "id": "button_label",
-      "label": "Get Started Button Text",
-      "default": "Let's Get Started!"
-    },
-    {
-      "type": "image_picker",
-      "id": "button_icon",
-      "label": "Button Icon"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "guide_link",
-      "name": "Guide Link",
-      "settings": [
-        {
-          "type": "text",
-          "id": "step_number",
-          "label": "Step Number",
-          "default": "01"
-        },
-        {
-          "type": "text",
-          "id": "step_label",
-          "label": "Step Label",
-          "default": "What’s In The Box"
-        },
-        {
-          "type": "text",
-          "id": "step_id",
-          "label": "Step ID (e.g. step1)",
-          "default": "step1"
-        }
-      ]
-    }
-  ],
-  "max_blocks": 10,
-  "presets": [
-    {
-      "name": "LED Guide Intro",
-      "category": "Custom"
-    }
-  ]
-}
-{% endschema %}
+
 
 <main class="homepage q-urify_safety led_guide">
   <div id="zero_step" class="content"></div>
@@ -117,3 +61,63 @@
     </div>
   </div>
 </main>
+
+
+
+{% schema %}
+{
+  "name": "LED Guide Intro",
+  "settings": [
+    {
+      "type": "text",
+      "id": "guide_heading",
+      "label": "Guide Contents Heading",
+      "default": "Guide Contents"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Get Started Button Text",
+      "default": "Let's Get Started!"
+    },
+    {
+      "type": "image_picker",
+      "id": "button_icon",
+      "label": "Button Icon"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "guide_link",
+      "name": "Guide Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "step_number",
+          "label": "Step Number",
+          "default": "01"
+        },
+        {
+          "type": "text",
+          "id": "step_label",
+          "label": "Step Label",
+          "default": "What’s In The Box"
+        },
+        {
+          "type": "text",
+          "id": "step_id",
+          "label": "Step ID (e.g. step1)",
+          "default": "step1"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "LED Guide Intro",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
