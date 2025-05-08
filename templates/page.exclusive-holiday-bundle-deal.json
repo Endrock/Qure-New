@@ -1458,10 +1458,12 @@
         },
         "bundle_3RY7qF": {
           "type": "bundle",
+          "disabled": true,
           "settings": {}
         },
         "product_qM8ypV": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "breakout-control-starter",
             "percent": 28,
@@ -1479,6 +1481,7 @@
         },
         "include_hxkWTR": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Faucet Filter",
             "is_limited": false,
@@ -1493,6 +1496,7 @@
         },
         "include_nwb4HD": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Shower Filter",
             "is_limited": false,
@@ -1507,6 +1511,7 @@
         },
         "how_to_use_8WVeGb": {
           "type": "how-to-use",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_faucet_filter.svg",
             "text": "<h5>Faucet Filter</h5><ul><li>Install the Qure Faucet Filter on your faucet.</li><li>Replace filter every 3 months (purchase replacement via our website).</li></ul>"
@@ -1514,6 +1519,7 @@
         },
         "how_to_use_DiytkL": {
           "type": "how-to-use",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_shower_f_sm.svg",
             "text": "<h5>Shower Filter</h5><ul><li>Remove your original shower head and screw on the Qure Shower Filter</li><li>Replace filter every 3 months (purchase replacement via our website).</li></ul>"
