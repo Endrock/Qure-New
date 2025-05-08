@@ -1,4 +1,21 @@
-{% assign product = all_products['neck-decolletage-led'] %}
+{%- assign rating_count = 0 -%}
+{%- assign supply_count = 0 -%}
+{%- assign subscribe_count = 0 -%}
+
+{%- for block in section.blocks -%}
+	{%- case block.type -%}
+        {%- when 'rating' -%}
+            {%- assign rating_count = rating_count | plus: 1 -%}    
+        {%- when 'list' -%}
+            {%- assign list_count = list_count | plus: 1 -%}
+        {%- when 'supply' -%}
+            {%- assign supply_count = supply_count | plus: 1 -%}
+        {%- when 'subscribe' -%}
+            {%- assign subscribe_count = subscribe_count | plus: 1 -%}
+    {%- endcase -%}
+{%- endfor -%}
+
+{% assign product = all_products['fade-firm-bundle-advance'] %}
 
 <link rel="stylesheet" href="https://qureskincaredns.com/new/assets/product-bf-sales.css">
 
@@ -10,41 +27,57 @@
             <div class="col-md-6 order-2 order-md-1">
                 <div class="bndl_pdp_new">
                     <div class="refill_info pt-4 mw-546">
-                        <div class="refill_review justify-content-start mb-2">
-                            <div class="star_gp">
-                                <img src="https://qureskincaredns.com/new/assets/star-full.svg" alt="">
-                            </div>
-                            <p class="text-sm fw-normal text-decoration-none">729 reviews
-                            </p>
-                        </div>
+                        {%- for block in section.blocks -%}
+                            {% case block.type %}
+                                {% when 'preorder' %}
+                                    <h6 class="order-3 order-md-2">Pre-Order</h6>
+                                {% when 'rating' %}
+                                    <div class="refill_review justify-content-start mb-2">
+                                        {% if block.settings.image != blank %}
+                                            <div class="star_gp">
+                                                <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}">
+                                            </div>
+                                        {% endif %}
+                                        {% if block.settings.text != blank %}
+                                            <p class="text-sm fw-normal text-decoration-none">{{ block.settings.text }}</p>
+                                        {% endif %}
+                                    </div>
+                            {% endcase %}
+                        {%- endfor -%}
+
+
                         <div class="text-start">
-                            <h1 class="title-lg save_hair my-2">{Product name}</h1>
+                            <h1 class="title-lg save_hair my-2">{{ product.title }}</h1>
                         </div>
                         
-                    
                         <div class="mw-430">
                             <div class="ss_list pt-2 pb-1  pt-md-1 pb-md-1">
-                                <!-- <ul>
-                                    <li>Triple-filter showerhead for the purest head-to-toe hydration.</li>
-                                    <li>Removes up to 99% of chlorine, heavy metals & contaminants that irritate the skin, for an overall more hydrated, clearer skin and hair.</li>
-                                    <li>Reduces limescale buildup, which can dry out skin and hair, for smoother, softer results.</li>
-                                </ul> -->
-                                <p>{Product description}</p>
+                                <p>{{ product.description }}</p>
                             </div>
 
 
                             <div class="bundle_price d-flex align-items-center justify-content-start my-3 pb-2">
-                                <div class="bef_price">{Before price}</div>
-                                <div class="aft_price">{sale price}</div>
-                                <div class="discount_percentage_new">{discount}</div>
+                                {% if product.compare_at_price != blank %}
+                                    <div class="bef_price" style="font-size: 30px;">{{ product.compare_at_price |  money_without_trailing_zeros }}</div>
+                                {% endif %}
+                                <div class="aft_price" style="font-size: 22px;">{{ product.price |  money_without_trailing_zeros }}</div>
+                                {% if product.compare_at_price != blank %}
+                                    <div class="discount_percentage_new">{{ product.price | times: 100 | divided_by: product.compare_at_price | minus: 100 | abs | round }} % OFF</div>
+                                {% endif %}
                             </div>
 
+                            {% if section.settings.soldout == true %}
+                                <a class="btn btn-lg btn-primary without_subscription buy_btn mt-4" href="#">Sold Out</a>
+                            {% else %}
+                                {% if product.variants.first.available %}
+                                    <a class="btn btn-lg btn-primary without_subscription buy_btn mt-4" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" onclick="setEventProductHandler('{{ product.handle | escape }}')" data-ajax-cart-request-button>{% if section.settings.reserve == true %}Reserve now{% else %} Add To Cart{% endif %}</a>
+                                {% else %}
+                                    <a class="btn btn-lg btn-primary without_subscription buy_btn mt-4" href="#">Sold Out</a>
+                                {% endif %}
+                            {% endif %}
 
-
-                            <a class="btn btn-lg btn-primary without_subscription buy_btn mt-4" href="#productSubscription"> Add To Cart
-                            </a>
                             <div class="justify-content-start payment_method without_subscription">
-                                <p>OR 4 monthly payments of $99.75 with</p>
+                                <p>OR 4 monthly payments of {{ product.price | divided_by: 4 | money_without_trailing_zeros }} with</p>
                                 <div class="pmt_img ps-2">
                                     <img src="https://qureskincaredns.com/new/assets/klarna.svg" alt="">
                                     <img src="https://qureskincaredns.com/new/assets/sezzle.svg" alt="">
@@ -54,27 +87,26 @@
 
                             <div class="certified_derm">
                                 <img src="https://qureskincaredns.com/new/assets/certified_derma.webp" alt="">
-                                <p><strong>50+ Board Certified Dermatologists</strong>
-                                    <br> 
-                                    recommended Qure to their patients. 
-                                    <a href="https://qureskincare.com/pages/derm-reviews"
-                                        class="text-black text-decoration-underline">See More</a> </p>
+                                <p><strong>50+ Board Certified Dermatologists</strong> <br> recommended Qure to their patients. <a href="https://qureskincare.com/pages/derm-reviews" class="text-black text-decoration-underline">See More</a> </p>
                             </div>
 
-
-                            <div class="holiday-banner d-none d-md-flex mt-4">
-                                <div class="banner-left">
-                                    <div class="icon-circle">
-                                    <img src="https://qureskincaredns.com/new/assets/gift_new.svg" alt="">
+                            {%- for block in section.blocks -%}
+                                {% if block.type == 'button' %}
+                                    <div class="holiday-banner d-none d-md-flex mt-4">
+                                        <div class="banner-left">
+                                            <div class="icon-circle">
+                                                <img src="https://qureskincaredns.com/new/assets/gift_new.svg" alt="">
+                                            </div>
+                                            {% if block.settings.text != blank %}
+                                                <div class="banner-text">
+                                                    {{ block.settings.text }}
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                        <a href="{{ block.settings.button_url }}" title="{{ block.settings.button_label | escape }}" class="shop-button text-black">{{ block.settings.button_label }} <img src="https://qureskincaredns.com/new/assets/long_right_black_arrow.svg"></a>
                                     </div>
-                                    <div class="banner-text">
-                                    <p>Save up to <strong>XX%</strong> with<br>Holiday Bundles</p>
-                                    </div>
-                                </div>
-                                <a href="#" class="shop-button text-black">Shop Now <img src="https://qureskincaredns.com/new/assets/long_right_black_arrow.svg"></a>
-                                </div>
-
-                                
+                                {% endif %}
+                            {%- endfor -%}
 
 
                             <div class="shipping shipping_bg bg-transparent d-flex pt-2 pt-md-4 pb-1 mx-auto">
@@ -91,84 +123,84 @@
     
                         </div>
                     </div>
-                            <!-- accordions shower filter  -->
-                <div class="faq accordions_shower_filter faq_under_product pt-0 mw-452">
-                    <div class="accordion" id="accordion_shower_filter"> 
-                        <div class="accordion-item d-none">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc_shower_One" aria-expanded="true" aria-controls="accFAQOne">
-                                    <div class="container">
-                                        <div class="d-flex justify-content-start gap-2 align-items-center sub_try_free">
-                                            <p class="bg-green"> TRY FREE FOR 30 DAYS </p>  
-                                            <h6 class="explained">Explained</h6>
+                    <!-- accordions shower filter  -->
+                    <div class="faq accordions_shower_filter faq_under_product pt-0 mw-452">
+                        <div class="accordion" id="accordion_shower_filter"> 
+                            <div class="accordion-item d-none">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc_shower_One" aria-expanded="true" aria-controls="accFAQOne">
+                                        <div class="container">
+                                            <div class="d-flex justify-content-start gap-2 align-items-center sub_try_free">
+                                                <p class="bg-green"> TRY FREE FOR 30 DAYS </p>  
+                                                <h6 class="explained">Explained</h6>
+                                            </div>
+                                        </div>
+                                    </button>
+        
+                                </h2>
+                                <div id="acc_shower_One" class="accordion-collapse collapse" data-bs-parent="#accordion_shower_filter" style="">
+                                    <div class="accordion-body">
+                                        <div class="container">
+                                            <p>Pay $0 today and try Qure Shower Filter at home, risk-free for 30 days. Only pay if you keep it. </p>
+                                            <p>With subscription you will get Shower Filter Refill delivered to you every 90 days for only <span class="clr_faded"> $50 </span> $35.  </p>
                                         </div>
                                     </div>
-                                </button>
-    
-                            </h2>
-                            <div id="acc_shower_One" class="accordion-collapse collapse" data-bs-parent="#accordion_shower_filter" style="">
-                                <div class="accordion-body">
-                                    <div class="container">
-                                        <p>Pay $0 today and try Qure Shower Filter at home, risk-free for 30 days. Only pay if you keep it. </p>
-                                        <p>With subscription you will get Shower Filter Refill delivered to you every 90 days for only <span class="clr_faded"> $50 </span> $35.  </p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#acc_shower_Two" aria-expanded="true" aria-controls="accFAQOne">
+                                        <div class="container">
+                                            <p class="fw-normal">Key Benefits <span class="d-none">In The Box</span></p>
+                                        </div>
+                                    </button>
+                                </h2>
+                                <div id="acc_shower_Two" class="accordion-collapse collapse show" data-bs-parent="#accordion_shower_filter">
+                                    <div class="accordion-body">
+                                        <div class="container">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempor, dui et lobortis convallis, lectus justo molestie elit, non rutrum lacus urna non diam. Integer non elit diam. Duis tincidunt tempus mattis.</p>
+                                            <p>Mauris ac efficitur turpis. Sed quis sem at odio efficitur bibendum vitae eu mi. Aliquam feugiat nec leo sed malesuada. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean viverra arcu iaculis justo rhoncus pharetra. </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#acc_shower_Two" aria-expanded="true" aria-controls="accFAQOne">
-                                    <div class="container">
-                                        <p class="fw-normal">Key Benefits <span class="d-none">In The Box</span></p>
-                                    </div>
-                                </button>
-                            </h2>
-                            <div id="acc_shower_Two" class="accordion-collapse collapse show" data-bs-parent="#accordion_shower_filter">
-                                <div class="accordion-body">
-                                    <div class="container">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempor, dui et lobortis convallis, lectus justo molestie elit, non rutrum lacus urna non diam. Integer non elit diam. Duis tincidunt tempus mattis.</p>
-                                        <p>Mauris ac efficitur turpis. Sed quis sem at odio efficitur bibendum vitae eu mi. Aliquam feugiat nec leo sed malesuada. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean viverra arcu iaculis justo rhoncus pharetra. </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc_shower_Three" aria-expanded="true" aria-controls="accFAQOne">
-                                    <div class="container"><p class="fw-normal">How It Works</p></div>
-                                </button>
-    
-                            </h2>
-                            <div id="acc_shower_Three" class="accordion-collapse collapse" data-bs-parent="#accordion_shower_filter" style="">
-                                <div class="accordion-body">
-                                    <div class="container">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempor, dui et lobortis convallis, lectus justo molestie elit, non rutrum lacus urna non diam. Integer non elit diam. Duis tincidunt tempus mattis.</p>
-                                        <p>Mauris ac efficitur turpis. Sed quis sem at odio efficitur bibendum vitae eu mi. Aliquam feugiat nec leo sed malesuada. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean viverra arcu iaculis justo rhoncus pharetra. </p>
-                                    
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc_shower_Three" aria-expanded="true" aria-controls="accFAQOne">
+                                        <div class="container"><p class="fw-normal">How It Works</p></div>
+                                    </button>
+        
+                                </h2>
+                                <div id="acc_shower_Three" class="accordion-collapse collapse" data-bs-parent="#accordion_shower_filter" style="">
+                                    <div class="accordion-body">
+                                        <div class="container">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempor, dui et lobortis convallis, lectus justo molestie elit, non rutrum lacus urna non diam. Integer non elit diam. Duis tincidunt tempus mattis.</p>
+                                            <p>Mauris ac efficitur turpis. Sed quis sem at odio efficitur bibendum vitae eu mi. Aliquam feugiat nec leo sed malesuada. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean viverra arcu iaculis justo rhoncus pharetra. </p>
+                                        
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc_shower_Four" aria-expanded="true" aria-controls="accFAQOne">
-                                    <div class="container"><p class="fw-normal">What’s Included</p></div>
-                                </button>
-    
-                            </h2>
-                            <div id="acc_shower_Four" class="accordion-collapse collapse" data-bs-parent="#accordion_shower_filter" style="">
-                                <div class="accordion-body">
-                                    <div class="container">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempor, dui et lobortis convallis, lectus justo molestie elit, non rutrum lacus urna non diam. Integer non elit diam. Duis tincidunt tempus mattis.</p>
-                                        <p>Mauris ac efficitur turpis. Sed quis sem at odio efficitur bibendum vitae eu mi. Aliquam feugiat nec leo sed malesuada. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean viverra arcu iaculis justo rhoncus pharetra. </p>
-                                    
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc_shower_Four" aria-expanded="true" aria-controls="accFAQOne">
+                                        <div class="container"><p class="fw-normal">What’s Included</p></div>
+                                    </button>
+        
+                                </h2>
+                                <div id="acc_shower_Four" class="accordion-collapse collapse" data-bs-parent="#accordion_shower_filter" style="">
+                                    <div class="accordion-body">
+                                        <div class="container">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempor, dui et lobortis convallis, lectus justo molestie elit, non rutrum lacus urna non diam. Integer non elit diam. Duis tincidunt tempus mattis.</p>
+                                            <p>Mauris ac efficitur turpis. Sed quis sem at odio efficitur bibendum vitae eu mi. Aliquam feugiat nec leo sed malesuada. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean viverra arcu iaculis justo rhoncus pharetra. </p>
+                                        
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
                     <!-- accordions shower filter  -->
                 </div>
             </div>
@@ -181,98 +213,36 @@
                         data-arrowleft="realResultSlider-swiper-prev"
                         data-arrowright="realResultSlider-swiper-next">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="https://qureskincaredns.com/new/assets/bundles-1.webp" class="img-fluid" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <!-- <img src="https://qureskincaredns.com/new/assets/bundles-2.webp" class="img-fluid" alt=""> -->
-                                <div class="sale-bf-img">
-                                    <div class="sale-bf-bgImg">
-                                        <picture id="image-id">
-                                            <source media="(min-width:1920px)" srcset="https://qureskincaredns.com/new/assets/bundles-2.webp" class="img-fluid" width="92" height="79">
-                                            <source media="(min-width:1600px)" srcset="https://qureskincaredns.com/new/assets/bundles-2.webp" class="img-fluid" width="350" height="350">
-                                            <source media="(min-width:1100px)" srcset="https://qureskincaredns.com/new/assets/bundles-2.webp" class="img-fluid" width="350" height="350">
-                                            <source media="(min-width:720px)" srcset="https://qureskincaredns.com/new/assets/bundles-2.webp" class="img-fluid" width="92" height="79">
-                                            <source media="(min-width:540px)" srcset="https://qureskincaredns.com/new/assets/bundles-2.webp" class="img-fluid" width="92" height="79">
-                                            <img src="https://qureskincaredns.com/new/assets/bundles-2mob.webp" alt="" class="img-fluid" width="189" height="146">
-                                        </picture>
-                                    </div>
-                                    <div class="sale-bg-cont">
-                                        <div class="sale-bf-tag">INCLUDED IN BUNDLE:</div>
-                                        <div class="sale-bf-info">
-                                            <p>Q-Rejuvalight Pro LED Mask <span class="regular_price">$529</span>
-                                            </p>
-                                            <ul>
-                                                <li>1 Year Warranty</li>
-                                                <li>1x Luxury Storage Bag</li>
-                                                <li>1x Universal USB-C Charging Cable </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://qureskincaredns.com/new/assets/bundles-3.webp" class="img-fluid" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="wistia_responsive_padding" style="position:relative;">
-                                    <div class="wistia_responsive_wrapper"
-                                        style="height:100%;left:0;position:absolute;top:0;width:100%;">
-                                        <div class="wistia_embed wistia_async_59afkfuwud seo=false videoFoam=true"
-                                            style="height:100%;position:relative;width:100%">
-                                            <div class="wistia_swatch"
-                                                style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
-                                                <img src="https://fast.wistia.com/embed/medias/59afkfuwud/swatch"
-                                                    style="filter:blur(5px);height:100%;object-fit:contain;width:100%;"
-                                                    alt="" aria-hidden="true"
-                                                    onload="this.parentNode.style.opacity=1;" />
+                            {% for media in product.media %}
+                                {% case media.media_type %}
+                                    {% when 'external_video' %}
+                                        <div class="swiper-slide">
+                                            <a class="popup-youtube" href="https://www.youtube.com/watch?v={{ media.external_id }}">
+                                                <div class="sale-bf-img">
+                                                    <img class="img-fluid d-none d-md-block" src="{{ media | img_url: '720x' }}" />
+                                                    <img class="img-fluid d-block d-md-none" src="{{ media | img_url: '540x' }}" />
+                                                </div>
+                                            </a>
+                                        </div>   
+                                    {% else %}
+                                        <div class="swiper-slide">
+                                            <div class="sale-bf-img">
+                                                <div class="sale-bf-bgImg">
+                                                    <picture id="image-id">
+                                                        <source media="(min-width:1920px)" srcset="{{ media | img_url: 'master' }}">
+                                                        <source media="(min-width:1600px)" srcset="{{ media | img_url: '1600x' }}">
+                                                        <source media="(min-width:1100px)" srcset="{{ media | img_url: '1100x' }}">
+                                                        <source media="(min-width:720px)" srcset="{{ media | img_url: '720x' }}">
+                                                        <source media="(min-width:540px)" srcset="{{ media | img_url: '540x' }}">
+                                                        <img class="img-fluid" src="{{ media | img_url: '540x' }}" width="100" height="100" alt="{{ block.settings.image.alt | escape }}">
+                                                    </picture>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="sale-bf-img">
-                                    <div class="sale-bf-bgImg">
-                                        <picture id="image-id">
-                                            <source media="(min-width:1920px)" srcset="https://qureskincaredns.com/new/assets/bundles-4.webp" class="img-fluid" width="92" height="79">
-                                            <source media="(min-width:1600px)" srcset="https://qureskincaredns.com/new/assets/bundles-4.webp" class="img-fluid" width="92" height="79">
-                                            <source media="(min-width:1100px)" srcset="https://qureskincaredns.com/new/assets/bundles-4.webp" class="img-fluid" width="92" height="79">
-                                            <source media="(min-width:720px)" srcset="https://qureskincaredns.com/new/assets/bundles-4.webp" class="img-fluid" width="92" height="79">
-                                            <source media="(min-width:540px)" srcset="https://qureskincaredns.com/new/assets/bundles-4.webp" class="img-fluid" width="92" height="79">
-                                            <img src="https://qureskincaredns.com/new/assets/bundles-4.webp" alt="" class="img-fluid" width="189" height="146">
-                                        </picture>
-                                    </div>
-                                    <div class="sale-bg-cont">
-                                        <div class="sale-bf-tag">INCLUDED IN BUNDLE:</div>
-                                        <div class="sale-bf-info">
-                                            <p>Micro-Infusion 3 Month Limited Edition Bundle <span class="regular_price">$307</span>
-                                            </p>
-                                            <ul>
-                                                <li>Micro Infusion device + Sterile Disposable Needle Head
-                                                </li>
-                                                <li> 6x 4ml serums (3x Rejuvenating Serums and 3x
-                                                    Hydra-Soothing
-                                                    Serums)</li>
-                                                <li> 5x additional Sterile Disposable Needle Heads</li>
-                                                <li>Qure Headband</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- <img src="https://qureskincaredns.com/new/assets/bundles-4.webp" class="img-fluid" alt=""> -->
-                            </div>
-                            
-                            <div class="swiper-slide">
-                                <img src="https://qureskincaredns.com/new/assets/bundles-5.webp" class="img-fluid" alt="">
-                            </div>
+                                {% endcase %}
+                            {% endfor %}
                         </div>
-                        <!-- <div class="pagination_navigation mw-464 mx-md-auto mx-4">
-                            <div class="swiper-pagination"></div>
-                            <div class="realResultSlider-swiper-prev swiper-button-prev swiper-button"></div>
-                            <div class="realResultSlider-swiper-next  swiper-button-next swiper-button"></div>
-                        </div> -->
+
                     </div>
 
                     <div class="thumbsSlider_wrap mt-3">
@@ -285,72 +255,19 @@
                             data-spacing-desktop="12">
                     
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="bfs_mb_wrapThumb">
-                                        <img src="https://qureskincaredns.com/new/assets/bundles-1.webp" class="img-fluid" />
+                                {% for media in product.media %}
+                                    <div class="swiper-slide">
+                                        <div class="bfs_mb_wrapThumb">
+                                            <img src="{{ media | img_url: '540x' }}" class="img-fluid" />
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="bfs_mb_wrapThumb">
-                                        <img src="https://qureskincaredns.com/new/assets/bundles-2.webp" class="img-fluid" alt="">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="bfs_mb_wrapThumb">
-                                        <img src="https://qureskincaredns.com/new/assets/bundles-3.webp" class="img-fluid" alt="">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="bfs_mb_wrapThumb">
-                                        <img src="https://qureskincaredns.com/new/assets/shower_filter_thumb_5.webp" class="img-fluid" />
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="bfs_mb_wrapThumb">
-                                        <img src="https://qureskincaredns.com/new/assets/bundles-4.webp" class="img-fluid" alt="">
-                                    </div>
-                                </div>
-                                
-                                <div class="swiper-slide">
-                                    <div class="bfs_mb_wrapThumb">
-                                        <img src="https://qureskincaredns.com/new/assets/bundles-5.webp" class="img-fluid" alt="">
-                                    </div>
-                                </div>
+                                {% endfor %}
                             </div>
                         </div>
                         <div class="thumb-next swiper-button-next swiper-button"></div>
                         <div class="thumb-prev swiper-button-prev swiper-button"></div>
                     </div>
                 </div>
-
-                
-                
-        
-                <!-- big water impact  -->
-                    
-                <!-- <div class="big_impact_water mw-452 mx-auto">
-                    <div class="d-grid">
-                            <div class="water_impact_img">
-                                <img src="https://qureskincaredns.com/new/assets/big_water_impact.webp" alt="" class="img-fluid">
-                            </div>
-                            <div class="water_impact_content">
-                                <p>“I didn’t realize how <strong> big an impact water had on my skin</strong>... this filter has been a game changer in my 
-                                    skincare routine.</p>
-                                <div class="verified_img_kim mt-2">
-                                    <p>Kim L.</p>
-                                    <p>
-                                        <img src="https://qureskincaredns.com/new/assets/verified.svg" alt="">
-                                        <span>Verified customer</span>
-                                    </p>
-                                </div>
-                            </div>
-                    </div>
-                </div> -->
-                    <!-- big water impact end  -->
-
-            
-
-
             </div>
         </div>
     </div>
@@ -507,3 +424,76 @@
         // Removed the slideChangeTransitionStart block
     });
 </script>
+
+
+{% schema %}
+    {
+        "name": "t:sections.product-bundle.name",
+        "class": "section-product-bundle",
+        "settings": [
+            {
+                "type": "checkbox",
+                "id": "reserve",
+                "label": "t:common.reserve.label",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "soldout",
+                "label": "t:common.soldout.label",
+                "default": false
+            },
+        ],
+        "blocks": [
+            {
+                "type": "rating",
+                "name": "t:common.rating.label",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "t:common.image.label"
+                    },
+                    {
+                        "type": "text",
+                        "id": "text",
+                        "label": "t:common.text.label"
+                    }
+                ]
+		    },
+            {
+                "type": "button",
+                "name": "t:common.button.label",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "t:common.text.label"
+                    },
+                    {
+                        "type": "text",
+                        "id": "button_label",
+                        "default": "Button label",
+                        "label": "t:common.button.label",
+                        "info": "t:common.button.info"
+                    },
+                    {
+                        "type": "url",
+                        "id": "button_url",
+                        "label": "t:common.button.url.label"
+                    }
+                ]
+		    },
+            {
+                "type": "preorder",
+                "name": "t:common.preorder.label",
+                "limit": 1,
+                "settings": [
+
+                ]
+		    }
+        ]
+    }
+{% endschema %}
