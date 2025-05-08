@@ -56,14 +56,18 @@
                                 {% if block.settings.product != blank %}
                                     {% render 'product-rating', rating_value: block.settings.product.metafields.reviews.rating.value, rating_count: block.settings.product.metafields.reviews.rating_count.value %}
                                 {% else %}
-                                    <div class="refill_review">
-                                        <div class="star_gp">
-                                            {% if block.settings.image != blank %}
-                                                <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}">
-                                            {% endif %}
+                                    {% if product.metafields.reviews.rating_count.value > 20 %}
+                                        {% render 'product-rating', rating_value: product.metafields.reviews.rating.value, rating_count: product.metafields.reviews.rating_count.value %}
+                                    {% else %}
+                                        <div class="refill_review">
+                                            <div class="star_gp">
+                                                {% if block.settings.image != blank %}
+                                                    <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}">
+                                                {% endif %}
+                                            </div>
+                                            <p class="text-sm fw-normal" style="text-decoration: none;">{{ block.settings.text }}</p>
                                         </div>
-                                        <p class="text-sm fw-normal" style="text-decoration: none;">{{ block.settings.text }}</p>
-                                    </div>
+                                    {% endif %}
                                 {% endif %}
                             {% endif %}
                         {%- endfor -%}

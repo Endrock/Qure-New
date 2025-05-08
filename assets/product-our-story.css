@@ -1,12 +1,8 @@
-.our_story .imageText {
-    padding: 80px 0;
-}
-
-.our_story .skincare_right .skincare_percent .progressCont {
+.our_story .skincare_percent .progressCont {
     margin-right: 10px;
 }
 
-.our_story .skincare_right .skincare_percent .ss_c_link {
+.our_story .skincare_percent .ss_c_link {
     font-size: 13px;
     line-height: 24px;
     font-weight: 400;
@@ -18,9 +14,192 @@
 .our_story .trusted_bl {
     padding: 60px 0;
 }
+.p_bl_header p {
+    color: #C2BCB1;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+}
+.marquee-item-list li {
+    padding-right: 40px;
+    display: flex;
+    align-items: center;
+}
+.endless_mar_abt .marquee-row {
+    padding: 45px 0;
+}
+.fastest_growing_item {
+    padding: 20px 15px;
+    gap: 10px;
+    border-radius: 10px;
+    border: 2px solid #C7E7DC;
+    background: #FFF;
+    box-shadow: 0px 3px 8px 0px rgba(186, 189, 188, 0.28);
+    text-align: center;
+    margin: 0 auto;
+    height: 100%;
+    max-width: 220px;
+}
+.fastest_growing_item h3 {
+    margin: 0;
+    color: #250D00;
+    font-family: "Canela Light";
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 0.28px;
+}
+.fastest_growing_item p {
+    color: #250D00;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.14px;
+}
+.fastest_growing_startup .container {
+    max-width: 1040px;
+    margin: 0 auto;
+}
+.our_story .skincare_left {
+    box-shadow: 0px 5px 15px 0px #B0B0B040;
+    border: 1px solid var(--clr-light-green);
+    border-radius: 10px;
+    margin: 0 20px;
+    height: 100%;
+}
+.our_story .skincare_percent {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+    padding: 15px 32px;
+}
+.our_story .ss_skin_mask{
+    padding: 15px 32px;
+    margin-top: 0;
+    gap: 16px;
+}
+.our_story .skin_item_ctm {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+.our_story .ss_mask_info{
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.our_story .ss_mask_info a {
+    padding: 6px 13px;
+}
+.our_story .ss_mask_info h5 {
+    font-weight: 400;
+    color: rgb(0 0 0 / 60%);
+    margin: 0 0 15px;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: .01em;
+}
+.trusted_bl .section_header h2.title-lg {
+    margin-bottom: 18px;
+}
+.skincare_left{
+    background: #fff;
+}
+.trusted_left .section_header p {
+    letter-spacing: 0.14px;
+}
+.trusted_bl .trust_item .trust_item_info .result_content p {
+    font-size: 12px;
+}
+.our_story .main_b_wrapper .title-xl {
+    font-size: 45px;
+}
+.marquee-row img {
+    height: 28px;
+}
+.skincare_sliderz .title-lg{
+    letter-spacing: 0.1px;
+}
+.main_b_wrapper p {
+    padding-bottom: 0;
+}
+
+@media(min-width:768px){
+    .trusted_cl_m .play_btn {
+        bottom: 45px;
+    }
+}
 
 @media(max-width:767px) {
-    .our_story .skincare_right .skincare_percent .ss_c_link {
+    .our_story .skincare_percent{
+        height: 90px;
+    }
+    .our_story .ss_skin_mask{
+        height: 115px;
+    }
+    .our_story .ss_mask_info a {
+        padding: 4px 10px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.13px;
+    }
+    .our_story .skincare_percent .progressCont {
+        margin-right: 5px;
+    }
+    .skincare_percent p{
+        font-size: 12px;
+        letter-spacing: 0;
+    }
+    .our_story .skincare_left {
+        margin: 0 10px;
+    }
+    .our_story .main_b_wrapper .title-xl {
+        font-size: 34px;
+    }
+    .endless_mar_abt .marquee-row {
+        padding: 14px 0 20px;
+    }
+    .main_b_wrapper p {
+        max-width: 260px;
+        margin: 0 auto;
+    }
+    .trusted_bl .section_header h2.title-lg {
+        margin-bottom: 5px;
+    }
+    .trusted_cl .section_header {
+        padding-bottom: 20px;
+    }
+    .trusted_withInfo  p{
+        padding: 12px 0;
+    }
+    .our_story .skincare_percent {
+        padding: 12px;
+    }
+    .our_story .ss_skin_mask {
+        padding: 15px 24px;
+    }
+    .skincare_left{
+        padding: 0;
+    }
+    .qa__inner {
+        align-items: center;
+        padding: 0 15px;
+        bottom: 140px;
+        top: 0;
+    }
+    .p_bl_header p{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: 1px;
+    }
+    .main_banner .main_b_wrapper.bg_gradient_mob {
+        background: none;
+    }
+    .main_banner .main_b_wrapper .section_header {
+        padding: 40px 0 0px 0;
+    }
+    .our_story .skincare_percent .ss_c_link {
         font-size: 10px;
         line-height: 22px;
         padding-left: 3px;
@@ -32,5 +211,25 @@
 
     .our_story .trusted_bl {
         padding: 30px 0;
+    }
+    .fastest_growing_item {
+        padding: 15px 5px;
+    }
+    .fastest_growing_item h3 {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 28px;
+        letter-spacing: 0.22px;
+    }
+    .fastest_growing_item p {
+        color: #250D00;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0.11px;
     }
 }

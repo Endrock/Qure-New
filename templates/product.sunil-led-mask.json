@@ -165,12 +165,14 @@
         },
         "image_iy6yaC": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/gq_logo.png"
           }
         },
         "text_EnENJU": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p> “Q-Rejuvalight Pro harnesses the power of lights from blue to infrared to address nearly every skincare concern you could imagine.”</p>"
           }
@@ -730,6 +732,8 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/ledMask_main.webp",
+            "dual_action": "",
+            "dual_action_mob": "",
             "classname": "mw-mob-100"
           }
         },
@@ -828,6 +832,8 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/led_clinical_mask.webp",
+            "dual_action": "",
+            "dual_action_mob": "",
             "classname": "mw-mob-100"
           }
         },
@@ -890,6 +896,8 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/LED_mask_mob_app.png",
+            "dual_action": "",
+            "dual_action_mob": "",
             "classname": "mw-mob-100"
           }
         },

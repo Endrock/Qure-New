@@ -17,7 +17,7 @@
           "settings": {
             "image": "shopify://shop_images/star-half_fill.svg",
             "text": "<p>97% customer satisfaction rate</p>",
-            "product": "micro-infusion-3-month-refill-3x-b-g-serum-3x-e-g-f-serum"
+            "product": "micro-infusion-targeted-patches"
           }
         },
         "list_mMY6Hf": {
@@ -126,7 +126,18 @@
             "heading_first": "",
             "text": "<p>Fast-acting patches feature 80 self-dissolving micro-darts designed to <strong>target and treat wrinkles, under-eye puffiness and dark circles.</strong></p><p>While traditional patches lay flat on the surface of the skin, these ultra thin micro-darts gently <strong>penetrate the skin</strong>, infusing serum for <strong>deeper delivery.</strong> Precise and powerful, they infuse serum where you need it most and fully absorb into the skin for deeper, better, faster results <strong>– yet gentle enough for sensitive skin!</strong></p>",
             "txt_order_mob": false,
+            "percent_bar_1": 70,
+            "agreed_text_1": "",
+            "percent_bar_2": 70,
+            "agreed_text_2": "",
+            "percent_bar_3": 70,
+            "agreed_text_3": "",
+            "percent_bar_4": 70,
+            "agreed_text_4": "",
+            "ctm_cls_btn": "",
             "btn_text": "",
+            "btn_font_size_desktop": "22px",
+            "btn_font_size_mobile": "20px",
             "btn_url": "",
             "custom_class": "",
             "heading2": "",
@@ -576,6 +587,8 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/micro_grid-combat-patches_12efc9c2-5dc1-4d8c-9e23-bb08433a78b2.webp",
+            "dual_action": "",
+            "dual_action_mob": "",
             "classname": "mw-mob-100"
           }
         },
@@ -850,6 +863,35 @@
         "button_label": "Show More Questions",
         "button_hide_label": "Hide More Questions"
       }
+    },
+    "heading_VCrXzr": {
+      "type": "heading",
+      "name": "t:sections.heading.name",
+      "settings": {
+        "heading": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>",
+        "heading_mobile": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>"
+      }
+    },
+    "1746575402f68ea6bc": {
+      "type": "apps",
+      "blocks": {
+        "stamped_reviews_main_widget_gbnxV3": {
+          "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true,
+            "use_metafields": false,
+            "sku_tagtype": "sku"
+          }
+        }
+      },
+      "block_order": [
+        "stamped_reviews_main_widget_gbnxV3"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -866,6 +908,8 @@
     "compare_eYNU3L",
     "ingredients_dropdown_7zxb7X",
     "how_to_use_wC7khU",
-    "faq_mw3Aqn"
+    "faq_mw3Aqn",
+    "heading_VCrXzr",
+    "1746575402f68ea6bc"
   ]
 }
