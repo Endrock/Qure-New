@@ -1,165 +1,119 @@
-<div class="led_guide_quickstart">
-  <div class="banner">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 order-md-2">
-          <img 
-            src="{{ section.settings.banner_image_desktop | image_url }}" 
-            class="img-fluid d-none d-md-block" 
-            alt="Banner">
-          <img 
-            src="{{ section.settings.banner_image_mobile | image_url }}" 
-            class="img-fluid d-md-none pt-5 mt-3" 
-            alt="Banner Mobile">
-        </div>
-        <div class="col-md-6 d-flex flex-column justify-content-center">
-          <div class="ps-md-5">
-            <h1 class="d-none d-md-block">{{ section.settings.heading }}</h1>
-            <h1 class="d-md-none">{{ section.settings.heading }}</h1>
-            <h6>{{ section.settings.subheading }}</h6>
-            <p>{{ section.settings.intro_text }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="whats_in_the_box pt-5 pb-3">
-    <div class="container">
-      <h3 class="mb-4">What’s in the Box</h3>
-      <div class="row">
-        {% for block in section.blocks %}
-          {% if block.type == 'box_item' %}
-            <div class="col-md-6">
-              <div class="item_wrapper">
-                <div class="img_wrapper">
-                  {% if block.settings.item_icon %}
-                    <img src="{{ block.settings.item_icon | image_url }}" alt="{{ block.settings.item_label }}">
-                  {% endif %}
-                  <div class="item-text">
-                    <p>{{ block.settings.item_label }}</p>
-                  </div>
-                </div>
-                <div class="qty">{{ block.settings.item_qty }}</div>
-              </div>
-            </div>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-
-  <div class="guide_steps pt-5">
-    <div class="container">
-      {% for block in section.blocks %}
-        {% if block.type == 'step' %}
-          <div class="guide_step mb-5">
-            <h5>{{ block.settings.step_title }}</h5>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="step_text">{{ block.settings.step_description }}</div>
-              </div>
-              <div class="col-md-6">
-                {% if block.settings.step_image %}
-                  <img src="{{ block.settings.step_image | image_url }}" class="img-fluid" alt="Step Image">
-                {% endif %}
-              </div>
-            </div>
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-</div>
-
-
-
 {% schema %}
 {
-  "name": "Quickstart Steps Guide",
-  "tag": "section",
-  "class": "section-nd-led-guide",
+  "name": "LED Guide Intro",
   "settings": [
     {
-      "type": "image_picker",
-      "id": "banner_image_desktop",
-      "label": "Banner Image (Desktop)"
-    },
-    {
-      "type": "image_picker",
-      "id": "banner_image_mobile",
-      "label": "Banner Image (Mobile)"
+      "type": "text",
+      "id": "guide_heading",
+      "label": "Guide Contents Heading",
+      "default": "Guide Contents"
     },
     {
       "type": "text",
-      "id": "heading",
-      "label": "Main Heading",
-      "default": "Get started with your Neck & Décolletage LED"
+      "id": "button_label",
+      "label": "Get Started Button Text",
+      "default": "Let's Get Started!"
     },
     {
-      "type": "text",
-      "id": "subheading",
-      "label": "Subheading",
-      "default": "Qure™ Neck & Décolletage LED User Guide"
-    },
-    {
-      "type": "textarea",
-      "id": "intro_text",
-      "label": "Intro Text",
-      "default": "Great skin is waiting… Let's get started!"
+      "type": "image_picker",
+      "id": "button_icon",
+      "label": "Button Icon"
     }
   ],
   "blocks": [
     {
-      "type": "step",
-      "name": "Guide Step",
+      "type": "guide_link",
+      "name": "Guide Link",
       "settings": [
         {
           "type": "text",
-          "id": "step_title",
-          "label": "Step Title"
-        },
-        {
-          "type": "richtext",
-          "id": "step_description",
-          "label": "Step Description"
-        },
-        {
-          "type": "image_picker",
-          "id": "step_image",
-          "label": "Step Image"
-        }
-      ]
-    },
-    {
-      "type": "box_item",
-      "name": "What's in the Box Item",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "item_icon",
-          "label": "Item Icon"
+          "id": "step_number",
+          "label": "Step Number",
+          "default": "01"
         },
         {
           "type": "text",
-          "id": "item_label",
-          "label": "Item Label"
+          "id": "step_label",
+          "label": "Step Label",
+          "default": "What’s In The Box"
         },
         {
           "type": "text",
-          "id": "item_qty",
-          "label": "Quantity",
-          "default": "1 pc"
+          "id": "step_id",
+          "label": "Step ID (e.g. step1)",
+          "default": "step1"
         }
       ]
     }
   ],
-  "max_blocks": 50,
+  "max_blocks": 10,
   "presets": [
     {
-      "name": "Quickstart Steps Guide",
+      "name": "LED Guide Intro",
       "category": "Custom"
     }
   ]
 }
 {% endschema %}
+
+<main class="homepage q-urify_safety led_guide">
+  <div id="zero_step" class="content"></div>
+  <div class="bg-white">
+    <div class="container">
+      <div class="instruction_inner border-bottom-0 pb-0"></div>
+      <div class="instruction_manual">
+        <h5>{{ section.settings.guide_heading }}</h5>
+      </div>
+      <div class="row justify-content-end mw-mob-100">
+        <div class="col-md-9 pb-md-4 pb-3">
+          <div class="search_main position-relative">
+            <input type="search" class="static_search" placeholder="Search">
+            <button type="submit">
+              <img src="https://qureskincaredns.com/new/assets/search2.svg" alt="">
+            </button>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="contents-info">
+            <div class="tab">
+              <div class="row">
+                {% assign column_size = 2 %}
+                {% assign items_per_column = section.blocks.size | divided_by: column_size | ceil %}
+                {% for column in (1..column_size) %}
+                  <div class="col-md-4">
+                    <ul>
+                      {% for block in section.blocks offset: items_per_column | times: column | minus: items_per_column limit: items_per_column %}
+                        {% if block.type == 'guide_link' %}
+                          <li>
+                            <span>{{ block.settings.step_number }}</span>
+                            <a href="#{{ block.settings.step_id }}" data-section="{{ block.settings.step_id }}" class="menu-item tablinks">
+                              {{ block.settings.step_label }}
+                            </a>
+                          </li>
+                        {% endif %}
+                      {% endfor %}
+                    </ul>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pt-md-5">
+      <div class="let_start-btn">
+        <div class="container">
+          <div class="text-end">
+            <button class="let_start btn see_more" onclick="showTabNavigation()">
+              <span class="me-2">{{ section.settings.button_label }}</span>
+              {% if section.settings.button_icon %}
+                <img src="{{ section.settings.button_icon | image_url }}" alt="">
+              {% endif %}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
