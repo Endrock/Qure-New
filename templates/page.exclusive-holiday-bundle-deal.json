@@ -106,6 +106,7 @@
         },
         "product_iEprpi": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "heading": "Line Refine Bundle Advanced",
             "discount": 55,
@@ -170,6 +171,7 @@
         },
         "product_EkTrHA": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "heading": "Breakout Control Pro",
             "discount": 40,
@@ -679,10 +681,12 @@
         },
         "bundle_Aem3Hy": {
           "type": "bundle",
+          "disabled": true,
           "settings": {}
         },
         "product_V9XtBw": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "line-refine-bundle-advanced-1",
             "percent": 35,
@@ -700,6 +704,7 @@
         },
         "include_6xfjCG": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles) ",
             "is_limited": false,
@@ -714,6 +719,7 @@
         },
         "include_bb8X96": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Faucet Filter",
             "is_limited": false,
@@ -728,6 +734,7 @@
         },
         "how_to_use_wHCyJt": {
           "type": "how-to-use",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_mi_sm_4425a83b-96a8-43e9-95d3-fff35b157c82.svg",
             "text": "<h5>Micro-Infusion 3 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Easily purchase 3 month refills via our website.</li></ul>"
@@ -735,6 +742,7 @@
         },
         "how_to_use_RGeRNi": {
           "type": "how-to-use",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_faucet_filter.svg",
             "text": "<h5>Faucet Filter</h5><ul><li>Install the Qure Faucet Filter on your faucet.</li><li>Replace filter every 3 months (purchase replacement via our website).</li></ul>"
@@ -1312,10 +1320,12 @@
         },
         "bundle_CwjkD3": {
           "type": "bundle",
+          "disabled": true,
           "settings": {}
         },
         "product_qWAyap": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "breakout-control-pro-1",
             "percent": 27,
@@ -1333,6 +1343,7 @@
         },
         "include_AJjjKi": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Q-Rejuvalight Pro LED Mask",
             "is_limited": false,
@@ -1347,6 +1358,7 @@
         },
         "include_4wQdLg": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Faucet Filter",
             "is_limited": false,
@@ -1361,6 +1373,7 @@
         },
         "include_e4Mq9A": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Dermal Mist (120ml)",
             "is_limited": false,
@@ -1375,6 +1388,7 @@
         },
         "how_to_use_7jAfUt": {
           "type": "how-to-use",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_sm_mask.svg",
             "text": "<h5>Q-Rejuvalight Pro LED Mask </h5><ul><li>Use daily.</li><li>Cleanse and dry your face, then put it on for just 3 minutes and follow with your skincare routine.</li></ul>"
@@ -1382,6 +1396,7 @@
         },
         "how_to_use_jmgmhy": {
           "type": "how-to-use",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_faucet_filter.svg",
             "text": "<h5>Faucet Filter</h5><ul><li>Install the Qure Faucet Filter on your faucet.</li><li>Replace filter every 3 months (purchase replacement via our website).</li></ul>"
@@ -1389,6 +1404,7 @@
         },
         "how_to_use_PeiBgM": {
           "type": "how-to-use",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs-dermal-mist-sm.svg",
             "text": "<h5>Dermal Mist (120ml)</h5><ul><li>Spray directly on dry skin, body and face. Allow skin to air dry—no rinsing needed.</li></ul>"
