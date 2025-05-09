@@ -1,0 +1,139 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "product-bundle",
+      "blocks": {
+        "rating_JRyVkE": {
+          "type": "rating",
+          "settings": {
+            "image": "shopify://shop_images/star-full.svg",
+            "text": "729 reviews"
+          }
+        },
+        "preorder_P3zKE8": {
+            "type": "preorder",
+            "disabled": true,
+            "settings": {}
+        },
+        "button_FhkPj8": {
+          "type": "button",
+          "settings": {
+            "text": "<p>Save up to <strong>55%</strong> with<br>Holiday Bundles</p>",
+            "button_label": "SHOP NOW",
+            "button_url": "shopify://pages/exclusive-holiday-bundle-deal-new"
+          }
+        },
+        "supply_xAX9bT": {
+          "type": "supply",
+          "disabled": true,
+          "settings": {
+            "heading": "Next batch ships on the 31st of January:",
+            "heading_mobile": "Next batch ships 01/31:",
+            "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.</p>",
+            "first_option_date": "December 15th",
+            "first_option_text": "SOLD OUT",
+            "first_option_percent": 100,
+            "second_option_date": "January 31st",
+            "second_option_text": "73% Reserved",
+            "second_option_percent": 73,
+            "third_option_date": "March 30th",
+            "third_option_text": "In Production",
+            "third_option_percent": 0
+          }
+        }
+      },
+      "block_order": [
+        "rating_JRyVkE",
+        "preorder_P3zKE8",
+        "button_FhkPj8",
+        "supply_xAX9bT"
+      ],
+      "settings": {
+        "reserve": false,
+        "soldout": false
+      }
+    },
+    "featuredin_extended_P7BNDN": {
+      "type": "featuredin_extended",
+      "blocks": {
+        "image_n99dk9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/vogue-black.svg"
+          }
+        },
+        "text_hjVp7i": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"The professional grade is the perfect addition to any at-home skincare routine.\"</p>"
+          }
+        },
+        "image_XrzjQ3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/womenshealth_e1cfba2e-29da-4232-9235-69184bd9d1a3.svg"
+          }
+        },
+        "text_t9tnXK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"My skin actually seems considerable brighter and smoother! It’s simple, fast, and effective enough to become a daily habit.\"</p>"
+          }
+        },
+        "image_PmUxLt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Popsugar_logo.svg"
+          }
+        },
+        "text_bxTn4H": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"The results are blatant — my glow after using the treatment speaks for itself. You'll notice hydrated, radiant, and healthy-looking skin.\"</p>"
+          }
+        },
+        "image_hNLLqX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/who_what_wear_new.svg"
+          }
+        },
+        "text_k6KEBE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"The day after I used Qure, I was shocked at how firm, plump, and even my skin looked. And my dark circles? Where'd they go?\"</p>"
+          }
+        }
+      },
+      "block_order": [
+        "image_n99dk9",
+        "text_hjVp7i",
+        "image_XrzjQ3",
+        "text_t9tnXK",
+        "image_PmUxLt",
+        "text_bxTn4H",
+        "image_hNLLqX",
+        "text_k6KEBE"
+      ],
+      "settings": {
+        "heading": "FEATURED IN",
+        "slider_type": "five_slides",
+        "slide_per_view_desktop": 3,
+        "slide_per_view_mobile": 3
+      }
+    }
+  },
+  "order": [
+    "main",
+    "featuredin_extended_P7BNDN"
+  ]
+}
