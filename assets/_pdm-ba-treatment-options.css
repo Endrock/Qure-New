@@ -1,0 +1,339 @@
+/* start test B&A micro-infusion */
+.row.treatment-ba__row-container .qure__treatments {
+  margin-bottom: 2rem;
+  padding: 0;
+}
+
+.row.treatment-ba__row-container .qure__treatments .section__header.d-block.d-md-none .des {
+  margin-bottom: 0 !important;
+}
+
+.row.treatment-ba__row-container .qure__treatments .section__header.d-block.d-md-none .des p {
+  opacity: 0.8;
+  color: #000;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.12px;
+}
+
+.row.treatment-ba__row-container .qure__treatments .section__header.d-block.d-md-none .des p strong {
+  color: #000;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.12px;
+  white-space: nowrap
+}
+
+.row.treatment-ba__row-container .qure__treatments .section__header.d-none.d-md-block .des p {
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.12px;
+}
+
+.row.treatment-ba__row-container .qure__treatments .tmtFtrs_image .section__header,
+.row.treatment-ba__row-container .qure__treatments .tmtFtrs_image .container-pdm-ba-treatment {
+  padding: 0 24px;
+}
+
+.row.treatment-ba__row-container .qure__treatments .tmtFtrs_image .container-pdm-ba-treatment {
+  margin-top: 24px !important;
+}
+.row.treatment-ba__row-container .qure__treatments .tmtFtrs_image .container-pdm-ba-treatment > div {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.row.treatment-ba__row-container .c_s_wrapper.cs_wrapper-pdm .value-props-ba {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.row.treatment-ba__row-container .c_s_wrapper.cs_wrapper-pdm .value-props-ba svg {
+  opacity: 0.8;
+  width: 43px;
+  height: 35px;
+}
+
+.row.treatment-ba__row-container .c_s_wrapper.cs_wrapper-pdm .value-props-ba .text {
+  opacity: 0.8;
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0.03px;
+  max-width: 99px;
+}
+
+.row.treatment-ba__row-container .tmtFtrs_image.order-1.order-md-2 img.img-fluid {
+  width: 230px;
+  height: 214px;
+  padding: 0;
+  margin: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.row.treatment-ba__row-container .tmtFtrs_image.order-1.order-md-2 .testimonial-card {
+  display: flex;
+  margin: 0px 8px;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 12px;
+  border: 1px solid var(--Turquoise, #C8E6DC);
+  overflow: hidden;
+}
+
+.row.treatment-ba__row-container .tmtFtrs_image.order-1.order-md-2 .testimonial-card .product-images {
+  display: flex;
+  align-items: flex-start;
+  gap: 1px;
+  align-self: stretch;
+  background: #C8E6DC;
+}
+
+.row.treatment-ba__row-container .tmtFtrs_image.order-1.order-md-2 .testimonial-card .product-images .product-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1 0 0;
+  margin: 0;
+  position: relative;
+}
+
+.row.treatment-ba__row-container .tmtFtrs_image.order-1.order-md-2 .testimonial-card .product-images .product-image-container .image-overlay {
+  background: #FFF;
+  display: flex;
+  padding: 4px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.row.treatment-ba__row-container .tmtFtrs_image.order-1.order-md-2 .testimonial-card .product-images .product-image-container img {
+  min-height: 224px;
+  height: 100%;
+  align-self: stretch;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+}
+
+.row.treatment-ba__row-container .tmtFtrs_image.order-1.order-md-2 .testimonial-card .product-images .product-image-container .image-overlay .text {
+  color: #000;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+}
+
+.row.treatment-ba__row-container .tmtFtrs_image.order-1.order-md-2 .testimonial-card .customer-info {
+  display: flex;
+  padding: 6px 14px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.row.treatment-ba__row-container .tmtFtrs_image.order-1.order-md-2 .testimonial-card .customer-info .customer-details {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.row.treatment-ba__row-container .tmtFtrs_image.order-1.order-md-2 .testimonial-card .customer-info .customer-details .customer-location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.row.treatment-ba__row-container .tmtFtrs_image.order-1.order-md-2 .testimonial-card .customer-info .customer-details .customer-location .icon {
+  display: flex;
+  width: 14px;
+  height: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  aspect-ratio: 7/5;
+}
+.row.treatment-ba__row-container .tmtFtrs_image.order-1.order-md-2 .testimonial-card .customer-info .customer-details .customer-location .customer-name {
+  color: #000;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.row.treatment-ba__row-container .tmtFtrs_image.order-1.order-md-2 .testimonial-card .customer-info .customer-details .verification-badge {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.row.treatment-ba__row-container .tmtFtrs_image.order-1.order-md-2 .testimonial-card .customer-info .customer-details .verification-badge .icon {
+  width: 14px;
+  height: 14px;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+}
+
+.row.treatment-ba__row-container .tmtFtrs_image.order-1.order-md-2 .testimonial-card .customer-info .customer-details .verification-badge .verification-text {
+  color: #008E66;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.row.treatment-ba__row-container .supply_steps.pdm-step_content_v2 .step_block .step_content.step_btn.upsell_popup_anchor_hover {
+  margin-bottom: 16px;
+  padding-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .row.treatment-ba__row-container .tmtFtrs_image.order-1.order-md-2{
+    display: flex;
+    flex-direction: column;
+  }
+  .section__header.d-block.d-md-none {
+    order: 1;
+  }
+  .container-pdm-ba-treatment {
+    order: 3;
+  }
+  .testimonial-card {
+    order: 2;
+    margin-top: 32px !important;
+  }
+}
+@media screen and (min-width:768px) {
+
+  .row.treatment-ba__row-container .supply_steps.pdm-step_content_v2 .step_block .step_content.step_btn.upsell_popup_anchor_hover {
+    margin-bottom: 8px !important;
+  }
+
+  .row.treatment-ba__row-container .c_s_wrapper.cs_wrapper-pdm .value-props-ba svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .row.treatment-ba__row-container .qure__treatments {
+    margin-bottom: 0;
+    padding: 0 24px;
+  }
+
+  .row.treatment-ba__row-container .qure__treatments .text-start .des {
+    margin-bottom: 40px;
+  }
+
+  .row.treatment-ba__row-container .qure__treatments .tmtFtrs_image .section__header,
+  .row.treatment-ba__row-container .qure__treatments .tmtFtrs_image .container-pdm-ba-treatment {
+    padding: 0;
+  }
+
+  .row.treatment-ba__row-container .qure__treatments .tmtFtrs_image .container-pdm-ba-treatment {
+    margin-top: 0 !important;
+  }
+
+  .row.treatment-ba__row-container .tmtFtrs_image.order-1.order-md-2 .testimonial-card {
+    margin: 0px;
+  }
+
+  .row.treatment-ba__row-container .step_content.step_btn.upsell_popup_anchor_hover.atc-btn {
+    padding-bottom: 0;
+    margin-bottom: 8px;
+  }
+
+  .row.treatment-ba__row-container .tmtFtrs_image.order-1.order-md-2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+
+  .row.treatment-ba__row-container .btn-icon-atc-before {
+    display: flex;
+    padding: 0px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+  }
+  .row.treatment-ba__row-container .btn-icon-atc-before svg {
+    width: 26px;
+    height: 26px;
+    opacity: 0.8;
+  }
+
+  .row.treatment-ba__row-container .btn-icon-atc-before .text {
+    color: #000;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0.12px;
+  }
+
+  .row.treatment-ba__row-container .container-pdm-ba-treatment {
+    margin-bottom: 24px;
+  }
+
+  .row.treatment-ba__row-container .container-pdm-ba-treatment .tmtFtrs {
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center;
+  }
+
+  .row.treatment-ba__row-container .tmtFtrs_image.order-1.order-md-2 img.img-fluid {
+    width: 182px;
+    height: 158px;
+    flex-shrink: 0;
+    padding: 0;
+    margin: auto;
+  }
+
+  .row.treatment-ba__row-container .value-props-ba-treatment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .row.treatment-ba__row-container .value-props-ba-treatment svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .row.treatment-ba__row-container .value-props-ba-treatment .text {
+    opacity: 0.8;
+    color: #000;
+    font-family: Poppins;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px;
+    width: 78px;
+  }
+}
+/* End test B&A micro-infusion */
