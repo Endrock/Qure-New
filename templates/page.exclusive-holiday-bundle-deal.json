@@ -106,7 +106,6 @@
         },
         "product_iEprpi": {
           "type": "product",
-          "disabled": true,
           "settings": {
             "heading": "Line Refine Bundle Advanced",
             "discount": 55,
@@ -173,7 +172,6 @@
         },
         "product_EkTrHA": {
           "type": "product",
-          "disabled": true,
           "settings": {
             "heading": "Breakout Control Pro",
             "discount": 40,
