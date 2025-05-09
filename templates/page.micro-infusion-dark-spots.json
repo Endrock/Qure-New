@@ -107,26 +107,23 @@
         },
         "jump_to_section_kYWrYh": {
           "type": "jump_to_section",
-          "disabled": true,
           "settings": {
             "title": "The Science",
-            "section_id": "science-section"
+            "section_id": "shopify-section-template--19443028885743__two_column_box_EGirxP"
           }
         },
         "jump_to_section_U7LHQK": {
           "type": "jump_to_section",
-          "disabled": true,
           "settings": {
             "title": "Serum Guide",
-            "section_id": "serum_guide_section"
+            "section_id": "see_it_section"
           }
         },
         "jump_to_section_R7UYWE": {
           "type": "jump_to_section",
-          "disabled": true,
           "settings": {
             "title": "Dermatologists",
-            "section_id": "trusted_section"
+            "section_id": "shopify-section-template--19443028885743__text_with_video_cUM66F"
           }
         },
         "jump_to_section_Dt7YUT": {
@@ -1118,8 +1115,10 @@
     "liquid_EH7JLe2": {
       "type": "liquid",
       "settings": {
-        "code": "{% render 'serums-months-image-form-v2' with section_id: section.id %}",
-        "popup_micro_infusion_enabled": true
+        "code": "{% render 'serums-months-image-form-v2' with section_id: section.id, one_month_img: 'MI2x-rejuv_blue_new.webp', three_months_img: 'MI6x-mixed_blue.webp' %}",
+        "popup_micro_infusion_enabled": false,
+        "payment_icons": "shopify://shop_images/logos_full_qure_0d060a66-5fb6-4e6c-a740-55552a43bb10.png",
+        "payment_icons_today_only": "shopify://shop_images/payments_today.png"
       }
     },
     "compare_box_nCyb79": {
