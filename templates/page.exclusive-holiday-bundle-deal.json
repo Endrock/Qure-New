@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "header_sales": {
       "type": "header-sales",
@@ -1323,12 +1323,10 @@
         },
         "bundle_CwjkD3": {
           "type": "bundle",
-          "disabled": true,
           "settings": {}
         },
         "product_qWAyap": {
           "type": "product",
-          "disabled": true,
           "settings": {
             "product": "breakout-control-pro-1",
             "percent": 27,
@@ -1346,7 +1344,6 @@
         },
         "include_AJjjKi": {
           "type": "include",
-          "disabled": true,
           "settings": {
             "heading": "Q-Rejuvalight Pro LED Mask",
             "is_limited": false,
@@ -1361,7 +1358,6 @@
         },
         "include_4wQdLg": {
           "type": "include",
-          "disabled": true,
           "settings": {
             "heading": "Faucet Filter",
             "is_limited": false,
@@ -1371,12 +1367,11 @@
             "count": "23 left",
             "hide": false,
             "hide_variants": false,
-            "code": "<div class=\"bfs_tbx_color\">\n    <select class=\"form-select colorSelector\" aria-label=\"Default select example\">\n        <option value=\"1\" selected=\"\">White</option>\n        <option value=\"2\">Black</option>\n    </select>\n</div>"
+            "code": "<div class=\"bfs_tbx_color\">\n    <select class=\"form-select colorSelector\" aria-label=\"Default select example\">\n        <option value=\"1\" data-soldout=\"true\" data-goto=\"2\">White</option>\n        <option value=\"2\">Black</option>\n    </select>\n</div>"
           }
         },
         "include_e4Mq9A": {
           "type": "include",
-          "disabled": true,
           "settings": {
             "heading": "Dermal Mist (120ml)",
             "is_limited": false,
@@ -1391,7 +1386,6 @@
         },
         "how_to_use_7jAfUt": {
           "type": "how-to-use",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_sm_mask.svg",
             "text": "<h5>Q-Rejuvalight Pro LED Mask </h5><ul><li>Use daily.</li><li>Cleanse and dry your face, then put it on for just 3 minutes and follow with your skincare routine.</li></ul>"
@@ -1399,7 +1393,6 @@
         },
         "how_to_use_jmgmhy": {
           "type": "how-to-use",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_faucet_filter.svg",
             "text": "<h5>Faucet Filter</h5><ul><li>Install the Qure Faucet Filter on your faucet.</li><li>Replace filter every 3 months (purchase replacement via our website).</li></ul>"
@@ -1407,7 +1400,6 @@
         },
         "how_to_use_PeiBgM": {
           "type": "how-to-use",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs-dermal-mist-sm.svg",
             "text": "<h5>Dermal Mist (120ml)</h5><ul><li>Spray directly on dry skin, body and face. Allow skin to air dry—no rinsing needed.</li></ul>"

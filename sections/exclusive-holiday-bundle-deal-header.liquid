@@ -251,9 +251,62 @@
         // Initialize Swipers
         TwaSettingsSwiper.init();
 
+        document.querySelectorAll('.type_radio').forEach(radio => {
+            radio.addEventListener('click', function() {
+                let variantId = 0;
+                const parentDiv = this.closest('.bfs_bf_item');
+                const button = parentDiv ? parentDiv.querySelector('.bfs_bf_item_buyBtn') : null;
+
+                if(bundle_variants[parentDiv.getAttribute('id')]) 
+                {
+                    if(variantId = bundle_variants[parentDiv.getAttribute('id')][this.value])
+                    {
+                        //console.log('variantTitle [' + this.value + '] variantId [' + variantId + ']');
+
+                        if (button) {
+                            button.setAttribute('data-ajax-cart-request-button', `/cart/add?id=${variantId}&quantity=1`);
+                        }
+                    }
+                }
+
+            });
+        });
+
+        document.querySelectorAll('.form-select').forEach(select => {
+            select.addEventListener('change', function() {
+                let variantId = 0;
+                let variantTitle = '';
+                const parentDiv = this.closest('.bfs_bf_item');
+                const button = parentDiv ? parentDiv.querySelector('.bfs_bf_item_buyBtn') : null;
+                const select_first = parentDiv ? parentDiv.querySelector('.form-select-first') : null;
+                const select_second = parentDiv ? parentDiv.querySelector('.form-select-second') : null;
+
+                if(select_first && select_second)
+                {
+                    variantTitle = select_first.options[select_first.selectedIndex].text + ' / ' + select_second.options[select_second.selectedIndex].text;
+                }
+
+                if(variantTitle == '')
+                {
+                    variantTitle = this.options[this.selectedIndex].text;
+                }
+                
+                if(bundle_variants[parentDiv.getAttribute('id')]) 
+                {
+                    if(variantId = bundle_variants[parentDiv.getAttribute('id')][variantTitle])
+                    {
+                        //console.log('variantTitle [' + variantTitle + '] variantId [' + variantId + ']');
+
+                        if (button) {
+                            button.setAttribute('data-ajax-cart-request-button', `/cart/add?id=${variantId}&quantity=1`);
+                        }
+                    }
+                }
+            });
+        });
 
         // Select all the color selectors
-        document.querySelectorAll('.colorSelectorFaucet').forEach(function (selectElement) {
+        document.querySelectorAll('select.colorSelectorFaucet').forEach(function (selectElement) {
             selectElement.addEventListener('change', function () {
                 // Find the closest .bfs_tabContent_bx parent
                 var parentBox = selectElement.closest('.bfs_tabContent_bx');
@@ -270,7 +323,7 @@
         });
 
         // Select all the color selectors
-        document.querySelectorAll('.colorSelectorShower').forEach(function (selectElement) {
+        document.querySelectorAll('select.colorSelectorShower').forEach(function (selectElement) {
             selectElement.addEventListener('change', function () {
                 // Find the closest .bfs_tabContent_bx parent
                 var parentBox = selectElement.closest('.bfs_tabContent_bx');
@@ -284,6 +337,19 @@
                     showerImage.src = "https://qureskincaredns.com/new/assets/bfs_shower_f_b.webp"; // Black option
                 }
             });
+        });
+
+        document.querySelectorAll('.form-select').forEach(select => {
+            const soldoutOption = select.querySelector('option[data-soldout]');
+            if (soldoutOption && soldoutOption.hasAttribute('data-goto')) {
+                const gotoValue = soldoutOption.getAttribute('data-goto');
+                const targetOption = select.querySelector(`option[value="${gotoValue}"]`);
+                if (targetOption && select.value !== gotoValue) {
+                    soldoutOption.disabled = true;
+                    select.value = gotoValue;
+                    select.dispatchEvent(new Event('change', { bubbles: true })); // надёжно вызываем событие
+                }
+            }
         });
 
         const swiperWrappers = document.querySelectorAll('.thumbsSlider_wrap .swiper-wrapper');
