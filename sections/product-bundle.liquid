@@ -158,13 +158,13 @@
                         <div class="accordion" id="accordion_shower_filter"> 
 
                             {% if product.metafields.custom.what_s_included != blank %}
-                                {% render 'product-bundle-collapsed-item' input: product.metafields.custom.what_s_included, index: 'first', title: 'Key Benefits', mobile_title: 'In The Box' %}
+                                {% render 'product-bundle-collapsed-item' input: product.metafields.custom.key_benefits, index: 'first', title: 'Key Benefits', mobile_title: 'In The Box' %}
                             {% endif %}
                             {% if product.metafields.custom.how_it_works != blank %}
                                 {% render 'product-bundle-collapsed-item' input: product.metafields.custom.how_it_works, index: 'second', title: 'How It Works' %}
                             {% endif %}
                             {% if product.metafields.custom.key_benefits != blank %}
-                                {% render 'product-bundle-collapsed-item' input: product.metafields.custom.key_benefits, index: 'third', title: 'What’s Included' %}
+                                {% render 'product-bundle-collapsed-item' input: product.metafields.custom.what_s_included, index: 'third', title: 'What’s Included' %}
                             {% endif %}
                         </div>
                     </div>
