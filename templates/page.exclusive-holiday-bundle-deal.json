@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "header_sales": {
       "type": "header-sales",
@@ -684,12 +684,10 @@
         },
         "bundle_Aem3Hy": {
           "type": "bundle",
-          "disabled": true,
           "settings": {}
         },
         "product_V9XtBw": {
           "type": "product",
-          "disabled": true,
           "settings": {
             "product": "line-refine-bundle-advanced-1",
             "percent": 35,
@@ -707,7 +705,6 @@
         },
         "include_6xfjCG": {
           "type": "include",
-          "disabled": true,
           "settings": {
             "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles) ",
             "is_limited": false,
@@ -722,7 +719,6 @@
         },
         "include_bb8X96": {
           "type": "include",
-          "disabled": true,
           "settings": {
             "heading": "Faucet Filter",
             "is_limited": false,
@@ -732,12 +728,11 @@
             "count": "23 left",
             "hide": false,
             "hide_variants": false,
-            "code": ""
+            "code": "<div class=\"bfs_tbx_color\">\n    <select class=\"form-select colorSelector\" aria-label=\"Default select example\">\n        <option value=\"1\" data-soldout=\"true\" data-goto=\"2\">White</option>\n        <option value=\"2\">Black</option>\n    </select>\n</div>"
           }
         },
         "how_to_use_wHCyJt": {
           "type": "how-to-use",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_mi_sm_4425a83b-96a8-43e9-95d3-fff35b157c82.svg",
             "text": "<h5>Micro-Infusion 3 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Easily purchase 3 month refills via our website.</li></ul>"
@@ -745,7 +740,6 @@
         },
         "how_to_use_RGeRNi": {
           "type": "how-to-use",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_faucet_filter.svg",
             "text": "<h5>Faucet Filter</h5><ul><li>Install the Qure Faucet Filter on your faucet.</li><li>Replace filter every 3 months (purchase replacement via our website).</li></ul>"
