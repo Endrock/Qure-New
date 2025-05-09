@@ -37,6 +37,7 @@
   <div class="section productSubscription choose_serum form-{{ section_id }}" id="productSubscription">
     <div class="container">
       {% render 'pdm-ba-treatment-options' %}
+      {% render 'pdm-test-6-month-price' %}
     </div>
   </div>
   <div
@@ -47,4 +48,8 @@
   ></div>
 
   <script src="{{ '__app_serums-months-form-v2.js' | asset_url }}"></script>
+  <script defer src="{{ '__pdm-ba-treatment-options.js' | asset_url }}"></script>
+
 {% endif %}
+
+
