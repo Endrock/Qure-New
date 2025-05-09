@@ -125,6 +125,7 @@
         },
         "product_exRwKt": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "heading": "Fade & Firm Bundle Pro",
             "discount": 55,
@@ -162,6 +163,7 @@
         },
         "product_VXCeRt": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "heading": "Filter Family Bundle",
             "discount": 52,
@@ -190,6 +192,7 @@
         },
         "product_MxRW8i": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "heading": "Breakout Control Starter",
             "discount": 52,
