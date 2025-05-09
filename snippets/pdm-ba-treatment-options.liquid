@@ -8,7 +8,7 @@
   {% render 'pdm-ba-treatment-options' %}
 {% endcomment %}
 
-<div class="row pdm-treatment__row-container treatment-ba-test__row-container">
+<div class="row pdm-treatment__row-container treatment-ba__row-container">
   <div class="col-md-6">
     <div class="qure__treatments">
       <div class="text-start order-2 order-md-1">
@@ -261,6 +261,7 @@
                   <div class="plan_des">
                     <div class="plan_hdr">
                       <h3>1 Month Supply</h3>
+                      <span class="saved_price pre_order">PRE ORDER</span>
                     </div>
                     <div class="plan_des">(2 Micro-Infusion Treatments)</div>
                   </div>
@@ -269,6 +270,43 @@
                   </div>
                 </label>
               </a>
+              <!-- Next batch ships January 25th -->
+              <div class="next_batch_bl next_batch_highlight mt-3 ctm_cls_next_batch_mi_lp">
+                <h5 class="d-block d-md-block">Next batch ships early May 2025:</h5>
+                <p>Due to high demand, 1-month Micro-Infusion supply is sold out. <br> Order now and secure yours from the next shipment.</p>
+                <div class="batch_h batch_h_fade mt-3 mt-md-4">
+                    <div class="batch_h_month">April 14th</div>
+                    <div class="batch_h_info sold_out_h" style="--bgPercent:100%;"><span>SOLD
+                            OUT</span></div>
+                </div>
+                <div class="batch_h my-2">
+                    <div class="batch_h_month fw-bold">May 6th</div>
+                    <div class="batch_h_info" style="--bgPercent:54%;">54% Reserved</div>
+                </div>
+                <div class="batch_h batch_h_fade">
+                    <div class="batch_h_month">June 2025</div>
+                    <div class="batch_h_info" style="--bgPercent:0%;"><span>In
+                            Production</span></div>
+                </div> 
+              </div>
+              <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const batchMessage = document.querySelector('.ctm_cls_next_batch_mi_lp');
+                    const radioButtons = document.querySelectorAll('input[name="monthlyPlan"]');
+                
+                    batchMessage.style.display = 'none';
+                
+                    radioButtons.forEach(function (radio) {
+                        radio.addEventListener('change', function () {
+                            if (document.getElementById('1_month').checked) {
+                                batchMessage.style.display = 'block';
+                            } else {
+                                batchMessage.style.display = 'none';
+                            }
+                        });
+                    });
+                });
+              </script>
             </div>
 
             <div class="tab_content" id="month_3">
@@ -506,32 +544,7 @@
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    if (!document.body.hasAttribute('data-ba-treatment-options')) {
-      document.querySelector('.row.treatment-ba-test__row-container').remove();
-      const radioInput = document.querySelector('.step_conten_blocks [data-tab="month_3"] input[type="radio"]');
-      if (radioInput) {
-        radioInput.checked = true;
-        const changeEvent = new Event('change', {
-          bubbles: true,
-          cancelable: true,
-        });
-        radioInput.dispatchEvent(changeEvent);
-      }
-      const radioInputPayFull = document.querySelector(
-        '.step_block .step_content.item-3.pdm-step_content_v2 input[type="radio"]'
-      );
-      if (radioInputPayFull) {
-        radioInputPayFull.checked = true;
-        const changeEvent = new Event('change', {
-          bubbles: true,
-          cancelable: true,
-        });
-        radioInputPayFull.dispatchEvent(changeEvent);
-      }
-      return;
-    }
-
+  document.addEventListener('DOMContentLoaded', function () {    
     v2__selectProduct('{{ section_id }}_');
 
       const v2__parent = '.form-{{ section_id }}';
