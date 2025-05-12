@@ -8,7 +8,7 @@
   {% render 'pdm-ba-treatment-options' %}
 {% endcomment %}
 
-<div class="row pdm-treatment__row-container treatment-ba__row-container">
+<div class="row pdm-treatment__row-container treatment-ba__row-container price-bundle-test__row-container">
   <div class="col-md-6">
     <div class="qure__treatments">
       <div class="text-start order-2 order-md-1">
@@ -110,7 +110,7 @@
           </div>
           <div class="step_content pdm-step_content_v2">
             <div class="step_conten_blocks">
-              {% assign product = all_products['microinfusion-offer-6-month-supply'] %}
+              {% assign product = all_products['micro-infusion-6-month-bundle-for-wrinkles-dark-spots-1'] %}
               {% assign divided_price = product.price | divided_by: 4 %}
               {% assign discount_percentage = product.price
                 | times: 1.0
@@ -149,7 +149,7 @@
                   name="monthlyPlan"
                   id="3_month"
                   checked
-                  data-product-period="6"
+                  data-product-period="7"
                   data-product-variant-id="{{ product.variants.first.id }}"
                   data-product-id="{{ product.id }}"
                 >
@@ -183,7 +183,7 @@
                     </div>
                   </div>
                   <div class="pdm_plan-bundle-detail item-1">
-                    <p>🔥 Only $20,75 per treatment</p>
+                    <p>🔥 Only $18.25 per treatment</p>
                   </div>
                 </label>
               </a>
@@ -233,7 +233,7 @@
                     </div>
                   </div>
                   <div class="pdm_plan-bundle-detail item-2">
-                    <p>Only $24,83 per treatment</p>
+                    <p>Only $24.83 per treatment</p>
                   </div>
                 </label>
               </a>
@@ -408,7 +408,7 @@
         </div>
       </div>
 
-      {% assign product = all_products['microinfusion-offer-6-month-supply'] %}
+      {% assign product = all_products['micro-infusion-6-month-bundle-for-wrinkles-dark-spots-1'] %}
       {% assign divided_price = product.price | divided_by: 4 %}
       {% assign discount_percentage = product.price
         | times: 1.0
@@ -544,29 +544,30 @@
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {    
+  document.addEventListener('DOMContentLoaded', function () {
     v2__selectProduct('{{ section_id }}_');
 
-      const v2__parent = '.form-{{ section_id }}';
-      const v2__buyButton = document.querySelector(v2__parent + ' .buy_btn');
-      const v2__buyButtonSoldOut = document.querySelector(v2__parent + ' .buy_btn_soldout');
-      const v2__savedAmount = document.querySelector(v2__parent + ' .savedAmount');
+    const v2__parent = '.form-{{ section_id }}';
+    const v2__buyButton = document.querySelector(v2__parent + ' .buy_btn');
+    const v2__buyButtonSoldOut = document.querySelector(v2__parent + ' .buy_btn_soldout');
+    const v2__savedAmount = document.querySelector(v2__parent + ' .savedAmount');
 
-      const v2__stoggleSoldOutButton = () => {
-        if (v2__savedAmount && v2__buyButton && v2__buyButtonSoldOut) {
-          if (v2__savedAmount.textContent.trim() === '& SAVE {{ soldout_percentage }}%') {
-            v2__buyButton.style.display = 'none';
-            v2__buyButtonSoldOut.style.display = 'block';
-          } else {
-            v2__buyButton.style.display = 'block';
-            v2__buyButtonSoldOut.style.display = 'none';
-          }
+    const v2__stoggleSoldOutButton = () => {
+      if (v2__savedAmount && v2__buyButton && v2__buyButtonSoldOut) {
+        if (v2__savedAmount.textContent.trim() === '& SAVE {{ soldout_percentage }}%') {
+          v2__buyButton.style.display = 'none';
+          v2__buyButtonSoldOut.style.display = 'block';
+        } else {
+          v2__buyButton.style.display = 'block';
+          v2__buyButtonSoldOut.style.display = 'none';
         }
-      };
-
-      const v2__observer = new MutationObserver(v2__stoggleSoldOutButton);
-      if (v2__savedAmount) {
-        v2__observer.observe(v2__savedAmount, { childList: true, subtree: true });
       }
+    };
+
+    const v2__observer = new MutationObserver(v2__stoggleSoldOutButton);
+    if (v2__savedAmount) {
+      v2__observer.observe(v2__savedAmount, { childList: true, subtree: true });
+    }
   });
+
 </script>
