@@ -56,18 +56,17 @@
         },
         "supply_xAX9bT": {
           "type": "supply",
-          "disabled": true,
           "settings": {
-            "heading": "Next batch ships on the 31st of January:",
+            "heading": "Next batch ships on the 19th of May:",
             "heading_mobile": "Next batch ships 01/31:",
             "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.</p>",
-            "first_option_date": "December 15th",
+            "first_option_date": "May 12th",
             "first_option_text": "SOLD OUT",
             "first_option_percent": 100,
-            "second_option_date": "January 31st",
+            "second_option_date": "May 19th",
             "second_option_text": "73% Reserved",
             "second_option_percent": 73,
-            "third_option_date": "March 30th",
+            "third_option_date": "June 1st",
             "third_option_text": "In Production",
             "third_option_percent": 0
           }
