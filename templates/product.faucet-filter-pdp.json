@@ -116,10 +116,41 @@
     "second": {
       "type": "temp-product-faucet-filter",
       "settings": {}
+    },
+    "heading_bHegtb": {
+      "type": "heading",
+      "name": "t:sections.heading.name",
+      "settings": {
+        "heading": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>",
+        "heading_mobile": "<h2>Our customer reviews</h2>"
+      }
+    },
+    "1747026074e07e7a91": {
+      "type": "apps",
+      "blocks": {
+        "stamped_reviews_main_widget_3pR7pa": {
+          "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true,
+            "use_metafields": false,
+            "sku_tagtype": "sku"
+          }
+        }
+      },
+      "block_order": [
+        "stamped_reviews_main_widget_3pR7pa"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "main",
-    "second"
+    "second",
+    "heading_bHegtb",
+    "1747026074e07e7a91"
   ]
 }
