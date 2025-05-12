@@ -88,6 +88,7 @@
 }
 .purify_anything .purify_anything-inner {
     background: rgb(236 236 236);
+    background: red !important;
     padding: 88px 0 142px 0;
 }
 .purify_anything .accordion-button::after {
