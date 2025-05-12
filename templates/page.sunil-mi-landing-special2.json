@@ -394,6 +394,9 @@
         "slide_YFJAPx",
         "slide_qcrUGK"
       ],
+      "custom_css": [
+        ".result_s_wrapper .result_item .skincare_left .img-fluid {aspect-ratio: 180 / 109;}"
+      ],
       "settings": {
         "heading": "Achieve your skincare goals",
         "text": "",
