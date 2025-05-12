@@ -1,0 +1,73 @@
+.planBlock{
+  display: flex;
+  flex-direction: column;
+}
+
+.pdm-step_content_v2 .planBlock .monthly_plans{
+  align-items: stretch;
+}
+
+.planBlock .monthly_plans .price{
+  justify-content: start;
+  flex-direction: column;
+  padding-top: 16px;
+  padding-bottom: 12px;
+}
+
+  .pdm-step_content_v2 .planBlock .monthly_plans .saved_price.item-1.mobile,
+  .pdm-step_content_v2 .planBlock .monthly_plans .saved_price.item-2.mobile,
+  .pdm-step_content_v2 .planBlock .monthly_plans .saved_price.pre_order.mobile{
+    margin-top: auto;
+  }
+
+.pdm-step_content_v2 .planBlock .monthly_plans .plan_des{
+  margin-top: 0;
+}
+
+.pdm-step_content_v2 .planBlock .monthly_plans .plan_des>.plan_des{
+  margin-top: 13px;
+}
+
+.pdm-step_content_v2 .planBlock .monthly_plans .saved_price.item-1.desktop,
+.pdm-step_content_v2 .planBlock .monthly_plans .saved_price.item-2.desktop,
+.pdm-step_content_v2 .planBlock .monthly_plans .saved_price.pre_order.desktop{
+  display: none !important;
+}
+
+/* desktop */
+@media screen and (min-width: 1024px) {
+  .pdm-step_content_v2 .price.pmd_price-first-elemnt .price-row{
+    align-items: center;
+  }
+
+  .planBlock .monthly_plans .price{
+    flex-direction: row;
+  }
+
+  .planBlock .monthly_plans .price.pmd_price-first-elemnt{
+    flex-direction: column;
+  }
+
+  .pdm-step_content_v2 .planBlock .monthly_plans .saved_price.item-1.mobile,
+  .pdm-step_content_v2 .planBlock .monthly_plans .saved_price.item-2.mobile,
+  .pdm-step_content_v2 .planBlock .monthly_plans .saved_price.pre_order.mobile{
+    display: none !important;
+  }
+  
+  .pdm-step_content_v2 .planBlock .monthly_plans .saved_price.item-1.desktop,
+  .pdm-step_content_v2 .planBlock .monthly_plans .saved_price.item-2.desktop,
+  .pdm-step_content_v2 .planBlock .monthly_plans .saved_price.pre_order.desktop{
+    display: block !important;
+    margin: 0;
+    margin-right: 16px;
+  }
+
+  .pdm-step_content_v2 .price.pmd_price-first-elemnt{
+    justify-content: center;
+  }
+
+  .pdm-step_content_v2 .planBlock .monthly_plans .price{
+    gap: 0;
+  }
+
+}

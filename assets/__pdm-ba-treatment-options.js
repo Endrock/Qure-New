@@ -1,11 +1,36 @@
 function showElementsByAttribute() {
-  if (document.body.hasAttribute('data-test-price-bundle')) {
-    document.querySelector('.row.treatment-ba__row-container').remove();
-  }
+   const config = [
+    {
+      attribute: 'data-test-price-bundle',
+      selector: '.row.treatment-ba__row-container',
+      showIfPresent: false,
+    },
+    {
+      attribute: 'data-copy-treatment',
+      selector: '.row.treatment-ba__row-container',
+      showIfPresent: false,
+    },
+    {
+      attribute: 'data-test-price-bundle',
+      selector: '.row.price-bundle-test__row-container',
+      showIfPresent: true,
+    },
+    {
+      attribute: 'data-copy-treatment',
+      selector: '.row.copy-treatment-test__row-container',
+      showIfPresent: true,
+    },
+  ];
 
-  if (!document.body.hasAttribute('data-test-price-bundle')) {
-    document.querySelector('.row.price-bundle-test__row-container').remove();
-  }
+  config.forEach(({ attribute, selector, showIfPresent }) => {
+    const hasAttribute = document.body.hasAttribute(attribute);
+    const shouldRemove = showIfPresent ? !hasAttribute : hasAttribute;
+    if (shouldRemove) {
+      const element = document.querySelector(selector);
+      if (element) element.remove();
+    }
+  });
+
 }
 
 function selecElements() {
