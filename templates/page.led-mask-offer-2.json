@@ -49,15 +49,8 @@
         "button_url": "#shop"
       }
     },
-    "main": {
-      "type": "temp-page-led-mask-offer-2",
-      "disabled": true,
-      "settings": {}
-    },
-    "second": {
-      "type": "temp-page-led-mask-offer-2-second",
-      "disabled": true,
-      "settings": {}
+    "main-banner": {
+      "type": "temp-page-led-mask-offer-main-banner"
     },
     "endless_marquee_VTfD9k": {
       "type": "endless_marquee",
@@ -902,7 +895,7 @@
         "description": "Perfect combination to the Q-Rejuvalight Pro LED mask for the ultimate skin rejuvenation experience.",
         "product_led_neck": "neck-decolletage-led",
         "cta_url": "#bundle_shop",
-        "cta_text": "Shop Now & Save"
+        "cta_text": "Pre-order & Save"
       }
     },
     "faq_GpbA8F": {
@@ -1005,8 +998,7 @@
   },
   "order": [
     "header_landing_SSnaTx",
-    "main",
-    "second",
+    "main-banner",
     "endless_marquee_VTfD9k",
     "qure_uses_slider_hRB7TB",
     "proof_in_numbers_4pTJzE",

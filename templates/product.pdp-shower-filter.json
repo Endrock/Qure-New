@@ -122,11 +122,6 @@
         "text_label_real_result_3": ""
       }
     },
-    "second": {
-      "type": "temp-product-shower-filter",
-      "disabled": true,
-      "settings": {}
-    },
     "you_know_shower_water_mLaXcE": {
       "type": "you_know_shower_water",
       "blocks": {
@@ -596,11 +591,14 @@
         "free_shipping": "<p>Free Shipping<br\/>Orders Over $100<\/p>",
         "pay_later": "<p>Buy Now,<br\/>Pay Later<\/p>"
       }
+    },
+    "second": {
+      "type": "temp-product-shower-filter",
+      "settings": {}
     }
   },
   "order": [
     "main",
-    "second",
     "you_know_shower_water_mLaXcE",
     "meet_qure_shower_filter_McYKxa",
     "featuredin_qRUTGi",
@@ -608,6 +606,7 @@
     "results_AkYqpJ",
     "three_step_WG8iMm",
     "text_with_video_GhpDnG",
-    "why_it_works_Vz7ain"
+    "why_it_works_Vz7ain",
+    "second"
   ]
 }

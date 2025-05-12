@@ -151,16 +151,10 @@
       "settings": {
         "active_step": "step1"
       }
-    },
-    "main": {
-      "type": "temp-page-n-d-quickstart-guide",
-      "disabled": true,
-      "settings": {}
     }
   },
   "order": [
     "header_landing_pFmaRH",
-    "quickstart_steps_guide_iCADpV",
-    "main"
+    "quickstart_steps_guide_iCADpV"
   ]
 }

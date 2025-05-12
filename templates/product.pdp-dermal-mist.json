@@ -120,11 +120,6 @@
         "custom_cls": "bg-lightGrey"
       }
     },
-    "product_benefits": {
-      "type": "temp-product-pdp-dermal-mist-benefits",
-      "disabled": true,
-      "settings": {}
-    },
     "video_with_show_more_text_jmQfAP": {
       "type": "video_with_show_more_text",
       "blocks": {
@@ -569,7 +564,6 @@
   "order": [
     "main",
     "featuredin_9nEkfL",
-    "product_benefits",
     "video_with_show_more_text_jmQfAP",
     "product_benefits_EhnmRK",
     "capsule_dropdowns_JnKRb9",
