@@ -63,7 +63,7 @@
                     <div class="ps_wrapper">
                         {%- for block in section.blocks -%}
                             {% if block.type == 'image' %}
-                                <div class="ps_item{% if block.settings.mobile_hide %} d-none d-md-block{% endif %}">
+                                <div class="ps_item{% if block.settings.mobile_hide %} d-none d-md-block{% endif %} {{ block.settings.ctm_cls_in_ps_item }}">
                                     <img class="img-fluid" src="{{ block.settings.image | img_url: '300x' }}" alt="{{ block.settings.image.alt | escape }}">
                                 </div>
                             {% endif %}
@@ -129,6 +129,11 @@
           "id": "mobile_hide",
           "label": "t:common.image.hide.mobile.label",
           "default": false
+        },
+        {
+          "type": "text",
+          "id": "ctm_cls_in_ps_item",
+          "label": "t:common.classname.custom"
         }
       ]
     },
