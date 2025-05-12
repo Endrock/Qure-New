@@ -558,22 +558,25 @@
         "layer_rQwc4Q": {
           "type": "layer",
           "settings": {
-            "title": "Activated Carbon Layer",
-            "content": "<p>Removes chlorine, odors, and organic contaminants from the water.<\/p>"
+            "icon": "shopify:\/\/shop_images\/why_works1.svg",
+            "title": "Carbon Fiber Layer",
+            "content": "<p>Removes up to 99% of chlorine, reducing skin irritation and dryness, leaving your skin and hair healthier.<\/p>"
           }
         },
         "layer_Bq7FFw": {
           "type": "layer",
           "settings": {
+            "icon": "shopify:\/\/shop_images\/why_works2.svg",
             "title": "KDF Layer",
-            "content": "<p>Reduces heavy metals such as lead and mercury.<\/p>"
+            "content": "<p>Targets and removes heavy metals like lead and mercury, providing cleaner water for your shower. <\/p>"
           }
         },
         "layer_M6WeBe": {
           "type": "layer",
           "settings": {
-            "title": "Cotton Mesh Layer",
-            "content": "<p>Captures sediment, rust, and micro-particles.<\/p>"
+            "icon": "shopify:\/\/shop_images\/why_works3.svg",
+            "title": "FOF (Filter of Future)",
+            "content": "<p>Helps with descaling by preventing the buildup of hard water minerals such as calcium and magnesium, reducing scale formation and improving water flow.<\/p>"
           }
         }
       },
@@ -584,12 +587,12 @@
       ],
       "name": "Why It Works",
       "settings": {
-        "section_title": "<p>Why It Works<\/p>",
+        "section_title": "Why It Works",
         "section_description": "<p>Our triple filtration technology filters the water to remove heavy metals and purify.<\/p>",
         "image_desktop": "shopify:\/\/shop_images\/shower_pd-2.webp",
         "image_mobile": "shopify:\/\/shop_images\/shower_pd-22.webp",
         "btn_text": "Buy Now",
-        "btn_url": "",
+        "btn_url": "#productSubscription",
         "free_shipping": "<p>Free Shipping<br\/>Orders Over $100<\/p>",
         "pay_later": "<p>Buy Now,<br\/>Pay Later<\/p>"
       }
