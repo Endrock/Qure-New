@@ -703,6 +703,7 @@
       "blocks": {
         "result_rycBDU": {
           "type": "result",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/review_home_page.png",
             "heading": "Definitely pleased with the product",
