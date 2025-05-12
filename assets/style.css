@@ -32506,6 +32506,9 @@ body.page\.led-mask-offer-2 .bs_content .price__label{
 .faq_technical .accordion-button:not(.collapsed) .container:after{
     content: "-";
 }
+.shower_filter_ctm_cls .title-lg {
+    padding-bottom: 10px !important;
+}
 @media(max-width:767px){
     .indiv_clinics p{
         font-size: 10px;
