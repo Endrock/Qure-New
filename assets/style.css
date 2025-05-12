@@ -32509,8 +32509,12 @@ body.page\.led-mask-offer-2 .bs_content .price__label{
 .shower_filter_ctm_cls .title-lg {
     padding-bottom: 10px !important;
 }
-
-
+.shwr_dr_ctm a.popup-youtube {
+    display: none !important;
+}
+.shwr_dr_ctm .play_btn h5 {
+    font-size: 14px !important;
+}
 
 @media(max-width:767px){
     .shwr_dr_ctm .section-description {
