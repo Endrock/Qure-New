@@ -1,13 +1,4 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
- {
+{
   "sections": {
     "main": {
       "type": "product-extended-new",
@@ -15,14 +6,14 @@
         "rating_KDB67x": {
           "type": "rating",
           "settings": {
-            "image": "shopify://shop_images/star-half_fill.svg",
-            "text": "<p>Recommended by 99% of customers</p>"
+            "image": "shopify:\/\/shop_images\/star-half_fill.svg",
+            "text": "<p>Recommended by 99% of customers<\/p>"
           }
         },
         "list_azYRbY": {
           "type": "list",
           "settings": {
-            "text": "<ul><li>Triple-filter showerhead for the purest head-to-toe hydration.</li><li>Removes up to 99% of chlorine, heavy metals & contaminants that irritate the skin, for an overall more hydrated, clearer skin and hair.</li><li>Reduces limescale buildup, which can dry out skin and hair, for smoother, softer results.</li></ul>"
+            "text": "<ul><li>Triple-filter showerhead for the purest head-to-toe hydration.<\/li><li>Removes up to 99% of chlorine, heavy metals & contaminants that irritate the skin, for an overall more hydrated, clearer skin and hair.<\/li><li>Reduces limescale buildup, which can dry out skin and hair, for smoother, softer results.<\/li><\/ul>"
           }
         },
         "out_of_stock_3xp9iR": {
@@ -30,7 +21,7 @@
           "settings": {
             "heading": "Next batch ships end of April 2025:",
             "heading_mobile": "Next batch ships end of April 2025:",
-            "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.</p>",
+            "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.<\/p>",
             "first_option_date": "March 28st",
             "first_option_text": "SOLD OUT",
             "first_option_percent": 100,
@@ -46,7 +37,7 @@
           "type": "variant",
           "settings": {
             "heading": "White",
-            "image": "shopify://shop_images/filter-white.webp",
+            "image": "shopify:\/\/shop_images\/filter-white.webp",
             "variant_id": 45909763522799,
             "main": false,
             "reserve": false,
@@ -57,7 +48,7 @@
           "type": "variant",
           "settings": {
             "heading": "Black",
-            "image": "shopify://shop_images/filter_black.webp",
+            "image": "shopify:\/\/shop_images\/filter_black.webp",
             "variant_id": 45909763490031,
             "main": true,
             "reserve": false,
@@ -68,7 +59,7 @@
           "type": "subscribe",
           "settings": {
             "heading": "Subscribe & save 30%",
-            "text": "<h6>One Time: Showerhead + 1 Filter</h6><h6>Every 90 days: Filter Refill (<strong>[price_additional]</strong>[discount_price_additional])</h6><p>Skip, pause or cancel anytime. <a href=\"https://qureskincare.com/pages/subscriptions\" title=\"skip\">See more details</a></p>",
+            "text": "<h6>One Time: Showerhead + 1 Filter<\/h6><h6>Every 90 days: Filter Refill (<strong>[price_additional]<\/strong>[discount_price_additional])<\/h6><p>Skip, pause or cancel anytime. <a href=\"https:\/\/qureskincare.com\/pages\/subscriptions\" title=\"skip\">See more details<\/a><\/p>",
             "product": "shower-filter-replacement",
             "plan": "6286115055",
             "discount": 30
@@ -79,7 +70,7 @@
           "settings": {
             "heading": "Key Benefits",
             "heading_mobile": "",
-            "text": "<p>Healthy skin starts in the shower – we're tackling skin issues at the source. The Qure Shower Filter removes harmful impurities that can cause dryness, irritation, and brittleness. By filtering your shower water, you're creating the perfect canvas for the rest of your skincare routine and helping your hair and skin stay hydrated and happy.</p>"
+            "text": "<p>Healthy skin starts in the shower – we're tackling skin issues at the source. The Qure Shower Filter removes harmful impurities that can cause dryness, irritation, and brittleness. By filtering your shower water, you're creating the perfect canvas for the rest of your skincare routine and helping your hair and skin stay hydrated and happy.<\/p>"
           }
         },
         "collapsed_xqBcWj": {
@@ -87,7 +78,7 @@
           "settings": {
             "heading": "How It Works",
             "heading_mobile": "",
-            "text": "<p>Our Triple-Filtration System targets up to 99% of chlorine, heavy metals, and contaminants in your water. Here's what happens:</p><ul><li>Water passes through our multi-stage filter</li><li>Impurities get trapped in the specialized filtration media</li><li>Clean, filtered water flows through your shower head</li></ul><p>The result? Water that's gentler on your skin and hair, without the stuff that can strip away natural moisture.</p>"
+            "text": "<p>Our Triple-Filtration System targets up to 99% of chlorine, heavy metals, and contaminants in your water. Here's what happens:<\/p><ul><li>Water passes through our multi-stage filter<\/li><li>Impurities get trapped in the specialized filtration media<\/li><li>Clean, filtered water flows through your shower head<\/li><\/ul><p>The result? Water that's gentler on your skin and hair, without the stuff that can strip away natural moisture.<\/p>"
           }
         },
         "collapsed_E33cqi": {
@@ -95,7 +86,7 @@
           "settings": {
             "heading": "What’s Included In The Box",
             "heading_mobile": "",
-            "text": "<p>Inside the box, you'll find:</p><ul><li>The Qure Shower Filter with a replaceable filter cartridge (lasts up to 3 months)</li><li>A universal shower head wrench for easy installation</li><li>Clear setup instructions that won't leave you scratching your head</li></ul>"
+            "text": "<p>Inside the box, you'll find:<\/p><ul><li>The Qure Shower Filter with a replaceable filter cartridge (lasts up to 3 months)<\/li><li>A universal shower head wrench for easy installation<\/li><li>Clear setup instructions that won't leave you scratching your head<\/li><\/ul>"
           }
         }
       },
@@ -133,11 +124,490 @@
     },
     "second": {
       "type": "temp-product-shower-filter",
+      "disabled": true,
       "settings": {}
+    },
+    "you_know_shower_water_mLaXcE": {
+      "type": "you_know_shower_water",
+      "blocks": {
+        "icon_kgwr3g": {
+          "type": "icon",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/shower_water_icon1.svg",
+            "icon_label": "Limescale"
+          }
+        },
+        "icon_zKd9RA": {
+          "type": "icon",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/shower_water_icon2.svg",
+            "icon_label": "Heavy Metals"
+          }
+        },
+        "icon_rxqLp6": {
+          "type": "icon",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/shower_water_icon3.svg",
+            "icon_label": "Chlorine"
+          }
+        },
+        "icon_e4dLb8": {
+          "type": "icon",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/shower_water_icon4.svg",
+            "icon_label": "Micro-plastics"
+          }
+        },
+        "icon_NLwbhU": {
+          "type": "icon",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/shower_water_icon5.svg",
+            "icon_label": "Copper"
+          }
+        },
+        "icon_pP6PJe": {
+          "type": "icon",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/shower_water_icon6.svg",
+            "icon_label": "Micro-organisms"
+          }
+        }
+      },
+      "block_order": [
+        "icon_kgwr3g",
+        "icon_zKd9RA",
+        "icon_rxqLp6",
+        "icon_e4dLb8",
+        "icon_NLwbhU",
+        "icon_pP6PJe"
+      ],
+      "name": "You Know Shower Water",
+      "settings": {
+        "heading": "Do you know what’s in your shower water?",
+        "desktop_paragraph": "Most tap water is filled with invisible contaminants that quietly damage your skin, hair, and health – without you even realizing.",
+        "mobile_paragraph": "Most tap water is filled with invisible contaminants that quietly damage your skin, hair, and health."
+      }
+    },
+    "meet_qure_shower_filter_McYKxa": {
+      "type": "meet_qure_shower_filter",
+      "blocks": {
+        "feature_ibTA3m": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/meet_qure_icon1.svg",
+            "label": "Filters Heavy Metals"
+          }
+        },
+        "feature_BJNEhH": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/meet_qure_icon2.svg",
+            "label": "Removes Chlorine"
+          }
+        },
+        "feature_AgPjAN": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/meet_qure_icon3.svg",
+            "label": "Reduces Build-Up"
+          }
+        },
+        "feature_mLd4pT": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/meet_qure_icon4.svg",
+            "label": "Balances pH"
+          }
+        },
+        "feature_rDzzMU": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/meet_qure_icon5.svg",
+            "label": "Boosts Skin Hydration"
+          }
+        },
+        "feature_GpXxAz": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/meet_qure_icon6.svg",
+            "label": "Locks in Hair Moisture"
+          }
+        }
+      },
+      "block_order": [
+        "feature_ibTA3m",
+        "feature_BJNEhH",
+        "feature_AgPjAN",
+        "feature_mLd4pT",
+        "feature_rDzzMU",
+        "feature_GpXxAz"
+      ],
+      "name": "Meet Qure Shower Filter",
+      "settings": {
+        "main_image": "shopify:\/\/shop_images\/meet_shower_filter.webp",
+        "heading": "Meet Qure Shower Filter",
+        "description": "At Qure, we believe great skin starts at the source – and that’s the water you use every day. The Qure Shower Filter helps remove sneaky chemicals and minerals that live in your water and linger on your skin.",
+        "button_text": "Buy Now",
+        "button_link": "",
+        "shipping_text": "Free Shipping Orders Over $100",
+        "pay_later_text": "Buy Now, Pay Later"
+      }
+    },
+    "featuredin_qRUTGi": {
+      "type": "featuredin",
+      "blocks": {
+        "image_LNDiqz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vogue2.svg",
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
+          }
+        },
+        "image_xBMVHJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/women_health.svg",
+            "mobile_hide": true,
+            "ctm_cls_in_ps_item": ""
+          }
+        },
+        "image_QTraDb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cosmopolitan2.svg",
+            "mobile_hide": true,
+            "ctm_cls_in_ps_item": ""
+          }
+        },
+        "image_zcJKpQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/elle2.svg",
+            "mobile_hide": true,
+            "ctm_cls_in_ps_item": ""
+          }
+        },
+        "image_nGNJBz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/marie.svg",
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": "order-md-0 order-first"
+          }
+        },
+        "image_pwXw77": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/grazia2.svg",
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_LNDiqz",
+        "image_xBMVHJ",
+        "image_QTraDb",
+        "image_zcJKpQ",
+        "image_nGNJBz",
+        "image_pwXw77"
+      ],
+      "name": "t:sections.featuredin.name",
+      "settings": {
+        "heading": "",
+        "custom_cls": "bg-lightGrey"
+      }
+    },
+    "ingredients_list_QazWNB": {
+      "type": "ingredients-list",
+      "blocks": {
+        "column_PLrdpd": {
+          "type": "column",
+          "settings": {
+            "flag": "Hiding in Plain Sight!",
+            "flag-color": "#f9c91d",
+            "i-heading": "Limescale",
+            "i-text": "Causes mineral buildup, which coats your hair and skin in a stubborn film. This keeps moisture out, leaving you with dry, itchy skin and weaker hair.",
+            "icon_1": "shopify:\/\/shop_images\/cross_icon_e5668d7e-831e-4d47-9e9c-179c70074940.svg",
+            "text_1": "Dries Out Skin",
+            "icon_2": "shopify:\/\/shop_images\/cross_icon_e5668d7e-831e-4d47-9e9c-179c70074940.svg",
+            "text_2": "Clogs Pores",
+            "icon_3": "shopify:\/\/shop_images\/cross_icon_e5668d7e-831e-4d47-9e9c-179c70074940.svg",
+            "text_3": "Makes Hair Dull & Brittle",
+            "ingredient1": "",
+            "ingredient2": "",
+            "ingredient_text": "",
+            "column_class": ""
+          }
+        },
+        "column_HjDteT": {
+          "type": "column",
+          "settings": {
+            "flag": "Hidden Hazards!",
+            "flag-color": "#fa6f0b",
+            "i-heading": "Heavy metals",
+            "i-text": "These can disrupt the skin’s natural barrier and moisture balance, making it more prone to irritation, eczema, psoriasis, and breakouts.",
+            "icon_1": "shopify:\/\/shop_images\/cross_icon_e5668d7e-831e-4d47-9e9c-179c70074940.svg",
+            "text_1": "Irritates Skin",
+            "icon_2": "shopify:\/\/shop_images\/cross_icon_e5668d7e-831e-4d47-9e9c-179c70074940.svg",
+            "text_2": "Causes Breakouts",
+            "icon_3": "shopify:\/\/shop_images\/cross_icon_e5668d7e-831e-4d47-9e9c-179c70074940.svg",
+            "text_3": "Weakens Hair Structure",
+            "ingredient1": "",
+            "ingredient2": "",
+            "ingredient_text": "",
+            "column_class": ""
+          }
+        },
+        "column_PYgGMq": {
+          "type": "column",
+          "settings": {
+            "flag": "The Water Wrecker!",
+            "flag-color": "#c92127",
+            "i-heading": "Chlorine",
+            "i-text": "This chemical strips your skin of its natural oils which causes dry skin and flare-ups. It’s also behind dandruff, flaky scalp and hair breakage!",
+            "icon_1": "shopify:\/\/shop_images\/cross_icon_e5668d7e-831e-4d47-9e9c-179c70074940.svg",
+            "text_1": "Strips Skin Oils",
+            "icon_2": "shopify:\/\/shop_images\/cross_icon_e5668d7e-831e-4d47-9e9c-179c70074940.svg",
+            "text_2": "Causes Scalp Irritation",
+            "icon_3": "shopify:\/\/shop_images\/cross_icon_e5668d7e-831e-4d47-9e9c-179c70074940.svg",
+            "text_3": "Leads to Hair Breakage",
+            "ingredient1": "",
+            "ingredient2": "",
+            "ingredient_text": "",
+            "column_class": ""
+          }
+        },
+        "button_shipping_icons_mbWAK6": {
+          "type": "Button_shipping_icons",
+          "settings": {
+            "button_link": "#productSubscription",
+            "button_text": "Buy Now",
+            "shipping_icon": "shopify:\/\/shop_images\/free-shipping-ftr.svg",
+            "shipping_text_desktop": "Free Shipping Orders Over $100",
+            "shipping_text_mobile": "Free Shipping Orders Over $100",
+            "payment_icon": "shopify:\/\/shop_images\/buy_now_pay_later.svg",
+            "payment_text_desktop": "Buy Now,  Pay Later",
+            "payment_text_mobile": "Dermatologist Reviewed"
+          }
+        }
+      },
+      "block_order": [
+        "column_PLrdpd",
+        "column_HjDteT",
+        "column_PYgGMq",
+        "button_shipping_icons_mbWAK6"
+      ],
+      "name": "t:sections.ingredient-list.label",
+      "settings": {
+        "heading": "The problem with unfiltered shower water",
+        "subtext": "<p>Your shower should be a sanctuary, but it’s actually the source of frustration for many. Chlorine, heavy metals and other impurities found in “hard water” rain down on you with every drop – draining the life from your skin and hair.<\/p>",
+        "custom_class": "section shower_filter_ctm_cls"
+      }
+    },
+    "results_AkYqpJ": {
+      "type": "results",
+      "blocks": {
+        "result_JPUfBC": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/results_kim_l.webp",
+            "heading": "Source of my unclear skin",
+            "text": "<p>“I didn’t realize how big impact water has on our skin... I almost got used to my skin never getting better than mediocre, but this Water Filter is a game changer in my skincare routine.”<\/p>",
+            "see-more": "",
+            "image_country": "shopify:\/\/shop_images\/australia_f.webp",
+            "text_country": "Australia",
+            "client": "Kim L.",
+            "code": ""
+          }
+        },
+        "result_6yKb7e": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/results_hanna.webp",
+            "heading": "Hydrated more than ever",
+            "text": "<p>“I never had any major issues with skin before I moved. Then I started to get irritation and my makeup would look cakey cause my skin was always so dry no matter what moisturiser I used...<\/p>",
+            "see-more": "I didn’t change anything in my skincare routine except filtered water. I’m never washing my face with anything less than Q-urified water because my skin is so much better.”",
+            "image_country": "shopify:\/\/shop_images\/england_f.webp",
+            "text_country": "United Kingdom",
+            "client": "Hanna",
+            "code": ""
+          }
+        },
+        "result_94GHVf": {
+          "type": "result",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/results_josie.webp",
+            "heading": "Acne and dryness gone",
+            "text": "<p>“My skin has cleared up so much thanks to Qure! I use the LED mask and water filter daily and it’s cleared up my acne, and my complexion so much smoother and less red! My skin feels soft and hydrated. I can actually walk out of the house without makeup now. THANK YOU QURE!!!”<\/p>",
+            "see-more": "",
+            "image_country": "shopify:\/\/shop_images\/america_f.webp",
+            "text_country": "United States",
+            "client": "Josie",
+            "code": ""
+          }
+        }
+      },
+      "block_order": [
+        "result_JPUfBC",
+        "result_6yKb7e",
+        "result_94GHVf"
+      ],
+      "name": "t:sections.results.name",
+      "settings": {
+        "classname": "mi_landing_result",
+        "heading": "Results you‘ll see with your own eyes",
+        "heading_reduced": "",
+        "text_verified_customer": "Verified customer",
+        "text_reviewed": "Reviewed in"
+      }
+    },
+    "three_step_WG8iMm": {
+      "type": "three_step",
+      "blocks": {
+        "step_hhj48d": {
+          "type": "step",
+          "settings": {
+            "step_image": "shopify:\/\/shop_images\/step_one_sf.webp",
+            "step_icon": "shopify:\/\/shop_images\/step_icon_1.svg",
+            "step_heading": "Step 1.",
+            "step_description": "Unscrew your old shower head by hand, or with a wrench (included) for more grip if needed."
+          }
+        },
+        "step_zxipwc": {
+          "type": "step",
+          "settings": {
+            "step_image": "shopify:\/\/shop_images\/step_second_sf.webp",
+            "step_icon": "shopify:\/\/shop_images\/step_icon_2.svg",
+            "step_heading": "Step 2.",
+            "step_description": "Wrap the plumber tape (included) around the shower pipe."
+          }
+        },
+        "step_DrzDKt": {
+          "type": "step",
+          "settings": {
+            "step_image": "shopify:\/\/shop_images\/step_third_sf.webp",
+            "step_icon": "shopify:\/\/shop_images\/step_icon_3.svg",
+            "step_heading": "Step 3.",
+            "step_description": "Twist the Qure Shower Filter onto the pipe and tighten it securely with the wrench."
+          }
+        }
+      },
+      "block_order": [
+        "step_hhj48d",
+        "step_zxipwc",
+        "step_DrzDKt"
+      ],
+      "name": "Three Step Setup",
+      "settings": {
+        "section_title": "Easy 3-Step Set-Up",
+        "video_embed_id": "fsw2ted2a8",
+        "play_text": "Watch the video",
+        "button_link": "#productSubscription",
+        "button_text": "Buy Now",
+        "shipping_icon": "shopify:\/\/shop_images\/free-shipping-ftr.svg",
+        "shipping_text": "Free Shipping Orders Over $100",
+        "payment_icon": "shopify:\/\/shop_images\/buy_now_pay_later.svg",
+        "payment_text": "Buy Now,  Pay Later",
+        "adjust_title": "Adjust the flow and angle",
+        "adjust_description": "Transform your shower with our rotatable filter and three customizable water flow settings."
+      }
+    },
+    "text_with_video_GhpDnG": {
+      "type": "text-with-video",
+      "blocks": {
+        "text_content_H9V3tP": {
+          "type": "text_content",
+          "settings": {
+            "trust_icon": "shopify:\/\/shop_images\/verified_design.svg",
+            "trust_des": "Trusted and recommended by world leading Dermatologists",
+            "title": "Trusted and recommended by experts",
+            "title_des": "<p><strong>“Throughout my life…<\/strong>living in Wilmington, [my] skin was great. Then I… move to Charlotte and… every week my skin would get irritated especially after showering. Even my hair wouldn't cooperate. I was convinced it was the water I was exposed to.<\/p><p>Turns out, <strong>there’s an overwhelming amount of data that the water hardness could affect your skin.”<\/strong><\/p>",
+            "title_clr": "#000000",
+            "title_strong_clr": "#797d7c"
+          }
+        },
+        "video_piwi7R": {
+          "type": "video",
+          "settings": {
+            "title_mob": "Recommended by Experts",
+            "image": "shopify:\/\/shop_images\/dr_sahh-2.webp",
+            "video": "https:\/\/www.youtube.com\/watch?v=I2Fe-kP-2Jg",
+            "title": "Dr Shah, MD",
+            "des": "Board certified dermatologist"
+          }
+        }
+      },
+      "block_order": [
+        "text_content_H9V3tP",
+        "video_piwi7R"
+      ],
+      "name": "t:sections.text_video.label",
+      "settings": {
+        "ctm_cls": "mw-970 shwr_dr_ctm",
+        "left_dv_width": "8",
+        "right_dv_width": "4",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "why_it_works_Vz7ain": {
+      "type": "why_it_works",
+      "blocks": {
+        "layer_rQwc4Q": {
+          "type": "layer",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/why_works1.svg",
+            "title": "Carbon Fiber Layer",
+            "content": "<p>Removes up to 99% of chlorine, reducing skin irritation and dryness, leaving your skin and hair healthier.<\/p>"
+          }
+        },
+        "layer_Bq7FFw": {
+          "type": "layer",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/why_works2.svg",
+            "title": "KDF Layer",
+            "content": "<p>Targets and removes heavy metals like lead and mercury, providing cleaner water for your shower. <\/p>"
+          }
+        },
+        "layer_M6WeBe": {
+          "type": "layer",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/why_works3.svg",
+            "title": "FOF (Filter of Future)",
+            "content": "<p>Helps with descaling by preventing the buildup of hard water minerals such as calcium and magnesium, reducing scale formation and improving water flow.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "layer_rQwc4Q",
+        "layer_Bq7FFw",
+        "layer_M6WeBe"
+      ],
+      "name": "Why It Works",
+      "settings": {
+        "section_title": "Why It Works",
+        "section_description": "<p>Our triple filtration technology filters the water to remove heavy metals and purify.<\/p>",
+        "image_desktop": "shopify:\/\/shop_images\/shower_pd-2.webp",
+        "image_mobile": "shopify:\/\/shop_images\/shower_pd-22.webp",
+        "btn_text": "Buy Now",
+        "btn_url": "#productSubscription",
+        "free_shipping": "<p>Free Shipping<br\/>Orders Over $100<\/p>",
+        "pay_later": "<p>Buy Now,<br\/>Pay Later<\/p>"
+      }
     }
   },
   "order": [
     "main",
-    "second"
+    "second",
+    "you_know_shower_water_mLaXcE",
+    "meet_qure_shower_filter_McYKxa",
+    "featuredin_qRUTGi",
+    "ingredients_list_QazWNB",
+    "results_AkYqpJ",
+    "three_step_WG8iMm",
+    "text_with_video_GhpDnG",
+    "why_it_works_Vz7ain"
   ]
 }
