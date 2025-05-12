@@ -60,58 +60,6 @@
         "text_label_real_result_3": ""
       }
     },
-    "custom_qurify_filter_lp_featuredin_XN4VnN": {
-      "type": "custom-qurify-filter-lp-featuredin",
-      "blocks": {
-        "image_F4pRBT": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/vogue2.svg"
-          }
-        },
-        "image_REj7LK": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/women_health.svg"
-          }
-        },
-        "image_JxUPpq": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/cosmopolitan2.svg"
-          }
-        },
-        "image_VbkVGW": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/elle2.svg"
-          }
-        },
-        "image_eBdmRj": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/marie.svg"
-          }
-        },
-        "image_A8EGdy": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/grazia2.svg"
-          }
-        }
-      },
-      "block_order": [
-        "image_F4pRBT",
-        "image_REj7LK",
-        "image_JxUPpq",
-        "image_VbkVGW",
-        "image_eBdmRj",
-        "image_A8EGdy"
-      ],
-      "settings": {
-        "custom_class": "bg-lightGrey"
-      }
-    },
     "featuredin_9nEkfL": {
       "type": "featuredin",
       "blocks": {
@@ -132,28 +80,28 @@
         "image_Ngypwf": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/glamour.svg",
-            "mobile_hide": false
+            "image": "shopify:\/\/shop_images\/cosmopolitan2.svg",
+            "mobile_hide": true
           }
         },
         "image_kQTbBg": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/grazia.svg",
+            "image": "shopify:\/\/shop_images\/elle2.svg",
             "mobile_hide": false
           }
         },
         "image_bVKkqF": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/cosmopolitan.svg",
+            "image": "shopify:\/\/shop_images\/marie.svg",
             "mobile_hide": false
           }
         },
         "image_Lz8bEk": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/bazaar_889503c3-d4d6-4eb0-b7be-dd1212b56c58.png",
+            "image": "shopify:\/\/shop_images\/grazia2.svg",
             "mobile_hide": false
           }
         }
@@ -174,7 +122,66 @@
     },
     "product_benefits": {
       "type": "temp-product-pdp-dermal-mist-benefits",
+      "disabled": true,
       "settings": {}
+    },
+    "video_with_show_more_text_jmQfAP": {
+      "type": "video_with_show_more_text",
+      "blocks": {
+        "feature_fyi83P": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/bacteria.svg",
+            "title": "Purifies Beyond The Surface:",
+            "description": "Removes impurities and bacteria, helping to prevent irritation and breakouts."
+          }
+        },
+        "feature_XaERJy": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Soothes.svg",
+            "title": "Soothes Redness and Irritation:",
+            "description": "Hypochlorous Acid calms your skin, providing relief from everyday stressors and is safe for those prone to allergies or sensitive skin."
+          }
+        },
+        "feature_aKcDzN": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Dry-skin.svg",
+            "title": "Doesn’t Dry Out Skin:",
+            "description": "Our alcohol-free formula is designed to be gentle and kind to skin, leaving it comfortable and not dry."
+          }
+        },
+        "feature_hHDWry": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/spray.svg",
+            "title": "Super Versatile:",
+            "description": "From your face and body to your devices, this mist fits effortlessly into different parts of your day."
+          }
+        },
+        "feature_xYWNG6": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/sparkling.svg",
+            "title": "Fits Into Any Routine:",
+            "description": "Just spray, let it dry, and continue with your routine—no extra steps needed."
+          }
+        }
+      },
+      "block_order": [
+        "feature_fyi83P",
+        "feature_XaERJy",
+        "feature_aKcDzN",
+        "feature_hHDWry",
+        "feature_xYWNG6"
+      ],
+      "name": "Video Show More Text",
+      "settings": {
+        "title": "5 Reasons Dermal Mist deserves a VIP spot in your routine",
+        "video_id": "getx3xc27m",
+        "show_see_more": true
+      }
     },
     "product_benefits_EhnmRK": {
       "type": "product-benefits",
@@ -561,9 +568,9 @@
   },
   "order": [
     "main",
-    "custom_qurify_filter_lp_featuredin_XN4VnN",
     "featuredin_9nEkfL",
     "product_benefits",
+    "video_with_show_more_text_jmQfAP",
     "product_benefits_EhnmRK",
     "capsule_dropdowns_JnKRb9",
     "text_with_video_tyRqaL",
