@@ -842,6 +842,10 @@
         "background": "bg_clr_transparent"
       }
     },
+    "consult": {
+      "type": "temp-page-index-consult",
+      "settings": {}
+    },
     "compare_pPhPQJ": {
       "type": "compare",
       "blocks": {
@@ -972,6 +976,7 @@
       "block_order": [
         "form_FCEpBt"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Personalized solutions for your skin’s unique needs",
         "text": "<p>Answer a few questions and we’ll tell you how to achieve your skincare goals.</p>",
@@ -993,6 +998,7 @@
     "text_with_video_TwRQhd",
     "testimonials_m84mqf",
     "box_slider_HRHeRA",
+    "consult",
     "compare_pPhPQJ",
     "tile_JERe9p",
     "community_QPpfkf",

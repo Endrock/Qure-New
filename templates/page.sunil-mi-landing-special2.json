@@ -177,6 +177,7 @@
         },
         "jump_to_section_kYWrYh": {
           "type": "jump_to_section",
+          "disabled": true,
           "settings": {
             "title": "The Science",
             "section_id": "science-section"
@@ -193,7 +194,7 @@
           "type": "jump_to_section",
           "settings": {
             "title": "Dermatologists",
-            "section_id": "trusted_section"
+            "section_id": "shopify-section-template--19443028164847__text_with_video_qHAV6G"
           }
         },
         "jump_to_section_Dt7YUT": {
@@ -238,7 +239,7 @@
         "before_after_button_label": "Before & After",
         "reserve": false,
         "soldout": false,
-        "selected_design": "old",
+        "selected_design": "new",
         "text_label_real_result_1": "Product",
         "text_label_real_result_2": "Real Results",
         "text_label_real_result_3": "Dermatologist",
@@ -505,6 +506,9 @@
     },
     "reasons_khXbp7": {
       "type": "reasons",
+      "custom_css": [
+        ".reasons {background: #f5f5f5 !important;}"
+      ],
       "blocks": {
         "icon_kDV8nw": {
           "type": "icon",
@@ -1225,8 +1229,8 @@
       ],
       "settings": {
         "classname": "",
-        "heading": "See it in action — an instant, effortless glow that looks as good as it feels",
-        "text": "<p>5 minutes total, every 2-4 weeks</p>"
+        "heading": "See it in action — an effortless glow that looks as good as it feels",
+        "text": "<h5>5 minutes total, every 2-4 weeks</g5>"
       }
     },
     "line_a8KbFQ": {
@@ -1574,7 +1578,7 @@
         "button_F67Uh4"
       ],
       "custom_css": [
-        ".faq {background-color: #f5f5f5 !important;}"
+        ".faq {background-color: #ffffff !important;}"
       ],
       "settings": {
         "background": "bg_yellow",
@@ -1640,6 +1644,9 @@
     },
     "two_column_box_LCKkjE": {
       "type": "two-column-box",
+      "custom_css": [
+        ".joinMicro {background-color: rgb(251 251 251) !important;}"
+      ],
       "blocks": {
         "content_awPwam": {
           "type": "content",
