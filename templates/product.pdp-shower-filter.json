@@ -462,6 +462,137 @@
         "text_verified_customer": "Verified customer",
         "text_reviewed": "Reviewed in"
       }
+    },
+    "three_step_WG8iMm": {
+      "type": "three_step",
+      "blocks": {
+        "step_hhj48d": {
+          "type": "step",
+          "settings": {
+            "step_image": "shopify:\/\/shop_images\/step_one_sf.webp",
+            "step_icon": "shopify:\/\/shop_images\/step_icon_1.svg",
+            "step_heading": "Step 1.",
+            "step_description": "Unscrew your old shower head by hand, or with a wrench (included) for more grip if needed."
+          }
+        },
+        "step_zxipwc": {
+          "type": "step",
+          "settings": {
+            "step_image": "shopify:\/\/shop_images\/step_second_sf.webp",
+            "step_icon": "shopify:\/\/shop_images\/step_icon_2.svg",
+            "step_heading": "Step 2.",
+            "step_description": "Wrap the plumber tape (included) around the shower pipe."
+          }
+        },
+        "step_DrzDKt": {
+          "type": "step",
+          "settings": {
+            "step_image": "shopify:\/\/shop_images\/step_third_sf.webp",
+            "step_icon": "shopify:\/\/shop_images\/step_icon_3.svg",
+            "step_heading": "Step 3.",
+            "step_description": "Twist the Qure Shower Filter onto the pipe and tighten it securely with the wrench."
+          }
+        }
+      },
+      "block_order": [
+        "step_hhj48d",
+        "step_zxipwc",
+        "step_DrzDKt"
+      ],
+      "name": "Three Step Setup",
+      "settings": {
+        "section_title": "Easy 3-Step Set-Up",
+        "video_embed_id": "fsw2ted2a8",
+        "play_text": "Watch the video",
+        "button_link": "#productSubscription",
+        "button_text": "Buy Now",
+        "shipping_icon": "shopify:\/\/shop_images\/free-shipping-ftr.svg",
+        "shipping_text": "Free Shipping Orders Over $100",
+        "payment_icon": "shopify:\/\/shop_images\/buy_now_pay_later.svg",
+        "payment_text": "Buy Now,  Pay Later",
+        "adjust_title": "Adjust the flow and angle",
+        "adjust_description": "Transform your shower with our rotatable filter and three customizable water flow settings."
+      }
+    },
+    "text_with_video_GhpDnG": {
+      "type": "text-with-video",
+      "blocks": {
+        "text_content_H9V3tP": {
+          "type": "text_content",
+          "settings": {
+            "trust_icon": "shopify:\/\/shop_images\/verified_design.svg",
+            "trust_des": "Trusted and recommended by world leading Dermatologists",
+            "title": "Trusted and recommended by experts",
+            "title_des": "<p><strong>“Throughout my life…<\/strong>living in Wilmington, [my] skin was great. Then I… move to Charlotte and… every week my skin would get irritated especially after showering. Even my hair wouldn't cooperate. I was convinced it was the water I was exposed to.<\/p><p>Turns out, <strong>there’s an overwhelming amount of data that the water hardness could affect your skin.”<\/strong><\/p>",
+            "title_clr": "#000000",
+            "title_strong_clr": "#797d7c"
+          }
+        },
+        "video_piwi7R": {
+          "type": "video",
+          "settings": {
+            "title_mob": "Recommended by Experts",
+            "image": "shopify:\/\/shop_images\/dr_sahh-2.webp",
+            "video": "https:\/\/www.youtube.com\/watch?v=I2Fe-kP-2Jg",
+            "title": "Dr Shah, MD",
+            "des": "Board certified dermatologist"
+          }
+        }
+      },
+      "block_order": [
+        "text_content_H9V3tP",
+        "video_piwi7R"
+      ],
+      "name": "t:sections.text_video.label",
+      "settings": {
+        "ctm_cls": "mw-970 shwr_dr_ctm",
+        "left_dv_width": "8",
+        "right_dv_width": "4",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "why_it_works_Vz7ain": {
+      "type": "why_it_works",
+      "blocks": {
+        "layer_rQwc4Q": {
+          "type": "layer",
+          "settings": {
+            "title": "Activated Carbon Layer",
+            "content": "<p>Removes chlorine, odors, and organic contaminants from the water.<\/p>"
+          }
+        },
+        "layer_Bq7FFw": {
+          "type": "layer",
+          "settings": {
+            "title": "KDF Layer",
+            "content": "<p>Reduces heavy metals such as lead and mercury.<\/p>"
+          }
+        },
+        "layer_M6WeBe": {
+          "type": "layer",
+          "settings": {
+            "title": "Cotton Mesh Layer",
+            "content": "<p>Captures sediment, rust, and micro-particles.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "layer_rQwc4Q",
+        "layer_Bq7FFw",
+        "layer_M6WeBe"
+      ],
+      "name": "Why It Works",
+      "settings": {
+        "section_title": "<p>Why It Works<\/p>",
+        "section_description": "<p>Our triple filtration technology filters the water to remove heavy metals and purify.<\/p>",
+        "image_desktop": "shopify:\/\/shop_images\/shower_pd-2.webp",
+        "image_mobile": "shopify:\/\/shop_images\/shower_pd-22.webp",
+        "btn_text": "Buy Now",
+        "btn_url": "",
+        "free_shipping": "<p>Free Shipping<br\/>Orders Over $100<\/p>",
+        "pay_later": "<p>Buy Now,<br\/>Pay Later<\/p>"
+      }
     }
   },
   "order": [
@@ -471,6 +602,9 @@
     "meet_qure_shower_filter_McYKxa",
     "featuredin_qRUTGi",
     "ingredients_list_QazWNB",
-    "results_AkYqpJ"
+    "results_AkYqpJ",
+    "three_step_WG8iMm",
+    "text_with_video_GhpDnG",
+    "why_it_works_Vz7ain"
   ]
 }
