@@ -1,0 +1,175 @@
+
+
+<div class="single_step pb-md-5 py-5 bg-lightGrey section">
+  <div class="container">
+    <div class="section_header d-block d-md-none text-center">
+      <h2 class="title-lg paddingB">{{ section.settings.heading }}</h2>
+    </div>
+    <div class="row gx-5">
+      <div class="col-md-6">
+        <div class="single_step mt-3 mt-md-0">
+          <div class="section_header mw-100">
+            <h2 class="title-lg paddingB d-none d-md-block">{{ section.settings.heading }}</h2>
+            <p>{{ section.settings.content_1 }}</p>
+            <p>{{ section.settings.content_2 }}</p>
+            <p>{{ section.settings.content_3 }}</p>
+            <p>{{ section.settings.content_4 }}</p>
+          </div>
+        </div>
+
+        <div class="faq_technical">
+          <div class="accordion" id="accordionTech">
+
+            {% for block in section.blocks %}
+              {% if block.type == 'spec' %}
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTech{{ forloop.index }}" aria-expanded="false" aria-controls="collapseTech{{ forloop.index }}">
+                      <div class="container">{{block.settings.accordion_tech_text}}</div>
+                    </button>
+                  </h2>
+                  <div id="collapseTech{{ forloop.index }}" class="accordion-collapse collapse" data-bs-parent="#accordionTech">
+                    <div class="accordion-body">
+                      <div class="container">
+                        {{ block.settings.tech_text }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% elsif block.type == 'treatment' %}
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTreat{{ forloop.index }}" aria-expanded="false" aria-controls="collapseTreat{{ forloop.index }}">
+                      <div class="container">{{ block.settings.accordion_treat_text }} </div>
+                    </button>
+                  </h2>
+                  <div id="collapseTreat{{ forloop.index }}" class="accordion-collapse collapse" data-bs-parent="#accordionTech">
+                    <div class="accordion-body">
+                      <div class="container">
+                        {{ block.settings.treat_text }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 order-first order-md-0">
+        <div class="single-step_img">
+          {% if section.settings.desktop_image != blank %}
+            <img src="{{ section.settings.desktop_image | image_url: width: 800 }}" alt="" class="img-fluid d-none d-md-block">
+          {% endif %}
+          {% if section.settings.mobile_image != blank %}
+            <img src="{{ section.settings.mobile_image | image_url: width: 400 }}" alt="" class="img-fluid d-md-none">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const anchor = document.querySelector('a[href="#neck-tab-1"]');
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault(); // Prevent default anchor behavior
+            const tabButton = document.querySelector('#neck-tab-1');
+            if (tabButton) tabButton.click(); // Trigger the tab change
+        });
+    });
+</script>
+
+{% schema %}
+{
+  "name": "Why Light Therapy Works",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Why light therapy is proven to work"
+    },
+    {
+      "type": "textarea",
+      "id": "content_1",
+      "label": "Paragraph 1",
+      "default": "Just as plants need sunlight, our skin craves the rejuvenating power of light..."
+    },
+    {
+      "type": "textarea",
+      "id": "content_2",
+      "label": "Paragraph 2",
+      "default": "Enter red light therapy — the ultimate skincare revolution."
+    },
+    {
+      "type": "textarea",
+      "id": "content_3",
+      "label": "Paragraph 3",
+      "default": "Harnessing the transformative energy of LED light..."
+    },
+    {
+      "type": "textarea",
+      "id": "content_4",
+      "label": "Paragraph 4",
+      "default": "Embrace the light, embrace the beauty!"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "spec",
+      "name": "Technical Specification",
+      "settings": [
+        {
+          "type": "text",
+          "id": "accordion_tech_text",
+          "label": "Specification Text"
+        },
+        {
+          "type": "richtext",
+          "id": "tech_text",
+          "label": "Specification Desription"
+        }
+      ]
+    },
+    {
+      "type": "treatment",
+      "name": "Treatment Detail",
+      "settings": [
+        {
+          "type": "text",
+          "id": "accordion_treat_text",
+          "label": "Treatment Text",
+          "default":"Treatment Details"
+        },
+        {
+          "type": "richtext",
+          "id": "treat_text",
+          "label": "Treatment Desription"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Why Light Therapy Works",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
