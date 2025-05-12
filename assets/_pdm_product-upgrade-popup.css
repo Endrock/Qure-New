@@ -92,14 +92,14 @@ START PDM UPGRADE POPUP - FACE SERUM
   
   .pdm-popup-product-text p {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
   }
   
   .pdm-popup-headline h3 {
     text-align: center;
-    font-family: 'Canela', serif;
+    font-family: 'Canela';
     margin-top: 40px;
     margin-bottom: 16px;
     font-size: 26px;
@@ -148,32 +148,39 @@ START PDM UPGRADE POPUP - FACE SERUM
   .pdm-popup-price {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 5px;
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 1rem;
   }
   
   .pdm-popup-price del {
-    color: #080101;
+    color: #000;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
     font-weight: 300;
-    font-size: 1.2rem;
+    line-height: 24px;
   }
   
   .discounted-price {
-    color: #b91c1c;
-    font-weight: 550;
-    font-size: 1.5rem;
+    color: #C4121A;
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.2px;
   }
   
   .discount-tag {
-    background: #b91c1c;
+    background: #C4121A;
     color: white;
     font-size: 0.85rem;
-    padding: 2px 6px;
+    padding: 0px 6px;
     border-radius: 5rem;
     width: 6rem;
     text-align: center;
+    margin-left: 10px;
   }
 
   .pdm-popup-benefits {
@@ -243,8 +250,9 @@ START PDM UPGRADE POPUP - FACE SERUM
     }
 
     .pdm-popup-headline h3 {
-      font-size: 19px;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      font-size: 20px;
       font-weight: 500;
       white-space: nowrap;
       margin-top: 15px;
