@@ -602,7 +602,7 @@
             "image": "shopify://shop_images/trusted_3.webp",
             "video": "https://www.youtube.com/watch?v=JPWycy8cwN8",
             "title": "Dr Shah & Dr Maxfield,",
-            "des": ""
+            "des": "Board certified dermatologists"
           }
         },
         "text_content_WxPnNR": {
@@ -1096,7 +1096,7 @@
         "small_image_qure": "shopify://shop_images/serum_icon_a466c544-f134-424f-8fa4-282249d83318.webp",
         "serum_heading": "for Dark Spots",
         "accordion_1_heading": "What can it do for your skin",
-        "accordion_1_text": "<p>Works beneath the surface to address dark spots and uneven skin tone. Our powerful formula targets areas of discoloration that surface treatments can't reach, for a more even, balanced complexion. <strong>Skin Concerns:</strong> Designed for those dealing with dark spots, hyperpigmentation, rough texture, uneven skin tone, and areas of discoloration that haven't responded to topical treatments.</p>",
+        "accordion_1_text": "<p>Works beneath the surface to address dark spots and uneven skin tone. Our powerful formula targets areas of discoloration that surface treatments can't reach, for a more even, balanced complexion. <br> <strong> Skin Concerns:</strong> Designed for those dealing with dark spots, hyperpigmentation, rough texture, uneven skin tone, and areas of discoloration that haven't responded to topical treatments.</p>",
         "accordion_2_heading": "All Ingredients",
         "accordion_2_text": "<p><strong>Epidermal Growth Factor (EGF):</strong><br/>Works at a cellular level to repair and rejuvenate skin. Reduces appearance of wrinkles, improves hydration, and prevents pigmentation</p><p><strong>Niacinamide:</strong><br/>Superstar ingredient that helps with most skin concerns from soothing to brightening and clarifying, and reducing fine lines and wrinkles.</p><p><strong>Tranexamic Acid:</strong><br/>Helps to fade look of dark spots and discolouration. Assists with brightening and evening look of skin tone.</p><p><strong>All ingredients:</strong><br/>Rosa Damascena Flower Water, Propanediol, Glycerin, Tranexamic Acid, Niacinamide, Panthenol, Chrysanthellum Indicum Extract, Ethylhexylglycerin, Tripeptide-1, Xanthan Gum, Allantoin, Sh-Oligopeptide-1.</p><p>Please note that due to innovative updates and changing regulatory guidelines, the ingredient lists provided here may differ slightly from those on our packaging and distributor websites.</p>"
       }
@@ -1115,7 +1115,7 @@
     "liquid_EH7JLe2": {
       "type": "liquid",
       "settings": {
-        "code": "{% render 'serums-months-image-form-v2' with section_id: section.id, one_month_img: 'MI2x-rejuv_blue_new.webp', three_months_img: 'MI6x-mixed_blue.webp' %}",
+        "code": "{% render 'serums-months-image-form-v2' with section_id: section.id, one_month_img: 'MI2x-dark_spots.webp', three_months_img: 'MI6x-dark_spots.webp' %}",
         "popup_micro_infusion_enabled": false,
         "payment_icons": "shopify://shop_images/logos_full_qure_0d060a66-5fb6-4e6c-a740-55552a43bb10.png",
         "payment_icons_today_only": "shopify://shop_images/payments_today.png"
