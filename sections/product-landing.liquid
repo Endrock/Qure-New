@@ -71,7 +71,7 @@
                                 {% if block.settings.product != blank %}
                                     {% render 'product-rating', rating_value: block.settings.product.metafields.reviews.rating.value, rating_count: block.settings.product.metafields.reviews.rating_count.value %}
                                 {% else %}
-                                    {% if product.metafields.reviews.rating_count.value > 20 %}
+                                    {% if product.metafields.reviews.rating_count.value > 5 %}
                                         {% render 'product-rating', rating_value: product.metafields.reviews.rating.value, rating_count: product.metafields.reviews.rating_count.value %}
                                     {% else %}
                                         <div class="refill_review">
