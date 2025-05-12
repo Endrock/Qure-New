@@ -23,7 +23,7 @@
   }
 {%- endstyle -%}
 
-<div class="section-{{ section.id }}-padding">
+<div class="section-{{ section.id }}-padding {{ section.settings.ctm_cls }}">
     <div class="container">
         
         <div class="row align-items-center">
@@ -31,7 +31,7 @@
                 {% assign bs = block.settings %}
                 {%- case block.type -%}
                     {%- when 'text_content' -%}
-                    <div class="col-lg-7 order-2 order-lg-1">
+                    <div class="col-lg-{{section.settings.left_dv_width}} order-2 order-lg-1">
                         <div class="trusted_left mw-600">
                             <div class="section_header pt-0 mw-100" style="--ttl-color:{{ bs.title_clr }}; --title_strong_clr:{{ bs.title_strong_clr }}">
                                 {% if bs.trust_des != blank %}
@@ -42,17 +42,32 @@
                                         <p>{{bs.trust_des}}</p>
                                     </div>
                                 {% endif %}
+                                                                
                                 {% if bs.title != blank %}
-                                    <h2 class="title-lg">
-                                        {{ bs.title }}
-                                    </h2>
+                                <h2 class="title-lg desk_title">
+                                    {{ bs.title }}
+                                </h2>
                                 {% endif %}
+                       
+
+                              {% if bs.title_des != blank %}
+                                <div class="section-description">
+                                    {{ bs.title_des }}
+                                </div>
+                                {% endif %}
+
+
                             </div>
                         </div>
                     </div>
                     {%- when 'video' -%}
-                    <div class="col-lg-5 order-1 order-lg-2">
+                    <div class="col-lg-{{section.settings.right_dv_width}} order-1 order-lg-2">
                         <div class="trusted_cl_m mb-2 mb-md-0">
+                            {% if bs.title_mob !=blank %}
+                              <h2 class="title-lg d-md-none mb-4">
+                                    {{ bs.title_mob }}
+                                </h2>
+                            {% endif %}
                             {%- if bs.image != blank -%}
                                 <img src="{{ bs.image | img_url:'master' }}" alt="" class="img-fluid t_m_img">
                             {%- else -%}
@@ -88,6 +103,23 @@
     "class":"trusted_bl section pb-0 trustedVerified",
     "max_blocks": 2,
     "settings":[
+        {
+            "type":"text",
+            "id":"ctm_cls",
+            "label":"t:common.classname.custom"
+        },
+        {
+            "type":"text",
+            "id":"left_dv_width",
+            "label":"left column width",
+            "default":"7"
+        },
+        {
+            "type":"text",
+            "id":"right_dv_width",
+            "label":"left column width",
+            "default":"5"
+        },
 
         {
             "type": "header",
@@ -120,6 +152,12 @@
             "name":"t:common.video.label",
             "limit": 1,
             "settings":[
+                {
+                    "type":"inline_richtext",
+                    "id":"title_mob",
+                    "label":"title mob",
+                    "default":"Recommended by Experts"
+                },
                 {
                     "type":"image_picker",
                     "id":"image",
@@ -173,6 +211,7 @@
                     "label":"t:sections.trusted.text",
                     "default":"Trusted and recommended by world leading Dermatologists"
                 },
+          
                 {
                     "type":"header",
                     "content":"Heading settings"
@@ -182,6 +221,12 @@
                     "id":"title",
                     "label":"t:common.heading.label",
                 },
+  
+                      {
+                    "type": "richtext",
+                    "id": "title_des",
+                    "label": "Heading Description"
+                    },
                 {
                     "type":"color",
                     "id":"title_clr",

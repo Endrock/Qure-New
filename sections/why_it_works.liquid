@@ -1,0 +1,199 @@
+<div class="why_it_works">
+  <div class="container">
+    <div class="section_header text-center">
+      {% if section.settings.section_title != blank %}
+        <h2 class="title-lg">{{ section.settings.section_title }}</h2>
+      {% endif %}
+      {% if section.settings.section_description != blank %}
+        <div class="rte">{{ section.settings.section_description }}</div>
+      {% endif %}
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="faq accordions_shower_filter mw-452 mx-auto">
+          <div class="accordion" id="accordion_works_filter">
+            {% for block in section.blocks %}
+              <div class="accordion-item pt-2">
+                <h2 class="accordion-header">
+                  <button class="accordion-button p-2 {% unless forloop.first %}collapsed{% endunless %}" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#acc_works_{{ forloop.index }}"
+                    aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}"
+                    aria-controls="acc_works_{{ forloop.index }}">
+                    <div class="container">
+                      <div class="d-flex justify-content-start gap-2 align-items-center">
+                        {% if block.settings.icon %}
+                          <img src="{{ block.settings.icon | image_url }}" alt="">
+                        {% endif %}
+                        <p class="fw-semibold">{{ block.settings.title }}</p>
+                      </div>
+                    </div>
+                  </button>
+                </h2>
+                <div id="acc_works_{{ forloop.index }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}" data-bs-parent="#accordion_works_filter">
+                  <div class="accordion-body">
+                    <div class="container">
+                      {{ block.settings.content }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 order-md-0 order-first">
+        <div class="how_it_works_img position-relative">
+          {% if section.settings.image_desktop %}
+            <img src="{{ section.settings.image_desktop | image_url }}" alt="" class="img-fluid d-none d-md-block">
+          {% endif %}
+          {% if section.settings.image_mobile %}
+            <img src="{{ section.settings.image_mobile | image_url }}" alt="" class="img-fluid d-md-none">
+          {% endif %}
+
+          {% for block in section.blocks %}
+            <div class="why_works_btn{{ forloop.index }}">
+              <button class="accordion-button {% unless forloop.first %}collapsed{% endunless %}" type="button"
+                data-bs-toggle="collapse" data-bs-target="#acc_works_{{ forloop.index }}">
+                <div class="container p-0">
+                  <div class="d-flex justify-content-start gap-2 align-items-center sub_try_free">
+                    <div class="dot_btn"><span></span></div>
+                    <h6>{{ block.settings.title }}</h6>
+                  </div>
+                </div>
+              </button>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="ctm_cls_filter_wat mw-402 mx-auto mt-3">
+      <div class="shwr_fil_wat">
+        <a class="btn btn-lg btn-primary with_subscription buy_btn" href="{{ section.settings.btn_url }}">{{ section.settings.btn_text }}</a>
+      </div>
+      <div class="bg-transparent ctm_cls_shipping d-flex mw-359 px-md-4 mx-auto pt-3 px-3 px-md-0 shipping shipping_bg">
+        <div class="s_bx">
+          <img src="https://qureskincaredns.com/new/assets/shipping.svg" alt="">
+          {{ section.settings.free_shipping }}
+        </div>
+        <div class="s_bx">
+          <img src="https://qureskincaredns.com/new/assets/buy_now_pay_later.svg" alt="">
+          {{ section.settings.pay_later }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Why It Works",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title"
+    },
+    {
+      "type": "richtext",
+      "id": "section_description",
+      "label": "Section Description",
+      "default": "<p>Our triple filtration technology filters the water to remove heavy metals and purify.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_desktop",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text",
+      "default": "Buy Now"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "Button Link"
+    },
+    {
+      "type": "richtext",
+      "id": "free_shipping",
+      "label": "Free Shipping",
+      "default": "<p>Free Shipping<br>Orders Over $100</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "pay_later",
+      "label": "Pay Later",
+      "default": "<p>Buy Now,<br>Pay Later</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "layer",
+      "name": "Filter Layer",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Layer Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Layer Description"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Why It Works",
+      "category": "Custom",
+      "settings": {
+        "section_description": "<p>Our triple filtration technology filters the water to remove heavy metals and purify.</p>",
+        "btn_text": "Buy Now",
+        "free_shipping": "<p>Free Shipping<br>Orders Over $100</p>",
+        "pay_later": "<p>Buy Now,<br>Pay Later</p>"
+      },
+      "blocks": [
+        {
+          "type": "layer",
+          "settings": {
+            "title": "Activated Carbon Layer",
+            "content": "<p>Removes chlorine, odors, and organic contaminants from the water.</p>"
+          }
+        },
+        {
+          "type": "layer",
+          "settings": {
+            "title": "KDF Layer",
+            "content": "<p>Reduces heavy metals such as lead and mercury.</p>"
+          }
+        },
+        {
+          "type": "layer",
+          "settings": {
+            "title": "Cotton Mesh Layer",
+            "content": "<p>Captures sediment, rust, and micro-particles.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
