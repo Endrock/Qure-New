@@ -2003,6 +2003,8 @@ const initObserverStickyAtc = () => {
     stickyButtons.forEach(stickyBtn => {
       const stickyImage = stickyBtn.querySelector('.button_sticky_wrapper__product-image');
       const stickyTitle = stickyBtn.querySelector('.button_sticky_wrapper__title');
+      const stickyLink = stickyBtn.querySelector('.button_sticky_wrapper__button_sticky');
+
       const checkedTitle = inputChecked.dataset.productRadioTitle;
       const checkedImage = inputChecked.dataset.productRadioImage;
 
@@ -2016,6 +2018,11 @@ const initObserverStickyAtc = () => {
       if (stickyTitle && checkedTitle) {
         stickyTitle.textContent = checkedTitle;
       }
+
+      if (stickyLink) {
+        stickyLink.href = atcButtonSrc;
+      }
+
     });
   };
 
