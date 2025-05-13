@@ -67,8 +67,7 @@ function handleDeclineOrClose(popup, overlay) {
   
     // Close popup when clicking outside the popup (overlay)
     overlay?.addEventListener("click", function () {
-      popup.classList.add("hidden");
-      overlay.classList.add("hidden");
+      handleDeclineOrClose(popup, overlay);
     });
   
     // Close popup when clicking "No thanks" button
