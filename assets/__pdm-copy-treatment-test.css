@@ -34,6 +34,10 @@ body[data-copy-treatment='true'] .pdm-step_content_v2 .planBlock .monthly_plans 
   display: none !important;
 }
 
+body[data-copy-treatment='true'] .pdm-step_content_v2 .pdm_price-stock-left{
+  width: 100% !important;
+}
+
 /* desktop */
 @media screen and (min-width: 1024px) {
   body[data-copy-treatment='true'] .pdm-step_content_v2 .price.pmd_price-first-elemnt .price-row{
