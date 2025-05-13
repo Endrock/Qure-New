@@ -37,7 +37,11 @@
                                         <span class="top-label__label">{{ 'products.product.contrast_horizontal.top_label' | t }}</span>
                                     </div>
 
-                                    <input type="radio" name="mBanner_monthlyPlan" id="mBanner_3_month" checked="">
+                                    <input type="radio" name="mBanner_monthlyPlan" id="mBanner_3_month" checked=""
+                                      data-product-radio-id="{{ product.variants.first.id }}"
+                                      data-product-radio-title="{{ product.title | escape }}"
+                                      data-product-radio-image="{{ settings.patches_1_month | image_url: width: 28, height: 40 }}"
+                                    >
                                     <label class="monthly_plans" for="mBanner_3_month" payment-price="{{ product_price_divided | money_without_trailing_zeros }}">
                                         <div class="plan_des">
                                             <div class="plan_hdr">
@@ -74,7 +78,11 @@
                                 {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
 
                                 <div class="planBlock planBlockTop" data-variantid="{{ product_variant_id }}">
-                                    <input type="radio" name="mBanner_monthlyPlan" id="mBanner_2_month">
+                                    <input type="radio" name="mBanner_monthlyPlan" id="mBanner_2_month"
+                                      data-product-radio-id="{{ product.variants.first.id }}"
+                                      data-product-radio-title="{{ product.title | escape }}"
+                                      data-product-radio-image="{{ settings.patches_1_month | image_url: width: 28, height: 40 }}"
+                                    >
                                     <label class="monthly_plans" for="mBanner_2_month" payment-price="{{ product_price_divided | money_without_trailing_zeros }}">
                                         <div class="plan_des">
                                             <div class="plan_hdr">
@@ -108,7 +116,11 @@
                                 {% assign product_variant_id = product.variants.first.id %}
 
                                 <div class="planBlock planBlockTop" data-variantid="{{ product_variant_id }}">
-                                    <input type="radio" name="mBanner_monthlyPlan" id="mBanner_1_month">
+                                    <input type="radio" name="mBanner_monthlyPlan" id="mBanner_1_month"
+                                      data-product-radio-id="{{ product.variants.first.id }}"
+                                      data-product-radio-title="{{ product.title | escape }}"
+                                      data-product-radio-image="{{ settings.patches_1_month | image_url: width: 28, height: 40 }}"
+                                    >
                                     <label class="monthly_plans" for="mBanner_1_month" payment-price="{{ product_price_divided | money_without_trailing_zeros }}">
                                         
 
