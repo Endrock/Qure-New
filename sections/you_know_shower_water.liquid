@@ -1,0 +1,93 @@
+<!-- you know shower water  -->
+<div class="container py-md-4">
+  <div class="row align-items-center">
+    <div class="col-md-7">
+      <div class="left_content_shwr_water">
+        <h2 class="you_know_shower_water_heading">{{ section.settings.heading }}</h2>
+        <p class="water_filled_invisible d-none d-md-block">
+          {{ section.settings.desktop_paragraph }}
+        </p>
+        <p class="water_filled_invisible text-center d-md-none">
+          {{ section.settings.mobile_paragraph }}
+        </p>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="row row-cols-3 row-cols-md-3 g-4 text-center ps-md-5 icons_water_filter pt-4 pt-md-0">
+        {% for block in section.blocks %}
+          {% if block.type == 'icon' %}
+            <div class="col">
+              {% if block.settings.icon_image %}
+                <img src="{{ block.settings.icon_image | image_url: width: 50 }}" alt="{{ block.settings.icon_label }}" class="img-fluid" width="50">
+              {% endif %}
+              <p class="mt-2">{{ block.settings.icon_label }}</p>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- you know shower water end -->
+
+{% schema %}
+{
+  "name": "You Know Shower Water",
+  "tag": "section",
+  "class": "you_know_shower_water py-5",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Do you know what’s in your shower water?"
+    },
+    {
+      "type": "textarea",
+      "id": "desktop_paragraph",
+      "label": "Paragraph (Desktop)",
+      "default": "Most tap water is filled with invisible contaminants that quietly damage your skin, hair, and health – without you even realizing."
+    },
+    {
+      "type": "textarea",
+      "id": "mobile_paragraph",
+      "label": "Paragraph (Mobile)",
+      "default": "Most tap water is filled with invisible contaminants that quietly damage your skin, hair, and health."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon",
+      "name": "Icon Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Icon Image"
+        },
+        {
+          "type": "text",
+          "id": "icon_label",
+          "label": "Icon Label",
+          "default": "Limescale"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "You Know Shower Water",
+      "category": "Custom",
+      "blocks": [
+        { "type": "icon", "settings": { "icon_label": "Limescale" } },
+        { "type": "icon", "settings": { "icon_label": "Heavy Metals" } },
+        { "type": "icon", "settings": { "icon_label": "Chlorine" } },
+        { "type": "icon", "settings": { "icon_label": "Micro-plastics" } },
+        { "type": "icon", "settings": { "icon_label": "Copper" } },
+        { "type": "icon", "settings": { "icon_label": "Micro-organisms" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

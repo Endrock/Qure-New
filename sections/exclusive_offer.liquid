@@ -1,0 +1,266 @@
+<!-- sections/exclusive-offer.liquid -->
+<div class="exclusive_tabs section bg-lightGrey" id="special_offer">
+    <div class="container">
+      <div class="text-center ctm_indiv_cls">
+        <a href="{{ section.settings.link_url }}" class="text-black">{{ section.settings.link_text }}</a>
+        <h3 class="title-lg">{{ section.settings.heading }}</h3>
+        <p class="d-md-none"><em>{{ section.settings.subheading }}</em></p>
+      </div>
+  
+      <!-- Tabs for Mobile Only -->
+      <ul class="nav nav-tabs d-md-none position-relative" id="ledTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="mask-tab" data-bs-toggle="tab" data-bs-target="#mask" type="button" role="tab">
+            <div class="exclusive_desk_bx">
+              <div class="exclusive_img">
+                <img src="{{ section.settings.mask_image | img_url: 'medium' }}" alt="" class="img-fluid">
+              </div>
+              <h5>{{ section.settings.mask_title }}</h5>
+            </div>
+          </button>
+        </li>
+        <li class="nav-item">
+          <div class="plus_icon_dv_main">
+            <div class="plus_icon_dv position-absolute">
+              <img src="{{ section.settings.plus_icon | img_url: 'small' }}" alt="plus">
+            </div>
+          </div>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="neck-tab" data-bs-toggle="tab" data-bs-target="#neck" type="button" role="tab">
+            <div class="exclusive_desk_bx">
+              <div class="exclusive_img">
+                <img src="{{ section.settings.neck_image | img_url: 'medium' }}" alt="" class="img-fluid">
+              </div>
+              <h5>{{ section.settings.neck_title }}</h5>
+            </div>
+          </button>
+        </li>
+      </ul>
+  
+      {% assign product_mask = all_products[section.settings.mask_product] %}
+      {% assign product_neck = all_products[section.settings.neck_product] %}
+  
+      <!-- Mobile Content -->
+      <div class="tab-content d-md-none" id="ledTabContent">
+        <div class="tab-pane fade show active" id="mask" role="tabpanel">
+          <div class="exclusive_desk_bx">
+            <div class="exclusive_img">
+              <img src="{{ section.settings.mask_image | img_url: 'medium' }}" alt="" class="img-fluid">
+            </div>
+            <h5>{{ section.settings.mask_title }}</h5>
+            <p>{{ product_mask.price | money_without_trailing_zeros }}</p>
+            <ul>
+              {% for block in section.blocks %}
+                {% if block.type == 'led_mask_feature' %}
+                  <li>
+                    <img src="{{ block.settings.tick_icon | img_url: 'small' }}" alt="tick">
+                    <span>{{ block.settings.feature_text }}</span>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+  
+        <div class="tab-pane fade" id="neck" role="tabpanel">
+          <div class="exclusive_desk_bx">
+            <div class="exclusive_img">
+              <img src="{{ section.settings.neck_image | img_url: 'medium' }}" alt="" class="img-fluid">
+            </div>
+            <h5>{{ section.settings.neck_title }}</h5>
+            <p>
+              {% if product_neck.compare_at_price > product_neck.price %}
+                <del>{{ product_neck.compare_at_price | money_without_trailing_zeros }}</del>
+              {% else %}
+                <del>{{ product_neck.price | money_without_trailing_zeros }}</del>
+              {% endif %}
+              <strong class="text-success">FREE</strong>
+            </p>
+            <ul>
+              {% for block in section.blocks %}
+                {% if block.type == 'led_neck_feature' %}
+                  <li>
+                    <img src="{{ block.settings.tick_icon | img_url: 'small' }}" alt="tick">
+                    <span>{{ block.settings.feature_text }}</span>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Desktop View -->
+      <div class="exclusive_desk_bxs d-none d-md-flex mt-4 justify-content-between gap-5">
+        <div class="exclusive_desk_bx">
+          <div class="exclusive_img">
+            <img src="{{ section.settings.mask_image | img_url: 'medium' }}" alt="" class="img-fluid">
+          </div>
+          <h5>{{ section.settings.mask_title }}</h5>
+          <p>{{ product_mask.price | money_without_trailing_zeros }}</p>
+          <ul>
+            {% for block in section.blocks %}
+              {% if block.type == 'led_mask_feature' %}
+                <li>
+                  <img src="{{ block.settings.tick_icon | img_url: 'small' }}" alt="tick">
+                  <span>{{ block.settings.feature_text }}</span>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+  
+        <div class="plus_icon_dv_main position-relative">
+          <div class="plus_icon_dv position-absolute">
+            <img src="{{ section.settings.plus_icon | img_url: 'small' }}" alt="plus">
+          </div>
+        </div>
+  
+        <div class="exclusive_desk_bx">
+          <div class="inc_with_purchase">{{ section.settings.included_text }}</div>
+          <div class="exclusive_img">
+            <img src="{{ section.settings.neck_image | img_url: 'medium' }}" alt="" class="img-fluid">
+          </div>
+          <h5>{{ section.settings.neck_title }}</h5>
+          <p>
+            {% if product_neck.compare_at_price > product_neck.price %}
+              <del>{{ product_neck.compare_at_price | money_without_trailing_zeros }}</del>
+            {% else %}
+              <del>{{ product_neck.price | money_without_trailing_zeros }}</del>
+            {% endif %}
+            <strong class="text-success">FREE</strong>
+          </p>
+          <ul>
+            {% for block in section.blocks %}
+              {% if block.type == 'led_neck_feature' %}
+                <li>
+                  <img src="{{ block.settings.tick_icon | img_url: 'small' }}" alt="tick">
+                  <span>{{ block.settings.feature_text }}</span>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  {% schema %}
+  {
+    "name": "Exclusive Offer",
+    "settings": [
+      {
+        "type": "text",
+        "id": "link_text",
+        "label": "Link Text",
+        "default": "Your Exclusive Offer"
+      },
+      {
+        "type": "url",
+        "id": "link_url",
+        "label": "Link URL"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Main Heading",
+        "default": "Experience face and neck rejuvenation in one bundle"
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Mobile Subheading",
+        "default": "Includes 2 LED Devices:"
+      },
+      {
+        "type": "product",
+        "id": "mask_product",
+        "label": "LED Mask Product"
+      },
+      {
+        "type": "product",
+        "id": "neck_product",
+        "label": "Neck Device Product"
+      },
+      {
+        "type": "text",
+        "id": "mask_title",
+        "label": "LED Mask Title",
+        "default": "Q–Rejuvalight Pro LED Mask"
+      },
+      {
+        "type": "image_picker",
+        "id": "mask_image",
+        "label": "LED Mask Image"
+      },
+      {
+        "type": "text",
+        "id": "neck_title",
+        "label": "Neck Device Title",
+        "default": "Neck & Décolletage LED Device"
+      },
+      {
+        "type": "image_picker",
+        "id": "neck_image",
+        "label": "Neck Device Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "plus_icon",
+        "label": "Plus Icon Image"
+      },
+      {
+        "type": "text",
+        "id": "included_text",
+        "label": "Included With Purchase Label",
+        "default": "Included with your purchase"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "led_mask_feature",
+        "name": "LED Mask Feature",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "tick_icon",
+                "label": "Tick Icon Image"
+            },
+          {
+            "type": "richtext",
+            "id": "feature_text",
+            "label": "Mask Feature Text"
+          }
+        ]
+      },
+      {
+        "type": "led_neck_feature",
+        "name": "LED Neck Feature",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "tick_icon",
+                "label": "Tick Icon Image"
+              },
+          {
+            "type": "richtext",
+            "id": "feature_text",
+            "label": "Neck Feature Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Exclusive Offer",
+        "blocks": []
+      }
+    ]
+  }
+  {% endschema %}
+
+
+
+
+
