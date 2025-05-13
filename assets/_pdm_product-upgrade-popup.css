@@ -17,7 +17,8 @@ START PDM UPGRADE POPUP - FACE SERUM
     background: linear-gradient(180deg, #DBEFE8 -3.91%, #FFF 51.05%), #FFF;
     border-radius: 12px;
     max-width: 720px;
-    width: 90%;
+    width: 680px;
+    height: 576px;
     padding: 0rem 2rem 2rem;
     z-index: 9999;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
