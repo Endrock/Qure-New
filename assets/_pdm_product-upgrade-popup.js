@@ -13,6 +13,25 @@
 
 let pdmSelectedVariantId = null;
 
+/**
+ * Lógica compartida: añade la variante guardada al carrito y cierra el popup.
+ */
+function handleDeclineOrClose(popup, overlay) {
+  if (pdmSelectedVariantId) {
+    const ajaxLink = document.createElement("a");
+    ajaxLink.href = `/cart/add?id=${pdmSelectedVariantId}&quantity=1`;
+    ajaxLink.setAttribute("data-ajax-cart-request-button", "");
+    ajaxLink.style.display = "none";
+    document.body.appendChild(ajaxLink);
+    ajaxLink.click();
+    setTimeout(() => ajaxLink.remove(), 500);
+  } else {
+    console.warn("No variantId found to add to cart");
+  }
+  popup.classList.add("hidden");
+  overlay.classList.add("hidden");
+}
+
    function openPopUpPromotion(selector, overlay, popup) {
     if (selector && popup && overlay) { 
       selector.addEventListener("click", function () {
@@ -54,32 +73,12 @@ let pdmSelectedVariantId = null;
   
     // Close popup when clicking "No thanks" button
     decline?.addEventListener("click", function () {
-      if (pdmSelectedVariantId) {
-        // We create the AJAX link to add to cart
-        const ajaxLink = document.createElement("a");
-        ajaxLink.href = `/cart/add?id=${pdmSelectedVariantId}&quantity=1`;
-        ajaxLink.setAttribute("data-ajax-cart-request-button", "");
-        ajaxLink.style.display = "none";
-        document.body.appendChild(ajaxLink);
-        
-        // Fire petition
-        ajaxLink.click();
-        
-        // Clean
-        setTimeout(() => ajaxLink.remove(), 500);
-      } else {
-        console.warn("No variantId found to add to cart");
-      }
-      
-      // Close popup
-      popup.classList.add("hidden");
-      overlay.classList.add("hidden");
+      handleDeclineOrClose(popup, overlay);
     });
 
     // Close popup when clicking the "X" (close button)
     closeBtn?.addEventListener("click", function () {
-      popup?.classList.add("hidden");
-      overlay?.classList.add("hidden");
+      handleDeclineOrClose(popup, overlay);
     });
   });
 
