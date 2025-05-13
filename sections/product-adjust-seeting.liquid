@@ -1,0 +1,139 @@
+<div class="flow_and_angle section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="flow_and_angle_content d-none d-md-block">
+          <h3>{{ section.settings.heading }}</h3>
+          <p>{{ section.settings.description }}</p>
+          <div class="flow_and_angle_icons d-flex gap-5">
+            {% for block in section.blocks %}
+              {% if block.type == 'icon' %}
+                <div class="flow_angle_img">
+                  <img src="{{ block.settings.icon_image | image_url }}" alt="" class="img-fluid">
+                  <p>{{ block.settings.icon_label }}</p>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        <div class="lifetime_warranty d-flex gap-2 mx-auto mx-md-0">
+          {% if section.settings.warranty_icon %}
+            <img src="{{ section.settings.warranty_icon | image_url }}" alt="">
+          {% endif %}
+          <p>{{ section.settings.warranty_text }}</p>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="flow_tabs row gy-4">
+          <div class="col-12">
+            <div class="tab-content text-center" id="v-pills-tabContent">
+              {% assign tabIndex = 0 %}
+              {% for block in section.blocks %}
+                {% if block.type == 'tab' %}
+                  <div class="tab-pane fade {% if forloop.first %}show active{% endif %}" id="v-pills-{{ forloop.index0 }}" role="tabpanel">
+                    <div class="tab_img">
+                      <img src="{{ block.settings.tab_image | image_url }}" alt="" class="img-fluid">
+                    </div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          <div class="col-12 order-first order-md-0">
+            <div class="choose_from_dv text-center">
+              <p class="choose_from">{{ section.settings.flow_label }}</p>
+            </div>
+            <div class="nav d-flex nav-pills ctm_tab_pills justify-content-center mt-md-4" id="v-pills-tab" role="tablist">
+              {% for block in section.blocks %}
+                {% if block.type == 'tab' %}
+                  <button class="nav-link {% if forloop.first %}active{% endif %}" id="v-pills-{{ forloop.index0 }}-tab" data-bs-toggle="pill" data-bs-target="#v-pills-{{ forloop.index0 }}" type="button" role="tab">
+                    {{ block.settings.tab_name }}
+                  </button>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Flow and Angle Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:common.heading.label",
+      "default": "Adjust the flow and angle"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "t:common.description.label",
+      "default": "Transform your shower with our rotatable filter and three customizable water flow settings, giving you the perfect angle and flow for every preference."
+    },
+    {
+      "type": "image_picker",
+      "id": "warranty_icon",
+      "label": "t:product.warranty.icon"
+    },
+    {
+      "type": "textarea",
+      "id": "warranty_text",
+      "label": "t:product.warranty.label",
+      "default": "Covered by our <strong> Lifetime Warranty</strong>. <br>  Backed by our 30-Day Money-Back Guarantee."
+    },
+    {
+      "type": "text",
+      "id": "flow_label",
+      "label": "",
+      "default": "Choose from three flow settings:"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon",
+      "name": "Flow & Angle Icon",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Icon Image"
+        },
+        {
+          "type": "text",
+          "id": "icon_label",
+          "label": "Icon Label"
+        }
+      ]
+    },
+    {
+      "type": "tab",
+      "name": "Tab Option",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_name",
+          "label": "Tab Name"
+        },
+        {
+          "type": "image_picker",
+          "id": "tab_image",
+          "label": "Tab Image"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "Flow and Angle Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
