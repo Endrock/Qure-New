@@ -43,8 +43,9 @@
     endif
 %}
 
+
 <!-- -- main banner start -- -->
-<div class="refill_bl pt-0 tabSlider" id="page">
+<div class="refill_bl pt-0 tabSlider pb-3" id="page">
     <div class="container">
         <div class="row">
             <div class="col-md-6 order-2 order-md-1">
@@ -71,7 +72,7 @@
                                 {% if block.settings.product != blank %}
                                     {% render 'product-rating', rating_value: block.settings.product.metafields.reviews.rating.value, rating_count: block.settings.product.metafields.reviews.rating_count.value %}
                                 {% else %}
-                                    {% if product.metafields.reviews.rating_count.value > 20 %}
+                                    {% if product.metafields.reviews.rating_count.value > 5 %}
                                         {% render 'product-rating', rating_value: product.metafields.reviews.rating.value, rating_count: product.metafields.reviews.rating_count.value %}
                                     {% else %}
                                         <div class="refill_review">
@@ -291,6 +292,7 @@
 
                     {% if page.handle == 'qure-microinfusion-offer'
                       or page.handle == 'qure-micro-infusion-landing-page-affiliate'
+                      or page.handle == 'micro-infusion-acne'
                       or page.handle == 'micro-infusion-dark-spots'
                     %}
                       {% assign show_jump_to  = section.settings.enable_jump_to_section %}
@@ -547,6 +549,7 @@
                 {% if page.handle == 'qure-microinfusion-offer'
                   or page.handle == 'qure-micro-infusion-landing-page-affiliate'
                   or page.handle == 'micro-infusion-dark-spots'
+                  or page.handle == 'micro-infusion-acne'
                 %}
                   {% assign show_jump_to  = section.settings.enable_jump_to_section %}
                   {% if show_jump_to %}
