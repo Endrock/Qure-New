@@ -14,7 +14,7 @@
 let pdmSelectedVariantId = null;
 
 /**
- * Lógica compartida: añade la variante guardada al carrito y cierra el popup.
+ * Add the saved variant to the cart and close the popup.
  */
 function handleDeclineOrClose(popup, overlay) {
   if (pdmSelectedVariantId) {
