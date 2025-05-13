@@ -3,7 +3,7 @@
  * START - PDM UPGRADE POPUP LOGIC - FACE SERUM
  * ============================================
  */
-
+let pdmSelectedVariantId = null;
 /**
  * Opens the upgrade popup when a specific plan label is clicked.
  *
@@ -14,6 +14,7 @@
    function openPopUpPromotion(selector, overlay, popup) {
     if (selector && popup && overlay) { 
       selector.addEventListener("click", function () {
+        pdmSelectedVariantId = this.closest(".planBlockTop").dataset.variantid;
         popup.classList.remove("hidden");
         overlay.classList.remove("hidden");
       });
@@ -49,6 +50,24 @@
   
     // Close popup when clicking "No thanks" button
     decline?.addEventListener("click", function () {
+      if (pdmSelectedVariantId) {
+        // ③ Creamos un <a> oculto que apunte a la ruta de añadir al carrito
+        const ajaxLink = document.createElement("a");
+        ajaxLink.href = `/cart/add?id=${pdmSelectedVariantId}&quantity=1`;
+        ajaxLink.setAttribute("data-ajax-cart-request-button", "");
+        ajaxLink.style.display = "none";
+        document.body.appendChild(ajaxLink);
+        
+        // ④ Disparamos la petición como si el usuario clicara en “Añadir al carrito”
+        ajaxLink.click();
+        
+        // ⑤ Limpiamos el <a> del DOM tras medio segundo
+        setTimeout(() => ajaxLink.remove(), 500);
+      } else {
+        console.warn("No se encontró ningún variantId para añadir al carrito");
+      }
+      
+      // ⑥ Cerramos el popup igual que antes
       popup.classList.add("hidden");
       overlay.classList.add("hidden");
     });
