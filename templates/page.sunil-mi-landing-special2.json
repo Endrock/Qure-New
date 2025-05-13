@@ -304,6 +304,9 @@
       "type": "line",
       "settings": {
         "heading": "ONE OF THE ONLY FACIAL TREATMENTS YOUR SKIN NEEDS",
+        "font_weight": "700",
+        "font_size_desktop": "13px",
+        "font_size_mobile": "12px",
         "classname": "bg-green text-dark"
       }
     },
@@ -360,7 +363,7 @@
           "settings": {
             "heading": "Fine Lines and Wrinkles",
             "text": "<ul><li>Helps reduce the appearance of <strong>fine lines and wrinkles</strong></li><li>Promotes <strong>hydration</strong> for dewey, plump-looking skin</li><li>Supports the skin barrier for a <strong>boost in firmness</strong> you can feel</li></ul>",
-            "image": "shopify://shop_images/Frame_1664_3d20ab2a-00a7-40ba-a537-e588aa5b3d46.png",
+            "image": "shopify://shop_images/review_home_page_450x_ba2bdad6-d428-45ec-a6a4-678bd85f0b8b.png",
             "image_country": "shopify://shop_images/usa_89e25711-f730-4521-8931-83b3307204af.png",
             "client": "Tami T."
           }
@@ -390,6 +393,9 @@
         "slide_beViXV",
         "slide_YFJAPx",
         "slide_qcrUGK"
+      ],
+      "custom_css": [
+        ".result_s_wrapper .result_item .skincare_left .img-fluid {aspect-ratio: 180 / 109;}"
       ],
       "settings": {
         "heading": "Achieve your skincare goals",
@@ -475,6 +481,8 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Dual_action.png",
+            "dual_action": "",
+            "dual_action_mob": "",
             "classname": "mw-mob-100 pt-4"
           }
         },
@@ -506,9 +514,6 @@
     },
     "reasons_khXbp7": {
       "type": "reasons",
-      "custom_css": [
-        ".reasons {background: #f5f5f5 !important;}"
-      ],
       "blocks": {
         "icon_kDV8nw": {
           "type": "icon",
@@ -552,6 +557,9 @@
         "icon_3jJA6X",
         "icon_hQTWT9",
         "icon_6qiFmi"
+      ],
+      "custom_css": [
+        ".reasons {background: #f5f5f5 !important;}"
       ],
       "settings": {
         "classname": "",
@@ -698,6 +706,7 @@
       "blocks": {
         "result_rycBDU": {
           "type": "result",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/review_home_page.png",
             "heading": "Definitely pleased with the product",
@@ -1230,6 +1239,7 @@
       "settings": {
         "classname": "",
         "heading": "See it in action — an effortless glow that looks as good as it feels",
+        "heading_mob": "",
         "text": "<h5>5 minutes total, every 2-4 weeks</g5>"
       }
     },
@@ -1237,6 +1247,9 @@
       "type": "line",
       "settings": {
         "heading": "SOLD OUT 5x - AVAILABLE UNTIL STOCK LASTS",
+        "font_weight": "700",
+        "font_size_desktop": "13px",
+        "font_size_mobile": "12px",
         "classname": ""
       }
     },
@@ -1288,6 +1301,9 @@
       "type": "line",
       "settings": {
         "heading": "INCLUDED IN THE SYSTEM:",
+        "font_weight": "700",
+        "font_size_desktop": "13px",
+        "font_size_mobile": "12px",
         "classname": "bg-black text-white"
       }
     },
@@ -1414,6 +1430,7 @@
         "button_dAehhB"
       ],
       "settings": {
+        "ctm_clss": "",
         "heading": "What you should know for the best results",
         "text": "<p><strong>The Qure Micro-Infusion System is designed with your safety in mind.</strong></p><p>Unlike popular at-home derma rollers, our stamper device features single-use sterile heads that help minimise the risk of infection or unnecessary skin damage caused by blunt and multi-use needles.</p><p>For more information on the treatment protocol, please click button below for the full treatment guide.</p><p><strong>Below are a few rules you should follow while using your Qure Micro-Infusion System:</strong></p>"
       }
@@ -1644,9 +1661,6 @@
     },
     "two_column_box_LCKkjE": {
       "type": "two-column-box",
-      "custom_css": [
-        ".joinMicro {background-color: rgb(251 251 251) !important;}"
-      ],
       "blocks": {
         "content_awPwam": {
           "type": "content",
@@ -1660,6 +1674,8 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/join_to_revolution.png",
+            "dual_action": "",
+            "dual_action_mob": "",
             "classname": "mw-mob-100"
           }
         },
@@ -1674,6 +1690,9 @@
         "content_awPwam",
         "image_fFdePg",
         "code_fXbXkm"
+      ],
+      "custom_css": [
+        ".joinMicro {background-color: rgb(251 251 251) !important;}"
       ],
       "settings": {
         "classname": "imageText joinMicro",
