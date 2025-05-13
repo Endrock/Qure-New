@@ -204,7 +204,7 @@ START PDM UPGRADE POPUP - FACE SERUM
     display: flex;
     flex-direction: column;
     gap: 8px;
-    margin-top: -1.4rem;
+    margin-top: -0.5rem;
   }
   
   .pdm-upgrade-btn {
