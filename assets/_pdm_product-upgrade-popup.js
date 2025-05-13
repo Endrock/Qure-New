@@ -3,7 +3,6 @@
  * START - PDM UPGRADE POPUP LOGIC - FACE SERUM
  * ============================================
  */
-let pdmSelectedVariantId = null;
 /**
  * Opens the upgrade popup when a specific plan label is clicked.
  *
@@ -11,10 +10,15 @@ let pdmSelectedVariantId = null;
  * @param {HTMLElement} overlay - The popup overlay element.
  * @param {HTMLElement} popup - The popup container element.
  */
+
+let pdmSelectedVariantId = null;
+
    function openPopUpPromotion(selector, overlay, popup) {
     if (selector && popup && overlay) { 
       selector.addEventListener("click", function () {
+        // We capture the variantId of the clicked plan
         pdmSelectedVariantId = this.closest(".planBlockTop").dataset.variantid;
+        // Show pop up
         popup.classList.remove("hidden");
         overlay.classList.remove("hidden");
       });
@@ -51,23 +55,23 @@ let pdmSelectedVariantId = null;
     // Close popup when clicking "No thanks" button
     decline?.addEventListener("click", function () {
       if (pdmSelectedVariantId) {
-        // ③ Creamos un <a> oculto que apunte a la ruta de añadir al carrito
+        // We create the AJAX link to add to cart
         const ajaxLink = document.createElement("a");
         ajaxLink.href = `/cart/add?id=${pdmSelectedVariantId}&quantity=1`;
         ajaxLink.setAttribute("data-ajax-cart-request-button", "");
         ajaxLink.style.display = "none";
         document.body.appendChild(ajaxLink);
         
-        // ④ Disparamos la petición como si el usuario clicara en “Añadir al carrito”
+        // Fire petition
         ajaxLink.click();
         
-        // ⑤ Limpiamos el <a> del DOM tras medio segundo
+        // Clean
         setTimeout(() => ajaxLink.remove(), 500);
       } else {
-        console.warn("No se encontró ningún variantId para añadir al carrito");
+        console.warn("No variantId found to add to cart");
       }
       
-      // ⑥ Cerramos el popup igual que antes
+      // Close popup
       popup.classList.add("hidden");
       overlay.classList.add("hidden");
     });
