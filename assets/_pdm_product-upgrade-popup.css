@@ -247,8 +247,10 @@ START PDM UPGRADE POPUP - FACE SERUM
 
   @media (max-width: 767px) {
     .pdm-popup-container {
-      height: 90%;
+      height: 650px;
       z-index: 999999;
+      width: 351px;
+      overflow-y: auto;
     }
 
     .pdm-popup-headline h3 {
