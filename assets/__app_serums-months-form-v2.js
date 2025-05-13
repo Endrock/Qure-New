@@ -47,7 +47,6 @@ function v2__selectProduct(destination)
             v2__product_period = inputElement.getAttribute('data-product-period');
 
             let product_variant_id = v2__product_variants[v2__product_type][v2__product_period];
-            console.log('product_variant_id', product_variant_id);
 
             var regular_price = $(this).find(".regular_price").text();
             var sale_price = $(this).find(".sale_price").text();
