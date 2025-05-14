@@ -951,6 +951,7 @@ var swiper = new Swiper(".howUSe_slider", {
 *js only for micro-infusion pdp start
 */
 $('.monthly_plans').click(function () {
+    if ($(this).hasClass('ignore')) return;
     var savedTxt = $(this).find('.saved_price').html();
     if (savedTxt !== undefined) {
         if (document.body.hasAttribute('data-contrast-horizontal-layout')) {

@@ -23,7 +23,7 @@
                             </div>
                         </div>
                         <div class="tmtFtrs_image order-1 order-md-2 mw-mob-100">
-                            <img src="{{ 'MI6x-mixed_blue.webp' | asset_url }}" class="img-fluid" alt="" id="choosen_image" />
+                            <img src="https://qureskincare.com/cdn/shop/files/3monthwrinkles_1.png" class="img-fluid" alt="" id="choosen_image" />
                         </div>
                         <div class="tmtFtrs d-none d-md-flex justify-content-between mb-4 mt-5">
                             <div class="tmtFtrs_block text-center">
@@ -118,17 +118,17 @@
                                 <div class="step_content">
                                     <div class="step_conten_blocks">
                                         
-                                        {% assign product = all_products['micro-infusion-3-month-bundle-3x-b-g-serum-3x-e-g-f-serum'] %}
+                                        {% assign product = all_products['micro-infusion-3-month-bundle-6x-beta-glucan-serum'] %}
                                         {% assign divided_price = product.price | divided_by: 4 %}
                                         {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
 
                                         <a class="planBlock active {{ section_id }}_productPeriodObject" href="month_3" data-tab="month_3"
-                                            data-per="& SAVE {{ discount_percentage }}%" data-image="https://qureskincaredns.com/new/assets/MI6x-mixed_blue.webp">
+                                            data-per="& SAVE {{ discount_percentage }}%" data-image="https://qureskincare.com/cdn/shop/files/3monthwrinkles_1.png">
                                             <div class="plan_choosed">
                                                 <span>Over 5,000 people chose this supply</span>
                                             </div>
                                             <input type="radio" name="monthlyPlan" id="3_month" checked data-product-period="3">
-                                            <label class="monthly_plans" for="3_month" payment-price="{{ divided_price | money_without_trailing_zeros }}">
+                                            <label class="monthly_plans ignore" for="3_month" payment-price="{{ divided_price | money_without_trailing_zeros }}">
                                                 <div class="plan_des">
                                                     <div class="plan_hdr">
                                                         <h3>3 Month Supply</h3>
@@ -152,7 +152,7 @@
                                         <a class="planBlock {{ section_id }}_productPeriodObject new_block active" href="month_2" data-tab="month_2"
                                             data-per="& SAVE {{ discount_percentage }}%" data-image="https://qureskincaredns.com/new/assets/MI4x-rejuv_blue.webp">
                                             <input type="radio" name="monthlyPlan" id="2_month" data-product-period="2">
-                                            <label class="monthly_plans" for="2_month" payment-price="{{ divided_price | money_without_trailing_zeros }}">
+                                            <label class="monthly_plans ignore" for="2_month" payment-price="{{ divided_price | money_without_trailing_zeros }}">
                                                 <div class="plan_des">
                                                     <div class="plan_hdr">
                                                         <h3>2 Month Supply</h3>
@@ -168,13 +168,13 @@
                                         </a> 
                                         {% endcomment %}
 
-                                        {% assign product = all_products['micro-infusion-1-month-bundle-1x-b-g-serum-1x-e-g-f-serum'] %}
+                                        {% assign product = all_products['micro-infusion-1-month-bundle-2x-beta-glucan-serum'] %}
                                         {% assign divided_price = product.price | divided_by: 4 %}
                                         
                                         <a class="planBlock {{ section_id }}_productPeriodObject new_block" href="month_1" data-tab="month_1"
-                                            data-per="- $99" data-image="https://qureskincaredns.com/new/assets/MI2x-rejuv_blue.webp">
+                                            data-per="- $99" data-image="https://qureskincare.com/cdn/shop/files/1monthwrinkles.png">
                                             <input type="radio" name="monthlyPlan" id="1_month" data-product-period="1">
-                                            <label class="monthly_plans" for="1_month" payment-price="{{ divided_price | money_without_trailing_zeros }}">
+                                            <label class="monthly_plans ignore" for="1_month" payment-price="{{ divided_price | money_without_trailing_zeros }}">
                                                 <div class="plan_des">
                                                     <div class="plan_hdr">
                                                         <h3>1 Month Supply</h3>
@@ -261,7 +261,7 @@
                             %}
                         {% endif %}
                         
-                        {% assign product = all_products['micro-infusion-3-month-bundle-3x-b-g-serum-3x-e-g-f-serum'] %}
+                        {% assign product = all_products['micro-infusion-3-month-bundle-6x-beta-glucan-serum'] %}
                         {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
                         {% assign divided_price = product.price | divided_by: 4 %}
                         
@@ -322,6 +322,8 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             selectProduct('{{ section_id }}_');
+            reserveProduct('{{ section_id }}');
+            updateButtonText('{{ section_id }}');
 
             /*
             const bf__parent = '.form-{{ section_id }}';
