@@ -592,6 +592,254 @@
         "pay_later": "<p>Buy Now,<br\/>Pay Later<\/p>"
       }
     },
+    "adjust_angle_mob_VptmPM": {
+      "type": "adjust_angle_mob",
+      "blocks": {
+        "step_3zexNp": {
+          "type": "step",
+          "settings": {
+            "title": "Step 1.",
+            "text": "Unscrew your old shower head by hand, or with a wrench (included) for more grip if needed."
+          }
+        },
+        "step_m4hLKP": {
+          "type": "step",
+          "settings": {
+            "title": "Step 2.",
+            "text": "Wrap the plumber tape (included) around the shower pipe."
+          }
+        },
+        "step_qeTWW8": {
+          "type": "step",
+          "settings": {
+            "title": "Step 3.",
+            "text": "Twist the Qure Shower Filter onto the pipe and tighten it securely with the wrench."
+          }
+        },
+        "feature_VEyXXH": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/adjust_ang1.svg",
+            "text": "Adjustable Angle"
+          }
+        },
+        "feature_wapiYX": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/adjust_ang2.svg",
+            "text": "3 Spray Settings"
+          }
+        },
+        "feature_63ifkX": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/adjust_ang3.svg",
+            "text": "Fits 99% of Showers"
+          }
+        }
+      },
+      "block_order": [
+        "step_3zexNp",
+        "step_m4hLKP",
+        "step_qeTWW8",
+        "feature_VEyXXH",
+        "feature_wapiYX",
+        "feature_63ifkX"
+      ],
+      "name": "Adjust Angle Mob",
+      "settings": {
+        "adjust_title": "Adjust the flow and angle",
+        "adjust_text": "Transform your shower with our rotatable filter and three customizable water flow settings, giving you the perfect angle and flow for every preference.",
+        "wistia_id": "fsw2ted2a8",
+        "steps_title": "Easy 3-Step Set-Up"
+      }
+    },
+    "product_adjust_seeting_PcLcUy": {
+      "type": "product-adjust-seeting",
+      "blocks": {
+        "icon_tEMKLg": {
+          "type": "icon",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/adjust_ang1.svg",
+            "icon_label": "Adjustable Angle"
+          }
+        },
+        "icon_aDqJ66": {
+          "type": "icon",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/spray_icon_b2115b7b-dc96-41ca-a671-cf9fc792d695.svg",
+            "icon_label": "3 Spray Settings"
+          }
+        },
+        "icon_UXFrbb": {
+          "type": "icon",
+          "settings": {
+            "icon_image": "shopify:\/\/shop_images\/shower_icon_63d033b6-5845-445d-80c4-005ce2a78ee2.svg",
+            "icon_label": "Fits 99% of Showers"
+          }
+        },
+        "tab_yzW4ha": {
+          "type": "tab",
+          "settings": {
+            "tab_name": "Rainfall",
+            "tab_image": "shopify:\/\/shop_images\/rainfall.webp"
+          }
+        },
+        "tab_7DmBwj": {
+          "type": "tab",
+          "settings": {
+            "tab_name": "Massage",
+            "tab_image": "shopify:\/\/shop_images\/massage.webp"
+          }
+        },
+        "tab_hHHeQK": {
+          "type": "tab",
+          "settings": {
+            "tab_name": "Power Spray",
+            "tab_image": "shopify:\/\/shop_images\/power_spray.webp"
+          }
+        }
+      },
+      "block_order": [
+        "icon_tEMKLg",
+        "icon_aDqJ66",
+        "icon_UXFrbb",
+        "tab_yzW4ha",
+        "tab_7DmBwj",
+        "tab_hHHeQK"
+      ],
+      "name": "Flow and Angle Section",
+      "settings": {
+        "heading": "Adjust the flow and angle",
+        "description": "Transform your shower with our rotatable filter and three customizable water flow settings, giving you the perfect angle and flow for every preference.",
+        "warranty_icon": "shopify:\/\/shop_images\/verfied_sheild.svg",
+        "warranty_text": "Covered by our <strong> Lifetime Warranty<\/strong>. <br>  Backed by our 30-Day Money-Back Guarantee.",
+        "flow_label": "Choose from three flow settings:"
+      }
+    },
+    "compare_nJWwdf": {
+      "type": "compare",
+      "blocks": {
+        "object_6bhAcx": {
+          "type": "object",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shwr.webp",
+            "heading": "Qure Shower Filter",
+            "mob_text": "",
+            "text": "",
+            "price": "",
+            "style": "correctCircle",
+            "list": "<ul><li>Reduces chlorine<\/li><li>Reduces calcium<\/li><li>Reduces magnesium<\/li><li>Three-Step Filtration<\/li><li>Lifetime warranty<\/li><li>Customizable Water Flow<\/li><li>Fits 99% of Showerheads<\/li><\/ul>"
+          }
+        },
+        "object_dTrqWV": {
+          "type": "object",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shower_img_blur.webp",
+            "heading": "Alternative Filters",
+            "mob_text": "",
+            "text": "",
+            "price": "",
+            "style": "incorrectCircle",
+            "list": "<ul><li>Reduces chlorine<\/li><li>Reduces calcium<\/li><li>Reduces magnesium<\/li><li>Standard filtration<\/li><li>Limited or no warranty<\/li><li>Non-Customizable Water Flow<\/li><li>Incompatible fits<\/li><\/ul><p><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "object_6bhAcx",
+        "object_dTrqWV"
+      ],
+      "name": "t:sections.compare.name",
+      "settings": {
+        "classname": "beauty_skincare section bg-white wrongcircle_first_tick",
+        "sub_head": "",
+        "heading": "Why choose Qure?",
+        "heading_reduced": "",
+        "text": "<p>Qure Shower Filter removes more contaminants than standard showerheads, and provides better water quality than alternative filters.<br\/><br\/><\/p>",
+        "text_reduced": "",
+        "design": false
+      }
+    },
+    "faq_zwFb4X": {
+      "type": "faq",
+      "blocks": {
+        "object_VPnjUU": {
+          "type": "object",
+          "settings": {
+            "heading": "How will the Qure Shower Filter benefit my hair\/skin?",
+            "text": "<p>The Qure Shower Filter removes harmful impurities like heavy metals, chlorine, and unwanted minerals from your water, helping to protect your skin and hair from damage caused by hard water.<\/p><p>By filtering out water impurities, the Qure Shower Filter helps reduce dryness, irritation, and brittleness, leaving your skin hydrated and your hair smoother and more manageable.<\/p>",
+            "code": ""
+          }
+        },
+        "object_aGjV7K": {
+          "type": "object",
+          "settings": {
+            "heading": "Is it compatible with all showerheads?",
+            "text": "<p>The Qure Shower Filter fits most standard showerheads, but we recommend checking your showerhead's specifications to ensure compatibility.<br\/><br\/><\/p>",
+            "code": ""
+          }
+        },
+        "object_WEHPg7": {
+          "type": "object",
+          "settings": {
+            "heading": "Does it affect water pressure?",
+            "text": "<p>The Qure Shower Filter is designed to maintain water pressure while effectively filtering impurities. You’ll enjoy clean water without compromising your shower experience.<br\/><br\/><\/p>",
+            "code": ""
+          }
+        },
+        "object_kPg9bD": {
+          "type": "object",
+          "settings": {
+            "heading": "Do I need to change\/replace the filter?",
+            "text": "<p>The Qure Shower Filter lasts approximately 3 months, depending on your water quality and usage. We recommend replacing it after 3 months for optimal performance.<br\/><br\/><\/p>",
+            "code": ""
+          }
+        },
+        "object_WfDa4V": {
+          "type": "object",
+          "settings": {
+            "heading": "How easy is it to install?",
+            "text": "<p>Yes, the Qure Shower Filter is designed for easy, tool-free installation. It fits most standard showerheads, so you can quickly start enjoying clean, filtered water.<br\/><br\/><\/p>",
+            "code": ""
+          }
+        },
+        "object_FjYejK": {
+          "type": "object",
+          "settings": {
+            "heading": "Why should I subscribe?",
+            "text": "<p>Regularly replacing your Qure Shower Filter ensures it continues to effectively remove chlorine, heavy metals, and impurities from your water. Over time, the filtration media becomes saturated, reducing its ability to provide clean, skin-friendly water.<\/p><p>By subscribing, you prevent buildup of contaminants that can diminish the filter’s effectiveness, and consistently reduce exposure to harmful chemicals that cause hair and skin irritation and dryness.<\/p>",
+            "code": ""
+          }
+        },
+        "dont_see_question_G7ic6F": {
+          "type": "dont_see_question",
+          "settings": {
+            "dont_see_text": "Don’t see your question?",
+            "ask_us_btn": "Ask us",
+            "ask_us_url": "",
+            "arrow_img": "shopify:\/\/shop_images\/arrow_right_sf.svg"
+          }
+        }
+      },
+      "block_order": [
+        "object_VPnjUU",
+        "object_aGjV7K",
+        "object_WEHPg7",
+        "object_kPg9bD",
+        "object_WfDa4V",
+        "object_FjYejK",
+        "dont_see_question_G7ic6F"
+      ],
+      "name": "t:sections.faq.name",
+      "settings": {
+        "background": "bg-lightGrey",
+        "classname": "bg-lightGrey",
+        "heading": "The answers to your questions",
+        "text": "",
+        "button_label": "Show More Questions",
+        "button_hide_label": "Hide More Questions"
+      }
+    },
     "second": {
       "type": "temp-product-shower-filter",
       "settings": {}
@@ -607,6 +855,10 @@
     "three_step_WG8iMm",
     "text_with_video_GhpDnG",
     "why_it_works_Vz7ain",
+    "adjust_angle_mob_VptmPM",
+    "product_adjust_seeting_PcLcUy",
+    "compare_nJWwdf",
+    "faq_zwFb4X",
     "second"
   ]
 }
