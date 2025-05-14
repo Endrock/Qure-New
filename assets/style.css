@@ -32565,10 +32565,31 @@ body.page\.led-mask-offer-2 .bs_content .price__label{
     width: 100px;
     border-radius: 666px;
 }
-
+.shwr_reviews h2.title-lg {
+    padding-bottom: 0 !important;
+}
+main.shower_filter .trusted_bl.trustedVerified .trusted_verified {
+    display: flex;
+    height: 44px;
+}
 
 
 @media(max-width:767px){
+    .why_it_works .faq.accordions_shower_filter{
+        padding: 0 !important;
+    }
+    .shower_filter_ctm_cls .ingredients_content .row .col-md-4:nth-child(3) {
+    order: -1;
+}
+.shower_filter_ctm_cls .ingredients_content .row .col-md-4:nth-child(1) {
+    order: 3;
+}
+    .shower_filter_ctm_cls .section_header {
+    text-align: center;
+}
+    main.shower_filter .refill_bl .col-md-6 {
+    padding: 0 0;
+}
     .shwr_dr_ctm .section-description {
         text-align: center;
     }

@@ -7,6 +7,9 @@
                     {{ section.settings.heading }}
                 </h2>
             {% endif %}
+            {% if section.settings.des != blank %}
+                    {{ section.settings.des }}
+            {% endif %}
             {% if section.settings.heading_reduced != blank %}
                 <h2 class="title-lg paddingB reduced-copy">
                     {{ section.settings.heading_reduced }}
@@ -65,7 +68,7 @@
                                                 <div class="read-more-content2">
                                                     <p class="nomargin">{{ block.settings.see-more }}</p>
                                                 </div>
-                                                <a href="javascript:void(0);" class="read-more2 text-black" title="Read More">See
+                                                <a href="javascript:void(0);" class="read-more text-black" title="Read More">See
                                                 More</a>
                                                 {% endif %}
                                             </div>
@@ -116,6 +119,16 @@
 }
 {% endstyle %}
 
+    <script>
+        $('.read-more').click(function () {
+            $(this).prev().slideToggle();
+            if (($(this).text()) == "See Less") {
+                $(this).text("See More");
+            } else {
+                $(this).text("See Less");
+            }
+        });
+    </script>
 
 {% schema %}
     {
@@ -132,6 +145,11 @@
                 "type": "text",
                 "id": "heading",
                 "label": "t:common.heading.label"
+            },
+            {
+                "type": "richtext",
+                "id": "des",
+                "label": "t:common.description.label"
             },
             {
                 "type": "text",
