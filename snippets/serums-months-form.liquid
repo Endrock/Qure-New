@@ -404,7 +404,9 @@
         document.addEventListener("DOMContentLoaded", () => {
     
             selectProduct('{{ section_id }}_');
-            reserveProduct('{{ section_id }}');
+            {% if out_of_stock_count > 0%}
+                reserveProduct('{{ section_id }}');
+            {% endif %}
             updateButtonText('{{ section_id }}');
 
             /*

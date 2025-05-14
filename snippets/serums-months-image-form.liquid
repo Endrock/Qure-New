@@ -2,6 +2,15 @@
     <p>Please provide section_id property to use this snippet</p>
 {% else %}
 
+    {%- assign out_of_stock_count = 0 -%}
+
+    {%- for block in section.blocks -%}
+        {%- case block.type -%}
+            {%- when 'out_of_stock' -%}
+                {%- assign out_of_stock_count = out_of_stock_count | plus: 1 -%}
+        {%- endcase -%}
+    {%- endfor -%}
+
     <div class="available_bar">
         <p>AVAILABLE UNTIL STOCK LASTS</p>
     </div>
@@ -322,7 +331,9 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             selectProduct('{{ section_id }}_');
-            reserveProduct('{{ section_id }}');
+            {% if out_of_stock_count > 0%}
+                reserveProduct('{{ section_id }}');
+            {% endif %}
             updateButtonText('{{ section_id }}');
 
             /*
