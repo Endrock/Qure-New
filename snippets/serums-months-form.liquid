@@ -87,7 +87,7 @@
                             <p class="pb-3">Choose supply:</p>
                             <div class="step_content">
                                 <div class="step_conten_blocks">
-                                    <div class="planBlock {{ section_id }}_productPeriodObject">
+                                    <div class="planBlock ignore {{ section_id }}_productPeriodObject">
                                         <div class="plan_choosed">
                                             <span>Over 5,000 people chose this supply</span>
                                         </div>
@@ -136,7 +136,7 @@
                                     </div> 
                                     {% endcomment %}
 
-                                    <div class="planBlock {{ section_id }}_productPeriodObject">
+                                    <div class="planBlock ignore {{ section_id }}_productPeriodObject">
                                         {% assign product = all_products['micro-infusion-1-month-bundle-2x-beta-glucan-serum'] %}
                                         {% assign divided_price = product.price | divided_by: 4 %}
                                         <input type="radio" name="mBanner_monthlyPlan" id="mBanner_1_month" data-product-period="1">
