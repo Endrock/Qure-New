@@ -6,7 +6,7 @@
         "rating_KDB67x": {
           "type": "rating",
           "settings": {
-            "image": "shopify:\/\/shop_images\/star-half_fill.svg",
+            "image": "shopify:\/\/shop_images\/star-full.svg",
             "text": "<p>Recommended by 99% of customers<\/p>"
           }
         },
@@ -39,9 +39,9 @@
             "heading": "White",
             "image": "shopify:\/\/shop_images\/filter-white.webp",
             "variant_id": 45909763522799,
-            "main": false,
+            "main": true,
             "reserve": false,
-            "soldout": true
+            "soldout": false
           }
         },
         "variant_7nqQxD": {
@@ -50,7 +50,7 @@
             "heading": "Black",
             "image": "shopify:\/\/shop_images\/filter_black.webp",
             "variant_id": 45909763490031,
-            "main": true,
+            "main": false,
             "reserve": false,
             "soldout": false
           }
@@ -103,7 +103,7 @@
       ],
       "settings": {
         "seo_heading": "SHOWER FILTER",
-        "heading": "Save Your Hair & Skin from Dryness and Irritation",
+        "heading": "Save Your Hair and  Skin from Dryness  and Irritation",
         "heading_mobile": "Save Your Hair & Skin from Dryness and Irritation",
         "one_time_purchase": "Showerhead + 1 Filter",
         "product": "",
@@ -243,8 +243,10 @@
         "heading": "Meet Qure Shower Filter",
         "description": "At Qure, we believe great skin starts at the source – and that’s the water you use every day. The Qure Shower Filter helps remove sneaky chemicals and minerals that live in your water and linger on your skin.",
         "button_text": "Buy Now",
-        "button_link": "",
+        "button_link": "#productSubscription",
+        "shipping_icon": "shopify:\/\/shop_images\/faq-shipping.svg",
         "shipping_text": "Free Shipping Orders Over $100",
+        "pay_later_icon": "shopify:\/\/shop_images\/buy_now_pay_later.svg",
         "pay_later_text": "Buy Now, Pay Later"
       }
     },
@@ -380,7 +382,7 @@
             "button_link": "#productSubscription",
             "button_text": "Buy Now",
             "shipping_icon": "shopify:\/\/shop_images\/free-shipping-ftr.svg",
-            "shipping_text_desktop": "Free Shipping Orders Over $100",
+            "shipping_text_desktop": "Free Shipping <br> Orders Over $100",
             "shipping_text_mobile": "Free Shipping Orders Over $100",
             "payment_icon": "shopify:\/\/shop_images\/buy_now_pay_later.svg",
             "payment_text_desktop": "Buy Now,  Pay Later",
@@ -451,8 +453,9 @@
       ],
       "name": "t:sections.results.name",
       "settings": {
-        "classname": "mi_landing_result",
-        "heading": "Results you‘ll see with your own eyes",
+        "classname": "mi_landing_result shwr_reviews",
+        "heading": "The Results",
+        "des": "<p>See the power of Qure filter technology, now available for your shower too.<\/p>",
         "heading_reduced": "",
         "text_verified_customer": "Verified customer",
         "text_reviewed": "Reviewed in"
