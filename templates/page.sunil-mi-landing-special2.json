@@ -1401,7 +1401,10 @@
         "code": "{% render 'serums-months-image-form-6-month' with section_id: section.id %}",
         "popup_micro_infusion_enabled": true,
         "payment_icons": "shopify://shop_images/logos_full_qure_0d060a66-5fb6-4e6c-a740-55552a43bb10.png",
-        "payment_icons_today_only": "shopify://shop_images/payments_today.png"
+        "payment_icons_today_only": "shopify://shop_images/payments_today.png",
+        "product_1": "micro-infusion-6-month-bundle-for-wrinkles",
+        "product_2": "micro-infusion-3-month-bundle-6x-beta-glucan-serum",
+        "product_3": "micro-infusion-1-month-bundle-2x-beta-glucan-serum"
       }
     },
     "compare_box_p4B7wy": {
