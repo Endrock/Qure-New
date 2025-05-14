@@ -3,7 +3,6 @@
  * START - PDM UPGRADE POPUP LOGIC - FACE SERUM
  * ============================================
  */
-
 /**
  * Opens the upgrade popup when a specific plan label is clicked.
  *
@@ -11,9 +10,34 @@
  * @param {HTMLElement} overlay - The popup overlay element.
  * @param {HTMLElement} popup - The popup container element.
  */
+
+let pdmSelectedVariantId = null;
+
+/**
+ * Add the saved variant to the cart and close the popup.
+ */
+function handleDeclineOrClose(popup, overlay) {
+  if (pdmSelectedVariantId) {
+    const ajaxLink = document.createElement("a");
+    ajaxLink.href = `/cart/add?id=${pdmSelectedVariantId}&quantity=1`;
+    ajaxLink.setAttribute("data-ajax-cart-request-button", "");
+    ajaxLink.style.display = "none";
+    document.body.appendChild(ajaxLink);
+    ajaxLink.click();
+    setTimeout(() => ajaxLink.remove(), 500);
+  } else {
+    console.warn("No variantId found to add to cart");
+  }
+  popup.classList.add("hidden");
+  overlay.classList.add("hidden");
+}
+
    function openPopUpPromotion(selector, overlay, popup) {
     if (selector && popup && overlay) { 
       selector.addEventListener("click", function () {
+        // We capture the variantId of the clicked plan
+        pdmSelectedVariantId = this.closest(".planBlockTop").dataset.variantid;
+        // Show pop up
         popup.classList.remove("hidden");
         overlay.classList.remove("hidden");
       });
@@ -43,20 +67,17 @@
   
     // Close popup when clicking outside the popup (overlay)
     overlay?.addEventListener("click", function () {
-      popup.classList.add("hidden");
-      overlay.classList.add("hidden");
+      handleDeclineOrClose(popup, overlay);
     });
   
     // Close popup when clicking "No thanks" button
     decline?.addEventListener("click", function () {
-      popup.classList.add("hidden");
-      overlay.classList.add("hidden");
+      handleDeclineOrClose(popup, overlay);
     });
 
     // Close popup when clicking the "X" (close button)
     closeBtn?.addEventListener("click", function () {
-      popup?.classList.add("hidden");
-      overlay?.classList.add("hidden");
+      handleDeclineOrClose(popup, overlay);
     });
   });
 
