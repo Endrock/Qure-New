@@ -85,6 +85,16 @@
             "link_url": "#bf-bundles"
           }
         },
+        "product_XP469M": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "heading": "Exclusive Memorial Day Bundle",
+            "discount": 72,
+            "image": "shopify://shop_images/Memorial_day_bundle_slider_image.png",
+            "product_url": "#memorial-day-bundle"
+          }
+        },
         "product_L8TbkG": {
           "type": "product",
           "disabled": true,
@@ -211,6 +221,7 @@
       "block_order": [
         "badge_bNNHbU",
         "link_Xz3LeQ",
+        "product_XP469M",
         "product_L8TbkG",
         "product_YzAr6q",
         "product_iEprpi",
