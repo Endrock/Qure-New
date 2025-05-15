@@ -47,9 +47,29 @@
         "heading": "Contact Us",
         "text": "<h5>We are here to help</h5>"
       }
+    },
+    "17473185189d2351c1": {
+      "type": "apps",
+      "blocks": {
+        "bookx_app_blocks_7ahWyt": {
+          "type": "shopify://apps/bookx/blocks/app-blocks/865cd10f-9515-4d8b-8e41-efece9c83f71",
+          "settings": {
+            "bookeasy-app-id": "htGfwdi1vmeEiPRv6XLQuo",
+            "bookeasy-app-title": "Book a Consultation",
+            "bookeasy-app-subtitle": "",
+            "bookeasy-app-description": "Have an issue with your order or product? Easily schedule your treatment at your convenience. Choose your preferred service, date, and time—all in just a few clicks. Secure your spot today with our customer care team at a time that works for you—we’ll make sure your concerns are resolved quickly and smoothly.",
+            "bookeasy-app-alignment": "flex-start"
+          }
+        }
+      },
+      "block_order": [
+        "bookx_app_blocks_7ahWyt"
+      ],
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "main",
+    "17473185189d2351c1"
   ]
 }
