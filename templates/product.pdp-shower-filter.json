@@ -39,9 +39,9 @@
             "heading": "White",
             "image": "shopify:\/\/shop_images\/filter-white.webp",
             "variant_id": 45909763522799,
-            "main": true,
+            "main": false,
             "reserve": false,
-            "soldout": false
+            "soldout": true
           }
         },
         "variant_7nqQxD": {
@@ -50,7 +50,7 @@
             "heading": "Black",
             "image": "shopify:\/\/shop_images\/filter_black.webp",
             "variant_id": 45909763490031,
-            "main": false,
+            "main": true,
             "reserve": false,
             "soldout": false
           }
