@@ -34,17 +34,18 @@
         },
         "out_of_stock_3xp9iR": {
           "type": "out_of_stock",
+          "disabled": true,
           "settings": {
-            "heading": "Next batch ships early May 2025:",
-            "heading_mobile": "Next batch ships early May 2025:",
+            "heading": "Next batch ships early June 2025:",
+            "heading_mobile": "Next batch ships early June 2025:",
             "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.</p>",
             "first_option_date": "April 14th",
             "first_option_text": "SOLD OUT",
             "first_option_percent": 100,
-            "second_option_date": "May 6th",
+            "second_option_date": "June 10th",
             "second_option_text": "54% Reserved",
             "second_option_percent": 54,
-            "third_option_date": "June 2025",
+            "third_option_date": "July 2025",
             "third_option_text": "In Production",
             "third_option_percent": 0
           }
@@ -162,6 +163,12 @@
             "text": "\"Few beauty trends are actually worth adopting, but Qure’s take on at-home micro-infusion is a viral skin trend with merit.\""
           }
         },
+        "text_YmXCPg": {
+          "type": "text",
+          "settings": {
+            "text": "A true microneedling treatment - creating microchannels that increase collagen and elastin production and product absorption."
+          }
+        },
         "text_dHpn33": {
           "type": "text",
           "settings": {
@@ -174,6 +181,12 @@
             "image": "shopify://shop_images/forbes.svg"
           }
         },
+        "image_b8kTBX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/bazaar_h.svg"
+          }
+        },
         "image_zXYJ3q": {
           "type": "image",
           "settings": {
@@ -183,8 +196,10 @@
       },
       "block_order": [
         "text_cYhaYn",
+        "text_YmXCPg",
         "text_dHpn33",
         "image_FpcTmy",
+        "image_b8kTBX",
         "image_zXYJ3q"
       ],
       "settings": {
@@ -259,7 +274,19 @@
             "ctm_cls": "",
             "heading_first": "",
             "text": "<p>Its tiny, almost painless, 24K gold plated 0.5mm microneedles penetrate <strong>beyond the skin’s surface</strong> to gently create controlled trauma in your skin which help boost the feel of <strong>firmness, smooth texture and reduce the look of fine lines and wrinkles.</strong><br/><br/>The invisible micro-channels then <strong>infuse science-backed serums</strong> into your skin that are tailored to treat your specific skin concerns, increasing absorption and <strong>delivering powerful active ingredients EXACTLY where they’re needed!</strong></p>",
+            "txt_order_mob": false,
+            "percent_bar_1": 70,
+            "agreed_text_1": "",
+            "percent_bar_2": 70,
+            "agreed_text_2": "",
+            "percent_bar_3": 70,
+            "agreed_text_3": "",
+            "percent_bar_4": 70,
+            "agreed_text_4": "",
+            "ctm_cls_btn": "",
             "btn_text": "Shop Now",
+            "btn_font_size_desktop": "22px",
+            "btn_font_size_mobile": "20px",
             "btn_url": "",
             "custom_class": "",
             "heading2": "",
@@ -1163,6 +1190,9 @@
       "type": "line",
       "settings": {
         "heading": "INCLUDED IN THE SYSTEM:",
+        "font_weight": "700",
+        "font_size_desktop": "13px",
+        "font_size_mobile": "12px",
         "classname": "bg-black text-white"
       }
     },

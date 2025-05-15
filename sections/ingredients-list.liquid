@@ -69,7 +69,7 @@
         </div>
       {% endif %}
 
-      <div class="row gy-3">
+      <div class="row gy-3 gy-5">
         {% for block in section.blocks %}
           {% case block.type %}
             {% when 'column' %}
@@ -88,6 +88,29 @@
                       <p class="pb-3">{{ block.settings['i-text'] }}</p>
                     {% endif %}
                   </div>
+
+                    <div class="supply_icons d-flex flex-wrap gap-2 mt-3">
+                      {% if block.settings.text_1 !=blank%}
+                        <div class="ninety_easy_icons">
+                          <img src="{{ block.settings.icon_1 | image_url: width: 30 }}" alt="">
+                          <span>{{ block.settings.text_1 }}</span>
+                        </div>
+                      {% endif %}
+                      {% if block.settings.text_2 !=blank%}
+                        <div class="ninety_easy_icons">
+                          <img src="{{ block.settings.icon_2 | image_url: width: 30 }}" alt="">
+                          <span>{{ block.settings.text_2 }}</span>
+                        </div>
+                      {% endif %}
+                      {% if block.settings.text_3 !=blank%}
+                        <div class="ninety_easy_icons">
+                          <img src="{{ block.settings.icon_3 | image_url: width: 30 }}" alt="">
+                          <span>{{ block.settings.text_3 }}</span>
+                        </div>
+                      {% endif %}
+                    </div>
+
+
                   {% if block.settings.img_id_ingr != blank %}
                     <div class="ing_image">
                       <img
@@ -99,9 +122,53 @@
                   {% endif %}
                 </div>
               </div>
+
+
+
+
+
+
+  {% when 'Button_shipping_icons' %}
+  <div class="ctm_cls_filter_wat mw-402 mx-auto mt-5 d-md-block d-none">
+    <div class="shwr_fil_wat">
+      <a class="btn btn-lg btn-primary with_subscription buy_btn mt-4" href="{{ block.settings.button_link }}">
+        {{ block.settings.button_text }}
+      </a>
+    </div>
+
+    <div class="bg-transparent ctm_cls_shipping d-flex mw-359 px-md-4 mx-auto pt-3 shipping shipping_bg">
+      <div class="s_bx">
+        {% if block.settings.shipping_icon %}
+          <img src="{{ block.settings.shipping_icon | image_url: width: 40 }}" alt="Shipping Icon">
+        {% endif %}
+        <p class="d-none d-md-block">{{ block.settings.shipping_text_desktop }}</p>
+        <p class="d-md-none">{{ block.settings.shipping_text_mobile }}</p>
+      </div>
+      <div class="s_bx">
+        {% if block.settings.payment_icon %}
+          <img src="{{ block.settings.payment_icon | image_url: width: 40 }}" alt="Payment Icon">
+        {% endif %}
+        <p class="d-none d-md-block">{{ block.settings.payment_text_desktop }}</p>
+        <p class="d-md-none">{{ block.settings.payment_text_mobile }}</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
           {% endcase %}
         {% endfor %}
       </div>
+
+
+
 
       {% assign has_iconz = false %}
       {%- for block in section.blocks -%}
@@ -230,6 +297,39 @@
         },
         {
           "type": "image_picker",
+          "id": "icon_1",
+          "label": "Icon1"
+        },
+        {
+          "type": "text",
+          "id": "text_1",
+          "label": "Label",
+          "default": "Dries Out Skin"
+        },
+            {
+          "type": "image_picker",
+          "id": "icon_2",
+          "label": "Icon 2"
+        },
+        {
+          "type": "text",
+          "id": "text_2",
+          "label": "Label",
+          "default": "Clogs Pores"
+        },
+            {
+          "type": "image_picker",
+          "id": "icon_3",
+          "label": "Icon3"
+        },
+        {
+          "type": "text",
+          "id": "text_3",
+          "label": "Label",
+          "default": "Makes Hair Dull & Brittle"
+        },
+        {
+          "type": "image_picker",
           "id": "img_id_ingr",
           "label": "t:common.image.label"
         },
@@ -265,6 +365,7 @@
         }
       ]
     },
+    
     {
       "type": "heading",
       "name": "t:common.heading.label",
@@ -277,6 +378,58 @@
         }
       ]
     },
+    {
+  "type": "Button_shipping_icons",
+  "name": "Buy Button + Icons",
+  "settings": [
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Buy Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Buy Button Text",
+      "default": "Buy Now"
+    },
+    {
+      "type": "image_picker",
+      "id": "shipping_icon",
+      "label": "Shipping Icon"
+    },
+    {
+      "type": "text",
+      "id": "shipping_text_desktop",
+      "label": "Shipping Text (Desktop)",
+      "default": "Free Shipping <br>Orders Over $100"
+    },
+    {
+      "type": "text",
+      "id": "shipping_text_mobile",
+      "label": "Shipping Text (Mobile)",
+      "default": "Free Shipping <br>Orders Over $100"
+    },
+    {
+      "type": "image_picker",
+      "id": "payment_icon",
+      "label": "Buy Now Pay Later Icon"
+    },
+    {
+      "type": "text",
+      "id": "payment_text_desktop",
+      "label": "Payment Text (Desktop)",
+      "default": "Buy Now, <br> Pay Later"
+    },
+    {
+      "type": "text",
+      "id": "payment_text_mobile",
+      "label": "Payment Text (Mobile)",
+      "default": "Dermatologist <br>Reviewed"
+    }
+  ]
+},
+
     {
       "type": "skin_image",
       "name": "t:common.image.label",

@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "main": {
       "type": "product-extended-new",
@@ -33,7 +33,7 @@
             "variant_id": 45852978348271,
             "main": false,
             "reserve": false,
-            "soldout": false
+            "soldout": true
           }
         },
         "variant_8RVKyP": {
@@ -42,7 +42,7 @@
             "heading": "Black",
             "image": "shopify://shop_images/water-fIlter-black.webp",
             "variant_id": 45852978315503,
-            "main": false,
+            "main": true,
             "reserve": false,
             "soldout": false
           }
@@ -97,12 +97,14 @@
         "heading": "Get clearer skin, on tap, with Qure Faucet Filter",
         "heading_mobile": "Get clearer skin, on tap, with Qure Faucet Filter",
         "one_time_purchase": "Faucet + 1 Filter",
+        "product": "",
         "wistia_id": "tev066z6pv",
         "product_images_limit": 6,
         "product_button_label": "Product",
         "before_after_images_limit": 2,
         "before_after_button_label": "Before & After",
         "reserve": false,
+        "soldout": false,
         "underbutton_text_left": "Dermatologist Reviewed",
         "underbutton_text_right": "Free Shipping Over $100",
         "selected_design": "new",
@@ -114,10 +116,41 @@
     "second": {
       "type": "temp-product-faucet-filter",
       "settings": {}
+    },
+    "heading_bHegtb": {
+      "type": "heading",
+      "name": "t:sections.heading.name",
+      "settings": {
+        "heading": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>",
+        "heading_mobile": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>"
+      }
+    },
+    "1747026074e07e7a91": {
+      "type": "apps",
+      "blocks": {
+        "stamped_reviews_main_widget_3pR7pa": {
+          "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true,
+            "use_metafields": false,
+            "sku_tagtype": "sku"
+          }
+        }
+      },
+      "block_order": [
+        "stamped_reviews_main_widget_3pR7pa"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "main",
-    "second"
+    "second",
+    "heading_bHegtb",
+    "1747026074e07e7a91"
   ]
 }

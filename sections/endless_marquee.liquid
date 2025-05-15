@@ -1,0 +1,58 @@
+<div class="endless_marquee bg-lightGrey mt-4">
+    <div class="container">
+      <div class="featured_in">
+        <h5>{{ section.settings.title }}</h5>
+      </div>
+      <div class="marquee-row mw-860">
+        <div class="marquee-block marquee1">
+          <ul class="marquee-item-list">
+            {% for block in section.blocks %}
+              <li>
+                <img src="{{ block.settings.logo | image_url }}" alt="Featured logo">
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  {% schema %}
+  {
+    "name": "Endless Marquee",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "FEATURED IN"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "logo",
+        "name": "Logo",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Logo Image"
+          }
+        ]
+      }
+    ],
+    "max_blocks": 10,
+    "presets": [
+      {
+        "name": "Endless Marquee",
+        "category": "Custom",
+        "blocks": [
+          { "type": "logo" },
+          { "type": "logo" },
+          { "type": "logo" }
+        ]
+      }
+    ]
+  }
+  {% endschema %}
+  

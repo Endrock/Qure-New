@@ -214,7 +214,7 @@ window.addEventListener('load', function () {
 // =================================== js for same height ===============================
 $(function () {
     //setTimeout(function () {
-    $('.q_uses_header, .dfrc__hdr, .s_name, .result_item, .serum_bx, .bs_content, .skin_item, .safety_content, .mc_desc, .blog_wrap, .see_item img, .menu li a, .return_step1, .result_tabs .rt_wrap_header .nav-link').matchHeight({
+    $('.q_uses_header, .dfrc__hdr, .s_name, .serum_bx, .bs_content, .skin_item, .safety_content, .mc_desc, .blog_wrap, .see_item img, .menu li a, .return_step1, .result_tabs .rt_wrap_header .nav-link').matchHeight({
         property: 'height',
         target: null,
         remove: false
@@ -704,12 +704,17 @@ addEventListener("resize", (event) => {
 
 // === sticky button ===
 $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-        $('.button_sticky_wrapper').addClass("sticky");
+  if ($(this).scrollTop() > 100) {
+    $('.button_sticky_wrapper').addClass("sticky");
+    if (window.innerWidth <= 767) { // Check if it's mobile
+      $('.richpanel-micro .rp-micro-app-dummy-icon-container').css('bottom', '130px');
     }
-    else {
-        $('.button_sticky_wrapper').removeClass("sticky");
+  } else {
+    $('.button_sticky_wrapper').removeClass("sticky");
+    if (window.innerWidth <= 767) { // Check if it's mobile
+      $('.richpanel-micro .rp-micro-app-dummy-icon-container').css('bottom', '');
     }
+  }
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -946,6 +951,7 @@ var swiper = new Swiper(".howUSe_slider", {
 *js only for micro-infusion pdp start
 */
 $('.monthly_plans').click(function () {
+    if ($(this).hasClass('ignore')) return;
     var savedTxt = $(this).find('.saved_price').html();
     if (savedTxt !== undefined) {
         if (document.body.hasAttribute('data-contrast-horizontal-layout')) {
@@ -998,6 +1004,7 @@ $(document).ready(function () {
     $('.tab_content').hide(); // Hide all tab contents initially
     $('.tab_content').eq(0).show(); // Show the second tab content by default
     $('.step_conten_blocks .planBlock').click(function () {
+        if ($(this).hasClass('ignore')) return;
         var regular_price = $(this).find(".regular_price").text();
         var sale_price = $(this).find(".sale_price:visible").text().trim();
         console.log(regular_price);
@@ -1220,6 +1227,8 @@ function myFunction() {
 /*
 * countdown js start
 */
+
+/*
 // ============== countdown JS ============
 function createCountdownTimer(targetDate, targetElement) {
     // Update the countdown every 1 second
@@ -1258,6 +1267,8 @@ countdownSections.forEach((section) => {
     const targetElement = section.querySelector(".countdown_block");
     createCountdownTimer(targetDate, targetElement);
 });
+*/
+
 /*
 * countdown js end
 */
@@ -1775,4 +1786,30 @@ document.querySelectorAll('.ctm_swiper_main_images').forEach((mainEl) => {
   });
   
 
+
+// best swiper ever end 
+// show more and show less in dermal mist   
+
+const seeMoreBtn = document.getElementById('seeMoreBtn');
+
+seeMoreBtn.addEventListener('click', function() {
+  const hiddenItems = document.querySelectorAll('#featuresList li:nth-child(4), #featuresList li:nth-child(5)');
+  const isExpanded = this.getAttribute('data-expanded') === 'true';
+
+  if (isExpanded) {
+    // If expanded, hide the extra items
+    hiddenItems.forEach(function(item) {
+      item.classList.add('hidden-li');
+    });
+    this.textContent = 'See More';
+    this.setAttribute('data-expanded', 'false');
+  } else {
+    // If collapsed, show the extra items
+    hiddenItems.forEach(function(item) {
+      item.classList.remove('hidden-li');
+    });
+    this.textContent = 'See Less';
+    this.setAttribute('data-expanded', 'true');
+  }
+});
 

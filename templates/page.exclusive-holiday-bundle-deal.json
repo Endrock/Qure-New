@@ -16,7 +16,7 @@
           "type": "announcement",
           "settings": {
             "heading": "Limited Time Only:",
-            "timer": "2025-04-21T23:59:59",
+            "timer": "2025-05-10T23:59:59",
             "timer_next": 7
           }
         },
@@ -100,7 +100,7 @@
           "settings": {
             "heading": "Line Refine Bundle Pro",
             "discount": 47,
-            "image": "shopify://shop_images/Line_Refine_Bundle_Pro_NEWslider.png",
+            "image": "shopify://shop_images/Line_Refine_Bundle_Pro_NEW_435b372c-1be4-4caa-84e3-ab3b83de5070.png",
             "product_url": "#line-refine-bundle-pro"
           }
         },
@@ -109,7 +109,7 @@
           "settings": {
             "heading": "Line Refine Bundle Advanced",
             "discount": 55,
-            "image": "shopify://shop_images/Line_Refine_Bundle_Advanced_NEW_slider_191680ce-254a-45e0-a8fb-25a94f523af6.png",
+            "image": "shopify://shop_images/Line_Refine_Bundle_Advanced_NEW_f0456c17-9f28-4278-8f42-8dbe29aad28b.png",
             "product_url": "#line-refine-bundle-advanced-1"
           }
         },
@@ -124,6 +124,7 @@
         },
         "product_exRwKt": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "heading": "Fade & Firm Bundle Pro",
             "discount": 55,
@@ -161,6 +162,7 @@
         },
         "product_VXCeRt": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "heading": "Filter Family Bundle",
             "discount": 52,
@@ -188,6 +190,7 @@
         },
         "product_MxRW8i": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "heading": "Breakout Control Starter",
             "discount": 52,
@@ -645,11 +648,11 @@
         "include_tCtYLH": {
           "type": "include",
           "settings": {
-            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles + Dark Spots) ",
+            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles) ",
             "is_limited": false,
             "type": "",
-            "image": "shopify://shop_images/bfs_3-serum.webp",
-            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p><h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
+            "image": "shopify://shop_images/bfs_blue-serum_ca9c2e68-113a-475e-8d4b-2ad73f5e8a5e.webp",
+            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p>",
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -701,11 +704,11 @@
         "include_6xfjCG": {
           "type": "include",
           "settings": {
-            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles + Dark Spots) ",
+            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles) ",
             "is_limited": false,
             "type": "",
-            "image": "shopify://shop_images/bfs_3-serum.webp",
-            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p><h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
+            "image": "shopify://shop_images/bfs_blue-serum_ca9c2e68-113a-475e-8d4b-2ad73f5e8a5e.webp",
+            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p>",
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -723,7 +726,7 @@
             "count": "23 left",
             "hide": false,
             "hide_variants": false,
-            "code": ""
+            "code": "<div class=\"bfs_tbx_color\">\n    <select class=\"form-select colorSelector\" aria-label=\"Default select example\">\n        <option value=\"1\" data-soldout=\"true\" data-goto=\"2\">White</option>\n        <option value=\"2\">Black</option>\n    </select>\n</div>"
           }
         },
         "how_to_use_wHCyJt": {
@@ -1356,7 +1359,7 @@
             "count": "23 left",
             "hide": false,
             "hide_variants": false,
-            "code": "<div class=\"bfs_tbx_color\">\n    <select class=\"form-select colorSelector\" aria-label=\"Default select example\">\n        <option value=\"1\" selected=\"\">White</option>\n        <option value=\"2\">Black</option>\n    </select>\n</div>"
+            "code": "<div class=\"bfs_tbx_color\">\n    <select class=\"form-select colorSelector\" aria-label=\"Default select example\">\n        <option value=\"1\" data-soldout=\"true\" data-goto=\"2\">White</option>\n        <option value=\"2\">Black</option>\n    </select>\n</div>"
           }
         },
         "include_e4Mq9A": {
@@ -1458,10 +1461,12 @@
         },
         "bundle_3RY7qF": {
           "type": "bundle",
+          "disabled": true,
           "settings": {}
         },
         "product_qM8ypV": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "breakout-control-starter",
             "percent": 28,
@@ -1479,6 +1484,7 @@
         },
         "include_hxkWTR": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Faucet Filter",
             "is_limited": false,
@@ -1493,6 +1499,7 @@
         },
         "include_nwb4HD": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Shower Filter",
             "is_limited": false,
@@ -1507,6 +1514,7 @@
         },
         "how_to_use_8WVeGb": {
           "type": "how-to-use",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_faucet_filter.svg",
             "text": "<h5>Faucet Filter</h5><ul><li>Install the Qure Faucet Filter on your faucet.</li><li>Replace filter every 3 months (purchase replacement via our website).</li></ul>"
@@ -1514,6 +1522,7 @@
         },
         "how_to_use_DiytkL": {
           "type": "how-to-use",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_shower_f_sm.svg",
             "text": "<h5>Shower Filter</h5><ul><li>Remove your original shower head and screw on the Qure Shower Filter</li><li>Replace filter every 3 months (purchase replacement via our website).</li></ul>"
@@ -1547,7 +1556,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs-derma-mist.webp",
             "text": "<h5>Dermal Mist</h5><p>Dermatologically Tested, Clinically Tested, Hypoallergenic, Suitable for sensitive skin, Dermatologist approved, Allergy Tested, Non-Irritating.</p><h5>Dermal Mist Ingredients</h5><p>WATER (Aqua)*, CHRYSANTHELLUM INDICUM FLOWER WATER, SODIUM CHLORIDE, SODIUM PHOSPHATE, DISODIUM PHOSPHATE, HYPOCHLOROUS ACID. *Ultra Pure Water.</p>",
-            "count": "Ships Mid April",
+            "count": "",
             "hide": false,
             "hide_variants": false,
             "code": ""

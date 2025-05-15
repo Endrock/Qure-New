@@ -71,7 +71,7 @@
                     {% if rating_count %}
                         {%- for block in section.blocks -%}
                             {% if block.type == 'rating' %}
-                                {% if product.metafields.reviews.rating_count.value > 10 %}
+                                {% if product.metafields.reviews.rating_count.value > 5 %}
                                     {% render 'product-rating', rating_value: product.metafields.reviews.rating.value, rating_count: product.metafields.reviews.rating_count.value %}
                                 {% else %}
                                     <div class="refill_review">
@@ -218,12 +218,14 @@
                                     variant_id: product.variants.first.id, 
                                     current_price: product.price, 
                                     original_price: product.compare_at_price, 
+                                    product_data: product,
                                 %}                    
                             {% else %}
                                 {% render 'product-sticky-button' with
                                     variant_id: product.variants.first.id, 
                                     current_price: product.price, 
                                     original_price: product.price, 
+                                    product_data: product, 
                                 %}
                             {% endif %}
 

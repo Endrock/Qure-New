@@ -1,0 +1,160 @@
+{
+  "sections": {
+    "header_landing_pFmaRH": {
+      "type": "header-landing-simple",
+      "blocks": {
+        "navigation_link_qLHgyD": {
+          "type": "navigation-link",
+          "settings": {
+            "link_label": "HOW TO USE",
+            "link_url": "#step3"
+          }
+        },
+        "navigation_link_DgYaFx": {
+          "type": "navigation-link",
+          "settings": {
+            "link_label": "TROUBLESHOOTING",
+            "link_url": "#step7"
+          }
+        }
+      },
+      "block_order": [
+        "navigation_link_qLHgyD",
+        "navigation_link_DgYaFx"
+      ],
+      "settings": {}
+    },
+    "quickstart_steps_guide_iCADpV": {
+      "type": "quickstart_steps_guide",
+      "blocks": {
+        "step1_3pCQTg": {
+          "type": "step1",
+          "settings": {
+            "title": "What’s In The Box",
+            "whats_in_the_box_title": "What’s in the Box",
+            "item1_image": "shopify:\/\/shop_images\/whats_in_box_icon1.svg",
+            "item1_text": "Qure™ Neck & DécolletageLED System",
+            "item1_qty": "1",
+            "item2_image": "shopify:\/\/shop_images\/whats_in_box_icon2.svg",
+            "item2_text": "Controller with DoubleUSB-C Port",
+            "item2_qty": "1",
+            "item3_image": "shopify:\/\/shop_images\/whats_in_box_icon3.svg",
+            "item3_text": "USB-C to USB-C ChargingCable",
+            "item3_qty": "1",
+            "item4_image": "shopify:\/\/shop_images\/whats_in_box_icon4.svg",
+            "item4_text": "Adjustable Straps",
+            "item4_qty": "1",
+            "item5_image": "shopify:\/\/shop_images\/whats_in_box_icon4.svg",
+            "item5_text": "Storage Bag",
+            "item5_qty": "1",
+            "item6_image": "shopify:\/\/shop_images\/whats_in_box_icon6.svg",
+            "item6_text": "Manual",
+            "item6_qty": "1"
+          }
+        },
+        "step2_PJKVBT": {
+          "type": "step2",
+          "settings": {
+            "title": "Safety Notes",
+            "accordion_title_1": "Safety Notes",
+            "accordion_intro_1": "",
+            "accordion_list_style_1": "bullet",
+            "accordion_item_1_1": "Do not use on broken or irritated skin.",
+            "accordion_item_1_2": "Do not look directly into the LEDs while in use.",
+            "accordion_item_1_3": "Not recommended for use if you are pregnant, have epilepsy, or other photosensitive conditions—consult your physician.",
+            "accordion_item_1_4": "Only use the Qure™ Neck & Décolletage LED System as directed.",
+            "accordion_title_2": "Light Sensitivity Test",
+            "accordion_intro_2": "Follow these steps before your first use to check if you are light-sensitive:",
+            "accordion_list_style_2": "number",
+            "accordion_item_2_1": "Remove the power supply from the product (see instructions).",
+            "accordion_item_2_2": "Apply the product to your inner forearm, ensuring the light shines directly onto the skin. Use it for a 10-minute treatment.",
+            "accordion_item_2_3": "Wait for 24 hours. If you experience pain, discomfort, or redness lasting more than 2 hours, you might be light-sensitive. Please consult a doctor for advice before continuing use.",
+            "accordion_item_2_4": ""
+          }
+        },
+        "step3_jTLxNk": {
+          "type": "step3",
+          "settings": {
+            "title": " How to Use",
+            "accordion_title_1": "Clean the Skin",
+            "accordion_image_1": "shopify:\/\/shop_images\/clean_skin_icon_f2afb7f9-b631-4273-8249-fc3b7f9fb7ad.svg",
+            "accordion_content_1": "Make sure the skin you want to treat is clean, dry, and free of makeup or other topicals.",
+            "accordion_title_2": "Connect the Product to the Controller",
+            "accordion_content_2": "<p>Insert the USB-C cable from the Qure™ Neck & Décolletage LED System into the port located on the top of the controller.<\/p><p>Note:<\/p><p>The Qure™ Neck & Décolletage LED System can be worn in two ways:<\/p><ul><li><strong>Secured around the neck <\/strong>– to comfortably treat the entire neck and décolletage area.<\/li><li><strong>Strap positioned across the shoulders <\/strong>– to lower the LED panel slightly and extend coverage further across the décolletage.<\/li><\/ul><p>Both positions deliver full treatment benefits—just choose the fit that best suits your comfort and desired coverage.<\/p>",
+            "accordion_title_3": "Turn It On",
+            "desktop_image": "shopify:\/\/shop_images\/connect_icon_e7c23427-2fe5-426e-984a-f437711ec64c.svg",
+            "mobile_image": "shopify:\/\/shop_images\/turn_it_on_mob.webp",
+            "accordion_content_3": "<p>Press the ON\/OFF button on the controller. The treatment will automatically run for 10 minutes and shut off at the end of the session.<\/p><p>(You can also stop the treatment anytime by pressing the ON\/OFF button again.)<\/p>",
+            "accordion_title": "Clean After Use",
+            "accordion_image": "shopify:\/\/shop_images\/clean_icon_0df602ec-9232-4379-9c29-1b562dd254ba.svg",
+            "accordion_text": "<p>After each use, clean the product using a water-based wipe, a damp cloth, or by spraying Qure Dermal Mist directly onto the Qure™ Neck & Décolletage LED System. Allow it to air dry fully. Do not clean while connected to power.<\/p>"
+          }
+        },
+        "step4_JLUdyp": {
+          "type": "step4",
+          "settings": {
+            "title": "Treatment Routine",
+            "frequency_heading": "Frequency",
+            "frequency_paragraph_1": "Use the Qure™ Neck & Décolletage LED System once per day for a minimum of 4 weeks.",
+            "frequency_paragraph_2": "After that, continue based on your personal care routine.",
+            "limit_heading": "Limit",
+            "limit_paragraph": "Do not use the product more than 7 times per week."
+          }
+        },
+        "step5_McG6iA": {
+          "type": "step5",
+          "settings": {
+            "title": "Charging Instructions",
+            "charging_main_title": "Initial Charge",
+            "initial_charge_title": "Initial Charge",
+            "initial_charge": "<p>Charge the Qure™ Neck & Décolletage LED System fully for 4 hours before first use.<br\/><br\/><\/p>",
+            "power_supply_title": "Power Supply",
+            "power_supply": "<p>Only use a 5V adapter or USB-C power supply.Fast chargers may damage the battery.<br\/><br\/><\/p>",
+            "charging_process_title": "Charging Process",
+            "img_5": "shopify:\/\/shop_images\/charge_icon_9cc876e6-9723-44d4-aead-52a63745bb57.svg",
+            "li_items": "<ul><li>Insert the USB-C cable into the bottom of the controller (look for the ⚡ symbol).<\/li><li>Connect the other end to a USB-C power source.<\/li><li>The LED indicator will flash white while charging, then show a steady white light when fully charged.<\/li><li>Ensure the plug and socket are completely dry before charging.<\/li><li>Unplug the product before use — it will not operate while charging.<\/li><\/ul>"
+          }
+        },
+        "step6_tXAqdG": {
+          "type": "step6",
+          "settings": {
+            "title": "Care & Storage",
+            "prepare_shower_title": "Preparing Your Shower Head",
+            "prepare_shower_content": "<p>To extend battery life, allow it to fully charge and fully discharge during regular use.<br\/><br\/><\/p>",
+            "storage_title": "Storage",
+            "storage_content": "<ul><li>Keep the Qure™ Neck & Décolletage LED System at room temperature in dry conditions.<\/li><li>Store it in the provided storage pouch to avoid bending or crushing.<\/li><li>Avoid dusty, sunny, humid, or damp environments.<\/li><\/ul>"
+          }
+        },
+        "step7_jJiVEV": {
+          "type": "step7",
+          "settings": {
+            "title": "Troubleshooting",
+            "product_doesnt_switch_on_title": "Product doesn’t switch on?",
+            "product_doesnt_switch_on_content": "<ul><li>Ensure the product is fully charged.<\/li><li>Make sure the charging cable is properly inserted into the power outlet.<\/li><li>Check that the charging cable is fully inserted into the product.<\/li><li>Try a different power outlet — the one used may not have worked during charging.<\/li><li>Ensure the USB-C cable is plugged into the correct port on the controller (look for the port marked with the lightning bolt battery symbol).<\/li><li>Press and hold the ON\/OFF button for a full second to activate the product.<\/li><\/ul>",
+            "product_doesnt_switch_off_title": "Product switches off unexpectedly?",
+            "product_doesnt_switch_off_content": "<p>The battery level may be too low — charge the product fully and try again.<br\/><br\/><\/p>",
+            "still_not_working": "Still not working?",
+            "still_not_working_content": "<ul><li>DO NOT attempt to investigate or modify the product. It contains no serviceable parts.<\/li><li>If the issue persists, please contact Qure Support at <a href=\"mail:support@qureskincare.com\">support@qureskincare.com <\/a>for further assistance.<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "step1_3pCQTg",
+        "step2_PJKVBT",
+        "step3_jTLxNk",
+        "step4_JLUdyp",
+        "step5_McG6iA",
+        "step6_tXAqdG",
+        "step7_jJiVEV"
+      ],
+      "name": "Step Guide New",
+      "settings": {
+        "active_step": "step1"
+      }
+    }
+  },
+  "order": [
+    "header_landing_pFmaRH",
+    "quickstart_steps_guide_iCADpV"
+  ]
+}

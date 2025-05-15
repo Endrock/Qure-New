@@ -56,18 +56,17 @@
         },
         "supply_xAX9bT": {
           "type": "supply",
-          "disabled": true,
           "settings": {
-            "heading": "Next batch ships on the 31st of January:",
+            "heading": "Next batch ships on the 19th of May:",
             "heading_mobile": "Next batch ships 01/31:",
             "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.</p>",
-            "first_option_date": "December 15th",
+            "first_option_date": "May 12th",
             "first_option_text": "SOLD OUT",
             "first_option_percent": 100,
-            "second_option_date": "January 31st",
+            "second_option_date": "May 19th",
             "second_option_text": "73% Reserved",
             "second_option_percent": 73,
-            "third_option_date": "March 30th",
+            "third_option_date": "June 1st",
             "third_option_text": "In Production",
             "third_option_percent": 0
           }
@@ -91,7 +90,7 @@
         "product_button_label": "Product",
         "before_after_images_limit": 2,
         "before_after_button_label": "Before & After",
-        "reserve": false,
+        "reserve": true,
         "soldout": false,
         "underbutton_text_left": "Dermatologist Reviewed",
         "underbutton_text_right": "Free Shipping Over $100",
@@ -192,7 +191,19 @@
             "ctm_cls": "",
             "heading_first": "",
             "text": "<p>Our <strong>safe, non-invasive skin rejuvenation</strong> LED treatment targets a part of the skincare routine many people overlook – the neck and décolletage.<br/><br/>This delicate area is actually where the <strong>first signs of aging show – thin skin, wrinkles, sun spots,</strong> age spots and more.</p><p><br/>Now, you can conveniently boost firmness, even skin tone and texture, plump fine lines for youthful-looking neck and décolletage skin with our clinically-proven portable, at-home LED light therapy treatment.</p><p><br/>No trips to the clinic, and no pain, side effects, or down time. (Your low neckline wardrobe will thank you for it!). </p>",
+            "txt_order_mob": false,
+            "percent_bar_1": 70,
+            "agreed_text_1": "",
+            "percent_bar_2": 70,
+            "agreed_text_2": "",
+            "percent_bar_3": 70,
+            "agreed_text_3": "",
+            "percent_bar_4": 70,
+            "agreed_text_4": "",
+            "ctm_cls_btn": "",
             "btn_text": "",
+            "btn_font_size_desktop": "22px",
+            "btn_font_size_mobile": "20px",
             "btn_url": "",
             "custom_class": "",
             "heading2": "",
@@ -570,7 +581,7 @@
           "settings": {
             "heading": "Prepare & set",
             "heading_mob": "How to use",
-            "image": "shopify://shop_images/compare-1_4d4a5b07-773b-422e-90b6-7efef627f15c.png",
+            "image": "shopify://shop_images/Rectangle_194_5ac4efc7-3f59-4207-b125-8be24973b833.png",
             "tab_content": "<p>Cleanse and dry your skin to prepare it for ultimate LED light absorption.  Secure the device around your neck using the adjustable velcro straps. </p>"
           }
         },
@@ -599,7 +610,7 @@
         "tab_tiRD8V"
       ],
       "settings": {
-        "heading": "How to use"
+        "heading": "How to use - Treat signs of aging with 10 minute treatments"
       }
     },
     "icons_list_9g8QWp": {

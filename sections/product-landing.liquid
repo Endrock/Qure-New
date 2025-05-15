@@ -43,31 +43,13 @@
     endif
 %}
 
+
 <!-- -- main banner start -- -->
-<div class="refill_bl pt-0 tabSlider" id="page">
+<div class="refill_bl pt-0 tabSlider pb-3" id="page">
     <div class="container">
         <div class="row">
             <div class="col-md-6 order-2 order-md-1">
                 <div class="refill_info pt-0 pt-md-3">
-
-                    {% if rating_count %}
-                        {%- for block in section.blocks -%}
-                            {% if block.type == 'rating' %}
-                                {% if block.settings.product != blank %}
-                                    {% render 'product-rating', rating_value: block.settings.product.metafields.reviews.rating.value, rating_count: block.settings.product.metafields.reviews.rating_count.value %}
-                                {% else %}
-                                    <div class="refill_review">
-                                        <div class="star_gp">
-                                            {% if block.settings.image != blank %}
-                                                <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}">
-                                            {% endif %}
-                                        </div>
-                                        <p class="text-sm fw-normal" style="text-decoration: none;">{{ block.settings.text }}</p>
-                                    </div>
-                                {% endif %}
-                            {% endif %}
-                        {%- endfor -%}
-                    {% endif %}
 
                     {% if section.settings.seo_heading != blank %}
                         <h1 class="seo_heading">{{ section.settings.seo_heading }}</h1>
@@ -83,6 +65,29 @@
                             <h2 class="title-xl d-md-none">{{ section.settings.heading | replace: '\n', '<br />' }}</h2>
                         {% endif %}
                     </div>
+
+                    {% if rating_count %}
+                        {%- for block in section.blocks -%}
+                            {% if block.type == 'rating' %}
+                                {% if block.settings.product != blank %}
+                                    {% render 'product-rating', rating_value: block.settings.product.metafields.reviews.rating.value, rating_count: block.settings.product.metafields.reviews.rating_count.value %}
+                                {% else %}
+                                    {% if product.metafields.reviews.rating_count.value > 5 %}
+                                        {% render 'product-rating', rating_value: product.metafields.reviews.rating.value, rating_count: product.metafields.reviews.rating_count.value %}
+                                    {% else %}
+                                        <div class="refill_review">
+                                            <div class="star_gp">
+                                                {% if block.settings.image != blank %}
+                                                    <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}">
+                                                {% endif %}
+                                            </div>
+                                            <p class="text-sm fw-normal" style="text-decoration: none;">{{ block.settings.text }}</p>
+                                        </div>
+                                    {% endif %}
+                                {% endif %}
+                            {% endif %}
+                        {%- endfor -%}
+                    {% endif %}
 
                     {% if subheading_count > 0 %}
                         {%- for block in section.blocks -%}
@@ -115,7 +120,7 @@
                         {%- for block in section.blocks -%}
                             {% if block.type == 'button' %}
                                 {% if block.settings.button_label != blank %}
-                                    <a class="mt-4 mb-2 mt-md-5 mt-md-3 btn btn-lg btn-primary" href="{{ block.settings.button_url }}" aria-label="{{ block.settings.button_label | escape }}">
+                                    <a class="mt-4 mb-2 mt-md-3 btn btn-lg btn-primary" href="{{ block.settings.button_url }}" aria-label="{{ block.settings.button_label | escape }}">
                                         {{ block.settings.button_label }}
                                     </a>
                                 {% endif %}
@@ -205,12 +210,14 @@
                                     variant_id: product.variants.first.id, 
                                     current_price: product.price, 
                                     original_price: product.compare_at_price, 
+                                    product_data: product,
                                 %}                    
                             {% else %}
                                 {% render 'product-sticky-button' with
                                     variant_id: product.variants.first.id, 
                                     current_price: product.price, 
                                     original_price: product.price, 
+                                    product_data: product,
                                 %}
                             {% endif %}
 
@@ -285,6 +292,8 @@
 
                     {% if page.handle == 'qure-microinfusion-offer'
                       or page.handle == 'qure-micro-infusion-landing-page-affiliate'
+                      or page.handle == 'micro-infusion-acne'
+                      or page.handle == 'micro-infusion-dark-spots'
                     %}
                       {% assign show_jump_to  = section.settings.enable_jump_to_section %}
                       {% if show_jump_to %}
@@ -539,6 +548,8 @@
 
                 {% if page.handle == 'qure-microinfusion-offer'
                   or page.handle == 'qure-micro-infusion-landing-page-affiliate'
+                  or page.handle == 'micro-infusion-dark-spots'
+                  or page.handle == 'micro-infusion-acne'
                 %}
                   {% assign show_jump_to  = section.settings.enable_jump_to_section %}
                   {% if show_jump_to %}

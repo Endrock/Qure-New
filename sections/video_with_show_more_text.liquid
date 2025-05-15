@@ -1,0 +1,165 @@
+<div class="imageText new_side section mt-md-4">
+  <div class="container">
+    <div class="row">
+      <!-- Left: Video -->
+      <div class="col-12 col-md-6">
+        <div class="it_img pb-4 pb-md-0 pe-0 pe-md-5 pt-md-0">
+          <div class="header d-md-none d-block pb-3">
+            <h2 class="title-lg mb-md-4 text-capitalize">{{ section.settings.title }}</h2>
+          </div>
+          <div class="derm_vid_new">
+            <style>
+              wistia-player[media-id='{{ section.settings.video_id }}']:not(:defined) {
+                background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/{{ section.settings.video_id }}/swatch');
+                display: block;
+                filter: blur(5px);
+                padding-top: 100.0%;
+              }
+            </style>
+            <wistia-player media-id="{{ section.settings.video_id }}" seo="false" aspect="1.0"></wistia-player>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Features -->
+      <div class="col-12 col-md-6">
+        <div class="it_info p-0 pt-2 pt-md-4">
+          <div class="header d-md-block d-none">
+            <h2 class="title-lg mb-md-4">{{ section.settings.title }}</h2>
+          </div>
+          <div class="newside_list mw-100">
+            <!-- Desktop List -->
+            <ul class="d-md-block d-none" id="featuresList">
+              {% for block in section.blocks %}
+                <li class="{% if forloop.index > 3 %}hidden-li{% endif %}">
+                  {% if block.settings.icon %}
+                    <img src="{{ block.settings.icon | image_url }}" alt="">
+                  {% endif %}
+                  <div>
+                    <p>{{ block.settings.title }}</p>
+                    <p class="fw-normal">{{ block.settings.description }}</p>
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
+
+            {% if section.settings.show_see_more %}
+              <div id="seeMoreBtn" class="faq_ques ctm_see_more d-none d-md-block">See More</div>
+            {% endif %}
+
+            <!-- Mobile Slider -->
+            <div class="result_s_wrapper ctm_cls_swiper_derm d-md-none">
+              <div class="swiper dot_pagination result_slider_lp twa__swiper"
+                   id="twa__swiper-result_slider_lp"
+                   data-section-id="result_slider_lp"
+                   data-autoplay="false"
+                   data-loop="false"
+                   data-centerslide="false"
+                   data-mobile="1.1"
+                   data-tablet="2"
+                   data-desktop="3"
+                   data-spacing="20"
+                   data-arrowleft="result_slider_lp-swiper-prev"
+                   data-arrowright="result_slider_lp-swiper-next">
+                <div class="swiper-wrapper">
+                    {% assign blocks_per_slide = 2 %}
+                    {% assign blocks_per_slide_minus_one = blocks_per_slide | minus: 1 %}
+                    
+                    {% for block in section.blocks %}
+                      {% assign mod = forloop.index0 | modulo: blocks_per_slide %}
+                      {% if forloop.first or mod == 0 %}
+                        <div class="swiper-slide"><div class="cleanses_surface"><ul>
+                      {% endif %}
+                    
+                          <li>
+                            {% if block.settings.icon %}
+                              <img src="{{ block.settings.icon | image_url }}" alt="">
+                            {% endif %}
+                            <div>
+                              <p>{{ block.settings.title }}</p>
+                              <p class="fw-normal">{{ block.settings.description }}</p>
+                            </div>
+                          </li>
+                    
+                      {% assign mod_end = forloop.index0 | modulo: blocks_per_slide %}
+                      {% if mod_end == blocks_per_slide_minus_one %}
+                        </ul></div></div>
+                      {% endif %}
+                      {% if forloop.last and mod_end != blocks_per_slide_minus_one %}
+                        </ul></div></div>
+                      {% endif %}
+                    {% endfor %}
+                    
+                </div>
+                <div class="pagination_navigation d-md-none">
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-prev result_slider_lp-swiper-prev swiper-button-prev swiper-button"></div>
+                  <div class="swiper-next result_slider_lp-swiper-next swiper-button-next swiper-button"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+
+{% schema %}
+{
+  "name": "Video Show More Text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Main Title",
+      "default": "5 Reasons Dermal Mist deserves a VIP spot in your routine"
+    },
+    {
+      "type": "text",
+      "id": "video_id",
+      "label": "Wistia Video ID",
+      "default": "getx3xc27m"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_see_more",
+      "label": "Show 'See More' Button",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Feature Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Feature Description"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "Video Show More Text",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

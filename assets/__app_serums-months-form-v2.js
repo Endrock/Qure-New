@@ -6,10 +6,11 @@ let v2__product_variants = [];
 
 //Rejuvenating + Hydra-Soothing
 v2__product_variants[1] = [];  
-v2__product_variants[1][1] = 43216489513199; //1 month
+v2__product_variants[1][1] = window.pdmSerumsMonthsImageForm['product_1_month'] || 43216489513199; //1 month
 v2__product_variants[1][2] = 45951933022447; //2 months
-v2__product_variants[1][3] = 45951935217903; //3 months
-v2__product_variants[1][6] = 46314012115183; //6 months
+v2__product_variants[1][3] = window.pdmSerumsMonthsImageForm['product_3_month'] || 45951935217903; //3 months
+v2__product_variants[1][6] = window.pdmSerumsMonthsImageForm['product_6_month'] || 46314012115183; //6 months original
+v2__product_variants[1][7] = 46414788002031; //6 months test price
 
 //Rejuvenating
 v2__product_variants[2] = []; 
