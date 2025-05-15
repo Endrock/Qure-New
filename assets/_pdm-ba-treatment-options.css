@@ -83,7 +83,7 @@
   padding: 0;
   margin: auto;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .row.treatment-ba__row-container .tmtFtrs_image.order-1.order-md-2 .testimonial-card {

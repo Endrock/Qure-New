@@ -85,6 +85,16 @@
             "link_url": "#bf-bundles"
           }
         },
+        "product_XP469M": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "heading": "Exclusive Memorial Day Bundle",
+            "discount": 72,
+            "image": "shopify://shop_images/Memorial_day_bundle_slider_image.png",
+            "product_url": "#memorial-day-bundle"
+          }
+        },
         "product_L8TbkG": {
           "type": "product",
           "disabled": true,
@@ -211,6 +221,7 @@
       "block_order": [
         "badge_bNNHbU",
         "link_Xz3LeQ",
+        "product_XP469M",
         "product_L8TbkG",
         "product_YzAr6q",
         "product_iEprpi",
@@ -351,6 +362,7 @@
       ],
       "settings": {
         "heading": "FEATURED IN",
+        "ctm_cls_heading": "",
         "slider_type": "five_slides",
         "slide_per_view_desktop": 3,
         "slide_per_view_mobile": 3
@@ -539,6 +551,66 @@
           "settings": {
             "text": "<p>Promotes firmer, \\n youthful-looking skin</p>",
             "image": "shopify://shop_images/bf-ftr-firmer.svg"
+          }
+        },
+        "bundle_jeyfm3": {
+          "type": "bundle",
+          "disabled": true,
+          "settings": {}
+        },
+        "product_AXXtjA": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "memorial-day-promo-2025",
+            "percent": 30,
+            "media_limit": 0,
+            "hide_us": false,
+            "recommended_heading": "",
+            "recommended_text": "",
+            "is_top_rated": false,
+            "is_preorder": false,
+            "preorder_text": "",
+            "classname": "",
+            "code": ""
+          }
+        },
+        "include_7Yq3PY": {
+          "type": "include",
+          "disabled": true,
+          "settings": {
+            "heading": "Micro-Infusion 1 Month Supply (For Wrinkles + For Dark Spots)",
+            "is_limited": false,
+            "type": "",
+            "image": "shopify://shop_images/bfs_3-serum.webp",
+            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p><h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
+            "count": "",
+            "hide": false,
+            "hide_variants": false,
+            "code": ""
+          }
+        },
+        "include_FxdKqc": {
+          "type": "include",
+          "disabled": true,
+          "settings": {
+            "heading": "Micro-Infusion 4 Month Supply (For Wrinkles)",
+            "is_limited": false,
+            "type": "",
+            "image": "shopify://shop_images/bfs_blue-serum_ca9c2e68-113a-475e-8d4b-2ad73f5e8a5e.webp",
+            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p>",
+            "count": "",
+            "hide": false,
+            "hide_variants": false,
+            "code": ""
+          }
+        },
+        "how_to_use_tLw7mt": {
+          "type": "how-to-use",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/bfs_mi_sm.svg",
+            "text": "<h5>Micro-Infusion 5 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Use the 3 month refills after 2 month bundle.</li></ul>"
           }
         },
         "bundle_fhATMn": {
@@ -810,6 +882,11 @@
         "icon_AcpYLG",
         "icon_f36jbE",
         "icon_eUd4zy",
+        "bundle_jeyfm3",
+        "product_AXXtjA",
+        "include_7Yq3PY",
+        "include_FxdKqc",
+        "how_to_use_tLw7mt",
         "bundle_fhATMn",
         "product_6Nmeyc",
         "include_jkXtYb",
@@ -1002,11 +1079,11 @@
         "include_4RreaF": {
           "type": "include",
           "settings": {
-            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles + Dark Spots) ",
+            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles) ",
             "is_limited": false,
             "type": "",
-            "image": "shopify://shop_images/bfs_3-serum.webp",
-            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p><h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
+            "image": "shopify://shop_images/bfs_blue-serum_ca9c2e68-113a-475e-8d4b-2ad73f5e8a5e.webp",
+            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p>",
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -1050,11 +1127,11 @@
         "include_Ggpxqa": {
           "type": "include",
           "settings": {
-            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles + Dark Spots)",
+            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles)",
             "is_limited": false,
             "type": "",
-            "image": "shopify://shop_images/bfs_3-serum.webp",
-            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p><h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
+            "image": "shopify://shop_images/bfs_blue-serum.webp",
+            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p>",
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -1681,6 +1758,7 @@
         "video_xLP3b6": {
           "type": "video",
           "settings": {
+            "title_mob": "Recommended by Experts",
             "image": "shopify://shop_images/dr_shah_trusted.webp",
             "video": "https://www.youtube.com/watch?v=I2Fe-kP-2Jg",
             "title": "Dr Shah, MD",
@@ -1693,6 +1771,7 @@
             "trust_icon": "shopify://shop_images/verified_design.svg",
             "trust_des": "Trusted and recommended by world leading Dermatologists",
             "title": "\"The best LED mask <strong>on the market in my opinion at this time, that being said you do need to </strong>use this consistently to see results…\"",
+            "title_des": "",
             "title_clr": "#000000",
             "title_strong_clr": "#797d7c"
           }
@@ -1703,6 +1782,9 @@
         "text_content_zQrNN6"
       ],
       "settings": {
+        "ctm_cls": "",
+        "left_dv_width": "7",
+        "right_dv_width": "5",
         "padding_top": 60,
         "padding_bottom": 0
       }
