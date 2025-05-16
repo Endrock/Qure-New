@@ -53,7 +53,11 @@
                 <div class="step_block">
                     <div class="step_content step_serum">
                         <div class="serumBlock">
-                            <input type="radio" name="serum-{{ section_id }}" id="option_for_darkspots" value="43821069435119" data-product-id="8015049621743" data-selling-plan="5012914415"{%- if product_index == 2 -%} checked{%- endif -%}>
+                            <input type="radio" name="serum-{{ section_id }}" id="option_for_darkspots" value="43821069435119" data-product-id="8015049621743" data-selling-plan="5012914415"{%- if product_index == 2 -%} checked{%- endif -%}
+                            data-product-radio-id="{{ product.variants.first.id }}"
+                            data-product-radio-title="{{ product.title | escape }}"
+                            data-product-radio-image="{{ 'dark_spots.webp' | asset_url }}"
+                          >
                             <label class="serum_prd" for="option_for_darkspots">
                                 <div class="serum_img">
                                     <img src="{{ 'dark_spots.webp' | asset_url }}" alt="" class="img-fluid">
@@ -73,7 +77,11 @@
                             </label>
                         </div>
                         <div class="serumBlock">
-                        <input type="radio" name="serum-{{ section_id }}" id="option_for_wrinkles_darkspots" value="43821031031023" data-product-id="8015038873839" data-selling-plan="5012914415"{%- if product_index == 1 -%} checked{%- endif -%}>
+                        <input type="radio" name="serum-{{ section_id }}" id="option_for_wrinkles_darkspots" value="43821031031023" data-product-id="8015038873839" data-selling-plan="5012914415"{%- if product_index == 1 -%} checked{%- endif -%}
+                          data-product-radio-id="{{ product.variants.first.id }}"
+                          data-product-radio-title="{{ product.title | escape }}"
+                          data-product-radio-image="{{ 'reju_hydra_blue.webp' | asset_url }}"
+                          >
                             <label class="serum_prd" for="option_for_wrinkles_darkspots">
                                 <div class="serum_img">
                                     <img src="{{ 'reju_hydra_blue.webp' | asset_url }}" alt="" class="img-fluid">

@@ -95,7 +95,10 @@
                                         {% assign divided_price = product.price | divided_by: 4 %}
                                         {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
 
-                                        <input type="radio" name="mBanner_monthlyPlan" id="mBanner_3_month" checked="" data-product-period="3">
+                                        <input type="radio" name="mBanner_monthlyPlan" id="mBanner_3_month" checked="" data-product-period="3"
+                                          data-product-radio-id="{{ product.variants.first.id }}"
+                                          data-product-radio-title="{{ product.title | escape }}"
+                                        >
                                         <label class="monthly_plans ignore" for="mBanner_3_month" payment-price="{{ divided_price | money_without_trailing_zeros }}">
                                             <div class="plan_des">
                                                 <div class="plan_hdr">
@@ -139,7 +142,10 @@
                                     <div class="planBlock ignore {{ section_id }}_productPeriodObject">
                                         {% assign product = all_products['micro-infusion-1-month-bundle-2x-beta-glucan-serum'] %}
                                         {% assign divided_price = product.price | divided_by: 4 %}
-                                        <input type="radio" name="mBanner_monthlyPlan" id="mBanner_1_month" data-product-period="1">
+                                        <input type="radio" name="mBanner_monthlyPlan" id="mBanner_1_month" data-product-period="1"
+                                          data-product-radio-id="{{ product.variants.first.id }}"
+                                          data-product-radio-title="{{ product.title | escape }}"
+                                        >
                                         <label class="monthly_plans ignore" for="mBanner_1_month" payment-price="{{ divided_price | money_without_trailing_zeros }}">
                                             <div class="plan_des">
                                                 <div class="plan_hdr">
