@@ -53,8 +53,8 @@ START PDM UPGRADE POPUP - FACE SERUM
   }
   
   .pdm-popup-product-selected {
-    height: 104px; /* igual que en Figma */
-    padding: 14px 32px; /* horizontal como en Figma */
+    height: 104px; 
+    padding: 14px 32px; 
     display: flex;
     align-items: center;
     justify-content: flex-start;
