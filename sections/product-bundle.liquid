@@ -1,0 +1,449 @@
+{%- assign supply_count = 0 -%}
+
+{%- for block in section.blocks -%}
+	{%- case block.type -%}
+        {%- when 'supply' -%}
+            {%- assign supply_count = supply_count | plus: 1 -%}
+    {%- endcase -%}
+{%- endfor -%}
+
+<link rel="stylesheet" href="https://qureskincaredns.com/new/assets/product-bf-sales.css">
+
+<div class="refill_bl bndl_pdp_outer pt-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 order-2 order-md-1">
+                <div class="bndl_pdp_new">
+                    <div class="refill_info pt-4 mw-546">
+                        {%- for block in section.blocks -%}
+                            {% case block.type %}
+                                {% when 'preorder' %}
+                                    <h6 class="order-3 order-md-2">Pre-Order</h6>
+                                {% when 'rating' %}
+                                    <div class="refill_review justify-content-start mb-2">
+                                        {% if block.settings.image != blank %}
+                                            <div class="star_gp">
+                                                <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}">
+                                            </div>
+                                        {% endif %}
+                                        {% if block.settings.text != blank %}
+                                            <p class="text-sm fw-normal text-decoration-none">{{ block.settings.text }}</p>
+                                        {% endif %}
+                                    </div>
+                            {% endcase %}
+                        {%- endfor -%}
+
+
+                        <div class="text-start">
+                            <h1 class="title-lg save_hair my-2">{{ product.title }}</h1>
+                        </div>
+                        
+                        <div class="mw-430">
+                            <div class="ss_list pt-2 pb-1  pt-md-1 pb-md-1">
+                                <p>{{ product.description }}</p>
+                            </div>
+
+                            <div class="bundle_price d-flex align-items-center justify-content-start my-3 pb-2">
+                                {% if product.compare_at_price != blank %}
+                                    <div class="bef_price" style="font-size: 30px;">{{ product.compare_at_price |  money_without_trailing_zeros }}</div>
+                                {% endif %}
+                                <div class="aft_price" style="font-size: 22px;">{{ product.price |  money_without_trailing_zeros }}</div>
+                                {% if product.compare_at_price != blank %}
+                                    <div class="discount_percentage_new">{{ product.price | times: 100 | divided_by: product.compare_at_price | minus: 100 | abs | round }} % OFF</div>
+                                {% endif %}
+                            </div>
+
+                            {% if supply_count > 0 %}
+                                <div class="next_batch_bl next_batch_highlight">
+                                    {%- for block in section.blocks -%}
+                                        {% if block.type == 'supply' %}
+                                            {% if block.settings.heading != blank %}
+                                                <h6 class="d-none d-md-block">{{ block.settings.heading }}</h6>
+                                            {% endif %}
+            
+                                            {% if block.settings.heading_mobile != blank %}
+                                                <h6 class="d-md-none">{{ block.settings.heading_mobile }}</h6>
+                                            {% endif %}
+                                            
+                                            {% if block.settings.text != blank %}
+                                                {{ block.settings.text }}
+                                            {% endif %}
+            
+                                            {% if block.settings.first_option_text != blank %}
+                                                <div class="batch_h batch_h_fade mt-3 mt-md-4">
+                                                    <div class="batch_h_month">{{ block.settings.first_option_date }}</div>
+                                                    <div class="batch_h_info sold_out_h" style="--bgPercent:{{ block.settings.first_option_percent }}%;"><span>{{ block.settings.first_option_text }}</span></div>
+                                                </div>
+                                            {% endif %}
+            
+                                            {% if block.settings.second_option_text != blank %}
+                                                <div class="batch_h my-2">
+                                                    <div class="batch_h_month">{{ block.settings.second_option_date }}</div>
+                                                    <div class="batch_h_info" style="--bgPercent:{{ block.settings.second_option_percent }}%;">{{ block.settings.second_option_text }}</div>
+                                                </div>
+                                            {% endif %}
+            
+                                            {% if block.settings.third_option_text != blank %}
+                                                <div class="batch_h batch_h_fade">
+                                                    <div class="batch_h_month">{{ block.settings.third_option_date }}</div>
+                                                    <div class="batch_h_info" style="--bgPercent:{{ block.settings.third_option_percent }}%;"><span>{{ block.settings.third_option_text }}</span></div>
+                                                </div>
+                                            {% endif %}
+            
+                                        {% endif %}
+                                    {%- endfor -%}
+                                </div>
+                            {% endif %}
+
+                            {% if section.settings.soldout == true %}
+                                <a class="btn btn-lg btn-primary without_subscription buy_btn mt-4" href="#">Sold Out</a>
+                            {% else %}
+                                {% if product.variants.first.available %}
+                                    <a class="btn btn-lg btn-primary without_subscription buy_btn mt-4" href="{{ routes.cart_add_url }}?id={{ product.variants.first.id }}&quantity=1" onclick="setEventProductHandler('{{ product.handle | escape }}')" data-ajax-cart-request-button>{% if section.settings.reserve == true %}Reserve now{% else %} Add To Cart{% endif %}</a>
+                                {% else %}
+                                    <a class="btn btn-lg btn-primary without_subscription buy_btn mt-4" href="#">Sold Out</a>
+                                {% endif %}
+                            {% endif %}
+
+                            <div class="justify-content-start payment_method without_subscription">
+                                <p>OR 4 monthly payments of {{ product.price | divided_by: 4 | money_without_trailing_zeros }} with</p>
+                                <div class="pmt_img ps-2">
+                                    <img src="https://qureskincaredns.com/new/assets/klarna.svg" alt="">
+                                    <img src="https://qureskincaredns.com/new/assets/sezzle.svg" alt="">
+                                    <img src="https://qureskincaredns.com/new/assets/afterpay.svg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="certified_derm">
+                                <img src="https://qureskincaredns.com/new/assets/certified_derma.webp" alt="">
+                                <p><strong>50+ Board Certified Dermatologists</strong> <br> recommended Qure to their patients. <a href="https://qureskincare.com/pages/derm-reviews" class="text-black text-decoration-underline">See More</a> </p>
+                            </div>
+
+                            {%- for block in section.blocks -%}
+                                {% if block.type == 'button' %}
+                                    <div class="holiday-banner d-none d-md-flex mt-4">
+                                        <div class="banner-left">
+                                            <div class="icon-circle">
+                                                <img src="https://qureskincaredns.com/new/assets/gift_new.svg" alt="">
+                                            </div>
+                                            {% if block.settings.text != blank %}
+                                                <div class="banner-text">
+                                                    {{ block.settings.text }}
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                        <a href="{{ block.settings.button_url }}" title="{{ block.settings.button_label | escape }}" class="shop-button text-black">{{ block.settings.button_label }} <img src="https://qureskincaredns.com/new/assets/long_right_black_arrow.svg"></a>
+                                    </div>
+                                {% endif %}
+                            {%- endfor -%}
+
+
+                            <div class="shipping shipping_bg bg-transparent d-flex pt-2 pt-md-4 pb-1 mx-auto">
+                                <div class="s_bx gap-1">
+                                    <img src="https://qureskincaredns.com/new/assets/dermatologist.svg" alt="">
+                                    <p class="p-0">Dermatologist Reviewed</p>
+                                </div>
+                            
+                                <div class="s_bx gap-1">
+                                    <img src="https://qureskincaredns.com/new/assets/free_shipping_new.svg" alt="">
+                                    <p class="p-0">Free Shipping Over $100</p>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+
+                    <!-- accordions shower filter  -->
+                    <div class="faq accordions_shower_filter faq_under_product pt-0 mw-452">
+                        <div class="accordion" id="accordion_shower_filter"> 
+
+                            {% if product.metafields.custom.what_s_included != blank %}
+                                {% render 'product-bundle-collapsed-item' input: product.metafields.custom.key_benefits, index: 'first', title: 'Key Benefits', mobile_title: 'In The Box' %}
+                            {% endif %}
+                            {% if product.metafields.custom.how_it_works != blank %}
+                                {% render 'product-bundle-collapsed-item' input: product.metafields.custom.how_it_works, index: 'second', title: 'How It Works' %}
+                            {% endif %}
+                            {% if product.metafields.custom.key_benefits != blank %}
+                                {% render 'product-bundle-collapsed-item' input: product.metafields.custom.what_s_included, index: 'third', title: 'What’s Included' %}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <!-- accordions shower filter  -->
+                </div>
+            </div>
+            <div class="col-md-6 order-1 order-md-2 px-md-3 px-0">
+                <div class="ctm_swiper_outer">
+                    <div class="swiper ctm_swiper_main_images dot_pagination"
+                        id="twa__swiper-realResultSlider" data-section-id="realResultSlider"
+                        data-autoplay="false" data-loop="false" data-centerslide="false" data-mobile="1"
+                        data-tablet="1" data-desktop="1" data-spacing="10"
+                        data-arrowleft="realResultSlider-swiper-prev"
+                        data-arrowright="realResultSlider-swiper-next">
+                        <div class="swiper-wrapper">
+                            {% for media in product.media %}
+                                <div class="swiper-slide">
+                                    <div class="sale-bf-img">
+                                        <div class="sale-bf-bgImg">
+                                            <picture id="image-id">
+                                                <source media="(min-width:1920px)" srcset="{{ media | img_url: 'master' }}">
+                                                <source media="(min-width:1600px)" srcset="{{ media | img_url: '1600x' }}">
+                                                <source media="(min-width:1100px)" srcset="{{ media | img_url: '1100x' }}">
+                                                <source media="(min-width:720px)" srcset="{{ media | img_url: '720x' }}">
+                                                <source media="(min-width:540px)" srcset="{{ media | img_url: '540x' }}">
+                                                <img class="img-fluid" src="{{ media | img_url: '540x' }}" width="100" height="100" alt="{{ block.settings.image.alt | escape }}">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+
+                    <div class="thumbsSlider_wrap mt-3">
+                        <div class="swiper ctm_swiper_thumb_images pagination_navigation1" 
+                            data-slidesperview-mobile="4"
+                            data-slidesperview-tablet="4"
+                            data-slidesperview-desktop="4"
+                            data-spacing-mobile="8"
+                            data-spacing-tablet="10"
+                            data-spacing-desktop="12">
+                    
+                            <div class="swiper-wrapper">
+                                {% for media in product.media %}
+                                    <div class="swiper-slide">
+                                        <div class="bfs_mb_wrapThumb">
+                                            <img src="{{ media | img_url: '540x' }}" class="img-fluid" />
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="thumb-next swiper-button-next swiper-button"></div>
+                        <div class="thumb-prev swiper-button-prev swiper-button"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org/",
+        "@type": "Product",
+        "name": "{{ product.title | escape }}",
+        "url": "{{ shop.url }}{{ product.url }}",
+        {% if product.featured_image %}
+            {% assign image_size = product.featured_image.width | append: 'x' %}
+            "image": [
+            "https:{{ product.featured_image.src | img_url: image_size }}"
+            ],
+        {% endif %}
+        "description": "{{ product.description | strip_html | escape }}",
+        {% if current_variant.sku != blank %}
+            "sku": "{{ current_variant.sku }}",
+        {% endif %}
+        "brand": {
+            "@type": "Thing",
+            "name": "{{ product.vendor | escape }}"
+        },
+        "offers": [
+            {%- for variant in product.variants -%}
+            {
+                "@type" : "Offer",
+                {%- if variant.sku != blank -%}
+                "sku": {{ variant.sku | json }},
+                {%- endif -%}
+                {%- if variant.barcode.size == 12 -%}
+                "gtin12": {{ variant.barcode }},
+                {%- endif -%}
+                {%- if variant.barcode.size == 13 -%}
+                "gtin13": {{ variant.barcode }},
+                {%- endif -%}
+                {%- if variant.barcode.size == 14 -%}
+                "gtin14": {{ variant.barcode }},
+                {%- endif -%}
+                "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+                "price" : {{ variant.price | divided_by: 100.00 | json }},
+                "priceCurrency" : {{ cart.currency.iso_code | json }},
+                "url" : {{ request.origin | append: variant.url | json }}
+            }{% unless forloop.last %},{% endunless %}
+            {%- endfor -%}
+        ]
+    }
+</script>
+
+{% schema %}
+    {
+        "name": "t:sections.product-bundle.name",
+        "class": "section-product-bundle",
+        "settings": [
+            {
+                "type": "checkbox",
+                "id": "reserve",
+                "label": "t:common.reserve.label",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "soldout",
+                "label": "t:common.soldout.label",
+                "default": false
+            }
+        ],
+        "blocks": [
+            {
+                "type": "supply",
+                "name": "t:common.supply.label",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "t:common.heading.label"
+                    },
+                    {
+                        "type": "text",
+                        "id": "heading_mobile",
+                        "label": "t:common.heading.mobile.label"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "t:common.text.label"
+                    },
+                    {
+                        "type": "header",
+                        "content": "First option"
+                    },
+                    {
+                        "type": "text",
+                        "id": "first_option_date",
+                        "label": "t:common.date.label",
+                        "default": "October 15th"
+                    },
+                    {
+                        "type": "text",
+                        "id": "first_option_text",
+                        "label": "t:common.text.label",
+                        "default": "SOLD OUT"
+                    },
+                    {
+                        "type": "range",
+                        "id": "first_option_percent",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1,
+                        "unit": "%",
+                        "label": "t:common.percent.label",
+                        "default": 100
+                    },
+                    {
+                        "type": "header",
+                        "content": "Second option"
+                    },
+                    {
+                        "type": "text",
+                        "id": "second_option_date",
+                        "label": "t:common.date.label",
+                        "default": "November 10th"
+                    },
+                    {
+                        "type": "text",
+                        "id": "second_option_text",
+                        "label": "t:common.text.label",
+                        "default": "81% Reserved"
+                    },
+                    {
+                        "type": "range",
+                        "id": "second_option_percent",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1,
+                        "unit": "%",
+                        "label": "t:common.percent.label",
+                        "default": 81
+                    },
+                    {
+                        "type": "header",
+                        "content": "Third option"
+                    },
+                    {
+                        "type": "text",
+                        "id": "third_option_date",
+                        "label": "t:common.date.label",
+                        "default": "December 30th"
+                    },
+                    {
+                        "type": "text",
+                        "id": "third_option_text",
+                        "label": "t:common.text.label",
+                        "default": "In Production"
+                    },
+                    {
+                        "type": "range",
+                        "id": "third_option_percent",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1,
+                        "unit": "%",
+                        "label": "t:common.percent.label",
+                        "default": 0
+                    }
+                ]
+		    },
+            {
+                "type": "rating",
+                "name": "t:common.rating.label",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "t:common.image.label"
+                    },
+                    {
+                        "type": "text",
+                        "id": "text",
+                        "label": "t:common.text.label"
+                    }
+                ]
+		    },
+            {
+                "type": "button",
+                "name": "t:common.button.label",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "t:common.text.label"
+                    },
+                    {
+                        "type": "text",
+                        "id": "button_label",
+                        "default": "Button label",
+                        "label": "t:common.button.label",
+                        "info": "t:common.button.info"
+                    },
+                    {
+                        "type": "url",
+                        "id": "button_url",
+                        "label": "t:common.button.url.label"
+                    }
+                ]
+		    },
+            {
+                "type": "preorder",
+                "name": "t:common.preorder.label",
+                "limit": 1,
+                "settings": [
+
+                ]
+		    }
+        ]
+    }
+{% endschema %}

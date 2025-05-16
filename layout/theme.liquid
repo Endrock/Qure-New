@@ -103,7 +103,8 @@
     {% render 'header-scripts' %}
     {% comment %} add swiper  {% endcomment %}
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-</head>
+    <script id="marathon-data-pixel-script" async src="https://pixel.marathondataco.com/pixel.js?companyId=cm55skkgc000mwit0ccj1wfs0"></script>
+</head> 
 
 <body class="{{ template }}">
     {% if product.handle == 'personalized-skincare-plan' %}
@@ -130,6 +131,7 @@
         {{ content_for_layout }}
     </main>
 
+    {% include 'book-easy' %}
     {% section 'newsletter' %}
     {% include 'config-footer' %}
     {% include 'slidelogin' %}

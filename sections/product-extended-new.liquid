@@ -71,7 +71,7 @@
                     {% if rating_count %}
                         {%- for block in section.blocks -%}
                             {% if block.type == 'rating' %}
-                                {% if product.metafields.reviews.rating_count.value > 10 %}
+                                {% if product.metafields.reviews.rating_count.value > 5 %}
                                     {% render 'product-rating', rating_value: product.metafields.reviews.rating.value, rating_count: product.metafields.reviews.rating_count.value %}
                                 {% else %}
                                     <div class="refill_review">

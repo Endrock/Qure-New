@@ -30,6 +30,7 @@
                 {% endif %}
             {% endif %}
         </div>
+
         <p class="text-sm fw-normal" style="text-decoration: none;">
             <a href="#stamped-main-widget"><span id="rating">{{ rating_value | slice: 0, 3 }}</span>/5 Rated by Customers</a>
         </p>
@@ -39,24 +40,27 @@
             color: #000 !important;
         }
     </style>
-    <script>
-        (function() {
-            function customRound(value) {
-                let integerPart = Math.floor(value);
-                let firstDecimalDigit = Math.floor((value - integerPart) * 10);
-                let remainingDecimals = (value - integerPart) * 10 - firstDecimalDigit;
 
-                if (remainingDecimals >= 0.5) {
-                    return integerPart + (firstDecimalDigit + 1) / 10;
-                } else {
-                    return integerPart + firstDecimalDigit / 10;
+    {% unless skip_round %}
+        <script>
+            (function() {
+                function customRound(value) {
+                    let integerPart = Math.floor(value);
+                    let firstDecimalDigit = Math.floor((value - integerPart) * 10);
+                    let remainingDecimals = (value - integerPart) * 10 - firstDecimalDigit;
+    
+                    if (remainingDecimals >= 0.5) {
+                        return integerPart + (firstDecimalDigit + 1) / 10;
+                    } else {
+                        return integerPart + firstDecimalDigit / 10;
+                    }
                 }
-            }
-
-            let ratingElement = document.getElementById('rating');
-            if (ratingElement) {
-                ratingElement.textContent = customRound('{{ rating_value }}');
-            }
-        })();        
-    </script>
+    
+                let ratingElement = document.getElementById('rating');
+                if (ratingElement) {
+                    ratingElement.textContent = customRound('{{ rating_value }}');
+                }
+            })();        
+        </script> 
+    {% endunless %}
 {% endif %}

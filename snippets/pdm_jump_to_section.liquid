@@ -6,8 +6,9 @@
 {%- endcomment -%}
 
 {% assign title_jump_to = section_data.settings.text_jump_to_section %}
+
 {% if title_jump_to!= blank %}
-  <div class="jump_to_section {{ class }}">
+  <div class="jump_to_section {{ class }}{% if class == 'desktop' %} py-md-4{% endif %}">
     <h3 class="jump_to_section__head">
       {{ title_jump_to }}
     </h3>

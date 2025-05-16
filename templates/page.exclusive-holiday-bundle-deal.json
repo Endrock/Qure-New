@@ -16,7 +16,7 @@
           "type": "announcement",
           "settings": {
             "heading": "Limited Time Only:",
-            "timer": "2025-05-10T23:59:59",
+            "timer": "2025-05-20T23:59:59",
             "timer_next": 7
           }
         },
@@ -61,7 +61,7 @@
         "navigation_link_rmYfWw"
       ],
       "settings": {
-        "button_label": "SAVE UP TO 55%",
+        "button_label": "SAVE UP TO 72%",
         "button_url": "#bf-bundles"
       }
     },
@@ -80,9 +80,18 @@
         "link_Xz3LeQ": {
           "type": "link",
           "settings": {
-            "link_label": "Shop & SAVE UP TO 55%",
-            "link_label_mobile": "Shop & SAVE UP TO 55%",
+            "link_label": "Shop & SAVE UP TO 72%",
+            "link_label_mobile": "Shop & SAVE UP TO 72%",
             "link_url": "#bf-bundles"
+          }
+        },
+        "product_XP469M": {
+          "type": "product",
+          "settings": {
+            "heading": "Exclusive Memorial Day Bundle",
+            "discount": 72,
+            "image": "shopify://shop_images/Memorial_day_bundle_slider_image.png",
+            "product_url": "#memorial-day-promo-2025"
           }
         },
         "product_L8TbkG": {
@@ -100,7 +109,7 @@
           "settings": {
             "heading": "Line Refine Bundle Pro",
             "discount": 47,
-            "image": "shopify://shop_images/Line_Refine_Bundle_Pro_NEWslider.png",
+            "image": "shopify://shop_images/Line_Refine_Bundle_Pro_NEW_435b372c-1be4-4caa-84e3-ab3b83de5070.png",
             "product_url": "#line-refine-bundle-pro"
           }
         },
@@ -109,7 +118,7 @@
           "settings": {
             "heading": "Line Refine Bundle Advanced",
             "discount": 55,
-            "image": "shopify://shop_images/Line_Refine_Bundle_Advanced_NEW_slider_191680ce-254a-45e0-a8fb-25a94f523af6.png",
+            "image": "shopify://shop_images/Line_Refine_Bundle_Advanced_NEW_f0456c17-9f28-4278-8f42-8dbe29aad28b.png",
             "product_url": "#line-refine-bundle-advanced-1"
           }
         },
@@ -124,6 +133,7 @@
         },
         "product_exRwKt": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "heading": "Fade & Firm Bundle Pro",
             "discount": 55,
@@ -136,7 +146,7 @@
           "settings": {
             "heading": "Fade & Firm Bundle Advanced",
             "discount": 43,
-            "image": "shopify://shop_images/Fade_Firm_Bundle_Advanced_sliderNEW.png",
+            "image": "shopify://shop_images/Fade_Firm_Bundle_Advanced_NEW_cefda12e-7246-401e-a234-b1a0413f9454.png",
             "product_url": "#fade-firm-bundle-advance"
           }
         },
@@ -145,7 +155,7 @@
           "settings": {
             "heading": "Fade & Firm Bundle Essentials",
             "discount": 55,
-            "image": "shopify://shop_images/Fade_Firm_Bundle_Essentials3.png",
+            "image": "shopify://shop_images/Fade_Firm_Bundle_Advanced_NEW_48978640-a11f-4cdf-871c-345fba593d59.png",
             "product_url": "#fade-firm-bundle-essentials"
           }
         },
@@ -161,6 +171,7 @@
         },
         "product_VXCeRt": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "heading": "Filter Family Bundle",
             "discount": 52,
@@ -188,6 +199,7 @@
         },
         "product_MxRW8i": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "heading": "Breakout Control Starter",
             "discount": 52,
@@ -208,6 +220,7 @@
       "block_order": [
         "badge_bNNHbU",
         "link_Xz3LeQ",
+        "product_XP469M",
         "product_L8TbkG",
         "product_YzAr6q",
         "product_iEprpi",
@@ -224,7 +237,7 @@
       ],
       "settings": {
         "seo_heading": "",
-        "heading": "Save Up to 55% on \\n Certified Skincare Solutions",
+        "heading": "Save Up to 72% on \\n Certified Skincare Solutions",
         "text": "<p>Backed by the most respected peer-reviewed <strong>Dermatologist Journals </strong>and <strong>scientific studies </strong>that prove; Qure’s skincare <strong>works.</strong></p>"
       }
     },
@@ -348,6 +361,7 @@
       ],
       "settings": {
         "heading": "FEATURED IN",
+        "ctm_cls_heading": "",
         "slider_type": "five_slides",
         "slide_per_view_desktop": 3,
         "slide_per_view_mobile": 3
@@ -538,6 +552,61 @@
             "image": "shopify://shop_images/bf-ftr-firmer.svg"
           }
         },
+        "bundle_jeyfm3": {
+          "type": "bundle",
+          "settings": {}
+        },
+        "product_AXXtjA": {
+          "type": "product",
+          "settings": {
+            "product": "memorial-day-promo-2025",
+            "percent": 30,
+            "media_limit": 0,
+            "hide_us": false,
+            "recommended_heading": "",
+            "recommended_text": "",
+            "is_top_rated": false,
+            "is_preorder": false,
+            "preorder_text": "",
+            "classname": "",
+            "code": ""
+          }
+        },
+        "include_7Yq3PY": {
+          "type": "include",
+          "settings": {
+            "heading": "Micro-Infusion 1 Month Supply (For Wrinkles + For Dark Spots)",
+            "is_limited": false,
+            "type": "",
+            "image": "shopify://shop_images/bfs_3-serum.webp",
+            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p><h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
+            "count": "",
+            "hide": false,
+            "hide_variants": false,
+            "code": ""
+          }
+        },
+        "include_FxdKqc": {
+          "type": "include",
+          "settings": {
+            "heading": "Micro-Infusion 4 Month Supply (For Wrinkles)",
+            "is_limited": false,
+            "type": "",
+            "image": "shopify://shop_images/bfs_blue-serum_ca9c2e68-113a-475e-8d4b-2ad73f5e8a5e.webp",
+            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p>",
+            "count": "",
+            "hide": false,
+            "hide_variants": false,
+            "code": ""
+          }
+        },
+        "how_to_use_tLw7mt": {
+          "type": "how-to-use",
+          "settings": {
+            "image": "shopify://shop_images/bfs_mi_sm.svg",
+            "text": "<h5>Micro-Infusion 5 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Use the 3 month refills after 2 month bundle.</li></ul>"
+          }
+        },
         "bundle_fhATMn": {
           "type": "bundle",
           "settings": {}
@@ -561,6 +630,7 @@
         },
         "include_jkXtYb": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles)",
             "is_limited": false,
@@ -575,6 +645,7 @@
         },
         "include_6bW3Ra": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Micro-Infusion 2 Month Supply (For Wrinkles)",
             "is_limited": false,
@@ -589,6 +660,7 @@
         },
         "how_to_use_nRp9HV": {
           "type": "how-to-use",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_mi_sm.svg",
             "text": "<h5>Micro-Infusion 5 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Use the 3 month refills after 2 month bundle.</li></ul>"
@@ -645,11 +717,11 @@
         "include_tCtYLH": {
           "type": "include",
           "settings": {
-            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles + Dark Spots) ",
+            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles) ",
             "is_limited": false,
             "type": "",
-            "image": "shopify://shop_images/bfs_3-serum.webp",
-            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p><h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
+            "image": "shopify://shop_images/bfs_blue-serum_ca9c2e68-113a-475e-8d4b-2ad73f5e8a5e.webp",
+            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p>",
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -701,11 +773,11 @@
         "include_6xfjCG": {
           "type": "include",
           "settings": {
-            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles + Dark Spots) ",
+            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles) ",
             "is_limited": false,
             "type": "",
-            "image": "shopify://shop_images/bfs_3-serum.webp",
-            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p><h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
+            "image": "shopify://shop_images/bfs_blue-serum_ca9c2e68-113a-475e-8d4b-2ad73f5e8a5e.webp",
+            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p>",
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -723,7 +795,7 @@
             "count": "23 left",
             "hide": false,
             "hide_variants": false,
-            "code": ""
+            "code": "<div class=\"bfs_tbx_color\">\n    <select class=\"form-select colorSelector\" aria-label=\"Default select example\">\n        <option value=\"1\" data-soldout=\"true\" data-goto=\"2\">White</option>\n        <option value=\"2\">Black</option>\n    </select>\n</div>"
           }
         },
         "how_to_use_wHCyJt": {
@@ -807,6 +879,11 @@
         "icon_AcpYLG",
         "icon_f36jbE",
         "icon_eUd4zy",
+        "bundle_jeyfm3",
+        "product_AXXtjA",
+        "include_7Yq3PY",
+        "include_FxdKqc",
+        "how_to_use_tLw7mt",
         "bundle_fhATMn",
         "product_6Nmeyc",
         "include_jkXtYb",
@@ -999,11 +1076,11 @@
         "include_4RreaF": {
           "type": "include",
           "settings": {
-            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles + Dark Spots) ",
+            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles) ",
             "is_limited": false,
             "type": "",
-            "image": "shopify://shop_images/bfs_3-serum.webp",
-            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p><h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
+            "image": "shopify://shop_images/bfs_blue-serum_ca9c2e68-113a-475e-8d4b-2ad73f5e8a5e.webp",
+            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p>",
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -1047,11 +1124,11 @@
         "include_Ggpxqa": {
           "type": "include",
           "settings": {
-            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles + Dark Spots)",
+            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles)",
             "is_limited": false,
             "type": "",
-            "image": "shopify://shop_images/bfs_3-serum.webp",
-            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p><h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
+            "image": "shopify://shop_images/bfs_blue-serum.webp",
+            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p>",
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -1356,7 +1433,7 @@
             "count": "23 left",
             "hide": false,
             "hide_variants": false,
-            "code": "<div class=\"bfs_tbx_color\">\n    <select class=\"form-select colorSelector\" aria-label=\"Default select example\">\n        <option value=\"1\" selected=\"\">White</option>\n        <option value=\"2\">Black</option>\n    </select>\n</div>"
+            "code": "<div class=\"bfs_tbx_color\">\n    <select class=\"form-select colorSelector\" aria-label=\"Default select example\">\n        <option value=\"1\" data-soldout=\"true\" data-goto=\"2\">White</option>\n        <option value=\"2\">Black</option>\n    </select>\n</div>"
           }
         },
         "include_e4Mq9A": {
@@ -1458,10 +1535,12 @@
         },
         "bundle_3RY7qF": {
           "type": "bundle",
+          "disabled": true,
           "settings": {}
         },
         "product_qM8ypV": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "breakout-control-starter",
             "percent": 28,
@@ -1479,6 +1558,7 @@
         },
         "include_hxkWTR": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Faucet Filter",
             "is_limited": false,
@@ -1493,6 +1573,7 @@
         },
         "include_nwb4HD": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Shower Filter",
             "is_limited": false,
@@ -1507,6 +1588,7 @@
         },
         "how_to_use_8WVeGb": {
           "type": "how-to-use",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_faucet_filter.svg",
             "text": "<h5>Faucet Filter</h5><ul><li>Install the Qure Faucet Filter on your faucet.</li><li>Replace filter every 3 months (purchase replacement via our website).</li></ul>"
@@ -1514,6 +1596,7 @@
         },
         "how_to_use_DiytkL": {
           "type": "how-to-use",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_shower_f_sm.svg",
             "text": "<h5>Shower Filter</h5><ul><li>Remove your original shower head and screw on the Qure Shower Filter</li><li>Replace filter every 3 months (purchase replacement via our website).</li></ul>"
@@ -1547,7 +1630,7 @@
             "type": "",
             "image": "shopify://shop_images/bfs-derma-mist.webp",
             "text": "<h5>Dermal Mist</h5><p>Dermatologically Tested, Clinically Tested, Hypoallergenic, Suitable for sensitive skin, Dermatologist approved, Allergy Tested, Non-Irritating.</p><h5>Dermal Mist Ingredients</h5><p>WATER (Aqua)*, CHRYSANTHELLUM INDICUM FLOWER WATER, SODIUM CHLORIDE, SODIUM PHOSPHATE, DISODIUM PHOSPHATE, HYPOCHLOROUS ACID. *Ultra Pure Water.</p>",
-            "count": "Ships Mid April",
+            "count": "",
             "hide": false,
             "hide_variants": false,
             "code": ""
@@ -1672,6 +1755,7 @@
         "video_xLP3b6": {
           "type": "video",
           "settings": {
+            "title_mob": "Recommended by Experts",
             "image": "shopify://shop_images/dr_shah_trusted.webp",
             "video": "https://www.youtube.com/watch?v=I2Fe-kP-2Jg",
             "title": "Dr Shah, MD",
@@ -1684,6 +1768,7 @@
             "trust_icon": "shopify://shop_images/verified_design.svg",
             "trust_des": "Trusted and recommended by world leading Dermatologists",
             "title": "\"The best LED mask <strong>on the market in my opinion at this time, that being said you do need to </strong>use this consistently to see results…\"",
+            "title_des": "",
             "title_clr": "#000000",
             "title_strong_clr": "#797d7c"
           }
@@ -1694,6 +1779,9 @@
         "text_content_zQrNN6"
       ],
       "settings": {
+        "ctm_cls": "",
+        "left_dv_width": "7",
+        "right_dv_width": "5",
         "padding_top": 60,
         "padding_bottom": 0
       }

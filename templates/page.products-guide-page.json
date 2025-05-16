@@ -51,13 +51,24 @@
             "micro_prod_link": "https://qureskincare.com/pages/shower-filter-online-guide",
             "arrow_img": "shopify://shop_images/arrow-next.png"
           }
+        },
+        "block_qdzPRD": {
+          "type": "Block",
+          "settings": {
+            "product_guide_img": "shopify://shop_images/n_d_device.webp",
+            "micro_title": "Neck & Décolletage LED",
+            "micro_desc": "<p>Set Up Guide, How To Use, Troubleshooting, etc..</p>",
+            "micro_prod_link": "https://qureskincare.com/pages/n-d-quickstart-guide",
+            "arrow_img": "shopify://shop_images/arrow-next.png"
+          }
         }
       },
       "block_order": [
         "block_yVi68x",
         "block_VKPc3V",
         "block_VEwRKX",
-        "block_qdzPRU"
+        "block_qdzPRU",
+        "block_qdzPRD"
       ],
       "settings": {
         "heading_id": "User Manuals Made Easy!",

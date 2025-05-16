@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "product-landing": {
       "type": "product-landing",
@@ -336,16 +336,16 @@
     "results_Lezjzk": {
       "type": "results",
       "blocks": {
-        "result_8XqmbQ": {
+        "result_Km8EJp": {
           "type": "result",
           "settings": {
-            "image": "shopify://shop_images/results_ebony.webp",
-            "heading": "I love this serum",
-            "text": "<p>“I rarely have the guts to try new skincare as I just hate wasting my money on products I don't like and haven't gotten to sample before. But I got recommended this from a girlfriend of mine and was so happy I took on her recommendation because i LOVE this serum. It's the perfect everyday serum that you can actually notice a difference in your skin with!”</p>",
+            "image": "shopify://shop_images/results_dorothy.webp",
+            "heading": "Beauty Has No Age Limit",
+            "text": "<p>“I am 76 years old. I shared my discovery of Qure’s All-in-1 serum about three months ago and that I had purchased the red light mask about six weeks before. I use both daily. Such a boost to my anti-aging regimen in just three or four minutes! The Qure's at home micro-needling system and targeted serums enhance the red light therapy and All-in-1 Serum and it saves me money! Qure’s products have made an obvious improvement in my skin’s texture, brightness, and tone.</p>",
             "see-more": "",
-            "image_country": "shopify://shop_images/australia_f.webp",
-            "text_country": "Australia",
-            "client": "Ebony",
+            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "text_country": "United States",
+            "client": "Dorothy S.",
             "code": ""
           }
         },
@@ -440,16 +440,16 @@
             "code": ""
           }
         },
-        "result_Km8EJp": {
+        "result_8XqmbQ": {
           "type": "result",
           "settings": {
-            "image": "shopify://shop_images/results_dorothy.webp",
-            "heading": "Beauty Has No Age Limit",
-            "text": "<p>“I am 76 years old. I shared my discovery of Qure’s All-in-1 serum about three months ago and that I had purchased the red light mask about six weeks before. I use both daily. Such a boost to my anti-aging regimen in just three or four minutes! The Qure's at home micro-needling system and targeted serums enhance the red light therapy and All-in-1 Serum and it saves me money! Qure’s products have made an obvious improvement in my skin’s texture, brightness, and tone.</p>",
+            "image": "shopify://shop_images/results_ebony.webp",
+            "heading": "I love this serum",
+            "text": "<p>“I rarely have the guts to try new skincare as I just hate wasting my money on products I don't like and haven't gotten to sample before. But I got recommended this from a girlfriend of mine and was so happy I took on her recommendation because i LOVE this serum. It's the perfect everyday serum that you can actually notice a difference in your skin with!”</p>",
             "see-more": "",
-            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
-            "text_country": "United States",
-            "client": "Dorothy S.",
+            "image_country": "shopify://shop_images/australia_f.webp",
+            "text_country": "Australia",
+            "client": "Ebony",
             "code": ""
           }
         },
@@ -468,7 +468,7 @@
         }
       },
       "block_order": [
-        "result_8XqmbQ",
+        "result_Km8EJp",
         "result_YCMcrf",
         "result_xNJbBh",
         "result_pEAJKU",
@@ -476,7 +476,7 @@
         "result_LQ93LC",
         "result_hMcrLP",
         "result_wKDmdr",
-        "result_Km8EJp",
+        "result_8XqmbQ",
         "result_m3HaCy"
       ],
       "settings": {
@@ -700,6 +700,10 @@
         "slide_space": 18
       }
     },
+    "17465746219b2971f9": {
+      "type": "apps",
+      "settings": {}
+    },
     "faq_LBTFeM": {
       "type": "faq",
       "blocks": {
@@ -786,6 +790,35 @@
         "button_label": "Show More Questions",
         "button_hide_label": "Hide More Questions"
       }
+    },
+    "heading_W6mXHy": {
+      "type": "heading",
+      "name": "t:sections.heading.name",
+      "settings": {
+        "heading": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>",
+        "heading_mobile": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>"
+      }
+    },
+    "1746575117b4e38951": {
+      "type": "apps",
+      "blocks": {
+        "stamped_reviews_main_widget_XxqkkY": {
+          "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true,
+            "use_metafields": false,
+            "sku_tagtype": "sku"
+          }
+        }
+      },
+      "block_order": [
+        "stamped_reviews_main_widget_XxqkkY"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -802,6 +835,9 @@
     "pdm_all_in_one_face_serum_offer_form_dAje9z",
     "icons_list_RxBdg4",
     "videos_list_zckcnX",
-    "faq_LBTFeM"
+    "17465746219b2971f9",
+    "faq_LBTFeM",
+    "heading_W6mXHy",
+    "1746575117b4e38951"
   ]
 }

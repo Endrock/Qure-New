@@ -1,3 +1,6 @@
+{% assign product_led_neck = all_products['neck-decolletage-led'] %}
+{% assign product_led_mask = all_products['q-rejuvalight-pro-facewear-3'] %}
+
 <!-- product bundle start -->
 <div class="product_bundle offer-lp section" id="shop">
     <div class="container">
@@ -77,7 +80,7 @@
                         <div class="col-md-12">
                             <div class="bundle_select-main include ps-md-3">
                                 <div class="product_details">
-                                    <p class="limited_time_offer mb-2">Limited time <strong> MOTHER’S DAY </strong> offer</p>
+                                    <p class="limited_time_offer mb-2">Limited time offer</p>
                                     <h2 class="title-lg">Q-Rejuvalight Pro LED Mask<br>
                                         <span>+ FREE Neck & Décolletage LED Device</span>
                                     </h2>
@@ -133,10 +136,10 @@
                                     <div class="include_checkout">
                                         <div class="row justify-content-between">
                                             <div class="col-auto">
-                                                <p class="green_txt">INSTANT SAVINGS: {{ 299 | times: 100 | money_without_trailing_zeros }}</p>
+                                                <p class="green_txt">INSTANT SAVINGS: {{ product_led_neck.price | money_without_trailing_zeros }}</p>
                                             </div>
                                             <div class="col-auto">
-                                                <h6><del class="text-grey">{{ 698 | times: 100 | money_without_trailing_zeros }}</del> <span>{{ 399 | times: 100 | money_without_trailing_zeros }}</span></h6>
+                                                <h6><del class="text-grey">{{ product_led_neck.price | plus: product_led_mask.price | money_without_trailing_zeros }}</del> <span>{{ product_led_mask.price | money_without_trailing_zeros }}</span></h6>
                                             </div>
                                         </div>
 
@@ -160,11 +163,11 @@
                                         </div>
                                     </div>
                                     <!-- Buy Now Button -->
-                                    <button class="buy-now" id="buy-now-button">Buy Now & Save {{ 299 | times: 100 | money_without_trailing_zeros }}</button>
+                                    <button class="buy-now" id="buy-now-button">Shop & Save {{ product_led_neck.price | money_without_trailing_zeros }}</button>
 
                                     <!-- Payment Methods -->
                                     <div class="payment_method">
-                                        <p>or pay 4 monthly payments of {{ 99.75 | times: 100 | money_without_trailing_zeros }} with</p>
+                                        <p>or pay 4 monthly payments of {{ product_led_mask.price | divided_by: 4 | money_without_trailing_zeros }} with</p>
                                         <div class="pmt_img ps-2">
                                             <img src="https://qureskincaredns.com/new/assets/klarna.svg" alt="Klarna">
                                             <img src="https://qureskincaredns.com/new/assets/sezzle.svg" alt="Sezzle">
@@ -181,8 +184,6 @@
     </div>
 </div>
 <!-- product bundle end -->
-
-{% assign amount = 299 | times: 100 | money_without_trailing_zeros %}
 
 <script>
     document.getElementById('buy-now-button').addEventListener('click', function() {
@@ -246,7 +247,7 @@
 
     document.addEventListener("DOMContentLoaded", function() {
         let find = '$299';
-        let replace = '{{ amount }}';
+        let replace = '{{ product_led_neck.price | money_without_trailing_zeros }}';
         const spanEl = document.querySelector('.header_btn span');
         
         if (spanEl && spanEl.textContent.includes(find)) {

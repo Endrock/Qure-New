@@ -748,19 +748,6 @@
     letter-spacing: 0.14px;
     text-transform: uppercase;
 }
-.limited_time_offer {
-    color: #FFF;
-    font-size: 10px;
-    font-weight: 500;
-    text-transform: uppercase;
-    border-radius: 666px;
-    background: #C92127;
-    width: 110px;
-    height: 19px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .content_free_neck p {
     font-size: 10px;
     font-style: normal;
@@ -1302,7 +1289,7 @@ div#collapseTech1 a{
     border-radius: 666px;
     background: var(--Qure-Dark-Green, #008763);
     font-weight: 400;
-    width: 130px;
+    min-width: 130px;
     height: max-content;
     display: flex;
     justify-content: center;
@@ -1467,13 +1454,20 @@ div#collapseOnezzz .tab-pane .col-4 p strong {
     margin-bottom: 21px;
 }
 .limited_time_offer {
-    width: 199px;
+    min-width: 120px;
+    max-width: 120px;
     height: 24px;
     font-size: 11px;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 18px;
     text-transform: uppercase;
     gap: 2px;
+    color: #FFF;
+    border-radius: 666px;
+    background: #C92127;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .buy_led_mask{
     font-size: 13px;
@@ -1501,13 +1495,13 @@ div#collapseOnezzz .tab-pane .col-4 p strong {
     color: var(--Qure-Dark-Green, #008763);
     font-size: 11.744px;
     font-weight: 500;
-    width: 50px;
+    min-width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .mothers_day_offer_prods .prod_dv:last-child p {
-    width: 104px;
+    min-width: 104px;
 }
 .prod_dv, .prod_dv img {
     border-radius: 6px;
@@ -1563,7 +1557,7 @@ div#collapseOnezzz .tab-pane .col-4 p strong {
         font-size: 11px;
     }
     .limited_time_offer {
-        width: 185px;
+        min-width: 120px;
         font-size: 10px !important;
     }
     .mothers_day_offer {

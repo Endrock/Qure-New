@@ -1,0 +1,271 @@
+<div class="three_step d-md-none bg-lightGrey section">
+  <div class="container">
+    <div class="section_header text-center ms-0 mb-md-4 m-md-auto">
+      <h2 class="title-lg">{{ section.settings.section_title }}</h2>
+
+      <div class="banner_img position-relative see_action d-flex justify-content-center popup-youtube pt-3 pb-2">
+        <p>
+          <img src="{{ section.settings.play_icon | image_url }}" alt="" class="img-fluid">
+          {{ section.settings.play_text }}
+        </p>
+        <a class="popup-youtube position-absolute top-0 bottom-0 start-0 end-0">
+          <div class="wistia_responsive_padding" style="position:relative;">
+            <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+              <span class="wistia_embed wistia_async_{{ section.settings.video_embed_id }} popover=true videoFoam=true"
+                style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span>
+            </div>
+            <span class="d-flex justify-content-end p-2">
+              <img src="{{ section.settings.trusted_icon | image_url }}" alt="" class="w-auto">
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="swiper twa__swiper qureSlider dot_pagination" id="twa__swiper-qureSlider" data-section-id="qureSlider"
+      data-autoplay="false" data-loop="false" data-centerslide="false" data-mobile="1.4" data-tablet="6" data-desktop="6"
+      data-spacing="20" data-arrowleft="video-swiper-prev" data-arrowright="video-swiper-next">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          {% if block.type == 'step' %}
+            <div class="swiper-slide">
+              <div class="step">
+                {% if block.settings.step_image %}
+                  <img src="{{ block.settings.step_image | image_url }}" class="img-fluid" alt="">
+                {% endif %}
+                <div class="icon">
+                  {% if block.settings.step_icon %}
+                    <img src="{{ block.settings.step_icon | image_url }}" alt="">
+                  {% endif %}
+                </div>
+                <h4>{{ block.settings.step_heading }}</h4>
+                <p>{{ block.settings.step_description }}</p>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="pagination_navigation">
+        <div class="swiper-pagination"></div>
+        <div class="video-swiper-prev swiper-button-prev swiper-button"></div>
+        <div class="video-swiper-next swiper-button-next swiper-button"></div>
+      </div>
+    </div>
+
+    <div class="d-md-none ctm_cls_filter_wat">
+      <div class="d-md-none">
+        <a class="btn btn-lg btn-primary with_subscription mt-4 d-md-none" href="{{ section.settings.button_link }}">{{ section.settings.button_text }}</a>
+      </div>
+      <div class="bg-transparent ctm_cls_shipping d-flex mw-359 px-4 mx-auto pt-3 shipping shipping_bg">
+        <div class="s_bx">
+          <img src="{{ section.settings.shipping_icon | image_url: width: 40 }}" alt="">
+          <p>{{ section.settings.shipping_text }}</p>
+        </div>
+        <div class="s_bx">
+          <img src="{{ section.settings.payment_icon | image_url: width: 40 }}" alt="">
+          <p>{{ section.settings.payment_text }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="easy_setup d-md-block d-none">
+  <div class="container">
+    <div class="adjust_flow d-md-none">
+      <h3>{{ section.settings.adjust_title }}</h3>
+      <p>{{ section.settings.adjust_description }}</p>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-md-4 col-7 order-first order-md-0">
+        <div class="actVideo_block">
+          <div class="ctmVideo__block">
+            <div class="player">
+                <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+                    <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                        <iframe src="https://fast.wistia.net/embed/iframe/{{ section.settings.video_embed_id }}?seo=false&videoFoam=true"
+                        title="Wistia video player"
+                        allow="autoplay; fullscreen"
+                        allowfullscreen
+                        frameborder="0"
+                        scrolling="no"
+                        class="wistia_embed"
+                        style="width:100%;height:100%;">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8 col-5">
+        <div class="easy_setup_content d-none d-md-block ps-md-5">
+          <h3 class="easy_step_heading">{{ section.settings.section_title }}</h3>
+          <div class="easy_setup_content_inner row">
+            {% for block in section.blocks %}
+              {% if block.type == 'step' %}
+                <div class="col-4 p-0">
+                  <h3><img src="{{ block.settings.step_icon | image_url }}" alt=""></h3>
+                  <div class="step_dot"></div>
+                  <div class="step_text_ctm">
+                    <h4>{{ block.settings.step_heading }}</h4>
+                    <p>{{ block.settings.step_description }}</p>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="adjustable_angle_icons d-md-none">
+          {% for block in section.blocks %}
+            {% if block.type == 'feature' %}
+              <div class="adjustable_angle_inner">
+                <img src="{{ block.settings.icon | image_url }}" alt="">
+                <p>{{ block.settings.text }}</p>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+
+
+{% schema %}
+{
+  "name": "Three Step Setup",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Easy 3-Step Set-Up"
+    },
+    {
+      "type": "text",
+      "id": "video_embed_id",
+      "label": "Wistia Video Embed ID",
+      "default": "fsw2ted2a8"
+    },
+    {
+      "type": "image_picker",
+      "id": "play_icon",
+      "label": "Play Icon"
+    },
+    {
+      "type": "text",
+      "id": "play_text",
+      "label": "Play Button Text",
+      "default": "Watch the video"
+    },
+    {
+      "type": "image_picker",
+      "id": "trusted_icon",
+      "label": "Trusted Icon"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Buy Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Buy Button Text",
+      "default": "Buy Now"
+    },
+    {
+      "type": "image_picker",
+      "id": "shipping_icon",
+      "label": "Shipping Icon"
+    },
+    {
+      "type": "text",
+      "id": "shipping_text",
+      "label": "Shipping Text",
+      "default": "Free Shipping <br>Orders Over $100"
+    },
+    {
+      "type": "image_picker",
+      "id": "payment_icon",
+      "label": "Payment Icon"
+    },
+    {
+      "type": "text",
+      "id": "payment_text",
+      "label": "Payment Text",
+      "default": "Buy Now, <br> Pay Later"
+    },
+    {
+      "type": "text",
+      "id": "adjust_title",
+      "label": "Adjust Flow Title",
+      "default": "Adjust the flow and angle"
+    },
+    {
+      "type": "textarea",
+      "id": "adjust_description",
+      "label": "Adjust Flow Description",
+      "default": "Transform your shower with our rotatable filter and three customizable water flow settings."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "step_image",
+          "label": "Step Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "step_icon",
+          "label": "Step Icon"
+        },
+        {
+          "type": "text",
+          "id": "step_heading",
+          "label": "Step Heading",
+          "default": "Step 1."
+        },
+        {
+          "type": "textarea",
+          "id": "step_description",
+          "label": "Step Description"
+        }
+      ]
+    },
+    {
+      "type": "feature",
+      "name": "Feature Icon",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Feature Icon"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Feature Text"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Three Step Setup",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

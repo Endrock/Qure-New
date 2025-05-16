@@ -214,7 +214,7 @@ window.addEventListener('load', function () {
 // =================================== js for same height ===============================
 $(function () {
     //setTimeout(function () {
-    $('.q_uses_header, .dfrc__hdr, .s_name, .result_item, .serum_bx, .bs_content, .skin_item, .safety_content, .mc_desc, .blog_wrap, .see_item img, .menu li a, .return_step1, .result_tabs .rt_wrap_header .nav-link').matchHeight({
+    $('.q_uses_header, .dfrc__hdr, .s_name, .serum_bx, .bs_content, .skin_item, .safety_content, .mc_desc, .blog_wrap, .see_item img, .menu li a, .return_step1, .result_tabs .rt_wrap_header .nav-link').matchHeight({
         property: 'height',
         target: null,
         remove: false
@@ -951,6 +951,7 @@ var swiper = new Swiper(".howUSe_slider", {
 *js only for micro-infusion pdp start
 */
 $('.monthly_plans').click(function () {
+    if ($(this).hasClass('ignore')) return;
     var savedTxt = $(this).find('.saved_price').html();
     if (savedTxt !== undefined) {
         if (document.body.hasAttribute('data-contrast-horizontal-layout')) {
@@ -1003,6 +1004,7 @@ $(document).ready(function () {
     $('.tab_content').hide(); // Hide all tab contents initially
     $('.tab_content').eq(0).show(); // Show the second tab content by default
     $('.step_conten_blocks .planBlock').click(function () {
+        if ($(this).hasClass('ignore')) return;
         var regular_price = $(this).find(".regular_price").text();
         var sale_price = $(this).find(".sale_price:visible").text().trim();
         console.log(regular_price);
@@ -1810,3 +1812,4 @@ seeMoreBtn.addEventListener('click', function() {
     this.setAttribute('data-expanded', 'true');
   }
 });
+

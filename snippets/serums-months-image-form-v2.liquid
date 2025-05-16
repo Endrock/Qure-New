@@ -58,18 +58,11 @@
                                         purchase needle heads and serum of choice.</p>
                                 </div>
                             </div>
-                            <img src="{{ 'MI6x-mixed_blue.webp' | asset_url }}" class="img-fluid" alt="" id="choosen_image" />
-                        </div>
-                        <div class="tmtFtrs d-none d-md-flex justify-content-between mb-4 mt-5">
-                            <div class="tmtFtrs_block text-center"> <!-- Ftr Block -->
-                                {% render "serums-months-svg-low-contrast", icon: "thumbs_up" %} 
-                            </div> <!-- Ftr Block end-->
-                            <div class="tmtFtrs_block text-center"> <!-- Ftr Block -->
-                                {% render "serums-months-svg-low-contrast", icon: "truck" %} 
-                            </div> <!-- Ftr Block end-->
-                            <div class="tmtFtrs_block text-center"> <!-- Ftr Block -->
-                                {% render "serums-months-svg-low-contrast", icon: "shield" %} 
-                            </div> <!-- Ftr Block end-->
+                            {% if three_months_img != blank %}
+                                <img src="https://qureskincaredns.com/new/assets/{{ three_months_img }}" class="img-fluid" alt="" id="choosen_image" />
+                            {% else %}
+                                <img src="{{ 'MI6x-mixed_blue.webp' | asset_url }}" class="img-fluid" alt="" id="choosen_image" />
+                            {% endif %}
                         </div>
                         <div class="qst_box text-center d-none d-md-block">
                             <img src="{{ 'question_mark.svg' | asset_url }}" alt="" class="me-2">Have questions about
@@ -148,7 +141,7 @@
                                         data-tab="month_3" 
                                         data-pay="{{ divided_price | money_without_trailing_zeros }}"
                                         data-per="Buy Now & SAVE {{ discount_percentage }}%" 
-                                        data-image="https://qureskincaredns.com/new/assets/MI6x-mixed_blue.webp"
+                                        data-image="https://qureskincaredns.com/new/assets/{% if three_months_img != blank %}{{ three_months_img }}{% else %}MI6x-mixed_blue.webp{% endif %}"
                                             >
                                             <div class="pdm_plan-choosen">
                                                 <p>
@@ -233,7 +226,7 @@
                                         {% assign divided_price = product.price | divided_by: 4 %}
 
                                         <a class="planBlock {{ section_id }}_productPeriodObject" href="month_1" data-tab="month_1" data-pay="{{ divided_price | money_without_trailing_zeros}}"
-                                            data-per="BUY NOW - {{ product.price | money_without_trailing_zeros }}" data-image="https://qureskincaredns.com/new/assets/MI2x-rejuv_blue.webp">
+                                            data-per="BUY NOW - {{ product.price | money_without_trailing_zeros }}" data-image="https://qureskincaredns.com/new/assets/{% if one_month_img != blank %}{{ one_month_img }}{% else %}MI2x-rejuv_blue.webp{% endif %}">
                                             {% assign price_third_element = product.price %}
                                             <input type="radio" name="monthlyPlan" id="1_month" 
                                                 data-product-period="1"
@@ -331,12 +324,16 @@
                                                 <div class="pmt_row-test">
                                                     <div class="pmt_des">One-time payment with</div>
                                                     <div class="pmt_options">
-                                                        {% if section.settings.payment_icons != blank %}
-                                                            {{
-                                                                section.settings.payment_icons
-                                                                | image_url: width: 350
-                                                                | image_tag: alt: 'Payment Icons', class: 'pmt_options__image'
-                                                            }}
+                                                        {% if is_static == true %}
+                                                            <div class="pmt_options"><img src="https://qureskincaredns.com/new/assets/payment_logos.png" alt=""></div>
+                                                        {% else %}
+                                                            {% if section.settings.payment_icons != blank %}
+                                                                {{
+                                                                    section.settings.payment_icons
+                                                                    | image_url: width: 350
+                                                                    | image_tag: alt: 'Payment Icons', class: 'pmt_options__image'
+                                                                }}
+                                                            {% endif %}
                                                         {% endif %}
                                                     </div>
                                                 </div>
@@ -357,12 +354,16 @@
                                                 <div class="pmt_row-test">
                                                     <div class="pmt_des">Monthly interest-free payments with</div>
                                                     <div class="pmt_options item-2">
-                                                        {% if section.settings.payment_icons_today_only != blank %}
-                                                            {{
-                                                                section.settings.payment_icons_today_only
-                                                                | image_url: width: 150
-                                                                | image_tag: alt: 'Payment Icons Today Only', class: 'pmt_options__image'
-                                                            }}
+                                                        {% if is_static == true %}
+                                                            <div class="pmt_options"><img src="https://qureskincaredns.com/new/assets/payments.png" alt=""></div>
+                                                        {% else %}
+                                                            {% if section.settings.payment_icons_today_only != blank %}
+                                                                {{
+                                                                    section.settings.payment_icons_today_only
+                                                                    | image_url: width: 150
+                                                                    | image_tag: alt: 'Payment Icons Today Only', class: 'pmt_options__image'
+                                                                }}
+                                                            {% endif %} 
                                                         {% endif %}
                                                     </div>
                                                 </div>
@@ -402,25 +403,25 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="c_s_shipping d-block d-md-none">
-                            <div class="c_s_wrapper cs_wrapper-pdm">
-                                <div class="c_s_bx">
-                                    {% render "serums-months-svg-low-contrast", icon: "thumbs_up" %} 
-                                </div>
-                                <div class="c_s_bx">
-                                    {% render "serums-months-svg-low-contrast", icon: "truck" %} 
-                                </div>
-                                <div class="c_s_bx">
-                                    {% render "serums-months-svg-low-contrast", icon: "shield" %} 
-                                </div>
+                    </div>
+                    <div class="c_s_shipping d-block d-md-non">
+                        <div class="c_s_wrapper">
+                            <div class="c_s_bx">
+                                {% render "serums-months-svg-low-contrast", icon: "thumbs_up" %}
                             </div>
-                            <div class="c_s_ques text-center">
-                                <p class="ask-ques">
-                                    <img src="{{ 'question_mark.svg' | asset_url }}" alt="">
-                                    Have questions about MicroInfusion?
-                                    <a href="#">Chat with us!</a>
-                                </p>
+                            <div class="c_s_bx">
+                                {% render "serums-months-svg-low-contrast", icon: "truck" %} 
                             </div>
+                            <div class="c_s_bx">
+                                {% render "serums-months-svg-low-contrast", icon: "shield" %}
+                            </div>
+                        </div>
+                        <div class="c_s_ques text-center d-md-none">
+                            <p class="ask-ques">
+                                <img src="https://qureskincaredns.com/new/assets/question_mark.svg" alt="">
+                                Have questions about MicroInfusion?
+                                <a href="#">Chat with us!</a>
+                            </p>
                         </div>
                     </div>
                 </div>

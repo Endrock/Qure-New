@@ -1,0 +1,101 @@
+
+
+<div class="container">
+  <div class="use_three_steps_wrapper d-flex flex-column flex-md-row align-items-center">
+    <div class="actVideo_block">
+      <div class="ctmVideo__block">
+        <div class="player">
+          <div class="wistia_responsive_padding" style="position:relative;">
+            <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+              <div class="wistia_embed wistia_async_{{ section.settings.wistia_id }} seo=false videoFoam=true"
+                style="height:100%;position:relative;width:100%">
+                <div class="wistia_swatch"
+                  style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                  <img src="https://fast.wistia.com/embed/medias/{{ section.settings.wistia_id }}/swatch"
+                    style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true"
+                    onload="this.parentNode.style.opacity=1;" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="steps_main">
+      <h3 class="title-lg mb-3 mb-5">{{ section.settings.section_title }}</h3>
+      <div class="timeline">
+        {% for block in section.blocks %}
+          {% if block.type == 'step' %}
+            <div class="timeline-step">
+              <div class="d-flex ctm_gap_10">
+                <div class="step-label">{{ block.settings.step_label }}</div>
+                <div class="step-title">{{ block.settings.step_title }}</div>
+              </div>
+              {% assign lines = block.settings.step_description | newline_to_br | split: '<br />' %}
+              {% for line in lines %}
+                <p class="step-description mt-1{% if forloop.last == true %} mb-0{% endif %}">{{ line }}</p>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+{% schema %}
+{
+  "name": "Use in 3 Steps",
+  "tag": "section",
+  "class": "use_three_steps section bg-lightGrey",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Use in 3 simple steps"
+    },
+    {
+      "type": "text",
+      "id": "wistia_id",
+      "label": "Wistia Video ID",
+      "default": "j7op01weqs"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "step_label",
+          "label": "Step Label",
+          "default": "STEP ONE"
+        },
+        {
+          "type": "text",
+          "id": "step_title",
+          "label": "Step Title",
+          "default": "Prep your skin"
+        },
+        {
+          "type": "textarea",
+          "id": "step_description",
+          "label": "Description (use line breaks for multiple lines)",
+          "default": "Start with clean, dry skin."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Use in 3 Steps",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
