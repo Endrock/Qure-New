@@ -7,8 +7,6 @@ Usage:
 {% endcomment %}
 
 {{ '_pdm_product-upgrade-popup.css' | asset_url | stylesheet_tag  }}  
-<script src="{{'_pdm_product-upgrade-popup.js' | asset_url }}" defer >
-</script>
 
 <!-- pdm-upgrade-popup.liquid -->
 <div class="pdm-popup-overlay hidden" id="pdm-popup-overlay"></div>
@@ -25,10 +23,7 @@ Usage:
       <div class="pdm-image-check-wrapper">
         <img src="{{ pop_up.image.value | image_url: width: 200 }}" alt="{{ pop_up.title.value }}" />
         <span class="pdm-check-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-            <circle cx="9" cy="9" r="9" fill="#008763"/>
-            <path d="M5 8.41788L7.95882 11.3193L13.3833 6" stroke="white" stroke-width="2"/>
-          </svg>
+          {% render 'icons', icon: 'popup-check' %} 
         </span>
       </div>
       <div class="pdm-popup-product-text">
@@ -59,9 +54,9 @@ Usage:
         <del>{{ price_full | money_without_trailing_zeros }}</del> <span class="discounted-price">${{ discount_amount }}</span> <span class="discount-tag">19% OFF</span>
       </p>
       <ul class="pdm-popup-benefits">
-        {% assign svg = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" style="margin-right: 8px;">
-                          <path d="M4.08703 8.06541L2.01589 5.99427C1.90429 5.88267 1.75292 5.81997 1.59509 5.81997C1.43726 5.81997 1.2859 5.88267 1.1743 5.99427C1.0627 6.10587 1 6.25724 1 6.41507C1 6.49322 1.01539 6.5706 1.0453 6.6428C1.07521 6.715 1.11904 6.7806 1.1743 6.83586L3.66922 9.33078C3.902 9.56356 4.27803 9.56356 4.51081 9.33078L10.8257 3.01589C10.9373 2.90429 11 2.75292 11 2.59509C11 2.43726 10.9373 2.2859 10.8257 2.1743C10.7141 2.0627 10.5627 2 10.4049 2C10.2471 2 10.0957 2.0627 9.98411 2.1743L4.08703 8.06541Z" fill="#3B8566"/>
-                          </svg>' %}
+        {% capture svg %}
+          {% render 'icons', icon: 'check-list' %}
+        {% endcapture %}
         {% assign checklist = pop_up.checklist.value | newline_to_br %}
         {{ checklist | replace: "-", svg  }}
       </ul>
@@ -74,3 +69,4 @@ Usage:
     <button class="pdm-decline-btn" id="pdm-decline">No thanks, keep my choice</button>
   </div>
 </div>
+<script src="{{'_pdm_product-upgrade-popup.js' | asset_url }}" defer ></script>
