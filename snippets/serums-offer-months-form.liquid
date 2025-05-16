@@ -40,7 +40,7 @@
                                     <input type="radio" name="mBanner_monthlyPlan" id="mBanner_3_month" checked=""
                                       data-product-radio-id="{{ product.variants.first.id }}"
                                       data-product-radio-title="{{ product.title | escape }}"
-                                      data-product-radio-image="{{ settings.patches_1_month | image_url: width: 28, height: 40 }}"
+                                      data-product-radio-image="{{ product.featured_media | image_url: width: 700, height: 700 }}"
                                     >
                                     <label class="monthly_plans" for="mBanner_3_month" payment-price="{{ product_price_divided | money_without_trailing_zeros }}">
                                         <div class="plan_des">
@@ -81,7 +81,7 @@
                                     <input type="radio" name="mBanner_monthlyPlan" id="mBanner_2_month"
                                       data-product-radio-id="{{ product.variants.first.id }}"
                                       data-product-radio-title="{{ product.title | escape }}"
-                                      data-product-radio-image="{{ settings.patches_1_month | image_url: width: 28, height: 40 }}"
+                                      data-product-radio-image="{{ product.featured_media | image_url: width: 700, height: 700 }}"
                                     >
                                     <label class="monthly_plans" for="mBanner_2_month" payment-price="{{ product_price_divided | money_without_trailing_zeros }}">
                                         <div class="plan_des">
@@ -119,7 +119,7 @@
                                     <input type="radio" name="mBanner_monthlyPlan" id="mBanner_1_month"
                                       data-product-radio-id="{{ product.variants.first.id }}"
                                       data-product-radio-title="{{ product.title | escape }}"
-                                      data-product-radio-image="{{ settings.patches_1_month | image_url: width: 28, height: 40 }}"
+                                      data-product-radio-image="{{ product.featured_media | image_url: width: 700, height: 700 }}"
                                     >
                                     <label class="monthly_plans" for="mBanner_1_month" payment-price="{{ product_price_divided | money_without_trailing_zeros }}">
                                         
