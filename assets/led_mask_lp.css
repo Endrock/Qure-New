@@ -40,7 +40,6 @@
     color: #000;
     font-weight: 400;
     text-align: center;
-    font-size: 13px;
 }
 
 .tooltip_btn {
@@ -73,11 +72,8 @@
     padding-top: 10px;
     letter-spacing: 0.11px;
     position: relative;
-    display: flex;
 }
-.offer-lp .thumbsSlider_wrap .swiper-slide {
-    margin-right: 12px;
-}
+
 .tootltip_text img {
     margin-left: 5px;
     cursor: pointer;
@@ -90,7 +86,6 @@
     line-height: 170%;
     letter-spacing: 0.1px;
     padding: 16px;
-    color: #000;
 }
 
 .tootltip_text .tooltip_info {
@@ -534,7 +529,7 @@
     font-size: 11px;
     font-weight: 300;
     line-height: 18px;
-    letter-spacing: 0;
+    letter-spacing: 0.11px;
 }
 .include .include_wrap .include_pd-price h6,
 .include .include_checkout h6{
@@ -753,19 +748,6 @@
     letter-spacing: 0.14px;
     text-transform: uppercase;
 }
-.limited_time_offer {
-    color: #FFF;
-    font-size: 10px;
-    font-weight: 500;
-    text-transform: uppercase;
-    border-radius: 666px;
-    background: #C92127;
-    width: 110px;
-    height: 19px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .content_free_neck p {
     font-size: 10px;
     font-style: normal;
@@ -903,14 +885,6 @@
     font-weight: 400;
     line-height: 150%;
     letter-spacing: 0.18px;
-}
-.exclusive_desk_bx span p{
-    text-align: start;
-}
-.exclusive_desk_bx ul li, .exclusive_desk_bx ul li span, .exclusive_desk_bx ul li span p {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 26px;
 }
 .exclusive_desk_bx h5 {
     color: var(--Qure-Black, #000);
@@ -1215,9 +1189,6 @@ div#collapseTech1 a{
     text-decoration-style: solid;
     text-decoration-skip-ink: none;
 }
-div#collapseTech1 a:hover{
-    color: #000;
-}
 
 /* trusted recom */
 .trusted_cl_m .play_btn {
@@ -1483,13 +1454,20 @@ div#collapseOnezzz .tab-pane .col-4 p strong {
     margin-bottom: 21px;
 }
 .limited_time_offer {
-    width: 199px;
+    min-width: 120px;
+    max-width: 120px;
     height: 24px;
     font-size: 11px;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 18px;
     text-transform: uppercase;
     gap: 2px;
+    color: #FFF;
+    border-radius: 666px;
+    background: #C92127;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .buy_led_mask{
     font-size: 13px;
@@ -1579,7 +1557,7 @@ div#collapseOnezzz .tab-pane .col-4 p strong {
         font-size: 11px;
     }
     .limited_time_offer {
-        width: 185px;
+        min-width: 120px;
         font-size: 10px !important;
     }
     .mothers_day_offer {
@@ -1627,7 +1605,7 @@ div#collapseOnezzz .tab-pane .col-4 p strong {
         gap: 1px;
     }
     .step-label {
-        min-width: 85px;
+        width: 85px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1645,7 +1623,7 @@ div#collapseOnezzz .tab-pane .col-4 p strong {
     }
     .maximize_benefits .price-badge {
         font-size: 11.268px;
-        min-width: 104px;
+        width: 104px;
     }
     .trusted_recom .trusted_left .title-lg {
         font-size: 24px;
