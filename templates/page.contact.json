@@ -47,9 +47,14 @@
         "heading": "Contact Us",
         "text": "<h5>We are here to help</h5>"
       }
+    },
+    "17473185189d2351c1": {
+      "type": "apps",
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "main",
+    "17473185189d2351c1"
   ]
 }
