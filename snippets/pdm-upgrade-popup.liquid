@@ -7,8 +7,6 @@ Usage:
 {% endcomment %}
 
 {{ '_pdm_product-upgrade-popup.css' | asset_url | stylesheet_tag  }}  
-<script src="{{'_pdm_product-upgrade-popup.js' | asset_url }}" defer >
-</script>
 
 <!-- pdm-upgrade-popup.liquid -->
 <div class="pdm-popup-overlay hidden" id="pdm-popup-overlay"></div>
@@ -71,3 +69,4 @@ Usage:
     <button class="pdm-decline-btn" id="pdm-decline">No thanks, keep my choice</button>
   </div>
 </div>
+<script src="{{'_pdm_product-upgrade-popup.js' | asset_url }}" defer ></script>
