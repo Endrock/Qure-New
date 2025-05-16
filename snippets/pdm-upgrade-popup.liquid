@@ -17,10 +17,13 @@ Usage:
   <!-- Top Selected Product -->
 
   {% assign pop_up = product.metafields.custom.pop_up_promotion.value %}
-
+  {% comment %}
+    Technical debt: Changing the rendering of the img tag to Shopify images
+  {% endcomment %}
   <div class="pdm-popup-product-border-wrapper">
     <div class="pdm-popup-product-selected">
       <div class="pdm-image-check-wrapper">
+
         <img src="{{ pop_up.image.value | image_url: width: 200 }}" alt="{{ pop_up.title.value }}" />
         <span class="pdm-check-icon">
           {% render 'icons', icon: 'popup-check' %} 

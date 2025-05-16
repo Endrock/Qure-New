@@ -53,6 +53,10 @@ function handleDeclineOrClose(popup, overlay) {
  * when interacting with plan labels, the overlay, decline button, or close button.
  */
    document.addEventListener("DOMContentLoaded", function () {
+    const hasBodyAtribute = document.body.hasAttribute('data-popup-test');
+
+    if (!hasBodyAtribute) return;
+
     const labelTwoMonth = document.querySelector('label[for="mBanner_1_month"]');
     const labelOneMonth = document.querySelector('label[for="1_month"]');
     const popup = document.getElementById("pdm-popup");
