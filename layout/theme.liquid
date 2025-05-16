@@ -107,10 +107,11 @@
 </head> 
 
 <body class="{{ template }}">
-    {% if product.handle == 'personalized-skincare-plan' %}
-      <script>
+    {% assign blocked_products = 'led-mask-neck-dec-bundle-option,personalized-skincare-plan' | split: ',' %}
+    {% if blocked_products contains product.handle %}
+    <script>
         window.location.href = "/";
-      </script>
+    </script>
     {% endif %}
     {% comment %} Edgemesh Performance: Stale cart refresher {% endcomment %}
     {% render 'cart-refresher' %}
