@@ -2,7 +2,19 @@
   assign price_first_element = ''
   assign price_second_element = ''
   assign price_third_element = ''
+
+  assign product_6_month = section.settings.product_1
+  assign product_3_month = section.settings.product_2
+  assign product_1_month = section.settings.product_3
 %}
+
+<script>
+  window.pdmSerumsMonthsImageForm = {
+    product_6_month: {{ product_6_month.variants.first.id }},
+    product_3_month: {{ product_3_month.variants.first.id }},
+    product_1_month: {{ product_1_month.variants.first.id }},
+  };
+</script>
 
 {% if section_id == blank %}
   <p>Please provide section_id property to use this snippet</p>
@@ -36,7 +48,12 @@
   </div>
   <div class="section productSubscription choose_serum form-{{ section_id }}" id="productSubscription">
     <div class="container">
-      {% render 'pdm-ba-treatment-options' %}
+      {% render 'pdm-ba-treatment-options',
+        product_6_month: product_6_month,
+        product_3_month: product_3_month,
+        product_1_month: product_1_month,
+      %}
+
       {% render 'pdm-test-6-month-price' %}
     </div>
   </div>

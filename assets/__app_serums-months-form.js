@@ -1,14 +1,14 @@
 let product_type = 1; //default type
 let product_period = 3; //default period
-let product_variant = 43216377217263; //default product variant
+let product_variant = 43216359555311; //default product variant
 
 let product_variants = [];
 
 //Rejuvenating + Hydra-Soothing
 product_variants[1] = [];  
-product_variants[1][1] = 43216489513199; //1 month
+product_variants[1][1] = 43216483942639; //1 month
 product_variants[1][2] = 43216449208559; //2 months
-product_variants[1][3] = 43216377217263; //3 months
+product_variants[1][3] = 43216359555311; //3 months
 
 //Rejuvenating
 product_variants[2] = []; 
@@ -70,7 +70,6 @@ function updateProductButtonHref(destination, product_variant_id) {
     });
 }
 
-
 function applySpecialPromo(destination, product_period, product_variant_id) {
    
     if(window.location.href.includes("micro-infusion-special-offer"))
@@ -128,4 +127,54 @@ function applySpecialPromo(destination, product_period, product_variant_id) {
             }
         }
     }
+}
+
+function reserveProduct(destination)
+{
+    if(destination)
+    {
+        let outOfStock = document.querySelector('.form-' + destination + ' .next_batch_bl');
+
+        $('.form-' + destination + ' .step_conten_blocks .planBlock').click(function () {
+            if(!$(this).find(".regular_price").text())
+            {
+                if(outOfStock) outOfStock.style.display = "block";
+                
+                document.querySelectorAll('.form-' + destination + ' .btn_text_value').forEach(btn => {
+                    btn.textContent = 'Reserve now';
+                });
+            }
+            else
+            {
+                if(outOfStock) outOfStock.style.display = "none";
+    
+                document.querySelectorAll('.form-' + destination + ' .btn_text_value').forEach(btn => {
+                    btn.textContent = 'Buy now';
+                });
+            }
+        });
+    }
+}
+
+function updateButtonText(destination)
+{
+    $('.form-' + destination + ' .monthly_plans').click(function () {
+        var savedTxt = $(this).find('.saved_price').html();
+        if (savedTxt !== undefined) {
+            if (document.body.hasAttribute('data-contrast-horizontal-layout')) {
+                $('.form-' + destination + ' .savedAmount').html('& SAVE ' + savedTxt.replace(/\bOFF\b/, "").trim());
+             } else {
+                $('.form-' + destination + ' .savedAmount').html('& ' + savedTxt);
+             }
+        } else {
+            $('.form-' + destination + ' .savedAmount').html('');
+        }
+    
+        var paymentPrice = $(this).attr("payment-price");
+        if (paymentPrice !== undefined) {
+            $('.form-' + destination + ' .payment_price').html(paymentPrice);
+        } else {
+            $('.form-' + destination + ' .payment_price').html('');
+        }
+    })
 }

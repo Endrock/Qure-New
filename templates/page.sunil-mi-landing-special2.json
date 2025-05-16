@@ -15,8 +15,8 @@
         "announcement_QmXGJK": {
           "type": "announcement",
           "settings": {
-            "heading": "FREE World-Wide Shipping  |  Mother's Day Offer SAVE Up To 66%",
-            "heading_mobile": "SAVE UP TO 66% | Mother's Day Offer",
+            "heading": "FREE World-Wide Shipping  |  SAVE Up To 66%",
+            "heading_mobile": "SAVE UP TO 66% | Special Offer",
             "color": "green",
             "font_size_desktop": 14,
             "font_size_mobile": 13
@@ -72,7 +72,7 @@
         "button_L9q6wE": {
           "type": "button",
           "settings": {
-            "button_label": "MOTHER’S DAY: 66% OFF",
+            "button_label": "SAVE UP TO 66% OFF",
             "button_url": "#productSubscription"
           }
         },
@@ -337,7 +337,7 @@
         "button_rznYjF": {
           "type": "button",
           "settings": {
-            "button_label": "MOTHER’S DAY: 66% OFF",
+            "button_label": "SAVE UP TO 66% OFF",
             "button_url": "#productSubscription"
           }
         }
@@ -573,6 +573,7 @@
         "video_yVVtFF": {
           "type": "video",
           "settings": {
+            "title_mob": "Recommended by Experts",
             "image": "shopify://shop_images/trusted_3.webp",
             "video": "https://www.youtube.com/watch?v=JPWycy8cwN8",
             "title": "Dr Shah & Dr Maxfield,",
@@ -585,6 +586,7 @@
             "trust_icon": "shopify://shop_images/verified_design.svg",
             "trust_des": "Trusted and recommended by world leading Dermatologists",
             "title": "<strong>“This treatment is an</strong> at-home <strong>option for those who want to</strong> avoid the hassle or cost of going to the office”.",
+            "title_des": "",
             "title_clr": "#000000",
             "title_strong_clr": "#797d7c"
           }
@@ -595,6 +597,9 @@
         "text_content_YJPfXt"
       ],
       "settings": {
+        "ctm_cls": "",
+        "left_dv_width": "7",
+        "right_dv_width": "5",
         "padding_top": 60,
         "padding_bottom": 0
       }
@@ -1291,7 +1296,7 @@
       "settings": {
         "heading": "We make science-backed skincare easily accessible and affordable",
         "text": "<p><strong>“Even my esthetician is hooked!</strong> And I can now visit beauty clinics less often.”</p><ul><li>Helps <strong>boost</strong> serum absorption</li><li>Minimal to <strong>no downtime</strong></li><li>Virtually <strong>painless</strong></li><li><strong>Easy to use,</strong> 5-minute treatment</li><li><strong>2-in-1 action:</strong> stimulate & infuse</li></ul>",
-        "button_label": "MOTHER’S DAY: 66% OFF",
+        "button_label": "SAVE UP TO 66% OFF",
         "button_url": "#productSubscription",
         "underbutton_text_left": "90-Day Money Back Guarantee",
         "underbutton_text_right": "Free World-Wide Shipping Over $100"
@@ -1396,7 +1401,10 @@
         "code": "{% render 'serums-months-image-form-6-month' with section_id: section.id %}",
         "popup_micro_infusion_enabled": true,
         "payment_icons": "shopify://shop_images/logos_full_qure_0d060a66-5fb6-4e6c-a740-55552a43bb10.png",
-        "payment_icons_today_only": "shopify://shop_images/payments_today.png"
+        "payment_icons_today_only": "shopify://shop_images/payments_today.png",
+        "product_1": "micro-infusion-6-month-bundle-for-wrinkles",
+        "product_2": "micro-infusion-3-month-bundle-6x-beta-glucan-serum",
+        "product_3": "micro-infusion-1-month-bundle-2x-beta-glucan-serum"
       }
     },
     "compare_box_p4B7wy": {
