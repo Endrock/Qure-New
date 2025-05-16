@@ -16,7 +16,7 @@
           "type": "announcement",
           "settings": {
             "heading": "Limited Time Only:",
-            "timer": "2025-05-10T23:59:59",
+            "timer": "2025-05-20T23:59:59",
             "timer_next": 7
           }
         },
@@ -147,7 +147,7 @@
           "settings": {
             "heading": "Fade & Firm Bundle Advanced",
             "discount": 43,
-            "image": "shopify://shop_images/Fade_Firm_Bundle_Advanced_sliderNEW.png",
+            "image": "shopify://shop_images/Fade_Firm_Bundle_Advanced_NEW_cefda12e-7246-401e-a234-b1a0413f9454.png",
             "product_url": "#fade-firm-bundle-advance"
           }
         },
@@ -156,7 +156,7 @@
           "settings": {
             "heading": "Fade & Firm Bundle Essentials",
             "discount": 55,
-            "image": "shopify://shop_images/Fade_Firm_Bundle_Essentials3.png",
+            "image": "shopify://shop_images/Fade_Firm_Bundle_Advanced_NEW_48978640-a11f-4cdf-871c-345fba593d59.png",
             "product_url": "#fade-firm-bundle-essentials"
           }
         },
