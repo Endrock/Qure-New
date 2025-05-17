@@ -32,11 +32,11 @@ function handleDeclineOrClose(popup, overlay) {
   overlay.classList.add("hidden");
 }
 
-   function openPopUpPromotion(selector, overlay, popup) {
-    if (selector && popup && overlay) { 
+   function openPopUpPromotion(variant, selector, overlay, popup, parentClass) {
+    if (variant && popup && overlay) { 
       selector.addEventListener("click", function () {
         // We capture the variantId of the clicked plan
-        pdmSelectedVariantId = this.closest(".planBlockTop").dataset.variantid;
+        pdmSelectedVariantId = variant.closest(parentClass).dataset.variantid;
         // Show pop up
         popup.classList.remove("hidden");
         overlay.classList.remove("hidden");
@@ -56,18 +56,42 @@ function handleDeclineOrClose(popup, overlay) {
     const hasBodyAtribute = document.body.hasAttribute('data-popup-test');
 
     if (!hasBodyAtribute) return;
-
+    
+    
     const labelTwoMonth = document.querySelector('label[for="mBanner_1_month"]');
     const labelOneMonth = document.querySelector('label[for="1_month"]');
     const popup = document.getElementById("pdm-popup");
     const overlay = document.getElementById("pdm-popup-overlay");
     const decline = document.getElementById("pdm-decline");
-    const submit  = document.querySelector('a.btn.buy_btn[href*="35987553419413"]');
     const closeBtn = document.getElementById("pdm-popup-close");
-  
+    const buyNowOne = document.querySelector('.submit_btn_top');
+    const buyNowTwo = document.querySelector('.submit_btn_down');
+    const ButtonOffers = document.querySelectorAll('.pdm-popup-btn');
+    const variantsOne = document.querySelectorAll('input[name="mBanner_monthlyPlan"]');
+    const variantsTwo = document.querySelectorAll('input[name="monthlyPlan"]');
+
+    function clickSelectors(selectorsVariant, popupBtn, buyNowBtn, nameInput) {
+      selectorsVariant.forEach(selector => {
+        selector.addEventListener("click", function () {
+          if (selector.id == nameInput) {
+            popupBtn.classList.remove('hidden');
+            buyNowBtn.classList.add('hidden');
+        
+          }else {
+            popupBtn.classList.add('hidden');
+            buyNowBtn.classList.remove('hidden');
+            
+          }
+        });
+    });
+    }
+
+    clickSelectors(variantsOne, ButtonOffers[0], buyNowOne, 'mBanner_1_month')
+    clickSelectors(variantsTwo, ButtonOffers[1], buyNowTwo, '1_month')
+
     // Show popup when 2 Month Supply or alternative option is clicked
-    openPopUpPromotion(labelTwoMonth, overlay, popup);
-    openPopUpPromotion(labelOneMonth, overlay, popup);
+    openPopUpPromotion(labelTwoMonth, ButtonOffers[0], overlay, popup, ".planBlockTop");
+    openPopUpPromotion(labelOneMonth, ButtonOffers[1], overlay, popup, ".planBlockDown");
   
     // Close popup when clicking outside the popup (overlay)
     overlay?.addEventListener("click", function () {

@@ -190,6 +190,10 @@
         
     {% endif %}
 
+    <div class="btn btn-lg btn-primary buy_btn mt-3 pdm-popup-btn hidden">
+        Buy Now <img src="{{ 'arrow_right.svg' | asset_url }}" alt="">
+    </div>
+    
     <a class="btn btn-lg btn-primary buy_btn submit_btn_top reserve_btn {% if out_of_stock_count == 0 %}mt-4{% endif %}" href="/cart/add?id={{ product_variant_id }}&amp;quantity=1" onclick="setEventProductHandler('{{ product.handle }}')" data-ajax-cart-request-button>
         {% if out_of_stock_count > 0 %}Reserve now{% else %}Buy Now{% endif %} <span class="savedAmount">& SAVE {{ discount_percentage }}%</span><img src="https://qureskincaredns.com/new/assets/arrow_right.svg" alt="">
     </a>
