@@ -8,17 +8,20 @@ function showElementsByAttribute() {
   }
 }
 
-function selecElements() {
-  const batchMessage = document.querySelector('.row.pdm-treatment__row-container .ctm_cls_next_batch_mi_lp');
+function selectElements() {
   const radioButtons = document.querySelectorAll('input[name="monthlyPlan"]');
-  batchMessage.style.display = 'none';
+  const batchMessage = document.querySelector('.row.pdm-treatment__row-container .ctm_cls_next_batch_mi_lp');
+
+  if (batchMessage) {
+    batchMessage.style.display = 'none';
+  }
 
   radioButtons.forEach(function (radio) {
     radio.addEventListener('change', function () {
-      if (document.getElementById('1_month').checked) {
-        batchMessage.style.display = 'block';
+      if (document.getElementById('1_month')?.checked) {
+        if (batchMessage) batchMessage.style.display = 'block';
       } else {
-        batchMessage.style.display = 'none';
+        if (batchMessage) batchMessage.style.display = 'none';
       }
     });
   });
@@ -31,7 +34,9 @@ function selecElements() {
     }
   }, 500);
 
-  const radioInput = document.querySelector('.row.pdm-treatment__row-container .step_conten_blocks [data-tab="month_3"] input[type="radio"]');
+  const radioInput = document.querySelector(
+    '.row.pdm-treatment__row-container .step_conten_blocks [data-tab="month_3"] input[type="radio"]'
+  );
   if (radioInput) {
     radioInput.checked = true;
     const changeEvent = new Event('change', {
@@ -40,6 +45,7 @@ function selecElements() {
     });
     radioInput.dispatchEvent(changeEvent);
   }
+
   const radioInputPayFull = document.querySelector(
     '.step_block .step_content.item-3.pdm-step_content_v2 input[type="radio"]'
   );
@@ -55,7 +61,7 @@ function selecElements() {
 
 document.addEventListener('DOMContentLoaded', function () {
   showElementsByAttribute();
-  selecElements();
+  selectElements();
 });
 
 
