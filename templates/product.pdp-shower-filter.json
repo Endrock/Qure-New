@@ -842,10 +842,6 @@
         "button_label": "Show More Questions",
         "button_hide_label": "Hide More Questions"
       }
-    },
-    "second": {
-      "type": "temp-product-shower-filter",
-      "settings": {}
     }
   },
   "order": [
@@ -861,7 +857,6 @@
     "adjust_angle_mob_VptmPM",
     "product_adjust_seeting_PcLcUy",
     "compare_nJWwdf",
-    "faq_zwFb4X",
-    "second"
+    "faq_zwFb4X"
   ]
 }
