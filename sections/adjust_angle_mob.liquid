@@ -1,0 +1,189 @@
+<div class="easy_setup d-md-none bg-transparent p-0 pt-md-0 pt-5">
+  <div class="container">
+    <div class="adjust_flow d-md-none">
+      <h3>{{ section.settings.adjust_title }}</h3>
+      <p>{{ section.settings.adjust_text }}</p>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-7 order-first order-md-0">
+        <div class="actVideo_block">
+          <div class="ctmVideo__block">
+            <div class="player">
+              <div class="wistia_responsive_padding" style="position:relative;">
+                <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                  <div class="wistia_embed wistia_async_{{ section.settings.wistia_id }} seo=false videoFoam=true"
+                    style="height:100%;position:relative;width:100%">
+                    <div class="wistia_swatch"
+                      style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                      <img src="https://fast.wistia.com/embed/medias/{{ section.settings.wistia_id }}/swatch"
+                        style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true"
+                        onload="this.parentNode.style.opacity=1;" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8 col-5">
+        <div class="easy_setup_content d-none d-md-block">
+          <h3>{{ section.settings.steps_title }}</h3>
+          <div class="easy_setup_content_inner row">
+            {% for block in section.blocks %}
+              {% if block.type == 'step' %}
+              <div class="col-4 p-0">
+                <h3>
+                  {% if block.settings.icon != blank %}
+                    <img src="{{ block.settings.icon | image_url }}" alt="">
+                  {% endif %}
+                </h3>
+                <div class="step_dot"></div>
+                <div class="step_text_ctm">
+                  <h4>{{ block.settings.title }}</h4>
+                  <p>{{ block.settings.text }}</p>
+                </div>
+              </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="adjustable_angle_icons d-md-none">
+          {% for block in section.blocks %}
+            {% if block.type == 'feature' %}
+              <div class="adjustable_angle_inner">
+                {% if block.settings.image != blank %}
+                  <img src="{{ block.settings.image | image_url }}" alt="">
+                {% endif %}
+                <p>{{ block.settings.text }}</p>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Adjust Angle Mob",
+  "settings": [
+    {
+      "type": "text",
+      "id": "adjust_title",
+      "label": "Top Title",
+      "default": "Adjust the flow and angle"
+    },
+    {
+      "type": "textarea",
+      "id": "adjust_text",
+      "label": "Top Description",
+      "default": "Transform your shower with our rotatable filter and three customizable water flow settings, giving you the perfect angle and flow for every preference."
+    },
+    {
+      "type": "text",
+      "id": "wistia_id",
+      "label": "Wistia Video ID",
+      "default": "fsw2ted2a8"
+    },
+    {
+      "type": "text",
+      "id": "steps_title",
+      "label": "Steps Heading",
+      "default": "Easy 3-Step Set-Up"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Step Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Step Title",
+          "default": "Step 1."
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Step Description",
+          "default": "Step description goes here."
+        }
+      ]
+    },
+    {
+      "type": "feature",
+      "name": "Bottom Icon Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Icon Image"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Adjustable Angle"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Adjust Angle Mob",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "title": "Step 1.",
+            "text": "Unscrew your old shower head by hand, or with a wrench (included) for more grip if needed."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Step 2.",
+            "text": "Wrap the plumber tape (included) around the shower pipe."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Step 3.",
+            "text": "Twist the Qure Shower Filter onto the pipe and tighten it securely with the wrench."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "text": "Adjustable Angle"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "text": "3 Spray Settings"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "text": "Fits 99% of Showers"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
