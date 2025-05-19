@@ -5,7 +5,9 @@
 
       <div class="banner_img position-relative see_action d-flex justify-content-center popup-youtube pt-3 pb-2">
         <p>
-          <img src="{{ section.settings.play_icon | image_url }}" alt="" class="img-fluid">
+          {% if section.settings.play_icon != blank %}
+            <img src="{{ section.settings.play_icon | image_url }}" alt="" class="img-fluid">
+          {% endif %}
           {{ section.settings.play_text }}
         </p>
         <a class="popup-youtube position-absolute top-0 bottom-0 start-0 end-0">
@@ -14,9 +16,11 @@
               <span class="wistia_embed wistia_async_{{ section.settings.video_embed_id }} popover=true videoFoam=true"
                 style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span>
             </div>
-            <span class="d-flex justify-content-end p-2">
-              <img src="{{ section.settings.trusted_icon | image_url }}" alt="" class="w-auto">
-            </span>
+            {% if section.settings.trusted_icon != blank %}
+                <span class="d-flex justify-content-end p-2">
+                  <img src="{{ section.settings.trusted_icon | image_url }}" alt="" class="w-auto">
+                </span>
+            {% endif %}
           </div>
         </a>
       </div>

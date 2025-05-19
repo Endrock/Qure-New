@@ -507,7 +507,7 @@ main.faucet_filter .accordion-item p {
     color: #000;
 }
 .faq .accordion-button .container:after {
-    font-weight: 100;
+    font-weight: 400;
 }
 .faq.accordions_shower_filter .accordion-item {
     border-bottom: 1px solid #C7E7DC;
