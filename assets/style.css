@@ -29849,6 +29849,27 @@ p {
     .container-sm {
         max-width: 100%
     }
+    .wrongcircle_first_tick .bs_content {
+    text-align: start;
+    padding-bottom: 0 !important;
+    height: 73px !important;
+}
+.wrongcircle_first_tick .bs_vs_item {
+    margin: 0 -48px;
+}
+.wrongcircle_first_tick .bs_versace {
+    border: 12px solid #fff;
+    height: 116px;
+    width: 116px;
+}
+.wrongcircle_first_tick .bs_item h4 {
+    font-size: 32px;
+    font-weight: 500;
+    font-family: 'Poppins';
+}
+.wrongcircle_first_tick .bs_content, .wrongcircle_first_tick .bs_feature{
+    max-width: 300px !important;
+}
 }
 
 @media (min-width:992px) {
@@ -32515,8 +32536,60 @@ body.page\.led-mask-offer-2 .bs_content .price__label{
 .shwr_dr_ctm .play_btn h5 {
     font-size: 14px !important;
 }
+.wrongcircle_first_tick ul.wrongCircle li:first-child:before {
+    content: url(./correct_circle.svg);
+}
+.ask_us_question p {
+    font-size: 18px;
+    font-family: Canela;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0;
+    font-weight: 500;
+    top: 0;
+    height: 100%;
+}
+.ask_us_question a {
+    position: relative;
+    display: flex;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid var(--Qure-Black, #000);
+    background: #FFF;
+    height: 30px;
+    width: 100px;
+    border-radius: 666px;
+}
+.shwr_reviews h2.title-lg {
+    padding-bottom: 0 !important; 
+}
+main.shower_filter .trusted_bl.trustedVerified .trusted_verified {
+    display: flex;
+    height: 44px;
+}
+
 
 @media(max-width:767px){
+    .why_it_works .faq.accordions_shower_filter{
+        padding: 0 !important;
+    }
+    .shower_filter_ctm_cls .ingredients_content .row .col-md-4:nth-child(3) {
+    order: -1;
+}
+.shower_filter_ctm_cls .ingredients_content .row .col-md-4:nth-child(1) {
+    order: 3;
+}
+    .shower_filter_ctm_cls .section_header {
+    text-align: center;
+}
+    main.shower_filter .refill_bl .col-md-6 {
+    padding: 0 0;
+}
     .shwr_dr_ctm .section-description {
         text-align: center;
     }

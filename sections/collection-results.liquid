@@ -64,6 +64,7 @@
                                 </div>
                             {% when 'brand_card' %}
                                 <div class="productBlockGrid fullImage">
+                                <a href="{{ block.settings.button_url }}">
                                     {% if block.settings.image != blank %}
                                         <img class="img-fluid h-100 d-none d-md-block" src="{{ block.settings.image | img_url: '400x' }}" alt="">
                                     {% endif %}
@@ -79,6 +80,7 @@
                                             <a href="{{ block.settings.button_url }}" class="discover_btn">{{ block.settings.button_label }}</a>
                                         {% endif %}
                                     </div>
+                                    </a>
                                 </div>
                         {% endcase %}
                     {% endif %}
@@ -157,14 +159,16 @@
                     </a>
                 </div>
                 <div class="pdt_cln_info">
-                    <div class="product-grid__review collection-review">
-                        <!-- 
-                            <div class="prdStar"><img src="assets/collection-4.7.svg" alt=""></div>
-                            <span>196 Reviews</span>
-                        -->
-                    </div>
-                    <div class="product-grid__title">{{ product.title }}</div>
-                    <div class="collection-description">{{ product.description | strip_html | truncate: 130 }}</div>
+                    <a href="{{ routes.root_url }}{{ product_url }}" class="productLink">
+                        <div class="product-grid__review collection-review">
+                            <!-- 
+                                <div class="prdStar"><img src="assets/collection-4.7.svg" alt=""></div>
+                                <span>196 Reviews</span>
+                            -->
+                        </div>
+                        <div class="product-grid__title">{{ product.title }}</div>
+                        <div class="collection-description">{{ product.description | strip_html | truncate: 130 }}</div>    
+                    </a>
                 </div>
                 <div class="pdt_cln_bottom">
                     <div class="product-grid__price abtest">
