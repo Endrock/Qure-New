@@ -61,7 +61,7 @@
         "navigation_link_rmYfWw"
       ],
       "settings": {
-        "button_label": "SAVE UP TO 55%",
+        "button_label": "SAVE UP TO 72%",
         "button_url": "#bf-bundles"
       }
     },
@@ -80,19 +80,18 @@
         "link_Xz3LeQ": {
           "type": "link",
           "settings": {
-            "link_label": "Shop & SAVE UP TO 55%",
-            "link_label_mobile": "Shop & SAVE UP TO 55%",
+            "link_label": "Shop & SAVE UP TO 72%",
+            "link_label_mobile": "Shop & SAVE UP TO 72%",
             "link_url": "#bf-bundles"
           }
         },
         "product_XP469M": {
           "type": "product",
-          "disabled": true,
           "settings": {
             "heading": "Exclusive Memorial Day Bundle",
             "discount": 72,
             "image": "shopify://shop_images/Memorial_day_bundle_slider_image.png",
-            "product_url": "#memorial-day-bundle"
+            "product_url": "#memorial-day-promo-2025"
           }
         },
         "product_L8TbkG": {
@@ -238,7 +237,7 @@
       ],
       "settings": {
         "seo_heading": "",
-        "heading": "Save Up to 55% on \\n Certified Skincare Solutions",
+        "heading": "Save Up to 72% on \\n Certified Skincare Solutions",
         "text": "<p>Backed by the most respected peer-reviewed <strong>Dermatologist Journals </strong>and <strong>scientific studies </strong>that prove; Qure’s skincare <strong>works.</strong></p>"
       }
     },
@@ -555,12 +554,10 @@
         },
         "bundle_jeyfm3": {
           "type": "bundle",
-          "disabled": true,
           "settings": {}
         },
         "product_AXXtjA": {
           "type": "product",
-          "disabled": true,
           "settings": {
             "product": "memorial-day-promo-2025",
             "percent": 30,
@@ -577,7 +574,6 @@
         },
         "include_7Yq3PY": {
           "type": "include",
-          "disabled": true,
           "settings": {
             "heading": "Micro-Infusion 1 Month Supply (For Wrinkles + For Dark Spots)",
             "is_limited": false,
@@ -592,7 +588,6 @@
         },
         "include_FxdKqc": {
           "type": "include",
-          "disabled": true,
           "settings": {
             "heading": "Micro-Infusion 4 Month Supply (For Wrinkles)",
             "is_limited": false,
@@ -607,7 +602,6 @@
         },
         "how_to_use_tLw7mt": {
           "type": "how-to-use",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_mi_sm.svg",
             "text": "<h5>Micro-Infusion 5 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Use the 3 month refills after 2 month bundle.</li></ul>"
@@ -636,6 +630,7 @@
         },
         "include_jkXtYb": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles)",
             "is_limited": false,
@@ -650,6 +645,7 @@
         },
         "include_6bW3Ra": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Micro-Infusion 2 Month Supply (For Wrinkles)",
             "is_limited": false,
@@ -664,6 +660,7 @@
         },
         "how_to_use_nRp9HV": {
           "type": "how-to-use",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_mi_sm.svg",
             "text": "<h5>Micro-Infusion 5 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Use the 3 month refills after 2 month bundle.</li></ul>"
