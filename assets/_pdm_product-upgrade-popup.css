@@ -193,7 +193,6 @@ START PDM UPGRADE POPUP - FACE SERUM
 }
 
 .pdm-popup-container .pdm-popup-benefits li::before {
-  content: '✓';
   color: green;
   font-weight: bold;
   font-size: 1rem;

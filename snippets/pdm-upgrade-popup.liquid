@@ -24,7 +24,7 @@ Usage:
     <div class="pdm-popup-product-selected">
       <div class="pdm-image-check-wrapper">
 
-        <img src="{{ pop_up.image.value | image_url: width: 200 }}" alt="{{ pop_up.title.value }}" />
+        {{ pop_up.image.value | image_url: width: 200 | image_tag: alt: pop_up.title.value }}
         <span class="pdm-check-icon">
           {% render 'icons', icon: 'popup-check' %} 
         </span>
@@ -44,7 +44,7 @@ Usage:
   <!-- Offer Block -->
   <div class="pdm-popup-offer">
     <div class="pdm-popup-image">
-      <img src="{{ pop_up.image_upgrade.value | image_url: width: 560 }}" alt="{{ pop_up.title.value }}" />
+      {{ pop_up.image_upgrade.value | image_url: width: 560 | image_tag: alt: pop_up.title.value }}
     </div>
     <div class="pdm-popup-offer-content">
       <h4>{{  pop_up.text_primary.value }}</h4>
@@ -56,12 +56,20 @@ Usage:
       <p class="pdm-popup-price">
         <del>{{ price_full | money_without_trailing_zeros }}</del> <span class="discounted-price">${{ discount_amount }}</span> <span class="discount-tag">19% OFF</span>
       </p>
+      {% assign raw = pop_up.checklist.value | remove_first: "-" %}
+      {% assign items = raw | split: "-" %}
+
       <ul class="pdm-popup-benefits">
-        {% capture svg %}
-          {% render 'icons', icon: 'check-list' %}
-        {% endcapture %}
-        {% assign checklist = pop_up.checklist.value | newline_to_br %}
-        {{ checklist | replace: "-", svg  }}
+
+        {% for item in items %}
+          {% comment %}
+            Technical debt: Improve code line to use metafield_tag
+          {% endcomment %}
+          <li>
+            {% render 'icons', icon: 'check-list' %}
+            {{ item | strip }}
+          </li>
+        {% endfor %}
       </ul>
     </div>
   </div>
