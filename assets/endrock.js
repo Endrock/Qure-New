@@ -1944,3 +1944,114 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 });
 /* End QR - Navigation Bundle Features AB test */
+
+// Start stickyAtc
+/**
+ * Initializes a mutation observer to sync sticky "Add to Cart" buttons with the main product form
+ * Updates product variant images and titles when selections change
+ * @returns {void}
+ */
+const initObserverStickyAtc = () => {
+  // Select DOM elements
+  const stickyAtcButton = document.getElementById('green-product-sticky-btn');
+  const stickyAtcButtonForm = document.getElementById('green-product-sticky-form-btn');
+  
+  // Exit early if sticky buttons don't exist
+  if (!stickyAtcButton && !stickyAtcButtonForm) return;
+
+  const parent = stickyAtcButton.parentElement;
+  const atcButton = parent.querySelector('.btn.buy_btn');
+  
+  // Exit if main "Add to Cart" button not found
+  if (!atcButton) return;
+
+  /**
+   * Extracts a specific parameter from a URL
+   * @param {string} url - The URL to parse
+   * @returns {string|null} - The value of the 'id' parameter or null if not found
+   */
+  const getIdParam = (url) => {
+    try {
+      const urlObj = new URL(url);
+      const params = new URLSearchParams(urlObj.search);
+      return params.get('id');
+    } catch (error) {
+      console.error('Error parsing URL:', error);
+      return null;
+    }
+  };
+
+  /**
+   * Updates sticky button content based on the selected product variant
+   * Syncs product image and title from the selected radio input
+   * @returns {void}
+   */
+  const handleCheckedElement = () => {
+    const newAtcButton = parent.querySelector('.btn.buy_btn');
+    const atcButtonSrc = newAtcButton?.href;
+    
+    if (!atcButtonSrc) return;
+
+    const variantId = getIdParam(atcButtonSrc);
+    const inputChecked = document.querySelector(`input[data-product-radio-id="${variantId}"]`);
+
+    if (!inputChecked) return;
+    
+    // Array of sticky buttons to update
+    const stickyButtons = [stickyAtcButtonForm, stickyAtcButton].filter(Boolean);
+    
+    stickyButtons.forEach(stickyBtn => {
+      const stickyImage = stickyBtn.querySelector('.button_sticky_wrapper__product-image');
+      const stickyTitle = stickyBtn.querySelector('.button_sticky_wrapper__title');
+      const stickyLink = stickyBtn.querySelector('.button_sticky_wrapper__button_sticky');
+
+      const checkedTitle = inputChecked.dataset.productRadioTitle;
+      const checkedImage = inputChecked.dataset.productRadioImage;
+
+      // Update image if both elements and data exist
+      if (stickyImage && checkedImage) {
+        stickyImage.src = checkedImage;
+        stickyImage.removeAttribute('srcset');
+      }
+
+      // Update title if both element and data exist
+      if (stickyTitle && checkedTitle) {
+        stickyTitle.textContent = checkedTitle;
+      }
+
+      if (stickyLink) {
+        stickyLink.href = atcButtonSrc;
+      }
+
+    });
+  };
+
+  // Initialize content on page load
+  handleCheckedElement();
+
+  /**
+   * Sets up a mutation observer to watch for changes to the main "Add to Cart" button
+   * When href changes, updates the sticky buttons after a short delay
+   */
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (
+        mutation.type === 'attributes' && 
+        mutation.attributeName === 'href'
+      ) {
+        // Small delay allows for DOM to stabilize
+        setTimeout(handleCheckedElement, 200);
+      }
+    });
+  });
+
+  // Start observing the main "Add to Cart" button for href changes
+  observer.observe(atcButton, {
+    attributes: true,
+    attributeFilter: ['href']
+  });
+};
+
+// Initialize when DOM is fully loaded
+document.addEventListener('DOMContentLoaded', initObserverStickyAtc);
+// End stickyAtc
