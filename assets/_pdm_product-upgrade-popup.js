@@ -11,7 +11,20 @@
  * @param {HTMLElement} popup - The popup container element.
  */
 
-let pdmSelectedVariantId = null;
+    let pdmSelectedVariantId = null;
+    let  labelTwoMonth;
+    let  labelOneMonth;
+    let  popup;
+    let  overlay;
+    let  decline;
+    let  closeBtn;
+    let  buyNowOne;
+    let  buyNowTwo;
+    let  buttonOffers;
+    let  variantsOne;
+    let  variantsTwo;
+    let  buttonOfferOne;
+    let  buttonOfferTwo;
 
 /**
  * Add the saved variant to the cart and close the popup.
@@ -46,69 +59,22 @@ function handleDeclineOrClose(popup, overlay) {
     }
   }
 
-  /**
- * Waits for the DOM to be fully loaded before initializing popup event listeners.
- * 
- * Sets up click handlers to open and close the upgrade popup
- * when interacting with plan labels, the overlay, decline button, or close button.
- */
-   
-  document.addEventListener("DOMContentLoaded", function () {
-    const hasBodyAtribute = document.body.hasAttribute('data-popup-test');
-
-    if (!hasBodyAtribute) return;
-    
-    
-    const labelTwoMonth = document.querySelector('label[for="mBanner_1_month"]');
-    const labelOneMonth = document.querySelector('label[for="1_month"]');
-    const popup = document.getElementById("pdm-popup");
-    const overlay = document.getElementById("pdm-popup-overlay");
-    const decline = document.getElementById("pdm-decline");
-    const closeBtn = document.getElementById("pdm-popup-close");
-    const buyNowOne = document.querySelector('.submit_btn_top');
-    const buyNowTwo = document.querySelector('.submit_btn_down');
-    const ButtonOffers = document.querySelectorAll('.pdm-popup-btn');
-    const variantsOne = document.querySelectorAll('input[name="mBanner_monthlyPlan"]');
-    const variantsTwo = document.querySelectorAll('input[name="monthlyPlan"]');
-
-    function clickSelectors(selectorsVariant, popupBtn, buyNowBtn, nameInput) {
-      selectorsVariant.forEach(selector => {
-        selector.addEventListener("click", function () {
-          if (selector.id == nameInput) {
-            popupBtn.classList.remove('hidden');
-            buyNowBtn.classList.add('hidden');
-        
-          }else {
-            popupBtn.classList.add('hidden');
-            buyNowBtn.classList.remove('hidden');
-            
-          }
-        });
-    });
-    }
-
-    clickSelectors(variantsOne, ButtonOffers[0], buyNowOne, 'mBanner_1_month')
-    clickSelectors(variantsTwo, ButtonOffers[1], buyNowTwo, '1_month')
-
-    // Show popup when 2 Month Supply or alternative option is clicked
-    openPopUpPromotion(labelTwoMonth, ButtonOffers[0], overlay, popup, ".planBlockTop");
-    openPopUpPromotion(labelOneMonth, ButtonOffers[1], overlay, popup, ".planBlockDown");
-  
-    // Close popup when clicking outside the popup (overlay)
-    overlay?.addEventListener("click", function () {
-      handleDeclineOrClose(popup, overlay);
-    });
-  
-    // Close popup when clicking "No thanks" button
-    decline?.addEventListener("click", function () {
-      handleDeclineOrClose(popup, overlay);
-    });
-
-    // Close popup when clicking the "X" (close button)
-    closeBtn?.addEventListener("click", function () {
-      handleDeclineOrClose(popup, overlay);
-    });
+  function clickSelectors(selectorsVariant, popupBtn, buyNowBtn, nameInput) {
+    selectorsVariant.forEach(selector => {
+      selector.addEventListener("click", function () {
+        if (selector.id == nameInput) {
+          popupBtn.classList.remove('hidden');
+          buyNowBtn.classList.add('hidden');
+      
+        }else {
+          popupBtn.classList.add('hidden');
+          buyNowBtn.classList.remove('hidden');
+          
+        }
+      });
   });
+  }
+
 
   /**
   * Adds the 4 Month Supply variant to the cart via Ajax and closes the popup.
@@ -134,6 +100,71 @@ function handleDeclineOrClose(popup, overlay) {
     // Cleanup
     setTimeout(() => ajaxLink.remove(), 500);
   }
+
+  function validPopupUpgrade() {
+    const hasBodyAttribute = document.body.hasAttribute('data-popup-test');
+
+    if (!hasBodyAttribute) return false;
+
+     labelTwoMonth = document.querySelector('label[for="mBanner_1_month"]');
+     labelOneMonth = document.querySelector('label[for="1_month"]');
+     popup = document.getElementById("pdm-popup");
+     overlay = document.getElementById("pdm-popup-overlay");
+     decline = document.getElementById("pdm-decline");
+     closeBtn = document.getElementById("pdm-popup-close");
+     buyNowOne = document.querySelector('.submit_btn_top');
+     buyNowTwo = document.querySelector('.submit_btn_down');
+     buttonOffers = document.querySelectorAll('.pdm-popup-btn');
+     variantsOne = document.querySelectorAll('input[name="mBanner_monthlyPlan"]');
+     variantsTwo = document.querySelectorAll('input[name="monthlyPlan"]');
+
+     buttonOfferOne = document.querySelector('.pdm-popup-btn-form');
+     buttonOfferTwo = document.querySelector('.pdm-popup-btn-image-form');  
+
+    if (!labelTwoMonth || 
+        !labelOneMonth || 
+        !popup || 
+        !overlay || 
+        !decline || 
+        !closeBtn || 
+        !buyNowOne || 
+        !buyNowTwo || 
+        !variantsOne || 
+        !variantsTwo || 
+        !buttonOfferOne || 
+        !buttonOfferTwo) {
+            return false;
+    }
+    return true
+  }
+
+  function initPopupUpgrade () {
+    if (validPopupUpgrade ()) {
+    clickSelectors(variantsOne, buttonOfferOne, buyNowOne, 'mBanner_1_month')
+    clickSelectors(variantsTwo, buttonOfferTwo, buyNowTwo, '1_month')
+
+    // Show popup when 2 Month Supply or alternative option is clicked
+    openPopUpPromotion(labelTwoMonth, buttonOfferOne, overlay, popup, ".planBlockTop");
+    openPopUpPromotion(labelOneMonth, buttonOfferTwo, overlay, popup, ".planBlockDown");
+  
+    // Close popup when clicking outside the popup (overlay)
+    overlay?.addEventListener("click", function () {
+      handleDeclineOrClose(popup, overlay);
+    });
+  
+    // Close popup when clicking "No thanks" button
+    decline?.addEventListener("click", function () {
+      handleDeclineOrClose(popup, overlay);
+    });
+
+    // Close popup when clicking the "X" (close button)
+    closeBtn?.addEventListener("click", function () {
+      handleDeclineOrClose(popup, overlay);
+    });
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', initPopupUpgrade)
 /**
  * ============================================
  * END - PDM UPGRADE POPUP LOGIC - FACE SERUM
