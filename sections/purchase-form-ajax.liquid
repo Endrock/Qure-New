@@ -1,0 +1,261 @@
+{%- comment -%} Capture the content for header containing the tracking data {%- endcomment -%}
+{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+
+{% comment %} Use string splitting to pull the value from content_for_header and apply some string clean up {% endcomment %}
+{%- assign pageUrl = contentForQuerystring | split:'"pageurl":"' | last | split:'"' | first | split:'.myshopify.com' | last |
+   replace:'\/','/' | 
+   replace:'%20',' ' | 
+   replace:'\u0026','&'
+-%}
+
+{%- capture shop_url -%}{{ shop.url | replace: 'https://', '' }}{%- endcapture -%}
+
+{%- assign incoming_values = pageUrl 
+| replace: shop_url, ''
+| replace: '/?section_id=purchase-form-ajax&incoming_values=', ''
+| split: ","
+-%}
+
+<!-- aaaaqqqq1 [{{ incoming_values[0] }}] -->
+<!-- aaaaqqqq2 [{{ incoming_values[1] }}] -->
+<!-- aaaaqqqq3 [{{ incoming_values[2] }}] -->
+<!-- aaaaqqqq4 [{{ incoming_values[3] }}] -->
+<!-- aaaaqqqq5 [{{ incoming_values[4] }}] -->
+
+<div class="supply_steps">
+    <div class="step_counter"><span class="">2</span></div>
+    <div class="step_block">
+        <div class="step_header">
+            <h3 class="d-block"><span class="d-none">Step 2/3</span> Choose your supply</h3>
+            <h3 class="d-none"><span class="d-none">Step 2/3</span> Choose the Bundle</h3>
+        </div>
+        <div class="step_content">
+            <div class="step_conten_blocks">
+                <a class="planBlock" href="month_3" data-tab="month_3" data-pay="$62.25"
+                    data-per="Buy Now & SAVE 66%" data-image="https://qureskincaredns.com/new/assets/MI2x-mixed.webp">
+                    <div class="best_value">Best Value<span><img src="https://qureskincaredns.com/new/assets/star_new.svg" alt="" class="img-fluid ms-1"></span></div>
+                    <input type="radio" name="monthlyPlan" id="3_month" checked>
+                    <label class="monthly_plans" for="3_month">
+                        <div class="monthly_supply">
+                            <div class="plan_des">
+                                <div class="plan_hdr">
+                                    <h3>6 Month Supply</h3>
+                                    <span class="saved_price">SAVE 66%</span>
+                                </div>
+                                <div class="plan_des">(12 Micro-infusion Treatments)</div>
+                            </div>
+                            <div class="price_wrapper">
+                                <div class="price">
+                                    <div class="plan_prc regular_price">$714</div>
+                                    <div class="plan_prc sale_price color_red">$249</div>
+                                </div>
+                                <p class="kits_left"><img src="https://qureskincaredns.com/new/assets/clock_icon.svg" class="img-fluid" alt="">166 kits <span>left</span></p>
+                            </div>
+                        </div>
+                        <div class="supply_fire"><p>🔥 Only $20.75 per treatment </p></div>
+                    </label>
+                </a>
+                <a class="planBlock" href="month_2" data-tab="month_2" data-pay="$37.25"
+                    data-per="Buy Now & SAVE 59% " data-image="https://qureskincaredns.com/new/assets/MI4x-mixed.webp">
+                    <div class="plan_choosed text-md-center mw-100 d-none">
+                        <span class="px-3 d-none">BUY ONE & GET ONE <strong>FREE</strong></span>
+                        <span class="d-md-none d-md-inline me-4">BUY ONE & GET ONE <strong>FREE</strong></span>
+                    </div>
+                    <input type="radio" name="monthlyPlan" id="2_month">
+                    <label class="monthly_plans limited__offer" for="2_month">
+                        <div class="monthly_supply">
+                            <div class="plan_des">
+                                <div class="plan_hdr">
+                                    <h3>3 Month Supply</h3>
+                                    <span class="saved_price">SAVE 59%</span>
+                                </div>
+                                <div class="plan_des">(6 Micro-infusion Treatments)</div> 
+                            </div>
+                            <div>
+                                <span class="saved_price ms-auto d-none mb-1 saved_price50">SAVE 59%</span>
+                                <div class="price">
+                                    <div class="plan_prc regular_price">$357</div>
+                                    <div class="plan_prc sale_price color_red">$149</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="supply_fire bg_linear_pink"><p>Only $24.83 per treatment </p></div>
+                    </label>
+                </a>
+                <a class="planBlock" href="month_1" data-tab="month_1" data-pay="$29.75"
+                    data-per="Reserve Now" data-image="https://qureskincaredns.com/new/assets/treatment.png">
+                    <input type="radio" name="monthlyPlan" id="1_month">
+                    <label class="monthly_plans" for="1_month">
+                        <div class="monthly_supply">
+                            <div class="plan_des">
+                                <div class="plan_hdr">
+                                    <h3>1 Month Supply</h3>
+                                        <span class="saved_price pre_order">PRE ORDER</span> 
+                                </div>
+                                <div class="plan_des">(2 Micro-Infusion Treatments)</div>
+                            </div>
+                            <div class="price">
+                                    <!-- <div class="plan_prc regular_price">$99</div>  -->
+                                <div class="plan_prc sale_price">$119</div>
+                            </div>
+                        </div>
+                    </label>
+                </a>
+
+                {%- for block in section.blocks -%}
+                    {% if block.type == 'out_of_stock' %}
+                        <div class="next_batch_bl next_batch_highlight mt-3 ctm_cls_next_batch_mi_lp">
+                            {% if block.settings.heading != blank %}
+                                <h5 class="d-block d-md-block">{{ block.settings.heading }}</h5>
+                            {% endif %}
+                            
+                            {% if block.settings.text != blank %}
+                                {{ block.settings.text }}
+                            {% endif %}
+
+                            {% if block.settings.first_option_text != blank %}
+                                <div class="batch_h batch_h_fade mt-3 mt-md-4">
+                                    <div class="batch_h_month">{{ block.settings.first_option_date }}</div>
+                                    <div class="batch_h_info sold_out_h" style="--bgPercent:{{ block.settings.first_option_percent }}%;"><span>{{ block.settings.first_option_text }}</span></div>
+                                </div>
+                            {% endif %}
+
+                            {% if block.settings.second_option_text != blank %}
+                                <div class="batch_h my-2">
+                                    <div class="batch_h_month fw-bold">{{ block.settings.second_option_date }}</div>
+                                    <div class="batch_h_info" style="--bgPercent:{{ block.settings.second_option_percent }}%;">{{ block.settings.second_option_text }}</div>
+                                </div>
+                            {% endif %}
+
+                            {% if block.settings.third_option_text != blank %}
+                                <div class="batch_h batch_h_fade">
+                                    <div class="batch_h_month">{{ block.settings.third_option_date }}</div>
+                                    <div class="batch_h_info" style="--bgPercent:{{ block.settings.third_option_percent }}%;"><span>{{ block.settings.third_option_text }}</span></div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                {%- endfor -%}
+
+            </div>
+            <div class="tab_content" id="month_3">
+                <div class="plan_bundle_detail">
+                    <h6 class="cs_item__accordion">Buy one 6 month supply and get:<span><img src="https://qureskincaredns.com/new/assets/arrow-up.png" alt=""></span></h6>
+                    <div class="u_item__hidden-div" style="display: none;">
+                        <p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>2 Micro-Infusion devices (valued at $160)</p>
+                        <p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>10 Clinical-grade micro-needling heads (valued at $100)</p>
+                        <p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>12 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $240) </p>
+                        <p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>Worldwide shipping (valued at $25)</p>
+                        <p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>Risk-free 90 days money-back guarantee to trial/p>
+                        <p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>24/7 customer support access</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab_content" id="month_2">
+                <div class="plan_bundle_detail">
+                    <h6 class="cs_item__accordion ps-3">Buy one 3 month supply and get:<span><img src="https://qureskincaredns.com/new/assets/arrow-up.png" alt=""></span></h6>
+                    <div class="u_item__hidden-div" style="display: none;">
+                        <p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>Micro-Infusion device (valued at $80)</p>
+                        <p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>5 Clinical-grade micro-needling heads (valued at $50)</p>
+                        <p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>6 clinically-formulated 4ml serum to treat your specific skin concerns (valued at $120)</p>
+                        <p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>Worldwide shipping (valued at $25)</p>
+                        <p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>Risk-free 90 days money-back guarantee to trial</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab_content" id="month_1">
+                <div class="plan_bundle_detail">
+                    <h6 class="cs_item__accordion">Buy one 1 month supply and get:<span><img src="https://qureskincaredns.com/new/assets/arrow-up.png" alt=""></span></h6>
+                    <div class="u_item__hidden-div" style="display: none;">
+                        <p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>Micro-Infusion device (valued at $80)</p>
+                        <p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>1 Clinical-grade micro-needling heads (valued at $10)</p>
+                        <p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>2 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $40)</p>
+                        <p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>Worldwide shipping (valued at $25)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<script>
+    $(document).ready(function () {
+        $('.tab_content').hide(); // Hide all tab contents initially
+        $('.tab_content').eq(0).show(); // Show the second tab content by default
+        $('.step_conten_blocks .planBlock').click(function () {
+            if ($(this).hasClass('ignore')) return;
+            var regular_price = $(this).find(".regular_price").text();
+            var sale_price = $(this).find(".sale_price:visible").text().trim();
+            console.log(regular_price);
+            var imageLink = $(this).attr("data-image");
+            var data_per = $(this).attr("data-per");
+            var data_pay = $(this).attr("data-pay");
+            $(".total_price").find(".regular_price").text(regular_price);
+            $(".total_price").find(".sale_price").text(sale_price);
+            $(".btn_value").text(data_per);
+            $(".pay_today").text(data_pay);
+            $("#choosen_image").attr("src", imageLink);
+            $('.tab_content').hide();
+            $('.step_conten_blocks .planBlock').removeClass('active');
+            $(this).addClass('active');
+
+            var tab = $(this).data('tab');
+
+            if (tab == "month_2") {
+                $(".supply-detail").addClass("offer_active");
+            } else {
+                $(".supply-detail").removeClass("offer_active");
+            }
+            $('#' + tab).show();
+        });
+
+        //product subscription
+
+
+        var data_month1_image = $(".serum_img.active").attr('data-month1-image');
+        var data_month2_image = $(".serum_img.active").attr('data-month2-image');
+        var data_month3_image = $(".serum_img.active").attr('data-month3-image');
+
+        $(".planBlock").each(function () {
+            var data_tab = $(this).attr("data-tab");
+            if (data_tab == "month_3") {
+                $(this).attr("data-image", data_month3_image);
+            } else if (data_tab == "month_2") {
+                $(this).attr("data-image", data_month2_image);
+            } else if (data_tab == "month_1") {
+                $(this).attr("data-image", data_month1_image);
+            }
+        });
+
+        $(".serumBlock").click(function () {
+            
+            var imageLinkss = $(".step_conten_blocks a.planBlock.active").attr('data-image');
+            $("#choosen_image").attr("src", imageLinkss);
+            $(".serum_img").removeClass("active");
+            $("input[name='serum']").prop("checked", false);
+            $("input[name='serum']").removeClass("active");
+            $(this).find(".serum_img").addClass("active");
+            $(this).find("input[name='serum']").prop("checked", true);
+            $(this).find("input[name='serum']").addClass("active");
+            var data_month1_image = $(".serum_img.active").attr('data-month1-image');
+            var data_month2_image = $(".serum_img.active").attr('data-month2-image');
+            var data_month3_image = $(".serum_img.active").attr('data-month3-image');
+            $(".planBlock").each(function () {
+                var data_tab = $(this).attr("data-tab");
+                if (data_tab == "month_3") {
+                    $(this).attr("data-image", data_month3_image);
+                } else if (data_tab == "month_2") {
+                    $(this).attr("data-image", data_month2_image);
+                } else if (data_tab == "month_1") {
+                    $(this).attr("data-image", data_month1_image);
+                }
+            });
+        });
+
+        //choose serum accordion
+        $('.cs_item__accordion').click(function () {
+            $(this).toggleClass('active');
+            $(this).next().slideToggle();
+        })
+    });
+</script>

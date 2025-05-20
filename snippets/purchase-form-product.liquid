@@ -1,0 +1,167 @@
+{% if array != blank %}
+
+    {%- for __id in array -%}
+        {% assign block = section.blocks | where: "id", __id | first %}
+        {% if block.type == 'product_type' %}
+            {% assign product_type_title = block.settings.heading | strip_newlines | strip | replace: ' ', '' | downcase %}
+        {% endif %}
+    {%- endfor -%}
+
+    <div class="step_content" id="{{ product_type_title }}" {% unless active %} style="display:none"{% endunless %}>
+        <div class="step_conten_blocks">
+
+            {%- for __id in array -%}
+                {% assign block = section.blocks | where: "id", __id | first %}
+                {% if block.type == 'product' %}
+                    {% assign product = all_products[block.settings.product] %}
+
+                    {% if product != blank %}
+
+                        {% assign product_type = false %}
+
+                        {% if block.settings.heading contains '6 Month' %}
+                            {% assign product_type = 1 %}
+                            {% assign product_price_per_item = product.price | divided_by: 12 %}
+                            {% assign product_hash = 'month_3' %}
+
+                            {% capture product_included_month_3 %}
+                                    <div class="tab_content" id="{{ product_hash }}">
+                                        <div class="plan_bundle_detail">
+                                            <h6 class="cs_item__accordion">Buy one 6 month supply and get:<span><img src="https://qureskincaredns.com/new/assets/arrow-up.png" alt=""></span></h6>
+                                            <div class="u_item__hidden-div" style="display: none;">
+                                                {{ block.settings.included_text |  replace: '<p>', '<p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>' }}
+                                            </div>
+                                        </div>
+                                    </div>
+                            {% endcapture %}
+
+                        {% endif %}
+
+                        {% if block.settings.heading contains '3 Month' %}
+                            {% assign product_type = 2 %}
+                            {% assign product_price_per_item = product.price | divided_by: 6 %}
+                            {% assign product_hash = 'month_2' %}
+
+                            {% capture product_included_month_2 %}
+                                <div class="tab_content" id="{{ product_hash }}">
+                                    <div class="plan_bundle_detail">
+                                        <h6 class="cs_item__accordion ps-3">Buy one 3 month supply and get:<span><img src="https://qureskincaredns.com/new/assets/arrow-up.png" alt=""></span></h6>
+                                        <div class="u_item__hidden-div" style="display: none;">
+                                            {{ block.settings.included_text |  replace: '<p>', '<p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>' }}
+                                        </div>
+                                    </div>
+                                </div>                                
+                            {% endcapture %}
+
+                        {% endif %}
+
+                        {% if block.settings.heading contains '1 Month' %}
+                            {% assign product_type = 3 %}
+                            {% assign product_price_per_item = product.price | divided_by: 2 %}
+                            {% assign product_hash = 'month_1' %}
+
+                            {% capture product_included_month_1 %}
+                                <div class="tab_content" id="{{ product_hash }}">
+                                    <div class="plan_bundle_detail">
+                                        <h6 class="cs_item__accordion">Buy one 1 month supply and get:<span><img src="https://qureskincaredns.com/new/assets/arrow-up.png" alt=""></span></h6>
+                                        <div class="u_item__hidden-div" style="display: none;">
+                                            {{ block.settings.included_text |  replace: '<p>', '<p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>' }}
+                                        </div>
+                                    </div>
+                                </div>                                
+                            {% endcapture %}
+                        {% endif %}
+
+                        {% assign product_price_divided = product.price | divided_by: 4 %}
+                        {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
+                        {% assign product_title_tag = block.settings.heading | strip_newlines | strip | replace: ' ', '' | downcase %}
+                        {% assign product_price = product.price | money_without_trailing_zeros %}
+                        {% assign product_price_compare = product.compare_at_price | money_without_trailing_zeros %}
+
+                        <a class="planBlock" href="{{ product_hash }}" data-tab="{{ product_hash }}" data-pay="{{ divided_price | money_without_trailing_zeros }}" data-per="Buy Now & SAVE {{ discount_percentage }}%" data-image="{{ block.settings.image | img_url: 'master' }}">
+                            {% if product_type == 1 %}
+                                <div class="best_value">Best Value<span><img src="https://qureskincaredns.com/new/assets/star_new.svg" alt="" class="img-fluid ms-1"></span></div>
+                            {% endif %}
+                            <input type="radio" name="monthlyPlan" id="{{ product_title_tag }}"{% if product_type == 1 %} checked{% endif %}>
+                            <label class="monthly_plans" for="{{ product_title_tag }}">
+                                <div class="monthly_supply">
+                                    <div class="plan_des">
+                                        <div class="plan_hdr">
+                                            <h3>{{ block.settings.heading }}</h3>
+
+                                            {% if block.settings.preorder == true %}
+                                                <span class="saved_price pre_order">PRE ORDER</span>
+                                            {% else %}
+                                                {% if product_type == 1 or product_type == 2 %}
+                                                    <span class="saved_price">SAVE {{ discount_percentage }}%</span>
+                                                {% endif %}
+                                            {% endif %}
+                                        </div>
+                                        <div class="plan_des">{{ block.settings.subheading }}</div>
+                                    </div>
+                                    <div class="price_wrapper">
+                                        <div class="price">
+                                            {% if product_type == 3 %}
+                                                <div class="plan_prc sale_price">{{ product_price }}</div>
+                                            {% else %}
+                                                <div class="plan_prc regular_price">{{ product_price_compare }}</div>
+                                                <div class="plan_prc sale_price color_red">{{ product_price }}</div>
+                                            {% endif %}
+                                        </div>  
+                                        {% if block.settings.left_items > 0 %}
+                                            <p class="kits_left"><img src="https://qureskincaredns.com/new/assets/clock_icon.svg" class="img-fluid" alt="">{{ block.settings.left_items }} kits <span>left</span></p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                {% if product_type == 1 %}
+                                    <div class="supply_fire"><p>🔥 Only {{ product_price_per_item | money_without_trailing_zeros }} per treatment </p></div>
+                                {% endif %}
+                                {% if product_type == 2 %}
+                                    <div class="supply_fire bg_linear_pink"><p>Only {{ product_price_per_item | money_without_trailing_zeros }} per treatment </p></div>
+                                {% endif %}
+                            </label>
+                        </a>
+                    {% endif %}
+                {% endif %}
+            {%- endfor -%}
+            
+            {%- for block in section.blocks -%}
+                {% if block.type == 'out_of_stock' %}
+                    <div class="next_batch_bl next_batch_highlight mt-3 ctm_cls_next_batch_mi_lp">
+                        {% if block.settings.heading != blank %}
+                            <h5 class="d-block d-md-block">{{ block.settings.heading }}</h5>
+                        {% endif %}
+                        
+                        {% if block.settings.text != blank %}
+                            {{ block.settings.text }}
+                        {% endif %}
+
+                        {% if block.settings.first_option_text != blank %}
+                            <div class="batch_h batch_h_fade mt-3 mt-md-4">
+                                <div class="batch_h_month">{{ block.settings.first_option_date }}</div>
+                                <div class="batch_h_info sold_out_h" style="--bgPercent:{{ block.settings.first_option_percent }}%;"><span>{{ block.settings.first_option_text }}</span></div>
+                            </div>
+                        {% endif %}
+
+                        {% if block.settings.second_option_text != blank %}
+                            <div class="batch_h my-2">
+                                <div class="batch_h_month fw-bold">{{ block.settings.second_option_date }}</div>
+                                <div class="batch_h_info" style="--bgPercent:{{ block.settings.second_option_percent }}%;">{{ block.settings.second_option_text }}</div>
+                            </div>
+                        {% endif %}
+
+                        {% if block.settings.third_option_text != blank %}
+                            <div class="batch_h batch_h_fade">
+                                <div class="batch_h_month">{{ block.settings.third_option_date }}</div>
+                                <div class="batch_h_info" style="--bgPercent:{{ block.settings.third_option_percent }}%;"><span>{{ block.settings.third_option_text }}</span></div>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            {%- endfor -%}
+        </div>
+        {{ product_included_month_3 }}
+        {{ product_included_month_2 }}
+        {{ product_included_month_1 }}
+    </div>    
+{% endif %}

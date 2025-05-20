@@ -1,0 +1,630 @@
+{%- assign line_count = 0 -%}
+{%- assign payment_type_count = 0 -%}
+{%- assign product_type_count = 0 -%}
+
+{%- for block in section.blocks -%}
+    {% case block.type %}
+        {% when 'line' %}
+            {%- assign line_count = line_count | plus: 1 -%}
+        {% when 'payment_type' %}
+            {%- assign payment_type_count = payment_type_count | plus: 1 -%}
+        {% when 'product_type' %}
+            {%- assign product_type_count = product_type_count | plus: 1 -%}
+    {% endcase %}
+{% endfor %}
+
+{% if line_count > 0 %}
+    {%- for block in section.blocks -%}
+        {% case block.type %}
+            {% when 'line' %}
+                <div class="available_bar"{% if block.settings.background != blank %} style="background: {{ block.settings.background }};"{% endif %}>
+                    <p>{{ block.settings.text }}</p>
+                </div>
+        {% endcase %}
+    {% endfor %}
+{% endif %}
+
+{% include 'assoc-array', section: section, __parent_title: 'type', __separator: '###' %}
+
+{% capture section_details %}
+    <div class="qure__treatments">
+        <div class="text-start order-2 order-md-1">
+            <div class="section__header d-none d-md-block">
+                {% if section.settings.heading != blank %}
+                    <h2 class="title-lg">{{ section.settings.heading }}</h2>
+                {% endif %}
+                <div class="des">
+                    {% if section.settings.text != blank %}
+                        {{ section.settings.text }}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="tmtFtrs_image order-1 order-md-2">
+            <div class="section__header d-block d-md-none">
+                {% if section.settings.heading != blank %}
+                    <h2 class="title-lg">{{ section.settings.heading }}</h2>
+                {% endif %}
+                <div class="des">
+                    {% if section.settings.text != blank %}
+                        {{ section.settings.text }}
+                    {% endif %}
+                </div>
+            </div>
+            {% if section.settings.image != blank %}
+                <img src="{{ section.settings.image | img_url: 'master' }}" class="img-fluid" alt="choosen_image" id="choosen_image" />
+            {% endif %}
+        </div>
+        <div class="tmtFtrs d-none d-md-flex justify-content-between mb-4 mt-5 mw-455">
+            {% if section.settings.icon_image1 != blank %}
+                <div class="tmtFtrs_block text-center"> 
+                    <div class="tmtFtr_icon">
+                        <img src="{{ section.settings.icon_image1 | img_url: 'master' }}" alt="">
+                    </div>
+                    {% if section.settings.icon_text1 != blank %}
+                        <div class="tmtFtr_des">
+                            {{ section.settings.icon_text1 }}
+                        </div>                    
+                    {% endif %}
+                </div>             
+            {% endif %}
+
+            {% if section.settings.icon_image2 != blank %}
+                <div class="tmtFtrs_block text-center"> 
+                    <div class="tmtFtr_icon">
+                        <img src="{{ section.settings.icon_image2 | img_url: 'master' }}" alt="">
+                    </div>
+                    {% if section.settings.icon_text2 != blank %}
+                        <div class="tmtFtr_des">
+                            {{ section.settings.icon_text2 }}
+                        </div>                    
+                    {% endif %}
+                </div>             
+            {% endif %}
+
+            {% if section.settings.icon_image3 != blank %}
+                <div class="tmtFtrs_block text-center"> 
+                    <div class="tmtFtr_icon">
+                        <img src="{{ section.settings.icon_image3 | img_url: 'master' }}" alt="">
+                    </div>
+                    {% if section.settings.icon_text3 != blank %}
+                        <div class="tmtFtr_des">
+                            {{ section.settings.icon_text3 }}
+                        </div>                    
+                    {% endif %}
+                </div>             
+            {% endif %}
+        </div>
+        {% if section.settings.bottom_text != blank %}
+            <div class="qst_box text-center d-none d-md-block">
+                <img src="https://qureskincaredns.com/new/assets/question_mark.svg" alt="question_mark" class="me-2">{{ section.settings.bottom_text | replace: '<p>', '' | replace: '</p>', '' }}
+            </div>        
+        {% endif %}
+    </div>
+{% endcapture %}
+
+{% capture step1 %}
+    <div class="supply_steps">
+        <div class="step_counter active"><span>1</span></div>
+        <div class="step_block">
+            <div class="step_header">
+                <h3><span class="d-none">Step 1/3</span> Choose your Serum:</h3>
+            </div>
+            <div class="step_content step_serum pb-3">
+                {% render 'purchase-form-product-type' array: __idsArray1, active: true %}
+                {% render 'purchase-form-product-type' array: __idsArray2 %}
+                {% render 'purchase-form-product-type' array: __idsArray3 %}
+
+                {% comment %} <div class="serumBlock">
+                    <input type="radio" class="active" name="serum" id="rejuvenating" />
+                    <label class="serum_prd" for="rejuvenating">
+                        <div class="serum_img active" 
+                            data-month1-image="https://qureskincaredns.com/new/assets/MI2x-rejuv_blue.webp"
+                            data-month2-image="https://qureskincaredns.com/new/assets/wrinkles_dark_spots_3m.webp"
+                            data-month3-image="https://qureskincaredns.com/new/assets/6_month_bundle.webp">
+                            <img src="https://qureskincaredns.com/new/assets/mc_2.webp" alt="" class="img-fluid" />
+                        </div>
+                        <h4 class="serum_ttl"><span>For <strong> Dark Spots</strong></span> </h4>
+                    </label>
+                </div>                    
+                <div class="serumBlock">
+                    <input type="radio" class="" name="serum" id="hydra-soothing" />
+                    <label class="serum_prd" for="hydra-soothing">
+                        <div class="serum_img" data-month1-image="https://qureskincaredns.com/new/assets/MI2x-hydra_blue.webp"
+                            data-month2-image="https://qureskincaredns.com/new/assets/wrinkles_dark_spots_3m.webp"
+                            data-month3-image="https://qureskincaredns.com/new/assets/6_month_bundle.webp">
+                            <img src="https://qureskincaredns.com/new/assets/for_wrinkles.webp" alt="" class="img-fluid" />
+                        </div>
+                        <h4 class="serum_ttl"><span>For <strong> Wrinkles</strong></span> </h4>
+                    </label>
+                </div>
+                <div class="serumBlock">
+                    <input type="radio" class="" name="serum" id="rejuvenating-hydra" checked />
+                    <label class="serum_prd" for="rejuvenating-hydra">
+                        <div class="serum_img active"
+                            data-month1-image="https://qureskincaredns.com/new/assets/MI2x-rejuv_blue.webp"
+                            data-month2-image="https://qureskincaredns.com/new/assets/wrinkles_dark_spots_3m.webp"
+                            data-month3-image="https://qureskincaredns.com/new/assets/6_month_bundle.webp">
+                            <img src="https://qureskincaredns.com/new/assets/mc_5.webp" alt="" class="img-fluid" />
+                        </div>
+                        <h4 class="serum_ttl d-block pt-2"><span>For</span>
+                            Wrinkles +<br> Dark Spots
+                        </h4>
+                    </label>
+                </div> {% endcomment %}
+            </div>
+        </div>
+    </div>
+{% endcapture %}
+
+
+{% capture step2 %}
+    {% comment %} <div id="ajax-section"></div>
+
+    <script>
+        let loadContent = (incoming_values) => {
+            if($("#ajax-section" ).length) {
+                ajaxRequest(incoming_values);
+            }
+        }
+
+        let ajaxRequest = (incoming_values) => {
+
+            $.ajax({
+                url: "{{ shop.url }}?section_id=purchase-form-ajax&incoming_values=" + incoming_values, cache: false
+            })
+            .done(function( html ) {
+                $( "#ajax-section" ).html( html );
+            })
+            .fail((jqXHR) => {
+                if(jqXHR.status == 404)
+                {
+                    ajaxRequest(incoming_values);
+                }
+            });
+        }
+    </script> {% endcomment %}
+
+    <div class="supply_steps">
+        <div class="step_counter"><span class="">2</span></div>
+        <div class="step_block">
+            <div class="step_header">
+                <h3 class="d-block"><span class="d-none">Step 2/3</span> Choose your supply</h3>
+                <h3 class="d-none"><span class="d-none">Step 2/3</span> Choose the Bundle</h3>
+            </div>
+            {% comment %} {% render 'purchase-form-product' array: __idsArray1 %} {% endcomment %}
+            {% render 'purchase-form-product' array: __idsArray2, active: true %}
+            {% comment %} {% render 'purchase-form-product' array: __idsArray3 %} {% endcomment %}
+        </div>
+    </div>
+
+{% endcapture %}
+
+{% capture step3 %}
+    <div class="supply_steps">
+        <div class="step_counter"><span class="">3</span></div>
+        <div class="step_block">
+            <div class="step_header">
+                <h3 class="align-items-baseline"><span class="d-none">Step 3/3</span> Choose a payment option</h3>
+            </div>
+            <div class="step_content">
+                {% assign num = 0 %}
+                {%- for block in section.blocks -%}
+                    {% case block.type %}
+                        {% when 'payment_type' %}
+                            {% if num == 0 %}
+                                <div class="pmtBlock">
+                                    <input type="radio" name="pmtPlan" id="pay_in_full" checked>
+                                    <label class="pmt_plans" for="pay_in_full">
+                                        <div class="pmt_des">
+                                            {% if block.settings.heading != blank %}
+                                                <div class="pmt_hdr">
+                                                    <h3>{{ block.settings.heading }}</h3>
+                                                </div>
+                                            {% endif %}
+                                            <div class="d-md-flex gap-2">
+                                                <div class="pmt_des">{{ block.settings.text }}</div>
+                                                {% if block.settings.image != blank %}
+                                                    <div class="pmt_options"><img src="{{ block.settings.image | img_url: 'master' }}"  alt=""/></div>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        <div class="price total_price">
+                                            <div class="pmt_prc regular_price">$714</div>
+                                            <div class="pmt_prc sale_price">$249</div>
+                                        </div>
+                                    </label>
+                                </div>
+                            {% else %}
+                                <div class="pmtBlock">
+                                    <input type="radio" name="pmtPlan" id="pay_today">
+                                    <label class="pmt_plans" for="pay_today">
+                                        <div class="pmt_des">
+                                            {% if block.settings.heading != blank %}
+                                                <div class="pmt_hdr">
+                                                    <h3>{{ block.settings.heading }}</h3>
+                                                </div>
+                                            {% endif %}
+                                            <div class="d-md-flex gap-2">
+                                                <div class="pmt_des">{{ block.settings.text }}</div>
+                                                {% if block.settings.image != blank %}
+                                                    <div class="pmt_options"><img src="{{ block.settings.image | img_url: 'master' }}"  alt=""/></div>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        <div class="price">
+                                            <div class="pmt_prc pay_today">$62.25</div>
+                                        </div>
+                                    </label>
+                                </div>                                
+                            {% endif %}
+                            {%- assign num = num | plus: 1 -%}
+                    {% endcase %}
+                {% endfor %}                
+            </div>
+        </div>
+    </div>
+{% endcapture %}
+
+{% capture product_details %}
+    <div class="supply-detail offer_active">
+        {{ step1 }}
+        {{ step2 }}
+        {% if payment_type_count > 0 %}
+            {{ step3 }}
+        {% endif %}
+
+        <div class="supply_steps">
+            <div class="step_counter" style="visibility: collapse;"><span class="">&nbsp;</span></div>
+            <div class="step_block">
+                <div class="step_content mb-0 pt-0 pb-1 step_btn">
+                    <button type="submit" class="btn btn-atc submit_btn">
+                        <span class="btn_value">Buy Now & SAVE 66% </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="c_s_shipping d-block d-md-none mt-3">
+            <div class="c_s_wrapper">
+                {% if section.settings.icon_image1 != blank %}
+                    <div class="c_s_bx">
+                        <img src="{{ section.settings.icon_image1 | img_url: 'master' }}" alt="">
+                        {% if section.settings.icon_text1 != blank %}
+                            {{ section.settings.icon_text1 }}
+                        {% endif %}
+                    </div> 
+                {% endif %}
+
+                {% if section.settings.icon_image2 != blank %}
+                    <div class="c_s_bx">
+                        <img src="{{ section.settings.icon_image2 | img_url: 'master' }}" alt="">
+                        {% if section.settings.icon_text2 != blank %}
+                            {{ section.settings.icon_text2 }}
+                        {% endif %}
+                    </div> 
+                {% endif %}
+
+                {% if section.settings.icon_image3 != blank %}
+                    <div class="c_s_bx">
+                        <img src="{{ section.settings.icon_image3 | img_url: 'master' }}" alt="">
+                        {% if section.settings.icon_text3 != blank %}
+                            {{ section.settings.icon_text3 }}
+                        {% endif %}
+                    </div> 
+                {% endif %}
+            </div>
+            {% if section.settings.bottom_text != blank %}
+                <div class="c_s_ques text-center">
+                    <p class="ask-ques">
+                        <img src="https://qureskincaredns.com/new/assets/question_mark.svg" alt="">{{ section.settings.bottom_text | replace: '<p>', '' | replace: '</p>', '' }}
+                    </p>
+                </div>            
+            {% endif %}
+        </div>
+    </div>    
+{% endcapture %}
+
+<!-- new treatment section  -->
+<div class="section productSubscription choose_serum new_updated_treatment_outer" id="productSubscription">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                {{ section_details }}
+            </div>
+            <div class="col-md-6 p-0 pt-md-5">
+                {{ product_details }}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- new treatment section end  -->
+
+{%- schema -%}
+{
+    "name":"t:sections.purchase-form.name",
+    "class":"purchase-form",
+    "settings":[
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "t:common.heading.label"
+        },
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "t:common.text.label"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "t:common.image.label"
+        },
+        {
+            "type": "image_picker",
+            "id": "icon_image1",
+            "label": "t:common.image.label"
+        },
+        {
+            "type": "text",
+            "id": "icon_text1",
+            "label": "t:common.text.label"
+        },
+        {
+            "type": "image_picker",
+            "id": "icon_image2",
+            "label": "t:common.image.label"
+        },
+        {
+            "type": "text",
+            "id": "icon_text2",
+            "label": "t:common.text.label"
+        },
+        {
+            "type": "image_picker",
+            "id": "icon_image3",
+            "label": "t:common.image.label"
+        },
+        {
+            "type": "text",
+            "id": "icon_text3",
+            "label": "t:common.text.label"
+        },
+        {
+            "type": "richtext",
+            "id": "bottom_text",
+            "label": "t:common.text.label"
+        }
+    ],
+    "blocks":[
+        {
+            "type": "line",
+            "name": "t:sections.purchase-form.blocks.line.name",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "text",
+                    "label": "t:sections.purchase-form.blocks.line.settings.text",
+                    "default": "SOLD OUT 10X - AVAILABLE UNTIL STOCK LASTS"
+                },
+                {
+                    "type": "color_background",
+                    "id": "background",
+                    "label": "t:sections.purchase-form.blocks.line.settings.background"
+                }
+            ]
+        },
+        {
+            "type": "out_of_stock",
+            "name": "t:common.out_of_stock.label",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "t:common.heading.label"
+                },
+                {
+                    "type": "richtext",
+                    "id": "text",
+                    "label": "t:common.text.label"
+                },
+                {
+                    "type": "header",
+                    "content": "First option"
+                },
+                {
+                    "type": "text",
+                    "id": "first_option_date",
+                    "label": "t:common.date.label",
+                    "default": "October 15th"
+                },
+                {
+                    "type": "text",
+                    "id": "first_option_text",
+                    "label": "t:common.text.label",
+                    "default": "SOLD OUT"
+                },
+                {
+                    "type": "range",
+                    "id": "first_option_percent",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "label": "t:common.percent.label",
+                    "default": 100
+                },
+                {
+                    "type": "header",
+                    "content": "Second option"
+                },
+                {
+                    "type": "text",
+                    "id": "second_option_date",
+                    "label": "t:common.date.label",
+                    "default": "November 10th"
+                },
+                {
+                    "type": "text",
+                    "id": "second_option_text",
+                    "label": "t:common.text.label",
+                    "default": "81% Reserved"
+                },
+                {
+                    "type": "range",
+                    "id": "second_option_percent",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "label": "t:common.percent.label",
+                    "default": 81
+                },
+                {
+                    "type": "header",
+                    "content": "Third option"
+                },
+                {
+                    "type": "text",
+                    "id": "third_option_date",
+                    "label": "t:common.date.label",
+                    "default": "December 30th"
+                },
+                {
+                    "type": "text",
+                    "id": "third_option_text",
+                    "label": "t:common.text.label",
+                    "default": "In Production"
+                },
+                {
+                    "type": "range",
+                    "id": "third_option_percent",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "label": "t:common.percent.label",
+                    "default": 0
+                }
+            ]
+        },
+        {
+            "type": "type",
+            "limit": 3,
+            "name": "t:sections.purchase-form.blocks.type.name",
+            "settings": [
+                {
+                    "type": "header",
+                    "content": "TYPE"
+                }
+            ]
+        },
+        {
+            "type": "product_type",
+            "name": "t:sections.purchase-form.blocks.product_type.name",
+            "limit": 3,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "t:common.heading.label"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "t:common.image.label"
+                }
+            ]
+        },
+        {
+            "type": "product",
+            "name": "t:sections.purchase-form.blocks.product.name",
+            "limit": 9,
+            "settings": [
+                {
+                    "type": "product",
+                    "id": "product",
+                    "label": "t:common.product.label"
+                },                
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "t:common.heading.label"
+                },
+                {
+                    "type": "text",
+                    "id": "subheading",
+                    "label": "t:common.text.label"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "t:common.image.label"
+                },
+                {
+                    "type": "number",
+                    "id": "left_items",
+                    "label": "t:sections.purchase-form.blocks.product.settings.left_items"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "reserve",
+                    "label": "t:common.reserve.label",
+                    "default": false
+                },
+                {
+                    "type": "checkbox",
+                    "id": "preorder",
+                    "label": "t:common.preorder.label",
+                    "default": false
+                },
+                {
+                    "type": "checkbox",
+                    "id": "soldout",
+                    "label": "t:common.soldout.label",
+                    "default": false
+                },
+                {
+                    "type": "checkbox",
+                    "id": "show_soldout",
+                    "label": "t:sections.purchase-form.blocks.product.settings.show_soldout",
+                    "default": false
+                },
+                {
+                    "type": "richtext",
+                    "id": "included_text",
+                    "label": "t:sections.purchase-form.blocks.product.settings.included_text"
+                }
+            ]
+        },
+        {
+            "type": "payment_type",
+            "name": "t:sections.purchase-form.blocks.payment_type.name",
+            "limit": 2,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "t:common.heading.label"
+                },
+                {
+                    "type": "text",
+                    "id": "text",
+                    "label": "t:common.text.label"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "t:common.image.label"
+                }
+            ]
+        },
+    ],
+    "presets":[
+        {
+            "name":"t:sections.purchase-form.name"
+        }
+    ]
+}
+{%- endschema -%}
