@@ -619,6 +619,36 @@
       "padding_top": "Padding top",
       "padding_bottom": "Padding bottom"
     },
+    "purchase-form": {
+      "name": "Purchase form",
+      "settings": {},
+      "blocks": {
+        "line": {
+          "name": "Line",
+          "settings": {
+            "text": "Text",
+            "background": "Background"
+          }
+        },
+        "type": {
+          "name": "Type"
+        },
+        "product": {
+            "name": "Product",
+            "settings": {
+              "left_items": "Left items",
+              "show_soldout": "Show soldout info",
+              "included_text": "Included"
+            }
+        },
+        "product_type": {
+          "name": "Product type"
+        },
+        "payment_type": {
+          "name": "Payment type"
+        }        
+      }
+    },
     "header": {
       "name": "Header",
       "settings": {},
