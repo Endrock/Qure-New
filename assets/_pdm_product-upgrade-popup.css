@@ -262,7 +262,7 @@ START PDM UPGRADE POPUP - FACE SERUM
       margin-bottom: 0px;
     }
   
-    .pdm-popup-container .pdm-popup-image img {
+    .pdm-popup-container .pdm-popup-image .image-class {
       display: flex;
       width: 100%;
       height: 190px;
