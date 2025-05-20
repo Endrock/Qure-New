@@ -1,0 +1,84 @@
+{% comment %}
+Snippet for upgrade popup used on product-landing.liquid
+Params:
+- product: The current product object where the metafield "pop_up_promotion" is defined.
+Usage:
+{% render 'pdm-upgrade-popup', product: product %}
+{% endcomment %}
+
+{{ '_pdm_product-upgrade-popup.css' | asset_url | stylesheet_tag  }}  
+
+<!-- pdm-upgrade-popup.liquid -->
+<div class="pdm-popup-overlay hidden" id="pdm-popup-overlay"></div>
+
+<div class="pdm-popup-container hidden" id="pdm-popup">
+
+  <button class="pdm-popup-close" id="pdm-popup-close" aria-label="Close popup">×</button>
+  <!-- Top Selected Product -->
+
+  {% assign pop_up = product.metafields.custom.pop_up_promotion.value %}
+  {% comment %}
+    Technical debt: Changing the rendering of the img tag to Shopify images
+  {% endcomment %}
+  <div class="pdm-popup-product-border-wrapper">
+    <div class="pdm-popup-product-selected">
+      <div class="pdm-image-check-wrapper">
+
+        {{ pop_up.image.value | image_url: width: 200 | image_tag: alt: pop_up.title.value }}
+        <span class="pdm-check-icon">
+          {% render 'icons', icon: 'popup-check' %} 
+        </span>
+      </div>
+      <div class="pdm-popup-product-text">
+        <h4>{{ pop_up.title.value }}</h4>
+        <p>{{ product.price | money_without_trailing_zeros }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Headline -->
+  <div class="pdm-popup-headline">
+    <h3>{{  pop_up.monthly.value }}</h3>
+  </div>
+
+  <!-- Offer Block -->
+  <div class="pdm-popup-offer">
+    <div class="pdm-popup-image">
+      {{ pop_up.image_upgrade.value | image_url: width: 560 | image_tag: alt: pop_up.title.value }}
+    </div>
+    <div class="pdm-popup-offer-content">
+      <h4>{{  pop_up.text_primary.value }}</h4>
+      <p class="pdm-popup-subtitle">{{ pop_up.text_secondary.value }}</p> 
+      {% assign price_full = product.price | times: 2  %}
+      {% assign discount_percentage = price_full | times: 0.19 %}
+      {% assign discount_amount =  price_full | minus: discount_percentage | divided_by: 100 | round %}
+
+      <p class="pdm-popup-price">
+        <del>{{ price_full | money_without_trailing_zeros }}</del> <span class="discounted-price">${{ discount_amount }}</span> <span class="discount-tag">19% OFF</span>
+      </p>
+      {% assign raw = pop_up.checklist.value | remove_first: "-" %}
+      {% assign items = raw | split: "-" %}
+
+      <ul class="pdm-popup-benefits">
+
+        {% for item in items %}
+          {% comment %}
+            Technical debt: Improve code line to use metafield_tag
+          {% endcomment %}
+          <li>
+            {% render 'icons', icon: 'check-list' %}
+            {{ item | strip }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="pdm-popup-actions">
+    <button class="pdm-upgrade-btn" onclick="addUpgradeVariantToCart()">UPGRADE NOW</button>
+    <button class="pdm-decline-btn" id="pdm-decline">No thanks, keep my choice</button>
+  </div>
+</div>
+ <script src="{{'_pdm_product-upgrade-popup.js' | asset_url }}" defer ></script>
+
