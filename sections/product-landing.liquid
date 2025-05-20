@@ -561,6 +561,11 @@
         </div>
     </div>
 </div>
+
+{% if product.metafields.custom.pop_up_promotion.value != blank %}
+    {% render 'pdm-upgrade-popup', product: product  %}
+{% endif %}
+ 
 <!-- -- main banner end -- -->
 
 {% comment %} social proof feature  {% endcomment %}
