@@ -20,7 +20,7 @@
     let  closeBtn;
     let  buyNowOne;
     let  buyNowTwo;
-    let  ButtonOffers;
+    let  buttonOffers;
     let  variantsOne;
     let  variantsTwo;
     let  buttonOfferOne;
@@ -114,7 +114,7 @@ function handleDeclineOrClose(popup, overlay) {
      closeBtn = document.getElementById("pdm-popup-close");
      buyNowOne = document.querySelector('.submit_btn_top');
      buyNowTwo = document.querySelector('.submit_btn_down');
-     ButtonOffers = document.querySelectorAll('.pdm-popup-btn');
+     buttonOffers = document.querySelectorAll('.pdm-popup-btn');
      variantsOne = document.querySelectorAll('input[name="mBanner_monthlyPlan"]');
      variantsTwo = document.querySelectorAll('input[name="monthlyPlan"]');
 
