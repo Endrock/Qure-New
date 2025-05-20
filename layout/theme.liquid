@@ -106,7 +106,7 @@
     <script id="marathon-data-pixel-script" async src="https://pixel.marathondataco.com/pixel.js?companyId=cm55skkgc000mwit0ccj1wfs0"></script>
 </head> 
 
-<body class="{{ template }}">
+<body class="{% if template == 'page.form-test' %}page.sunil-mi-landing-special2{% else %}{{ template }}{% endif %}">
     {% assign blocked_products = 'led-mask-neck-dec-bundle-option,personalized-skincare-plan' | split: ',' %}
     {% if blocked_products contains product.handle %}
     <script>
