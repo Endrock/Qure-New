@@ -322,7 +322,7 @@
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/Micro-Infusion6MonthBundle_DarkSpots.jpg",
             "left_items": 166,
-            "reserve": false,
+            "reserve": true,
             "preorder": false,
             "soldout": false,
             "preselected": false,
