@@ -60,6 +60,7 @@
     },
     "main": {
       "type": "product-landing",
+      "disabled": true,
       "blocks": {
         "rating_TfBQ9X": {
           "type": "rating",
@@ -250,6 +251,7 @@
     },
     "money_back_guarantee_8D6BkW": {
       "type": "money-back-guarantee",
+      "disabled": true,
       "settings": {
         "heading": "Try it now with zero risk.\n<br>\nOur 90-day money-back guarantee",
         "text": "You have 90 days to try Qure’s Micro-Infusion System with our 3 month supply to see and feel the skin-changing effects of 6 treatments!",
@@ -268,8 +270,8 @@
             "background": ""
           }
         },
-        "out_of_stock_3xp9iR": {
-          "type": "out_of_stock",
+        "preorder_box_3xp9iR": {
+          "type": "preorder_box",
           "settings": {
             "heading": "Next batch ships early May 2025:",
             "text": "<p>Due to high demand, 1-month Micro-Infusion supply is sold out. Order now and secure yours from the next shipment.</p>",
@@ -280,7 +282,7 @@
             "second_option_text": "54% Reserved",
             "second_option_percent": 54,
             "third_option_date": "June 2025",
-            "third_option_text": "In Production",
+            "third_option_text": "",
             "third_option_percent": 0
           }
         },
@@ -308,7 +310,8 @@
           "type": "product_type",
           "settings": {
             "heading": "Dark spots",
-            "image": "shopify://shop_images/mc_2.webp"
+            "image": "shopify://shop_images/mc_2.webp",
+            "preselected": true
           }
         },
         "product_DBd4ef": {
@@ -322,7 +325,7 @@
             "reserve": false,
             "preorder": false,
             "soldout": false,
-            "show_soldout": false,
+            "preselected": false,
             "included_text": "<p>2 Micro-Infusion devices (valued at $160)</p><p>10 Clinical-grade micro-needling heads (valued at $100)</p><p>12 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $240)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial/p&gt;</p><p>24/7 customer support access</p>"
           }
         },
@@ -335,8 +338,8 @@
             "image": "shopify://shop_images/3monthdarkspots_cb2897ed-4d86-45d6-8249-2b11460670b8.png",
             "reserve": false,
             "preorder": false,
-            "soldout": false,
-            "show_soldout": false,
+            "soldout": true,
+            "preselected": false,
             "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>5 Clinical-grade micro-needling heads (valued at $50)</p><p>6 clinically-formulated 4ml serum to treat your specific skin concerns (valued at $120)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial</p>"
           }
         },
@@ -348,9 +351,9 @@
             "subheading": "(2 Micro-Infusion Treatments)",
             "image": "shopify://shop_images/1monthdarkspots.png",
             "reserve": false,
-            "preorder": true,
+            "preorder": false,
             "soldout": false,
-            "show_soldout": false,
+            "preselected": false,
             "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>1 Clinical-grade micro-needling heads (valued at $10)</p><p>2 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $40)</p><p>Worldwide shipping (valued at $25)</p>"
           }
         },
@@ -362,7 +365,8 @@
           "type": "product_type",
           "settings": {
             "heading": "Wrinkles",
-            "image": "shopify://shop_images/for_wrinkles.webp"
+            "image": "shopify://shop_images/for_wrinkles.webp",
+            "preselected": false
           }
         },
         "product_EKAAzA": {
@@ -375,7 +379,7 @@
             "reserve": false,
             "preorder": false,
             "soldout": false,
-            "show_soldout": false,
+            "preselected": false,
             "included_text": "<p>2 Micro-Infusion devices (valued at $160)</p><p>10 Clinical-grade micro-needling heads (valued at $100)</p><p>12 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $240)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial/p&gt;</p><p>24/7 customer support access</p>"
           }
         },
@@ -389,7 +393,7 @@
             "reserve": false,
             "preorder": false,
             "soldout": false,
-            "show_soldout": false,
+            "preselected": false,
             "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>5 Clinical-grade micro-needling heads (valued at $50)</p><p>6 clinically-formulated 4ml serum to treat your specific skin concerns (valued at $120)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial</p>"
           }
         },
@@ -403,7 +407,7 @@
             "reserve": false,
             "preorder": false,
             "soldout": false,
-            "show_soldout": false,
+            "preselected": false,
             "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>1 Clinical-grade micro-needling heads (valued at $10)</p><p>2 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $40)</p><p>Worldwide shipping (valued at $25)</p>"
           }
         },
@@ -415,7 +419,8 @@
           "type": "product_type",
           "settings": {
             "heading": "Wrinkles + Dark Spots",
-            "image": "shopify://shop_images/mc_5.webp"
+            "image": "shopify://shop_images/mc_5.webp",
+            "preselected": false
           }
         },
         "product_gbPf3J": {
@@ -428,7 +433,7 @@
             "reserve": false,
             "preorder": false,
             "soldout": false,
-            "show_soldout": false,
+            "preselected": false,
             "included_text": "<p>2 Micro-Infusion devices (valued at $160)</p><p>10 Clinical-grade micro-needling heads (valued at $100)</p><p>12 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $240)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial/p&gt;</p><p>24/7 customer support access</p>"
           }
         },
@@ -442,7 +447,7 @@
             "reserve": false,
             "preorder": false,
             "soldout": false,
-            "show_soldout": false,
+            "preselected": false,
             "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>5 Clinical-grade micro-needling heads (valued at $50)</p><p>6 clinically-formulated 4ml serum to treat your specific skin concerns (valued at $120)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial</p>"
           }
         },
@@ -456,14 +461,14 @@
             "reserve": false,
             "preorder": false,
             "soldout": false,
-            "show_soldout": false,
+            "preselected": false,
             "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>1 Clinical-grade micro-needling heads (valued at $10)</p><p>2 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $40)</p><p>Worldwide shipping (valued at $25)</p>"
           }
         }
       },
       "block_order": [
         "line_8cPUxh",
-        "out_of_stock_3xp9iR",
+        "preorder_box_3xp9iR",
         "payment_type_3zQTmH",
         "payment_type_B6Pzbh",
         "type_hHPdgJ",
@@ -485,6 +490,8 @@
       "settings": {
         "heading": "Choose your treatment options",
         "text": "<p><strong>Rest assured that all orders are one-time purchases.</strong></p><p>You will not be charged again in the subsequent months, and there are no hidden charges. When you are ready to reorder your treatment, you can purchase needle heads and serum of choice.</p>",
+        "hide_product_types": false,
+        "hide_payment_types": false,
         "image": "shopify://shop_images/6_month_bundle.webp",
         "icon_image1": "shopify://shop_images/money-back.svg",
         "icon_text1": "Money Back Guarantee",
