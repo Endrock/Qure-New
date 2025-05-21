@@ -323,8 +323,8 @@
             "image": "shopify://shop_images/Micro-Infusion6MonthBundle_DarkSpots.jpg",
             "left_items": 166,
             "reserve": false,
-            "preorder": true,
-            "soldout": false,
+            "preorder": false,
+            "soldout": true,
             "preselected": false,
             "included_text": "<p>2 Micro-Infusion devices (valued at $160)</p><p>10 Clinical-grade micro-needling heads (valued at $100)</p><p>12 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $240)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial/p&gt;</p><p>24/7 customer support access</p>"
           }
