@@ -1,0 +1,13 @@
+<div class="supply_steps"{% if section.settings.hide_product_types == true %} style="display:none"{% endif %}>
+    <div class="step_counter active"><span>1</span></div>
+    <div class="step_block">
+        <div class="step_header">
+            <h3><span class="d-none">Step 1/3</span> Choose your Serum:</h3>
+        </div>
+        <div class="step_content step_serum pb-3">
+            {% render 'purchase-form-type' array: __idsArray1 %}
+            {% render 'purchase-form-type' array: __idsArray2 %}
+            {% render 'purchase-form-type' array: __idsArray3 %}
+        </div>
+    </div>
+</div>
