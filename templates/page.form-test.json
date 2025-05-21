@@ -309,7 +309,7 @@
         "product_type_QKQhNr": {
           "type": "product_type",
           "settings": {
-            "heading": "Dark spots",
+            "heading": "Dark Spots",
             "image": "shopify://shop_images/mc_2.webp",
             "preselected": false
           }
@@ -318,7 +318,7 @@
           "type": "product",
           "settings": {
             "product": "micro-infusion-6-month-bundle-for-dark-spots",
-            "heading": "6 Month Supply",
+            "heading": "Memorial Day 6 Month Supply",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/Micro-Infusion6MonthBundle_DarkSpots.jpg",
             "left_items": 166,
@@ -376,8 +376,8 @@
             "heading": "6 Month Supply",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/micro-infusion_6_month_bundle__for_wrinkles.png",
-            "reserve": false,
-            "preorder": false,
+            "reserve": true,
+            "preorder": true,
             "soldout": false,
             "preselected": false,
             "included_text": "<p>2 Micro-Infusion devices (valued at $160)</p><p>10 Clinical-grade micro-needling heads (valued at $100)</p><p>12 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $240)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial/p&gt;</p><p>24/7 customer support access</p>"
