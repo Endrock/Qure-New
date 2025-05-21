@@ -490,8 +490,8 @@
       "settings": {
         "heading": "Choose your treatment options",
         "text": "<p><strong>Rest assured that all orders are one-time purchases.</strong></p><p>You will not be charged again in the subsequent months, and there are no hidden charges. When you are ready to reorder your treatment, you can purchase needle heads and serum of choice.</p>",
-        "hide_product_types": true,
-        "hide_payment_types": false,
+        "hide_product_types": false,
+        "hide_payment_types": true,
         "image": "shopify://shop_images/6_month_bundle.webp",
         "icon_image1": "shopify://shop_images/money-back.svg",
         "icon_text1": "Money Back Guarantee",
