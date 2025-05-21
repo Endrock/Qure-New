@@ -550,6 +550,9 @@
             "address2": "Apartment, suite, etc (We are not able to ship to PO boxes)."
           }
         }
+      },
+      "payment": {
+        "purchase_options_agreement_label": "Try at home for 30 days after delivery. Returns are easy. We'll place a pre-authorization on your card to ensure it's valid, but you'll only pay for what you keep."
       }
     }
   },
