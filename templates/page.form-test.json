@@ -60,7 +60,6 @@
     },
     "main": {
       "type": "product-landing",
-      "disabled": true,
       "blocks": {
         "rating_TfBQ9X": {
           "type": "rating",
@@ -228,6 +227,7 @@
         "jump_to_section_R7UYWE",
         "jump_to_section_Dt7YUT"
       ],
+      "disabled": true,
       "settings": {
         "seo_heading": "",
         "heading": "Ditch The Make-up: Embrace a New Level of Confidence with Micro-Infusion",
@@ -311,7 +311,7 @@
           "settings": {
             "heading": "Dark spots",
             "image": "shopify://shop_images/mc_2.webp",
-            "preselected": true
+            "preselected": false
           }
         },
         "product_DBd4ef": {
@@ -420,7 +420,7 @@
           "settings": {
             "heading": "Wrinkles + Dark Spots",
             "image": "shopify://shop_images/mc_5.webp",
-            "preselected": false
+            "preselected": true
           }
         },
         "product_gbPf3J": {
