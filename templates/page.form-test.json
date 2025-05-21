@@ -316,6 +316,7 @@
         },
         "product_DBd4ef": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "micro-infusion-6-month-bundle-for-dark-spots",
             "heading": "6 Month Supply",
@@ -331,6 +332,7 @@
         },
         "product_7dL4ci": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "micro-infusion-3-month-bundle-rejuvenating",
             "heading": "3 Month Supply",
