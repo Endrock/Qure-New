@@ -350,7 +350,7 @@
             "heading": "1 Month Supply",
             "subheading": "(2 Micro-Infusion Treatments)",
             "image": "shopify://shop_images/1monthdarkspots.png",
-            "reserve": false,
+            "reserve": true,
             "preorder": true,
             "soldout": false,
             "preselected": false,
