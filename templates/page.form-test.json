@@ -323,8 +323,11 @@
             "image": "shopify://shop_images/Micro-Infusion6MonthBundle_DarkSpots.jpg",
             "left_items": 166,
             "reserve": false,
-            "preorder": false,
             "soldout": false,
+            "preorder": true,
+            "preorder_text": "",
+            "preorder_date_soldout": "",
+            "preorder_date_reserved": "",
             "preselected": false,
             "included_text": "<p>2 Micro-Infusion devices (valued at $160)</p><p>10 Clinical-grade micro-needling heads (valued at $100)</p><p>12 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $240)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial/p&gt;</p><p>24/7 customer support access</p>"
           }
@@ -337,8 +340,11 @@
             "subheading": "(6 Micro-infusion Treatments)",
             "image": "shopify://shop_images/3monthdarkspots_cb2897ed-4d86-45d6-8249-2b11460670b8.png",
             "reserve": false,
-            "preorder": false,
             "soldout": true,
+            "preorder": false,
+            "preorder_text": "",
+            "preorder_date_soldout": "",
+            "preorder_date_reserved": "",
             "preselected": false,
             "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>5 Clinical-grade micro-needling heads (valued at $50)</p><p>6 clinically-formulated 4ml serum to treat your specific skin concerns (valued at $120)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial</p>"
           }
@@ -350,9 +356,13 @@
             "heading": "1 Month Supply",
             "subheading": "(2 Micro-Infusion Treatments)",
             "image": "shopify://shop_images/1monthdarkspots.png",
-            "reserve": true,
-            "preorder": true,
+            "reserve": false,
             "soldout": false,
+            "preorder": true,
+            "preorder_text": "<h5>Next batch ships early July 2025:</h5><p>Due to high demand, 1-month Micro-Infusion supply is sold out. Order now and secure yours from the next shipment.</p>",
+            "preorder_date_soldout": "22 May",
+            "preorder_date_reserved": "10 July",
+            "preorder_percent": "65% Reserved",
             "preselected": false,
             "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>1 Clinical-grade micro-needling heads (valued at $10)</p><p>2 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $40)</p><p>Worldwide shipping (valued at $25)</p>"
           }
@@ -376,9 +386,12 @@
             "heading": "6 Month Supply",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/micro-infusion_6_month_bundle__for_wrinkles.png",
-            "reserve": true,
-            "preorder": true,
+            "reserve": false,
             "soldout": false,
+            "preorder": false,
+            "preorder_text": "",
+            "preorder_date_soldout": "",
+            "preorder_date_reserved": "",
             "preselected": false,
             "included_text": "<p>2 Micro-Infusion devices (valued at $160)</p><p>10 Clinical-grade micro-needling heads (valued at $100)</p><p>12 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $240)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial/p&gt;</p><p>24/7 customer support access</p>"
           }
@@ -391,8 +404,11 @@
             "subheading": "(6 Micro-infusion Treatments)",
             "image": "shopify://shop_images/3monthwrinkles_5d80e14d-e628-4311-990a-34a1fc948558.png",
             "reserve": false,
-            "preorder": false,
             "soldout": false,
+            "preorder": false,
+            "preorder_text": "",
+            "preorder_date_soldout": "",
+            "preorder_date_reserved": "",
             "preselected": false,
             "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>5 Clinical-grade micro-needling heads (valued at $50)</p><p>6 clinically-formulated 4ml serum to treat your specific skin concerns (valued at $120)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial</p>"
           }
@@ -405,8 +421,11 @@
             "subheading": "(2 Micro-Infusion Treatments)",
             "image": "shopify://shop_images/1monthwrinkles.png",
             "reserve": false,
-            "preorder": false,
             "soldout": false,
+            "preorder": false,
+            "preorder_text": "",
+            "preorder_date_soldout": "",
+            "preorder_date_reserved": "",
             "preselected": false,
             "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>1 Clinical-grade micro-needling heads (valued at $10)</p><p>2 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $40)</p><p>Worldwide shipping (valued at $25)</p>"
           }
@@ -431,8 +450,11 @@
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/Micro-Infusion_6_Month_Bundle_For_Wrinkles_Dark_Spots.png",
             "reserve": false,
-            "preorder": false,
             "soldout": false,
+            "preorder": false,
+            "preorder_text": "",
+            "preorder_date_soldout": "",
+            "preorder_date_reserved": "",
             "preselected": false,
             "included_text": "<p>2 Micro-Infusion devices (valued at $160)</p><p>10 Clinical-grade micro-needling heads (valued at $100)</p><p>12 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $240)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial/p&gt;</p><p>24/7 customer support access</p>"
           }
@@ -445,8 +467,11 @@
             "subheading": "(6 Micro-infusion Treatments)",
             "image": "shopify://shop_images/3monthmix_1_7b716b38-ab3d-44f0-bbb5-a0b0c379dec3.png",
             "reserve": false,
-            "preorder": false,
             "soldout": false,
+            "preorder": false,
+            "preorder_text": "",
+            "preorder_date_soldout": "",
+            "preorder_date_reserved": "",
             "preselected": false,
             "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>5 Clinical-grade micro-needling heads (valued at $50)</p><p>6 clinically-formulated 4ml serum to treat your specific skin concerns (valued at $120)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial</p>"
           }
@@ -459,8 +484,11 @@
             "subheading": "(2 Micro-Infusion Treatments)",
             "image": "shopify://shop_images/1monthMIX.png",
             "reserve": false,
-            "preorder": false,
             "soldout": false,
+            "preorder": false,
+            "preorder_text": "",
+            "preorder_date_soldout": "",
+            "preorder_date_reserved": "",
             "preselected": false,
             "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>1 Clinical-grade micro-needling heads (valued at $10)</p><p>2 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $40)</p><p>Worldwide shipping (valued at $25)</p>"
           }

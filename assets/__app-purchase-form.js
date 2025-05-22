@@ -94,7 +94,8 @@
             var preorder = $(this).attr("data-preorder");
 
             updateProductButtonHref(product_variant_id, soldout);
-            tooglePreorderBox(preorder);
+            clearPreorderBoxes();
+            tooglePreorderBox(preorder, product_variant_id);
 
             $('.' + purchase_form_section_id + " .total_price").find(".regular_price").text($(this).find(".regular_price").text());
             $('.' + purchase_form_section_id + " .total_price").find(".sale_price").text($(this).find(".sale_price:visible").text().trim());
@@ -109,16 +110,66 @@
             $('.' + purchase_form_section_id + ' #' + $(this).data('tab')).show();
         }
 
-        function tooglePreorderBox(preorder) {
-            let preorderBox = document.querySelector('.' + purchase_form_section_id + ' .preorder_box');
+        function clearPreorderBoxes()
+        {
+            document.querySelectorAll('.' + purchase_form_section_id + ' .purchase-form-preorder-box-item').forEach(el => {
+                el.innerHTML = '';
+            });
+        }
 
+        function tooglePreorderBox(preorder, product_variant_id) {
+            const preorderBox = document.querySelector('.' + purchase_form_section_id + ' .preorder_box');
+            const targetBox = document.querySelector('.' + purchase_form_section_id + ' .purchase-form-preorder-box__' + product_variant_id);
+
+            if (!preorderBox || !targetBox) return;
+            
             if(preorder === 'true')
             {
-                if (preorderBox) preorderBox.classList.remove('hide');
+                if (preorderBox) 
+                {
+                    preorderBox.classList.remove('hide');
+                    targetBox.appendChild(preorderBox.cloneNode(true));
+                    preorderBox.classList.add('hide');
+
+                    updatePreorderBox(targetBox, product_variant_id);
+                }
             }
             else
             {
-                if (preorderBox) preorderBox.classList.add('hide');
+                if (preorderBox) 
+                {
+                    preorderBox.classList.add('hide');
+                }
             }
         }
+
+        function updatePreorderBox(targetBox, product_variant_id)
+        {
+            const preorder_text = document.querySelector('.' + purchase_form_section_id + ' .purchase-form-product-preorder-text__' + product_variant_id);
+            if (preorder_text && preorder_text.innerHTML !== '') {
+                targetBox.querySelector('.preorder_text').innerHTML = preorder_text.innerHTML;
+            }
+
+            const preorder_date_soldout = document.querySelector('.' + purchase_form_section_id + ' .purchase-form-product-preorder_date_soldout__' + product_variant_id);
+            if (preorder_date_soldout && preorder_date_soldout.innerHTML !== '') {
+                targetBox.querySelector('.preorder_date_soldout').innerHTML = preorder_date_soldout.innerHTML;
+            }
+
+            const preorder_date_reserved = document.querySelector('.' + purchase_form_section_id + ' .purchase-form-product-preorder_date_reserved__' + product_variant_id);
+            if (preorder_date_reserved && preorder_date_reserved.innerHTML !== '') {
+                targetBox.querySelector('.preorder_date_reserved').innerHTML = preorder_date_reserved.innerHTML;
+            }
+
+            const preorder_percent = document.querySelector('.' + purchase_form_section_id + ' .purchase-form-product-preorder_percent__' + product_variant_id);
+            if (preorder_percent && preorder_percent.innerHTML !== '') {
+                targetBox.querySelector('.preorder_percent').innerHTML = preorder_percent.innerHTML;
+
+                const match = preorder_percent.innerHTML.match(/\d+%/);
+                if (match) {
+                    const percentText = match[0];
+                    targetBox.querySelector('.preorder_percent').style.setProperty('--bgPercent', percentText);
+                }                
+            }            
+        }
+
     });

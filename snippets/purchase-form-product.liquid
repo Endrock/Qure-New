@@ -4,7 +4,17 @@
         .hide {
             display: none; 
         }
+        .new_updated_treatment_outer .planBlock .monthly_plans .plan_hdr h3 {
+            font-size: 15px !important;
+        }
+        @media(max-width:767px) {
+            .new_updated_treatment_outer .planBlock .monthly_plans .plan_hdr h3 {
+                font-size: 12px !important;
+            }
+        }
     </style>
+
+    {% capture preorder-box-items %}{% endcapture %}
 
     {%- for __id in array -%}
         {% assign block = section.blocks | where: "id", __id | first %}
@@ -96,7 +106,16 @@
                                 {% capture data-per %}Sold Out{% endcapture %}
                             {% endif %}
 
-                            <div class="planBlock" href="javascript:void(0)" data-tab="{{ product_hash }}" data-pay="{{ product_price_divided | money_without_trailing_zeros }}" data-per="{{ data-per }}" data-image="{{ block.settings.image | img_url: 'master' }}" data-product_variant_id="{{ product_variant_id }}" data-soldout="{{ block.settings.soldout }}" data-preorder="{{ block.settings.preorder }}" data-type="{{ product_type }}">
+                            <div class="planBlock" href="javascript:void(0)" 
+                                data-tab="{{ product_hash }}" 
+                                data-pay="{{ product_price_divided | money_without_trailing_zeros }}" 
+                                data-per="{{ data-per }}" 
+                                data-image="{{ block.settings.image | img_url: 'master' }}" 
+                                data-product_variant_id="{{ product_variant_id }}" 
+                                data-soldout="{{ block.settings.soldout }}" 
+                                data-preorder="{{ block.settings.preorder }}" 
+                                data-type="{{ product_type }}"
+                            >
                                 {% if product_type == 1 %}
                                     <div class="best_value">Best Value<span><img src="https://qureskincaredns.com/new/assets/star_new.svg" alt="" class="img-fluid ms-1"></span></div>
                                 {% endif %}
@@ -139,10 +158,33 @@
                                     {% endif %}
                                 </label>
                             </div>
+
+                            {% if block.settings.preorder == true %}
+                                
+                                {% capture preorder-box-items %}{{ preorder-box-items }}<div class="purchase-form-preorder-box-item purchase-form-preorder-box__{{ product_variant_id }}"></div>{% endcapture %}
+                                
+                                {% if block.settings.preorder_text != blank %}
+                                    <span class="purchase-form-product-preorder-text__{{ product_variant_id }} hide">{{ block.settings.preorder_text }}</span>
+                                {% endif %}
+                                {% if block.settings.preorder_date_soldout != blank %}
+                                    <span class="purchase-form-product-preorder_date_soldout__{{ product_variant_id }} hide">{{ block.settings.preorder_date_soldout }}</span>
+                                {% endif %}
+                                {% if block.settings.preorder_date_reserved != blank %}
+                                    <span class="purchase-form-product-preorder_date_reserved__{{ product_variant_id }} hide">{{ block.settings.preorder_date_reserved }}</span>
+                                {% endif %}
+                                {% if block.settings.preorder_percent != blank %}
+                                    <span class="purchase-form-product-preorder_percent__{{ product_variant_id }} hide">{{ block.settings.preorder_percent }}</span>
+                                {% endif %}
+                            {% endif %}
+
                         {% endif %}
                     {% endif %}
                 {%- endfor -%}
                 
+                {% comment %} <div class="purchase-form-preorder-box"></div> {% endcomment %}
+
+                {{ preorder-box-items }}
+
                 {{ preorder_box }}
             </div>
 

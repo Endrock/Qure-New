@@ -376,7 +376,13 @@
                     "type": "product",
                     "id": "product",
                     "label": "t:common.product.label"
-                },                
+                },   
+                {
+                    "type": "checkbox",
+                    "id": "preselected",
+                    "label": "t:sections.purchase-form.blocks.product.settings.preselected",
+                    "default": false
+                },             
                 {
                     "type": "text",
                     "id": "heading",
@@ -405,21 +411,35 @@
                 },
                 {
                     "type": "checkbox",
-                    "id": "preorder",
-                    "label": "t:common.preorder.label",
-                    "default": false
-                },
-                {
-                    "type": "checkbox",
                     "id": "soldout",
                     "label": "t:common.soldout.label",
                     "default": false
                 },
                 {
                     "type": "checkbox",
-                    "id": "preselected",
-                    "label": "t:sections.purchase-form.blocks.product.settings.preselected",
+                    "id": "preorder",
+                    "label": "t:common.preorder.label",
                     "default": false
+                },
+                {
+                    "type": "richtext",
+                    "id": "preorder_text",
+                    "label": "t:sections.purchase-form.blocks.product.settings.preorder_text"
+                },
+                {
+                    "type": "text",
+                    "id": "preorder_date_soldout",
+                    "label": "t:sections.purchase-form.blocks.product.settings.preorder_date_soldout"
+                },
+                {
+                    "type": "text",
+                    "id": "preorder_date_reserved",
+                    "label": "t:sections.purchase-form.blocks.product.settings.preorder_date_reserved"
+                },
+                {
+                    "type": "text",
+                    "id": "preorder_percent",
+                    "label": "t:sections.purchase-form.blocks.product.settings.preorder_percent"
                 },
                 {
                     "type": "richtext",

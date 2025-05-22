@@ -644,7 +644,11 @@
             "settings": {
               "left_items": "Left items",
               "included_text": "Included",
-              "preselected": "Preselected"
+              "preselected": "Preselected",
+              "preorder_text": "Preorder text",
+              "preorder_date_soldout": "Preorder date soldout",
+              "preorder_date_reserved": "Preorder date reserved",
+              "preorder_percent": "Preorder percent"
             }
         },
         "product_type": {
