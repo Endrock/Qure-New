@@ -34,6 +34,7 @@
         },
         "supply_xAX9bT": {
           "type": "supply",
+          "disabled": true,
           "settings": {
             "heading": "Next batch ships end of June 2025:",
             "heading_mobile": "Next batch ships end of June 2025:",
@@ -58,7 +59,7 @@
       ],
       "settings": {
         "reserve": false,
-        "soldout": true
+        "soldout": false
       }
     },
     "featuredin_extended_P7BNDN": {
