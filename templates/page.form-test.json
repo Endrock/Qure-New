@@ -61,192 +61,152 @@
     "main": {
       "type": "product-landing",
       "blocks": {
-        "rating_TfBQ9X": {
+        "rating_eLjGX8": {
           "type": "rating",
           "settings": {
             "image": "shopify://shop_images/star-half_fill.svg",
-            "text": "<p>4.8/5 Based on 43,893 Users</p>",
-            "product": ""
+            "text": "<p>97% customer satisfaction rate</p>",
+            "product": "micro-infusion-3-month-bundle-3x-b-g-serum-3x-e-g-f-serum"
           }
         },
-        "button_L9q6wE": {
-          "type": "button",
-          "settings": {
-            "button_label": "SAVE UP TO 66% OFF",
-            "button_url": "#productSubscription"
-          }
-        },
-        "list_pQxE9h": {
+        "list_FatCgk": {
           "type": "list",
           "settings": {
-            "text": "<ul><li><strong>Transforms dull-looking skin,</strong> helps reduce appearance of fine lines & smooths texture</li><li><strong>Easy</strong> 5-minute facial, serums <strong>customized</strong> to address your skin concerns for <strong>visible results</strong></li><li>Minimal to <strong>no downtime,</strong> virtually <strong>painless</strong> & perform conveniently from home</li></ul>"
+            "text": "<ul><li>Helps reduce appearance of <strong>fine lines, smooth texture</strong> whilst helping to infuse active ingredients into your skin.</li><li>Virtually <strong>painless</strong> and performed in the comfort and convenience of your home.</li><li>Minimal to <strong>no downtime</strong> with visible results.</li></ul>"
           }
         },
-        "media_bfYhdk": {
-          "type": "media",
+        "liquid_6AqWXk": {
+          "type": "liquid",
           "settings": {
-            "image": "shopify://shop_images/LP_MI.png",
-            "wistia_id": ""
+            "code": "<div id='ajax-top-purchase-form'></div>"
           }
         },
-        "media_4iwCUn": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/mi_pdp-product-2.webp",
-            "wistia_id": "jg8c1a3bee"
-          }
-        },
-        "media_BGGnJg": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/Rectangle_1g98_2x_bd58bf5f-2f7b-456a-b68f-d0b336830253.png",
-            "wistia_id": ""
-          }
-        },
-        "media_ewbVL3": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/Frame_114g28.png",
-            "wistia_id": ""
-          }
-        },
-        "media_yDrJ3B": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/mi_pdp-product-3.webp",
-            "wistia_id": ""
-          }
-        },
-        "media_JqRMtg": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/4_d28b48d9-9d2e-4b49-a3d0-dca26d58db2f.png",
-            "wistia_id": ""
-          }
-        },
-        "media_kjtYgA": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/B_a_mi_atf.png",
-            "wistia_id": ""
-          }
-        },
-        "media_Hb9Dce": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/mi_refill-result-4.webp",
-            "wistia_id": ""
-          }
-        },
-        "media_LaQVR8": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/m.i_above_the_fold.png",
-            "wistia_id": ""
-          }
-        },
-        "media_7jTHzN": {
-          "type": "media",
-          "settings": {
-            "image": "shopify://shop_images/mi_refill-result-1.webp",
-            "wistia_id": ""
-          }
-        },
-        "video_GAjMEW": {
-          "type": "video",
-          "settings": {
-            "image": "shopify://shop_images/Group_1865.png",
-            "image_mobile": "shopify://shop_images/Grocup_1865.png",
-            "video": "shopify://files/videos/MICRO INFUSION_fin.mp4",
-            "video_label": "See How It Works"
-          }
-        },
-        "jump_to_section_fVDdbe": {
-          "type": "jump_to_section",
-          "settings": {
-            "title": "Results",
-            "section_id": "result_section"
-          }
-        },
-        "jump_to_section_GE4tfE": {
-          "type": "jump_to_section",
-          "settings": {
-            "title": "How To Use",
-            "section_id": "see_it_section"
-          }
-        },
-        "jump_to_section_kYWrYh": {
-          "type": "jump_to_section",
+        "out_of_stock_3xp9iR": {
+          "type": "out_of_stock",
           "disabled": true,
           "settings": {
-            "title": "The Science",
-            "section_id": "science-section"
+            "heading": "Next batch ships early June 2025:",
+            "heading_mobile": "Next batch ships early June 2025:",
+            "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.</p>",
+            "first_option_date": "April 14th",
+            "first_option_text": "SOLD OUT",
+            "first_option_percent": 100,
+            "second_option_date": "June 10th",
+            "second_option_text": "54% Reserved",
+            "second_option_percent": 54,
+            "third_option_date": "July 2025",
+            "third_option_text": "In Production",
+            "third_option_percent": 0
           }
         },
-        "jump_to_section_U7LHQK": {
-          "type": "jump_to_section",
+        "product_in_page_x33rFD": {
+          "type": "product_in_page",
+          "disabled": true,
           "settings": {
-            "title": "Serum Guide",
-            "section_id": "serum_guide_section"
+            "image_product_1": "shopify://shop_images/Group_1000008507.png",
+            "image_product_text_1": "product one",
+            "video_wistia_id_1": "",
+            "image_product_2": "shopify://shop_images/mi_pdp-product-2.webp",
+            "image_product_text_2": "product two",
+            "video_wistia_id_2": "jg8c1a3bee",
+            "image_product_3": "shopify://shop_images/Monika_MI.png",
+            "image_product_text_3": "product three",
+            "video_wistia_id_3": "",
+            "image_product_4": "shopify://shop_images/Frame_1142h6.png",
+            "image_product_text_4": "producto fourth",
+            "video_wistia_id_4": "",
+            "image_product_5": "shopify://shop_images/sharen_refill.png",
+            "image_product_text_5": "product five",
+            "video_wistia_id_5": "",
+            "image_product_6": "shopify://shop_images/Rectangle_1g98_2x_bd58bf5f-2f7b-456a-b68f-d0b336830253.png",
+            "image_product_text_6": "product six",
+            "video_wistia_id_6": "",
+            "image_product_7": "shopify://shop_images/Frame_11425.png",
+            "image_product_text_7": "product seven",
+            "video_wistia_id_7": "",
+            "image_product_text_8": "",
+            "video_wistia_id_8": ""
           }
         },
-        "jump_to_section_R7UYWE": {
-          "type": "jump_to_section",
+        "before_and_after_i7mAeJ": {
+          "type": "before_and_after",
+          "disabled": true,
           "settings": {
-            "title": "Dermatologists",
-            "section_id": "shopify-section-template--19443028164847__text_with_video_qHAV6G"
+            "image_new_section_1": "shopify://shop_images/ba_images_mi.png",
+            "image_new_section_text_1": "micro infusion one",
+            "image_new_section_2": "shopify://shop_images/B_a_micro.png",
+            "image_new_section_text_2": "micro infusion two",
+            "image_new_section_3": "shopify://shop_images/b_a_images_dark_spots.png",
+            "image_new_section_text_3": "micro infusion three",
+            "image_new_section_4": "shopify://shop_images/b_a_images_ds.png",
+            "image_new_section_text_4": "micro infusion four",
+            "image_new_section_5": "shopify://shop_images/b_a_images_scars.png",
+            "image_new_section_text_5": "Micro infusion five",
+            "image_new_section_text_6": ""
           }
         },
-        "jump_to_section_Dt7YUT": {
-          "type": "jump_to_section",
+        "video_before_and_after_ww3Xa3": {
+          "type": "video_before_and_after",
           "settings": {
-            "title": "FAQs",
-            "section_id": "faq_section"
+            "video_new_section": "shopify://files/videos/dr_tripathi.mov"
+          }
+        },
+        "supply_for_refill_VM6N4V": {
+          "type": "supply_for_refill",
+          "settings": {
+            "heading": "Next batch ships 6th of May 2025:",
+            "heading_mobile": "Next batch ships 05/6:",
+            "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.</p>",
+            "first_option_date": "March 5th",
+            "first_option_text": "Sold Out",
+            "first_option_percent": 100,
+            "second_option_date": "May 6th",
+            "second_option_text": "51% Reserved",
+            "second_option_percent": 52,
+            "third_option_date": "June 30th",
+            "third_option_text": "In Production",
+            "third_option_percent": 0,
+            "option_wrinkles_darkspots": false,
+            "option_wrinkles": true,
+            "option_darkspots": false
           }
         }
       },
       "block_order": [
-        "rating_TfBQ9X",
-        "button_L9q6wE",
-        "list_pQxE9h",
-        "media_bfYhdk",
-        "media_4iwCUn",
-        "media_BGGnJg",
-        "media_ewbVL3",
-        "media_yDrJ3B",
-        "media_JqRMtg",
-        "media_kjtYgA",
-        "media_Hb9Dce",
-        "media_LaQVR8",
-        "media_7jTHzN",
-        "video_GAjMEW",
-        "jump_to_section_fVDdbe",
-        "jump_to_section_GE4tfE",
-        "jump_to_section_kYWrYh",
-        "jump_to_section_U7LHQK",
-        "jump_to_section_R7UYWE",
-        "jump_to_section_Dt7YUT"
+        "rating_eLjGX8",
+        "list_FatCgk",
+        "liquid_6AqWXk",
+        "out_of_stock_3xp9iR",
+        "product_in_page_x33rFD",
+        "before_and_after_i7mAeJ",
+        "video_before_and_after_ww3Xa3",
+        "supply_for_refill_VM6N4V"
       ],
-      "disabled": true,
       "settings": {
-        "seo_heading": "",
-        "heading": "Ditch The Make-up: Embrace a New Level of Confidence with Micro-Infusion",
-        "heading_mobile": "Ditch The Make-up: Embrace a New Level of Confidence with Micro-Infusion",
+        "seo_heading": "Micro Infusion Facial System - An Alternative To Derma Rollers",
+        "heading": "Transform dull looking skin with Micro-Infusion System",
+        "heading_mobile": "Transform dull looking skin with Micro-Infusion System",
         "product": "",
         "product_images_offset": 0,
-        "product_images_limit": 6,
+        "product_images_limit": 8,
         "product_button_label": "Product",
         "before_after_images_limit": 3,
         "before_after_button_label": "Before & After",
-        "reserve": false,
+        "reserve": true,
         "soldout": false,
         "selected_design": "new",
         "text_label_real_result_1": "Product",
         "text_label_real_result_2": "Real Results",
-        "text_label_real_result_3": "Dermatologist",
+        "text_label_real_result_3": "Plastic Surgeon",
         "enable_jump_to_section": true,
         "text_jump_to_section": "Jump To",
-        "popup_enabled": false
+        "popup_enabled": true
+      }
+    },
+    "top-purchase-form": {
+      "type": "top-purchase-form",
+      "settings": {
+        "heading": ""
       }
     },
     "money_back_guarantee_8D6BkW": {
@@ -547,6 +507,7 @@
   "order": [
     "header_landing_yzqaEc",
     "main",
+    "top-purchase-form",
     "money_back_guarantee_8D6BkW",
     "purchase_form",
     "liquid_86wfLd"
