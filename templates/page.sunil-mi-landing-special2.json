@@ -300,6 +300,9 @@
         "heading": "FEATURED IN"
       }
     },
+    "rendercanimation": {
+      "type": "temp-page-sunil-mi-landing-special2-rcan"
+    },
     "line_M99hQR": {
       "type": "line",
       "settings": {
@@ -1666,53 +1669,13 @@
         "heading": "Join 30,000+ Qure fans revolutionizing their skincare at home",
         "text": "<h5>@qureskincare</h5>"
       }
-    },
-    "two_column_box_LCKkjE": {
-      "type": "two-column-box",
-      "blocks": {
-        "content_awPwam": {
-          "type": "content",
-          "settings": {
-            "text": "<ul><li><strong>Transforms dull-looking skin,</strong> helps reduce appearance of fine lines & smooths texture skin</li><li><strong>Easy</strong> 5-minute facial, serums <strong>customized</strong> to address your skin concerns for <strong>visible results</strong></li><li>Minimal to <strong>no downtime,</strong> virtually <strong>painless &</strong> perform conveniently from home</li></ul><p>[image_mobile]</p><p>[code]</p>",
-            "column_content": 0,
-            "classname": "ba_wrapper"
-          }
-        },
-        "image_fFdePg": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/join_to_revolution.png",
-            "dual_action": "",
-            "dual_action_mob": "",
-            "classname": "mw-mob-100"
-          }
-        },
-        "code_fXbXkm": {
-          "type": "code",
-          "settings": {
-            "code": "<div class=\"mw-486 mb-3 mb-md-0 mt-4 mt-md-0\">\n                        <a class=\"btn btn-lg btn-primary mb-3 d-flex justify-content-center\"\n                            href=\"#productSubscription\">BUY NOW &amp; SAVE UP TO 59% </a>\n                        <div class=\"progress_bar d-block d-md-block\">\n                            <div class=\"loading_bar_wrap\">\n                                <div class=\"loading_bar\" style=\"width:52%\">\n                                </div>\n                            </div>\n                            <p>Selling Out FAST</p>\n                        </div>\n                        <div class=\"shipping shipping_bg bg-transparent my-3 pe-0  ps-2\">\n                            <div class=\"s_bx\">\n                                <img src=\"{{ '90_days.svg' | asset_url }}\" alt=\"\">\n                                <p>90-Day Money Back<br> Guarantee </p>\n                            </div>\n                            <div class=\"s_bx\">\n                                <img src=\"{{ 'shipping.svg' | asset_url }}\" alt=\"\">\n                                <p>Free World-Wide<br> Shipping Over $100</p>\n                            </div>\n                        </div>\n                    </div>"
-          }
-        }
-      },
-      "block_order": [
-        "content_awPwam",
-        "image_fFdePg",
-        "code_fXbXkm"
-      ],
-      "custom_css": [
-        ".joinMicro {background-color: rgb(251 251 251) !important;}"
-      ],
-      "settings": {
-        "classname": "imageText joinMicro",
-        "column_image": 6,
-        "column_content": 6
-      }
     }
   },
   "order": [
     "header_landing_yzqaEc",
     "main",
     "featured_landing",
+    "rendercanimation",
     "line_M99hQR",
     "product_box_b3WBQC",
     "before_after_short_slider_pYmNqR",
@@ -1733,7 +1696,6 @@
     "liquid_86wfLd",
     "compare_box_p4B7wy",
     "faq_ABfhyg",
-    "social_zwVAqW",
-    "two_column_box_LCKkjE"
+    "social_zwVAqW"
   ]
 }
