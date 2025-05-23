@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="{{ 'product-mi-landing.css' | asset_url }}">
+
 {% include 'assoc-array', section: section, __parent_title: 'type', __separator: '###' %}
 
 {%- for block in section.blocks -%}
@@ -154,7 +156,7 @@
 {%- schema -%}
 {
     "name":"t:sections.purchase-form.name",
-    "class":"purchase-form",
+    "class":"purchase-form mi_landing mi_lp mi_lp_v2",
     "settings":[
         {
             "type": "text",

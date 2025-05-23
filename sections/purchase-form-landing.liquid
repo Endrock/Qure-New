@@ -1,0 +1,338 @@
+<link rel="stylesheet" href="https://qureskincaredns.com/new/assets/product_micro-infusion-pdp.css">
+
+<!-- -- main banner start -- -->
+<div class="refill_bl pt-0 tabSlider">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 order-2 order-md-1">
+                <div class="refill_info pt-0 pt-md-3">
+                    {%- for block in section.blocks -%}
+                        {% if block.type == 'rating' %}
+                            {% if block.settings.product != blank %}
+                                {% render 'product-rating', rating_value: block.settings.product.metafields.reviews.rating.value, rating_count: block.settings.product.metafields.reviews.rating_count.value %}
+                            {% else %}
+                                <div class="refill_review mb-2">
+                                    <div class="star_gp">
+                                        {% if block.settings.image != blank %}
+                                            <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt | escape }}">
+                                        {% endif %}
+                                    </div>
+                                    <p class="text-sm fw-normal" style="text-decoration: none;">{{ block.settings.text }}</p>
+                                </div>
+                            {% endif %}                        
+                        {% endif %}   
+                    {%- endfor -%}
+                    <div class="section_header text-start ms-0">
+                        {% if section.settings.seo_heading != blank %}
+                            <h1 class="seo_heading">{{ section.settings.seo_heading }}</h1>
+                        {% endif %}
+                        {% if section.settings.heading != blank %}
+                            <h2 id="page-{{ page.handle | escape }}" class="title-xl d-none d-md-block">{{ section.settings.heading | replace: '\n', '<br />' }}</h2>
+                        {% endif %}
+                    </div>
+
+                    {%- for block in section.blocks -%}
+                        {% if block.type == 'list' %}
+                            {% if block.settings.text %}
+                                <div class="ss_list mw-427 py-4">
+                                    {{ block.settings.text }}
+                                </div>
+                            {% endif %}
+                        {% endif %}
+                    {%- endfor -%} 
+
+                    <div class="mw-402">
+                        <div class="serum_bl">
+                            <div class="facial_system d-none">
+                                <h3>Micro-Infusion Facial System </h3>
+                                <p>(for Dark Spots and Wrinkles)</p>
+                            </div>
+                            <div class="s_bl_wrapper">
+                                <div class="supply-detail supply-detail-without-counter pb-0">
+                                    <div class="supply_steps ">
+                                        <div class="step_block">
+                                            <p class="pb-3">Choose serums:</p>
+                                            <div class="step_content step_serum serum_image">
+                                                <div class="serumBlock mt-0">
+                                                    <input type="radio" name="mBanner_serum"
+                                                        id="mBanner_rejuvenating-hydra" checked>
+                                                    <label class="serum_prd" for="mBanner_rejuvenating-hydra">
+                                                        <div class="serum_img">
+                                                            <img src="https://qureskincaredns.com/new/assets/reju_hydra_blue.webp" alt=""
+                                                                class="img-fluid">
+                                                        </div>
+                                                        <h4 class="serum_ttl d-block pt-md-3 pt-2">
+                                                            <span>For</span>
+                                                            Wrinkles + <br> Dark Spots
+                                                        </h4>
+                                                    </label>
+                                                </div>
+                                                <div class="serumBlock mt-0">
+                                                    <input type="radio" name="mBanner_serum"
+                                                        id="mBanner_hydra-soothing">
+                                                    <label class="serum_prd" for="mBanner_hydra-soothing">
+                                                        <div class="serum_img">
+                                                            <img src="https://qureskincaredns.com/new/assets/hydra_blue.webp" alt=""
+                                                                class="img-fluid">
+                                                        </div>
+                                                        <h4 class="serum_ttl flex-row gap-1"><span>For</span>
+                                                            Wrinkles</h4>
+                                                    </label>
+                                                </div>
+                                                <div class="serumBlock">
+                                                    <input type="radio" name="mBanner_serum"
+                                                        id="mBanner_rejuvenating">
+                                                    <label class="serum_prd" for="mBanner_rejuvenating">
+                                                        <div class="serum_img">
+                                                            <img src="https://qureskincaredns.com/new/assets/dark_spots.webp" alt=""
+                                                                class="img-fluid">
+                                                        </div>
+                                                        <h4 class="serum_ttl flex-row gap-1"><span>For</span>
+                                                            Dark Spots</h4>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="supply_steps month_plan_steps mt-0 mt-md-3 pt-2 pt-md-3">
+                                        <div class="step_block">
+                                            <p class="pb-3">Choose supply:</p>
+                                            <div class="step_content">
+                                                <div class="step_conten_blocks">
+                                                    <div class="planBlock">
+                                                        <div class="plan_choosed">
+                                                            <span>OVER 5,000 PEOPLE CHOSE THIS SUPPLY</span>
+                                                        </div>
+                                                        <input type="radio" name="mBanner_monthlyPlan"
+                                                            id="mBanner_3_month" checked="">
+                                                        <label class="monthly_plans-new monthly_plans"
+                                                            for="mBanner_3_month" payment-price="$42.25">
+                                                            <div class="plan_des">
+                                                                <div class="plan_hdr">
+                                                                    <h3>3 Month Supply</h3>
+                                                                    <span class="saved_price">& SAVE 43%</span>
+                                                                </div>
+                                                                <div class="plan_des">6 Micro-Infusion
+                                                                    Treatments</div>
+                                                            </div>
+                                                            <div class="price">
+                                                                <div class="plan_prc regular_price">$297</div>
+                                                                <div class="plan_prc sale_price">$169</div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="planBlock">
+                                                        <input type="radio" name="mBanner_monthlyPlan"
+                                                            id="mBanner_2_month">
+                                                        <label class="monthly_plans-new monthly_plans"
+                                                            for="mBanner_2_month" payment-price="$34.75">
+                                                            <div class="plan_des">
+                                                                <div class="plan_hdr">
+                                                                    <h3>2 Month Supply</h3>
+                                                                    <span class="saved_price">SAVE 25%</span>
+                                                                </div>
+                                                                <div class="plan_des">4 Micro-Infusion
+                                                                    Treatments</div>
+                                                            </div>
+                                                            <div class="price">
+                                                                <div class="plan_prc regular_price">$198</div>
+                                                                <div class="plan_prc sale_price">$149</div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="planBlock">
+                                                        <input type="radio" name="mBanner_monthlyPlan"
+                                                            id="mBanner_1_month">
+                                                        <label class="monthly_plans-new monthly_plans"
+                                                            for="mBanner_1_month" payment-price="$24.75">
+                                                            <div class="plan_des">
+                                                                <div class="plan_hdr">
+                                                                    <h3>1 Month Supply</h3>
+                                                                    <span class="saved_price d-none"> -
+                                                                        $99</span>
+                                                                </div>
+                                                                <div class="plan_des">2 Micro-Infusion
+                                                                    Treatments</div>
+                                                            </div>
+                                                            <div class="price">
+                                                                <div class="plan_prc sale_price">$99</div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="next_batch_bl next_batch_highlight mt-4">
+                                        <div class="batch_h batch_h_fade mt-3 mt-md-4">
+                                            <div class="batch_h_month">December 5th</div>
+                                            <div class="batch_h_info sold_out_h" style="--bgPercent:100%;">
+                                                <span>SOLD
+                                                    OUT</span>
+                                            </div>
+                                        </div>
+                                        <div class="batch_h my-2">
+                                            <div class="batch_h_month">January 10th</div>
+                                            <div class="batch_h_info" style="--bgPercent:81%;">81% Reserved
+                                            </div>
+                                        </div>
+                                        <div class="batch_h batch_h_fade">
+                                            <div class="batch_h_month">January 30th</div>
+                                            <div class="batch_h_info" style="--bgPercent:0%;"><span>In
+                                                    Production</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="btn btn-lg btn-primary buy_btn reserve_btn mt-3"
+                            href="#productSubscription">Buy Now <span class="savedAmount"> SAVE 43%</span><img
+                                src="https://qureskincaredns.com/new/assets/arrow_right.svg" alt="">
+                        </a>
+                        <div class="payment_method">
+                            <p>OR 4 monthly payments of <span class="payment_price">$42.25</span> with</p>
+                            <div class="pmt_img ps-2">
+                                <img src="https://qureskincaredns.com/new/assets/klarna.svg" alt="">
+                                <img src="https://qureskincaredns.com/new/assets/sezzle.svg" alt="">
+                                <img src="https://qureskincaredns.com/new/assets/afterpay.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="certified_derm">
+                            <img src="https://qureskincaredns.com/new/assets/certified_derma.webp" alt="">
+                            <p><b>50+ Board Certified Dermatologists</b> recommended Qure to
+                                their patients. <a href="https://qureskincare.com/pages/derm-reviews"
+                                    class="text-black text-decoration-underline">See More</a> </p>
+                        </div>
+                        <div class="shipping shipping_bg bg-transparent py-2main .certified_derm p">
+                            <div class="s_bx">
+                                <img src="https://qureskincaredns.com/new/assets/dermatologist.svg" alt="">
+                                <p>Dermatologist Reviewed</p>
+                            </div>
+                            <div class="s_bx">
+                                <img src="https://qureskincaredns.com/new/assets/shipping.svg" alt="">
+                                <p class="d-none d-md-block">Free Shipping Over $100</p>
+                                <p class="d-block d-md-none">Free World-Wide Shipping Over $100</p>
+                            </div>
+                        </div>
+                        {% render 'pdm_cross-sell', cross-sell-products: page.metafields.custom.cross_sell.value, visibility: "mobile" %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6  order-1 order-md-2">
+                {% render 'pdm_before_after_carousel', settings: section.settings %}
+                {% render 'pdm_cross-sell', cross-sell-products: page.metafields.custom.cross_sell.value, visibility: "desktop" %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -- main banner end -- -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const serumOptions = document.querySelectorAll('input[name="mBanner_serum"]');
+        const supplySteps = document.querySelector(".supply_steps.month_plan_steps");
+        const nextBatchBl = document.querySelector(".next_batch_bl");
+        const buyButton = document.querySelector(".reserve_btn");
+        let lastSavedText = buyButton.innerHTML;
+
+        const handleSerumChange = () => {
+            let selectedSerum = document.querySelector('input[name="mBanner_serum"]:checked');
+            if (selectedSerum && selectedSerum.id === "mBanner_hydra-soothing") {
+                nextBatchBl.style.display = "block";
+                buyButton.textContent = "Reserve";
+            } else {
+                nextBatchBl.style.display = "none";
+                buyButton.innerHTML = lastSavedText;
+            }
+            supplySteps.style.display = "block";
+        };
+
+        serumOptions.forEach((option) => {
+            option.addEventListener("change", handleSerumChange);
+        });
+
+        handleSerumChange();
+
+        document.querySelectorAll('.monthly_plans-new').forEach(plan => {
+            plan.addEventListener('click', function () {
+                let savedTxt = this.querySelector('.saved_price')?.innerHTML;
+                if (savedTxt !== undefined) {
+                    if (document.body.hasAttribute('data-contrast-horizontal-layout')) {
+                        lastSavedText = 'Buy Now <span class="savedAmount"> SAVE ' + savedTxt.replace(/\bOFF\b/, "").trim() + '</span><img src="https://qureskincaredns.com/new/assets/arrow_right.svg" alt="">';
+                    } else {
+                        lastSavedText = 'Buy Now <span class="savedAmount"> ' + savedTxt + '</span><img src="https://qureskincaredns.com/new/assets/arrow_right.svg" alt="">';
+                    }
+                } else {
+                    lastSavedText = 'Buy Now';
+                }
+                buyButton.innerHTML = lastSavedText;
+
+                let paymentPrice = this.getAttribute("payment-price");
+                document.querySelectorAll('.payment_price').forEach(el => el.innerHTML = paymentPrice !== null ? paymentPrice : '');
+            });
+        });
+    });
+
+</script>
+
+
+{% schema %}
+    {
+        "name": "t:sections.product-landing.name",
+        "class": "section-purchase-form-landing mi-pdp",
+        "settings": [
+            {
+                "type": "text",
+                "id": "seo_heading",
+                "label": "t:common.heading.seo_heading.label"
+            },
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "t:common.heading.label"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "rating",
+                "name": "t:common.rating.label",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "t:common.image.label"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "t:common.text.label"
+                    },
+                    {
+                        "type": "product",
+                        "id": "product",
+                        "label": "t:common.product.label"
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "name": "t:common.list.label",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "t:common.text.label"
+                    }
+                ]
+		    }        
+        ],
+        "presets": [
+          {
+            "name": "t:sections.product-landing.name"
+          }
+        ]
+    }
+{% endschema %}
