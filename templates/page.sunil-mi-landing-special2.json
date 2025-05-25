@@ -1347,7 +1347,6 @@
         },
         "or_QiWbyt": {
           "type": "or",
-          "disabled": true,
           "settings": {
             "or_txt": "Or"
           }
