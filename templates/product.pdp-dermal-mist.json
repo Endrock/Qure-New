@@ -27,6 +27,7 @@
         },
         "supply_CTrVRQ": {
           "type": "supply",
+          "disabled": true,
           "settings": {
             "heading": "Next batch ships 15th of June 2025:",
             "heading_mobile": "Next batch ships 05/15:",
@@ -36,8 +37,8 @@
             "first_option_percent": 100,
             "second_option_date": "June 15th",
             "second_option_text": "67% Reserved",
-            "second_option_percent": 32,
-            "third_option_date": "May 30th",
+            "second_option_percent": 51,
+            "third_option_date": "July 30th",
             "third_option_text": "In Production",
             "third_option_percent": 0
           }
@@ -59,7 +60,7 @@
         "before_after_images_limit": 0,
         "before_after_button_label": "Before & After",
         "reserve": false,
-        "soldout": false,
+        "soldout": true,
         "underbutton_text_left": "Dermatologist Approved",
         "underbutton_text_right": "Free Shipping Over US$100",
         "selected_design": "new",
