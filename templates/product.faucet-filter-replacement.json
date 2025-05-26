@@ -446,6 +446,14 @@
             "code": ""
           }
         },
+        "object_7a4tt8": {
+          "type": "object",
+          "settings": {
+            "heading": "Is the Qure Faucet Filter tested and safe to use?",
+            "text": "<p>Yes — it’s third-party tested to meet NSF water filtration standards and made with certified BPA-free, non-toxic, and skin-friendly materials. It’s also leak-resistant and built to last.</p>",
+            "code": ""
+          }
+        },
         "object_mzDNEA": {
           "type": "object",
           "settings": {
@@ -482,14 +490,15 @@
       "block_order": [
         "object_K3hfrg",
         "object_7a4tt7",
+        "object_7a4tt8",
         "object_mzDNEA",
         "object_EjRqqz",
         "object_Jw3qcf",
         "object_aUJwkt"
       ],
       "settings": {
-        "background": "bg_yellow",
-        "classname": "bg_yellow",
+        "background": "bg-lightGrey",
+        "classname": "bg-lightGrey",
         "heading": "The answers to your questions",
         "text": "",
         "button_label": "Show More Questions",
