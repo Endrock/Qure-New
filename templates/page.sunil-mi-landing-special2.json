@@ -1448,6 +1448,7 @@
         },
         "product_type_QKQhNr": {
           "type": "product_type",
+          "disabled": true,
           "settings": {
             "heading": "Dark Spots",
             "image": "shopify://shop_images/mc_2.webp",
