@@ -1791,25 +1791,26 @@ document.querySelectorAll('.ctm_swiper_main_images').forEach((mainEl) => {
 // show more and show less in dermal mist   
 
 const seeMoreBtn = document.getElementById('seeMoreBtn');
-
-seeMoreBtn.addEventListener('click', function() {
-  const hiddenItems = document.querySelectorAll('#featuresList li:nth-child(4), #featuresList li:nth-child(5)');
-  const isExpanded = this.getAttribute('data-expanded') === 'true';
-
-  if (isExpanded) {
-    // If expanded, hide the extra items
-    hiddenItems.forEach(function(item) {
-      item.classList.add('hidden-li');
+if (seeMoreBtn){
+    seeMoreBtn.addEventListener('click', function() {
+      const hiddenItems = document.querySelectorAll('#featuresList li:nth-child(4), #featuresList li:nth-child(5)');
+      const isExpanded = this.getAttribute('data-expanded') === 'true';
+    
+      if (isExpanded) {
+        // If expanded, hide the extra items
+        hiddenItems.forEach(function(item) {
+          item.classList.add('hidden-li');
+        });
+        this.textContent = 'See More';
+        this.setAttribute('data-expanded', 'false');
+      } else {
+        // If collapsed, show the extra items
+        hiddenItems.forEach(function(item) {
+          item.classList.remove('hidden-li');
+        });
+        this.textContent = 'See Less';
+        this.setAttribute('data-expanded', 'true');
+      }
     });
-    this.textContent = 'See More';
-    this.setAttribute('data-expanded', 'false');
-  } else {
-    // If collapsed, show the extra items
-    hiddenItems.forEach(function(item) {
-      item.classList.remove('hidden-li');
-    });
-    this.textContent = 'See Less';
-    this.setAttribute('data-expanded', 'true');
-  }
-});
+}
 

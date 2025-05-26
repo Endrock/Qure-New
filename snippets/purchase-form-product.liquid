@@ -31,9 +31,8 @@
                     {% assign block = section.blocks | where: "id", __id | first %}
                     {% if block.type == 'product' %}
                         {% assign product = all_products[block.settings.product] %}
-
                         {% if product != blank %}
-
+                            {% assign product_id = product.id %}
                             {% assign product_variant_id = product.variants.first.id %}
                             {% assign product_price_divided = product.price | divided_by: 4 %}
                             {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
@@ -145,8 +144,8 @@
                                                     <div class="plan_prc sale_price color_red">{{ product_price }}</div>
                                                 {% endif %}
                                             </div>  
-                                            {% if block.settings.left_items > 0 %}
-                                                <p class="kits_left"><img src="https://qureskincaredns.com/new/assets/clock_icon.svg" class="img-fluid" alt="">{{ block.settings.left_items }} kits <span>left</span></p>
+                                            {% if block.settings.left_items %}
+                                                {% render 'pdm_stock-items-left', product_id: product_id %}
                                             {% endif %}
                                         </div>
                                     </div>
