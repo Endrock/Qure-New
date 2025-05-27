@@ -63,6 +63,6 @@
         {% render 'purchase-form-product' array: __idsArray2, preorder_box: preorder_box %}
         {% render 'purchase-form-product' array: __idsArray3, preorder_box: preorder_box %}
 
-        <div id="purchase-form-body"></div>
+        <div id="{{ section.settings.form_name }}-body-{{ section.id }}"></div>
     </div>
 </div>

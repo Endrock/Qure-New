@@ -622,7 +622,7 @@
     "purchase-form-landing": {
       "name": "Purchase form landing",
       "settings": {
-
+        "form_name": "Form name"
       },
       "blocks": {
         "preorder_box": {
@@ -655,7 +655,8 @@
       "name": "Purchase form",
       "settings": {
         "hide_product_types": "Hide product types",
-        "hide_payment_types": "Hide payment types"
+        "hide_payment_types": "Hide payment types",
+        "form_name": "Form name"
       },
       "blocks": {
         "preorder_box": {
