@@ -3,7 +3,7 @@
 {% include 'assoc-array', section: section, __parent_title: 'type', __separator: '###' %}
 
 <!-- -- main banner start -- -->
-<div class="refill_bl pt-0 tabSlider">
+<div class="refill_bl pt-0 tabSlider {{ section.id }}">
     <div class="container">
         <div class="row">
             <div class="col-md-6 order-2 order-md-1">
@@ -52,12 +52,13 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="btn btn-lg btn-primary buy_btn reserve_btn mt-3"
-                            href="#productSubscription">Buy Now <span class="savedAmount"> SAVE 43%</span><img
-                                src="https://qureskincaredns.com/new/assets/arrow_right.svg" alt="">
+
+                        <a href="javascript:void(0)" class="btn btn-lg btn-primary buy_btn reserve_btn mt-3 productButtonObject" data-ajax-cart-request-button>
+                            <span class="btn_value">Buy Now</span>
                         </a>
+
                         <div class="payment_method">
-                            <p>OR 4 monthly payments of <span class="payment_price">$42.25</span> with</p>
+                            <p>OR 4 monthly payments of <span class="pay_today"></span> with</p>
                             <div class="pmt_img ps-2">
                                 <img src="https://qureskincaredns.com/new/assets/klarna.svg" alt="">
                                 <img src="https://qureskincaredns.com/new/assets/sezzle.svg" alt="">
@@ -94,53 +95,8 @@
 </div>
 <!-- -- main banner end -- -->
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const serumOptions = document.querySelectorAll('input[name="mBanner_serum"]');
-        const supplySteps = document.querySelector(".supply_steps.month_plan_steps");
-        const nextBatchBl = document.querySelector(".next_batch_bl");
-        const buyButton = document.querySelector(".reserve_btn");
-        let lastSavedText = buyButton.innerHTML;
 
-        const handleSerumChange = () => {
-            let selectedSerum = document.querySelector('input[name="mBanner_serum"]:checked');
-            if (selectedSerum && selectedSerum.id === "mBanner_hydra-soothing") {
-                nextBatchBl.style.display = "block";
-                buyButton.textContent = "Reserve";
-            } else {
-                nextBatchBl.style.display = "none";
-                buyButton.innerHTML = lastSavedText;
-            }
-            supplySteps.style.display = "block";
-        };
-
-        serumOptions.forEach((option) => {
-            option.addEventListener("change", handleSerumChange);
-        });
-
-        handleSerumChange();
-
-        document.querySelectorAll('.monthly_plans-new').forEach(plan => {
-            plan.addEventListener('click', function () {
-                let savedTxt = this.querySelector('.saved_price')?.innerHTML;
-                if (savedTxt !== undefined) {
-                    if (document.body.hasAttribute('data-contrast-horizontal-layout')) {
-                        lastSavedText = 'Buy Now <span class="savedAmount"> SAVE ' + savedTxt.replace(/\bOFF\b/, "").trim() + '</span><img src="https://qureskincaredns.com/new/assets/arrow_right.svg" alt="">';
-                    } else {
-                        lastSavedText = 'Buy Now <span class="savedAmount"> ' + savedTxt + '</span><img src="https://qureskincaredns.com/new/assets/arrow_right.svg" alt="">';
-                    }
-                } else {
-                    lastSavedText = 'Buy Now';
-                }
-                buyButton.innerHTML = lastSavedText;
-
-                let paymentPrice = this.getAttribute("payment-price");
-                document.querySelectorAll('.payment_price').forEach(el => el.innerHTML = paymentPrice !== null ? paymentPrice : '');
-            });
-        });
-    });
-
-</script>
+<script src="{{ '__app-purchase-form.js' | asset_url }}" data-form="{{ section.settings.form_name }}" data-section="{{ section.id }}" defer></script>
 
 
 {% schema %}
@@ -157,6 +113,12 @@
                 "type": "text",
                 "id": "heading",
                 "label": "t:common.heading.label"
+            },
+            {
+                "type": "text",
+                "id": "form_name",
+                "label": "t:sections.purchase-form-landing.settings.form_name",
+                "default": "purchase-form-landing"
             }
         ],
         "blocks": [

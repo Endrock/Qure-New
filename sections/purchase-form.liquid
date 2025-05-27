@@ -150,8 +150,7 @@
 </div>
 <!-- new treatment section end  -->
 
-<script>var purchase_form_section_id = '{{ section.id }}';</script>
-<script src="{{ '__app-purchase-form.js' | asset_url }}" defer></script>
+<script src="{{ '__app-purchase-form.js' | asset_url }}" data-form="{{ section.settings.form_name }}" data-section="{{ section.id }}" defer></script>
 
 {%- schema -%}
 {
@@ -219,6 +218,12 @@
             "type": "richtext",
             "id": "bottom_text",
             "label": "t:common.text.label"
+        },
+        {
+            "type": "text",
+            "id": "form_name",
+            "label": "t:sections.purchase-form.settings.form_name",
+            "default": "purchase-form"
         }
     ],
     "blocks":[

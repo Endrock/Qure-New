@@ -15,7 +15,7 @@
         {% endif %}
     {%- endfor -%}
 
-    {% comment %} <template id="purchase-form-source-{{ section.id }}-{{ product_type_title }}"> {% endcomment %}
+    <template id="{{ section.settings.form_name }}-source-{{ section.id }}-{{ product_type_title }}">
         <div class="step_content" id="{{ section.id }}-{{ product_type_title }}">
             <div class="step_conten_blocks">
 
@@ -73,7 +73,7 @@
                                     </div>                                    
                                 {% endif %}
 
-                                <input type="radio" name="mBanner_monthlyPlan" id="{{ section.id }}-{{ product_title_tag }}" {% if block.settings.preselected == true %} checked{% endif %}>
+                                <input type="radio" name="monthlyPlan" id="{{ section.id }}-{{ product_title_tag }}" {% if block.settings.preselected == true %} checked{% endif %}>
                                 <label class="monthly_plans-new monthly_plans" for="{{ section.id }}-{{ product_title_tag }}">
                                     <div class="plan_des">
                                         <div class="plan_hdr">
@@ -99,82 +99,33 @@
                                 </label>
                             </div>
 
+                            {% if block.settings.preorder == true %}
+                                
+                                {% capture preorder-box-items %}{{ preorder-box-items }}<div class="{{ section.settings.form_name }}-preorder-box-item {{ section.settings.form_name }}-preorder-box__{{ product_variant_id }}"></div>{% endcapture %}
+                                
+                                {% if block.settings.preorder_text != blank %}
+                                    <span class="{{ section.settings.form_name }}-product-preorder-text__{{ product_variant_id }} hide">{{ block.settings.preorder_text }}</span>
+                                {% endif %}
+                                {% if block.settings.preorder_date_soldout != blank %}
+                                    <span class="{{ section.settings.form_name }}-product-preorder_date_soldout__{{ product_variant_id }} hide">{{ block.settings.preorder_date_soldout }}</span>
+                                {% endif %}
+                                {% if block.settings.preorder_date_reserved != blank %}
+                                    <span class="{{ section.settings.form_name }}-product-preorder_date_reserved__{{ product_variant_id }} hide">{{ block.settings.preorder_date_reserved }}</span>
+                                {% endif %}
+                                {% if block.settings.preorder_percent != blank %}
+                                    <span class="{{ section.settings.form_name }}-product-preorder_percent__{{ product_variant_id }} hide">{{ block.settings.preorder_percent }}</span>
+                                {% endif %}
+                            {% endif %}
+
                         {% endif %}
                     {% endif %}
                 {%- endfor -%}
 
 
                 {{ preorder-box-items }}
-                {{ preorder_box }}                
+                {{ preorder_box }}    
+                            
             </div>
         </div>
-    {% comment %} </template> {% endcomment %}
+    </template>
 {% endif %}
-
-
-{% comment %} 
-<div class="step_content">
-    <div class="step_conten_blocks">
-        <div class="planBlock">
-            <div class="plan_choosed">
-                <span>OVER 5,000 PEOPLE CHOSE THIS SUPPLY</span>
-            </div>
-            <input type="radio" name="mBanner_monthlyPlan"
-                id="mBanner_3_month" checked="">
-            <label class="monthly_plans-new monthly_plans"
-                for="mBanner_3_month" payment-price="$42.25">
-                <div class="plan_des">
-                    <div class="plan_hdr">
-                        <h3>3 Month Supply</h3>
-                        <span class="saved_price">& SAVE 43%</span>
-                    </div>
-                    <div class="plan_des">6 Micro-Infusion
-                        Treatments</div>
-                </div>
-                <div class="price">
-                    <div class="plan_prc regular_price">$297</div>
-                    <div class="plan_prc sale_price">$169</div>
-                </div>
-            </label>
-        </div>
-        <div class="planBlock">
-            <input type="radio" name="mBanner_monthlyPlan"
-                id="mBanner_2_month">
-            <label class="monthly_plans-new monthly_plans"
-                for="mBanner_2_month" payment-price="$34.75">
-                <div class="plan_des">
-                    <div class="plan_hdr">
-                        <h3>2 Month Supply</h3>
-                        <span class="saved_price">SAVE 25%</span>
-                    </div>
-                    <div class="plan_des">4 Micro-Infusion
-                        Treatments</div>
-                </div>
-                <div class="price">
-                    <div class="plan_prc regular_price">$198</div>
-                    <div class="plan_prc sale_price">$149</div>
-                </div>
-            </label>
-        </div>
-        <div class="planBlock">
-            <input type="radio" name="mBanner_monthlyPlan"
-                id="mBanner_1_month">
-            <label class="monthly_plans-new monthly_plans"
-                for="mBanner_1_month" payment-price="$24.75">
-                <div class="plan_des">
-                    <div class="plan_hdr">
-                        <h3>1 Month Supply</h3>
-                        <span class="saved_price d-none"> -
-                            $99</span>
-                    </div>
-                    <div class="plan_des">2 Micro-Infusion
-                        Treatments</div>
-                </div>
-                <div class="price">
-                    <div class="plan_prc sale_price">$99</div>
-                </div>
-            </label>
-        </div>
-    </div>
-</div>
-{% endcomment %}

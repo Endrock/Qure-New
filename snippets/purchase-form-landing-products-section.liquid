@@ -37,36 +37,23 @@
     {%- endfor -%}        
 {% endcapture %}
 
-{% comment %} 
-<div class="next_batch_bl next_batch_highlight mt-4">
-    <div class="batch_h batch_h_fade mt-3 mt-md-4">
-        <div class="batch_h_month">December 5th</div>
-        <div class="batch_h_info sold_out_h" style="--bgPercent:100%;">
-            <span>SOLD
-                OUT</span>
-        </div>
-    </div>
-    <div class="batch_h my-2">
-        <div class="batch_h_month">January 10th</div>
-        <div class="batch_h_info" style="--bgPercent:81%;">81% Reserved
-        </div>
-    </div>
-    <div class="batch_h batch_h_fade">
-        <div class="batch_h_month">January 30th</div>
-        <div class="batch_h_info" style="--bgPercent:0%;"><span>In
-                Production</span></div>
-    </div>
-</div> 
-{% endcomment %}
-
+<style>
+    .ctm_cls_next_batch_mi_lp h5{
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.13px;
+        margin-bottom: 2px;
+    }
+</style>
 
 <div class="supply_steps month_plan_steps mt-0 mt-md-3 pt-2 pt-md-3">
     <div class="step_block">
         <p class="pb-3">Choose supply:</p>
         {% render 'purchase-form-landing-product' array: __idsArray1, preorder_box: preorder_box %}
-        {% comment %} {% render 'purchase-form-landing-product' array: __idsArray2, preorder_box: preorder_box %} {% endcomment %}
-        {% comment %} {% render 'purchase-form-landing-product' array: __idsArray3, preorder_box: preorder_box %} {% endcomment %}
+        {% render 'purchase-form-landing-product' array: __idsArray2, preorder_box: preorder_box %}
+        {% render 'purchase-form-landing-product' array: __idsArray3, preorder_box: preorder_box %}
 
-        <div id="purchase-form-landing-body"></div>
+        <div id="{{ section.settings.form_name }}-body-{{ section.id }}"></div>
     </div>
 </div>

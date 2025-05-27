@@ -23,7 +23,7 @@
         {% endif %}
     {%- endfor -%}
 
-    <template id="purchase-form-source-{{ section.id }}-{{ product_type_title }}">
+    <template id="{{ section.settings.form_name }}-source-{{ section.id }}-{{ product_type_title }}">
         <div class="step_content" id="{{ section.id }}-{{ product_type_title }}">
             <div class="step_conten_blocks">
 
@@ -160,19 +160,19 @@
 
                             {% if block.settings.preorder == true %}
                                 
-                                {% capture preorder-box-items %}{{ preorder-box-items }}<div class="purchase-form-preorder-box-item purchase-form-preorder-box__{{ product_variant_id }}"></div>{% endcapture %}
+                                {% capture preorder-box-items %}{{ preorder-box-items }}<div class="{{ section.settings.form_name }}-preorder-box-item {{ section.settings.form_name }}-preorder-box__{{ product_variant_id }}"></div>{% endcapture %}
                                 
                                 {% if block.settings.preorder_text != blank %}
-                                    <span class="purchase-form-product-preorder-text__{{ product_variant_id }} hide">{{ block.settings.preorder_text }}</span>
+                                    <span class="{{ section.settings.form_name }}-product-preorder-text__{{ product_variant_id }} hide">{{ block.settings.preorder_text }}</span>
                                 {% endif %}
                                 {% if block.settings.preorder_date_soldout != blank %}
-                                    <span class="purchase-form-product-preorder_date_soldout__{{ product_variant_id }} hide">{{ block.settings.preorder_date_soldout }}</span>
+                                    <span class="{{ section.settings.form_name }}-product-preorder_date_soldout__{{ product_variant_id }} hide">{{ block.settings.preorder_date_soldout }}</span>
                                 {% endif %}
                                 {% if block.settings.preorder_date_reserved != blank %}
-                                    <span class="purchase-form-product-preorder_date_reserved__{{ product_variant_id }} hide">{{ block.settings.preorder_date_reserved }}</span>
+                                    <span class="{{ section.settings.form_name }}-product-preorder_date_reserved__{{ product_variant_id }} hide">{{ block.settings.preorder_date_reserved }}</span>
                                 {% endif %}
                                 {% if block.settings.preorder_percent != blank %}
-                                    <span class="purchase-form-product-preorder_percent__{{ product_variant_id }} hide">{{ block.settings.preorder_percent }}</span>
+                                    <span class="{{ section.settings.form_name }}-product-preorder_percent__{{ product_variant_id }} hide">{{ block.settings.preorder_percent }}</span>
                                 {% endif %}
                             {% endif %}
 
@@ -180,8 +180,6 @@
                     {% endif %}
                 {%- endfor -%}
                 
-                {% comment %} <div class="purchase-form-preorder-box"></div> {% endcomment %}
-
                 {{ preorder-box-items }}
 
                 {{ preorder_box }}

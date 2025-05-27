@@ -83,6 +83,10 @@ document.addEventListener('DOMContentLoaded', function() {
         $('.' + __section + ' .cs_item__accordion').click(__handlerItemAccordion);
     }
 
+    function __handlerSerumBlock() {
+        
+    }
+
     function __handlerItemAccordion() {
         $(this).toggleClass('active');
         $(this).next().slideToggle();
