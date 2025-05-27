@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="https://qureskincaredns.com/new/assets/product_micro-infusion-pdp.css">
 
+{% include 'assoc-array', section: section, __parent_title: 'type', __separator: '###' %}
+
 <!-- -- main banner start -- -->
 <div class="refill_bl pt-0 tabSlider">
     <div class="container">
@@ -43,146 +45,10 @@
 
                     <div class="mw-402">
                         <div class="serum_bl">
-                            <div class="facial_system d-none">
-                                <h3>Micro-Infusion Facial System </h3>
-                                <p>(for Dark Spots and Wrinkles)</p>
-                            </div>
                             <div class="s_bl_wrapper">
                                 <div class="supply-detail supply-detail-without-counter pb-0">
-                                    <div class="supply_steps ">
-                                        <div class="step_block">
-                                            <p class="pb-3">Choose serums:</p>
-                                            <div class="step_content step_serum serum_image">
-                                                <div class="serumBlock mt-0">
-                                                    <input type="radio" name="mBanner_serum"
-                                                        id="mBanner_rejuvenating-hydra" checked>
-                                                    <label class="serum_prd" for="mBanner_rejuvenating-hydra">
-                                                        <div class="serum_img">
-                                                            <img src="https://qureskincaredns.com/new/assets/reju_hydra_blue.webp" alt=""
-                                                                class="img-fluid">
-                                                        </div>
-                                                        <h4 class="serum_ttl d-block pt-md-3 pt-2">
-                                                            <span>For</span>
-                                                            Wrinkles + <br> Dark Spots
-                                                        </h4>
-                                                    </label>
-                                                </div>
-                                                <div class="serumBlock mt-0">
-                                                    <input type="radio" name="mBanner_serum"
-                                                        id="mBanner_hydra-soothing">
-                                                    <label class="serum_prd" for="mBanner_hydra-soothing">
-                                                        <div class="serum_img">
-                                                            <img src="https://qureskincaredns.com/new/assets/hydra_blue.webp" alt=""
-                                                                class="img-fluid">
-                                                        </div>
-                                                        <h4 class="serum_ttl flex-row gap-1"><span>For</span>
-                                                            Wrinkles</h4>
-                                                    </label>
-                                                </div>
-                                                <div class="serumBlock">
-                                                    <input type="radio" name="mBanner_serum"
-                                                        id="mBanner_rejuvenating">
-                                                    <label class="serum_prd" for="mBanner_rejuvenating">
-                                                        <div class="serum_img">
-                                                            <img src="https://qureskincaredns.com/new/assets/dark_spots.webp" alt=""
-                                                                class="img-fluid">
-                                                        </div>
-                                                        <h4 class="serum_ttl flex-row gap-1"><span>For</span>
-                                                            Dark Spots</h4>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="supply_steps month_plan_steps mt-0 mt-md-3 pt-2 pt-md-3">
-                                        <div class="step_block">
-                                            <p class="pb-3">Choose supply:</p>
-                                            <div class="step_content">
-                                                <div class="step_conten_blocks">
-                                                    <div class="planBlock">
-                                                        <div class="plan_choosed">
-                                                            <span>OVER 5,000 PEOPLE CHOSE THIS SUPPLY</span>
-                                                        </div>
-                                                        <input type="radio" name="mBanner_monthlyPlan"
-                                                            id="mBanner_3_month" checked="">
-                                                        <label class="monthly_plans-new monthly_plans"
-                                                            for="mBanner_3_month" payment-price="$42.25">
-                                                            <div class="plan_des">
-                                                                <div class="plan_hdr">
-                                                                    <h3>3 Month Supply</h3>
-                                                                    <span class="saved_price">& SAVE 43%</span>
-                                                                </div>
-                                                                <div class="plan_des">6 Micro-Infusion
-                                                                    Treatments</div>
-                                                            </div>
-                                                            <div class="price">
-                                                                <div class="plan_prc regular_price">$297</div>
-                                                                <div class="plan_prc sale_price">$169</div>
-                                                            </div>
-                                                        </label>
-                                                    </div>
-                                                    <div class="planBlock">
-                                                        <input type="radio" name="mBanner_monthlyPlan"
-                                                            id="mBanner_2_month">
-                                                        <label class="monthly_plans-new monthly_plans"
-                                                            for="mBanner_2_month" payment-price="$34.75">
-                                                            <div class="plan_des">
-                                                                <div class="plan_hdr">
-                                                                    <h3>2 Month Supply</h3>
-                                                                    <span class="saved_price">SAVE 25%</span>
-                                                                </div>
-                                                                <div class="plan_des">4 Micro-Infusion
-                                                                    Treatments</div>
-                                                            </div>
-                                                            <div class="price">
-                                                                <div class="plan_prc regular_price">$198</div>
-                                                                <div class="plan_prc sale_price">$149</div>
-                                                            </div>
-                                                        </label>
-                                                    </div>
-
-                                                    <div class="planBlock">
-                                                        <input type="radio" name="mBanner_monthlyPlan"
-                                                            id="mBanner_1_month">
-                                                        <label class="monthly_plans-new monthly_plans"
-                                                            for="mBanner_1_month" payment-price="$24.75">
-                                                            <div class="plan_des">
-                                                                <div class="plan_hdr">
-                                                                    <h3>1 Month Supply</h3>
-                                                                    <span class="saved_price d-none"> -
-                                                                        $99</span>
-                                                                </div>
-                                                                <div class="plan_des">2 Micro-Infusion
-                                                                    Treatments</div>
-                                                            </div>
-                                                            <div class="price">
-                                                                <div class="plan_prc sale_price">$99</div>
-                                                            </div>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="next_batch_bl next_batch_highlight mt-4">
-                                        <div class="batch_h batch_h_fade mt-3 mt-md-4">
-                                            <div class="batch_h_month">December 5th</div>
-                                            <div class="batch_h_info sold_out_h" style="--bgPercent:100%;">
-                                                <span>SOLD
-                                                    OUT</span>
-                                            </div>
-                                        </div>
-                                        <div class="batch_h my-2">
-                                            <div class="batch_h_month">January 10th</div>
-                                            <div class="batch_h_info" style="--bgPercent:81%;">81% Reserved
-                                            </div>
-                                        </div>
-                                        <div class="batch_h batch_h_fade">
-                                            <div class="batch_h_month">January 30th</div>
-                                            <div class="batch_h_info" style="--bgPercent:0%;"><span>In
-                                                    Production</span></div>
-                                        </div>
-                                    </div>
+                                    {% render 'purchase-form-landing-types-section' section: section, __idsArray1: __idsArray1, __idsArray2: __idsArray2, __idsArray3: __idsArray3 %}
+                                    {% render 'purchase-form-landing-products-section' section: section, __idsArray1: __idsArray1, __idsArray2: __idsArray2, __idsArray3: __idsArray3 %}
                                 </div>
                             </div>
                         </div>
@@ -279,7 +145,7 @@
 
 {% schema %}
     {
-        "name": "t:sections.product-landing.name",
+        "name": "t:sections.purchase-form-landing.name",
         "class": "section-purchase-form-landing mi-pdp",
         "settings": [
             {
@@ -327,11 +193,200 @@
                         "label": "t:common.text.label"
                     }
                 ]
-		    }        
+		    },
+            {
+                "type": "preorder_box",
+                "name": "t:sections.purchase-form-landing.blocks.preorder_box.name",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "t:common.heading.label"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "t:common.text.label"
+                    },
+                    {
+                        "type": "header",
+                        "content": "First option"
+                    },
+                    {
+                        "type": "text",
+                        "id": "first_option_date",
+                        "label": "t:common.date.label",
+                        "default": "October 15th"
+                    },
+                    {
+                        "type": "text",
+                        "id": "first_option_text",
+                        "label": "t:common.text.label",
+                        "default": "SOLD OUT"
+                    },
+                    {
+                        "type": "range",
+                        "id": "first_option_percent",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1,
+                        "unit": "%",
+                        "label": "t:common.percent.label",
+                        "default": 100
+                    },
+                    {
+                        "type": "header",
+                        "content": "Second option"
+                    },
+                    {
+                        "type": "text",
+                        "id": "second_option_date",
+                        "label": "t:common.date.label",
+                        "default": "November 10th"
+                    },
+                    {
+                        "type": "text",
+                        "id": "second_option_text",
+                        "label": "t:common.text.label",
+                        "default": "81% Reserved"
+                    },
+                    {
+                        "type": "range",
+                        "id": "second_option_percent",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1,
+                        "unit": "%",
+                        "label": "t:common.percent.label",
+                        "default": 81
+                    },
+                    {
+                        "type": "header",
+                        "content": "Third option"
+                    },
+                    {
+                        "type": "text",
+                        "id": "third_option_date",
+                        "label": "t:common.date.label",
+                        "default": "December 30th"
+                    },
+                    {
+                        "type": "text",
+                        "id": "third_option_text",
+                        "label": "t:common.text.label",
+                        "default": "In Production"
+                    },
+                    {
+                        "type": "range",
+                        "id": "third_option_percent",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1,
+                        "unit": "%",
+                        "label": "t:common.percent.label",
+                        "default": 0
+                    }
+                ]
+            },
+            {
+                "type": "type",
+                "limit": 3,
+                "name": "t:sections.purchase-form-landing.blocks.type.name",
+                "settings": [
+                    {
+                        "type": "header",
+                        "content": "TYPE"
+                    }
+                ]
+            },
+            {
+                "type": "product_type",
+                "name": "t:sections.purchase-form-landing.blocks.product_type.name",
+                "limit": 3,
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "t:common.heading.label"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "t:common.image.label"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "preselected",
+                        "label": "t:sections.purchase-form-landing.blocks.product_type.settings.preselected",
+                        "default": false
+                    }
+                ]
+            },
+            {
+                "type": "product",
+                "name": "t:sections.purchase-form-landing.blocks.product.name",
+                "limit": 9,
+                "settings": [
+                    {
+                        "type": "product",
+                        "id": "product",
+                        "label": "t:common.product.label"
+                    },   
+                    {
+                        "type": "checkbox",
+                        "id": "preselected",
+                        "label": "t:sections.purchase-form-landing.blocks.product.settings.preselected",
+                        "default": false
+                    },             
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "t:common.heading.label"
+                    },
+                    {
+                        "type": "text",
+                        "id": "subheading",
+                        "label": "t:common.text.label"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "soldout",
+                        "label": "t:common.soldout.label",
+                        "default": false
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "preorder",
+                        "label": "t:common.preorder.label",
+                        "default": false
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "preorder_text",
+                        "label": "t:sections.purchase-form-landing.blocks.product.settings.preorder_text"
+                    },
+                    {
+                        "type": "text",
+                        "id": "preorder_date_soldout",
+                        "label": "t:sections.purchase-form-landing.blocks.product.settings.preorder_date_soldout"
+                    },
+                    {
+                        "type": "text",
+                        "id": "preorder_date_reserved",
+                        "label": "t:sections.purchase-form-landing.blocks.product.settings.preorder_date_reserved"
+                    },
+                    {
+                        "type": "text",
+                        "id": "preorder_percent",
+                        "label": "t:sections.purchase-form-landing.blocks.product.settings.preorder_percent"
+                    }
+                ]
+            }       
         ],
         "presets": [
           {
-            "name": "t:sections.product-landing.name"
+            "name": "t:sections.purchase-form-landing.name"
           }
         ]
     }
