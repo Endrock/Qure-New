@@ -74,11 +74,206 @@
           "settings": {
             "text": "<ul><li>Helps reduce appearance of <strong>fine lines, smooth texture</strong> whilst helping to infuse active ingredients into your skin.</li><li>Virtually <strong>painless</strong> and performed in the comfort and convenience of your home.</li><li>Minimal to <strong>no downtime</strong> with visible results.</li></ul>"
           }
+        },
+        "preorder_box_3xp9iR": {
+          "type": "preorder_box",
+          "settings": {
+            "heading": "Next batch ships early May 2025:",
+            "text": "<p>Due to high demand, 1-month Micro-Infusion supply is sold out. Order now and secure yours from the next shipment.</p>",
+            "first_option_date": "April 14th",
+            "first_option_text": "SOLD OUT",
+            "first_option_percent": 100,
+            "second_option_date": "May 6th",
+            "second_option_text": "54% Reserved",
+            "second_option_percent": 54,
+            "third_option_date": "June 2025",
+            "third_option_text": "",
+            "third_option_percent": 0
+          }
+        },
+        "type_hHPdgJ": {
+          "type": "type",
+          "settings": {}
+        },
+        "product_type_QKQhNr": {
+          "type": "product_type",
+          "settings": {
+            "heading": "Dark Spots",
+            "image": "shopify://shop_images/dark_spots.webp",
+            "preselected": false
+          }
+        },
+        "product_DBd4ef": {
+          "type": "product",
+          "settings": {
+            "product": "micro-infusion-3-month-bundle-6x-beta-glucan-serum",
+            "heading": "3 Month Supply",
+            "subheading": "(12 Micro-infusion Treatments)",
+            "soldout": false,
+            "preorder": true,
+            "preorder_text": "",
+            "preorder_date_soldout": "",
+            "preorder_date_reserved": "",
+            "preselected": false
+          }
+        },
+        "product_7dL4ci": {
+          "type": "product",
+          "settings": {
+            "product": "micro-infusion-2-month-bundle-2x-b-g-serum-2x-e-g-f-serum",
+            "heading": "2 Month Supply",
+            "subheading": "(6 Micro-infusion Treatments)",
+            "soldout": true,
+            "preorder": false,
+            "preorder_text": "",
+            "preorder_date_soldout": "",
+            "preorder_date_reserved": "",
+            "preselected": false
+          }
+        },
+        "product_Xf8A6C": {
+          "type": "product",
+          "settings": {
+            "product": "micro-infusion-1-month-bundle-1x-b-g-serum-1x-e-g-f-serum",
+            "heading": "1 Month Supply",
+            "subheading": "(2 Micro-Infusion Treatments)",
+            "soldout": false,
+            "preorder": true,
+            "preorder_text": "<h5>Next batch ships early July 2025:</h5><p>Due to high demand, 1-month Micro-Infusion supply is sold out. Order now and secure yours from the next shipment.</p>",
+            "preorder_date_soldout": "22 May",
+            "preorder_date_reserved": "10 July",
+            "preorder_percent": "65% Reserved",
+            "preselected": false
+          }
+        },
+        "type_aJwQ9q": {
+          "type": "type",
+          "settings": {}
+        },
+        "product_type_VLXcAn": {
+          "type": "product_type",
+          "settings": {
+            "heading": "Wrinkles",
+            "image": "shopify://shop_images/hydra_blue.webp",
+            "preselected": false
+          }
+        },
+        "product_EKAAzA": {
+          "type": "product",
+          "settings": {
+            "product": "micro-infusion-3-month-bundle-6x-beta-glucan-serum",
+            "heading": "3 Month Supply",
+            "subheading": "(12 Micro-infusion Treatments)",
+            "soldout": false,
+            "preorder": false,
+            "preorder_text": "",
+            "preorder_date_soldout": "",
+            "preorder_date_reserved": "",
+            "preselected": false
+          }
+        },
+        "product_nyJ9n7": {
+          "type": "product",
+          "settings": {
+            "product": "micro-infusion-2-month-bundle-4x-beta-glucan-serum",
+            "heading": "2 Month Supply",
+            "subheading": "(6 Micro-infusion Treatments)",
+            "soldout": false,
+            "preorder": false,
+            "preorder_text": "",
+            "preorder_date_soldout": "",
+            "preorder_date_reserved": "",
+            "preselected": false
+          }
+        },
+        "product_eiY89h": {
+          "type": "product",
+          "settings": {
+            "product": "micro-infusion-1-month-bundle-2x-beta-glucan-serum",
+            "heading": "1 Month Supply",
+            "subheading": "(2 Micro-Infusion Treatments)",
+            "soldout": false,
+            "preorder": false,
+            "preorder_text": "",
+            "preorder_date_soldout": "",
+            "preorder_date_reserved": "",
+            "preselected": false
+          }
+        },
+        "type_yDwWmt": {
+          "type": "type",
+          "settings": {}
+        },
+        "product_type_YrPQrV": {
+          "type": "product_type",
+          "settings": {
+            "heading": "Wrinkles + Dark Spots",
+            "image": "shopify://shop_images/reju_hydra_blue.webp",
+            "preselected": false
+          }
+        },
+        "product_gbPf3J": {
+          "type": "product",
+          "settings": {
+            "product": "micro-infusion-3-month-bundle",
+            "heading": "3 Month Supply",
+            "subheading": "(12 Micro-infusion Treatments)",
+            "soldout": false,
+            "preorder": false,
+            "preorder_text": "",
+            "preorder_date_soldout": "",
+            "preorder_date_reserved": "",
+            "preselected": false
+          }
+        },
+        "product_NEgEkN": {
+          "type": "product",
+          "settings": {
+            "product": "micro-infusion-2-month-bundle-4x-e-g-f-serum",
+            "heading": "2 Month Supply",
+            "subheading": "(6 Micro-infusion Treatments)",
+            "soldout": false,
+            "preorder": false,
+            "preorder_text": "",
+            "preorder_date_soldout": "",
+            "preorder_date_reserved": "",
+            "preselected": false
+          }
+        },
+        "product_RBCPe8": {
+          "type": "product",
+          "settings": {
+            "product": "micro-infusion-1-month-bundle-2x-e-g-f-serum",
+            "heading": "1 Month Supply",
+            "subheading": "(2 Micro-Infusion Treatments)",
+            "soldout": false,
+            "preorder": false,
+            "preorder_text": "",
+            "preorder_date_soldout": "",
+            "preorder_date_reserved": "",
+            "preselected": false
+          }
         }
       },
       "block_order": [
         "rating_eLjGX8",
-        "list_FatCgk"
+        "list_FatCgk",
+        "preorder_box_3xp9iR",
+        "type_hHPdgJ",
+        "product_type_YrPQrV",
+        "product_gbPf3J",
+        "product_NEgEkN",
+        "product_RBCPe8",
+        "type_aJwQ9q",
+        "product_type_VLXcAn",
+        "product_EKAAzA",
+        "product_nyJ9n7",
+        "product_eiY89h",
+        "type_yDwWmt",
+        "product_type_QKQhNr",
+        "product_DBd4ef",
+        "product_7dL4ci",
+        "product_Xf8A6C"
       ],
       "settings": {
         "seo_heading": "Micro Infusion Facial System - An Alternative To Derma Rollers",
@@ -98,6 +293,7 @@
     },
     "purchase_form": {
       "type": "purchase-form",
+      "disabled": true,
       "blocks": {
         "line_8cPUxh": {
           "type": "line",
@@ -158,7 +354,6 @@
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/Micro-Infusion6MonthBundle_DarkSpots.jpg",
             "left_items": 166,
-            "reserve": false,
             "soldout": false,
             "preorder": true,
             "preorder_text": "",
@@ -175,7 +370,6 @@
             "heading": "3 Month Supply",
             "subheading": "(6 Micro-infusion Treatments)",
             "image": "shopify://shop_images/3monthdarkspots_cb2897ed-4d86-45d6-8249-2b11460670b8.png",
-            "reserve": false,
             "soldout": true,
             "preorder": false,
             "preorder_text": "",
@@ -192,7 +386,6 @@
             "heading": "1 Month Supply",
             "subheading": "(2 Micro-Infusion Treatments)",
             "image": "shopify://shop_images/1monthdarkspots.png",
-            "reserve": false,
             "soldout": false,
             "preorder": true,
             "preorder_text": "<h5>Next batch ships early July 2025:</h5><p>Due to high demand, 1-month Micro-Infusion supply is sold out. Order now and secure yours from the next shipment.</p>",
@@ -222,7 +415,6 @@
             "heading": "6 Month Supply",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/micro-infusion_6_month_bundle__for_wrinkles.png",
-            "reserve": false,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
@@ -239,7 +431,6 @@
             "heading": "3 Month Supply",
             "subheading": "(6 Micro-infusion Treatments)",
             "image": "shopify://shop_images/3monthwrinkles_5d80e14d-e628-4311-990a-34a1fc948558.png",
-            "reserve": false,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
@@ -256,7 +447,6 @@
             "heading": "1 Month Supply",
             "subheading": "(2 Micro-Infusion Treatments)",
             "image": "shopify://shop_images/1monthwrinkles.png",
-            "reserve": false,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
@@ -285,7 +475,6 @@
             "heading": "6 Month Supply",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/Micro-Infusion_6_Month_Bundle_For_Wrinkles_Dark_Spots.png",
-            "reserve": false,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
@@ -302,7 +491,6 @@
             "heading": "3 Month Supply",
             "subheading": "(6 Micro-infusion Treatments)",
             "image": "shopify://shop_images/3monthmix_1_7b716b38-ab3d-44f0-bbb5-a0b0c379dec3.png",
-            "reserve": false,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
@@ -319,7 +507,6 @@
             "heading": "1 Month Supply",
             "subheading": "(2 Micro-Infusion Treatments)",
             "image": "shopify://shop_images/1monthMIX.png",
-            "reserve": false,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
