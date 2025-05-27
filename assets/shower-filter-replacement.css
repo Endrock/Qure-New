@@ -94,7 +94,7 @@
     padding: 3px 15px 3px 3px;
 }
 .supply_icons {
-    gap: 10px;
+    gap: 5px;
 }
 .caring_for_your_skin .caring_skin h3 {
     font-family: Canela Web;
@@ -111,6 +111,7 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 26px;
+    gap: 3px;
 }
 .bg_light_grey{
     background: #FBFBFB;
@@ -124,6 +125,14 @@
     font-size: 45px;
     line-height: 57.37px;
 }
+/* main.shower_filter.shower-filter-replacement .subscribe_save_wrapper .subscribePrice p span {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.3px; 
+    text-align: right;
+    margin-right: 10px;
+} */
 main.shower_filter.shower-filter-replacement .subscribe_save_wrapper .subscriptionType.active>div:first-child {
     border-radius: 24px;
 }
@@ -166,6 +175,18 @@ main.shower_filter.shower-filter-replacement .section_header .silk_heading {
 main.shower_filter.shower-filter-replacement .swiper-slide, main.shower_filter .swiper {
     border-radius: 0 !important;
 }
+.progress_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.shower-filter-replacement .progressInfo {
+    max-width: 150px;
+}
+
+
 
 
 
