@@ -619,6 +619,38 @@
       "padding_top": "Padding top",
       "padding_bottom": "Padding bottom"
     },
+    "purchase-form-landing": {
+      "name": "Purchase form landing",
+      "settings": {
+
+      },
+      "blocks": {
+        "preorder_box": {
+          "name": "Preorder box"
+        },
+        "type": {
+          "name": "Type"
+        },
+        "product": {
+            "name": "Product",
+            "settings": {
+              "left_items": "Left items",
+              "included_text": "Included",
+              "preselected": "Preselected",
+              "preorder_text": "Preorder text",
+              "preorder_date_soldout": "Preorder date soldout",
+              "preorder_date_reserved": "Preorder date reserved",
+              "preorder_percent": "Preorder percent"
+            }
+        },
+        "product_type": {
+          "name": "Product type",
+          "settings": {
+            "preselected": "Preselected"
+          }
+        }      
+      }
+    },
     "purchase-form": {
       "name": "Purchase form",
       "settings": {

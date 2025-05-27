@@ -98,10 +98,6 @@
                                 {% capture data-per %}Pre Order{% endcapture %}
                             {% endif %}
 
-                            {% if block.settings.reserve == true %}
-                                {% capture data-per %}Reserve Now{% endcapture %}
-                            {% endif %}
-
                             {% if block.settings.soldout == true %}
                                 {% capture data-per %}Sold Out{% endcapture %}
                             {% endif %}
