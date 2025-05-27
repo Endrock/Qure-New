@@ -45,7 +45,7 @@ class PDMStockItemsLeft extends HTMLElement {
     const stockTextElement = this.querySelector('.pdm_price-stock-left-quantity');
 
     if (!productId || !stockTextElement) {
-      console.log('Missing productId or target element for stock display');
+      console.warn('Missing productId or target element for stock display');
       return;
     }
 
@@ -76,7 +76,7 @@ class PDMStockItemsLeft extends HTMLElement {
    */
   async updateValueStock(element, url) {
     const dataStock = await this.getDataStock(url);
-    if (dataStock && dataStock.data) {
+    if (dataStock?.data) {
       const message = `${dataStock.data} kits `;
       element.textContent = message;
     } else {
