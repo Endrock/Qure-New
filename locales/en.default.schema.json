@@ -961,6 +961,9 @@
         "is_preorder": {
           "label": "Preorder"
         },
+        "is_soldout": {
+          "label": "Soldout"
+        },
         "preorder_text": {
           "label": "Preorder text"
         },

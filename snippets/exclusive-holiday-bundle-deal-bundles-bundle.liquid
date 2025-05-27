@@ -67,6 +67,10 @@
         {% endcapture %}
     {% endif %}
 
+    {% if block.settings.is_soldout == true %}
+        {% assign is_soldout = true %}
+    {% endif %}
+
     {% assign is_types = false %}
 
     {% for __id in children %}
@@ -231,15 +235,20 @@
             </div>
             {{ types }}
         </div>
-            <button data-ajax-cart-request-button="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" onclick="setEventProductHandler('{{ product.handle | escape }}')" class="bfs_bf_item_buyBtn{% if product_variant_available == false and preorder == blank %} soldout{% endif %}" style="--bgPercent:30%">
-                <div class="stock_left">{{ block.settings.percent }}%<div>of stock left</div>
-                </div>
-                {% if preorder != blank %}
-                    <div class="add_cart">Pre-Order Now</div>
-                {% else %}
-                    <div class="add_cart"><span class="me-1">+</span>{% if product_variant_available %}Add to Cart{% else %}Sold out{% endif %}</div>
-                {% endif %}
-            </button>
+            {% if is_soldout == true %}
+                <a href="javascript:void()" class="btn btn-lg btn-primary buy_btn">Sold Out</a>
+            {% else %}
+                <button data-ajax-cart-request-button="{{ routes.cart_add_url }}?id={{ product_variant }}&quantity=1" onclick="setEventProductHandler('{{ product.handle | escape }}')" class="bfs_bf_item_buyBtn{% if product_variant_available == false and preorder == blank %} soldout{% endif %}" style="--bgPercent:30%">
+                    <div class="stock_left">{{ block.settings.percent }}%<div>of stock left</div>
+                    </div>
+                    {% if preorder != blank %}
+                        <div class="add_cart">Pre-Order Now</div>
+                    {% else %}
+                        <div class="add_cart"><span class="me-1">+</span>{% if product_variant_available %}Add to Cart{% else %}Sold out{% endif %}</div>
+                    {% endif %}
+                </button>                
+            {% endif %}
+
             {% if children != blank %}
                 <div class="bfs_bf_item_tabs mt-4">
                     <ul class="nav nav-pills mb-3" id="pills-{{ bundleId }}-tab" role="tablist">
