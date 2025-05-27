@@ -23,8 +23,8 @@
         {% endif %}
     {%- endfor -%}
 
-    <template id="purchase-form-source-{{ product_type_title }}">
-        <div class="step_content" id="{{ product_type_title }}">
+    <template id="purchase-form-source-{{ section.id }}-{{ product_type_title }}">
+        <div class="step_content" id="{{ section.id }}-{{ product_type_title }}">
             <div class="step_conten_blocks">
 
                 {%- for __id in array -%}
@@ -32,7 +32,7 @@
                     {% if block.type == 'product' %}
                         {% assign product = all_products[block.settings.product] %}
 
-                        {% if product != blank %}
+                        {% if product != blank and product.available %}
 
                             {% assign product_variant_id = product.variants.first.id %}
                             {% assign product_price_divided = product.price | divided_by: 4 %}
@@ -98,6 +98,10 @@
                                 {% capture data-per %}Pre Order{% endcapture %}
                             {% endif %}
 
+                            {% if block.settings.reserve == true %}
+                                {% capture data-per %}Reserve Now{% endcapture %}
+                            {% endif %}
+
                             {% if block.settings.soldout == true %}
                                 {% capture data-per %}Sold Out{% endcapture %}
                             {% endif %}
@@ -115,8 +119,8 @@
                                 {% if product_type == 1 %}
                                     <div class="best_value">Best Value<span><img src="https://qureskincaredns.com/new/assets/star_new.svg" alt="" class="img-fluid ms-1"></span></div>
                                 {% endif %}
-                                <input type="radio" name="monthlyPlan" id="{{ product_title_tag }}"{% if block.settings.preselected == true %} checked{% endif %}>
-                                <label class="monthly_plans" for="{{ product_title_tag }}">
+                                <input type="radio" name="monthlyPlan" id="{{ section.id }}-{{ product_title_tag }}"{% if block.settings.preselected == true %} checked{% endif %}>
+                                <label class="monthly_plans" for="{{ section.id }}-{{ product_title_tag }}">
                                     <div class="monthly_supply">
                                         <div class="plan_des">
                                             <div class="plan_hdr">

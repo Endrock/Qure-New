@@ -60,7 +60,6 @@
     },
     "purchase-form-landing": {
       "type": "purchase-form-landing",
-      "disabled": true,
       "blocks": {
         "rating_eLjGX8": {
           "type": "rating",
@@ -294,6 +293,7 @@
     },
     "purchase_form": {
       "type": "purchase-form",
+      "disabled": true,
       "blocks": {
         "line_8cPUxh": {
           "type": "line",
