@@ -1539,7 +1539,7 @@
         "product_nyJ9n7": {
           "type": "product",
           "settings": {
-            "product": "micro-infusion-3-month-bundle-hydra-soothing",
+            "product": "micro-infusion-3-month-bundle-6x-beta-glucan-serum",
             "preselected": false,
             "heading": "3 Month Supply",
             "subheading": "(6 Micro-infusion Treatments)",
@@ -1668,7 +1668,8 @@
         "icon_text2": "Free World-Wide Shipping over $100",
         "icon_image3": "shopify://shop_images/derma-ftr.svg",
         "icon_text3": "Dermatologist Approved",
-        "bottom_text": "<p><strong>Have questions about MicroInfusion? </strong><a href=\"https://qureskincare.com/pages/test-landing-page#\">Chat with us!</a></p>"
+        "bottom_text": "<p><strong>Have questions about MicroInfusion? </strong><a href=\"https://qureskincare.com/pages/test-landing-page#\">Chat with us!</a></p>",
+        "form_name": "purchase-form"
       }
     },
     "compare_box_p4B7wy": {
