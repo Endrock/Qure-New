@@ -79,7 +79,7 @@
           "settings": {
             "heading": "Key Benefits",
             "heading_mobile": "",
-            "text": "<p>Healthy skin starts in the shower – we're tackling skin issues at the source. The Qure Shower Filter removes harmful impurities that can cause dryness, irritation, and brittleness. By filtering your shower water, you're creating the perfect canvas for the rest of your skincare routine and helping your hair and skin stay hydrated and happy.<br/><br/>The Qure Shower Filter is third-party tested to meet <strong>NSF standards</strong> for water filtration performance.</p>"
+            "text": "<p>Healthy skin starts in the shower – we're tackling skin issues at the source. The Qure Shower Filter removes harmful impurities that cause dryness, irritation, and brittleness. By filtering your shower water, you create the ideal canvas for your skincare routine, helping both your skin and hair stay hydrated and happy. </p><p>Tested to meet NSF water filtration standards, the Qure Shower Filter ensures top safety and quality—so you can enjoy every shower with peace of mind.</p><p><strong> Clinically proven to boost skin & scalp moisture </strong> after just 8 weeks of daily use.</p><p><img src=\"https://qureskincaredns.com/new/assets/upper_arrow.svg\" class=\"me-2\"><span>Boost skin moisture by <strong> 15% </strong></span></p><p><img src=\"https://qureskincaredns.com/new/assets/upper_arrow.svg\" class=\"me-2\"><span>Boost scalp moisture by  <strong> 22% </strong></span></p>"
           }
         },
         "collapsed_xqBcWj": {
@@ -209,20 +209,6 @@
             "label": "Removes Chlorine"
           }
         },
-        "feature_AgPjAN": {
-          "type": "feature",
-          "settings": {
-            "icon": "shopify://shop_images/meet_qure_icon3.svg",
-            "label": "Reduces Build-Up"
-          }
-        },
-        "feature_mLd4pT": {
-          "type": "feature",
-          "settings": {
-            "icon": "shopify://shop_images/meet_qure_icon4.svg",
-            "label": "Balances pH"
-          }
-        },
         "feature_rDzzMU": {
           "type": "feature",
           "settings": {
@@ -236,19 +222,33 @@
             "icon": "shopify://shop_images/meet_qure_icon6.svg",
             "label": "Locks in Hair Moisture"
           }
+        },
+        "feature_rDzzMD": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/meet_qure_icon4.svg",
+            "label": "Reduces Build-Up and Balances pH"
+          }
+        },
+        "feature_GpXxAD": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/nsf.svg",
+            "label": "Tested to meet NSF standards"
+          }
         }
       },
       "block_order": [
         "feature_ibTA3m",
         "feature_BJNEhH",
-        "feature_AgPjAN",
-        "feature_mLd4pT",
         "feature_rDzzMU",
-        "feature_GpXxAz"
+        "feature_GpXxAz",
+        "feature_rDzzMD",
+        "feature_GpXxAD"
       ],
       "name": "Meet Qure Shower Filter",
       "settings": {
-        "main_image": "shopify://shop_images/meet_shower_filter.webp",
+        "main_image": "shopify://shop_images/meet_shower_filter_new.webp",
         "heading": "Meet Qure Shower Filter",
         "description": "At Qure, we believe great skin starts at the source – and that’s the water you use every day. The Qure Shower Filter helps remove sneaky chemicals and minerals that live in your water and linger on your skin.",
         "button_text": "Buy Now",
@@ -469,6 +469,9 @@
         "text_verified_customer": "Verified customer",
         "text_reviewed": "Reviewed in"
       }
+    },
+    "proven": {
+      "type": "temp-page-shower-filter-proven"
     },
     "three_step_WG8iMm": {
       "type": "three_step",
@@ -741,7 +744,7 @@
             "text": "",
             "price": "",
             "style": "correctCircle",
-            "list": "<ul><li>Reduces chlorine</li><li>Reduces calcium</li><li>Reduces magnesium</li><li>Three-Step Filtration</li><li>Lifetime warranty</li><li>Customizable Water Flow</li><li>Fits 99% of Showerheads</li></ul>"
+            "list": "<ul><li>Reduces chlorine</li><li>Three-Step Filtration</li><li>NSF standard tested</li><li>Lifetime warranty</li><li>Customizable Water Flow</li><li>Fits 99% of Showerheads</li></ul>"
           }
         },
         "object_dTrqWV": {
@@ -753,7 +756,7 @@
             "text": "",
             "price": "",
             "style": "incorrectCircle",
-            "list": "<ul><li>Reduces chlorine</li><li>Reduces calcium</li><li>Reduces magnesium</li><li>Standard filtration</li><li>Limited or no warranty</li><li>Non-Customizable Water Flow</li><li>Incompatible fits</li></ul><p></p>"
+            "list": "<ul><li>Reduces chlorine</li><li>Standard filtration</li><li>No certificates</li><li>Limited or no warranty</li><li>Non-Customizable Water Flow</li><li>Incompatible fits</li></ul>"
           }
         }
       },
@@ -799,6 +802,14 @@
             "code": ""
           }
         },
+        "object_kPg9bC": {
+          "type": "object",
+          "settings": {
+            "heading": "Is the Qure Shower Filter certified, tested, and safe to use?",
+            "text": "<p>Yes — it’s third-party tested to meet NSF water filtration standards and made with certified BPA-free, non-toxic, and skin-friendly materials. It’s also leak-resistant and built to last.</p>",
+            "code": ""
+          }
+        },
         "object_kPg9bD": {
           "type": "object",
           "settings": {
@@ -837,6 +848,7 @@
         "object_VPnjUU",
         "object_aGjV7K",
         "object_WEHPg7",
+        "object_kPg9bC",
         "object_kPg9bD",
         "object_WfDa4V",
         "object_FjYejK",
@@ -860,6 +872,7 @@
     "featuredin_qRUTGi",
     "ingredients_list_QazWNB",
     "results_AkYqpJ",
+    "proven",
     "three_step_WG8iMm",
     "text_with_video_GhpDnG",
     "why_it_works_Vz7ain",

@@ -60,20 +60,21 @@
             "link_url": "shopify://products/faucet-filter"
           }
         },
-        "slide_GReD48": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/homepageslide-6.jpg",
-            "link_label": "Micro-Infusion Refill",
-            "link_url": "https://www.qureskincare.com/pages/micro-infusion-refill"
-          }
-        },
         "slide_hVri9x": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Ellipse_81_6730773b-c0c0-4501-9bf1-740bf439e1fd.png",
             "link_label": "Dermal Mist",
             "link_url": "https://qureskincare.com/products/dermal-mist"
+          }
+        },
+        "slide_GReD48": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/homepageslide-6.jpg",
+            "link_label": "Micro-Infusion Refill",
+            "link_url": "https://www.qureskincare.com/pages/micro-infusion-refill"
           }
         },
         "slide_tNrDjD": {
@@ -101,8 +102,8 @@
         "slide_aKL6kD",
         "slide_9wpXXH",
         "slide_9qAien",
-        "slide_GReD48",
         "slide_hVri9x",
+        "slide_GReD48",
         "slide_tNrDjD",
         "slide_xdAzha"
       ],

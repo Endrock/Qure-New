@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -6,30 +15,30 @@
         "rating_KDB67x": {
           "type": "rating",
           "settings": {
-            "image": "shopify:\/\/shop_images\/star-half_fill.svg",
-            "text": "<p>97% customer satisfaction rate<\/p>"
+            "image": "shopify://shop_images/star-half_fill.svg",
+            "text": "<p>97% customer satisfaction rate</p>"
           }
         },
         "list_azYRbY": {
           "type": "list",
           "settings": {
-            "text": "<ul><li>Reduces Impurities and prevents breakouts without stripping or drying out the skin.<\/li><li>Secret weapon for keeping skin calm, clear, and ready for whatever comes next- no rising, no fuss.<\/li><li>Dermatologically tested, versatile and safe for use on your face, body, and devices.<\/li><\/ul>"
+            "text": "<ul><li>Reduces Impurities and prevents breakouts without stripping or drying out the skin.</li><li>Secret weapon for keeping skin calm, clear, and ready for whatever comes next- no rising, no fuss.</li><li>Dermatologically tested, versatile and safe for use on your face, body, and devices.</li></ul>"
           }
         },
         "supply_CTrVRQ": {
           "type": "supply",
           "disabled": true,
           "settings": {
-            "heading": "Next batch ships 15th of April 2025:",
-            "heading_mobile": "Next batch ships 04\/15:",
-            "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.<\/p>",
-            "first_option_date": "January 20th",
+            "heading": "Next batch ships 15th of June 2025:",
+            "heading_mobile": "Next batch ships 05/15:",
+            "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.</p>",
+            "first_option_date": "May 20th",
             "first_option_text": "SOLD OUT",
             "first_option_percent": 100,
-            "second_option_date": "April 15th",
+            "second_option_date": "June 15th",
             "second_option_text": "67% Reserved",
-            "second_option_percent": 67,
-            "third_option_date": "May 30th",
+            "second_option_percent": 51,
+            "third_option_date": "July 30th",
             "third_option_text": "In Production",
             "third_option_percent": 0
           }
@@ -51,7 +60,7 @@
         "before_after_images_limit": 0,
         "before_after_button_label": "Before & After",
         "reserve": false,
-        "soldout": false,
+        "soldout": true,
         "underbutton_text_left": "Dermatologist Approved",
         "underbutton_text_right": "Free Shipping Over US$100",
         "selected_design": "new",
@@ -66,43 +75,49 @@
         "image_xc4b8E": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/vogue2.svg",
-            "mobile_hide": false
+            "image": "shopify://shop_images/vogue2.svg",
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_HiEcBX": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/women_health.svg",
-            "mobile_hide": true
+            "image": "shopify://shop_images/women_health.svg",
+            "mobile_hide": true,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_Ngypwf": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/cosmopolitan2.svg",
-            "mobile_hide": true
+            "image": "shopify://shop_images/cosmopolitan2.svg",
+            "mobile_hide": true,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_kQTbBg": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/elle2.svg",
-            "mobile_hide": false
+            "image": "shopify://shop_images/elle2.svg",
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_bVKkqF": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/marie.svg",
-            "mobile_hide": false
+            "image": "shopify://shop_images/marie.svg",
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_Lz8bEk": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/grazia2.svg",
-            "mobile_hide": false
+            "image": "shopify://shop_images/grazia2.svg",
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
           }
         }
       },
@@ -126,7 +141,7 @@
         "feature_fyi83P": {
           "type": "feature",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/bacteria.svg",
+            "icon": "shopify://shop_images/bacteria.svg",
             "title": "Purifies Beyond The Surface:",
             "description": "Removes impurities and bacteria, helping to prevent irritation and breakouts."
           }
@@ -134,7 +149,7 @@
         "feature_XaERJy": {
           "type": "feature",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Soothes.svg",
+            "icon": "shopify://shop_images/Soothes.svg",
             "title": "Soothes Redness and Irritation:",
             "description": "Hypochlorous Acid calms your skin, providing relief from everyday stressors and is safe for those prone to allergies or sensitive skin."
           }
@@ -142,7 +157,7 @@
         "feature_aKcDzN": {
           "type": "feature",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Dry-skin.svg",
+            "icon": "shopify://shop_images/Dry-skin.svg",
             "title": "Doesn’t Dry Out Skin:",
             "description": "Our alcohol-free formula is designed to be gentle and kind to skin, leaving it comfortable and not dry."
           }
@@ -150,7 +165,7 @@
         "feature_hHDWry": {
           "type": "feature",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/spray.svg",
+            "icon": "shopify://shop_images/spray.svg",
             "title": "Super Versatile:",
             "description": "From your face and body to your devices, this mist fits effortlessly into different parts of your day."
           }
@@ -158,7 +173,7 @@
         "feature_xYWNG6": {
           "type": "feature",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/sparkling.svg",
+            "icon": "shopify://shop_images/sparkling.svg",
             "title": "Fits Into Any Routine:",
             "description": "Just spray, let it dry, and continue with your routine—no extra steps needed."
           }
@@ -184,7 +199,7 @@
         "image_yFkfyU": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_1000jjjj004190.png"
+            "image": "shopify://shop_images/Frame_1000jjjj004190.png"
           }
         },
         "heading_QaXLcc": {
@@ -196,46 +211,46 @@
         "content_cXqUPn": {
           "type": "content",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/bacteria.svg",
-            "text": "<p><strong>Purifies Beyond The Surface:<\/strong><\/p><p>Removes impurities and bacteria, helping to prevent irritation and breakouts.<\/p>",
-            "iconMob": "shopify:\/\/shop_images\/bacteria.svg",
-            "textMob": "<p><strong>It Cleanses Beyond The Surface:<\/strong><\/p><p>Dermal Mist works to remove impurities and bacteria, helping to prevent irritation and breakouts.<\/p>"
+            "icon": "shopify://shop_images/bacteria.svg",
+            "text": "<p><strong>Purifies Beyond The Surface:</strong></p><p>Removes impurities and bacteria, helping to prevent irritation and breakouts.</p>",
+            "iconMob": "shopify://shop_images/bacteria.svg",
+            "textMob": "<p><strong>It Cleanses Beyond The Surface:</strong></p><p>Dermal Mist works to remove impurities and bacteria, helping to prevent irritation and breakouts.</p>"
           }
         },
         "content_8qnDQ8": {
           "type": "content",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Soothes.svg",
-            "text": "<p><strong>Soothes Redness and Irritation:<\/strong><\/p><p>Hypochlorous Acid calms your skin, providing relief from everyday stressors and is safe for those prone to allergies or sensitive skin.<\/p>",
-            "iconMob": "shopify:\/\/shop_images\/Soothes.svg",
-            "textMob": "<p><strong>It Soothes Redness And Irritation:<\/strong><\/p><p>Hypochlorous acid helps to calm your skin, providing relief from everyday stressors.<\/p>"
+            "icon": "shopify://shop_images/Soothes.svg",
+            "text": "<p><strong>Soothes Redness and Irritation:</strong></p><p>Hypochlorous Acid calms your skin, providing relief from everyday stressors and is safe for those prone to allergies or sensitive skin.</p>",
+            "iconMob": "shopify://shop_images/Soothes.svg",
+            "textMob": "<p><strong>It Soothes Redness And Irritation:</strong></p><p>Hypochlorous acid helps to calm your skin, providing relief from everyday stressors.</p>"
           }
         },
         "content_frTXnG": {
           "type": "content",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Dry-skin.svg",
-            "text": "<p><strong>Doesn’t Dry Out Skin:<\/strong><\/p><p>Our alcohol-free formula is designed to be gentle and kind to skin, leaving it comfortable and not dry.<\/p>",
-            "iconMob": "shopify:\/\/shop_images\/Dry-skin.svg",
-            "textMob": "<p><strong>It Doesn’t Dry You Out:<\/strong><\/p><p>The alcohol-free formula is designed to be gentle, leaving your skin comfortable, not tight or dry.<\/p>"
+            "icon": "shopify://shop_images/Dry-skin.svg",
+            "text": "<p><strong>Doesn’t Dry Out Skin:</strong></p><p>Our alcohol-free formula is designed to be gentle and kind to skin, leaving it comfortable and not dry.</p>",
+            "iconMob": "shopify://shop_images/Dry-skin.svg",
+            "textMob": "<p><strong>It Doesn’t Dry You Out:</strong></p><p>The alcohol-free formula is designed to be gentle, leaving your skin comfortable, not tight or dry.</p>"
           }
         },
         "content_67QpDY": {
           "type": "content",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/spray.svg",
-            "text": "<p><strong>Super Versatile:<\/strong><\/p><p>From your face and body to your devices, this mist fits effortlessly into different parts of your day.<\/p>",
-            "iconMob": "shopify:\/\/shop_images\/spray.svg",
-            "textMob": "<p><strong>It’s Super Versatile:<\/strong><\/p><p>From your face and body to your devices, this mist fits effortlessly into different parts of your day.<\/p>"
+            "icon": "shopify://shop_images/spray.svg",
+            "text": "<p><strong>Super Versatile:</strong></p><p>From your face and body to your devices, this mist fits effortlessly into different parts of your day.</p>",
+            "iconMob": "shopify://shop_images/spray.svg",
+            "textMob": "<p><strong>It’s Super Versatile:</strong></p><p>From your face and body to your devices, this mist fits effortlessly into different parts of your day.</p>"
           }
         },
         "content_FwmGpt": {
           "type": "content",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/sparkling.svg",
-            "text": "<p><strong>Fits Into Any Routine:<\/strong><\/p><p>Just spray, let it dry, and continue with your routine—no extra steps needed.<\/p>",
-            "iconMob": "shopify:\/\/shop_images\/sparkling.svg",
-            "textMob": "<p><strong>It Fits Into Any Routine:<\/strong><\/p><p>Just spray, let it dry, and continue with your routine—no extra steps needed.<\/p>"
+            "icon": "shopify://shop_images/sparkling.svg",
+            "text": "<p><strong>Fits Into Any Routine:</strong></p><p>Just spray, let it dry, and continue with your routine—no extra steps needed.</p>",
+            "iconMob": "shopify://shop_images/sparkling.svg",
+            "textMob": "<p><strong>It Fits Into Any Routine:</strong></p><p>Just spray, let it dry, and continue with your routine—no extra steps needed.</p>"
           }
         }
       },
@@ -259,33 +274,33 @@
         "dropdown_KfHMQK": {
           "type": "dropdown",
           "settings": {
-            "cap_image": "shopify:\/\/shop_images\/post-workout.png",
+            "cap_image": "shopify://shop_images/post-workout.png",
             "text": "Post- Workout Essential:",
-            "drop_text": "<p>Spray right after a gym session to help keep breakouts at bay before you can get to a full cleanse.<\/p>"
+            "drop_text": "<p>Spray right after a gym session to help keep breakouts at bay before you can get to a full cleanse.</p>"
           }
         },
         "dropdown_j7LX3d": {
           "type": "dropdown",
           "settings": {
-            "cap_image": "shopify:\/\/shop_images\/pillowcase.png",
+            "cap_image": "shopify://shop_images/pillowcase.png",
             "text": "Pillowcase Protector:",
-            "drop_text": "<p>In between washes, a spray on your pillowcase can help keep breakout-causing germs under control.<\/p>"
+            "drop_text": "<p>In between washes, a spray on your pillowcase can help keep breakout-causing germs under control.</p>"
           }
         },
         "dropdown_KGCPEr": {
           "type": "dropdown",
           "settings": {
-            "cap_image": "shopify:\/\/shop_images\/pre-treatment-purifier.png",
+            "cap_image": "shopify://shop_images/pre-treatment-purifier.png",
             "text": "Pre-Treatment Purifier:",
-            "drop_text": "<p>Before Micro-Infusion, give your skin a spritz to cleanse and prep for better results.<\/p>"
+            "drop_text": "<p>Before Micro-Infusion, give your skin a spritz to cleanse and prep for better results.</p>"
           }
         },
         "dropdown_iJEgLx": {
           "type": "dropdown",
           "settings": {
-            "cap_image": "shopify:\/\/shop_images\/device-defender.png",
+            "cap_image": "shopify://shop_images/device-defender.png",
             "text": "Device Defender:",
-            "drop_text": "<p>After using your Q-Rejuvalight Pro, a light spray and wipe inside your device keeps it clean.<\/p>"
+            "drop_text": "<p>After using your Q-Rejuvalight Pro, a light spray and wipe inside your device keeps it clean.</p>"
           }
         }
       },
@@ -307,8 +322,9 @@
         "video_A3GKHe": {
           "type": "video",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Dermal_Mist_video_cover.png",
-            "video": "https:\/\/www.youtube.com\/watch?v=EjLx0IvKh7g",
+            "title_mob": "Recommended by Experts",
+            "image": "shopify://shop_images/Dermal_Mist_video_cover.png",
+            "video": "https://www.youtube.com/watch?v=EjLx0IvKh7g",
             "title": "Dr Shah & Dr Maxfield",
             "des": "Board certified dermatologists"
           }
@@ -316,9 +332,10 @@
         "text_content_QDJUbt": {
           "type": "text_content",
           "settings": {
-            "trust_icon": "shopify:\/\/shop_images\/verified_design.svg",
+            "trust_icon": "shopify://shop_images/verified_design.svg",
             "trust_des": "Trusted and recommended by world leading Dermatologists",
             "title": "\"...Spray your skin to sanitize it before using your Micro-Infusion device. It's absolutely genius.\"",
+            "title_des": "",
             "title_clr": "#000000",
             "title_strong_clr": "#797d7c"
           }
@@ -329,6 +346,9 @@
         "text_content_QDJUbt"
       ],
       "settings": {
+        "ctm_cls": "",
+        "left_dv_width": "7",
+        "right_dv_width": "5",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -339,25 +359,25 @@
         "object_9Y86Br": {
           "type": "object",
           "settings": {
-            "image": "shopify:\/\/shop_images\/dermal-mist.webp",
+            "image": "shopify://shop_images/dermal-mist.webp",
             "heading": "Qure Dermal Mist",
             "mob_text": "",
             "text": "",
             "price": "",
             "style": "correctCircle",
-            "list": "<ul><li>Powered by <strong>Hypochlorous Acid<\/strong> and enriched with Chamomile<\/li><li>Safe for <strong>face, body, and surfaces<\/strong><\/li><li><strong>Hypoallergenic<\/strong> and suitable for <strong>sensitive skin<\/strong><\/li><li><strong>Clinically proven<\/strong> to reduce bacteria and inflammation<\/li><li><strong>Non-drying<\/strong> and leaves <strong>no residue<\/strong><\/li><li>Light, natural <strong>HOCl scent<\/strong> that dissipates quickly<\/li><\/ul>"
+            "list": "<ul><li>Powered by <strong>Hypochlorous Acid</strong> and enriched with Chamomile</li><li>Safe for <strong>face, body, and surfaces</strong></li><li><strong>Hypoallergenic</strong> and suitable for <strong>sensitive skin</strong></li><li><strong>Clinically proven</strong> to reduce bacteria and inflammation</li><li><strong>Non-drying</strong> and leaves <strong>no residue</strong></li><li>Light, natural <strong>HOCl scent</strong> that dissipates quickly</li></ul>"
           }
         },
         "object_CYfhxK": {
           "type": "object",
           "settings": {
-            "image": "shopify:\/\/shop_images\/skin-mist.webp",
+            "image": "shopify://shop_images/skin-mist.webp",
             "heading": "Traditional Skin Mists",
             "mob_text": "",
             "text": "",
             "price": "",
             "style": "incorrectCircle",
-            "list": "<ul><li>Often <strong>alcohol-based<\/strong> or contain added fragrances<\/li><li>Primarily designed for <strong>facial use only<\/strong><\/li><li>May contain <strong>irritants<\/strong> not ideal for sensitive skin<\/li><li>Usually <strong>focused on hydration<\/strong> without these benefits<\/li><li>May leave <strong>sticky residue<\/strong> or cause dryness<\/li><li>Often has a <strong>fragrance<\/strong> which can cause irritation<\/li><\/ul>"
+            "list": "<ul><li>Often <strong>alcohol-based</strong> or contain added fragrances</li><li>Primarily designed for <strong>facial use only</strong></li><li>May contain <strong>irritants</strong> not ideal for sensitive skin</li><li>Usually <strong>focused on hydration</strong> without these benefits</li><li>May leave <strong>sticky residue</strong> or cause dryness</li><li>Often has a <strong>fragrance</strong> which can cause irritation</li></ul>"
           }
         }
       },
@@ -381,8 +401,8 @@
         "slide_9RcBYL": {
           "type": "slide",
           "settings": {
-            "slide_image": "shopify:\/\/shop_images\/as_3.webp",
-            "slide_imageMob": "shopify:\/\/shop_images\/as_3-mob.webp",
+            "slide_image": "shopify://shop_images/as_3.webp",
+            "slide_imageMob": "shopify://shop_images/as_3-mob.webp",
             "heading": "Breakouts:",
             "text": "Reduces bacteria that can cause breakouts, helping to reduce and prevent acne without harsh chemicals."
           }
@@ -390,8 +410,8 @@
         "slide_C4C9W9": {
           "type": "slide",
           "settings": {
-            "slide_image": "shopify:\/\/shop_images\/as_5.webp",
-            "slide_imageMob": "shopify:\/\/shop_images\/as_5-mob.webp",
+            "slide_image": "shopify://shop_images/as_5.webp",
+            "slide_imageMob": "shopify://shop_images/as_5-mob.webp",
             "heading": "Sensitivity:",
             "text": "Gentle and non-irritating, Dermal Mist is safe for even the most sensitive skin, helping to calm and protect without causing flare-ups."
           }
@@ -399,8 +419,8 @@
         "slide_Te6XVw": {
           "type": "slide",
           "settings": {
-            "slide_image": "shopify:\/\/shop_images\/as_6.webp",
-            "slide_imageMob": "shopify:\/\/shop_images\/as_6-mob.webp",
+            "slide_image": "shopify://shop_images/as_6.webp",
+            "slide_imageMob": "shopify://shop_images/as_6-mob.webp",
             "heading": "Irritation:",
             "text": "By reducing inflammation and soothing irritated skin, Dermal Mist helps to restore balance and calm redness or discomfort."
           }
@@ -424,7 +444,7 @@
           "type": "object",
           "settings": {
             "heading": "What makes Dermal Mist different from other facial sprays?",
-            "text": "<p>Dermal Mist is powered by hypochlorous acid and enriched with chamomile, offering anti-inflammatory and antibacterial benefits without any harsh chemicals. It's pH balanced and gentle enough for all skin types, making it a versatile addition to your daily routine.<\/p>",
+            "text": "<p>Dermal Mist is powered by hypochlorous acid and enriched with chamomile, offering anti-inflammatory and antibacterial benefits without any harsh chemicals. It's pH balanced and gentle enough for all skin types, making it a versatile addition to your daily routine.</p>",
             "code": ""
           }
         },
@@ -432,7 +452,7 @@
           "type": "object",
           "settings": {
             "heading": "Can I use Dermal Mist on sensitive skin?",
-            "text": "<p>Absolutely. Dermal Mist is dermatologically tested, hypoallergenic, and formulated specifically to be kind to even the most sensitive skin. It’s designed to soothe, purify, and protect without causing irritation.<\/p>",
+            "text": "<p>Absolutely. Dermal Mist is dermatologically tested, hypoallergenic, and formulated specifically to be kind to even the most sensitive skin. It’s designed to soothe, purify, and protect without causing irritation.</p>",
             "code": ""
           }
         },
@@ -440,7 +460,7 @@
           "type": "object",
           "settings": {
             "heading": "How should I incorporate Dermal Mist into my skincare routine?",
-            "text": "<p>You can use Dermal Mist morning and evening as a purifying step before applying treatments. It’s also great for refreshing your skin throughout the day, post-workout, or to disinfect surfaces like your skincare tools.<\/p>",
+            "text": "<p>You can use Dermal Mist morning and evening as a purifying step before applying treatments. It’s also great for refreshing your skin throughout the day, post-workout, or to disinfect surfaces like your skincare tools.</p>",
             "code": ""
           }
         },
@@ -448,7 +468,7 @@
           "type": "object",
           "settings": {
             "heading": "Why does Dermal Mist have a faint “pool water” smell?",
-            "text": "<p>The natural smell comes from hypochlorous acid, the active ingredient. We don’t add any fragrances or masking agents, so what you’re smelling is simply the product working its magic. The scent is light and fades quickly.<\/p>",
+            "text": "<p>The natural smell comes from hypochlorous acid, the active ingredient. We don’t add any fragrances or masking agents, so what you’re smelling is simply the product working its magic. The scent is light and fades quickly.</p>",
             "code": ""
           }
         },
@@ -456,7 +476,7 @@
           "type": "object",
           "settings": {
             "heading": "Is Dermal Mist safe to use around my eyes?",
-            "text": "<p>Yes, it’s safe for facial use, including around the eye area. Just be sure to close your eyes when spraying and allow the mist to air dry—no need to rinse off.<\/p>",
+            "text": "<p>Yes, it’s safe for facial use, including around the eye area. Just be sure to close your eyes when spraying and allow the mist to air dry—no need to rinse off.</p>",
             "code": ""
           }
         },
@@ -464,7 +484,7 @@
           "type": "object",
           "settings": {
             "heading": "Can I use Dermal Mist on surfaces, too?",
-            "text": "<p>Yes, Dermal Mist is versatile enough to be used on your face, body, and even surfaces like your pillowcase or skincare tools. It’s a gentle yet effective way to keep bacteria at bay.<\/p>",
+            "text": "<p>Yes, Dermal Mist is versatile enough to be used on your face, body, and even surfaces like your pillowcase or skincare tools. It’s a gentle yet effective way to keep bacteria at bay.</p>",
             "code": ""
           }
         },
@@ -472,7 +492,7 @@
           "type": "object",
           "settings": {
             "heading": "Is this product vegan and cruelty-free?",
-            "text": "<p>Yes, Dermal Mist is both vegan and cruelty-free. We are committed to creating products that are kind to both your skin and the environment.<\/p>",
+            "text": "<p>Yes, Dermal Mist is both vegan and cruelty-free. We are committed to creating products that are kind to both your skin and the environment.</p>",
             "code": ""
           }
         },
@@ -480,7 +500,7 @@
           "type": "object",
           "settings": {
             "heading": "What’s the concentration of hypochlorous acid in Dermal Mist?",
-            "text": "<p>Dermal Mist contains a precise 0.02% concentration of hypochlorous acid, which is effective enough to deliver antibacterial and anti-inflammatory benefits while remaining gentle on the skin.<\/p>",
+            "text": "<p>Dermal Mist contains a precise 0.02% concentration of hypochlorous acid, which is effective enough to deliver antibacterial and anti-inflammatory benefits while remaining gentle on the skin.</p>",
             "code": ""
           }
         },
@@ -488,7 +508,7 @@
           "type": "object",
           "settings": {
             "heading": "How should I store Dermal Mist?",
-            "text": "<p>Store Dermal Mist at room temperature, away from direct sunlight and heat. This will help maintain its effectiveness and prolong its shelf life.<\/p>",
+            "text": "<p>Store Dermal Mist at room temperature, away from direct sunlight and heat. This will help maintain its effectiveness and prolong its shelf life.</p>",
             "code": ""
           }
         },
@@ -496,7 +516,7 @@
           "type": "object",
           "settings": {
             "heading": "Will Dermal Mist dry out my skin?",
-            "text": "<p>No, Dermal Mist is formulated to be non-drying and won’t leave any residue. It’s designed to cleanse and soothe your skin, helping it stay hydrated and balanced.<\/p>",
+            "text": "<p>No, Dermal Mist is formulated to be non-drying and won’t leave any residue. It’s designed to cleanse and soothe your skin, helping it stay hydrated and balanced.</p>",
             "code": ""
           }
         },
@@ -535,15 +555,15 @@
       "type": "heading",
       "name": "t:sections.heading.name",
       "settings": {
-        "heading": "<h2>Real reviews, real results<\/h2><h2>from people just like you.<\/h2>",
-        "heading_mobile": "<h2>Real reviews, real results<\/h2><h2>from people just like you.<\/h2>"
+        "heading": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>",
+        "heading_mobile": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>"
       }
     },
     "174657597101c36fa5": {
       "type": "apps",
       "blocks": {
         "stamped_reviews_main_widget_xNcWcK": {
-          "type": "shopify:\/\/apps\/stamped-reviews\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
+          "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
           "settings": {
             "animation": true,
             "tags_exclude": "",
