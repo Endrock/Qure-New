@@ -94,18 +94,14 @@
                             {% capture data-per %}Buy now {% if product_type == 1 or product_type == 2 %} & SAVE {{ discount_percentage }}%{% endif %}{% endcapture %}
 
                             {% if block.settings.preorder == true %}
-                                {% capture data-per %}Pre Order{% endcapture %}
-                            {% endif %}
-
-                            {% if block.settings.reserve == true %}
-                                {% capture data-per %}Reserve Now{% endcapture %}
+                                {% capture data-per %}Reserve now {% if product_type == 1 or product_type == 2 %} & SAVE {{ discount_percentage }}%{% endif %}{% endcapture %}
                             {% endif %}
 
                             {% if block.settings.soldout == true %}
                                 {% capture data-per %}Sold Out{% endcapture %}
                             {% endif %}
 
-                            <div class="planBlock" href="javascript:void(0)" 
+                            <div class="planBlock ignore" href="javascript:void(0)" 
                                 data-tab="{{ product_hash }}" 
                                 data-pay="{{ product_price_divided | money_without_trailing_zeros }}" 
                                 data-per="{{ data-per }}" 
@@ -118,7 +114,7 @@
                                 {% if product_type == 1 %}
                                     <div class="best_value">Best Value<span><img src="https://qureskincaredns.com/new/assets/star_new.svg" alt="" class="img-fluid ms-1"></span></div>
                                 {% endif %}
-                                <input type="radio" name="monthlyPlan" id="{{ section.id }}-{{ product_title_tag }}"{% if block.settings.preselected == true %} checked{% endif %}>
+                                <input type="radio" name="monthlyPlan_{{ section.settings.form_name }}" id="{{ section.id }}-{{ product_title_tag }}"{% if block.settings.preselected == true %} checked{% endif %}>
                                 <label class="monthly_plans" for="{{ section.id }}-{{ product_title_tag }}">
                                     <div class="monthly_supply">
                                         <div class="plan_des">

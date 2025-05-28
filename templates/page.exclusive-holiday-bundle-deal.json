@@ -1403,6 +1403,7 @@
             "recommended_text": "",
             "is_top_rated": false,
             "is_preorder": false,
+            "is_soldout": true,
             "preorder_text": "SHIPS MID APRIL",
             "classname": "",
             "code": ""
@@ -1486,6 +1487,7 @@
             "recommended_text": "",
             "is_top_rated": true,
             "is_preorder": false,
+            "is_soldout": true,
             "preorder_text": "SHIPS MID APRIL",
             "classname": "",
             "code": ""
@@ -1617,6 +1619,7 @@
             "recommended_text": "",
             "is_top_rated": false,
             "is_preorder": false,
+            "is_soldout": true,
             "preorder_text": "SHIPS MID APRIL",
             "classname": "",
             "code": ""
