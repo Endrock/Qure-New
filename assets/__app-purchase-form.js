@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!checkedInput) {
             checkedInput = document.querySelector('.' + __section + ' input[type="radio"][name="serum"]');
         }
-        
+
         if (checkedInput) {
             checkedInput.checked = true;
             const serumBlock = checkedInput.closest('.serumBlock');

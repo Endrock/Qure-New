@@ -60,6 +60,7 @@
     },
     "purchase-form-landing": {
       "type": "purchase-form-landing",
+      "disabled": true,
       "blocks": {
         "rating_eLjGX8": {
           "type": "rating",
@@ -317,6 +318,7 @@
     },
     "purchase-form": {
       "type": "purchase-form",
+      "disabled": false,
       "blocks": {
         "line_8cPUxh": {
           "type": "line",
@@ -363,6 +365,7 @@
         },
         "product_type_QKQhNr": {
           "type": "product_type",
+          "disabled": true,
           "settings": {
             "heading": "Dark Spots",
             "image": "shopify://shop_images/mc_2.webp",
@@ -374,12 +377,12 @@
           "settings": {
             "product": "micro-infusion-6-month-bundle-for-dark-spots",
             "preselected": false,
-            "heading": "Memorial Day 6 Month Supply",
+            "heading": "6 Month Supply",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/Micro-Infusion6MonthBundle_DarkSpots.jpg",
             "left_items": 166,
             "soldout": false,
-            "preorder": true,
+            "preorder": false,
             "preorder_text": "",
             "preorder_date_soldout": "",
             "preorder_date_reserved": "",
@@ -395,7 +398,7 @@
             "heading": "3 Month Supply",
             "subheading": "(6 Micro-infusion Treatments)",
             "image": "shopify://shop_images/3monthdarkspots_cb2897ed-4d86-45d6-8249-2b11460670b8.png",
-            "soldout": true,
+            "soldout": false,
             "preorder": false,
             "preorder_text": "",
             "preorder_date_soldout": "",
@@ -413,7 +416,7 @@
             "subheading": "(2 Micro-Infusion Treatments)",
             "image": "shopify://shop_images/1monthdarkspots.png",
             "soldout": false,
-            "preorder": true,
+            "preorder": false,
             "preorder_text": "<h5>Next batch ships early July 2025:</h5><p>Due to high demand, 1-month Micro-Infusion supply is sold out. Order now and secure yours from the next shipment.</p>",
             "preorder_date_soldout": "22 May",
             "preorder_date_reserved": "10 July",
@@ -430,7 +433,7 @@
           "settings": {
             "heading": "Wrinkles",
             "image": "shopify://shop_images/for_wrinkles.webp",
-            "preselected": false
+            "preselected": true
           }
         },
         "product_EKAAzA": {
@@ -453,7 +456,7 @@
         "product_nyJ9n7": {
           "type": "product",
           "settings": {
-            "product": "micro-infusion-3-month-bundle-hydra-soothing",
+            "product": "micro-infusion-3-month-bundle-6x-beta-glucan-serum",
             "preselected": false,
             "heading": "3 Month Supply",
             "subheading": "(6 Micro-infusion Treatments)",
@@ -490,6 +493,7 @@
         },
         "product_type_YrPQrV": {
           "type": "product_type",
+          "disabled": true,
           "settings": {
             "heading": "Wrinkles + Dark Spots",
             "image": "shopify://shop_images/mc_5.webp",
@@ -569,7 +573,6 @@
         "product_NEgEkN",
         "product_RBCPe8"
       ],
-      "disabled": true,
       "settings": {
         "heading": "Choose your treatment options",
         "text": "<p><strong>Rest assured that all orders are one-time purchases.</strong></p><p>You will not be charged again in the subsequent months, and there are no hidden charges. When you are ready to reorder your treatment, you can purchase needle heads and serum of choice.</p>",
