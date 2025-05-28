@@ -676,6 +676,7 @@
             "name": "Product",
             "settings": {
               "left_items": "Left items",
+              "left_items_info": "Use this setting to show the number of items left in stock.",
               "included_text": "Included",
               "preselected": "Preselected",
               "preorder_text": "Preorder text",
