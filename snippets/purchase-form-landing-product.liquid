@@ -51,7 +51,7 @@
                             {% capture data-per %}Buy now {% if product_type == 1 or product_type == 2 %} & SAVE {{ discount_percentage }}%{% endif %}{% endcapture %}
 
                             {% if block.settings.preorder == true %}
-                                {% capture data-per %}Pre Order{% endcapture %}
+                                {% capture data-per %}Reserve now {% if product_type == 1 or product_type == 2 %} & SAVE {{ discount_percentage }}%{% endif %}{% endcapture %}
                             {% endif %}
 
                             {% if block.settings.soldout == true %}
