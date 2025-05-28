@@ -438,10 +438,11 @@
           "type": "product",
           "settings": {
             "product": "micro-infusion-3-month-bundle-6x-beta-glucan-serum",
-            "preselected": false,
+            "preselected": true,
             "heading": "3 Month Supply",
             "subheading": "(6 Micro-infusion Treatments)",
             "image": "shopify://shop_images/micro-infusion_6_month_bundle__for_wrinkles.png",
+            "left_items": 314,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
