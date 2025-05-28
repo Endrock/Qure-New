@@ -122,6 +122,7 @@
 
   {%
     render 'product-sticky-button' with
+    product_data: product,
     variant_id: product.variants.first.id,
     current_price: product.price,
     original_price: product.compare_at_price,
