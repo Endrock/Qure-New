@@ -1,11 +1,13 @@
 {% if variant_id %}
   {{  '_pdm_product-sticky-button.css' | asset_url |  stylesheet_tag }}
   <div id="green-product-sticky-btn" class="button_sticky_wrapper" data-product-id="{{ product_data.id }}">
-    {{
-      product_data.featured_image
-      | image_url: width: 700
-      | image_tag: alt: product_data.title, class: 'button_sticky_wrapper__product-image'
-    }}
+    {% if product_data.featured_image %}   
+      {{
+        product_data.featured_image
+        | image_url: width: 700
+        | image_tag: alt: product_data.title, class: 'button_sticky_wrapper__product-image'
+      }}
+    {% endif %}
     <div class="button_sticky_wrapper__product-info">
       <div class="button_sticky_wrapper__product-info__text">
         <h4 class="button_sticky_wrapper__title">{{ product_data.title | escape }}</h4>
