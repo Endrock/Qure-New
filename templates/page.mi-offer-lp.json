@@ -1400,7 +1400,7 @@
         "read_txt": "<p>If you do not experience any changes in your skin, of <strong>firmer, brighter, smoother skin,</strong> if you do not save hours of your time and hundreds of dollars by enjoying your facial treatments in the comfort of your home instead of waiting in line at the beauty clinic – simply contact us, send via email all your before and after photos and we will make it right.</p><p>For more information on our money back offer please don’t hesitate to reach out to is.</p>"
       }
     },
-    "purchase_form": {
+    "purchase-form-second": {
       "type": "purchase-form",
       "blocks": {
         "line_8cPUxh": {
@@ -1669,7 +1669,7 @@
         "icon_image3": "shopify://shop_images/derma-ftr.svg",
         "icon_text3": "Dermatologist Approved",
         "bottom_text": "<p><strong>Have questions about MicroInfusion? </strong><a href=\"https://qureskincare.com/pages/test-landing-page#\">Chat with us!</a></p>",
-        "form_name": "purchase-form"
+        "form_name": "purchase-form-second"
       }
     },
     "compare_box_p4B7wy": {
@@ -1955,7 +1955,7 @@
     "line_F6nAKn",
     "serum_ingredients_ttGaCg",
     "money_back_guarantee_8D6BkW",
-    "purchase_form",
+    "purchase-form-second",
     "compare_box_p4B7wy",
     "faq_ABfhyg",
     "social_zwVAqW"
