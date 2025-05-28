@@ -186,7 +186,7 @@
                             <a class="button_primary" style="cursor:pointer; font-size:14px;" data-ajax-cart-request-button="/cart/add?id={{ product.variants.first.id }}&quantity=1" onclick="setEventProductHandler('{{ product.handle | escape }}')" data-ajax-cart-request-button>Reserve Now</a>
                             <a class="collec-more" href="{{ routes.root_url }}{{ product_url }}" style="font-size:14px;">Learn More</a>
                         {% else %}
-                            <a class="button_primary" style="cursor:pointer;" data-ajax-cart-request-button="/cart/add?id={{ product.variants.first.id }}&quantity=1" onclick="setEventProductHandler('{{ product.handle | escape }}')" data-ajax-cart-request-button>Buy Now</a> <!-- aaaaqqqq999 [{{ product.handle }} | {{ product.available }}] -->
+                            <a class="button_primary" style="cursor:pointer;" data-ajax-cart-request-button="/cart/add?id={{ product.variants.first.id }}&quantity=1" onclick="setEventProductHandler('{{ product.handle | escape }}')" data-ajax-cart-request-button>Buy Now</a>
                             <a class="collec-more" href="{{ routes.root_url }}{{ product_url }}">Learn More</a>
                         {% endif %}
                     </div>
