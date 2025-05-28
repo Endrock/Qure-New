@@ -23,7 +23,10 @@
   <div class="mw-402 form-{{ section_id }}">
     <div class="serum_bl">
       <div class="facial_system">
-        <h5>Get started with the Micro-Infusion Facial System that {{ cc_creator['cc-creator-first-name'] }} loves</h5>
+        <h5>
+          Get started with the Micro-Infusion Facial System that
+          {{ cc_creator['cc-creator-first-name'] | default: metaobject['cc-creator-first-name'] }} loves
+        </h5>
         <p>(for Dark Spots and Wrinkles)</p>
       </div>
 
@@ -410,6 +413,7 @@
     current_price: product.price,
     original_price: product.compare_at_price,
     classname: sticky-button-classname
+    product_data: product,
   %}
 
   <script>
