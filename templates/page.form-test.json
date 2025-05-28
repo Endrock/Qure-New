@@ -168,7 +168,7 @@
             "heading": "3 Month Supply",
             "subheading": "(12 Micro-infusion Treatments)",
             "soldout": false,
-            "preorder": false,
+            "preorder": true,
             "preorder_text": "<p>testing </p>",
             "preorder_date_soldout": "Testing",
             "preorder_date_reserved": "???",
