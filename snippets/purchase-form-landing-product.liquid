@@ -58,7 +58,7 @@
                                 {% capture data-per %}Sold Out{% endcapture %}
                             {% endif %}
 
-                            <div class="planBlock" href="javascript:void(0)"
+                            <div class="planBlock ignore" href="javascript:void(0)"
                                 data-tab="{{ product_hash }}" 
                                 data-pay="{{ product_price_divided | money_without_trailing_zeros }}" 
                                 data-per="{{ data-per }}" 
@@ -73,7 +73,7 @@
                                     </div>                                    
                                 {% endif %}
 
-                                <input type="radio" name="monthlyPlan" id="{{ section.id }}-{{ product_title_tag }}" {% if block.settings.preselected == true %} checked{% endif %}>
+                                <input type="radio" name="monthlyPlan_{{ section.settings.form_name }}" id="{{ section.id }}-{{ product_title_tag }}" {% if block.settings.preselected == true %} checked{% endif %}>
                                 <label class="monthly_plans-new monthly_plans" for="{{ section.id }}-{{ product_title_tag }}">
                                     <div class="plan_des">
                                         <div class="plan_hdr">

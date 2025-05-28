@@ -43,12 +43,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function getProductType() {
 
-        let checkedInput = document.querySelector('.' + __section + ' input[type="radio"][name="serum"]:checked');
+        let checkedInput = document.querySelector('.' + __section + ' input[type="radio"][name="serum_'+ __form + '"]:checked');
 
         if (!checkedInput) {
-            checkedInput = document.querySelector('.' + __section + ' input[type="radio"][name="serum"]');
+            checkedInput = document.querySelector('.' + __section + ' input[type="radio"][name="serum_'+ __form + '"]');
         }
-
+        
         if (checkedInput) {
             checkedInput.checked = true;
             const serumBlock = checkedInput.closest('.serumBlock');
@@ -61,10 +61,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function initProduct() {
-        let checkedInput = document.querySelector('.' + __section + ' input[type="radio"][name="monthlyPlan"]:checked');
+        let checkedInput = document.querySelector('.' + __section + ' input[type="radio"][name="monthlyPlan_'+ __form + '"]:checked');
 
         if (!checkedInput) {
-            checkedInput = document.querySelector('.' + __section + ' input[type="radio"][name="monthlyPlan"]');
+            checkedInput = document.querySelector('.' + __section + ' input[type="radio"][name="monthlyPlan_'+ __form + '"]');
         }
 
         if(checkedInput)
@@ -104,9 +104,6 @@ document.addEventListener('DOMContentLoaded', function() {
         $('.' + __section + " #choosen_image").attr("src", $(this).attr("data-image"));
         
         $('.' + __section + ' .tab_content').hide();
-        $('.' + __section + ' .step_conten_blocks .planBlock').removeClass('active');
-        $(this).addClass('active');
-
         $('.' + __section + ' #' + $(this).data('tab')).show();
     }
 

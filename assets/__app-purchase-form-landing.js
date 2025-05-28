@@ -43,12 +43,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function __landing__getProductType() {
 
-        let checkedInput = document.querySelector('.' + __section_landing + ' input[type="radio"][name="serum"]:checked');
+        let checkedInput = document.querySelector('.' + __section_landing + ' input[type="radio"][name="serum_'+ __form_landing + '"]:checked');
 
         if (!checkedInput) {
-            checkedInput = document.querySelector('.' + __section_landing + ' input[type="radio"][name="serum"]');
+            checkedInput = document.querySelector('.' + __section_landing + ' input[type="radio"][name="serum_'+ __form_landing + '"]');
         }
-
+        
         if (checkedInput) {
             checkedInput.checked = true;
             const serumBlock = checkedInput.closest('.serumBlock');
@@ -61,10 +61,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function __landing__initProduct() {
-        let checkedInput = document.querySelector('.' + __section_landing + ' input[type="radio"][name="monthlyPlan"]:checked');
+        let checkedInput = document.querySelector('.' + __section_landing + ' input[type="radio"][name="monthlyPlan_'+ __form_landing + '"]:checked');
 
         if (!checkedInput) {
-            checkedInput = document.querySelector('.' + __section_landing + ' input[type="radio"][name="monthlyPlan"]');
+            checkedInput = document.querySelector('.' + __section_landing + ' input[type="radio"][name="monthlyPlan_'+ __form_landing + '"]');
         }
 
         if(checkedInput)
@@ -80,12 +80,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function __landing__initScripts() {
         $('.' + __section_landing + ' .step_conten_blocks .planBlock').click(__landing__handlerPlanBlock);
-        $('.' + __section_landing + ' .cs_item__accordion').click(__landing__handlerItemAccordion);
-    }
-
-    function __landing__handlerItemAccordion() {
-        $(this).toggleClass('active');
-        $(this).next().slideToggle();
     }
 
     function __landing__handlerPlanBlock () {
@@ -101,13 +95,6 @@ document.addEventListener('DOMContentLoaded', function() {
         $('.' + __section_landing + " .total_price").find(".sale_price").text($(this).find(".sale_price:visible").text().trim());
         $('.' + __section_landing + " .btn_value").text($(this).attr("data-per"));
         $('.' + __section_landing + " .pay_today").text($(this).attr("data-pay"));
-        $('.' + __section_landing + " #choosen_image").attr("src", $(this).attr("data-image"));
-        
-        $('.' + __section_landing + ' .tab_content').hide();
-        $('.' + __section_landing + ' .step_conten_blocks .planBlock').removeClass('active');
-        $(this).addClass('active');
-
-        $('.' + __section_landing + ' #' + $(this).data('tab')).show();
     }
 
     function __landing__clearPreorderBoxes()

@@ -60,7 +60,6 @@
     },
     "purchase-form-landing": {
       "type": "purchase-form-landing",
-      "disabled": true,
       "blocks": {
         "rating_eLjGX8": {
           "type": "rating",
@@ -316,9 +315,8 @@
         "product_3": "micro-infusion-1-month-bundle-2x-beta-glucan-serum"
       }
     },
-    "purchase-form": {
+    "purchase-form-second": {
       "type": "purchase-form",
-      "disabled": false,
       "blocks": {
         "line_8cPUxh": {
           "type": "line",
@@ -586,7 +584,7 @@
         "icon_image3": "shopify://shop_images/derma-ftr.svg",
         "icon_text3": "Dermatologist Approved",
         "bottom_text": "<p><strong>Have questions about MicroInfusion? </strong><a href=\"https://qureskincare.com/pages/test-landing-page#\">Chat with us!</a></p>",
-        "form_name": "purchase-form"
+        "form_name": "purchase-form-second"
       }
     }
   },
@@ -595,6 +593,6 @@
     "purchase-form-landing",
     "money_back_guarantee_8D6BkW",
     "liquid_86wfLd",
-    "purchase-form"
+    "purchase-form-second"
   ]
 }
