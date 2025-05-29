@@ -44,10 +44,9 @@
                             {% if block.settings.heading contains '6 Month' %}
                                 {% assign product_type = 1 %}
                                 {% assign product_price_per_item = product.price | divided_by: 12 %}
-                                {% assign product_hash = 'month_3' %}
 
-                                {% capture product_included_month_3 %}
-                                        <div class="tab_content" id="{{ product_hash }}">
+                                {% capture product_included_month_6 %}
+                                        <div class="tab_content" id="tab_{{ product_title_tag }}">
                                             <div class="plan_bundle_detail">
                                                 <h6 class="cs_item__accordion">Buy one 6 month supply and get:<span><img src="https://qureskincaredns.com/new/assets/arrow-up.png" alt=""></span></h6>
                                                 <div class="u_item__hidden-div" style="display: none;">
@@ -59,14 +58,34 @@
                             {% endif %}
 
                             {% if block.settings.heading contains '3 Month' %}
-                                {% assign product_type = 2 %}
+                                {% if section.settings.form_type == '3_months'  %}
+                                    {% assign product_type = 1 %}
+                                {% else %}
+                                    {% assign product_type = 2 %}
+                                {% endif %}
+                                
                                 {% assign product_price_per_item = product.price | divided_by: 6 %}
-                                {% assign product_hash = 'month_2' %}
 
-                                {% capture product_included_month_2 %}
-                                    <div class="tab_content" id="{{ product_hash }}">
+                                {% capture product_included_month_3 %}
+                                    <div class="tab_content" id="tab_{{ product_title_tag }}">
                                         <div class="plan_bundle_detail">
                                             <h6 class="cs_item__accordion">Buy one 3 month supply and get:<span><img src="https://qureskincaredns.com/new/assets/arrow-up.png" alt=""></span></h6>
+                                            <div class="u_item__hidden-div" style="display: none;">
+                                                {{ block.settings.included_text |  replace: '<p>', '<p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>' }}
+                                            </div>
+                                        </div>
+                                    </div>                                
+                                {% endcapture %}
+                            {% endif %}
+
+                            {% if block.settings.heading contains '2 Month' %}
+                                {% assign product_type = 2 %}
+                                {% assign product_price_per_item = product.price | divided_by: 4 %}
+
+                                {% capture product_included_month_2 %}
+                                    <div class="tab_content" id="tab_{{ product_title_tag }}">
+                                        <div class="plan_bundle_detail">
+                                            <h6 class="cs_item__accordion">Buy one 2 month supply and get:<span><img src="https://qureskincaredns.com/new/assets/arrow-up.png" alt=""></span></h6>
                                             <div class="u_item__hidden-div" style="display: none;">
                                                 {{ block.settings.included_text |  replace: '<p>', '<p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>' }}
                                             </div>
@@ -78,10 +97,9 @@
                             {% if block.settings.heading contains '1 Month' %}
                                 {% assign product_type = 3 %}
                                 {% assign product_price_per_item = product.price | divided_by: 2 %}
-                                {% assign product_hash = 'month_1' %}
 
                                 {% capture product_included_month_1 %}
-                                    <div class="tab_content" id="{{ product_hash }}">
+                                    <div class="tab_content" id="tab_{{ product_title_tag }}">
                                         <div class="plan_bundle_detail">
                                             <h6 class="cs_item__accordion">Buy one 1 month supply and get:<span><img src="https://qureskincaredns.com/new/assets/arrow-up.png" alt=""></span></h6>
                                             <div class="u_item__hidden-div" style="display: none;">
@@ -103,7 +121,7 @@
                             {% endif %}
 
                             <div class="planBlock ignore" href="javascript:void(0)" 
-                                data-tab="{{ product_hash }}" 
+                                data-tab="tab_{{ product_title_tag }}" 
                                 data-pay="{{ product_price_divided | money_without_trailing_zeros }}" 
                                 data-per="{{ data-per }}" 
                                 data-image="{{ block.settings.image | img_url: 'master' }}" 
@@ -182,7 +200,7 @@
                 {{ preorder_box }}
             </div>
 
-
+            {{ product_included_month_6 }}
             {{ product_included_month_3 }}
             {{ product_included_month_2 }}
             {{ product_included_month_1 }}

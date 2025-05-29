@@ -656,6 +656,11 @@
       "settings": {
         "hide_product_types": "Hide product types",
         "hide_payment_types": "Hide payment types",
+        "form_type": {
+          "name": "Form type",
+          "6_months": "6 months",
+          "3_months": "3 months"
+        },
         "form_name": "Form name"
       },
       "blocks": {

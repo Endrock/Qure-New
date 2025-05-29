@@ -35,17 +35,14 @@
 
                             {% if block.settings.heading contains '3 Month' %}
                                 {% assign product_type = 1 %}
-                                {% assign product_hash = 'month_3' %}
                             {% endif %}
 
                             {% if block.settings.heading contains '2 Month' %}
                                 {% assign product_type = 2 %}
-                                {% assign product_hash = 'month_2' %}
                             {% endif %}
 
                             {% if block.settings.heading contains '1 Month' %}
                                 {% assign product_type = 3 %}
-                                {% assign product_hash = 'month_1' %}
                             {% endif %}
 
                             {% capture data-per %}Buy now {% if product_type == 1 or product_type == 2 %} & SAVE {{ discount_percentage }}%{% endif %}{% endcapture %}
@@ -59,7 +56,6 @@
                             {% endif %}
 
                             <div class="planBlock ignore" href="javascript:void(0)"
-                                data-tab="{{ product_hash }}" 
                                 data-pay="{{ product_price_divided | money_without_trailing_zeros }}" 
                                 data-per="{{ data-per }}" 
                                 data-product_variant_id="{{ product_variant_id }}" 
