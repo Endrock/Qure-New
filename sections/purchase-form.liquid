@@ -158,6 +158,28 @@
     "class":"purchase-form mi_landing mi_lp mi_lp_v2",
     "settings":[
         {
+            "type": "select",
+            "id": "form_type",
+            "label": "t:sections.purchase-form.settings.form_type.name",
+            "options": [
+                {
+                    "value": "6_months",
+                    "label": "t:sections.purchase-form.settings.form_type.6_months"
+                },
+                {
+                    "value": "3_months",
+                    "label": "t:sections.purchase-form.settings.form_type.3_months"
+                },
+            ],
+            "default": "6_months"
+        },
+        {
+            "type": "text",
+            "id": "form_name",
+            "label": "t:sections.purchase-form.settings.form_name",
+            "default": "purchase-form"
+        },
+        {
             "type": "text",
             "id": "heading",
             "label": "t:common.heading.label"
@@ -218,12 +240,6 @@
             "type": "richtext",
             "id": "bottom_text",
             "label": "t:common.text.label"
-        },
-        {
-            "type": "text",
-            "id": "form_name",
-            "label": "t:sections.purchase-form.settings.form_name",
-            "default": "purchase-form"
         }
     ],
     "blocks":[
