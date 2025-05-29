@@ -80,7 +80,7 @@ class PDMStockItemsLeft extends HTMLElement {
       const message = `${dataStock.data} kits `;
       element.textContent = message;
     } else {
-      element.textContent = '0 kits';
+      this.style.display = 'none'; // Hide the element if no stock data is available
     }
   }
 }
