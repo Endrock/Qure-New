@@ -1,0 +1,33 @@
+{%- comment -%}
+  Renders the PDM Stock Items Left component.
+
+  Purpose:
+  Displays a dynamic stock counter (e.g. "Only X kits left") based on product inventory retrieved via API.
+  This component enhances urgency messaging and can be reused on product pages.
+
+  Accepts:
+  - product_id: (string) Required. The product ID to fetch stock data for. Passed to the custom element via data attribute.
+
+  Usage:
+  {% render 'pdm_stock-items-left', product_id: product_id %}
+
+  Dependencies:
+  - Snippet 'pdm_icons' with the icon key 'red-clock' for visual context.
+  - Stylesheet: __pdm_stock-items-left.css
+  - JavaScript: __pdm_stock-items-left.js (contains the Web Component logic)
+
+  Notes:
+  - Ensure the product ID is valid.
+  - This snippet must be included in pages where the product ID is available in the context.
+{%- endcomment -%}
+
+{{ '__pdm_stock-items-left.css' | asset_url | stylesheet_tag }}
+
+<pdm-stock-items-left
+  data-product-id="{{ product_id }}"
+>
+  {% render 'pdm_icons', icon: 'red-clock' %}
+  <p><strong class="pdm_price-stock-left-quantity"></strong>left</p>
+</pdm-stock-items-left>
+
+<script defer src="{{ '__pdm_stock-items-left.js' | asset_url }}"></script>
