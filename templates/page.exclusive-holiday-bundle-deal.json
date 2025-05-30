@@ -87,6 +87,7 @@
         },
         "product_XP469M": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "heading": "Exclusive Memorial Day Bundle",
             "discount": 72,
