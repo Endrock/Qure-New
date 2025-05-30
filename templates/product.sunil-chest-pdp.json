@@ -521,17 +521,32 @@
             "client": "Josie",
             "code": ""
           }
+        },
+        "result_cGxTjD": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/n_d_review_desk.png",
+            "heading": "Great results so far!",
+            "text": "<p>“The neck and décolletage LED device by Qure has been amazing so far! It’s very high quality and after only 3 weeks of use I can see a visible change in the texture and color of my skin. I have a lot of sun damage in my chest so I imagine I will need to use my device consistently for a few months before I see a huge difference but I am already noticing improvement and am very happy with my purchase. I highly recommend!”</p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/america_f_85c3552f-2c5a-48e4-9ca5-78539e5139ca.webp",
+            "text_country": "United States",
+            "client": "Brooke B.",
+            "code": ""
+          }
         }
       },
       "block_order": [
         "result_99hr6W",
         "result_TK6i6r",
         "result_jzwh9c",
-        "result_Lxeh36"
+        "result_Lxeh36",
+        "result_cGxTjD"
       ],
       "settings": {
         "classname": "mi_landing_result",
         "heading": "Results you‘ll see with your own eyes",
+        "des": "",
         "heading_reduced": "",
         "text_verified_customer": "Verified customer",
         "text_reviewed": "Reviewed in"
