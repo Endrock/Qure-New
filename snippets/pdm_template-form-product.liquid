@@ -102,7 +102,7 @@
                 data-image="{{ all_products['micro-infusion-6-month-bundle-for-wrinkles-dark-spots-free-patches'] | image_url: width: 800 }}"
                 data-product_variant_id="46427761836271"
               {% else %}
-                 data-image="{{ block.settings.image | image_url: width: 800 }}"
+                data-image="{{ block.settings.image | image_url: width: 800 }}"
                 data-product_variant_id="{{ product_variant_id }}"
               {% endif %}
               data-soldout="{{ block.settings.soldout }}"
@@ -150,11 +150,8 @@
                           <div class="plan_prc sale_price color_red">{{ product_price }}</div>
                         {% endif %}
                       </div>
-                      {% if block.settings.left_items > 0 %}
-                        <p class="kits_left">
-                          <img src="https://qureskincaredns.com/new/assets/clock_icon.svg" class="img-fluid" alt="">
-                          {{- block.settings.left_items }} kits <span>left</span>
-                        </p>
+                      {% if block.settings.left_items %}
+                        {% render 'pdm_stock-items-left', product_id: product_id %}
                       {% endif %}
                     </div>
                   </div>
