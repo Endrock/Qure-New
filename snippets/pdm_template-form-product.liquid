@@ -1,3 +1,32 @@
+{%- comment -%}
+  Renders the PDM landing serums free patches form template with free patches variant for AB test.
+
+  Purpose:
+  Dynamically builds and displays multiple subscription plan options (e.g., 6-month, 3-month, 2-month, 1-month) and make the free patches appears for the AB test.
+  It loops through a provided array of block IDs, fetches each block’s product data, calculates pricing and discount details,
+  and outputs the corresponding HTML structure with data attributes for JS-driven tab and plan selection logic.
+
+  Accepts:
+  - array: (array) Required. List of block IDs to render in order.
+  - section: (object) Required. Section settings including form_name, form_type, heading blocks, images, and preorder/sold-out flags.
+  - product_type_title: (string) Required. Used to build unique IDs and scoping CSS/JS hooks.
+
+  Usage:
+  {% render 'pdm_template-form-product', array: array, section: section, product_type_title: product_type_title %}
+
+  Dependencies:
+  - Stylesheet: _pdm_landing-serums-free-patches.css
+  - Script: __pdm_template-form-product.js
+  - Snippet: 'pdm_stock-items-left' for rendering stock-left counters when `left_items` is true
+  - External assets for icons/images referenced via full URLs
+
+  Notes:
+  - Ensure each block in `array` has type 'product' and valid `settings.product`.
+  - Blocks marked `preselected` will have their radio input initially checked.
+  - Pre-order and sold-out states override the default “Buy now” text.
+  - Pricing per item, discount percentage, and included-text accordions are generated via Liquid captures.
+{%- endcomment -%}
+
 {{ '_pdm_landing-serums-free-patches.css' | asset_url | stylesheet_tag }}
 
 <template
@@ -241,3 +270,4 @@
     {{ product_included_month_1 }}
   </div>
 </template>
+<script defer src="{{ '__pdm_template-form-product.js' | asset_url }}"></script>
