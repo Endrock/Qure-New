@@ -728,6 +728,19 @@
             "client": "Carey C.",
             "code": ""
           }
+        },
+        "result_A4BHNw": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/b_a_led_mask_d.png",
+            "heading": "My daily spa",
+            "text": "<p>“I am very pleased with the mask. I got struck with adult acne. Using the mask daily, and using adalapene gel before bed was the only thing that worked to bring my skin al,ost back to normal. I am so thankful. And it’s my daily 3 minute spa where I just sit and relax, after working all day, and absorb the rays.”</p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/america_f_85c3552f-2c5a-48e4-9ca5-78539e5139ca.webp",
+            "text_country": "United States",
+            "client": "Anonymous",
+            "code": ""
+          }
         }
       },
       "block_order": [
@@ -749,7 +762,8 @@
         "result_Ude8aB",
         "result_dM9Lij",
         "result_emGVe6",
-        "result_7LbRgc"
+        "result_7LbRgc",
+        "result_A4BHNw"
       ],
       "settings": {
         "classname": "mi_landing_result",
