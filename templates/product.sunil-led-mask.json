@@ -715,6 +715,19 @@
             "client": "Diane F.",
             "code": ""
           }
+        },
+        "result_7LbRgc": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/b_a_MI_desk_3827abef-34e8-4fc4-89e5-84b79b080e86.png",
+            "heading": "Wow just wow!!!",
+            "text": "<p>“Easy to use. I’ve used it three times this far and the changes in my skin are amazing. Skin is glowing, pores minimized. And my wrinkles what wrinkles this 53 year old happy skin. Well worth the $$$.”</p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/america_f_85c3552f-2c5a-48e4-9ca5-78539e5139ca.webp",
+            "text_country": "United States",
+            "client": "Carey C.",
+            "code": ""
+          }
         }
       },
       "block_order": [
@@ -735,7 +748,8 @@
         "result_H93Rhe",
         "result_Ude8aB",
         "result_dM9Lij",
-        "result_emGVe6"
+        "result_emGVe6",
+        "result_7LbRgc"
       ],
       "settings": {
         "classname": "mi_landing_result",
