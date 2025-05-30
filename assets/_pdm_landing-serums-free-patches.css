@@ -63,7 +63,7 @@ body[data-ab-free-patches-6-months] .monthly_supply {
 }
 
 .pdm_free-patch span {
-  color: var(--Black, #000);
+  color: #000;
   font-family: Poppins;
   font-size: 10.5px;
   font-style: normal;
