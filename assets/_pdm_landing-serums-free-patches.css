@@ -1,150 +1,205 @@
-.template-abtest{
-    display: none;
+.template-abtest {
+  display: none;
 }
 
-.template-original{
-    display: block;
+.template-original {
+  display: block;
 }
 
-body[data-ab-free-patches-6-months] .template-abtest{
-    display: block;
+body[data-ab-free-patches-6-months] .template-abtest {
+  display: block;
 }
-body[data-ab-free-patches-6-months] .template-original{
-    display: none;
+body[data-ab-free-patches-6-months] .template-original {
+  display: none;
 }
+
+body[data-ab-free-patches-6-months] .monthly_supply {
+  position: relative;
+}
+
 /* Start patches free offer */
- .pdm_free-patch {
-    display: flex;
-    align-items: center;
-    margin: 8px 0 0;          /* space above/below */
-    padding: 4px 12px 4px 8px;           /* inner padding */
-    border: 1px dashed var(--Turquoise, #C8E6DC);
-    background: #FFF;
-    border-radius: 2px;            /* slight rounding */
-  }
-  .ab-test .planBlock .monthly_plans .price .regular_price, .ab-test .planBlock .monthly_plans .price .plan_prc+.plan_prc{
-    font-size: 16px;
-  }
+.pdm_free-patch {
+  display: flex;
+  align-items: center;
+  margin: 8px 0 0; /* space above/below */
+  padding: 4px 12px 4px 8px; /* inner padding */
+  border: 1px dashed var(--Turquoise, #c8e6dc);
+  background: #fff;
+  border-radius: 2px; /* slight rounding */
+}
+.ab-test .planBlock .monthly_plans .price .regular_price,
+.ab-test .planBlock .monthly_plans .price .plan_prc + .plan_prc {
+  font-size: 16px;
+}
 
-  .monthly_supply--inner{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
+.monthly_supply--inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
 
-   .pdm_plan-with-free-patch{
-    display: flex;
-    gap: 6px;
-    justify-content: space-between;
-    width: 100%;
-  }
-   .pdm-step_content_v2 .planBlock .monthly_plans .pdm_plan-with-free-patch .price{
-    justify-content: space-between;
-    padding-top: 19px;
-    padding-bottom: 16px;
-  }
+.pdm_plan-with-free-patch {
+  display: flex;
+  gap: 6px;
+  justify-content: space-between;
+  width: 100%;
+}
+.pdm-step_content_v2
+  .planBlock
+  .monthly_plans
+  .pdm_plan-with-free-patch
+  .price {
+  justify-content: space-between;
+  padding-top: 19px;
+  padding-bottom: 16px;
+}
 
-   .pdm_free-patch img {
-    width: 39px;
-    height: 26px;
-    object-fit: cover;
-    margin-right: 6px;
-  }
+.pdm_free-patch img {
+  width: 39px;
+  height: 26px;
+  object-fit: cover;
+  margin-right: 6px;
+}
 
-   .pdm_free-patch span {
-    color: var(--Black, #000);
+.pdm_free-patch span {
+  color: var(--Black, #000);
   font-family: Poppins;
   font-size: 10.5px;
   font-style: normal;
   font-weight: 600;
   line-height: 15px;
   letter-spacing: 0.12px;
-  }
+}
 
-  .pdm_free-patch span strong {
-    font-weight: 600;
-    color: #008763;
-  }
-  .pdm-step_content_v2 .planBlock .monthly_plans .pdm_plan-with-free-patch .price{
-    padding-bottom: 4px;
-  }
-   .pdm-step_content_v2 .pdm_price-stock-left{
-    height: 24px;
+.pdm_free-patch span strong {
+  font-weight: 600;
+  color: #008763;
+}
+.pdm-step_content_v2
+  .planBlock
+  .monthly_plans
+  .pdm_plan-with-free-patch
+  .price {
+  padding-bottom: 4px;
+}
+.pdm-step_content_v2 .pdm_price-stock-left {
+  height: 24px;
+  width: 82px;
+}
+.pdm-step_content_v2
+  .planBlock
+  .monthly_plans
+  .pdm_plan-with-free-patch
+  .plan_des.container
+  .plan_des {
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+.pdm-step_content_v2
+  .planBlock
+  .monthly_plans
+  .pdm_plan-with-free-patch
+  .plan_des.container {
+  padding-bottom: 4px;
+  padding-right: 0px !important;
+}
+@media screen and (min-width: 380px) {
+  .pdm-step_content_v2 .pdm_price-stock-left {
+    height: 30px;
     width: 82px;
   }
-  .pdm-step_content_v2 .planBlock .monthly_plans .pdm_plan-with-free-patch .plan_des.container .plan_des{
-        height: 32px;
-        display: flex;
-        align-items: center;
+  .pdm-step_content_v2
+    .planBlock
+    .monthly_plans
+    .pdm_plan-with-free-patch
+    .plan_des.container
+    .plan_des {
+    height: 30px;
+    display: flex;
+    align-items: center;
   }
-  .pdm-step_content_v2 .planBlock .monthly_plans .pdm_plan-with-free-patch .plan_des.container{
-    padding-bottom: 4px;
-    padding-right: 0px !important;
+  .pdm_free-patch.mobile {
+    display: flex;
+    width: 100%;
+    margin: 0px 16px 12px;
+  }
 }
-  @media screen and (min-width: 380px) {
-       .pdm-step_content_v2 .pdm_price-stock-left{
-        height: 30px;
-        width: 82px;
-      }
-      .pdm-step_content_v2 .planBlock .monthly_plans .pdm_plan-with-free-patch .plan_des.container .plan_des{
-            height: 30px;
-            display: flex;
-            align-items: center;
-      }
-    .pdm_free-patch.mobile{
-      display: flex;
-      width: 100%;
-      margin: 0px 16px 12px;
-    }
 
-  }
-
-  @media screen and (min-width: 768px) {
-      .ab-test .planBlock .monthly_plans .price .regular_price, .ab-test .planBlock .monthly_plans .price .plan_prc+.plan_prc{
+@media screen and (min-width: 768px) {
+  .ab-test .planBlock .monthly_plans .price .regular_price,
+  .ab-test .planBlock .monthly_plans .price .plan_prc + .plan_prc {
     font-size: 18px;
   }
 
-  .ab-test .planBlock .monthly_plans .plan_hdr .saved_price, .planBlock .monthly_plans .saved_price{
- letter-spacing: 0;
+  body[data-ab-free-patches-6-months] pdm-stock-items-left {
+    position: absolute;
+    right: 14px;
+    height: 36px;
+    width: fit-content;
+    align-items: center;
+    bottom: 13px;
   }
 
-    .pdm_free-patch.desktop{
-      display: flex;
-    }
-    .pdm_free-patch.mobile{
-      display: none;
-    }
-    .pdm-step_content_v2 .planBlock .monthly_plans .pdm_plan-with-free-patch .price{
-      position: relative;
-      justify-content: end;
-    }
-
-    .pdm-step_content_v2 .planBlock .monthly_plans .pdm_plan-with-free-patch .price{
-        padding-bottom: 16px;
-      }
-      .pdm-step_content_v2 .planBlock .monthly_plans .pdm_plan-with-free-patch .plan_des.container{
-        padding-bottom: 16px;
-    }
-
-     .pdm-step_content_v2 .pdm_price-stock-left{
-        height: 36px;
-        width: 82px;
-      }
-    .pdm_free-patch span{
-      font-size: 12px;
-    }
-
-    .pdm-step_content_v2 .planBlock .monthly_plans .pdm_plan-with-free-patch .price .pdm_price-stock{
-      position: absolute;
-      top: 19px;
-      right: 24px;
-    }
-    .pdm_free-patch img {
-      width: 42px;
-      height: 26px;
-      object-fit: cover;
-      margin-right: 6px;
-    }
+  .ab-test .planBlock .monthly_plans .plan_hdr .saved_price,
+  .planBlock .monthly_plans .saved_price {
+    letter-spacing: 0;
   }
-  /* End patches free offer */
+
+  .pdm_free-patch.desktop {
+    display: flex;
+  }
+  .pdm_free-patch.mobile {
+    display: none;
+  }
+  .pdm-step_content_v2
+    .planBlock
+    .monthly_plans
+    .pdm_plan-with-free-patch
+    .price {
+    position: relative;
+    justify-content: end;
+  }
+
+  .pdm-step_content_v2
+    .planBlock
+    .monthly_plans
+    .pdm_plan-with-free-patch
+    .price {
+    padding-bottom: 16px;
+  }
+  .pdm-step_content_v2
+    .planBlock
+    .monthly_plans
+    .pdm_plan-with-free-patch
+    .plan_des.container {
+    padding-bottom: 16px;
+  }
+
+  .pdm-step_content_v2 .pdm_price-stock-left {
+    height: 36px;
+    width: 82px;
+  }
+  .pdm_free-patch span {
+    font-size: 12px;
+  }
+
+  .pdm-step_content_v2
+    .planBlock
+    .monthly_plans
+    .pdm_plan-with-free-patch
+    .price
+    .pdm_price-stock {
+    position: absolute;
+    top: 19px;
+    right: 24px;
+  }
+  .pdm_free-patch img {
+    width: 42px;
+    height: 26px;
+    object-fit: cover;
+    margin-right: 6px;
+  }
+}
+/* End patches free offer */
