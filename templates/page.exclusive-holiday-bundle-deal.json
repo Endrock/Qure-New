@@ -237,7 +237,7 @@
       ],
       "settings": {
         "seo_heading": "",
-        "heading": "Save Up to 72% on \\n Certified Skincare Solutions",
+        "heading": "Save Up to 55% on \\n Certified Skincare Solutions",
         "text": "<p>Backed by the most respected peer-reviewed <strong>Dermatologist Journals </strong>and <strong>scientific studies </strong>that prove; Qure’s skincare <strong>works.</strong></p>"
       }
     },
@@ -567,6 +567,7 @@
             "recommended_text": "",
             "is_top_rated": false,
             "is_preorder": false,
+            "is_soldout": false,
             "preorder_text": "",
             "classname": "",
             "code": ""
@@ -623,6 +624,7 @@
             "recommended_text": "",
             "is_top_rated": false,
             "is_preorder": true,
+            "is_soldout": false,
             "preorder_text": "SHIPS ON APRIL 30TH",
             "classname": "",
             "code": ""
@@ -681,6 +683,7 @@
             "recommended_text": "",
             "is_top_rated": false,
             "is_preorder": false,
+            "is_soldout": false,
             "preorder_text": "SHIPS END OF APRIL",
             "classname": "",
             "code": ""
@@ -765,6 +768,7 @@
             "recommended_image": "shopify://shop_images/cl_shah.webp",
             "is_top_rated": false,
             "is_preorder": false,
+            "is_soldout": false,
             "preorder_text": "",
             "classname": "",
             "code": ""
@@ -827,6 +831,7 @@
             "recommended_text": "",
             "is_top_rated": false,
             "is_preorder": false,
+            "is_soldout": false,
             "preorder_text": "SHIPS END OF APRIL",
             "classname": "",
             "code": ""
@@ -964,6 +969,7 @@
             "recommended_text": "",
             "is_top_rated": false,
             "is_preorder": false,
+            "is_soldout": false,
             "preorder_text": "",
             "classname": "",
             "code": ""
@@ -1054,6 +1060,7 @@
             "recommended_image": "shopify://shop_images/advisor_4.webp",
             "is_top_rated": true,
             "is_preorder": false,
+            "is_soldout": false,
             "preorder_text": "",
             "classname": "",
             "code": ""
@@ -1116,6 +1123,7 @@
             "recommended_text": "",
             "is_top_rated": false,
             "is_preorder": false,
+            "is_soldout": false,
             "preorder_text": "",
             "classname": "",
             "code": ""
@@ -1181,6 +1189,7 @@
             "recommended_image": "shopify://shop_images/advisor_3.webp",
             "is_top_rated": false,
             "is_preorder": false,
+            "is_soldout": false,
             "preorder_text": "",
             "classname": "",
             "code": ""
@@ -1263,6 +1272,7 @@
             "recommended_text": "",
             "is_top_rated": false,
             "is_preorder": false,
+            "is_soldout": false,
             "preorder_text": "",
             "classname": "",
             "code": ""
@@ -1553,6 +1563,7 @@
             "recommended_text": "",
             "is_top_rated": false,
             "is_preorder": false,
+            "is_soldout": false,
             "preorder_text": "",
             "classname": "",
             "code": ""
