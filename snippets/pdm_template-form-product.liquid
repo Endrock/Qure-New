@@ -26,9 +26,6 @@
   - Pre-order and sold-out states override the default “Buy now” text.
   - Pricing per item, discount percentage, and included-text accordions are generated via Liquid captures.
 {%- endcomment -%}
-
-{{ '_pdm_landing-serums-free-patches.css' | asset_url | stylesheet_tag }}
-
 <template
   class="template-abtest"
   id="{{ section.settings.form_name }}-source-{{ section.id }}-{{ product_type_title }}"
@@ -146,9 +143,9 @@
               data-tab="tab_{{ product_title_tag }}"
               data-pay="{{ product_price_divided | money_without_trailing_zeros }}"
               data-per="{{ data-per }}"
-              {% if product_type == 1 %}
-                data-image="{{ all_products['micro-infusion-6-month-bundle-for-wrinkles-dark-spots-free-patches'] | image_url: width: 800 }}"
-                data-product_variant_id="46427761836271"
+              {% if block.settings.free_patches %}
+                data-image="{{ block.settings.free_patches_product.featured_media | image_url: width: 800 }}"
+                data-product_variant_id="{{ block.settings.free_patches_product.selected_or_first_available_variant.id }}"
               {% else %}
                 data-image="{{ block.settings.image | image_url: width: 800 }}"
                 data-product_variant_id="{{ product_variant_id }}"
@@ -174,7 +171,9 @@
               >
               <label class="monthly_plans" for="{{ section.id }}-{{ product_title_tag }}">
                 <div class="monthly_supply">
+                  {% if block.settings.free_patches %}
                   <div class="monthly_supply--inner">
+                  {% endif %}
                     <div class="plan_des">
                       <div class="plan_hdr">
                         <h3>{{ block.settings.heading }}</h3>
@@ -202,18 +201,25 @@
                         {% render 'pdm_stock-items-left', product_id: product_id %}
                       {% endif %}
                     </div>
+                  {% if block.settings.free_patches %}
                   </div>
+                  {% endif %}
 
-                  {% if product_type == 1 %}
+                  {% if block.settings.free_patches %}
+                    {{ '_pdm_landing-serums-free-patches.css' | asset_url | stylesheet_tag }}
                     <!-- “Free Patch” badge desktop -->
                     <div class="pdm_free-patch desktop">
                       <img
+                      {% if block.settings.free_patches_icon != blank %}
+                        src="{{ block.settings.free_patches_icon | image_url: width: 80 }}"
+                      {% else %}
                         src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/patches_168px.png?v=1745556105"
+                      {% endif %}
                         width="42"
                         height="26"
                         alt="Micro-Infusion Patch icon"
                       >
-                      <span><strong>Get a Free</strong> Pair of Micro-Infusion Patches</span>
+                      <span>{{ block.settings.free_patches_text }}</span>
                     </div>
                     <!-- End of “Free Patch” badge desktop -->
                   {% endif %}
