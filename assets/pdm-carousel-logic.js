@@ -9,7 +9,8 @@
  */
 
 document.addEventListener('DOMContentLoaded', function () {
-    const showCustomSlides = false;
+    const showCustomSlides = document.body.hasAttribute('data-pdm-activation-slider');
+    
   
     const customSlides = [
       'neck-v2',
