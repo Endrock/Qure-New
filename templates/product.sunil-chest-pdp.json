@@ -483,19 +483,6 @@
             "code": ""
           }
         },
-        "result_TK6i6r": {
-          "type": "result",
-          "settings": {
-            "image": "shopify://shop_images/results_sophia.webp",
-            "heading": "From sun damage to this",
-            "text": "<p>“After years damage from the strong Aussie sun I wanted to try LED therapy to help rejuvenate and repair my decollate area as I read lots of positive reviews on it. I’m so glad I did because after using it daily, I've witnessed this transformation!!! Skin is firmer, sunspots have faded and texture is so much smoother!! ”                     </p>",
-            "see-more": "",
-            "image_country": "shopify://shop_images/australia_f_35e9b6f0-d77f-4184-afaf-224d96562185.webp",
-            "text_country": "Australia",
-            "client": "Sophia. N",
-            "code": ""
-          }
-        },
         "result_jzwh9c": {
           "type": "result",
           "settings": {
@@ -522,6 +509,19 @@
             "code": ""
           }
         },
+        "result_TK6i6r": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/results_sophia.webp",
+            "heading": "From sun damage to this",
+            "text": "<p>“After years damage from the strong Aussie sun I wanted to try LED therapy to help rejuvenate and repair my decollate area as I read lots of positive reviews on it. I’m so glad I did because after using it daily, I've witnessed this transformation!!! Skin is firmer, sunspots have faded and texture is so much smoother!! ”                     </p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/australia_f_35e9b6f0-d77f-4184-afaf-224d96562185.webp",
+            "text_country": "Australia",
+            "client": "Sophia. N",
+            "code": ""
+          }
+        },
         "result_99hr6W": {
           "type": "result",
           "settings": {
@@ -538,9 +538,9 @@
       },
       "block_order": [
         "result_cGxTjD",
-        "result_TK6i6r",
         "result_jzwh9c",
         "result_Lxeh36",
+        "result_TK6i6r",
         "result_99hr6W"
       ],
       "settings": {
