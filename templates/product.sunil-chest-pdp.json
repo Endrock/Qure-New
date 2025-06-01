@@ -470,16 +470,16 @@
     "results_FxQnmz": {
       "type": "results",
       "blocks": {
-        "result_99hr6W": {
+        "result_cGxTjD": {
           "type": "result",
           "settings": {
-            "image": "shopify://shop_images/results_claudia.webp",
-            "heading": "Healthier-looking glow",
-            "text": "<p>“I was shocked seeing my before and after photos!! I didn’t realise how much my skin improved. I feel so much more confident wearing open tops now. My skin looks much more even, less red and all round healthier. Happy I invested into this device and would definitely recommend it to everyone :)”<br/>                                    </p>",
+            "image": "shopify://shop_images/n_d_review_desk.png",
+            "heading": "Great results so far!",
+            "text": "<p>“The neck and décolletage LED device by Qure has been amazing so far! It’s very high quality and after only 3 weeks of use I can see a visible change in the texture and color of my skin. I have a lot of sun damage in my chest so I imagine I will need to use my device consistently for a few months before I see a huge difference but I am already noticing improvement and am very happy with my purchase. I highly recommend!”</p>",
             "see-more": "",
-            "image_country": "shopify://shop_images/canada_f.svg",
-            "text_country": "Canada",
-            "client": "Claudia",
+            "image_country": "shopify://shop_images/america_f_85c3552f-2c5a-48e4-9ca5-78539e5139ca.webp",
+            "text_country": "United States",
+            "client": "Brooke B.",
             "code": ""
           }
         },
@@ -522,26 +522,26 @@
             "code": ""
           }
         },
-        "result_cGxTjD": {
+        "result_99hr6W": {
           "type": "result",
           "settings": {
-            "image": "shopify://shop_images/n_d_review_desk.png",
-            "heading": "Great results so far!",
-            "text": "<p>“The neck and décolletage LED device by Qure has been amazing so far! It’s very high quality and after only 3 weeks of use I can see a visible change in the texture and color of my skin. I have a lot of sun damage in my chest so I imagine I will need to use my device consistently for a few months before I see a huge difference but I am already noticing improvement and am very happy with my purchase. I highly recommend!”</p>",
+            "image": "shopify://shop_images/results_claudia.webp",
+            "heading": "Healthier-looking glow",
+            "text": "<p>“I was shocked seeing my before and after photos!! I didn’t realise how much my skin improved. I feel so much more confident wearing open tops now. My skin looks much more even, less red and all round healthier. Happy I invested into this device and would definitely recommend it to everyone :)”<br/>                                    </p>",
             "see-more": "",
-            "image_country": "shopify://shop_images/america_f_85c3552f-2c5a-48e4-9ca5-78539e5139ca.webp",
-            "text_country": "United States",
-            "client": "Brooke B.",
+            "image_country": "shopify://shop_images/canada_f.svg",
+            "text_country": "Canada",
+            "client": "Claudia",
             "code": ""
           }
         }
       },
       "block_order": [
-        "result_99hr6W",
+        "result_cGxTjD",
         "result_TK6i6r",
         "result_jzwh9c",
         "result_Lxeh36",
-        "result_cGxTjD"
+        "result_99hr6W"
       ],
       "settings": {
         "classname": "mi_landing_result",
