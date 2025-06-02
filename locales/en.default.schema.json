@@ -701,6 +701,37 @@
         }        
       }
     },
+    "purchase-form-bundle": {
+      "name": "Purchase form bundle",
+      "settings": {
+        "form_name": "Form name"
+      },
+      "blocks": {
+        "preorder_box": {
+          "name": "Preorder box"
+        },
+        "line": {
+          "name": "Line",
+          "settings": {
+            "text": "Text",
+            "background": "Background"
+          }
+        },
+        "type": {
+          "name": "Type"
+        },
+        "product": {
+          "name": "Product",
+          "settings": {
+            "preselected": "Preselected",
+            "preorder_text": "Preorder text",
+            "preorder_date_soldout": "Preorder date soldout",
+            "preorder_date_reserved": "Preorder date reserved",
+            "preorder_percent": "Preorder percent"
+          }
+        }        
+      }
+    },
     "header": {
       "name": "Header",
       "settings": {},

@@ -1,0 +1,318 @@
+{% comment %} {% include 'assoc-array', section: section, __parent_title: 'type', __separator: '###' %} {% endcomment %}
+
+<link rel="stylesheet" href="{{ 'offer-pages.css' | asset_url }}">
+
+{%- for block in section.blocks -%}
+    {% case block.type %}
+        {% when 'line' %}
+            <div class="available_bar"{% if block.settings.background != blank %} style="background: {{ block.settings.background }};"{% endif %}>
+                <p>{{ block.settings.text }}</p>
+            </div>
+    {% endcase %}
+{% endfor %}
+
+{% capture preorder_box %}
+    {%- for block in section.blocks -%}
+        {% if block.type == 'preorder_box' %}
+            <div class="next_batch_bl next_batch_highlight mt-3 ctm_cls_next_batch_mi_lp hide preorder_box">
+                <div class="preorder_text">
+                    {% if block.settings.heading != blank %}
+                        <h5>{{ block.settings.heading }}</h5>
+                    {% endif %}
+                    
+                    {% if block.settings.text != blank %}
+                        {{ block.settings.text }}
+                    {% endif %}
+                </div>
+
+                {% if block.settings.first_option_text != blank %}
+                    <div class="batch_h batch_h_fade mt-3 mt-md-4">
+                        <div class="batch_h_month preorder_date_soldout">{{ block.settings.first_option_date }}</div>
+                        <div class="batch_h_info sold_out_h" style="--bgPercent:{{ block.settings.first_option_percent }}%;"><span>{{ block.settings.first_option_text }}</span></div>
+                    </div>
+                {% endif %}
+
+                {% if block.settings.second_option_text != blank %}
+                    <div class="batch_h my-2">
+                        <div class="batch_h_month fw-bold preorder_date_reserved">{{ block.settings.second_option_date }}</div>
+                        <div class="batch_h_info preorder_percent" style="--bgPercent:{{ block.settings.second_option_percent }}%;">{{ block.settings.second_option_text }}</div>
+                    </div>
+                {% endif %}
+
+                {% if block.settings.third_option_text != blank %}
+                    <div class="batch_h batch_h_fade">
+                        <div class="batch_h_month">{{ block.settings.third_option_date }}</div>
+                        <div class="batch_h_info" style="--bgPercent:{{ block.settings.third_option_percent }}%;"><span>{{ block.settings.third_option_text }}</span></div>
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
+    {%- endfor -%}        
+{% endcapture %}
+
+<!-- -- choose bundle offer -- -->
+<div class="choose_bundle-offer section {{ section.id }}" id="choose_bundle">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="section_header text-start d-md-none">
+                    {% if section.settings.heading != blank %}
+                        <h2 class="mb-0">{{ section.settings.heading }}</h2>
+                    {% endif %}
+                </div>
+                <div class="pe-md-4">
+                    {% assign buy_block_image = section.settings.image | img_url: 'master' %}
+
+                    {% if section.settings.product != blank %}
+                        {% assign product = all_products[section.settings.product] %}
+                    {% endif %}
+
+                    {% render 'pdm_before-after-patches-buy-block-carousel',image: buy_block_image, product: product %}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bundle_offer-content">
+                    <div class="section_header text-start d-md-block d-none">
+                        {% if section.settings.heading != blank %}
+                            <h2 class="mb-0">{{ section.settings.heading }}</h2>
+                        {% endif %}
+                    </div>
+                    {% render 'purchase-form-bundle-product' preorder_box: preorder_box %}
+
+                    <div id="{{ section.settings.form_name }}-body-{{ section.id }}"></div>
+
+                    <a href="javascript:void(0)" class="btn btn-atc submit_btn_down mt-md-2 mt-4 productButtonObject" data-ajax-cart-request-button>
+                        <span class="btn_value">Buy Now</span>
+                    </a>
+
+                    <div class="payment_method pb-0">
+                        <p>OR 4 monthly payments of <span class="pay_today"></span> with</p>
+                        <div class="pmt_img ps-2">
+                            <img src="https://qureskincaredns.com/new/assets/klarna.svg" alt="">
+                            <img src="https://qureskincaredns.com/new/assets/sezzle.svg" alt="">
+                            <img src="https://qureskincaredns.com/new/assets/afterpay.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -- choose bundle offer -- -->
+
+<script src="{{ '__app-purchase-form-bundle.js' | asset_url }}" data-form="{{ section.settings.form_name }}" data-section="{{ section.id }}" defer></script>
+
+{%- schema -%}
+{
+    "name":"t:sections.purchase-form-bundle.name",
+    "class":"purchase-form-bundle black_friday",
+    "settings":[
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "t:common.heading.label"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "t:common.image.label"
+        },
+        {
+            "type": "product",
+            "id": "product",
+            "label": "t:common.product.label"
+        },
+        {
+            "type": "text",
+            "id": "form_name",
+            "label": "t:sections.purchase-form-bundle.settings.form_name",
+            "default": "purchase-form-bundle"
+        }
+    ],
+    "blocks":[
+        {
+            "type": "line",
+            "name": "t:sections.purchase-form-bundle.blocks.line.name",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "text",
+                    "label": "t:sections.purchase-form-bundle.blocks.line.settings.text",
+                    "default": "SOLD OUT 10X - AVAILABLE UNTIL STOCK LASTS"
+                },
+                {
+                    "type": "color_background",
+                    "id": "background",
+                    "label": "t:sections.purchase-form-bundle.blocks.line.settings.background"
+                }
+            ]
+        },
+        {
+            "type": "preorder_box",
+            "name": "t:sections.purchase-form-bundle.blocks.preorder_box.name",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "t:common.heading.label"
+                },
+                {
+                    "type": "richtext",
+                    "id": "text",
+                    "label": "t:common.text.label"
+                },
+                {
+                    "type": "header",
+                    "content": "First option"
+                },
+                {
+                    "type": "text",
+                    "id": "first_option_date",
+                    "label": "t:common.date.label",
+                    "default": "October 15th"
+                },
+                {
+                    "type": "text",
+                    "id": "first_option_text",
+                    "label": "t:common.text.label",
+                    "default": "SOLD OUT"
+                },
+                {
+                    "type": "range",
+                    "id": "first_option_percent",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "label": "t:common.percent.label",
+                    "default": 100
+                },
+                {
+                    "type": "header",
+                    "content": "Second option"
+                },
+                {
+                    "type": "text",
+                    "id": "second_option_date",
+                    "label": "t:common.date.label",
+                    "default": "November 10th"
+                },
+                {
+                    "type": "text",
+                    "id": "second_option_text",
+                    "label": "t:common.text.label",
+                    "default": "81% Reserved"
+                },
+                {
+                    "type": "range",
+                    "id": "second_option_percent",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "label": "t:common.percent.label",
+                    "default": 81
+                },
+                {
+                    "type": "header",
+                    "content": "Third option"
+                },
+                {
+                    "type": "text",
+                    "id": "third_option_date",
+                    "label": "t:common.date.label",
+                    "default": "December 30th"
+                },
+                {
+                    "type": "text",
+                    "id": "third_option_text",
+                    "label": "t:common.text.label",
+                    "default": "In Production"
+                },
+                {
+                    "type": "range",
+                    "id": "third_option_percent",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "label": "t:common.percent.label",
+                    "default": 0
+                }
+            ]
+        },
+        {
+            "type": "product",
+            "name": "t:sections.purchase-form-bundle.blocks.product.name",
+            "limit": 3,
+            "settings": [
+                {
+                    "type": "product",
+                    "id": "product",
+                    "label": "t:common.product.label"
+                },   
+                {
+                    "type": "checkbox",
+                    "id": "preselected",
+                    "label": "t:sections.purchase-form-bundle.blocks.product.settings.preselected",
+                    "default": false
+                },             
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "t:common.heading.label"
+                },
+                {
+                    "type": "text",
+                    "id": "subheading",
+                    "label": "t:common.text.label"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "t:common.image.label"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "soldout",
+                    "label": "t:common.soldout.label",
+                    "default": false
+                },
+                {
+                    "type": "checkbox",
+                    "id": "preorder",
+                    "label": "t:common.preorder.label",
+                    "default": false
+                },
+                {
+                    "type": "richtext",
+                    "id": "preorder_text",
+                    "label": "t:sections.purchase-form-bundle.blocks.product.settings.preorder_text"
+                },
+                {
+                    "type": "text",
+                    "id": "preorder_date_soldout",
+                    "label": "t:sections.purchase-form-bundle.blocks.product.settings.preorder_date_soldout"
+                },
+                {
+                    "type": "text",
+                    "id": "preorder_date_reserved",
+                    "label": "t:sections.purchase-form-bundle.blocks.product.settings.preorder_date_reserved"
+                },
+                {
+                    "type": "text",
+                    "id": "preorder_percent",
+                    "label": "t:sections.purchase-form-bundle.blocks.product.settings.preorder_percent"
+                }
+            ]
+        }
+    ],
+    "presets":[
+        {
+            "name":"t:sections.purchase-form-bundle.name"
+        }
+    ]
+}
+{%- endschema -%}
