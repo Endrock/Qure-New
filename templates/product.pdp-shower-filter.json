@@ -27,6 +27,7 @@
         },
         "supply_9PTzcj": {
           "type": "supply",
+          "disabled": true,
           "settings": {
             "heading": "Next batch ships 10th June 2025:",
             "heading_mobile": "Next batch ships 10th June 2025:",
@@ -67,7 +68,7 @@
             "variant_id": 45909763522799,
             "main": false,
             "reserve": false,
-            "soldout": false
+            "soldout": true
           }
         },
         "variant_7nqQxD": {
