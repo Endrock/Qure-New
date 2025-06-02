@@ -19,6 +19,8 @@
         <div class="step_content" id="{{ section.id }}-{{ product_type_title }}">
             <div class="step_conten_blocks">
 
+                {% assign array_count = array.size %}
+
                 {%- for __id in array -%}
                     {% assign block = section.blocks | where: "id", __id | first %}
                     {% if block.type == 'product' %}
@@ -33,22 +35,17 @@
                             {% assign product_price = product.price | money_without_trailing_zeros %}
                             {% assign product_price_compare = product.compare_at_price | money_without_trailing_zeros %}
 
-                            {% if block.settings.heading contains '3 Month' %}
-                                {% assign product_type = 1 %}
+                            {% assign array_count = array_count |  minus: 1 %}
+                            {% assign product_type = array_count %}
+                            
+                            {% if product_price_compare == blank %}
+                                {% assign discount_percentage = blank %}
                             {% endif %}
 
-                            {% if block.settings.heading contains '2 Month' %}
-                                {% assign product_type = 2 %}
-                            {% endif %}
-
-                            {% if block.settings.heading contains '1 Month' %}
-                                {% assign product_type = 3 %}
-                            {% endif %}
-
-                            {% capture data-per %}Buy now {% if product_type == 1 or product_type == 2 %} & SAVE {{ discount_percentage }}%{% endif %}{% endcapture %}
+                            {% capture data-per %}Buy now {% if discount_percentage != blank %} & SAVE {{ discount_percentage }}%{% endif %}{% endcapture %}
 
                             {% if block.settings.preorder == true %}
-                                {% capture data-per %}Reserve now {% if product_type == 1 or product_type == 2 %} & SAVE {{ discount_percentage }}%{% endif %}{% endcapture %}
+                                {% capture data-per %}Reserve now {% if discount_percentage != blank %} & SAVE {{ discount_percentage }}%{% endif %}{% endcapture %}
                             {% endif %}
 
                             {% if block.settings.soldout == true %}
@@ -63,7 +60,7 @@
                                 data-preorder="{{ block.settings.preorder }}" 
                                 data-type="{{ product_type }}"
                             >
-                                {% if product_type == 1 %}
+                                {% if product_type == 3 %}
                                     <div class="plan_choosed">
                                         <span>OVER 5,000 PEOPLE CHOSE THIS SUPPLY</span>
                                     </div>                                    
@@ -75,22 +72,22 @@
                                         <div class="plan_hdr">
                                             <h3>{{ block.settings.heading }}</h3>
 
-                                            {% if product_type == 1 or product_type == 2 %}
+                                            {% if discount_percentage != blank %}
                                                 <span class="saved_price">SAVE {{ discount_percentage }}%</span>
                                             {% endif %}
                                         </div>
                                         <div class="plan_des">{{ block.settings.subheading }}</div>
                                     </div>
 
-                                    {% if product_type == 3 %}
-                                        <div class="price">
-                                            <div class="plan_prc sale_price">{{ product_price }}</div>
-                                        </div>
-                                    {% else %}
+                                    {% if product_price_compare != blank %}
                                         <div class="price">
                                             <div class="plan_prc regular_price">{{ product_price_compare }}</div>
                                             <div class="plan_prc sale_price">{{ product_price }}</div>
-                                        </div>                                        
+                                        </div> 
+                                    {% else %}
+                                        <div class="price">
+                                            <div class="plan_prc sale_price">{{ product_price }}</div>
+                                        </div>                                       
                                     {% endif %}
                                 </label>
                             </div>
