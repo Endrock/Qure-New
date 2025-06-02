@@ -28,6 +28,7 @@
         },
         "liquid_EH7JLe": {
           "type": "liquid",
+          "disabled": false,
           "settings": {
             "code": "{% render 'serums-offer-months-form' with section_id: section.id, section: section, product: product %}"
           }
