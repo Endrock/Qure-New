@@ -144,7 +144,6 @@
         ],
         "settings": {
           "upsell_content": [
-            "exclusive-memorial-day-bundle",
             "fade-firm-bundle-essentials",
             "line-refine-bundle-advanced",
             "line-refine-bundle-pro-pre-order",
@@ -152,7 +151,8 @@
             "breakout-control-pro",
             "breakout-control-advanced",
             "line-refine-bundle-essentials-pre-order",
-            "breakout-control-essentials"
+            "breakout-control-essentials",
+            "exclusive-memorial-day-bundle"
           ]
         }
       },
