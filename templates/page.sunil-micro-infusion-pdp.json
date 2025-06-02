@@ -112,21 +112,6 @@
             "preselected": true
           }
         },
-        "product_EKAAzA": {
-          "type": "product",
-          "settings": {
-            "product": "micro-infusion-3-month-bundle-6x-beta-glucan-serum",
-            "preselected": false,
-            "heading": "3 Month Supply",
-            "subheading": "(6 Micro-infusion Treatments)",
-            "soldout": false,
-            "preorder": false,
-            "preorder_text": "<p>testing </p>",
-            "preorder_date_soldout": "Testing",
-            "preorder_date_reserved": "???",
-            "preorder_percent": "50"
-          }
-        },
         "product_nyJ9n7": {
           "type": "product",
           "settings": {
@@ -140,6 +125,21 @@
             "preorder_date_soldout": "",
             "preorder_date_reserved": "",
             "preorder_percent": ""
+          }
+        },
+        "product_EKAAzA": {
+          "type": "product",
+          "settings": {
+            "product": "micro-infusion-3-month-bundle-6x-beta-glucan-serum",
+            "preselected": false,
+            "heading": "3 Month Supply",
+            "subheading": "(6 Micro-infusion Treatments)",
+            "soldout": false,
+            "preorder": false,
+            "preorder_text": "<p>testing </p>",
+            "preorder_date_soldout": "Testing",
+            "preorder_date_reserved": "???",
+            "preorder_percent": "50"
           }
         },
         "product_eiY89h": {
@@ -227,8 +227,8 @@
         "product_RBCPe8",
         "type_aJwQ9q",
         "product_type_VLXcAn",
-        "product_EKAAzA",
         "product_nyJ9n7",
+        "product_EKAAzA",
         "product_eiY89h",
         "type_yDwWmt",
         "product_type_YrPQrV",
