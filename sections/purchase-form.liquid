@@ -46,48 +46,48 @@
                     </div>
                     <div class="tmtFtrs d-none d-md-flex justify-content-between mb-4 mt-5 mw-455">
                         {% if section.settings.icon_image1 != blank %}
-                            <div class="tmtFtrs_block text-center"> 
+                            <div class="tmtFtrs_block text-center">
                                 <div class="tmtFtr_icon">
                                     <img src="{{ section.settings.icon_image1 | img_url: 'master' }}" alt="">
                                 </div>
                                 {% if section.settings.icon_text1 != blank %}
                                     <div class="tmtFtr_des">
                                         {{ section.settings.icon_text1 }}
-                                    </div>                    
+                                    </div>
                                 {% endif %}
-                            </div>             
+                            </div>
                         {% endif %}
 
                         {% if section.settings.icon_image2 != blank %}
-                            <div class="tmtFtrs_block text-center"> 
+                            <div class="tmtFtrs_block text-center">
                                 <div class="tmtFtr_icon">
                                     <img src="{{ section.settings.icon_image2 | img_url: 'master' }}" alt="">
                                 </div>
                                 {% if section.settings.icon_text2 != blank %}
                                     <div class="tmtFtr_des">
                                         {{ section.settings.icon_text2 }}
-                                    </div>                    
+                                    </div>
                                 {% endif %}
-                            </div>             
+                            </div>
                         {% endif %}
 
                         {% if section.settings.icon_image3 != blank %}
-                            <div class="tmtFtrs_block text-center"> 
+                            <div class="tmtFtrs_block text-center">
                                 <div class="tmtFtr_icon">
                                     <img src="{{ section.settings.icon_image3 | img_url: 'master' }}" alt="">
                                 </div>
                                 {% if section.settings.icon_text3 != blank %}
                                     <div class="tmtFtr_des">
                                         {{ section.settings.icon_text3 }}
-                                    </div>                    
+                                    </div>
                                 {% endif %}
-                            </div>             
+                            </div>
                         {% endif %}
                     </div>
                     {% if section.settings.bottom_text != blank %}
                         <div class="qst_box text-center d-none d-md-block">
                             <img src="https://qureskincaredns.com/new/assets/question_mark.svg" alt="question_mark" class="me-2">{{ section.settings.bottom_text | replace: '<p>', '' | replace: '</p>', '' }}
-                        </div>        
+                        </div>
                     {% endif %}
                 </div>
             </div>
@@ -114,7 +114,7 @@
                                     {% if section.settings.icon_text1 != blank %}
                                         <p>{{ section.settings.icon_text1 }}</p>
                                     {% endif %}
-                                </div> 
+                                </div>
                             {% endif %}
 
                             {% if section.settings.icon_image2 != blank %}
@@ -123,7 +123,7 @@
                                     {% if section.settings.icon_text2 != blank %}
                                         <p>{{ section.settings.icon_text2 }}</p>
                                     {% endif %}
-                                </div> 
+                                </div>
                             {% endif %}
 
                             {% if section.settings.icon_image3 != blank %}
@@ -132,7 +132,7 @@
                                     {% if section.settings.icon_text3 != blank %}
                                         <p>{{ section.settings.icon_text3 }}</p>
                                     {% endif %}
-                                </div> 
+                                </div>
                             {% endif %}
                         </div>
                         {% if section.settings.bottom_text != blank %}
@@ -140,10 +140,10 @@
                                 <p class="ask-ques">
                                     <img src="https://qureskincaredns.com/new/assets/question_mark.svg" alt="">{{ section.settings.bottom_text | replace: '<p>', '' | replace: '</p>', '' }}
                                 </p>
-                            </div>            
+                            </div>
                         {% endif %}
                     </div>
-                </div> 
+                </div>
             </div>
         </div>
     </div>
@@ -151,7 +151,6 @@
 <!-- new treatment section end  -->
 
 <script src="{{ '__app-purchase-form.js' | asset_url }}" data-form="{{ section.settings.form_name }}" data-section="{{ section.id }}" defer></script>
-
 {%- schema -%}
 {
     "name":"t:sections.purchase-form.name",
@@ -383,13 +382,13 @@
                     "type": "product",
                     "id": "product",
                     "label": "t:common.product.label"
-                },   
+                },
                 {
                     "type": "checkbox",
                     "id": "preselected",
                     "label": "t:sections.purchase-form.blocks.product.settings.preselected",
                     "default": false
-                },             
+                },
                 {
                     "type": "text",
                     "id": "heading",
@@ -448,6 +447,32 @@
                     "type": "richtext",
                     "id": "included_text",
                     "label": "t:sections.purchase-form.blocks.product.settings.included_text"
+                },
+                {
+                    "type": "header",
+                    "content": "t:sections.purchase-form.blocks.product.settings.header_ab"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "free_patches",
+                    "label": "t:sections.purchase-form.blocks.product.settings.free_patches",
+                    "default": false
+                },
+                {
+                    "type": "image_picker",
+                    "id": "free_patches_image",
+                    "label": "t:sections.purchase-form.blocks.product.settings.free_patches_image"
+                },
+                {
+                    "type": "product",
+                    "id": "free_patches_product",
+                    "label": "t:sections.purchase-form.blocks.product.settings.free_patches_product",
+                },
+                {
+                    "type": "inline_richtext",
+                    "id": "free_patches_text",
+                    "label": "t:sections.purchase-form.blocks.product.settings.free_patches_text",
+                    "default": "<strong>Get a Free</strong> Pair of Micro-Infusion Patches"
                 }
             ]
         },
