@@ -25,7 +25,7 @@
                     <div class="step_content">
                         <div class="step_conten_blocks">
 
-                            {% assign product = all_products['micro-infusion-targeted-patches-3-month-supply-24-pairs'] %}
+                            {% assign product = all_products['micro-infusion-targeted-patches-3-month-supply-24-pairs-1'] %}
                             {% assign product_price_divided = product.price | divided_by: 4 %}
                             {% assign product_variant_id = product.variants.first.id %}
                             {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
@@ -54,7 +54,7 @@
                                 </label>
                             </a>
 
-                            {% assign product = all_products['micro-infusion-targeted-patches-2-month-supply-16-pairs'] %}
+                            {% assign product = all_products['micro-infusion-targeted-patches-2-month-supply-16-pairs-1'] %}
                             {% assign product_price_divided = product.price | divided_by: 4 %}
                             {% assign product_variant_id = product.variants.first.id %}
                             {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
@@ -99,7 +99,7 @@
                                 </label>
                             </a>
 
-                            {% assign product = all_products['micro-infusion-targeted-patches-3-month-supply-24-pairs'] %}
+                            {% assign product = all_products['micro-infusion-targeted-patches-3-month-supply-24-pairs-1'] %}
                             {% assign product_price_divided = product.price | divided_by: 4 %}
                             {% assign product_variant_id = product.variants.first.id %}
                             {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
@@ -146,11 +146,11 @@
 </div>
 <!-- -- choose bundle offer -- -->
 
-<script src="https://qureskincaredns.com/new/assets/mi-patches-pdp.js"></script>
-<script src="https://fast.wistia.com/embed/medias/3ahwzg8wjz.jsonp" async></script>
-<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+{% comment %} <script src="https://qureskincaredns.com/new/assets/mi-patches-pdp.js"></script> {% endcomment %}
+{% comment %} <script src="https://fast.wistia.com/embed/medias/3ahwzg8wjz.jsonp" async></script> {% endcomment %}
+{% comment %} <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script> {% endcomment %}
 
-<script>
+{% comment %} <script>
     document.addEventListener('DOMContentLoaded', function() {
         var swiper_press = new Swiper(".app_press_sl_img", {
             spaceBetween: 20,
@@ -213,4 +213,4 @@
             },
         });
     });
-</script>
+</script> {% endcomment %}
