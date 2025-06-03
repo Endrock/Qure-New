@@ -10,26 +10,11 @@
 {
   "sections": {
     "main": {
-      "type": "page",
-      "custom_css": [
-        ".subscriptions_header {display: none;}"
-      ],
-      "settings": {}
-    },
-    "17115385750c73305f": {
-      "type": "apps",
-      "disabled": true,
-      "settings": {}
-    },
-    "1723811635f4799cbc": {
-      "type": "apps",
-      "disabled": true,
+      "type": "temp-page-qure-filters-offer",
       "settings": {}
     }
   },
   "order": [
-    "main",
-    "17115385750c73305f",
-    "1723811635f4799cbc"
+    "main"
   ]
 }
