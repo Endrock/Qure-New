@@ -26,7 +26,7 @@
                         <div class="step_content">
                             <div class="step_conten_blocks">
 
-                                {% assign product = all_products['micro-infusion-targeted-patches-3-month-supply-24-pairs'] %}
+                                {% assign product = all_products['micro-infusion-targeted-patches-3-month-supply-24-pairs-1'] %}
                                 {% assign product_price_divided = product.price | divided_by: 4 %}
                                 {% assign product_variant_id = product.variants.first.id %}
                                 {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
@@ -72,7 +72,7 @@
                                     </label>
                                 </div>
 
-                                {% assign product = all_products['micro-infusion-targeted-patches-2-month-supply-16-pairs'] %}
+                                {% assign product = all_products['micro-infusion-targeted-patches-2-month-supply-16-pairs-1'] %}
                                 {% assign product_price_divided = product.price | divided_by: 4 %}
                                 {% assign product_variant_id = product.variants.first.id %}
                                 {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}
@@ -146,7 +146,7 @@
         </div>
     </div>
 
-    {% assign product = all_products['micro-infusion-targeted-patches-3-month-supply-24-pairs'] %}
+    {% assign product = all_products['micro-infusion-targeted-patches-3-month-supply-24-pairs-1'] %}
     {% assign product_price_divided = product.price | divided_by: 4 %}
     {% assign product_variant_id = product.variants.first.id %}
     {% assign discount_percentage = product.price | times: 1.0 | divided_by: product.compare_at_price | minus: 1 | abs | times: 100 | ceil %}

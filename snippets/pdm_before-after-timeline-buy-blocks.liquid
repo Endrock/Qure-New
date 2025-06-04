@@ -1,0 +1,72 @@
+{% comment %}
+  This code snippet is used to display a before and after testimonial card
+  with product images and customer information. It includes two product images
+  with overlays indicating "BEFORE" and "AFTER 6 MONTHS", along with customer
+  details such as name, location, and verification status.
+  accept:
+  data: object
+  - data: The data object containing information for the testimonial card.
+  Usage:
+  {% render 'pdm_before-after-timeline-buy-blocks', data: block_timeline_ba %}
+{% endcomment %}
+
+{% liquid
+  assign block_settings_data = data.settings
+  assign before_image = block_settings_data.ba_image_1
+  assign before_text = block_settings_data.text_heading_1
+  assign after_image = block_settings_data.ba_image_2
+  assign after_text = block_settings_data.text_heading_2
+  assign show_verify_badge = block_settings_data.show_verify_badge
+  assign image_country_badge = block_settings_data.image_country_badge
+  assign text_badge = block_settings_data.text_badge
+  assign image_verify_badge = block_settings_data.image_verify_badge
+  assign text_verified_badge = block_settings_data.text_verified_badge
+%}
+<article class="testimonial-card">
+  {% if before_image != blank and after_image != blank %}
+    <section class="product-images">
+      <figure class="product-image-container">
+        <div class="image-overlay">
+          {% if before_text != blank %}
+            <span class="text">{{- before_text -}}</span>
+          {% endif %}
+        </div>
+        {{ before_image | image_url: width: 700 | image_tag: alt: 'before testimonial card' }}
+      </figure>
+      <figure class="product-image-container">
+        <div class="image-overlay">
+          {% if after_text != blank %}
+            <span class="text">{{- after_text -}}</span>
+          {% endif %}
+        </div>
+        {{ after_image | image_url: width: 700 | image_tag: alt: 'after testimonial card' }}
+      </figure>
+    </section>
+  {% endif %}
+  <footer class="customer-info">
+    <div class="customer-details">
+      <div class="customer-location">
+        {% if image_country_badge != blank %}
+          <span class="icon">
+            {{ image_country_badge | image_url: width: 64 | image_tag: alt: 'customer badge image' }}
+          </span>
+        {% endif %}
+        {% if text_badge != blank %}
+          <span class="customer-name">{{- text_badge -}}</span>
+        {% endif %}
+      </div>
+      {% if show_verify_badge %}
+        <div class="verification-badge">
+          {% if image_verify_badge != blank %}
+            <span class="icon">
+              {{ image_verify_badge | image_url: width: 64 | image_tag: alt: 'verified badge image' }}
+            </span>
+          {% endif %}
+          {% if text_verified_badge != blank %}
+            <span class="verification-text">{{- text_verified_badge -}}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </footer>
+</article>

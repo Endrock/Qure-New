@@ -648,7 +648,7 @@
           "settings": {
             "preselected": "Preselected"
           }
-        }      
+        }
       }
     },
     "purchase-form": {
@@ -687,7 +687,12 @@
               "preorder_text": "Preorder text",
               "preorder_date_soldout": "Preorder date soldout",
               "preorder_date_reserved": "Preorder date reserved",
-              "preorder_percent": "Preorder percent"
+              "preorder_percent": "Preorder percent",
+              "header_ab": "ABTEST setting for Free patches",
+              "free_patches": "Enable free patches",
+              "free_patches_image": "Free patches image",
+              "free_patches_product": "Free patches product (Bundle product)",
+              "free_patches_text": "Free patches text",
             }
         },
         "product_type": {
@@ -698,6 +703,55 @@
         },
         "payment_type": {
           "name": "Payment type"
+        },
+        "before_after_timeline": {
+          "name": "Before after timeline",
+          "settings": {
+            "image_before_after": {
+              "label_after": "Image after",
+              "label_before": "Image before",
+              "text_heading": "Heading text"
+            },
+            "verified_badge": {
+              "label": "Verified badge",
+              "show_verified_badge": "Show verified badge",
+              "image_country_badge": "Image country badge",
+              "text_badge": "Text badge",
+              "image_verified_badge": "Image verified badge",
+              "text_verified_badge": "Text verified badge"
+            }
+          }
+        }
+      }
+    },
+    "purchase-form-bundle": {
+      "name": "Purchase form bundle",
+      "settings": {
+        "form_name": "Form name"
+      },
+      "blocks": {
+        "preorder_box": {
+          "name": "Preorder box"
+        },
+        "line": {
+          "name": "Line",
+          "settings": {
+            "text": "Text",
+            "background": "Background"
+          }
+        },
+        "type": {
+          "name": "Type"
+        },
+        "product": {
+          "name": "Product",
+          "settings": {
+            "preselected": "Preselected",
+            "preorder_text": "Preorder text",
+            "preorder_date_soldout": "Preorder date soldout",
+            "preorder_date_reserved": "Preorder date reserved",
+            "preorder_percent": "Preorder percent"
+          }
         }        
       }
     },

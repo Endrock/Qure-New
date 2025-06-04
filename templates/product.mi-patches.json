@@ -28,6 +28,7 @@
         },
         "liquid_EH7JLe": {
           "type": "liquid",
+          "disabled": false,
           "settings": {
             "code": "{% render 'serums-offer-months-form' with section_id: section.id, section: section, product: product %}"
           }
@@ -414,11 +415,107 @@
         "text_reviewed": "Reviewed in"
       }
     },
-    "liquid_EH7JLe2": {
-      "type": "liquid",
+    "purchase-form-bundle": {
+      "type": "purchase-form-bundle",
+      "blocks": {
+        "line_8cPUxh": {
+          "type": "line",
+          "settings": {
+            "text": "SOLD OUT 10X - AVAILABLE UNTIL STOCK LASTS",
+            "background": ""
+          }
+        },
+        "preorder_box_3xp9iR": {
+          "type": "preorder_box",
+          "settings": {
+            "heading": "Next batch ships early May 2025:",
+            "text": "<p>Due to high demand, 1-month Micro-Infusion supply is sold out. Order now and secure yours from the next shipment.</p>",
+            "first_option_date": "April 14th",
+            "first_option_text": "SOLD OUT",
+            "first_option_percent": 100,
+            "second_option_date": "May 6th",
+            "second_option_text": "54% Reserved",
+            "second_option_percent": 54,
+            "third_option_date": "June 2025",
+            "third_option_text": "",
+            "third_option_percent": 0
+          }
+        },
+        "product_DBd4ef": {
+          "type": "product",
+          "settings": {
+            "product": "micro-infusion-targeted-patches-3-month-supply-24-pairs-1",
+            "preselected": false,
+            "heading": "3 Month Supply",
+            "subheading": "3 Boxes / 24 patch pairs",
+            "image": "shopify://shop_images/offer_patches-11.webp",
+            "soldout": false,
+            "preorder": false,
+            "preorder_text": "",
+            "preorder_date_soldout": "",
+            "preorder_date_reserved": "",
+            "preorder_percent": ""
+          }
+        },
+        "product_7dL4ci": {
+          "type": "product",
+          "settings": {
+            "product": "micro-infusion-targeted-patches-2-month-supply-16-pairs-1",
+            "preselected": false,
+            "heading": "2 Month Supply",
+            "subheading": "2 Boxes / 16 patch pairs",
+            "image": "shopify://shop_images/offer_patches-22.webp",
+            "soldout": false,
+            "preorder": false,
+            "preorder_text": "",
+            "preorder_date_soldout": "",
+            "preorder_date_reserved": "",
+            "preorder_percent": ""
+          }
+        },
+        "product_Xf8A6C": {
+          "type": "product",
+          "settings": {
+            "product": "micro-infusion-targeted-patches",
+            "preselected": false,
+            "heading": "1 Month Supply",
+            "subheading": "1 Box / 8 patch pairs",
+            "image": "shopify://shop_images/offer_patches-33.webp",
+            "soldout": false,
+            "preorder": false,
+            "preorder_text": "<h5>Next batch ships early July 2025:</h5><p>Due to high demand, 1-month Micro-Infusion supply is sold out. Order now and secure yours from the next shipment.</p>",
+            "preorder_date_soldout": "22 May",
+            "preorder_date_reserved": "10 July",
+            "preorder_percent": "65% Reserved"
+          }
+        }
+      },
+      "block_order": [
+        "line_8cPUxh",
+        "preorder_box_3xp9iR",
+        "payment_type_3zQTmH",
+        "payment_type_B6Pzbh",
+        "type_hHPdgJ",
+        "product_type_QKQhNr",
+        "product_DBd4ef",
+        "product_7dL4ci",
+        "product_Xf8A6C",
+        "type_aJwQ9q",
+        "product_type_VLXcAn",
+        "product_EKAAzA",
+        "product_nyJ9n7",
+        "product_eiY89h",
+        "type_yDwWmt",
+        "product_type_YrPQrV",
+        "product_gbPf3J",
+        "product_NEgEkN",
+        "product_RBCPe8"
+      ],
       "settings": {
-        "code": "{% render 'serums-offer-months-image-form' with section_id: section.id %}",
-        "popup_micro_infusion_enabled": true
+        "form_name": "purchase-form-bundle",
+        "heading": "Choose Your Bundle",
+        "image": "shopify://shop_images/offer_patches-11.webp",
+        "product": "micro-infusion-targeted-patches"
       }
     },
     "icons_list_hrRbkg": {
@@ -901,7 +998,7 @@
     "confidence_slider_ir7cWU",
     "product_science_8BYxLK",
     "results_KkTxAy",
-    "liquid_EH7JLe2",
+    "purchase-form-bundle",
     "icons_list_hrRbkg",
     "videos_list_CfJjwV",
     "two_column_box_bkFG8d",

@@ -16,7 +16,7 @@
           "type": "announcement",
           "settings": {
             "heading": "Limited Time Only:",
-            "timer": "2025-05-20T23:59:59",
+            "timer": "2025-06-06T23:59:59",
             "timer_next": 7
           }
         },
@@ -61,7 +61,7 @@
         "navigation_link_rmYfWw"
       ],
       "settings": {
-        "button_label": "SAVE UP TO 72%",
+        "button_label": "SAVE UP TO 55%",
         "button_url": "#bf-bundles"
       }
     },
@@ -80,13 +80,14 @@
         "link_Xz3LeQ": {
           "type": "link",
           "settings": {
-            "link_label": "Shop & SAVE UP TO 72%",
-            "link_label_mobile": "Shop & SAVE UP TO 72%",
+            "link_label": "Shop & SAVE UP TO 55%",
+            "link_label_mobile": "Shop & SAVE UP TO 55%",
             "link_url": "#bf-bundles"
           }
         },
         "product_XP469M": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "heading": "Exclusive Memorial Day Bundle",
             "discount": 72,
@@ -237,7 +238,7 @@
       ],
       "settings": {
         "seo_heading": "",
-        "heading": "Save Up to 72% on \\n Certified Skincare Solutions",
+        "heading": "Save Up to 55% on \\n Certified Skincare Solutions",
         "text": "<p>Backed by the most respected peer-reviewed <strong>Dermatologist Journals </strong>and <strong>scientific studies </strong>that prove; Qure’s skincare <strong>works.</strong></p>"
       }
     },
@@ -554,10 +555,12 @@
         },
         "bundle_jeyfm3": {
           "type": "bundle",
+          "disabled": true,
           "settings": {}
         },
         "product_AXXtjA": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "memorial-day-promo-2025",
             "percent": 30,
@@ -567,6 +570,7 @@
             "recommended_text": "",
             "is_top_rated": false,
             "is_preorder": false,
+            "is_soldout": false,
             "preorder_text": "",
             "classname": "",
             "code": ""
@@ -574,6 +578,7 @@
         },
         "include_7Yq3PY": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Micro-Infusion 1 Month Supply (For Wrinkles + For Dark Spots)",
             "is_limited": false,
@@ -588,6 +593,7 @@
         },
         "include_FxdKqc": {
           "type": "include",
+          "disabled": true,
           "settings": {
             "heading": "Micro-Infusion 4 Month Supply (For Wrinkles)",
             "is_limited": false,
@@ -602,6 +608,7 @@
         },
         "how_to_use_tLw7mt": {
           "type": "how-to-use",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_mi_sm.svg",
             "text": "<h5>Micro-Infusion 5 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Use the 3 month refills after 2 month bundle.</li></ul>"
@@ -623,6 +630,7 @@
             "recommended_text": "",
             "is_top_rated": false,
             "is_preorder": true,
+            "is_soldout": false,
             "preorder_text": "SHIPS ON APRIL 30TH",
             "classname": "",
             "code": ""
@@ -681,6 +689,7 @@
             "recommended_text": "",
             "is_top_rated": false,
             "is_preorder": false,
+            "is_soldout": false,
             "preorder_text": "SHIPS END OF APRIL",
             "classname": "",
             "code": ""
@@ -765,6 +774,7 @@
             "recommended_image": "shopify://shop_images/cl_shah.webp",
             "is_top_rated": false,
             "is_preorder": false,
+            "is_soldout": false,
             "preorder_text": "",
             "classname": "",
             "code": ""
@@ -827,6 +837,7 @@
             "recommended_text": "",
             "is_top_rated": false,
             "is_preorder": false,
+            "is_soldout": false,
             "preorder_text": "SHIPS END OF APRIL",
             "classname": "",
             "code": ""
@@ -964,6 +975,7 @@
             "recommended_text": "",
             "is_top_rated": false,
             "is_preorder": false,
+            "is_soldout": false,
             "preorder_text": "",
             "classname": "",
             "code": ""
@@ -1054,6 +1066,7 @@
             "recommended_image": "shopify://shop_images/advisor_4.webp",
             "is_top_rated": true,
             "is_preorder": false,
+            "is_soldout": false,
             "preorder_text": "",
             "classname": "",
             "code": ""
@@ -1116,6 +1129,7 @@
             "recommended_text": "",
             "is_top_rated": false,
             "is_preorder": false,
+            "is_soldout": false,
             "preorder_text": "",
             "classname": "",
             "code": ""
@@ -1181,6 +1195,7 @@
             "recommended_image": "shopify://shop_images/advisor_3.webp",
             "is_top_rated": false,
             "is_preorder": false,
+            "is_soldout": false,
             "preorder_text": "",
             "classname": "",
             "code": ""
@@ -1263,6 +1278,7 @@
             "recommended_text": "",
             "is_top_rated": false,
             "is_preorder": false,
+            "is_soldout": false,
             "preorder_text": "",
             "classname": "",
             "code": ""
@@ -1553,6 +1569,7 @@
             "recommended_text": "",
             "is_top_rated": false,
             "is_preorder": false,
+            "is_soldout": false,
             "preorder_text": "",
             "classname": "",
             "code": ""

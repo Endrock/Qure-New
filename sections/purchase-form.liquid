@@ -11,10 +11,14 @@
     {% endcase %}
 {% endfor %}
 
+{% assign block_timeline_ba = section.blocks | where: 'type', 'before_after_timeline' | first %}
+{% if block_timeline_ba != blank %}
+  {{'_pdm-ba-timeline-buy-blocks.css' | asset_url | stylesheet_tag }}
+{% endif %}
 <!-- new treatment section  -->
 <div class="section productSubscription choose_serum new_updated_treatment_outer {{ section.id }}" id="productSubscription">
     <div class="container">
-        <div class="row">
+        <div class="row {% if block_timeline_ba != blank %} pdm-ba-timeline {% endif %}">
             <div class="col-md-6">
                 <div class="qure__treatments">
                     <div class="text-start order-2 order-md-1">
@@ -40,58 +44,70 @@
                                 {% endif %}
                             </div>
                         </div>
-                        {% if section.settings.image != blank %}
+                        {% if block_timeline_ba != blank %}
+                          {% render 'pdm_before-after-timeline-buy-blocks', data: block_timeline_ba %}
+                          {% if section.settings.image != blank %}
+                            <div class="d-block d-md-none">
+                              <img src="{{ section.settings.image | img_url: 'master' }}" class="img-fluid" alt="choosen_image" id="choosen_image" />
+                            </div>
+                          {% endif %}
+                        {% elsif section.settings.image != blank %}
                             <img src="{{ section.settings.image | img_url: 'master' }}" class="img-fluid" alt="choosen_image" id="choosen_image" />
                         {% endif %}
+
                     </div>
-                    <div class="tmtFtrs d-none d-md-flex justify-content-between mb-4 mt-5 mw-455">
+                    <div class="tmtFtrs d-none d-md-flex justify-content-between mb-4 mt-5 mw-455 value-props-desktop">
                         {% if section.settings.icon_image1 != blank %}
-                            <div class="tmtFtrs_block text-center"> 
+                            <div class="tmtFtrs_block text-center">
                                 <div class="tmtFtr_icon">
                                     <img src="{{ section.settings.icon_image1 | img_url: 'master' }}" alt="">
                                 </div>
                                 {% if section.settings.icon_text1 != blank %}
                                     <div class="tmtFtr_des">
                                         {{ section.settings.icon_text1 }}
-                                    </div>                    
+                                    </div>
                                 {% endif %}
-                            </div>             
+                            </div>
                         {% endif %}
 
-                        {% if section.settings.icon_image2 != blank %}
-                            <div class="tmtFtrs_block text-center"> 
-                                <div class="tmtFtr_icon">
-                                    <img src="{{ section.settings.icon_image2 | img_url: 'master' }}" alt="">
-                                </div>
-                                {% if section.settings.icon_text2 != blank %}
-                                    <div class="tmtFtr_des">
-                                        {{ section.settings.icon_text2 }}
-                                    </div>                    
-                                {% endif %}
-                            </div>             
+                        {% if block_timeline_ba != blank and section.settings.image != blank %}
+                          <img src="{{ section.settings.image | img_url: 'master' }}" class="img-fluid pdm-ba-timeline__product-choosen-desktop" alt="choosen_image" id="choosen_image" />
+                        {% else %}
+                          {% if section.settings.icon_image2 != blank %}
+                            <div class="tmtFtrs_block text-center">
+                              <div class="tmtFtr_icon">
+                                <img src="{{ section.settings.icon_image2 | img_url: 'master' }}" alt="">
+                              </div>
+                              {% if section.settings.icon_text2 != blank %}
+                              <div class="tmtFtr_des">
+                                {{ section.settings.icon_text2 }}
+                              </div>
+                              {% endif %}
+                            </div>
+                          {% endif %}
                         {% endif %}
 
                         {% if section.settings.icon_image3 != blank %}
-                            <div class="tmtFtrs_block text-center"> 
+                            <div class="tmtFtrs_block text-center">
                                 <div class="tmtFtr_icon">
                                     <img src="{{ section.settings.icon_image3 | img_url: 'master' }}" alt="">
                                 </div>
                                 {% if section.settings.icon_text3 != blank %}
                                     <div class="tmtFtr_des">
                                         {{ section.settings.icon_text3 }}
-                                    </div>                    
+                                    </div>
                                 {% endif %}
-                            </div>             
+                            </div>
                         {% endif %}
                     </div>
                     {% if section.settings.bottom_text != blank %}
                         <div class="qst_box text-center d-none d-md-block">
                             <img src="https://qureskincaredns.com/new/assets/question_mark.svg" alt="question_mark" class="me-2">{{ section.settings.bottom_text | replace: '<p>', '' | replace: '</p>', '' }}
-                        </div>        
+                        </div>
                     {% endif %}
                 </div>
             </div>
-            <div class="col-md-6 p-0 pt-md-5">
+            <div class="col-md-6 p-0 {% unless block_timeline_ba != blank %} pt-md-5 {% endunless %}">
                 <div class="supply-detail offer_active">
                     {% render 'purchase-form-types-section' section: section, __idsArray1: __idsArray1, __idsArray2: __idsArray2, __idsArray3: __idsArray3 %}
                     {% render 'purchase-form-products-section' section: section, __idsArray1: __idsArray1, __idsArray2: __idsArray2, __idsArray3: __idsArray3 %}
@@ -114,7 +130,7 @@
                                     {% if section.settings.icon_text1 != blank %}
                                         <p>{{ section.settings.icon_text1 }}</p>
                                     {% endif %}
-                                </div> 
+                                </div>
                             {% endif %}
 
                             {% if section.settings.icon_image2 != blank %}
@@ -123,7 +139,7 @@
                                     {% if section.settings.icon_text2 != blank %}
                                         <p>{{ section.settings.icon_text2 }}</p>
                                     {% endif %}
-                                </div> 
+                                </div>
                             {% endif %}
 
                             {% if section.settings.icon_image3 != blank %}
@@ -132,7 +148,7 @@
                                     {% if section.settings.icon_text3 != blank %}
                                         <p>{{ section.settings.icon_text3 }}</p>
                                     {% endif %}
-                                </div> 
+                                </div>
                             {% endif %}
                         </div>
                         {% if section.settings.bottom_text != blank %}
@@ -140,10 +156,24 @@
                                 <p class="ask-ques">
                                     <img src="https://qureskincaredns.com/new/assets/question_mark.svg" alt="">{{ section.settings.bottom_text | replace: '<p>', '' | replace: '</p>', '' }}
                                 </p>
-                            </div>            
+                            </div>
                         {% endif %}
                     </div>
-                </div> 
+
+                    {% if block_timeline_ba != blank and section.settings.icon_image2 != blank %}
+                      <div class="d-none d-md-flex mt-2 text-center pdm-ba-timeline__bottom-value-prop">
+                        <div class="tmtFtr_icon">
+                          <img src="{{ section.settings.icon_image2 | img_url: 'master' }}" alt="">
+                        </div>
+                        {% if section.settings.icon_text2 != blank %}
+                        <div class="tmtFtr_des">
+                          {{ section.settings.icon_text2 }}
+                        </div>
+                        {% endif %}
+                      </div>
+                    {% endif %}
+
+                </div>
             </div>
         </div>
     </div>
@@ -151,34 +181,11 @@
 <!-- new treatment section end  -->
 
 <script src="{{ '__app-purchase-form.js' | asset_url }}" data-form="{{ section.settings.form_name }}" data-section="{{ section.id }}" defer></script>
-
 {%- schema -%}
 {
     "name":"t:sections.purchase-form.name",
     "class":"purchase-form mi_landing mi_lp mi_lp_v2",
     "settings":[
-        {
-            "type": "select",
-            "id": "form_type",
-            "label": "t:sections.purchase-form.settings.form_type.name",
-            "options": [
-                {
-                    "value": "6_months",
-                    "label": "t:sections.purchase-form.settings.form_type.6_months"
-                },
-                {
-                    "value": "3_months",
-                    "label": "t:sections.purchase-form.settings.form_type.3_months"
-                },
-            ],
-            "default": "6_months"
-        },
-        {
-            "type": "text",
-            "id": "form_name",
-            "label": "t:sections.purchase-form.settings.form_name",
-            "default": "purchase-form"
-        },
         {
             "type": "text",
             "id": "heading",
@@ -240,6 +247,12 @@
             "type": "richtext",
             "id": "bottom_text",
             "label": "t:common.text.label"
+        },
+        {
+            "type": "text",
+            "id": "form_name",
+            "label": "t:sections.purchase-form.settings.form_name",
+            "default": "purchase-form"
         }
     ],
     "blocks":[
@@ -399,13 +412,13 @@
                     "type": "product",
                     "id": "product",
                     "label": "t:common.product.label"
-                },   
+                },
                 {
                     "type": "checkbox",
                     "id": "preselected",
                     "label": "t:sections.purchase-form.blocks.product.settings.preselected",
                     "default": false
-                },             
+                },
                 {
                     "type": "text",
                     "id": "heading",
@@ -464,6 +477,32 @@
                     "type": "richtext",
                     "id": "included_text",
                     "label": "t:sections.purchase-form.blocks.product.settings.included_text"
+                },
+                {
+                    "type": "header",
+                    "content": "t:sections.purchase-form.blocks.product.settings.header_ab"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "free_patches",
+                    "label": "t:sections.purchase-form.blocks.product.settings.free_patches",
+                    "default": false
+                },
+                {
+                    "type": "image_picker",
+                    "id": "free_patches_image",
+                    "label": "t:sections.purchase-form.blocks.product.settings.free_patches_image"
+                },
+                {
+                    "type": "product",
+                    "id": "free_patches_product",
+                    "label": "t:sections.purchase-form.blocks.product.settings.free_patches_product",
+                },
+                {
+                    "type": "inline_richtext",
+                    "id": "free_patches_text",
+                    "label": "t:sections.purchase-form.blocks.product.settings.free_patches_text",
+                    "default": "<strong>Get a Free</strong> Pair of Micro-Infusion Patches"
                 }
             ]
         },
@@ -489,6 +528,71 @@
                 }
             ]
         },
+        {
+          "type": "before_after_timeline",
+          "name": "t:sections.purchase-form.blocks.before_after_timeline.name",
+          "limit": 1,
+            "settings": [
+              {
+                "type":"header",
+                "content": "t:sections.purchase-form.blocks.before_after_timeline.settings.image_before_after.label_before"
+              },
+              {
+                  "type": "image_picker",
+                  "id": "ba_image_1",
+                  "label": "t:common.image.label"
+              },
+              {
+                "type": "text",
+                "id": "text_heading_1",
+                "label": "t:sections.purchase-form.blocks.before_after_timeline.settings.image_before_after.text_heading"
+              },
+              {
+                "type":"header",
+                "content": "t:sections.purchase-form.blocks.before_after_timeline.settings.image_before_after.label_after"
+              },
+              {
+                  "type": "image_picker",
+                  "id": "ba_image_2",
+                  "label": "t:common.image.label"
+              },
+              {
+                "type": "text",
+                "id": "text_heading_2",
+                "label": "t:sections.purchase-form.blocks.before_after_timeline.settings.image_before_after.text_heading"
+              },
+              {
+                "type": "header",
+                "content": "t:sections.purchase-form.blocks.before_after_timeline.settings.verified_badge.label"
+              },
+              {
+                "type": "checkbox",
+                "id": "show_verify_badge",
+                "label": "t:sections.purchase-form.blocks.before_after_timeline.settings.verified_badge.show_verified_badge",
+                "default": true
+              },
+              {
+                "type": "image_picker",
+                "id": "image_country_badge",
+                "label": "t:sections.purchase-form.blocks.before_after_timeline.settings.verified_badge.image_country_badge"
+              },
+              {
+                "type": "text",
+                "id": "text_badge",
+                "label": "t:sections.purchase-form.blocks.before_after_timeline.settings.verified_badge.text_badge"
+              },
+              {
+                "type": "image_picker",
+                "id": "image_verify_badge",
+                "label": "t:sections.purchase-form.blocks.before_after_timeline.settings.verified_badge.image_verified_badge"
+              },
+              {
+                "type": "text",
+                "id": "text_verified_badge",
+                "label": "t:sections.purchase-form.blocks.before_after_timeline.settings.verified_badge.text_verified_badge"
+              }
+            ]
+        }
     ],
     "presets":[
         {
