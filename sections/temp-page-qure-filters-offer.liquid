@@ -1232,57 +1232,61 @@
                                             </div>
                                         </div>
                                         <!-- Buy Now Button -->
-                                        <button class="buy-now" id="buy-now-button">PRE-ORDER NOW – {{ product_price_shower_filter }}
+                                        <button class="buy-now buy-now-button">PRE-ORDER NOW – {{ product_price_shower_filter }}
                                             <span><img src="https://qureskincaredns.com/new/assets/long_right_black_arrow.svg" alt=""></span>
                                         </button>
 
                                         <script>
-                                            document.getElementById('buy-now-button').addEventListener('click', function() {
-                                                let __items = [];
-                                                let product_variant_id_white_shower_filter = '{{ product_variant_id_white_shower_filter }}';
-                                                let product_variant_id_black_shower_filter = '{{ product_variant_id_black_shower_filter }}';
-                                                let selling_plan_shower_filter = '{{ selling_plan_shower_filter }}';
+                                            document.addEventListener('DOMContentLoaded', function() {
+                                                document.querySelectorAll('.buy-now-button').forEach(button => {
+                                                    button.addEventListener('click', function() {
+                                                        let __items = [];
+                                                        let product_variant_id_white_shower_filter = '{{ product_variant_id_white_shower_filter }}';
+                                                        let product_variant_id_black_shower_filter = '{{ product_variant_id_black_shower_filter }}';
+                                                        let selling_plan_shower_filter = '{{ selling_plan_shower_filter }}';
 
-                                                let product_variant_id_white_faucet_filter = '{{ product_variant_id_white_faucet_filter }}';
-                                                let product_variant_id_black_faucet_filter = '{{ product_variant_id_black_faucet_filter }}';
-                                                let selling_plan_faucet_filter = '{{ selling_plan_faucet_filter }}';
+                                                        let product_variant_id_white_faucet_filter = '{{ product_variant_id_white_faucet_filter }}';
+                                                        let product_variant_id_black_faucet_filter = '{{ product_variant_id_black_faucet_filter }}';
+                                                        let selling_plan_faucet_filter = '{{ selling_plan_faucet_filter }}';
 
-                                                const newUrl = new URL(window.location.href);
-                                                let selected_product_variant_id = newUrl.searchParams.get('variant');
+                                                        const newUrl = new URL(window.location.href);
+                                                        let selected_product_variant_id = newUrl.searchParams.get('variant');
 
-                                                if(selected_product_variant_id && selected_product_variant_id == product_variant_id_white_shower_filter)
-                                                {
-                                                    __items.push({
-                                                        id: product_variant_id_white_shower_filter,
-                                                        selling_plan: selling_plan_shower_filter,
-                                                        quantity: 1
+                                                        if(selected_product_variant_id && selected_product_variant_id == product_variant_id_white_shower_filter)
+                                                        {
+                                                            __items.push({
+                                                                id: product_variant_id_white_shower_filter,
+                                                                selling_plan: selling_plan_shower_filter,
+                                                                quantity: 1
+                                                            });
+
+                                                            __items.push({
+                                                                id: product_variant_id_white_faucet_filter,
+                                                                selling_plan: selling_plan_faucet_filter,
+                                                                quantity: 1
+                                                            });  
+                                                        }
+                                                        else
+                                                        {
+                                                            __items.push({
+                                                                id: product_variant_id_black_shower_filter,
+                                                                selling_plan: selling_plan_shower_filter,
+                                                                quantity: 1
+                                                            });
+
+                                                            __items.push({
+                                                                id: product_variant_id_black_faucet_filter,
+                                                                selling_plan: selling_plan_faucet_filter,
+                                                                quantity: 1
+                                                            }); 
+                                                        }
+
+                                                        cartRequestAdd({ 
+                                                            items:  __items
+                                                        }, {} )
                                                     });
-
-                                                    __items.push({
-                                                        id: product_variant_id_white_faucet_filter,
-                                                        selling_plan: selling_plan_faucet_filter,
-                                                        quantity: 1
-                                                    });  
-                                                }
-                                                else
-                                                {
-                                                    __items.push({
-                                                        id: product_variant_id_black_shower_filter,
-                                                        selling_plan: selling_plan_shower_filter,
-                                                        quantity: 1
-                                                    });
-
-                                                    __items.push({
-                                                        id: product_variant_id_black_faucet_filter,
-                                                        selling_plan: selling_plan_faucet_filter,
-                                                        quantity: 1
-                                                    }); 
-                                                }
-
-                                                cartRequestAdd({ 
-                                                    items:  __items
-                                                }, {} )
-                                            })
+                                                });
+                                            });
                                         </script>
 
 
@@ -1948,7 +1952,7 @@
     </svg>
     </div>
     </div>
-    <a href="#bundle_shop" class="button_sticky button_sticky_wrapper__button_sticky  event_btn">
+    <a href="javascript:void(0);" class="button_sticky button_sticky_wrapper__button_sticky event_btn buy-now-button">
         PRE-ORDER NOW - {{ product_price_shower_filter }}
     </a>
     </div>
