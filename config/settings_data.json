@@ -284,8 +284,8 @@
               "upsell_product_first_description": "Plump, smooth & brighten in one step.",
               "upsell_product_second": "line-refine-bundle-essentials",
               "upsell_product_second_description": "Bundle & SAVE 32%",
-              "upsell_product_third": "dermal-mist",
-              "upsell_product_thid_description": "Purify your skin - anywhere, anytime."
+              "upsell_product_third": "",
+              "upsell_product_thid_description": ""
             }
           },
           "upsell_UiGexh": {
@@ -318,8 +318,8 @@
               "page_url": "https://qureskincare.com/pages/microinfusion",
               "upsell_product_first": "micro-infusion-hydra-soothing-2-treatments",
               "upsell_product_first_description": "Reduce fine lines & increase hydration.",
-              "upsell_product_second": "dermal-mist",
-              "upsell_product_second_description": "Sanitise & prep your skin for Micro-Infusion.",
+              "upsell_product_second": "micro-infusion-targeted-patches-single",
+              "upsell_product_second_description": "Elevate your skincare with at-home microneeding treatment.",
               "upsell_product_third": "face-serum",
               "upsell_product_thid_description": "Maintain your results post treatment"
             }
@@ -340,8 +340,8 @@
             "type": "upsell",
             "settings": {
               "page_url": "https://qureskincare.com/pages/qure-microinfusion-offer",
-              "upsell_product_first": "dermal-mist",
-              "upsell_product_first_description": "Sanitise & prep your skin for Micro-Infusion.",
+              "upsell_product_first": "micro-infusion-targeted-patches-single",
+              "upsell_product_first_description": "Elevate your skincare with at-home microneeding treatment.",
               "upsell_product_second": "micro-infusion-hydra-soothing-2-treatments",
               "upsell_product_second_description": "Reduce fine lines & boost hydration.",
               "upsell_product_third": "face-serum",
