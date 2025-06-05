@@ -20,6 +20,7 @@
   letter-spacing: 0.225px;
   text-transform: uppercase;
   white-space: nowrap;
+  margin: 0;
 }
 
 .pdm-menu-upsell .menuSlider.pdm-nav-first-img-item-mobile .dm_imgItem h6 span {
@@ -107,6 +108,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  justify-content: space-between;
 }
 
 .pdm-menu-upsell .dropdown_menu_img.pdm-nav-first-img-item-desktop .dm_imgItem {
@@ -148,6 +150,7 @@
   position: relative;
   padding: 0 26px;
   display: block;
+  margin-bottom: auto;
 }
 
 .pdm-menu-upsell .dropdown_menu_img.pdm-nav-first-img-item-desktop .swiper.pdm-upsell-nav-container__swiper {
