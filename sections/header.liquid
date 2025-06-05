@@ -1,4 +1,5 @@
-<div class="wrapper home-default-wrapper header-wrapperBlock">
+{% assign is_enable_menu_upsell = section.settings.enable_menu_upsell_carousel %}
+<div class="wrapper home-default-wrapper header-wrapperBlock {% if is_enable_menu_upsell %} pdm-menu-upsell  {% endif %} ">
     <div id="shopify-section-header" class="shopify-section site-header">
         <div class="header-wrapper">
             {% if settings.enable_site_gamification %}
@@ -87,6 +88,12 @@
         "id": "upsell_content",
         "label": "Upsell List Content",
         "metaobject_type": "nav_upsell_card_item"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_menu_upsell_carousel",
+        "label": "Enable menu upsell carousel",
+        "default": false
       }
     ],
 	"blocks": [
