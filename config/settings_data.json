@@ -340,7 +340,7 @@
             "type": "upsell",
             "settings": {
               "page_url": "https://qureskincare.com/pages/qure-microinfusion-offer",
-              "upsell_product_first": "micro-infusion-targeted-patches-single",
+              "upsell_product_first": "micro-infusion-targeted-patches",
               "upsell_product_first_description": "Elevate your skincare with at-home microneeding treatment.",
               "upsell_product_second": "micro-infusion-hydra-soothing-2-treatments",
               "upsell_product_second_description": "Reduce fine lines & boost hydration.",
