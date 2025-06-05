@@ -453,7 +453,7 @@
       },
       "16361216567099377559": {
         "type": "shopify://apps/tariff-support-by-intelligems/blocks/tariff-support-script/450d9b0f-e77b-4bc3-aeb2-b0c71fe65bbf",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
       }
     }
