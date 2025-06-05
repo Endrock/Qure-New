@@ -1400,6 +1400,20 @@
     "purchase-form-second": {
       "type": "purchase-form",
       "blocks": {
+        "before_after_timeline_6VCptP": {
+          "type": "before_after_timeline",
+          "settings": {
+            "ba_image_1": "shopify://shop_images/Before_b825b7fd-f7ef-4b5d-a776-20fd834f8f3c.png",
+            "text_heading_1": "BEFORE",
+            "ba_image_2": "shopify://shop_images/After_9e2c0c16-579d-41cc-8016-72043f5f4a79.png",
+            "text_heading_2": "AFTER 6 MONTHS",
+            "show_verify_badge": true,
+            "image_country_badge": "shopify://shop_images/Flag_of_the_United_States_1_8790062a-0fa0-40cc-ac9e-1c1c8c65507f.svg",
+            "text_badge": "Tami T.",
+            "image_verify_badge": "shopify://shop_images/Layer_1.png",
+            "text_verified_badge": "Verified customer"
+          }
+        },
         "line_8cPUxh": {
           "type": "line",
           "settings": {
@@ -1645,6 +1659,7 @@
         }
       },
       "block_order": [
+        "before_after_timeline_6VCptP",
         "line_8cPUxh",
         "preorder_box_3xp9iR",
         "payment_type_3zQTmH",
