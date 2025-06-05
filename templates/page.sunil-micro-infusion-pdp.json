@@ -112,6 +112,21 @@
             "preselected": true
           }
         },
+        "product_nyJ9n7": {
+          "type": "product",
+          "settings": {
+            "product": "micro-infusion-6-month-bundle-for-wrinkles",
+            "preselected": true,
+            "heading": "6 Month Supply",
+            "subheading": "(12 Micro-infusion Treatments)",
+            "soldout": false,
+            "preorder": false,
+            "preorder_text": "",
+            "preorder_date_soldout": "",
+            "preorder_date_reserved": "",
+            "preorder_percent": ""
+          }
+        },
         "product_EKAAzA": {
           "type": "product",
           "settings": {
@@ -125,21 +140,6 @@
             "preorder_date_soldout": "Testing",
             "preorder_date_reserved": "???",
             "preorder_percent": "50"
-          }
-        },
-        "product_nyJ9n7": {
-          "type": "product",
-          "settings": {
-            "product": "micro-infusion-2-month-bundle-4x-beta-glucan-serum",
-            "preselected": false,
-            "heading": "2 Month Supply",
-            "subheading": "(4 Micro-infusion Treatments)",
-            "soldout": false,
-            "preorder": false,
-            "preorder_text": "",
-            "preorder_date_soldout": "",
-            "preorder_date_reserved": "",
-            "preorder_percent": ""
           }
         },
         "product_eiY89h": {
@@ -227,8 +227,8 @@
         "product_RBCPe8",
         "type_aJwQ9q",
         "product_type_VLXcAn",
-        "product_EKAAzA",
         "product_nyJ9n7",
+        "product_EKAAzA",
         "product_eiY89h",
         "type_yDwWmt",
         "product_type_YrPQrV",
@@ -239,7 +239,6 @@
       "settings": {
         "seo_heading": "Micro Infusion Facial System - An Alternative To Derma Rollers",
         "heading": "Transform dull looking skin with Micro-Infusion System",
-        "form_name": "purchase-form-landing"
       }
     },
     "featured_landing": {
@@ -514,6 +513,7 @@
         "video_cWe83q": {
           "type": "video",
           "settings": {
+            "title_mob": "Recommended by Experts",
             "image": "shopify://shop_images/trusted_3.webp",
             "video": "https://www.youtube.com/watch?v=JPWycy8cwN8",
             "title": "Dr Shah & Dr Maxfield,",
@@ -526,6 +526,7 @@
             "trust_icon": "shopify://shop_images/verified_design.svg",
             "trust_des": "Trusted and recommended by world leading Dermatologists",
             "title": "<strong>“This treatment is an</strong> at-home <strong>option for those who want to</strong> avoid the hassle or cost of going to the office”.",
+            "title_des": "",
             "title_clr": "#000000",
             "title_strong_clr": "#797d7c"
           }
@@ -536,6 +537,9 @@
         "text_content_BRMwjz"
       ],
       "settings": {
+        "ctm_cls": "",
+        "left_dv_width": "7",
+        "right_dv_width": "5",
         "padding_top": 60,
         "padding_bottom": 0
       }
@@ -947,6 +951,19 @@
             "client": "Paul W.",
             "code": ""
           }
+        },
+        "result_36Ei9K": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/b_a_MI_desk.png",
+            "heading": "Wow just wow!!!",
+            "text": "<p>“Wow just wow!!! Easy to use. I’ve used it three times this far and the changes in my skin are amazing. Skin is glowing, pores minimized. And my wrinkles what wrinkles this 53 year old happy skin. Well worth the $$$.”</p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/america_f_85c3552f-2c5a-48e4-9ca5-78539e5139ca.webp",
+            "text_country": "United States",
+            "client": "Carey C.",
+            "code": ""
+          }
         }
       },
       "block_order": [
@@ -972,11 +989,13 @@
         "result_eLJa6L",
         "result_DYbUAd",
         "result_VFw8Mj",
-        "result_qKjLeC"
+        "result_qKjLeC",
+        "result_36Ei9K"
       ],
       "settings": {
         "classname": "mi_landing_result pt-0",
         "heading": "Results you‘ll see with your own eyes",
+        "des": "",
         "heading_reduced": "",
         "text_verified_customer": "Verified customer",
         "text_reviewed": "Reviewed in"
@@ -1418,7 +1437,7 @@
             "heading": "6 Month Supply",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/Micro-Infusion6MonthBundle_DarkSpots.jpg",
-            "left_items": 166,
+            "left_items": false,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
@@ -1436,6 +1455,7 @@
             "heading": "3 Month Supply",
             "subheading": "(6 Micro-infusion Treatments)",
             "image": "shopify://shop_images/3monthdarkspots_cb2897ed-4d86-45d6-8249-2b11460670b8.png",
+            "left_items": false,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
@@ -1453,6 +1473,7 @@
             "heading": "1 Month Supply",
             "subheading": "(2 Micro-Infusion Treatments)",
             "image": "shopify://shop_images/1monthdarkspots.png",
+            "left_items": false,
             "soldout": false,
             "preorder": false,
             "preorder_text": "<h5>Next batch ships early July 2025:</h5><p>Due to high demand, 1-month Micro-Infusion supply is sold out. Order now and secure yours from the next shipment.</p>",
@@ -1474,15 +1495,33 @@
             "preselected": true
           }
         },
+        "product_nyJ9n7": {
+          "type": "product",
+          "settings": {
+            "product": "micro-infusion-6-month-bundle-for-wrinkles",
+            "preselected": true,
+            "heading": "6 Month Supply",
+            "subheading": "(12 Micro-infusion Treatments)",
+            "image": "shopify://shop_images/micro-infusion_6_month_bundle__for_wrinkles.png",
+            "left_items": false,
+            "soldout": false,
+            "preorder": false,
+            "preorder_text": "",
+            "preorder_date_soldout": "",
+            "preorder_date_reserved": "",
+            "preorder_percent": "",
+            "included_text": "<p>2 Micro-Infusion devices (valued at $160)</p><p>10 Clinical-grade micro-needling heads (valued at $100)</p><p>12 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $240)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial/p&gt;</p>"
+          }
+        },
         "product_EKAAzA": {
           "type": "product",
           "settings": {
             "product": "micro-infusion-3-month-bundle-6x-beta-glucan-serum",
-            "preselected": true,
+            "preselected": false,
             "heading": "3 Month Supply",
             "subheading": "(6 Micro-infusion Treatments)",
-            "image": "shopify://shop_images/micro-infusion_6_month_bundle__for_wrinkles.png",
-            "left_items": 314,
+            "image": "shopify://shop_images/3monthwrinkles_1.png",
+            "left_items": false,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
@@ -1490,23 +1529,6 @@
             "preorder_date_reserved": "",
             "preorder_percent": "",
             "included_text": "<p>1 Micro-Infusion devices (valued at $80)</p><p>5 Clinical-grade micro-needling heads (valued at $50)</p><p>6 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $120)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial/p&gt;</p><p>24/7 customer support access</p>"
-          }
-        },
-        "product_nyJ9n7": {
-          "type": "product",
-          "settings": {
-            "product": "micro-infusion-2-month-bundle-4x-beta-glucan-serum",
-            "preselected": false,
-            "heading": "2 Month Supply",
-            "subheading": "(4 Micro-infusion Treatments)",
-            "image": "shopify://shop_images/3monthwrinkles_5d80e14d-e628-4311-990a-34a1fc948558.png",
-            "soldout": false,
-            "preorder": false,
-            "preorder_text": "",
-            "preorder_date_soldout": "",
-            "preorder_date_reserved": "",
-            "preorder_percent": "",
-            "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>5 Clinical-grade micro-needling heads (valued at $30)</p><p>4 clinically-formulated 4ml serum to treat your specific skin concerns (valued at $90)</p><p>Worldwide shipping (valued at $25)</p>"
           }
         },
         "product_eiY89h": {
@@ -1517,6 +1539,7 @@
             "heading": "1 Month Supply",
             "subheading": "(2 Micro-Infusion Treatments)",
             "image": "shopify://shop_images/1monthwrinkles.png",
+            "left_items": false,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
@@ -1547,6 +1570,7 @@
             "heading": "6 Month Supply",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/Micro-Infusion_6_Month_Bundle_For_Wrinkles_Dark_Spots.png",
+            "left_items": false,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
@@ -1564,6 +1588,7 @@
             "heading": "3 Month Supply",
             "subheading": "(6 Micro-infusion Treatments)",
             "image": "shopify://shop_images/3monthmix_1_7b716b38-ab3d-44f0-bbb5-a0b0c379dec3.png",
+            "left_items": false,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
@@ -1581,6 +1606,7 @@
             "heading": "1 Month Supply",
             "subheading": "(2 Micro-Infusion Treatments)",
             "image": "shopify://shop_images/1monthMIX.png",
+            "left_items": false,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
@@ -1603,8 +1629,8 @@
         "product_Xf8A6C",
         "type_aJwQ9q",
         "product_type_VLXcAn",
-        "product_EKAAzA",
         "product_nyJ9n7",
+        "product_EKAAzA",
         "product_eiY89h",
         "type_yDwWmt",
         "product_type_YrPQrV",
@@ -1613,7 +1639,6 @@
         "product_RBCPe8"
       ],
       "settings": {
-        "form_type": "3_months",
         "form_name": "purchase-form-second",
         "heading": "Choose your treatment options",
         "text": "<p><strong>Rest assured that all orders are one-time purchases.</strong></p><p>You will not be charged again in the subsequent months, and there are no hidden charges. When you are ready to reorder your treatment, you can purchase needle heads and serum of choice.</p>",

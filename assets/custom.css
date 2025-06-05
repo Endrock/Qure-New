@@ -371,3 +371,12 @@ div.ur_btn {
 .unique_c .cant_decide {
         display: none;
 }
+
+
+@media(max-width:767px) {
+        body[class~="page.qure-filters-offer"] {
+                .rp-micro-app-dummy-icon {
+                        margin-top: -150px !important;
+                }
+        }
+}

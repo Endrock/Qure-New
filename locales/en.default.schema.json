@@ -648,7 +648,7 @@
           "settings": {
             "preselected": "Preselected"
           }
-        }      
+        }
       }
     },
     "purchase-form": {
@@ -681,12 +681,18 @@
             "name": "Product",
             "settings": {
               "left_items": "Left items",
+              "left_items_info": "Use this setting to show the number of items left in stock.",
               "included_text": "Included",
               "preselected": "Preselected",
               "preorder_text": "Preorder text",
               "preorder_date_soldout": "Preorder date soldout",
               "preorder_date_reserved": "Preorder date reserved",
-              "preorder_percent": "Preorder percent"
+              "preorder_percent": "Preorder percent",
+              "header_ab": "ABTEST setting for Free patches",
+              "free_patches": "Enable free patches",
+              "free_patches_image": "Free patches image",
+              "free_patches_product": "Free patches product (Bundle product)",
+              "free_patches_text": "Free patches text",
             }
         },
         "product_type": {
@@ -697,6 +703,37 @@
         },
         "payment_type": {
           "name": "Payment type"
+        }
+      }
+    },
+    "purchase-form-bundle": {
+      "name": "Purchase form bundle",
+      "settings": {
+        "form_name": "Form name"
+      },
+      "blocks": {
+        "preorder_box": {
+          "name": "Preorder box"
+        },
+        "line": {
+          "name": "Line",
+          "settings": {
+            "text": "Text",
+            "background": "Background"
+          }
+        },
+        "type": {
+          "name": "Type"
+        },
+        "product": {
+          "name": "Product",
+          "settings": {
+            "preselected": "Preselected",
+            "preorder_text": "Preorder text",
+            "preorder_date_soldout": "Preorder date soldout",
+            "preorder_date_reserved": "Preorder date reserved",
+            "preorder_percent": "Preorder percent"
+          }
         }        
       }
     },

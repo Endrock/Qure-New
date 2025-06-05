@@ -1,0 +1,28 @@
+pdm-stock-items-left{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: end;
+  gap: 2px;
+}
+
+pdm-stock-items-left p{
+  color: #000;
+  font-family: Poppins;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0.11px;
+}
+
+pdm-stock-items-left p strong{
+  color: black;
+  font-family: Poppins;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 13.2px */
+  letter-spacing: 0.11px;
+}

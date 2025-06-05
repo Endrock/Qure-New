@@ -1,0 +1,278 @@
+{%- comment -%}
+  Renders the original PDM landing serums free patches subscription form (control variant).
+
+  Purpose:
+  - Checks that `array` of plan block IDs is not empty.
+  - Injects inline CSS to hide elements (`.hide`) and adjust plan heading font sizes on mobile.
+  - Extracts `product_type_title` from the first `product_type` block for unique IDs.
+  - Wraps the control markup in a `<template class="template-original">`:
+      • Loops through each `product` block in `array`
+      • Fetches the product, availability, price splits, and discount percentage
+      • Captures “included” accordions for 6-, 3-, 2-, and 1-month plans
+      • Builds each `.planBlock` with radio inputs, labels, pricing, stock counters, and badges
+      • Aggregates any preorder box items
+  - Finally invokes the AB-test variant render via `pdm_template-form-product` as a fallback.
+
+  Accepts:
+  - `array` (array): Ordered list of block IDs to render.
+  - `section` (object): Section settings including `form_name`, `form_type`, block definitions, and flags.
+  - `product_type_title` (string): Slugified heading from a `product_type` block for scoping IDs/CSS.
+
+  Usage:
+    {% render 'pdm_template-form-product', array: array, section: section, product_type_title: product_type_title %}
+
+  Dependencies:
+  - Inline `<style>` for `.hide` class and responsive `.plan_hdr h3` sizing.
+  - Snippet `pdm_stock-items-left` for remaining-stock display when `left_items` is true.
+  - External assets (tick, arrow, star icons) referenced via full URLs.
+
+  Notes:
+  - Blocks marked `preselected`, `preorder`, or `soldout` override default labels and states.
+  - Pricing-per-item and discount % are calculated with Liquid filters.
+  - The outer `{% if array != blank %}` guard prevents output when no plans exist.
+{%- endcomment -%}
+{% if array != blank %}
+  <style>
+    .hide {
+      display: none;
+    }
+    .new_updated_treatment_outer .planBlock .monthly_plans .plan_hdr h3 {
+      font-size: 15px !important;
+    }
+    @media (max-width: 767px) {
+      .new_updated_treatment_outer .planBlock .monthly_plans .plan_hdr h3 {
+        font-size: 12px !important;
+      }
+    }
+  </style>
+
+  {% capture preorder-box-items %}{% endcapture %}
+
+  {%- for __id in array -%}
+    {% assign block = section.blocks | where: 'id', __id | first %}
+    {% if block.type == 'product_type' %}
+      {% assign product_type_title = block.settings.heading | strip_newlines | strip | replace: ' ', '' | downcase %}
+    {% endif %}
+  {%- endfor -%}
+
+  <template
+    class="template-original"
+    id="{{ section.settings.form_name }}-source-{{ section.id }}-{{ product_type_title }}"
+  >
+    <div class="step_content" id="{{ section.id }}-{{ product_type_title }}">
+      <div class="step_conten_blocks">
+        {%- for __id in array -%}
+          {% assign block = section.blocks | where: 'id', __id | first %}
+          {% if block.type == 'product' %}
+            {% assign product = all_products[block.settings.product] %}
+            {% if product != blank and product.available %}
+              {% assign product_id = product.id %}
+              {% assign product_variant_id = product.variants.first.id %}
+              {% assign product_price_divided = product.price | divided_by: 4 %}
+              {% assign discount_percentage = product.price
+                | times: 1.0
+                | divided_by: product.compare_at_price
+                | minus: 1
+                | abs
+                | times: 100
+                | ceil
+              %}
+              {% assign product_title_tag = block.settings.heading
+                | strip_newlines
+                | strip
+                | replace: ' ', ''
+                | downcase
+              %}
+              {% assign product_price = product.price | money_without_trailing_zeros %}
+              {% assign product_price_compare = product.compare_at_price | money_without_trailing_zeros %}
+
+              {% if block.settings.heading contains '6 Month' %}
+                {% assign product_type = 1 %}
+                {% assign product_price_per_item = product.price | divided_by: 12 %}
+
+                {% capture product_included_month_6 %}
+                                        <div class="tab_content" id="tab_{{ product_title_tag }}">
+                                            <div class="plan_bundle_detail">
+                                                <h6 class="cs_item__accordion">Buy one 6 month supply and get:<span><img src="https://qureskincaredns.com/new/assets/arrow-up.png" alt=""></span></h6>
+                                                <div class="u_item__hidden-div" style="display: none;">
+                                                    {{ block.settings.included_text |  replace: '<p>', '<p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>' }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                {% endcapture %}
+              {% endif %}
+
+              {% if block.settings.heading contains '3 Month' %}
+                {% if section.settings.form_type == '3_months' %}
+                  {% assign product_type = 1 %}
+                {% else %}
+                  {% assign product_type = 2 %}
+                {% endif %}
+
+                {% assign product_price_per_item = product.price | divided_by: 6 %}
+
+                {% capture product_included_month_3 %}
+                                    <div class="tab_content" id="tab_{{ product_title_tag }}">
+                                        <div class="plan_bundle_detail">
+                                            <h6 class="cs_item__accordion">Buy one 3 month supply and get:<span><img src="https://qureskincaredns.com/new/assets/arrow-up.png" alt=""></span></h6>
+                                            <div class="u_item__hidden-div" style="display: none;">
+                                                {{ block.settings.included_text |  replace: '<p>', '<p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>' }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endcapture %}
+              {% endif %}
+
+              {% if block.settings.heading contains '2 Month' %}
+                {% assign product_type = 2 %}
+                {% assign product_price_per_item = product.price | divided_by: 4 %}
+
+                {% capture product_included_month_2 %}
+                                    <div class="tab_content" id="tab_{{ product_title_tag }}">
+                                        <div class="plan_bundle_detail">
+                                            <h6 class="cs_item__accordion">Buy one 2 month supply and get:<span><img src="https://qureskincaredns.com/new/assets/arrow-up.png" alt=""></span></h6>
+                                            <div class="u_item__hidden-div" style="display: none;">
+                                                {{ block.settings.included_text |  replace: '<p>', '<p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>' }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endcapture %}
+              {% endif %}
+
+              {% if block.settings.heading contains '1 Month' %}
+                {% assign product_type = 3 %}
+                {% assign product_price_per_item = product.price | divided_by: 2 %}
+
+                {% capture product_included_month_1 %}
+                                    <div class="tab_content" id="tab_{{ product_title_tag }}">
+                                        <div class="plan_bundle_detail">
+                                            <h6 class="cs_item__accordion">Buy one 1 month supply and get:<span><img src="https://qureskincaredns.com/new/assets/arrow-up.png" alt=""></span></h6>
+                                            <div class="u_item__hidden-div" style="display: none;">
+                                                {{ block.settings.included_text |  replace: '<p>', '<p><span><img src="https://qureskincaredns.com/new/assets/tick.png" alt=""></span>' }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endcapture %}
+              {% endif %}
+
+              {% capture data-per %}Buy now {% if product_type == 1 or product_type == 2 %} & SAVE {{ discount_percentage }}%{% endif %}{% endcapture %}
+
+              {% if block.settings.preorder == true %}
+                {% capture data-per %}Reserve now {% if product_type == 1 or product_type == 2 %} & SAVE {{ discount_percentage }}%{% endif %}{% endcapture %}
+              {% endif %}
+
+              {% if block.settings.soldout == true %}
+                {% capture data-per %}Sold Out{% endcapture %}
+              {% endif %}
+
+              <div
+                class="planBlock ignore"
+                href="javascript:void(0)"
+                data-tab="tab_{{ product_title_tag }}"
+                data-pay="{{ product_price_divided | money_without_trailing_zeros }}"
+                data-per="{{ data-per }}"
+                data-image="{{ block.settings.image | image_url: width: 800 }}"
+                data-product_variant_id="{{ product_variant_id }}"
+                data-soldout="{{ block.settings.soldout }}"
+                data-preorder="{{ block.settings.preorder }}"
+                data-type="{{ product_type }}"
+              >
+                {% if product_type == 1 %}
+                  <div class="best_value">
+                    Best Value<span
+                      ><img src="https://qureskincaredns.com/new/assets/star_new.svg" alt="" class="img-fluid ms-1"
+                    ></span>
+                  </div>
+                {% endif %}
+                <input
+                  type="radio"
+                  name="monthlyPlan_{{ section.settings.form_name }}"
+                  id="{{ section.id }}-{{ product_title_tag }}"
+                  {% if block.settings.preselected == true %}
+                    checked
+                  {% endif %}
+                >
+                <label class="monthly_plans" for="{{ section.id }}-{{ product_title_tag }}">
+                  <div class="monthly_supply">
+                    <div class="plan_des">
+                      <div class="plan_hdr">
+                        <h3>{{ block.settings.heading }}</h3>
+
+                        {% if block.settings.preorder == true %}
+                          <span class="saved_price pre_order">PRE ORDER</span>
+                        {% else %}
+                          {% if product_type == 1 or product_type == 2 %}
+                            <span class="saved_price">SAVE {{ discount_percentage }}%</span>
+                          {% endif %}
+                        {% endif %}
+                      </div>
+                      <div class="plan_des">{{ block.settings.subheading }}</div>
+                    </div>
+                    <div class="price_wrapper">
+                      <div class="price">
+                        {% if product_type == 3 %}
+                          <div class="plan_prc sale_price">{{ product_price }}</div>
+                        {% else %}
+                          <div class="plan_prc regular_price">{{ product_price_compare }}</div>
+                          <div class="plan_prc sale_price color_red">{{ product_price }}</div>
+                        {% endif %}
+                      </div>
+                      {% if block.settings.left_items %}
+                        {% render 'pdm_stock-items-left', product_id: product_id %}
+                      {% endif %}
+                    </div>
+                  </div>
+                  {% if product_type == 1 %}
+                    <div class="supply_fire">
+                      <p>🔥 Only {{ product_price_per_item | money_without_trailing_zeros }} per treatment</p>
+                    </div>
+                  {% endif %}
+                  {% if product_type == 2 %}
+                    <div class="supply_fire bg_linear_pink">
+                      <p>Only {{ product_price_per_item | money_without_trailing_zeros }} per treatment</p>
+                    </div>
+                  {% endif %}
+                </label>
+              </div>
+
+              {% if block.settings.preorder == true %}
+                {% capture preorder-box-items %}{{ preorder-box-items }}<div class="{{ section.settings.form_name }}-preorder-box-item {{ section.settings.form_name }}-preorder-box__{{ product_variant_id }}"></div>{% endcapture %}
+
+                {% if block.settings.preorder_text != blank %}
+                  <span class="{{ section.settings.form_name }}-product-preorder-text__{{ product_variant_id }} hide">
+                    {{- block.settings.preorder_text -}}
+                  </span>
+                {% endif %}
+                {% if block.settings.preorder_date_soldout != blank %}
+                  <span class="{{ section.settings.form_name }}-product-preorder_date_soldout__{{ product_variant_id }} hide">
+                    {{- block.settings.preorder_date_soldout -}}
+                  </span>
+                {% endif %}
+                {% if block.settings.preorder_date_reserved != blank %}
+                  <span class="{{ section.settings.form_name }}-product-preorder_date_reserved__{{ product_variant_id }} hide">
+                    {{- block.settings.preorder_date_reserved -}}
+                  </span>
+                {% endif %}
+                {% if block.settings.preorder_percent != blank %}
+                  <span class="{{ section.settings.form_name }}-product-preorder_percent__{{ product_variant_id }} hide">
+                    {{- block.settings.preorder_percent -}}
+                  </span>
+                {% endif %}
+              {% endif %}
+            {% endif %}
+          {% endif %}
+        {%- endfor -%}
+
+        {{ preorder-box-items }}
+
+        {{ preorder_box }}
+      </div>
+
+      {{ product_included_month_6 }}
+      {{ product_included_month_3 }}
+      {{ product_included_month_2 }}
+      {{ product_included_month_1 }}
+    </div>
+  </template>
+  {% render 'pdm_template-form-product', array: array, section: section, product_type_title: product_type_title %}
+{% endif %}

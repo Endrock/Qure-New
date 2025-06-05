@@ -237,12 +237,12 @@ sup {
 }
 
 a {
-    color: #000;
+    color: #0d6efd;
     text-decoration: underline
 }
 
 a:hover {
-    color: #000
+    color: #0a58ca
 }
 
 a:not([href]):not([class]),
@@ -3167,22 +3167,22 @@ fieldset:disabled .btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #000;
-    border-color: #000
+    background-color: #0d6efd;
+    border-color: #0d6efd
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #000;
-    border-color: #000
+    background-color: #0b5ed7;
+    border-color: #0a58ca
 }
 
 .btn-check:focus+.btn-primary,
 .btn-primary:focus {
     color: #fff;
-    background-color: #000;
-    border-color: #000;
-    box-shadow: 0 0 0 .25rem rgba(0, 0, 0, 0.5)
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+    box-shadow: 0 0 0 .25rem rgba(49, 132, 253, .5)
 }
 
 .btn-check:active+.btn-primary,
@@ -3191,7 +3191,7 @@ fieldset:disabled .btn {
 .btn-primary:active,
 .show>.btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #000;
+    background-color: #0a58ca;
     border-color: #0a53be
 }
 
@@ -3852,7 +3852,7 @@ fieldset:disabled .btn {
 }
 
 .btn-link:hover {
-    color: #000
+    color: #0a58ca
 }
 
 .btn-link.disabled,
@@ -4391,7 +4391,7 @@ fieldset:disabled .btn {
 
 .nav-link:focus,
 .nav-link:hover {
-    color: #000
+    color: #0a58ca
 }
 
 .nav-link.disabled {
@@ -5214,14 +5214,14 @@ fieldset:disabled .btn {
 
 .page-link:hover {
     z-index: 2;
-    color: #000;
+    color: #0a58ca;
     background-color: #e9ecef;
     border-color: #dee2e6
 }
 
 .page-link:focus {
     z-index: 3;
-    color: #000;
+    color: #0a58ca;
     background-color: #e9ecef;
     outline: 0;
     box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25)
@@ -6962,7 +6962,7 @@ fieldset:disabled .btn {
 
 .link-primary:focus,
 .link-primary:hover {
-    color: #000
+    color: #0a58ca
 }
 
 .link-secondary {
@@ -7467,6 +7467,9 @@ fieldset:disabled .btn {
 
 .mw-100 {
     max-width: 100% !important
+}
+.mw-213 {
+    max-width: 213px !important
 }
 
 .vw-100 {
@@ -28470,7 +28473,7 @@ fieldset:disabled .btn {
     height: 100%;
     position: relative;
     transition-property: transform;
-    display: block
+    display: block;
 }
 
 .swiper-slide-invisible-blank {
@@ -29749,6 +29752,25 @@ a:focus {
     font-display: swap;
 }
 
+
+
+@font-face {
+  font-family: 'TT Commons';
+  src: url('../assets/TTCommons-Regular.woff2') format('woff2'); 
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Commons Medium';
+  src: url('../assets/TTCommons-Medium.woff2') format('woff2'); 
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 p {
     margin-bottom: 0;
     font-size: 14px;
@@ -29783,7 +29805,9 @@ p {
 .bg-grey {
     background-color: var(--clr-grey);
 }
-
+.bg-grey_new {
+    background: #F6F6F7;
+}
 .bg-yellowGrey {
     background: linear-gradient(90deg, #FFFAF1 0%, #F5F5F5 100%);
 
@@ -29849,27 +29873,6 @@ p {
     .container-sm {
         max-width: 100%
     }
-    .wrongcircle_first_tick .bs_content {
-    text-align: start;
-    padding-bottom: 0 !important;
-    height: 73px !important;
-}
-.wrongcircle_first_tick .bs_vs_item {
-    margin: 0 -48px;
-}
-.wrongcircle_first_tick .bs_versace {
-    border: 12px solid #fff;
-    height: 116px;
-    width: 116px;
-}
-.wrongcircle_first_tick .bs_item h4 {
-    font-size: 32px;
-    font-weight: 500;
-    font-family: 'Poppins';
-}
-.wrongcircle_first_tick .bs_content, .wrongcircle_first_tick .bs_feature{
-    max-width: 300px !important;
-}
 }
 
 @media (min-width:992px) {
@@ -30482,7 +30485,9 @@ p {
 .mw-402 {
     max-width: 402px !important;
 }
-
+.mw-414{
+    max-width: 414px;
+}
 .mw-421 {
     max-width: 421px;
 }
@@ -30530,20 +30535,23 @@ p {
 .mw-500 {
     max-width: 500px;
 }
-
 .mw-512 {
     max-width: 512px;
 }
-
+.mw-522{
+    max-width: 522px;
+}
 .mw-525 {
     max-width: 525px !important;
 }
 .mw-542{
     max-width: 542px !important;
 }
-
 .mw-546 {
     max-width: 546px !important;
+}
+.mw-550 {
+    max-width: 550px !important;
 }
 .mw-560 {
     max-width: 560px !important;
@@ -32464,161 +32472,48 @@ picture img {
 .marquee-row img {
     height: 25px;
 }
-
-
-.mi_goes_where .section_header {
-    padding-bottom: 0;
-}
-.mi_goes_where .skincare_percent p {
-    font-size: 13px;
-}
-.img_ser img {
-    height: 130px;
-}
-.rej_ser_dv {
-    gap: 42px;
-    margin-top: -25px !important;
-}
-.icon_ser span {
-    font-size: 14px;
-}
-.mi_acne_accord {
-    margin-top: 30px;
-}
-.mi_acne_accord .u_item_question .accordion-header {
-    border-radius: 20px;
-}
-.trusted_bl.trustedVerified .trust_item {
-    height: 100%;
-}
-.mi_landing_result .section_header{
-    padding-bottom: 15px;
-}
-.clinical_grade .u_item_question .accordion-body p{
-    letter-spacing: 0.15px;
-}
-.img_ser {
-    margin-top: 25px;
-}
 .result_s_wrapper .swiper-slide {
     height: auto;
 }
 .result_s_wrapper .swiper-slide .result_item {
     height: 100%;
 }
-body.page\.led-mask-offer-2 .app_press_sl_img .swiper-slide{
-    opacity: 1;
-}
-body.page\.led-mask-offer-2 .app_press_info img {
-    max-height: 25px;
-}
-div#tab-10 .ctm_text_align{
-    text-align: center;
-}
-.accordion-button:not(.collapsed)::after {
-    transform: rotate(-180deg);
-}
-body.page\.led-mask-offer-2 .bs_price .sale_p {
-     font-weight: 600; 
-}
-body.page\.led-mask-offer-2 .bs_content .price__label{
-    font-weight: 300;
+.result_s_wrapper .swiper {
+    padding-bottom: 20px;
 }
 .faq_technical .accordion-button:not(.collapsed) .container:after{
     content: "-";
 }
-.shower_filter_ctm_cls .title-lg {
-    padding-bottom: 10px !important;
+.bg_cyan_blue {
+    background: #91BAEC;
+    border-radius: 50px;
+    color: #212428;
+    font-family: 'poppins';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 8px 16px;
+    display: inline-block;
 }
-.shwr_dr_ctm a.popup-youtube {
-    display: none !important;
-}
-.shwr_dr_ctm .play_btn h5 {
-    font-size: 14px !important;
-}
-.wrongcircle_first_tick ul.wrongCircle li:first-child:before {
-    content: url(./correct_circle.svg);
-}
-.ask_us_question p {
-    font-size: 18px;
-    font-family: Canela;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    letter-spacing: 0;
-    font-weight: 500;
-    top: 0;
-    height: 100%;
-}
-.ask_us_question a {
-    position: relative;
-    display: flex;
-    padding: 8px 12px;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    border: 1px solid var(--Qure-Black, #000);
-    background: #FFF;
-    height: 30px;
-    width: 100px;
-    border-radius: 666px;
-}
-.shwr_reviews h2.title-lg {
-    padding-bottom: 0 !important; 
-}
-main.shower_filter .trusted_bl.trustedVerified .trusted_verified {
-    display: flex;
-    height: 44px;
-}
+
+
+
+
+
+
+
+
+
+@media (min-width: 1400px) {
+    .custom_container {
+        max-width: 1200px;
+    }
+  }
+  
 
 
 @media(max-width:767px){
-    .why_it_works .faq.accordions_shower_filter{
-        padding: 0 !important;
-    }
-    .shower_filter_ctm_cls .ingredients_content .row .col-md-4:nth-child(3) {
-    order: -1;
-}
-.shower_filter_ctm_cls .ingredients_content .row .col-md-4:nth-child(1) {
-    order: 3;
-}
-    .shower_filter_ctm_cls .section_header {
-    text-align: center;
-}
-    main.shower_filter .refill_bl .col-md-6 {
-    padding: 0 0;
-}
-    .shwr_dr_ctm .section-description {
-        text-align: center;
-    }
-    .shwr_dr_ctm .trusted_verified {
-    display: none !important;
-}
-    .shwr_dr_ctm .desk_title {
-    display: none;
-}
-    .indiv_clinics p{
-        font-size: 10px;
-    }
-    .see_slider_wrapper {
-        padding-bottom: 0 !important;
-    }
-    .rej_ser_dv {
-        gap: 20px;
-        margin-top: 25px !important;
-    }
-    .img_ser {
-        margin-top: 0;
-    }
-    .img_ser img {
-        height: 80px;
-    }
-   .mi_acne .imageText .aboveText {
-        bottom: 40px;
-        top: unset !important;
-    }
     .marquee1{
         animation-name: marquee1;
     }

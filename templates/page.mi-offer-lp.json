@@ -398,9 +398,6 @@
         "slide_YFJAPx",
         "slide_qcrUGK"
       ],
-      "custom_css": [
-        ".result_s_wrapper .result_item .skincare_left .img-fluid {aspect-ratio: 180 / 109;}"
-      ],
       "settings": {
         "heading": "Achieve your skincare goals",
         "text": "",
@@ -1463,7 +1460,7 @@
             "heading": "6 Month Supply",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/Micro-Infusion6MonthBundle_DarkSpots.jpg",
-            "left_items": 166,
+            "left_items": false,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
@@ -1481,6 +1478,7 @@
             "heading": "3 Month Supply",
             "subheading": "(6 Micro-infusion Treatments)",
             "image": "shopify://shop_images/3monthdarkspots_cb2897ed-4d86-45d6-8249-2b11460670b8.png",
+            "left_items": false,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
@@ -1498,6 +1496,7 @@
             "heading": "1 Month Supply",
             "subheading": "(2 Micro-Infusion Treatments)",
             "image": "shopify://shop_images/1monthdarkspots.png",
+            "left_items": false,
             "soldout": false,
             "preorder": false,
             "preorder_text": "<h5>Next batch ships early July 2025:</h5><p>Due to high demand, 1-month Micro-Infusion supply is sold out. Order now and secure yours from the next shipment.</p>",
@@ -1527,13 +1526,18 @@
             "heading": "6 Month Supply",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/micro-infusion_6_month_bundle__for_wrinkles.png",
+            "left_items": true,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
             "preorder_date_soldout": "",
             "preorder_date_reserved": "",
             "preorder_percent": "",
-            "included_text": "<p>2 Micro-Infusion devices (valued at $160)</p><p>10 Clinical-grade micro-needling heads (valued at $100)</p><p>12 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $240)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial/p&gt;</p><p>24/7 customer support access</p>"
+            "included_text": "<p>2 Micro-Infusion devices (valued at $160)</p><p>10 Clinical-grade micro-needling heads (valued at $100)</p><p>12 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $240)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial/p&gt;</p><p>24/7 customer support access</p>",
+            "free_patches": true,
+            "free_patches_image": "shopify://shop_images/patches_168px.png",
+            "free_patches_product": "micro-infusion-6-month-bundle-for-wrinkles-dark-spots-free-patches",
+            "free_patches_text": "<strong>Get a Free</strong> Pair of Micro-Infusion Patches"
           }
         },
         "product_nyJ9n7": {
@@ -1544,6 +1548,7 @@
             "heading": "3 Month Supply",
             "subheading": "(6 Micro-infusion Treatments)",
             "image": "shopify://shop_images/3monthwrinkles_5d80e14d-e628-4311-990a-34a1fc948558.png",
+            "left_items": false,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
@@ -1561,6 +1566,7 @@
             "heading": "1 Month Supply",
             "subheading": "(2 Micro-Infusion Treatments)",
             "image": "shopify://shop_images/1monthwrinkles.png",
+            "left_items": false,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
@@ -1591,6 +1597,7 @@
             "heading": "6 Month Supply",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/Micro-Infusion_6_Month_Bundle_For_Wrinkles_Dark_Spots.png",
+            "left_items": false,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
@@ -1608,6 +1615,7 @@
             "heading": "3 Month Supply",
             "subheading": "(6 Micro-infusion Treatments)",
             "image": "shopify://shop_images/3monthmix_1_7b716b38-ab3d-44f0-bbb5-a0b0c379dec3.png",
+            "left_items": false,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
@@ -1625,6 +1633,7 @@
             "heading": "1 Month Supply",
             "subheading": "(2 Micro-Infusion Treatments)",
             "image": "shopify://shop_images/1monthMIX.png",
+            "left_items": false,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
@@ -1657,8 +1666,6 @@
         "product_RBCPe8"
       ],
       "settings": {
-        "form_type": "6_months",
-        "form_name": "purchase-form-second",
         "heading": "Choose your treatment options",
         "text": "<p><strong>Rest assured that all orders are one-time purchases.</strong></p><p>You will not be charged again in the subsequent months, and there are no hidden charges. When you are ready to reorder your treatment, you can purchase needle heads and serum of choice.</p>",
         "hide_product_types": false,
@@ -1670,7 +1677,8 @@
         "icon_text2": "Free World-Wide Shipping over $100",
         "icon_image3": "shopify://shop_images/derma-ftr.svg",
         "icon_text3": "Dermatologist Approved",
-        "bottom_text": "<p><strong>Have questions about MicroInfusion? </strong><a href=\"https://qureskincare.com/pages/test-landing-page#\">Chat with us!</a></p>"
+        "bottom_text": "<p><strong>Have questions about MicroInfusion? </strong><a href=\"https://qureskincare.com/pages/test-landing-page#\">Chat with us!</a></p>",
+        "form_name": "purchase-form-second"
       }
     },
     "compare_box_p4B7wy": {
