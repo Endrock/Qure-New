@@ -154,6 +154,11 @@ document.addEventListener('DOMContentLoaded', () => {
           });
           document.dispatchEvent(customEvent);
         }
+        //clear free faucet filter if there's no shower filter
+        if (typeof qure_filters_offer_clear === 'function') {
+          const state = getCartState();
+          qure_filters_offer_clear(state);
+        }
       }
       if(myRequestCallback.requestType === 'add') {
 
