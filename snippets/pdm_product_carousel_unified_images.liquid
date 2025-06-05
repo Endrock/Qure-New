@@ -86,8 +86,8 @@
                 </picture>
             </div>
             {% comment %} init-new-infographic  {% endcomment %}
-            {% if product.handle == "neck-decolletage-led" and forloop.index0 == 1 %}
-              <div class="swiper-slide" data-pdm-slider-test="neck-v2">
+            {% if product.handle == "neck-decolletage-led" and forloop.index0 == 2 %}
+              <div class="swiper-slide" style="overflow: hidden; border-radius: 8px;" data-pdm-slider-test="neck-v2">
                 <a class="banner-popup-link">
                   <picture>
                     <source media="(min-width:1920px)" srcset="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/neck-and-deck-v2.png?v=1748619231">
@@ -106,8 +106,8 @@
                 </a>
               </div>
             {% endif %}
-            {% if page.handle == "microinfusion" and forloop.index0 == 6 %}
-              <div class="swiper-slide" data-pdm-slider-test="microinfusion-v2">
+            {% if page.handle == "microinfusion" and forloop.index0 == 2 %}
+              <div class="swiper-slide" style="overflow: hidden; border-radius: 8px;" data-pdm-slider-test="microinfusion-v2">
                 <a class="banner-popup-link">
                   <picture>
                     <source media="(min-width:1920px)" srcset="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/micro-infusion-v2.png?v=1748621376">
@@ -127,7 +127,7 @@
               </div>
             {% endif %}
             {% if product.handle == "q-rejuvalight-pro-facewear" and forloop.index0 == 3 %}
-              <div class="swiper-slide" data-pdm-slider-test="led-mask-v2">
+              <div class="swiper-slide" style="overflow: hidden; border-radius: 8px;" data-pdm-slider-test="led-mask-v2">
                 <a class="banner-popup-link">
                   <picture>
                     <source media="(min-width:1920px)" srcset="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/led-mask-v2.png?v=1748621386">
@@ -189,7 +189,7 @@
           >
         </div>
         {% comment %} init-new-infographic-thumbails {% endcomment %}
-        {% if product.handle == "neck-decolletage-led" and forloop.index0 == 1 %}
+        {% if product.handle == "neck-decolletage-led" and forloop.index0 == 2 %}
           <div class="swiper-slide" data-pdm-slider-test="neck-v2">
             <img
               class="swiper-products-carousel__thumb-image"
@@ -200,7 +200,7 @@
             >
           </div>
         {% endif %}
-        {% if page.handle == "microinfusion" and forloop.index0 == 6 %}
+        {% if page.handle == "microinfusion" and forloop.index0 == 2 %}
           <div class="swiper-slide" data-pdm-slider-test="microinfusion-v2">
             <img
               class="swiper-products-carousel__thumb-image"
