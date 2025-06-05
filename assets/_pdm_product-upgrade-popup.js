@@ -48,7 +48,10 @@ function handleDeclineOrClose(popup, overlay) {
     if (variant && popup && overlay) { 
       selector.addEventListener("click", function () {
         // We capture the variantId of the clicked plan
-        pdmSelectedVariantId = variant.closest(parentClass).dataset.variantid;
+        const variantElement = variant.closest(parentClass)
+        if (!variantElement) return;
+        pdmSelectedVariantId = variantElement.dataset.variantid || variantElement.getAttribute('data-product_variant_id');
+        
         // Show pop up
         popup.classList.remove("hidden");
         overlay.classList.remove("hidden");
@@ -79,7 +82,8 @@ function handleDeclineOrClose(popup, overlay) {
   */
   function addUpgradeVariantToCart() {
     let variantSelected = document.querySelector('label[for="mBanner_2_month"]').closest(".planBlockTop");
-    const variantId = variantSelected.dataset.variantid; // Variante del 4 Month Supply
+    if (!variantSelected) return;
+    const variantId = variantSelected.dataset.variantid || variantSelected.getAttribute('data-product_variant_id');
   
     // Create an <a> element that simulates an Ajax cart add
     const ajaxLink = document.createElement("a");
@@ -102,7 +106,6 @@ function handleDeclineOrClose(popup, overlay) {
   
     const hasBodyAttribute = document.body.hasAttribute('data-popup-test');
 
-    //if (!hasBodyAttribute) return false;
     labelTwoMonth = document.querySelector('label[for="mBanner_1_month"]');
      popup = document.getElementById("pdm-popup");
      overlay = document.getElementById("pdm-popup-overlay");
@@ -147,8 +150,6 @@ function handleDeclineOrClose(popup, overlay) {
       initPopupUpgrade();
     }, 1000);
   });
-
-  //document.addEventListener('DOMContentLoaded', initPopupUpgrade)
 /**
  * ============================================
  * END - PDM UPGRADE POPUP LOGIC - FACE SERUM
