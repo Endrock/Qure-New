@@ -144,16 +144,17 @@
         ],
         "settings": {
           "upsell_content": [
-            "fade-firm-bundle-essentials",
             "line-refine-bundle-advanced",
+            "fade-firm-bundle-essentials",
             "line-refine-bundle-pro-pre-order",
             "fade-firm-bundle-advanced",
             "breakout-control-pro",
-            "breakout-control-advanced",
+            "exclusive-memorial-day-bundle",
             "line-refine-bundle-essentials-pre-order",
             "breakout-control-essentials",
-            "exclusive-memorial-day-bundle"
-          ]
+            "breakout-control-advanced"
+          ],
+          "enable_menu_upsell_carousel": true
         }
       },
       "newsletter": {
