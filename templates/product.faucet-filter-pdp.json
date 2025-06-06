@@ -25,6 +25,41 @@
             "text": "<ul><li>Advanced water filter reduces up to 99% of irritants for clearer, hydrated skin.</li><li>Helps reduce pore-clogging contaminants and supports the reduction of premature aging, without any extra steps in your routine.</li><li>Optimizes skincare effectiveness, and provides the most purified cleanse your skin will drink up.</li></ul>"
           }
         },
+        "supply_Dd4Xn6": {
+          "type": "supply",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "heading_mobile": "",
+            "text": "",
+            "first_option_date": "October 15th",
+            "first_option_text": "SOLD OUT",
+            "first_option_percent": 100,
+            "second_option_date": "November 10th",
+            "second_option_text": "81% Reserved",
+            "second_option_percent": 81,
+            "third_option_date": "December 30th",
+            "third_option_text": "In Production",
+            "third_option_percent": 0
+          }
+        },
+        "out_of_stock_wE4kWP": {
+          "type": "out_of_stock",
+          "settings": {
+            "heading": "Next batch ships 16th June 2025:",
+            "heading_mobile": "Next batch ships 16th June 2025:",
+            "text": "<p>Next batch ships 10th June 2025:</p>",
+            "first_option_date": "May 11th",
+            "first_option_text": "SOLD OUT",
+            "first_option_percent": 100,
+            "second_option_date": "June 16th",
+            "second_option_text": "49% Reserved",
+            "second_option_percent": 49,
+            "third_option_date": "July 6th",
+            "third_option_text": "In Production",
+            "third_option_percent": 0
+          }
+        },
         "variant_3yKhQx": {
           "type": "variant",
           "settings": {
@@ -32,8 +67,8 @@
             "image": "shopify://shop_images/water-fIlter-white.webp",
             "variant_id": 45852978348271,
             "main": false,
-            "reserve": false,
-            "soldout": true
+            "reserve": true,
+            "soldout": false
           }
         },
         "variant_8RVKyP": {
@@ -85,6 +120,8 @@
       "block_order": [
         "rating_KDB67x",
         "list_azYRbY",
+        "supply_Dd4Xn6",
+        "out_of_stock_wE4kWP",
         "variant_3yKhQx",
         "variant_8RVKyP",
         "subscribe_tnLCRQ",
