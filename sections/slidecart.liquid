@@ -234,12 +234,12 @@
 															{%- assign subtotal_price = subtotal_price | minus: item.discounted_price -%}
 															{%- assign savings = savings | plus: item.discounted_price -%}
 
-															<p class="new-price test igPrice" data-price-multiplier="{{ item.quantity }}">
+															<p class="new-price test igPrice a" data-price-multiplier="{{ item.quantity }}">
 																<span class="money">0$</span>
 															</p>
 															
 														{% else %}
-															<p class="new-price test igPrice" data-price-multiplier="{{ item.quantity }}">
+															<p class="new-price test igPrice b" data-price-multiplier="{{ item.quantity }}">
 																<span class="money">{{ item.selling_plan_allocation.price | money_without_trailing_zeros }}</span>
 															</p>
 														{% endif %}
@@ -250,7 +250,7 @@
 														{% endif %}
 													{%- else -%}
 														{% if item.original_price > item.discounted_price %}
-															<p class="new-price test igPrice a" data-price-multiplier="{{ item.quantity }}">
+															<p class="new-price test igPrice c" data-price-multiplier="{{ item.quantity }}">
 																<span class="money">{{ item.discounted_price | money_without_trailing_zeros }}</span>
 															</p>
 															<p class="old-price igComparePrice" data-price-multiplier="{{ item.quantity }}">
@@ -259,7 +259,7 @@
 															{% assign comparedPrices = item.original_price | minus: item.discounted_price | times: item.quantity %}
 															{% assign savings = savings | plus: comparedPrices %}
 														{% else %}
-															<p class="new-price test igPrice" data-price-multiplier="{{ item.quantity }}">
+															<p class="new-price test igPrice d" data-price-multiplier="{{ item.quantity }}">
 																<span class="money">{{ item_new_price | money_without_trailing_zeros }}</span>
 															</p>
 															{% if item.variant.compare_at_price > item.variant.price %}
