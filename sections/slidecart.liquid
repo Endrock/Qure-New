@@ -259,7 +259,7 @@
 															{% assign comparedPrices = item.original_price | minus: item.discounted_price | times: item.quantity %}
 															{% assign savings = savings | plus: comparedPrices %}
 														{% else %}
-															<p class="new-price test igPrice {{ item_new_price }}" data-price-multiplier="{{ item.quantity }}">
+															<p class="new-price test igPrice {{ item_new_price }} {{ item.discounted_price }}" data-price-multiplier="{{ item.quantity }}">
 																<span class="money">{{ item_new_price | money_without_trailing_zeros }}</span>
 															</p>
 															{% if item.variant.compare_at_price > item.variant.price %}
