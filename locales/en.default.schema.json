@@ -105,6 +105,9 @@
       "text": "Study Highlight Text",
       "study": "In Study Text"
     },
+    "offer": {
+      "label": "Offer"
+    },
     "setting": {
       "label": "Richtext"
     },
@@ -703,6 +706,24 @@
         },
         "payment_type": {
           "name": "Payment type"
+        },
+        "before_after_timeline": {
+          "name": "Before after timeline",
+          "settings": {
+            "image_before_after": {
+              "label_after": "Image after",
+              "label_before": "Image before",
+              "text_heading": "Heading text"
+            },
+            "verified_badge": {
+              "label": "Verified badge",
+              "show_verified_badge": "Show verified badge",
+              "image_country_badge": "Image country badge",
+              "text_badge": "Text badge",
+              "image_verified_badge": "Image verified badge",
+              "text_verified_badge": "Text verified badge"
+            }
+          }
         }
       }
     },

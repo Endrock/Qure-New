@@ -32,29 +32,33 @@
             assign link_cta = upsell_product.url
           endif
           %}
-          <div class="swiper-slide pdm-upsell-nav-container-mobile__swiper-slide">
-            <a href="{{ link_cta }}" class="pdm-upsell-nav-container-mobile__card">
-              <div class="pdm-upsell-nav-container-mobile__card__image-container">
-                {% if upsell_product.compare_at_price %}
-                  {% assign discount_percentage = upsell_product.price
-                    | times: 1.0
-                    | divided_by: upsell_product.compare_at_price
-                    | minus: 1
-                    | abs
-                    | times: 100
-                    | ceil
-                  %}
-                  <span class="pdm-upsell-nav-container-mobile__card__badge"> -{{ discount_percentage }}% </span>
-                {% endif %}
-                {{
-                  upsell_image
-                  | image_url: width: 640
-                  | image_tag: alt: upsell_title, class: 'pdm-upsell-nav-container-mobile__card__image'
-                }}
-              </div>
-              <p>{{ upsell_title }}</p>
-            </a>
-          </div>
+          {% if link_cta != blank %}
+            <div class="swiper-slide pdm-upsell-nav-container-mobile__swiper-slide">
+              <a href="{{ link_cta }}" class="pdm-upsell-nav-container-mobile__card">
+                <div class="pdm-upsell-nav-container-mobile__card__image-container">
+                  {% if upsell_product.compare_at_price %}
+                    {% assign discount_percentage = upsell_product.price
+                      | times: 1.0
+                      | divided_by: upsell_product.compare_at_price
+                      | minus: 1
+                      | abs
+                      | times: 100
+                      | ceil
+                    %}
+                    <span class="pdm-upsell-nav-container-mobile__card__badge"> -{{ discount_percentage }}% </span>
+                  {% endif %}
+                  {% if upsell_image != blank %}
+                    {{
+                      upsell_image
+                      | image_url: width: 640
+                      | image_tag: alt: upsell_title, class: 'pdm-upsell-nav-container-mobile__card__image'
+                    }}
+                  {% endif %}
+                </div>
+                <p>{{ upsell_title }}</p>
+              </a>
+            </div>
+          {% endif %}
         {% endfor %}
       </div>
     </div>
