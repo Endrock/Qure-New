@@ -249,7 +249,7 @@
 															</p>
 														{% endif %}
 													{%- else -%}
-														{% if item.original_price > item.discounted_price %}
+														{% if item.original_price >= item.discounted_price %}
 															<p class="new-price test">
 																<span class="money">{{ item.discounted_price | money_without_trailing_zeros }}</span>
 															</p>
