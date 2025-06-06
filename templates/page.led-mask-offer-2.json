@@ -58,9 +58,54 @@
         "button_url": "#shop"
       }
     },
-    "main-banner": {
-      "type": "temp-page-led-mask-offer-main-banner",
-      "settings": {}
+    "main": {
+      "type": "product-landing",
+      "custom_css": [
+        ".product-price {display: none;}"
+      ],
+      "blocks": {
+        "rating_TfBQ9X": {
+          "type": "rating",
+          "settings": {
+            "image": "shopify://shop_images/star-half_fill.svg",
+            "text": "<p>229,000+ Happy Customers</p>",
+            "product": ""
+          }
+        },
+        "offer_L9q6wE": {
+          "type": "offer",
+          "settings": {
+            "heading": "Limited time offer",
+            "text": "Buy LED Mask & get Neck & Décolletage Device for FREE",
+            "product": "q-rejuvalight-pro-facewear-3",
+            "image": "shopify://shop_images/mothers_day_bundle.webp",
+            "product2": "neck-decolletage-led",
+            "image2": "shopify://shop_images/mothers_day_bundle2.webp",
+            "button_label": "Shop & Save [price_save]",
+            "button_url": "#shop"
+          }
+        },
+        "list_pQxE9h": {
+          "type": "list",
+          "settings": {
+            "text": "<ul><li>FDA-cleared at-home LED mask</li><li>Treat acne, fine lines, wrinkles & more</li><li>Customize, track & schedule treatments with app</li><li>Quick & convenient 3-minute wireless treatments</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "rating_TfBQ9X",
+        "list_pQxE9h",
+        "offer_L9q6wE"
+      ],
+      "settings": {
+        "seo_heading": "",
+        "heading": "Feel Confident Makeup-Free with Q-Rejuvalight Pro",
+        "heading_mobile": "Feel Confident Makeup-Free with Q-Rejuvalight Pro",
+        "reserve": false,
+        "soldout": false,
+        "selected_design": "new",
+        "popup_enabled": false
+      }
     },
     "endless_marquee_VTfD9k": {
       "type": "endless_marquee",
@@ -1008,7 +1053,7 @@
   },
   "order": [
     "header_landing_SSnaTx",
-    "main-banner",
+    "main",
     "endless_marquee_VTfD9k",
     "qure_uses_slider_hRB7TB",
     "proof_in_numbers_4pTJzE",

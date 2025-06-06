@@ -3,6 +3,7 @@
 {%- assign button_count = 0 -%}
 {%- assign supply_count = 0 -%}
 {%- assign list_count = 0 -%}
+{%- assign offer_count = 0 -%}
 {%- assign liquid_count = 0 -%}
 {%- assign video_count = 0 -%}
 {%- assign icons_count = 0 -%}
@@ -18,6 +19,8 @@
             {%- assign button_count = button_count | plus: 1 -%}    
         {%- when 'list' -%}
             {%- assign list_count = list_count | plus: 1 -%}
+        {%- when 'offer' -%}
+            {%- assign offer_count = offer_count | plus: 1 -%}
         {%- when 'supply' -%}
             {%- assign supply_count = supply_count | plus: 1 -%}
         {%- when 'video' -%}
@@ -139,6 +142,10 @@
                                 {% endif %}
                             {%- endfor -%} 
                             </div>
+                        {% endif %}
+
+                        {% if offer_count > 0 %}
+                            {% render 'product-landing-offer' %}
                         {% endif %}
 
                         {% if supply_count > 0 %}
@@ -813,6 +820,55 @@
                 "name": "t:common.button.name",
                 "limit": 1,
                 "settings": [
+                    {
+                        "type": "text",
+                        "id": "button_label",
+                        "default": "Button label",
+                        "label": "t:common.button.label",
+                        "info": "t:common.button.info"
+                    },
+                    {
+                        "type": "url",
+                        "id": "button_url",
+                        "label": "t:common.button.url.label"
+                    }
+                ]
+		    },
+            {
+                "type": "offer",
+                "name": "t:common.offer.name",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "t:common.text.label"
+                    },
+                    {
+                        "type": "text",
+                        "id": "text",
+                        "label": "t:common.text.label"
+                    },
+                    {
+                        "type": "product",
+                        "id": "product",
+                        "label": "t:common.product.label"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "t:common.image.label"
+                    },
+                    {
+                        "type": "product",
+                        "id": "product2",
+                        "label": "t:common.product.label"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image2",
+                        "label": "t:common.image.label"
+                    },
                     {
                         "type": "text",
                         "id": "button_label",
