@@ -154,7 +154,7 @@
             "breakout-control-essentials",
             "breakout-control-advanced"
           ],
-          "enable_menu_upsell_carousel": true
+          "enable_menu_upsell_carousel": false
         }
       },
       "newsletter": {
@@ -374,9 +374,9 @@
           "upsell_product_third_description": "Plump, smooth & brighten in just one step",
           "sidecart_timer_old_enable": false,
           "sidecart_timer_new_enable": true,
-          "start_date": "12-10-2024 00:00",
-          "finish_date": "12-25-2024 11:59",
-          "label_ends": "Holidays Sale Ends In:",
+          "start_date": "07-02-2025 24:00",
+          "finish_date": "07-08-2025 24:00",
+          "label_ends": "4th July Offer Ends:",
           "label_days": "DAYS",
           "label_hours": "HOURS",
           "label_minutes": "MINUTES",
