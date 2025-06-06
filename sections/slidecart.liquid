@@ -250,7 +250,7 @@
 														{% endif %}
 													{%- else -%}
 														{% if item.original_price > item.discounted_price %}
-															<p class="new-price test igPrice" data-price-multiplier="{{ item.quantity }}">
+															<p class="new-price test igPrice a" data-price-multiplier="{{ item.quantity }}">
 																<span class="money">{{ item.discounted_price | money_without_trailing_zeros }}</span>
 															</p>
 															<p class="old-price igComparePrice" data-price-multiplier="{{ item.quantity }}">
