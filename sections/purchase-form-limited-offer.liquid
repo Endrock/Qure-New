@@ -1,0 +1,506 @@
+{% assign product_count = 0 %}
+
+{%- for block in section.blocks -%}
+    {% case block.type %}
+        {% when 'product' %}
+            {%- assign product_count = product_count | plus: 1 -%}
+            {% if product_count == 1 %}
+                {% assign product = all_products[block.settings.product] %}
+                {% assign product_id = product.id %}
+                {% assign product_price_divided = product.price | divided_by: 4 | money_without_trailing_zeros %}
+                {% assign product_variant_id = product.variants.first.id %}
+                {% assign product_price = product.price | money_without_trailing_zeros %}
+                {% assign product_settings = block %}
+            {% else %}
+                {% assign gift = all_products[block.settings.product] %}
+                {% assign gift_id = gift.id %}
+                {% assign gift_price_divided = gift.price | divided_by: 4 | money_without_trailing_zeros %}
+                {% assign gift_variant_id = gift.variants.first.id %}
+                {% assign gift_price = gift.price | money_without_trailing_zeros %}
+                {% assign gift_settings = block %}
+            {% endif %}
+    {% endcase %}
+{% endfor %}
+
+<!-- product bundle start -->
+<div class="product_bundle offer-lp section" id="shop">
+    <div class="container">
+        <div class="product_bundle-content">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="pe-md-3">
+                        {% render 'purchase-form-carousel' %}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="bundle_select-main include ps-md-3">
+                                <div class="product_details">
+                                    {% if section.settings.title != blank %}
+                                        <p class="limited_time_offer mb-2">{{ section.settings.title }}</p>
+                                    {% endif %}
+
+                                    {% if section.settings.heading != blank %}
+                                        {{ section.settings.heading 
+                                            | replace: '<p>', '<h2 class="title-lg">' 
+                                            | replace: '</p>', '</h2>' 
+                                            | replace: '<em>', '<br><span>'
+                                            | replace: '</em>', '</span>'
+                                        }}
+                                    {% endif %}
+                                    
+                                    {% if section.settings.text != blank %}
+                                        <p>{{ section.settings.text }}</p>
+                                    {% endif %}
+                                </div>
+                                <div class="product-section pt-md-4">
+                                    <p class="selection_title pb-3">What’s Included</p>
+                                    <div class="include_wrap-main">
+                                        {% if product != blank %}
+                                            <div class="include_wrap">
+                                                {% if product_settings.settings.image != blank %}
+                                                    <div class="include_pd-img">
+                                                        <img src="{{ product_settings.settings.image | img_url: 'master' }}" class="img-fluid pt-md-0 pt-2" alt="">
+                                                    </div> 
+                                                {% endif %}
+                                                <div class="include_pd-detail">
+                                                    <span>Bestseller</span>
+                                                    <h6>{{ product_settings.settings.heading }}</h6>
+                                                    <p>{{ product_settings.settings.subheading }}</p>
+                                                </div>
+                                                <div class="include_pd-price">
+                                                    <h6>{{ product_price }}</h6>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    
+                                        {% if gift != blank %}
+                                            <div class="include_wrap">
+                                                {% if gift_settings.settings.image != blank %}
+                                                    <div class="include_pd-img">
+                                                        <img src="{{ gift_settings.settings.image | img_url: 'master' }}" class="img-fluid" alt="">
+                                                    </div>                                                    
+                                                {% endif %}
+
+                                                <div class="include_pd-detail">
+                                                    <h6>{{ gift_settings.settings.heading }}</h6>
+                                                    <p>{{ gift_settings.settings.subheading }}</p>
+                                                </div>
+                                                <div class="include_pd-price">
+                                                    {% if section.settings.discount != blank %}
+                                                        <h6><del class="text-grey">{{ gift_price }}</del> <span class="green_txt">FREE</span></h6>
+                                                    {% else %}
+                                                        <h6>{{ gift_price }}</h6>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                    <div class="include_checkout pb-4">
+                                        {% if gift != blank %}
+                                            {% if section.settings.discount != blank %}
+                                                <div class="row justify-content-between">
+                                                    <div class="col-auto">
+                                                        <p class="green_txt">INSTANT SAVINGS: {{ gift_price }}</p>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <h6><del class="text-grey">{{ gift.price | plus: product.price | money_without_trailing_zeros }}</del> <span>{{ product_price }}</span></h6>
+                                                    </div>
+                                                </div>                                                 
+                                            {% else %}
+                                                <br />
+                                            {% endif %}
+                                           
+                                        {% endif %}
+
+                                        {%- for block in section.blocks -%}
+                                            {% case block.type %}
+                                                {% when 'low_stock' %}
+                                                    <div class="include_stock">
+                                                        <p>{{ block.settings.heading  }}</p>
+                                                        <span>{{ block.settings.subheading }}</span>
+                                                        {% if block.settings.percent > 0 %}
+                                                            <div class="row align-items-center">
+                                                                <div class="col-sm-10 col-9">
+                                                                    <div class="batch_h-info" style="--bgPercent:{{ block.settings.percent }}%;"></div>
+                                                                </div>
+                                                                <div class="col-sm-2 col-3">
+                                                                    <h6>{{ block.settings.percent }}% SOLD</h6>
+                                                                </div>
+                                                            </div>
+                                                        {% endif %}
+                                                    </div>
+                                                {% when 'order_today' %}
+                                                    {% if block.settings.heading != blank %}
+                                                        <div class="order_today">
+                                                            {{ block.settings.heading |  replace: '<strong>', '<strong class="d-block d-md-inline-block">' }}
+                                                        </div>                                                        
+                                                    {% endif %}
+                                                {% when 'preorder_box' %}
+
+                                                    <style>
+                                                        .ctm_cls_next_batch_mi_lp h5{
+                                                            font-size: 13px;
+                                                            font-weight: 600;
+                                                            line-height: 24px;
+                                                            letter-spacing: 0.13px;
+                                                            margin-bottom: 2px;
+                                                        }
+                                                    </style>
+
+                                                    <div class="next_batch_bl next_batch_highlight mt-3 ctm_cls_next_batch_mi_lp"{% unless section.settings.preorder %} style="display:none"{% endunless %}>
+                                                        <div class="preorder_text">
+                                                            {% if block.settings.heading != blank %}
+                                                                <h5>{{ block.settings.heading }}</h5>
+                                                            {% endif %}
+
+                                                            {% if block.settings.text != blank %}
+                                                                {{ block.settings.text }}
+                                                            {% endif %}
+                                                        </div>
+
+                                                        {% if block.settings.first_option_text != blank %}
+                                                            <div class="batch_h batch_h_fade mt-3 mt-md-4">
+                                                                <div class="batch_h_month preorder_date_soldout">{{ block.settings.first_option_date }}</div>
+                                                                <div class="batch_h_info sold_out_h" style="--bgPercent:{{ block.settings.first_option_percent }}%;"><span>{{ block.settings.first_option_text }}</span></div>
+                                                            </div>
+                                                        {% endif %}
+
+                                                        {% if block.settings.second_option_text != blank %}
+                                                            <div class="batch_h my-2">
+                                                                <div class="batch_h_month fw-bold preorder_date_reserved">{{ block.settings.second_option_date }}</div>
+                                                                <div class="batch_h_info preorder_percent" style="--bgPercent:{{ block.settings.second_option_percent }}%;">{{ block.settings.second_option_text }}</div>
+                                                            </div>
+                                                        {% endif %}
+
+                                                        {% if block.settings.third_option_text != blank %}
+                                                            <div class="batch_h batch_h_fade">
+                                                                <div class="batch_h_month">{{ block.settings.third_option_date }}</div>
+                                                                <div class="batch_h_info" style="--bgPercent:{{ block.settings.third_option_percent }}%;"><span>{{ block.settings.third_option_text }}</span></div>
+                                                            </div>
+                                                        {% endif %}
+                                                    </div>
+                                            {% endcase %}
+                                        {% endfor %}
+                                    </div>
+                                    <!-- Buy Now Button -->
+
+                                    {% capture button_caption %}Shop{% if gift != blank and section.settings.discount != blank %} & Save {{ gift_price }}{% endif %}{% endcapture %}
+
+                                    {% if section.settings.preorder == true %}
+                                        {% capture button_caption %}Reserve now{% if gift != blank and section.settings.discount != blank %} & Save {{ gift_price }}{% endif %}{% endcapture %}
+                                    {% endif %}
+
+                                    {% if section.settings.soldout == true %}
+                                        {% capture button_caption %}Sold Out{% endcapture %}
+                                    {% endif %}
+
+                                    <button class="buy-now"{% unless section.settings.soldout %} id="buy-now-button"{% endunless %}>{{ button_caption }}</button>
+
+                                    <!-- Payment Methods -->
+                                    <div class="payment_method">
+                                        {% if section.settings.discount != blank %}
+                                            <p>or pay 4 monthly payments of {{ product_price_divided }} with</p>
+                                        {% else %}
+                                            {% if gift != blank %}
+                                                <p>or pay 4 monthly payments of {{ product.price | plus: gift.price | divided_by: 4 | money_without_trailing_zeros }} with</p>
+                                            {% else %}
+                                                <p>or pay 4 monthly payments of {{ product_price_divided }} with</p>
+                                            {% endif %}
+                                        {% endif %}
+                                        <div class="pmt_img ps-2">
+                                            <img src="https://qureskincaredns.com/new/assets/klarna.svg" alt="Klarna">
+                                            <img src="https://qureskincaredns.com/new/assets/sezzle.svg" alt="Sezzle">
+                                            <img src="https://qureskincaredns.com/new/assets/afterpay.svg" alt="Afterpay">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- product bundle end -->
+
+<script>
+    document.getElementById('buy-now-button').addEventListener('click', function() {
+        
+        let __discount = '';
+        let __items = [];
+
+        {% if product != blank %}
+            __items.push({
+                id: {{ product_variant_id }},
+                quantity: 1
+            });    
+        {% endif %}
+
+        {% if gift != blank %}
+            __items.push({
+                id: {{ gift_variant_id }},
+                quantity: 1
+            });    
+        {% endif %}
+
+        {% if section.settings.discount != blank %}
+            __discount = '{{ section.settings.discount }}';
+        {% endif %}
+
+        if(__discount)
+        {
+            fetch('/discount/' + __discount).then(async () => {
+                cartRequestAdd({ 
+                    items:  __items
+                }, {} )
+            });
+        }
+        else
+        {
+            cartRequestAdd({ 
+                items:  __items
+            }, {} )
+        }
+    });
+</script>
+
+{% if gift != blank and section.settings.replace != blank %}
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let find = '{{ section.settings.replace }}';
+            let replace = '{{ gift.price | money_without_trailing_zeros }}';
+            const spanEl = document.querySelector('.header_btn span');
+            
+            if (spanEl && spanEl.textContent.includes(find)) {
+                spanEl.textContent = spanEl.textContent.replace(find, replace);
+            }
+
+            document.querySelectorAll('a.btn-primary').forEach(aEl => {
+                if (aEl.textContent.includes(find)) {
+                    aEl.textContent = aEl.textContent.replace(find, replace);
+                }
+            });
+        });
+    </script>
+{% endif %}
+
+{%- schema -%}
+{
+    "name":"t:sections.purchase-form-limited-offer.name",
+    "class":"purchase-form-limiter-offer",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "t:common.title.label",
+            "default": "LIMITED TIME OFFER"
+        },
+        {
+            "type": "richtext",
+            "id": "heading",
+            "label": "t:common.heading.label"
+        },
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "t:common.text.label"
+        },
+        {
+            "type": "text",
+            "id": "discount",
+            "label": "t:common.sale.discount"
+        },
+        {
+            "type": "text",
+            "id": "replace",
+            "label": "t:common.replace.label"
+        },
+        {
+            "type": "checkbox",
+            "id": "soldout",
+            "label": "t:common.soldout.label",
+            "default": false
+        },
+        {
+            "type": "checkbox",
+            "id": "preorder",
+            "label": "t:common.preorder.label",
+            "default": false
+        }
+    ],
+    "blocks":[
+        {
+            "type": "preorder_box",
+            "name": "t:sections.purchase-form-limited-offer.blocks.preorder_box.name",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "t:common.heading.label"
+                },
+                {
+                    "type": "richtext",
+                    "id": "text",
+                    "label": "t:common.text.label"
+                },
+                {
+                    "type": "header",
+                    "content": "First option"
+                },
+                {
+                    "type": "text",
+                    "id": "first_option_date",
+                    "label": "t:common.date.label",
+                    "default": "October 15th"
+                },
+                {
+                    "type": "text",
+                    "id": "first_option_text",
+                    "label": "t:common.text.label",
+                    "default": "SOLD OUT"
+                },
+                {
+                    "type": "range",
+                    "id": "first_option_percent",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "label": "t:common.percent.label",
+                    "default": 100
+                },
+                {
+                    "type": "header",
+                    "content": "Second option"
+                },
+                {
+                    "type": "text",
+                    "id": "second_option_date",
+                    "label": "t:common.date.label",
+                    "default": "November 10th"
+                },
+                {
+                    "type": "text",
+                    "id": "second_option_text",
+                    "label": "t:common.text.label",
+                    "default": "81% Reserved"
+                },
+                {
+                    "type": "range",
+                    "id": "second_option_percent",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "label": "t:common.percent.label",
+                    "default": 81
+                },
+                {
+                    "type": "header",
+                    "content": "Third option"
+                },
+                {
+                    "type": "text",
+                    "id": "third_option_date",
+                    "label": "t:common.date.label",
+                    "default": "December 30th"
+                },
+                {
+                    "type": "text",
+                    "id": "third_option_text",
+                    "label": "t:common.text.label",
+                    "default": "In Production"
+                },
+                {
+                    "type": "range",
+                    "id": "third_option_percent",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "label": "t:common.percent.label",
+                    "default": 0
+                }
+            ]
+        },
+        {
+            "type": "product",
+            "name": "t:sections.purchase-form-limited-offer.blocks.product.name",
+            "limit": 2,
+            "settings": [
+                {
+                    "type": "product",
+                    "id": "product",
+                    "label": "t:common.product.label"
+                },
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "t:common.heading.label"
+                },
+                {
+                    "type": "text",
+                    "id": "subheading",
+                    "label": "t:common.text.label"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "t:common.image.label"
+                }
+            ]
+        },
+        {
+            "type": "low_stock",
+            "name": "t:sections.purchase-form-limited-offer.blocks.low-stock.name",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "t:common.heading.label",
+                    "default": "Low stock"
+                },
+                {
+                    "type": "text",
+                    "id": "subheading",
+                    "label": "t:common.text.label",
+                    "default": "Due to high demand, this offer has limited availability."
+                },
+                {
+                    "type": "range",
+                    "id": "percent",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "label": "t:common.percent.label",
+                    "default": 83
+                }
+            ]
+        },
+        {
+            "type": "order_today",
+            "name": "t:sections.purchase-form-limited-offer.blocks.order-today.name",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "richtext",
+                    "id": "heading",
+                    "label": "t:common.heading.label",
+                    "default": "<p>Order today to lock in your deal and get <strong>FREE Shipping</strong></p>"
+                }
+            ]
+        }
+    ],
+    "presets":[
+        {
+            "name":"t:sections.purchase-form-limited-offer.name"
+        }
+    ]
+}
+{%- endschema -%}

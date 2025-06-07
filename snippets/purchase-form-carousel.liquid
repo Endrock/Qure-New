@@ -1,0 +1,60 @@
+{% assign page_metaobject = page.metafields.custom.purchase_form_carousel_media.value %}
+
+{% if page_metaobject %}
+
+    <div class="bfs_mb_slider">
+        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper bfs_mb_sl2">
+            <div class="swiper-wrapper">
+                {% for media in page_metaobject.image_or_video.value %}
+                    {% if media.media_type == 'video' %}
+                        {% if media.sources[1].url != blank %}
+                            {% assign video_source_url = media.sources[1].url %}
+                        {% else %}
+                            {% assign video_source_url = media.sources[0].url %}
+                        {% endif %}
+
+                        <div class="swiper-slide video_popup" data-media="{{ media.media_type }}">
+                            <a class="popup-youtube d-block" href="{{ video_source_url }}">
+                                <img class="img-fluid swiper-products-carousel__image" src="{{ media | image_url: width: 560, height: 496 }}" width="560" height="496" alt="{{ media.alt | escape }}">
+                            </a>
+                        </div>
+                    {% else %}
+                        <div class="swiper-slide" class="bfs_mb_wrap" data-media="{{ media.media_type }}" data-index="{{ index }}" data-forloopindex0={{ forloop.index0 }}>
+                            <picture class="swiper-products-carousel__image-container {% if product.handle == "dermal-mist" %}margin-auto{% endif %}">
+                                <source media="(min-width:1920px)" srcset="{{ media | img_url: 'master' }}">
+                                <source media="(min-width:1600px)" srcset="{{ media | img_url: '1600x' }}">
+                                <source media="(min-width:1100px)" srcset="{{ media | img_url: '1100x' }}">
+                                <source media="(min-width:720px)" srcset="{{ media | img_url: '720x' }}">
+                                <source media="(min-width:540px)" srcset="{{ media | img_url: '540x' }}">
+                                {{ media | image_url: width: 1600 | image_tag: class: 'swiper-products-carousel__image', alt: media.alt | escape}} 
+                            </picture>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="thumbsSlider_wrap mt-3">
+            <div thumbsSlider="" class="swiper bfs_mb_sl pagination_navigation1">
+                <div class="swiper-wrapper justify-content-center">
+                    {% for media in page_metaobject.image_or_video.value %}
+                        <div class="swiper-slide w-auto">
+                            <div class="bfs_mb_wrapThumb">
+                                <img src="{{ media | img_url: '340x' }}" class="img-fluid" />
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        {% if page_metaobject.video_url.value != blank %}
+            <div class="bfs_mb_btn justify-content-between bfBundle__content pt-3">
+                <a class="see_action text-center text-black popup-youtube text-decoration-underline" href="{{ page_metaobject.video_url.value }}">
+                    <p>
+                        <span><img src="https://qureskincaredns.com/new/assets/play_circle-black.svg" alt="" class="img-fluid me-2">See it in action</span>
+                    </p>
+                </a>
+            </div>            
+        {% endif %}
+    </div>
+{% endif %}
