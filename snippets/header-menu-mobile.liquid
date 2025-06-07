@@ -19,7 +19,9 @@
                         <img src="{{ block.settings.image | img_url: '400x' }}" alt="" class="img-fluid">
                         <h6>{{ block.settings.button_label |  replace: '[', '<span>' |  replace: ']', '</span>'  }} <img src="{{ 'header_drop_right.svg' | asset_url }}" alt="" class="ms-1"></h6>
                     </a>
-                    {% render 'pdm-navigation-bundle-mobile', upsells_data: section.settings.upsell_content %}
+                    {% if section.settings.enable_menu_upsell_carousel %}
+                      {% render 'pdm-navigation-bundle-mobile', upsells_data: section.settings.upsell_content %}
+                    {% endif %}
                 </div>
             {% endif %}
             {%- assign num = num | plus: 1 -%}

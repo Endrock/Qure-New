@@ -63,6 +63,7 @@ setTimeout(function () {
                     },
                     pagination: {
                         clickable: !0,
+                        type: 'fraction',
                         el: e.querySelector(".swiper-pagination")
                     },
                     breakpoints: {
@@ -329,12 +330,13 @@ if ($(".plan_bundle_hdr")[0]) {
 
 // =================================== js for slider ===============================
 
-//result slider
+// result slider
 var swiper = new Swiper(".result_slider", {
-    spaceBetween: 15,
+    spaceBetween: 25,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
+        type: 'fraction',
     },
     navigation: {
         nextEl: ".qureSlider-swiper-next",
@@ -352,6 +354,8 @@ var swiper = new Swiper(".result_slider", {
         },
     },
 });
+
+
 
 
 //micro infusion-lp result slider
@@ -405,32 +409,44 @@ var swiper = new Swiper(".result_slider_3", {
 
 
 // =================
-//YOUTUBE VIDEO
+// //YOUTUBE VIDEO
+// $(document).ready(function () {
+
+    // $('.play_btn').on('click', function () {
+    //     $('.video-popup').fadeIn('slow');
+    //     return false;
+    // });
+
+//     $('.popup-bg').on('click', function () {
+//         $('.video-popup').slideUp('slow');
+//         return false;
+//     });
+
+//     $('.close-btn').on('click', function () {
+//         $('.video-popup').fadeOut('slow');
+//         return false;
+//     });
+// });
+
+
+// // Video Popup
+// $(document).ready(function () {
+//     $('.popup-youtube').magnificPopup({
+//         type: 'iframe'
+//     });
+// });
 $(document).ready(function () {
-
-    $('.play_btn').on('click', function () {
-        $('.video-popup').fadeIn('slow');
-        return false;
-    });
-
-    $('.popup-bg').on('click', function () {
-        $('.video-popup').slideUp('slow');
-        return false;
-    });
-
-    $('.close-btn').on('click', function () {
-        $('.video-popup').fadeOut('slow');
-        return false;
-    });
-});
-
-
-// Video Popup
-$(document).ready(function () {
+    // Initialize Magnific Popup for YouTube links
     $('.popup-youtube').magnificPopup({
-        type: 'iframe'
+      type: 'iframe',
+      mainClass: 'mfp-fade',
+      removalDelay: 160,
+      preloader: false,
+      fixedContentPos: false
     });
-});
+  });
+
+  
 
 // Image PopUp Refill Banner
 // document.addEventListener('DOMContentLoaded', function () {
@@ -498,15 +514,51 @@ $(function () {
 
 
 // navbar
-setTimeout(function () {
-    $('.hamburger-container').click(function () {
-        $('body').toggleClass("openmenu");
+// setTimeout(function () {
+//     $('.hamburger-container').click(function () {
+//         $('body').toggleClass("openmenu");
+//     });
+//     $("#menu li > a").click(function () {
+//         $('body').removeClass("openmenu");
+//         bottomBar.removeClass("hidden");
+//     })
+// }, 500);
+
+function initMobileMenu() {
+    const hamburgerContainer = document.querySelector('.hamburger-container');
+    const menuLinks = document.querySelectorAll('#menu li > a');
+    const bottomBar = document.querySelector('.bottom-bar'); // Adjust selector if needed
+    const body = document.body;
+
+    if (!hamburgerContainer || menuLinks.length === 0) return;
+
+    hamburgerContainer.addEventListener('click', function () {
+        body.classList.toggle('openmenu');
     });
-    $("#menu li > a").click(function () {
-        $('body').removeClass("openmenu");
-        bottomBar.removeClass("hidden");
-    })
-}, 500);
+
+    menuLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+            body.classList.remove('openmenu');
+            if (bottomBar) {
+                bottomBar.classList.remove('hidden');
+            }
+        });
+    });
+}
+
+// Run when DOM is ready and target element is found
+function waitForElement(selector, callback) {
+    const checkExist = setInterval(function () {
+        if (document.querySelector(selector)) {
+            clearInterval(checkExist);
+            callback();
+        }
+    }, 100); // check every 100ms
+}
+
+waitForElement('.hamburger-container', initMobileMenu);
+
+
 
 
 
@@ -704,17 +756,12 @@ addEventListener("resize", (event) => {
 
 // === sticky button ===
 $(window).scroll(function () {
-  if ($(this).scrollTop() > 100) {
-    $('.button_sticky_wrapper').addClass("sticky");
-    if (window.innerWidth <= 767) { // Check if it's mobile
-      $('.richpanel-micro .rp-micro-app-dummy-icon-container').css('bottom', '130px');
+    if ($(this).scrollTop() > 100) {
+        $('.button_sticky_wrapper').addClass("sticky");
     }
-  } else {
-    $('.button_sticky_wrapper').removeClass("sticky");
-    if (window.innerWidth <= 767) { // Check if it's mobile
-      $('.richpanel-micro .rp-micro-app-dummy-icon-container').css('bottom', '');
+    else {
+        $('.button_sticky_wrapper').removeClass("sticky");
     }
-  }
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -1227,48 +1274,44 @@ function myFunction() {
 /*
 * countdown js start
 */
-
-/*
 // ============== countdown JS ============
-function createCountdownTimer(targetDate, targetElement) {
-    // Update the countdown every 1 second
-    const countdownInterval = setInterval(function () {
-        const currentDate = new Date().getTime();
-        const timeRemaining = targetDate - currentDate;
+// function createCountdownTimer(targetDate, targetElement) {
+//     // Update the countdown every 1 second
+//     const countdownInterval = setInterval(function () {
+//         const currentDate = new Date().getTime();
+//         const timeRemaining = targetDate - currentDate;
 
-        if (timeRemaining <= 0) {
-            // Countdown has ended
-            clearInterval(countdownInterval);
-            targetElement.querySelector(".theTimer").innerHTML = "Countdown Expired!";
-        } else {
-            // Calculate days, hours, minutes, and seconds
-            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+//         if (timeRemaining <= 0) {
+//             // Countdown has ended
+//             clearInterval(countdownInterval);
+//             targetElement.querySelector(".theTimer").innerHTML = "Countdown Expired!";
+//         } else {
+//             // Calculate days, hours, minutes, and seconds
+//             const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+//             const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//             const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+//             const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-            // Update the countdown display for the target element
-            targetElement.querySelector(".theTimer").innerHTML =
-                `<span data-name="days">${padZeroes(days)}</span> <span class="dots">:</span> <span data-name="hours">${padZeroes(hours)}</span> <span class="dots">:</span> <span data-name="minutes">${padZeroes(minutes)}</span> <span class="dots">:</span> <span data-name="seconds">${padZeroes(seconds)}</span>`;
-        }
-    }, 1000);
-}
+//             // Update the countdown display for the target element
+//             targetElement.querySelector(".theTimer").innerHTML =
+//                 `<span data-name="days">${padZeroes(days)}</span> <span class="dots">:</span> <span data-name="hours">${padZeroes(hours)}</span> <span class="dots">:</span> <span data-name="minutes">${padZeroes(minutes)}</span> <span class="dots">:</span> <span data-name="seconds">${padZeroes(seconds)}</span>`;
+//         }
+//     }, 1000);
+// }
 
-// Function to pad zeroes to a number if it's less than 10
-function padZeroes(num) {
-    return num < 10 ? "0" + num : num;
-}
+// // Function to pad zeroes to a number if it's less than 10
+// function padZeroes(num) {
+//     return num < 10 ? "0" + num : num;
+// }
 
-// Set target dates and elements for each countdown section
-const countdownSections = document.querySelectorAll(".countdown_timer");
+// // Set target dates and elements for each countdown section
+// const countdownSections = document.querySelectorAll(".countdown_timer");
 
-countdownSections.forEach((section) => {
-    const targetDate = new Date(section.getAttribute("data-target-date")).getTime();
-    const targetElement = section.querySelector(".countdown_block");
-    createCountdownTimer(targetDate, targetElement);
-});
-*/
-
+// countdownSections.forEach((section) => {
+//     const targetDate = new Date(section.getAttribute("data-target-date")).getTime();
+//     const targetElement = section.querySelector(".countdown_block");
+//     createCountdownTimer(targetDate, targetElement);
+// });
 /*
 * countdown js end
 */
@@ -1641,40 +1684,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // Thumb Slider Start
-// var swiper = new Swiper(".bfs_mb_sl", {
-//     spaceBetween: 8,
-//     slidesPerView: 4.4,
-//     freeMode: true,
-//     watchSlidesProgress: true,
-//     breakpoints: {
-//         768: {
-//             spaceBetween: 12,
-//             slidesPerView: 6.5,
-//         },
+var swiper = new Swiper(".bfs_mb_sl", {
+    spaceBetween: 8,
+    slidesPerView: 4.4,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+        768: {
+            spaceBetween: 12,
+            slidesPerView: 6.5,
+        },
 
-//     },
-// });
-// var swiper2 = new Swiper(".bfs_mb_sl2", {
-//     spaceBetween: 10,
-//     navigation: {
-//         nextEl: ".thumb-next",
-//         prevEl: ".thumb-prev",
-//     },
-//     thumbs: {
-//         swiper: swiper,
-//     },
-// });
+    },
+});
+var swiper2 = new Swiper(".bfs_mb_sl2", {
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".thumb-next",
+        prevEl: ".thumb-prev",
+    },
+    thumbs: {
+        swiper: swiper,
+    },
+});
 
 $(document).ready(function () {
     // When a planBlock is clicked
     $('.planBlock').click(function () {
         // Get the image path from the selected plan
         var selectedImage = $(this).data('image');  // Retrieve the data-image attribute
- 
-    // Update the image source of all elements with the id bundleImage
-    $('[id="bundleImage"]').attr('src', selectedImage);  // Update image src for all matching elements
-    if (window.patchesCarousel) window.patchesCarousel.goToSlide(0);
-  });
+
+        // Update the image source of the first column's image
+        $('#bundleImage').attr('src', selectedImage);  // Update image src
+    });
 });
 
 // Thumb Slider End
@@ -1683,75 +1725,110 @@ $(document).ready(function () {
 
 
 
+
 var BlsEventMainProductShopify = {
     init: function() {
-        this.eventMediaGalleryProduct()
+        this.eventMediaGalleryProduct();
     },
+
     eventMediaGalleryProduct: function() {
-        const e = document.querySelector(".bls__swiper-gallery-thumbnails"),
-            t = document.querySelector(".bls__swiper-gallery");
-        if (e)
-            // if (e.classList.contains("bls__swiper-vertical")) var r = new Swiper(".bls__swiper-gallery-thumbnails.bls__swiper-vertical", {
-            //     spaceBetween: 10,
-            //     slidesPerView: 8,
-            //     freeMode: !0,
-            //     direction: "vertical",
-            //     watchSlidesProgress: !0
-            // });
-            //else 
-            r = new Swiper(".bls__swiper-gallery-thumbnails", {
-                spaceBetween: 10,
-                slidesPerView: 4.6,
-                freeMode: !0,
-                watchSlidesProgress: !0,
-                navigation: {
-                    nextEl: ".swiper-next",
-                    prevEl: ".swiper-prev"
-                }
-            });
-        if (t)
-            if (r) var o = new Swiper(".bls__swiper-gallery", {
-                loop: !1,
-                speed: 600,
+        const thumbnailEl = document.querySelector(".bls__swiper-gallery-thumbnails");
+        const mainEl = document.querySelector(".bls__swiper-gallery");
+        let thumbnailSwiper, mainSwiper;
+
+        // ---------- Thumbnail Swiper ----------
+        if (thumbnailEl) {
+            const slidesPerViewDesktop = Number(thumbnailEl.dataset.desktop) || 5;
+            const slidesPerViewTablet = Number(thumbnailEl.dataset.tablet) || 4;
+            const slidesPerViewMobile = Number(thumbnailEl.dataset.mobile) || 3;
+            const spacingThumbs = Number(thumbnailEl.dataset.spacing) || 10;
+
+            thumbnailSwiper = new Swiper(".bls__swiper-gallery-thumbnails", {
+                spaceBetween: spacingThumbs,
+                slidesPerView: slidesPerViewDesktop,
+                freeMode: true,
+                watchSlidesProgress: true,
                 navigation: {
                     nextEl: ".swiper-next",
                     prevEl: ".swiper-prev"
                 },
-                thumbs: {
-                    swiper: r
+                breakpoints: {
+                    0: {
+                        slidesPerView: slidesPerViewMobile
+                    },
+                    768: {
+                        slidesPerView: slidesPerViewTablet
+                    },
+                    1024: {
+                        slidesPerView: slidesPerViewDesktop
+                    }
                 }
             });
-            else {
-                const e = "true" === t.dataset.autoplay,
-                    r = t?.dataset.mobile,
-                    i = t?.dataset.spacing,
-                    a = t?.dataset.sectionId;
-                o = new Swiper(".bls__swiper-gallery", {
-                    slidesPerView: r,
-                    spaceBetween: Number(i),
-                    autoplay: e,
+        }
+
+        // ---------- Main Swiper ----------
+        if (mainEl) {
+            if (thumbnailSwiper) {
+                mainSwiper = new Swiper(".bls__swiper-gallery", {
+                    loop: false,
                     speed: 600,
-                    loop: !1,
-                    grid: {
-                        rows: a
+                    navigation: {
+                        nextEl: ".swiper-next",
+                        prevEl: ".swiper-prev"
                     },
+                    thumbs: {
+                        swiper: thumbnailSwiper
+                    }
+                });
+            } else {
+                const autoplay = mainEl.dataset.autoplay === "true";
+                const slidesPerViewMobile = Number(mainEl.dataset.mobile) || 1;
+                const slidesPerViewTablet = Number(mainEl.dataset.tablet) || 1;
+                const slidesPerViewDesktop = Number(mainEl.dataset.desktop) || 1;
+                const spacing = Number(mainEl.dataset.spacing) || 0;
+                const sectionId = mainEl.dataset.sectionId;
+
+                mainSwiper = new Swiper(".bls__swiper-gallery", {
+                    loop: false,
+                    speed: 600,
+                    autoplay: autoplay,
+                    spaceBetween: spacing,
+                    slidesPerView: slidesPerViewDesktop,
                     navigation: {
                         nextEl: ".swiper-next",
                         prevEl: ".swiper-prev"
                     },
                     pagination: {
-                        clickable: !0,
-                        el: ".swiper-pagination"
+                        el: ".swiper-pagination",
+                        clickable: true
+                    },
+                    breakpoints: {
+                        0: {
+                            slidesPerView: slidesPerViewMobile
+                        },
+                        768: {
+                            slidesPerView: slidesPerViewTablet
+                        },
+                        1024: {
+                            slidesPerView: slidesPerViewDesktop
+                        }
+                    },
+                    grid: {
+                        rows: sectionId ? Number(sectionId) : 1
                     }
-                })
-            } 
-            
+                });
+            }
+        }
     }
 };
+
 BlsEventMainProductShopify.init();
 
 
 
+
+
+// best swiper ever 
 
 document.querySelectorAll('.ctm_swiper_main_images').forEach((mainEl) => {
     const thumbsEl = mainEl.closest('.ctm_swiper_outer').querySelector('.ctm_swiper_thumb_images');
@@ -1785,31 +1862,32 @@ document.querySelectorAll('.ctm_swiper_main_images').forEach((mainEl) => {
     });
   });
   
-
-
 // best swiper ever end 
 // show more and show less in dermal mist   
 
-const seeMoreBtn = document.getElementById('seeMoreBtn');
+  const seeMoreBtn = document.getElementById('seeMoreBtn');
 
-seeMoreBtn.addEventListener('click', function() {
-  const hiddenItems = document.querySelectorAll('#featuresList li:nth-child(4), #featuresList li:nth-child(5)');
-  const isExpanded = this.getAttribute('data-expanded') === 'true';
+  seeMoreBtn.addEventListener('click', function() {
+    const hiddenItems = document.querySelectorAll('#featuresList li:nth-child(4), #featuresList li:nth-child(5)');
+    const isExpanded = this.getAttribute('data-expanded') === 'true';
 
-  if (isExpanded) {
-    // If expanded, hide the extra items
-    hiddenItems.forEach(function(item) {
-      item.classList.add('hidden-li');
-    });
-    this.textContent = 'See More';
-    this.setAttribute('data-expanded', 'false');
-  } else {
-    // If collapsed, show the extra items
-    hiddenItems.forEach(function(item) {
-      item.classList.remove('hidden-li');
-    });
-    this.textContent = 'See Less';
-    this.setAttribute('data-expanded', 'true');
-  }
-});
+    if (isExpanded) {
+      // If expanded, hide the extra items
+      hiddenItems.forEach(function(item) {
+        item.classList.add('hidden-li');
+      });
+      this.textContent = 'See More';
+      this.setAttribute('data-expanded', 'false');
+    } else {
+      // If collapsed, show the extra items
+      hiddenItems.forEach(function(item) {
+        item.classList.remove('hidden-li');
+      });
+      this.textContent = 'See Less';
+      this.setAttribute('data-expanded', 'true');
+    }
+  });
+
+
+
 

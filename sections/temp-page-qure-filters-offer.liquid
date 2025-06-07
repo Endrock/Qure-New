@@ -1237,18 +1237,36 @@
                                         </button>
 
                                         <script>
+                                            let product_variant_id_white_shower_filter = '{{ product_variant_id_white_shower_filter }}';
+                                            let product_variant_id_black_shower_filter = '{{ product_variant_id_black_shower_filter }}';
+                                            let selling_plan_shower_filter = '{{ selling_plan_shower_filter }}';
+
+                                            let product_variant_id_white_faucet_filter = '{{ product_variant_id_white_faucet_filter }}';
+                                            let product_variant_id_black_faucet_filter = '{{ product_variant_id_black_faucet_filter }}';
+                                            let selling_plan_faucet_filter = '{{ selling_plan_faucet_filter }}';
+
+                                            const qure_filters_offer_clear = function(state) {
+                                                qure_filters_offer_clear_variant(state.cart.items, product_variant_id_white_shower_filter, product_variant_id_white_faucet_filter);
+                                                qure_filters_offer_clear_variant(state.cart.items, product_variant_id_black_shower_filter, product_variant_id_black_faucet_filter);
+                                            }
+
+                                            const qure_filters_offer_clear_variant = function(items, shower_variant_id, faucet_variant_id) {
+                                                let __shower_filter = items.find(item => item.id === +(shower_variant_id));
+                                                let __faucet_filter = items.find(item => item.id === +(faucet_variant_id));
+
+                                                if(!__shower_filter && __faucet_filter)
+                                                {
+                                                    cartRequestChange({ 
+                                                        id: __faucet_filter.key,
+                                                        quantity: 0
+                                                    },  {} )
+                                                }
+                                            }
+
                                             document.addEventListener('DOMContentLoaded', function() {
                                                 document.querySelectorAll('.buy-now-button').forEach(button => {
                                                     button.addEventListener('click', function() {
                                                         let __items = [];
-                                                        let product_variant_id_white_shower_filter = '{{ product_variant_id_white_shower_filter }}';
-                                                        let product_variant_id_black_shower_filter = '{{ product_variant_id_black_shower_filter }}';
-                                                        let selling_plan_shower_filter = '{{ selling_plan_shower_filter }}';
-
-                                                        let product_variant_id_white_faucet_filter = '{{ product_variant_id_white_faucet_filter }}';
-                                                        let product_variant_id_black_faucet_filter = '{{ product_variant_id_black_faucet_filter }}';
-                                                        let selling_plan_faucet_filter = '{{ selling_plan_faucet_filter }}';
-
                                                         const newUrl = new URL(window.location.href);
                                                         let selected_product_variant_id = newUrl.searchParams.get('variant');
 
@@ -1291,7 +1309,7 @@
 
 
                                         <p class="d-flex justify-content-center flex-column flex-md-row skip_pause mt-1 gap-1">Skip, pause/modify or cancel anytime.   
-                                            <a href="https://qureskincare.com/pages/subscriptions"> See more details</a>.
+                                            <a href="https://qureskincare.com/pages/subscriptions" target="_blank"> See more details</a>.
                                         </p>
                                         <!-- Next batch ships January 25th -->
                                         <div class="next_batch_bl next_batch_highlight">
