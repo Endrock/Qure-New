@@ -154,7 +154,7 @@
             "breakout-control-essentials",
             "breakout-control-advanced"
           ],
-          "enable_menu_upsell_carousel": true
+          "enable_menu_upsell_carousel": false
         }
       },
       "newsletter": {
@@ -247,8 +247,8 @@
               "page_url": "https://www.qureskincare.com/products/q-rejuvalight-pro-facewear",
               "upsell_product_first": "led-mask-extended-1-year-warranty",
               "upsell_product_first_description": "Protect your LED Device for 1 more year.",
-              "upsell_product_second": "breakout-control-advanced",
-              "upsell_product_second_description": "Upgrade your treatment & treat multiple skin concerns.",
+              "upsell_product_second": "micro-infusion-targeted-patches",
+              "upsell_product_second_description": "Smooths fine lines, fades dark circles, and deflates puffiness.",
               "upsell_product_third": "face-serum",
               "upsell_product_thid_description": "Boost your LED light therapy results"
             }
@@ -257,8 +257,8 @@
             "type": "upsell",
             "settings": {
               "page_url": "https://www.qureskincare.com/products/neck-decolletage-led",
-              "upsell_product_first": "micro-infusion-targeted-patches-single",
-              "upsell_product_first_description": "Elevate your skincare with at-home microneeding treatment.",
+              "upsell_product_first": "micro-infusion-targeted-patches",
+              "upsell_product_first_description": "Smooths fine lines, fades dark circles, and deflates puffiness.",
               "upsell_product_second": "nec-and-deck-extended-1-year-warranty",
               "upsell_product_second_description": "Protect your LED Device for 1 more year.",
               "upsell_product_third": "fade-firm-bundle-advance",
@@ -285,8 +285,8 @@
               "upsell_product_first_description": "Plump, smooth & brighten in one step.",
               "upsell_product_second": "line-refine-bundle-essentials",
               "upsell_product_second_description": "Bundle & SAVE 32%",
-              "upsell_product_third": "",
-              "upsell_product_thid_description": ""
+              "upsell_product_third": "micro-infusion-targeted-patches",
+              "upsell_product_thid_description": "Smooths fine lines, fades dark circles, and deflates puffiness."
             }
           },
           "upsell_UiGexh": {
@@ -341,7 +341,7 @@
             "type": "upsell",
             "settings": {
               "page_url": "https://qureskincare.com/pages/qure-microinfusion-offer",
-              "upsell_product_first": "micro-infusion-targeted-patches-single",
+              "upsell_product_first": "micro-infusion-targeted-patches",
               "upsell_product_first_description": "Elevate your skincare with at-home microneeding treatment.",
               "upsell_product_second": "micro-infusion-hydra-soothing-2-treatments",
               "upsell_product_second_description": "Reduce fine lines & boost hydration.",
@@ -374,9 +374,9 @@
           "upsell_product_third_description": "Plump, smooth & brighten in just one step",
           "sidecart_timer_old_enable": false,
           "sidecart_timer_new_enable": true,
-          "start_date": "12-10-2024 00:00",
-          "finish_date": "12-25-2024 11:59",
-          "label_ends": "Holidays Sale Ends In:",
+          "start_date": "07-02-2025 24:00",
+          "finish_date": "07-08-2025 24:00",
+          "label_ends": "4th July Offer Ends:",
           "label_days": "DAYS",
           "label_hours": "HOURS",
           "label_minutes": "MINUTES",
@@ -451,6 +451,11 @@
         "settings": {
           "enable_cart_validation": true
         }
+      },
+      "16361216567099377559": {
+        "type": "shopify://apps/tariff-support-by-intelligems/blocks/tariff-support-script/450d9b0f-e77b-4bc3-aeb2-b0c71fe65bbf",
+        "disabled": true,
+        "settings": {}
       }
     }
   },
