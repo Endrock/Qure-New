@@ -116,6 +116,7 @@
         },
         "product_iEprpi": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "heading": "Line Refine Bundle Advanced",
             "discount": 55,
