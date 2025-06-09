@@ -60,9 +60,6 @@
     },
     "main": {
       "type": "product-landing",
-      "custom_css": [
-        ".product-price {display: none;}"
-      ],
       "blocks": {
         "rating_TfBQ9X": {
           "type": "rating",
@@ -70,6 +67,12 @@
             "image": "shopify://shop_images/star-half_fill.svg",
             "text": "<p>229,000+ Happy Customers</p>",
             "product": ""
+          }
+        },
+        "list_pQxE9h": {
+          "type": "list",
+          "settings": {
+            "text": "<ul><li>FDA-cleared at-home LED mask</li><li>Treat acne, fine lines, wrinkles & more</li><li>Customize, track & schedule treatments with app</li><li>Quick & convenient 3-minute wireless treatments</li></ul>"
           }
         },
         "offer_L9q6wE": {
@@ -84,12 +87,6 @@
             "button_label": "Shop & Save [price_save]",
             "button_url": "#shop"
           }
-        },
-        "list_pQxE9h": {
-          "type": "list",
-          "settings": {
-            "text": "<ul><li>FDA-cleared at-home LED mask</li><li>Treat acne, fine lines, wrinkles & more</li><li>Customize, track & schedule treatments with app</li><li>Quick & convenient 3-minute wireless treatments</li></ul>"
-          }
         }
       },
       "block_order": [
@@ -97,13 +94,27 @@
         "list_pQxE9h",
         "offer_L9q6wE"
       ],
+      "custom_css": [
+        ".product-price {display: none;}"
+      ],
       "settings": {
         "seo_heading": "",
         "heading": "Feel Confident Makeup-Free with Q-Rejuvalight Pro",
         "heading_mobile": "Feel Confident Makeup-Free with Q-Rejuvalight Pro",
+        "product": "",
+        "product_images_offset": 0,
+        "product_images_limit": 0,
+        "product_button_label": "Product",
+        "before_after_images_limit": 0,
+        "before_after_button_label": "Before & After",
         "reserve": false,
         "soldout": false,
         "selected_design": "new",
+        "text_label_real_result_1": "Product",
+        "text_label_real_result_2": "Real Results",
+        "text_label_real_result_3": "Dermatologist",
+        "enable_jump_to_section": true,
+        "text_jump_to_section": "Jump To",
         "popup_enabled": false
       }
     },
@@ -539,11 +550,73 @@
         "included_text": "Included with your purchase"
       }
     },
-    "liquid_6AqWXk": {
-      "type": "liquid",
+    "purchase-form-limited-offer": {
+      "type": "purchase-form-limited-offer",
+      "blocks": {
+        "preorder_box": {
+          "type": "preorder_box",
+          "settings": {
+            "heading": "Next batch ships early May 2025:",
+            "text": "<p>Due to high demand, 1-month Micro-Infusion supply is sold out. Order now and secure yours from the next shipment.</p>",
+            "first_option_date": "April 14th",
+            "first_option_text": "SOLD OUT",
+            "first_option_percent": 100,
+            "second_option_date": "May 6th",
+            "second_option_text": "54% Reserved",
+            "second_option_percent": 54,
+            "third_option_date": "June 2025",
+            "third_option_text": "",
+            "third_option_percent": 0
+          }
+        },
+        "product": {
+          "type": "product",
+          "settings": {
+            "product": "q-rejuvalight-pro-facewear-3",
+            "heading": "Q-Rejuvalight Pro LED Mask",
+            "subheading": "FDA-cleared device that treats acne, fine lines, wrinkles and dark spots.",
+            "image": "shopify://shop_images/include_pd-img1.webp"
+          }
+        },
+        "product2": {
+          "type": "product",
+          "settings": {
+            "product": "neck-decolletage-led",
+            "heading": "Neck & Décolletage LED Device",
+            "subheading": "Clinically-proven results for anti-aging and skin rejuvenation where the first signs of aging appear.",
+            "image": "shopify://shop_images/include_pd-img2.webp"
+          }
+        },
+        "low_stock": {
+          "type": "low_stock",
+          "settings": {
+            "heading": "Low stock",
+            "subheading": "Due to high demand, this offer has limited availability.",
+            "percent": 83
+          }
+        },
+        "order_today": {
+          "type": "order_today",
+          "settings": {
+            "heading": "<p>Order today to lock in your deal and get <strong>FREE Shipping</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "preorder_box",
+        "product",
+        "product2",
+        "low_stock",
+        "order_today"
+      ],
       "settings": {
-        "code": "{% render 'led-mask-offer-2-form' with section: section %}",
-        "popup_micro_infusion_enabled": true
+        "title": "LIMITED TIME OFFER",
+        "heading": "<p>Q-Rejuvalight Pro LED Mask<em>+ FREE Neck & Décolletage LED Device</em></p>",
+        "text": "<p>Repair and rejuvenate your skin—and boost your self-esteem—with our FDA-cleared LED mask that treats acne, fine lines, wrinkles and dark spots.</p>",
+        "discount": "FREEN&DOFFER",
+        "replace": "$299",
+        "soldout": false,
+        "preorder": false
       }
     },
     "use_three_steps_7TxcHJ": {
@@ -765,6 +838,7 @@
             "trust_icon": "shopify://shop_images/verified_design.svg",
             "trust_des": "Trusted and recommended by world leading Dermatologists",
             "title": "\"The best LED mask <strong>on the market in my opinion at this time, that being said you do need </strong>to use this consistently to see results...\"",
+            "title_des": "",
             "title_clr": "#000000",
             "title_strong_clr": "#797d7c"
           }
@@ -772,6 +846,7 @@
         "video_yaaryT": {
           "type": "video",
           "settings": {
+            "title_mob": "Recommended by Experts",
             "image": "shopify://shop_images/trusted_22.png",
             "video": "https://www.youtube.com/watch?v=I2Fe-kP-2Jg",
             "title": "Dr Shah, MD",
@@ -785,6 +860,9 @@
       ],
       "name": "t:sections.text_video.label",
       "settings": {
+        "ctm_cls": "",
+        "left_dv_width": "7",
+        "right_dv_width": "5",
         "padding_top": 30,
         "padding_bottom": 30
       }
@@ -1059,7 +1137,7 @@
     "proof_in_numbers_4pTJzE",
     "result_with_product_wmbwCj",
     "exclusive_offer_yFYm4j",
-    "liquid_6AqWXk",
+    "purchase-form-limited-offer",
     "use_three_steps_7TxcHJ",
     "services_slider_jRhij4",
     "how_it_works_bNMxpm",
