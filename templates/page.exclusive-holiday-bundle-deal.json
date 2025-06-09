@@ -1500,8 +1500,8 @@
             "recommended_heading": "",
             "recommended_text": "",
             "is_top_rated": true,
-            "is_preorder": false,
-            "is_soldout": true,
+            "is_preorder": true,
+            "is_soldout": false,
             "preorder_text": "SHIPS MID APRIL",
             "classname": "",
             "code": ""
@@ -1524,7 +1524,7 @@
         "include_gNNy6j": {
           "type": "include",
           "settings": {
-            "heading": "Dermal Mist (120ml)",
+            "heading": "Dermal Mist (120ml) (Pre-Order)",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs-derma-mist.webp",
