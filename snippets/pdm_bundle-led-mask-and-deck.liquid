@@ -14,7 +14,7 @@
     data-product-bundlet-id="{{ product_bundle.id }}"
     data-product-bundle-variant-id="{{ product_bundle.variants.first.id }}"
     data-product-bundle-handle="{{ product_bundle.handle }}"
-    data-product-bundle-image="{{ bundle_metafield_data.product_with_discount_image | image_url: width: 400 }}"
+    data-product-bundle-image="{{ product_bundle.featured_image| image_url: width: 400 }}"
     class="pdm_product-bundle-container {{ device_visibility }}"
   >
     <label class="pdm_product-bundle-label">
