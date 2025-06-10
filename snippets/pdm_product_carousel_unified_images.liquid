@@ -85,6 +85,61 @@
                   {{ media | image_url: width: 1600 | image_tag: class: 'swiper-products-carousel__image', alt: media.alt | escape}} 
                 </picture>
             </div>
+            {% comment %} init-new-infographic  {% endcomment %}
+            {% if product.handle == "neck-decolletage-led" and forloop.index0 == 2 %}
+              <div class="swiper-slide" style="display: flex; justify-content: center;" data-pdm-slider-test="neck-v2">
+                <picture style="height: 100%">
+                  <source media="(min-width:1920px)" srcset="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/N_D_Mask_Benefits.png?v=1749249027">
+                  <source media="(min-width:1600px)" srcset="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/N_D_Mask_Benefits.png?v=1749249027">
+                  <source media="(min-width:1100px)" srcset="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/N_D_Mask_Benefits.png?v=1749249027">
+                  <source media="(min-width:720px)" srcset="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/N_D_Mask_Benefits.png?v=1749249027">
+                  <source media="(min-width:540px)" srcset="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/N_D_Mask_Benefits.png?v=1749249027">
+                  <img
+                    class="img-fluid swiper-products-carousel__image"
+                    src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/N_D_Mask_Benefits.png?v=1749249027"
+                    width="560"
+                    height="496"
+                    alt="Neck & Decolletage Mask Benefits"
+                  >
+                </picture>
+              </div>
+            {% endif %}
+            {% if page.handle == "microinfusion" and forloop.index0 == 2 %}
+              <div class="swiper-slide" style="overflow: hidden; border-radius: 8px;" data-pdm-slider-test="microinfusion-v2">
+                  <picture>
+                    <source media="(min-width:1920px)" srcset="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/micro-infusion-v2.png?v=1748621376">
+                    <source media="(min-width:1600px)" srcset="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/micro-infusion-v2.png?v=1748621376">
+                    <source media="(min-width:1100px)" srcset="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/micro-infusion-v2.png?v=1748621376">
+                    <source media="(min-width:720px)" srcset="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/micro-infusion-v2.png?v=1748621376">
+                    <source media="(min-width:540px)" srcset="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/micro-infusion-v2.png?v=1748621376">
+                    <img
+                      class="img-fluid swiper-products-carousel__image"
+                      src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/micro-infusion-v2.png?v=1748621376"
+                      width="560"
+                      height="496"
+                      alt="Micro Infusion V2"
+                    >
+                  </picture>
+              </div>
+            {% endif %}
+            {% if product.handle == "q-rejuvalight-pro-facewear" and forloop.index0 == 3 %}
+              <div class="swiper-slide" style="display: flex; justify-content: center;" data-pdm-slider-test="led-mask-v2">
+                <picture style="height: 100%">
+                  <source media="(min-width:1920px)" srcset="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/LED_Mask_Benefits.png?v=1749248464">
+                  <source media="(min-width:1600px)" srcset="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/LED_Mask_Benefits.png?v=1749248464">
+                  <source media="(min-width:1100px)" srcset="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/LED_Mask_Benefits.png?v=1749248464">
+                  <source media="(min-width:720px)" srcset="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/LED_Mask_Benefits.png?v=1749248464">
+                  <source media="(min-width:540px)" srcset="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/LED_Mask_Benefits.png?v=1749248464">
+                  <img
+                    class="img-fluid swiper-products-carousel__image"
+                    src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/LED_Mask_Benefits.png?v=1749248464"
+                    width="560"
+                    height="496"
+                    alt="LED Mask Benefits">
+                </picture>
+              </div>
+            {% endif %}
+            {% comment %} end-new-infographic  {% endcomment %}
           {% endif %}
         {% endif %} 
     {% endfor %}
@@ -127,8 +182,43 @@
             alt="{{ media.alt | escape }}"
           >
         </div>
+        {% comment %} init-new-infographic-thumbails {% endcomment %}
+        {% if product.handle == "neck-decolletage-led" and forloop.index0 == 2 %}
+          <div class="swiper-slide" data-pdm-slider-test="neck-v2">
+            <img
+              class="swiper-products-carousel__thumb-image"
+              src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/N_D_Mask_Benefits.png?v=1749249027"
+              width="64"
+              height="64"
+              alt="Thumbnail Neck & Decolletage Benefits"
+            >
+          </div>
+        {% endif %}
+        {% if page.handle == "microinfusion" and forloop.index0 == 2 %}
+          <div class="swiper-slide" data-pdm-slider-test="microinfusion-v2">
+            <img
+              class="swiper-products-carousel__thumb-image"
+              src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/micro-infusion-v2.png?v=1748621376"
+              width="64"
+              height="64"
+              alt="Thumbnail Micro Infusion V2"
+            >
+          </div>
+        {% endif %}
+        {% if product.handle == "q-rejuvalight-pro-facewear" and forloop.index0 == 3 %}
+          <div class="swiper-slide" data-pdm-slider-test="led-mask-v2">
+            <img
+              class="swiper-products-carousel__thumb-image"
+              src="https://cdn.shopify.com/s/files/1/0441/1431/3365/files/LED_Mask_Benefits.png?v=1749248464"
+              width="64"
+              height="64"
+              alt="Thumbnail LED Mask Benefits">
+          </div>
+        {% endif %}
+        {% comment %} end-new-infographic-thumbails  {% endcomment %}
     {% endfor %}
       {% comment %} wistia video  {% endcomment %}
+
     {% if metaobject.wistia_id != blank %}
       <div class="swiper-slide">
         <img src="https://fast.wistia.com/embed/medias/{{ metaobject.wistia_id }}/swatch"
@@ -148,3 +238,4 @@
 <div class="swiper-products-thumbs-prev">
   {% render 'pdm_icons', icon: 'arrow-left-black' %}  
 </div>
+<script src="{{ 'pdm-carousel-logic.js' | asset_url }}" defer></script>
