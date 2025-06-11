@@ -21,8 +21,8 @@ usage: {% render 'pdm_upsell_cards_slide', image_slide:image_slide, title_copy:t
       <h4>{{ title_copy }}</h4>
       <p>{{ description_copy }}</p>
       <div class="upsell_content-price-wrapper">
-        <span class="upsell_content-price-wrapper--full" data-product-id="{{ product_slide.id }}">{{ product_slide.compare_at_price | money_without_trailing_zeros  }}</span>
-        <span class="upsell_content-price-wrapper--real" data-product-id="{{ product_slide.id }}">{{ product_slide.price | money_without_trailing_zeros }}</span>
+        <span class="upsell_content-price-wrapper--full igComparePrice" data-product-id="{{ product_slide.id }}">{{ product_slide.compare_at_price | money_without_trailing_zeros  }}</span>
+        <span class="upsell_content-price-wrapper--real igPrice" data-product-id="{{ product_slide.id }}">{{ product_slide.price | money_without_trailing_zeros }}</span>
       </div>
     </div>
 
@@ -32,8 +32,8 @@ usage: {% render 'pdm_upsell_cards_slide', image_slide:image_slide, title_copy:t
         <p>{{ description_copy }}</p>
       </div>
       <div class="upsell_content-price-wrapper">
-        <span class="upsell_content-price-wrapper--full" data-product-id="{{ product_slide.id }}">{{ product_slide.compare_at_price | money_without_trailing_zeros  }}</span>
-        <span class="upsell_content-price-wrapper--real" data-product-id="{{ product_slide.id }}">{{ product_slide.price | money_without_trailing_zeros }}</span>
+        <span class="upsell_content-price-wrapper--full igComparePrice" data-product-id="{{ product_slide.id }}">{{ product_slide.compare_at_price | money_without_trailing_zeros  }}</span>
+        <span class="upsell_content-price-wrapper--real igPrice" data-product-id="{{ product_slide.id }}">{{ product_slide.price | money_without_trailing_zeros }}</span>
       </div>
     </div>
 
