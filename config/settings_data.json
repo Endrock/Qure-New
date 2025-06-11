@@ -383,14 +383,14 @@
           "label_seconds": "SECONDS",
           "enable_free_shipping_treshold": true,
           "enable_product_gift": true,
-          "product_free_gift": "face-serum",
+          "product_free_gift": "silk-pillowcase",
           "icon_product_gift_clean": "shopify://shop_images/Layer_1_1.svg",
           "icon_product_gift_full": "shopify://shop_images/Layer_1_0f98f0bb-ebbd-41bc-96dc-f905b2948e10.svg",
           "icon_gift_width": 18,
           "icon_gift_height": 26,
           "enable_show_gift_price": true,
           "copy_get_free_shipping": "<p>You are &price-left& away from <strong>Free Shipping!</strong></p>",
-          "copy_get_product_free": "<p>You’re &price-left& away from a <strong>FREE Face Serum </strong>worth &product-price&</p>",
+          "copy_get_product_free": "<p>You’re &price-left& away from a <strong>FREE Silk Pillowcase </strong>worth &product-price&</p>",
           "copy_congrats": "<p>Congrats! You've unlocked your Free &product-title&</p>",
           "show_urgency_note": true,
           "urgency_note_content": "Due to high demand, [] $quantity_label only saved for 30 minutes.",
@@ -437,11 +437,6 @@
       },
       "1291562577487733835": {
         "type": "shopify://apps/black-crow-ai-that-delivers/blocks/blackcrow_ai_script/3e73f597-cb71-47a1-8a06-0c931482ecd2",
-        "disabled": false,
-        "settings": {}
-      },
-      "9595312320780652085": {
-        "type": "shopify://apps/creatorcommerce-creator-shops/blocks/ccsdk/4dbde762-1068-4d2d-8b03-4505bf4cf377",
         "disabled": false,
         "settings": {}
       },
