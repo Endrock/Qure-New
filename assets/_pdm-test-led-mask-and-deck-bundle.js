@@ -9,40 +9,72 @@
  * @param {NodeList} pdmProductBundleElements - A NodeList containing all product bundle checkboxes.
  */
 function initBundleUpsell(pdmProductBundleElements) {
-  // Get the "Buy Now" button
   const buyNowButton = document.querySelector(".btn.buy_btn");
-  if (!buyNowButton) return; 
+  const stickyBuyButton = document.querySelector(".button_sticky_wrapper__button_sticky");
+  const stickyTitle = document.querySelector(".button_sticky_wrapper__title");
+  const stickyImage = document.querySelector(".button_sticky_wrapper__product-image");
 
-  // Store default values for href and onclick attributes of the "Buy Now" button
+  if (!buyNowButton || !stickyBuyButton || !stickyTitle || !stickyImage) return;
+
+  // Save default states
   const defaultHref = buyNowButton.getAttribute("href");
   const defaultOnClick = buyNowButton.getAttribute("onclick");
 
-  /**
-   * Handles the checkbox change event by updating the "Buy Now" button's attributes
-   * based on whether the checkbox is checked or not.
-   */
-  const handleCheckboxChange = function () {
-    // Find the closest parent pdm-bundle-upsell container and get its product handle
-    const pdmBundleContainer = this.closest(".pdm_product-bundle-container");
-    const productHandle = pdmBundleContainer.getAttribute("data-product-bundle-handle");
+  const defaultStickyHref = stickyBuyButton.getAttribute("href");
+  const defaultStickyOnClick = stickyBuyButton.getAttribute("onclick");
+  const defaultStickyTitle = stickyTitle.textContent;
+  const defaultStickyImageSrc = stickyImage.getAttribute("src");
 
-    // Update the "Buy Now" button's href and onclick based on the checkbox state
+  const handleCheckboxChange = function () {
+    const pdmBundleContainer = this.closest(".pdm_product-bundle-container");
+
+    const productHandle = pdmBundleContainer.getAttribute("data-product-bundle-handle");
+    const variantId = pdmBundleContainer.getAttribute("data-product-bundle-variant-id");
+    const bundleTitle = pdmBundleContainer.getAttribute("data-product-bundle-title");
+    const bundleImage = pdmBundleContainer.getAttribute("data-product-bundle-image");
+
+    console.log("Checkbox changed:", {
+      defaultStickyImageSrc,
+      bundleImage,
+    });
     if (this.checked) {
+      // Update Buy Now (main) button
       buyNowButton.setAttribute("href", `/cart/add?id=${this.value}&quantity=1`);
       buyNowButton.setAttribute("onclick", `setEventProductHandler("${productHandle}")`);
+
+      // Update sticky button href + onclick
+      stickyBuyButton.setAttribute("href", `/cart/add?id=${variantId}&quantity=1`);
+      stickyBuyButton.setAttribute("onclick", `setEventProductHandler("${productHandle}")`);
+
+      // Update sticky title
+      if (bundleTitle) {
+        stickyTitle.textContent = bundleTitle;
+      }
+
+      // Update sticky image
+      if (bundleImage) {
+        stickyImage.setAttribute("src", bundleImage);
+        stickyImage.setAttribute("srcset", bundleImage);
+      }
     } else {
+      // Reset all to defaults
       buyNowButton.setAttribute("href", defaultHref);
       buyNowButton.setAttribute("onclick", defaultOnClick);
+
+      stickyBuyButton.setAttribute("href", defaultStickyHref);
+      stickyBuyButton.setAttribute("onclick", defaultStickyOnClick);
+
+      stickyTitle.textContent = defaultStickyTitle;
+
+      stickyImage.setAttribute("src", defaultStickyImageSrc);
+      stickyImage.setAttribute("srcset", defaultStickyImageSrc);
     }
   };
 
-  // Iterate through each checkbox and add an event listener for the "change" event
   pdmProductBundleElements.forEach((checkbox) => {
     checkbox.addEventListener("change", handleCheckboxChange);
   });
 }
-
-
 document.addEventListener("DOMContentLoaded", () => {
   // Select all checkboxes inside product bundle containers
   const pdmProductBundleElements = document.querySelectorAll(".pdm_product-bundle-container input[type='checkbox']");
