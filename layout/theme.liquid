@@ -91,6 +91,7 @@
             'page.skincare-plan-acne' %}
 
           {{ 'endrock-skincareplanresultslp.css' | asset_url | stylesheet_tag }}
+        {% when 'page.qure-filters-offer' %}
     {% else %}
         {{ 'endrock.css' | asset_url | stylesheet_tag }}
     {% endcase %}
@@ -247,6 +248,7 @@
     </script>
 
     <script defer src="{{ 'endrock.js' | asset_url }}"></script>
+    <script defer src="{{ 'endrock-intelligems.js' | asset_url }}"></script>
     {% case template %}
         {% when 'page.skincare-plan-results' or
             'page.skincare-plan-dark-spots' or
