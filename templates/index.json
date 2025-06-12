@@ -112,7 +112,21 @@
             "heading_fm": "Canela Web",
             "heading_tf": "unset",
             "heading_mt": 0,
-            "heading_mb": 10
+            "heading_mb": 20,
+            "heading_color": "#ffffff",
+            "heading_fsm": 34
+          }
+        },
+        "buttons_jt6ttK": {
+          "type": "buttons",
+          "settings": {
+            "btn_content": "Shop Best Sellers",
+            "button_type": "primary-new",
+            "button_size": "medium",
+            "button_link": "shopify:\/\/collections\/best-sellers",
+            "button_target": false,
+            "b_mt": 0,
+            "b_mb": 15
           }
         },
         "text_a4YPW6": {
@@ -122,34 +136,25 @@
             "txt_fs": 14,
             "txt_fw": "default",
             "txt_tf": "unset",
-            "txt_mt": 0,
-            "txt_mb": 25
-          }
-        },
-        "buttons_jt6ttK": {
-          "type": "buttons",
-          "settings": {
-            "btn_content": "Shop Best Sellers",
-            "button_type": "primary-new",
-            "button_link": "shopify:\/\/collections\/best-sellers",
-            "button_target": false,
-            "b_mt": 0,
-            "b_mb": 15
+            "txt_mt": 20,
+            "txt_mb": 0,
+            "text_hide": true
           }
         }
       },
       "block_order": [
         "heading_qteHYG",
-        "text_a4YPW6",
-        "buttons_jt6ttK"
+        "buttons_jt6ttK",
+        "text_a4YPW6"
       ],
       "name": "Banner with text",
       "settings": {
         "container": "full-width",
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "image_behavior": "none",
         "banner_type": "image",
         "image": "shopify:\/\/shop_images\/Banner_57c19f02-06bd-42fa-ac3a-6ebd0393ecc4.png",
+        "image_mobile": "shopify:\/\/shop_images\/hm_banner_clinic_results.png_mob.webp",
         "video_url": "",
         "link": "",
         "open_link": "_blank",
@@ -170,7 +175,7 @@
         "text_bellow_mobile": false,
         "img_position": "left",
         "banner_width": "col-md-6",
-        "column_gap": 30,
+        "column_gap": 0,
         "hover_effect": "zoom",
         "padding_top": 0,
         "padding_bottom": 0,
