@@ -101,9 +101,15 @@
     }
   },
   "common": {
+    "replace":{
+      "label": "Replace text"
+    },
     "highlighted":{
       "text": "Study Highlight Text",
       "study": "In Study Text"
+    },
+    "offer": {
+      "label": "Offer"
     },
     "setting": {
       "label": "Richtext"
@@ -621,6 +627,29 @@
       "section_padding_heading": "Padding",
       "padding_top": "Padding top",
       "padding_bottom": "Padding bottom"
+    },
+    "purchase-form-limited-offer": {
+      "name": "Purchase form limited offer",
+      "settings": {
+        "form_name": "Form name"
+      },
+      "blocks": {
+        "preorder_box": {
+          "name": "Preorder box"
+        },
+        "type": {
+          "name": "Type"
+        },
+        "product": {
+          "name": "Product"
+        },
+        "low-stock": {
+          "name": "Low stock"
+        },
+        "order-today": {
+          "name": "Order today"
+        }
+      }
     },
     "purchase-form-landing": {
       "name": "Purchase form landing",

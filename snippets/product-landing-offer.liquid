@@ -1,0 +1,51 @@
+{%- for block in section.blocks -%}
+    {% if block.type == 'offer' %}
+
+        {% assign product_price = '' %}
+        {% assign product2_price = '' %}
+
+        {% if block.settings.product != blank %}
+            {% assign product = all_products[block.settings.product] %}
+            {% assign product_price = product.price | money_without_trailing_zeros %}
+        {% endif %}
+
+        {% if block.settings.product2 != blank %}
+            {% assign product2 = all_products[block.settings.product2] %}
+            {% assign product_price2 = product2.price | money_without_trailing_zeros %}
+        {% endif %}
+
+        <div class="mothers_day_offer mt-4">
+            {% if block.settings.heading != blank %}
+                <p class="limited_time_offer">{{ block.settings.heading }}</p>
+            {% endif %}
+            <div class="mothers_day_offer_prods">
+                <div class="prod_dv">
+                    {% if block.settings.image != blank %}
+                        <img src="{{ block.settings.image | img_url: '300x' }}" alt="" class="img-fluid">
+                    {% endif %}
+                    <p>{{ product_price }}</p>
+                </div>
+                <div class="mothers_plus_sign">
+                    <img src="https://qureskincaredns.com/new/assets/mothers_day_plus.svg" alt="" class="img-fluid">
+                </div>
+                <div class="prod_dv">
+                    {% if block.settings.image2 != blank %}
+                        <img src="{{ block.settings.image2 | img_url: '300x' }}" alt="" class="img-fluid">
+                    {% endif %}
+                    <p><del>{{ product_price2 }}</del> &nbsp; {{ 0 | times: 100 | money_without_trailing_zeros }} &nbsp; FREE</p>
+                </div>
+            </div>
+            {% if block.settings.text != blank %}
+                <p class="buy_led_mask">{{ block.settings.text }}</p>
+            {% endif %}
+        </div>
+
+        {% if block.settings.button_label != blank %}
+            <div class="get_clearer_wrapper ms-0 mt-2 mt-md-4 pt-2">
+                <a class="btn btn-lg btn-primary led_mask_btn" href="{{ block.settings.button_url }}" aria-label="{{ block.settings.button_label | replace: '[price_save]' | escape }}">{{ block.settings.button_label |  replace: '[price_save]', product_price2 }}
+                    <span><img src="https://qureskincaredns.com/new/assets/long_right_black_arrow.svg" alt="long_right_black_arrow"></span>
+                </a>
+            </div>
+        {% endif %}
+    {% endif %}
+{%- endfor -%} 

@@ -149,7 +149,7 @@
             "breakout-control-essentials",
             "breakout-control-advanced"
           ],
-          "enable_menu_upsell_carousel": true
+          "enable_menu_upsell_carousel": false
         }
       },
       "newsletter": {
@@ -369,24 +369,24 @@
           "upsell_product_third_description": "Plump, smooth & brighten in just one step",
           "sidecart_timer_old_enable": false,
           "sidecart_timer_new_enable": true,
-          "start_date": "12-10-2024 00:00",
-          "finish_date": "12-25-2024 11:59",
-          "label_ends": "Holidays Sale Ends In:",
+          "start_date": "07-02-2025 24:00",
+          "finish_date": "07-08-2025 24:00",
+          "label_ends": "4th July Offer Ends:",
           "label_days": "DAYS",
           "label_hours": "HOURS",
           "label_minutes": "MINUTES",
           "label_seconds": "SECONDS",
           "enable_free_shipping_treshold": true,
           "enable_product_gift": true,
-          "product_free_gift": "face-serum",
-          "icon_product_gift_clean": "shopify:\/\/shop_images\/Layer_1_1.svg",
-          "icon_product_gift_full": "shopify:\/\/shop_images\/Layer_1_0f98f0bb-ebbd-41bc-96dc-f905b2948e10.svg",
+          "product_free_gift": "silk-pillowcase",
+          "icon_product_gift_clean": "shopify://shop_images/pillowcase_white.svg",
+          "icon_product_gift_full": "shopify://shop_images/pillowcase_teal.svg",
           "icon_gift_width": 18,
           "icon_gift_height": 26,
           "enable_show_gift_price": true,
-          "copy_get_free_shipping": "<p>You are &price-left& away from <strong>Free Shipping!<\/strong><\/p>",
-          "copy_get_product_free": "<p>You’re &price-left& away from a <strong>FREE Face Serum <\/strong>worth &product-price&<\/p>",
-          "copy_congrats": "<p>Congrats! You've unlocked your Free &product-title&<\/p>",
+          "copy_get_free_shipping": "<p>You are &price-left& away from <strong>Free Shipping!</strong></p>",
+          "copy_get_product_free": "<p>You’re &price-left& away from a <strong>FREE Silk Pillowcase </strong>worth &product-price&</p>",
+          "copy_congrats": "<p>Congrats! You've unlocked your Free &product-title&</p>",
           "show_urgency_note": true,
           "urgency_note_content": "Due to high demand, [] $quantity_label only saved for 30 minutes.",
           "urgency_note_label_single": "Checkout now!",
@@ -431,7 +431,7 @@
         "settings": {}
       },
       "1291562577487733835": {
-        "type": "shopify:\/\/apps\/black-crow-ai-that-delivers\/blocks\/blackcrow_ai_script\/3e73f597-cb71-47a1-8a06-0c931482ecd2",
+        "type": "shopify://apps/black-crow-ai-that-delivers/blocks/blackcrow_ai_script/3e73f597-cb71-47a1-8a06-0c931482ecd2",
         "disabled": false,
         "settings": {}
       },
