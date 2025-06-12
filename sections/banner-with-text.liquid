@@ -118,6 +118,7 @@
     assign container-box = 'full-width-content'
   endif
   assign enabled_animations = settings.animations_enabled
+  assign text_align-mob = st.text_align-mob
 -%}
 {%- capture style -%}
   {%- if bn_design == 'text_column' -%}
@@ -141,7 +142,7 @@
           banner-with-text-overplay banner-position overflow-hidden relative
         {%- endif -%}">
       <div
-        class="{% if height_full %}height-full{% endif %} {% if enabled_animations %}scroll-trigger animate--slide-in{% endif %} {% if banner_type == 'video' %} type-video {% endif %} {% if banner_type == 'image' %} type-banner {% endif %} bls__banner-text--media {{ banner_width }} {{ banner_height }} {% if bn_design == 'text_overlay' %} {% if banner_height == 'depend-image' %}h-full absolute static-xl inset-0{% else %}static{% endif %} overflow-hidden{% endif %}  {% if bn_design == 'text_column' %} align-self-start {% endif %} "
+        class="{% if height_full %}height-full{% endif %} {% if enabled_animations %}scroll-trigger animate--slide-in{% endif %} {% if banner_type == 'video' %} type-video {% endif %} {% if banner_type == 'image' %} type-banner {% endif %} bls__banner-text--media {{ banner_width }} {{ banner_height }} {% if bn_design == 'text_overlay' %} {% if banner_height == 'depend-image' %}h-full static static-xl inset-0{% else %}static{% endif %} overflow-hidden{% endif %}  {% if bn_design == 'text_column' %} align-self-start {% endif %} "
         {% if height_full == blank %}
           style="--desktop-height:{{ height_dk }}px;--tablet-height:{{ height_tb }}px;--mobile-height:{{ height_mb }}px;"
         {% endif %}
@@ -217,13 +218,13 @@
       </div>
       {%- if bn_design == 'text_column' -%}<div class="d-flex flex-direction align-self-stretch flex-1">{%- endif -%}
       <div
-        class="{% if bn_design == 'text_column' %} {% if settings.image_style != blank and section.settings.column_gap != 0 and section.settings.container != "full-width" %} column-radius {% endif %} bg-text-column{% endif %}{% if bn_design == 'text_overlay' %}{{ container-box }} {{ banner_height }} {% if banner_height == 'depend-image' %}static absolute-xl inset-0{% else %}absolute inset-0{% endif %} {%- if content_bg_color != blank or background_gradient != empty -%} has-bg{% endif %}{% endif %} bls__banner-text--content {{ content_position }} {{ st.text_align }} content-position-{{ text_position }} content-horizontal-position-{{ text_horizontal_position }}"
+        class="{% if bn_design == 'text_column' %} {% if settings.image_style != blank and section.settings.column_gap != 0 and section.settings.container != "full-width" %} column-radius {% endif %} bg-text-column{% endif %}{% if bn_design == 'text_overlay' %}{{ container-box }} {{ banner_height }} {% if banner_height == 'depend-image' %}absolute absolute-xl inset-0{% else %}absolute inset-0{% endif %} {%- if content_bg_color != blank or background_gradient != empty -%} has-bg{% endif %}{% endif %} bls__banner-text--content {{ content_position }} {{ st.text_align }} content-position-{{ text_position }} content-horizontal-position-{{ text_horizontal_position }}"
         {% if bn_design == 'text_column' %}
           style="{%- if content_bg_color != blank or background_gradient != empty -%}{%- if background_gradient != empty -%} --content-bg: {{ background_gradient }}; {% else %} --content-bg: {{ content_bg_color }};{%- endif -%} {%- endif -%}"
         {% endif %}
       >
         <div
-          class="bls__banner-text--content-inner {% if bn_design == 'text_overlay' %}bg-overlay--content-inner{% endif %} {% if content_width > 99 %}content-full-with{% endif %} {%- if content_bg_color != blank -%}content-bg{%- endif -%}"
+          class="bls__banner-text--content-inner {{ text_align-mob }} {% if bn_design == 'text_overlay' %}bg-overlay--content-inner{% endif %} {% if content_width > 99 %}content-full-with{% endif %} {%- if content_bg_color != blank -%}content-bg{%- endif -%}"
           style="--content-width:{{ content_width }}%;{%- if content_bg_color != blank or background_gradient != empty -%}{%- if background_gradient != empty -%} --content-bg: {{ background_gradient }}; {% else %} --content-bg: {{ content_bg_color }};{%- endif -%}{%- endif -%}--content-opacity:{{ bg_opacity }}%; --bs-gutter-x: {{ column_gap }}px;"
         >
           {%- for block in section.blocks -%}
@@ -236,7 +237,9 @@
               assign heading_tf = bs.heading_tf
               assign heading_mt = bs.heading_mt
               assign heading_mb = bs.heading_mb
+              assign heading_color = bs.heading_color
               assign subheading_fs = bs.subheading_fs
+              assign heading_fsm = bs.heading_fsm
               assign subheading_color = bs.subheading_color
               assign subheading_fw = bs.subheading_fw
               assign subheading_tf = bs.subheading_tf
@@ -251,6 +254,7 @@
               assign img_mt = bs.text_img_mt
               assign img_mb = bs.text_img_mb
               assign button_type = bs.button_type
+              assign button_size = bs.button_size
               assign b_mt = bs.b_mt
               assign b_mb = bs.b_mb
 
@@ -274,6 +278,7 @@
               assign bn_txt_tf = bs.bn_txt_tf
               assign bn_txt_mt = bs.bn_txt_mt
               assign bn_txt_mb = bs.bn_txt_mb
+              assign text_hide = bs.text_hide
             -%}
             {% case block.type %}
               {%- when 'image_picker' -%}
@@ -300,7 +305,8 @@
                 <h2
                   {{ block.shopify_attributes }}
                   class="bls__banner-text--heading color-{{ block.settings.color_scheme_heading }} {% if enabled_animations %}scroll-trigger animate--slide-in{% endif %}"
-                  style="--text-heading-font-size: {{ heading_fs }}px; {% if heading_fm != 'default' %}--text-heading-font-family: {{ heading_fm }};{% endif %}  {% if heading_fw != 'default' %}--text-heading-font-weight: {{ heading_fw }};{% endif %} --text-heading-color: {{ heading_color }}; --text-heading-transform: {{ heading_tf }}; --text-heading-mt: {{ heading_mt }}px; --text-heading-mb: {{ heading_mb }}px;"
+                  style="--text-heading-font-size: {{ heading_fs }}px; {% if heading_fm != 'default' %}--text-heading-font-family: {{ heading_fm }};{% endif %}  {% if heading_fw != 'default' %}--text-heading-font-weight: {{ heading_fw }};{% endif %} --text-heading-color: {{ heading_color }}; --text-heading-transform: {{ heading_tf }}; --text-heading-mt: {{ heading_mt }}px; --text-heading-mb: {{ heading_mb }}px; --heading-color-mobile: {{ heading_color }};
+                  --mob-heading-font-size: {{ heading_fsm }}px;"
                 >
                   {{ block.settings.title }}
                 </h2>
@@ -308,7 +314,8 @@
                 <div
                   {{ block.shopify_attributes }}
                   class="bls__banner-text--des color-{{ block.settings.color_scheme_txt }} {% if enabled_animations %}scroll-trigger animate--slide-in{% endif %}"
-                  style="--text-font-size: {{ txt_fs }}px;{%- if txt_color != blank -%} --text-color: {{ txt_color }};{%- endif -%} {% if txt_fw != 'default' %}--text-font-weight: {{ txt_fw }};{% endif %} --text-transform: {{ txt_tf }}; --text-mt: {{ txt_mt }}px; --text-mb: {{ txt_mb }}px;"
+                  style="--text-font-size: {{ txt_fs }}px;{%- if txt_color != blank -%} --text-color: {{ txt_color }};{%- endif -%} {% if txt_fw != 'default' %}--text-font-weight: {{ txt_fw }};{% endif %} --text-transform: {{ txt_tf }}; --text-mt: {{ txt_mt }}px; --text-mb: {{ txt_mb }}px;
+                  --hide-on-mob: {% if block.settings.text_hide %} none {% endif %};"
                 >
                   {{ block.settings.txt_content }}
                 </div>
@@ -328,7 +335,8 @@
                     {% else %}
                       target="_self"
                     {% endif %}
-                    class="{% if enabled_animations %}scroll-trigger animate--slide-in{% endif %} bls__banner-text--button whitespace-nowrap btn-{{ button_type }} inline-block"
+                    class="{% if enabled_animations %}scroll-trigger animate--slide-in{% endif %} bls__banner-text--button btn-{{ button_type }} inline-block 
+                    btn_{{ button_size }}"
                   >
                     {{ block.settings.btn_content | escape }}
                   </a>
@@ -703,6 +711,30 @@
     },
     {
       "type": "header",
+      "content": "Content on mobile"
+    },
+    {
+      "type": "select",
+      "id": "text_align-mob",
+      "label": "Alignment",
+      "default": "on_mob-center",
+      "options": [
+        {
+          "value": "on_mob-left",
+          "label": "Left"
+        },
+        {
+          "value": "on_mob-center",
+          "label": "Center"
+        },
+        {
+          "value": "on_mob-right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "header",
       "content": "Text overlay setting"
     },
     {
@@ -1070,6 +1102,25 @@
           "unit": "px",
           "default": 10,
           "label": "Bottom"
+        },
+        {
+          "type": "header",
+          "content": "Mobile Responsive"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Heading Color"
+        },
+        {
+          "type": "range",
+          "id": "heading_fsm",
+          "label": "Font size",
+          "min": 20,
+          "max": 120,
+          "step": 1,
+          "unit": "px",
+          "default": 40
         }
       ]
     },
@@ -1272,6 +1323,17 @@
           "unit": "px",
           "default": 25,
           "label": "Bottom"
+        },
+        {
+          "type": "header",
+          "content": "Mobile Responsive"
+        },
+        {
+          "type": "checkbox",
+          "default": false,
+          "id": "text_hide",
+          "label": "Hide",
+          "info": "Text hide on mobile"
         }
       ]
     },
@@ -1302,6 +1364,26 @@
             {
               "value": "link",
               "label": "Link"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "button_size",
+          "label": "Button Size",
+          "default": "medium",
+          "options": [
+            {
+              "value": "small",
+              "label": "Small"
+            },
+            {
+              "value": "medium",
+              "label": "Medium"
+            },
+            {
+              "value": "large",
+              "label": "Large"
             }
           ]
         },
