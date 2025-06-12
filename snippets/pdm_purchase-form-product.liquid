@@ -213,8 +213,8 @@
                         {% if product_type == 3 %}
                           <div class="plan_prc sale_price">{{ product_price }}</div>
                         {% else %}
-                          <div class="plan_prc regular_price">{{ product_price_compare }}</div>
-                          <div class="plan_prc sale_price color_red">{{ product_price }}</div>
+                          <div class="plan_prc regular_price igComparePrice" data-product-id="{{ product_id }}">{{ product_price_compare }}</div>
+                          <div class="plan_prc sale_price color_red igPrice" data-product-id="{{ product_id }}">{{ product_price }}</div>
                         {% endif %}
                       </div>
                       {% if block.settings.left_items %}

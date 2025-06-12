@@ -33,7 +33,7 @@
                         <div class="fav_pdt_price">{% if block.settings.from != blank %} from {% endif %} 
                             {% if block.settings.product != blank %}
                                 {% assign product = all_products[block.settings.product.handle] %}
-                                <span>{{ product.price | money_without_trailing_zeros }}</span>
+                                <span class="igPrice" data-product-id="{{product.id }}">{{ product.price | money_without_trailing_zeros }}</span>
                             {% endif %}
                         </div>
                     </div>
