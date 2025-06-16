@@ -111,7 +111,6 @@
     },
     "promotion_main_banner_48gkNr": {
       "type": "promotion-main-banner",
-      "disabled": false,
       "blocks": {
         "link_GirQqh": {
           "type": "link",
@@ -145,6 +144,7 @@
         "product_BANXY7",
         "banner_6wgzUN"
       ],
+      "disabled": true,
       "settings": {
         "heading": "",
         "heading_mobile": "",
@@ -159,7 +159,6 @@
     },
     "promotion_main_banner_second_jCUkqh": {
       "type": "promotion-main-banner-second",
-      "disabled": true,
       "blocks": {
         "link_Pk3LH6": {
           "type": "link",
@@ -188,11 +187,11 @@
         "heading": "Two Filters. One Goal: Healthier Skin.",
         "heading_mobile": "Two Filters. One Goal: Healthier Skin.",
         "heading_tag": "h1",
-        "video": "shopify://files/videos/faucet_offer-d.webm",
-        "video_mobile": "shopify://files/videos/faucet_offer-m.webm",
         "subheading": "<h5>Get Faucet Filter FREE</h5>",
         "subheading_mobile": "<h5>Get Faucet Filter FREE</h5>",
-        "text": "<h6>Limited Time Offer </h6>"
+        "text": "<h6>Limited Time Offer </h6>",
+        "video": "shopify://files/videos/faucet_offer-d.webm",
+        "video_mobile": "shopify://files/videos/faucet_offer-m.webm"
       }
     },
     "featuredin_extended_P7BNDN": {
