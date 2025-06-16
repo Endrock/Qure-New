@@ -111,6 +111,7 @@
     },
     "promotion_main_banner_48gkNr": {
       "type": "promotion-main-banner",
+      "disabled": false,
       "blocks": {
         "link_GirQqh": {
           "type": "link",
@@ -158,13 +159,14 @@
     },
     "promotion_main_banner_second_jCUkqh": {
       "type": "promotion-main-banner-second",
+      "disabled": true,
       "blocks": {
         "link_Pk3LH6": {
           "type": "link",
           "settings": {
-            "link_label": "SHOP & SAVE $357",
-            "link_label_mobile": "SHOP & SAVE $357",
-            "link_url": "https://qureskincare.com/pages/international-womens-offer"
+            "link_label": "Shop Now & Save",
+            "link_label_mobile": "Shop Now & Save",
+            "link_url": "https://qureskincare.com/pages/qure-filters-offer?variant=45909763490031"
           }
         },
         "banner_6wgzUN": {
@@ -182,16 +184,15 @@
         "link_Pk3LH6",
         "banner_6wgzUN"
       ],
-      "disabled": true,
       "settings": {
-        "heading": "INTERNATIONAL WOMEN’S DAY",
-        "heading_mobile": "",
-        "subheading": "<p>Love your skin, own your glow.</p>",
-        "subheading_mobile": "",
-        "text": "",
-        "image": "shopify://shop_images/hm_womens_day_banner_desk.webp",
-        "image_mobile": "shopify://shop_images/hm_womens_day_banner_mob.webp",
-        "link_url": "https://qureskincare.com/pages/international-womens-offer"
+        "heading": "Two Filters. One Goal: Healthier Skin.",
+        "heading_mobile": "Two Filters. One Goal: Healthier Skin.",
+        "heading_tag": "h1",
+        "video": "shopify://files/videos/faucet_offer-d.webm",
+        "video_mobile": "shopify://files/videos/faucet_offer-m.webm",
+        "subheading": "<h5>Get Faucet Filter FREE</h5>",
+        "subheading_mobile": "<h5>Get Faucet Filter FREE</h5>",
+        "text": "<h6>Limited Time Offer </h6>"
       }
     },
     "featuredin_extended_P7BNDN": {

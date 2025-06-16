@@ -42,6 +42,12 @@
     {% endif %}
 {% endfor %}
 
+<style>
+    #richpanel_messenger_iframe {
+        bottom: 80px !important;
+    }
+</style>
+
 <main class="shower_plus_faucet_water_filter">
     <!-- -- main banner start -- -->
     <div class="tabSlider may_cls25_shwr_plus_faucet section">
@@ -894,8 +900,7 @@
                             </div>
                             <h2 class="title-lg-commons d-none d-md-block">Trusted and Recommended by Experts</h2>
                             <p>“How do you <span style="background:#C7E5DB"> reduce the things in your water that are causing issues</span>  with your skin? </p>
-                                <p> This Qure filter is incredible – <span style="background:#C7E5DB"> it’s the only filter  I personally use</span> to remove calcium carbonate as well as chlorine 
-                                and anything else that’s going to make your water harsh for your skin.” </p>
+                                <p> This Qure filter is incredible – <span style="background:#C7E5DB"> it’s the only filter  I personally use</span> to [reduce] chlorine and anything else that’s going to make your water harsh for your skin.” </p>
                                 <div class="trusted_verified d-md-none mt-3"><img src="https://qureskincaredns.com/new/assets/tick_new.svg" alt="">
                                 <p class="p-0">Dermatologist Approved
                                 </p>
@@ -1037,9 +1042,9 @@
                                 <div id="acc_shower_Three" class="accordion-collapse collapse" data-bs-parent="#accordion_shower_filterzz" style="">
                                     <div class="accordion-body">
                                         <div class="container">
-                                            <p>The Qure Faucet Bundle improves your tap water by reducing skin irritants like chlorine, heavy metals, micro-organisms, and more.</p>
+                                            <p>The Qure Filter Bundle improves your tap water by reducing skin irritants like chlorine, heavy metals, micro-organisms, and more.</p>
                                             <p>Each filter attaches directly to your showerhead or faucet, and uses a patent-pending, multi-stage filtration system.</p>
-                                            <p>The Shower Filter softens and purifies the water that hits your skin and hair. The Faucet Filter cleans the water that touches your skin and hands — so you’re no longer washing with the same harsh water that’s been drying you out and triggering breakouts. </p>
+                                            <p>The Shower Filter softens and purifies the water that hits your skin and hair. The Faucet Filter cleans the water that touches your skin and hands — so you’re no longer washing with the same harsh water that’s been drying you out and triggering breakouts.  </p>
                                         </div>
                                     </div>
                                 </div>
@@ -1129,9 +1134,6 @@
                                                     // Remove 'active' from all swatches
                                                     document.querySelectorAll('.item_swatch').forEach(el => el.classList.remove('active'));
                                                     
-                                                    // Add 'active' to clicked swatch
-                                                    swatch.classList.add('active');
-
                                                     // Get the selected color (from span text or you can use data-color)
                                                     const selectedColor = swatch.querySelector('span').innerText.trim().toLowerCase();
 
@@ -1158,6 +1160,8 @@
                                                 const url = new URL(window.location);
                                                 url.searchParams.set('variant', variant_id);
                                                 window.history.pushState({}, '', url);
+
+                                                document.querySelectorAll('.item_swatch[data-id="' + variant_id + '"]').forEach(el => el.classList.add('active'));
                                             }
                                         }
                                     </script>
@@ -1215,8 +1219,9 @@
                                                     <h6><del class="text-grey me-1">{{ total_price }}</del> <span>{{ product_price_shower_filter }}</span></h6>
                                                 </div>
                                             </div>
+
                                             <!-- Low Stock start-->
-                                            <div class="include_stock d-none">
+                                            <div class="include_stock">
                                                 <p>Low Stock</p>
                                                 <span>Due to high demand, this offer is only available while stock lasts.</span> 
                                                 <div class="row align-items-center px-2">
@@ -1227,15 +1232,15 @@
                                             </div>
                                             <!-- Low Stock end-->
                                             
-                                            <div class="order_today d-none">
+                                            <div class="order_today shower-order_today">
                                                 <p>Order today to lock in your deal and get FREE Shipping</p>
                                             </div>
                                         </div>
                                         <!-- Buy Now Button -->
-                                        <button class="buy-now buy-now-button">PRE-ORDER NOW – {{ product_price_shower_filter }}
-                                            <span><img src="https://qureskincaredns.com/new/assets/long_right_black_arrow.svg" alt=""></span>
+                                        <button class="buy-now buy-now-button">Shop & Save {{ product_price_shower_filter }}
+                                            <span class="d-none"><img src="https://qureskincaredns.com/new/assets/long_right_black_arrow.svg" alt=""></span>
                                         </button>
-
+                                        
                                         <script>
                                             let product_variant_id_white_shower_filter = '{{ product_variant_id_white_shower_filter }}';
                                             let product_variant_id_black_shower_filter = '{{ product_variant_id_black_shower_filter }}';
@@ -1312,6 +1317,7 @@
                                             <a href="https://qureskincare.com/pages/subscriptions" target="_blank"> See more details</a>.
                                         </p>
                                         <!-- Next batch ships January 25th -->
+                                        <!--
                                         <div class="next_batch_bl next_batch_highlight">
                                             <h5 class="d-none d-md-block">Next batch ships 16th June:</h5>
                                             <h5 class="d-md-none">Next batch ships 16th June:</h5> 
@@ -1331,8 +1337,7 @@
                                                         Production</span></div>
                                             </div> 
                                         </div> 
-
-
+                                        -->
 
                             <div class="ser_icons d-md-none">
                                 <div class="Dermatologist_Reviewed ">
@@ -1463,9 +1468,9 @@
 
     <div class="section videosQure bg-grey_new">
         <div class="container">
-            <div class="section_header text-start text-md-center mb-3">
+            <div class="section_header text-start text-center pb-0 mw-100">
                 <h2 class="title-lg-commons">
-                    The results are crystal clear
+                    See why everyone’s switching to filtered water 
                 </h2>
             </div>
             <div class="videoInfo">
@@ -1475,7 +1480,7 @@
                         data-centerslide="false" data-mobile="1" data-tablet="3" data-desktop="4" data-spacing="20"
                         data-arrowleft="trustedSwipper-swiper-prev" data-arrowright="trustedSwipper-swiper-next">
                         <div class="swiper-wrapper">
-                                <div class="swiper-slide">
+                            <div class="swiper-slide">
                                 <div class="play_btn">
                                     <a class="popup-youtube"
                                         href="https://www.youtube.com/watch?v=-JELsZmxlAM">
@@ -1507,7 +1512,7 @@
                                             <span class="wistia_embed wistia_async_altvn4hlw5 popover=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span>
                                         </div>
                                         <span class="justify-content-center">
-                                            <img src="https://qureskincaredns.com/new/assets/shwr_fau_img4.webp" alt="" class="img-fluid">
+                                            <img src="https://qureskincaredns.com/new/assets/shwr_fau_img4.webp?rnd=1" alt="" class="img-fluid">
                                         </span>
                                         </div>
                                     </a>
@@ -1843,7 +1848,7 @@
                     <div id="accFAQThree" class="accordion-collapse collapse" data-bs-parent="#accFAQ">
                         <div class="accordion-body">
                             <div class="container">
-                                <p>The Qure Faucet Bundle improves your tap water by reducing skin irritants that make your water “hard,” like chlorine, heavy metals, microorganisms, and more.</p>
+                                <p>The Qure Filter Bundle improves your tap water by reducing skin irritants that make your water “hard,” like chlorine, heavy metals, microorganisms, and more.</p>
                                 <p>The filters reduce chlorine, heavy metals, microorganisms, and other common water contaminants.</p>
                             </div>
                         </div>
@@ -1874,7 +1879,7 @@
                     <div id="accFAQSevenzz" class="accordion-collapse collapse" data-bs-parent="#accFAQ">
                         <div class="accordion-body">
                             <div class="container">
-                                <p>With daily use, your Qure Filters will need to be replaced at least once every three months for your skin to look and feel its best. When you subscribe to this bundle, 2 replacement filters (1 for Showerhead and 1 for Faucet) will auto-ship every 90 days, with a recurring charge of $XX.XX per month. </p>
+                                <p>With daily use, your Qure Filters will need to be replaced at least once every three months for your skin to look and feel its best. When you subscribe to this bundle, 2 replacement filters (1 for Showerhead and 1 for Faucet) will auto-ship every 90 days, with a recurring charge of $70 per month. </p>
                             </div>
                         </div>
                     </div>
@@ -1901,7 +1906,7 @@
                 <h3>Don’t see your question?</h3>
                 <a href="https://qureskincare.com/pages/contact-us">
                     <p class="text-black">Ask us 
-                    <img src="https://qureskincaredns.com/new/assets/arrow_right_sf.svg" alt=""> </p>  
+                    <img src="assets/arrow_right_sf.svg" alt=""> </p>  
                 </a>
             </div>
         </div>
@@ -1944,39 +1949,57 @@
 <!-- Product Modal -->
 
 <!-- sticky CTA -->
-<div id="green-product-sticky-btn" class="button_sticky_wrapper sticky new-bottom" data-product-id="8835368288495">
-    <img src="https://qureskincaredns.com/new/assets/protect_skin.webp" alt="Qure Shower Filter + Free Faucet Filter" width="80" height="80" class="button_sticky_wrapper__product-image">
+<div id="green-product-sticky-btn" class="button_sticky_wrapper sticky new-bottom d-block" data-product-id="8835368288495">
+    <!-- <img src="https://qureskincaredns.com/new/assets/protect_skin.webp" alt="Qure Shower Filter + Free Faucet Filter" width="80" height="80" class="button_sticky_wrapper__product-image"> -->
     <div class="button_sticky_wrapper__product-info">
-        <div class="button_sticky_wrapper__product-info__text">
-            <h4 class="button_sticky_wrapper__title d-none d-md-block">Shower Filter + <strong> Free </strong> Faucet Filter</h4>
-            <h4 class="button_sticky_wrapper__title d-md-none">Shower + <strong> Free </strong> Faucet Filter</h4>
-        <div class="social-proof-data-container" data-suffix="" data-product-id="5657784025237" data-page-handle="" data-product-list="">
+        <div class="d-md-flex d-none justify-content-between align-items-center select_color_swatches border-0 mt-0 py-0 gap-3">
+            <div><p class="m-0 select_color fw-semibold">Select Color</p></div>
+            <div class="d-flex align-items-center ctm_swatches gap-3">
+                <div class="d-flex align-items-center gap-2 item_swatch" data-id="{{ product_variant_id_white_shower_filter }}">
+                    <div class="circle_swatch white_swatch"></div>
+                    <span>White</span>
+                </div>
+                <div class="d-flex align-items-center gap-2 item_swatch active" data-id="{{ product_variant_id_black_shower_filter }}">
+                    <div class="circle_swatch black_swatch"></div>
+                    <span>Black</span>
+                </div>
+            </div>
+        </div>
+        <div class="mobile_color_dropdown d-md-none">
+            <div class="dropdown_selected" onclick="toggleDropdown()">
+                <div class="circle_swatch black_swatch"></div>
+                <span>Black</span>
+                <span class="arrow"><img src="https://qureskincaredns.com/new/assets/arrow-down-sm.svg" width="10"></span>
+            </div>
+
+            <div class="dropdown_options d-none" id="dropdownOptions">
+                <div class="dropdown_option item_swatch" onclick="selectColor('White')" data-id="{{ product_variant_id_white_shower_filter }}">
+                <div class="circle_swatch white_swatch"></div>
+                <span>White</span>
+                </div>
+                <div class="dropdown_option item_swatch" onclick="selectColor('Black')" data-id="{{ product_variant_id_black_shower_filter }}">
+                <div class="circle_swatch black_swatch"></div>
+                <span>Black</span>
+                </div>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="button_sticky button_sticky_wrapper__button_sticky event_btn buy-now-button">
+            Secure Now
+        </a>
+    </div>
+    <div class="d-flex justify-content-center gap-2 social-proof-data-container rounded-0 mw-mob-100" data-suffix="" data-product-id="5657784025237" data-page-handle="" data-product-list="">
         <div class="circle-container">
-        <svg class="circle" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-        <circle cx="8" cy="8" r="4" fill="#C8E6DC"></circle>
-        </svg>
-        <svg class="shine" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-        <circle cx="8" cy="8" r="4" fill="#C8E6DC"></circle>
-        </svg>
-    </div>
-    <div class="d-flex gap-2 price_with_discount d-none">
-        <p class="price_actual_sticky">{{ product_price_shower_filter }}</p>
-        <del>{{ total_price }}</del>
-        <p class="clr_orange">46% Off</p>
-    </div>
-    <p class="units_reserved">580 Units Reserved in last 48 hours</p>
-    <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-    <path d="M3.68882 4.18882C3.74852 4.12897 3.81945 4.08148 3.89753 4.04908C3.97562 4.01668 4.05933 4 4.14387 4C4.22841 4 4.31211 4.01668 4.3902 4.04908C4.46828 4.08148 4.53921 4.12897 4.59891 4.18882L8.00017 7.59137L11.4014 4.18882C11.4612 4.12906 11.5321 4.08166 11.6102 4.04932C11.6883 4.01698 11.772 4.00034 11.8565 4.00034C11.941 4.00034 12.0247 4.01698 12.1027 4.04932C12.1808 4.08166 12.2518 4.12906 12.3115 4.18882C12.3713 4.24858 12.4187 4.31952 12.451 4.3976C12.4834 4.47567 12.5 4.55936 12.5 4.64387C12.5 4.72838 12.4834 4.81206 12.451 4.89013C12.4187 4.96821 12.3713 5.03915 12.3115 5.09891L8.90897 8.50017L12.3115 11.9014C12.3713 11.9612 12.4187 12.0321 12.451 12.1102C12.4834 12.1883 12.5 12.272 12.5 12.3565C12.5 12.441 12.4834 12.5247 12.451 12.6027C12.4187 12.6808 12.3713 12.7518 12.3115 12.8115C12.2518 12.8713 12.1808 12.9187 12.1027 12.951C12.0247 12.9834 11.941 13 11.8565 13C11.772 13 11.6883 12.9834 11.6102 12.951C11.5321 12.9187 11.4612 12.8713 11.4014 12.8115L8.00017 9.40897L4.59891 12.8115C4.53915 12.8713 4.46821 12.9187 4.39013 12.951C4.31206 12.9834 4.22838 13 4.14387 13C4.05936 13 3.97567 12.9834 3.8976 12.951C3.81952 12.9187 3.74858 12.8713 3.68882 12.8115C3.62906 12.7518 3.58166 12.6808 3.54932 12.6027C3.51698 12.5247 3.50034 12.441 3.50034 12.3565C3.50034 12.272 3.51698 12.1883 3.54932 12.1102C3.58166 12.0321 3.62906 11.9612 3.68882 11.9014L7.09137 8.50017L3.68882 5.09891C3.62897 5.03921 3.58148 4.96828 3.54908 4.8902C3.51668 4.81211 3.5 4.72841 3.5 4.64387C3.5 4.55933 3.51668 4.47562 3.54908 4.39753C3.58148 4.31945 3.62897 4.24852 3.68882 4.18882Z" fill="#870B0F"></path>
-    </svg>
-    </div>
-    </div>
-    <a href="javascript:void(0);" class="button_sticky button_sticky_wrapper__button_sticky event_btn buy-now-button">
-        PRE-ORDER NOW - {{ product_price_shower_filter }}
-    </a>
+        <img src="https://qureskincaredns.com/new/assets/indicator.svg" alt="">
+        </div>
+        <div class="d-flex gap-2 price_with_discount d-none">
+            <p class="price_actual_sticky">{{ product_price_shower_filter }}</p>
+            <del>{{ total_price }}</del>
+            <p class="clr_orange">46% Off</p>
+        </div>
+        <p class="units_reserved">580 Units Reserved in last 48 hours</p>
     </div>
 </div>
 <!---- sticky CTA end -->
-
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -2124,6 +2147,22 @@
             }
         });
     });
+
+    function toggleDropdown() {
+        const options = document.getElementById("dropdownOptions");
+        options.classList.toggle("d-none");
+    }
+
+    function selectColor(color) {
+        const selected = document.querySelector(".dropdown_selected span:nth-child(2)");
+        selected.textContent = color;
+
+        const swatch = document.querySelector(".dropdown_selected .circle_swatch");
+        swatch.className = `circle_swatch ${color.toLowerCase()}_swatch`;
+
+        toggleDropdown(); // close dropdown
+    }
+
 </script>
 
 <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
