@@ -81,9 +81,9 @@
           "announcement_TPxBgi": {
             "type": "announcement",
             "settings": {
-              "heading": "<p><strong>FREE World-Wide Shipping</strong> All Orders Above $100</p>",
+              "heading": "<p>Buy a Shower Filter and Get a <strong>FREE </strong>Faucet Filter Device!</p>",
               "button_label": "SHOP NOW",
-              "button_url": "https://qureskincare.com/pages/exclusive-holiday-bundle-deal-new"
+              "button_url": "https://qureskincare.com/pages/qure-filters-offer"
             }
           },
           "tab_3Wyyea": {
@@ -446,11 +446,6 @@
         "settings": {
           "enable_cart_validation": true
         }
-      },
-      "16361216567099377559": {
-        "type": "shopify://apps/tariff-support-by-intelligems/blocks/tariff-support-script/450d9b0f-e77b-4bc3-aeb2-b0c71fe65bbf",
-        "disabled": true,
-        "settings": {}
       }
     }
   },
