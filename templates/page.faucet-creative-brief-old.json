@@ -1,0 +1,297 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "header_landing_pFmaRH": {
+      "type": "header-landing-simple",
+      "blocks": {
+        "navigation_link_qLHgyD": {
+          "type": "navigation-link",
+          "settings": {
+            "link_label": "CONTENT REQUIREMENTS",
+            "link_url": "#tabsAccordion",
+            "image": "shopify://shop_images/header_cs1.webp"
+          }
+        },
+        "navigation_link_DgYaFx": {
+          "type": "navigation-link",
+          "settings": {
+            "link_label": "PRODUCT",
+            "link_url": "#tabsAccordion",
+            "image": "shopify://shop_images/header_cs2.webp"
+          }
+        },
+        "navigation_link_3X4mrf": {
+          "type": "navigation-link",
+          "settings": {
+            "link_label": "INSPIRING CONTENT",
+            "link_url": "#tabsAccordion",
+            "image": "shopify://shop_images/header_cs3.webp"
+          }
+        }
+      },
+      "block_order": [
+        "navigation_link_qLHgyD",
+        "navigation_link_DgYaFx",
+        "navigation_link_3X4mrf"
+      ],
+      "settings": {}
+    },
+    "section1": {
+      "type": "guide-header",
+      "blocks": {
+        "button_LUpm3B": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn more about Faucet Filter",
+            "button_url": "https://qureskincare.com/products/faucet-filter"
+          }
+        }
+      },
+      "block_order": [
+        "button_LUpm3B"
+      ],
+      "settings": {
+        "heading": "Faucet Filter Creative Content Guide",
+        "text": "<p>Hey skincare enthusiasts!</p><p>Ready to take your content to the next level?</p><p>Discover how to make the most of the Qure Faucet Filter with our creative content guide. This brief will help you create compelling content that highlights how our innovative tool enhances skincare routines—all backed by a lifetime warranty.</p>",
+        "wistia_id": "e3m8ywxskc"
+      }
+    },
+    "qure_founder_LkfQUT": {
+      "type": "qure-founder",
+      "settings": {
+        "heading": "\"Harsh water can definitely damage your skin on daily basis and it impacts everything you are doing with your skincare\"",
+        "sub_heading": "<p><strong>- Dr. Luke Maxfield, MD</strong>, Board certified dermatologist</p>",
+        "image": "shopify://shop_images/dr.luke_drma_exp.webp",
+        "trust_des": "Trusted and recommended by world leading Dermatologists",
+        "trusted_image_mob": "shopify://shop_images/fcb_dr.luke_mob.webp"
+      }
+    },
+    "section3": {
+      "type": "guide-columns",
+      "blocks": {
+        "header_RA46tw": {
+          "type": "header",
+          "settings": {
+            "heading": "STEP 1",
+            "text": "Merge Qure into your creatives",
+            "image": "shopify://shop_images/fcb_step1_img.webp",
+            "button_label": "Content Requirements"
+          }
+        },
+        "description_mHnPFA": {
+          "type": "description",
+          "settings": {
+            "classname": "",
+            "heading": "Key Messages",
+            "image": "shopify://shop_images/key_message.svg",
+            "content": "<p>Key Points to include in the messaging:</p><ul><li>Advanced water filter reduces up to 99% of irritants for clearer, hydrated skin.</li><li>Reduces pore-clogging contaminants and prevents pre-mature aging without any extra steps in your routine.</li><li>Optimizes skincare effectiveness, and provides the most purified cleanse your skin will drink up.</li><li>Decreases redness and irritation, great for sensitive skin</li><li>360° Nozzle for Precise Water Direction</li></ul>",
+            "wistia_id": ""
+          }
+        },
+        "description_tVQDHe": {
+          "type": "description",
+          "settings": {
+            "classname": "",
+            "heading": "Creative Direction",
+            "image": "shopify://shop_images/direction.svg",
+            "content": "<ul><li>High-quality, bright lighting and high-resolution imagery/ videography to be supplied. No obvious filters.</li><li>Qure Faucet filter to be the feature of the post. The background must be clean and bright.</li><li>When using the product, please do not wear any makeup, or no visible/noticeable makeup (unless you are showing how to remove makeup). Please include a clip of the filter installation and a before and after of your skin. Include photos of your old faucet which should be full of limescale.</li><li>In cover photos for video content always show yourself using the Qure Faucet filter, unless otherwise agreed on with Qure’s team.</li></ul>",
+            "wistia_id": ""
+          }
+        },
+        "description_cpREQp": {
+          "type": "description",
+          "settings": {
+            "classname": "",
+            "heading": "Inclusion",
+            "image": "shopify://shop_images/inclusion.svg",
+            "content": "<ul><li>Tag and mention @qureskincare #QureSkincare #faucetfilter #Skincare #qurefaucetfilter #qurefilter</li><li>Include your affiliate or other links provided by Qure in Instagram Stories and content captions. If the link can’t be placed in BIO, include it in linktr.ee or similar.</li></ul>",
+            "wistia_id": ""
+          }
+        },
+        "header_LhpN6x": {
+          "type": "header",
+          "settings": {
+            "heading": "STEP 2",
+            "text": "Get to know Faucet Filter",
+            "image": "shopify://shop_images/fcb_step2_img.webp",
+            "button_label": "Product Information"
+          }
+        },
+        "description_6WtF8b": {
+          "type": "description",
+          "settings": {
+            "classname": "",
+            "heading": "Product Details",
+            "image": "shopify://shop_images/search.svg",
+            "content": "<p>4-Stage Advanced Filtration Technology</p><ul><li>Carbon Fiber - Removes up to 99.9% chlorine, calcium & magnesium.</li><li>Ultra Filter - Reduces tiny particles like sand and bacteria.</li><li>Descaler - Reduces limescale buildup.</li><li>Reduction Layer - Reduces heavy metals like lead.</li></ul>",
+            "wistia_id": ""
+          }
+        },
+        "link_NC873b": {
+          "type": "link",
+          "settings": {
+            "link_label": "Learn more about Faucet Filter",
+            "link_url": "https://qureskincare.com/products/faucet-filter"
+          }
+        },
+        "description_BNpxL3": {
+          "type": "description",
+          "settings": {
+            "classname": "faq",
+            "heading": "Usage Instructions",
+            "image": "shopify://shop_images/usage_dir.svg",
+            "content": "",
+            "wistia_id": ""
+          }
+        },
+        "collapsed_JkHeKT": {
+          "type": "collapsed",
+          "settings": {
+            "show": false,
+            "style": "default",
+            "heading": "Preparing Your Faucet",
+            "content": "<ul><li>Use the included bubbler wrench to unscrew the aerator or rectifier from your faucet.</li><li>Select the appropriate faucet adapter from the 12 provided, based on the type of faucet outlet.</li></ul>",
+            "code": ""
+          }
+        },
+        "collapsed_EYEMK6": {
+          "type": "collapsed",
+          "settings": {
+            "show": false,
+            "style": "default",
+            "heading": "Installation steps",
+            "content": "<ul><li>Remove faucet aerator. Simply attach and twist it off using the key for removal.</li><li>Find the faucet thread accessory which best fits your faucet size.</li><li>Clip Qure Faucet Filter onto the faucet. Once you hear it click it is installed. Turn the toggle button to “Q” mark on the filter and enjoy healthier, clearer skin!</li></ul>",
+            "code": ""
+          }
+        },
+        "video_pCNrp9": {
+          "type": "video",
+          "settings": {
+            "wistia_id": "ejhd901ecq"
+          }
+        },
+        "button_bfkAUf": {
+          "type": "button",
+          "settings": {
+            "button_label": "Manual & Installation",
+            "button_url": "https://qureskincare.com/pages/faucet-online-guide"
+          }
+        },
+        "description_GE3PNL": {
+          "type": "description",
+          "settings": {
+            "classname": "",
+            "heading": "Product Claims",
+            "image": "shopify://shop_images/product_claims.svg",
+            "content": "<p>User Study Results</p><ul><li>77% reported reduced tightness after washing with filtered water.</li><li>83% noticed less dryness after 4 weeks.</li><li>83% would recommend Qure Faucet Filter to a friend.</li><li>Clinically proven to improve skin hydration in just 4 weeks</li></ul>",
+            "wistia_id": ""
+          }
+        },
+        "link_rFtDNx": {
+          "type": "link",
+          "settings": {
+            "link_label": "Learn more about Faucet Filter",
+            "link_url": "https://qureskincare.com/products/faucet-filter"
+          }
+        },
+        "header_AwT6ji": {
+          "type": "header",
+          "settings": {
+            "heading": "STEP 3",
+            "text": "Get inspired by other content creators",
+            "image": "shopify://shop_images/fcb_step3_img.webp",
+            "button_label": "Inspiring Content"
+          }
+        },
+        "heading_YiyFGP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Show how it works for you"
+          }
+        },
+        "video_4Jjjcm": {
+          "type": "video",
+          "settings": {
+            "image": "shopify://shop_images/ffcb_vid1.webp",
+            "wistia_id": "uwbrkijdey"
+          }
+        },
+        "video_iHceHC": {
+          "type": "video",
+          "settings": {
+            "image": "shopify://shop_images/fcb_vid2.webp",
+            "wistia_id": "yvm1h7gbig"
+          }
+        },
+        "video_DmtewU": {
+          "type": "video",
+          "settings": {
+            "image": "shopify://shop_images/fcb_vid3.webp",
+            "wistia_id": "2k2r6fa1nk"
+          }
+        },
+        "heading_fUcJta": {
+          "type": "heading",
+          "settings": {
+            "heading": "Show how it works for you"
+          }
+        },
+        "video_H9fmrV": {
+          "type": "video",
+          "settings": {
+            "image": "shopify://shop_images/fcb_vid4.webp",
+            "wistia_id": "kev2vcwkro"
+          }
+        },
+        "video_dpGpUm": {
+          "type": "video",
+          "settings": {
+            "image": "shopify://shop_images/fcb_vid5.webp",
+            "wistia_id": "o0wghi5h89"
+          }
+        }
+      },
+      "block_order": [
+        "header_RA46tw",
+        "description_mHnPFA",
+        "description_tVQDHe",
+        "description_cpREQp",
+        "header_LhpN6x",
+        "description_6WtF8b",
+        "link_NC873b",
+        "description_BNpxL3",
+        "collapsed_JkHeKT",
+        "collapsed_EYEMK6",
+        "video_pCNrp9",
+        "button_bfkAUf",
+        "description_GE3PNL",
+        "link_rFtDNx",
+        "header_AwT6ji",
+        "heading_YiyFGP",
+        "video_4Jjjcm",
+        "video_iHceHC",
+        "video_DmtewU",
+        "heading_fUcJta",
+        "video_H9fmrV",
+        "video_dpGpUm"
+      ],
+      "settings": {
+        "heading": "All you need to know before you start creating your amazing content"
+      }
+    }
+  },
+  "order": [
+    "header_landing_pFmaRH",
+    "section1",
+    "qure_founder_LkfQUT",
+    "section3"
+  ]
+}
