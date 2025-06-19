@@ -16,11 +16,12 @@
 {% assign total_price = product.price %}
 
 {% for variant in product_shower_filter.variants %}
-    {% if forloop.index == 1 %}
-        {% assign product_variant_id_white_shower_filter = variant.id %}
-    {% else %}
-        {% assign product_variant_id_black_shower_filter = variant.id %}
-    {% endif %}
+    {% case forloop.index %}
+        {% when 1 %}
+            {% assign product_variant_id_white_shower_filter = variant.id %}
+        {% when 2 %}
+            {% assign product_variant_id_black_shower_filter = variant.id %}
+    {% endcase %}
 {% endfor %}
 
 {% assign product = all_products['faucet-filter'] %}
