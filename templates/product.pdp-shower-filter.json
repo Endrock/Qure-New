@@ -82,6 +82,17 @@
             "soldout": false
           }
         },
+        "variant_8nqQxD": {
+          "type": "variant",
+          "settings": {
+            "heading": "Silver",
+            "image": "shopify://shop_images/shower_filter_silver_var.webp",
+            "variant_id": 46544976969967,
+            "main": false,
+            "reserve": false,
+            "soldout": false
+          }
+        },
         "subscribe_EyrzEb": {
           "type": "subscribe",
           "settings": {
@@ -124,6 +135,7 @@
         "out_of_stock_3xp9iR",
         "variant_7PWWak",
         "variant_7nqQxD",
+        "variant_8nqQxD",
         "subscribe_EyrzEb",
         "collapsed_TnJHpV",
         "collapsed_xqBcWj",
@@ -564,7 +576,7 @@
             "title_mob": "Recommended by Experts",
             "image": "shopify://shop_images/dr_sahh-2.webp",
             "video": "https://www.youtube.com/watch?v=I2Fe-kP-2Jg",
-            "title": "Dr Shah, MD",
+            "title": "Dr Shah",
             "des": "Board certified dermatologist"
           }
         }
