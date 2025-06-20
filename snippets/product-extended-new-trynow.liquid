@@ -100,16 +100,16 @@
     <script>
         document.getElementById('try-now-button').addEventListener('click', function() {
             let __items = [];
-            let product_variant_id = '{{ product_variant_id }}';
             let product_variant_id_trynow_white = 46361549766895;
             let product_variant_id_trynow_black = 46361549799663;
+            let product_variant_id_trynow_grey = 46361549799663;
             let selling_plan = '{{ block.settings.plan }}';
             let selling_plan_trynow = 6971687151;
 
             const newUrl = new URL(window.location.href);
             let selected_product_variant_id = newUrl.searchParams.get('variant');
 
-            if(selected_product_variant_id && selected_product_variant_id != product_variant_id)
+            if(selected_product_variant_id > 0)
             {
                 __items.push({
                     id: selected_product_variant_id,
@@ -117,25 +117,30 @@
                     quantity: 1
                 });
 
-                __items.push({
-                    id: product_variant_id_trynow_black,
-                    selling_plan: selling_plan_trynow,
-                    quantity: 1
-                });  
-            }
-            else
-            {
-                __items.push({
-                    id: product_variant_id,
-                    selling_plan: selling_plan,
-                    quantity: 1
-                });
-
-                __items.push({
-                    id: product_variant_id_trynow_white,
-                    selling_plan: selling_plan_trynow,
-                    quantity: 1
-                }); 
+                switch (selected_product_variant_id) {
+                    case '45909763522799': //white
+                        __items.push({
+                            id: product_variant_id_trynow_white,
+                            selling_plan: selling_plan_trynow,
+                            quantity: 1
+                        });
+                        break;
+                    case '45909763490031': //black
+                        __items.push({
+                            id: product_variant_id_trynow_black,
+                            selling_plan: selling_plan_trynow,
+                            quantity: 1
+                        });
+                        break;
+                    case '46544976969967': //grey
+                        __items.push({
+                            id: product_variant_id_trynow_grey,
+                            selling_plan: selling_plan_trynow,
+                            quantity: 1
+                        });
+                        break;
+                }
+                
             }
 
             cartRequestAdd({ 

@@ -64,6 +64,18 @@
             "soldout": false
           }
         },
+        "variant_8nqQxD": {
+          "type": "variant",
+          "disabled": true,
+          "settings": {
+            "heading": "Silver",
+            "image": "shopify://shop_images/shower_filter_silver_var.webp",
+            "variant_id": 46544976969967,
+            "main": false,
+            "reserve": false,
+            "soldout": false
+          }
+        },
         "trynow_EyrzEb": {
           "type": "trynow",
           "settings": {
@@ -100,6 +112,7 @@
         "out_of_stock_3xp9iR",
         "variant_7PWWak",
         "variant_7nqQxD",
+        "variant_8nqQxD",
         "trynow_EyrzEb",
         "collapsed_TnJHpV",
         "collapsed_xqBcWj",
