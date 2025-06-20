@@ -16,11 +16,12 @@
 {% assign total_price = product.price %}
 
 {% for variant in product_shower_filter.variants %}
-    {% if forloop.index == 1 %}
-        {% assign product_variant_id_white_shower_filter = variant.id %}
-    {% else %}
-        {% assign product_variant_id_black_shower_filter = variant.id %}
-    {% endif %}
+    {% case forloop.index %}
+        {% when 1 %}
+            {% assign product_variant_id_white_shower_filter = variant.id %}
+        {% when 2 %}
+            {% assign product_variant_id_black_shower_filter = variant.id %}
+    {% endcase %}
 {% endfor %}
 
 {% assign product = all_products['faucet-filter'] %}
@@ -1042,9 +1043,9 @@
                                 <div id="acc_shower_Three" class="accordion-collapse collapse" data-bs-parent="#accordion_shower_filterzz" style="">
                                     <div class="accordion-body">
                                         <div class="container">
-                                            <p>The Qure Faucet Bundle improves your tap water by reducing skin irritants like chlorine, heavy metals, micro-organisms, and more.</p>
+                                            <p>The Qure Filter Bundle improves your tap water by reducing skin irritants like chlorine, heavy metals, micro-organisms, and more.</p>
                                             <p>Each filter attaches directly to your showerhead or faucet, and uses a patent-pending, multi-stage filtration system.</p>
-                                            <p>The Shower Filter softens and purifies the water that hits your skin and hair. The Faucet Filter cleans the water that touches your skin and hands — so you’re no longer washing with the same harsh water that’s been drying you out and triggering breakouts. </p>
+                                            <p>The Shower Filter softens and purifies the water that hits your skin and hair. The Faucet Filter cleans the water that touches your skin and hands — so you’re no longer washing with the same harsh water that’s been drying you out and triggering breakouts.  </p>
                                         </div>
                                     </div>
                                 </div>
@@ -1237,10 +1238,10 @@
                                             </div>
                                         </div>
                                         <!-- Buy Now Button -->
-                                        <button class="buy-now buy-now-button">PRE-ORDER NOW – {{ product_price_shower_filter }}
-                                            <span><img src="https://qureskincaredns.com/new/assets/long_right_black_arrow.svg" alt=""></span>
+                                        <button class="buy-now buy-now-button">Shop & Save {{ product_price_shower_filter }}
+                                            <span class="d-none"><img src="https://qureskincaredns.com/new/assets/long_right_black_arrow.svg" alt=""></span>
                                         </button>
-
+                                        
                                         <script>
                                             let product_variant_id_white_shower_filter = '{{ product_variant_id_white_shower_filter }}';
                                             let product_variant_id_black_shower_filter = '{{ product_variant_id_black_shower_filter }}';
@@ -1512,7 +1513,7 @@
                                             <span class="wistia_embed wistia_async_altvn4hlw5 popover=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span>
                                         </div>
                                         <span class="justify-content-center">
-                                            <img src="https://qureskincaredns.com/new/assets/shwr_fau_img4.webp" alt="" class="img-fluid">
+                                            <img src="https://qureskincaredns.com/new/assets/shwr_fau_img4.webp?rnd=1" alt="" class="img-fluid">
                                         </span>
                                         </div>
                                     </a>
@@ -1848,7 +1849,7 @@
                     <div id="accFAQThree" class="accordion-collapse collapse" data-bs-parent="#accFAQ">
                         <div class="accordion-body">
                             <div class="container">
-                                <p>The Qure Faucet Bundle improves your tap water by reducing skin irritants that make your water “hard,” like chlorine, heavy metals, microorganisms, and more.</p>
+                                <p>The Qure Filter Bundle improves your tap water by reducing skin irritants that make your water “hard,” like chlorine, heavy metals, microorganisms, and more.</p>
                                 <p>The filters reduce chlorine, heavy metals, microorganisms, and other common water contaminants.</p>
                             </div>
                         </div>
@@ -1879,7 +1880,7 @@
                     <div id="accFAQSevenzz" class="accordion-collapse collapse" data-bs-parent="#accFAQ">
                         <div class="accordion-body">
                             <div class="container">
-                                <p>With daily use, your Qure Filters will need to be replaced at least once every three months for your skin to look and feel its best. When you subscribe to this bundle, 2 replacement filters (1 for Showerhead and 1 for Faucet) will auto-ship every 90 days, with a recurring charge of $XX.XX per month. </p>
+                                <p>With daily use, your Qure Filters will need to be replaced at least once every three months for your skin to look and feel its best. When you subscribe to this bundle, 2 replacement filters (1 for Showerhead and 1 for Faucet) will auto-ship every 90 days, with a recurring charge of $70 per month. </p>
                             </div>
                         </div>
                     </div>
@@ -1906,7 +1907,7 @@
                 <h3>Don’t see your question?</h3>
                 <a href="https://qureskincare.com/pages/contact-us">
                     <p class="text-black">Ask us 
-                    <img src="https://qureskincaredns.com/new/assets/arrow_right_sf.svg" alt=""> </p>  
+                    <img src="assets/arrow_right_sf.svg" alt=""> </p>  
                 </a>
             </div>
         </div>

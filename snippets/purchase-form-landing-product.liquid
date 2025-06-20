@@ -81,12 +81,12 @@
 
                                     {% if product_price_compare != blank %}
                                         <div class="price">
-                                            <div class="plan_prc regular_price">{{ product_price_compare }}</div>
-                                            <div class="plan_prc sale_price">{{ product_price }}</div>
+                                            <div data-variant-id="{{ product_variant_id }}" class="plan_prc regular_price igComparePrice">{{ product_price_compare }}</div>
+                                            <div data-variant-id="{{ product_variant_id }}" class="plan_prc sale_price igPrice">{{ product_price }}</div>
                                         </div> 
                                     {% else %}
                                         <div class="price">
-                                            <div class="plan_prc sale_price">{{ product_price }}</div>
+                                            <div data-variant-id="{{ product_variant_id }}" class="plan_prc sale_price igPrice">{{ product_price }}</div>
                                         </div>                                       
                                     {% endif %}
                                 </label>

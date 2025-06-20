@@ -67,7 +67,7 @@
             "image": "shopify://shop_images/filter-white.webp",
             "variant_id": 45909763522799,
             "main": false,
-            "reserve": true,
+            "reserve": false,
             "soldout": false
           }
         },
