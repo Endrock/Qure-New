@@ -27,6 +27,7 @@
         },
         "out_of_stock_3xp9iR": {
           "type": "out_of_stock",
+          "disabled": true,
           "settings": {
             "heading": "Next batch ships end of April 2025:",
             "heading_mobile": "Next batch ships end of April 2025:",
@@ -67,7 +68,7 @@
             "variant_id": 45909763522799,
             "main": false,
             "reserve": false,
-            "soldout": true
+            "soldout": false
           }
         },
         "variant_7nqQxD": {
