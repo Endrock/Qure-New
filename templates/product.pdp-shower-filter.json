@@ -44,6 +44,7 @@
         },
         "out_of_stock_3xp9iR": {
           "type": "out_of_stock",
+          "disabled": true,
           "settings": {
             "heading": "Next batch ships 10th June 2025:",
             "heading_mobile": "Next batch ships 10th June 2025:",
