@@ -243,6 +243,7 @@
         "text_CjmW4j",
         "buttons_TztLB4"
       ],
+      "disabled": true,
       "name": "Banner with text",
       "settings": {
         "container": "container",
@@ -282,6 +283,7 @@
     },
     "sub_banner_mDCcyx": {
       "type": "sub-banner",
+      "disabled": true,
       "name": "t:common.sub-banner.label",
       "settings": {
         "heading": "Save up to 55% on Exclusive Bundles",
@@ -365,7 +367,6 @@
         "link_Pk3LH6",
         "banner_6wgzUN"
       ],
-      "disabled": true,
       "settings": {
         "heading": "Two Filters. One Goal: Healthier Skin.",
         "heading_mobile": "Two Filters. One Goal: Healthier Skin.",
