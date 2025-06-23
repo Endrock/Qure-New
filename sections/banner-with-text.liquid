@@ -28,7 +28,7 @@
 }
 {% endstyle %}
 {%- liquid
-  assign st = section.settings
+  assign st = section.settings 
   assign container = st.container
   assign bn_design = st.bn_design
   assign text_bellow_mobile = st.text_bellow_mobile
@@ -48,6 +48,7 @@
   assign height_tb = st.height_tb
   assign height_mb = st.height_mb
   assign height_full = st.height_full 
+  assign image_second_on_mobile = st.image_second_on_mobile 
   assign bg_opacity = st.bg_opacity
   assign image_mobile = st.image_mobile
   assign banner_type = st.banner_type
@@ -120,12 +121,29 @@
   assign enabled_animations = settings.animations_enabled
   assign text_align-mob = st.text_align-mob
 -%}
-{%- capture style -%}
+
+{% comment %} {%- capture style -%}
   {%- if bn_design == 'text_column' -%}
     --bls-gutter-x: {{ column_gap }}px;
   {%- endif -%}
   --section-padding-top: {{ st.padding_top }}px; --section-padding-bottom: {{ st.padding_bottom }}px;
+{%- endcapture -%}  {% endcomment %}
+
+{%- assign padding_top_mobile = st.padding_top | times: 0.7 | round -%}
+{%- assign padding_bottom_mobile = st.padding_bottom | times: 0.7 | round -%}
+
+{%- capture style -%}
+  {%- if bn_design == 'text_column' -%}
+    --bls-gutter-x: {{ column_gap }}px;
+  {%- endif -%}
+  --section-padding-top: {{ st.padding_top }}px;
+  --section-padding-bottom: {{ st.padding_bottom }}px;
+  --section-padding-top-mobile: {{ padding_top_mobile }}px;
+  --section-padding-bottom-mobile: {{ padding_bottom_mobile }}px;
 {%- endcapture -%}
+
+
+
 <section
   class="color-{{ color_scheme }} gradient bls__section{{ has_bg }}{{ spt_tablet }}{{ spb_tablet }}{{ spt_mobile }}{{ spb_mobile }} bls__banner-with-text {{ reset_spacing }} {% if bn_design == 'text_overlay' %}bls__banner-with-text-overlay  {% if settings.image_style != blank and section.settings.column_gap != 0 and section.settings.container != "full-width" %} bls__banner-with-text-overlay-radius {% endif %}{% endif %}"
   style="{{ style | strip | strip_newlines }}"
@@ -137,12 +155,12 @@
         {% if text_bellow_mobile != blank %}text-bellow-mobile{% endif %}
         {{ column_gap_tablet }}{{ column_gap_mobile }}
         {%- if bn_design == 'text_column' -%}
-          bls__banner-text--grid row row-cols-md-2 align-items-center {{ img_position }}
+        bls__banner-text--grid row row-cols-md-2 align-items-center {{ img_position }}
         {%- else -%}
           banner-with-text-overplay banner-position overflow-hidden relative
         {%- endif -%}">
       <div
-        class="{% if height_full %}height-full{% endif %} {% if enabled_animations %}scroll-trigger animate--slide-in{% endif %} {% if banner_type == 'video' %} type-video {% endif %} {% if banner_type == 'image' %} type-banner {% endif %} bls__banner-text--media {{ banner_width }} {{ banner_height }} {% if bn_design == 'text_overlay' %} {% if banner_height == 'depend-image' %}h-full static static-xl inset-0{% else %}static{% endif %} overflow-hidden{% endif %}  {% if bn_design == 'text_column' %} align-self-start {% endif %} "
+        class="{% if height_full %}height-full{% endif %} {% if enabled_animations %}scroll-trigger animate--slide-in{% endif %} {% if banner_type == 'video' %} type-video {% endif %} {% if banner_type == 'image' %} type-banner {% endif %} bls__banner-text--media {{ banner_width }} {{ banner_height }} {% if bn_design == 'text_overlay' %} {% if banner_height == 'depend-image' %}h-full static static-xl inset-0{% else %}static{% endif %} overflow-hidden{% endif %}  {% if bn_design == 'text_column' %} align-self-start {% endif %} {% if image_second_on_mobile %} order-2 order-md-0 {% endif %} "
         {% if height_full == blank %}
           style="--desktop-height:{{ height_dk }}px;--tablet-height:{{ height_tb }}px;--mobile-height:{{ height_mb }}px;"
         {% endif %}
@@ -216,7 +234,7 @@
             </a>
         {%- endcase -%}
       </div>
-      {%- if bn_design == 'text_column' -%}<div class="d-flex flex-direction align-self-stretch flex-1">{%- endif -%}
+      {%- if bn_design == 'text_column' -%}<div class="d-md-flex flex-direction align-self-stretch flex-1 py-3">{%- endif -%}
       <div
         class="{% if bn_design == 'text_column' %} {% if settings.image_style != blank and section.settings.column_gap != 0 and section.settings.container != "full-width" %} column-radius {% endif %} bg-text-column{% endif %}{% if bn_design == 'text_overlay' %}{{ container-box }} {{ banner_height }} {% if banner_height == 'depend-image' %}absolute absolute-xl inset-0{% else %}absolute inset-0{% endif %} {%- if content_bg_color != blank or background_gradient != empty -%} has-bg{% endif %}{% endif %} bls__banner-text--content {{ content_position }} {{ st.text_align }} content-position-{{ text_position }} content-horizontal-position-{{ text_horizontal_position }}"
         {% if bn_design == 'text_column' %}
@@ -780,6 +798,12 @@
       "label": "Full screen (desktop)",
       "default": false,
       "info": "Only works when selected custom height"
+    },
+    {
+      "type": "checkbox",
+      "id": "image_second_on_mobile",
+      "label": "image second on mobile",
+      "default": true
     },
     {
       "type": "select",
