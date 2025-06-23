@@ -379,7 +379,7 @@
 }
 
 @media (max-width: 767px) {
-  .bls__section[style*="--section-padding-top-mobile"] {
+  .bls__section[style*="--section-padding-top-mobile"] { 
     padding-top: var(--section-padding-top-mobile);
   }
 
