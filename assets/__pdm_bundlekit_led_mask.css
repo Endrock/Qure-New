@@ -1,0 +1,242 @@
+.choose-your-kit-section .choose-your-kit-section__products {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+  margin-bottom: 32px;
+  max-width: 100%;
+}
+
+.choose-your-kit-section h5 {
+    color: #000;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 15.275px;
+    letter-spacing: 0.14px;
+    margin-bottom: 34px;
+}
+
+.choose-your-kit-section .choose-your-kit-section__products .product-item {
+  border-radius: 12px;
+  border: 1px solid #D7D9D9;
+  background: #FFF;
+  padding: 0 16px 10px;
+  cursor: pointer;
+  flex: 1;
+} 
+
+.choose-your-kit-section .choose-your-kit-section__products .product-item input {
+  display: none;
+}
+
+.choose-your-kit-section .choose-your-kit-section__products .product-item .product-item-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.choose-your-kit-section .choose-your-kit-section__products .product-item .product-item-inner .product-item__label {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.13px;
+}
+
+
+
+.choose-your-kit-section .choose-your-kit-section__products .product-item.selected {
+  border: 1px solid #000;
+  background-color: #EAF5F2;
+}
+.choose-your-kit-section .choose-your-kit-section__products .product-item .product-item-inner .inner-image{
+  padding-bottom: 12px;
+}
+
+/* Bundle */
+
+.choose-your-kit-section .choose-your-kit-section__products .product-item.product-bundle {
+  position: relative;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0; 
+}
+
+.choose-your-kit-section .choose-your-kit-section__products .product-item.product-bundle .bundle-kit-label {
+  position: absolute;
+  top: -24px;
+  background: #D7D9D9;
+  color: #000;
+  left: -1px;
+  border-radius: 11.52px 11.52px 0 0;
+  text-align: center;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: .11px;
+  text-transform: uppercase;
+  width: calc(100% + 2px);
+  padding: 2px 0;
+}
+
+.choose-your-kit-section .choose-your-kit-section__products .product-item.product-bundle.selected  .bundle-kit-label {
+  background: #000;
+  color: #FFF;
+}
+
+/* Bundle skincare kit*/
+.choose-your-skincarekit-section {
+    margin-bottom: 32px;
+}
+
+.choose-your-skincarekit-section h5 {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 15.275px;
+  letter-spacing: 0.14px;
+  margin-bottom: 16px;
+}
+
+.choose-your-skincarekit-section .choose-your-skincarekit-section__product .skincare-bundle {
+  width: 452px;
+  padding: 8px 16px 8px 24px;
+  border-radius: 8px;
+  border: 1px solid #D7D9D9;
+  background: #FFF;
+  max-width: 100%;
+}
+
+.skincare-bundle-container {
+  display: flex;
+  width: 100%;
+  gap: 12px;
+}
+
+.skincare-bundle-container input#productskincare {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #797D7C;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+.skincare-bundle-container input#productskincare:checked {
+  background-color: #008763;
+  border-color: #008763;
+}
+
+.skincare-bundle-container input#productskincare:checked::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 12px; 
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.skincare-bundle-container .skincare-bundle__inner {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.skincare-bundle__content .title {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+}
+
+.skincare-bundle__content .description {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.12px;
+  margin-bottom: 8px;
+  margin-top: 4px;
+}
+
+.skincare-bundle__content .price .price-badge{
+    padding: 4px 12px;
+    border-radius: 40px;
+    background: #c4121a;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 11px;
+    letter-spacing: .11px;
+    text-transform: uppercase;
+    margin-right: 8px;
+}
+.skincare-bundle__content .price .price-value {
+  color: #C4121A;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.18px;
+}
+.skincare-bundle__content .price .price-value s {
+font-size: 14px;
+font-style: normal;
+font-weight: 300;
+line-height: 24px;
+letter-spacing: 0.14px;
+}
+
+.choose-your-kit-section .choose-your-kit-section__products .product-item .product-item-inner .badge-label {
+    padding: 4px 14px;
+    border-radius: 40px;
+    background: #c4121a;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: .11px;
+    text-transform: uppercase;
+    margin-right: 8px;
+    position: absolute;
+    right: 0;
+    top: 6px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .product-free-gift {
+    padding: 8px 16px 8px 8px;
+    gap: 12px;
+  }
+
+  .choose-your-kit-section .choose-your-kit-section__products .product-item {
+    padding: 0 6px 10px;
+  }
+
+  .choose-your-kit-section .choose-your-kit-section__products {
+    gap: 12px;
+  }
+  .choose-your-kit-section .choose-your-kit-section__products .product-item .product-item-inner .product-item__label {
+    font-size: 12px;
+  }
+  .choose-your-kit-section .choose-your-kit-section__products .product-item.product-bundle img {
+    width: 120px;
+  }
+  .choose-your-kit-section .choose-your-kit-section__products .product-item .product-item-inner {
+    padding-top: 20px;
+  }
+}
