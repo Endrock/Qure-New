@@ -2068,7 +2068,8 @@ const SHOPIFY_ENDPOINTS = {
 };
 
 const SELECTORS = {
-  BUY_NOW_BUTTON: '.btn.btn-atc.submit_btn.productButtonObject'
+  BUY_NOW_BUTTON: '.btn.btn-atc.submit_btn.productButtonObject',
+  CART_BUTTON: '.nav__item.cart_btn a.nav__url'
 };
 
 const HTTP_HEADERS = {
@@ -2191,14 +2192,7 @@ const findParentLink = (button) => {
   return null;
 };
 
-/**
- * Initializes the buy now functionality by setting up event listeners
- * This function runs when the DOM is fully loaded
- */
 const initializeBuyNowFunctionality = () => {
-
-  if (!document.body.hasAttribute('data-checkout')) return;
-  
   // Find the buy now button in the DOM
   const buyNowButton = document.querySelector(SELECTORS.BUY_NOW_BUTTON);
   
@@ -2223,10 +2217,27 @@ const initializeBuyNowFunctionality = () => {
       console.error('Error handling buy now click:', error);
     }
   });
+}
+const initializeCartNavButton = () => {
+  const cartNavButton = document.querySelector(SELECTORS.CART_BUTTON);
+  if (!cartNavButton) return;
+  cartNavButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    window.location.href = SHOPIFY_ENDPOINTS.CHECKOUT;
+  });
+}
+/**
+ * Initializes the buy now functionality by setting up event listeners
+ * This function runs when the DOM is fully loaded
+ */
+const initializeBuyNowTest = () => {
 
-  console.log('Buy now functionality initialized successfully');
+  if (!document.body.hasAttribute('data-checkout')) return;
+  initializeCartNavButton();
+  initializeBuyNowFunctionality();
 };
 
 // Initialize the functionality when the DOM is ready
-document.addEventListener('DOMContentLoaded', initializeBuyNowFunctionality);
+document.addEventListener('DOMContentLoaded', initializeBuyNowTest);
 
