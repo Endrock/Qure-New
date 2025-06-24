@@ -1,0 +1,111 @@
+{{ '__pdm_bundlekit_led_mask.css' | asset_url | stylesheet_tag }}
+<script src="{{ '__pdm_bundlekit_led_mask.js' | asset_url }}"></script>
+
+
+{% liquid
+  assign title_original_product = section.settings.title_original_product
+  assign product_kit = section.settings.product_kit
+  assign product_kit_image = section.settings.product_kit_image
+  assign title_product_kit = section.settings.product_kit_title | replace: '{', '<s style="color:#0000004d;">' | replace: '}', '</s>'
+  assign label_product_kit = section.settings.product_kit_label
+  assign badged_product_kit = section.settings.product_kit_badged
+
+  assign product_bundle1 = section.settings.skincare_kit_bundle_1
+  assign product_bundle2 = section.settings.skincare_kit_bundle_2
+%}
+
+<div class="choose-your-kit-section">
+  <h5>Choose Your Kit</h5>
+  <div class="choose-your-kit-section__products">
+      <label class="product-item product-original" for="productonly">
+          <input 
+          type="radio" 
+          name="product-kit" 
+          id="productonly" 
+          value="{{ product.variants.first.id }}" 
+          data-product-original-title="{{ product.title }}"
+          data-product-original-id="{{ product.id }}"
+          data-product-original-variant-id="{{ product.variants.first.id }}"
+          data-product-original-handle="{{ product.handle }}"
+          data-product-original-image="{{ product.featured_image | image_url: width: 400 }}"
+          data-productskincare-variant-id="{{ product_bundle1.variants.first.id }}">
+          <div class="product-item-inner">
+            <div class="inner-image">
+                <img class="product-item__image" src="{{ product.featured_image | image_url: width: 130, height: 110,  crop: 'center' }}" alt="{{ product.title | escape }}">
+            </div>
+              
+              <span class="product-item__label"> {{ section.settings.title_original_product }} <br> {{ product.variants.first.price | money_without_trailing_zeros }}</span>
+          </div>
+      </label>
+      <label class="product-item product-bundle selected" for="productbundle">
+          {% assign product_kit = section.settings.product_kit %}
+          <div class="bundle-kit-label">{{ label_product_kit }}</div>
+          <input 
+            type="radio" 
+            name="product-kit" 
+            id="productbundle" 
+            value="{{ product_kit.variants.first.id }}" 
+            data-product-bundle-title="{{ product_kit.title }}"
+            data-product-bundle-id="{{ product_kit.id }}"
+            data-product-bundle-variant-id="{{ product_kit.variants.first.id }}"
+            data-product-bundle-handle="{{ product_kit.handle }}"
+            data-product-bundle-image="{{ product_kit_image | image_url: width: 400 }}"
+            data-productskincare-variant-id="{{ product_bundle2.variants.first.id }}"
+            checked>
+          <div class="product-item-inner">
+            <div class="badge-label"> {{ badged_product_kit }} </div>
+            <div class="inner-image">
+                <img class="product-item__image" src="{{ product_kit_image | image_url: width: 140, height: 110}}" alt="{{ product_kit.title | escape }}">
+            </div>
+              <span class="product-item__label"> {{ title_product_kit }} </span>
+          </div>
+      </label>
+  </div>
+</div>
+
+<div class="choose-your-skincarekit-section">
+  <h5>Complete your skincare kit</h5>
+  <div class="choose-your-skincarekit-section__product">
+    <label class="skincare-bundle" for="productskincare">
+      <input class="skincarekit-products"
+        type="hidden" 
+        name="original_productskincare"
+        value="{{ product_bundle1.variants.first.id }}"
+        data-productskincare-title="{{ product_bundle1.title }}"
+        data-productskincare-variant-id="{{ product_bundle1.variants.first.id }}"
+        data-productskincare-handle="{{ product_bundle1.handle }}"
+        data-productskincare-image="{{ product_bundle1.featured_image | image_url: width: 400 }}"
+      >
+        
+      <input class="skincarekit-products"
+        type="hidden"
+        name="bundle_productskincare" 
+        value="{{ product_bundle2.variants.first.id }}"
+        data-productskincare-title="{{ product_bundle2.title }}"
+        data-productskincare-variant-id="{{ product_bundle2.variants.first.id }}" 
+        data-productskincare-handle="{{ product_bundle2.handle }}"
+        data-productskincare-image="{{ product_bundle2.featured_image | image_url: width: 400 }}"
+      >
+
+      {% assign price_bundle = section.settings.additional_info_price | replace: '{', '<s style="color:#000;">' | replace: '}', '</s>' %}
+
+      <div class="skincare-bundle-container">
+        <input type="checkbox" name="productskincare" id="productskincare" value="{{ product_bundle2.variants.first.id }}">
+        <div class="skincare-bundle__inner">
+          <div class="skincare-bundle__content">
+            <div class="title"> {{ section.settings.additional_info_heading }} </div>
+            <div class="description"> {{ section.settings.additional_info_description }} </div>
+            <div class="price">
+              <span class="price-badge"> {{ section.settings.additional_info_badge }} </span>
+              <span class="price-value"> {{ price_bundle }} </span>
+            </div>
+          </div> 
+          <div class="inner-image">
+              <img class="skincare-bundle__image" src="{{ section.settings.additional_info_image | image_url: width: 100, height: 80,  crop: 'center' }}" alt="{{ section.settings.additional_info_heading }}">
+          </div>
+
+        </div>
+      </div>
+    </label>
+  </div> 
+</div>
