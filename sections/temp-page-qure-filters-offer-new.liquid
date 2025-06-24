@@ -13,7 +13,6 @@
 {% assign product_price_shower_filter = product.price | money_without_trailing_zeros %}
 {% assign product_price_compare_shower_filter = product.compare_at_price | money_without_trailing_zeros %}
 {% assign selling_plan_shower_filter = 7175078127 %}
-{% assign total_price = product.price %}
 
 {% for variant in product_shower_filter.variants %}
     {% case forloop.index %}
@@ -24,6 +23,8 @@
     {% endcase %}
 {% endfor %}
 
+{% comment %} ######### {% endcomment %}
+
 {% assign product = all_products['faucet-filter'] %}
 {% assign product_faucet_filter = product %}
 {% assign product_id_faucet_filter = product.id %}
@@ -33,7 +34,6 @@
 {% assign product_price_faucet_filter = product.price | money_without_trailing_zeros %}
 {% assign product_price_compare_faucet_filter = product.compare_at_price | money_without_trailing_zeros %}
 {% assign selling_plan_faucet_filter = 7176421615 %}
-{% assign total_price = total_price | plus: product.price | money_without_trailing_zeros %}
 
 {% for variant in product_faucet_filter.variants %}
     {% if forloop.index == 1 %}
@@ -42,6 +42,11 @@
         {% assign product_variant_id_black_faucet_filter = variant.id %}
     {% endif %}
 {% endfor %}
+
+{% assign total_price = product_shower_filter.price | plus: product_faucet_filter.price %}
+{% assign total_discount = product_shower_filter.price | times: 1.0 | divided_by: total_price | minus: 1 | abs | times: 100 | ceil %}
+{% assign total_price = total_price | money_without_trailing_zeros %}
+
 
 <style>
     #richpanel_messenger_iframe {
@@ -80,9 +85,9 @@
                             </div>
                         <div class="wrapper_box mw-499">
                             <div class="complete_filter_bundle mt-4 mt-md-0 mw-414">
-                                <div class="text_bundle">
+                                <div class="text_bundle text-center">
                                     <h4> THE COMPLETE FILTER BUNDLE </h4>
-                                    <p>Subscribe today & Receive a FREE Faucet Filter with your Shower Filter (value {{ product_price_faucet_filter }})</p>
+                                    <p>Order today & Receive a FREE Faucet Filter with your Shower Filter (value {{ product_price_faucet_filter }})</p>
                                 </div>
                                 <div class="mothers_day_offer_prods m-0">
                                     <div class="prod_dv">
@@ -90,7 +95,7 @@
                                         <p>{{ product_price_shower_filter }}</p>
                                     </div>
                                     <div class="mothers_plus_sign">
-                                        <img src="https://qureskincaredns.com/new/assets/mothers_day_plus.svg" alt="" class="img-fluid">
+                                        <img src="https://qureskincaredns.com/new/assets/plus_grey.svg" alt="" class="img-fluid">
                                     </div>
                                     <div class="prod_dv">
                                         <img src="https://qureskincaredns.com/new/assets/qure_water_img2.webp" alt="" class="img-fluid">
@@ -925,7 +930,6 @@
 
     <!-- trusted recommended end -->
 
-
     <!-- product bundle start -->
     <div class="product_bundle offer-lp section shw_fau_prod_bndl" id="bundle_shop">
         <div class="container">
@@ -933,526 +937,396 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="pe-md-3">
-                            <div class="bfs_mb_slider">
-                                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-                                    class="swiper main_image_swiper"> 
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <a href="#b1-s1-bundle" class="bfs_mb_wrap">
-                                                <img src="https://qureskincaredns.com/new/assets/shower_plus_faucet_img_1.webp" class="img-fluid" />
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="#b1-s2-bundle" class="bfs_mb_wrap">
-                                                <img src="https://qureskincaredns.com/new/assets/shower_plus_faucet_img_2.webp" class="img-fluid" />
-                                            </a>
-                                        </div>
-                                        <!-- <div class="swiper-slide">
-                                            <a href="#b1-s3-bundle" class="bfs_mb_wrap">
-                                                <img src="https://qureskincaredns.com/new/assets/shower_plus_faucet_img_3.webp" class="img-fluid" />
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="#b1-s3-bundle" class="bfs_mb_wrap">
-                                                <img src="https://qureskincaredns.com/new/assets/shower_plus_faucet_img_4.webp" class="img-fluid" />
-                                            </a>
-                                        </div> -->
-                                        <div class="swiper-slide">
-                                            <a href="#b1-s3-bundle" class="bfs_mb_wrap">
-                                                <img src="https://qureskincaredns.com/new/assets/shower_plus_faucet_img_5.webp" class="img-fluid" />
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="#b1-s3-bundle" class="bfs_mb_wrap">
-                                                <img src="https://qureskincaredns.com/new/assets/shower_plus_faucet_img_6.webp" class="img-fluid" />
-                                            </a>
-                                        </div>
-                                    </div>
-
+                        <div class="bfs_mb_slider">
+                            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper main_image_swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                <a href="#b1-s1-bundle" class="bfs_mb_wrap">
+                                    <img src="https://qureskincaredns.com/new/assets/shower_plus_faucet_img_1.webp" class="img-fluid" />
+                                </a>
                                 </div>
-                                <div class="thumbsSlider_wrap mt-3">
-                                    <div thumbsSlider="" class="swiper thumb_swiper pagination_navigation1">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide w-auto">
-                                                <div class="bfs_mb_wrapThumb">
-                                                    <img src="https://qureskincaredns.com/new/assets/shower_plus_faucet_img_1.webp" class="img-fluid" />
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide w-auto">
-                                                <div class="bfs_mb_wrapThumb">
-                                                    <img src="https://qureskincaredns.com/new/assets/shower_plus_faucet_img_2.webp" class="img-fluid" />
-                                                </div>
-                                            </div>
-                                            <!-- <div class="swiper-slide w-auto">
-                                                <div class="bfs_mb_wrapThumb">
-                                                    <img src="https://qureskincaredns.com/new/assets/shower_plus_faucet_img_3.webp" class="img-fluid" />
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide w-auto">
-                                                <div class="bfs_mb_wrapThumb">
-                                                    <img src="https://qureskincaredns.com/new/assets/shower_plus_faucet_img_4.webp" class="img-fluid" />
-                                                </div>
-                                            </div> -->
-                                            <div class="swiper-slide w-auto">
-                                                <div class="bfs_mb_wrapThumb">
-                                                    <img src="https://qureskincaredns.com/new/assets/shower_plus_faucet_img_5.webp" class="img-fluid" />
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide w-auto">
-                                                <div class="bfs_mb_wrapThumb">
-                                                    <img src="https://qureskincaredns.com/new/assets/shower_plus_faucet_img_6.webp" class="img-fluid" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                        <div class="thumb-next swiper-button-next swiper-button"></div>
-                                        <div class="thumb-prev swiper-button-prev swiper-button"></div> 
+                                <div class="swiper-slide">
+                                <a href="#b1-s2-bundle" class="bfs_mb_wrap">
+                                    <img src="https://qureskincaredns.com/new/assets/shower_plus_faucet_img_2.webp" class="img-fluid" />
+                                </a>
                                 </div>
-                                
-
-
-
-
-
-                    <div class="faq fq_common_cls accordions_shower_filter faq_under_product d-none d-md-block">
-                        <div class="accordion" id="accordion_shower_filterzz"> 
-                            <div class="accordion-item">
+                                <div class="swiper-slide">
+                                <a href="#b1-s3-bundle" class="bfs_mb_wrap">
+                                    <img src="https://qureskincaredns.com/new/assets/shower_plus_faucet_img_5.webp" class="img-fluid" />
+                                </a>
+                                </div>
+                                <div class="swiper-slide">
+                                <a href="#b1-s3-bundle" class="bfs_mb_wrap">
+                                    <img src="https://qureskincaredns.com/new/assets/shower_plus_faucet_img_6.webp" class="img-fluid" />
+                                </a>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="thumbsSlider_wrap mt-3">
+                            <div thumbsSlider="" class="swiper thumb_swiper pagination_navigation1">
+                                <div class="swiper-wrapper">
+                                <div class="swiper-slide w-auto">
+                                    <div class="bfs_mb_wrapThumb">
+                                    <img src="https://qureskincaredns.com/new/assets/shower_plus_faucet_img_1.webp" class="img-fluid" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide w-auto">
+                                    <div class="bfs_mb_wrapThumb">
+                                    <img src="https://qureskincaredns.com/new/assets/shower_plus_faucet_img_2.webp" class="img-fluid" />
+                                    </div>
+                                </div>
+                                <!-- <div class="swiper-slide w-auto"><div class="bfs_mb_wrapThumb"><img src="https://qureskincaredns.com/new/assets/shower_plus_faucet_img_3.webp" class="img-fluid" /></div></div><div class="swiper-slide w-auto"><div class="bfs_mb_wrapThumb"><img src="https://qureskincaredns.com/new/assets/shower_plus_faucet_img_4.webp" class="img-fluid" /></div></div> -->
+                                <div class="swiper-slide w-auto">
+                                    <div class="bfs_mb_wrapThumb">
+                                    <img src="https://qureskincaredns.com/new/assets/shower_plus_faucet_img_5.webp" class="img-fluid" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide w-auto">
+                                    <div class="bfs_mb_wrapThumb">
+                                    <img src="https://qureskincaredns.com/new/assets/shower_plus_faucet_img_6.webp" class="img-fluid" />
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="thumb-next swiper-button-next swiper-button"></div>
+                            <div class="thumb-prev swiper-button-prev swiper-button"></div>
+                            </div>
+                            <div class="faq fq_common_cls accordions_shower_filter faq_under_product d-none d-md-block">
+                            <div class="accordion" id="accordion_shower_filterzz">
+                                <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc_shower_Two" aria-expanded="false" aria-controls="accFAQOne">
-                                        <div class="container"><p class="fw-normal">Key Benefits </p></div>
+                                    <div class="container">
+                                        <p class="fw-normal">Key Benefits </p>
+                                    </div>
                                     </button>
-        
                                 </h2>
                                 <div id="acc_shower_Two" class="accordion-collapse collapse" data-bs-parent="#accordion_shower_filterzz" style="">
                                     <div class="accordion-body">
-                                        <div class="container">
-                                            <p>Get clearer, hydrated skin on tap with the Qure Faucet Bundle.</p>
-                                            <p>Research shows tap water is often contaminated with over 320 chemicals, which can harm skin health. This bundle utilizes advanced filtering technology to reduce contaminants, including chlorine and other heavy metals, which are known to impact skin negatively.</p>
-                                            <p>The Qure Shower Filter and Qure Faucet Filter work together to filter  water, providing clean purified water that helps to improve skin hydration, reduce premature aging, and decrease redness and irritation.</p>
-                                        </div>
+                                    <div class="container">
+                                        <p>Get clearer, hydrated skin on tap with the Qure Filter Bundle.</p>
+                                        <p>Research shows tap water is often contaminated with over 320 chemicals, which can harm skin health. This bundle utilizes advanced filtering technology to reduce contaminants, including chlorine and other heavy metals, which are known to impact skin negatively.</p>
+                                        <p>The Qure Shower Filter and Qure Faucet Filter work together to filter water, providing clean purified water that helps to improve skin hydration, reduce premature aging, and decrease redness and irritation.</p>
+                                    </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="accordion-item">
+                                </div>
+                                <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc_shower_Three" aria-expanded="true" aria-controls="accFAQOne">
-                                        <div class="container"><p class="fw-normal">How It Works</p></div>
+                                    <div class="container">
+                                        <p class="fw-normal">How It Works</p>
+                                    </div>
                                     </button>
-        
                                 </h2>
                                 <div id="acc_shower_Three" class="accordion-collapse collapse" data-bs-parent="#accordion_shower_filterzz" style="">
                                     <div class="accordion-body">
-                                        <div class="container">
-                                            <p>The Qure Filter Bundle improves your tap water by reducing skin irritants like chlorine, heavy metals, micro-organisms, and more.</p>
-                                            <p>Each filter attaches directly to your showerhead or faucet, and uses a patent-pending, multi-stage filtration system.</p>
-                                            <p>The Shower Filter softens and purifies the water that hits your skin and hair. The Faucet Filter cleans the water that touches your skin and hands — so you’re no longer washing with the same harsh water that’s been drying you out and triggering breakouts.  </p>
-                                        </div>
+                                    <div class="container">
+                                        <p>The Qure Filter Bundle improves your tap water by reducing skin irritants like chlorine, heavy metals, micro-organisms, and more.</p>
+                                        <p>Each filter attaches directly to your showerhead or faucet, and uses a patent-pending, multi-stage filtration system.</p>
+                                        <p>The Shower Filter softens and purifies the water that hits your skin and hair. The Faucet Filter cleans the water that touches your skin and hands — so you’re no longer washing with the same harsh water that’s been drying you out and triggering breakouts. </p>
+                                    </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="accordion-item">
+                                </div>
+                                <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc_shower_Four" aria-expanded="true" aria-controls="accFAQOne">
-                                        <div class="container"><p class="fw-normal">What’s Included</p></div>
+                                    <div class="container">
+                                        <p class="fw-normal">What’s Included</p>
+                                    </div>
                                     </button>
-        
                                 </h2>
                                 <div id="acc_shower_Four" class="accordion-collapse collapse" data-bs-parent="#accordion_shower_filterzz" style="">
                                     <div class="accordion-body">
-                                        <div class="container">
-                                            <p>This bundle includes:</p>
-                                            <ul class="sec_ul_und_prod">
-                                                <li>1 Qure Showerhead + 1 Filter</li>
-                                                <li>1 Qure Faucet + 1 Filter</li>
-                                            </ul>
-                                            <p>Each filter lasts 90 days (3 months) before needing to be replaced to ensure optimal filtration. When you 
-                                                subscribe to this bundle, 2 replacement filters (1 for Showerhead and 1 for Faucet) will auto-ship every 90 days, 
-                                                with a recurring charge of $70 per month. </p>
-                                        </div>
+                                    <div class="container">
+                                        <p>This bundle includes:</p>
+                                        <ul class="sec_ul_und_prod">
+                                        <li>1 Qure Showerhead + 1 Filter</li>
+                                        <li>1 Qure Faucet + 1 Filter</li>
+                                        </ul>
+                                        <p>Each filter lasts 90 days (3 months) before needing to be replaced to ensure optimal filtration. When you subscribe to this bundle, 2 replacement filters (1 for Showerhead and 1 for Faucet) will auto-ship every 90 days, with a recurring charge of $70 per month. </p>
+                                    </div>
                                     </div>
                                 </div>
+                                </div>
+                            </div>
                             </div>
                         </div>
-                    </div>
-
-
-
-                </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="row">
-                            <div class="col-md-12">
-                                <div class="bundle_select-main include ps-md-5">
-                                    <div class="product_details">
-                                        <div class="holiday_spcl mb-md-2 mb-3 justify-content-start d-none">
-                                            <p class="save_txt">HOLIDAY SPECIAL <span>| Available Until February
-                                                    28th</span></p>
-                                        </div>
-                                        <p class="limited_time_offer_new mb-2">Limited Time Offer</p>
-                                        <h2 class="title-lg-commons">Qure Shower Filter<br>
-                                            <span>+ FREE Faucet Filter </span>
-                                        </h2>
-                                        <div class="d-flex gap-2 price_with_discount mb-3 mt-3">
-                                            <p class="price_actual">{{ product_price_shower_filter }}</p>
-                                            <del>{{ total_price }}</del>
-                                            <p class="clr_orange">46% Off</p>
-                                        </div>
-                                        <div class="warranty_compat gap-2 gap-md-4 mb-2">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="https://qureskincaredns.com/new/assets/tick_blue.svg" alt="">
-                                                <p>Lifetime Warranty</p>
-                                            </div>
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="https://qureskincaredns.com/new/assets/tick_blue.svg" alt="">
-                                                <p>99% Fit Compatibility</p>
-                                            </div>
-                                        </div>
-                                        <p class="repair_skin">Repair skin and hair with dual filters that remove up to 99% of chlorine, heavy metals and contaminants.
-                                        </p>
+                        <div class="col-md-12">
+                            <div class="bundle_select-main include ps-md-5">
+                                <div class="product_details">
+                                    <p class="limited_time_offer_new mb-2">Limited Time Offer</p>
+                                    <h2 class="title-lg-commons">Qure Shower Filter <br><span>+ FREE Faucet Filter </span></h2>
+                                    <div class="d-flex gap-2 price_with_discount mb-3 mt-3">
+                                        <p class="price_actual">{{ product_price_shower_filter }}</p>
+                                        <del>{{ total_price }}</del>
+                                        <p class="clr_orange">SAVE {{ total_discount }}%</p>
                                     </div>
-                                    <div class="d-flex justify-content-between align-items-center select_color_swatches">
-                                        <div><p class="m-0 select_color">Select Color</p></div>
-                                        <div class="d-flex align-items-center ctm_swatches gap-3">
-                                            <div class="d-flex align-items-center gap-2 item_swatch" data-id="{{ product_variant_id_white_shower_filter }}">
-                                                <div class="circle_swatch white_swatch"></div>
-                                                <span>White</span>
-                                            </div>
-                                            <div class="d-flex align-items-center gap-2 item_swatch" data-id="{{ product_variant_id_black_shower_filter }}">
-                                                <div class="circle_swatch black_swatch"></div>
-                                                <span>Black</span>
-                                            </div>
+                                    <div class="warranty_compat gap-2 gap-md-4 mb-2">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <img src="https://qureskincaredns.com/new/assets/tick_blue.svg" alt="">
+                                            <p>Lifetime Warranty</p>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <img src="https://qureskincaredns.com/new/assets/tick_blue.svg" alt="">
+                                            <p>99% Fit Compatibility</p>
                                         </div>
                                     </div>
-                                    <script>
-                                        document.addEventListener('DOMContentLoaded', function() {
-                                            setTimeout(() => {
-                                                initVariant('{{ product_variant_id_black_shower_filter }}');
-                                            }, 500)
+                                    <p class="repair_skin">Repair skin and hair with dual filters that remove up to 99% of chlorine, heavy metals and contaminants. </p>
+                                </div>
 
-                                            document.querySelectorAll('.item_swatch').forEach(swatch => {
-                                                swatch.addEventListener('click', () => {
-                                                    // Remove 'active' from all swatches
-                                                    document.querySelectorAll('.item_swatch').forEach(el => el.classList.remove('active'));
-                                                    
-                                                    // Get the selected color (from span text or you can use data-color)
-                                                    const selectedColor = swatch.querySelector('span').innerText.trim().toLowerCase();
-
-                                                    // Show/hide color images
-                                                    document.querySelectorAll('.color-image').forEach(img => {
-                                                        if (img.dataset.color === selectedColor) {
-                                                            img.classList.remove('d-none');
-                                                        } else {
-                                                            img.classList.add('d-none');
-                                                        }
-                                                    });
-
-                                                    const variant_id = swatch.getAttribute('data-id');
-                                                    initVariant(variant_id);
-                                                });
-                                            });
-                                        });
-
-                                        const initVariant = function(variant_id) {
-                                            const element = document.querySelector('.item_swatch[data-id="' + variant_id + '"]');
-                                            if(element)
-                                            {
-                                                element.click();
-                                                const url = new URL(window.location);
-                                                url.searchParams.set('variant', variant_id);
-                                                window.history.pushState({}, '', url);
-
-                                                document.querySelectorAll('.item_swatch[data-id="' + variant_id + '"]').forEach(el => el.classList.add('active'));
-                                            }
-                                        }
-                                    </script>
-                                    <div class="product-section pt-md-4">
-                                        <p class="selection_title pb-3">What’s Included
-                                        </p>
-                                        <div class="include_wrap-main border-top-0">
-                                            <div class="include_wrap">
-                                                <div class="include_pd-img">
-                                                    <img src="https://qureskincaredns.com/new/assets/qure_shower_filter.webp"
-                                                        class="img-fluid pt-md-0 pt-2 color-image" data-color="black" alt="">
-                                                    <img src="https://qureskincaredns.com/new/assets/qure_shower_filter_white.webp"
-                                                        class="img-fluid pt-md-0 pt-2 color-image d-none" data-color="white" alt="">
-                                                </div>
-                                                <div class="include_pd-detail">
-                                                    <span class="d-none">Bestseller</span>
-                                                    <h6>Qure Shower Filter</h6>
-                                                    <p>One-Time;  Showerhead + Filter <br> Every 90 days: Replacement Filter <del>$50</del> $35</p>
-                                                </div>
-                                                <div class="include_pd-price">
-                                                    <del class="opacity-0">$299</del>
-                                                    <h6>{{ product_price_shower_filter }}</h6>
-                                                </div>
-                                            </div>
-                                            <div class="include_wrap">
-                                                <div class="include_pd-img">
-                                                    <img src="https://qureskincaredns.com/new/assets/qure_faucet_filter.webp" class="img-fluid color-image" data-color="black" alt="">
-                                                    <img src="https://qureskincaredns.com/new/assets/qure_faucet_filter_white.webp" class="img-fluid color-image d-none" data-color="white" alt="">
-                                                </div>
-                                                <div class="include_pd-detail">
-                                                    <h6>Qure Faucet Filter
-                                                        <span>
-                                                            <button class="btn product_popup p-0 align-baseline d-none"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#productInfoModal">
-                                                                <img src="https://qureskincaredns.com/new/assets/i-mark.svg" alt="" class="">
-                                                            </button>
-                                                        </span>
-                                                    </h6>
-                                                    <p>One-Time; Faucet + Filter <br> Every 90 days: Replacement Filter <del>$50</del> $35</p>
-                                                        <h5 class="preorder_txt d-none"><span>!</span> PREORDER | Ships on January 25th.</h5> 
-                                                </div>
-                                                <div class="include_pd-price">
-                                                    <h6><del class="text-grey">{{ product_price_faucet_filter }}</del> <span
-                                                            class="orange_text">FREE</span></h6>
-                                                </div>
-                                            </div>
+                                <div class="d-flex justify-content-between align-items-start flex-column select_color_swatches mw-452">
+                                    <div>
+                                    <p class="mb-2 select_color">Select Your Color:</p>
+                                    </div>
+                                    <div class="d-flex align-items-center ctm_swatches gap-3">
+                                    <div class="d-flex align-items-center flex-column gap-2 item_swatch" data-id="{{ product_variant_id_white_shower_filter }}">
+                                        <div class="circle_swatch white_swatch d-flex justify-content-between align-items-center">
+                                        <img src="https://qureskincaredns.com/new/assets/shower_filter_white.svg" alt="">
+                                        <img src="https://qureskincaredns.com/new/assets/plus_thin_black.svg" alt="">
+                                        <img src="https://qureskincaredns.com/new/assets/faucet_filter_white.svg" alt="">
+                                        <p class="free_label">FREE</p>
                                         </div>
-                                        <div class="include_checkout">
-                                            <div class="row justify-content-between mb-4">
-                                                <div class="col-auto">
-                                                    <p class="green_txt">INSTANT SAVINGS: {{ product_price_faucet_filter }}</p>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <h6><del class="text-grey me-1">{{ total_price }}</del> <span>{{ product_price_shower_filter }}</span></h6>
-                                                </div>
-                                            </div>
+                                        <span>White</span>
+                                    </div>
+                                    <div class="d-flex align-items-center flex-column gap-2 item_swatch active" data-id="{{ product_variant_id_black_shower_filter }}">
+                                        <div class="circle_swatch black_swatch d-flex justify-content-between align-items-center">
+                                        <img src="https://qureskincaredns.com/new/assets/shower_filter_black.svg" alt="">
+                                        <img src="https://qureskincaredns.com/new/assets/plus_thin_black.svg" alt="">
+                                        <img src="https://qureskincaredns.com/new/assets/faucet_filter_black.svg" alt="">
+                                        <p class="free_label">FREE</p>
+                                        </div>
+                                        <span>Black</span>
+                                    </div>
+                                    </div>
+                                </div>
 
-                                            <!-- Low Stock start-->
-                                            <div class="include_stock">
-                                                <p>Low Stock</p>
-                                                <span>Due to high demand, this offer is only available while stock lasts.</span> 
-                                                <div class="row align-items-center px-2">
-                                                    <div class="perc_sold" style="--bgPercent:60%;">
-                                                        <span>60% Sold</span>
+                                <div class="product-section">
+                                    <p class="selection_title pb-0">Select Your Delivery: </p>
+                                    <div class="subscribe_save_wrapper_new mb-4">
+                                        <div class="subs_and_save active">
+                                            <div class="best_value">Best Value <img src="https://qureskincaredns.com/new/assets/star_white.svg" alt=""></div>
+                                            
+                                            <div class="subs_save_wrapper">
+                                                <div class="subs_fir_blk">
+                                                    <div class="row justify-content-between align-items-center pb-2">
+                                                        <div class="col-auto">
+                                                            <p class="d-flex align-items-center gap-2">Subscribe &amp; <span class="clr_orange">SAVE {{ total_discount }}%</span>
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <h6 class="mb-0">
+                                                                <del class="text-grey me-1">{{ total_price }}</del>
+                                                                <span>{{ product_price_shower_filter }}</span>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="shower_with_faucet_free">
+                                                    <div class="row justify-content-between align-items-center py-2">
+                                                        <div class="col-auto">
+                                                            <p class="">Qure Shower Filter</p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <h6>
+                                                                <span>{{ product_price_shower_filter }}</span>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row justify-content-between align-items-center pb-2">
+                                                        <div class="col-auto">
+                                                            <p class="">Qure Faucet Filter</p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <h6>
+                                                                <span class="free_orange_text me-1">FREE</span>
+                                                                <del class="text-grey ms-1">{{ product_price_faucet_filter }}</del>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="new_filters_auto_ship pt-2">
+                                                    <div class="row justify-content-between align-items-center">
+                                                        <div class="col-auto">
+                                                            <p class="">New filters auto-ship every 90 days.</p>
+                                                            <p class="pause_cancel_text mt-1">Skip, pause or cancel anytime. <a href="https://qureskincare.com/pages/subscriptions"> See more details </a>
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-auto"></div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- Low Stock end-->
-                                            
-                                            <div class="order_today shower-order_today">
-                                                <p>Order today to lock in your deal and get FREE Shipping</p>
+
+                                            <div class="one_time_purchase_offer">
+                                                <div class=" d-flex justify-content-between align-items-start pb-2">
+                                                    <h6 class="one_time_purchase_text mb-0 d-flex align-items-center gap-2"> One-Time Purchase <span class="clr_orange">SAVE 35%</span></h6>
+                                                    <div class="ctm_cls_price">
+                                                        <p>{{ product_price_shower_filter }}</p>
+                                                        <del class="text-grey me-1">{{ total_price }}</del>
+                                                    </div>
+                                                </div>
+                                                <div class="wrapper_qure_shwr_one_time">
+                                                    <div class="row justify-content-between align-items-center py-2">
+                                                        <div class="col-auto">
+                                                            <p class="">Qure Shower Filter</p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <h6>
+                                                                <span>{{ product_price_shower_filter }}</span>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row justify-content-between align-items-center pb-2">
+                                                        <div class="col-auto">
+                                                            <p class="">Qure Faucet Filter</p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <h6>
+                                                                <span class="free_orange_text me-1">FREE</span>
+                                                                <del class="text-grey ms-1">{{ product_price_faucet_filter }}</del>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
+                                            <button class="buy-now mt-4 buy-now-button">Subscribe Now & Save {{ total_discount }}% <span class="d-none">
+                                                <img src="https://qureskincaredns.com/new/assets/long_right_black_arrow.svg" alt="">
+                                                </span>
+                                            </button>
                                         </div>
+
                                         <!-- Buy Now Button -->
-                                        <button class="buy-now buy-now-button">Shop & Save {{ product_price_shower_filter }}
-                                            <span class="d-none"><img src="https://qureskincaredns.com/new/assets/long_right_black_arrow.svg" alt=""></span>
-                                        </button>
-                                        
-                                        <script>
-                                            let product_variant_id_white_shower_filter = '{{ product_variant_id_white_shower_filter }}';
-                                            let product_variant_id_black_shower_filter = '{{ product_variant_id_black_shower_filter }}';
-                                            let selling_plan_shower_filter = '{{ selling_plan_shower_filter }}';
+                                        <button class="buy-now d-none buy-now-button">Subscribe Now & Save {{ total_discount }}% <span class="d-none"><img src="https://qureskincaredns.com/new/assets/long_right_black_arrow.svg" alt=""></span></button>
 
-                                            let product_variant_id_white_faucet_filter = '{{ product_variant_id_white_faucet_filter }}';
-                                            let product_variant_id_black_faucet_filter = '{{ product_variant_id_black_faucet_filter }}';
-                                            let selling_plan_faucet_filter = '{{ selling_plan_faucet_filter }}';
-
-                                            const qure_filters_offer_clear = function(state) {
-                                                qure_filters_offer_clear_variant(state.cart.items, product_variant_id_white_shower_filter, product_variant_id_white_faucet_filter);
-                                                qure_filters_offer_clear_variant(state.cart.items, product_variant_id_black_shower_filter, product_variant_id_black_faucet_filter);
-                                            }
-
-                                            const qure_filters_offer_clear_variant = function(items, shower_variant_id, faucet_variant_id) {
-                                                let __shower_filter = items.find(item => item.id === +(shower_variant_id));
-                                                let __faucet_filter = items.find(item => item.id === +(faucet_variant_id));
-
-                                                if(!__shower_filter && __faucet_filter)
-                                                {
-                                                    cartRequestChange({ 
-                                                        id: __faucet_filter.key,
-                                                        quantity: 0
-                                                    },  {} )
-                                                }
-                                            }
-
-                                            document.addEventListener('DOMContentLoaded', function() {
-                                                document.querySelectorAll('.buy-now-button').forEach(button => {
-                                                    button.addEventListener('click', function() {
-                                                        let __items = [];
-                                                        const newUrl = new URL(window.location.href);
-                                                        let selected_product_variant_id = newUrl.searchParams.get('variant');
-
-                                                        if(selected_product_variant_id && selected_product_variant_id == product_variant_id_white_shower_filter)
-                                                        {
-                                                            __items.push({
-                                                                id: product_variant_id_white_shower_filter,
-                                                                selling_plan: selling_plan_shower_filter,
-                                                                quantity: 1
-                                                            });
-
-                                                            __items.push({
-                                                                id: product_variant_id_white_faucet_filter,
-                                                                selling_plan: selling_plan_faucet_filter,
-                                                                quantity: 1
-                                                            });  
-                                                        }
-                                                        else
-                                                        {
-                                                            __items.push({
-                                                                id: product_variant_id_black_shower_filter,
-                                                                selling_plan: selling_plan_shower_filter,
-                                                                quantity: 1
-                                                            });
-
-                                                            __items.push({
-                                                                id: product_variant_id_black_faucet_filter,
-                                                                selling_plan: selling_plan_faucet_filter,
-                                                                quantity: 1
-                                                            }); 
-                                                        }
-
-                                                        cartRequestAdd({ 
-                                                            items:  __items
-                                                        }, {} )
-                                                    });
-                                                });
-                                            });
-                                        </script>
-
-
-                                        <p class="d-flex justify-content-center flex-column flex-md-row skip_pause mt-1 gap-1">Skip, pause/modify or cancel anytime.   
-                                            <a href="https://qureskincare.com/pages/subscriptions" target="_blank"> See more details</a>.
-                                        </p>
-                                        <!-- Next batch ships January 25th -->
-                                        <!--
-                                        <div class="next_batch_bl next_batch_highlight">
-                                            <h5 class="d-none d-md-block">Next batch ships 16th June:</h5>
-                                            <h5 class="d-md-none">Next batch ships 16th June:</h5> 
-                                            <p>Due to high demand, these products are sold out. Order now and secure yours from the next shipment.</p>
-                                            <div class="batch_h batch_h_fade mt-3 mt-md-4">
-                                                <div class="batch_h_month">16th May</div>
-                                                <div class="batch_h_info sold_out_h" style="--bgPercent:100%;"><span>SOLD
-                                                        OUT</span></div>
+                                        <p class="d-grid justify-content-center flex-column flex-md-row skip_pause mt-1 gap-1">Skip, pause/modify or cancel anytime. <a href="https://qureskincare.com/pages/subscriptions" class="text-decoration-underline"> See more details.</a></p>
+                                    
+                                        <div class="d-none d-md-flex justify-content-between mw-402 mx-auto pt-2">
+                                            <div class="Dermatologist_Reviewed d-flex align-items-center gap-2">
+                                                <img src="https://qureskincaredns.com/new/assets/derm_review.svg" alt="">
+                                                <p>Dermatologist Reviewed </p>
                                             </div>
-                                            <div class="batch_h reserved_batch my-2">
-                                                <div class="batch_h_month fw-bold">16th June</div>
-                                                <div class="batch_h_info" style="--bgPercent:81%;">48% Reserved</div>
+                                            <div class="shipping_with_text d-flex align-items-center gap-2">
+                                                <img src="https://qureskincaredns.com/new/assets/shipping_qure.svg" alt="">
+                                                <p>Free Shipping over $100</p>
                                             </div>
-                                            <div class="batch_h batch_h_fade">
-                                                <div class="batch_h_month">16th July</div>
-                                                <div class="batch_h_info" style="--bgPercent:0%;"><span>In
-                                                        Production</span></div>
-                                            </div> 
-                                        </div> 
-                                        -->
+                                        </div>
 
-                            <div class="ser_icons d-md-none">
-                                <div class="Dermatologist_Reviewed ">
-                                    <img src="https://qureskincaredns.com/new/assets/derm_review.svg" alt="">
-                                    <p>Dermatologist Reviewed </p>
-                                </div>
-                                <div class="shipping_with_text">
-                                    <img src="https://qureskincaredns.com/new/assets/shipping_qure.svg" alt="">
-                                    <p>Free World-<br>Wide Shipping over $100</p>
-                                </div>
-                                <div class="backed_by_science">
-                                    <img src="https://qureskincaredns.com/new/assets/backed_by_science_new.svg" alt="">
-                                    <p>Backed by Science</p>
-                                </div>
-                            </div>
+                                        <div class="ser_icons d-md-none">
+                                            <div class="Dermatologist_Reviewed ">
+                                                <img src="https://qureskincaredns.com/new/assets/derm_review.svg" alt="">
+                                                <p>Dermatologist Reviewed </p>
+                                            </div>
+                                            <div class="shipping_with_text">
+                                                <img src="https://qureskincaredns.com/new/assets/shipping_qure.svg" alt="">
+                                                <p>Free World- <br>Wide Shipping over $100 </p>
+                                            </div>
+                                            <div class="backed_by_science">
+                                                <img src="https://qureskincaredns.com/new/assets/backed_by_science_new.svg" alt="">
+                                                <p>Backed by Science</p>
+                                            </div>
+                                        </div>
 
+                                        <div class="faq fq_common_cls accordions_shower_filter faq_under_product d-md-none">
+                                            <div class="accordion" id="accordion_shower_filter">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc_shower_Twozz" aria-expanded="false" aria-controls="acc_shower_Twozz">
+                                                        <div class="container">
+                                                            <p class="fw-normal">Key Benefits </p>
+                                                        </div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="acc_shower_Twozz" class="accordion-collapse collapse" data-bs-parent="#accordion_shower_filter" style="">
+                                                        <div class="accordion-body">
+                                                            <div class="container">
+                                                                <p>Get clearer, hydrated skin on tap with the Qure Filter Bundle.</p>
+                                                                <p>Research shows tap water is often contaminated with over 320 chemicals, which can harm skin health. This bundle utilizes advanced filtering technology to reduce contaminants, including chlorine and other heavy metals, which are known to impact skin negatively.</p>
+                                                                <p>The Qure Shower Filter and Qure Faucet Filter work together to filter water, providing clean purified water that helps to improve skin hydration, reduce premature aging, and decrease redness and irritation.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc_shower_Threeaa" aria-expanded="true" aria-controls="acc_shower_Threeaa">
+                                                        <div class="container">
+                                                            <p class="fw-normal">How It Works</p>
+                                                        </div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="acc_shower_Threeaa" class="accordion-collapse collapse" data-bs-parent="#accordion_shower_filter" style="">
+                                                        <div class="accordion-body">
+                                                            <div class="container">
+                                                                <p>The Qure Filter Bundle improves your tap water by reducing skin irritants like chlorine, heavy metals, micro-organisms, and more.</p>
+                                                                <p>Each filter attaches directly to your showerhead or faucet, and uses a patent-pending, multi-stage filtration system.</p>
+                                                                <p>The Shower Filter softens and purifies the water that hits your skin and hair. The Faucet Filter cleans the water that touches your skin and hands — so you’re no longer washing with the same harsh water that’s been drying you out and triggering breakouts. </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc_shower_Fourgg" aria-expanded="true" aria-controls="acc_shower_Fourgg">
+                                                        <div class="container">
+                                                            <p class="fw-normal">What’s Included</p>
+                                                        </div>
+                                                        </button>
+                                                    </h2>
+                                                    <div id="acc_shower_Fourgg" class="accordion-collapse collapse" data-bs-parent="#accordion_shower_filter" style="">
+                                                        <div class="accordion-body">
+                                                            <div class="container">
+                                                                <p>This bundle includes:</p>
+                                                                <ul class="sec_ul_und_prod">
+                                                                <li>1 Qure Showerhead + 1 Filter</li>
+                                                                <li>1 Qure Faucet + 1 Filter</li>
+                                                                </ul>
+                                                                <p>Each filter lasts 90 days (3 months) before needing to be replaced to ensure optimal filtration. When you subscribe to this bundle, 2 replacement filters (1 for Showerhead and 1 for Faucet) will auto-ship every 90 days, with a recurring charge of $70 per month. </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
 
-
-
-
-                    <div class="faq fq_common_cls accordions_shower_filter faq_under_product d-md-none">
-                        <div class="accordion" id="accordion_shower_filter"> 
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc_shower_Twozz" aria-expanded="false" aria-controls="acc_shower_Twozz">
-                                        <div class="container"><p class="fw-normal">Key Benefits </p></div>
-                                    </button>
-        
-                                </h2>
-                                <div id="acc_shower_Twozz" class="accordion-collapse collapse" data-bs-parent="#accordion_shower_filter" style="">
-                                    <div class="accordion-body">
-                                        <div class="container">
-                                            <p>Get clearer, hydrated skin on tap with the Qure Faucet Bundle.</p>
-                                            <p>Research shows tap water is often contaminated with over 320 chemicals, which can harm skin health. This bundle utilizes advanced filtering technology to reduce contaminants, including chlorine and other heavy metals, which are known to impact skin negatively.</p>
-                                            <p>The Qure Shower Filter and Qure Faucet Filter work together to filter  water, providing clean purified water that helps to improve skin hydration, reduce premature aging, and decrease redness and irritation.</p>
+                                        <div class="lifetime_warranty d-none">
+                                            <img src="https://qureskincaredns.com/new/assets/lifetime_warranty.svg" alt="" class="img-fluid mb-3">
+                                            <h5>Covered by our Lifetime Warranty. </h5>
+                                            <p>Backed by our 30-Day Money-Back Guarantee. </p>
+                                        </div>
+                                    
+                                        <!-- Payment Methods -->
+                                        <div class="payment_method d-none">
+                                            <p>or pay 4 monthly payments of $99.75 with</p>
+                                            <div class="pmt_img ps-2">
+                                                <img src="https://qureskincaredns.com/new/assets/klarna.svg" alt="Klarna">
+                                                <img src="https://qureskincaredns.com/new/assets/sezzle.svg" alt="Sezzle">
+                                                <img src="https://qureskincaredns.com/new/assets/afterpay.svg" alt="Afterpay">
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center d-none">
+                                            <div class="mw-402">
+                                                <div class="shipping shipping_bg bg-transparent d-flex pt-0 mw-359 mx-auto gap-4">
+                                                    <div class="s_bx gap-2">
+                                                        <img src="https://qureskincaredns.com/new/assets/free_shipping_new.svg" alt="">
+                                                        <p class="d-none d-md-block p-0">Free Shipping</p>
+                                                        <p class="d-md-none p-0">Free Shipping</p>
+                                                    </div>
+                                                    <div class="s_bx gap-2">
+                                                        <img src="https://qureskincaredns.com/new/assets/one_year_guarantee.svg" alt="">
+                                                        <p class="d-none d-md-block p-0">Free 1-Year Warranty</p>
+                                                        <p class="d-md-none p-0">Free 1-Year Warranty</p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc_shower_Threeaa" aria-expanded="true" aria-controls="acc_shower_Threeaa">
-                                        <div class="container"><p class="fw-normal">How It Works</p></div>
-                                    </button>
-        
-                                </h2>
-                                <div id="acc_shower_Threeaa" class="accordion-collapse collapse" data-bs-parent="#accordion_shower_filter" style="">
-                                    <div class="accordion-body">
-                                        <div class="container">
-                                            <p>The Qure Faucet Bundle improves your tap water by reducing skin irritants like chlorine, heavy metals, micro-organisms, and more.</p>
-                                            <p>Each filter attaches directly to your showerhead or faucet, and uses a patent-pending, multi-stage filtration system.</p>
-                                            <p>The Shower Filter softens and purifies the water that hits your skin and hair. The Faucet Filter cleans the water that touches your skin and hands — so you’re no longer washing with the same harsh water that’s been drying you out and triggering breakouts. </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc_shower_Fourgg" aria-expanded="true" aria-controls="acc_shower_Fourgg">
-                                        <div class="container"><p class="fw-normal">What’s Included</p></div>
-                                    </button>
-        
-                                </h2>
-                                <div id="acc_shower_Fourgg" class="accordion-collapse collapse" data-bs-parent="#accordion_shower_filter" style="">
-                                    <div class="accordion-body">
-                                        <div class="container">
-                                            <p>This bundle includes:</p>
-                                            <ul class="sec_ul_und_prod">
-                                                <li>1 Qure Showerhead + 1 Filter</li>
-                                                <li>1 Qure Faucet + 1 Filter</li>
-                                            </ul>
-                                            <p>Each filter lasts 90 days (3 months) before needing to be replaced to ensure optimal filtration. When you subscribe to this bundle, 2 replacement filters (1 for Showerhead and 1 for Faucet) will auto-ship every 90 days, with a recurring charge of $70 per month. </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="lifetime_warranty mt-4">
-                        <img src="https://qureskincaredns.com/new/assets/lifetime_warranty.svg" alt="" class="img-fluid mb-3">
-                        <h5>Covered by our Lifetime Warranty. </h5>
-                        <p>Backed by our 30-Day Money-Back Guarantee. </p>
-                    </div>
-
-                    <!-- Payment Methods -->
-                    <div class="payment_method d-none">
-                        <p>or pay 4 monthly payments of $99.75 with</p>
-                        <div class="pmt_img ps-2">
-                            <img src="https://qureskincaredns.com/new/assets/klarna.svg" alt="Klarna">
-                            <img src="https://qureskincaredns.com/new/assets/sezzle.svg" alt="Sezzle">
-                            <img src="https://qureskincaredns.com/new/assets/afterpay.svg" alt="Afterpay">
-                        </div>
-                    </div>
-                        <div class="d-flex justify-content-center align-items-center d-none">
-                            <div class="mw-402">
-                                <div
-                                    class="shipping shipping_bg bg-transparent d-flex pt-0 mw-359 mx-auto gap-4">
-                                    <div class="s_bx gap-2">
-                                        <img src="https://qureskincaredns.com/new/assets/free_shipping_new.svg" alt="">
-                                        <p class="d-none d-md-block p-0">Free Shipping</p>
-                                        <p class="d-md-none p-0">Free Shipping</p>
-                                    </div>
-                                    <div class="s_bx gap-2">
-                                        <img src="https://qureskincaredns.com/new/assets/one_year_guarantee.svg" alt="">
-                                        <p class="d-none d-md-block p-0">Free 1-Year Warranty</p>
-                                        <p class="d-md-none p-0">Free 1-Year Warranty</p>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
                             </div>
                         </div>
                     </div>
@@ -1460,11 +1334,181 @@
             </div>
         </div>
     </div>
-    </div>
-    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                initVariant('{{ product_variant_id_black_shower_filter }}');
+            }, 500)
+
+            document.querySelectorAll('.item_swatch').forEach(swatch => {
+                swatch.addEventListener('click', () => {
+                    // Remove 'active' from all swatches
+                    document.querySelectorAll('.item_swatch').forEach(el => el.classList.remove('active'));
+                    
+                    // Get the selected color (from span text or you can use data-color)
+                    const selectedColor = swatch.querySelector('span').innerText.trim().toLowerCase();
+
+                    // Show/hide color images
+                    document.querySelectorAll('.color-image').forEach(img => {
+                        if (img.dataset.color === selectedColor) {
+                            img.classList.remove('d-none');
+                        } else {
+                            img.classList.add('d-none');
+                        }
+                    });
+
+                    const variant_id = swatch.getAttribute('data-id');
+                    initVariant(variant_id);
+                });
+            });
+        });
+
+        const initVariant = function(variant_id) {
+            const element = document.querySelector('.item_swatch[data-id="' + variant_id + '"]');
+            if(element)
+            {
+                element.click();
+                const url = new URL(window.location);
+                url.searchParams.set('variant', variant_id);
+                window.history.pushState({}, '', url);
+
+                document.querySelectorAll('.item_swatch[data-id="' + variant_id + '"]').forEach(el => el.classList.add('active'));
+            }
+        }
+    </script>
+
+    <script>
+        let product_variant_id_white_shower_filter = '{{ product_variant_id_white_shower_filter }}';
+        let product_variant_id_black_shower_filter = '{{ product_variant_id_black_shower_filter }}';
+        let selling_plan_shower_filter = '{{ selling_plan_shower_filter }}';
+
+        let product_variant_id_white_faucet_filter = '{{ product_variant_id_white_faucet_filter }}';
+        let product_variant_id_black_faucet_filter = '{{ product_variant_id_black_faucet_filter }}';
+        let selling_plan_faucet_filter = '{{ selling_plan_faucet_filter }}';
+
+        const qure_filters_offer_clear = function(state) {
+            qure_filters_offer_clear_variant(state.cart.items, product_variant_id_white_shower_filter, product_variant_id_white_faucet_filter);
+            qure_filters_offer_clear_variant(state.cart.items, product_variant_id_black_shower_filter, product_variant_id_black_faucet_filter);
+        }
+
+        const qure_filters_offer_clear_variant = function(items, shower_variant_id, faucet_variant_id) {
+            let __shower_filter = items.find(item => item.id === +(shower_variant_id));
+            let __faucet_filter = items.find(item => item.id === +(faucet_variant_id));
+
+            if(!__shower_filter && __faucet_filter)
+            {
+                cartRequestChange({ 
+                    id: __faucet_filter.key,
+                    quantity: 0
+                },  {} )
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.buy-now-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    let __items = [];
+                    const newUrl = new URL(window.location.href);
+                    let selected_product_variant_id = newUrl.searchParams.get('variant');
+                    let onetime = false;
+
+                    if (this.classList.contains('onetime')) {
+                        if(selected_product_variant_id && selected_product_variant_id == product_variant_id_white_shower_filter)
+                        {
+                            __items.push({
+                                id: product_variant_id_white_shower_filter,
+                                quantity: 1
+                            });
+
+                            __items.push({
+                                id: product_variant_id_white_faucet_filter,
+                                quantity: 1
+                            });  
+                        }
+                        else
+                        {
+                            __items.push({
+                                id: product_variant_id_black_shower_filter,
+                                quantity: 1
+                            });
+
+                            __items.push({
+                                id: product_variant_id_black_faucet_filter,
+                                quantity: 1
+                            }); 
+                        }
+                    }
+                    else
+                    {
+                        if(selected_product_variant_id && selected_product_variant_id == product_variant_id_white_shower_filter)
+                        {
+                            __items.push({
+                                id: product_variant_id_white_shower_filter,
+                                selling_plan: selling_plan_shower_filter,
+                                quantity: 1
+                            });
+
+                            __items.push({
+                                id: product_variant_id_white_faucet_filter,
+                                selling_plan: selling_plan_faucet_filter,
+                                quantity: 1
+                            });  
+                        }
+                        else
+                        {
+                            __items.push({
+                                id: product_variant_id_black_shower_filter,
+                                selling_plan: selling_plan_shower_filter,
+                                quantity: 1
+                            });
+
+                            __items.push({
+                                id: product_variant_id_black_faucet_filter,
+                                selling_plan: selling_plan_faucet_filter,
+                                quantity: 1
+                            }); 
+                        }
+                    }
+
+                    cartRequestAdd({ 
+                        items:  __items
+                    }, {} )
+                });
+            });
+        });
+    </script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".subscribe_save_wrapper_new").forEach(wrapper => {
+            const subsOption = wrapper.querySelector(".subs_and_save");
+            const oneTimeOption = wrapper.querySelector(".one_time_purchase_offer");
+            const buyNowBtn = wrapper.querySelector(".buy-now");
+
+            if (!subsOption || !oneTimeOption || !buyNowBtn) return;
+
+            // Click on Subscribe & Save
+            subsOption.addEventListener("click", () => {
+                subsOption.classList.add("active");
+                oneTimeOption.classList.remove("active");
+                buyNowBtn.innerHTML = `Subscribe Now & Save {{ total_discount }}% <span class="d-none"><img src="https://qureskincaredns.com/new/assets/long_right_black_arrow.svg" alt=""></span>`;
+                buyNowBtn.classList.remove("onetime");
+            });
+
+            // Click on One-Time Purchase
+            oneTimeOption.addEventListener("click", () => {
+                oneTimeOption.classList.add("active");
+                subsOption.classList.remove("active");
+                buyNowBtn.innerHTML = `Buy Now & Save 35% <span class="d-none"><img src="https://qureskincaredns.com/new/assets/long_right_black_arrow.svg" alt=""></span>`;
+                buyNowBtn.classList.add("onetime");
+            });
+        });
+    });
+</script>
+
     <!-- product bundle end -->
-
-
 
 
     <div class="section videosQure bg-grey_new">
@@ -1907,7 +1951,7 @@
                 <h3>Don’t see your question?</h3>
                 <a href="https://qureskincare.com/pages/contact-us">
                     <p class="text-black">Ask us 
-                    <img src="assets/arrow_right_sf.svg" alt=""> </p>  
+                    <img src="https://qureskincaredns.com/new/assets/arrow_right_sf.svg" alt=""> </p>  
                 </a>
             </div>
         </div>
@@ -1984,9 +2028,14 @@
                 </div>
             </div>
         </div>
-        <a href="javascript:void(0);" class="button_sticky button_sticky_wrapper__button_sticky event_btn buy-now-button">
+        <a href="javascript:void(0);" id="sticky-button" class="button_sticky button_sticky_wrapper__button_sticky event_btn">
             Secure Now
         </a>
+        <script>
+            document.getElementById('sticky-button').addEventListener('click', function() {
+                document.querySelector('.buy-now-button')?.click();
+            });
+        </script>
     </div>
     <div class="d-flex justify-content-center gap-2 social-proof-data-container rounded-0 mw-mob-100" data-suffix="" data-product-id="5657784025237" data-page-handle="" data-product-list="">
         <div class="circle-container">
@@ -1995,7 +2044,7 @@
         <div class="d-flex gap-2 price_with_discount d-none">
             <p class="price_actual_sticky">{{ product_price_shower_filter }}</p>
             <del>{{ total_price }}</del>
-            <p class="clr_orange">46% Off</p>
+            <p class="clr_orange">{{ total_discount }}</p>
         </div>
         <p class="units_reserved">580 Units Reserved in last 48 hours</p>
     </div>

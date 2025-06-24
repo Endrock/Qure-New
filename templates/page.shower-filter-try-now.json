@@ -28,16 +28,34 @@
         "out_of_stock_3xp9iR": {
           "type": "out_of_stock",
           "settings": {
-            "heading": "Next batch ships end of April 2025:",
-            "heading_mobile": "Next batch ships end of April 2025:",
+            "heading": "Next batch ships 10th July 2025:",
+            "heading_mobile": "Next batch ships 10th July 2025:",
             "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.</p>",
-            "first_option_date": "March 21st",
+            "first_option_date": "June 10th",
             "first_option_text": "SOLD OUT",
             "first_option_percent": 100,
-            "second_option_date": "April 25th",
+            "second_option_date": "July 10th",
             "second_option_text": "42% Reserved",
             "second_option_percent": 42,
-            "third_option_date": "May 2025",
+            "third_option_date": "July 30th",
+            "third_option_text": "In Production",
+            "third_option_percent": 0
+          }
+        },
+        "supply_kVVh3Y": {
+          "type": "supply",
+          "disabled": true,
+          "settings": {
+            "heading": "Next batch ships 10th of July 2025:",
+            "heading_mobile": "Next batch ships 10th of July 2025:",
+            "text": "",
+            "first_option_date": "June 15th",
+            "first_option_text": "SOLD OUT",
+            "first_option_percent": 100,
+            "second_option_date": "July 10th",
+            "second_option_text": "53% Reserved",
+            "second_option_percent": 53,
+            "third_option_date": "July 30th",
             "third_option_text": "In Production",
             "third_option_percent": 0
           }
@@ -50,7 +68,7 @@
             "variant_id": 45909763522799,
             "main": false,
             "reserve": false,
-            "soldout": true
+            "soldout": false
           }
         },
         "variant_7nqQxD": {
@@ -61,6 +79,17 @@
             "variant_id": 45909763490031,
             "main": true,
             "reserve": false,
+            "soldout": false
+          }
+        },
+        "variant_8nqQxD": {
+          "type": "variant",
+          "settings": {
+            "heading": "Silver",
+            "image": "shopify://shop_images/shower_filter_silver_var.webp",
+            "variant_id": 46544976969967,
+            "main": false,
+            "reserve": true,
             "soldout": false
           }
         },
@@ -76,6 +105,7 @@
           "type": "collapsed",
           "settings": {
             "heading": "Key Benefits",
+            "heading_mobile": "",
             "text": "<p>Healthy skin starts in the shower – we're tackling skin issues at the source. The Qure Shower Filter removes harmful impurities that can cause dryness, irritation, and brittleness. By filtering your shower water, you're creating the perfect canvas for the rest of your skincare routine and helping your hair and skin stay hydrated and happy.</p>"
           }
         },
@@ -83,6 +113,7 @@
           "type": "collapsed",
           "settings": {
             "heading": "How It Works",
+            "heading_mobile": "",
             "text": "<p>Our Triple-Filtration System targets up to 99% of chlorine, heavy metals, and contaminants in your water. Here's what happens:</p><ul><li>Water passes through our multi-stage filter</li><li>Impurities get trapped in the specialized filtration media</li><li>Clean, filtered water flows through your shower head</li></ul><p>The result? Water that's gentler on your skin and hair, without the stuff that can strip away natural moisture.</p>"
           }
         },
@@ -90,6 +121,7 @@
           "type": "collapsed",
           "settings": {
             "heading": "What’s Included In The Box",
+            "heading_mobile": "",
             "text": "<p>Inside the box, you'll find:</p><ul><li>The Qure Shower Filter with a replaceable filter cartridge (lasts up to 3 months)</li><li>A universal shower head wrench for easy installation</li><li>Clear setup instructions that won't leave you scratching your head</li></ul>"
           }
         }
@@ -98,8 +130,10 @@
         "rating_KDB67x",
         "list_azYRbY",
         "out_of_stock_3xp9iR",
+        "supply_kVVh3Y",
         "variant_7PWWak",
         "variant_7nqQxD",
+        "variant_8nqQxD",
         "trynow_EyrzEb",
         "collapsed_TnJHpV",
         "collapsed_xqBcWj",
@@ -117,6 +151,7 @@
         "before_after_images_limit": 0,
         "before_after_button_label": "Before & After",
         "reserve": false,
+        "soldout": false,
         "underbutton_text_left": "Dermatologist Approved",
         "underbutton_text_right": "Free Shipping Over US$100",
         "selected_design": "new",
