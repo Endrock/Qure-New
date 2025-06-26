@@ -4,9 +4,12 @@
 
 {% liquid
   assign title_original_product = section.settings.title_original_product
-  assign product_kit = section.settings.product_kit
-  assign product_kit_image = section.settings.product_kit_image
-  assign title_product_kit = section.settings.product_kit_title | replace: '{', '<s style="color:#0000004d;">' | replace: '}', '</s>'
+  assign product_kit_1 = section.settings.product_kit_1
+  assign product_kit_image_1 = section.settings.product_kit_image_1
+  assign title_product_kit_2 = section.settings.product_kit_title | replace: '{', '<s style="color:#0000004d;">' | replace: '}', '</s>'
+
+  assign product_kit_2 = section.settings.product_kit_2
+  assign product_kit_image_2 = section.settings.product_kit_image_2
   assign label_product_kit = section.settings.product_kit_label
   assign badged_product_kit = section.settings.product_kit_badged
 
@@ -22,42 +25,41 @@
           type="radio" 
           name="product-kit" 
           id="productonly" 
-          value="{{ product.variants.first.id }}" 
-          data-product-original-title="{{ product.title }}"
-          data-product-original-id="{{ product.id }}"
-          data-product-original-variant-id="{{ product.variants.first.id }}"
-          data-product-original-handle="{{ product.handle }}"
-          data-product-original-image="{{ product.featured_image | image_url: width: 400 }}"
+          value="{{ product_kit_1.variants.first.id }}" 
+          data-product-original-title="{{ product_kit_1.title }}"
+          data-product-original-id="{{ product_kit_1.id }}"
+          data-product-original-variant-id="{{ product_kit_1.variants.first.id }}"
+          data-product-original-handle="{{ product_kit_1.handle }}"
+          data-product-original-image="{{ product_kit_1.featured_image | image_url: width: 400 }}"
           data-productskincare-variant-id="{{ product_bundle1.variants.first.id }}">
           <div class="product-item-inner">
             <div class="inner-image">
-                <img class="product-item__image" src="{{ product.featured_image | image_url: width: 130, height: 110,  crop: 'center' }}" alt="{{ product.title | escape }}">
+                <img class="product-item__image" src="{{ product_kit_1.featured_image | image_url: width: 130, height: 110,  crop: 'center' }}" alt="{{ product.title | escape }}">
             </div>
               
               <span class="product-item__label"> {{ section.settings.title_original_product }} <br> {{ product.variants.first.price | money_without_trailing_zeros }}</span>
           </div>
       </label>
       <label class="product-item product-bundle selected" for="productbundle">
-          {% assign product_kit = section.settings.product_kit %}
           <div class="bundle-kit-label">{{ label_product_kit }}</div>
           <input 
             type="radio" 
             name="product-kit" 
             id="productbundle" 
-            value="{{ product_kit.variants.first.id }}" 
-            data-product-bundle-title="{{ product_kit.title }}"
-            data-product-bundle-id="{{ product_kit.id }}"
-            data-product-bundle-variant-id="{{ product_kit.variants.first.id }}"
-            data-product-bundle-handle="{{ product_kit.handle }}"
-            data-product-bundle-image="{{ product_kit_image | image_url: width: 400 }}"
+            value="{{ product_kit_2.variants.first.id }}" 
+            data-product-bundle-title="{{ product_kit_2.title }}"
+            data-product-bundle-id="{{ product_kit_2.id }}"
+            data-product-bundle-variant-id="{{ product_kit_2.variants.first.id }}"
+            data-product-bundle-handle="{{ product_kit_2.handle }}"
+            data-product-bundle-image="{{ product_kit_2.featured_image | image_url: width: 400 }}"
             data-productskincare-variant-id="{{ product_bundle2.variants.first.id }}"
             checked>
           <div class="product-item-inner">
             <div class="badge-label"> {{ badged_product_kit }} </div>
             <div class="inner-image">
-                <img class="product-item__image" src="{{ product_kit_image | image_url: width: 140, height: 110}}" alt="{{ product_kit.title | escape }}">
+                <img class="product-item__image" src="{{ product_kit_2.featured_image | image_url: width: 140, height: 110}}" alt="{{ product_kit.title | escape }}">
             </div>
-              <span class="product-item__label"> {{ title_product_kit }} </span>
+              <span class="product-item__label"> {{ title_product_kit_2 }} </span>
           </div>
       </label>
   </div>
