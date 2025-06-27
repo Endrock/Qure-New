@@ -67,7 +67,7 @@
             "image": "shopify://shop_images/water-fIlter-white.webp",
             "variant_id": 45852978348271,
             "main": false,
-            "reserve": true,
+            "reserve": false,
             "soldout": false
           }
         },
