@@ -59,6 +59,223 @@
     ]
   },
   {
+    "name": "Color",
+    "settings": [
+      {
+        "type": "color_scheme_group",
+        "id": "color_schemes",
+        "definition": [
+          {
+            "type": "color",
+            "id": "background",
+            "label": "t:settings_schema.colors.settings.background.label",
+            "default": "#FFFFFF"
+          },
+          {
+            "type": "color_background",
+            "id": "background_gradient",
+            "label": "t:settings_schema.colors.settings.background_gradient.label",
+            "info": "t:settings_schema.colors.settings.background_gradient.info"
+          },
+          {
+            "type": "color",
+            "id": "heading_color",
+            "label": "Headings",
+            "default": "#111111"
+          },
+          {
+            "type": "color",
+            "id": "text",
+            "label": "t:settings_schema.colors.settings.text.label",
+            "default": "#121212"
+          },
+          {
+            "type": "color",
+            "id": "link_color",
+            "label": "Link",
+            "default": "#111111"
+          },
+          {
+            "type": "color",
+            "id": "link_hover_color",
+            "label": "Link hover",
+            "default": "#555"
+          },
+          {
+            "type": "color",
+            "id": "border_color",
+            "label": "Border",
+            "default": "#EBEBEB"
+          },
+          {
+            "type": "header",
+            "content": "Button primary"
+          },
+          {
+            "type": "color",
+            "id": "button_primary_color",
+            "label": "Color",
+            "default": "#ffffff"
+          },
+          {
+            "type": "color",
+            "id": "button_primary_background_color",
+            "label": "Background",
+            "default": "#111111"
+          },
+          {
+            "type": "color",
+            "id": "button_primary_hover_color",
+            "label": "Hover color",
+            "default": "#ffffff"
+          },
+          {
+            "type": "color",
+            "id": "button_primary_hover_background_color",
+            "label": "Hover background",
+            "default": "#111111"
+          },
+          {
+            "type": "header",
+            "content": "Button secondary"
+          },
+          {
+            "type": "color",
+            "id": "button_secondary_color",
+            "label": "Color",
+            "default": "#111111"
+          },
+          {
+            "type": "color",
+            "id": "button_secondary_border_color",
+            "label": "Border color",
+            "default": "#DEDEDE"
+          },
+          {
+            "type": "color",
+            "id": "button_secondary_background_color",
+            "label": "Background",
+            "default": "#ffffff"
+          },
+          {
+            "type": "color",
+            "id": "button_secondary_hover_color",
+            "label": "Hover color",
+            "default": "#ffffff"
+          },
+          {
+            "type": "color",
+            "id": "button_secondary_hover_background_color",
+            "label": "Hover background color",
+            "default": "#111111"
+          },
+          {
+            "type": "header",
+            "content": "Button link"
+          },
+          {
+            "type": "color",
+            "id": "button_link_color",
+            "label": "Color",
+            "default": "#111111"
+          },
+          {
+            "type": "color",
+            "id": "button_link_hover_color",
+            "label": "Hover Color",
+            "default": "#555"
+          },
+          {
+            "type": "color",
+            "id": "input_color",
+            "label": "Input color",
+            "default": "#000"
+          },
+          {
+            "type": "color",
+            "id": "input_border",
+            "label": "Input border",
+            "default": "#fff"
+          },
+          {
+            "type": "color",
+            "id": "input_bg",
+            "label": "Input background",
+            "default": "#fff"
+          }
+        ],
+        "role": {
+          "text": "text",
+          "background": {
+            "solid": "background",
+            "gradient": "background_gradient"
+          },
+          "links": "link_color",
+          "icons": "text",
+          "primary_button": "button_primary_background_color",
+          "on_primary_button": "button_primary_color",
+          "primary_button_border": "button_primary_background_color",
+          "secondary_button": "background",
+          "on_secondary_button": "button_secondary_color",
+          "secondary_button_border": "button_secondary_border_color"
+        }
+      }
+    ]
+  },
+  {
+    "name":"Button",
+    "settings": [
+      {
+        "type": "range",
+        "id": "btn_font_size",
+        "min": 12,
+        "max": 25,
+        "step": 1,
+        "unit":"px",
+        "label": "Button font size",
+        "default": 14
+      },
+      {
+        "type": "range",
+        "id": "btn_line_height",
+        "min": 1,
+        "max": 20,
+        "step": 1,
+        "label": "Button line height",
+        "default": 1
+      },
+      {
+        "type": "range",
+        "id": "btn_font_weight",
+        "min": 100,
+        "max": 900,
+        "step": 100,
+        "label": "Button font weight",
+        "default": 500
+      },
+      {
+        "type": "range",
+        "id": "btn_width_border",
+        "min": 0,
+        "max": 5,
+        "step": 1,
+        "label": "Button border width",
+        "default": 1
+      },
+      {
+        "type": "range",
+        "id": "btn_border_radius",
+        "min": 0,
+        "max": 40,
+        "step": 1,
+        "label": "Button border radius",
+        "default": 30
+      }
+      
+
+    ] 
+  },
+  {
     "name": "Product",
     "settings": [
       {

@@ -28415,7 +28415,7 @@ fieldset:disabled .btn {
 }
 
 :root {
-    --swiper-theme-color: #007aff
+    --swiper-theme-color: #000
 }
 
 :host {
@@ -32496,7 +32496,10 @@ picture img {
     padding: 8px 16px;
     display: inline-block;
 }
-
+.biggest_hair_issues_slider .swiper-pagination-bullet{
+    width: 14px;
+    height: 14px;
+}
 
 
 
