@@ -1109,7 +1109,7 @@
                                 <div class="product-section">
                                     <p class="selection_title pb-0">Select Your Delivery: </p>
                                     <div class="subscribe_save_wrapper_new mb-4">
-                                        <div class="subs_and_save active">
+                                        <div class="subs_and_save">
                                             <div class="best_value">Best Value <img src="https://qureskincaredns.com/new/assets/star_white.svg" alt=""></div>
                                             
                                             <div class="subs_save_wrapper">
@@ -1163,9 +1163,9 @@
                                                 </div>
                                             </div>
 
-                                            <div class="one_time_purchase_offer">
+                                            <div class="one_time_purchase_offer active">
                                                 <div class=" d-flex justify-content-between align-items-start pb-2">
-                                                    <h6 class="one_time_purchase_text mb-0 d-flex align-items-center gap-2"> One-Time Purchase <span class="clr_orange">SAVE 35%</span></h6>
+                                                    <h6 class="one_time_purchase_text mb-0 d-flex align-items-center gap-2"> One-Time Purchase <span class="clr_orange">SAVE {{ total_discount }}%</span></h6>
                                                     <div class="ctm_cls_price">
                                                         <p>{{ product_price_shower_filter }}</p>
                                                         <del class="text-grey me-1">{{ total_price }}</del>
@@ -1195,16 +1195,16 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <button class="buy-now mt-4 buy-now-button">Subscribe Now & Save {{ total_discount }}% <span class="d-none">
+                                            <button class="buy-now mt-4 buy-now-button onetime">Buy Now & Save {{ total_discount }}% <span class="d-none">
                                                 <img src="https://qureskincaredns.com/new/assets/long_right_black_arrow.svg" alt="">
                                                 </span>
                                             </button>
                                         </div>
 
                                         <!-- Buy Now Button -->
-                                        <button class="buy-now d-none buy-now-button">Subscribe Now & Save {{ total_discount }}% <span class="d-none"><img src="https://qureskincaredns.com/new/assets/long_right_black_arrow.svg" alt=""></span></button>
+                                        <button class="buy-now d-none buy-now-button onetime">Buy Now & Save {{ total_discount }}% <span class="d-none"><img src="https://qureskincaredns.com/new/assets/long_right_black_arrow.svg" alt=""></span></button>
 
-                                        <p class="d-grid justify-content-center flex-column flex-md-row skip_pause mt-1 gap-1">Skip, pause/modify or cancel anytime. <a href="https://qureskincare.com/pages/subscriptions" class="text-decoration-underline"> See more details.</a></p>
+                                        {% comment %} <p class="d-grid justify-content-center flex-column flex-md-row skip_pause mt-1 gap-1">Skip, pause/modify or cancel anytime. <a href="https://qureskincare.com/pages/subscriptions" class="text-decoration-underline"> See more details.</a></p> {% endcomment %}
                                     
                                         <div class="d-none d-md-flex justify-content-between mw-402 mx-auto pt-2">
                                             <div class="Dermatologist_Reviewed d-flex align-items-center gap-2">
@@ -1408,12 +1408,15 @@
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('.buy-now-button').forEach(button => {
                 button.addEventListener('click', function() {
-                    let __items = [];
                     const newUrl = new URL(window.location.href);
                     let selected_product_variant_id = newUrl.searchParams.get('variant');
                     let onetime = false;
+                    let __items = [];
+                    let __discount = '';
 
                     if (this.classList.contains('onetime')) {
+                        __discount = 'FREEFAUCET';
+
                         if(selected_product_variant_id && selected_product_variant_id == product_variant_id_white_shower_filter)
                         {
                             __items.push({
@@ -1471,9 +1474,20 @@
                         }
                     }
 
-                    cartRequestAdd({ 
-                        items:  __items
-                    }, {} )
+                    if(__discount)
+                    {
+                        fetch('/discount/' + __discount).then(async () => {
+                            cartRequestAdd({ 
+                                items:  __items
+                            }, {} )
+                        });
+                    }
+                    else
+                    {
+                            cartRequestAdd({ 
+                                items:  __items
+                            }, {} )
+                    }
                 });
             });
         });
@@ -1501,7 +1515,7 @@
             oneTimeOption.addEventListener("click", () => {
                 oneTimeOption.classList.add("active");
                 subsOption.classList.remove("active");
-                buyNowBtn.innerHTML = `Buy Now & Save 35% <span class="d-none"><img src="https://qureskincaredns.com/new/assets/long_right_black_arrow.svg" alt=""></span>`;
+                buyNowBtn.innerHTML = `Buy Now & Save {{ total_discount }}% <span class="d-none"><img src="https://qureskincaredns.com/new/assets/long_right_black_arrow.svg" alt=""></span>`;
                 buyNowBtn.classList.add("onetime");
             });
         });
@@ -2029,7 +2043,7 @@
             </div>
         </div>
         <a href="javascript:void(0);" id="sticky-button" class="button_sticky button_sticky_wrapper__button_sticky event_btn">
-            Secure Now
+            Save {{ total_discount }}% Now
         </a>
         <script>
             document.getElementById('sticky-button').addEventListener('click', function() {

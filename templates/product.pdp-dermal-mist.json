@@ -27,6 +27,7 @@
         },
         "supply_CTrVRQ": {
           "type": "supply",
+          "disabled": true,
           "settings": {
             "heading": "Next batch ships 30th of June 2025:",
             "heading_mobile": "Next batch ships 06/30:",
@@ -58,7 +59,7 @@
         "product_button_label": "Product",
         "before_after_images_limit": 0,
         "before_after_button_label": "Before & After",
-        "reserve": true,
+        "reserve": false,
         "soldout": false,
         "underbutton_text_left": "Dermatologist Approved",
         "underbutton_text_right": "Free Shipping Over US$100",
