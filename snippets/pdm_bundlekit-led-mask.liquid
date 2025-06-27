@@ -26,15 +26,15 @@
           name="product-kit" 
           id="productonly" 
           value="{{ product_kit_1.variants.first.id }}" 
-          data-product-original-title="{{ product_kit_1.title }}"
+          data-product-original-title="{{ product_kit_1.description | strip_html }}"
           data-product-original-id="{{ product_kit_1.id }}"
-          data-product-original-variant-id="{{ product_kit_1.variants.first.id }}"
+          data-product-original-variant-id="{{ product_kit_1.variants.first.id }}" 
           data-product-original-handle="{{ product_kit_1.handle }}"
-          data-product-original-image="{{ product_kit_1.featured_image | image_url: width: 400 }}"
+          data-product-original-image="{{ section.settings.product_kit_image_1 | image_url: width: 400 }}"    
           data-productskincare-variant-id="{{ product_bundle1.variants.first.id }}">
           <div class="product-item-inner">
             <div class="inner-image">
-                <img class="product-item__image" src="{{ product_kit_1.featured_image | image_url: width: 130, height: 110,  crop: 'center' }}" alt="{{ product.title | escape }}">
+                <img class="product-item__image" src="{{ section.settings.product_kit_image_1 | image_url: width: 140, height: 110}}" alt="{{ product.title | escape }}">
             </div>
               
               <span class="product-item__label"> {{ section.settings.title_original_product }} <br> {{ product.variants.first.price | money_without_trailing_zeros }}</span>
@@ -47,23 +47,23 @@
             name="product-kit" 
             id="productbundle" 
             value="{{ product_kit_2.variants.first.id }}" 
-            data-product-bundle-title="{{ product_kit_2.title }}"
+            data-product-bundle-title="{{ product_kit_2.description | strip_html }}"
             data-product-bundle-id="{{ product_kit_2.id }}"
             data-product-bundle-variant-id="{{ product_kit_2.variants.first.id }}"
             data-product-bundle-handle="{{ product_kit_2.handle }}"
-            data-product-bundle-image="{{ product_kit_2.featured_image | image_url: width: 400 }}"
+            data-product-bundle-image="{{ section.settings.product_kit_image_2 | image_url: width: 400 }}"
             data-productskincare-variant-id="{{ product_bundle2.variants.first.id }}"
             checked>
           <div class="product-item-inner">
             <div class="badge-label"> {{ badged_product_kit }} </div>
             <div class="inner-image">
-                <img class="product-item__image" src="{{ product_kit_2.featured_image | image_url: width: 140, height: 110}}" alt="{{ product_kit.title | escape }}">
+                <img class="product-item__image" src="{{ section.settings.product_kit_image_2 | image_url: width: 140, height: 110}}" alt="{{ product_kit.title | escape }}">
             </div>
               <span class="product-item__label"> {{ title_product_kit_2 }} </span>
           </div>
       </label>
   </div>
-</div>
+</div> 
 
 <div class="choose-your-skincarekit-section">
   <h5>Complete your skincare kit</h5>
@@ -73,20 +73,20 @@
         type="hidden" 
         name="original_productskincare"
         value="{{ product_bundle1.variants.first.id }}"
-        data-productskincare-title="{{ product_bundle1.title }}"
+        data-productskincare-title="{{ product_bundle1.description | strip_html }}"
         data-productskincare-variant-id="{{ product_bundle1.variants.first.id }}"
         data-productskincare-handle="{{ product_bundle1.handle }}"
-        data-productskincare-image="{{ product_bundle1.featured_image | image_url: width: 400 }}"
+        data-productskincare-image="{{ product_bundle1.images[1] | image_url: width: 400 }}"
       >
         
       <input class="skincarekit-products"
         type="hidden"
         name="bundle_productskincare" 
         value="{{ product_bundle2.variants.first.id }}"
-        data-productskincare-title="{{ product_bundle2.title }}"
+        data-productskincare-title="{{ product_bundle2.description | strip_html }}"
         data-productskincare-variant-id="{{ product_bundle2.variants.first.id }}" 
-        data-productskincare-handle="{{ product_bundle2.handle }}"
-        data-productskincare-image="{{ product_bundle2.featured_image | image_url: width: 400 }}"
+        data-productskincare-handle="{{ product_bundle2.handle }}" 
+        data-productskincare-image="{{ product_bundle2.images[1] | image_url: width: 400 }}"
       >
 
       {% assign price_bundle = section.settings.additional_info_price | replace: '{', '<s style="color:#000;">' | replace: '}', '</s>' %}
