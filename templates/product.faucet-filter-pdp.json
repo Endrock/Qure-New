@@ -66,7 +66,7 @@
             "heading": "White",
             "image": "shopify://shop_images/water-fIlter-white.webp",
             "variant_id": 45852978348271,
-            "main": false,
+            "main": true,
             "reserve": false,
             "soldout": false
           }
@@ -77,7 +77,7 @@
             "heading": "Black",
             "image": "shopify://shop_images/water-fIlter-black.webp",
             "variant_id": 45852978315503,
-            "main": true,
+            "main": false,
             "reserve": false,
             "soldout": false
           }
