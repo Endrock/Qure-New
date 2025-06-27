@@ -240,3 +240,38 @@ letter-spacing: 0.14px;
     padding-top: 20px;
   }
 }
+
+@media screen and (min-width: 767px) {
+ .sticky_row {
+  height: 100vh;
+  overflow: hidden;
+ }
+
+ .sticky_row .col-md-6.order-2.order-md-1 {
+    overflow-y: auto;
+    height: 100%;
+    padding-right: 15px;
+    scrollbar-width: none;
+    -ms-overflow-style: none; /* IE and Edge */
+
+ }
+ .sticky_row .col-md-6.order-1.order-md-2 {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+ }
+
+ .sticky_row .col-md-6.order-2.order-md-1::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+ }
+ .sticky_row .col-md-6.order-2.order-md-1::-webkit-scrollbar {
+    width: 0; /* Firefox */
+    height: 0; /* Firefox */
+ }
+
+ .sticky_row .before-after-carousel-container .show {
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+ }
+}
