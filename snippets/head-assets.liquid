@@ -1,0 +1,78 @@
+{% style %}
+:root{
+    
+}
+{% for scheme in settings.color_schemes -%}
+        {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
+        {% if forloop.index == 1 -%}
+          :root,
+        {%- endif %}
+        .color-{{ scheme.id }} {
+          --color-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+        {% if scheme.settings.background_gradient != empty %}
+          --gradient-background: {{ scheme.settings.background_gradient }};
+        {% else %}
+          --gradient-background: {{ scheme.settings.background }};
+        {% endif %}
+
+        {% liquid
+          assign background_color = scheme.settings.background
+          assign background_color_brightness = background_color | color_brightness
+          if background_color_brightness <= 26
+            assign background_color_contrast = background_color | color_lighten: 50
+          elsif background_color_brightness <= 65
+            assign background_color_contrast = background_color | color_lighten: 5
+          else
+            assign background_color_contrast = background_color | color_darken: 25
+          endif
+        %}
+        --border-color-base : {{ scheme.settings.border_color }};
+        --input-box-color:  {{ scheme.settings.input_color }};
+        --input-background:  {{ scheme.settings.input_bg }};
+        --input-border:  {{ scheme.settings.input_border }};
+        --heading-color:{{ scheme.settings.heading_color }};
+        --text-color:{{ scheme.settings.text }};
+        --color-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+        --base-color: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+        --color-background-contrast: {{ background_color_contrast.red }},{{ background_color_contrast.green }},{{ background_color_contrast.blue }};
+        --color-shadow: {{ scheme.settings.shadow.red }},{{ scheme.settings.shadow.green }},{{ scheme.settings.shadow.blue }};
+        --color-button: {{ scheme.settings.button.red }},{{ scheme.settings.button.green }},{{ scheme.settings.button.blue }};
+        --color-button-text: {{ scheme.settings.button_label.red }},{{ scheme.settings.button_label.green }},{{ scheme.settings.button_label.blue }};
+        --color-secondary-button: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+        --color-secondary-button-text: {{ scheme.settings.secondary_button_label.red }},{{ scheme.settings.secondary_button_label.green }},{{ scheme.settings.secondary_button_label.blue }};
+        --color-link: {{ scheme.settings.link_color }};
+        --color-badge-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+        --color-badge-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+        --color-badge-border: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+        --payment-terms-background-color: rgb({{ scheme.settings.background.rgb }});
+
+        --btn-primary-bg : {{ scheme.settings.button_primary_background_color }};
+        --btn-primary-color : {{ scheme.settings.button_primary_color }};
+        --btn-primary-color-hover : {{ scheme.settings.button_primary_hover_color }};
+        --btn-primary-bg-hover : {{ scheme.settings.button_primary_hover_background_color }};
+        --btn-secondary-color : {{ scheme.settings.button_secondary_color }};
+        --btn-secondary-border-color : {{ scheme.settings.button_secondary_border_color }};
+        --btn-secondary-bg : {{ scheme.settings.button_secondary_background_color }};
+        --btn-secondary-color-hover : {{ scheme.settings.button_secondary_hover_color }};
+        --btn-secondary-bg-hover : {{ scheme.settings.button_secondary_hover_background_color }};
+        --btn-link-color : {{ scheme.settings.button_link_color }};
+        --btn-link-color-hover : {{ scheme.settings.button_link_hover_color }};
+
+--font-weight-btn:{{ settings.btn_font_weight }};
+    --btn-font-size:{{ settings.btn_font_size }}px;
+    --btn-line-height:{{ settings.btn_line_height }}px;
+    --btn-width-border:{{ settings.btn_width_border }}px;
+    --btn-border-radius:{{ settings.btn_border_radius }}px;
+        /* --btn-font-size : {{ settings.button_font_size }}px;
+        --btn-font-weight : {{ settings.button_font_weight }};
+        --btn-letter-spacing : {{ settings.button_letter_spacing }}px;
+        --btn-border-radius : {{ settings.button_border_radius }}px; */
+        /* --btn-uppercase : {% if settings.button_uppercase %} uppercase {% else %} none {% endif %}; */
+      }
+      {% endfor %}
+
+      {{ scheme_classes | prepend: 'body' }} {
+        color: rgba(var(--color-foreground), 1);
+        background-color: rgb(var(--color-background));
+      }
+      {% endstyle %}
