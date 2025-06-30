@@ -1537,7 +1537,7 @@
           "settings": {
             "heading": "Wrinkles",
             "image": "shopify://shop_images/for_wrinkles.webp",
-            "preselected": true
+            "preselected": false
           }
         },
         "product_EKAAzA": {
@@ -1613,7 +1613,7 @@
           "settings": {
             "heading": "Wrinkles + Dark Spots",
             "image": "shopify://shop_images/mc_5.webp",
-            "preselected": false
+            "preselected": true
           }
         },
         "product_gbPf3J": {
