@@ -72,7 +72,7 @@
         "button_L9q6wE": {
           "type": "button",
           "settings": {
-            "button_label": "SAVE UP TO 75% OFF",
+            "button_label": "BUY ONE GET ONE FREE",
             "button_url": "#productSubscription"
           }
         },
@@ -1459,6 +1459,7 @@
         },
         "product_type_QKQhNr": {
           "type": "product_type",
+          "disabled": true,
           "settings": {
             "heading": "Dark Spots",
             "image": "shopify://shop_images/mc_2.webp",
@@ -1534,6 +1535,7 @@
         },
         "product_type_VLXcAn": {
           "type": "product_type",
+          "disabled": true,
           "settings": {
             "heading": "Wrinkles",
             "image": "shopify://shop_images/for_wrinkles.webp",
@@ -1620,7 +1622,7 @@
           "type": "product",
           "settings": {
             "product": "micro-infusion-6-month-bogo-for-wrinkles-dark-spots",
-            "preselected": false,
+            "preselected": true,
             "heading": "Buy 3 Months, Get 3 Months FREE",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/Micro-Infusion_6_Month_Bundle_For_Wrinkles_Dark_Spots.png",
