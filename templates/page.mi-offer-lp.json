@@ -1535,6 +1535,7 @@
         },
         "product_type_VLXcAn": {
           "type": "product_type",
+          "disabled": true,
           "settings": {
             "heading": "Wrinkles",
             "image": "shopify://shop_images/for_wrinkles.webp",
@@ -1611,7 +1612,6 @@
         },
         "product_type_YrPQrV": {
           "type": "product_type",
-          "disabled": true,
           "settings": {
             "heading": "Wrinkles + Dark Spots",
             "image": "shopify://shop_images/mc_5.webp",
@@ -1642,11 +1642,11 @@
         "product_NEgEkN": {
           "type": "product",
           "settings": {
-            "product": "micro-infusion-2-month-bundle-2x-b-g-serum-2x-e-g-f-serum",
+            "product": "micro-infusion-3-month-bundle-3x-b-g-serum-3x-e-g-f-serum",
             "preselected": false,
-            "heading": "2 Month Supply",
-            "subheading": "(4 Micro-infusion Treatments)",
-            "image": "shopify://shop_images/2monthmix_1_514d5488-29f6-447d-81e3-242be3792631.png",
+            "heading": "3 Month Supply",
+            "subheading": "(6 Micro-infusion Treatments)",
+            "image": "shopify://shop_images/3monthmix_3.png",
             "left_items": false,
             "soldout": false,
             "preorder": false,
