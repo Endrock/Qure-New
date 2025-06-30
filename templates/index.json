@@ -299,17 +299,9 @@
         "link_GirQqh": {
           "type": "link",
           "settings": {
-            "link_label": "Shop Best Sellers",
-            "link_label_mobile": "Shop Best Sellers",
-            "link_url": "shopify:\/\/collections\/best-sellers"
-          }
-        },
-        "product_BANXY7": {
-          "type": "product",
-          "settings": {
-            "heading": "<p>Micro-Infusion Bundle<\/p>",
-            "image": "shopify:\/\/shop_images\/mi_bundle.webp",
-            "product_url": "shopify:\/\/products\/exclusive"
+            "link_label": "Shop Now & Save",
+            "link_label_mobile": "Shop Now & Save",
+            "link_url": "https:\/\/www.qureskincare.com\/pages\/qure-microinfusion-offer"
           }
         },
         "banner_6wgzUN": {
@@ -325,7 +317,6 @@
       },
       "block_order": [
         "link_GirQqh",
-        "product_BANXY7",
         "banner_6wgzUN"
       ],
       "disabled": true,
@@ -333,16 +324,17 @@
         "heading": "",
         "heading_mobile": "",
         "heading_tag": "h1",
-        "subheading": "<h3>Get clinic-level results<\/h3><h4>from home- minus<\/h4><h5>the ‘clinical’ costs.<\/h5>",
-        "subheading_mobile": "<h3>Get clinic-level results<\/h3><h4>from home- minus<\/h4><h5>the ‘clinical’ costs.<\/h5>",
-        "text": "<p><strong>300,000+ <\/strong>customers feel more confident in their own skin.<\/p>",
-        "image": "shopify:\/\/shop_images\/Banner_57c19f02-06bd-42fa-ac3a-6ebd0393ecc4.png",
-        "image_mobile": "shopify:\/\/shop_images\/hm_banner_clinic_results.png_mob.webp",
+        "subheading": "<h5>Buy One - Get One FREE<\/h5>",
+        "subheading_mobile": "<h5>Buy One - Get One FREE<\/h5>",
+        "text": "<p>Double your Micro-Infusion supply!<\/p>",
+        "image": "shopify:\/\/shop_images\/qure_anniversary_banner_d9728cf1-9736-4b43-9b57-fb00aa020c9c.webp",
+        "image_mobile": "shopify:\/\/shop_images\/qure_anniversary_banner_mob_679560eb-a8c0-4c64-824a-47b81c1225b3.webp",
         "wistia_id": ""
       }
     },
     "promotion_main_banner_second_jCUkqh": {
       "type": "promotion-main-banner-second",
+      "disabled": false,
       "blocks": {
         "link_Pk3LH6": {
           "type": "link",

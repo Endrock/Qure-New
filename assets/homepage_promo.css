@@ -973,7 +973,7 @@
 .hero_valentine_banner .collection_grid .banner_text a {
     background-color: #E03D42;
     padding: 10px 55px;
-    margin-top: 33px !important;
+    /* margin-top: 33px !important; */
 }
 
 .love_ur_skin_content a {
@@ -1255,7 +1255,284 @@ span.discount_badge {
     letter-spacing: 0.6px;
     opacity: 0.8;
 }
+/* womens day banner  */
+.womens_day_banner p{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 17.13px;
+    letter-spacing: 0.79px;
+    color: #B35877;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+.womens_day_banner h3{
+    font-family: Canela Web;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 57.4px;
+    letter-spacing: 1;
+}
+.womens_day_banner a{
+    width: 373px !important;
+    background: #000 !important;
+}
+.womens_day_banner_outer .main_b_wrapper{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: unset;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+.womens_day_banner_outer .holiday_banner .bundle_slider-main {
+    margin: 0;
+    max-width: 430px;
+}
+.new-slide_ctm {
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none;
+    backdrop-filter: none !important;
+}
+.womens_day_banner_outer .holiday_banner .bf_sale-slider .swiper-button {
+    display: none !important;
+}
+.womens_day_banner_outer .holiday_banner.womens_day_holiday {
+    padding-top: 10px;
+}
+.womens_day_banner_outer .bf_sale-slider .new_img, .holiday_banner .bf_sale-slider .new_img {
+    background: transparent;
+}
+.new-slide_ctm {
+    display: grid;
+    grid-template-columns: 0fr 0fr 1fr;
+    max-width: 418px;
+}
+.womens_day_banner_outer .womens_day_banner_ctm .bf_sale-slider .new_img, 
+.womens_day_banner_outer .womens_day_banner_ctm .bf_sale-slider .new_img{
+    width: max-content;
+}
+.womens_day_banner_outer .womens_day_banner_ctm .new_content {
+    padding-left: 0;
+}
+.new-slide_ctm .mi_bndl_women {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.new-slide_ctm .mi_bndl_women p.free_text {
+    display: flex;
+    justify-content: right;
+}
+.new-slide_ctm .mi_bndl_women p.free_text span.discount_badge {
+    font-weight: 500 !important;
+    font-size: 15px !important;
+    line-height: 39.06px;
+    letter-spacing: 0.86px;
+    text-align: center;
+    width: 66px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #B35877;
+}
+h4.mi_bndl_text {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 22.61px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+.mi_bndl_dv {
+    background: #fff;
+    width: 155px;
+    border-radius: 38px;
+    padding: 1px;
+    height: 33px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.new-slide_ctm .mi_bndl_women .valued_at {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 0 !important;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #000 !important;
+}
+.women_day_bnr_collec h3{
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 57.4px;
 
+}
+p.valued_at strong {
+    font-size: 9px;
+}
+
+/* womens day banner end */
+
+
+/* quiz */
+.take_the_quiz {
+    background: #CCE5DD;
+  }
+  .hero-desc {
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+  .cta-btn {
+    display: flex;
+    width: 250px;
+    height: 61px;
+    padding: 12px 24px;
+    align-items: center;
+    border-radius: 8px;
+    border: 2px solid #C7E7DC;
+    background: #FFF;
+    gap: 5px;
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0.16px;
+}
+.quiz_content h5 {
+    color: var(--Qure-Black, #000);
+    font-family: "Canela Light";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 0.28px;
+}
+.get_custom_plan{
+    color: var(--Qure-Black, #000);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.14px;
+}
+  .step-section {
+    text-align: left;
+  }
+  
+  .step-circle {
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    margin: 0 auto;
+}
+.step-1 {
+    background: #000;
+    color: #FFF;
+    font-family: "Canela Web";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.24px;
+    text-transform: capitalize;
+}
+  .step-2 {
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #DDD9D9;
+    font-family: "Canela Web";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.24px;
+    text-transform: capitalize;
+}
+  
+  .step-line {
+    width: 2px;
+    height: 150px; 
+    background: linear-gradient(to bottom, #000, #ccc);
+    margin: 0 auto;
+  }
+  
+  .quiz-btn {
+    display: flex;
+    height: 63px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: var(--Qure-Black, #000);
+    max-width: 269px;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22.018px;
+    letter-spacing: 0.18px;
+}
+  
+    .quiz-info {
+        color: #000;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0.14px;
+        max-width: 260px;
+    }
+  
+  .personalized_skincare{
+    color: #797D7C;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%; 
+  }
+  .quiz_content {
+    max-width: 295px;
+}
+  /* quiz end */
+  
+.faucet_offer-banner p{
+    font-size: 18px;
+    letter-spacing: 0.124px;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+.faucet_offer-banner .faucet_offer-text a{
+    font-size: 22px;
+    padding: 19px 10px;
+    line-height: 20px;
+    max-width: 354px;
+    width: 100%;
+}
+.faucet_offer-banner h6{
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.13px;
+    padding-top: 12px;
+}
+.faucet_offer-banner .faucet_offer-text{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.faucet_offer-banner{
+    padding: 28px 0;
+}
+.faucet_offer-banner h5{
+    font-family: Canela Web;
+    font-size: 42px !important;
+    line-height: 50px;
+    font-weight: 500;
+}
 /* .............Sub Banner............... */
 @media(max-width:991px) {
     .main_banner .bf_sale-slider .swiper-button {
@@ -1277,10 +1554,25 @@ span.discount_badge {
     }
     .womens_day_offer_collec .collection_grid {
         justify-content: start !important;
+        padding: 10px;
     }
 }
 
 @media(max-width:767px) {
+    .faucet_offer-banner.qure_anniversary_banner h5 {
+    font-size: 30px !important;
+}
+    .faucet_offer-banner.qure_anniversary_banner p {
+    padding-top: 0 !important; 
+}
+    .cta-btn {
+        width: 196px;
+        height: 46px;
+    }
+    .step-circle {
+        width: 35px;
+        height: 35px;
+    }
 
     /* <----Banners CSS Start-------> */
     /* <!--.Main Banner--> */
@@ -1590,123 +1882,76 @@ span.discount_badge {
         color: #000;
         font-size: 20px;
     }
-}
-
-/* quiz */
-.take_the_quiz {
-    background: #CCE5DD;
-  }
-  .hero-desc {
-    color: #000;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    max-width: 500px;
-}
-  .cta-btn {
-    display: flex;
-    width: 250px;
-    height: 61px;
-    padding: 12px 24px;
-    align-items: center;
-    border-radius: 8px;
-    border: 2px solid #C7E7DC;
-    background: #FFF;
-    gap: 5px;
-    color: #000;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 150%;
-    letter-spacing: 0.16px;
-}
-.quiz_content h5 {
-    color: var(--Qure-Black, #000);
-    font-family: "Canela Light";
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 32px;
-    letter-spacing: 0.28px;
-}
-.get_custom_plan{
-    color: var(--Qure-Black, #000);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 26px;
-    letter-spacing: 0.14px;
-}
-  .step-section {
-    text-align: left;
-  }
-  
-  .step-circle {
-    width: 47px;
-    height: 47px;
-    border-radius: 50%;
-    text-align: center;
-    font-weight: bold;
-    margin: 0 auto;
-}
-.step-1 {
-    background: #000;
-    color: #FFF;
-    font-family: "Canela Web";
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    letter-spacing: 0.24px;
-    text-transform: capitalize;
-}
-  .step-2 {
-    background: #fff;
-    border: 1px solid #ccc;
-    color: #DDD9D9;
-    font-family: "Canela Web";
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    letter-spacing: 0.24px;
-    text-transform: capitalize;
-}
-  
-  .step-line {
-    width: 2px;
-    height: 150px; 
-    background: linear-gradient(to bottom, #000, #ccc);
-    margin: 0 auto;
-  }
-  
-  .quiz-btn {
-    display: flex;
-    height: 63px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100px;
-    background: var(--Qure-Black, #000);
-    max-width: 269px;
-    color: #FFF;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 22.018px;
-    letter-spacing: 0.18px;
-}
-  
-    .quiz-info {
-        color: #000;
-        text-align: center;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 26px;
-        letter-spacing: 0.14px;
-        max-width: 260px;
+    /* womens day banner homepage  */
+    .womens_day_banner_outer .main_b_wrapper {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
-  
-  .personalized_skincare{
-    color: #797D7C;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 150%; 
-  }
-  .quiz_content {
-    max-width: 295px;
+    .womens_day_banner h3 {
+        font-size: 34px;
+        line-height: 36px;
+        text-align: center;
+        max-width: 260px;
+        margin-bottom: 15px;
+    }
+    .womens_day_banner_outer .collection_grid .banner_text a {
+        padding: 10px !important;
+    }
+    .womens_day_banner_outer .collection_grid{
+        justify-content: start;
+    }
+    .womens_day_banner_outer .bf_sale-slider{
+        margin: 0 !important;
+    }
+    .new-slide_ctm {
+        grid-template-columns: 5fr 1fr 6fr;
+        max-width: 394px;
+    }
+    .womens_day_banner_outer .main_b_wrapper{
+        max-width: 100%;
+    }
+    .women_day_bnr_collec h3{
+        font-size: 20px;
+        line-height: 26.52px;
+        text-align: center;
+        max-width: 100%;
+    }
+    .women_day_bnr_collec p{
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 17.13px;
+        letter-spacing: 0.79px;
+        text-align: center;
+    }
+    .womens_day_offer_collec .womens_day_banner.women_day_bnr_collec a {
+        margin-top: 0 !important;
+        max-width: 180px;
+        font-size: 14px;
+        padding: 8px;
+    }
+    .faucet_offer-banner h5 {
+    font-size: 32px !important;
 }
-  /* quiz end */
+.faucet_offer-banner p {
+    font-size: 13px;
+    padding-top: 25px;
+    padding-bottom: 0;
+}
+.faucet_offer-banner h6 {
+    font-size: 10px;
+    padding-top: 5px;
+}
+.faucet_offer-banner .faucet_offer-text a {
+    font-size: 14px;
+    padding: 11px 10px;
+    max-width: 180px;
+}
+.faucet_offer-banner {
+    padding: 24px 0;
+}
+.faucet_offer-banner .faucet_offer-text {
+    justify-content: center;
+}
+}
