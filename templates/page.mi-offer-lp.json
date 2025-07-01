@@ -1459,7 +1459,6 @@
         },
         "product_type_QKQhNr": {
           "type": "product_type",
-          "disabled": true,
           "settings": {
             "heading": "Dark Spots",
             "image": "shopify://shop_images/mc_2.webp",
@@ -1535,7 +1534,6 @@
         },
         "product_type_VLXcAn": {
           "type": "product_type",
-          "disabled": true,
           "settings": {
             "heading": "Wrinkles",
             "image": "shopify://shop_images/for_wrinkles.webp",
