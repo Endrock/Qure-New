@@ -177,12 +177,8 @@
                 data-preorder="{{ block.settings.preorder }}"
                 data-type="{{ product_type }}"
               >
-                {% if product_type == 1 %}
-                  <div class="best_value">
-                    Best Value<span
-                      ><img src="https://qureskincaredns.com/new/assets/star_new.svg" alt="" class="img-fluid ms-1"
-                    ></span>
-                  </div>
+                {% if block.settings.preselected == true %}
+                    <div class="best_value">Best Value<span><img src="https://qureskincaredns.com/new/assets/star_new.svg" alt="" class="img-fluid ms-1"></span></div>
                 {% endif %}
                 <input
                   type="radio"
@@ -222,16 +218,15 @@
                       {% endif %}
                     </div>
                   </div>
-                  {% if product_type == 1 %}
-                    <div class="supply_fire">
-                      <p>🔥 Only {{ product_price_per_item | money_without_trailing_zeros }} per treatment</p>
-                    </div>
+
+                  {% if product_price_per_item != blank %}
+                      {% if block.settings.preselected == true %}
+                          <div class="supply_fire"><p>🔥 Only {{ product_price_per_item | money_without_trailing_zeros }} per treatment </p></div>
+                      {% else %}
+                          <div class="supply_fire bg_linear_pink"><p>Only {{ product_price_per_item | money_without_trailing_zeros }} per treatment </p></div>
+                      {% endif %}
                   {% endif %}
-                  {% if product_type == 2 %}
-                    <div class="supply_fire bg_linear_pink">
-                      <p>Only {{ product_price_per_item | money_without_trailing_zeros }} per treatment</p>
-                    </div>
-                  {% endif %}
+
                 </label>
               </div>
 
