@@ -1548,7 +1548,7 @@
             "heading": "Buy 3 Months, Get 3 Months FREE",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/micro-infusion_6_month_bundle__for_wrinkles.png",
-            "left_items": true,
+            "left_items": false,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
@@ -1556,7 +1556,7 @@
             "preorder_date_reserved": "",
             "preorder_percent": "",
             "included_text": "<p>2 Micro-Infusion devices (valued at $160)</p><p>10 Clinical-grade micro-needling heads (valued at $100)</p><p>12 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $240)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial/p&gt;</p><p>24/7 customer support access</p>",
-            "free_patches": true,
+            "free_patches": false,
             "free_patches_image": "shopify://shop_images/patches_168px.png",
             "free_patches_product": "micro-infusion-6-month-bundle-for-wrinkles-dark-spots-free-patches",
             "free_patches_text": "<strong>Get a Free</strong> Pair of Micro-Infusion Patches"
