@@ -1473,7 +1473,7 @@
             "heading": "Buy 3 Months, Get 3 Months FREE",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/Micro-Infusion6MonthBundle_DarkSpots.jpg",
-            "left_items": false,
+            "left_items": true,
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
