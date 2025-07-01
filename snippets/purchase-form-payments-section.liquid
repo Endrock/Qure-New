@@ -7,6 +7,15 @@
     {% endcase %}
 {% endfor %}
 
+<style>
+    .total_price .regular_price {
+        font-size: 14px;
+    }
+    .total_price .sale_price, .price .pay_today {
+        font-size: 17px;
+    }
+</style>
+
 {% if payment_type_count > 0 %}
     <div class="supply_steps"{% if section.settings.hide_payment_types == true %} style="display:none"{% endif %}>
         <div class="step_counter">
