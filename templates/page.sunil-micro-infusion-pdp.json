@@ -48,7 +48,6 @@
         },
         "product_type_QKQhNr": {
           "type": "product_type",
-          "disabled": true,
           "settings": {
             "heading": "Dark Spots",
             "image": "shopify://shop_images/dark_spots.webp",
@@ -163,7 +162,6 @@
         },
         "product_type_YrPQrV": {
           "type": "product_type",
-          "disabled": true,
           "settings": {
             "heading": "Wrinkles + Dark Spots",
             "image": "shopify://shop_images/reju_hydra_blue.webp",
@@ -1423,7 +1421,6 @@
         },
         "product_type_QKQhNr": {
           "type": "product_type",
-          "disabled": true,
           "settings": {
             "heading": "Dark Spots",
             "image": "shopify://shop_images/mc_2.webp",
@@ -1574,7 +1571,6 @@
         },
         "product_type_YrPQrV": {
           "type": "product_type",
-          "disabled": true,
           "settings": {
             "heading": "Wrinkles + Dark Spots",
             "image": "shopify://shop_images/mc_5.webp",
