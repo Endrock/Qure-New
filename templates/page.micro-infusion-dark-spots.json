@@ -15,8 +15,8 @@
         "announcement_QmXGJK": {
           "type": "announcement",
           "settings": {
-            "heading": "SAVE UP TO 59% | Limited time Offer",
-            "heading_mobile": "SAVE UP TO 59% | Limited time Offer",
+            "heading": "SAVE UP TO 75% | Limited time Offer",
+            "heading_mobile": "SAVE UP TO 75% | Limited time Offer",
             "color": "green",
             "font_size_desktop": 14,
             "font_size_mobile": 13
@@ -54,7 +54,7 @@
         "navigation_link_wMtKmt"
       ],
       "settings": {
-        "button_label": "SAVE UP TO 59%",
+        "button_label": "SAVE UP TO 75%",
         "button_url": "#productSubscription"
       }
     },
@@ -72,7 +72,7 @@
         "button_L9q6wE": {
           "type": "button",
           "settings": {
-            "button_label": "HOLIDAY OFFER SAVE 59%",
+            "button_label": "HOLIDAY OFFER SAVE 75%",
             "button_url": "#productSubscription"
           }
         },
@@ -248,7 +248,7 @@
             "percent_bar_4": 70,
             "agreed_text_4": "",
             "ctm_cls_btn": "mw-455",
-            "btn_text": "HOLIDAY OFFER SAVE 59%",
+            "btn_text": "HOLIDAY OFFER SAVE 75%",
             "btn_font_size_desktop": "22px",
             "btn_font_size_mobile": "20px",
             "btn_url": "#productSubscription",
@@ -308,7 +308,7 @@
         "button_Yb6H7J": {
           "type": "button",
           "settings": {
-            "button_label": "HOLIDAY OFFER SAVE 59%",
+            "button_label": "HOLIDAY OFFER SAVE 75%",
             "button_url": "#productSubscription"
           }
         },
@@ -1175,6 +1175,7 @@
             "heading": "Buy 3 Months, Get 3 Months FREE",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/Micro-Infusion6MonthBundle_DarkSpots.jpg",
+            "total_treatments": 12,
             "left_items": false,
             "soldout": false,
             "preorder": false,
@@ -1196,6 +1197,7 @@
             "heading": "3 Month Supply",
             "subheading": "(6 Micro-infusion Treatments)",
             "image": "shopify://shop_images/3monthdarkspots_a7465a7d-d4d1-49c0-8063-8b4c5878b701.png",
+            "total_treatments": 6,
             "left_items": false,
             "soldout": false,
             "preorder": false,
@@ -1217,6 +1219,7 @@
             "heading": "1 Month Supply",
             "subheading": "(2 Micro-Infusion Treatments)",
             "image": "shopify://shop_images/1monthdarkspots.png",
+            "total_treatments": 0,
             "left_items": false,
             "soldout": false,
             "preorder": false,
@@ -1251,6 +1254,7 @@
             "heading": "6 Month Supply",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/micro-infusion_6_month_bundle__for_wrinkles.png",
+            "total_treatments": 12,
             "left_items": false,
             "soldout": false,
             "preorder": false,
@@ -1272,6 +1276,7 @@
             "heading": "3 Month Supply",
             "subheading": "(6 Micro-infusion Treatments)",
             "image": "shopify://shop_images/3monthwrinkles_1.png",
+            "total_treatments": 6,
             "left_items": false,
             "soldout": false,
             "preorder": false,
@@ -1293,6 +1298,7 @@
             "heading": "1 Month Supply",
             "subheading": "(2 Micro-Infusion Treatments)",
             "image": "shopify://shop_images/1monthwrinkles.png",
+            "total_treatments": 0,
             "left_items": false,
             "soldout": false,
             "preorder": false,
@@ -1327,6 +1333,7 @@
             "heading": "Buy 3 Months, Get 3 Months FREE",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/Micro-Infusion_6_Month_Bundle_For_Wrinkles_Dark_Spots.png",
+            "total_treatments": 12,
             "left_items": false,
             "soldout": false,
             "preorder": false,
@@ -1348,6 +1355,7 @@
             "heading": "2 Month Supply",
             "subheading": "(4 Micro-infusion Treatments)",
             "image": "shopify://shop_images/2monthmix_1.png",
+            "total_treatments": 4,
             "left_items": false,
             "soldout": false,
             "preorder": false,
@@ -1369,6 +1377,7 @@
             "heading": "1 Month Supply",
             "subheading": "(2 Micro-Infusion Treatments)",
             "image": "shopify://shop_images/1monthMIX.png",
+            "total_treatments": 0,
             "left_items": false,
             "soldout": false,
             "preorder": false,
