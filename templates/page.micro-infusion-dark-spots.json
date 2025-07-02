@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "header_landing_yzqaEc": {
       "type": "header-landing",
@@ -1160,7 +1160,6 @@
         },
         "product_type_QKQhNr": {
           "type": "product_type",
-          "disabled": false,
           "settings": {
             "heading": "Dark Spots",
             "image": "shopify://shop_images/mc_2.webp",
