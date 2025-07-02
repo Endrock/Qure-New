@@ -51,9 +51,11 @@
 
                             {% assign product_price_per_item = blank %}
 
-                            {% if block.settings.heading contains '6 Month' %}
-                                {% assign product_price_per_item = product.price | divided_by: 12 %}
+                            {% if block.settings.total_treatments > 0 %}
+                                {% assign product_price_per_item = product.price | divided_by: block.settings.total_treatments %}
+                            {% endif %}
 
+                            {% if block.settings.heading contains '6 Month' %}
                                 {% capture product_included_month_6 %}
                                         <div class="tab_content" id="tab_{{ product_title_tag }}">
                                             <div class="plan_bundle_detail">
@@ -67,8 +69,6 @@
                             {% endif %}
 
                             {% if block.settings.heading contains '3 Month' %}                                
-                                {% assign product_price_per_item = product.price | divided_by: 6 %}
-
                                 {% capture product_included_month_3 %}
                                     <div class="tab_content" id="tab_{{ product_title_tag }}">
                                         <div class="plan_bundle_detail">
@@ -82,8 +82,6 @@
                             {% endif %}
 
                             {% if block.settings.heading contains '2 Month' %}
-                                {% assign product_price_per_item = product.price | divided_by: 4 %}
-
                                 {% capture product_included_month_2 %}
                                     <div class="tab_content" id="tab_{{ product_title_tag }}">
                                         <div class="plan_bundle_detail">
