@@ -54,7 +54,7 @@
         "navigation_link_wMtKmt"
       ],
       "settings": {
-        "button_label": "SAVE UP TO 59%",
+        "button_label": "SAVE UP TO 75%",
         "button_url": "#productSubscription"
       }
     },
@@ -177,35 +177,40 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/vogue_icon_0e2c0d8a-2998-423c-aeda-e708845718ec.png",
-            "mobile_hide": false
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_QVNmkF": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/cosmopolitan_76e124b7-290e-4593-b031-e15242709f0a.svg",
-            "mobile_hide": true
+            "mobile_hide": true,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_6crcLq": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/elle_e3f3335b-7ad1-476c-b0ba-3da1880ae9a2.svg",
-            "mobile_hide": false
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_67GkzM": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/glamour_d84111c4-117f-49b6-a938-92e01b686bf0.svg",
-            "mobile_hide": false
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_49UEP9": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/grazia_707ddcc1-d346-4939-8c2a-b7ae511acfd2.svg",
-            "mobile_hide": false
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
           }
         }
       },
@@ -599,6 +604,7 @@
         "video_ktYir4": {
           "type": "video",
           "settings": {
+            "title_mob": "Recommended by Experts",
             "image": "shopify://shop_images/trusted_3.webp",
             "video": "https://www.youtube.com/watch?v=JPWycy8cwN8",
             "title": "Dr Shah & Dr Maxfield,",
@@ -611,6 +617,7 @@
             "trust_icon": "shopify://shop_images/verified_design.svg",
             "trust_des": "Trusted and recommended by world leading Dermatologists",
             "title": "<strong>“This treatment is an</strong> at-home <strong>option for those who want to</strong> avoid the hassle or cost of going to the office”.",
+            "title_des": "",
             "title_clr": "#000000",
             "title_strong_clr": "#797d7c"
           }
@@ -622,6 +629,9 @@
       ],
       "name": "t:sections.text_video.label",
       "settings": {
+        "ctm_cls": "",
+        "left_dv_width": "7",
+        "right_dv_width": "5",
         "padding_top": 60,
         "padding_bottom": 0
       }
@@ -879,6 +889,7 @@
       "settings": {
         "classname": "mi_landing_result",
         "heading": "Results you‘ll see with your own eyes",
+        "des": "",
         "heading_reduced": "",
         "text_verified_customer": "Verified customer",
         "text_reviewed": "Reviewed in"
@@ -1426,7 +1437,10 @@
         "code": "{% render 'serums-months-image-form-v2' with section_id: section.id, one_month_img: 'MI2x-dark_spots.webp', three_months_img: 'MI6x-dark_spots.webp' %}",
         "popup_micro_infusion_enabled": false,
         "payment_icons": "shopify://shop_images/logos_full_qure_0d060a66-5fb6-4e6c-a740-55552a43bb10.png",
-        "payment_icons_today_only": "shopify://shop_images/payments_today.png"
+        "payment_icons_today_only": "shopify://shop_images/payments_today.png",
+        "product_1": "",
+        "product_2": "",
+        "product_3": ""
       }
     },
     "compare_box_nCyb79": {
