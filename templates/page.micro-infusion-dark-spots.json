@@ -1169,11 +1169,10 @@
         },
         "product_DBd4ef": {
           "type": "product",
-          "disabled": true,
           "settings": {
-            "product": "micro-infusion-6-month-bundle-for-dark-spots",
-            "preselected": false,
-            "heading": "6 Month Supply",
+            "product": "micro-infusion-6-month-bogo-for-dark-spots",
+            "preselected": true,
+            "heading": "Buy 3 Months, Get 3 Months FREE",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/Micro-Infusion6MonthBundle_DarkSpots.jpg",
             "left_items": false,
@@ -1193,7 +1192,7 @@
           "type": "product",
           "settings": {
             "product": "micro-infusion-3-month-bundle",
-            "preselected": true,
+            "preselected": false,
             "heading": "3 Month Supply",
             "subheading": "(6 Micro-infusion Treatments)",
             "image": "shopify://shop_images/3monthdarkspots_a7465a7d-d4d1-49c0-8063-8b4c5878b701.png",
