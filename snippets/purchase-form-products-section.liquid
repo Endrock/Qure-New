@@ -60,7 +60,6 @@
     <div class="step_counter"><span class="">{% if section.settings.hide_product_types == true %}1{% else %}2{% endif %}</span></div>
     <div class="step_block">
         {% render 'purchase-form-product' array: __idsArray1, preorder_box: preorder_box %}
-        {% render 'purchase-form-product' array: __idsArray2, preorder_box: preorder_box %}
         {% render 'purchase-form-product' array: __idsArray3, preorder_box: preorder_box %}
         <div id="{{ section.settings.form_name }}-body-{{ section.id }}"></div>
     </div>
