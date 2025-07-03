@@ -60,14 +60,6 @@
     <div class="step_counter"><span class="">{% if section.settings.hide_product_types == true %}1{% else %}2{% endif %}</span></div>
     <div class="step_block">
         {% render 'purchase-form-product' array: __idsArray1, preorder_box: preorder_box %}
-        {%- comment -%}
-           Start pdm test for Free patches
-            NOTE: This is a temporary test for the PDM Free patches.
-            Once the release is made, move development to purchase-form-product.
-            Only one form should remain.
-        {%- endcomment -%}
-        {% render 'pdm_purchase-form-product' array: __idsArray2, preorder_box: preorder_box %}
-        {%- comment -%}End pdm test for Free patches{%- endcomment -%}
         {% render 'purchase-form-product' array: __idsArray3, preorder_box: preorder_box %}
 
         <div id="{{ section.settings.form_name }}-body-{{ section.id }}"></div>
