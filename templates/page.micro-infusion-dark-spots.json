@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "header_landing_yzqaEc": {
       "type": "header-landing",
@@ -15,8 +15,8 @@
         "announcement_QmXGJK": {
           "type": "announcement",
           "settings": {
-            "heading": "SAVE UP TO 59% | Limited time Offer",
-            "heading_mobile": "SAVE UP TO 59% | Limited time Offer",
+            "heading": "SAVE UP TO 75% | Limited time Offer",
+            "heading_mobile": "SAVE UP TO 75% | Limited time Offer",
             "color": "green",
             "font_size_desktop": 14,
             "font_size_mobile": 13
@@ -54,7 +54,7 @@
         "navigation_link_wMtKmt"
       ],
       "settings": {
-        "button_label": "SAVE UP TO 59%",
+        "button_label": "SAVE UP TO 75%",
         "button_url": "#productSubscription"
       }
     },
@@ -72,7 +72,7 @@
         "button_L9q6wE": {
           "type": "button",
           "settings": {
-            "button_label": "HOLIDAY OFFER SAVE 59%",
+            "button_label": "HOLIDAY OFFER SAVE 75%",
             "button_url": "#productSubscription"
           }
         },
@@ -177,35 +177,40 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/vogue_icon_0e2c0d8a-2998-423c-aeda-e708845718ec.png",
-            "mobile_hide": false
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_QVNmkF": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/cosmopolitan_76e124b7-290e-4593-b031-e15242709f0a.svg",
-            "mobile_hide": true
+            "mobile_hide": true,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_6crcLq": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/elle_e3f3335b-7ad1-476c-b0ba-3da1880ae9a2.svg",
-            "mobile_hide": false
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_67GkzM": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/glamour_d84111c4-117f-49b6-a938-92e01b686bf0.svg",
-            "mobile_hide": false
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_49UEP9": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/grazia_707ddcc1-d346-4939-8c2a-b7ae511acfd2.svg",
-            "mobile_hide": false
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
           }
         }
       },
@@ -248,7 +253,7 @@
             "percent_bar_4": 70,
             "agreed_text_4": "",
             "ctm_cls_btn": "mw-455",
-            "btn_text": "HOLIDAY OFFER SAVE 59%",
+            "btn_text": "HOLIDAY OFFER SAVE 75%",
             "btn_font_size_desktop": "22px",
             "btn_font_size_mobile": "20px",
             "btn_url": "#productSubscription",
@@ -308,7 +313,7 @@
         "button_Yb6H7J": {
           "type": "button",
           "settings": {
-            "button_label": "HOLIDAY OFFER SAVE 59%",
+            "button_label": "HOLIDAY OFFER SAVE 75%",
             "button_url": "#productSubscription"
           }
         },
@@ -599,6 +604,7 @@
         "video_ktYir4": {
           "type": "video",
           "settings": {
+            "title_mob": "Recommended by Experts",
             "image": "shopify://shop_images/trusted_3.webp",
             "video": "https://www.youtube.com/watch?v=JPWycy8cwN8",
             "title": "Dr Shah & Dr Maxfield,",
@@ -611,6 +617,7 @@
             "trust_icon": "shopify://shop_images/verified_design.svg",
             "trust_des": "Trusted and recommended by world leading Dermatologists",
             "title": "<strong>“This treatment is an</strong> at-home <strong>option for those who want to</strong> avoid the hassle or cost of going to the office”.",
+            "title_des": "",
             "title_clr": "#000000",
             "title_strong_clr": "#797d7c"
           }
@@ -622,6 +629,9 @@
       ],
       "name": "t:sections.text_video.label",
       "settings": {
+        "ctm_cls": "",
+        "left_dv_width": "7",
+        "right_dv_width": "5",
         "padding_top": 60,
         "padding_bottom": 0
       }
@@ -879,6 +889,7 @@
       "settings": {
         "classname": "mi_landing_result",
         "heading": "Results you‘ll see with your own eyes",
+        "des": "",
         "heading_reduced": "",
         "text_verified_customer": "Verified customer",
         "text_reviewed": "Reviewed in"
@@ -1160,7 +1171,6 @@
         },
         "product_type_QKQhNr": {
           "type": "product_type",
-          "disabled": false,
           "settings": {
             "heading": "Dark Spots",
             "image": "shopify://shop_images/mc_2.webp",
@@ -1169,13 +1179,13 @@
         },
         "product_DBd4ef": {
           "type": "product",
-          "disabled": true,
           "settings": {
-            "product": "micro-infusion-6-month-bundle-for-dark-spots",
-            "preselected": false,
-            "heading": "6 Month Supply",
+            "product": "micro-infusion-6-month-bogo-for-dark-spots",
+            "preselected": true,
+            "heading": "Buy 3 Months, Get 3 Months FREE",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/Micro-Infusion6MonthBundle_DarkSpots.jpg",
+            "total_treatments": 12,
             "left_items": false,
             "soldout": false,
             "preorder": false,
@@ -1193,10 +1203,11 @@
           "type": "product",
           "settings": {
             "product": "micro-infusion-3-month-bundle",
-            "preselected": true,
+            "preselected": false,
             "heading": "3 Month Supply",
             "subheading": "(6 Micro-infusion Treatments)",
             "image": "shopify://shop_images/3monthdarkspots_a7465a7d-d4d1-49c0-8063-8b4c5878b701.png",
+            "total_treatments": 6,
             "left_items": false,
             "soldout": false,
             "preorder": false,
@@ -1218,6 +1229,7 @@
             "heading": "1 Month Supply",
             "subheading": "(2 Micro-Infusion Treatments)",
             "image": "shopify://shop_images/1monthdarkspots.png",
+            "total_treatments": 0,
             "left_items": false,
             "soldout": false,
             "preorder": false,
@@ -1252,6 +1264,7 @@
             "heading": "6 Month Supply",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/micro-infusion_6_month_bundle__for_wrinkles.png",
+            "total_treatments": 12,
             "left_items": false,
             "soldout": false,
             "preorder": false,
@@ -1273,6 +1286,7 @@
             "heading": "3 Month Supply",
             "subheading": "(6 Micro-infusion Treatments)",
             "image": "shopify://shop_images/3monthwrinkles_1.png",
+            "total_treatments": 6,
             "left_items": false,
             "soldout": false,
             "preorder": false,
@@ -1294,6 +1308,7 @@
             "heading": "1 Month Supply",
             "subheading": "(2 Micro-Infusion Treatments)",
             "image": "shopify://shop_images/1monthwrinkles.png",
+            "total_treatments": 0,
             "left_items": false,
             "soldout": false,
             "preorder": false,
@@ -1328,6 +1343,7 @@
             "heading": "Buy 3 Months, Get 3 Months FREE",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/Micro-Infusion_6_Month_Bundle_For_Wrinkles_Dark_Spots.png",
+            "total_treatments": 12,
             "left_items": false,
             "soldout": false,
             "preorder": false,
@@ -1349,6 +1365,7 @@
             "heading": "2 Month Supply",
             "subheading": "(4 Micro-infusion Treatments)",
             "image": "shopify://shop_images/2monthmix_1.png",
+            "total_treatments": 4,
             "left_items": false,
             "soldout": false,
             "preorder": false,
@@ -1370,6 +1387,7 @@
             "heading": "1 Month Supply",
             "subheading": "(2 Micro-Infusion Treatments)",
             "image": "shopify://shop_images/1monthMIX.png",
+            "total_treatments": 0,
             "left_items": false,
             "soldout": false,
             "preorder": false,
@@ -1428,7 +1446,10 @@
         "code": "{% render 'serums-months-image-form-v2' with section_id: section.id, one_month_img: 'MI2x-dark_spots.webp', three_months_img: 'MI6x-dark_spots.webp' %}",
         "popup_micro_infusion_enabled": false,
         "payment_icons": "shopify://shop_images/logos_full_qure_0d060a66-5fb6-4e6c-a740-55552a43bb10.png",
-        "payment_icons_today_only": "shopify://shop_images/payments_today.png"
+        "payment_icons_today_only": "shopify://shop_images/payments_today.png",
+        "product_1": "",
+        "product_2": "",
+        "product_3": ""
       }
     },
     "compare_box_nCyb79": {
