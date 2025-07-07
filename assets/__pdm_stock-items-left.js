@@ -22,68 +22,69 @@
  * - https://webhooks.endrock.software/endrockapi/qureskincare/stock/:productId
  *   (Returns a JSON response containing a `data` property with the stock count.)
  */
-
-class PDMStockItemsLeft extends HTMLElement {
-  constructor() {
-    super();
-  }
-
-  /**
-   * Lifecycle hook called when the element is added to the DOM.
-   * Triggers the stock-fetching logic.
-   */
-  connectedCallback() {
-    this.init();
-  }
-
-  /**
-   * Initializes the component by validating required attributes and
-   * updating the stock message if the data is available.
-   */
-  async init() {
-    const productId = this.dataset.productId;
-    const stockTextElement = this.querySelector('.pdm_price-stock-left-quantity');
-
-    if (!productId || !stockTextElement) {
-      console.warn('Missing productId or target element for stock display');
-      return;
+if (!customElements.get('pdm-stock-items-left')) {
+  class PDMStockItemsLeft extends HTMLElement {
+    constructor() {
+      super();
     }
 
-    const url = `https://webhooks.endrock.software/endrockapi/qureskincare/stock/${productId}`;
-    await this.updateValueStock(stockTextElement, url);
-  }
+    /**
+     * Lifecycle hook called when the element is added to the DOM.
+     * Triggers the stock-fetching logic.
+     */
+    connectedCallback() {
+      this.init();
+    }
 
-  /**
-   * Fetches stock data from the given API URL.
-   * @param {string} url - The API endpoint to fetch data from.
-   * @returns {Promise<Object|null>} - Parsed JSON response or null if failed.
-   */
-  async getDataStock(url) {
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error("Error fetching stock data:", error);
-      return null;
+    /**
+     * Initializes the component by validating required attributes and
+     * updating the stock message if the data is available.
+     */
+    async init() {
+      const productId = this.dataset.productId;
+      const stockTextElement = this.querySelector('.pdm_price-stock-left-quantity');
+
+      if (!productId || !stockTextElement) {
+        console.warn('Missing productId or target element for stock display');
+        return;
+      }
+
+      const url = `https://webhooks.endrock.software/endrockapi/qureskincare/stock/${productId}`;
+      await this.updateValueStock(stockTextElement, url);
+    }
+
+    /**
+     * Fetches stock data from the given API URL.
+     * @param {string} url - The API endpoint to fetch data from.
+     * @returns {Promise<Object|null>} - Parsed JSON response or null if failed.
+     */
+    async getDataStock(url) {
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        console.error("Error fetching stock data:", error);
+        return null;
+      }
+    }
+
+    /**
+     * Updates the target DOM element with the stock count message.
+     * @param {HTMLElement} element - The DOM element to display stock quantity.
+     * @param {string} url - The API endpoint used to fetch stock data.
+     */
+    async updateValueStock(element, url) {
+      const dataStock = await this.getDataStock(url);
+      if (dataStock?.data) {
+        const message = `${dataStock.data} kits `;
+        element.textContent = message;
+      } else {
+        this.style.display = 'none'; // Hide the element if no stock data is available
+      }
     }
   }
 
-  /**
-   * Updates the target DOM element with the stock count message.
-   * @param {HTMLElement} element - The DOM element to display stock quantity.
-   * @param {string} url - The API endpoint used to fetch stock data.
-   */
-  async updateValueStock(element, url) {
-    const dataStock = await this.getDataStock(url);
-    if (dataStock?.data) {
-      const message = `${dataStock.data} kits `;
-      element.textContent = message;
-    } else {
-      this.style.display = 'none'; // Hide the element if no stock data is available
-    }
-  }
+  // Define the custom element
+  customElements.define('pdm-stock-items-left', PDMStockItemsLeft);
 }
-
-// Define the custom element
-customElements.define('pdm-stock-items-left', PDMStockItemsLeft);
