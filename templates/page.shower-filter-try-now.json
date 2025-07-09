@@ -163,10 +163,19 @@
     "second": {
       "type": "temp-page-shower-filter-try-now",
       "settings": {}
+    },
+    "heading_ytKrXK": {
+      "type": "heading",
+      "name": "t:sections.heading.name",
+      "settings": {
+        "heading": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>",
+        "heading_mobile": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>"
+      }
     }
   },
   "order": [
     "main",
-    "second"
+    "second",
+    "heading_ytKrXK"
   ]
 }
