@@ -1,5 +1,5 @@
 {{ '__pdm_all-in-one-ingredients.css' | asset_url | stylesheet_tag }}
-{% comment %}  <script src="{{ '__pdm_all-in-one-ingredients.js' |  asset_url }}"></script>{% endcomment %}
+ <script src="{{ '__pdm_all-in-one-ingredients.js' |  asset_url }}"></script>
 <section class="serum-section">
   <div class="content-wrapper">
     <div class="text-content">
@@ -7,7 +7,7 @@
       <p class="subtitle"> {{ section.settings.subtitle }} </p>
     </div>
       
-    <div class="carousel-container">
+    <div class="carousel-container ingredients-carousel">
       <div class="swiper serumSwiper">
         <div class="swiper-wrapper">
           <!-- Slide 1: -->
@@ -58,14 +58,17 @@
               </div>
             </div>
            {% endif %}
+
+           {% comment %} empty slide for visibility {% endcomment %}
+          <div class="swiper-slide empty-slide"></div>
         </div>
       </div>
         
         <!-- Navegación personalizada -->
       <div class="navigation-wrapper">
         <button class="nav-button swiper-button-prev-custom">
-          <svg viewBox="0 0 24 24">
-              <path d="M15 18l-6-6 6-6"/>
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+            <path d="M6.71705 11.1321L1.2832 5.69825L6.71705 0.868164" stroke="#8B8C8E" stroke-linecap="round"/>
           </svg>
         </button>
         
@@ -74,12 +77,57 @@
         </div>
         
         <button class="nav-button swiper-button-next-custom">
-          <svg viewBox="0 0 24 24">
-              <path d="M9 18l6-6-6-6"/>
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+            <path d="M1.28295 11.1321L6.7168 5.69825L1.28295 0.868164" stroke="#212428" stroke-linecap="round"/>
           </svg>
         </button>
       </div>
     </div>
+  </div>
+
+  {% comment %} Ingredients grid  {% endcomment %}
+  <div class="ingredients-mobile">
+    {% if section.settings.image_1 != blank %}
+      <div class="ingredient-item">
+        <div class="item-image">
+          <div class="image-number">1</div>
+           {% assign image_1 = section.settings.image_1 | image_url: width: 480 %}
+            <img src="{{ image_1 }}" alt="1 Image - {{ section.settings.title_1 }}" class="slide-image-img">
+        </div>
+        <div class="item-text">
+          <h4 class="item-title">{{ section.settings.title_1 }}</h4>
+          <p class="item-description">{{ section.settings.subtitle_1 }}</p>
+        </div>
+      </div>
+    {% endif %}
+    {% if section.settings.image_2 != blank %}
+      <div class="ingredient-item">
+        <div class="item-image">
+          <div class="image-number">2</div>
+          {% assign image_2 = section.settings.image_2 | image_url: width: 480 %}
+          <img src="{{ image_2 }}" alt="2 Image - {{ section.settings.title_2 }}" class="slide-image-img">
+        </div>
+        <div class="item-text">
+          <h4 class="item-title">{{ section.settings.title_2 }}</h4>
+          <p class="item-description">{{ section.settings.subtitle_2 }}</p>
+        </div>
+      </div>
+    {% endif %}
+
+    {% if section.settings.image_3 != blank %}
+      <div class="ingredient-item">
+        <div class="item-image">
+          <div class="image-number">3</div>
+          {% assign image_3 = section.settings.image_3 | image_url: width: 480 %}
+          <img src="{{ image_3 }}" alt="3 Image - {{ section.settings.title_3 }}" class="slide-image-img">
+        </div>
+        <div class="item-text">
+          <h4 class="item-title">{{ section.settings.title_3 }}</h4>
+          <p class="item-description">{{ section.settings.subtitle_3 }}</p>
+        </div>
+      </div>
+    {% endif %}
+
   </div>
 </section>
 
