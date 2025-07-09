@@ -181,6 +181,9 @@
 <!-- new treatment section end  -->
 
 <script src="{{ '__app-purchase-form.js' | asset_url }}" data-form="{{ section.settings.form_name }}" data-section="{{ section.id }}" defer></script>
+<script src="{{ '__pdm-purchase-form.js' | asset_url }}" data-section="{{ section.id }}" defer></script>
+
+
 {%- schema -%}
 {
     "name":"t:sections.purchase-form.name",
