@@ -23,7 +23,7 @@
     border: 1px solid transparent;
     opacity: .5; 
     width: 62px;
-    height: 62px;
+    height: clamp(34px, 5vw, 62px);
     object-fit: cover;
     border-radius: 10px;
 }
@@ -133,7 +133,7 @@ background: #F6F6F6;
     display: flex;
     align-items: center;
     padding: 4px 14px;
-    margin-top: 30px;
+    margin: 15px 0;
 }
 .certified_derm img {
     max-width: 78px;
@@ -2947,7 +2947,7 @@ main .certified_derm p {
     width: 100%;
     right: 0;
     bottom: 0; */
-    max-height: 113px;
+    max-height: 70px;
 }
 
 .ss_mask_info {
@@ -3963,7 +3963,14 @@ p.border-r {
 .w-bottom-bar {
     bottom: 8px !important;
 }
-
+.wistia_responsive_wrapper .w-bpb-wrapper {
+    transform: translate(-50%, -50%);
+    margin-left: unset !important;
+    margin-top: unset !important;
+}
+.wistia_responsive_wrapper .w-vulcan-overlays-table{
+    height: 100% !important;
+}
 .trusted_bl.trustedVerified .trusted_verified {
     background-color: #F3F3F3;
     padding: 12px 16px 12px 12px;
@@ -4020,6 +4027,7 @@ p.border-r {
 .trusted_bl.trustedVerified .trust_item {
     border: 1px solid #f3f3f3;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.12);
+    height: 100%;
 }
 
 .trusted_bl.trustedVerified .trust_item .trust_item_info .result_content {
@@ -5565,7 +5573,7 @@ input[type=range]::-moz-range-thumb {
 /* ======================sticky button start ===================== */
 .button_sticky_wrapper {
     position: fixed;
-    z-index: 98;
+    z-index: 999;
     bottom: 50px;
     display: flex;
     align-items: center;
@@ -7484,7 +7492,7 @@ p.title_mob {
     margin-bottom: 30px;
 }
 
-.compare__titleBlock .compare__title, .compare__titleBlock .compare__title h4 {
+.compare__titleBlock .compare__title {
     font-family: 'Canela Light';
     font-size: 20px;
     font-style: normal;
