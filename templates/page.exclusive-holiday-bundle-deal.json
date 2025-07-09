@@ -15,9 +15,9 @@
         "announcement_JyMH8T": {
           "type": "announcement",
           "settings": {
-            "heading": "4th July Sale Ends In:",
-            "timer": "2025-07-07T23:59:59",
-            "timer_next": 7
+            "heading": "Prime Day Sale Ends In:",
+            "timer": "2025-07-12T05:59:53",
+            "timer_next": 6
           }
         },
         "navigation_link_4YHENL": {
@@ -71,7 +71,7 @@
         "badge_bNNHbU": {
           "type": "badge",
           "settings": {
-            "heading": "4th JULY SALE",
+            "heading": "Prime Day Sale",
             "text": "BUNDLES",
             "color_main": "#c4121a",
             "color": "#0a0a0a"
@@ -486,7 +486,7 @@
         "badge_TwBcgj": {
           "type": "badge",
           "settings": {
-            "heading": "4TH JULY SALE",
+            "heading": "Prime Day Sale",
             "text": "BUNDLES",
             "color_main": "#c4121a",
             "color": "#0a0a0a"
