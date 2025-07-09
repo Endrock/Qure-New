@@ -8,7 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.' + __section + ' .serumBlock').forEach(function(element) {
         element.addEventListener('click', function() {
             const id = this.id;
+            console.log('Selected serum type:', id);
             initTemplate(id);
+            // event to notify other scripts that a serum type has been selected
+            window.dispatchEvent(new CustomEvent('serumTypeSelected'));
         });
     });
 
