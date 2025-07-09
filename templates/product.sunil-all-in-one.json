@@ -131,12 +131,15 @@
         "title": "Powered by actives, designed for daily use",
         "subtitle": "This multi-tasking daily serum works hard to rejuvenate without stressing your skin.",
         "image_1": "shopify://shop_images/serum_treat.png",
+        "image_1_mobile": "shopify://shop_images/treat_mobile.png",
         "title_1": "Treat",
         "subtitle_1": "Active ingredients like Retinol, Ethyl Ascorbic Acid (Vitamin C), Ferulic Acid and Bakuchiol target fine lines and uneven tone.",
         "image_2": "shopify://shop_images/serum_firm.png",
+        "image_2_mobile": "shopify://shop_images/Firm_mobile.png",
         "title_2": "Firm",
         "subtitle_2": "Hyaluronic Acid and Argireline® Peptides absorb into the skin for long-lasting hydration and a firm, plump look.",
         "image_3": "shopify://shop_images/serum_strengthen.png",
+        "image_3_mobile": "shopify://shop_images/Strengthen_mobile.png",
         "title_3": "Strengthen",
         "subtitle_3": "Barrier-boosting actives like Vitamin E and Niacinamide help fortify your skin to keep it calm, clear, and resilient."
       }

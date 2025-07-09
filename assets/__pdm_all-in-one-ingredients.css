@@ -5,6 +5,12 @@
   --light-secondary-color: #8B8C8E;
 }
 
+.serum-section-container.hidden {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+}
+
 .serum-section {
   padding: 80px 0px;
   max-width: 1140px;
@@ -184,13 +190,13 @@
   justify-content: center;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
-  border: 1px solid #212428;
+  border: 1px solid var(--dark-color);
 }
 
 .ingredients-carousel .nav-button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-  border-color: #8B8C8E;
+  border-color: var(--light-secondary-color);
 }
 
 .ingredients-carousel .nav-button svg {
@@ -219,6 +225,11 @@
 }
 
 @media screen and (max-width: 767px) {
+  .serum-section {
+    width: 93%;
+    padding: 30px 0 40px 0;
+  }
+
   .ingredients-carousel {
     display: none;
   }
@@ -227,7 +238,67 @@
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+    gap: 24px;
+    margin: 32px 0 0;
+  }
 
+  .ingredient-item {
+    display: flex;
+    gap: 16px;
+  }
+
+  .ingredient-item .item-image {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+  }
+
+  .ingredient-item .item-image .slide-image-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   
+  .ingredient-item .item-text {
+    min-width: 227px;
+  }
+  .ingredient-item .item-text .item-title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    font-family: "TT Commons";
+  }
+
+  .ingredient-item .item-text .item-description {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--dark-color);
+    font-family: "TT Commons";
+
+  }
+
+  .ingredient-item .item-image .image-number  {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 26px;
+    height: 26px;
+    background: var(--dark-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 16px;
+    z-index: 10;
+    font-family: "TT Commons";
+    line-height: 20px;
+  }
 }
