@@ -131,16 +131,9 @@ async function main() {
         {
             window.location = 'https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal';
         }
-        else if(window.location.href.includes('/products/shower-filter'))
+        if(window.location.href.includes('/pages/shower-filter-trynow'))
         {
-            window.location = 'https://www.qureskincare.com/pages/shower-filter-trynow';
-        }
-        else
-        {
-            if(!window.location.href.includes('/pages/shower-filter-trynow'))
-            {
-                window.location = 'https://www.qureskincare.com/collections/best-sellers';
-            }
+            window.location = 'https://www.qureskincare.com/products/shower-filter';
         }
     }
     else {
