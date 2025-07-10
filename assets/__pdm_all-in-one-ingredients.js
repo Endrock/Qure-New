@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     const swiper = new Swiper('.serumSwiper', {
-        slidesPerView: 1.6,
+        slidesPerView: 1.9,
         spaceBetween: 24,
         centeredSlides: false,
         loop: false,
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         breakpoints: {
             768: {
-                slidesPerView: 1.6,
+                slidesPerView: 1.9,
                 spaceBetween: 24,
             },
             480: {
