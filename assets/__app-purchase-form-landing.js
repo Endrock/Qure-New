@@ -83,6 +83,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function __landing__handlerPlanBlock () {
+        window.dispatchEvent(new CustomEvent('appPurchaseFormLanding', {
+          detail: {
+              element: this
+          }
+        }));
+
         var product_variant_id = $(this).attr("data-product_variant_id");
         var soldout = $(this).attr("data-soldout");
         var preorder = $(this).attr("data-preorder");
