@@ -32530,6 +32530,18 @@ picture img {
     .marquee-row img {
         height: 22px;
     }
+    .pl_mob{
+        padding-left: var(--pl_mob, 15px)!important;
+    }
+    .pr_mob{
+        padding-right: var(--pr_mob, 15px)!important;
+    }
+    .pt_mob{
+        padding-top: var(--pt_mob, 15px)!important;
+    }
+    .pb_mob{
+        padding-bottom: var(--pb_mob, 15px)!important;
+    }
 }
 /* css for endless slider  */
 
