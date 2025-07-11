@@ -145,10 +145,10 @@
 
 
 <section
-  class="color-{{ color_scheme }} gradient bls__section{{ has_bg }}{{ spt_tablet }}{{ spb_tablet }}{{ spt_mobile }}{{ spb_mobile }} bls__banner-with-text {{ reset_spacing }} {% if bn_design == 'text_overlay' %}bls__banner-with-text-overlay  {% if settings.image_style != blank and section.settings.column_gap != 0 and section.settings.container != "full-width" %} bls__banner-with-text-overlay-radius {% endif %}{% endif %}"
-  style="{{ style | strip | strip_newlines }}"
+  class="pb_mob color-{{ color_scheme }} gradient bls__section{{ has_bg }}{{ spt_tablet }}{{ spb_tablet }}{{ spt_mobile }}{{ spb_mobile }} bls__banner-with-text {{ reset_spacing }} {% if bn_design == 'text_overlay' %}bls__banner-with-text-overlay  {% if settings.image_style != blank and section.settings.column_gap != 0 and section.settings.container != "full-width" %} bls__banner-with-text-overlay-radius {% endif %}{% endif %}"
+  style="{{ style | strip | strip_newlines }} --pb_mob:0;"
 >
-  <div class="{{ container }} section-full ">
+  <div class="{{ container }} section-full pl_mob pr_mob" style="--pl_mob:0; --pr_mob:0;">
     <div
       style="--bs-gutter-x: {{ column_gap }}px;"
       class="
