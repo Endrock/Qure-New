@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
         element.addEventListener('click', function() {
             const id = this.id;
             initTemplate(id);
+            window.dispatchEvent(new CustomEvent('appPurchaseForm', {
+                detail: {
+                    element: this
+                }
+            }));
         });
     });
 
