@@ -105,7 +105,12 @@
                                                     <span class="saved_price pre_order">PRE ORDER</span>
                                                 {% else %}
                                                     {% if discount_percentage != blank %}
-                                                        <span class="saved_price">SAVE {{ discount_percentage }}%</span>
+                                                      <span
+                                                        class="saved_price igSavingsPercentage"
+                                                        data-variant-id="{{ product_variant_id }}"
+                                                      >
+                                                          SAVE {{ discount_percentage }}%
+                                                      </span>
                                                     {% endif %}
                                                 {% endif %}
                                             </div>
@@ -114,10 +119,10 @@
                                         <div class="price_wrapper">
                                             <div class="price">
                                                 {% if product_price_compare != blank %}
-                                                    <div class="plan_prc regular_price">{{ product_price_compare }}</div>
-                                                    <div class="plan_prc sale_price color_red">{{ product_price }}</div>                                                    
+                                                  <div class="plan_prc regular_price igComparePrice" data-variant-id="{{ product_variant_id }}">{{ product_price_compare }}</div>
+                                                  <div class="plan_prc sale_price color_red igPrice" data-variant-id="{{ product_variant_id }}">{{ product_price }}</div>
                                                 {% else %}
-                                                    <div class="plan_prc sale_price">{{ product_price }}</div>
+                                                  <div class="plan_prc sale_price igPrice" data-variant-id="{{ product_variant_id }}">{{ product_price }}</div>
                                                 {% endif %}
                                             </div>  
                                             {% if block.settings.left_items %}
@@ -130,7 +135,14 @@
                                         {% if block.settings.preselected == true %}
                                             <div class="supply_fire"><p>🔥 Only {{ product_price_per_item | money_without_trailing_zeros }} per treatment </p></div>
                                         {% else %}
-                                            <div class="supply_fire bg_linear_pink"><p>Only {{ product_price_per_item | money_without_trailing_zeros }} per treatment </p></div>
+                                          <div class="supply_fire bg_linear_pink">
+                                            <p>Only 
+                                              <span class="igPrice" data-variant-id="{{ product_variant_id }}" data-price-multiplier="{{ 1.0 | divided_by: block.settings.total_treatments }}">
+                                                {{ product_price_per_item | money_without_trailing_zeros }}
+                                              </span>
+                                              per treatment
+                                            </p>
+                                          </div>
                                         {% endif %}
                                     {% endif %}
                                 </label>

@@ -895,6 +895,35 @@
         "button_label": "Show More Questions",
         "button_hide_label": "Hide More Questions"
       }
+    },
+    "heading_tGcDFW": {
+      "type": "heading",
+      "name": "t:sections.heading.name",
+      "settings": {
+        "heading": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>",
+        "heading_mobile": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>"
+      }
+    },
+    "17521350570a426e30": {
+      "type": "apps",
+      "blocks": {
+        "stamped_reviews_main_widget_fbiF3K": {
+          "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true,
+            "use_metafields": false,
+            "sku_tagtype": "sku"
+          }
+        }
+      },
+      "block_order": [
+        "stamped_reviews_main_widget_fbiF3K"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -911,6 +940,8 @@
     "adjust_angle_mob_VptmPM",
     "product_adjust_seeting_PcLcUy",
     "compare_nJWwdf",
-    "faq_zwFb4X"
+    "faq_zwFb4X",
+    "heading_tGcDFW",
+    "17521350570a426e30"
   ]
 }

@@ -12,6 +12,11 @@ document.addEventListener('DOMContentLoaded', function() {
             initTemplate(id);
             // event to notify other scripts that a serum type has been selected
             window.dispatchEvent(new CustomEvent('serumTypeSelected'));
+            window.dispatchEvent(new CustomEvent('appPurchaseForm', {
+                detail: {
+                    element: this
+                }
+            }));
         });
     });
 
