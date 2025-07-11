@@ -29,10 +29,10 @@
           "type": "supply",
           "disabled": true,
           "settings": {
-            "heading": "Next batch ships 10th June 2025:",
-            "heading_mobile": "Next batch ships 10th June 2025:",
+            "heading": "Next batch ships 10th July 2025:",
+            "heading_mobile": "Next batch ships 10th July 2025:",
             "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.</p>",
-            "first_option_date": "May 15th",
+            "first_option_date": "June 15th",
             "first_option_text": "SOLD OUT",
             "first_option_percent": 100,
             "second_option_date": "June 10th",
@@ -46,16 +46,16 @@
         "out_of_stock_3xp9iR": {
           "type": "out_of_stock",
           "settings": {
-            "heading": "Next batch ships 10th June 2025:",
-            "heading_mobile": "Next batch ships 10th June 2025:",
+            "heading": "Next batch ships on 15th July 2025:",
+            "heading_mobile": "Next batch ships on 15th July 2025:",
             "text": "<p>Due to high demand we have sold out. Order now and secure yours from the next shipment.</p>",
-            "first_option_date": "May 15th",
+            "first_option_date": "June 15th",
             "first_option_text": "SOLD OUT",
             "first_option_percent": 100,
-            "second_option_date": "June 10th",
-            "second_option_text": "42% Reserved",
-            "second_option_percent": 42,
-            "third_option_date": "June 30th",
+            "second_option_date": "July 15th",
+            "second_option_text": "58% Reserved",
+            "second_option_percent": 58,
+            "third_option_date": "July 30th",
             "third_option_text": "In Production",
             "third_option_percent": 0
           }
@@ -79,6 +79,17 @@
             "variant_id": 45909763490031,
             "main": true,
             "reserve": false,
+            "soldout": false
+          }
+        },
+        "variant_8nqQxD": {
+          "type": "variant",
+          "settings": {
+            "heading": "Silver",
+            "image": "shopify://shop_images/shower_filter_silver_var.webp",
+            "variant_id": 46544976969967,
+            "main": false,
+            "reserve": true,
             "soldout": false
           }
         },
@@ -124,6 +135,7 @@
         "out_of_stock_3xp9iR",
         "variant_7PWWak",
         "variant_7nqQxD",
+        "variant_8nqQxD",
         "subscribe_EyrzEb",
         "collapsed_TnJHpV",
         "collapsed_xqBcWj",
@@ -564,7 +576,7 @@
             "title_mob": "Recommended by Experts",
             "image": "shopify://shop_images/dr_sahh-2.webp",
             "video": "https://www.youtube.com/watch?v=I2Fe-kP-2Jg",
-            "title": "Dr Shah, MD",
+            "title": "Dr Shah",
             "des": "Board certified dermatologist"
           }
         }
@@ -883,6 +895,35 @@
         "button_label": "Show More Questions",
         "button_hide_label": "Hide More Questions"
       }
+    },
+    "heading_tGcDFW": {
+      "type": "heading",
+      "name": "t:sections.heading.name",
+      "settings": {
+        "heading": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>",
+        "heading_mobile": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>"
+      }
+    },
+    "17521350570a426e30": {
+      "type": "apps",
+      "blocks": {
+        "stamped_reviews_main_widget_fbiF3K": {
+          "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true,
+            "use_metafields": false,
+            "sku_tagtype": "sku"
+          }
+        }
+      },
+      "block_order": [
+        "stamped_reviews_main_widget_fbiF3K"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -899,6 +940,8 @@
     "adjust_angle_mob_VptmPM",
     "product_adjust_seeting_PcLcUy",
     "compare_nJWwdf",
-    "faq_zwFb4X"
+    "faq_zwFb4X",
+    "heading_tGcDFW",
+    "17521350570a426e30"
   ]
 }

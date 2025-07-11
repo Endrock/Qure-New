@@ -8,13 +8,9 @@
  * ------------------------------------------------------------
  */
 {
-  "sections": {
-    "main": {
-      "type": "temp-page-qure-filters-offer-new",
-      "settings": {}
-    }
+  "parent": "index.json",
+  "context": {
+    "market": "us"
   },
-  "order": [
-    "main"
-  ]
+  "sections": {}
 }

@@ -15,9 +15,9 @@
         "announcement_JyMH8T": {
           "type": "announcement",
           "settings": {
-            "heading": "Limited Time Only:",
-            "timer": "2025-06-23T23:59:59",
-            "timer_next": 7
+            "heading": "Prime Day Sale Ends In:",
+            "timer": "2025-07-12T05:59:53",
+            "timer_next": 6
           }
         },
         "navigation_link_4YHENL": {
@@ -71,7 +71,7 @@
         "badge_bNNHbU": {
           "type": "badge",
           "settings": {
-            "heading": "EXCLUSIVE",
+            "heading": "Prime Day Sale",
             "text": "BUNDLES",
             "color_main": "#c4121a",
             "color": "#0a0a0a"
@@ -486,7 +486,7 @@
         "badge_TwBcgj": {
           "type": "badge",
           "settings": {
-            "heading": "EXCLUSIVE",
+            "heading": "Prime Day Sale",
             "text": "BUNDLES",
             "color_main": "#c4121a",
             "color": "#0a0a0a"
@@ -1407,6 +1407,7 @@
         },
         "product_qWAyap": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "breakout-control-pro-1",
             "percent": 27,
@@ -1416,7 +1417,7 @@
             "recommended_heading": "",
             "recommended_text": "",
             "is_top_rated": false,
-            "is_preorder": true,
+            "is_preorder": false,
             "is_soldout": false,
             "preorder_text": "SHIPS 30TH JUNE",
             "classname": "",
@@ -1454,7 +1455,7 @@
         "include_e4Mq9A": {
           "type": "include",
           "settings": {
-            "heading": "Dermal Mist (100ml) (Pre-Order)",
+            "heading": "Dermal Mist (100ml)",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs-derma-mist.webp",
@@ -1500,7 +1501,7 @@
             "recommended_heading": "",
             "recommended_text": "",
             "is_top_rated": true,
-            "is_preorder": true,
+            "is_preorder": false,
             "is_soldout": false,
             "preorder_text": "SHIPS 30TH JUNE",
             "classname": "",
@@ -1524,7 +1525,7 @@
         "include_gNNy6j": {
           "type": "include",
           "settings": {
-            "heading": "Dermal Mist (100ml) (Pre-Order)",
+            "heading": "Dermal Mist (100ml)",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs-derma-mist.webp",
@@ -1633,7 +1634,7 @@
             "recommended_heading": "",
             "recommended_text": "",
             "is_top_rated": false,
-            "is_preorder": true,
+            "is_preorder": false,
             "is_soldout": false,
             "preorder_text": "SHIPS 30TH JUNE",
             "classname": "",
@@ -1643,7 +1644,7 @@
         "include_kHjfp7": {
           "type": "include",
           "settings": {
-            "heading": "Dermal Mist (100ml) (Pre-Order)",
+            "heading": "Dermal Mist (100ml)",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs-derma-mist.webp",
