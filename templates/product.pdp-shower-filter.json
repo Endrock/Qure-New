@@ -89,7 +89,7 @@
             "image": "shopify://shop_images/shower_filter_silver_var.webp",
             "variant_id": 46544976969967,
             "main": false,
-            "reserve": true,
+            "reserve": false,
             "soldout": false
           }
         },
