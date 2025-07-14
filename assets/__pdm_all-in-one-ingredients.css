@@ -224,6 +224,13 @@ font-family: 'TT Commons';
   .ingredients-carousel {
     display: none;
   }
+
+  .main-title {
+    font-size: 28px;
+    margin-bottom: 24px;
+    line-height: 32px;
+  }
+
   .ingredients-mobile {
     display: flex;
     flex-direction: column;
