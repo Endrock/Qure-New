@@ -499,12 +499,22 @@
             "text_check_strong": "Dull Skin",
             "text_check": "All-In-One Face Serum"
           }
+        },
+        "card_zmPdUX": {
+          "type": "card",
+          "settings": {
+            "custom_name": "",
+            "image_product": "shopify://shop_images/images_D_3_2___M_1_1_3.png",
+            "text_check_strong": "Sunspots & Age Spots",
+            "text_check": "Neck & Décolletage LED Light Therapy"
+          }
         }
       },
       "block_order": [
         "card_xCwg4V",
         "card_eXhJmY",
-        "card_87yRjf"
+        "card_87yRjf",
+        "card_zmPdUX"
       ],
       "settings": {
         "bundle_info": "skincare-plan-result-dark-spots",
