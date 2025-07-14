@@ -85,7 +85,7 @@
           "announcement_TPxBgi": {
             "type": "announcement",
             "settings": {
-              "heading": "<p>🇺🇸Get <strong>$100 OFF</strong> LED Mask with code: <strong>FREEDOMGLOW</strong></p>",
+              "heading": "<p>Get <strong>$100 OFF</strong> LED Mask with code: <strong>FREEDOMGLOW</strong></p>",
               "button_label": "SHOP NOW",
               "button_url": "https://qureskincare.com/products/q-rejuvalight-pro-facewear"
             }
@@ -379,8 +379,8 @@
           "sidecart_timer_old_enable": false,
           "sidecart_timer_new_enable": true,
           "start_date": "07-01-2025 23:00",
-          "finish_date": "07-08-2025 23:00",
-          "label_ends": "4th July Offer Ends:",
+          "finish_date": "07-13-2025 15:00",
+          "label_ends": "Prime Day Sale Ends:",
           "label_days": "DAYS",
           "label_hours": "HOURS",
           "label_minutes": "MINUTES",
