@@ -16,7 +16,7 @@
           "type": "announcement",
           "settings": {
             "heading": "Prime Day Sale Ends In:",
-            "timer": "2025-07-12T05:59:53",
+            "timer": "2025-07-13T05:59:53",
             "timer_next": 6
           }
         },
@@ -1407,6 +1407,7 @@
         },
         "product_qWAyap": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "breakout-control-pro-1",
             "percent": 27,
