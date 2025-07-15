@@ -49,10 +49,11 @@
         },
         "timer_abVU3e": {
           "type": "timer",
+          "disabled": true,
           "settings": {
             "heading": "Prime Day Limited Time Offer!",
             "text": "<p>Get <em><strong>$100 OFF</strong></em><strong> </strong>with code: <strong>FREEDOMGLOW</strong></p>",
-            "timer": "2025-07-13T06:00:00"
+            "timer": "2025-07-14T11:00:00"
           }
         },
         "list_reduced_yep6j9": {
@@ -1146,7 +1147,7 @@
             "heading": "Q-Rejuvalight Pro LED Mask",
             "mob_text": "",
             "text": "<p><strong>One-time cost investment</strong></p>",
-            "price": "$399",
+            "price": "$379",
             "style": "correctCircle",
             "list": "<ul><li>saves you time</li><li>comfort and privacy of your own home</li><li><strong>unlimited treatments</strong></li><li><strong>only 3 minutes daily</strong></li><li>no ongoing payments</li></ul>"
           }
