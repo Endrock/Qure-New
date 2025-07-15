@@ -15,8 +15,8 @@
         "announcement_JyMH8T": {
           "type": "announcement",
           "settings": {
-            "heading": "Prime Day Sale Ends In:",
-            "timer": "2025-07-13T05:59:53",
+            "heading": "Anniversary Sale Ends In:",
+            "timer": "2025-07-20T05:59:53",
             "timer_next": 6
           }
         },
@@ -71,7 +71,7 @@
         "badge_bNNHbU": {
           "type": "badge",
           "settings": {
-            "heading": "Prime Day Sale",
+            "heading": "Anniversary Sale",
             "text": "BUNDLES",
             "color_main": "#c4121a",
             "color": "#0a0a0a"
@@ -486,7 +486,7 @@
         "badge_TwBcgj": {
           "type": "badge",
           "settings": {
-            "heading": "Prime Day Sale",
+            "heading": "Anniversary Sale",
             "text": "BUNDLES",
             "color_main": "#c4121a",
             "color": "#0a0a0a"
