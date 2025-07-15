@@ -215,7 +215,7 @@ font-family: 'TT Commons';
   display: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 992px) {
   .serum-section {
     width: 93%;
     padding: 30px 0 40px 0;
