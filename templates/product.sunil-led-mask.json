@@ -49,6 +49,7 @@
         },
         "timer_abVU3e": {
           "type": "timer",
+          "disabled": true,
           "settings": {
             "heading": "Prime Day Limited Time Offer!",
             "text": "<p>Get <em><strong>$100 OFF</strong></em><strong> </strong>with code: <strong>FREEDOMGLOW</strong></p>",
