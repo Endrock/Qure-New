@@ -1,42 +1,162 @@
-# we use Shopify as our ecommerce platform
-{%- comment -%}
-# Caution! Please read https://help.shopify.com/en/manual/promoting-marketing/seo/editing-robots-txt before proceeding to make changes to this file.
-{% endcomment %}
-{% for group in robots.default_groups %}
-  {{- group.user_agent -}}
+# --- START: Custom Rules ---
 
-  {% for rule in group.rules %}
-    {{- rule -}}
-  {% endfor %}
+# --- Standard Search Engines ---
+User-agent: Googlebot
+Allow: /
+Disallow: /cart
+Disallow: /carts/
+Disallow: /checkout
+Disallow: /checkouts/
+Disallow: /account
+Disallow: /orders
+Disallow: /admin
+Disallow: /password
 
-  {%- if group.sitemap != blank -%}
-    {{ group.sitemap }}
-  {%- endif -%}
-{% endfor %}
+User-agent: Bingbot
+Allow: /
+Disallow: /cart
+Disallow: /carts/
+Disallow: /checkout
+Disallow: /checkouts/
+Disallow: /account
+Disallow: /orders
+Disallow: /admin
+Disallow: /password
+
+# --- AI Chatbots and Indexers ---
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /cart
+Disallow: /carts/
+Disallow: /checkout
+Disallow: /checkouts/
+Disallow: /account
+Disallow: /orders
+Disallow: /admin
+Disallow: /password
 
 User-agent: GPTBot
-Disallow: /
+Allow: /
+Disallow: /cart
+Disallow: /carts/
+Disallow: /checkout
+Disallow: /checkouts/
+Disallow: /account
+Disallow: /orders
+Disallow: /admin
+Disallow: /password
 
-User-agent: ChatGPT-User
-Disallow: /
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /cart
+Disallow: /carts/
+Disallow: /checkout
+Disallow: /checkouts/
+Disallow: /account
+Disallow: /orders
+Disallow: /admin
+Disallow: /password
 
 User-agent: Google-Extended
-Disallow: /
+Allow: /
+Disallow: /cart
+Disallow: /carts/
+Disallow: /checkout
+Disallow: /checkouts/
+Disallow: /account
+Disallow: /orders
+Disallow: /admin
+Disallow: /password
 
-User-agent: anthropic-ai
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
+User-agent: Anthropic-Bot
+Allow: /
+Disallow: /cart
+Disallow: /carts/
+Disallow: /checkout
+Disallow: /checkouts/
+Disallow: /account
+Disallow: /orders
+Disallow: /admin
+Disallow: /password
 
 User-agent: ClaudeBot
-Disallow: /
+Allow: /
+Disallow: /cart
+Disallow: /carts/
+Disallow: /checkout
+Disallow: /checkouts/
+Disallow: /account
+Disallow: /orders
+Disallow: /admin
+Disallow: /password
 
-User-agent: OpenAI-User
-Disallow: /
+User-agent: PerplexityBot
+Allow: /
+Disallow: /cart
+Disallow: /carts/
+Disallow: /checkout
+Disallow: /checkouts/
+Disallow: /account
+Disallow: /orders
+Disallow: /admin
+Disallow: /password
 
-User-agent: facebookexternalhit
-Disallow: /
+User-agent: CCBot
+Allow: /
+Disallow: /cart
+Disallow: /carts/
+Disallow: /checkout
+Disallow: /checkouts/
+Disallow: /account
+Disallow: /orders
+Disallow: /admin
+Disallow: /password
 
-User-agent: Bytespider
-Disallow: /
+User-agent: NeevaBot
+Allow: /
+Disallow: /cart
+Disallow: /carts/
+Disallow: /checkout
+Disallow: /checkouts/
+Disallow: /account
+Disallow: /orders
+Disallow: /admin
+Disallow: /password
+
+User-agent: YouBot
+Allow: /
+Disallow: /cart
+Disallow: /carts/
+Disallow: /checkout
+Disallow: /checkouts/
+Disallow: /account
+Disallow: /orders
+Disallow: /admin
+Disallow: /password
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /cart
+Disallow: /carts/
+Disallow: /checkout
+Disallow: /checkouts/
+Disallow: /account
+Disallow: /orders
+Disallow: /admin
+Disallow: /password
+
+# --- END: Custom Rules ---
+
+
+# --- START: Shopify Default Rules ---
+# This loop prints Shopify's managed rules. Do not modify it.
+{% for group in robots.default_groups %}
+{{ group.user_agent }}
+{% for rule in group.rules %}
+{{ rule }}
+{% endfor %}
+{%- if group.sitemap != blank -%}
+{{ group.sitemap }}
+{%- endif -%}
+{% endfor %}
+# --- END: Shopify Default Rules ---
