@@ -450,6 +450,11 @@
         "settings": {
           "enable_cart_validation": true
         }
+      },
+      "13477285647392927056": {
+        "type": "shopify://apps/kefi-bundle-builder/blocks/kefi/a54b549a-0a53-4f58-b095-45369cafa8e7",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
