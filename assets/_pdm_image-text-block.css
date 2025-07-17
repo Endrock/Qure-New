@@ -37,7 +37,7 @@
   font-style: normal;
   font-weight: 300;
   line-height: 42px;
-  font-family: "Canela web", serif;
+  font-family: 'Canela Light';
   color: #212428;
   margin-bottom: 32px;
 }
@@ -48,7 +48,7 @@
   font-weight: 400;
   line-height: 22px;
   color: #212428;
-  font-family: " TT Commons", sans-serif;
+  font-family: "TT Commons", sans-serif;
 }
 .block-image-text-section__description span {
   background-color: #C7E5DB;
@@ -75,7 +75,7 @@
   cursor: pointer;
   background-color: #212428;
   color: white;
-  font-family: " TT Commons", sans-serif;
+  font-family: "TT Commons", sans-serif;
   line-height: 24px;
   max-width: 184px;
 }
