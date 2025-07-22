@@ -36,8 +36,6 @@ async function is_country_us() {
 
     const countryCode = await getCountryCode(clientIp);
 
-    console.log('aaaaqqqq7777 [' + countryCode + ']');
-    
     if (['US'].includes(countryCode)) {
         return true;
     }
