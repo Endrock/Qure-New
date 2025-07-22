@@ -780,7 +780,8 @@
         "object_rkVQek"
       ],
       "custom_css": [
-        ".targetSkin .swiper-slide:nth-of-type(4) .text-white {margin-top: -10px;}"
+        ".targetSkin .swiper-slide:nth-of-type(4) .text-white {margin-top: -10px;}",
+        ".board_of-advisors {padding:60px 0px;}"
       ],
       "settings": {
         "heading": "Meet our board of advisors",
@@ -846,10 +847,6 @@
         "slide_on_tablet": 2,
         "slide_on_mobile": 1
       }
-    },
-    "consult": {
-      "type": "temp-page-index-consult",
-      "settings": {}
     },
     "text_with_video_TwRQhd": {
       "type": "text-with-video",
@@ -1045,6 +1042,10 @@
       "settings": {
         "background": "bg_clr_transparent"
       }
+    },
+    "consult": {
+      "type": "temp-page-index-consult",
+      "settings": {}
     },
     "compare_pPhPQJ": {
       "type": "compare",
