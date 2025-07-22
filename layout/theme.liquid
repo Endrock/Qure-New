@@ -6,7 +6,7 @@
 <html lang="{{ shop.locale }}">
 {% endif %}
 
-<head>
+<head>{% render 'skio-head' %}
   
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,9 +68,7 @@
     {% endif %}
 
 
-  <!-- PDQ APP -->
-  <script type="text/javascript" experiment_id= "monitoring22-06-2025" src="https://pdq-scripts.pdqprod.link/pdq-text-abtest.js" id="pdq_custom_ab_test_script"></script>
-  <!-- PDQ APP -->
+ 
 
     <!--== CSS ==-->
     {%- render 'head-assets' -%}

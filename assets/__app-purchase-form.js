@@ -10,6 +10,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const id = this.id;
             console.log('Selected serum type:', id);
             initTemplate(id);
+            window.dispatchEvent(new CustomEvent('appPurchaseForm', {
+                detail: {
+                    element: this
+                }
+            }));
             // event to notify other scripts that a serum type has been selected
             window.dispatchEvent(new CustomEvent('serumTypeSelected'));
         });
