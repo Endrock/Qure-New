@@ -680,6 +680,7 @@
         "product_RV8HgT",
         "product_3hFb8X"
       ],
+      "custom_css": [],
       "settings": {
         "heading": "Best Sellers",
         "btn": "Shop All Best-Sellers",
@@ -845,6 +846,10 @@
         "slide_on_tablet": 2,
         "slide_on_mobile": 1
       }
+    },
+    "consult": {
+      "type": "temp-page-index-consult",
+      "settings": {}
     },
     "text_with_video_TwRQhd": {
       "type": "text-with-video",
@@ -1041,10 +1046,6 @@
         "background": "bg_clr_transparent"
       }
     },
-    "consult": {
-      "type": "temp-page-index-consult",
-      "settings": {}
-    },
     "compare_pPhPQJ": {
       "type": "compare",
       "blocks": {
@@ -1195,8 +1196,8 @@
     "results_slider_w6BARa",
     "products_grid_mCReWM",
     "icons_list_iPVXgA",
-    "featured_collection_Hj3Xcw",
     "advisors_MYYMCj",
+    "featured_collection_Hj3Xcw",
     "text_with_video_TwRQhd",
     "testimonials_m84mqf",
     "box_slider_HRHeRA",
