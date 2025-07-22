@@ -1,0 +1,88 @@
+<!-- Begin Image Comparison Slider assets -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"
+></script>
+<!-- End Image Comparison Slider assets -->
+
+{{ '__pdm-timeline-progress.css' | asset_url | stylesheet_tag }}
+
+<pdm-timeline-progress>
+  <div class="timeline-progress">
+    <div class="timeline-progress-content">
+      <h2 class="timeline-progress-title">{{ section_settings.section_title }}</h2>
+
+      <div class="timeline-progress-nav-wrapper">
+        <div class="timeline-progress-nav">
+          <div class="timeline-nav-line"></div>
+          <div class="timeline-nav-items">
+            {% for block in blocks %}
+              {% if block.type == 'card' %}
+                <div class="timeline-nav-item" data-index="{{ forloop.index0 }}">
+                  <button class="timeline-nav-btn"></button>
+                  <div class="timeline-nav-labels">
+                    <h4>{{ block.settings.button_title }}</h4>
+                    <p>{{ block.settings.button_subtitle }}</p>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-progress-cards">
+        <div class="timeline-cards-container">
+          {% assign blocks = section.blocks %}
+          {% for block in blocks %}
+            {% if block.type == 'card' %}
+              <div
+                class="timeline-card {% if forloop.index0 == 0 %}active{% endif %}"
+                data-index="{{ forloop.index0 }}"
+              >
+                <div class="timeline-card-image">
+                  <img-comparison-slider class="img-comparison-slider">
+                    {% assign image_1 = block.settings.before_image |  image_url: width: 1200 %}
+                    {% assign image_2 = block.settings.after_image | image_url: width: 1200 %}
+                    <img
+                      slot="first"
+                      src="{{ image_1 }}"
+                      class="timeline-card-image-before-image"
+                      height="200"
+                    >
+                    <img
+                      slot="second"
+                      src="{{ image_2 }}"
+                      height="200"
+                      class="timeline-card-image-after-image"
+                    >
+                    <svg slot="handle" width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect y="-0.000244141" width="40" height="30" rx="15" fill="white" fill-opacity="0.2"/>
+                      <rect y="-0.000244141" width="40" height="30" rx="15" fill="white" fill-opacity="0.7"/>
+                      <path d="M14.9963 9.86791L9.5625 15.3018L14.9963 20.1318" stroke="#B5B6B7" stroke-linecap="round"/>
+                      <path d="M25.0037 20.1316L30.4375 14.6978L25.0037 9.86768" stroke="#B5B6B7" stroke-linecap="round"/>
+                    </svg>
+                  </img-comparison-slider>
+                </div>
+                <div class="timeline-card-content">
+                  <h4>{{ block.settings.title | capitalize }}</h4>
+                  {{ block.settings.content }}
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="timeline-progress-controls">
+        <button id="timeline-prev" class="timeline-btn" disabled>Prev</button>
+        <button id="timeline-next" class="timeline-btn">Next</button>
+      </div>
+    </div>
+  </div>
+</pdm-timeline-progress>
+
+<script defer src="{{ '__pdm-timeline-progress.js' | asset_url }}"></script>
