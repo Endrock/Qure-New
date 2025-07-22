@@ -1,0 +1,246 @@
+{{ '__pdm_all-in-one-ingredients.css' | asset_url | stylesheet_tag }}
+ <script defer src="{{ '__pdm_all-in-one-ingredients.js' |  asset_url }}"></script>
+<section class="serum-section">
+  <div class="content-wrapper">
+    <div class="text-content">
+      <h2 class="main-title"> {{ section.settings.title  }} </h2>
+      <p class="subtitle"> {{ section.settings.subtitle }} </p>
+    </div>
+      
+    <div class="carousel-container ingredients-carousel">
+      <div class="swiper serumSwiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1: -->
+           {% if section.settings.image_1 != blank %}
+            <div class="swiper-slide slide-1">
+              <div class="slide-number">1</div>
+                <div class="slide-image">
+                  {% assign image_1 = section.settings.image_1 | image_url: width: 480 %}
+                  <img src="{{ image_1 }}" alt="1 Image - {{ section.settings.title_1 }}" class="slide-image-img">
+                </div>
+              <div class="slide-bottom-info">
+                  <h4 class="slide-bottom-title"> {{ section.settings.title_1 }} </h4>
+                  <p class="slide-bottom-description"> {{ section.settings.subtitle_1}} </p>
+              </div>
+            </div>
+           {% endif %}
+          
+          <!-- Slide 2 -->
+            {% if section.settings.image_2 != blank %}
+              <div class="swiper-slide slide-2">
+                <div class="slide-number">2</div>
+                <div class="slide-content">
+                    <div class="slide-image">
+                      {% assign image_2 = section.settings.image_2 | image_url: width: 480 %}
+                      <img src="{{ image_2 }}" alt="2 Image - {{ section.settings.title_2 }}" class="slide-image-img">
+                    </div>
+                </div>
+                <div class="slide-bottom-info">
+                    <h4 class="slide-bottom-title"> {{ section.settings.title_2 }} </h4>
+                    <p class="slide-bottom-description"> {{ section.settings.subtitle_2}} </p>
+                </div>
+              </div>
+            {% endif %}
+          
+          <!-- Slide 3 -->
+           {% if section.settings.image_3 != blank %}
+            <div class="swiper-slide slide-3">
+              <div class="slide-number">3</div>
+              <div class="slide-content">
+                  <div class="slide-image">
+                    {% assign image_3 = section.settings.image_3 | image_url: width: 480 %}
+                    <img src="{{ image_3 }}" alt="3 Image - {{ section.settings.title_3 }}" class="slide-image-img">
+                  </div>
+              </div>
+              <div class="slide-bottom-info">
+                  <h4 class="slide-bottom-title"> {{ section.settings.title_3 }} </h4>
+                  <p class="slide-bottom-description"> {{ section.settings.subtitle_3}} </p>
+              </div>
+            </div>
+           {% endif %}
+
+           {% comment %} empty slide for visibility {% endcomment %}
+          <div class="swiper-slide empty-slide"></div>
+        </div>
+      </div>
+        
+        <!-- Navegación personalizada -->
+      <div class="navigation-wrapper">
+        <button class="nav-button swiper-button-prev-custom">
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+            <path d="M6.71705 11.1321L1.2832 5.69825L6.71705 0.868164" stroke="#8B8C8E" stroke-linecap="round"/>
+          </svg>
+        </button>
+        
+        <div class="page-indicator">
+          <span class="current-slide">1</span> / <span class="total-slides">3</span>
+        </div>
+        
+        <button class="nav-button swiper-button-next-custom">
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+            <path d="M1.28295 11.1321L6.7168 5.69825L1.28295 0.868164" stroke="#212428" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  {% comment %} Ingredients grid  {% endcomment %}
+  <div class="ingredients-mobile">
+    {% if section.settings.image_1_mobile != blank %}
+      <div class="ingredient-item">
+        <div class="item-image">
+          <div class="image-number">1</div>
+           {% assign image_1 = section.settings.image_1_mobile | image_url: width: 200 %}
+            <img src="{{ image_1 }}" alt="1 Image - {{ section.settings.title_1 }}" class="slide-image-img">
+        </div>
+        <div class="item-text">
+          <h4 class="item-title">{{ section.settings.title_1 }}</h4>
+          <p class="item-description">{{ section.settings.subtitle_1 }}</p>
+        </div>
+      </div>
+    {% endif %}
+    {% if section.settings.image_2_mobile != blank %}
+      <div class="ingredient-item">
+        <div class="item-image">
+          <div class="image-number">2</div>
+          {% assign image_2 = section.settings.image_2_mobile | image_url: width: 200 %}
+          <img src="{{ image_2 }}" alt="2 Image - {{ section.settings.title_2 }}" class="slide-image-img">
+        </div>
+        <div class="item-text">
+          <h4 class="item-title">{{ section.settings.title_2 }}</h4>
+          <p class="item-description">{{ section.settings.subtitle_2 }}</p>
+        </div>
+      </div>
+    {% endif %}
+
+    {% if section.settings.image_3_mobile != blank %}
+      <div class="ingredient-item">
+        <div class="item-image">
+          <div class="image-number">3</div>
+          {% assign image_3 = section.settings.image_3_mobile | image_url: width: 200 %}
+          <img src="{{ image_3 }}" alt="3 Image - {{ section.settings.title_3 }}" class="slide-image-img">
+        </div>
+        <div class="item-text">
+          <h4 class="item-title">{{ section.settings.title_3 }}</h4>
+          <p class="item-description">{{ section.settings.subtitle_3 }}</p>
+        </div>
+      </div>
+    {% endif %}
+
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Ingredients Carousel",
+  "class": "serum-section-container hidden",
+  "settings": [
+      {
+        "type": "header",
+        "content": "Ingredients Carousel Settings"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Powered by actives, designed for daily use"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle",
+        "default": "This multi-tasking daily serum works hard to rejuvenate without stressing your skin."
+      },
+      {
+        "type": "header",
+        "content": "Slide 1 Settings"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_1",
+        "label": "Image 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_1_mobile",
+        "label": "Image 1 Mobile",
+        "info": "This image will be used in the mobile view of the ingredients section."
+      },
+      {
+        "type": "text",
+        "id": "title_1",
+        "label": "Title 1",
+        "default": "Treat"
+      },
+      {
+        "type": "text",
+        "id": "subtitle_1",
+        "label": "Subtitle 1",
+        "default": "Active ingredients like Retinol, Ethyl Ascorbic Acid (Vitamin C), Ferulic Acid and Bakuchiol target fine lines and uneven tone."
+      },
+      {
+        "type": "header",
+        "content": "Slide 2 Settings"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_2",
+        "label": "Image 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_2_mobile",
+        "label": "Image 2 Mobile",
+        "info": "This image will be used in the mobile view of the ingredients section."
+      },
+      {
+        "type": "text",
+        "id": "title_2",
+        "label": "Title 2",
+        "default": "Firm"
+      },
+      {
+        "type": "text",
+        "id": "subtitle_2",
+        "label": "Subtitle 2",
+        "default": "Hyaluronic Acid and Argireline® Peptides absorb into the skin for long-lasting hydration and a firm, plump look."
+      },
+      {
+        "type": "header",
+        "content": "Slide 3 Settings"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_3",
+        "label": "Image 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_3_mobile",
+        "label": "Image 3 Mobile",
+        "info": "This image will be used in the mobile view of the ingredients section."
+      },
+      {
+        "type": "text",
+        "id": "title_3",
+        "label": "Title 3",
+        "default": "Strengthen"
+      },
+      {
+        "type": "text",
+        "id": "subtitle_3",
+        "label": "Subtitle 3",
+        "default": "Barrier-boosting actives like Vitamin E and Niacinamide help fortify your skin to keep it calm, clear, and resilient."
+      }
+    ],
+  "presets": [
+    {
+      "name": "Ingredients Carousel",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+

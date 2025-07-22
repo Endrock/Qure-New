@@ -198,19 +198,20 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        if (!getCookie("gdrp")) {
+            is_country_us().then((isUS) => {
+                if (!isUS) {
+                    gdrpModal.show();
+                }
+            }).catch((err) => {
+                console.error("Can't detect the country", err);
+            });
+        }
 
-
-    
         document.querySelector('#gdpr_settings_change').addEventListener('click', function() {
             event.preventDefault();
             gdrpSettingsModal.show();
         });
-
-        if (!getCookie("gdrp")) {
-            setTimeout(() => {
-                gdrpModal.show();
-            }, 750);
-        }
 
         document.querySelector('#gdpr_reject').addEventListener('click', function() {
             event.preventDefault();

@@ -1,0 +1,302 @@
+/* variables */
+:root {
+  --dark-color: #212428;
+  --light-primary-color: #DFE0E0;
+  --light-secondary-color: #8B8C8E;
+}
+
+.serum-section-container.hidden {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+}
+
+.serum-section {
+  padding: 80px 0px;
+  max-width: calc(1140px + 150px);
+  width: 90%;
+  margin-left: auto;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.text-content {
+  width: 540px;
+  min-width: 0;
+}
+
+.main-title {
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 42px;
+  color: var(--dark-color);
+  margin-bottom: 32px;
+  font-family: 'Canela Light';
+}
+
+.subtitle {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--dark-color);
+  font-family: 'TT Commons';
+}
+
+.carousel-container.ingredients-carousel {
+  position: relative;
+  flex: 1;
+  flex-basis: 0;
+  width: calc(540px + 150px);
+  min-width: 0;
+}
+
+.swiper.serumSwiper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.swiper.serumSwiper .swiper-wrapper {
+  display: flex;
+  align-items: stretch; 
+}
+
+.serumSwiper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--light-primary-color);
+  height: auto; 
+  min-height: 400px;
+}
+
+.serumSwiper .swiper-slide.empty-slide {
+  background: transparent;
+  border: none;
+}
+
+.serumSwiper .slide-image {
+  width: 100%;
+  height: 194px;
+  flex-shrink: 0;
+  width: 360px !important;
+}
+
+.serumSwiper .slide-image img {
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover; 
+}
+
+.serumSwiper .slide-bottom-info {
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.98);
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.serumSwiper .slide-bottom-title {
+  font-family: "TT Commons";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--dark-color);
+}
+
+.serumSwiper .slide-bottom-description {
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px;
+color: var(--dark-color);
+font-family: 'TT Commons';
+}
+
+.serumSwiper .slide-number {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 30px;
+  height: 30px;
+  background: var(--dark-color);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 18px;
+  z-index: 10;
+  font-family: "TT Commons";
+  line-height: 22px;
+}
+
+.serumSwiper .slide-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.serumSwiper .slide-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.ingredients-carousel .navigation-wrapper {
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 100;
+}
+
+.ingredients-carousel .nav-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--dark-color);
+}
+
+.ingredients-carousel .nav-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: var(--light-secondary-color);
+}
+
+.ingredients-carousel .nav-button svg {
+  width: 10px;
+  height: 10px;
+}
+
+.ingredients-carousel .page-indicator { 
+  background: rgba(255, 255, 255, 0.9);
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: #333;
+    line-height: 22px;
+    font-family: "TT Commons";
+    display: flex;
+    gap: 10px;
+    font-weight: 400;
+}
+
+.ingredients-carousel .page-indicator .current-slide {
+  font-weight: 600;
+}
+.ingredients-carousel .total-slides {
+  font-weight: 400;
+}
+
+.ingredients-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .serum-section {
+    width: 93%;
+    padding: 30px 0 40px 0;
+  }
+
+  .ingredients-carousel {
+    display: none;
+  }
+
+  .main-title {
+    font-size: 28px;
+    margin-bottom: 24px;
+    line-height: 32px;
+  }
+
+  .ingredients-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 32px 0 0;
+  }
+
+  .ingredient-item {
+    display: flex;
+    gap: 16px;
+  }
+
+  .ingredient-item .item-image {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+  }
+
+  .ingredient-item .item-image .slide-image-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .ingredient-item .item-text {
+    min-width: 227px;
+  }
+  .ingredient-item .item-text .item-title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    font-family: "TT Commons";
+  }
+
+  .ingredient-item .item-text .item-description {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--dark-color);
+    font-family: "TT Commons";
+
+  }
+
+  .ingredient-item .item-image .image-number  {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 26px;
+    height: 26px;
+    background: var(--dark-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 16px;
+    z-index: 10;
+    font-family: "TT Commons";
+    line-height: 20px;
+  }
+}
