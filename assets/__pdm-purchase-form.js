@@ -1,6 +1,9 @@
 // Wait for the DOM content to be fully loaded before executing the script
 document.addEventListener('DOMContentLoaded', function () {
 
+  // Exit early if the body does not have the required attribute
+  if (!document.body.hasAttribute('data-3m-select')) return;
+
   /**
    * Adds click event listeners to all `.monthly_plans` elements within `.planBlock`
    * inside each `.step_block`. When a `.monthly_plans` is clicked, it ensures that:
@@ -32,21 +35,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     });
-  }
+  };
 
-  // Initialize background color behavior on page load
-  newBackgroundColor();
-
-  // Check if the body element has the attribute `data-3m-select`
-  const hasBodyAttribute = document.body.hasAttribute('data-3m-select');
-
-  if (hasBodyAttribute) {
-    // Automatically trigger a click on the second `.monthly_plans` element after 300ms
+  function autoSelectSecondMonthlyPlan() {
     setTimeout(() => {
       const planBlocks = document.querySelectorAll(".step_conten_blocks .planBlock");
 
       if (planBlocks.length >= 2) {
         const secondPlanLabel = planBlocks[1].querySelector(".monthly_plans");
+
         if (secondPlanLabel) {
           const clickEvent = new MouseEvent('click', {
             view: window,
@@ -59,10 +56,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 300);
   }
 
+  // Init
+  newBackgroundColor();
+  autoSelectSecondMonthlyPlan();
+
   // Re-run background color logic if the `serumTypeSelected` event is triggered
   window.addEventListener('serumTypeSelected', () => {
     console.log('serumTypeSelected event triggered');
     newBackgroundColor();
+    autoSelectSecondMonthlyPlan();
   });
 
 });

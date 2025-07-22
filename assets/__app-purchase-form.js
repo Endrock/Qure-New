@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.' + __section + ' .serumBlock').forEach(function(element) {
         element.addEventListener('click', function() {
             const id = this.id;
-            console.log('Selected serum type:', id);
             initTemplate(id);
             window.dispatchEvent(new CustomEvent('appPurchaseForm', {
                 detail: {
