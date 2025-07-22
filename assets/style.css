@@ -28415,7 +28415,7 @@ fieldset:disabled .btn {
 }
 
 :root {
-    --swiper-theme-color: #007aff
+    --swiper-theme-color: #000
 }
 
 :host {
@@ -32496,7 +32496,10 @@ picture img {
     padding: 8px 16px;
     display: inline-block;
 }
-
+.biggest_hair_issues_slider .swiper-pagination-bullet{
+    width: 14px;
+    height: 14px;
+}
 
 
 
@@ -32526,6 +32529,18 @@ picture img {
     }
     .marquee-row img {
         height: 22px;
+    }
+    .pl_mob{
+        padding-left: var(--pl_mob, 15px)!important;
+    }
+    .pr_mob{
+        padding-right: var(--pr_mob, 15px)!important;
+    }
+    .pt_mob{
+        padding-top: var(--pt_mob, 15px)!important;
+    }
+    .pb_mob{
+        padding-bottom: var(--pb_mob, 15px)!important;
     }
 }
 /* css for endless slider  */

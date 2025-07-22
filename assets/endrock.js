@@ -2055,3 +2055,189 @@ const initObserverStickyAtc = () => {
 // Initialize when DOM is fully loaded
 document.addEventListener('DOMContentLoaded', initObserverStickyAtc);
 // End stickyAtc
+/**
+ * Shopify Buy Now Functionality
+ * Handles adding products to cart and redirecting to checkout
+ */
+
+// Constants for better maintainability
+const SHOPIFY_ENDPOINTS = {
+  CART_ADD: '/cart/add.js',
+  CHECKOUT: '/checkout',
+  CART_ADD_FALLBACK: '/cart/add'
+};
+
+const SELECTORS = {
+  BUY_NOW_BUTTON: '.btn.btn-atc.submit_btn.productButtonObject',
+  CART_BUTTON: '.nav__item.cart_btn a.nav__url'
+};
+
+const HTTP_HEADERS = {
+  'Content-Type': 'application/json'
+};
+
+/**
+ * Adds a product variant to the Shopify cart and redirects to checkout
+ * @param {string|number} variantId - The Shopify variant ID to add to cart
+ * @param {number} [quantity=1] - The quantity of the variant to add
+ * @returns {Promise<void>} Promise that resolves when the operation completes
+ * @throws {Error} When variant ID is invalid or API call fails
+ */
+const addToCartAndCheckout = async (items) => {
+  // Prepare cart item data according to Shopify Cart API format
+  const cartData = {
+    items
+  };
+
+  try {
+    // Attempt to add item to cart using Shopify Ajax Cart API
+    const response = await fetch(SHOPIFY_ENDPOINTS.CART_ADD, {
+      method: 'POST',
+      headers: HTTP_HEADERS,
+      body: JSON.stringify(cartData)
+    });
+
+    // Check if the response is successful
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    // Parse the JSON response
+    const data = await response.json();
+    
+    // Redirect to checkout on successful cart addition
+    window.location.href = SHOPIFY_ENDPOINTS.CHECKOUT;
+    
+  } catch (error) {
+    console.error('Failed to add item to cart via Ajax API:', error);
+    
+    // Fallback to traditional cart add URL as backup method
+    const fallbackUrl = `${SHOPIFY_ENDPOINTS.CART_ADD_FALLBACK}?id=${variantId}&quantity=${quantity}`;
+    window.location.href = fallbackUrl;
+  }
+};
+
+window.addToCartAndCheckout = addToCartAndCheckout; // Expose function globally for easy access
+/**
+ * Extracts variant ID and quantity from a Shopify cart add URL
+ * @param {string} href - The URL containing cart parameters
+ * @returns {Object} Object containing variantId and quantity
+ * @returns {string|null} returns.variantId - The extracted variant ID
+ * @returns {number} returns.quantity - The extracted quantity (defaults to 1)
+ */
+const extractCartParameters = (href) => {
+  if (!href || typeof href !== 'string') {
+    return { variantId: null, quantity: 1 };
+  }
+
+  const urlParts = href.split('?');
+  if (urlParts.length < 2) {
+    return { variantId: null, quantity: 1 };
+  }
+
+  const urlParams = new URLSearchParams(urlParts[1]);
+  
+  return {
+    variantId: urlParams.get('id'),
+    quantity: parseInt(urlParams.get('quantity'), 10) || 1
+  };
+};
+
+/**
+ * Handles the click event for buy now buttons
+ * Prevents default link behavior and triggers cart addition
+ * @param {Event} event - The click event object
+ * @param {HTMLElement} linkElement - The link element containing cart parameters
+ */
+const handleBuyNowClick = (event, linkElement) => {
+  // Prevent default link navigation and event bubbling
+  event.preventDefault();
+  event.stopPropagation();
+
+  // Extract cart parameters from the link href
+  const href = linkElement.getAttribute('href');
+  const { variantId, quantity } = extractCartParameters(href);
+
+  // Validate that we have a variant ID before proceeding
+  if (!variantId) {
+    console.error('No variant ID found in buy now button link');
+    return;
+  }
+let items =  [{
+  'id': variantId,
+  'quantity': quantity
+  }]
+  // Execute the add to cart and checkout flow
+  addToCartAndCheckout(items);
+};
+
+/**
+ * Finds and returns the parent link element for a buy now button
+ * @param {HTMLElement} button - The buy now button element
+ * @returns {HTMLElement|null} The parent link element or null if not found
+ */
+const findParentLink = (button) => {
+  // First check if the button is directly wrapped in a link
+  const closestLink = button.closest('a');
+  if (closestLink) {
+    return closestLink;
+  }
+
+  // Fallback: check immediate parent element
+  const parentElement = button.parentElement;
+  if (parentElement && parentElement.tagName === 'A') {
+    return parentElement;
+  }
+
+  return null;
+};
+
+const initializeBuyNowFunctionality = () => {
+  // Find the buy now button in the DOM
+  const buyNowButton = document.querySelector(SELECTORS.BUY_NOW_BUTTON);
+  
+  if (!buyNowButton) {
+    console.warn('Buy now button not found on this page');
+    return;
+  }
+
+  // Find the associated link element
+  const linkElement = findParentLink(buyNowButton);
+  
+  if (!linkElement) {
+    console.error('Buy now button is not wrapped in a link element');
+    return;
+  }
+
+  // Attach click event listener with proper error handling
+  linkElement.addEventListener('click', (event) => {
+    try {
+      handleBuyNowClick(event, linkElement);
+    } catch (error) {
+      console.error('Error handling buy now click:', error);
+    }
+  });
+}
+const initializeCartNavButton = () => {
+  const cartNavButton = document.querySelector(SELECTORS.CART_BUTTON);
+  if (!cartNavButton) return;
+  cartNavButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    window.location.href = SHOPIFY_ENDPOINTS.CHECKOUT;
+  });
+}
+/**
+ * Initializes the buy now functionality by setting up event listeners
+ * This function runs when the DOM is fully loaded
+ */
+const initializeBuyNowTest = () => {
+
+  if (!document.body.hasAttribute('data-checkout')) return;
+  initializeCartNavButton();
+  initializeBuyNowFunctionality();
+};
+
+// Initialize the functionality when the DOM is ready
+document.addEventListener('DOMContentLoaded', initializeBuyNowTest);
+

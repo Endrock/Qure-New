@@ -7,6 +7,15 @@
     {% endcase %}
 {% endfor %}
 
+<style>
+    .total_price .regular_price {
+        font-size: 14px;
+    }
+    .total_price .sale_price, .price .pay_today {
+        font-size: 17px;
+    }
+</style>
+
 {% if payment_type_count > 0 %}
     <div class="supply_steps"{% if section.settings.hide_payment_types == true %} style="display:none"{% endif %}>
         <div class="step_counter">
@@ -39,8 +48,8 @@
                                             </div>
                                         </div>
                                         <div class="price total_price">
-                                            <div class="pmt_prc regular_price igComparePrice" data-product-id="8958518788335">$714</div>
-                                            <div class="pmt_prc sale_price igPrice" data-product-id="8958518788335">$249</div>
+                                            <div class="pmt_prc regular_price igComparePrice" data-product-id="{{ product_id }}">$714</div>
+                                            <div class="pmt_prc sale_price igPrice" data-product-id="{{ product_id }}">$249</div>
                                         </div>
                                     </label>
                                 </div>
@@ -62,7 +71,7 @@
                                             </div>
                                         </div>
                                         <div class="price">
-                                            <div class="pmt_prc pay_today igPrice" data-price-multiplier="0.25" data-product-id="8958518788335">$62.25</div>
+                                            <div class="pmt_prc pay_today igPrice" data-price-multiplier="0.25" data-product-id="{{ product_id }}">$62.25</div>
                                         </div>
                                     </label>
                                 </div>                                

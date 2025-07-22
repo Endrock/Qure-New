@@ -15,6 +15,10 @@
     "social_facebook_link": "https://www.facebook.com/Qureskincare/",
     "social_tiktok_link": "https://www.tiktok.com/@qureskincare",
     "social_youtube_link": "https://youtube.com/channel/UCGTi3BZn8GVlu30NtQ-reYA",
+    "btn_font_size": 22,
+    "btn_line_height": 20,
+    "btn_font_weight": 600,
+    "btn_width_border": 0,
     "product_list_microinfusion_refill": [
       "micro-infusion-3-month-refill-3x-b-g-serum-3x-e-g-f-serum",
       "micro-infusion-3-month-refill-6x-hydra-soothing-serum",
@@ -81,9 +85,9 @@
           "announcement_TPxBgi": {
             "type": "announcement",
             "settings": {
-              "heading": "<p>Buy a Shower Filter and Get a <strong>FREE </strong>Faucet Filter Device!</p>",
+              "heading": "<p>FREE World-Wide Shipping Orders $100+</p>",
               "button_label": "SHOP NOW",
-              "button_url": "https://qureskincare.com/pages/qure-filters-offer"
+              "button_url": "https://www.qureskincare.com/collections/best-sellers"
             }
           },
           "tab_3Wyyea": {
@@ -374,9 +378,9 @@
           "upsell_product_third_description": "Plump, smooth & brighten in just one step",
           "sidecart_timer_old_enable": false,
           "sidecart_timer_new_enable": true,
-          "start_date": "07-02-2025 24:00",
-          "finish_date": "07-08-2025 24:00",
-          "label_ends": "4th July Offer Ends:",
+          "start_date": "07-01-2025 23:00",
+          "finish_date": "07-27-2025 20:00",
+          "label_ends": "Anniversary Sale Ends:",
           "label_days": "DAYS",
           "label_hours": "HOURS",
           "label_minutes": "MINUTES",
@@ -441,10 +445,62 @@
         "settings": {}
       },
       "15659862187755629035": {
-        "type": "shopify://apps/bookeasy/blocks/app-embed/865cd10f-9515-4d8b-8e41-efece9c83f71",
-        "disabled": false,
+        "type": "shopify://apps/bookx/blocks/app-embed/865cd10f-9515-4d8b-8e41-efece9c83f71",
+        "disabled": true,
         "settings": {
           "enable_cart_validation": true
+        }
+      }
+    },
+    "color_schemes": {
+      "scheme-1": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "heading_color": "#111111",
+          "text": "#121212",
+          "link_color": "#111111",
+          "link_hover_color": "#555555",
+          "border_color": "#ebebeb",
+          "button_primary_color": "#ffffff",
+          "button_primary_background_color": "#111111",
+          "button_primary_hover_color": "#ffffff",
+          "button_primary_hover_background_color": "#111111",
+          "button_secondary_color": "#111111",
+          "button_secondary_border_color": "#dedede",
+          "button_secondary_background_color": "#ffffff",
+          "button_secondary_hover_color": "#ffffff",
+          "button_secondary_hover_background_color": "#111111",
+          "button_link_color": "#111111",
+          "button_link_hover_color": "#555555",
+          "input_color": "#000000",
+          "input_border": "#ffffff",
+          "input_bg": "#ffffff"
+        }
+      },
+      "scheme-2": {
+        "settings": {
+          "background": "#135f42",
+          "background_gradient": "",
+          "heading_color": "#111111",
+          "text": "#ffffff",
+          "link_color": "#ffffff",
+          "link_hover_color": "#555555",
+          "border_color": "#ebebeb",
+          "button_primary_color": "#ffffff",
+          "button_primary_background_color": "#111111",
+          "button_primary_hover_color": "#ffffff",
+          "button_primary_hover_background_color": "#111111",
+          "button_secondary_color": "#111111",
+          "button_secondary_border_color": "#dedede",
+          "button_secondary_background_color": "#ffffff",
+          "button_secondary_hover_color": "#ffffff",
+          "button_secondary_hover_background_color": "#111111",
+          "button_link_color": "#ffffff",
+          "button_link_hover_color": "#555555",
+          "input_color": "#000000",
+          "input_border": "#ffffff",
+          "input_bg": "#ffffff"
         }
       }
     }

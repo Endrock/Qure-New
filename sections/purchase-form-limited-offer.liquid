@@ -253,16 +253,25 @@
         if(__discount)
         {
             fetch('/discount/' + __discount).then(async () => {
-                cartRequestAdd({ 
-                    items:  __items
-                }, {} )
+                if (!document.body.hasAttribute('data-checkout')) {
+                  cartRequestAdd({ 
+                      items:  __items
+                  }, {} )
+                } else {
+                  window.addToCartAndCheckout(__items);
+                }
             });
         }
         else
         {
-            cartRequestAdd({ 
-                items:  __items
-            }, {} )
+
+          if (!document.body.hasAttribute('data-checkout')) {
+              cartRequestAdd({ 
+                  items:  __items
+              }, {} )
+          } else {
+              window.addToCartAndCheckout(__items);
+          }
         }
     });
 </script>

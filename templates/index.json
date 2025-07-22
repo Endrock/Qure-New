@@ -109,6 +109,140 @@
       ],
       "settings": {}
     },
+    "banner_with_text_PLRJBt": {
+      "type": "banner-with-text",
+      "blocks": {
+        "heading_qteHYG": {
+          "type": "heading",
+          "settings": {
+            "title": "Get clinic-level results from home- minus the ‘clinical’ costs.",
+            "heading_fs": 42,
+            "heading_fw": "default",
+            "heading_fm": "Canela Web",
+            "heading_tf": "unset",
+            "heading_mt": 0,
+            "heading_mb": 20,
+            "heading_color": "#ffffff",
+            "heading_fsm": 34
+          }
+        },
+        "buttons_jt6ttK": {
+          "type": "buttons",
+          "settings": {
+            "btn_content": "Shop Best Sellers",
+            "button_type": "primary-new",
+            "button_size": "medium",
+            "button_link": "shopify://collections/best-sellers",
+            "button_target": false,
+            "b_mt": 0,
+            "b_mb": 15
+          }
+        },
+        "text_a4YPW6": {
+          "type": "text",
+          "settings": {
+            "txt_content": "<p><strong>300,000+</strong>customers feel more confident in their own skin.</p>",
+            "txt_fs": 14,
+            "txt_fw": "default",
+            "txt_tf": "unset",
+            "txt_mt": 20,
+            "txt_mb": 0,
+            "text_hide": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_qteHYG",
+        "buttons_jt6ttK",
+        "text_a4YPW6"
+      ],
+      "disabled": true,
+      "name": "Banner with text",
+      "settings": {
+        "container": "full-width",
+        "color_scheme": "scheme-1",
+        "image_behavior": "none",
+        "banner_type": "image",
+        "image": "shopify://shop_images/Banner_57c19f02-06bd-42fa-ac3a-6ebd0393ecc4.png",
+        "image_mobile": "shopify://shop_images/hm_banner_clinic_results.png_mob.webp",
+        "video_url": "",
+        "link": "",
+        "open_link": "_blank",
+        "bn_design": "text_overlay",
+        "text_align": "text-left",
+        "text_horizontal_position": "left",
+        "text_position": "center",
+        "content_bg_color": "",
+        "background_gradient": "",
+        "content_width": 41,
+        "text_align-mob": "on_mob-center",
+        "banner_height": "depend-image",
+        "height_dk": 800,
+        "height_tb": 600,
+        "height_mb": 360,
+        "height_full": false,
+        "image_second_on_mobile": true,
+        "content_box": "content_in_container",
+        "bg_opacity": 100,
+        "text_bellow_mobile": false,
+        "img_position": "left",
+        "banner_width": "col-md-6",
+        "column_gap": 0,
+        "hover_effect": "zoom",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "reset_spacing": false
+      }
+    },
+    "sub_banner_mDCcyx": {
+      "type": "sub-banner",
+      "name": "t:common.sub-banner.label",
+      "settings": {
+        "heading": "Save up to 55% on Exclusive Bundles",
+        "image": "shopify:\/\/shop_images\/sub_banner.webp",
+        "image_mobile": "shopify:\/\/shop_images\/sub_banner-mob.webp",
+        "link_label": "Buy Now",
+        "link_url": "https:\/\/www.qureskincare.com\/pages\/exclusive-holiday-bundle-deal"
+      }
+    },
+    "promotion_main_banner_second_jCUkqh": {
+      "type": "promotion-main-banner-second",
+      "blocks": {
+        "link_Pk3LH6": {
+          "type": "link",
+          "settings": {
+            "link_label": "Shop Now & Save",
+            "link_label_mobile": "Shop Now & Save",
+            "link_url": "https:\/\/qureskincare.com\/pages\/qure-filters-offer?variant=45909763490031"
+          }
+        },
+        "banner_6wgzUN": {
+          "type": "banner",
+          "settings": {
+            "heading": "Save up to 55% on Exclusive Bundles",
+            "image": "shopify:\/\/shop_images\/sub_banner.webp",
+            "image_mobile": "shopify:\/\/shop_images\/sub_banner-mob.webp",
+            "link_label": "Buy Now",
+            "link_url": "https:\/\/www.qureskincare.com\/pages\/exclusive-holiday-bundle-deal"
+          }
+        }
+      },
+      "block_order": [
+        "link_Pk3LH6",
+        "banner_6wgzUN"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Two Filters. One Goal: Healthier Skin.",
+        "heading_mobile": "Two Filters. One Goal: Healthier Skin.",
+        "heading_tag": "h1",
+        "subheading": "<h5>Get Faucet Filter FREE<\/h5>",
+        "subheading_mobile": "<h5>Get Faucet Filter FREE<\/h5>",
+        "text": "<h6>Limited Time Offer <\/h6>",
+        "video": "shopify:\/\/files\/videos\/faucet_offer-d.webm",
+        "video_mobile": "shopify:\/\/files\/videos\/faucet_offer-m.webm"
+      }
+    },
     "promotion_main_banner_48gkNr": {
       "type": "promotion-main-banner",
       "blocks": {
@@ -117,25 +251,25 @@
           "settings": {
             "link_label": "Shop Best Sellers",
             "link_label_mobile": "Shop Best Sellers",
-            "link_url": "shopify://collections/best-sellers"
+            "link_url": "shopify:\/\/collections\/best-sellers"
           }
         },
         "product_BANXY7": {
           "type": "product",
           "settings": {
-            "heading": "<p>Micro-Infusion Bundle</p>",
-            "image": "shopify://shop_images/mi_bundle.webp",
-            "product_url": "shopify://products/exclusive"
+            "heading": "<p>Micro-Infusion Bundle<\/p>",
+            "image": "shopify:\/\/shop_images\/mi_bundle.webp",
+            "product_url": "shopify:\/\/products\/exclusive"
           }
         },
         "banner_6wgzUN": {
           "type": "banner",
           "settings": {
             "heading": "Save up to 55% on Exclusive Bundles",
-            "image": "shopify://shop_images/sub_banner.webp",
-            "image_mobile": "shopify://shop_images/sub_banner-mob.webp",
+            "image": "shopify:\/\/shop_images\/sub_banner.webp",
+            "image_mobile": "shopify:\/\/shop_images\/sub_banner-mob.webp",
             "link_label": "Buy Now",
-            "link_url": "https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal"
+            "link_url": "https:\/\/www.qureskincare.com\/pages\/exclusive-holiday-bundle-deal"
           }
         }
       },
@@ -149,49 +283,107 @@
         "heading": "",
         "heading_mobile": "",
         "heading_tag": "h1",
-        "subheading": "<h3>Get clinic-level results</h3><h4>from home- minus</h4><h5>the ‘clinical’ costs.</h5>",
-        "subheading_mobile": "<h3>Get clinic-level results</h3><h4>from home- minus</h4><h5>the ‘clinical’ costs.</h5>",
-        "text": "<p><strong>300,000+ </strong>customers feel more confident in their own skin.</p>",
-        "image": "shopify://shop_images/Banner_57c19f02-06bd-42fa-ac3a-6ebd0393ecc4.png",
-        "image_mobile": "shopify://shop_images/hm_banner_clinic_results.png_mob.webp",
+        "subheading": "<h3>Get clinic-level results<\/h3><h4>from home- minus<\/h4><h5>the ‘clinical’ costs.<\/h5>",
+        "subheading_mobile": "<h3>Get clinic-level results<\/h3><h4>from home- minus<\/h4><h5>the ‘clinical’ costs.<\/h5>",
+        "text": "<p><strong>300,000+ <\/strong>customers feel more confident in their own skin.<\/p>",
+        "image": "shopify:\/\/shop_images\/Banner_57c19f02-06bd-42fa-ac3a-6ebd0393ecc4.png",
+        "image_mobile": "shopify:\/\/shop_images\/hm_banner_clinic_results.png_mob.webp",
         "wistia_id": ""
       }
     },
-    "promotion_main_banner_second_jCUkqh": {
-      "type": "promotion-main-banner-second",
+    "banner_with_text_Bgpcti": {
+      "type": "banner-with-text",
       "blocks": {
-        "link_Pk3LH6": {
-          "type": "link",
+        "image_picker_neC3Xa": {
+          "type": "image_picker",
           "settings": {
-            "link_label": "Shop Now & Save",
-            "link_label_mobile": "Shop Now & Save",
-            "link_url": "https://qureskincare.com/pages/qure-filters-offer?variant=45909763490031"
+            "image_block": "shopify://shop_images/qure_anniversary_sale.webp",
+            "icon_width_block": 300,
+            "icon_max_width_block": 100,
+            "text_img_mt": 1,
+            "text_img_mb": 10
           }
         },
-        "banner_6wgzUN": {
-          "type": "banner",
+        "heading_rFTTd3": {
+          "type": "heading",
           "settings": {
-            "heading": "Save up to 55% on Exclusive Bundles",
-            "image": "shopify://shop_images/sub_banner.webp",
-            "image_mobile": "shopify://shop_images/sub_banner-mob.webp",
-            "link_label": "Buy Now",
-            "link_url": "https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal"
+            "title": "Buy One - Get One FREE",
+            "heading_fs": 42,
+            "heading_fw": "default",
+            "heading_fm": "Canela Web",
+            "heading_tf": "unset",
+            "heading_mt": 0,
+            "heading_mb": 0,
+            "heading_color": "#000000",
+            "heading_fsm": 34
+          }
+        },
+        "text_CjmW4j": {
+          "type": "text",
+          "settings": {
+            "txt_content": "<p>Double your Micro-Infusion supply!</p>",
+            "txt_fs": 18,
+            "txt_fw": "default",
+            "txt_tf": "unset",
+            "txt_mt": 0,
+            "txt_mb": 20,
+            "text_hide": false
+          }
+        },
+        "buttons_TztLB4": {
+          "type": "buttons",
+          "settings": {
+            "btn_content": "Shop Now & Save",
+            "button_type": "primary-new",
+            "button_size": "medium",
+            "button_link": "https://qureskincare.com/pages/microinfusion",
+            "button_target": false,
+            "b_mt": 0,
+            "b_mb": 15
           }
         }
       },
       "block_order": [
-        "link_Pk3LH6",
-        "banner_6wgzUN"
+        "image_picker_neC3Xa",
+        "heading_rFTTd3",
+        "text_CjmW4j",
+        "buttons_TztLB4"
       ],
+      "name": "Banner with text",
       "settings": {
-        "heading": "Two Filters. One Goal: Healthier Skin.",
-        "heading_mobile": "Two Filters. One Goal: Healthier Skin.",
-        "heading_tag": "h1",
-        "subheading": "<h5>Get Faucet Filter FREE</h5>",
-        "subheading_mobile": "<h5>Get Faucet Filter FREE</h5>",
-        "text": "<h6>Limited Time Offer </h6>",
-        "video": "shopify://files/videos/faucet_offer-d.webm",
-        "video_mobile": "shopify://files/videos/faucet_offer-m.webm"
+        "container": "container",
+        "color_scheme": "scheme-1",
+        "image_behavior": "none",
+        "banner_type": "image",
+        "image": "shopify://shop_images/qure_anniversary_banner.webp",
+        "image_mobile": "shopify://shop_images/qure_anniversary_banner_mob.webp",
+        "video_url": "",
+        "link": "",
+        "open_link": "_blank",
+        "bn_design": "text_column",
+        "text_align": "text-center",
+        "text_horizontal_position": "left",
+        "text_position": "center",
+        "content_bg_color": "",
+        "background_gradient": "",
+        "content_width": 100,
+        "text_align-mob": "on_mob-left",
+        "banner_height": "depend-image",
+        "height_dk": 800,
+        "height_tb": 600,
+        "height_mb": 360,
+        "height_full": false,
+        "image_second_on_mobile": true,
+        "content_box": "content_in_container",
+        "bg_opacity": 100,
+        "text_bellow_mobile": false,
+        "img_position": "right",
+        "banner_width": "col-md-6",
+        "column_gap": 0,
+        "hover_effect": "zoom",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "reset_spacing": false
       }
     },
     "featuredin_extended_P7BNDN": {
@@ -994,8 +1186,11 @@
   },
   "order": [
     "main",
-    "promotion_main_banner_48gkNr",
+    "banner_with_text_PLRJBt",
     "promotion_main_banner_second_jCUkqh",
+    "promotion_main_banner_48gkNr",
+    "banner_with_text_Bgpcti",
+    "sub_banner_mDCcyx",
     "featuredin_extended_P7BNDN",
     "results_slider_w6BARa",
     "advisors_MYYMCj",
