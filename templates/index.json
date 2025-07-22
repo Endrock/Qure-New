@@ -728,64 +728,6 @@
         "background": "bg-grey"
       }
     },
-    "featured_collection_Hj3Xcw": {
-      "type": "featured-collection",
-      "blocks": {
-        "column_6Tzrqz": {
-          "type": "column",
-          "settings": {
-            "c_image": "shopify://shop_images/skin_c1.webp",
-            "name": "Signs of aging, fine lines & wrinkles",
-            "button": "Shop Now",
-            "btn_url": "https://www.qureskincare.com/collections/fine-line-wrinkles"
-          }
-        },
-        "column_XGE36r": {
-          "type": "column",
-          "settings": {
-            "c_image": "shopify://shop_images/skin_c2.webp",
-            "name": "Dark spots & uneven skin tone",
-            "button": "Shop Now",
-            "btn_url": "https://www.qureskincare.com/collections/dark-spots?ose=false"
-          }
-        },
-        "column_pTADx3": {
-          "type": "column",
-          "settings": {
-            "c_image": "shopify://shop_images/skin_c3.webp",
-            "name": "Acne Breakouts & Blemishes",
-            "button": "Shop Now",
-            "btn_url": "https://www.qureskincare.com/collections/acne-breakouts?ose=false"
-          }
-        },
-        "column_7bHmxW": {
-          "type": "column",
-          "settings": {
-            "c_image": "shopify://shop_images/skin_c4.webp",
-            "name": "Large pores & textured skin",
-            "button": "Shop Now",
-            "btn_url": "https://www.qureskincare.com/collections/dark-spots?"
-          }
-        }
-      },
-      "block_order": [
-        "column_6Tzrqz",
-        "column_XGE36r",
-        "column_pTADx3",
-        "column_7bHmxW"
-      ],
-      "custom_css": [
-        ".container-fluid {padding: 0;}"
-      ],
-      "settings": {
-        "heading": "Get the Qure",
-        "sub_heading": "<h4>Reclaim your confidence at any age, no matter what your skin concern is.</h4>",
-        "container": "container-fluid",
-        "slide_on_desktop": 4,
-        "slide_on_tablet": 2,
-        "slide_on_mobile": 1
-      }
-    },
     "advisors_MYYMCj": {
       "type": "advisors",
       "blocks": {
@@ -844,6 +786,64 @@
         "heading_mobile": "Board of advisors",
         "subheading": "At Qure Skincare, we are proud to have a team of esteemed Dermatologists guiding our mission to deliver high-quality skincare solutions.",
         "subheading_mobile": "Meet our board of advisors:"
+      }
+    },
+    "featured_collection_Hj3Xcw": {
+      "type": "featured-collection",
+      "blocks": {
+        "column_6Tzrqz": {
+          "type": "column",
+          "settings": {
+            "c_image": "shopify://shop_images/skin_c1.webp",
+            "name": "Signs of aging, fine lines & wrinkles",
+            "button": "Shop Now",
+            "btn_url": "https://www.qureskincare.com/collections/fine-line-wrinkles"
+          }
+        },
+        "column_XGE36r": {
+          "type": "column",
+          "settings": {
+            "c_image": "shopify://shop_images/skin_c2.webp",
+            "name": "Dark spots & uneven skin tone",
+            "button": "Shop Now",
+            "btn_url": "https://www.qureskincare.com/collections/dark-spots?ose=false"
+          }
+        },
+        "column_pTADx3": {
+          "type": "column",
+          "settings": {
+            "c_image": "shopify://shop_images/skin_c3.webp",
+            "name": "Acne Breakouts & Blemishes",
+            "button": "Shop Now",
+            "btn_url": "https://www.qureskincare.com/collections/acne-breakouts?ose=false"
+          }
+        },
+        "column_7bHmxW": {
+          "type": "column",
+          "settings": {
+            "c_image": "shopify://shop_images/skin_c4.webp",
+            "name": "Large pores & textured skin",
+            "button": "Shop Now",
+            "btn_url": "https://www.qureskincare.com/collections/dark-spots?"
+          }
+        }
+      },
+      "block_order": [
+        "column_6Tzrqz",
+        "column_XGE36r",
+        "column_pTADx3",
+        "column_7bHmxW"
+      ],
+      "custom_css": [
+        ".container-fluid {padding: 0;}"
+      ],
+      "settings": {
+        "heading": "Get the Qure",
+        "sub_heading": "<h4>Reclaim your confidence at any age, no matter what your skin concern is.</h4>",
+        "container": "container-fluid",
+        "slide_on_desktop": 4,
+        "slide_on_tablet": 2,
+        "slide_on_mobile": 1
       }
     },
     "text_with_video_TwRQhd": {
