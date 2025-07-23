@@ -68,9 +68,7 @@
     {% endif %}
 
 
-  <!-- PDQ APP -->
-  <script type="text/javascript" experiment_id= "monitoring22-06-2025" src="https://pdq-scripts.pdqprod.link/pdq-text-abtest.js" id="pdq_custom_ab_test_script"></script>
-  <!-- PDQ APP -->
+ 
 
     <!--== CSS ==-->
     {%- render 'head-assets' -%}
@@ -80,7 +78,6 @@
 
     {{ content_for_header }}
 
-    {% include 'redirect' %}
     {% include 'config-layout' %}
 
     <!-- styles endrock -->
@@ -201,8 +198,8 @@
     <script src="{{ 'slideLogin.js' | asset_url }}"></script>
     <script src="{{ '__app_trackObject.js' | asset_url }}"></script>
     <script src="{{ '__app_serums-months-form.js' | asset_url }}"></script>
-
     <script src="{{ '__app_serums-refill-form.js' | asset_url }}"></script>
+    <script src="{{ '__app-get-country.js' | asset_url }}"></script>
 
     <script defer type="text/javascript">
         /* order by: states info */
@@ -285,6 +282,7 @@
     {% section 'slidecart' %}
 
     {% render 'gdpr' %} 
+    {% include 'redirect' %}
     {% comment %} Scroll Depth Tracking on PostHog {% endcomment %}
     <script>
         let maxScrollDepth = 0;
