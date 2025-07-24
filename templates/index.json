@@ -194,17 +194,6 @@
         "reset_spacing": false
       }
     },
-    "sub_banner_mDCcyx": {
-      "type": "sub-banner",
-      "name": "t:common.sub-banner.label",
-      "settings": {
-        "heading": "Save up to 55% on Exclusive Bundles",
-        "image": "shopify:\/\/shop_images\/sub_banner.webp",
-        "image_mobile": "shopify:\/\/shop_images\/sub_banner-mob.webp",
-        "link_label": "Buy Now",
-        "link_url": "https:\/\/www.qureskincare.com\/pages\/exclusive-holiday-bundle-deal"
-      }
-    },
     "promotion_main_banner_second_jCUkqh": {
       "type": "promotion-main-banner-second",
       "blocks": {
@@ -213,17 +202,17 @@
           "settings": {
             "link_label": "Shop Now & Save",
             "link_label_mobile": "Shop Now & Save",
-            "link_url": "https:\/\/qureskincare.com\/pages\/qure-filters-offer?variant=45909763490031"
+            "link_url": "https://qureskincare.com/pages/qure-filters-offer?variant=45909763490031"
           }
         },
         "banner_6wgzUN": {
           "type": "banner",
           "settings": {
             "heading": "Save up to 55% on Exclusive Bundles",
-            "image": "shopify:\/\/shop_images\/sub_banner.webp",
-            "image_mobile": "shopify:\/\/shop_images\/sub_banner-mob.webp",
+            "image": "shopify://shop_images/sub_banner.webp",
+            "image_mobile": "shopify://shop_images/sub_banner-mob.webp",
             "link_label": "Buy Now",
-            "link_url": "https:\/\/www.qureskincare.com\/pages\/exclusive-holiday-bundle-deal"
+            "link_url": "https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal"
           }
         }
       },
@@ -236,11 +225,11 @@
         "heading": "Two Filters. One Goal: Healthier Skin.",
         "heading_mobile": "Two Filters. One Goal: Healthier Skin.",
         "heading_tag": "h1",
-        "subheading": "<h5>Get Faucet Filter FREE<\/h5>",
-        "subheading_mobile": "<h5>Get Faucet Filter FREE<\/h5>",
-        "text": "<h6>Limited Time Offer <\/h6>",
-        "video": "shopify:\/\/files\/videos\/faucet_offer-d.webm",
-        "video_mobile": "shopify:\/\/files\/videos\/faucet_offer-m.webm"
+        "subheading": "<h5>Get Faucet Filter FREE</h5>",
+        "subheading_mobile": "<h5>Get Faucet Filter FREE</h5>",
+        "text": "<h6>Limited Time Offer </h6>",
+        "video": "shopify://files/videos/faucet_offer-d.webm",
+        "video_mobile": "shopify://files/videos/faucet_offer-m.webm"
       }
     },
     "promotion_main_banner_48gkNr": {
@@ -251,25 +240,25 @@
           "settings": {
             "link_label": "Shop Best Sellers",
             "link_label_mobile": "Shop Best Sellers",
-            "link_url": "shopify:\/\/collections\/best-sellers"
+            "link_url": "shopify://collections/best-sellers"
           }
         },
         "product_BANXY7": {
           "type": "product",
           "settings": {
-            "heading": "<p>Micro-Infusion Bundle<\/p>",
-            "image": "shopify:\/\/shop_images\/mi_bundle.webp",
-            "product_url": "shopify:\/\/products\/exclusive"
+            "heading": "<p>Micro-Infusion Bundle</p>",
+            "image": "shopify://shop_images/mi_bundle.webp",
+            "product_url": "shopify://products/exclusive"
           }
         },
         "banner_6wgzUN": {
           "type": "banner",
           "settings": {
             "heading": "Save up to 55% on Exclusive Bundles",
-            "image": "shopify:\/\/shop_images\/sub_banner.webp",
-            "image_mobile": "shopify:\/\/shop_images\/sub_banner-mob.webp",
+            "image": "shopify://shop_images/sub_banner.webp",
+            "image_mobile": "shopify://shop_images/sub_banner-mob.webp",
             "link_label": "Buy Now",
-            "link_url": "https:\/\/www.qureskincare.com\/pages\/exclusive-holiday-bundle-deal"
+            "link_url": "https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal"
           }
         }
       },
@@ -283,11 +272,11 @@
         "heading": "",
         "heading_mobile": "",
         "heading_tag": "h1",
-        "subheading": "<h3>Get clinic-level results<\/h3><h4>from home- minus<\/h4><h5>the ‘clinical’ costs.<\/h5>",
-        "subheading_mobile": "<h3>Get clinic-level results<\/h3><h4>from home- minus<\/h4><h5>the ‘clinical’ costs.<\/h5>",
-        "text": "<p><strong>300,000+ <\/strong>customers feel more confident in their own skin.<\/p>",
-        "image": "shopify:\/\/shop_images\/Banner_57c19f02-06bd-42fa-ac3a-6ebd0393ecc4.png",
-        "image_mobile": "shopify:\/\/shop_images\/hm_banner_clinic_results.png_mob.webp",
+        "subheading": "<h3>Get clinic-level results</h3><h4>from home- minus</h4><h5>the ‘clinical’ costs.</h5>",
+        "subheading_mobile": "<h3>Get clinic-level results</h3><h4>from home- minus</h4><h5>the ‘clinical’ costs.</h5>",
+        "text": "<p><strong>300,000+ </strong>customers feel more confident in their own skin.</p>",
+        "image": "shopify://shop_images/Banner_57c19f02-06bd-42fa-ac3a-6ebd0393ecc4.png",
+        "image_mobile": "shopify://shop_images/hm_banner_clinic_results.png_mob.webp",
         "wistia_id": ""
       }
     },
@@ -384,6 +373,17 @@
         "padding_top": 30,
         "padding_bottom": 30,
         "reset_spacing": false
+      }
+    },
+    "sub_banner_mDCcyx": {
+      "type": "sub-banner",
+      "name": "t:common.sub-banner.label",
+      "settings": {
+        "heading": "Save up to 55% on Exclusive Bundles",
+        "image": "shopify://shop_images/sub_banner.webp",
+        "image_mobile": "shopify://shop_images/sub_banner-mob.webp",
+        "link_label": "Buy Now",
+        "link_url": "https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal"
       }
     },
     "featuredin_extended_P7BNDN": {
@@ -489,16 +489,16 @@
     "results_slider_w6BARa": {
       "type": "results-slider",
       "blocks": {
-        "slide_ApYVrJ": {
+        "slide_yWqyRW": {
           "type": "Slide",
           "settings": {
-            "heading": "IT REALLY WORKS!!",
+            "heading": "Thrilled with the results!",
             "product": "Q-Rejuvalight Pro LED Mask",
             "stars_img": "shopify://shop_images/results_star-full.svg",
-            "text": "<p>I was very skeptical when my husband bought this mask for me. But after 6mo the results are amazing!! I’ve tried numerous serums for my sun spots but nothing worked until I used this mask. Definitely worth the money.</p>",
-            "image": "shopify://shop_images/results_teresa.webp",
-            "image_country": "shopify://shop_images/america_f_92cbd39d-f0e3-42b9-a692-c714420fbe53.webp",
-            "client": "Teresa S.",
+            "text": "<p>\"I am 45 so I am fighting signs of aging, but also still dealing with acne flare ups. I haven’t had a single breakout since I started using the mask, plus I notice a definite smoothing of fine wrinkles on my cheeks & around my eyes. I recommend this product to anyone. Well worth the investment.\"</p>",
+            "image": "shopify://shop_images/Jessica_k_led_mask_b_a.png",
+            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "client": "Jessica K.",
             "concerns": "",
             "verified": true
           }
@@ -573,16 +573,16 @@
             "verified": true
           }
         },
-        "slide_yWqyRW": {
+        "slide_ApYVrJ": {
           "type": "Slide",
           "settings": {
-            "heading": "Thrilled with the results!",
+            "heading": "IT REALLY WORKS!!",
             "product": "Q-Rejuvalight Pro LED Mask",
             "stars_img": "shopify://shop_images/results_star-full.svg",
-            "text": "<p>\"I am 45 so I am fighting signs of aging, but also still dealing with acne flare ups. I haven’t had a single breakout since I started using the mask, plus I notice a definite smoothing of fine wrinkles on my cheeks & around my eyes. I recommend this product to anyone. Well worth the investment.\"</p>",
-            "image": "shopify://shop_images/Jessica_k_led_mask_b_a.png",
-            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
-            "client": "Jessica K.",
+            "text": "<p>I was very skeptical when my husband bought this mask for me. But after 6mo the results are amazing!! I’ve tried numerous serums for my sun spots but nothing worked until I used this mask. Definitely worth the money.</p>",
+            "image": "shopify://shop_images/results_teresa.webp",
+            "image_country": "shopify://shop_images/america_f_92cbd39d-f0e3-42b9-a692-c714420fbe53.webp",
+            "client": "Teresa S.",
             "concerns": "",
             "verified": true
           }
@@ -603,137 +603,19 @@
         }
       },
       "block_order": [
-        "slide_ApYVrJ",
+        "slide_yWqyRW",
         "slide_8DpTJn",
         "slide_wwBJ3B",
         "slide_xWKmb6",
         "slide_8TxkNC",
         "slide_hFbVVd",
-        "slide_yWqyRW",
+        "slide_ApYVrJ",
         "slide_PmixWy"
       ],
       "settings": {
         "ctm_cls_results": "",
         "heading": "See the results yourself",
         "rating_text": ""
-      }
-    },
-    "advisors_MYYMCj": {
-      "type": "advisors",
-      "blocks": {
-        "object_HV9VTX": {
-          "type": "object",
-          "settings": {
-            "heading": "Dr Shah, MD",
-            "subheading": "Board-Certified Dermatologist",
-            "text": "<p>“I like that they put a lot of R&D into their products -                                                       Ultimately, I think that they care a lot about the products they                                                        are putting out”</p>",
-            "image": "shopify://shop_images/advisor_1.webp",
-            "customClass": ""
-          }
-        },
-        "object_fwn8MX": {
-          "type": "object",
-          "settings": {
-            "heading": "Dr Maxfield, MD",
-            "subheading": "Board-Certified Dermatologist",
-            "text": "<p>“Qure do studies on this, taking a look at how effective it is, so you can have confidence it’s going to hep what you’re doing for your skincare routine”</p>",
-            "image": "shopify://shop_images/advisor_2.webp",
-            "customClass": ""
-          }
-        },
-        "object_ztcPKz": {
-          "type": "object",
-          "settings": {
-            "heading": "Dr Alexis Stephens, MD",
-            "subheading": "Board-Certified Dermatologist",
-            "text": "<p>\"What really sets Qure apart is the level of innovation and thoughtfulness they put into each product. Their commitment to quality and attention to detail really shines through in everything they create\"</p>",
-            "image": "shopify://shop_images/advisor_3.webp",
-            "customClass": ""
-          }
-        },
-        "object_rkVQek": {
-          "type": "object",
-          "settings": {
-            "heading": "Dr Prem Tripathi, MD",
-            "subheading": "Double Board Certified Facial Plastic Surgeon",
-            "text": "<p>“I love that Qure Skincare products go beyond just topical treatments, helping to maintain the results of in-office procedures.”</p>",
-            "image": "shopify://shop_images/advisor_4.webp",
-            "customClass": ""
-          }
-        }
-      },
-      "block_order": [
-        "object_HV9VTX",
-        "object_fwn8MX",
-        "object_ztcPKz",
-        "object_rkVQek"
-      ],
-      "custom_css": [
-        ".targetSkin .swiper-slide:nth-of-type(4) .text-white {margin-top: -10px;}"
-      ],
-      "settings": {
-        "heading": "Meet our board of advisors",
-        "heading_mobile": "Board of advisors",
-        "subheading": "At Qure Skincare, we are proud to have a team of esteemed Dermatologists guiding our mission to deliver high-quality skincare solutions.",
-        "subheading_mobile": "Meet our board of advisors:"
-      }
-    },
-    "featured_collection_Hj3Xcw": {
-      "type": "featured-collection",
-      "blocks": {
-        "column_6Tzrqz": {
-          "type": "column",
-          "settings": {
-            "c_image": "shopify://shop_images/skin_c1.webp",
-            "name": "Signs of aging, fine lines & wrinkles",
-            "button": "Shop Now",
-            "btn_url": "https://www.qureskincare.com/collections/fine-line-wrinkles"
-          }
-        },
-        "column_XGE36r": {
-          "type": "column",
-          "settings": {
-            "c_image": "shopify://shop_images/skin_c2.webp",
-            "name": "Dark spots & uneven skin tone",
-            "button": "Shop Now",
-            "btn_url": "https://www.qureskincare.com/collections/dark-spots?ose=false"
-          }
-        },
-        "column_pTADx3": {
-          "type": "column",
-          "settings": {
-            "c_image": "shopify://shop_images/skin_c3.webp",
-            "name": "Acne Breakouts & Blemishes",
-            "button": "Shop Now",
-            "btn_url": "https://www.qureskincare.com/collections/acne-breakouts?ose=false"
-          }
-        },
-        "column_7bHmxW": {
-          "type": "column",
-          "settings": {
-            "c_image": "shopify://shop_images/skin_c4.webp",
-            "name": "Large pores & textured skin",
-            "button": "Shop Now",
-            "btn_url": "https://www.qureskincare.com/collections/dark-spots?"
-          }
-        }
-      },
-      "block_order": [
-        "column_6Tzrqz",
-        "column_XGE36r",
-        "column_pTADx3",
-        "column_7bHmxW"
-      ],
-      "custom_css": [
-        ".container-fluid {padding: 0;}"
-      ],
-      "settings": {
-        "heading": "Get the Qure",
-        "sub_heading": "<h4>Reclaim your confidence at any age, no matter what your skin concern is.</h4>",
-        "container": "container-fluid",
-        "slide_on_desktop": 4,
-        "slide_on_tablet": 2,
-        "slide_on_mobile": 1
       }
     },
     "products_grid_mCReWM": {
@@ -798,6 +680,7 @@
         "product_RV8HgT",
         "product_3hFb8X"
       ],
+      "custom_css": [],
       "settings": {
         "heading": "Best Sellers",
         "btn": "Shop All Best-Sellers",
@@ -844,6 +727,125 @@
       ],
       "settings": {
         "background": "bg-grey"
+      }
+    },
+    "advisors_MYYMCj": {
+      "type": "advisors",
+      "blocks": {
+        "object_HV9VTX": {
+          "type": "object",
+          "settings": {
+            "heading": "Dr Shah, MD",
+            "subheading": "Board-Certified Dermatologist",
+            "text": "<p>“I like that they put a lot of R&D into their products -                                                       Ultimately, I think that they care a lot about the products they                                                        are putting out”</p>",
+            "image": "shopify://shop_images/advisor_1.webp",
+            "customClass": ""
+          }
+        },
+        "object_fwn8MX": {
+          "type": "object",
+          "settings": {
+            "heading": "Dr Maxfield, MD",
+            "subheading": "Board-Certified Dermatologist",
+            "text": "<p>“Qure do studies on this, taking a look at how effective it is, so you can have confidence it’s going to hep what you’re doing for your skincare routine”</p>",
+            "image": "shopify://shop_images/advisor_2.webp",
+            "customClass": ""
+          }
+        },
+        "object_ztcPKz": {
+          "type": "object",
+          "settings": {
+            "heading": "Dr Alexis Stephens, MD",
+            "subheading": "Board-Certified Dermatologist",
+            "text": "<p>\"What really sets Qure apart is the level of innovation and thoughtfulness they put into each product. Their commitment to quality and attention to detail really shines through in everything they create\"</p>",
+            "image": "shopify://shop_images/advisor_3.webp",
+            "customClass": ""
+          }
+        },
+        "object_rkVQek": {
+          "type": "object",
+          "settings": {
+            "heading": "Dr Prem Tripathi, MD",
+            "subheading": "Double Board Certified Facial Plastic Surgeon",
+            "text": "<p>“I love that Qure Skincare products go beyond just topical treatments, helping to maintain the results of in-office procedures.”</p>",
+            "image": "shopify://shop_images/advisor_4.webp",
+            "customClass": ""
+          }
+        }
+      },
+      "block_order": [
+        "object_HV9VTX",
+        "object_fwn8MX",
+        "object_ztcPKz",
+        "object_rkVQek"
+      ],
+      "custom_css": [
+        ".targetSkin .swiper-slide:nth-of-type(4) .text-white {margin-top: -10px;}",
+        ".board_of-advisors {padding:60px 0px;}"
+      ],
+      "settings": {
+        "heading": "Meet our board of advisors",
+        "heading_mobile": "Board of advisors",
+        "subheading": "At Qure Skincare, we are proud to have a team of esteemed Dermatologists guiding our mission to deliver high-quality skincare solutions.",
+        "subheading_mobile": "Meet our board of advisors:"
+      }
+    },
+    "featured_collection_Hj3Xcw": {
+      "type": "featured-collection",
+      "blocks": {
+        "column_6Tzrqz": {
+          "type": "column",
+          "settings": {
+            "c_image": "shopify://shop_images/skin_c1.webp",
+            "name": "Signs of aging, fine lines & wrinkles",
+            "button": "Shop Now",
+            "btn_url": "https://www.qureskincare.com/collections/fine-line-wrinkles"
+          }
+        },
+        "column_XGE36r": {
+          "type": "column",
+          "settings": {
+            "c_image": "shopify://shop_images/skin_c2.webp",
+            "name": "Dark spots & uneven skin tone",
+            "button": "Shop Now",
+            "btn_url": "https://www.qureskincare.com/collections/dark-spots?ose=false"
+          }
+        },
+        "column_pTADx3": {
+          "type": "column",
+          "settings": {
+            "c_image": "shopify://shop_images/skin_c3.webp",
+            "name": "Acne Breakouts & Blemishes",
+            "button": "Shop Now",
+            "btn_url": "https://www.qureskincare.com/collections/acne-breakouts?ose=false"
+          }
+        },
+        "column_7bHmxW": {
+          "type": "column",
+          "settings": {
+            "c_image": "shopify://shop_images/skin_c4.webp",
+            "name": "Large pores & textured skin",
+            "button": "Shop Now",
+            "btn_url": "https://www.qureskincare.com/collections/dark-spots?"
+          }
+        }
+      },
+      "block_order": [
+        "column_6Tzrqz",
+        "column_XGE36r",
+        "column_pTADx3",
+        "column_7bHmxW"
+      ],
+      "custom_css": [
+        ".container-fluid {padding: 0;}"
+      ],
+      "settings": {
+        "heading": "Get the Qure",
+        "sub_heading": "<h4>Reclaim your confidence at any age, no matter what your skin concern is.</h4>",
+        "container": "container-fluid",
+        "slide_on_desktop": 4,
+        "slide_on_tablet": 2,
+        "slide_on_mobile": 1
       }
     },
     "text_with_video_TwRQhd": {
@@ -1193,10 +1195,10 @@
     "sub_banner_mDCcyx",
     "featuredin_extended_P7BNDN",
     "results_slider_w6BARa",
-    "advisors_MYYMCj",
-    "featured_collection_Hj3Xcw",
     "products_grid_mCReWM",
     "icons_list_iPVXgA",
+    "advisors_MYYMCj",
+    "featured_collection_Hj3Xcw",
     "text_with_video_TwRQhd",
     "testimonials_m84mqf",
     "box_slider_HRHeRA",
