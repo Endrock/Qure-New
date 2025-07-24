@@ -1,0 +1,174 @@
+{%- comment -%}
+  Renders the PDM Timeline Progress component.
+
+  Purpose:
+  Displays an interactive timeline with navigation, image comparison sliders, progress bar, and responsive controls.
+  It is designed to showcase a sequence of "before and after" cards (image comparisons) in a progressive format.
+
+  Accepts:
+  - section_settings: (object) Required. Holds the title for the section and other configurable data.
+  - blocks: (array) Required. Collection of blocks of type 'card', each containing:
+    - before_image (image): Image to display on the left side of the comparison.
+    - after_image (image): Image to display on the right side of the comparison.
+    - title (string): Title text for the card.
+    - content (HTML): HTML/text content below the image.
+    - button_title (string): Label for the step navigation.
+    - button_subtitle (string): Subtitle for the step navigation.
+
+  Usage:
+  {% render 'pdm_timeline-progess', section_settings: section.settings, blocks: section.blocks %}
+
+  Dependencies:
+  - Third-party: Image Comparison Slider from CDN (img-comparison-slider)
+  - Stylesheet: __pdm-timeline-progress.css
+  - JavaScript: __pdm-timeline-progress.js (defines the <pdm-timeline-progress> Web Component)
+
+  Notes:
+  - Ensure all blocks passed are of type 'card'.
+  - The first card is shown by default; others are revealed via navigation.
+  - Includes responsive mobile support via navigation dots and horizontal scroll.
+{%- endcomment -%}
+
+<!-- Include Image Comparison Slider styles and script from CDN -->
+
+<!-- Begin Image Comparison Slider assets -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"
+></script>
+<!-- End Image Comparison Slider assets -->
+
+<!-- Load custom CSS for timeline component -->
+{{ '__pdm-timeline-progress.css' | asset_url | stylesheet_tag }}
+
+<!-- Filter blocks to only include those of type 'card' -->
+{% assign card_blocks = blocks | where: 'type', 'card' %}
+
+<!-- Custom Web Component wrapper -->
+<pdm-timeline-progress>
+  <div class="timeline-progress">
+    <div class="timeline-progress-content">
+      <!-- Section title -->
+      <h2 class="timeline-progress-title">{{ section_settings.section_title }}</h2>
+
+      {% comment %} Timeline navigation: Step indicators and progress bar {% endcomment %}
+      <div class="timeline-progress-nav-wrapper">
+        <div class="timeline-progress-nav">
+          <!-- Horizontal line that holds the animated progress bar -->
+          <div class="timeline-nav-line">
+            <div class="timeline-progress-bar" style="width: 0%"></div>
+          </div>
+
+          <!-- Step navigation items -->
+          <div class="timeline-nav-items">
+            {% for block in card_blocks %}
+              <div class="timeline-nav-item" data-index="{{ forloop.index0 }}">
+                <!-- Step circle button -->
+                <button class="timeline-nav-btn"></button>
+
+                <!-- Step labels -->
+                <div class="timeline-nav-labels">
+                  <h4>{{ block.settings.button_title }}</h4>
+                  <p>{{ block.settings.button_subtitle }}</p>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      {% comment %} Timeline cards: main content with image comparison {% endcomment %}
+      <div class="timeline-progress-cards">
+        <div class="timeline-cards-container">
+          {% for block in card_blocks %}
+            <div
+              class="timeline-card {% if forloop.index0 == 0 %}active{% endif %}"
+              data-index="{{ forloop.index0 }}"
+            >
+              <!-- Image comparison slider -->
+              <div class="timeline-card-image">
+                <img-comparison-slider class="img-comparison-slider">
+                  {% assign image_1 = block.settings.before_image | image_url: width: 1200 %}
+                  {% assign image_2 = block.settings.after_image | image_url: width: 1200 %}
+
+                  <!-- Before image -->
+                  <img
+                    slot="first"
+                    src="{{ image_1 }}"
+                    class="timeline-card-image-before-image"
+                    height="200"
+                  >
+
+                  <!-- After image -->
+                  <img
+                    slot="second"
+                    src="{{ image_2 }}"
+                    height="200"
+                    class="timeline-card-image-after-image"
+                  >
+
+                  <!-- Custom SVG handle for the slider -->
+                  <svg
+                    slot="handle"
+                    width="40"
+                    height="30"
+                    viewBox="0 0 40 30"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect y="-0.000244141" width="40" height="30" rx="15" fill="white" fill-opacity="0.2"/>
+                    <rect y="-0.000244141" width="40" height="30" rx="15" fill="white" fill-opacity="0.7"/>
+                    <path d="M14.9963 9.86791L9.5625 15.3018L14.9963 20.1318" stroke="#B5B6B7" stroke-linecap="round"/>
+                    <path d="M25.0037 20.1316L30.4375 14.6978L25.0037 9.86768" stroke="#B5B6B7" stroke-linecap="round"/>
+                  </svg>
+                </img-comparison-slider>
+              </div>
+
+              <!-- Card textual content -->
+              <div class="timeline-card-content">
+                <h4>{{ block.settings.title | capitalize }}</h4>
+                {{ block.settings.content }}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      {% comment %} Timeline controls: navigation arrows + mobile dots {% endcomment %}
+      <div class="timeline-progress-controls">
+        <!-- Previous button -->
+        <button data-direction="prev" id="timeline-prev" class="timeline-btn" disabled>
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+            <path d="M6.71509 0.868151L1.28125 6.302L6.71509 11.1321" stroke="black" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        {% comment %} Mobile dots for step navigation on small screens {% endcomment %}
+        <div class="timeline-dots">
+          <div class="timeline-dots-wrapper">
+            {% for block in card_blocks %}
+              <div
+                class="timeline-dot {% if forloop.index0 == 0 %}active{% endif %}"
+                data-index="{{ forloop.index0 }}"
+              ></div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <!-- Next button -->
+        <button data-direction="next" id="timeline-next" class="timeline-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+            <path d="M1.28491 11.1318L6.71875 5.698L1.28491 0.86792" stroke="black" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</pdm-timeline-progress>
+
+<!-- Load JavaScript behavior for the timeline component -->
+<script defer src="{{ '__pdm-timeline-progress.js' | asset_url }}"></script>
