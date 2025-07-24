@@ -1,3 +1,9 @@
+/**
+ * Bundle Kit LED Mask - Refactored Version
+ * Simplified to handle only 2 products: Original and Bundle
+ * Removed skincare kit functionality as requested
+ */
+
 // Global DOM elements cache to avoid repetitive queries
 let domCache = {};
 
@@ -6,13 +12,9 @@ let domCache = {};
  */
 const initDOMCache = () => {
   domCache = {
-    // Kit products
+    // Kit products (only original and bundle)
     originalProductInput: document.querySelector(".choose-your-kit-section__products .product-item.product-original input#productonly"),
     bundleProductInput: document.querySelector(".choose-your-kit-section__products .product-item.product-bundle input#productbundle"),
-    
-    // Skincare products
-    skincareKitInput1: document.querySelector(".choose-your-skincarekit-section__product .skincare-bundle input[name='original_productskincare']"),
-    skincareKitInput2: document.querySelector(".choose-your-skincarekit-section__product .skincare-bundle input[name='bundle_productskincare']"),
     
     // UI elements
     kitProducts: document.querySelectorAll(".choose-your-kit-section__products label.product-item"),
@@ -23,11 +25,7 @@ const initDOMCache = () => {
     stickyButtonElement: document.querySelector(".button_sticky_wrapper"),
     stickyBuyButton: document.querySelector(".button_sticky_wrapper__button_sticky"),
     stickyTitle: document.querySelector(".button_sticky_wrapper__title"),
-    stickyImage: document.querySelector(".button_sticky_wrapper__product-image"),
-    
-    // Skincare elements
-    skincarekitProducts: document.querySelectorAll('.skincarekit-products'),
-    skincarekitProductsRadio: document.querySelector('.skincare-bundle-container input[name="productskincare"]')
+    stickyImage: document.querySelector(".button_sticky_wrapper__product-image")
   };
 };
 
@@ -56,6 +54,7 @@ let productInfoCache = null;
 /**
  * Initializes Bundle Kit LED Mask product information
  * Implements singleton pattern to avoid unnecessary recalculations
+ * Now handles only original and bundle products
  * 
  * @returns {Object} Object with product information indexed by variantId
  */
@@ -72,14 +71,12 @@ const initBundleKitLedMask = () => {
     initDOMCache();
   }
 
-  // Extract product information using helper function
+  // Extract product information using helper function (only 2 products now)
   const originalProduct = extractProductInfo(domCache.originalProductInput, 'product-original');
   const bundleProduct = extractProductInfo(domCache.bundleProductInput, 'product-bundle');
-  const skincareProduct1 = extractProductInfo(domCache.skincareKitInput1, 'productskincare');
-  const skincareProduct2 = extractProductInfo(domCache.skincareKitInput2, 'productskincare');
 
   // Validate that we have the necessary information
-  const products = [originalProduct, bundleProduct, skincareProduct1, skincareProduct2];
+  const products = [originalProduct, bundleProduct];
   if (products.some(product => !product || !product.variantId)) {
     console.error("Error: Missing required product information");
     return { productinfo: {} };
@@ -88,7 +85,7 @@ const initBundleKitLedMask = () => {
   // Create product information object
   productInfoCache = {};
   
-  [originalProduct, bundleProduct, skincareProduct1, skincareProduct2].forEach(product => {
+  [originalProduct, bundleProduct].forEach(product => {
     if (product && product.variantId) {
       productInfoCache[product.variantId] = product;
     }
@@ -99,9 +96,9 @@ const initBundleKitLedMask = () => {
 };
 
 /**
- * Actualiza atributos de un botón con información del producto
- * @param {HTMLElement} button - Elemento botón a actualizar
- * @param {Object} productInfo - Información del producto
+ * Updates button attributes with product information
+ * @param {HTMLElement} button - Button element to update
+ * @param {Object} productInfo - Product information object
  */
 const updateButtonAttributes = (button, productInfo) => {
   if (!button || !productInfo) return;
@@ -111,14 +108,12 @@ const updateButtonAttributes = (button, productInfo) => {
 };
 
 /**
- * Determina qué variante usar basándose en el estado del checkbox de skincare
- * y actualiza automáticamente la información de los botones sticky
- * @param {HTMLElement} selectedKitProduct - Elemento del producto kit seleccionado
- * @param {boolean} updateButtons - Si debe actualizar los botones automáticamente (default: true)
- * @returns {string} ID de la variante a usar
+ * Gets the variant ID from selected kit product
+ * Simplified since we no longer have skincare variants
+ * @param {HTMLElement} selectedKitProduct - Selected kit product element
+ * @returns {string} Variant ID to use
  */
-const getCorrectVariantId = (selectedKitProduct, updateButtons = true) => {
-  const isSkincareChecked = domCache.skincarekitProductsRadio?.checked;
+const getCorrectVariantId = (selectedKitProduct) => {
   const kitInput = selectedKitProduct?.querySelector('input[name="product-kit"]');
   
   if (!kitInput) {
@@ -126,29 +121,16 @@ const getCorrectVariantId = (selectedKitProduct, updateButtons = true) => {
     return null;
   }
 
-  let variantId;
+  // Simply return the kit variant value (no skincare logic needed)
+  const variantId = kitInput.value;
+  console.log("Using kit variant:", variantId);
   
-  if (isSkincareChecked) {
-    // Si skincare está marcado, usar la variante de skincare
-    variantId = kitInput.getAttribute('data-productskincare-variant-id');
-    console.log("Using skincare variant:", variantId);
-  } else {
-    // Si skincare no está marcado, usar la variante normal del kit
-    variantId = kitInput.value;
-    console.log("Using kit variant:", variantId);
-  }
-
-  // Actualizar botones automáticamente si se solicita
-  if (updateButtons && variantId) {
-    setInfoStickyBuyButton(variantId);
-  }
-
   return variantId;
 };
 
 /**
- * Actualiza la información de los botones "Buy Now" principal y sticky
- * @param {number|string} productSelected - ID del producto seleccionado
+ * Updates main and sticky "Buy Now" buttons with product-specific information
+ * @param {number|string} productSelected - Selected product ID
  */
 const setInfoStickyBuyButton = (productSelected) => {
   const { productinfo } = initBundleKitLedMask();
@@ -161,11 +143,11 @@ const setInfoStickyBuyButton = (productSelected) => {
 
   console.log("Selected product info:", selectedProduct);
 
-  // Actualizar botones
+  // Update buttons
   updateButtonAttributes(domCache.buyNowButton, selectedProduct);
   updateButtonAttributes(domCache.stickyBuyButton, selectedProduct);
 
-  // Actualizar información sticky
+  // Update sticky information
   if (domCache.stickyTitle) {
     domCache.stickyTitle.textContent = selectedProduct.title;
   }
@@ -178,6 +160,7 @@ const setInfoStickyBuyButton = (productSelected) => {
 
 /**
  * Sets up event listeners for kit product changes
+ * Simplified without skincare logic
  */
 const changeStatusKitProduct = () => {
   if (!domCache.kitProductsRadio.length) {
@@ -202,10 +185,12 @@ const changeStatusKitProduct = () => {
       if (selectedProduct) {
         selectedProduct.classList.add("selected");
         
-        // Determine correct variant and update buttons automatically
+        // Get variant ID and update buttons
         const correctVariantId = getCorrectVariantId(selectedProduct);
         
-        if (!correctVariantId) {
+        if (correctVariantId) {
+          setInfoStickyBuyButton(correctVariantId);
+        } else {
           console.warn("Could not determine correct variant, using fallback");
           // Fallback to original value if correct variant cannot be determined
           setInfoStickyBuyButton(this.value);
@@ -247,34 +232,6 @@ const initStickyBuyButtonInfo = () => {
 };
 
 /**
- * Handles changes in skincare product selection
- */
-const skincareKitProductTrigger = () => {
-  if (!domCache.skincarekitProductsRadio) {
-    console.warn("Skincare kit radio button not found");
-    return;
-  }
-
-  domCache.skincarekitProductsRadio.addEventListener('change', function () {
-    const productKitSelected = document.querySelector('.choose-your-kit-section__products .product-item.selected');
-    
-    if (!productKitSelected) {
-      console.warn("No kit product selected");
-      return;
-    }
-
-    // Use centralized function that automatically updates buttons
-    const correctVariantId = getCorrectVariantId(productKitSelected);
-    
-    if (!correctVariantId) {
-      console.error("Could not determine correct variant ID");
-    } else {
-      console.log(`Skincare ${this.checked ? 'checked' : 'unchecked'} - Using variant:`, correctVariantId);
-    }
-  });
-};
-
-/**
  * Main initialization function
  */
 const init = () => {
@@ -283,7 +240,6 @@ const init = () => {
     initStickyBuyButtonInfo();
     initBundleKitLedMask();
     changeStatusKitProduct();
-    skincareKitProductTrigger();
     
     console.log("Bundle Kit LED Mask initialized successfully");
   } catch (error) {
