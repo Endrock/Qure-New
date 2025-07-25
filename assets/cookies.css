@@ -1,8 +1,8 @@
 .cookies_wrap {
     /* max-width: 950px; */
-    padding: 28px 0px;
     /* border-radius: 8px; */
     background: #fff;
+    padding: 24px;
 }
 
 .modal-dialog {
@@ -16,13 +16,22 @@
     display: grid;
 }
 
+.col-md-7.additional-config{
+    display: flex;
+    align-items: center;
+}
+
+.col-md-5.additional-config{
+    padding: 0 !important;
+}
+
 .cookies_wrap h5 {
+    display: none;
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
     line-height: 26px;
     letter-spacing: 0.14px;
-    margin-bottom: 10px;
 }
 
 .cookies_wrap p {
@@ -33,15 +42,13 @@
 .cookie_btn_wrap {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin: 20px 0 10px;
 }
 
 .cookie_btn_wrap .btn {
     border-radius: 100px;
     border: 1px solid #000;
     background: var(--White, #FFF);
-    padding: 6px 17px;
+    padding: 12px 17px;
     margin: 0;
     box-shadow: none;
     font-size: 13px;
@@ -49,13 +56,43 @@
     font-weight: 500;
     line-height: 22.018px;
     letter-spacing: 0.13px;
-    max-width: fit-content;
+    /* max-width: fit-content; */
+    width: 100%;
 }
 
 .cookie_btn_wrap .btn.btn_black {
     background: #000;
     color: #fff;
+    margin-right: 14px;
 }
+
+.cookie_btn_wrap .btn.btn_white{
+    margin-right: 16px;
+}
+
+.cookie_btn_wrap .btn.btn_white:hover {
+    background: #000;
+    color: #fff;
+}
+
+.cookie_btn_wrap .btn-preferences{
+    color: #000;
+    font-family: Poppins;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    border: none;
+    background: transparent;
+    flex-shrink: 0;
+}
+
+
 
 a.cookies_link {
     font-size: 11px;
@@ -113,7 +150,7 @@ a.cookies_link {
 
 
 .cookies_wrap input:checked+.slider {
-    background-color: #000;
+    background-color: #34C759;
 }
 
 .cookies_wrap .slider:before {
@@ -180,9 +217,22 @@ a.cookies_link {
 }
 
 @media(max-width:767px) {
+    .cookies_wrap {
+        padding: 24px 16px 32px;
+    }
+
+   .col-md-7.additional-config {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 !important;
+        margin-bottom: 16px;
+    }
+
     .cookies_wrap h5 {
+        display: block;
         font-size: 13px;
         letter-spacing: 0.13px;
+        margin-bottom: 16px;
     }
 
     .cookies_wrap p,
@@ -190,6 +240,35 @@ a.cookies_link {
         font-size: 10px;
         letter-spacing: 0.1px;
     }
+
+    .cookies_wrap p.last-p{
+        padding-top: 16px;
+    }
+
+    .cookie_btn_wrap.center{
+        justify-content: center;
+    }
+
+    .cookie_btn_wrap{
+        flex-wrap: wrap;
+        justify-content: start;
+        gap: 8px;
+    }
+
+    .cookie_btn_wrap .btn.btn_black {
+        width: 50%;
+        margin-right: 0;
+    }
+
+    .cookie_btn_wrap .btn.btn_white{
+        width: 47%;
+        margin-right: 0;
+    }
+
+    .cookie_btn_wrap .btn-preferences{
+        width: fit-content;
+    }
+
 
     .cookies_wrap .accordion-item {
         border-bottom: none;
@@ -208,9 +287,13 @@ a.cookies_link {
         padding: 0px 0 10px;
     }
 
+    .cookies_wrap .accordion-body p{
+        padding-top: 8px;
+    }
+
     .cookie_btn_wrap .btn {
-        font-size: 12px;
-        padding: 6px 11px;
+        font-size: 14px;
+        padding: 16px 11px;
         line-height: 18px;
         font-weight: 500;
     }
