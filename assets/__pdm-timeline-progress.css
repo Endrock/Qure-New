@@ -202,7 +202,7 @@ body[data-timeline-progress] pdm-timeline-progress{
   margin: 0;
 }
 
-p{
+.timeline-nav-labels p{
   font-family: Poppins;
   font-size: 10px;
   font-style: italic;
@@ -220,7 +220,7 @@ p{
     letter-spacing: 0.14px;
   }
 
-  p{
+  .timeline-nav-label p{
     font-family: Poppins;
     font-size: 11px;
     font-style: italic;
@@ -240,7 +240,7 @@ p{
 
 .timeline-cards-container{
   border: 1px solid #e0e0e0;
-  border-radius: 24px;
+  border-radius: 8px;
   padding: 24px;
   max-width: 500px;
   margin: 0 auto;
@@ -310,6 +310,25 @@ p{
   margin: auto;
 }
 
+.timeline-card-content h4{
+  font-family: "Canela Web";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; /* 160% */
+  letter-spacing: 0.2px;
+}
+
+.timeline-card-content p{
+  font-family: Poppins;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: 1%;
+
+}
+
 @media screen and (min-width:1024px) {
   
   .timeline-card-content{
@@ -324,7 +343,6 @@ p{
     font-weight: 500;
     font-size: 20px;
     line-height: 32px;
-    letter-spacing: 1%;
   }
 
   .timeline-card-content p{
@@ -332,7 +350,6 @@ p{
     font-weight: 400;
     font-size: 14px;
     line-height: 26px;
-    letter-spacing: 1%;
   }
 }
 
