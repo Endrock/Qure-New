@@ -286,6 +286,8 @@
               assign txt_mb = bs.txt_mb
               assign img_mt = bs.text_img_mt
               assign img_mb = bs.text_img_mb
+              assign img_mt_mob = bs.text_img_mt_mob
+              assign img_mb_mob = bs.text_img_mb_mob
               assign button_type = bs.button_type
               assign button_size = bs.button_size
               assign btn_radius = bs.btn_radius
@@ -319,7 +321,7 @@
                 <div
                   {{ block.shopify_attributes }}
                   class="bls__banner-text--img {% if enabled_animations %}scroll-trigger animate--slide-in{% endif %}"
-                  style="width: {{ block.settings.icon_width_block }}px; --img-max-width: {{ block.settings.icon_max_width_block }}%; --img-mt: {{ img_mt }}px; --img-mb: {{ img_mb }}px;"
+                  style="width: {{ block.settings.icon_width_block }}px; --img-max-width: {{ block.settings.icon_max_width_block }}%; --img-mt: {{ img_mt }}px; --img-mt-mob: {{ img_mt_mob }}px; --img-mb: {{ img_mb }}px; --img-mb-mob: {{ img_mb_mob }}px;"
                 >
                   {%- if block.settings.image_block != blank -%}
                     {%- render 'responsive-image', image: block.settings.image_block -%}
@@ -1050,6 +1052,16 @@
           "default": 1,
           "label": "Top"
         },
+          {
+          "type": "range",
+          "id": "text_img_mt_mob",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 1,
+          "label": "Margin Top mob"
+        },
         {
           "type": "range",
           "id": "text_img_mb",
@@ -1059,7 +1071,18 @@
           "unit": "px",
           "default": 25,
           "label": "Bottom"
-        }
+        },
+ 
+        {
+          "type": "range",
+          "id": "text_img_mb_mob",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 1,
+          "label": "Margin Bottom mob"
+        },
       ]
     },
     {
