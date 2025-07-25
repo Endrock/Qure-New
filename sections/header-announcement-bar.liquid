@@ -2,7 +2,7 @@
     <p>
         {{ section.settings.heading |  replace: '<p>', '' |  replace: '</p>', '' }}
         {% if section.settings.button_label %}
-            <a href="{{ section.settings.button_url }}" aria-label="{{ section.settings.button_label | escape }}" class="bar_shop-btn text-white">{{ section.settings.button_label }}</a>
+            <a href="{{ section.settings.button_url }}" aria-label="{{ section.settings.button_label | escape }}" class="bar_shop-btn text-white" style="--ann_bg_clr: {{ ann-bg-clr }}">{{ section.settings.button_label }}</a>
         {% endif %}
     </p>
 </div>
@@ -38,6 +38,11 @@
                 "type": "url",
                 "id": "button_url",
                 "label": "t:common.button.url.label"
+            },
+            {
+                "type": "color",
+                "id": "ann-bg-clr",
+                "label": "t:common.color.label"
             }
         ],
         "presets": [

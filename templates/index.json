@@ -285,7 +285,9 @@
             "icon_width_block": 150,
             "icon_max_width_block": 100,
             "text_img_mt": 1,
-            "text_img_mb": 10
+            "text_img_mt_mob": 20,
+            "text_img_mb": 10,
+            "text_img_mb_mob": 1
           }
         },
         "heading_rFTTd3": {
@@ -384,7 +386,9 @@
             "icon_width_block": 300,
             "icon_max_width_block": 100,
             "text_img_mt": 1,
-            "text_img_mb": 10
+            "text_img_mt_mob": 1,
+            "text_img_mb": 10,
+            "text_img_mb_mob": 1
           }
         },
         "heading_3QXyAD": {
