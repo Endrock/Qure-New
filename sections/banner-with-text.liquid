@@ -33,6 +33,7 @@
   assign bn_design = st.bn_design
   assign text_bellow_mobile = st.text_bellow_mobile
   assign text_position = st.text_position
+  assign text_position_mobile = st.text_position_mobile
   assign text_horizontal_position = st.text_horizontal_position
   assign color_scheme = st.color_scheme
 
@@ -129,8 +130,21 @@
   --section-padding-top: {{ st.padding_top }}px; --section-padding-bottom: {{ st.padding_bottom }}px;
 {%- endcapture -%}  {% endcomment %}
 
-{%- assign padding_top_mobile = st.padding_top | times: 0.7 | round -%}
+{% comment %} {%- assign padding_top_mobile = st.padding_top | times: 0.7 | round -%}
 {%- assign padding_bottom_mobile = st.padding_bottom | times: 0.7 | round -%}
+
+{%- capture style -%}
+  {%- if bn_design == 'text_column' -%}
+    --bls-gutter-x: {{ column_gap }}px;
+  {%- endif -%}
+  --section-padding-top: {{ st.padding_top }}px;
+  --section-padding-bottom: {{ st.padding_bottom }}px;
+  --section-padding-top-mobile: {{ padding_top_mobile }}px;
+  --section-padding-bottom-mobile: {{ padding_bottom_mobile }}px;
+{%- endcapture -%} {% endcomment %}
+
+{%- assign padding_top_mobile = st.padding_top_mobile -%}
+{%- assign padding_bottom_mobile = st.padding_bottom_mobile -%}
 
 {%- capture style -%}
   {%- if bn_design == 'text_column' -%}
@@ -145,8 +159,8 @@
 
 
 <section
-  class="pb_mob color-{{ color_scheme }} gradient bls__section{{ has_bg }}{{ spt_tablet }}{{ spb_tablet }}{{ spt_mobile }}{{ spb_mobile }} bls__banner-with-text {{ reset_spacing }} {% if bn_design == 'text_overlay' %}bls__banner-with-text-overlay  {% if settings.image_style != blank and section.settings.column_gap != 0 and section.settings.container != "full-width" %} bls__banner-with-text-overlay-radius {% endif %}{% endif %}"
-  style="{{ style | strip | strip_newlines }} --pb_mob:0;"
+  class="color-{{ color_scheme }} gradient bls__section{{ has_bg }}{{ spt_tablet }}{{ spb_tablet }}{{ spt_mobile }}{{ spb_mobile }} bls__banner-with-text {{ reset_spacing }} {% if bn_design == 'text_overlay' %}bls__banner-with-text-overlay  {% if settings.image_style != blank and section.settings.column_gap != 0 and section.settings.container != 'full-width' %} bls__banner-with-text-overlay-radius {% endif %}{% endif %}"
+  style="{{ style | strip | strip_newlines }}"
 >
   <div class="{{ container }} section-full pl_mob pr_mob" style="--pl_mob:0; --pr_mob:0;">
     <div
@@ -235,12 +249,13 @@
         {%- endcase -%}
       </div>
       {%- if bn_design == 'text_column' -%}<div class="d-md-flex flex-direction align-self-stretch flex-1 py-3">{%- endif -%}
-      <div
-        class="{% if bn_design == 'text_column' %} {% if settings.image_style != blank and section.settings.column_gap != 0 and section.settings.container != "full-width" %} column-radius {% endif %} bg-text-column{% endif %}{% if bn_design == 'text_overlay' %}{{ container-box }} {{ banner_height }} {% if banner_height == 'depend-image' %}absolute absolute-xl inset-0{% else %}absolute inset-0{% endif %} {%- if content_bg_color != blank or background_gradient != empty -%} has-bg{% endif %}{% endif %} bls__banner-text--content {{ content_position }} {{ st.text_align }} content-position-{{ text_position }} content-horizontal-position-{{ text_horizontal_position }}"
+      <div 
+        class="{% if bn_design == 'text_column' %} {% if settings.image_style != blank and section.settings.column_gap != 0 and section.settings.container != "full-width" %} column-radius {% endif %} bg-text-column{% endif %}{% if bn_design == 'text_overlay' %}{{ container-box }} {{ banner_height }} {% if banner_height == 'depend-image' %}absolute absolute-xl inset-0{% else %}absolute inset-0{% endif %} {%- if content_bg_color != blank or background_gradient != empty -%} has-bg{% endif %}{% endif %} bls__banner-text--content {{ content_position }} {{ st.text_align }} content-position-{{ text_position }} mobile-content-position-{{ text_position_mobile }} content-horizontal-position-{{ text_horizontal_position }}"
         {% if bn_design == 'text_column' %}
           style="{%- if content_bg_color != blank or background_gradient != empty -%}{%- if background_gradient != empty -%} --content-bg: {{ background_gradient }}; {% else %} --content-bg: {{ content_bg_color }};{%- endif -%} {%- endif -%}"
         {% endif %}
       >
+
         <div
           class="bls__banner-text--content-inner {{ text_align-mob }} {% if bn_design == 'text_overlay' %}bg-overlay--content-inner{% endif %} {% if content_width > 99 %}content-full-with{% endif %} {%- if content_bg_color != blank -%}content-bg{%- endif -%}"
           style="--content-width:{{ content_width }}%;{%- if content_bg_color != blank or background_gradient != empty -%}{%- if background_gradient != empty -%} --content-bg: {{ background_gradient }}; {% else %} --content-bg: {{ content_bg_color }};{%- endif -%}{%- endif -%}--content-opacity:{{ bg_opacity }}%; --bs-gutter-x: {{ column_gap }}px;"
@@ -273,6 +288,7 @@
               assign img_mb = bs.text_img_mb
               assign button_type = bs.button_type
               assign button_size = bs.button_size
+              assign btn_radius = bs.btn_radius
               assign b_mt = bs.b_mt
               assign b_mb = bs.b_mb
 
@@ -354,8 +370,7 @@
                       target="_self"
                     {% endif %}
                     class="{% if enabled_animations %}scroll-trigger animate--slide-in{% endif %} bls__banner-text--button btn-{{ button_type }} inline-block 
-                    btn_{{ button_size }}"
-                  >
+                    btn_{{ button_size }}" style="border-radius: {{ btn_radius }}px;">
                     {{ block.settings.btn_content | escape }}
                   </a>
                 {%- endif -%}
@@ -707,6 +722,26 @@
       ]
     },
     {
+      "type": "select",
+      "id": "text_position_mobile",
+      "label": "Content ( Vertical position Mobile ) ",
+      "default": "center",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        }
+      ]
+    },
+    {
       "type": "color",
       "id": "content_bg_color",
       "label": "Content background color"
@@ -937,6 +972,26 @@
       "type": "range",
       "id": "padding_bottom",
       "label": "Padding bottom",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Padding top mob",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Padding bottom mob",
       "default": 0,
       "min": 0,
       "max": 100,
@@ -1410,6 +1465,16 @@
               "label": "Large"
             }
           ]
+        },
+        {
+          "type": "range",
+          "id": "btn_radius",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 50,
+          "label": "Button Radius"
         },
         {
           "type": "url",
