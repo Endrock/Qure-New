@@ -240,7 +240,7 @@ a.cookies_link {
 
 @media(max-width:767px) {
     .cookies_wrap {
-        padding: 24px 16px 32px;
+        padding: 14px 0px 18px;
     }
 
    .col-md-7.additional-config {
@@ -254,7 +254,7 @@ a.cookies_link {
         display: block;
         font-size: 13px;
         letter-spacing: 0.13px;
-        margin-bottom: 16px;
+        margin-bottom: 12px;
     }
 
     .cookies_wrap p,
@@ -347,9 +347,7 @@ a.cookies_link {
         padding: 20px 0;
     }
 
-    .cookies_wrap {
-        padding: 18px 0;
+    .cookies_wrap .modal-h5{
+        margin-bottom: 5px;
     }
-
-   
 }
