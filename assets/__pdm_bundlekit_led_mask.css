@@ -28,7 +28,7 @@
   border-radius: 12px;
   border: 1px solid #D7D9D9;
   background: #FFF;
-  padding: 12px;
+  padding: 12px 14px;
   cursor: pointer;
   position: relative;
 }
@@ -44,7 +44,7 @@
 
 /* Product original (LED Mask Only) */
 .choose-your-kit-section .choose-your-kit-section__products .product-item.product-original {
-  width: 148px;
+  width: 180px;
   flex: none;
 }
 .choose-your-kit-section .choose-your-kit-section__products .product-item.product-original .product-item-inner {
@@ -75,9 +75,14 @@
   text-transform: capitalize;
 }
 
-  .choose-your-kit-section .choose-your-kit-section__products .product-item.product-original .product-item-inner .product-item__label.mobile {
-    display: none;
-  }
+.choose-your-kit-section .choose-your-kit-section__products .product-item.product-original .product-item-inner .product-item__label {
+  display: flex;
+  gap: 20px;
+}
+
+.choose-your-kit-section .choose-your-kit-section__products .product-item.product-original .product-item-inner .product-item__price.mobile {
+  display: none;
+}
 
 
 .choose-your-kit-section .choose-your-kit-section__products .product-item .product-item-inner .product-item__price {
@@ -101,8 +106,8 @@
 
 /* Original product image */
 .choose-your-kit-section .choose-your-kit-section__products .product-item.product-original .product-item-inner .inner-image img {
-  max-height: 100px;
-  width: 118px;
+  max-height: 112px;
+  width: 136px;
 }
 
 /* Bundle kit label */
@@ -132,10 +137,11 @@
 
 /* Bundle inner content */
 .choose-your-kit-section .choose-your-kit-section__products .product-item.product-bundle .product-item-inner .inner-content {
-flex-wrap: nowrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   margin-bottom: 12px;
   white-space: nowrap;
+  width: 100%;
 }
 
 .choose-your-kit-section .choose-your-kit-section__products .product-item.product-bundle .product-item-inner .inner-image {
@@ -205,6 +211,9 @@ flex-wrap: nowrap;
   text-transform: uppercase;
   display: inline-block;
   min-width: fit-content;
+  position: absolute;
+  right: 12px;
+  top: 35px;
 }
 
 /* Mobile responsive styles */
@@ -228,20 +237,28 @@ flex-wrap: nowrap;
   }
 
   .choose-your-kit-section .choose-your-kit-section__products .product-item.product-original .product-item-inner {
-    gap: 22px;
+    gap: 38px;
     flex-direction: row;
     justify-content: center;
     text-align: left;
   }
 
-  .choose-your-kit-section .choose-your-kit-section__products .product-item.product-original .product-item-inner .product-item__label {
-    display: none;
+  .choose-your-kit-section .choose-your-kit-section__products .product-item.product-original .product-item-inner .inner-image img {
+    max-height: 80px;
+    width: 104px;
+    object-fit: cover;
   }
 
-  .choose-your-kit-section .choose-your-kit-section__products .product-item.product-original .product-item-inner .product-item__label.mobile {
-    display: block;
+  .choose-your-kit-section .choose-your-kit-section__products .product-item.product-original .product-item-inner .product-item__label {
+    order: 2;
     margin-bottom: 11px;
     font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .choose-your-kit-section .choose-your-kit-section__products .product-item.product-original .product-item-inner .product-item__label span {
+      font-weight: 500;
   }
 
   .choose-your-kit-section .choose-your-kit-section__products .product-item .product-item-inner .product-item__price {
@@ -256,7 +273,7 @@ flex-wrap: nowrap;
   }
 
   .choose-your-kit-section .choose-your-kit-section__products .product-item.product-bundle .bundle-kit-label {
-    right: 24px;
+    left: 24px;
     transform: inherit;
     font-size: 10px;
     line-height: 9px;
@@ -265,9 +282,13 @@ flex-wrap: nowrap;
   }
 
   .choose-your-kit-section .choose-your-kit-section__products .product-item.product-bundle .product-item-inner {
-    gap: 8px;
+    gap: 16px;
     flex-direction: row-reverse;
     justify-content: center;
+  }
+
+  .choose-your-kit-section .choose-your-kit-section__products .product-item.product-bundle .product-item-inner .inner-image {
+    gap: 2px;
   }
 
   .choose-your-kit-section .choose-your-kit-section__products .product-item.product-bundle .product-item-inner .inner-content {
@@ -276,6 +297,12 @@ flex-wrap: nowrap;
     align-self: stretch;
     display: inline;
     align-content: center;
+    text-align: left;
+  }
+
+  .choose-your-kit-section .choose-your-kit-section__products .product-item .product-item-inner .badge-label {
+    right: 4px;
+    top: 4px;
   }
   
   .choose-your-kit-section .choose-your-kit-section__products .product-item.product-bundle .product-item-inner .inner-content .product-item__label{
