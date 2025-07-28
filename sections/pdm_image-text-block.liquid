@@ -1,0 +1,84 @@
+{{ '_pdm_image-text-block.css' | asset_url | stylesheet_tag }}
+
+<!-- Block Image Text Section -->
+<section class="block-image-text-section">
+  <div class="block-image-text-section__container">
+    <div class="block-image-text-section__content">
+      <!-- Image Container -->
+      <div class="block-image-text-section__image">
+        {% if section.settings.image %}
+          <img src="{{ section.settings.image | img_url: '600x600' }}" 
+               alt="{{ section.settings.image.alt | default: section.settings.title }}"
+               loading="lazy"
+               class="block-image-text-section__img">
+        {% endif %}
+      </div>
+      
+      <!-- Text Container -->
+      <div class="block-image-text-section__text">
+        {% if section.settings.title %}
+          <h2 class="block-image-text-section__title">{{ section.settings.title }}</h2>
+        {% endif %}
+        
+        {% if section.settings.text %}
+          <div class="block-image-text-section__description">
+            {{ section.settings.text | newline_to_br | replace: '[', '<span>' | replace: ']', '</span>' }}
+          </div>
+        {% endif %}
+        
+        {% if section.settings.button_text and section.settings.button_url %}
+          <div class="block-image-text-section__button">
+            <a href="{{ section.settings.button_url }}" class="block-image-text-section__btn">
+              {{ section.settings.button_text }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+{% schema %}
+{
+  "name": "Block Image Text",
+  "class": "image-text-block-container hidden",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Block Title"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Block text goes here."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    }
+  ],
+  "presets": [
+    {
+        "name": "Block Image Text",
+        "category": "Custom"
+      }
+    ]
+}
+{% endschema %}

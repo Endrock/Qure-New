@@ -66,42 +66,48 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/cosmopolitan.svg",
-            "mobile_hide": true
+            "mobile_hide": true,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_8MCLNX": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/vogue.svg",
-            "mobile_hide": false
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_nUMe7r": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/bazaar_889503c3-d4d6-4eb0-b7be-dd1212b56c58.png",
-            "mobile_hide": true
+            "mobile_hide": true,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_kn7TJe": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/elle.svg",
-            "mobile_hide": false
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_V38QRN": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/glamour.svg",
-            "mobile_hide": true
+            "mobile_hide": true,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_XTY4T4": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/grazia.svg",
-            "mobile_hide": false
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
           }
         }
       },
@@ -128,6 +134,37 @@
       "settings": {
         "heading": "<h2>Everything you need in one serum</h2><p>Our unique blend of active ingredients help to brighten, plump, and smooth the look of skin effortlessly, addressing various concerns in just one step. Free from fragrance, parabens, and PEG, it offers a streamlined and pure skincare.</p>",
         "heading_mobile": "<h2>Everything you need in one serum</h2><p>Unique blend of active ingredients work together to brighten, plump and smooth skin.</p><p>Treat various skin concerns in just one step.</p><p>Fragrance, Paraben & PEG Free.</p>"
+      }
+    },
+    "pdm_image_text_block_4WTdrR": {
+      "type": "pdm_image-text-block",
+      "name": "Block Image Text",
+      "settings": {
+        "image": "shopify://shop_images/serum_all_in_one.png",
+        "title": "Everything you need in one serum",
+        "text": "Simplify your skincare routine, [get maximum results with minimal effort.]\n\nPacked with [clinically backed ingredients] like Argireline® Peptides, Retinol, Bakuchiol, Niacinamide, Hyaluronic Acid, Vitamin C, Vitamin E, Ferulic Acid. The All-In-One Serum hydrates, brightens, smooths look of fine lines in one easy step.\n\nVegan and cruelty-free. Free from fragrance, parabens, and PEG.",
+        "button_text": "Shop Now",
+        "button_url": "#choose_bundle"
+      }
+    },
+    "pdm_all_in_one_ingredients_APHGNh": {
+      "type": "pdm_all-in-one-ingredients",
+      "name": "Ingredients Carousel",
+      "settings": {
+        "title": "Powered by actives, designed for daily use",
+        "subtitle": "This multi-tasking daily serum works hard to rejuvenate without stressing your skin.",
+        "image_1": "shopify://shop_images/serum_treat.png",
+        "image_1_mobile": "shopify://shop_images/treat_mobile.png",
+        "title_1": "Treat",
+        "subtitle_1": "Active ingredients like Retinol, Ethyl Ascorbic Acid (Vitamin C), Ferulic Acid and Bakuchiol target fine lines and uneven tone.",
+        "image_2": "shopify://shop_images/serum_firm.png",
+        "image_2_mobile": "shopify://shop_images/Firm_mobile.png",
+        "title_2": "Firm",
+        "subtitle_2": "Hyaluronic Acid and Argireline® Peptides absorb into the skin for long-lasting hydration and a firm, plump look.",
+        "image_3": "shopify://shop_images/serum_strengthen.png",
+        "image_3_mobile": "shopify://shop_images/Strengthen_mobile.png",
+        "title_3": "Strengthen",
+        "subtitle_3": "Barrier-boosting actives like Vitamin E and Niacinamide help fortify your skin to keep it calm, clear, and resilient."
       }
     },
     "before_after_box_EK6wT3": {
@@ -482,6 +519,7 @@
       "settings": {
         "classname": "mi_landing_result",
         "heading": "Thousands are out-glowing their skin insecurities...",
+        "des": "",
         "heading_reduced": "",
         "text_verified_customer": "Verified customer",
         "text_reviewed": "Reviewed in"
@@ -493,6 +531,7 @@
         "video_zJajWc": {
           "type": "video",
           "settings": {
+            "title_mob": "Recommended by Experts",
             "image": "shopify://shop_images/trusted_shah-max.webp",
             "video": "https://www.youtube.com/watch?v=PJt57LcFEQk",
             "title": "Dr Shah & Dr Maxfield,",
@@ -505,6 +544,7 @@
             "trust_icon": "shopify://shop_images/verified_design.svg",
             "trust_des": "Trusted and recommended by world leading Dermatologists",
             "title": "<strong>“Qure has a really good serum, probably is the</strong> best known peptide complex... <strong>it can really help simplify and consolidate routine steps.”</strong>",
+            "title_des": "",
             "title_clr": "#000000",
             "title_strong_clr": "#797d7c"
           }
@@ -515,6 +555,9 @@
         "text_content_tYknEA"
       ],
       "settings": {
+        "ctm_cls": "",
+        "left_dv_width": "7",
+        "right_dv_width": "5",
         "padding_top": 30,
         "padding_bottom": 0
       }
@@ -523,7 +566,10 @@
       "type": "liquid",
       "settings": {
         "code": "{% render 'serums-allin-months-image-form' with section_id: section.id %}",
-        "popup_micro_infusion_enabled": true
+        "popup_micro_infusion_enabled": true,
+        "product_1": "",
+        "product_2": "",
+        "product_3": ""
       }
     },
     "pdm_all_in_one_face_serum_offer_form_dAje9z": {
@@ -825,6 +871,8 @@
     "product-landing",
     "featuredin_Xdfftn",
     "heading_fxhCWM",
+    "pdm_image_text_block_4WTdrR",
+    "pdm_all_in_one_ingredients_APHGNh",
     "before_after_box_EK6wT3",
     "before_after_box_Ai6e8R",
     "before_after_box_YHj3zK",

@@ -197,17 +197,17 @@
           "settings": {
             "link_label": "Shop Now & Save",
             "link_label_mobile": "Shop Now & Save",
-            "link_url": "https:\/\/qureskincare.com\/pages\/qure-filters-offer?variant=45909763490031"
+            "link_url": "https://qureskincare.com/pages/qure-filters-offer?variant=45909763490031"
           }
         },
         "banner_6wgzUN": {
           "type": "banner",
           "settings": {
             "heading": "Save up to 55% on Exclusive Bundles",
-            "image": "shopify:\/\/shop_images\/sub_banner.webp",
-            "image_mobile": "shopify:\/\/shop_images\/sub_banner-mob.webp",
+            "image": "shopify://shop_images/sub_banner.webp",
+            "image_mobile": "shopify://shop_images/sub_banner-mob.webp",
             "link_label": "Buy Now",
-            "link_url": "https:\/\/www.qureskincare.com\/pages\/exclusive-holiday-bundle-deal"
+            "link_url": "https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal"
           }
         }
       },
@@ -220,11 +220,11 @@
         "heading": "Two Filters. One Goal: Healthier Skin.",
         "heading_mobile": "Two Filters. One Goal: Healthier Skin.",
         "heading_tag": "h1",
-        "subheading": "<h5>Get Faucet Filter FREE<\/h5>",
-        "subheading_mobile": "<h5>Get Faucet Filter FREE<\/h5>",
-        "text": "<h6>Limited Time Offer <\/h6>",
-        "video": "shopify:\/\/files\/videos\/faucet_offer-d.webm",
-        "video_mobile": "shopify:\/\/files\/videos\/faucet_offer-m.webm"
+        "subheading": "<h5>Get Faucet Filter FREE</h5>",
+        "subheading_mobile": "<h5>Get Faucet Filter FREE</h5>",
+        "text": "<h6>Limited Time Offer </h6>",
+        "video": "shopify://files/videos/faucet_offer-d.webm",
+        "video_mobile": "shopify://files/videos/faucet_offer-m.webm"
       }
     },
     "promotion_main_banner_48gkNr": {
@@ -235,25 +235,25 @@
           "settings": {
             "link_label": "Shop Best Sellers",
             "link_label_mobile": "Shop Best Sellers",
-            "link_url": "shopify:\/\/collections\/best-sellers"
+            "link_url": "shopify://collections/best-sellers"
           }
         },
         "product_BANXY7": {
           "type": "product",
           "settings": {
-            "heading": "<p>Micro-Infusion Bundle<\/p>",
-            "image": "shopify:\/\/shop_images\/mi_bundle.webp",
-            "product_url": "shopify:\/\/products\/exclusive"
+            "heading": "<p>Micro-Infusion Bundle</p>",
+            "image": "shopify://shop_images/mi_bundle.webp",
+            "product_url": "shopify://products/exclusive"
           }
         },
         "banner_6wgzUN": {
           "type": "banner",
           "settings": {
             "heading": "Save up to 55% on Exclusive Bundles",
-            "image": "shopify:\/\/shop_images\/sub_banner.webp",
-            "image_mobile": "shopify:\/\/shop_images\/sub_banner-mob.webp",
+            "image": "shopify://shop_images/sub_banner.webp",
+            "image_mobile": "shopify://shop_images/sub_banner-mob.webp",
             "link_label": "Buy Now",
-            "link_url": "https:\/\/www.qureskincare.com\/pages\/exclusive-holiday-bundle-deal"
+            "link_url": "https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal"
           }
         }
       },
@@ -267,11 +267,11 @@
         "heading": "",
         "heading_mobile": "",
         "heading_tag": "h1",
-        "subheading": "<h3>Get clinic-level results<\/h3><h4>from home- minus<\/h4><h5>the ‘clinical’ costs.<\/h5>",
-        "subheading_mobile": "<h3>Get clinic-level results<\/h3><h4>from home- minus<\/h4><h5>the ‘clinical’ costs.<\/h5>",
-        "text": "<p><strong>300,000+ <\/strong>customers feel more confident in their own skin.<\/p>",
-        "image": "shopify:\/\/shop_images\/Banner_57c19f02-06bd-42fa-ac3a-6ebd0393ecc4.png",
-        "image_mobile": "shopify:\/\/shop_images\/hm_banner_clinic_results.png_mob.webp",
+        "subheading": "<h3>Get clinic-level results</h3><h4>from home- minus</h4><h5>the ‘clinical’ costs.</h5>",
+        "subheading_mobile": "<h3>Get clinic-level results</h3><h4>from home- minus</h4><h5>the ‘clinical’ costs.</h5>",
+        "text": "<p><strong>300,000+ </strong>customers feel more confident in their own skin.</p>",
+        "image": "shopify://shop_images/Banner_57c19f02-06bd-42fa-ac3a-6ebd0393ecc4.png",
+        "image_mobile": "shopify://shop_images/hm_banner_clinic_results.png_mob.webp",
         "wistia_id": ""
       }
     },
@@ -592,10 +592,10 @@
     "results_slider_w6BARa": {
       "type": "results-slider",
       "blocks": {
-        "slide_ApYVrJ": {
+        "slide_yWqyRW": {
           "type": "Slide",
           "settings": {
-            "heading": "IT REALLY WORKS!!",
+            "heading": "Thrilled with the results!",
             "product": "Q-Rejuvalight Pro LED Mask",
             "stars_img": "shopify:\/\/shop_images\/results_star-full.svg",
             "text": "<p>I was very skeptical when my husband bought this mask for me. But after 6mo the results are amazing!! I’ve tried numerous serums for my sun spots but nothing worked until I used this mask. Definitely worth the money.<\/p>",
@@ -676,10 +676,10 @@
             "verified": true
           }
         },
-        "slide_yWqyRW": {
+        "slide_ApYVrJ": {
           "type": "Slide",
           "settings": {
-            "heading": "Thrilled with the results!",
+            "heading": "IT REALLY WORKS!!",
             "product": "Q-Rejuvalight Pro LED Mask",
             "stars_img": "shopify:\/\/shop_images\/results_star-full.svg",
             "text": "<p>\"I am 45 so I am fighting signs of aging, but also still dealing with acne flare ups. I haven’t had a single breakout since I started using the mask, plus I notice a definite smoothing of fine wrinkles on my cheeks & around my eyes. I recommend this product to anyone. Well worth the investment.\"<\/p>",
@@ -706,19 +706,130 @@
         }
       },
       "block_order": [
-        "slide_ApYVrJ",
+        "slide_yWqyRW",
         "slide_8DpTJn",
         "slide_wwBJ3B",
         "slide_xWKmb6",
         "slide_8TxkNC",
         "slide_hFbVVd",
-        "slide_yWqyRW",
+        "slide_ApYVrJ",
         "slide_PmixWy"
       ],
       "settings": {
         "ctm_cls_results": "",
         "heading": "See the results yourself",
         "rating_text": ""
+      }
+    },
+    "products_grid_mCReWM": {
+      "type": "products-grid",
+      "blocks": {
+        "product_WHecMQ": {
+          "type": "product",
+          "settings": {
+            "pd_img": "shopify://shop_images/Group_1000004027.png",
+            "pd_name": "Micro-Infusion Facial System",
+            "from": true,
+            "product": "micro-infusion-1-month-bundle-1x-b-g-serum-1x-e-g-f-serum",
+            "bestseller": true,
+            "rating": "shopify://shop_images/star-half_fill_d51f6801-2e35-487c-89d0-130f978da1e8.svg",
+            "rating_text": "1,825 Reviews",
+            "pd_link": "https://www.qureskincare.com/pages/microinfusion"
+          }
+        },
+        "product_a84cyP": {
+          "type": "product",
+          "settings": {
+            "pd_img": "shopify://shop_images/LED_Homepage_Best_Seller.png",
+            "pd_name": "Q-Rejuvalight Pro Facewear",
+            "from": false,
+            "product": "q-rejuvalight-pro-facewear",
+            "bestseller": false,
+            "rating": "shopify://shop_images/star-half_fill_d51f6801-2e35-487c-89d0-130f978da1e8.svg",
+            "rating_text": "723 Reviews",
+            "pd_link": "https://www.qureskincare.com/products/q-rejuvalight-pro-facewear"
+          }
+        },
+        "product_RV8HgT": {
+          "type": "product",
+          "settings": {
+            "pd_img": "shopify://shop_images/Face_Serm_Homepage_Best_Seller.png",
+            "pd_name": "All-In-One Face Serum",
+            "from": false,
+            "product": "face-serum",
+            "bestseller": false,
+            "rating": "shopify://shop_images/star-half_fill_d51f6801-2e35-487c-89d0-130f978da1e8.svg",
+            "rating_text": "200 Reviews",
+            "pd_link": "https://www.qureskincare.com/products/face-serum"
+          }
+        },
+        "product_3hFb8X": {
+          "type": "product",
+          "settings": {
+            "pd_img": "shopify://shop_images/Patches_Homepage_Best_seller.png",
+            "pd_name": "Micro-Infusion Targeted Patches",
+            "from": false,
+            "product": "micro-infusion-targeted-patches",
+            "bestseller": false,
+            "rating": "shopify://shop_images/star-half_fill_d51f6801-2e35-487c-89d0-130f978da1e8.svg",
+            "rating_text": "1,827 Reviews",
+            "pd_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_WHecMQ",
+        "product_a84cyP",
+        "product_RV8HgT",
+        "product_3hFb8X"
+      ],
+      "custom_css": [],
+      "settings": {
+        "heading": "Best Sellers",
+        "btn": "Shop All Best-Sellers",
+        "btn_url": "shopify://collections/best-sellers"
+      }
+    },
+    "icons_list_iPVXgA": {
+      "type": "icons-list",
+      "blocks": {
+        "icon_wE7DHH": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/free-shipping-ftr.svg",
+            "text": "<p>Free Shipping</p><p>Orders Over $100</p>"
+          }
+        },
+        "icon_VEziHa": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/buy-now-ftr.svg",
+            "text": "<p>Buy Now,</p><p>Pay Later</p>"
+          }
+        },
+        "icon_MjQxFD": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/derma-ftr.svg",
+            "text": "<p>Dermatologist Tested</p><p>& Approved</p>"
+          }
+        },
+        "icon_iah3Eg": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/science-ftr.svg",
+            "text": "<p>Proven Results,</p><p>Backed by science</p>"
+          }
+        }
+      },
+      "block_order": [
+        "icon_wE7DHH",
+        "icon_VEziHa",
+        "icon_MjQxFD",
+        "icon_iah3Eg"
+      ],
+      "settings": {
+        "background": "bg-grey"
       }
     },
     "advisors_MYYMCj": {
@@ -772,7 +883,8 @@
         "object_rkVQek"
       ],
       "custom_css": [
-        ".targetSkin .swiper-slide:nth-of-type(4) .text-white {margin-top: -10px;}"
+        ".targetSkin .swiper-slide:nth-of-type(4) .text-white {margin-top: -10px;}",
+        ".board_of-advisors {padding:60px 0px;}"
       ],
       "settings": {
         "heading": "Meet our board of advisors",
@@ -1297,10 +1409,10 @@
     "sub_banner_mDCcyx",
     "featuredin_extended_P7BNDN",
     "results_slider_w6BARa",
-    "advisors_MYYMCj",
-    "featured_collection_Hj3Xcw",
     "products_grid_mCReWM",
     "icons_list_iPVXgA",
+    "advisors_MYYMCj",
+    "featured_collection_Hj3Xcw",
     "text_with_video_TwRQhd",
     "testimonials_m84mqf",
     "box_slider_HRHeRA",
