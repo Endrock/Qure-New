@@ -2,7 +2,7 @@
     height: 100%;
 }
 
-.banner-with-text-overplay.banner-position .bls__banner-text--content {
+.banner-with-text-overplay.banner-position .bls__banner-text--content { 
     display: flex;
     flex-direction: column;
 }
