@@ -35,14 +35,13 @@
           data-product-original-image="{{ product_kit_image_1 | image_url: width: 400 }}"    
           data-productskincare-variant-id="{{ product_bundle1.variants.first.id }}">
           <div class="product-item-inner">
-            <span class="product-item__label"> {{ title_original_product }} </span>
+            <span class="product-item__label">
+               {{ title_original_product }}
+               <span> {{ product.variants.first.price | money_without_trailing_zeros }} </span>
+            </span>
             <div class="inner-image">
                 <img class="product-item__image" src="{{ product_kit_image_1 | image_url: width: 300}}" alt="{{ product.title | escape }}">
             </div>
-            
-            <span class="product-item__price">
-              <span class="product-item__label mobile"> {{ title_original_product }} </span>
-              {{ product.variants.first.price | money_without_trailing_zeros }}</span>
           </div>
       </label>
       <label class="product-item product-bundle selected" for="productbundle">
