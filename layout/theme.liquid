@@ -283,7 +283,20 @@
 
     {% render 'gdpr' %} 
     {% include 'redirect' %}
-    
+    {% comment %} Scroll Depth Tracking on PostHog {% endcomment %}
+    <script>
+        let maxScrollDepth = 0;
+        window.onscroll = function() {
+            const scrollDepth = Math.round((window.scrollY + window.innerHeight) / document.body.scrollHeight * 100);
+            if (scrollDepth > maxScrollDepth) {
+                maxScrollDepth = scrollDepth;
+                if (typeof posthog !== 'undefined') {
+                    posthog.capture('scroll', { depth: maxScrollDepth });
+                }
+            }
+        };
+    </script>
+    {% comment %} end Scroll Depth Tracking on PostHog {% endcomment %}
     {% comment %} {% include 'info' %} {% endcomment %}
 </body>
 </html>
