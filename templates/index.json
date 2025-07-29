@@ -109,100 +109,15 @@
       ],
       "settings": {}
     },
-    "banner_with_text_PLRJBt": {
-      "type": "banner-with-text",
-      "blocks": {
-        "heading_qteHYG": {
-          "type": "heading",
-          "settings": {
-            "title": "Get clinic-level results from home- minus the ‘clinical’ costs.",
-            "heading_fs": 42,
-            "heading_fw": "default",
-            "heading_fm": "Canela Web",
-            "heading_tf": "unset",
-            "heading_mt": 0,
-            "heading_mb": 20,
-            "heading_color": "#ffffff",
-            "heading_fsm": 34
-          }
-        },
-        "buttons_jt6ttK": {
-          "type": "buttons",
-          "settings": {
-            "btn_content": "Shop Best Sellers",
-            "button_type": "primary-new",
-            "button_size": "medium",
-            "button_link": "shopify://collections/best-sellers",
-            "button_target": false,
-            "b_mt": 0,
-            "b_mb": 15
-          }
-        },
-        "text_a4YPW6": {
-          "type": "text",
-          "settings": {
-            "txt_content": "<p><strong>300,000+</strong>customers feel more confident in their own skin.</p>",
-            "txt_fs": 14,
-            "txt_fw": "default",
-            "txt_tf": "unset",
-            "txt_mt": 20,
-            "txt_mb": 0,
-            "text_hide": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_qteHYG",
-        "buttons_jt6ttK",
-        "text_a4YPW6"
-      ],
-      "disabled": true,
-      "name": "Banner with text",
-      "settings": {
-        "container": "full-width",
-        "color_scheme": "scheme-1",
-        "image_behavior": "none",
-        "banner_type": "image",
-        "image": "shopify://shop_images/Banner_57c19f02-06bd-42fa-ac3a-6ebd0393ecc4.png",
-        "image_mobile": "shopify://shop_images/hm_banner_clinic_results.png_mob.webp",
-        "video_url": "",
-        "link": "",
-        "open_link": "_blank",
-        "bn_design": "text_overlay",
-        "text_align": "text-left",
-        "text_horizontal_position": "left",
-        "text_position": "center",
-        "content_bg_color": "",
-        "background_gradient": "",
-        "content_width": 41,
-        "text_align-mob": "on_mob-center",
-        "banner_height": "depend-image",
-        "height_dk": 800,
-        "height_tb": 600,
-        "height_mb": 360,
-        "height_full": false,
-        "image_second_on_mobile": true,
-        "content_box": "content_in_container",
-        "bg_opacity": 100,
-        "text_bellow_mobile": false,
-        "img_position": "left",
-        "banner_width": "col-md-6",
-        "column_gap": 0,
-        "hover_effect": "zoom",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "reset_spacing": false
-      }
-    },
     "promotion_main_banner_second_jCUkqh": {
       "type": "promotion-main-banner-second",
       "blocks": {
         "link_Pk3LH6": {
           "type": "link",
           "settings": {
-            "link_label": "Shop Now & Save",
-            "link_label_mobile": "Shop Now & Save",
-            "link_url": "https://qureskincare.com/pages/qure-filters-offer?variant=45909763490031"
+            "link_label": "Buy Now",
+            "link_label_mobile": "Buy Now",
+            "link_url": "https://qureskincare.com/collections/best-sellers"
           }
         },
         "banner_6wgzUN": {
@@ -222,14 +137,14 @@
       ],
       "disabled": true,
       "settings": {
-        "heading": "Two Filters. One Goal: Healthier Skin.",
-        "heading_mobile": "Two Filters. One Goal: Healthier Skin.",
+        "heading": "70% OFF \\ Micro-Infusion",
+        "heading_mobile": "70% OFF \\ Micro-Infusion",
         "heading_tag": "h1",
-        "subheading": "<h5>Get Faucet Filter FREE</h5>",
-        "subheading_mobile": "<h5>Get Faucet Filter FREE</h5>",
-        "text": "<h6>Limited Time Offer </h6>",
-        "video": "shopify://files/videos/faucet_offer-d.webm",
-        "video_mobile": "shopify://files/videos/faucet_offer-m.webm"
+        "subheading": "<p>Refresh your glow & save big!</p>",
+        "subheading_mobile": "<p>Refresh your glow & save big!</p>",
+        "text": "",
+        "image": "shopify://shop_images/summer_sale_4d821dfa-5798-447c-b981-00dee24d2b9c.webp",
+        "image_mobile": "shopify://shop_images/summer_sale_mob_d4d20b00-2ad2-40c4-9e86-053bbb6b6b7d.webp"
       }
     },
     "promotion_main_banner_48gkNr": {
@@ -781,7 +696,7 @@
       ],
       "custom_css": [
         ".targetSkin .swiper-slide:nth-of-type(4) .text-white {margin-top: -10px;}",
-        ".board_of-advisors {padding:60px 0px;}"
+        ".board_of-advisors {padding: 60px 0px;}"
       ],
       "settings": {
         "heading": "Meet our board of advisors",
@@ -1188,7 +1103,6 @@
   },
   "order": [
     "main",
-    "banner_with_text_PLRJBt",
     "promotion_main_banner_second_jCUkqh",
     "promotion_main_banner_48gkNr",
     "banner_with_text_Bgpcti",
