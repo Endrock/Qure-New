@@ -1,6 +1,4 @@
-
 {{ 'banner-text.css' | asset_url | stylesheet_tag }}
-{{ 'scrolling-text.css' | asset_url | stylesheet_tag }}
 {{ 'utilities.css' | asset_url | stylesheet_tag }}
 
 {% style %}
@@ -38,7 +36,6 @@
   assign color_scheme = st.color_scheme
 
   assign column_gap = st.column_gap
-  assign hover_effect = st.hover_effect
   assign img_position = st.img_position
   assign banner_width = st.banner_width
   assign content_width = st.content_width
@@ -119,29 +116,8 @@
   else
     assign container-box = 'full-width-content'
   endif
-  assign enabled_animations = settings.animations_enabled
   assign text_align-mob = st.text_align-mob
 -%}
-
-{% comment %} {%- capture style -%}
-  {%- if bn_design == 'text_column' -%}
-    --bls-gutter-x: {{ column_gap }}px;
-  {%- endif -%}
-  --section-padding-top: {{ st.padding_top }}px; --section-padding-bottom: {{ st.padding_bottom }}px;
-{%- endcapture -%}  {% endcomment %}
-
-{% comment %} {%- assign padding_top_mobile = st.padding_top | times: 0.7 | round -%}
-{%- assign padding_bottom_mobile = st.padding_bottom | times: 0.7 | round -%}
-
-{%- capture style -%}
-  {%- if bn_design == 'text_column' -%}
-    --bls-gutter-x: {{ column_gap }}px;
-  {%- endif -%}
-  --section-padding-top: {{ st.padding_top }}px;
-  --section-padding-bottom: {{ st.padding_bottom }}px;
-  --section-padding-top-mobile: {{ padding_top_mobile }}px;
-  --section-padding-bottom-mobile: {{ padding_bottom_mobile }}px;
-{%- endcapture -%} {% endcomment %}
 
 {%- assign padding_top_mobile = st.padding_top_mobile -%}
 {%- assign padding_bottom_mobile = st.padding_bottom_mobile -%}
@@ -174,7 +150,7 @@
           banner-with-text-overplay banner-position overflow-hidden relative
         {%- endif -%}">
       <div
-        class="{% if height_full %}height-full{% endif %} {% if enabled_animations %}scroll-trigger animate--slide-in{% endif %} {% if banner_type == 'video' %} type-video {% endif %} {% if banner_type == 'image' %} type-banner {% endif %} bls__banner-text--media {{ banner_width }} {{ banner_height }} {% if bn_design == 'text_overlay' %} {% if banner_height == 'depend-image' %}h-full static static-xl inset-0{% else %}static{% endif %} overflow-hidden{% endif %}  {% if bn_design == 'text_column' %} align-self-start {% endif %} {% if image_second_on_mobile %} order-2 order-md-0 {% endif %} "
+        class="{% if height_full %}height-full{% endif %} {% if banner_type == 'video' %} type-video {% endif %} {% if banner_type == 'image' %} type-banner {% endif %} bls__banner-text--media {{ banner_width }} {{ banner_height }} {% if bn_design == 'text_overlay' %} {% if banner_height == 'depend-image' %}h-full static static-xl inset-0{% else %}static{% endif %} overflow-hidden{% endif %}  {% if bn_design == 'text_column' %} align-self-start {% endif %} {% if image_second_on_mobile %} order-2 order-md-0 {% endif %} "
         {% if height_full == blank %}
           style="--desktop-height:{{ height_dk }}px;--tablet-height:{{ height_tb }}px;--mobile-height:{{ height_mb }}px;"
         {% endif %}
@@ -215,7 +191,7 @@
                 ></video>
               </div>
             {%- endif -%}
-          {%- when 'image' -%}
+          {%- when 'image' -%} 
             <a
               class="{% if st.image_behavior == 'fixed' %} animate-fixed-parent{% endif %} hover-effect hover-{{ hover_effect }} {% if settings.image_style != blank and section.settings.column_gap != 0 and section.settings.container != "full-width" %} radius {% endif %} {% if settings.image_style != blank and bn_design == 'text_overlay' and section.settings.container != "full-width" %} radius {% endif %}"
               {% if link == blank %}
@@ -270,14 +246,7 @@
               assign heading_tf = bs.heading_tf
               assign heading_mt = bs.heading_mt
               assign heading_mb = bs.heading_mb
-              assign heading_color = bs.heading_color
-              assign subheading_fs = bs.subheading_fs
               assign heading_fsm = bs.heading_fsm
-              assign subheading_color = bs.subheading_color
-              assign subheading_fw = bs.subheading_fw
-              assign subheading_tf = bs.subheading_tf
-              assign subheading_mt = bs.subheading_mt
-              assign subheading_mb = bs.subheading_mb
               assign txt_color = bs.txt_color
               assign txt_fs = bs.txt_fs
               assign txt_fw = bs.txt_fw
@@ -294,27 +263,7 @@
               assign b_mt = bs.b_mt
               assign b_mb = bs.b_mb
 
-              assign faq_fs = bs.faq_fs
-              assign faq_fw = bs.faq_fw
-              assign faq_tf = bs.faq_tf
-              assign faq_desc_fs = bs.faq_desc_fs
-              assign faq_desc_fw = bs.faq_desc_fw
-              assign faq_desc_tf = bs.faq_desc_tf
-              assign faq_mt = bs.faq_mt
-              assign faq_mb = bs.faq_mb
-              assign html_mt = bs.html_mt
-              assign html_mb = bs.html_mb
-
-              assign countdown_design = bs.countdown_design
-              assign bn_end_time = bs.bn_end_time
-              assign bn_txt_color = bs.bn_txt_color
-              assign bn_txt_fs = bs.bn_txt_fs
-              assign number_txt_fs = bs.number_txt_fs
-              assign bn_txt_fw = bs.bn_txt_fw
-              assign bn_txt_tf = bs.bn_txt_tf
-              assign bn_txt_mt = bs.bn_txt_mt
-              assign bn_txt_mb = bs.bn_txt_mb
-              assign text_hide = bs.text_hide
+          
             -%}
             {% case block.type %}
               {%- when 'image_picker' -%}
@@ -328,14 +277,6 @@
                   {%- else -%}
                     {%- render 'responsive-image' -%}
                   {%- endif -%}
-                </div>
-              {%- when 'subheading' -%}
-                <div
-                  {{ block.shopify_attributes }}
-                  class="h4 bls__banner-text--subheading color-{{ block.settings.color_scheme_subheading }} {% if enabled_animations %}scroll-trigger animate--slide-in{% endif %}"
-                  style="--text-subheading-font-size: {{ subheading_fs }}px; {% if subheading_fw != 'default' %}--text-subheading-font-weight: {{ subheading_fw }};{% endif %} --text-subheading-color: {{ subheading_color }}; --text-subheading-transform: {{ subheading_tf }}; --text-subheading-mt: {{ subheading_mt }}px; --text-subheading-mb: {{ subheading_mb }}px;"
-                >
-                  {{ block.settings.sub_title }}
                 </div>
               {%- when 'heading' -%}
                 <h2
@@ -376,137 +317,6 @@
                     {{ block.settings.btn_content | escape }}
                   </a>
                 {%- endif -%}
-              {%- when 'html' -%}
-                {% if block.settings.content_html != blank %}
-                  <div
-                    {{ block.shopify_attributes }}
-                    class="bls__banner-text--html color-{{ block.settings.color_scheme_txt }} {% if enabled_animations %}scroll-trigger animate--slide-in{% endif %}"
-                    style="--html-mt: {{ html_mt }}px; --html-mb: {{ html_mb }}px;"
-                  >
-                    {{ block.settings.content_html }}
-                  </div>
-                {% endif %}
-              {%- when 'countdown_bn' -%}
-                {% if bn_end_time != blank %}
-                  <div
-                    {{ block.shopify_attributes }}
-                    class="{{ countdown_design }} {% if enabled_animations %}scroll-trigger animate--slide-in{% endif %} bls__timer"
-                    data-timer="{{ bn_end_time }}"
-                  >
-                    <div class="d-inline-flex">
-                      <div
-                        class="timer-display timer-banner flex color-{{ block.settings.color_scheme_bn_txt }}"
-                        style="--bn-number-font-size: {{ number_txt_fs }}px;--bn-text-font-size: {{ bn_txt_fs }}px;{%- if bn_txt_color != blank -%} --bn-text-color: {{ bn_txt_color }};{%- endif -%} --bn-text-font-weight: {{ bn_txt_fw }}; --bn-text-transform: {{ bn_txt_tf }}; --bn-text-mt: {{ bn_txt_mt }}px; --bn-text-mb: {{ bn_txt_mb }}px;"
-                      >
-                        <div class="timer-block">
-                          <span class="timer-block__num js-timer-days">00</span>
-                          <span class="timer-block__text">{{ 'sections.times_bn.days' | t }}</span>
-                        </div>
-                        <div class="timer-block">
-                          <span class="timer-block__num js-timer-hours">00</span>
-                          <span class="timer-block__text">{{ 'sections.times_bn.hour' | t }}</span>
-                        </div>
-                        <div class="timer-block">
-                          <span class="timer-block__num js-timer-minutes">00</span>
-                          <span class="timer-block__text">{{ 'sections.times_bn.mins' | t }}</span>
-                        </div>
-                        <div class="timer-block">
-                          <span class="timer-block__num js-timer-seconds">00</span>
-                          <span class="timer-block__text">{{ 'sections.times_bn.secs' | t }}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                {% endif %}
-              {%- when 'faq' -%}
-                <div
-                  class="faq-content"
-                  style="--title-faq-font-size: {{ faq_fs }}px; {% if faq_fw != 'default' %}--title-faq-font-weight: {{ faq_fw }};{% endif %}; --title-faq-transform: {{ faq_tf }};--text-faq-font-size: {{ faq_desc_fs }}px; {% if faq_desc_fw != 'default' %}--text-faq-font-weight: {{ faq_desc_fw }};{% endif %} --text-faq-transform: {{ faq_desc_tf }};--faq-mt: {{ faq_mt }}px; --faq-mb: {{ faq_mb }}px;"
-                >
-                  <div
-                    {{ block.shopify_attributes }}
-                    class="bls__page-faq-items bls-toggle relative {% if enabled_animations %}scroll-trigger animate--slide-in{% endif %}"
-                  >
-                    {%- if block.settings.faq_title_1 != blank -%}
-                      <h4 class="bls__page-faq-title border-bottom py-20 mb-0 relative">
-                        {{ block.settings.faq_title_1 }}
-                        <span class="open-children-toggle d-block-important"></span>
-                      </h4>
-                    {%- endif -%}
-                    {%- if block.settings.faq_content_1 != blank -%}
-                      <div class="bls__page-faq-content overflow-hidden py-20" style="display: none">
-                        {{ block.settings.faq_content_1 }}
-                      </div>
-                    {%- endif -%}
-                  </div>
-                  <div
-                    {{ block.shopify_attributes }}
-                    class="bls__page-faq-items bls-toggle relative {% if enabled_animations %}scroll-trigger animate--slide-in{% endif %}"
-                  >
-                    {%- if block.settings.faq_title_2 != blank -%}
-                      <h4 class="bls__page-faq-title border-bottom py-20 mb-0 relative">
-                        {{ block.settings.faq_title_2 }}
-                        <span class="open-children-toggle d-block-important"></span>
-                      </h4>
-                    {%- endif -%}
-                    {%- if block.settings.faq_content_2 != blank -%}
-                      <div class="bls__page-faq-content overflow-hidden py-20" style="display: none">
-                        {{ block.settings.faq_content_2 }}
-                      </div>
-                    {%- endif -%}
-                  </div>
-
-                  <div
-                    {{ block.shopify_attributes }}
-                    class="bls__page-faq-items bls-toggle relative {% if enabled_animations %}scroll-trigger animate--slide-in{% endif %}"
-                  >
-                    {%- if block.settings.faq_title_3 != blank -%}
-                      <h4 class="bls__page-faq-title border-bottom py-20 mb-0 relative">
-                        {{ block.settings.faq_title_3 }}
-                        <span class="open-children-toggle d-block-important"></span>
-                      </h4>
-                    {%- endif -%}
-                    {%- if block.settings.faq_content_3 != blank -%}
-                      <div class="bls__page-faq-content overflow-hidden py-20" style="display: none">
-                        {{ block.settings.faq_content_3 }}
-                      </div>
-                    {%- endif -%}
-                  </div>
-
-                  <div
-                    {{ block.shopify_attributes }}
-                    class="bls__page-faq-items bls-toggle relative {% if enabled_animations %}scroll-trigger animate--slide-in{% endif %}"
-                  >
-                    {%- if block.settings.faq_title_4 != blank -%}
-                      <h4 class="bls__page-faq-title border-bottom py-20 mb-0 relative">
-                        {{ block.settings.faq_title_4 }}
-                        <span class="open-children-toggle d-block-important"></span>
-                      </h4>
-                    {%- endif -%}
-                    {%- if block.settings.faq_content_4 != blank -%}
-                      <div class="bls__page-faq-content overflow-hidden py-20" style="display: none">
-                        {{ block.settings.faq_content_4 }}
-                      </div>
-                    {%- endif -%}
-                  </div>
-
-                  <div
-                    {{ block.shopify_attributes }}
-                    class="bls__page-faq-items bls-toggle relative {% if enabled_animations %}scroll-trigger animate--slide-in{% endif %}"
-                  >
-                    {%- if block.settings.faq_title_5 != blank -%}
-                      <h4 class="bls__page-faq-title border-bottom py-20 mb-0 relative">
-                        {{ block.settings.faq_title_5 }}
-                        <span class="open-children-toggle d-block-important"></span>
-                      </h4>
-                    {%- endif -%}
-                    {%- if block.settings.faq_content_5 != blank -%}
-                      <div class="bls__page-faq-content overflow-hidden py-20" style="display: none">
-                        {{ block.settings.faq_content_5 }}
-                      </div>
-                    {%- endif -%}
-                  </div>
-                </div>
             {%- endcase -%}
           {%- endfor -%}
         </div>
@@ -551,34 +361,6 @@
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "Color schema"
-    },
-    {
-      "type": "header",
-      "content": "Animations"
-    },
-    {
-      "type": "select",
-      "id": "image_behavior",
-      "options": [
-        {
-          "value": "none",
-          "label": "None"
-        },
-        {
-          "value": "ambient",
-          "label": "Ambient movement"
-        },
-        {
-          "value": "fixed",
-          "label": "Fixed background position"
-        },
-        {
-          "value": "zoom-in",
-          "label": "Zoom in on scroll"
-        }
-      ],
-      "default": "none",
-      "label": "Image behavior"
     },
     {
       "type": "select",
@@ -1227,111 +1009,6 @@
       ]
     },
     {
-      "type": "subheading",
-      "name": " Subheading",
-      "settings": [
-        {
-          "type": "text",
-          "id": "sub_title",
-          "label": "Subheading",
-          "default": "Subheading"
-        },
-        {
-          "type": "range",
-          "id": "subheading_fs",
-          "label": "Font size",
-          "min": 10,
-          "max": 20,
-          "step": 1,
-          "unit": "px",
-          "default": 14
-        },
-        {
-          "type": "select",
-          "id": "subheading_fw",
-          "label": "Font weight",
-          "default": "default",
-          "options": [
-            {
-              "label": "Default",
-              "value": "default"
-            },
-            {
-              "label": "300",
-              "value": "300"
-            },
-            {
-              "label": "400",
-              "value": "400"
-            },
-            {
-              "label": "500",
-              "value": "500"
-            },
-            {
-              "label": "600",
-              "value": "600"
-            },
-            {
-              "label": "700",
-              "value": "700"
-            },
-            {
-              "label": "800",
-              "value": "800"
-            },
-            {
-              "label": "900",
-              "value": "900"
-            }
-          ]
-        },
-        {
-          "type": "select",
-          "id": "subheading_tf",
-          "label": "Text transform",
-          "options": [
-            {
-              "value": "unset",
-              "label": "Unset"
-            },
-            {
-              "value": "capitalize",
-              "label": "Capitalize"
-            },
-            {
-              "value": "uppercase",
-              "label": "Uppercase"
-            }
-          ]
-        },
-        {
-          "type": "header",
-          "content": "Spacing"
-        },
-        {
-          "type": "range",
-          "id": "subheading_mt",
-          "min": 0,
-          "max": 60,
-          "step": 1,
-          "unit": "px",
-          "default": 0,
-          "label": "Top"
-        },
-        {
-          "type": "range",
-          "id": "subheading_mb",
-          "min": 0,
-          "max": 40,
-          "step": 1,
-          "unit": "px",
-          "default": 10,
-          "label": "Bottom"
-        }
-      ]
-    },
-    {
       "type": "text",
       "name": "Text",
       "settings": [
@@ -1531,408 +1208,6 @@
           "step": 1,
           "unit": "px",
           "default": 15,
-          "label": "Bottom"
-        }
-      ]
-    },
-    {
-      "type": "countdown_bn",
-      "name": "Countdown",
-      "settings": [
-        {
-          "type": "select",
-          "id": "countdown_design",
-          "default": "countdown_design_1",
-          "label": "Design",
-          "options": [
-            {
-              "value": "countdown_design_1",
-              "label": "Design 1"
-            },
-            {
-              "value": "countdown_design_2",
-              "label": "Design 2"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "id": "bn_end_time",
-          "label": "End time",
-          "default": "12-24-2025",
-          "info": "e.g. mm-dd-yyyy"
-        },
-        {
-          "type": "range",
-          "id": "bn_txt_fs",
-          "label": "Font size text",
-          "min": 8,
-          "max": 30,
-          "step": 1,
-          "unit": "px",
-          "default": 18
-        },
-        {
-          "type": "range",
-          "id": "number_txt_fs",
-          "label": "Font size number",
-          "min": 24,
-          "max": 80,
-          "step": 1,
-          "unit": "px",
-          "default": 36
-        },
-        {
-          "type": "range",
-          "id": "bn_txt_fw",
-          "label": "Font weight",
-          "min": 100,
-          "max": 900,
-          "step": 100,
-          "default": 400
-        },
-        {
-          "type": "select",
-          "id": "bn_txt_tf",
-          "label": "Text transform",
-          "options": [
-            {
-              "value": "unset",
-              "label": "Unset"
-            },
-            {
-              "value": "capitalize",
-              "label": "Capitalize"
-            },
-            {
-              "value": "uppercase",
-              "label": "Uppercase"
-            },
-            {
-              "value": "lowercase",
-              "label": "Lowercase"
-            }
-          ]
-        },
-        {
-          "type": "header",
-          "content": "Spacing"
-        },
-        {
-          "type": "range",
-          "id": "bn_txt_mt",
-          "min": 0,
-          "max": 100,
-          "step": 1,
-          "unit": "px",
-          "default": 0,
-          "label": "Top"
-        },
-        {
-          "type": "range",
-          "id": "bn_txt_mb",
-          "min": 0,
-          "max": 100,
-          "step": 1,
-          "unit": "px",
-          "default": 25,
-          "label": "Bottom"
-        }
-      ]
-    },
-    {
-      "type": "html",
-      "name": "Html",
-      "settings": [
-        {
-          "type": "html",
-          "id": "content_html",
-          "label": "Content",
-          "default": "<div class=\"text-center py-10 px-15 border\" style=\"color: #111;\">This is Custom HTML section</div>"
-        },
-        {
-          "type": "header",
-          "content": "Spacing"
-        },
-        {
-          "type": "range",
-          "id": "html_mt",
-          "min": 0,
-          "max": 100,
-          "step": 1,
-          "unit": "px",
-          "default": 0,
-          "label": "Top"
-        },
-        {
-          "type": "range",
-          "id": "html_mb",
-          "min": 0,
-          "max": 100,
-          "step": 1,
-          "unit": "px",
-          "default": 25,
-          "label": "Bottom"
-        }
-      ]
-    },
-    {
-      "type": "faq",
-      "name": "Faq",
-      "settings": [
-        {
-          "type": "header",
-          "content": "FAQ 1"
-        },
-        {
-          "type": "text",
-          "id": "faq_title_1",
-          "label": "Title",
-          "default": "Frequently Asked Questions?"
-        },
-        {
-          "type": "richtext",
-          "id": "faq_content_1",
-          "label": "Content",
-          "default": "<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>"
-        },
-        {
-          "type": "header",
-          "content": "FAQ 2"
-        },
-        {
-          "type": "text",
-          "id": "faq_title_2",
-          "label": "Title",
-          "default": "Frequently Asked Questions?"
-        },
-        {
-          "type": "richtext",
-          "id": "faq_content_2",
-          "label": "Content",
-          "default": "<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>"
-        },
-        {
-          "type": "header",
-          "content": "FAQ 3"
-        },
-        {
-          "type": "text",
-          "id": "faq_title_3",
-          "label": "Title",
-          "default": "Frequently Asked Questions?"
-        },
-        {
-          "type": "richtext",
-          "id": "faq_content_3",
-          "label": "Content",
-          "default": "<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>"
-        },
-        {
-          "type": "header",
-          "content": "FAQ 4"
-        },
-        {
-          "type": "text",
-          "id": "faq_title_4",
-          "label": "Title",
-          "default": "Frequently Asked Questions?"
-        },
-        {
-          "type": "richtext",
-          "id": "faq_content_4",
-          "label": "Content",
-          "default": "<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>"
-        },
-        {
-          "type": "header",
-          "content": "FAQ 5"
-        },
-        {
-          "type": "text",
-          "id": "faq_title_5",
-          "label": "Title",
-          "default": "Frequently Asked Questions?"
-        },
-        {
-          "type": "richtext",
-          "id": "faq_content_5",
-
-          "label": "Content",
-          "default": "<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>"
-        },
-        {
-          "type": "header",
-          "content": "Typography"
-        },
-        {
-          "type": "paragraph",
-          "content": "== Title =="
-        },
-        {
-          "type": "range",
-          "id": "faq_fs",
-          "label": "Font size",
-          "min": 10,
-          "max": 20,
-          "step": 1,
-          "unit": "px",
-          "default": 14
-        },
-        {
-          "type": "select",
-          "id": "faq_fw",
-          "label": "Font weight",
-          "default": "default",
-          "options": [
-            {
-              "label": "Default",
-              "value": "default"
-            },
-            {
-              "label": "300",
-              "value": "300"
-            },
-            {
-              "label": "400",
-              "value": "400"
-            },
-            {
-              "label": "500",
-              "value": "500"
-            },
-            {
-              "label": "600",
-              "value": "600"
-            },
-            {
-              "label": "700",
-              "value": "700"
-            },
-            {
-              "label": "800",
-              "value": "800"
-            },
-            {
-              "label": "900",
-              "value": "900"
-            }
-          ]
-        },
-        {
-          "type": "select",
-          "id": "faq_tf",
-          "label": "Text transform",
-          "options": [
-            {
-              "value": "unset",
-              "label": "Unset"
-            },
-            {
-              "value": "capitalize",
-              "label": "Capitalize"
-            },
-            {
-              "value": "uppercase",
-              "label": "Uppercase"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "content": "== Content =="
-        },
-        {
-          "type": "range",
-          "id": "faq_desc_fs",
-          "label": "Font size",
-          "min": 10,
-          "max": 20,
-          "step": 1,
-          "unit": "px",
-          "default": 14
-        },
-        {
-          "type": "select",
-          "id": "faq_desc_fw",
-          "label": "Font weight",
-          "default": "default",
-          "options": [
-            {
-              "label": "Default",
-              "value": "default"
-            },
-            {
-              "label": "300",
-              "value": "300"
-            },
-            {
-              "label": "400",
-              "value": "400"
-            },
-            {
-              "label": "500",
-              "value": "500"
-            },
-            {
-              "label": "600",
-              "value": "600"
-            },
-            {
-              "label": "700",
-              "value": "700"
-            },
-            {
-              "label": "800",
-              "value": "800"
-            },
-            {
-              "label": "900",
-              "value": "900"
-            }
-          ]
-        },
-        {
-          "type": "select",
-          "id": "faq_desc_tf",
-          "label": "Text transform",
-          "options": [
-            {
-              "value": "unset",
-              "label": "Unset"
-            },
-            {
-              "value": "capitalize",
-              "label": "Capitalize"
-            },
-            {
-              "value": "uppercase",
-              "label": "Uppercase"
-            }
-          ]
-        },
-        {
-          "type": "header",
-          "content": "Spacing"
-        },
-        {
-          "type": "range",
-          "id": "faq_mt",
-          "min": 0,
-          "max": 60,
-          "step": 1,
-          "unit": "px",
-          "default": 0,
-          "label": "Top"
-        },
-        {
-          "type": "range",
-          "id": "faq_mb",
-          "min": 0,
-          "max": 60,
-          "step": 1,
-          "unit": "px",
-          "default": 10,
           "label": "Bottom"
         }
       ]
