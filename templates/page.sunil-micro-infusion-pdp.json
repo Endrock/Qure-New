@@ -976,6 +976,19 @@
             "client": "Jacqueline F.",
             "code": ""
           }
+        },
+        "result_YDCnQR": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/Group_1299mi-pdp-RAMANDEEPresults_1.png",
+            "heading": "10/10 Recommend!!",
+            "text": "<p> I honestly can't say enough good things about the Qure Skincare microneedling system. I’ve struggled with acne-prone skin for years due to PCOS, which left me with deep, pitted scars that no product ever seemed to help—until now. After consistently using the Qure system, I saw real, noticeable improvements. My skin started to feel smoother, and the scarring began to fade significantly.</p>",
+            "see-more": "What really blew me away is how much healthier and more radiant my skin looks—I barely wear makeup now because I feel confident in my natural skin. The process was gentle but effective, and I felt like I was getting professional-level results at home. Qure has truly transformed my skincare routine. If you struggle with acne scars or uneven texture, I highly recommend giving this a try. It’s been a total game-changer for me.",
+            "image_country": "shopify://shop_images/america_f_85c3552f-2c5a-48e4-9ca5-78539e5139ca.webp",
+            "text_country": "United States",
+            "client": "Jennifer H.",
+            "code": ""
+          }
         }
       },
       "block_order": [
@@ -1003,7 +1016,8 @@
         "result_VFw8Mj",
         "result_qKjLeC",
         "result_36Ei9K",
-        "result_NJzRrN"
+        "result_NJzRrN",
+        "result_YDCnQR"
       ],
       "settings": {
         "classname": "mi_landing_result pt-0",
