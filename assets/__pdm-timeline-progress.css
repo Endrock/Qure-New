@@ -118,18 +118,24 @@ body[data-timeline-progress] pdm-timeline-progress{
 
 @media screen and (min-width:1024px) {
   .timeline-progress-nav-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
   }
 
   .timeline-progress-nav{
     position: relative;
-    padding-bottom: 32px;
+    padding-bottom: 12px;
     margin: 0;
-    width: calc(100% - 48px);
+    /* width: calc(100% - 48px); */
+    width: 100%;
+    margin-left: 46px;
+    margin-right: 60px;
   }
 
   .timeline-nav-line{
-    width: 80%;
+    width: 98%;
   }
 
   /* Progress bar desktop adjustments */
@@ -153,11 +159,35 @@ body[data-timeline-progress] pdm-timeline-progress{
   }
 
   .timeline-nav-item {
+    width: 149px;
     flex-direction: column;
-    align-items: self-start;
+    align-items: center;
     text-align: center;
     cursor: pointer;
-    width: fit-content;
+  }
+
+  .timeline-nav-item:first-child {
+    align-items: start;
+  }
+
+  .timeline-nav-item:last-child {
+    align-items: end;
+  }
+
+  .timeline-nav-item:first-child .timeline-nav-labels{
+    position: absolute;
+    left: 0;
+    top: 16px;
+    transform: translateX(-30%);
+    white-space: nowrap;
+  }
+
+  .timeline-nav-item:last-child .timeline-nav-labels{
+    position: absolute;
+    right: 0;
+    top: 16px;
+    transform: translateX(41%);
+    white-space: nowrap;
   }
 }
 
