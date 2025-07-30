@@ -795,6 +795,7 @@
         },
         "result_feQjFD": {
           "type": "result",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/results_jess1.webp",
             "heading": "Totally worth it!!!",
