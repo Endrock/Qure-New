@@ -15,8 +15,8 @@
         "announcement_QmXGJK": {
           "type": "announcement",
           "settings": {
-            "heading": "SAVE UP TO 75% | Limited time Offer",
-            "heading_mobile": "SAVE UP TO 75% | Limited time Offer",
+            "heading": "SAVE UP TO 70% | Limited time Offer",
+            "heading_mobile": "SAVE UP TO 70% | Limited time Offer",
             "color": "green",
             "font_size_desktop": 14,
             "font_size_mobile": 13
@@ -72,7 +72,7 @@
         "button_L9q6wE": {
           "type": "button",
           "settings": {
-            "button_label": "HOLIDAY OFFER SAVE 75%",
+            "button_label": "HOLIDAY OFFER SAVE 70%",
             "button_url": "#productSubscription"
           }
         },
