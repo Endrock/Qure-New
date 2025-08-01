@@ -15,8 +15,8 @@
         "announcement_QmXGJK": {
           "type": "announcement",
           "settings": {
-            "heading": "SAVE UP TO 75% | Limited time Offer",
-            "heading_mobile": "SAVE UP TO 75% | Limited time Offer",
+            "heading": "SAVE UP TO 70% | Limited time Offer",
+            "heading_mobile": "SAVE UP TO 70% | Limited time Offer",
             "color": "green",
             "font_size_desktop": 14,
             "font_size_mobile": 13
@@ -54,7 +54,7 @@
         "navigation_link_wMtKmt"
       ],
       "settings": {
-        "button_label": "SAVE UP TO 75%",
+        "button_label": "SAVE UP TO 70%",
         "button_url": "#productSubscription"
       }
     },
