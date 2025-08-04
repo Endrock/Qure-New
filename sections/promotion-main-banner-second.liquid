@@ -16,8 +16,8 @@
 </style>
 
 <!-- -- main banner start -- -->
-<div class="bf_sale-banners"{% if location_href != blank %} onclick="window.location='{{ location_href }}';" style="cursor:pointer"{% endif %}>
-    <div class="hero_valentine_banner position-relative main_banner summer_sale_banner">
+<div class="bf_sale-banners">
+    <div class="hero_valentine_banner position-relative main_banner summer_sale_banner"{% if location_href != blank %} onclick="window.location='{{ location_href }}';" style="cursor:pointer"{% endif %}>
         <div class="container-fluid px-0">
             <picture>
                 <source media="(min-width:1920px)" srcset="{{ section.settings.image | img_url: 'master' }}" class="img-fluid" width="1440" height="557">
