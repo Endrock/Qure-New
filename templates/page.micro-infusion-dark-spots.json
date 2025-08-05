@@ -15,8 +15,8 @@
         "announcement_QmXGJK": {
           "type": "announcement",
           "settings": {
-            "heading": "SAVE UP TO 75% | Limited time Offer",
-            "heading_mobile": "SAVE UP TO 75% | Limited time Offer",
+            "heading": "SAVE UP TO 70% | Limited time Offer",
+            "heading_mobile": "SAVE UP TO 70% | Limited time Offer",
             "color": "green",
             "font_size_desktop": 14,
             "font_size_mobile": 13
@@ -54,7 +54,7 @@
         "navigation_link_wMtKmt"
       ],
       "settings": {
-        "button_label": "SAVE UP TO 75%",
+        "button_label": "SAVE UP TO 70%",
         "button_url": "#productSubscription"
       }
     },
@@ -72,7 +72,7 @@
         "button_L9q6wE": {
           "type": "button",
           "settings": {
-            "button_label": "HOLIDAY OFFER SAVE 75%",
+            "button_label": "SUMMER SALE SAVE 70%",
             "button_url": "#productSubscription"
           }
         },
@@ -1180,9 +1180,9 @@
         "product_DBd4ef": {
           "type": "product",
           "settings": {
-            "product": "micro-infusion-6-month-bogo-for-dark-spots",
+            "product": "micro-infusion-6-month-bundle-for-dark-spots",
             "preselected": true,
-            "heading": "Buy 3 Months, Get 3 Months FREE",
+            "heading": "6 Month Supply SUMMER SALE",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/Micro-Infusion6MonthBundle_DarkSpots.jpg",
             "total_treatments": 12,
@@ -1193,10 +1193,7 @@
             "preorder_date_soldout": "",
             "preorder_date_reserved": "",
             "preorder_percent": "",
-            "included_text": "<p>2 Micro-Infusion devices (valued at $160)</p><p>10 Clinical-grade micro-needling heads (valued at $100)</p><p>12 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $240)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial/p&gt;</p><p>24/7 customer support access</p>",
-            "free_patches": false,
-            "free_patches_product": "",
-            "free_patches_text": "<strong>Get a Free</strong> Pair of Micro-Infusion Patches"
+            "included_text": "<p>2 Micro-Infusion devices (valued at $160)</p><p>10 Clinical-grade micro-needling heads (valued at $100)</p><p>12 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $240)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial/p&gt;</p><p>24/7 customer support access</p>"
           }
         },
         "product_7dL4ci": {
@@ -1215,10 +1212,7 @@
             "preorder_date_soldout": "",
             "preorder_date_reserved": "",
             "preorder_percent": "",
-            "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>5 Clinical-grade micro-needling heads (valued at $50)</p><p>6 clinically-formulated 4ml serum to treat your specific skin concerns (valued at $120)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial</p>",
-            "free_patches": false,
-            "free_patches_product": "",
-            "free_patches_text": "<strong>Get a Free</strong> Pair of Micro-Infusion Patches"
+            "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>5 Clinical-grade micro-needling heads (valued at $50)</p><p>6 clinically-formulated 4ml serum to treat your specific skin concerns (valued at $120)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial</p>"
           }
         },
         "product_Xf8A6C": {
@@ -1237,10 +1231,7 @@
             "preorder_date_soldout": "22 May",
             "preorder_date_reserved": "10 July",
             "preorder_percent": "65% Reserved",
-            "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>1 Clinical-grade micro-needling heads (valued at $10)</p><p>2 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $40)</p><p>Worldwide shipping (valued at $25)</p>",
-            "free_patches": false,
-            "free_patches_product": "",
-            "free_patches_text": "<strong>Get a Free</strong> Pair of Micro-Infusion Patches"
+            "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>1 Clinical-grade micro-needling heads (valued at $10)</p><p>2 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $40)</p><p>Worldwide shipping (valued at $25)</p>"
           }
         },
         "type_aJwQ9q": {
@@ -1272,10 +1263,7 @@
             "preorder_date_soldout": "",
             "preorder_date_reserved": "",
             "preorder_percent": "",
-            "included_text": "<p>2 Micro-Infusion devices (valued at $160)</p><p>10 Clinical-grade micro-needling heads (valued at $100)</p><p>12 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $240)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial/p&gt;</p>",
-            "free_patches": false,
-            "free_patches_product": "",
-            "free_patches_text": "<strong>Get a Free</strong> Pair of Micro-Infusion Patches"
+            "included_text": "<p>2 Micro-Infusion devices (valued at $160)</p><p>10 Clinical-grade micro-needling heads (valued at $100)</p><p>12 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $240)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial/p&gt;</p>"
           }
         },
         "product_EKAAzA": {
@@ -1294,10 +1282,7 @@
             "preorder_date_soldout": "",
             "preorder_date_reserved": "",
             "preorder_percent": "",
-            "included_text": "<p>1 Micro-Infusion devices (valued at $80)</p><p>5 Clinical-grade micro-needling heads (valued at $50)</p><p>6 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $120)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial/p&gt;</p><p>24/7 customer support access</p>",
-            "free_patches": false,
-            "free_patches_product": "",
-            "free_patches_text": "<strong>Get a Free</strong> Pair of Micro-Infusion Patches"
+            "included_text": "<p>1 Micro-Infusion devices (valued at $80)</p><p>5 Clinical-grade micro-needling heads (valued at $50)</p><p>6 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $120)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial/p&gt;</p><p>24/7 customer support access</p>"
           }
         },
         "product_eiY89h": {
@@ -1316,10 +1301,7 @@
             "preorder_date_soldout": "",
             "preorder_date_reserved": "",
             "preorder_percent": "",
-            "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>1 Clinical-grade micro-needling heads (valued at $10)</p><p>2 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $40)</p><p>Worldwide shipping (valued at $25)</p>",
-            "free_patches": false,
-            "free_patches_product": "",
-            "free_patches_text": "<strong>Get a Free</strong> Pair of Micro-Infusion Patches"
+            "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>1 Clinical-grade micro-needling heads (valued at $10)</p><p>2 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $40)</p><p>Worldwide shipping (valued at $25)</p>"
           }
         },
         "type_yDwWmt": {
@@ -1351,10 +1333,7 @@
             "preorder_date_soldout": "",
             "preorder_date_reserved": "",
             "preorder_percent": "",
-            "included_text": "<p>2 Micro-Infusion devices (valued at $160)</p><p>10 Clinical-grade micro-needling heads (valued at $100)</p><p>12 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $240)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial/p&gt;</p><p>24/7 customer support access</p>",
-            "free_patches": false,
-            "free_patches_product": "",
-            "free_patches_text": "<strong>Get a Free</strong> Pair of Micro-Infusion Patches"
+            "included_text": "<p>2 Micro-Infusion devices (valued at $160)</p><p>10 Clinical-grade micro-needling heads (valued at $100)</p><p>12 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $240)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial/p&gt;</p><p>24/7 customer support access</p>"
           }
         },
         "product_NEgEkN": {
@@ -1373,10 +1352,7 @@
             "preorder_date_soldout": "",
             "preorder_date_reserved": "",
             "preorder_percent": "",
-            "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>5 Clinical-grade micro-needling heads (valued at $50)</p><p>6 clinically-formulated 4ml serum to treat your specific skin concerns (valued at $120)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial</p>",
-            "free_patches": false,
-            "free_patches_product": "",
-            "free_patches_text": "<strong>Get a Free</strong> Pair of Micro-Infusion Patches"
+            "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>5 Clinical-grade micro-needling heads (valued at $50)</p><p>6 clinically-formulated 4ml serum to treat your specific skin concerns (valued at $120)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial</p>"
           }
         },
         "product_RBCPe8": {
@@ -1395,10 +1371,7 @@
             "preorder_date_soldout": "",
             "preorder_date_reserved": "",
             "preorder_percent": "",
-            "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>1 Clinical-grade micro-needling heads (valued at $10)</p><p>2 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $40)</p><p>Worldwide shipping (valued at $25)</p>",
-            "free_patches": false,
-            "free_patches_product": "",
-            "free_patches_text": "<strong>Get a Free</strong> Pair of Micro-Infusion Patches"
+            "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>1 Clinical-grade micro-needling heads (valued at $10)</p><p>2 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $40)</p><p>Worldwide shipping (valued at $25)</p>"
           }
         }
       },
