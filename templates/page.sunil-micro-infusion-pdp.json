@@ -57,9 +57,9 @@
         "product_gbPf3J": {
           "type": "product",
           "settings": {
-            "product": "micro-infusion-6-month-bogo-for-dark-spots",
+            "product": "micro-infusion-6-month-bundle-for-dark-spots",
             "preselected": false,
-            "heading": "Buy 3 Months, Get 3 Months FREE!",
+            "heading": "6 Month Supply SUMMER SALE",
             "subheading": "(12 Micro-infusion Treatments)",
             "soldout": false,
             "preorder": false,
@@ -72,10 +72,10 @@
         "product_NEgEkN": {
           "type": "product",
           "settings": {
-            "product": "micro-infusion-2-month-bundle-4x-e-g-f-serum",
+            "product": "micro-infusion-3-month-bundle",
             "preselected": false,
-            "heading": "2 Month Supply",
-            "subheading": "(4 Micro-infusion Treatments)",
+            "heading": "3 Month Supply",
+            "subheading": "(6 Micro-infusion Treatments)",
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
@@ -114,9 +114,9 @@
         "product_nyJ9n7": {
           "type": "product",
           "settings": {
-            "product": "micro-infusion-6-month-bogo-for-wrinkles",
+            "product": "micro-infusion-6-month-bundle-for-wrinkles",
             "preselected": true,
-            "heading": "Buy 3 Months, Get 3 Months FREE!",
+            "heading": "6 Month Supply SUMMER SALE",
             "subheading": "(12 Micro-infusion Treatments)",
             "soldout": false,
             "preorder": false,
@@ -129,10 +129,10 @@
         "product_EKAAzA": {
           "type": "product",
           "settings": {
-            "product": "micro-infusion-2-month-bundle-4x-beta-glucan-serum",
+            "product": "micro-infusion-3-month-bundle-6x-beta-glucan-serum",
             "preselected": false,
-            "heading": "2 Month Supply",
-            "subheading": "(4 Micro-infusion Treatments)",
+            "heading": "3 Month Supply",
+            "subheading": "(6 Micro-infusion Treatments)",
             "soldout": false,
             "preorder": false,
             "preorder_text": "<p>testing </p>",
@@ -171,9 +171,9 @@
         "product_hD69Aq": {
           "type": "product",
           "settings": {
-            "product": "micro-infusion-6-month-bogo-for-wrinkles-dark-spots",
+            "product": "microinfusion-offer-6-month-supply",
             "preselected": false,
-            "heading": "Buy 3 Months, Get 3 Months FREE!",
+            "heading": "6 Month Supply SUMMER SALE",
             "subheading": "(12 Micro-infusion Treatments)",
             "soldout": false,
             "preorder": false,
@@ -186,10 +186,10 @@
         "product_DBd4ef": {
           "type": "product",
           "settings": {
-            "product": "micro-infusion-2-month-bundle-2x-b-g-serum-2x-e-g-f-serum",
+            "product": "micro-infusion-3-month-bundle-3x-b-g-serum-3x-e-g-f-serum",
             "preselected": false,
-            "heading": "2 Month Supply",
-            "subheading": "(4 Micro-infusion Treatments)",
+            "heading": "3 Month Supply",
+            "subheading": "(6 Micro-infusion Treatments)",
             "soldout": false,
             "preorder": false,
             "preorder_text": "",
@@ -795,6 +795,7 @@
         },
         "result_feQjFD": {
           "type": "result",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/results_jess1.webp",
             "heading": "Totally worth it!!!",
@@ -967,13 +968,39 @@
         "result_NJzRrN": {
           "type": "result",
           "settings": {
-            "image": "shopify://shop_images/Group_258.png",
+            "image": "shopify://shop_images/Group_1299mi-pdp-RAMANDEEPresults_1e3bd8c4-8ecd-4489-944d-8f1cc42bc3cb.png",
             "heading": "Reduced my fine lines",
             "text": "<p>“I’m such a believer in this product now. I noticed my skin was looking good, but it wasn’t until I looked at a photo from a few weeks ago that I really noticed how much it has lessened the lines around my eyes and the elevens between my eyebrows. I will say that it takes me longer than 5 minutes that some people claim- it probably takes me 20 minutes to go over my whole face several times and use up most of the serum. </p>",
             "see-more": "I’m very meticulous about keeping my hands clean the whole time, and not wearing makeup the next day. I really don’t think it hurts at all except for slightly when I get close to my eyes.”",
             "image_country": "shopify://shop_images/america_f_85c3552f-2c5a-48e4-9ca5-78539e5139ca.webp",
             "text_country": "United States",
             "client": "Jacqueline F.",
+            "code": ""
+          }
+        },
+        "result_YDCnQR": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/Group_1299mi-pdp-RAMANDEEPresults_1.png",
+            "heading": "10/10 Recommend!!",
+            "text": "<p> I honestly can't say enough good things about the Qure Skincare microneedling system. I’ve struggled with acne-prone skin for years due to PCOS, which left me with deep, pitted scars that no product ever seemed to help—until now. After consistently using the Qure system, I saw real, noticeable improvements. My skin started to feel smoother, and the scarring began to fade significantly.</p>",
+            "see-more": "What really blew me away is how much healthier and more radiant my skin looks—I barely wear makeup now because I feel confident in my natural skin. The process was gentle but effective, and I felt like I was getting professional-level results at home. Qure has truly transformed my skincare routine. If you struggle with acne scars or uneven texture, I highly recommend giving this a try. It’s been a total game-changer for me.",
+            "image_country": "shopify://shop_images/america_f_85c3552f-2c5a-48e4-9ca5-78539e5139ca.webp",
+            "text_country": "United States",
+            "client": "Jennifer H.",
+            "code": ""
+          }
+        },
+        "result_QcGXbc": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/Frame_1664_7ee52fd8-655b-409d-b4af-f692876787d8.png",
+            "heading": "Hold the wrinkles. This Sh%t is LEGIT!",
+            "text": "<p>“I came across this product and thought “Poke my face with needles?? Are these people crazy??”  But… I bought it anyway. You gotta try everything once, right?   Holy magic wizard potion in a jar! After just ONE application I am already seeing drastic results!  Was I afraid that it was going to hurt- HECK yes! Did it? Not at all. It really is like stamping your face. No pain at all. I don’t know what is in the serum, but I’m going to guess that it’s magical fairy dust mixed with unicorn water.  I can’t wait for my second application”</p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/america_f_85c3552f-2c5a-48e4-9ca5-78539e5139ca.webp",
+            "text_country": "United States",
+            "client": "Vernee C.",
             "code": ""
           }
         }
@@ -1003,7 +1030,9 @@
         "result_VFw8Mj",
         "result_qKjLeC",
         "result_36Ei9K",
-        "result_NJzRrN"
+        "result_NJzRrN",
+        "result_YDCnQR",
+        "result_QcGXbc"
       ],
       "settings": {
         "classname": "mi_landing_result pt-0",
@@ -1444,9 +1473,9 @@
         "product_DBd4ef": {
           "type": "product",
           "settings": {
-            "product": "micro-infusion-6-month-bogo-for-dark-spots",
+            "product": "micro-infusion-6-month-bundle-for-dark-spots",
             "preselected": true,
-            "heading": "Buy 3 Months, Get 3 Months FREE",
+            "heading": "6 Month Supply SUMMER SALE",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/Micro-Infusion6MonthBundle_DarkSpots.jpg",
             "total_treatments": 12,
@@ -1463,12 +1492,12 @@
         "product_7dL4ci": {
           "type": "product",
           "settings": {
-            "product": "micro-infusion-2-month-bundle-4x-e-g-f-serum",
+            "product": "micro-infusion-3-month-bundle",
             "preselected": false,
-            "heading": "2 Month Supply",
-            "subheading": "(4 Micro-infusion Treatments)",
+            "heading": "3 Month Supply",
+            "subheading": "(6 Micro-infusion Treatments)",
             "image": "shopify://shop_images/2_month_for_dark_spots_1.png",
-            "total_treatments": 4,
+            "total_treatments": 6,
             "left_items": false,
             "soldout": false,
             "preorder": false,
@@ -1476,7 +1505,7 @@
             "preorder_date_soldout": "",
             "preorder_date_reserved": "",
             "preorder_percent": "",
-            "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>3 Clinical-grade micro-needling heads (valued at $50)</p><p>4 clinically-formulated 4ml serum to treat your specific skin concerns (valued at $120)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial</p>"
+            "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>5 Clinical-grade micro-needling heads (valued at $50)</p><p>6 clinically-formulated 4ml serum to treat your specific skin concerns (valued at $120)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial</p>"
           }
         },
         "product_Xf8A6C": {
@@ -1513,9 +1542,9 @@
         "product_nyJ9n7": {
           "type": "product",
           "settings": {
-            "product": "micro-infusion-6-month-bogo-for-wrinkles",
+            "product": "micro-infusion-6-month-bundle-for-wrinkles",
             "preselected": true,
-            "heading": "Buy 3 Months, Get 3 Months FREE",
+            "heading": "6 Month Supply SUMMER SALE",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/micro-infusion_6_month_bundle__for_wrinkles.png",
             "total_treatments": 12,
@@ -1532,12 +1561,12 @@
         "product_EKAAzA": {
           "type": "product",
           "settings": {
-            "product": "micro-infusion-2-month-bundle-4x-beta-glucan-serum",
+            "product": "micro-infusion-3-month-bundle-6x-beta-glucan-serum",
             "preselected": false,
-            "heading": "2 Month Supply",
-            "subheading": "(4 Micro-infusion Treatments)",
+            "heading": "3 Month Supply",
+            "subheading": "(6 Micro-infusion Treatments)",
             "image": "shopify://shop_images/2_month_for_wrinkles.png",
-            "total_treatments": 4,
+            "total_treatments": 6,
             "left_items": false,
             "soldout": false,
             "preorder": false,
@@ -1545,7 +1574,7 @@
             "preorder_date_soldout": "",
             "preorder_date_reserved": "",
             "preorder_percent": "",
-            "included_text": "<p>1 Micro-Infusion devices (valued at $80)</p><p>3 Clinical-grade micro-needling heads (valued at $50)</p><p>4 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $120)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial/p&gt;</p><p>24/7 customer support access</p>"
+            "included_text": "<p>1 Micro-Infusion devices (valued at $80)</p><p>5 Clinical-grade micro-needling heads (valued at $50)</p><p>6 clinically-formulated 4ml serums to treat your specific skin concerns (valued at $120)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial/p&gt;</p><p>24/7 customer support access</p>"
           }
         },
         "product_eiY89h": {
@@ -1582,9 +1611,9 @@
         "product_gbPf3J": {
           "type": "product",
           "settings": {
-            "product": "micro-infusion-6-month-bogo-for-wrinkles-dark-spots",
+            "product": "microinfusion-offer-6-month-supply",
             "preselected": true,
-            "heading": "Buy 3 Months, Get 3 Months FREE",
+            "heading": "6 Month Supply SUMMER SALE",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/Micro-Infusion_6_Month_Bundle_For_Wrinkles_Dark_Spots.png",
             "total_treatments": 12,
@@ -1603,10 +1632,10 @@
           "settings": {
             "product": "micro-infusion-2-month-bundle-2x-b-g-serum-2x-e-g-f-serum",
             "preselected": false,
-            "heading": "2 Month Supply",
-            "subheading": "(4 Micro-infusion Treatments)",
+            "heading": "3 Month Supply",
+            "subheading": "(6 Micro-infusion Treatments)",
             "image": "shopify://shop_images/2monthmix_1_0201c796-fb83-44b6-a71b-800e642105a7_1.png",
-            "total_treatments": 4,
+            "total_treatments": 6,
             "left_items": false,
             "soldout": false,
             "preorder": false,
@@ -1614,7 +1643,7 @@
             "preorder_date_soldout": "",
             "preorder_date_reserved": "",
             "preorder_percent": "",
-            "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>3 Clinical-grade micro-needling heads (valued at $50)</p><p>4 clinically-formulated 4ml serum to treat your specific skin concerns (valued at $120)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial</p>"
+            "included_text": "<p>Micro-Infusion device (valued at $80)</p><p>5 Clinical-grade micro-needling heads (valued at $50)</p><p>6 clinically-formulated 4ml serum to treat your specific skin concerns (valued at $120)</p><p>Worldwide shipping (valued at $25)</p><p>Risk-free 90 days money-back guarantee to trial</p>"
           }
         },
         "product_RBCPe8": {
