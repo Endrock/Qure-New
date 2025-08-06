@@ -1,0 +1,95 @@
+<div class="bf_bundle_sale bf_bundle_sale-pdm" id="bf-bundles">
+    <div class="container">
+        <div class="section_header mw-100">
+            <div class="bf-bundles_title">
+                {% if section.settings.heading != blank %}
+                    <h3>{{ section.settings.heading }}</h3>
+                {% endif %}
+                {% if section.settings.subheading != blank %}
+                    <h4>{{ section.settings.subheading }}</h4>
+                {% endif %}
+            </div>
+        </div>
+        <div class="mw-600 mx-auto pb-md-3">
+            {% if section.settings.text != blank %}
+                <div class="light_green_tag">
+                    {{ section.settings.text }}
+                </div>    
+            {% endif %}
+            <div class="bf_bundle_sale_ftr">
+                {%- for block in section.blocks -%}
+                    {% if block.type == 'object' %}
+                        <a href="{{ block.settings.link_url }}" class="bf_bundle_sale_ftr_item">
+                            {% if block.settings.image != blank %}
+                                <div class="new_img">
+                                    <img src="{{ block.settings.image | img_url: '250x' }}" alt="{{ block.settings.image.alt | escape }}" class="img-fluid">
+                                </div>
+                            {% endif %}
+                            {{ block.settings.text |  replace: '\n', '<br />' }}
+                        </a>
+                    {% endif %}
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+  .bf_bundle_sale-pdm .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 30px 16px 50px 16px;
+  }
+
+  .bf_bundle_sale-pdm .section_header {
+    padding-bottom: 0;
+  }
+
+  .bf_bundle_sale-pdm .bf-bundles_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+  }
+
+  .bf_bundle_sale-pdm .bf-bundles_title h3 {
+    color:  #212428;
+    text-align: center;
+    font-family: Canela Web;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 32px;
+  }
+
+  .bf_bundle_sale-pdm .bf-bundles_title h4 {
+    color:  #212428;
+    text-align: center;
+    font-family: "TT Commons", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 0;
+  }
+
+  @media screen and (min-width:768px) {
+    .bf_bundle_sale-pdm .container {
+      gap: 50px;
+      padding: 40px 150px 80px 150px;
+    }
+
+    .bf_bundle_sale-pdm .bf-bundles_title {
+      gap: 32px;
+    }
+
+    .bf_bundle_sale-pdm .bf-bundles_title h3 {
+      font-size: 38px;
+      line-height: 42px;
+    }
+  }
+
+</style>
