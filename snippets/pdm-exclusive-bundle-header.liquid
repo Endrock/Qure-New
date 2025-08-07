@@ -10,24 +10,18 @@
                 {% endif %}
             </div>
         </div>
-        <div class="mw-600 mx-auto pb-md-3">
+        <div class="section_content">
             {% if section.settings.text != blank %}
                 <div class="light_green_tag">
                     {{ section.settings.text }}
                 </div>    
             {% endif %}
             <div class="bf_bundle_sale_ftr">
-                {%- for block in section.blocks -%}
-                    {% if block.type == 'object' %}
-                        <a href="{{ block.settings.link_url }}" class="bf_bundle_sale_ftr_item">
-                            {% if block.settings.image != blank %}
-                                <div class="new_img">
-                                    <img src="{{ block.settings.image | img_url: '250x' }}" alt="{{ block.settings.image.alt | escape }}" class="img-fluid">
-                                </div>
-                            {% endif %}
-                            {{ block.settings.text |  replace: '\n', '<br />' }}
-                        </a>
-                    {% endif %}
+              {% assign block_type_object = section.blocks |  where: 'type','object'  %}
+                {%- for block in block_type_object -%}
+                  <a href="{{ block.settings.link_url }}" class="bf_bundle_sale_ftr_item {% if forloop.first %} active {% endif %}">
+                      {{ block.settings.text |  replace: '<br />' }}
+                  </a>
                 {%- endfor -%}
             </div>
         </div>
@@ -40,7 +34,8 @@
     flex-direction: column;
     align-items: center;
     gap: 32px;
-    padding: 30px 16px 50px 16px;
+    padding: 30px 16px 32px 16px;
+    padding-bottom: 0;
   }
 
   .bf_bundle_sale-pdm .section_header {
@@ -76,10 +71,81 @@
     margin: 0;
   }
 
+  .section_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+  }
+
+  .section_content .light_green_tag {
+    color:#212428;
+    text-align: center;
+    font-family: "TT Commons";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+  }
+
+  .section_content .light_green_tag p {
+      text-align: center;
+      font-family: "TT Commons";
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 22px;
+  }
+
+  .section_content .bf_bundle_sale_ftr {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: flex-end;
+    gap: 12px;
+    align-self: stretch;
+    flex-wrap: wrap;
+    padding-bottom: 0;
+  }
+
+  .section_content .bf_bundle_sale_ftr .bf_bundle_sale_ftr_item {
+    display: flex;
+    padding: 7.5px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: 1px solid  #212428;
+    width: fit-content;
+  }
+
+  .section_content .bf_bundle_sale_ftr .bf_bundle_sale_ftr_item p {
+    color: #212428;
+    font-family: "TT Commons";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    padding: 0;
+  }
+  .section_content .bf_bundle_sale_ftr .bf_bundle_sale_ftr_item.active{
+    background: #212428;
+  }
+  .section_content .bf_bundle_sale_ftr .bf_bundle_sale_ftr_item.active p {
+    color: #FFFFFF;
+  }
   @media screen and (min-width:768px) {
+    .bf_bundle_sale-pdm {
+      padding-bottom: 0;
+    }
     .bf_bundle_sale-pdm .container {
       gap: 50px;
-      padding: 40px 150px 80px 150px;
+      padding: 0;
+      max-width: 858px;
+      padding-bottom: 0;
     }
 
     .bf_bundle_sale-pdm .bf-bundles_title {
@@ -90,6 +156,9 @@
       font-size: 38px;
       line-height: 42px;
     }
+    .section_content .bf_bundle_sale_ftr .bf_bundle_sale_ftr_item {
+      flex: 1;
+    }
   }
-
+  
 </style>
