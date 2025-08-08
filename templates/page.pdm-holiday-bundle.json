@@ -16,7 +16,7 @@
           "type": "announcement",
           "settings": {
             "heading": "Summer Sale Ends In:",
-            "timer": "2025-08-13T10:59:53",
+            "timer": "2025-08-07T10:59:53",
             "timer_next": 6
           }
         },
@@ -480,8 +480,9 @@
         "text": "<p>Top-rated products at <em>best prices.</em></p>"
       }
     },
-    "bundles-header": {
-      "type": "exclusive-holiday-bundle-deal-bundles-header",
+    "pdm_exclusive_holiday_bundle_deal_bundles_header_rqkTgp": {
+      "type": "pdm-exclusive-holiday-bundle-deal-bundles-header",
+      "name": "PDM Bundles Header",
       "blocks": {
         "badge_TwBcgj": {
           "type": "badge",
@@ -495,7 +496,7 @@
         "object_pBAeDi": {
           "type": "object",
           "settings": {
-            "text": "<p>Signs of Aging, Wrinkles & Fine Lines</p>",
+            "text": "<p>Dark Spots & Hyperpigmentation</p>",
             "image": "shopify://shop_images/bf-ftr-aging.svg",
             "link_url": "#Pro-Aging-Bundles"
           }
@@ -503,7 +504,7 @@
         "object_kbrVPD": {
           "type": "object",
           "settings": {
-            "text": "<p>Dark Spots, Wrinkles \\n & Fine Lines</p>",
+            "text": "<p>Signs of Aging</p>",
             "image": "shopify://shop_images/bf-ftr-wrinkles.svg",
             "link_url": "#Pro-Aging-&-Dark-Spots-Bundles"
           }
@@ -511,7 +512,7 @@
         "object_MU6PFN": {
           "type": "object",
           "settings": {
-            "text": "<p>Acne & Breakouts</p>",
+            "text": "<p>Acne & Redness</p>",
             "image": "shopify://shop_images/bf-ftr-acne.svg",
             "link_url": "#Acne-Bundles"
           }
@@ -529,28 +530,29 @@
         "text": "<p>Shop by concern</p>"
       }
     },
-    "bundles-list": {
-      "type": "exclusive-holiday-bundle-deal-bundles-list",
+    "pdm_exclusive_holiday_bundle_deal_bundles_list_KYLFMk": {
+      "type": "pdm-exclusive-holiday-bundle-deal-bundles-list",
+      "name": "PDM Bundles List",
       "blocks": {
         "icon_AcpYLG": {
           "type": "icon",
           "settings": {
-            "text": "<p>Reduces wrinkles \\n & fine lines</p>",
-            "image": "shopify://shop_images/bf-ftr-eye-wrinkles.svg"
+            "text": "<p>Fade dark spots</p>",
+            "image": "shopify://shop_images/Shape_Icons.svg"
           }
         },
         "icon_f36jbE": {
           "type": "icon",
           "settings": {
-            "text": "<p>Boosts collagen</p>",
-            "image": "shopify://shop_images/bf-ftr-collagen.svg"
+            "text": "<p>Boost radiance</p>",
+            "image": "shopify://shop_images/Shape_Icons_a848768c-1f77-4e99-9f00-2c4979d8d905.svg"
           }
         },
         "icon_eUd4zy": {
           "type": "icon",
           "settings": {
-            "text": "<p>Promotes firmer, \\n youthful-looking skin</p>",
-            "image": "shopify://shop_images/bf-ftr-firmer.svg"
+            "text": "<p>Brighten and even tone</p>",
+            "image": "shopify://shop_images/Shape_Icons_fae8537e-51d8-4c90-8c03-feaf67e9a9c4.svg"
           }
         },
         "bundle_jeyfm3": {
@@ -928,13 +930,14 @@
         "how_to_use_afmnQY"
       ],
       "settings": {
-        "heading": "Pro-Aging Bundles",
-        "subheading": "These bundles are specifically designed to target signs of aging, fine lines, wrinkles.",
+        "heading": "Dark Spots & Hyperpigmentation",
+        "subheading": "These bundles are specifically designed to target signs of aging and fade dark spots. ",
         "supertop": ""
       }
     },
-    "bundles-list2": {
-      "type": "exclusive-holiday-bundle-deal-bundles-list",
+    "pdm_exclusive_holiday_bundle_deal_bundles_list_KYLFMk2": {
+      "type": "pdm-exclusive-holiday-bundle-deal-bundles-list",
+      "name": "PDM Bundles List",
       "blocks": {
         "icon_cUYtN8": {
           "type": "icon",
@@ -1370,8 +1373,9 @@
         "supertop": ""
       }
     },
-    "bundles-list3": {
-      "type": "exclusive-holiday-bundle-deal-bundles-list",
+    "pdm_exclusive_holiday_bundle_deal_bundles_list_KYLFMk3": {
+      "type": "pdm-exclusive-holiday-bundle-deal-bundles-list",
+      "name": "PDM Bundles List",
       "blocks": {
         "icon_dLrXUB": {
           "type": "icon",
@@ -2029,10 +2033,10 @@
     "icons_list",
     "featuredin_extended",
     "before-after",
-    "bundles-header",
-    "bundles-list",
-    "bundles-list2",
-    "bundles-list3",
+    "pdm_exclusive_holiday_bundle_deal_bundles_header_rqkTgp",
+    "pdm_exclusive_holiday_bundle_deal_bundles_list_KYLFMk",
+    "pdm_exclusive_holiday_bundle_deal_bundles_list_KYLFMk2",
+    "pdm_exclusive_holiday_bundle_deal_bundles_list_KYLFMk3",
     "icons_list_second",
     "p7",
     "text_with_video",

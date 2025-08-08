@@ -1,0 +1,223 @@
+<div class="bf_bundle_sale bf_bundle_sale-pdm">
+  <div class="container">
+    <div class="bf_bundle_item" id="{{ section.settings.heading | escape |  replace: ' ', '-' }}">
+      <div class="section_header pb-0 text-center mw-100">
+        {% if section.settings.supertop != blank %}
+          <h6 class="pb-3">{{ section.settings.supertop }}</h6>
+        {% endif %}
+        <div class="section_header_container">
+          {% if section.settings.heading != blank %}
+            <h2 class="title-lg">{{ section.settings.heading }}</h2>
+          {% endif %}
+
+          {% if section.settings.subheading != blank %}
+            <p class="withLine_p">{{ section.settings.subheading }}</p>
+          {% endif %}
+
+          <div class="section_header_container-line"></div>
+          <div class="bf_bundle_item_ftr">
+            {%- for block in section.blocks -%}
+              {% if block.type == 'icon' %}
+                <div class="bf_bundle_item_ftr_item">
+                  {% if block.settings.image != blank %}
+                    <img
+                      src="{{ block.settings.image | img_url: '250x' }}"
+                      alt="{{ block.settings.image.alt | escape }}"
+                      class="img-fluid"
+                    >
+                  {% endif %}
+                  {{ block.settings.text | replace: '<p>', '<p class="d-none d-md-block">' | replace: '\n', '<br />' }}
+                  {{ block.settings.text | replace: '<p>', '<p class="d-block d-md-none">' | replace: '\n', '' }}
+                </div>
+              {% endif %}
+            {%- endfor -%}
+          </div>
+        </div>
+
+        {% if product_count > 0 %}
+          {% comment %} get assoc array from current section with defined block parent {% endcomment %}
+          {% render 'assoc-array', section: section, __parent_title: 'product', __separator: '###' %}
+
+          <div class="bfs_main_banner swiperWrap">
+            {% assign product_num = 0 %}
+            {%- for block in section.blocks -%}
+              {% if block.type == 'product' %}
+                {% if block.settings.product != blank %}
+                  {% assign children = blank %}
+                  {% assign product_num = product_num | plus: 1 %}
+
+                  {% case product_num %}
+                    {% when 1 %}
+                      {% assign children = __idsArray1 %}
+                    {% when 2 %}
+                      {% assign children = __idsArray2 %}
+                    {% when 3 %}
+                      {% assign children = __idsArray3 %}
+                    {% when 4 %}
+                      {% assign children = __idsArray4 %}
+                    {% when 5 %}
+                      {% assign children = __idsArray5 %}
+                    {% when 6 %}
+                      {% assign children = __idsArray6 %}
+                    {% when 7 %}
+                      {% assign children = __idsArray7 %}
+                    {% when 8 %}
+                      {% assign children = __idsArray8 %}
+                    {% when 9 %}
+                      {% assign children = __idsArray9 %}
+                    {% when 10 %}
+                      {% assign children = __idsArray10 %}
+                    {% when 11 %}
+                      {% assign children = __idsArray11 %}
+                    {% when 12 %}
+                      {% assign children = __idsArray12 %}
+                  {% endcase %}
+
+                  {% render 'pdm-exclusive-holiday-bundle-deal-bundles-bundle', block: block, children: children %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .bf_bundle_sale.bf_bundle_sale-pdm{
+      padding-top: 0;
+      padding-bottom: 0;
+    } 
+
+  .bf_bundle_sale-pdm .bf_bundle_item {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .bf_bundle_sale-pdm .section_header_container {
+    display: flex;
+    width: 100%;
+    padding: 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    border-radius: 10px;
+    background: #f6f6f7;
+  }
+
+  .bf_bundle_sale-pdm .section_header_container .title-lg {
+    align-self: stretch;
+    color: #212428;
+    text-align: center;
+    font-family: Canela Web !important;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 32px;
+  }
+
+  .bf_bundle_sale-pdm .section_header_container .title-lg h2 {
+    display: inline;
+    margin: 0;
+  }
+
+  .bf_bundle_sale-pdm .section_header_container .withLine_p {
+    align-self: stretch;
+    color: #212428;
+    text-align: center;
+    font-family: "TT Commons";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 0;
+  }
+
+  .bf_bundle_sale-pdm .section_header_container .section_header_container-line {
+    width: 295px;
+    height: 1px;
+    background: #DFE0E0;
+  }
+
+  .bf_bundle_sale-pdm .section_header_container .bf_bundle_item_ftr {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  .bf_bundle_sale-pdm .section_header_container .bf_bundle_item_ftr .bf_bundle_item_ftr_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex: 1 0 0;
+  }
+
+  .bf_bundle_sale-pdm .section_header_container .bf_bundle_item_ftr .bf_bundle_item_ftr_item .img-fluid {
+    width: 20px;
+    height: 20px;
+  }
+
+  .bf_bundle_sale-pdm .section_header_container .bf_bundle_item_ftr .bf_bundle_item_ftr_item .d-block {
+    align-self: stretch;
+    color: #212428;
+    text-align: center;
+    font-family: "TT Commons", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+
+    .bf_bundle_sale-pdm .bf_bundle_item {
+      padding-top: 40px;
+    }
+
+    .bf_bundle_sale-pdm .section_header_container {
+      padding: 24px 48px;
+      align-self: stretch;
+    }
+
+    .bf_bundle_sale-pdm .section_header_container .bf_bundle_item_ftr  .bf_bundle_item_ftr_item:not(:first-child)::after {
+      content: none;
+    }
+
+    .bf_bundle_sale-pdm .section_header_container .bf_bundle_item_ftr .bf_bundle_item_ftr_item .d-none {
+      color: #212428;
+      text-align: center;
+      font-family: "TT Commons";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      padding: 0;
+    }
+
+    .bf_bundle_sale-pdm .section_header_container .bf_bundle_item_ftr .bf_bundle_item_ftr_item {
+    flex-direction: row;
+      flex: 0 1 auto;
+      border: 0;
+      padding: 0;
+      width: auto;
+    }
+
+    .bf_bundle_sale-pdm .section_header_container .section_header_container-line {
+      width: 100%;
+    }
+
+    .bf_bundle_sale-pdm .section_header_container .bf_bundle_item_ftr {
+      justify-content: center;
+      gap: 24px;
+    }
+
+  }
+</style>

@@ -1,0 +1,227 @@
+{% assign product_count = 0 %}
+
+{%- for block in section.blocks -%}
+    {% if block.type == 'product' %}
+        {%- assign product_count = product_count | plus: 1 -%}
+    {% endif %}
+{% endfor %}
+
+{% render "pdm-exclusive-holiday-bundle", section: section, product_count: product_count %}
+
+{% schema %}
+    {
+        "name": "PDM Bundles List",
+        "class": "section-exclusive-holiday-bundle-deal-bundles-list",
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "t:common.heading.label"
+            },
+            {
+                "type": "text",
+                "id": "subheading",
+                "label": "t:common.subheading.label"
+            },
+            {
+                "type": "text",
+                "id": "supertop",
+                "label": "t:common.supertop.label"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "icon",
+                "name": "t:common.icon.label",
+                "settings": [
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "t:common.heading.label"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "t:common.image.label"
+                    }
+                ]
+		    },
+            {
+                "type": "bundle",
+                "name": "BUNDLE",
+                "settings": [
+                    {
+                        "type": "header",
+                        "content": "BUNDLE"
+                    }
+                ]
+		    },
+            {
+                "type": "product",
+                "name": "t:common.product.label",
+                "settings": [
+                    {
+                        "type": "product",
+                        "id": "product",
+                        "label": "t:common.product.label"
+                    },
+                    {
+                        "type": "range",
+                        "id": "percent",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1,
+                        "unit": "%",
+                        "label": "t:sections.exclusive-holiday-bundle-deal-bundles-list.blocks.percent.label",
+                        "default": 30
+                    },
+                    {
+                        "type": "number",
+                        "id": "default_variant_id",
+                        "label": "t:sections.exclusive-holiday-bundle-deal-bundles-list.blocks.default_variant_id.label"
+                    },
+                    {
+                        "type": "range",
+                        "id": "media_limit",
+                        "min": 0,
+                        "max": 10,
+                        "step": 1,
+                        "unit": "img",
+                        "label": "t:sections.exclusive-holiday-bundle-deal-bundles-list.blocks.media_limit.label",
+                        "default": 0
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "hide_us",
+                        "label": "t:sections.exclusive-holiday-bundle-deal-bundles-list.blocks.hide_us.label",
+                        "default": false
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "recommended_heading",
+                        "label": "t:sections.exclusive-holiday-bundle-deal-bundles-list.blocks.recommended_heading.label"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "recommended_text",
+                        "label": "t:sections.exclusive-holiday-bundle-deal-bundles-list.blocks.recommended_text.label"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "recommended_image",
+                        "label": "t:sections.exclusive-holiday-bundle-deal-bundles-list.blocks.recommended_image.label"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "is_top_rated",
+                        "label": "t:sections.exclusive-holiday-bundle-deal-bundles-list.blocks.top_rated.label",
+                        "default": false
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "is_preorder",
+                        "label": "t:sections.exclusive-holiday-bundle-deal-bundles-list.blocks.is_preorder.label",
+                        "default": false
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "is_soldout",
+                        "label": "t:sections.exclusive-holiday-bundle-deal-bundles-list.blocks.is_soldout.label",
+                        "default": false
+                    },
+                    {
+                        "type": "text",
+                        "id": "preorder_text",
+                        "label": "t:sections.exclusive-holiday-bundle-deal-bundles-list.blocks.preorder_text.label"
+                    },
+                    {
+                        "type": "text",
+                        "id": "classname",
+                        "label": "t:sections.exclusive-holiday-bundle-deal-bundles-list.blocks.classname.label"
+                    },
+                    {
+                        "type": "liquid",
+                        "id": "code",
+                        "label": "t:common.code.label"
+                    }
+                ]
+		    },
+            {
+                "type": "include",
+                "name": "t:sections.exclusive-holiday-bundle-deal-bundles-list.blocks.include.label",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "t:common.heading.label"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "is_limited",
+                        "label": "t:sections.exclusive-holiday-bundle-deal-bundles-list.blocks.include.settings.limited.label",
+                        "default": false
+                    },
+                    {
+                        "type": "text",
+                        "id": "type",
+                        "label": "t:sections.exclusive-holiday-bundle-deal-bundles-list.blocks.include.settings.type.label"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "t:common.image.label"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "t:sections.exclusive-holiday-bundle-deal-bundles-list.blocks.include.settings.ingredients.label"
+                    },
+                    {
+                        "type": "text",
+                        "id": "count",
+                        "label": "t:sections.exclusive-holiday-bundle-deal-bundles-list.blocks.include.settings.count.label"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "hide",
+                        "label": "t:sections.exclusive-holiday-bundle-deal-bundles-list.blocks.include.settings.hide.label",
+                        "default": false
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "hide_variants",
+                        "label": "t:sections.exclusive-holiday-bundle-deal-bundles-list.blocks.include.settings.hide_variants.label",
+                        "default": false
+                    },
+                    {
+                        "type": "liquid",
+                        "id": "code",
+                        "label": "t:common.code.label"
+                    }
+                ]
+		    },
+            {
+                "type": "how-to-use",
+                "name": "t:sections.exclusive-holiday-bundle-deal-bundles-list.blocks.how-to-use.label",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "t:common.image.label"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "t:common.text.label"
+                    }
+                ]
+		    }
+        ],
+        "presets": [
+            {
+                "name": "PDM Bundles List",
+                "category": "Custom"
+            }
+        ]
+    }
+{% endschema %}
