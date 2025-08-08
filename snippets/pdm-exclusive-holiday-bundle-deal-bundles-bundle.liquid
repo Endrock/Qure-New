@@ -1,3 +1,10 @@
+{% comment %}
+  Params:
+    block: The block object containing settings
+    children: The array of child block IDs
+  Usage:
+    {% render 'pdm-exclusive-holiday-bundle-deal-bundles-bundle', block: block, children: children %}
+{% endcomment %}
 
 {% if block.settings.product != blank %}
 
@@ -258,7 +265,7 @@
           
 
           {% if children != blank %}
-              <div class="bfs_bf_item_tabs mt-4">
+              <div class="bfs_bf_item_tabs">
                   <ul class="nav nav-pills mb-3" id="pills-{{ bundleId }}-tab" role="tablist">
                       <li class="nav-item" role="presentation">
                           <button class="nav-link active" id="pills-included-{{ bundleId }}-tab"
@@ -325,7 +332,9 @@
 
                                               {% if __block.settings.text != blank %}
                                                   <div class="popup-content">
-                                                      <button type="button" class="btn bfs_tbx_ing" data-bs-toggle="modal" data-bs-target="#pop-{{ __block.id }}">Ingredients List</button>
+                                                      <button type="button" class="btn bfs_tbx_ing" data-bs-toggle="modal" data-bs-target="#pop-{{ __block.id }}">
+                                                        <img src="{{ 'icon-info.svg' | asset_url }}" alt="icon-info" class="icon">
+                                                      </button>
                                                       <div class="modal fade" id="pop-{{ __block.id }}"
                                                           data-bs-backdrop="static" data-bs-keyboard="false"
                                                           tabindex="-1" aria-labelledby="pop-{{ __block.id }}-Label"
@@ -397,136 +406,5 @@
               </div>
           {% endif %}
   </div>
-
-  <style>
-
-    .bfs_bf_item.bsf_bf_item_pdm {
-      padding: 16px;
-      border-radius: 10px;
-      border: 1px solid #DFE0E0;
-    }
-
-    .bsf_bf_item_pdm .bfs_bf_item_pdtInfo {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 15px;
-      align-self: stretch;
-    }
-
-    .bsf_bf_item_pdm .bfs_bf_item_pdtInfo .bfs_pdtTitle {
-      color:#212428;
-      font-family: "TT Commons";
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 24px;
-      letter-spacing: 0;
-      margin: 0;
-    }
-
-    .bsf_bf_item_pdm .bfs_bf_item_pdtInfo .bfs_pdtPriceWrap {
-      border: none;
-      padding: 0;
-    }
-
-    .bsf_bf_item_pdm .bfs_bf_item_pdtInfo .bfs_pdtPriceWrap .bfs_pdtPriceAfter {
-      color: #FF5429;
-      text-align: center;
-      font-family: "TT Commons";
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 24px;
-    }
-
-    .bsf_bf_item_pdm .bfs_bf_item_pdtInfo .bfs_pdtPriceWrap .bfs_pdtPriceBefore {
-      color: #8B8C8E;
-      text-align: center;
-      font-family: "TT Commons";
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 24px;
-      text-decoration-line: line-through;
-    }
-
-    .bsf_bf_item_pdm .bfs_bf_item_pdtInfo .bfs_pdtPriceWrap .bfs_pdtPriceOff {
-      color: #FFF;
-      text-align: center;
-      font-family: "TT Commons";
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 20px;
-      background: #FF5429;
-    }
-
-    .bsf_bf_item_pdm .bfs_bf_item_buyBtn {
-      display: flex;
-      height: 60px;
-      padding: 0 45px;
-      justify-content: center;
-      align-items: center;
-      gap: 12px;
-      align-self: stretch;
-      border-radius: 100px;
-      background: #212428;
-      margin-top: 20px;
-    }
-
-    .bsf_bf_item_pdm .bfs_bf_item_buyBtn .add_cart {
-      color: #FFF;
-      font-family: "TT Commons";
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 22px;
-      letter-spacing: 0;
-    }
-
-    .bsf_bf_item_pdm .payment_method {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-      gap: 8px;
-      align-self: stretch;
-      flex-wrap: wrap;
-    }
-
-    .bsf_bf_item_pdm .payment_method p {
-      color: #212428;
-      font-family: "TT Commons";
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 18px;
-      padding: 0;
-    }
-
-    .bsf_bf_item_pdm .payment_method .img_one {
-      width: 44.314px;
-      height: 10px;
-    }
-
-    .bsf_bf_item_pdm .payment_method .img_two {
-      width: 50px;
-      height: 12.508px;
-    }
-
-    .bsf_bf_item_pdm .payment_method .img_three {
-      width: 60px;
-      height: 14px;
-      border-radius: 100px;
-
-    }
-
-      @media screen and (min-width: 768px) {
-
-      }
-
-  </style>
-
 {% endif %}
 

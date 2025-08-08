@@ -6,7 +6,91 @@
     {% endif %}
 {% endfor %}
 
-{% render "pdm-exclusive-holiday-bundle", section: section, product_count: product_count %}
+{{ '__pdm-exclusive-holiday-bundle.css' | asset_url | stylesheet_tag }}
+{{ '__pdm-exclusive-holiday-bundle-deal-bundles-bundle.css' | asset_url | stylesheet_tag }}
+
+<div class="bf_bundle_sale bf_bundle_sale-pdm">
+  <div class="container">
+    <div class="bf_bundle_item" id="{{ section.settings.heading | escape | downcase |  replace: ' ', '-' }}">
+      <div class="section_header pb-0 text-center mw-100">
+        <div class="section_header_container">
+          {% if section.settings.heading != blank %}
+            <h2 class="title-lg">{{ section.settings.heading }}</h2>
+          {% endif %}
+
+          {% if section.settings.subheading != blank %}
+            <p class="withLine_p">{{ section.settings.subheading }}</p>
+          {% endif %}
+
+          <div class="section_header_container-line"></div>
+          <div class="bf_bundle_item_ftr">
+            {% assign blocks_icon =  section.blocks |  where: 'type', 'icon' %}
+            {%- for block in  blocks_icon limit: 3-%}
+              
+                <div class="bf_bundle_item_ftr_item">
+                  {% if block.settings.image != blank %}
+                    <img
+                      src="{{ block.settings.image | img_url: '250x' }}"
+                      alt="{{ block.settings.image.alt | escape }}"
+                      class="img-fluid"
+                    >
+                  {% endif %}
+                  {{ block.settings.text | replace: '<p>', '<p class="d-none d-md-block">' | replace: '\n', '<br />' }}
+                  {{ block.settings.text | replace: '<p>', '<p class="d-block d-md-none">' | replace: '\n', '' }}
+                </div>
+              
+            {%- endfor -%}
+          </div>
+        </div>
+
+        {% if product_count > 0 %}
+          {% comment %} get assoc array from current section with defined block parent {% endcomment %}
+          {% include 'assoc-array', section: section, __parent_title: 'product', __separator: '###' %}
+
+          <div class="bfs_main_banner swiperWrap">
+            {% assign product_num = 0 %}
+            {%- for block in section.blocks -%}
+              {% if block.type == 'product' %}
+                {% if block.settings.product != blank %}
+                  {% assign children = blank %}
+                  {% assign product_num = product_num | plus: 1 %}
+
+                  {% case product_num %}
+                    {% when 1 %}
+                      {% assign children = __idsArray1 %}
+                    {% when 2 %}
+                      {% assign children = __idsArray2 %}
+                    {% when 3 %}
+                      {% assign children = __idsArray3 %}
+                    {% when 4 %}
+                      {% assign children = __idsArray4 %}
+                    {% when 5 %}
+                      {% assign children = __idsArray5 %}
+                    {% when 6 %}
+                      {% assign children = __idsArray6 %}
+                    {% when 7 %}
+                      {% assign children = __idsArray7 %}
+                    {% when 8 %}
+                      {% assign children = __idsArray8 %}
+                    {% when 9 %}
+                      {% assign children = __idsArray9 %}
+                    {% when 10 %}
+                      {% assign children = __idsArray10 %}
+                    {% when 11 %}
+                      {% assign children = __idsArray11 %}
+                    {% when 12 %}
+                      {% assign children = __idsArray12 %}
+                  {% endcase %}
+                  {% render 'pdm-exclusive-holiday-bundle-deal-bundles-bundle', block: block, children: children %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
 
 {% schema %}
     {
