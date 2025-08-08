@@ -16,8 +16,9 @@
 
           <div class="section_header_container-line"></div>
           <div class="bf_bundle_item_ftr">
-            {%- for block in section.blocks -%}
-              {% if block.type == 'icon' %}
+            {% assign blocks_icon =  section.blocks |  where: 'type', 'icon' %}
+            {%- for block in  blocks_icon limit: 3-%}
+              
                 <div class="bf_bundle_item_ftr_item">
                   {% if block.settings.image != blank %}
                     <img
@@ -29,7 +30,7 @@
                   {{ block.settings.text | replace: '<p>', '<p class="d-none d-md-block">' | replace: '\n', '<br />' }}
                   {{ block.settings.text | replace: '<p>', '<p class="d-block d-md-none">' | replace: '\n', '' }}
                 </div>
-              {% endif %}
+              
             {%- endfor -%}
           </div>
         </div>

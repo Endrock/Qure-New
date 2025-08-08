@@ -245,11 +245,15 @@
               </button>                
           {% endif %}
       <div class="payment_method m-0">
-              <p>OR pay 4 monthly payments of {{ product_price_divided }} with</p>
-              <div class="pmt_img ps-2">
-                  <img src="{{ 'bfs_pm.svg' | asset_url }}" alt="">
-              </div>
-          </div>
+        <p>OR pay 4 monthly payments of {{ product_price_divided }} with 
+          {% render 'pdm-exclusive-bundle-icon', icon: 'Klarna' %}
+        </p> 
+          
+          <img src="{{ 'sezzle.svg' | asset_url }}" alt="Sezzle" class="img_two">
+          <img src="{{ 'afterpay.svg' | asset_url }}" alt="Afterpay" class="img_three">
+          
+      </div>
+
           {{ types }}
           
 
@@ -498,19 +502,31 @@
       font-style: normal;
       font-weight: 400;
       line-height: 18px;
+      padding: 0;
+    }
+
+    .bsf_bf_item_pdm .payment_method .img_one {
+      width: 44.314px;
+      height: 10px;
+    }
+
+    .bsf_bf_item_pdm .payment_method .img_two {
+      width: 50px;
+      height: 12.508px;
+    }
+
+    .bsf_bf_item_pdm .payment_method .img_three {
+      width: 60px;
+      height: 14px;
+      border-radius: 100px;
+
     }
 
       @media screen and (min-width: 768px) {
 
-        .bsf_bf_item_pdm .bfs_main_banner {
-          display: flex;
-          align-items: flex-start;
-          gap: 32px;
-          align-self: stretch;
-        }
-      
       }
 
   </style>
 
 {% endif %}
+
