@@ -35,7 +35,8 @@ setTimeout(function () {
                 rtl = document.documentElement.dir === 'rtl',  // Check the document's direction
                 initialSlide = e?.dataset.initialSlide ? Number(e.dataset.initialSlide) : 0,  // Default to 0
                   centeredSlidesMobile = "true" === e?.dataset.centeredMobile,
-            centeredSlidesDesktop = "true" === e?.dataset.centeredDesktop;
+            centeredSlidesDesktop = "true" === e?.dataset.centeredDesktop,
+            dataPaginationType = e?.dataset.paginationType ? e?.dataset.paginationType : 'bullets';
                 m = Number(m), a = Number(a), c = Number(c), p <= 767 ? m >= 15 && (m = 15) : p <= 1199 && m >= 30 && (m = 30), new Swiper("#twa__swiper-" + d, {
                     slidesPerView: r,
                     slidesPerColumn: w,
@@ -63,7 +64,7 @@ setTimeout(function () {
                     },
                     pagination: {
                         clickable: !0,
-                        type: 'bullets',
+                        type: dataPaginationType,
                         el: e.querySelector(".swiper-pagination")
                     },
                     breakpoints: {

@@ -3,7 +3,7 @@
     block: The block object containing settings
     children: The array of child block IDs
   Usage:
-    {% render 'pdm-exclusive-holiday-bundle-deal-bundles-bundle', block: block, children: children %}
+    {% render 'pdm-exclusive-holiday-bundle-deal-bundles-bundle', block: block, children: children, loop_index: forloop.index0 %}
 {% endcomment %}
 
 {% if block.settings.product != blank %}
@@ -38,34 +38,6 @@
         {% endif %}
     </script>
 
-    {% if block.settings.recommended_heading != blank %}
-        {% capture recommended %}
-            <div class="bfs_recommendItem">
-                <div class="bfs_recommend">
-                    {% if block.settings.recommended_image != blank %}
-                        <div class="bfs_recommend_img">
-                            <img src="{{ block.settings.recommended_image | img_url: '150x' }}" alt="{{ block.settings.recommended_image.alt | escape }}" class="img-fluid" />
-                        </div>
-                    {% endif %}
-                    {% if block.settings.recommended_text != blank %}
-                        <div class="bfs_recommend_marquee">
-                            {{ block.settings.recommended_text }}
-                        </div>
-                    {% endif %}
-                </div>
-                {% if block.settings.recommended_heading != blank %}
-                    {{ block.settings.recommended_heading }}
-                {% endif %}
-            </div>
-            {% if block.settings.is_top_rated == true %}
-                <div class="bfs_top-rated">
-                    <p>Dermatologist</p>
-                    <h6>TOP RATED</h6>
-                </div>
-            {% endif %}
-        {% endcapture %}
-    {% endif %}
-    
     {% if block.settings.is_preorder == true %}
         {% capture preorder %}
             <div class="bfs_preOrderItem">
@@ -168,7 +140,11 @@
           <div class="swiper twa__swiper_thumbs" data-section-id="{{ bundleId }}" data-autoplay="false"
               data-loop="false" data-speed="500" data-mobile="1" data-tablet="1"
               data-desktop="1" data-arrowleft="twa__swiper_thumbs-{{ bundleId }}-swiper-prev"
-              data-arrowright="twa__swiper_thumbs-{{ bundleId }}-swiper-next">
+              data-arrowright="twa__swiper_thumbs-{{ bundleId }}-swiper-next"
+              data-thumbs-slide-per-view-desktop="3"
+              data-thumbs-slide-per-view-tablet="3"
+              data-thumbs-slide-per-view-mobile="3"
+              >
               <div id="twa__swiper_thumbs-{{ bundleId }}">
                   <div class="swiper-wrapper">
                       {% for media in product.media limit: __media_limit %}
@@ -218,6 +194,18 @@
               </div>
           </div>
       </div>
+
+      {% assign block_data = block.settings.rating %}
+      {% if block_data == 0 %}
+        {% assign block_data = 5 %}
+      {% endif %}
+      <div class="bfs_bf_item_pdtInfo_item_rating">
+        {% render 'pdm_bundle_deal_rate',  block_data: block_data, loop_index: loop_index %}
+        <span class="bfs_bf_item_pdtInfo_item_rating_value">
+          Rated <strong>{{ block_data }}</strong>/5
+        </span>
+      </div>
+
       <div class="bfs_bf_item_pdtInfo text-start bf-bundles__content">
           <div class="bfs_pdtTitle">
               {{ product.title }}
@@ -308,8 +296,12 @@
                                                   {% if __block.settings.heading != blank %}
                                                       <div class="bfs_tbx_title">{{ __block.settings.heading }}</div>
                                                   {% endif %}
-                                                  {% if __block.settings.count != blank %}
-                                                      <div class="bfs_tbx_lowStock">Low Stock <span>- {{ __block.settings.count }}</span></div>
+                                                  {% if __block.settings.count != blank or  __block.settings.show_low_stock_badge %}
+                                                      <div class="bfs_tbx_lowStock">Low Stock
+                                                        {% if __block.settings.count != blank %}
+                                                          <span>- {{ __block.settings.count }}</span>
+                                                        {% endif %}
+                                                      </div>
                                                   {% endif %}
                                               </div>
 
@@ -341,10 +333,15 @@
                                                           aria-hidden="true">
                                                           <div class="modal-dialog modal-dialog-centered">
                                                               <div class="modal-content">
+                                                                <button type="button" class="btn-close"
+                                                                  data-bs-dismiss="modal"
+                                                                  aria-label="Close">
+                                                                  {% render 'pdm-exclusive-bundle-icon', icon: 'close' %}
+                                                                </button>
                                                                   <div class="modal-header">
-                                                                      <button type="button" class="btn-close"
-                                                                          data-bs-dismiss="modal"
-                                                                          aria-label="Close"></button>
+                                                                    <img src="{{ __block.settings.image | img_url: '200x' }}" alt="{{ __block.settings.image.alt | escape }}" class="img-fluid image{{ target }}">
+                                                                    <div class="bfs_tbx_title">{{ __block.settings.heading }}</div>
+
                                                                   </div>
                                                                   <div class="modal-body">
                                                                       {{ __block.settings.text }}
@@ -369,7 +366,8 @@
                                   data-autoplay="false" data-loop="false" data-centerslide="false"
                                   data-mobile="1" data-tablet="1" data-desktop="1" data-spacing="10"
                                   data-arrowleft="bfs_howUse-{{ bundleId }}-swiper-prev"
-                                  data-arrowright="bfs_howUse-{{ bundleId }}-swiper-next">
+                                  data-arrowright="bfs_howUse-{{ bundleId }}-swiper-next"
+                                  data-pagination-type="fraction">
                                   <div class="swiper-wrapper">
                                       {% for __id in children %}
                                           {% assign __block = section.blocks | where: "id", __id | first %}
@@ -378,11 +376,12 @@
                                               {% if __block.type == 'how-to-use' %}
                                                   <div class="swiper-slide">
                                                       <div class="bfs_howUseWrap">
-                                                          {% if __block.settings.image != blank %}
-                                                              <img src="{{ __block.settings.image | img_url: '200x' }}" alt="{{ __block.settings.image.alt | escape }}" class="img-fluid">
-                                                          {% endif %}
+                                                          
                                                           {% if __block.settings.text != blank %}
                                                               <div class="bfs_howUseInfo text-start">
+                                                                {% if __block.settings.image != blank %}
+                                                              <img src="{{ __block.settings.image | img_url: '200x' }}" alt="{{ __block.settings.image.alt | escape }}" class="img-fluid">
+                                                          {% endif %}
                                                                   {{ __block.settings.text 
                                                                       |  replace: '<ul>', '<ul class="li_decimal">' 
                                                                   }}
@@ -395,8 +394,8 @@
                                       {% endfor %}
                                   </div>
                                       <div class="pagination_navigation">
-                                      <div class="swiper-pagination"></div>
                                       <div class="bfs_howUse-{{ bundleId }}-swiper-prev swiper-button-prev swiper-button"></div>
+                                      <div class="swiper-pagination"></div>
                                       <div class="bfs_howUse-{{ bundleId }}-swiper-next  swiper-button-next swiper-button"></div>
                                   </div>
                               </div>

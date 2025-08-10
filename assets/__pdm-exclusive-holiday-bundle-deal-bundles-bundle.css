@@ -2,10 +2,32 @@
   padding: 16px;
   border-radius: 10px;
   border: 1px solid #DFE0E0;
-  max-width: 350px;
+  max-width: 358.67px;
   flex: 1;
   width: 100%;
   margin-bottom: 0 !important;
+}
+
+.bfs_bf_item.bsf_bf_item_pdm .bfs_bf_item_pdtInfo_item_rating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.bfs_bf_item.bsf_bf_item_pdm .bfs_bf_item_pdtInfo_item_rating .bfs_bf_item_pdtInfo_item_rating_value {
+  color: #212428;
+  font-family: "TT Commons";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin: auto 0;
+}
+
+.bfs_bf_item.bsf_bf_item_pdm .bfs_bf_item_pdtInfo_item_rating .bfs_bf_item_pdtInfo_item_rating_value strong {
+  font-weight: 600;
 }
 
 .bsf_bf_item_pdm .bfs_bf_item_pdtInfo {
@@ -203,4 +225,307 @@
   font-weight: 400;
   line-height: 20px;
 }
-@media screen and (min-width: 768px) {}
+
+.bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .bfs_tbx_info .bfs_tbx_lowStock {
+  color: #FF5429;
+  font-family: "TT Commons";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.bsf_bf_item_pdm .swiper.twa__swiper_thumbs .swiper-slide {
+  height: auto;
+  border-radius: 10px;
+  max-height: 300px;
+}
+
+.bsf_bf_item_pdm .swiper.twa__swiper_thumbs .bfs_bf_itemSlide {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.bsf_bf_item_pdm .swiper.twa__swiper_thumbs .bfs_bf_itemSlide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  aspect-ratio: 1 / 1;
+}
+
+.bsf_bf_item_pdm .swiper.twa__swiper_thumbs .thumbsSlider_wrap {
+    margin: 12px 0 24px 0;
+    padding: 0;
+}
+
+.bsf_bf_item_pdm .swiper.twa__swiper_thumbs .thumbsSlider_wrap .swiper-slide {
+  height: auto;
+}
+
+.bsf_bf_item_pdm .swiper.twa__swiper_thumbs .thumbsSlider_wrap .swiper-slide .bfs_bf_itemThumb {
+  width: 100%;
+  height: 100%;
+}
+
+.bsf_bf_item_pdm .swiper.twa__swiper_thumbs .thumbsSlider_wrap .swiper-slide .bfs_bf_itemThumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bsf_bf_item_pdm .swiper.twa__swiper_thumbs .thumbsSlider_wrap .custom-next,
+.bsf_bf_item_pdm .swiper.twa__swiper_thumbs .thumbsSlider_wrap .custom-prev {
+  border-radius: 100px;
+  border: 1px solid #212428;
+  background: #FFF;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  transform: translateY(25%);
+}
+
+.bsf_bf_item_pdm .swiper.twa__swiper_thumbs .thumbsSlider_wrap .custom-next::after,
+.bsf_bf_item_pdm .swiper.twa__swiper_thumbs .thumbsSlider_wrap .custom-prev::after {
+  color: #212428;
+}
+
+.bsf_bf_item_pdm .swiper.twa__swiper_thumbs .thumbsSlider_wrap .custom-next.swiper-button-disabled,
+.bsf_bf_item_pdm .swiper.twa__swiper_thumbs .thumbsSlider_wrap .custom-prev.swiper-button-disabled {
+  border: 1px solid #8B8C8E;
+  opacity: 0.3;
+}
+
+.bsf_bf_item_pdm .swiper.twa__swiper_thumbs .thumbsSlider_wrap .custom-next.swiper-button-disabled::after,
+.bsf_bf_item_pdm .swiper.twa__swiper_thumbs .thumbsSlider_wrap .custom-prev.swiper-button-disabled::after {
+  color: #8B8C8E;
+}
+
+.bsf_bf_item_pdm .tab-pane.fade.popup-content .swiper .bfs_howUseWrap .bfs_howUseInfo img {
+  min-height: 25px;
+  min-width: 24px;
+  margin-right: 8px;
+  object-fit: fill;
+}
+
+.bsf_bf_item_pdm .tab-pane.fade.popup-content .swiper .bfs_howUseWrap .bfs_howUseInfo h5 {
+  display: inline;
+  color: #212428;
+  font-family: "TT Commons";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+
+.bsf_bf_item_pdm .tab-pane.fade.popup-content .swiper .bfs_howUseWrap .bfs_howUseInfo ul li {
+  color: #212428;
+  font-family: "TT Commons";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  padding-left: 32px;
+}
+
+.bsf_bf_item_pdm .tab-pane.fade.popup-content .swiper .bfs_howUseWrap .bfs_howUseInfo ul li::after {
+  left: 3%;
+}
+
+.bsf_bf_item_pdm .tab-pane.fade.popup-content .swiper .pagination_navigation {
+  padding: 0;
+  margin: 0;
+  margin-top: 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.bsf_bf_item_pdm .tab-pane.fade.popup-content .swiper .pagination_navigation .swiper-pagination {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #212428;
+  font-family: "TT Commons";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.bsf_bf_item_pdm .tab-pane.fade.popup-content .swiper .pagination_navigation .swiper-pagination .swiper-pagination-current {
+  color: #212428;
+  font-family: "TT Commons";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.bsf_bf_item_pdm .tab-pane.fade.popup-content .swiper .pagination_navigation .swiper-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 75px;
+  border: 0.75px solid #212428;
+  background: #FFF;
+  box-shadow: none;
+
+  position: relative;
+  margin-top: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.bsf_bf_item_pdm .tab-pane.fade.popup-content .swiper .pagination_navigation .swiper-button::after{
+  width: 4.075px;
+  height: 7.698px;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bsf_bf_item_pdm .tab-pane.fade.popup-content .swiper .pagination_navigation .swiper-button-next.swiper-button-disabled,
+.bsf_bf_item_pdm .tab-pane.fade.popup-content .swiper .pagination_navigation .swiper-button-prev.swiper-button-disabled {
+  border: 0.75px solid #8B8C8E;
+  opacity: 0.3;
+}
+
+.bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .popup-content .modal-content {
+  display: flex;
+  width: 328px;
+  padding: 32px 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  border-bottom: 1px solid #DFE0E0;
+  background:#FFF;
+  margin: auto;
+  border-radius: unset;
+  max-height: 548px;
+}
+
+.bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .popup-content .modal-content  .btn-close {
+  background: none;
+  position: absolute;
+  right: 3%;
+  top: 2%;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  opacity: 1;
+}
+
+.bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .popup-content .modal-content  .btn-close svg {
+  width: 18px;
+  height: 18px;
+}
+
+.bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .popup-content .modal-content  .modal-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .popup-content .modal-content  .modal-header  img {
+  width: 80px;
+  height: 80px;
+}
+
+.bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .popup-content .modal-content  .modal-header .bfs_tbx_title {
+  color: #212428;
+  font-family: "TT Commons";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .popup-content .modal-content .modal-body {
+  overflow-y: auto;
+  max-height: 342px;
+  width: 100%;
+}
+
+.bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .popup-content .modal-content .modal-body p {
+  padding: 0;
+  color: #212428;
+  font-family: "TT Commons";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .popup-content .modal-content .modal-body ul {
+  margin: 0;
+  padding: 0;
+  margin-top: 24px;
+  list-style: none;
+}
+
+
+.bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .popup-content .modal-content .modal-body ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 8px;
+
+  color: #212428;
+  font-family: "TT Commons";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .popup-content .modal-content .modal-body ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  transform: translateY(60%);
+  width: 16px;
+  height: 16px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M8.5 1C12.6421 1 16 4.35786 16 8.5C16 12.6421 12.6421 16 8.5 16C4.35786 16 1 12.6421 1 8.5C1 4.35786 4.35786 1 8.5 1Z" stroke="%2391BAEC" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.773 6.25L7.27299 10.75L5.22754 8.70455" stroke="%2391BAEC" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media screen and (min-width: 768px) {
+
+  .bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .popup-content .modal-content {
+    padding: 32px 40px;
+    width: 855px;
+  }
+
+  .bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .popup-content .modal-content  .modal-header {
+    flex-direction: row;
+    height: 87px;
+    align-items: flex-end;
+    align-self: stretch;
+  }
+
+  .bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .popup-content .modal-content  .modal-header  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .popup-content .modal-content  .modal-header .bfs_tbx_title {
+    font-size: 24px;
+    line-height: 28px;
+    flex: 1;
+  }
+
+  .bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .popup-content .modal-content .modal-body ul li::before {
+    transform: translateY(0%);
+  }
+}

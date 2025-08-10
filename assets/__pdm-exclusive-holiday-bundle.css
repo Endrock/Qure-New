@@ -122,6 +122,7 @@
     .bf_bundle_sale-pdm .bfs_main_banner {
       flex-direction: row;
       margin-bottom: 15px;
+      gap: 25px;
     }
 
     .bf_bundle_sale-pdm .section_header_container .bf_bundle_item_ftr  .bf_bundle_item_ftr_item:not(:first-child)::after {
