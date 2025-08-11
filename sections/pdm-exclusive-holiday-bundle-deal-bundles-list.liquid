@@ -151,6 +151,23 @@
                     },
                     {
                       "type": "header",
+                      "content": "Product variant selector"
+                    },
+                    {
+                      "type": "checkbox",
+                      "id": "enable_change_by_variant",
+                      "label": "Show variant selector",
+                      "default": false,
+                      "info": "Enable change bundle products by variant selector"
+                    },
+                    {
+                      "type": "product",
+                      "id": "product_with_variants",
+                      "label": "Product with Variants",
+                      "info": "Select a product with variants to display a dropdown list of options"
+                    },
+                    {
+                      "type": "header",
                       "content": "Rated"
                     },
                     {
@@ -247,6 +264,16 @@
                 "type": "include",
                 "name": "t:sections.exclusive-holiday-bundle-deal-bundles-list.blocks.include.label",
                 "settings": [
+                    {
+                        "type": "header",
+                        "content": "Product"
+                    },
+                    {
+                      "type": "product",
+                      "id": "product_data",
+                      "label": "Product data",
+                      "info": "Select a product associated with this include"
+                    },
                     {
                         "type": "text",
                         "id": "heading",

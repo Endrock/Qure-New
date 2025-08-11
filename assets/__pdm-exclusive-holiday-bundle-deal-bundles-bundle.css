@@ -213,7 +213,7 @@
 
 .bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .bfs_tbx_info {
   padding: 0;
-  flex: 1;
+  width: fit-content;
   max-width: unset;
 }
 
@@ -233,6 +233,31 @@
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
+}
+
+.bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .popup-content {
+  margin-left: auto;
+}
+
+.bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .bfs_tbx_color {
+  margin-right: auto;
+}
+
+.bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .bfs_tbx_color select {
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 5px;
+  border: 1px solid #8B8C8E;
+
+  color: #212428;
+  font-family: "TT Commons";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .bsf_bf_item_pdm .swiper.twa__swiper_thumbs .swiper-slide {
