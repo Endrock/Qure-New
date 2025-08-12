@@ -16,7 +16,7 @@
           "type": "announcement",
           "settings": {
             "heading": "Summer Sale Ends In:",
-            "timer": "2025-08-13T10:59:53",
+            "timer": "2025-08-07T10:59:53",
             "timer_next": 6
           }
         },
@@ -480,8 +480,8 @@
         "text": "<p>Top-rated products at <em>best prices.</em></p>"
       }
     },
-    "bundles-header": {
-      "type": "exclusive-holiday-bundle-deal-bundles-header",
+    "pdm_exclusive_holiday_bundle_deal_bundles_header_rqkTgp": {
+      "type": "pdm-exclusive-holiday-bundle-deal-bundles-header",
       "blocks": {
         "badge_TwBcgj": {
           "type": "badge",
@@ -495,15 +495,15 @@
         "object_pBAeDi": {
           "type": "object",
           "settings": {
-            "text": "<p>Signs of Aging, Wrinkles & Fine Lines</p>",
+            "text": "<p>Dark Spots & Hyperpigmentation</p>",
             "image": "shopify://shop_images/bf-ftr-aging.svg",
-            "link_url": "#Pro-Aging-Bundles"
+            "link_url": "#dark-spots-&-hyperpigmentation"
           }
         },
         "object_kbrVPD": {
           "type": "object",
           "settings": {
-            "text": "<p>Dark Spots, Wrinkles \\n & Fine Lines</p>",
+            "text": "<p>Signs of Aging</p>",
             "image": "shopify://shop_images/bf-ftr-wrinkles.svg",
             "link_url": "#Pro-Aging-&-Dark-Spots-Bundles"
           }
@@ -511,7 +511,7 @@
         "object_MU6PFN": {
           "type": "object",
           "settings": {
-            "text": "<p>Acne & Breakouts</p>",
+            "text": "<p>Acne & Redness</p>",
             "image": "shopify://shop_images/bf-ftr-acne.svg",
             "link_url": "#Acne-Bundles"
           }
@@ -523,46 +523,52 @@
         "object_kbrVPD",
         "object_MU6PFN"
       ],
+      "name": "PDM Bundles Header",
       "settings": {
         "heading": "Choose your bundle.",
         "subheading": "Long term healthy skin and better self-esteem starts here.",
         "text": "<p>Shop by concern</p>"
       }
     },
-    "bundles-list": {
-      "type": "exclusive-holiday-bundle-deal-bundles-list",
+    "pdm_exclusive_holiday_bundle_deal_bundles_list_KYLFMk": {
+      "type": "pdm-exclusive-holiday-bundle-deal-bundles-list",
       "blocks": {
         "icon_AcpYLG": {
           "type": "icon",
           "settings": {
-            "text": "<p>Reduces wrinkles \\n & fine lines</p>",
-            "image": "shopify://shop_images/bf-ftr-eye-wrinkles.svg"
+            "text": "<p>Fade dark spots</p>",
+            "image": "shopify://shop_images/Shape_Icons.svg"
           }
         },
         "icon_f36jbE": {
           "type": "icon",
           "settings": {
-            "text": "<p>Boosts collagen</p>",
-            "image": "shopify://shop_images/bf-ftr-collagen.svg"
+            "text": "<p>Boost radiance</p>",
+            "image": "shopify://shop_images/Shape_Icons_a848768c-1f77-4e99-9f00-2c4979d8d905.svg"
           }
         },
         "icon_eUd4zy": {
           "type": "icon",
           "settings": {
-            "text": "<p>Promotes firmer, \\n youthful-looking skin</p>",
-            "image": "shopify://shop_images/bf-ftr-firmer.svg"
+            "text": "<p>Brighten and even tone</p>",
+            "image": "shopify://shop_images/Shape_Icons_fae8537e-51d8-4c90-8c03-feaf67e9a9c4.svg"
           }
         },
         "bundle_jeyfm3": {
           "type": "bundle",
-          "disabled": true,
           "settings": {}
         },
         "product_AXXtjA": {
           "type": "product",
-          "disabled": true,
           "settings": {
-            "product": "memorial-day-promo-2025",
+            "product": "line-refine-bundle-advanced-1",
+            "enable_change_by_variant": true,
+            "product_with_variants": "faucet-filter",
+            "bundle_product_list": [
+              "line-refine-advanced",
+              "line-refine-advanced-1"
+            ],
+            "rating": 5,
             "percent": 30,
             "media_limit": 0,
             "hide_us": false,
@@ -578,28 +584,30 @@
         },
         "include_7Yq3PY": {
           "type": "include",
-          "disabled": true,
           "settings": {
-            "heading": "Micro-Infusion 1 Month Supply (For Wrinkles + For Dark Spots)",
+            "product_data": "faucet-filter",
+            "heading": "Faucet Filter",
             "is_limited": false,
             "type": "",
-            "image": "shopify://shop_images/bfs_3-serum.webp",
-            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p><h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
+            "image": "shopify://shop_images/Rectangle_1374.png",
+            "text": "<p>Healthy skin starts with your water. The Qure Faucet Filter helps reduce harmful impurities that can cause dryness, irritation, and discomfort.</p><p></p><ul><li>Advanced water filter reduces up to 99% of chlorine for clearer, hydrated skin.</li><li>Reduces heavy metals and other impurities that can disrupt skin barrier.</li><li>Easy to install on most standard faucets.</li><li>Third-party tested to meet NSF standards</li></ul>",
+            "show_low_stock_badge": true,
             "count": "",
             "hide": false,
-            "hide_variants": false,
+            "hide_variants": true,
             "code": ""
           }
         },
         "include_FxdKqc": {
           "type": "include",
-          "disabled": true,
           "settings": {
-            "heading": "Micro-Infusion 4 Month Supply (For Wrinkles)",
+            "product_data": "",
+            "heading": "Micro-Infusion 3 Month Supply (For Wrinkles)",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs_blue-serum_ca9c2e68-113a-475e-8d4b-2ad73f5e8a5e.webp",
-            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p>",
+            "text": "<p>A quick at-home facial that stamps your skin with ultra-fine, 24 karat gold-plated needles to help visibly smooth the look of fine lines. <br/><br/>Inspired by in-clinic microneedling for results you can see and feel — with minimal to no downtime.</p><p></p><ul><li>Helps soften the appearance of fine lines and wrinkles.</li><li>Brightens the look of dark spots and post-acne marks with targeted ingredients.</li><li>Improves the look of tone and texture through gentle renewal and hydration.</li><li>Designed for at-home use with ingredients backed by science.</li></ul><p></p>",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -608,70 +616,16 @@
         },
         "how_to_use_tLw7mt": {
           "type": "how-to-use",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/bfs_mi_sm.svg",
-            "text": "<h5>Micro-Infusion 5 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Use the 3 month refills after 2 month bundle.</li></ul>"
+            "image": "shopify://shop_images/faucet_svg.svg",
+            "text": "<h5>Faucet Filter</h5><p></p><ul><li>Install the Faucet Filter to your faucet.</li><li>Replace filter every 3 months.</li></ul>"
           }
         },
-        "bundle_fhATMn": {
-          "type": "bundle",
-          "settings": {}
-        },
-        "product_6Nmeyc": {
-          "type": "product",
-          "disabled": true,
-          "settings": {
-            "product": "exclusive-easter-bundle",
-            "percent": 30,
-            "media_limit": 0,
-            "hide_us": false,
-            "recommended_heading": "",
-            "recommended_text": "",
-            "is_top_rated": false,
-            "is_preorder": true,
-            "is_soldout": false,
-            "preorder_text": "SHIPS ON APRIL 30TH",
-            "classname": "",
-            "code": ""
-          }
-        },
-        "include_jkXtYb": {
-          "type": "include",
-          "disabled": true,
-          "settings": {
-            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles)",
-            "is_limited": false,
-            "type": "",
-            "image": "shopify://shop_images/3_month_mix_2.png",
-            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p>",
-            "count": "",
-            "hide": false,
-            "hide_variants": false,
-            "code": ""
-          }
-        },
-        "include_6bW3Ra": {
-          "type": "include",
-          "disabled": true,
-          "settings": {
-            "heading": "Micro-Infusion 2 Month Supply (For Wrinkles)",
-            "is_limited": false,
-            "type": "",
-            "image": "shopify://shop_images/2_month_for_wrinkles.png",
-            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p>",
-            "count": "",
-            "hide": false,
-            "hide_variants": false,
-            "code": ""
-          }
-        },
-        "how_to_use_nRp9HV": {
+        "how_to_use_bGNnrK": {
           "type": "how-to-use",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/bfs_mi_sm.svg",
-            "text": "<h5>Micro-Infusion 5 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Use the 3 month refills after 2 month bundle.</li></ul>"
+            "image": "shopify://shop_images/2728047093504.svg",
+            "text": "<h5>Micro-Infusion (for Wrinkles)</h5><h5></h5><ul><li>Use every 2 weeks, at night.</li><li>Cleanse and pat dry your face, start your 5-minute treatment and leave serum to work overnight.</li></ul>"
           }
         },
         "bundle_wpXFFy": {
@@ -682,6 +636,10 @@
           "type": "product",
           "settings": {
             "product": "line-refine-bundle-pro",
+            "enable_change_by_variant": false,
+            "product_with_variants": "",
+            "bundle_product_list": [],
+            "rating": 5,
             "percent": 46,
             "media_limit": 0,
             "hide_us": false,
@@ -698,11 +656,13 @@
         "include_cUEVxj": {
           "type": "include",
           "settings": {
+            "product_data": "",
             "heading": "Q-Rejuvalight Pro LED Mask",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs_mask.webp",
             "text": "",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -712,11 +672,13 @@
         "include_qYtiG6": {
           "type": "include",
           "settings": {
+            "product_data": "",
             "heading": "Micro-Infusion Targeted Patches",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs_blue-patches.webp",
             "text": "<h5>MICRO-INFUSION TARGETED PATCHES INGREDIENTS:</h5><p>Sodium Hyaluronate, Caffeine, Copper-Tripeptide-1, Niacinamide, Cyclodextrin, Water, Glycine Soja (Soybean) Oil, Madecassoside, Macadamia Nut Oil, Allantoin, Retinol, Oil Soluble Licorice(Glycyrrhiza) Extract, Centella Asiatica Extract, Acetyl Hexapeptide-8, BHT.</p>",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -726,11 +688,13 @@
         "include_tCtYLH": {
           "type": "include",
           "settings": {
+            "product_data": "",
             "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles) ",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs_blue-serum_ca9c2e68-113a-475e-8d4b-2ad73f5e8a5e.webp",
             "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p>",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -758,76 +722,6 @@
             "text": "<h5>Micro-Infusion 3 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Easily purchase 3 month refills via our website.</li></ul>"
           }
         },
-        "bundle_Aem3Hy": {
-          "type": "bundle",
-          "disabled": true,
-          "settings": {}
-        },
-        "product_V9XtBw": {
-          "type": "product",
-          "disabled": true,
-          "settings": {
-            "product": "line-refine-bundle-advanced-1",
-            "percent": 35,
-            "media_limit": 0,
-            "hide_us": true,
-            "recommended_heading": "<p><strong>Dr Shah, MD </strong>Certified Dermatologist</p>",
-            "recommended_text": "<p>\"I recommend this treatment to so many of my patients who are looking for a glowing, fresh looking complexion\"</p>",
-            "recommended_image": "shopify://shop_images/cl_shah.webp",
-            "is_top_rated": false,
-            "is_preorder": false,
-            "is_soldout": false,
-            "preorder_text": "",
-            "classname": "",
-            "code": ""
-          }
-        },
-        "include_6xfjCG": {
-          "type": "include",
-          "disabled": true,
-          "settings": {
-            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles) ",
-            "is_limited": false,
-            "type": "",
-            "image": "shopify://shop_images/bfs_blue-serum_ca9c2e68-113a-475e-8d4b-2ad73f5e8a5e.webp",
-            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p>",
-            "count": "",
-            "hide": false,
-            "hide_variants": false,
-            "code": ""
-          }
-        },
-        "include_bb8X96": {
-          "type": "include",
-          "disabled": true,
-          "settings": {
-            "heading": "Faucet Filter",
-            "is_limited": false,
-            "type": "",
-            "image": "shopify://shop_images/bfs_faucet.webp",
-            "text": "",
-            "count": "23 left",
-            "hide": false,
-            "hide_variants": false,
-            "code": "<div class=\"bfs_tbx_color\">\n    <select class=\"form-select colorSelector\" aria-label=\"Default select example\">\n        <option value=\"1\">White</option>\n        <option value=\"2\">Black</option>\n    </select>\n</div>"
-          }
-        },
-        "how_to_use_wHCyJt": {
-          "type": "how-to-use",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/bfs_mi_sm_4425a83b-96a8-43e9-95d3-fff35b157c82.svg",
-            "text": "<h5>Micro-Infusion 3 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Easily purchase 3 month refills via our website.</li></ul>"
-          }
-        },
-        "how_to_use_RGeRNi": {
-          "type": "how-to-use",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/bfs_faucet_filter.svg",
-            "text": "<h5>Faucet Filter</h5><ul><li>Install the Qure Faucet Filter on your faucet.</li><li>Replace filter every 3 months (purchase replacement via our website).</li></ul>"
-          }
-        },
         "bundle_prQmHa": {
           "type": "bundle",
           "settings": {}
@@ -836,6 +730,10 @@
           "type": "product",
           "settings": {
             "product": "line-refine-bundle-essentials",
+            "enable_change_by_variant": false,
+            "product_with_variants": "",
+            "bundle_product_list": [],
+            "rating": 5,
             "percent": 40,
             "media_limit": 0,
             "hide_us": false,
@@ -852,11 +750,13 @@
         "include_BptJE4": {
           "type": "include",
           "settings": {
+            "product_data": "",
             "heading": "All-In-One Face Serum",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs__one.webp",
             "text": "<h5>All-In-One Face Serum Full Ingredients List</h5><p>Argireline® Peptides, Retinol, Bakuchiol, Niacinamide, Vit C, Vit E, Ferulic Acid.</p><p>Water, Glycerin, Propanediol, Caprylic/Capric Triglyceride, Maltodextrin, Sodium Acrylates, Copolymer, Niacinamide, Bakuchiol, 3-O-Ethyl Ascorbic Acid, Glycine Soja (Soybean) Oil, Sucrose Dilaurate, Retinyl Palmitate, Lactic Acid, 1,2-Hexanediol, Glyceryl Oleate Citrate, Caprylyl Glycol, Tocopheryl Acetate, Lecithin, Polyacrylate-13, Retinol, Sodium Hydroxide, Sodium Cocoyl Glutamate, Polyisobutene, Ferulic Acid, Pentaerythrityl Tetra-Di-T-Butyl, Hydroxyhydrocinnamate, Mandelic Acid, Pisum Sativum (Pea) Extract, Artemisia Umbelliformis Flower Extract, Boswellia Serrata Resin Extract, Polysorbate 20, Sorbitan Isostearate, Sodium Benzoate, Potassium Sorbate, Ganoderma Lucidum (Mushroom) Extract, Tropolone, Camellia Sinensis Leaf, Tocopherol, Citric Acid, Acetyl Hexapeptide-8, Terminalia Ferdinandiana Fruit Extract, BHT, Hyaluronic Acid, Ginkgo Biloba Leaf Extract.</p>",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -866,11 +766,13 @@
         "include_pLcfQn": {
           "type": "include",
           "settings": {
+            "product_data": "",
             "heading": "Micro-Infusion Targeted Patches",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs_blue-patches_63ddb186-2ec2-4ad0-b37e-80e6a81340fb.webp",
             "text": "<h5>MICRO-INFUSION TARGETED PATCHES INGREDIENTS:</h5><p>Sodium Hyaluronate, Caffeine, Copper-Tripeptide-1, Niacinamide, Cyclodextrin, Water, Glycine Soja (Soybean) Oil, Madecassoside, Macadamia Nut Oil, Allantoin, Retinol, Oil Soluble Licorice(Glycyrrhiza) Extract, Centella Asiatica Extract, Acetyl Hexapeptide-8, BHT.</p>",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -901,11 +803,7 @@
         "include_7Yq3PY",
         "include_FxdKqc",
         "how_to_use_tLw7mt",
-        "bundle_fhATMn",
-        "product_6Nmeyc",
-        "include_jkXtYb",
-        "include_6bW3Ra",
-        "how_to_use_nRp9HV",
+        "how_to_use_bGNnrK",
         "bundle_wpXFFy",
         "product_aL9V3J",
         "include_cUEVxj",
@@ -914,12 +812,6 @@
         "how_to_use_WjUYK3",
         "how_to_use_3PL3Dh",
         "how_to_use_R4tTKt",
-        "bundle_Aem3Hy",
-        "product_V9XtBw",
-        "include_6xfjCG",
-        "include_bb8X96",
-        "how_to_use_wHCyJt",
-        "how_to_use_RGeRNi",
         "bundle_prQmHa",
         "product_PwLMAA",
         "include_BptJE4",
@@ -927,14 +819,15 @@
         "how_to_use_xKrmMc",
         "how_to_use_afmnQY"
       ],
+      "name": "PDM Bundles List",
       "settings": {
-        "heading": "Pro-Aging Bundles",
-        "subheading": "These bundles are specifically designed to target signs of aging, fine lines, wrinkles.",
+        "heading": "Dark Spots & Hyperpigmentation",
+        "subheading": "These bundles are specifically designed to target signs of aging and fade dark spots. ",
         "supertop": ""
       }
     },
-    "bundles-list2": {
-      "type": "exclusive-holiday-bundle-deal-bundles-list",
+    "pdm_exclusive_holiday_bundle_deal_bundles_list_KYLFMk2": {
+      "type": "pdm-exclusive-holiday-bundle-deal-bundles-list",
       "blocks": {
         "icon_cUYtN8": {
           "type": "icon",
@@ -972,6 +865,10 @@
           "type": "product",
           "settings": {
             "product": "fade-firm-bundle-pro",
+            "enable_change_by_variant": false,
+            "product_with_variants": "",
+            "bundle_product_list": [],
+            "rating": 5,
             "percent": 22,
             "media_limit": 0,
             "hide_us": false,
@@ -988,11 +885,13 @@
         "include_VKW6eX": {
           "type": "include",
           "settings": {
+            "product_data": "",
             "heading": "Q-Rejuvalight Pro LED Mask",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs_mask.webp",
             "text": "",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -1002,11 +901,13 @@
         "include_fqrYQr": {
           "type": "include",
           "settings": {
+            "product_data": "",
             "heading": "Neck & Décolletage LED Device",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs_decolletage.webp",
             "text": "",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -1016,11 +917,13 @@
         "include_3nrQQz": {
           "type": "include",
           "settings": {
+            "product_data": "",
             "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles)",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs_blue-serum.webp",
             "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p>",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -1056,6 +959,10 @@
           "type": "product",
           "settings": {
             "product": "fade-firm-bundle-advance",
+            "enable_change_by_variant": false,
+            "product_with_variants": "",
+            "bundle_product_list": [],
+            "rating": 5,
             "percent": 21,
             "media_limit": 0,
             "hide_us": false,
@@ -1073,11 +980,13 @@
         "include_HPFaWV": {
           "type": "include",
           "settings": {
+            "product_data": "",
             "heading": "Q-Rejuvalight Pro LED Mask",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs_mask.webp",
             "text": "",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -1087,11 +996,13 @@
         "include_4RreaF": {
           "type": "include",
           "settings": {
+            "product_data": "",
             "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles) ",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs_blue-serum_ca9c2e68-113a-475e-8d4b-2ad73f5e8a5e.webp",
             "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p>",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -1120,6 +1031,10 @@
           "type": "product",
           "settings": {
             "product": "fade-firm-bundle-essentials",
+            "enable_change_by_variant": false,
+            "product_with_variants": "",
+            "bundle_product_list": [],
+            "rating": 5,
             "percent": 27,
             "media_limit": 0,
             "hide_us": false,
@@ -1136,11 +1051,13 @@
         "include_Ggpxqa": {
           "type": "include",
           "settings": {
+            "product_data": "",
             "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles)",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs_blue-serum.webp",
             "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p>",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -1150,11 +1067,13 @@
         "include_zUz8Fx": {
           "type": "include",
           "settings": {
+            "product_data": "",
             "heading": "All-In-One Face Serum",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs__one.webp",
             "text": "<h5>All-In-One Face Serum Full Ingredients List</h5><p>Argireline® Peptides, Retinol, Bakuchiol, Niacinamide, Vit C, Vit E, Ferulic Acid.</p><p>Water, Glycerin, Propanediol, Caprylic/Capric Triglyceride, Maltodextrin, Sodium Acrylates, Copolymer, Niacinamide, Bakuchiol, 3-O-Ethyl Ascorbic Acid, Glycine Soja (Soybean) Oil, Sucrose Dilaurate, Retinyl Palmitate, Lactic Acid, 1,2-Hexanediol, Glyceryl Oleate Citrate, Caprylyl Glycol, Tocopheryl Acetate, Lecithin, Polyacrylate-13, Retinol, Sodium Hydroxide, Sodium Cocoyl Glutamate, Polyisobutene, Ferulic Acid, Pentaerythrityl Tetra-Di-T-Butyl, Hydroxyhydrocinnamate, Mandelic Acid, Pisum Sativum (Pea) Extract, Artemisia Umbelliformis Flower Extract, Boswellia Serrata Resin Extract, Polysorbate 20, Sorbitan Isostearate, Sodium Benzoate, Potassium Sorbate, Ganoderma Lucidum (Mushroom) Extract, Tropolone, Camellia Sinensis Leaf, Tocopherol, Citric Acid, Acetyl Hexapeptide-8, Terminalia Ferdinandiana Fruit Extract, BHT, Hyaluronic Acid, Ginkgo Biloba Leaf Extract.</p>",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -1184,6 +1103,10 @@
           "disabled": true,
           "settings": {
             "product": "micro-infusion-limited-edition-bundle",
+            "enable_change_by_variant": false,
+            "product_with_variants": "",
+            "bundle_product_list": [],
+            "rating": 5,
             "percent": 22,
             "default_variant_id": 45991849787631,
             "media_limit": 3,
@@ -1203,11 +1126,13 @@
           "type": "include",
           "disabled": true,
           "settings": {
+            "product_data": "",
             "heading": "Micro-Infusion 3 Month (for Wrinkles)",
             "is_limited": true,
             "type": "Wrinkles",
             "image": "shopify://shop_images/bfs_blue-serum.webp",
             "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p>",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -1218,11 +1143,13 @@
           "type": "include",
           "disabled": true,
           "settings": {
+            "product_data": "",
             "heading": "Micro-Infusion 3 Month (for Dark spots)",
             "is_limited": false,
             "type": "Dark Spots",
             "image": "shopify://shop_images/bfs_serumY.webp",
             "text": "<h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": true,
             "hide_variants": true,
@@ -1233,11 +1160,13 @@
           "type": "include",
           "disabled": true,
           "settings": {
+            "product_data": "",
             "heading": "Dermal Mist (15ml)",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs-derma-mist.webp",
             "text": "<h5>Dermal Mist</h5><p>Dermatologically Tested, Clinically Tested, Hypoallergenic, Suitable for sensitive skin, Dermatologist approved, Allergy Tested, Non-Irritating</p><h5>Dermal Mist Ingredients List</h5><p>WATER (Aqua)*, CHRYSANTHELLUM INDICUM FLOWER WATER, SODIUM CHLORIDE, SODIUM PHOSPHATE, DISODIUM PHOSPHATE, HYPOCHLOROUS ACID. *Ultra Pure Water.</p>",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -1268,6 +1197,10 @@
           "type": "product",
           "settings": {
             "product": "filter-family-bundle",
+            "enable_change_by_variant": false,
+            "product_with_variants": "",
+            "bundle_product_list": [],
+            "rating": 5,
             "percent": 28,
             "default_variant_id": 45909771124975,
             "media_limit": 0,
@@ -1285,11 +1218,13 @@
         "include_JqVB3H": {
           "type": "include",
           "settings": {
+            "product_data": "",
             "heading": "Faucet Filter",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs_faucet.webp",
             "text": "",
+            "show_low_stock_badge": false,
             "count": "23 left",
             "hide": false,
             "hide_variants": false,
@@ -1299,11 +1234,13 @@
         "include_7m63wA": {
           "type": "include",
           "settings": {
+            "product_data": "",
             "heading": "Shower Filter",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs_shower_f.webp",
             "text": "",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -1364,14 +1301,15 @@
         "how_to_use_gTbzw8",
         "how_to_use_bbae8X"
       ],
+      "name": "PDM Bundles List",
       "settings": {
         "heading": "Pro-Aging & Dark Spots Bundles",
         "subheading": "These bundles are specifically designed to target signs of aging and fade dark spots. ",
         "supertop": ""
       }
     },
-    "bundles-list3": {
-      "type": "exclusive-holiday-bundle-deal-bundles-list",
+    "pdm_exclusive_holiday_bundle_deal_bundles_list_KYLFMk3": {
+      "type": "pdm-exclusive-holiday-bundle-deal-bundles-list",
       "blocks": {
         "icon_dLrXUB": {
           "type": "icon",
@@ -1410,6 +1348,10 @@
           "disabled": true,
           "settings": {
             "product": "breakout-control-pro-1",
+            "enable_change_by_variant": false,
+            "product_with_variants": "",
+            "bundle_product_list": [],
+            "rating": 5,
             "percent": 27,
             "default_variant_id": 45970548883695,
             "media_limit": 0,
@@ -1427,11 +1369,13 @@
         "include_AJjjKi": {
           "type": "include",
           "settings": {
+            "product_data": "",
             "heading": "Q-Rejuvalight Pro LED Mask",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs_mask.webp",
             "text": "",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": false,
             "hide_variants": true,
@@ -1441,11 +1385,13 @@
         "include_4wQdLg": {
           "type": "include",
           "settings": {
+            "product_data": "",
             "heading": "Faucet Filter",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs_faucet.webp",
             "text": "",
+            "show_low_stock_badge": false,
             "count": "23 left",
             "hide": false,
             "hide_variants": false,
@@ -1455,11 +1401,13 @@
         "include_e4Mq9A": {
           "type": "include",
           "settings": {
+            "product_data": "",
             "heading": "Dermal Mist (100ml)",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs-derma-mist.webp",
             "text": "<h5>Dermal Mist</h5><p>Dermatologically Tested, Clinically Tested, Hypoallergenic, Suitable for sensitive skin, Dermatologist approved, Allergy Tested, Non-Irritating</p><h5>Dermal Mist Ingredients List</h5><p>WATER (Aqua)*, CHRYSANTHELLUM INDICUM FLOWER WATER, SODIUM CHLORIDE, SODIUM PHOSPHATE, DISODIUM PHOSPHATE, HYPOCHLOROUS ACID. *Ultra Pure Water.</p>",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -1495,6 +1443,10 @@
           "type": "product",
           "settings": {
             "product": "breakout-control-advanced",
+            "enable_change_by_variant": false,
+            "product_with_variants": "",
+            "bundle_product_list": [],
+            "rating": 5,
             "percent": 52,
             "media_limit": 0,
             "hide_us": false,
@@ -1511,11 +1463,13 @@
         "include_KnwEmf": {
           "type": "include",
           "settings": {
+            "product_data": "",
             "heading": "Q-Rejuvalight Pro LED Mask",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs_mask.webp",
             "text": "",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -1525,11 +1479,13 @@
         "include_gNNy6j": {
           "type": "include",
           "settings": {
+            "product_data": "",
             "heading": "Dermal Mist (100ml)",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs-derma-mist.webp",
             "text": "<h5>Dermal Mist</h5><p>Dermatologically Tested, Clinically Tested, Hypoallergenic, Suitable for sensitive skin, Dermatologist approved, Allergy Tested, Non-Irritating.</p><h5>Dermal Mist Ingredients</h5><p>WATER (Aqua)*, CHRYSANTHELLUM INDICUM FLOWER WATER, SODIUM CHLORIDE, SODIUM PHOSPHATE, DISODIUM PHOSPHATE, HYPOCHLOROUS ACID. *Ultra Pure Water.</p>",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -1560,6 +1516,10 @@
           "disabled": true,
           "settings": {
             "product": "breakout-control-starter",
+            "enable_change_by_variant": false,
+            "product_with_variants": "",
+            "bundle_product_list": [],
+            "rating": 5,
             "percent": 20,
             "default_variant_id": 45909844787439,
             "media_limit": 0,
@@ -1578,11 +1538,13 @@
           "type": "include",
           "disabled": true,
           "settings": {
+            "product_data": "",
             "heading": "Faucet Filter",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs_faucet.webp",
             "text": "",
+            "show_low_stock_badge": false,
             "count": "23 left",
             "hide": false,
             "hide_variants": false,
@@ -1593,11 +1555,13 @@
           "type": "include",
           "disabled": true,
           "settings": {
+            "product_data": "",
             "heading": "Shower Filter",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs_shower_f.webp",
             "text": "",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -1628,6 +1592,10 @@
           "type": "product",
           "settings": {
             "product": "breakout-control-essentials",
+            "enable_change_by_variant": false,
+            "product_with_variants": "",
+            "bundle_product_list": [],
+            "rating": 5,
             "percent": 81,
             "media_limit": 0,
             "hide_us": false,
@@ -1644,11 +1612,13 @@
         "include_kHjfp7": {
           "type": "include",
           "settings": {
+            "product_data": "",
             "heading": "Dermal Mist (100ml)",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs-derma-mist.webp",
             "text": "<h5>Dermal Mist</h5><p>Dermatologically Tested, Clinically Tested, Hypoallergenic, Suitable for sensitive skin, Dermatologist approved, Allergy Tested, Non-Irritating.</p><h5>Dermal Mist Ingredients</h5><p>WATER (Aqua)*, CHRYSANTHELLUM INDICUM FLOWER WATER, SODIUM CHLORIDE, SODIUM PHOSPHATE, DISODIUM PHOSPHATE, HYPOCHLOROUS ACID. *Ultra Pure Water.</p>",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -1658,11 +1628,13 @@
         "include_NVFexE": {
           "type": "include",
           "settings": {
+            "product_data": "",
             "heading": "All-In-One Face Serum",
             "is_limited": false,
             "type": "",
             "image": "shopify://shop_images/bfs__one.webp",
             "text": "<h5>All-In-One Face Serum Full Ingredients List</h5><p>Argireline® Peptides, Retinol, Bakuchiol, Niacinamide, Vit C, Vit E, Ferulic Acid.</p><p>Water, Glycerin, Propanediol, Caprylic/Capric Triglyceride, Maltodextrin, Sodium Acrylates, Copolymer, Niacinamide, Bakuchiol, 3-O-Ethyl Ascorbic Acid, Glycine Soja (Soybean) Oil, Sucrose Dilaurate, Retinyl Palmitate, Lactic Acid, 1,2-Hexanediol, Glyceryl Oleate Citrate, Caprylyl Glycol, Tocopheryl Acetate, Lecithin, Polyacrylate-13, Retinol, Sodium Hydroxide, Sodium Cocoyl Glutamate, Polyisobutene, Ferulic Acid, Pentaerythrityl Tetra-Di-T-Butyl, Hydroxyhydrocinnamate, Mandelic Acid, Pisum Sativum (Pea) Extract, Artemisia Umbelliformis Flower Extract, Boswellia Serrata Resin Extract, Polysorbate 20, Sorbitan Isostearate, Sodium Benzoate, Potassium Sorbate, Ganoderma Lucidum (Mushroom) Extract, Tropolone, Camellia Sinensis Leaf, Tocopherol, Citric Acid, Acetyl Hexapeptide-8, Terminalia Ferdinandiana Fruit Extract, BHT, Hyaluronic Acid, Ginkgo Biloba Leaf Extract.</p>",
+            "show_low_stock_badge": false,
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -1716,6 +1688,7 @@
         "how_to_use_EmG4iz",
         "how_to_use_BfUD4M"
       ],
+      "name": "PDM Bundles List",
       "settings": {
         "heading": "Acne Bundles",
         "subheading": "These bundles are specifically designed to clear acne and heal post-breakout skin",
@@ -2029,10 +2002,10 @@
     "icons_list",
     "featuredin_extended",
     "before-after",
-    "bundles-header",
-    "bundles-list",
-    "bundles-list2",
-    "bundles-list3",
+    "pdm_exclusive_holiday_bundle_deal_bundles_header_rqkTgp",
+    "pdm_exclusive_holiday_bundle_deal_bundles_list_KYLFMk",
+    "pdm_exclusive_holiday_bundle_deal_bundles_list_KYLFMk2",
+    "pdm_exclusive_holiday_bundle_deal_bundles_list_KYLFMk3",
     "icons_list_second",
     "p7",
     "text_with_video",

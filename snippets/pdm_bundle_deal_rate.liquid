@@ -1,0 +1,74 @@
+{% comment %}
+  Usage: {% render 'pdm_bundle_deal_rate',  block_data: block_data, loop_index: loop_index %}
+{% endcomment %}
+{% liquid
+  assign info_rating = block_data
+  assign info_rating_total = info_rating | floor
+  assign decimal_part = info_rating | modulo: 1
+  assign last_star_value = decimal_part | times: 100 | round
+  assign total_stars = 5
+
+  assign min = 1
+  assign max = 100
+  assign diff = max | minus: min
+  assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min
+
+  assign unique_id = block_data | replace: '.', '_' | append: '_' | append: block_data | split: '.' | join: '' | append: loop_index | append: randomNumber
+
+%}
+
+<div class="bfs_bf_item_pdtInfo_item_rating_stars">
+  {% for i in (1..info_rating_total) %}
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+        <defs>
+          <linearGradient id="starFill-{{ unique_id }}-{{ forloop.index }}" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#91BAEC"/>
+            <stop offset="100%" stop-color="#91BAEC"/>
+          </linearGradient>
+        </defs>
+        <path fill-rule="evenodd" clip-rule="evenodd" 
+              d="M9.33466 0.343508L11.1635 5.66097L16.8776 5.72594C17.3693 5.73156 17.5728 6.34689 17.1784 6.63488L12.594 9.98578L14.2969 15.3432C14.4432 15.8042 13.9108 16.1841 13.5094 15.9048L8.84804 12.6582L4.18605 15.9042C3.78531 16.1834 3.25226 15.803 3.39856 15.3426L5.10141 9.98515L0.517016 6.63425C0.122633 6.34626 0.326187 5.73093 0.817893 5.72531L6.532 5.66034L8.36079 0.342883C8.51854 -0.114398 9.17754 -0.114398 9.33466 0.343508Z" 
+              fill="url(#starFill-{{ unique_id }}-{{ forloop.index }})"/>
+      </svg>
+    {% endfor %}
+
+    {% comment %} Estrella parcial (si existe) {% endcomment %}
+    {% if decimal_part > 0 %}
+      {% assign partial_star_index = info_rating_total | plus: 1 %}
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+        <defs>
+          <linearGradient id="starFill-{{ unique_id }}-{{ partial_star_index }}" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#91BAEC"/>
+            <stop offset="{{ last_star_value }}%" stop-color="#91BAEC"/>
+            <stop offset="{{ last_star_value }}%" stop-color="#DFE0E0"/>
+            <stop offset="100%" stop-color="#DFE0E0"/>
+          </linearGradient>
+        </defs>
+        <path fill-rule="evenodd" clip-rule="evenodd" 
+              d="M9.33466 0.343508L11.1635 5.66097L16.8776 5.72594C17.3693 5.73156 17.5728 6.34689 17.1784 6.63488L12.594 9.98578L14.2969 15.3432C14.4432 15.8042 13.9108 16.1841 13.5094 15.9048L8.84804 12.6582L4.18605 15.9042C3.78531 16.1834 3.25226 15.803 3.39856 15.3426L5.10141 9.98515L0.517016 6.63425C0.122633 6.34626 0.326187 5.73093 0.817893 5.72531L6.532 5.66034L8.36079 0.342883C8.51854 -0.114398 9.17754 -0.114398 9.33466 0.343508Z" 
+              fill="url(#starFill-{{ unique_id }}-{{ partial_star_index }})"/>
+      </svg>
+    {% endif %}
+
+    {% comment %} Estrellas vacías {% endcomment %}
+    {% assign stars_shown = info_rating_total %}
+    {% if decimal_part > 0 %}
+      {% assign stars_shown = stars_shown | plus: 1 %}
+    {% endif %}
+    {% assign empty_stars = total_stars | minus: stars_shown %}
+    {% for i in (1..empty_stars) %}
+      {% assign empty_star_index = stars_shown | plus: forloop.index %}
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+        <defs>
+          <linearGradient id="starFill-{{ unique_id }}-{{ empty_star_index }}" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#DFE0E0"/>
+            <stop offset="100%" stop-color="#DFE0E0"/>
+          </linearGradient>
+        </defs>
+        <path fill-rule="evenodd" clip-rule="evenodd" 
+              d="M9.33466 0.343508L11.1635 5.66097L16.8776 5.72594C17.3693 5.73156 17.5728 6.34689 17.1784 6.63488L12.594 9.98578L14.2969 15.3432C14.4432 15.8042 13.9108 16.1841 13.5094 15.9048L8.84804 12.6582L4.18605 15.9042C3.78531 16.1834 3.25226 15.803 3.39856 15.3426L5.10141 9.98515L0.517016 6.63425C0.122633 6.34626 0.326187 5.73093 0.817893 5.72531L6.532 5.66034L8.36079 0.342883C8.51854 -0.114398 9.17754 -0.114398 9.33466 0.343508Z" 
+              fill="url(#starFill-{{ unique_id }}-{{ empty_star_index }})"/>
+      </svg>
+    {% endfor %}
+      
+</div> 
