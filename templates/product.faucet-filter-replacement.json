@@ -456,7 +456,7 @@
           "type": "object",
           "settings": {
             "heading": "What does it filter in the water?",
-            "text": "<p>The Qure Faucet Filter improves your tap water by reducing skin irritants that make your tap water “hard” – like chlorine, magnesium, calcium, heavy metals, microorganisms and more.</p>",
+            "text": "<p>The Qure Faucet Filter improves your tap water by reducing skin irritants that make your tap water “hard” – like chlorine, heavy metals, microorganisms and more.</p>",
             "code": ""
           }
         },
@@ -494,6 +494,7 @@
         },
         "object_aUJwkt": {
           "type": "object",
+          "disabled": true,
           "settings": {
             "heading": "What’s the difference between ‘hard water’ and ‘soft water’?",
             "text": "<p>Hard water is water that contains a high quantity of dissolved minerals (like calcium and magnesium). Where soft water has been treated, so that the only ion remaining is sodium. When rainwater falls, it is naturally soft.</p><p>However, as water makes its way through the ground and into our waterways, it picks up minerals like chalk, lime, calcium and magnesium and becomes hard water. Hard water is to blame for dishes with spots, dingy looking clothes, and residue and soap scums in bathrooms. Soap and cleansers are also less effective with hard water due to its reaction to the magnesium and calcium, which makes the lather not as rich and bubbly and leaves hair feeling sticky and dull.</p>",
