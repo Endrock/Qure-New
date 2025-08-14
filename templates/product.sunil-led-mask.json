@@ -742,6 +742,19 @@
             "client": "Anonymous",
             "code": ""
           }
+        },
+        "result_BNPGAd": {
+          "type": "result",
+          "settings": {
+            "image": "shopify://shop_images/Group_1299_da77e184-7dc9-4bff-a93b-666b0ef26006.png",
+            "heading": "I wouldn’t believe it if I didn’t see it with my own eyes.",
+            "text": "<p>“Fantastic! I am in love with this mask. I run anti-acne and anti-aging every day. My complexion is clearer, my fine lines and wrinkles are disappearing and my under eye looks far healthier than it ever had.”</p>",
+            "see-more": "",
+            "image_country": "shopify://shop_images/america-flag.webp",
+            "text_country": "United States",
+            "client": "Lisa S.",
+            "code": ""
+          }
         }
       },
       "block_order": [
@@ -764,7 +777,8 @@
         "result_dM9Lij",
         "result_emGVe6",
         "result_7LbRgc",
-        "result_A4BHNw"
+        "result_A4BHNw",
+        "result_BNPGAd"
       ],
       "settings": {
         "classname": "mi_landing_result",

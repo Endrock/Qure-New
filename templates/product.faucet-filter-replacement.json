@@ -22,7 +22,7 @@
         "list_EVK9TV": {
           "type": "list",
           "settings": {
-            "text": "<ul><li>Qure Faucet Filter Refill cartridge provides up to 3 months or 13,000 liters of purified, filtered water.</li><li>Reduces up to 99% of common skin irritants, including chlorine, calcium, and magnesium, from tap water.</li><li>Easy to refill, only 2 minutes, no tools needed.</li></ul>"
+            "text": "<ul><li>Qure Faucet Filter Refill cartridge provides up to 3 months or 13,000 liters of purified, filtered water.</li><li>Reduces up to 99% of common skin irritants, including chlorine, from tap water.</li><li>Easy to refill, only 2 minutes, no tools needed.</li></ul>"
           }
         },
         "variant_3yKhQx": {
@@ -84,12 +84,14 @@
         "seo_heading": "FAUCET FILTER REFILL CARTRIDGE",
         "heading": "Keep the good skin flowing with the Faucet Filter Refill",
         "heading_mobile": "Keep the good skin flowing with the Faucet Filter Refill",
+        "product": "",
         "wistia_id": "",
         "product_images_limit": 6,
         "product_button_label": "Product",
         "before_after_images_limit": 2,
         "before_after_button_label": "Before & After",
         "reserve": false,
+        "soldout": false,
         "underbutton_text_left": "Dermatologist Reviewed",
         "underbutton_text_right": "Free Shipping Over $100",
         "selected_design": "new",
@@ -102,7 +104,10 @@
       "type": "liquid",
       "settings": {
         "code": "<script>\ndocument.addEventListener('DOMContentLoaded', function() {\n    setTimeout(() => { $(\"#productButton\").trigger('click') }, 1500);\n});\n\n</script>",
-        "popup_micro_infusion_enabled": true
+        "popup_micro_infusion_enabled": true,
+        "product_1": "",
+        "product_2": "",
+        "product_3": ""
       }
     },
     "featuredin_PYCXAH": {
@@ -112,42 +117,48 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/vogue.svg",
-            "mobile_hide": false
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_WHF8Hx": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/women_health.svg",
-            "mobile_hide": true
+            "mobile_hide": true,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_ALhe9E": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/cosmopolitan.svg",
-            "mobile_hide": true
+            "mobile_hide": true,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_hzK3NG": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/elle.svg",
-            "mobile_hide": false
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_Ty97Qp": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/marie.svg",
-            "mobile_hide": false
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_3YkG8B": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/grazia.svg",
-            "mobile_hide": false
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
           }
         }
       },
@@ -250,6 +261,7 @@
       "settings": {
         "classname": "mi_landing_result",
         "heading": "Results you‘ll see with your own eyes",
+        "des": "",
         "heading_reduced": "",
         "text_verified_customer": "Verified customer",
         "text_reviewed": "Reviewed in"
@@ -271,6 +283,8 @@
           "settings": {
             "image": "shopify://shop_images/filter_facewash.webp",
             "image_mobile": "shopify://shop_images/filter_facewash-mob.webp",
+            "dual_action": "",
+            "dual_action_mob": "",
             "classname": "mw-mob-100"
           }
         }
@@ -442,7 +456,7 @@
           "type": "object",
           "settings": {
             "heading": "What does it filter in the water?",
-            "text": "<p>The Qure Faucet Filter improves your tap water by reducing skin irritants that make your tap water “hard” – like chlorine, magnesium, calcium, heavy metals, microorganisms and more.</p>",
+            "text": "<p>The Qure Faucet Filter improves your tap water by reducing skin irritants that make your tap water “hard” – like chlorine, heavy metals, microorganisms and more.</p>",
             "code": ""
           }
         },
@@ -480,6 +494,7 @@
         },
         "object_aUJwkt": {
           "type": "object",
+          "disabled": true,
           "settings": {
             "heading": "What’s the difference between ‘hard water’ and ‘soft water’?",
             "text": "<p>Hard water is water that contains a high quantity of dissolved minerals (like calcium and magnesium). Where soft water has been treated, so that the only ion remaining is sodium. When rainwater falls, it is naturally soft.</p><p>However, as water makes its way through the ground and into our waterways, it picks up minerals like chalk, lime, calcium and magnesium and becomes hard water. Hard water is to blame for dishes with spots, dingy looking clothes, and residue and soap scums in bathrooms. Soap and cleansers are also less effective with hard water due to its reaction to the magnesium and calcium, which makes the lather not as rich and bubbly and leaves hair feeling sticky and dull.</p>",
