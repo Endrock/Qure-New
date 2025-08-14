@@ -175,6 +175,11 @@
                           </div>
                       {% endfor %}
                   </div>
+                  {% if block.settings.enable_best_seller_badge %}
+                    <span class="bfs_bf_item-badge">
+                      Bestseller
+                    </span>
+                  {% endif %}
               </div>
               <div class="thumbsSlider_wrap">
                   <div id="twa__thumb-{{ bundleId }}" class="swiper-thumbs">
