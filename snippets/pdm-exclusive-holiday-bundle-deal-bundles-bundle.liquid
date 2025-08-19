@@ -250,11 +250,13 @@
           <div class="payment_method m-0">
             <p>OR pay 4 monthly payments of {{ product_price_divided }} with 
               {% render 'pdm-exclusive-bundle-icon', icon: 'Klarna' %}
-            </p> 
-              
-              <img src="{{ 'sezzle.svg' | asset_url }}" alt="Sezzle" class="img_two">
-              <img src="{{ 'afterpay.svg' | asset_url }}" alt="Afterpay" class="img_three">
-              
+            </p>
+            <div class="img_two">
+              <img src="{{ 'sezzle.svg' | asset_url }}" alt="Sezzle"  width="350px" height="420px">
+            </div>
+              <div class="img_three">
+                <img src="{{ 'afterpay.svg' | asset_url }}" alt="Afterpay"  width="350px" height="420px">
+              </div>
           </div>
 
           {{ types }}
