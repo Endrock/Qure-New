@@ -92,7 +92,7 @@
             "heading": "1 Month Supply",
             "subheading": "(2 Micro-Infusion Treatments)",
             "soldout": false,
-            "preorder": true,
+            "preorder": false,
             "preorder_text": "",
             "preorder_date_soldout": "",
             "preorder_date_reserved": "",
@@ -1814,7 +1814,7 @@
           "type": "object",
           "settings": {
             "heading": "How does the 90-day money back guarantee work?",
-            "text": "<p>You have 90 days to try Qure’s Micro Infusion System and see the results for yourself. If you don’t see any difference in your skin— if you do not experience firmer, brighter, younger-looking skin, simply contact us and we will gladly refund your money. This guarantee applies to the 3 month supply bundle. You’ll just need to provide before and after photos after each 2 week treatment to qualify.</p>",
+            "text": "<p>You have 90 days to try Qure’s Micro Infusion System and see the results for yourself. If you don’t notice any improvement—such as firmer, brighter, or more youthful-looking skin—simply contact us and we will gladly refund your money. To qualify, you’ll just need to provide before-and-after photos after each 2-week treatment within the 90-day period.</p>",
             "code": ""
           }
         },
