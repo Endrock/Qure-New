@@ -63,7 +63,7 @@
     "end_time_order": "2024-11-04T23:59",
     "show_order_by_receive_by_us": false,
     "enable_corner_treatment_bfcm": false,
-    "enable_site_gamification": false,
+    "enable_site_gamification": true,
     "enable_free_shipping_treshold": false,
     "enable_product_gift": false,
     "product_free_gift": "",
@@ -76,7 +76,7 @@
     "icon_gift_height": 20,
     "enable_site_wide_timer": true,
     "start_date": "08-19-2025 22:00",
-    "finish_date": "08-22-2025 11:59",
+    "finish_date": "08-22-2025 19:59",
     "label_ends": "Summer Sale Ends In:",
     "promotion": "promotion",
     "sections": {
