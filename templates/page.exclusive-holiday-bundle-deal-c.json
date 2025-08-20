@@ -288,6 +288,10 @@
       "type": "temp-exclusive-holiday-bundle-deal-p10",
       "settings": {}
     },
+    "p7": {
+      "type": "temp-exclusive-holiday-bundle-deal-p7",
+      "settings": {}
+    },
     "featuredin_extended": {
       "type": "featuredin_extended",
       "blocks": {
@@ -1847,10 +1851,6 @@
         "text": "<p>Top-rated products at <em>best prices.</em></p>"
       }
     },
-    "p7": {
-      "type": "temp-exclusive-holiday-bundle-deal-p7",
-      "settings": {}
-    },
     "testimonials": {
       "type": "testimonials",
       "blocks": {
@@ -2028,6 +2028,7 @@
     "header",
     "icons_list",
     "p10",
+    "p7",
     "featuredin_extended",
     "bundles-header",
     "bundles-list",
@@ -2037,7 +2038,6 @@
     "text_with_video",
     "compare",
     "before-after",
-    "p7",
     "testimonials",
     "faq_XgNVYJ"
   ]
