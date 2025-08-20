@@ -74,9 +74,10 @@
     "icon_product_gift_full": "shopify://shop_images/Gift-black.svg",
     "icon_gift_width": 20,
     "icon_gift_height": 20,
-    "enable_site_wide_timer": false,
-    "start_date": "11-20-2024 22:00",
-    "finish_date": "12-02-2024 11:59",
+    "enable_site_wide_timer": true,
+    "start_date": "08-19-2025 22:00",
+    "finish_date": "08-22-2025 11:59",
+    "label_ends": "Summer Sale Ends In:",
     "promotion": "promotion",
     "sections": {
       "header": {
