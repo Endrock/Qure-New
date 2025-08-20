@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -6,14 +15,14 @@
         "rating_KDB67x": {
           "type": "rating",
           "settings": {
-            "image": "shopify:\/\/shop_images\/star-half_fill.svg",
-            "text": "<p>Recommended by 99% of customers<\/p>"
+            "image": "shopify://shop_images/star-half_fill.svg",
+            "text": "<p>Recommended by 99% of customers</p>"
           }
         },
         "list_azYRbY": {
           "type": "list",
           "settings": {
-            "text": "<ul><li>Advanced water filter reduces up to 99% of irritants for clearer, hydrated skin.<\/li><li>Helps reduce pore-clogging contaminants and supports the reduction of premature aging, without any extra steps in your routine.<\/li><li>Optimizes skincare effectiveness, and provides the most purified cleanse your skin will drink up.<\/li><\/ul>"
+            "text": "<ul><li>Advanced water filter reduces up to 99% of irritants for clearer, hydrated skin.</li><li>Helps reduce pore-clogging contaminants and supports the reduction of premature aging, without any extra steps in your routine.</li><li>Optimizes skincare effectiveness, and provides the most purified cleanse your skin will drink up.</li></ul>"
           }
         },
         "supply_Dd4Xn6": {
@@ -39,7 +48,7 @@
           "settings": {
             "heading": "Next batch ships 16th June 2025:",
             "heading_mobile": "Next batch ships 16th June 2025:",
-            "text": "<p>Next batch ships 10th June 2025:<\/p>",
+            "text": "<p>Next batch ships 10th June 2025:</p>",
             "first_option_date": "May 11th",
             "first_option_text": "SOLD OUT",
             "first_option_percent": 100,
@@ -55,7 +64,7 @@
           "type": "variant",
           "settings": {
             "heading": "White",
-            "image": "shopify:\/\/shop_images\/water-fIlter-white.webp",
+            "image": "shopify://shop_images/water-fIlter-white.webp",
             "variant_id": 45852978348271,
             "main": true,
             "reserve": false,
@@ -66,7 +75,7 @@
           "type": "variant",
           "settings": {
             "heading": "Black",
-            "image": "shopify:\/\/shop_images\/water-fIlter-black.webp",
+            "image": "shopify://shop_images/water-fIlter-black.webp",
             "variant_id": 45852978315503,
             "main": false,
             "reserve": false,
@@ -76,11 +85,11 @@
         "subscribe_tnLCRQ": {
           "type": "subscribe",
           "settings": {
-            "heading": "Subscribe & save 30%",
-            "text": "<h6>One Time: Faucet + 1 Filter<\/h6><h6>Every 90 days: Filter Refill (<strong>[price_additional]<\/strong>[discount_price_additional])<\/h6><p>Skip, pause or cancel anytime. <a href=\"https:\/\/qureskincare.com\/pages\/subscriptions\" title=\"skip\">See more details<\/a><\/p>",
+            "heading": "SAVE 50%",
+            "text": "<h6>One Time: Faucet + 1 Filter</h6><h6>Every 90 days: Filter Refill (<strong>[price_additional]</strong>[discount_price_additional])</h6><p>Skip, pause or cancel anytime. <a href=\"https://qureskincare.com/pages/subscriptions\" title=\"skip\">See more details</a></p>",
             "product": "faucet-filter-refill",
             "plan": "6190465263",
-            "discount": 30
+            "discount": 50
           }
         },
         "collapsed_TnJHpV": {
@@ -88,7 +97,7 @@
           "settings": {
             "heading": "Key Benefits",
             "heading_mobile": "",
-            "text": "<p>Healthy skin starts with your water. The Qure Faucet Filter helps reduce harmful impurities that can cause dryness, irritation, and discomfort. By filtering your tap water, you're creating the perfect canvas for the rest of your skincare products and helping your skin stay hydrated and happy.<\/p><p>The Qure Faucet Filter is third-party tested to meet <strong>NSF standards<\/strong> for water filtration performance.<\/p>"
+            "text": "<p>Healthy skin starts with your water. The Qure Faucet Filter helps reduce harmful impurities that can cause dryness, irritation, and discomfort. By filtering your tap water, you're creating the perfect canvas for the rest of your skincare products and helping your skin stay hydrated and happy.</p><p>The Qure Faucet Filter is third-party tested to meet <strong>NSF standards</strong> for water filtration performance.</p>"
           }
         },
         "collapsed_xqBcWj": {
@@ -96,7 +105,7 @@
           "settings": {
             "heading": "How It Works",
             "heading_mobile": "",
-            "text": "<p>Our 4-stage filtration system helps reduce up to 99% of chlorine, heavy metals, and impurities for cleaner, skin-friendly water. <\/p><p>Here's what happens:<\/p><ul><li>Water passes through our multi-stage filter<\/li><li>Impurities get trapped in the specialized filtration media<\/li><li>Clean, filtered water flows through your tap<\/li><\/ul><p>The result? Water that’s gentler on your skin, free of harsh elements that can strip away natural moisture. <\/p>"
+            "text": "<p>Our 4-stage filtration system helps reduce up to 99% of chlorine, heavy metals, and impurities for cleaner, skin-friendly water. </p><p>Here's what happens:</p><ul><li>Water passes through our multi-stage filter</li><li>Impurities get trapped in the specialized filtration media</li><li>Clean, filtered water flows through your tap</li></ul><p>The result? Water that’s gentler on your skin, free of harsh elements that can strip away natural moisture. </p>"
           }
         },
         "collapsed_E33cqi": {
@@ -104,7 +113,7 @@
           "settings": {
             "heading": "What’s Included In The Box",
             "heading_mobile": "",
-            "text": "<p>Inside the box, you'll find:<\/p><ul><li>Qure Faucet Filter with an initial filter cartridge (lasting up to 3 months)<\/li><li>Tools for installation, including a bubbler wrench, thread adapters, and silicone rings<\/li><li>Clear setup instructions and user manual<\/li><\/ul>"
+            "text": "<p>Inside the box, you'll find:</p><ul><li>Qure Faucet Filter with an initial filter cartridge (lasting up to 3 months)</li><li>Tools for installation, including a bubbler wrench, thread adapters, and silicone rings</li><li>Clear setup instructions and user manual</li></ul>"
           }
         }
       },
@@ -149,15 +158,15 @@
       "type": "heading",
       "name": "t:sections.heading.name",
       "settings": {
-        "heading": "<h2>Real reviews, real results<\/h2><h2>from people just like you.<\/h2>",
-        "heading_mobile": "<h2>Real reviews, real results<\/h2><h2>from people just like you.<\/h2>"
+        "heading": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>",
+        "heading_mobile": "<h2>Real reviews, real results</h2><h2>from people just like you.</h2>"
       }
     },
     "1747026074e07e7a91": {
       "type": "apps",
       "blocks": {
         "stamped_reviews_main_widget_3pR7pa": {
-          "type": "shopify:\/\/apps\/stamped-reviews\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
+          "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
           "settings": {
             "animation": true,
             "tags_exclude": "",
