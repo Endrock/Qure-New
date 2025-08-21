@@ -75,8 +75,9 @@
     "icon_gift_width": 20,
     "icon_gift_height": 20,
     "enable_site_wide_timer": false,
-    "start_date": "11-20-2024 22:00",
-    "finish_date": "12-02-2024 11:59",
+    "start_date": "08-19-2025 22:00",
+    "finish_date": "08-22-2025 19:59",
+    "label_ends": "Summer Sale Ends In:",
     "promotion": "promotion",
     "sections": {
       "header": {
@@ -379,7 +380,7 @@
           "sidecart_timer_old_enable": false,
           "sidecart_timer_new_enable": true,
           "start_date": "07-31-2025 10:00",
-          "finish_date": "08-19-2025 20:00",
+          "finish_date": "08-22-2025 20:00",
           "label_ends": "Summer Sale Ends:",
           "label_days": "DAYS",
           "label_hours": "HOURS",
