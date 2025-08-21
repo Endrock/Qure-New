@@ -30,6 +30,11 @@
         "product_gbPf3J": {
           "disabled": false,
           "settings": {}
+        },
+        "product_NEgEkN": {
+          "settings": {
+            "image": "shopify://shop_images/3monthmix_1.png"
+          }
         }
       }
     }
