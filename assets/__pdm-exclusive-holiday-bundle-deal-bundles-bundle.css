@@ -5,6 +5,7 @@
   max-width: 358.67px;
   flex: 1;
   width: 100%;
+  margin: 0 auto;
   margin-bottom: 0 !important;
 }
 
@@ -344,7 +345,7 @@
   margin: 0;
   padding: 0;
   bottom: 0;
-  transform: translateY(25%);
+  transform: translateY(34%);
 }
 
 .bsf_bf_item_pdm .swiper.twa__swiper_thumbs .thumbsSlider_wrap .custom-next::after,
