@@ -14,11 +14,18 @@
   },
   "sections": {
     "purchase-form-second": {
-      "settings": {},
+      "settings": {
+        "image": "shopify://shop_images/3monthdarkspots_1_2ba8a042-e385-47f1-9560-44e6dd67e57f.png"
+      },
       "blocks": {
         "product_type_VLXcAn": {
           "settings": {
             "preselected": true
+          }
+        },
+        "product_nyJ9n7": {
+          "settings": {
+            "image": "shopify://shop_images/3monthwrinkles_5d80e14d-e628-4311-990a-34a1fc948558.png"
           }
         },
         "product_type_YrPQrV": {
@@ -34,11 +41,6 @@
         "product_NEgEkN": {
           "settings": {
             "image": "shopify://shop_images/3monthmix_1.png"
-          }
-        },
-        "product_nyJ9n7": {
-          "settings": {
-            "image": "shopify://shop_images/3monthwrinkles_5d80e14d-e628-4311-990a-34a1fc948558.png"
           }
         }
       }
