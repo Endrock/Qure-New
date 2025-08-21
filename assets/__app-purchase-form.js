@@ -102,6 +102,17 @@ document.addEventListener('DOMContentLoaded', function() {
         clearPreorderBoxes();
         tooglePreorderBox(preorder, product_variant_id);
 
+        if(window.location.pathname == '/pages/microinfusion') {
+
+            let json = {
+                event: 'purchase-form',
+                url: window.location.pathname,
+                product_variant_id: product_variant_id
+            }
+            window.dataLayer.push(json);
+        }
+
+
         $('.' + __section + " .total_price").find(".regular_price").text($(this).find(".regular_price").text());
         $('.' + __section + " .total_price").find(".sale_price").text($(this).find(".sale_price:visible").text().trim());
         $('.' + __section + " .btn_value").text($(this).attr("data-per"));
