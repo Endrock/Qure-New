@@ -12,5 +12,19 @@
   "context": {
     "market": "canada"
   },
-  "sections": {}
+  "sections": {
+    "purchase-form-second": {
+      "settings": {},
+      "blocks": {
+        "product_type_YrPQrV": {
+          "disabled": false,
+          "settings": {}
+        },
+        "product_gbPf3J": {
+          "disabled": false,
+          "settings": {}
+        }
+      }
+    }
+  }
 }
