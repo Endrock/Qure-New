@@ -16,18 +16,20 @@
     "purchase-form-second": {
       "settings": {},
       "blocks": {
-        "product_type_YrPQrV": {
-          "disabled": false,
-          "settings": {}
-        },
-        "product_gbPf3J": {
-          "disabled": false,
-          "settings": {}
-        },
         "product_type_VLXcAn": {
           "settings": {
             "preselected": true
           }
+        },
+        "product_type_YrPQrV": {
+          "disabled": false,
+          "settings": {
+            "preselected": false
+          }
+        },
+        "product_gbPf3J": {
+          "disabled": false,
+          "settings": {}
         }
       }
     }
