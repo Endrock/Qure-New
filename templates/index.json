@@ -135,7 +135,7 @@
         "link_Pk3LH6",
         "banner_6wgzUN"
       ],
-      "disabled": false,
+      "disabled": true,
       "settings": {
         "heading": "70% OFF \\ Micro-Infusion",
         "heading_mobile": "70% OFF \\ Micro-Infusion",
@@ -183,10 +183,12 @@
         "product_BANXY7",
         "banner_6wgzUN"
       ],
-      "disabled": true,
       "settings": {
         "heading": "<h3>Get clinic-level results</h3><h3>from home- minus</h3><h3>the ‘clinical’ costs.</h3>",
+        "heading_mobile": "",
         "heading_tag": "h1",
+        "subheading": "",
+        "subheading_mobile": "",
         "text": "<p><strong> 50,000+ </strong> customers feel more confident in their own skin.</p>",
         "image": "shopify://shop_images/hm_banner_clinic_results.webp",
         "image_mobile": "shopify://shop_images/hm_banner_clinic_results.png_mob.webp",
