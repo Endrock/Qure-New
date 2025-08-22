@@ -122,7 +122,7 @@
           "settings": {
             "btn_content": "Shop Best Sellers",
             "button_type": "primary-new",
-            "button_type_mob": "link",
+            "button_type_mob": "secondary",
             "button_size": "medium",
             "btn_radius": 50,
             "button_link": "shopify:\/\/collections\/best-sellers",
