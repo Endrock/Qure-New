@@ -303,7 +303,49 @@
     },
     "rendercanimation": {
       "type": "temp-page-mi-offer-lp-rcan",
-      "settings": {}
+      "blocks": {
+        "card_n9wHwE": {
+          "type": "card",
+          "settings": {
+            "button_title": "After 1-2 Treatments",
+            "button_subtitle": "First weeks",
+            "before_image": "shopify://shop_images/1_Before_cc0f9311-dd2a-4bf0-abfc-c9de6639eb0b.png",
+            "after_image": "shopify://shop_images/B_A_Slider_After.png",
+            "title": "Progress Showing",
+            "content": "<p>Skin noticeably feels smoother, with a reduction in dryness and a temporary plumping effect as hydration is boosted. </p>"
+          }
+        },
+        "card_XHyUdK": {
+          "type": "card",
+          "settings": {
+            "button_title": "After 6 Treatments",
+            "button_subtitle": "3 month supply",
+            "before_image": "shopify://shop_images/4_Before.png",
+            "after_image": "shopify://shop_images/4_After.png",
+            "title": "Inside-Out Glow",
+            "content": "<p>Expect a smoother appearance of fine lines, and a more radiant complexion as cellular turnover begins to improve.</p>"
+          }
+        },
+        "card_j4NBDM": {
+          "type": "card",
+          "settings": {
+            "button_title": "After 12 Treatments",
+            "button_subtitle": "6 month supply",
+            "before_image": "shopify://shop_images/3_Before.png",
+            "after_image": "shopify://shop_images/B_A_Slider_After_3.png",
+            "title": "Total Transformation",
+            "content": "<p>Visible improvement in fine lines and enhanced elasticity with firmer skin as collagen production begins to increase.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "card_n9wHwE",
+        "card_XHyUdK",
+        "card_j4NBDM"
+      ],
+      "settings": {
+        "section_title": "Quick results that get better with time."
+      }
     },
     "line_M99hQR": {
       "type": "line",
