@@ -258,6 +258,7 @@
               assign img_mt_mob = bs.text_img_mt_mob
               assign img_mb_mob = bs.text_img_mb_mob
               assign button_type = bs.button_type
+              assign button_type_mob = bs.button_type_mob
               assign button_size = bs.button_size
               assign btn_radius = bs.btn_radius
               assign b_mt = bs.b_mt
@@ -312,7 +313,7 @@
                     {% else %}
                       target="_self"
                     {% endif %}
-                    class="{% if enabled_animations %}scroll-trigger animate--slide-in{% endif %} bls__banner-text--button btn-{{ button_type }} inline-block 
+                    class="{% if enabled_animations %}scroll-trigger animate--slide-in{% endif %} bls__banner-text--button btn-{{ button_type }} btn-mob-{{ button_type_mob }} inline-block 
                     btn_{{ button_size }}" style="border-radius: {{ btn_radius }}px;">
                     {{ block.settings.btn_content | escape }}
                   </a>
@@ -1131,6 +1132,26 @@
           "id": "button_type",
           "label": "Button type",
           "default": "primary-new",
+          "options": [
+            {
+              "value": "primary-new",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "link",
+              "label": "Link"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "button_type_mob",
+          "label": "Button type mobile",
+          "default": "secondary",
           "options": [
             {
               "value": "primary-new",

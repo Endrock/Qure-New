@@ -604,6 +604,32 @@
 }
 
 
+@media (max-width: 767px) {
+    .btn-mob-secondary {
+        background-color: var(--btn-secondary-bg);
+        color: var(--btn-secondary-color);
+        border-color: var(--btn-secondary-border-color)
+    }
+    .btn-mob-secondary:hover {
+        background-color: var(--btn-secondary-bg-hover);
+        color: var(--btn-secondary-color-hover);
+        border-color: var(--btn-secondary-bg-hover)
+    }
+    .btn-mob-link {
+        background-color: transparent;
+        color: #fff;
+        border-color: var(--btn-secondary-border-color);
+        text-decoration: underline;
+    } 
+    .btn-mob-link:hover {
+        background-color: transparent;
+        color: #fff;
+        border-color: var(--btn-secondary-border-color);
+        text-decoration: underline;
+    } 
+}
+
+
 
 
 

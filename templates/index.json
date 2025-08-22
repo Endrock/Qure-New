@@ -122,6 +122,7 @@
           "settings": {
             "btn_content": "Shop Best Sellers",
             "button_type": "primary-new",
+            "button_type_mob": "link",
             "button_size": "medium",
             "btn_radius": 50,
             "button_link": "shopify:\/\/collections\/best-sellers",
@@ -133,7 +134,7 @@
         "text_a4YPW6": {
           "type": "text",
           "settings": {
-            "txt_content": "<p><strong>300,000+<\/strong>customers feel more confident in their own skin.<\/p>",
+            "txt_content": "<p><strong>50,000+ <\/strong>customers feel more confident in their own skin.<\/p>",
             "txt_fs": 14,
             "txt_fw": "default",
             "txt_tf": "unset",
@@ -148,7 +149,6 @@
         "buttons_jt6ttK",
         "text_a4YPW6"
       ],
-      "disabled": true,
       "name": "Banner with text",
       "settings": {
         "container": "full-width",
@@ -320,6 +320,7 @@
           "settings": {
             "btn_content": "Buy Now",
             "button_type": "primary-new",
+            "button_type_mob": "secondary",
             "button_size": "large",
             "btn_radius": 50,
             "button_link": "https:\/\/qureskincare.com\/pages\/microinfusion",
@@ -335,6 +336,7 @@
         "text_CjmW4j",
         "buttons_TztLB4"
       ],
+      "disabled": true,
       "name": "Banner with text",
       "settings": {
         "container": "full-width",
@@ -420,6 +422,7 @@
           "settings": {
             "btn_content": "Shop Now & Save",
             "button_type": "primary-new",
+            "button_type_mob": "secondary",
             "button_size": "medium",
             "btn_radius": 50,
             "button_link": "https:\/\/qureskincare.com\/pages\/microinfusion",
