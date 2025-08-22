@@ -16,7 +16,7 @@
           "type": "announcement",
           "settings": {
             "heading": "Summer Sale Ends In:",
-            "timer": "2025-08-19T10:59:53",
+            "timer": "2025-08-22T10:59:53",
             "timer_next": 6
           }
         },
@@ -562,7 +562,7 @@
           "type": "product",
           "disabled": true,
           "settings": {
-            "product": "memorial-day-promo-2025",
+            "product": "line-refine-bundle-advanced-1",
             "percent": 30,
             "media_limit": 0,
             "hide_us": false,
@@ -580,11 +580,11 @@
           "type": "include",
           "disabled": true,
           "settings": {
-            "heading": "Micro-Infusion 1 Month Supply (For Wrinkles + For Dark Spots)",
+            "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles) ",
             "is_limited": false,
             "type": "",
-            "image": "shopify://shop_images/bfs_3-serum.webp",
-            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p><h5>Serum Concentrate for Dark Spots</h5><p>Niacinamide, Epidermal Growth Factor (EGF), Tranexamic Acid, Tripeptide-1 Peptide</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, TRANEXAMIC ACID, NIACINAMIDE, PANTHENOL, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, TRIPEPTIDE-1, XANTHAN GUM, ALLANTOIN, SH-OLIGOPEPTIDE-1.</p>",
+            "image": "shopify://shop_images/bfs_blue-serum_ca9c2e68-113a-475e-8d4b-2ad73f5e8a5e.webp",
+            "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p><p></p>",
             "count": "",
             "hide": false,
             "hide_variants": false,
@@ -598,7 +598,7 @@
             "heading": "Micro-Infusion 4 Month Supply (For Wrinkles)",
             "is_limited": false,
             "type": "",
-            "image": "shopify://shop_images/bfs_blue-serum_ca9c2e68-113a-475e-8d4b-2ad73f5e8a5e.webp",
+            "image": "shopify://shop_images/Faucet_Filter_Refill_White.jpg",
             "text": "<h5>Serum Concentrate for Wrinkles</h5><p>Niacinamide, Copper Peptide GHK-Cu, Beta Glucan, Sodium Hyaluronate</p><p>INCI: ROSA DAMASCENA FLOWER WATER, PROPANEDIOL, GLYCERIN, PANTHENOL, NIACINAMIDE, MYROTHAMNUS FLABELLIFOLIA LEAF/STEM EXTRACT, WATER, BUTYLENE GLYCOL, HYDROXYACETOPHENONE, COPPER TRIPEPTIDE-1, BETA-GLUCAN, CHRYSANTHELLUM INDICUM EXTRACT, ETHYLHEXYLGLYCERIN, SODIUM HYALURONATE, ALLANTOIN, XANTHAN GUM.</p>",
             "count": "",
             "hide": false,
@@ -760,12 +760,10 @@
         },
         "bundle_Aem3Hy": {
           "type": "bundle",
-          "disabled": true,
           "settings": {}
         },
         "product_V9XtBw": {
           "type": "product",
-          "disabled": true,
           "settings": {
             "product": "line-refine-bundle-advanced-1",
             "percent": 35,
@@ -784,7 +782,6 @@
         },
         "include_6xfjCG": {
           "type": "include",
-          "disabled": true,
           "settings": {
             "heading": "Micro-Infusion 3 Month Bundle (For Wrinkles) ",
             "is_limited": false,
@@ -799,7 +796,6 @@
         },
         "include_bb8X96": {
           "type": "include",
-          "disabled": true,
           "settings": {
             "heading": "Faucet Filter",
             "is_limited": false,
@@ -814,7 +810,6 @@
         },
         "how_to_use_wHCyJt": {
           "type": "how-to-use",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_mi_sm_4425a83b-96a8-43e9-95d3-fff35b157c82.svg",
             "text": "<h5>Micro-Infusion 3 Month Bundle</h5><ul><li>Use at night, once every 2 weeks.</li><li>5 minute treatment, complete 2-3 passes and leave serum on overnight. </li><li>Easily purchase 3 month refills via our website.</li></ul>"
@@ -822,7 +817,6 @@
         },
         "how_to_use_RGeRNi": {
           "type": "how-to-use",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/bfs_faucet_filter.svg",
             "text": "<h5>Faucet Filter</h5><ul><li>Install the Qure Faucet Filter on your faucet.</li><li>Replace filter every 3 months (purchase replacement via our website).</li></ul>"
@@ -1407,7 +1401,6 @@
         },
         "product_qWAyap": {
           "type": "product",
-          "disabled": true,
           "settings": {
             "product": "breakout-control-pro-1",
             "percent": 27,
