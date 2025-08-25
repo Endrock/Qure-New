@@ -495,9 +495,9 @@
         "object_pBAeDi": {
           "type": "object",
           "settings": {
-            "text": "<p>Dark Spots & Hyperpigmentation</p>",
+            "text": "<p>Dark Spots, Lines & Wrinkles</p>",
             "image": "shopify://shop_images/bf-ftr-aging.svg",
-            "link_url": "#dark-spots-&-hyperpigmentation"
+            "link_url": "#dark-spots,-lines-&-wrinkles"
           }
         },
         "object_kbrVPD": {
@@ -821,7 +821,7 @@
       ],
       "name": "PDM Bundles List",
       "settings": {
-        "heading": "Dark Spots & Hyperpigmentation",
+        "heading": "Dark Spots, Lines & Wrinkles",
         "subheading": "These bundles are specifically designed to target signs of aging and fade dark spots. ",
         "supertop": ""
       }

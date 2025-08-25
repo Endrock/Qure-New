@@ -229,8 +229,9 @@
 
 .bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .bfs_tbx_info {
   padding: 0;
-  width: fit-content;
+  width: 100%;
   max-width: unset;
+  flex: 1;
 }
 
 .bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .bfs_tbx_info .bfs_tbx_title {
@@ -252,11 +253,11 @@
 }
 
 .bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .popup-content {
-  margin-left: auto;
+  /* margin-left: auto; */
 }
 
 .bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .bfs_tbx_color {
-  margin-right: auto;
+  /* margin-right: auto; */
 }
 
 .bsf_bf_item_pdm .bfs_bf_item_tabs .tab-content .tab-pane .bfs_bf_item_tabContent .bfs_tabContent_bx .bfs_tbx_color select {
