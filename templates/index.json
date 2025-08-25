@@ -103,7 +103,109 @@
     "banner_with_text_PLRJBt": {
       "type": "banner-with-text",
       "blocks": {
+        "image_picker_JfMzNR": {
+          "type": "image_picker",
+          "settings": {
+            "image_block": "shopify:\/\/shop_images\/summer_sale_end.webp",
+            "icon_width_block": 300,
+            "icon_max_width_block": 100,
+            "text_img_mt": 1,
+            "text_img_mt_mob": 1,
+            "text_img_mb": 10,
+            "text_img_mb_mob": 1
+          }
+        },
         "heading_qteHYG": {
+          "type": "heading",
+          "settings": {
+            "title": "Get 2 LED devices \u2028for the price of 1!",
+            "heading_fs": 42,
+            "heading_fw": "default",
+            "heading_fm": "Canela Web",
+            "heading_tf": "unset",
+            "heading_mt": 0,
+            "heading_mb": 20,
+            "heading_color": "#000000",
+            "heading_fsm": 34
+          }
+        },
+        "text_a4YPW6": {
+          "type": "text",
+          "settings": {
+            "txt_content": "<p>Don't let post-summer skin damage <\/p><p>get your confidence down<\/p>",
+            "txt_fs": 14,
+            "txt_fw": "default",
+            "txt_tf": "unset",
+            "txt_mt": 20,
+            "txt_mb": 27,
+            "text_hide": true
+          }
+        },
+        "buttons_jt6ttK": {
+          "type": "buttons",
+          "settings": {
+            "btn_content": "Buy Now & Save 43%",
+            "button_type": "primary-new",
+            "button_type_mob": "primary-new",
+            "button_size": "small",
+            "btn_radius": 50,
+            "button_link": "shopify:\/\/collections\/best-sellers",
+            "button_target": false,
+            "b_mt": 0,
+            "b_mb": 15
+          }
+        }
+      },
+      "block_order": [
+        "image_picker_JfMzNR",
+        "heading_qteHYG",
+        "text_a4YPW6",
+        "buttons_jt6ttK"
+      ],
+      "disabled": true,
+      "name": "Banner with text",
+      "settings": {
+        "container": "full-width",
+        "color_scheme": "scheme-1",
+        "banner_type": "image",
+        "image": "shopify:\/\/shop_images\/Banner_57c19f02-06bd-42fa-ac3a-6ebd0393ecc4.png",
+        "image_mobile": "shopify:\/\/shop_images\/qure_banner_mob.webp",
+        "video_url": "",
+        "link": "",
+        "open_link": "_blank",
+        "bn_design": "text_overlay",
+        "text_align": "text-left",
+        "text_horizontal_position": "left",
+        "text_position": "center",
+        "text_position_mobile": "top",
+        "content_bg_color": "",
+        "background_gradient": "",
+        "content_width": 41,
+        "text_align-mob": "on_mob-center",
+        "banner_height": "depend-image",
+        "height_dk": 800,
+        "height_tb": 600,
+        "height_mb": 360,
+        "height_full": false,
+        "image_second_on_mobile": true,
+        "content_box": "content_in_container",
+        "bg_opacity": 100,
+        "text_bellow_mobile": false,
+        "img_position": "left",
+        "banner_width": "col-md-6",
+        "column_gap": 0,
+        "hover_effect": "zoom",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "reset_spacing": false
+      }
+    },
+    "banner_with_text_Wft6CN": {
+      "type": "banner-with-text",
+      "blocks": {
+        "heading_ciCf8V": {
           "type": "heading",
           "settings": {
             "title": "Get clinic-level results from home- minus the ‘clinical’ costs.",
@@ -117,7 +219,7 @@
             "heading_fsm": 34
           }
         },
-        "buttons_jt6ttK": {
+        "buttons_zrjkCJ": {
           "type": "buttons",
           "settings": {
             "btn_content": "Shop Best Sellers",
@@ -131,7 +233,7 @@
             "b_mb": 15
           }
         },
-        "text_a4YPW6": {
+        "text_B88t8H": {
           "type": "text",
           "settings": {
             "txt_content": "<p><strong>50,000+ <\/strong>customers feel more confident in their own skin.<\/p>",
@@ -145,9 +247,9 @@
         }
       },
       "block_order": [
-        "heading_qteHYG",
-        "buttons_jt6ttK",
-        "text_a4YPW6"
+        "heading_ciCf8V",
+        "buttons_zrjkCJ",
+        "text_B88t8H"
       ],
       "name": "Banner with text",
       "settings": {
@@ -1291,6 +1393,7 @@
   "order": [
     "main",
     "banner_with_text_PLRJBt",
+    "banner_with_text_Wft6CN",
     "promotion_main_banner_second_jCUkqh",
     "promotion_main_banner_48gkNr",
     "banner_with_text_Bgpcti",
