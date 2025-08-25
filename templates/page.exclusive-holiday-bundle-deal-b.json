@@ -284,6 +284,90 @@
         "background": "bg-white"
       }
     },
+    "featuredin_extended": {
+      "type": "featuredin_extended",
+      "blocks": {
+        "text_hjVp7i": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"Treatment time is only three minutes—among the fastest \\n of all devices.\"</p>"
+          }
+        },
+        "image_XrzjQ3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/womenshealth_e1cfba2e-29da-4232-9235-69184bd9d1a3.svg"
+          }
+        },
+        "text_t9tnXK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"A multi-use LED mask with five different light setting options to plump, smooth and rejuvenate all skin types.\"</p>"
+          }
+        },
+        "image_PmUxLt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/elle-black_af7c0fb6-1535-4d44-b64c-b96b7d90bf08.svg"
+          }
+        },
+        "text_bxTn4H": {
+          "type": "text",
+          "settings": {
+            "text": "<p>“The combination of colors allows you to customize which lights are used, maximizing its benefits to help your skin...”</p>"
+          }
+        },
+        "image_hNLLqX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/cosmopolitan-black.svg"
+          }
+        },
+        "text_k6KEBE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>“The Qure mask is the FIRST mask in the world that adapts to your skin! ...There is an app that reminds you of the treatments too.”</p>"
+          }
+        },
+        "image_ebp8NW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/grazia_black.svg"
+          }
+        },
+        "text_Mnmb4P": {
+          "type": "text",
+          "settings": {
+            "text": "<p>“Q-Rejuvalight Pro harnesses the power of lights from blue to infrared to address nearly every skincare concern you could imagine.”</p>"
+          }
+        },
+        "image_a8KMPg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gq_logo.png"
+          }
+        }
+      },
+      "block_order": [
+        "text_hjVp7i",
+        "image_XrzjQ3",
+        "text_t9tnXK",
+        "image_PmUxLt",
+        "text_bxTn4H",
+        "image_hNLLqX",
+        "text_k6KEBE",
+        "image_ebp8NW",
+        "text_Mnmb4P",
+        "image_a8KMPg"
+      ],
+      "settings": {
+        "heading": "FEATURED IN",
+        "ctm_cls_heading": "",
+        "slider_type": "five_slides",
+        "slide_per_view_desktop": 3,
+        "slide_per_view_mobile": 3
+      }
+    },
     "p7": {
       "type": "temp-exclusive-holiday-bundle-deal-p7",
       "settings": {}
@@ -1572,90 +1656,6 @@
         "background": "bg-grey"
       }
     },
-    "featuredin_extended": {
-      "type": "featuredin_extended",
-      "blocks": {
-        "text_hjVp7i": {
-          "type": "text",
-          "settings": {
-            "text": "<p>\"Treatment time is only three minutes—among the fastest \\n of all devices.\"</p>"
-          }
-        },
-        "image_XrzjQ3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/womenshealth_e1cfba2e-29da-4232-9235-69184bd9d1a3.svg"
-          }
-        },
-        "text_t9tnXK": {
-          "type": "text",
-          "settings": {
-            "text": "<p>\"A multi-use LED mask with five different light setting options to plump, smooth and rejuvenate all skin types.\"</p>"
-          }
-        },
-        "image_PmUxLt": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/elle-black_af7c0fb6-1535-4d44-b64c-b96b7d90bf08.svg"
-          }
-        },
-        "text_bxTn4H": {
-          "type": "text",
-          "settings": {
-            "text": "<p>“The combination of colors allows you to customize which lights are used, maximizing its benefits to help your skin...”</p>"
-          }
-        },
-        "image_hNLLqX": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/cosmopolitan-black.svg"
-          }
-        },
-        "text_k6KEBE": {
-          "type": "text",
-          "settings": {
-            "text": "<p>“The Qure mask is the FIRST mask in the world that adapts to your skin! ...There is an app that reminds you of the treatments too.”</p>"
-          }
-        },
-        "image_ebp8NW": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/grazia_black.svg"
-          }
-        },
-        "text_Mnmb4P": {
-          "type": "text",
-          "settings": {
-            "text": "<p>“Q-Rejuvalight Pro harnesses the power of lights from blue to infrared to address nearly every skincare concern you could imagine.”</p>"
-          }
-        },
-        "image_a8KMPg": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/gq_logo.png"
-          }
-        }
-      },
-      "block_order": [
-        "text_hjVp7i",
-        "image_XrzjQ3",
-        "text_t9tnXK",
-        "image_PmUxLt",
-        "text_bxTn4H",
-        "image_hNLLqX",
-        "text_k6KEBE",
-        "image_ebp8NW",
-        "text_Mnmb4P",
-        "image_a8KMPg"
-      ],
-      "settings": {
-        "heading": "FEATURED IN",
-        "ctm_cls_heading": "",
-        "slider_type": "five_slides",
-        "slide_per_view_desktop": 3,
-        "slide_per_view_mobile": 3
-      }
-    },
     "before-after": {
       "type": "exclusive-holiday-bundle-deal-before-after",
       "blocks": {
@@ -2027,13 +2027,13 @@
     "header_sales",
     "header",
     "icons_list",
+    "featuredin_extended",
     "p7",
     "bundles-header",
     "bundles-list",
     "bundles-list2",
     "bundles-list3",
     "icons_list_second",
-    "featuredin_extended",
     "before-after",
     "p10",
     "text_with_video",
