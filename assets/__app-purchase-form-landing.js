@@ -6,9 +6,28 @@ document.addEventListener('DOMContentLoaded', function() {
     __landing__initTemplate(__landing__getProductType());
 
     document.querySelectorAll('.' + __section_landing + ' .serumBlock').forEach(function(element) {
-        element.addEventListener('click', function() {
+        element.addEventListener('click', function(e) {
+            if (e.target.tagName === 'INPUT') return; //to skip second click
             const id = this.id;
             __landing__initTemplate(id);
+        });
+    });
+
+    document.querySelectorAll('.' + __section_landing + ' .productButtonObject').forEach(function(element) {
+        element.addEventListener('click', function(e) {
+
+            const url = new URL(this.href, window.location.origin);
+            const product_variant_id = url.searchParams.get("id");
+
+            //send event with details
+            const event = new CustomEvent('__app-datalayer.purchaseForm', { detail: 
+                {
+                    event: 'purchase-form-buy',
+                    url: window.location.pathname,
+                    product_variant_id: product_variant_id,
+                }
+            });
+            document.dispatchEvent(event);
         });
     });
 
@@ -82,7 +101,8 @@ document.addEventListener('DOMContentLoaded', function() {
         $('.' + __section_landing + ' .step_conten_blocks .planBlock').click(__landing__handlerPlanBlock);
     }
 
-    function __landing__handlerPlanBlock () {
+    function __landing__handlerPlanBlock (e) {
+        if (e.target.tagName === 'INPUT') return;  //to skip second click
         window.dispatchEvent(new CustomEvent('appPurchaseFormLanding', {
           detail: {
               element: this
@@ -92,6 +112,21 @@ document.addEventListener('DOMContentLoaded', function() {
         var product_variant_id = $(this).attr("data-product_variant_id");
         var soldout = $(this).attr("data-soldout");
         var preorder = $(this).attr("data-preorder");
+
+        //send event with details
+        const event = new CustomEvent('__app-datalayer.purchaseForm', { detail: 
+            {
+                event: 'purchase-form',
+                url: window.location.pathname,
+                product_variant_id: product_variant_id,
+                product_category: document.querySelector('.serum_img.active')?.dataset.name,
+                product_name: $(this).attr("data-product-name"),
+                product_type: $(this).attr("data-product-type"),
+                product_price: $(this).attr("data-product-price"),
+                unix_time: Math.floor(Date.now() / 1000)
+            }
+        });
+        document.dispatchEvent(event);
 
         __landing__updateProductButtonHref(product_variant_id, soldout);
         __landing__clearPreorderBoxes();
