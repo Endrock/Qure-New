@@ -1,0 +1,49 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "page.mi-offer-lp.json",
+  "context": {
+    "market": "canada"
+  },
+  "sections": {
+    "purchase-form-second": {
+      "settings": {
+        "image": "shopify://shop_images/3monthdarkspots_1_2ba8a042-e385-47f1-9560-44e6dd67e57f.png"
+      },
+      "blocks": {
+        "product_type_VLXcAn": {
+          "settings": {
+            "preselected": false
+          }
+        },
+        "product_nyJ9n7": {
+          "settings": {
+            "image": "shopify://shop_images/3monthwrinkles_5d80e14d-e628-4311-990a-34a1fc948558.png"
+          }
+        },
+        "product_type_YrPQrV": {
+          "disabled": false,
+          "settings": {
+            "preselected": true
+          }
+        },
+        "product_gbPf3J": {
+          "disabled": false,
+          "settings": {}
+        },
+        "product_NEgEkN": {
+          "settings": {
+            "image": "shopify://shop_images/3monthmix_1.png"
+          }
+        }
+      }
+    }
+  }
+}

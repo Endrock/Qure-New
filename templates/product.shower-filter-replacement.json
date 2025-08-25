@@ -105,42 +105,48 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/vogue2.svg",
-            "mobile_hide": false
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_bAPphf": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/women_health.svg",
-            "mobile_hide": true
+            "mobile_hide": true,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_6dqk7q": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/cosmopolitan2.svg",
-            "mobile_hide": true
+            "mobile_hide": true,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_LfKgdE": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/elle2.svg",
-            "mobile_hide": false
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_eVJbTA": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/marie.svg",
-            "mobile_hide": false
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
           }
         },
         "image_P8mBiX": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/grazia2.svg",
-            "mobile_hide": false
+            "mobile_hide": false,
+            "ctm_cls_in_ps_item": ""
           }
         }
       },
@@ -228,6 +234,7 @@
       "settings": {
         "classname": "mi_landing_result",
         "heading": "Let the results pour in",
+        "des": "",
         "heading_reduced": "",
         "text_verified_customer": "Verified customer",
         "text_reviewed": "Reviewed in"
@@ -331,7 +338,7 @@
           "settings": {
             "icon": "shopify://shop_images/fof.svg",
             "title": "FOF (Filter of Future)",
-            "description": "Helps reduce the buildup of hard water minerals such as calcium and magnesium, preventing scale and improving water flow."
+            "description": "Helps reduce the buildup of hard water minerals preventing scale and improving water flow."
           }
         }
       },

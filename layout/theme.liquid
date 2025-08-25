@@ -136,8 +136,8 @@
     <!-- End Google Tag Manager (noscript) -- BV -->
 
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7RD8D7B"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!--<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7RD8D7B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
     <!-- End Google Tag Manager (noscript) -->
 
     {% render 'config-header' %}
@@ -200,6 +200,7 @@
     <script src="{{ '__app_serums-months-form.js' | asset_url }}"></script>
     <script src="{{ '__app_serums-refill-form.js' | asset_url }}"></script>
     <script src="{{ '__app-get-country.js' | asset_url }}"></script>
+    <script src="{{ '__app-datalayer.js' | asset_url }}"></script>
 
     <script defer type="text/javascript">
         /* order by: states info */
@@ -283,7 +284,20 @@
 
     {% render 'gdpr' %} 
     {% include 'redirect' %}
-    
+    {% comment %} Scroll Depth Tracking on PostHog {% endcomment %}
+    <script>
+        let maxScrollDepth = 0;
+        window.onscroll = function() {
+            const scrollDepth = Math.round((window.scrollY + window.innerHeight) / document.body.scrollHeight * 100);
+            if (scrollDepth > maxScrollDepth) {
+                maxScrollDepth = scrollDepth;
+                if (typeof posthog !== 'undefined') {
+                    posthog.capture('scroll', { depth: maxScrollDepth });
+                }
+            }
+        };
+    </script>
+    {% comment %} end Scroll Depth Tracking on PostHog {% endcomment %}
     {% comment %} {% include 'info' %} {% endcomment %}
 </body>
 </html>

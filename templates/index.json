@@ -296,9 +296,9 @@
         "link_Pk3LH6": {
           "type": "link",
           "settings": {
-            "link_label": "Shop Now & Save",
-            "link_label_mobile": "Shop Now & Save",
-            "link_url": "https:\/\/qureskincare.com\/pages\/qure-filters-offer?variant=45909763490031"
+            "link_label": "Buy Now",
+            "link_label_mobile": "Buy Now",
+            "link_url": "https://qureskincare.com/pages/microinfusion"
           }
         },
         "banner_6wgzUN": {
@@ -318,14 +318,14 @@
       ],
       "disabled": true,
       "settings": {
-        "heading": "Two Filters. One Goal: Healthier Skin.",
-        "heading_mobile": "Two Filters. One Goal: Healthier Skin.",
+        "heading": "70% OFF \\ Micro-Infusion",
+        "heading_mobile": "70% OFF \\ Micro-Infusion",
         "heading_tag": "h1",
-        "subheading": "<h5>Get Faucet Filter FREE<\/h5>",
-        "subheading_mobile": "<h5>Get Faucet Filter FREE<\/h5>",
-        "text": "<h6>Limited Time Offer <\/h6>",
-        "video": "shopify:\/\/files\/videos\/faucet_offer-d.webm",
-        "video_mobile": "shopify:\/\/files\/videos\/faucet_offer-m.webm"
+        "subheading": "<p>Refresh your glow & save big!</p>",
+        "subheading_mobile": "<p>Refresh your glow & save big!</p>",
+        "text": "",
+        "image": "shopify://shop_images/summer_sale_4d821dfa-5798-447c-b981-00dee24d2b9c.webp",
+        "image_mobile": "shopify://shop_images/summer_sale_mob_d4d20b00-2ad2-40c4-9e86-053bbb6b6b7d.webp"
       }
     },
     "promotion_main_banner_48gkNr": {
@@ -341,6 +341,7 @@
         },
         "product_BANXY7": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "heading": "<p>Micro-Infusion Bundle<\/p>",
             "image": "shopify:\/\/shop_images\/mi_bundle.webp",
@@ -363,16 +364,15 @@
         "product_BANXY7",
         "banner_6wgzUN"
       ],
-      "disabled": true,
       "settings": {
-        "heading": "",
+        "heading": "<h3>Get clinic-level results</h3><h3>from home- minus</h3><h3>the ‘clinical’ costs.</h3>",
         "heading_mobile": "",
         "heading_tag": "h1",
-        "subheading": "<h3>Get clinic-level results<\/h3><h4>from home- minus<\/h4><h5>the ‘clinical’ costs.<\/h5>",
-        "subheading_mobile": "<h3>Get clinic-level results<\/h3><h4>from home- minus<\/h4><h5>the ‘clinical’ costs.<\/h5>",
-        "text": "<p><strong>300,000+ <\/strong>customers feel more confident in their own skin.<\/p>",
-        "image": "shopify:\/\/shop_images\/Banner_57c19f02-06bd-42fa-ac3a-6ebd0393ecc4.png",
-        "image_mobile": "shopify:\/\/shop_images\/hm_banner_clinic_results.png_mob.webp",
+        "subheading": "",
+        "subheading_mobile": "",
+        "text": "<p><strong> 50,000+ </strong> customers feel more confident in their own skin.</p>",
+        "image": "shopify://shop_images/hm_banner_clinic_results.webp",
+        "image_mobile": "shopify://shop_images/hm_banner_clinic_results.png_mob.webp",
         "wistia_id": ""
       }
     },
@@ -939,7 +939,7 @@
         "object_HV9VTX": {
           "type": "object",
           "settings": {
-            "heading": "Dr Shah, MD",
+            "heading": "Dr Shah",
             "subheading": "Board-Certified Dermatologist",
             "text": "<p>“I like that they put a lot of R&D into their products -                                                       Ultimately, I think that they care a lot about the products they                                                        are putting out”<\/p>",
             "image": "shopify:\/\/shop_images\/advisor_1.webp",
@@ -949,7 +949,7 @@
         "object_fwn8MX": {
           "type": "object",
           "settings": {
-            "heading": "Dr Maxfield, MD",
+            "heading": "Dr Maxfield",
             "subheading": "Board-Certified Dermatologist",
             "text": "<p>“Qure do studies on this, taking a look at how effective it is, so you can have confidence it’s going to hep what you’re doing for your skincare routine”<\/p>",
             "image": "shopify:\/\/shop_images\/advisor_2.webp",
@@ -959,7 +959,7 @@
         "object_ztcPKz": {
           "type": "object",
           "settings": {
-            "heading": "Dr Alexis Stephens, MD",
+            "heading": "Dr Alexis Stephens",
             "subheading": "Board-Certified Dermatologist",
             "text": "<p>\"What really sets Qure apart is the level of innovation and thoughtfulness they put into each product. Their commitment to quality and attention to detail really shines through in everything they create\"<\/p>",
             "image": "shopify:\/\/shop_images\/advisor_3.webp",
@@ -969,7 +969,7 @@
         "object_rkVQek": {
           "type": "object",
           "settings": {
-            "heading": "Dr Prem Tripathi, MD",
+            "heading": "Dr Prem Tripathi",
             "subheading": "Double Board Certified Facial Plastic Surgeon",
             "text": "<p>“I love that Qure Skincare products go beyond just topical treatments, helping to maintain the results of in-office procedures.”<\/p>",
             "image": "shopify:\/\/shop_images\/advisor_4.webp",

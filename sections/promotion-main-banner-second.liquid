@@ -1,80 +1,56 @@
-{%- assign product_count = 0 -%}
+{%- assign location_href = blank -%}
 
 {%- for block in section.blocks -%}
 	{%- case block.type -%}
         {%- when 'link' -%}
             {% assign location_href = block.settings.link_url %}
-        {%- when 'product' -%}
-            {%- assign product_count = product_count | plus: 1 -%}
     {%- endcase -%}
 {%- endfor -%}
 
 <link rel="stylesheet" href="{{ 'homepage_promo_second.css' | asset_url }}">
 
+<style>
+    .announcement_bar .bar_shop-btn {
+        background-color: #ff5429 !important;
+    }
+</style>
+
 <!-- -- main banner start -- -->
 <div class="bf_sale-banners">
-    <!-- hero valentine banner  -->
-        <!-- faucet offer banner  -->
-    <div class="faucet_offer-banner">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="faucet_offer-text">
-                        <div>
-                            {% if section.settings.heading != blank %}
-                                <p>{{ section.settings.heading }}</p>
-                            {% endif %}           
-                            {% if section.settings.subheading != blank %}
-                                {{ section.settings.subheading }}
-                            {% endif %}                  
+    <div class="hero_valentine_banner position-relative main_banner summer_sale_banner"{% if location_href != blank %} onclick="window.location='{{ location_href }}';" style="cursor:pointer"{% endif %}>
+        <div class="container-fluid px-0">
+            <picture>
+                <source media="(min-width:1920px)" srcset="{{ section.settings.image | img_url: 'master' }}" class="img-fluid" width="1440" height="557">
+                <source media="(min-width:1600px)" srcset="{{ section.settings.image | img_url: '1920x' }}" class="img-fluid" width="1440" height="557">
+                <source media="(min-width:1100px)" srcset="{{ section.settings.image | img_url: '1600x' }}" class="img-fluid" width="1440" height="557">
+                <source media="(min-width:768px)" srcset="{{ section.settings.image | img_url: '1100x' }}" class="img-fluid" width="1440" height="557">
+                <source media="(min-width:720px)" srcset="{{ section.settings.image | img_url: '900x' }}" class="img-fluid" width="1440" height="557">
+                <source media="(min-width:540px)" srcset="{{ section.settings.image | img_url: '720x' }}" class="img-fluid" width="1440" height="557">
+                <img src="{{ section.settings.image_mobile | img_url: '720x' }}" width="225" height="281" alt="" class="img-fluid">
+            </picture>
+            <div class="collection_grid d-md-grid main_b_wrapper py-3">
+                <div class="banner_text w-100 womens_day_offer">
+                    <div class="clinic_results">
+                        <img src="https://qureskincaredns.com/new/assets/summer_sale_img.webp" alt="summer sale">
 
-                            {%- for block in section.blocks -%}
-                                {% if block.type == 'link' %}
-                                    <a href="{{ block.settings.link_url }}" class="btn_black btn mb-0 mt-2 mt-md-4" aria-label="{{ block.settings.link_label | escape }}">{{ block.settings.link_label }}</a>
-                                {% endif %}
-                            {%- endfor -%}
+                        {% if section.settings.heading != blank %}
+                            <h3>{{ section.settings.heading | replace:  '\', '<br />' }}</h3>
+                        {% endif %}
 
-                            {% if section.settings.text != blank %}
-                                {{ section.settings.text }}
-                            {% endif %} 
-                        </div>
+                        {% if section.settings.subheading != blank %}
+                            {{ section.settings.subheading }}
+                        {% endif %} 
+                         
+                        {%- for block in section.blocks -%}
+                            {% if block.type == 'link' %}
+                                <a href="{{ block.settings.link_url }}" class="btn_black btn mb-0 mt-2 mt-md-4" aria-label="{{ block.settings.link_label | escape }}">{{ block.settings.link_label }}</a>
+                            {% endif %}
+                        {%- endfor -%}
                     </div>
-                </div>
-                <div class="col-md-6">
-                    {% if section.settings.video_mobile != blank %}
-
-                        {% if section.settings.video_mobile.sources[1].url != blank %}
-                            {% assign video_mobile_source_url = section.settings.video_mobile.sources[1].url %}
-                        {% else %}
-                            {% assign video_mobile_source_url = section.settings.video_mobile.sources[0].url %}
-                        {% endif %}
-
-                        <div class="d-md-none">
-                            <video autoplay loop muted playsinline  class="w-100">
-                            <source src="{{ video_mobile_source_url }}" type="video/webm">
-                            </video>
-                        </div>    
-                    {% endif %}
-                    {% if section.settings.video != blank %}
-
-                        {% if section.settings.video.sources[1].url != blank %}
-                            {% assign video_source_url = section.settings.video.sources[1].url %}
-                        {% else %}
-                            {% assign video_source_url = section.settings.video.sources[0].url %}
-                        {% endif %}
-
-                        <div class="d-md-block d-none">
-                            <video autoplay loop muted playsinline  class="w-100">
-                            <source src="{{ video_source_url }}" type="video/webm">
-                            </video>
-                        </div>
-                    {% endif %}
                 </div>
             </div>
         </div>
     </div>
-    <!-- faucet offer banner  -->
-    <!-- hero valentine banner end  -->
 
     <!-- Sub banner  -->
     {%- for block in section.blocks -%}
@@ -116,115 +92,6 @@
     <!-- Sub banner end -->
 </div>
 <!-- -- main banner end -- -->
-
-
-{% comment %} <link rel="stylesheet" href="{{ 'homepage_promo.css' | asset_url }}">
-
-<!-- -- main banner start -- -->
-<div class="bf_sale-banners">
-    <!-- hero valentine banner  -->
-        <!-- faucet offer banner  -->
-    <div class="faucet_offer-banner">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="faucet_offer-text">
-                        <div>
-                            {% if section.settings.heading != blank %}
-                                <p>{{ section.settings.heading }}</p>
-                            {% endif %}           
-                            {% if section.settings.subheading != blank %}
-                                {{ section.settings.subheading }}
-                            {% endif %}                  
-
-                            {%- for block in section.blocks -%}
-                                {% if block.type == 'link' %}
-                                    <a href="{{ block.settings.link_url }}" class="btn_black btn mb-0 mt-2 mt-md-4" aria-label="{{ block.settings.link_label | escape }}">{{ block.settings.link_label }}</a>
-                                {% endif %}
-                            {%- endfor -%}
-
-                            {% if section.settings.text != blank %}
-                                {{ section.settings.text }}
-                            {% endif %} 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    {% if section.settings.video_mobile != blank %}
-
-                        {% if section.settings.video_mobile.sources[1].url != blank %}
-                            {% assign video_mobile_source_url = section.settings.video_mobile.sources[1].url %}
-                        {% else %}
-                            {% assign video_mobile_source_url = section.settings.video_mobile.sources[0].url %}
-                        {% endif %}
-
-                        <div class="d-md-none">
-                            <video autoplay loop muted playsinline  class="w-100">
-                            <source src="{{ video_mobile_source_url }}" type="video/webm">
-                            </video>
-                        </div>    
-                    {% endif %}
-                    {% if section.settings.video != blank %}
-
-                        {% if section.settings.video.sources[1].url != blank %}
-                            {% assign video_source_url = section.settings.video.sources[1].url %}
-                        {% else %}
-                            {% assign video_source_url = section.settings.video.sources[0].url %}
-                        {% endif %}
-
-                        <div class="d-md-block d-none">
-                            <video autoplay loop muted playsinline  class="w-100">
-                            <source src="{{ video_source_url }}" type="video/webm">
-                            </video>
-                        </div>
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- faucet offer banner  -->
-    <!-- hero valentine banner end  -->
-
-    <!-- Sub banner  -->
-    {%- for block in section.blocks -%}
-        {% if block.type == 'banner' %}
-            <!-- Sub banner  -->
-            <div class="sub_banner main_banner position-relative">
-                {% if block.settings.image != blank %}
-                    <picture>
-                        <source media="(min-width:1100px)" srcset="{{ block.settings.image | img_url: 'master' }}">
-                        {% if block.settings.image_mobile %}
-                            <source media="(min-width:720px)" srcset="{{ block.settings.image_mobile | img_url: '720x' }}">
-                            <source media="(min-width:540px)" srcset="{{ block.settings.image_mobile | img_url: '540x' }}">
-                        {% endif %}
-                        {% if block.settings.image_mobile %}
-                            <img class="img-fluid" src="{{ block.settings.image_mobile | img_url: '540x' }}" alt="{{ block.settings.image_mobile.alt | escape }}" width="125" height="186">
-                        {% else %}
-                            <img class="img-fluid" src="{{ block.settings.image | img_url: '540x' }}" alt="{{ block.settings.image.alt | escape }}" width="225" height="281" alt="">
-                        {% endif %}
-                    </picture>
-                {% endif %}
-                <div class="main_b_wrapper">
-                    <div class="container">
-                        <div class="sub_banner-content">
-                            {% if block.settings.heading != blank %}
-                                <h2 class="mb-0">
-                                    {{ block.settings.heading }}
-                                </h2>
-                            {% endif %}
-                            {% if block.settings.link_label != blank %}
-                                <a href="{{ block.settings.link_url }}" class="btn_black mb-0">{{ block.settings.link_label }}</a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Sub banner end -->
-        {% endif %}
-    {%- endfor -%}
-    <!-- Sub banner end -->
-</div>
-<!-- -- main banner end -- --> {% endcomment %}
 
 
 {% schema %}
@@ -274,14 +141,14 @@
                 "label": "t:common.text.label"
             },
             {
-                "type": "video",
-                "id": "video",
-                "label": "t:common.video.label"
+                "type": "image_picker",
+                "id": "image",
+                "label": "t:common.image.label"
             },
             {
-                "type": "video",
-                "id": "video_mobile",
-                "label": "t:common.video_mobile.label"
+                "type": "image_picker",
+                "id": "image_mobile",
+                "label": "t:common.image_mobile.label"
             }
         ],
         "blocks": [

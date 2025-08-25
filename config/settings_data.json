@@ -66,8 +66,9 @@
     "icon_gift_width": 20,
     "icon_gift_height": 20,
     "enable_site_wide_timer": false,
-    "start_date": "11-20-2024 22:00",
-    "finish_date": "12-02-2024 11:59",
+    "start_date": "08-19-2025 22:00",
+    "finish_date": "08-22-2025 19:59",
+    "label_ends": "Summer Sale Ends In:",
     "promotion": "promotion",
     "sections": {
       "header": {
@@ -76,10 +77,9 @@
           "announcement_TPxBgi": {
             "type": "announcement",
             "settings": {
-              "heading": "<p>FREE World-Wide Shipping Orders $100+<\/p>",
+              "heading": "<p><strong>LABOR DAY SALE</strong> 70% OFF Micro-Infusion</p>",
               "button_label": "SHOP NOW",
-              "button_url": "https:\/\/www.qureskincare.com\/collections\/best-sellers",
-              "ann_bg_clr": "#ff5429"
+              "button_url": "https://qureskincare.com/pages/microinfusion"
             }
           },
           "tab_3Wyyea": {
@@ -370,9 +370,9 @@
           "upsell_product_third_description": "Plump, smooth & brighten in just one step",
           "sidecart_timer_old_enable": false,
           "sidecart_timer_new_enable": true,
-          "start_date": "07-01-2025 23:00",
-          "finish_date": "07-31-2025 20:00",
-          "label_ends": "Anniversary Sale Ends:",
+          "start_date": "07-31-2025 10:00",
+          "finish_date": "08-27-2025 20:00",
+          "label_ends": "Labor Day Sale Ends:",
           "label_days": "DAYS",
           "label_hours": "HOURS",
           "label_minutes": "MINUTES",
@@ -442,6 +442,11 @@
         "settings": {
           "enable_cart_validation": true
         }
+      },
+      "2786716548061469553": {
+        "type": "shopify://apps/axon/blocks/app-embed/baa0f014-62ea-462f-a8aa-a94befb1cbad",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
