@@ -86,7 +86,9 @@
                                 data-product_variant_id="{{ product_variant_id }}" 
                                 data-soldout="{{ block.settings.soldout }}" 
                                 data-preorder="{{ block.settings.preorder }}" 
-                                data-type="{{ product_type }}"
+                                data-product-type="{{ product_type }}"
+                                data-product-name="{{ block.settings.heading | escape }}",
+                                data-product-price="{{ product_price }}"
                             >
                                 {% if block.settings.preselected == true %}
                                     <div class="best_value">Best Value<span><img src="https://qureskincaredns.com/new/assets/star_new.svg" alt="" class="img-fluid ms-1"></span></div>
