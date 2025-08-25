@@ -251,6 +251,7 @@
         "buttons_zrjkCJ",
         "text_B88t8H"
       ],
+      "disabled": true,
       "name": "Banner with text",
       "settings": {
         "container": "full-width",
@@ -298,7 +299,7 @@
           "settings": {
             "link_label": "Buy Now",
             "link_label_mobile": "Buy Now",
-            "link_url": "https://qureskincare.com/pages/microinfusion"
+            "link_url": "https:\/\/qureskincare.com\/pages\/microinfusion"
           }
         },
         "banner_6wgzUN": {
@@ -321,11 +322,11 @@
         "heading": "70% OFF \\ Micro-Infusion",
         "heading_mobile": "70% OFF \\ Micro-Infusion",
         "heading_tag": "h1",
-        "subheading": "<p>Refresh your glow & save big!</p>",
-        "subheading_mobile": "<p>Refresh your glow & save big!</p>",
+        "subheading": "<p>Refresh your glow & save big!<\/p>",
+        "subheading_mobile": "<p>Refresh your glow & save big!<\/p>",
         "text": "",
-        "image": "shopify://shop_images/summer_sale_4d821dfa-5798-447c-b981-00dee24d2b9c.webp",
-        "image_mobile": "shopify://shop_images/summer_sale_mob_d4d20b00-2ad2-40c4-9e86-053bbb6b6b7d.webp"
+        "image": "shopify:\/\/shop_images\/summer_sale_4d821dfa-5798-447c-b981-00dee24d2b9c.webp",
+        "image_mobile": "shopify:\/\/shop_images\/summer_sale_mob_d4d20b00-2ad2-40c4-9e86-053bbb6b6b7d.webp"
       }
     },
     "promotion_main_banner_48gkNr": {
@@ -365,14 +366,14 @@
         "banner_6wgzUN"
       ],
       "settings": {
-        "heading": "<h3>Get clinic-level results</h3><h3>from home- minus</h3><h3>the ‘clinical’ costs.</h3>",
+        "heading": "<h3>Get clinic-level results<\/h3><h3>from home- minus<\/h3><h3>the ‘clinical’ costs.<\/h3>",
         "heading_mobile": "",
         "heading_tag": "h1",
         "subheading": "",
         "subheading_mobile": "",
-        "text": "<p><strong> 50,000+ </strong> customers feel more confident in their own skin.</p>",
-        "image": "shopify://shop_images/hm_banner_clinic_results.webp",
-        "image_mobile": "shopify://shop_images/hm_banner_clinic_results.png_mob.webp",
+        "text": "<p><strong> 50,000+ <\/strong> customers feel more confident in their own skin.<\/p>",
+        "image": "shopify:\/\/shop_images\/hm_banner_clinic_results.webp",
+        "image_mobile": "shopify:\/\/shop_images\/hm_banner_clinic_results.png_mob.webp",
         "wistia_id": ""
       }
     },
@@ -582,6 +583,7 @@
     },
     "sub_banner_mDCcyx": {
       "type": "sub-banner",
+      "disabled": true,
       "name": "t:common.sub-banner.label",
       "settings": {
         "heading": "Save up to 55% on Exclusive Bundles",
