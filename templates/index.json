@@ -100,205 +100,14 @@
       ],
       "settings": {}
     },
-    "banner_with_text_PLRJBt": {
-      "type": "banner-with-text",
-      "blocks": {
-        "image_picker_JfMzNR": {
-          "type": "image_picker",
-          "settings": {
-            "image_block": "shopify:\/\/shop_images\/summer_sale_end.webp",
-            "icon_width_block": 300,
-            "icon_max_width_block": 100,
-            "text_img_mt": 1,
-            "text_img_mt_mob": 1,
-            "text_img_mb": 10,
-            "text_img_mb_mob": 1
-          }
-        },
-        "heading_qteHYG": {
-          "type": "heading",
-          "settings": {
-            "title": "Get 2 LED devices \u2028for the price of 1!",
-            "heading_fs": 42,
-            "heading_fw": "default",
-            "heading_fm": "Canela Web",
-            "heading_tf": "unset",
-            "heading_mt": 0,
-            "heading_mb": 20,
-            "heading_color": "#000000",
-            "heading_fsm": 34
-          }
-        },
-        "text_a4YPW6": {
-          "type": "text",
-          "settings": {
-            "txt_content": "<p>Don't let post-summer skin damage <\/p><p>get your confidence down<\/p>",
-            "txt_fs": 14,
-            "txt_fw": "default",
-            "txt_tf": "unset",
-            "txt_mt": 20,
-            "txt_mb": 27,
-            "text_hide": true
-          }
-        },
-        "buttons_jt6ttK": {
-          "type": "buttons",
-          "settings": {
-            "btn_content": "Buy Now & Save 43%",
-            "button_type": "primary-new",
-            "button_type_mob": "primary-new",
-            "button_size": "small",
-            "btn_radius": 50,
-            "button_link": "shopify:\/\/collections\/best-sellers",
-            "button_target": false,
-            "b_mt": 0,
-            "b_mb": 15
-          }
-        }
-      },
-      "block_order": [
-        "image_picker_JfMzNR",
-        "heading_qteHYG",
-        "text_a4YPW6",
-        "buttons_jt6ttK"
-      ],
-      "disabled": true,
-      "name": "Banner with text",
-      "settings": {
-        "container": "full-width",
-        "color_scheme": "scheme-1",
-        "banner_type": "image",
-        "image": "shopify:\/\/shop_images\/Banner_57c19f02-06bd-42fa-ac3a-6ebd0393ecc4.png",
-        "image_mobile": "shopify:\/\/shop_images\/qure_banner_mob.webp",
-        "video_url": "",
-        "link": "",
-        "open_link": "_blank",
-        "bn_design": "text_overlay",
-        "text_align": "text-left",
-        "text_horizontal_position": "left",
-        "text_position": "center",
-        "text_position_mobile": "top",
-        "content_bg_color": "",
-        "background_gradient": "",
-        "content_width": 41,
-        "text_align-mob": "on_mob-center",
-        "banner_height": "depend-image",
-        "height_dk": 800,
-        "height_tb": 600,
-        "height_mb": 360,
-        "height_full": false,
-        "image_second_on_mobile": true,
-        "content_box": "content_in_container",
-        "bg_opacity": 100,
-        "text_bellow_mobile": false,
-        "img_position": "left",
-        "banner_width": "col-md-6",
-        "column_gap": 0,
-        "hover_effect": "zoom",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0,
-        "reset_spacing": false
-      }
-    },
-    "banner_with_text_Wft6CN": {
-      "type": "banner-with-text",
-      "blocks": {
-        "heading_ciCf8V": {
-          "type": "heading",
-          "settings": {
-            "title": "Get clinic-level results from home- minus the ‘clinical’ costs.",
-            "heading_fs": 42,
-            "heading_fw": "default",
-            "heading_fm": "Canela Web",
-            "heading_tf": "unset",
-            "heading_mt": 0,
-            "heading_mb": 20,
-            "heading_color": "#ffffff",
-            "heading_fsm": 34
-          }
-        },
-        "buttons_zrjkCJ": {
-          "type": "buttons",
-          "settings": {
-            "btn_content": "Shop Best Sellers",
-            "button_type": "primary-new",
-            "button_type_mob": "secondary",
-            "button_size": "medium",
-            "btn_radius": 50,
-            "button_link": "shopify:\/\/collections\/best-sellers",
-            "button_target": false,
-            "b_mt": 0,
-            "b_mb": 15
-          }
-        },
-        "text_B88t8H": {
-          "type": "text",
-          "settings": {
-            "txt_content": "<p><strong>50,000+ <\/strong>customers feel more confident in their own skin.<\/p>",
-            "txt_fs": 14,
-            "txt_fw": "default",
-            "txt_tf": "unset",
-            "txt_mt": 20,
-            "txt_mb": 0,
-            "text_hide": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_ciCf8V",
-        "buttons_zrjkCJ",
-        "text_B88t8H"
-      ],
-      "disabled": true,
-      "name": "Banner with text",
-      "settings": {
-        "container": "full-width",
-        "color_scheme": "scheme-1",
-        "banner_type": "image",
-        "image": "shopify:\/\/shop_images\/Banner_57c19f02-06bd-42fa-ac3a-6ebd0393ecc4.png",
-        "image_mobile": "shopify:\/\/shop_images\/hm_banner_clinic_results.png_mob.webp",
-        "video_url": "",
-        "link": "",
-        "open_link": "_blank",
-        "bn_design": "text_overlay",
-        "text_align": "text-left",
-        "text_horizontal_position": "left",
-        "text_position": "center",
-        "text_position_mobile": "center",
-        "content_bg_color": "",
-        "background_gradient": "",
-        "content_width": 41,
-        "text_align-mob": "on_mob-center",
-        "banner_height": "depend-image",
-        "height_dk": 800,
-        "height_tb": 600,
-        "height_mb": 360,
-        "height_full": false,
-        "image_second_on_mobile": true,
-        "content_box": "content_in_container",
-        "bg_opacity": 100,
-        "text_bellow_mobile": false,
-        "img_position": "left",
-        "banner_width": "col-md-6",
-        "column_gap": 0,
-        "hover_effect": "zoom",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0,
-        "reset_spacing": false
-      }
-    },
     "promotion_main_banner_second_jCUkqh": {
       "type": "promotion-main-banner-second",
       "blocks": {
         "link_Pk3LH6": {
           "type": "link",
           "settings": {
-            "link_label": "Buy Now",
-            "link_label_mobile": "Buy Now",
+            "link_label": "Buy Now & Save 43%",
+            "link_label_mobile": "Buy Now & Save 43%",
             "link_url": "https:\/\/qureskincare.com\/pages\/microinfusion"
           }
         },
@@ -319,20 +128,20 @@
       ],
       "disabled": true,
       "settings": {
-        "heading": "70% OFF \\ Micro-Infusion",
-        "heading_mobile": "70% OFF \\ Micro-Infusion",
+        "heading": "Get 2 LED devices \\ for the price of 1!",
+        "heading_mobile": "Get 2 LED devices \\ for the price of 1!",
         "heading_tag": "h1",
-        "subheading": "<p>Refresh your glow & save big!<\/p>",
-        "subheading_mobile": "<p>Refresh your glow & save big!<\/p>",
+        "subheading": "<p>Don't let post-summer skin <\/p><p>damage get your confidence down<\/p>",
+        "subheading_mobile": "<p>Don't let post-summer skin <\/p><p>damage get your confidence down<\/p>",
         "text": "",
-        "image": "shopify:\/\/shop_images\/summer_sale_4d821dfa-5798-447c-b981-00dee24d2b9c.webp",
-        "image_mobile": "shopify:\/\/shop_images\/summer_sale_mob_d4d20b00-2ad2-40c4-9e86-053bbb6b6b7d.webp"
+        "image": "shopify:\/\/shop_images\/Banner_fa80bee0-fc02-4ef3-a21c-201e82626a6d.png",
+        "image_mobile": "shopify:\/\/shop_images\/qure_banner_mob.webp"
       }
     },
-    "promotion_main_banner_48gkNr": {
+    "promotion_main_banner_RfFKTc": {
       "type": "promotion-main-banner",
       "blocks": {
-        "link_GirQqh": {
+        "link_QGnGny": {
           "type": "link",
           "settings": {
             "link_label": "Shop Best Sellers",
@@ -340,7 +149,7 @@
             "link_url": "shopify:\/\/collections\/best-sellers"
           }
         },
-        "product_BANXY7": {
+        "product_anMBx3": {
           "type": "product",
           "disabled": true,
           "settings": {
@@ -349,7 +158,7 @@
             "product_url": "shopify:\/\/products\/exclusive"
           }
         },
-        "banner_6wgzUN": {
+        "banner_QDTHgb": {
           "type": "banner",
           "settings": {
             "heading": "Save up to 55% on Exclusive Bundles",
@@ -361,9 +170,9 @@
         }
       },
       "block_order": [
-        "link_GirQqh",
-        "product_BANXY7",
-        "banner_6wgzUN"
+        "link_QGnGny",
+        "product_anMBx3",
+        "banner_QDTHgb"
       ],
       "settings": {
         "heading": "<h3>Get clinic-level results<\/h3><h3>from home- minus<\/h3><h3>the ‘clinical’ costs.<\/h3>",
@@ -375,222 +184,6 @@
         "image": "shopify:\/\/shop_images\/hm_banner_clinic_results.webp",
         "image_mobile": "shopify:\/\/shop_images\/hm_banner_clinic_results.png_mob.webp",
         "wistia_id": ""
-      }
-    },
-    "banner_with_text_Bgpcti": {
-      "type": "banner-with-text",
-      "blocks": {
-        "image_picker_neC3Xa": {
-          "type": "image_picker",
-          "settings": {
-            "image_block": "shopify:\/\/shop_images\/summer_sale_3120e798-73d7-4bab-afda-ad2e97f0a5f5.webp",
-            "icon_width_block": 150,
-            "icon_max_width_block": 100,
-            "text_img_mt": 1,
-            "text_img_mt_mob": 20,
-            "text_img_mb": 10,
-            "text_img_mb_mob": 1
-          }
-        },
-        "heading_rFTTd3": {
-          "type": "heading",
-          "settings": {
-            "title": "70% OFF \u2028Micro-Infusion",
-            "heading_fs": 56,
-            "heading_fw": "500",
-            "heading_fm": "Canela Web",
-            "heading_tf": "unset",
-            "heading_mt": 10,
-            "heading_mb": 10,
-            "heading_color": "#000000",
-            "heading_fsm": 38
-          }
-        },
-        "text_CjmW4j": {
-          "type": "text",
-          "settings": {
-            "txt_content": "<p>Refresh your glow & save big!<\/p>",
-            "txt_fs": 18,
-            "txt_fw": "default",
-            "txt_tf": "unset",
-            "txt_mt": 0,
-            "txt_mb": 20,
-            "text_hide": false
-          }
-        },
-        "buttons_TztLB4": {
-          "type": "buttons",
-          "settings": {
-            "btn_content": "Buy Now",
-            "button_type": "primary-new",
-            "button_type_mob": "secondary",
-            "button_size": "large",
-            "btn_radius": 50,
-            "button_link": "https:\/\/qureskincare.com\/pages\/microinfusion",
-            "button_target": false,
-            "b_mt": 10,
-            "b_mb": 0
-          }
-        }
-      },
-      "block_order": [
-        "image_picker_neC3Xa",
-        "heading_rFTTd3",
-        "text_CjmW4j",
-        "buttons_TztLB4"
-      ],
-      "disabled": true,
-      "name": "Banner with text",
-      "settings": {
-        "container": "full-width",
-        "color_scheme": "scheme-1",
-        "banner_type": "image",
-        "image": "shopify:\/\/shop_images\/summer_sale.webp",
-        "image_mobile": "shopify:\/\/shop_images\/summer_sale_mob.webp",
-        "video_url": "",
-        "link": "https:\/\/qureskincare.com\/pages\/microinfusion",
-        "open_link": "_blank",
-        "bn_design": "text_overlay",
-        "text_align": "text-center",
-        "text_horizontal_position": "left",
-        "text_position": "center",
-        "text_position_mobile": "top",
-        "content_bg_color": "",
-        "background_gradient": "",
-        "content_width": 35,
-        "text_align-mob": "on_mob-left",
-        "banner_height": "depend-image",
-        "height_dk": 800,
-        "height_tb": 600,
-        "height_mb": 360,
-        "height_full": false,
-        "image_second_on_mobile": true,
-        "content_box": "content_in_container",
-        "bg_opacity": 100,
-        "text_bellow_mobile": false,
-        "img_position": "right",
-        "banner_width": "col-md-6",
-        "column_gap": 0,
-        "hover_effect": "zoom",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0,
-        "reset_spacing": false
-      }
-    },
-    "banner_with_text_Rk8Vdz": {
-      "type": "banner-with-text",
-      "blocks": {
-        "image_picker_YEff7B": {
-          "type": "image_picker",
-          "settings": {
-            "image_block": "shopify:\/\/shop_images\/qure_anniversary_sale.webp",
-            "icon_width_block": 300,
-            "icon_max_width_block": 100,
-            "text_img_mt": 1,
-            "text_img_mt_mob": 1,
-            "text_img_mb": 10,
-            "text_img_mb_mob": 1
-          }
-        },
-        "heading_3QXyAD": {
-          "type": "heading",
-          "settings": {
-            "title": "Buy One - Get One FREE",
-            "heading_fs": 42,
-            "heading_fw": "default",
-            "heading_fm": "Canela Web",
-            "heading_tf": "unset",
-            "heading_mt": 0,
-            "heading_mb": 0,
-            "heading_color": "#000000",
-            "heading_fsm": 34
-          }
-        },
-        "text_6HE7qc": {
-          "type": "text",
-          "settings": {
-            "txt_content": "<p>Double your Micro-Infusion supply!<\/p>",
-            "txt_fs": 18,
-            "txt_fw": "default",
-            "txt_tf": "unset",
-            "txt_mt": 0,
-            "txt_mb": 20,
-            "text_hide": false
-          }
-        },
-        "buttons_befCmC": {
-          "type": "buttons",
-          "settings": {
-            "btn_content": "Shop Now & Save",
-            "button_type": "primary-new",
-            "button_type_mob": "secondary",
-            "button_size": "medium",
-            "btn_radius": 50,
-            "button_link": "https:\/\/qureskincare.com\/pages\/microinfusion",
-            "button_target": false,
-            "b_mt": 0,
-            "b_mb": 15
-          }
-        }
-      },
-      "block_order": [
-        "image_picker_YEff7B",
-        "heading_3QXyAD",
-        "text_6HE7qc",
-        "buttons_befCmC"
-      ],
-      "disabled": true,
-      "name": "Banner with text",
-      "settings": {
-        "container": "container",
-        "color_scheme": "scheme-1",
-        "banner_type": "image",
-        "image": "shopify:\/\/shop_images\/qure_anniversary_banner.webp",
-        "image_mobile": "shopify:\/\/shop_images\/qure_anniversary_banner_mob.webp",
-        "video_url": "",
-        "link": "",
-        "open_link": "_blank",
-        "bn_design": "text_column",
-        "text_align": "text-center",
-        "text_horizontal_position": "left",
-        "text_position": "center",
-        "text_position_mobile": "center",
-        "content_bg_color": "",
-        "background_gradient": "",
-        "content_width": 100,
-        "text_align-mob": "on_mob-left",
-        "banner_height": "depend-image",
-        "height_dk": 800,
-        "height_tb": 600,
-        "height_mb": 360,
-        "height_full": false,
-        "image_second_on_mobile": true,
-        "content_box": "content_in_container",
-        "bg_opacity": 100,
-        "text_bellow_mobile": false,
-        "img_position": "right",
-        "banner_width": "col-md-6",
-        "column_gap": 0,
-        "hover_effect": "zoom",
-        "padding_top": 30,
-        "padding_bottom": 30,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0,
-        "reset_spacing": false
-      }
-    },
-    "sub_banner_mDCcyx": {
-      "type": "sub-banner",
-      "disabled": true,
-      "name": "t:common.sub-banner.label",
-      "settings": {
-        "heading": "Save up to 55% on Exclusive Bundles",
-        "image": "shopify:\/\/shop_images\/sub_banner.webp",
-        "image_mobile": "shopify:\/\/shop_images\/sub_banner-mob.webp",
-        "link_label": "Buy Now",
-        "link_url": "https:\/\/www.qureskincare.com\/pages\/exclusive-holiday-bundle-deal"
       }
     },
     "featuredin_extended_P7BNDN": {
@@ -1394,13 +987,8 @@
   },
   "order": [
     "main",
-    "banner_with_text_PLRJBt",
-    "banner_with_text_Wft6CN",
     "promotion_main_banner_second_jCUkqh",
-    "promotion_main_banner_48gkNr",
-    "banner_with_text_Bgpcti",
-    "banner_with_text_Rk8Vdz",
-    "sub_banner_mDCcyx",
+    "promotion_main_banner_RfFKTc",
     "featuredin_extended_P7BNDN",
     "results_slider_w6BARa",
     "products_grid_mCReWM",
