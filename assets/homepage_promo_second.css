@@ -1247,7 +1247,7 @@ span.discount_badge {
     font-size: 14px;
     line-height: 26px;
     text-align: start;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 .best_seller_womens_day p {
     color: #000;
@@ -1610,13 +1610,13 @@ p.valued_at strong {
         color: #000;
         line-height: 42px;
         letter-spacing: 0.38px;
-        margin: 10px 0;
+        margin: 5px 0;
     }
     .summer_sale_banner .collection_grid{
         justify-content: start !important;
     }
     .summer_sale_banner .clinic_results img {
-        padding-top: 15px;
+        padding-top: 0;
     }
     .faucet_offer-banner.qure_anniversary_banner h5 {
     font-size: 30px !important;
@@ -1945,7 +1945,7 @@ p.valued_at strong {
         padding: 15px 25px;
         margin-top: 10px !important;
         width: 231px !important;
-        max-width: 231px !important;
+        max-width: 231px !important; 
         background: #000;
         color: #fff;
         font-size: 14px;
