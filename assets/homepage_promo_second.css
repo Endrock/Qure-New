@@ -1226,9 +1226,9 @@ span.discount_badge {
     font-weight: 500;
 }
 .summer_sale_banner .clinic_results img {
-    max-width: 180px;
+    max-width: 236px;
     display: flex;
-    margin: 0 auto 10px;
+    margin: 0;
 }
 .collection_banner .collection_grid .banner_text, .hero_valentine_banner .collection_grid .womens_day_offer {
     text-align: center;
@@ -1543,10 +1543,10 @@ p.valued_at strong {
 /* summer sale banner css  */
 .summer_sale_banner .clinic_results h3, .clinic_results h4, .clinic_results h5 {
     font-family: Canela Web;
-    font-size: 56px !important;
-    text-align: center;
+    font-size: 56px !important;        
+    text-align: start;  
     font-weight: 500;
-    margin: 25px 0;
+    margin: 10px 0;
     line-height: 65px;
     letter-spacing: 0.56px;
 }
@@ -1562,6 +1562,9 @@ p.valued_at strong {
     line-height: 20px;
     border-radius: 100px;
 }
+  .summer_sale_banner .clinic_results p:nth-child(4){
+        margin-top: 0!important;
+    }
 /* summer sale banner css end */
 @media(max-width:991px) {
     .main_banner .bf_sale-slider .swiper-button {
@@ -1588,11 +1591,19 @@ p.valued_at strong {
 }
 
 @media(max-width:767px) {
+    .summer_sale_banner .clinic_results p{
+        text-align: center !important;
+        font-size: 12px!important;
+    }
+  
+    .summer_sale_banner .clinic_results h3, .clinic_results h4, .clinic_results h5{
+        text-align: center;
+    }
+.summer_sale_banner .clinic_results img {
+    margin: 0 auto !important;
+}
     .summer_sale_banner .collection_grid .banner_text .clinic_results a {
         font-size: 14px;
-    }
-    .summer_sale_banner .clinic_results img {
-        max-width: 110px;
     }
     .summer_sale_banner .clinic_results h3, .clinic_results h4, .clinic_results h5 {
         font-size: 38px !important;
