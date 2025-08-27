@@ -13,24 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    document.querySelectorAll('.' + __section_landing + ' .productButtonObject').forEach(function(element) {
-        element.addEventListener('click', function(e) {
-
-            const url = new URL(this.href, window.location.origin);
-            const product_variant_id = url.searchParams.get("id");
-
-            //send event with details
-            const event = new CustomEvent('__app-datalayer.purchaseForm', { detail: 
-                {
-                    event: 'purchase-form-buy',
-                    url: window.location.pathname,
-                    product_variant_id: product_variant_id,
-                }
-            });
-            document.dispatchEvent(event);
-        });
-    });
-
     function __landing__updateProductButtonHref(product_variant_id, soldout) {
         let button = document.querySelector('.' + __section_landing + ' .productButtonObject');
 

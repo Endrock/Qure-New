@@ -11,3 +11,13 @@ document.addEventListener('__app-datalayer.purchaseForm', (event) => {
 });
 
 
+document.addEventListener('__app-datalayer.purchaseFormUpdate', (event) => {
+    if(event.detail.url == "/pages/microinfusion" || event.detail.url == "/pages/qure-microinfusion-offer") {
+        cartRequestChange({ 
+            id: event.detail.key,
+            properties: {
+                __purchase_form: 'mi',
+            }
+        },  {} )
+    }
+});
