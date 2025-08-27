@@ -108,15 +108,12 @@ document.addEventListener('DOMContentLoaded', () => {
         let atc_url = new URL(atc_href, window.location.origin);
         let atc_variant_id = atc_url.searchParams.get('id');
 
-        //console.log('atc_variant_id [' + atc_variant_id + ']'); 
         updateItemObject(atc_variant_id);
       }
 
       setTimeout(() => {
         if(window.event_product_handle)
         {
-          //console.log('window.event_product_handle [' + window.event_product_handle + ']');
-
           fetchProductData(window.event_product_handle)
           .then(() => {
             console.log(window.item);
@@ -161,6 +158,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
       if(myRequestCallback.requestType === 'add') {
+
+        setTimeout(() => {
+          getShopifyCart()
+          .then(cart => {
+              if(myRequestCallback.requestBody != undefined) {
+                var purchase_form_variant_id = Object.fromEntries(myRequestCallback.requestBody).id;
+                
+                if(purchase_form_variant_id) {
+                  var purchase_form_variant = cart.items.find(item => item.id === +(purchase_form_variant_id));
+
+                  if(purchase_form_variant) {
+                    const event = new CustomEvent('__app-datalayer.purchaseFormUpdate', { detail: 
+                        {
+                            event: 'purchase-form-update',
+                            url: window.location.pathname,
+                            id: purchase_form_variant_id,
+                            key: purchase_form_variant.key,
+                        }
+                    });
+                    document.dispatchEvent(event);
+                  }
+                }
+              }
+          })
+        }, 500);
 
         setTimeout(() => {
           getShopifyCart()
