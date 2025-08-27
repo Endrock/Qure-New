@@ -6,7 +6,7 @@
             <div class="serumBlock" id="{{ section.id }}-{{ product_type_title }}">
                 <input type="radio" name="serum_{{ section.settings.form_name }}" id="{{ section.id }}-{{ block.id }}" {% if block.settings.preselected == true %} checked{% endif %}/>
                 <label class="serum_prd" for="{{ section.id }}-{{ block.id }}">
-                    <div class="serum_img">
+                    <div class="serum_img" data-name="{{ block.settings.heading | escape }}">
                         <img src="{{ block.settings.image | img_url: 'master' }}" alt="" class="img-fluid" />
                     </div>
                     <h4 class="serum_ttl"><span>For <strong> {{ block.settings.heading }}</strong></span> </h4>

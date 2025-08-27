@@ -135,6 +135,7 @@
         "link_Pk3LH6",
         "banner_6wgzUN"
       ],
+      "disabled": true,
       "settings": {
         "heading": "70% OFF \\ Micro-Infusion",
         "heading_mobile": "70% OFF \\ Micro-Infusion",
@@ -159,6 +160,7 @@
         },
         "product_BANXY7": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "heading": "<p>Micro-Infusion Bundle</p>",
             "image": "shopify://shop_images/mi_bundle.webp",
@@ -181,125 +183,16 @@
         "product_BANXY7",
         "banner_6wgzUN"
       ],
-      "disabled": true,
       "settings": {
-        "heading": "",
+        "heading": "<h3>Get clinic-level results</h3><h3>from home- minus</h3><h3>the ‘clinical’ costs.</h3>",
         "heading_mobile": "",
         "heading_tag": "h1",
-        "subheading": "<h3>Get clinic-level results</h3><h4>from home- minus</h4><h5>the ‘clinical’ costs.</h5>",
-        "subheading_mobile": "<h3>Get clinic-level results</h3><h4>from home- minus</h4><h5>the ‘clinical’ costs.</h5>",
-        "text": "<p><strong>300,000+ </strong>customers feel more confident in their own skin.</p>",
-        "image": "shopify://shop_images/Banner_57c19f02-06bd-42fa-ac3a-6ebd0393ecc4.png",
+        "subheading": "",
+        "subheading_mobile": "",
+        "text": "<p><strong> 50,000+ </strong> customers feel more confident in their own skin.</p>",
+        "image": "shopify://shop_images/Banner_fa80bee0-fc02-4ef3-a21c-201e82626a6d.png",
         "image_mobile": "shopify://shop_images/hm_banner_clinic_results.png_mob.webp",
         "wistia_id": ""
-      }
-    },
-    "banner_with_text_Bgpcti": {
-      "type": "banner-with-text",
-      "blocks": {
-        "image_picker_neC3Xa": {
-          "type": "image_picker",
-          "settings": {
-            "image_block": "shopify://shop_images/qure_anniversary_sale.webp",
-            "icon_width_block": 300,
-            "icon_max_width_block": 100,
-            "text_img_mt": 1,
-            "text_img_mb": 10
-          }
-        },
-        "heading_rFTTd3": {
-          "type": "heading",
-          "settings": {
-            "title": "Buy One - Get One FREE",
-            "heading_fs": 42,
-            "heading_fw": "default",
-            "heading_fm": "Canela Web",
-            "heading_tf": "unset",
-            "heading_mt": 0,
-            "heading_mb": 0,
-            "heading_color": "#000000",
-            "heading_fsm": 34
-          }
-        },
-        "text_CjmW4j": {
-          "type": "text",
-          "settings": {
-            "txt_content": "<p>Double your Micro-Infusion supply!</p>",
-            "txt_fs": 18,
-            "txt_fw": "default",
-            "txt_tf": "unset",
-            "txt_mt": 0,
-            "txt_mb": 20,
-            "text_hide": false
-          }
-        },
-        "buttons_TztLB4": {
-          "type": "buttons",
-          "settings": {
-            "btn_content": "Shop Now & Save",
-            "button_type": "primary-new",
-            "button_size": "medium",
-            "button_link": "https://qureskincare.com/pages/microinfusion",
-            "button_target": false,
-            "b_mt": 0,
-            "b_mb": 15
-          }
-        }
-      },
-      "block_order": [
-        "image_picker_neC3Xa",
-        "heading_rFTTd3",
-        "text_CjmW4j",
-        "buttons_TztLB4"
-      ],
-      "disabled": true,
-      "name": "Banner with text",
-      "settings": {
-        "container": "container",
-        "color_scheme": "scheme-1",
-        "image_behavior": "none",
-        "banner_type": "image",
-        "image": "shopify://shop_images/qure_anniversary_banner.webp",
-        "image_mobile": "shopify://shop_images/qure_anniversary_banner_mob.webp",
-        "video_url": "",
-        "link": "",
-        "open_link": "_blank",
-        "bn_design": "text_column",
-        "text_align": "text-center",
-        "text_horizontal_position": "left",
-        "text_position": "center",
-        "content_bg_color": "",
-        "background_gradient": "",
-        "content_width": 100,
-        "text_align-mob": "on_mob-left",
-        "banner_height": "depend-image",
-        "height_dk": 800,
-        "height_tb": 600,
-        "height_mb": 360,
-        "height_full": false,
-        "image_second_on_mobile": true,
-        "content_box": "content_in_container",
-        "bg_opacity": 100,
-        "text_bellow_mobile": false,
-        "img_position": "right",
-        "banner_width": "col-md-6",
-        "column_gap": 0,
-        "hover_effect": "zoom",
-        "padding_top": 30,
-        "padding_bottom": 30,
-        "reset_spacing": false
-      }
-    },
-    "sub_banner_mDCcyx": {
-      "type": "sub-banner",
-      "disabled": true,
-      "name": "t:common.sub-banner.label",
-      "settings": {
-        "heading": "Save up to 55% on Exclusive Bundles",
-        "image": "shopify://shop_images/sub_banner.webp",
-        "image_mobile": "shopify://shop_images/sub_banner-mob.webp",
-        "link_label": "Buy Now",
-        "link_url": "https://www.qureskincare.com/pages/exclusive-holiday-bundle-deal"
       }
     },
     "featuredin_extended_P7BNDN": {
@@ -1106,8 +999,6 @@
     "main",
     "promotion_main_banner_second_jCUkqh",
     "promotion_main_banner_48gkNr",
-    "banner_with_text_Bgpcti",
-    "sub_banner_mDCcyx",
     "featuredin_extended_P7BNDN",
     "results_slider_w6BARa",
     "products_grid_mCReWM",

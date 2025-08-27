@@ -15,7 +15,7 @@
         "announcement_QmXGJK": {
           "type": "announcement",
           "settings": {
-            "heading": "FREE World-Wide Shipping  |  SUMMER SALE - 70% OFF Micro-Infusion",
+            "heading": "FREE World-Wide Shipping  |  Labor Day Sale - 70% OFF Micro-Infusion",
             "heading_mobile": "70% OFF Micro-Infusion | Special Offer",
             "color": "green",
             "font_size_desktop": 14,
@@ -72,7 +72,7 @@
         "button_L9q6wE": {
           "type": "button",
           "settings": {
-            "button_label": "SUMMER SALE 70% OFF",
+            "button_label": "LABOR DAY SALE 70% OFF",
             "button_url": "#productSubscription"
           }
         },
@@ -1296,7 +1296,7 @@
     "line_a8KbFQ": {
       "type": "line",
       "settings": {
-        "heading": "SUMMER SALE - AVAILABLE UNTIL STOCK LASTS",
+        "heading": "LABOR DAY SALE - AVAILABLE UNTIL STOCK LASTS",
         "font_weight": "700",
         "font_size_desktop": "13px",
         "font_size_mobile": "12px",
@@ -1460,7 +1460,7 @@
         "line_8cPUxh": {
           "type": "line",
           "settings": {
-            "text": "SUMMER SALE - AVAILABLE UNTIL STOCK LASTS",
+            "text": "LABOR DAY - AVAILABLE UNTIL STOCK LASTS",
             "background": ""
           }
         },
@@ -1513,7 +1513,7 @@
           "settings": {
             "product": "micro-infusion-6-month-bundle-for-dark-spots",
             "preselected": true,
-            "heading": "6 Month Supply SUMMER SALE",
+            "heading": "6 Month Supply LABOR DAY SALE",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/Micro-Infusion6MonthBundle_DarkSpots.jpg",
             "total_treatments": 12,
@@ -1582,7 +1582,7 @@
           "settings": {
             "product": "micro-infusion-6-month-bundle-for-wrinkles",
             "preselected": true,
-            "heading": "6 Month Supply SUMMER SALE",
+            "heading": "6 Month Supply LABOR DAY SALE",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/micro-infusion_6_month_bundle__for_wrinkles.png",
             "total_treatments": 12,
@@ -1651,7 +1651,7 @@
           "settings": {
             "product": "microinfusion-offer-6-month-supply",
             "preselected": true,
-            "heading": "6 Month Supply SUMMER SALE",
+            "heading": "6 Month Supply LABOR DAY SALE",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/Micro-Infusion_6_Month_Bundle_For_Wrinkles_Dark_Spots.png",
             "total_treatments": 12,
