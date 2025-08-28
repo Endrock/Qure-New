@@ -1,0 +1,141 @@
+.bf_bundle_sale.bf_bundle_header_sale-pdm {
+  padding: 30px 0 32px 0;
+  display: block;
+}
+
+.bf_bundle_header_sale-pdm .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 0 16px;
+  padding-bottom: 0;
+}
+
+.bf_bundle_header_sale-pdm .section_header {
+  padding-bottom: 0;
+}
+
+.bf_bundle_header_sale-pdm .bf-bundles_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.bf_bundle_header_sale-pdm .bf-bundles_title h3 {
+  color: #212428;
+  text-align: center;
+  font-family: Canela Web;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+}
+
+.bf_bundle_header_sale-pdm .bf-bundles_title h4 {
+  color: #212428;
+  text-align: center;
+  font-family: "TT Commons", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0;
+}
+
+.section_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.section_content .light_green_tag {
+  color: #212428;
+  text-align: center;
+  font-family: "TT Commons";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+}
+
+.section_content .light_green_tag p {
+  text-align: center;
+  font-family: "TT Commons";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.section_content .bf_bundle_sale_ftr {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: flex-end;
+  gap: 12px;
+  align-self: stretch;
+  flex-wrap: wrap;
+  padding-bottom: 0;
+}
+
+.section_content .bf_bundle_sale_ftr .bf_bundle_sale_ftr_item {
+  display: flex;
+  padding: 7.5px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid #212428;
+  width: fit-content;
+}
+
+.section_content .bf_bundle_sale_ftr .bf_bundle_sale_ftr_item p {
+  color: #212428;
+  font-family: "TT Commons";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  padding: 0;
+}
+
+.section_content .bf_bundle_sale_ftr .bf_bundle_sale_ftr_item.active {
+  background: #212428;
+}
+
+.section_content .bf_bundle_sale_ftr .bf_bundle_sale_ftr_item.active p {
+  color: #FFFFFF;
+}
+
+@media screen and (min-width:768px) {
+  .bf_bundle_sale.bf_bundle_header_sale-pdm {
+    padding: 40px 150px 0 150px;
+  }
+
+  .bf_bundle_header_sale-pdm .container {
+    gap: 50px;
+    padding: 0;
+    max-width: 858px;
+    padding-bottom: 0;
+  }
+
+  .bf_bundle_header_sale-pdm .bf-bundles_title {
+    gap: 32px;
+  }
+
+  .bf_bundle_header_sale-pdm .bf-bundles_title h3 {
+    font-size: 38px;
+    line-height: 42px;
+  }
+
+  .section_content .bf_bundle_sale_ftr .bf_bundle_sale_ftr_item {
+    flex: 1;
+  }
+}

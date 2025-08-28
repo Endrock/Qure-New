@@ -1,0 +1,38 @@
+{% comment %}
+  Usage:
+  {% render 'pdm-exclusive-bundle-header' %}
+{% endcomment %}
+
+{{ '__pdm-exclusive-bundle-header.css' | asset_url | stylesheet_tag }}
+
+<bundle-filter class="bf_bundle_sale bf_bundle_header_sale-pdm" id="bf-bundles">
+    <div class="container">
+        <div class="section_header mw-100">
+            <div class="bf-bundles_title">
+                {% if section.settings.heading != blank %}
+                    <h3>{{ section.settings.heading }}</h3>
+                {% endif %}
+                {% if section.settings.subheading != blank %}
+                    <h4>{{ section.settings.subheading }}</h4>
+                {% endif %}
+            </div>
+        </div>
+        <div class="section_content">
+            {% if section.settings.text != blank %}
+                <div class="light_green_tag">
+                    {{ section.settings.text }}
+                </div>    
+            {% endif %}
+            <div class="bf_bundle_sale_ftr">
+              {% assign block_type_object = section.blocks |  where: 'type','object'  %}
+                {%- for block in block_type_object -%}
+                  <a href="{{ block.settings.link_url }}" class="bf_bundle_sale_ftr_item {% if forloop.first %} active {% endif %}">
+                      {{ block.settings.text |  replace: '<br />' }}
+                  </a>
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</bundle-filter>
+
+<script src="{{'__pdm-exclusive-bundle-header.js' | asset_url }}" defer ></script>

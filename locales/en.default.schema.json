@@ -1064,6 +1064,9 @@
         "preorder_text": {
           "label": "Preorder text"
         },
+        "rating": {
+          "label": "Rating Stars"
+        },
         "classname": {
           "label": "Classname"
         },
@@ -1092,6 +1095,7 @@
               "label": "Ingredients"
             },
             "count": {
+              "show": "Show Items left",
               "label": "Items left in stock"
             }
           }
