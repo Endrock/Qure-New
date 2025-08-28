@@ -768,7 +768,6 @@
     margin-bottom: 15px;
     display: inline-block;
     width: auto;
-    text-align: center;
 }
 
 .bf_sale-banners .main_banner2 .btn_black {
@@ -966,7 +965,6 @@
 .hero_valentine_banner .collection_grid .banner_text {
     display: flex;
     align-items: center;
-    text-align: center;
     justify-content: center;
 }
 
@@ -1230,9 +1228,6 @@ span.discount_badge {
     display: flex;
     margin: 0;
 }
-.collection_banner .collection_grid .banner_text, .hero_valentine_banner .collection_grid .womens_day_offer {
-    text-align: center;
-}
 .hero_valentine_banner .collection_grid .banner_text .clinic_results a {
     margin-top: 15px !important;
     background: #000;
@@ -1246,12 +1241,11 @@ span.discount_badge {
     font-weight: 400;
     font-size: 14px;
     line-height: 26px;
-    text-align: center;
-    margin-top: 15px;
+    text-align: start;
+    margin-top: 10px;
 }
 .best_seller_womens_day p {
     color: #000;
-    text-align: center;
     font-family: Poppins;
     font-size: 36px;
     font-style: normal;
@@ -1610,13 +1604,13 @@ p.valued_at strong {
         color: #000;
         line-height: 42px;
         letter-spacing: 0.38px;
-        margin: 10px 0;
+        margin: 5px 0;
     }
     .summer_sale_banner .collection_grid{
         justify-content: start !important;
     }
     .summer_sale_banner .clinic_results img {
-        padding-top: 15px;
+        padding-top: 0;
     }
     .faucet_offer-banner.qure_anniversary_banner h5 {
     font-size: 30px !important;
@@ -1945,7 +1939,7 @@ p.valued_at strong {
         padding: 15px 25px;
         margin-top: 10px !important;
         width: 231px !important;
-        max-width: 231px !important;
+        max-width: 231px !important; 
         background: #000;
         color: #fff;
         font-size: 14px;

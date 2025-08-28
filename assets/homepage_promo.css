@@ -59,7 +59,7 @@
     font-size: 14px;
     line-height: 17px;
     text-align: center;
-    letter-spacing: 3.30275px;
+    letter-spacing: 3.30275px;    
     text-transform: uppercase;
     color: #dd4d45;
 }
@@ -369,7 +369,6 @@
     margin-bottom: 15px;
     display: inline-block;
     width: auto;
-    text-align: center;
 }
 
 .homepage .main_banner .m_b_content p {
@@ -768,7 +767,6 @@
     margin-bottom: 15px;
     display: inline-block;
     width: auto;
-    text-align: center;
 }
 
 .bf_sale-banners .main_banner2 .btn_black {
@@ -966,7 +964,7 @@
 .hero_valentine_banner .collection_grid .banner_text {
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: start;
     justify-content: center;
 }
 
@@ -1224,9 +1222,6 @@ span.discount_badge {
     text-align: start;
     line-height: 50px;
     font-weight: 500;
-}
-.collection_banner .collection_grid .banner_text, .hero_valentine_banner .collection_grid .womens_day_offer {
-    text-align: start;
 }
 .hero_valentine_banner .collection_grid .banner_text .clinic_results a {
     margin-top: 15px !important;
@@ -1560,6 +1555,15 @@ p.valued_at strong {
 }
 
 @media(max-width:767px) {
+    .homepage .hero_valentine_banner.promo_banner .collection_grid .banner_text .clinic_results a {
+    padding: 15px 25px;
+    margin-top: 20px!important;
+    width: 231px!important;
+    max-width: 231px!important;
+    background: #fff;
+    color: #000;
+    font-size: 20px;
+}
     .faucet_offer-banner.qure_anniversary_banner h5 {
     font-size: 30px !important;
 }
@@ -1874,24 +1878,7 @@ p.valued_at strong {
         text-align: center;
 
     }
-    .homepage .hero_valentine_banner .collection_grid .banner_text .clinic_results a {
-        padding: 15px 25px;
-        margin-top: 20px !important;
-        width: 231px;
-        max-width: 231px;
-        background: #fff;
-        color: #000;
-        font-size: 20px;
-    }
-    .homepage .summer_sale_banner .collection_grid .banner_text .clinic_results a {
-        padding: 15px 25px;
-        margin-top: 20px !important;
-        width: 231px !important;
-        max-width: 231px !important;
-        background: #000;
-        color: #fff;
-        font-size: 14px;
-    }
+
     /* womens day banner homepage  */
     .womens_day_banner_outer .main_b_wrapper {
         top: 0;
