@@ -768,7 +768,6 @@
     margin-bottom: 15px;
     display: inline-block;
     width: auto;
-    text-align: center;
 }
 
 .bf_sale-banners .main_banner2 .btn_black {
@@ -966,7 +965,6 @@
 .hero_valentine_banner .collection_grid .banner_text {
     display: flex;
     align-items: center;
-    text-align: center;
     justify-content: center;
 }
 
@@ -1230,9 +1228,6 @@ span.discount_badge {
     display: flex;
     margin: 0;
 }
-.collection_banner .collection_grid .banner_text, .hero_valentine_banner .collection_grid .womens_day_offer {
-    text-align: center;
-}
 .hero_valentine_banner .collection_grid .banner_text .clinic_results a {
     margin-top: 15px !important;
     background: #000;
@@ -1251,7 +1246,6 @@ span.discount_badge {
 }
 .best_seller_womens_day p {
     color: #000;
-    text-align: center;
     font-family: Poppins;
     font-size: 36px;
     font-style: normal;
