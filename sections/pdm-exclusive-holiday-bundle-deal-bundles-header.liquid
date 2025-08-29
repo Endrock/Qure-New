@@ -1,0 +1,98 @@
+<!-- -- black friday bundle start -- -->
+{% render 'pdm-exclusive-bundle-header' %}
+<style>
+    .soldout {
+        --bgPercent:100% !important;
+    }
+    .soldout .stock_left {
+        display: none !important;
+    }
+    .soldout .me-1 {
+        display: none !important;
+    }
+</style>
+
+{% schema %}
+    {
+        "name": "PDM Bundles Header",
+        "class": "section-exclusive-holiday-bundle-deal-bundles-header",
+        "limit": 1,
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "t:common.heading.label"
+            },
+            {
+                "type": "text",
+                "id": "subheading",
+                "label": "t:common.subheading.label"
+            },
+            {
+                "type": "richtext",
+                "id": "text",
+                "label": "t:common.text.label"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "badge",
+                "name": "t:common.badge.label",
+                "limit": 1,
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "t:common.heading.label",
+                        "default": "BLACK FRIDAY"
+                    },
+                    {
+                        "type": "text",
+                        "id": "text",
+                        "label": "t:common.text.label",
+                        "default": "SALE"
+                    },
+                    {
+                        "type":"color",
+                        "id":"color_main",
+                        "label":"t:common.color.label",
+                        "default":"#000000"
+                    },
+                    {
+                        "type":"color",
+                        "id":"color",
+                        "label":"t:common.color.label",
+                        "default":"#C4121A"
+                    }
+                ]
+            },
+            {
+                "type": "object",
+                "name": "t:common.object.label",
+                "settings": [
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "t:common.heading.label"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "t:common.image.label"
+                    },
+                    {
+                        "type": "url",
+                        "id": "link_url",
+                        "label": "t:common.link.url.label"
+                    }
+                ]
+		    }
+        ],
+        "presets": [
+            {
+                "name": "PDM Bundles Header",
+                "category": "Custom"
+            }
+        ]
+    }
+{% endschema %}
