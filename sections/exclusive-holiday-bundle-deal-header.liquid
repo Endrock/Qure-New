@@ -194,19 +194,23 @@
                 a = Number(a);
                 c = Number(c);
                 p <= 767 ? m >= 15 && (m = 15) : p <= 1199 && m >= 30 && (m = 30);
+                let thumbsSlidePerViewDesktop = e?.dataset.thumbsSlidePerViewDesktop ? e?.dataset.thumbsSlidePerViewDesktop : 4,
+                    thumbsSlidePerViewTablet = e?.dataset.thumbsSlidePerViewTablet ? e?.dataset.thumbsSlidePerViewTablet : 4,
+                    thumbsSlidePerViewMobile = e?.dataset.thumbsSlidePerViewMobile ? e?.dataset.thumbsSlidePerViewMobile : 4;
+
                 var mainSwiperSelector = "#twa__swiper_thumbs-" + d;
                 var thumbSwiperSelector = "#twa__thumb-" + d;
                 // Initialize Thumbnail Swiper
                 var thumbnailSwiper = new Swiper(thumbSwiperSelector, {
                     spaceBetween: 10,
-                    slidesPerView: 4,
+                    slidesPerView: thumbsSlidePerViewMobile,
                     watchSlidesProgress: true,
                     breakpoints: {
                         768: {
-                            slidesPerView: 4
+                            slidesPerView: thumbsSlidePerViewTablet
                         },
                         1024: {
-                            slidesPerView: 4
+                            slidesPerView: thumbsSlidePerViewDesktop
                         }
                     }
                 });

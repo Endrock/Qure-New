@@ -86,9 +86,10 @@
           "announcement_TPxBgi": {
             "type": "announcement",
             "settings": {
-              "heading": "<p><strong>SUMMER SALE</strong> 70% OFF Micro-Infusion</p>",
+              "heading": "<p><strong>LABOR DAY SALE</strong> 70% OFF Micro-Infusion</p>",
               "button_label": "SHOP NOW",
-              "button_url": "https://qureskincare.com/pages/microinfusion"
+              "button_url": "https://qureskincare.com/pages/microinfusion",
+              "ann_bg_clr": ""
             }
           },
           "tab_3Wyyea": {
@@ -379,9 +380,9 @@
           "upsell_product_third_description": "Plump, smooth & brighten in just one step",
           "sidecart_timer_old_enable": false,
           "sidecart_timer_new_enable": true,
-          "start_date": "07-31-2025 10:00",
-          "finish_date": "08-22-2025 20:00",
-          "label_ends": "Summer Sale Ends:",
+          "start_date": "08-21-2025 10:00",
+          "finish_date": "09-02-2025 20:00",
+          "label_ends": "Labor Day Sale Ends:",
           "label_days": "DAYS",
           "label_hours": "HOURS",
           "label_minutes": "MINUTES",

@@ -72,7 +72,7 @@
         "button_L9q6wE": {
           "type": "button",
           "settings": {
-            "button_label": "SUMMER SALE SAVE 70%",
+            "button_label": "SAVE UP TO 70%",
             "button_url": "#productSubscription"
           }
         },
@@ -313,7 +313,7 @@
         "button_Yb6H7J": {
           "type": "button",
           "settings": {
-            "button_label": "HOLIDAY OFFER SAVE 75%",
+            "button_label": "SAVE UP TO 70%",
             "button_url": "#productSubscription"
           }
         },
@@ -1182,7 +1182,7 @@
           "settings": {
             "product": "micro-infusion-6-month-bundle-for-dark-spots",
             "preselected": true,
-            "heading": "6 Month Supply SUMMER SALE",
+            "heading": "6 Month Supply LABOR DAY SALE",
             "subheading": "(12 Micro-infusion Treatments)",
             "image": "shopify://shop_images/Micro-Infusion6MonthBundle_DarkSpots.jpg",
             "total_treatments": 12,

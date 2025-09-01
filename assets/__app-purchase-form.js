@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initTemplate(getProductType());
 
     document.querySelectorAll('.' + __section + ' .serumBlock').forEach(function(element) {
-        element.addEventListener('click', function() {
+        element.addEventListener('click', function(e) {
+            if (e.target.tagName === 'INPUT') return; //to skip second click
             const id = this.id;
             initTemplate(id);
             window.dispatchEvent(new CustomEvent('appPurchaseForm', {
@@ -93,7 +94,9 @@ document.addEventListener('DOMContentLoaded', function() {
         $(this).next().slideToggle();
     }
 
-    function __handlerPlanBlock () {
+    function __handlerPlanBlock (e) {
+        if (e.target.tagName === 'INPUT') return;  //to skip second click
+
         var product_variant_id = $(this).attr("data-product_variant_id");
         var soldout = $(this).attr("data-soldout");
         var preorder = $(this).attr("data-preorder");
@@ -102,16 +105,20 @@ document.addEventListener('DOMContentLoaded', function() {
         clearPreorderBoxes();
         tooglePreorderBox(preorder, product_variant_id);
 
-        //aaaaqqqq
-        // if(window.location.pathname == '/pages/microinfusion') {
-
-        //     let json = {
-        //         event: 'purchase-form',
-        //         url: window.location.pathname,
-        //         product_variant_id: product_variant_id
-        //     }
-        //     window.dataLayer.push(json);
-        // }
+        //send event with details
+        const event = new CustomEvent('__app-datalayer.purchaseForm', { detail: 
+            {
+                event: 'purchase-form',
+                url: window.location.pathname,
+                product_variant_id: product_variant_id,
+                product_category: document.querySelector('.serum_img.active')?.dataset.name,
+                product_name: $(this).attr("data-product-name"),
+                product_type: $(this).attr("data-product-type"),
+                product_price: $(this).attr("data-product-price"),
+                unix_time: Math.floor(Date.now() / 1000)
+            } 
+        });
+        document.dispatchEvent(event);
 
 
         $('.' + __section + " .total_price").find(".regular_price").text($(this).find(".regular_price").text());
@@ -185,5 +192,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }                
         }            
     }
-
 });
