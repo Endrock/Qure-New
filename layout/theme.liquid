@@ -299,5 +299,17 @@
     </script>
     {% comment %} end Scroll Depth Tracking on PostHog {% endcomment %}
     {% comment %} {% include 'info' %} {% endcomment %}
+
+    <!-- BEGIN UNIVERSAL ADS PIXEL CODE -->
+    <script>
+        var cachebuster = Math.floor(Math.random() * 10000000000);
+        var img = new Image();
+        img.src = "https://cnv.event.prod.bidr.io/log/cnv?tag_id=2646&buzz_key=ua&value=&segment_key=ua-1063&account_id=359&ord=" + cachebuster;
+        img.width = 0;
+        img.height = 0;
+        document.body.appendChild(img);
+    </script>
+    <!-- END UNIVERSAL ADS PIXEL CODE -->
+    
 </body>
 </html>

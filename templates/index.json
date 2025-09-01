@@ -115,8 +115,8 @@
         "link_Pk3LH6": {
           "type": "link",
           "settings": {
-            "link_label": "Buy Now",
-            "link_label_mobile": "Buy Now",
+            "link_label": "Buy Now & Save 43%",
+            "link_label_mobile": "Buy Now & Save 43%",
             "link_url": "https://qureskincare.com/pages/microinfusion"
           }
         },
@@ -137,20 +137,20 @@
       ],
       "disabled": true,
       "settings": {
-        "heading": "70% OFF \\ Micro-Infusion",
-        "heading_mobile": "70% OFF \\ Micro-Infusion",
+        "heading": "Get 2 LED devices \\ for the price of 1!",
+        "heading_mobile": "Get 2 LED devices \\ for the price of 1!",
         "heading_tag": "h1",
-        "subheading": "<p>Refresh your glow & save big!</p>",
-        "subheading_mobile": "<p>Refresh your glow & save big!</p>",
+        "subheading": "<p>Don't let post-summer skin </p><p>damage get your confidence down</p>",
+        "subheading_mobile": "<p>Don't let post-summer skin </p><p>damage get your confidence down</p>",
         "text": "",
-        "image": "shopify://shop_images/summer_sale_4d821dfa-5798-447c-b981-00dee24d2b9c.webp",
-        "image_mobile": "shopify://shop_images/summer_sale_mob_d4d20b00-2ad2-40c4-9e86-053bbb6b6b7d.webp"
+        "image": "shopify://shop_images/Banner_fa80bee0-fc02-4ef3-a21c-201e82626a6d.png",
+        "image_mobile": "shopify://shop_images/qure_banner_mob.webp"
       }
     },
-    "promotion_main_banner_48gkNr": {
+    "promotion_main_banner_RfFKTc": {
       "type": "promotion-main-banner",
       "blocks": {
-        "link_GirQqh": {
+        "link_QGnGny": {
           "type": "link",
           "settings": {
             "link_label": "Shop Best Sellers",
@@ -158,7 +158,7 @@
             "link_url": "shopify://collections/best-sellers"
           }
         },
-        "product_BANXY7": {
+        "product_anMBx3": {
           "type": "product",
           "disabled": true,
           "settings": {
@@ -167,7 +167,7 @@
             "product_url": "shopify://products/exclusive"
           }
         },
-        "banner_6wgzUN": {
+        "banner_QDTHgb": {
           "type": "banner",
           "settings": {
             "heading": "Save up to 55% on Exclusive Bundles",
@@ -179,18 +179,18 @@
         }
       },
       "block_order": [
-        "link_GirQqh",
-        "product_BANXY7",
-        "banner_6wgzUN"
+        "link_QGnGny",
+        "product_anMBx3",
+        "banner_QDTHgb"
       ],
       "settings": {
-        "heading": "<h3>Get clinic-level results</h3><h3>from home- minus</h3><h3>the ‘clinical’ costs.</h3>",
+        "heading": "<h3>Get clinic-level results</h3><h3>from home- minus</h3><h3>the ‘clinical’ costs. </h3>",
         "heading_mobile": "",
         "heading_tag": "h1",
         "subheading": "",
         "subheading_mobile": "",
         "text": "<p><strong> 50,000+ </strong> customers feel more confident in their own skin.</p>",
-        "image": "shopify://shop_images/Banner_fa80bee0-fc02-4ef3-a21c-201e82626a6d.png",
+        "image": "shopify://shop_images/hm_banner_clinic_results.webp",
         "image_mobile": "shopify://shop_images/hm_banner_clinic_results.png_mob.webp",
         "wistia_id": ""
       }
@@ -304,10 +304,10 @@
             "heading": "Thrilled with the results!",
             "product": "Q-Rejuvalight Pro LED Mask",
             "stars_img": "shopify://shop_images/results_star-full.svg",
-            "text": "<p>\"I am 45 so I am fighting signs of aging, but also still dealing with acne flare ups. I haven’t had a single breakout since I started using the mask, plus I notice a definite smoothing of fine wrinkles on my cheeks & around my eyes. I recommend this product to anyone. Well worth the investment.\"</p>",
-            "image": "shopify://shop_images/Jessica_k_led_mask_b_a.png",
-            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
-            "client": "Jessica K.",
+            "text": "<p>I was very skeptical when my husband bought this mask for me. But after 6mo the results are amazing!! I’ve tried numerous serums for my sun spots but nothing worked until I used this mask. Definitely worth the money.</p>",
+            "image": "shopify://shop_images/results_teresa.webp",
+            "image_country": "shopify://shop_images/america_f_92cbd39d-f0e3-42b9-a692-c714420fbe53.webp",
+            "client": "Teresa S.",
             "concerns": "",
             "verified": true
           }
@@ -388,10 +388,10 @@
             "heading": "IT REALLY WORKS!!",
             "product": "Q-Rejuvalight Pro LED Mask",
             "stars_img": "shopify://shop_images/results_star-full.svg",
-            "text": "<p>I was very skeptical when my husband bought this mask for me. But after 6mo the results are amazing!! I’ve tried numerous serums for my sun spots but nothing worked until I used this mask. Definitely worth the money.</p>",
-            "image": "shopify://shop_images/results_teresa.webp",
-            "image_country": "shopify://shop_images/america_f_92cbd39d-f0e3-42b9-a692-c714420fbe53.webp",
-            "client": "Teresa S.",
+            "text": "<p>\"I am 45 so I am fighting signs of aging, but also still dealing with acne flare ups. I haven’t had a single breakout since I started using the mask, plus I notice a definite smoothing of fine wrinkles on my cheeks & around my eyes. I recommend this product to anyone. Well worth the investment.\"</p>",
+            "image": "shopify://shop_images/Jessica_k_led_mask_b_a.png",
+            "image_country": "shopify://shop_images/usa_189ccd4e-add5-48f9-8078-c50c3e29332f.png",
+            "client": "Jessica K.",
             "concerns": "",
             "verified": true
           }
@@ -489,7 +489,6 @@
         "product_RV8HgT",
         "product_3hFb8X"
       ],
-      "custom_css": [],
       "settings": {
         "heading": "Best Sellers",
         "btn": "Shop All Best-Sellers",
@@ -998,7 +997,7 @@
   "order": [
     "main",
     "promotion_main_banner_second_jCUkqh",
-    "promotion_main_banner_48gkNr",
+    "promotion_main_banner_RfFKTc",
     "featuredin_extended_P7BNDN",
     "results_slider_w6BARa",
     "products_grid_mCReWM",
