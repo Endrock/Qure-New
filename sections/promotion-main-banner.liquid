@@ -23,11 +23,11 @@
         #fix {
             top: -280px !important;
         }
-    }
+ }
 </style>
 
 <!-- clinic banner homepage  -->
-<div class="hero_valentine_banner position-relative main_banner">
+<div class="hero_valentine_banner position-relative main_banner promo_banner {{ section.settings.custom_class }}">
     <div class="container-fluid px-0">
         <picture>
             <source media="(min-width:1920px)" srcset="{{ section.settings.image | img_url: 'master' }}" class="img-fluid" width="1440" height="557">
@@ -54,6 +54,8 @@
                     {% if section.settings.text != blank %}
                         {{ section.settings.text |  replace: '<p>', '<p class="d-none d-md-block">' }}
                     {% endif %}
+
+                     
                 </div>
             </div>
         </div>
