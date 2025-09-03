@@ -86,7 +86,7 @@
           "announcement_TPxBgi": {
             "type": "announcement",
             "settings": {
-              "heading": "<p><strong>LABOR DAY SALE</strong> 70% OFF Micro-Infusion</p>",
+              "heading": "<p><strong>END OF SUMMER SALE</strong> 70% OFF Micro-Infusion</p>",
               "button_label": "SHOP NOW",
               "button_url": "https://qureskincare.com/pages/microinfusion",
               "ann_bg_clr": ""
@@ -381,8 +381,8 @@
           "sidecart_timer_old_enable": false,
           "sidecart_timer_new_enable": true,
           "start_date": "08-21-2025 10:00",
-          "finish_date": "09-02-2025 20:00",
-          "label_ends": "Labor Day Sale Ends:",
+          "finish_date": "09-10-2025 20:00",
+          "label_ends": "End Of Summer Sale Ends:",
           "label_days": "DAYS",
           "label_hours": "HOURS",
           "label_minutes": "MINUTES",
