@@ -16,7 +16,7 @@ document.addEventListener('__app-datalayer.purchaseFormUpdate', (event) => {
         cartRequestChange({ 
             id: event.detail.key,
             properties: {
-                __purchase_form: 'mi',
+                __purchase_form: event.detail.url,
             }
         },  {} )
     }
