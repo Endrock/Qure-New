@@ -75,8 +75,8 @@
     "icon_gift_width": 20,
     "icon_gift_height": 20,
     "enable_site_wide_timer": false,
-    "start_date": "08-19-2025 22:00",
-    "finish_date": "08-22-2025 19:59",
+    "start_date": "08-21-2025 22:00",
+    "finish_date": "08-31-2025 19:59",
     "label_ends": "Summer Sale Ends In:",
     "promotion": "promotion",
     "sections": {
@@ -86,10 +86,10 @@
           "announcement_TPxBgi": {
             "type": "announcement",
             "settings": {
-              "heading": "<p><strong>LABOR DAY SALE</strong> 70% OFF Micro-Infusion</p>",
+              "heading": "<p><strong>END OF SUMMER SALE</strong> 70% OFF Micro-Infusion</p>",
               "button_label": "SHOP NOW",
               "button_url": "https://qureskincare.com/pages/microinfusion",
-              "ann_bg_clr": ""
+              "ann_bg_clr": "#135f42"
             }
           },
           "tab_3Wyyea": {
@@ -381,8 +381,8 @@
           "sidecart_timer_old_enable": false,
           "sidecart_timer_new_enable": true,
           "start_date": "08-21-2025 10:00",
-          "finish_date": "09-02-2025 20:00",
-          "label_ends": "Labor Day Sale Ends:",
+          "finish_date": "09-10-2025 20:00",
+          "label_ends": "End Of Summer Sale Ends:",
           "label_days": "DAYS",
           "label_hours": "HOURS",
           "label_minutes": "MINUTES",
@@ -426,11 +426,6 @@
         "disabled": false,
         "settings": {}
       },
-      "8218531531362863771": {
-        "type": "shopify://apps/kite-free-gift-discounts/blocks/app-embed/2c7302c4-455d-4078-a829-48563ba26089",
-        "disabled": true,
-        "settings": {}
-      },
       "4215564508307704909": {
         "type": "shopify://apps/sitemap-noindex-pro/blocks/app-embed/4d815e2c-5af0-46ba-8301-d0f9cf660031",
         "disabled": false,
@@ -455,6 +450,11 @@
       },
       "2786716548061469553": {
         "type": "shopify://apps/axon/blocks/app-embed/baa0f014-62ea-462f-a8aa-a94befb1cbad",
+        "disabled": false,
+        "settings": {}
+      },
+      "8218531531362863771": {
+        "type": "shopify://apps/kite-discount-free-gift/blocks/app-embed/2c7302c4-455d-4078-a829-48563ba26089",
         "disabled": false,
         "settings": {}
       }

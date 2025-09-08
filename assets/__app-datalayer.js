@@ -1,5 +1,4 @@
 document.addEventListener('__app-datalayer.purchaseForm', (event) => {
-
     //skip default product_variant_id
     if(event.detail.event == 'purchase-form') {
         if(event.detail.product_category === undefined) return;
@@ -16,7 +15,7 @@ document.addEventListener('__app-datalayer.purchaseFormUpdate', (event) => {
         cartRequestChange({ 
             id: event.detail.key,
             properties: {
-                __purchase_form: 'mi',
+                __purchase_form: event.detail.url,
             }
         },  {} )
     }
