@@ -6,6 +6,7 @@ document.addEventListener('__app-datalayer.purchaseForm', (event) => {
     }
 
     if(event.detail.url == "/pages/microinfusion" || event.detail.url == "/pages/qure-microinfusion-offer") {
+        console.log('>>> aaaaqqqq >>> purchase-form', event.detail);
         window.dataLayer.push(event.detail);
     }
 });
