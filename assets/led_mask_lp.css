@@ -1454,7 +1454,7 @@ div#collapseOnezzz .tab-pane .col-4 p strong {
     margin-bottom: 21px;
 }
 .limited_time_offer {
-    min-width: 120px;
+    min-width: 130px;
     max-width: 120px;
     height: 24px;
     font-size: 11px;
@@ -1557,7 +1557,7 @@ div#collapseOnezzz .tab-pane .col-4 p strong {
         font-size: 11px;
     }
     .limited_time_offer {
-        min-width: 120px;
+        min-width: 130px;
         font-size: 10px !important;
     }
     .mothers_day_offer {
