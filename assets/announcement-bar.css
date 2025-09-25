@@ -1,8 +1,8 @@
-@font-face {
+/* @font-face {
   font-family: "TT Commons Pro";
   src: url("https://cdn.shopify.com/s/files/1/0441/1431/3365/files/tt_commons_pro_regular.otf?v=1758812260")
     format("otf");
-}
+} */
 /*============================ Announcement Bar =========================================*/
 .announcement-bar {
   background: var(--White, #fff);
@@ -12,22 +12,17 @@
   z-index: 9;
   white-space: nowrap;
   display: flex;
-  padding: 10px 0 10px 0;
+  padding: 0;
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
   height: 40px;
 }
-
-.announcement-bar.large {
-  padding: 6px 0;
-}
-
-.announcement-carousel {
+.announcement-bar .announcement-container {
+  padding: 0;
   position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 .announcement-bar-content {
@@ -40,59 +35,36 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  /* width: 100%; */
   color: #000;
   font-family: "TT Commons";
   font-size: var(--Size-16, 16px);
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-}
-
-.announcement-bar-content.active {
-  opacity: 1;
-  transform: translateY(0);
-  z-index: 1;
+  height: 100%;
 }
 
 .announcement-bar strong {
   font-weight: 700;
 }
-
-.announcement-bar .announcement-container {
-  padding: 0 5px;
-  position: relative;
-  width: 100%;
-  height: 100%;
+.announcement-bar .splide__arrow svg {
+  fill: none;
+  height: 10px;
+  width: auto;
 }
 
 .announcement-bar .arrow-icon-left {
   transform: rotate(180deg);
 }
 
-.announcement-bar .arrow {
-  cursor: pointer;
-  flex-shrink: 0;
-  transition: opacity 0.2s ease;
-  user-select: none;
+.announcement-container .splide,
+.announcement-container .splide__track {
   height: 100%;
-  width: 39px;
-  padding: 0 16px;
 }
 
 .announcement-bar .arrow:hover {
   opacity: 0.7;
-}
-
-.announcement-bar .arrow:active {
-  transform: scale(0.95);
-}
-
-.announcement-bar .arrow-icon-left:active {
-  transform: rotate(180deg) scale(0.95);
 }
 
 .announcement-bar .button {
@@ -112,6 +84,19 @@
   text-decoration: none;
 }
 
+.announcement-bar .splide__arrow {
+  fill: transparent;
+  height: 100%;
+  width: 37px;
+  background: white;
+}
+.announcement-bar .splide__arrow--next {
+  right: 0;
+}
+.announcement-bar .splide__arrow--prev {
+  left: 0;
+}
+
 @media (max-width: 991px) {
   .announcement-bar-content {
     font-size: 12px;
@@ -119,13 +104,6 @@
   }
   .announcement-bar {
     height: 32px;
-    padding: 6px 0 6px 0;
-  }
-  .announcement-bar.large {
-    padding: 6px 0 6px 0;
-  }
-  .announcement-bar .announcement-container {
-    width: calc(100% - 16px);
   }
   .announcement-bar .icon {
     width: 14px;
@@ -151,32 +129,8 @@
     background: #ff5429;
     text-decoration: none;
   }
-
-  .announcement-bar .arrow {
-    width: 23px;
-    padding: 0 8px;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeOutDown {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(-10px);
+  .announcement-bar .splide__arrow {
+    width: 21px;
   }
 }
 
