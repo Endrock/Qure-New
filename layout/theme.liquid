@@ -1,22 +1,21 @@
 <!doctype html>
 <html lang="{{ shop.locale }}">
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
     {% if template contains 'product' and product.metafields.custom.custom_canonical_url != blank %}
-        <link rel="canonical" href="{{ product.metafields.custom.custom_canonical_url }}">
+      <link rel="canonical" href="{{ product.metafields.custom.custom_canonical_url }}">
     {% elsif template contains 'collection' and collection.metafields.custom.custom_canonical_url %}
-        <link rel="canonical" href="{{ collection.metafields.custom.custom_canonical_url }}">
+      <link rel="canonical" href="{{ collection.metafields.custom.custom_canonical_url }}">
     {% else %}
-        <link rel="canonical" href="{{ canonical_url }}">
+      <link rel="canonical" href="{{ canonical_url }}">
     {% endif %}
 
-    <meta name="p:domain_verify" content="67d2a1408f84408a05deffe883a0a523"/>
-    <meta name="google-site-verification" content="eJrHRDM9bifPc8Nf-ycIg275f3KrlSoWEHd5VM5M9LQ" />
-    <meta name="google-site-verification" content="N0QF9SQ35xUa1DQifP7jZgs_z2odMQBZlSB4L7n5fl4" /> 
-    <meta name="msvalidate.01" content="E6D2CFAEB841C8D3C13C6473265B99B6" />
+    <meta name="p:domain_verify" content="67d2a1408f84408a05deffe883a0a523">
+    <meta name="google-site-verification" content="eJrHRDM9bifPc8Nf-ycIg275f3KrlSoWEHd5VM5M9LQ">
+    <meta name="google-site-verification" content="N0QF9SQ35xUa1DQifP7jZgs_z2odMQBZlSB4L7n5fl4">
+    <meta name="msvalidate.01" content="E6D2CFAEB841C8D3C13C6473265B99B6">
 
     {% render 'robots' %}
 
@@ -33,9 +32,9 @@
     <title>{{ seo_title }}</title>
 
     {%- if page_description -%}
-			<meta name="description" content="{{ page_description | escape }}">
-		{%- else -%}
-			<meta name="description" content="{{ seo_title | escape }}">
+      <meta name="description" content="{{ page_description | escape }}">
+    {%- else -%}
+      <meta name="description" content="{{ seo_title | escape }}">
     {%- endif -%}
 
     {% render 'social-meta-tags' %}
@@ -60,9 +59,9 @@
     <link rel="shortcut icon" href="https://qureskincaredns-main.com/assets/images/qure_32x32.webp" type="image/png">
     <link rel="stylesheet" href="https://qureskincaredns-main.com/assets/css/vendor.css">
     <link rel="stylesheet" href="https://qureskincaredns-main.com/assets/css/spacings.css">
-    <link rel="stylesheet" href="https://qureskincaredns-main.com/assets/css/theme-fonts.css" />
-    <link rel="stylesheet" href="https://qureskincaredns-main.com/assets/css/base.css" />
-    
+    <link rel="stylesheet" href="https://qureskincaredns-main.com/assets/css/theme-fonts.css">
+    {{ 'base.css' | asset_url | stylesheet_tag }}
+
     {{ content_for_header }}
 
     {% render 'header-scripts' %}
@@ -72,12 +71,17 @@
   </head>
 
   <body class="{{ template }}">
-
     <!-- Google Tag Manager (noscript) -- BV -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLP8CZF"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KLP8CZF"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe
+    ></noscript>
     <!-- End Google Tag Manager (noscript) -- BV -->
-    
+
     {% sections 'header-group' %}
 
     {{ content_for_layout }}

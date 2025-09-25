@@ -11,21 +11,39 @@
   "type": "header",
   "name": "t:sections-group.header.name",
   "sections": {
-    "footer-form": {
+    "announcement-bar": {
       "type": "announcement-bar",
-      "settings": {
-        "heading": "END OF SUMMER SALE 70% OFF Micro-Infusion",
-        "button-label": "Shop Now",
-        "button-url": "https://qureskincare.com/pages/microinfusion"
-      }
+      "settings": {},
+      "blocks": {
+        "announcement-1": {
+          "type": "announcement",
+          "settings": {
+            "heading": "<strong>END OF SUMMER SALE</strong> 70% OFF Micro-Infusion",
+            "button-label": "Shop Now",
+            "button-url": "https://qureskincare.com/pages/microinfusion"
+          }
+        },
+        "announcement-2": {
+          "type": "announcement",
+          "settings": {
+            "heading": "<strong>Free Shipping</strong> on Orders Over $100",
+            "icon": "shopify://shop_images/icon-cart.png"
+          }
+        },
+        "announcement-3": {
+          "type": "announcement",
+          "settings": {
+            "heading": "<strong>Clinically Proven, Visible Results</strong>",
+            "icon": "shopify://shop_images/icon-shield.png"
+          }
+        }
+      },
+      "block_order": ["announcement-1", "announcement-2", "announcement-3"]
     },
     "header": {
       "type": "header",
       "settings": {}
     }
   },
-  "order": [
-    "footer-form",
-    "header"
-  ]
+  "order": ["announcement-bar", "header"]
 }
