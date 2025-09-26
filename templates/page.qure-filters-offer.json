@@ -9,15 +9,6 @@
  */
 {
   "sections": {
-    "announcement_bar_FNAPqF": {
-      "type": "announcement-bar",
-      "name": "t:sections.announcement-bar.name",
-      "settings": {
-        "heading": "FREE Worldwide Shipping Above $100",
-        "button-label": "SHOP NOW",
-        "button-url": "#"
-      }
-    },
     "clean_water_KQtjt9": {
       "type": "clean-water",
       "blocks": {
@@ -137,11 +128,7 @@
           }
         }
       },
-      "block_order": [
-        "carousel_JiXKEh",
-        "carousel_gMY6JG",
-        "carousel_PUe6Gj"
-      ],
+      "block_order": ["carousel_JiXKEh", "carousel_gMY6JG", "carousel_PUe6Gj"],
       "name": "t:sections.qure-filters-offer-slider-with-text.name",
       "settings": {
         "heading": "The 3 biggest skin and hair issues? Blame your water.",
@@ -391,11 +378,7 @@
           }
         }
       },
-      "block_order": [
-        "value_B8ER4i",
-        "value_E6RppN",
-        "value_izxaxF"
-      ],
+      "block_order": ["value_B8ER4i", "value_E6RppN", "value_izxaxF"],
       "name": "t:sections.improve-skin-hydration.name",
       "settings": {
         "heading": "Clinically proven to improve skin hydration in just 4 weeks",
@@ -449,11 +432,7 @@
           }
         }
       },
-      "block_order": [
-        "slider_6UfcXz",
-        "slider_7mtD8L",
-        "slider_KKJAJe"
-      ],
+      "block_order": ["slider_6UfcXz", "slider_7mtD8L", "slider_KKJAJe"],
       "name": "t:sections.trusted-reviews.name",
       "settings": {
         "background_color": "",
@@ -680,9 +659,7 @@
           }
         }
       },
-      "block_order": [
-        "claim_MTiLze"
-      ],
+      "block_order": ["claim_MTiLze"],
       "name": "t:sections.featured-product-bundle.name",
       "settings": {
         "heading": "Protect your skin & save $129",
@@ -785,10 +762,7 @@
           }
         }
       },
-      "block_order": [
-        "variant_43xxGi",
-        "variant_45xfGi"
-      ],
+      "block_order": ["variant_43xxGi", "variant_45xfGi"],
       "name": "t:sections.sticky-button-variants.name",
       "settings": {
         "heading": "",
@@ -799,7 +773,6 @@
     }
   },
   "order": [
-    "announcement_bar_FNAPqF",
     "clean_water_KQtjt9",
     "quote_zqnAHh",
     "qure_filters_offer_slider_with_text_JgnGLR",

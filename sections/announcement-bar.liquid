@@ -52,18 +52,22 @@
   </div>
 </div>
 
-<script src="{{ 'splide.min.js' | asset_url  }}"></script>
+<script src="{{ 'splide.min.js' | asset_url  }}" defer></script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const splide = new Splide('.splide', {
-      type: 'loop',
+    const annoucement = document.querySelector('.announcement-bar .splide');
+    console.log("🚀 ~ annoucement:", annoucement)
+    const splide = new Splide(annoucement, {
+      type: 'fade',
+      rewind: true,
       focus: 'center',
       perPage: 1,
       perMove: 1,
+      pauseOnHover: false,
       pagination: false,
       autoplay: true,
-      interval: 1000 * {{ section.settings.delay }},
+      interval:  {{ section.settings.delay }},
     });
 
     splide.mount();
@@ -78,8 +82,8 @@
     {
       "type": "number",
       "id": "delay",
-      "label": "Delay in seconds",
-      "default": 3
+      "label": "Delay in milliseconds",
+      "default": 3000
     }
   ],
   "blocks": [

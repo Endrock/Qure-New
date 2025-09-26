@@ -66,6 +66,9 @@
 .announcement-bar .arrow:hover {
   opacity: 0.7;
 }
+.announcement-bar .splide__track--fade > .splide__list > .splide__slide {
+  transition: opacity 100ms cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
 
 .announcement-bar .button {
   display: inline-flex;
@@ -89,6 +92,7 @@
   height: 100%;
   width: 37px;
   background: white;
+  opacity: 1;
 }
 .announcement-bar .splide__arrow--next {
   right: 0;
