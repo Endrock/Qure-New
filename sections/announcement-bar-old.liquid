@@ -1,0 +1,62 @@
+{% doc %}
+  Renders an announcement bar section
+{% enddoc %}
+
+{% if page.handle == 'exclusive-holiday-bundle-deal-new' or page.handle == 'qure-microinfusion-offer' %}
+  <style>
+    :root {
+      --height-bar: 50px !important;
+    }
+    @media (max-width: 991px) {
+      :root {
+        --height-bar: 34px !important;
+      }
+    }
+  </style>
+
+  {{ 'announcement-bar-old.css' | asset_url | stylesheet_tag }}
+
+  <!-- Announcement Bar old -->
+  <link rel="stylesheet" href="https://qureskincaredns-main.com/sections/isolated/announcement/announcement-bar.css">
+
+  <div id="announcement-bar" class="announcement-bar" style="--ans-bar-font-size:16px; --anc-bar-font-weight :400;">
+    <div class="container">
+      {% if section.settings.heading != blank %}
+        <div class="announcement-bar-content text-center">
+          {{ section.settings.heading }}
+          {% if section.settings['button-label'] != blank -%}
+            <a href="{{ section.settings.button-url }}">{{ section.settings['button-label'] }}</a>
+          {%- endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "announcement-bar-old",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:common.header"
+    },
+    {
+      "type": "text",
+      "id": "button-label",
+      "label": "t:common.button-label"
+    },
+    {
+      "type": "text",
+      "id": "button-url",
+      "label": "t:common.button-url"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.announcement-bar.name"
+    }
+  ]
+}
+{% endschema %}
