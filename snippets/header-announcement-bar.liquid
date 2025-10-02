@@ -4,12 +4,18 @@
   assign ann_bg_clr = st.ann_bg_clr
 %}
 
-
 <div class="announcement_bar">
-    <p>
-        {{ block.settings.heading |  replace: '<p>', '' |  replace: '</p>', '' }}
-        {% if block.settings.button_label %}
-            <a href="{{ block.settings.button_url }}" aria-label="{{ block.settings.button_label | escape }}" class="bar_shop-btn text-white" style="--ann_bg_clr: {{ ann_bg_clr }}">{{ block.settings.button_label }}</a>
-        {% endif %}
-    </p>
+  <p>
+    {{ block.settings.heading | replace: '<p>', '' | replace: '</p>', '' }}
+    {% if block.settings.button_label %}
+      <a
+        href="{{ block.settings.button_url }}"
+        aria-label="{{ block.settings.button_label | escape }}"
+        class="bar_shop-btn text-white"
+        style="--ann_bg_clr: {{ ann_bg_clr }}"
+      >
+        {{- block.settings.button_label -}}
+      </a>
+    {% endif %}
+  </p>
 </div>
