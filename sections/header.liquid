@@ -1,203 +1,249 @@
 {% assign is_enable_menu_upsell = section.settings.enable_menu_upsell_carousel %}
 <div class="wrapper home-default-wrapper header-wrapperBlock {% if is_enable_menu_upsell %} pdm-menu-upsell  {% endif %} ">
-    <div id="shopify-section-header" class="shopify-section site-header">
-        <div class="header-wrapper">
-            {% if settings.enable_site_gamification %}
-                <div class="announcement_bar site-gamification-active">
-                    {% render 'pdm_site-wide-gamification', settingsGamification: settings, cartTotal: cart.items_subtotal_price  %}
-                    {% if settings.enable_site_wide_timer %}
-                        <div class="announcement_bar__timer">
-                            {% render 'pdm_site-wide-timer' %}
-                        </div>
-                    {% endif %}
-                </div>
-            {% else %}
-                {% for block in section.blocks limit: 1 %}
-                    {%- case block.type -%}
-                        {% when 'announcement' %}
-                            {% render 'header-announcement-bar', section: section, block: block %}
-                        {% when 'announcement-promotion' %}
-                            {% render 'promotion-header-announcement-bar', section: section, block: block %}
-                    {%- endcase -%}
-                {% endfor %}
-            {% endif %}
-            <header>
-                <div class="header-new new-hp-header">
-                    {% render 'header-menu-mobile', section: section %}
-                    {% render 'header-menu-desktop', section: section %}
-                </div>
-            </header>
+  <div id="shopify-section-header" class="shopify-section site-header">
+    <div class="header-wrapper">
+      {% if settings.enable_site_gamification %}
+        <div class="announcement_bar site-gamification-active">
+          {% render 'pdm_site-wide-gamification',
+            settingsGamification: settings,
+            cartTotal: cart.items_subtotal_price
+          %}
+          {% if settings.enable_site_wide_timer %}
+            <div class="announcement_bar__timer">
+              {% render 'pdm_site-wide-timer' %}
+            </div>
+          {% endif %}
         </div>
+      {% else %}
+        {% for block in section.blocks limit: 1 %}
+          {%- case block.type -%}
+            {% when 'announcement' %}
+              {% render 'header-announcement-bar', section: section, block: block %}
+            {% when 'announcement-promotion' %}
+              {% render 'promotion-header-announcement-bar', section: section, block: block %}
+          {%- endcase -%}
+        {% endfor %}
+        {% if section.settings.enable_rotating_announcements %}
+          {% render 'rotating-announcement-bar', blocks: section.blocks %}
+        {% endif %}
+      {% endif %}
+      <header>
+        <div class="header-new new-hp-header">
+          {% render 'header-menu-mobile', section: section %}
+          {% render 'header-menu-desktop', section: section %}
+        </div>
+      </header>
     </div>
+  </div>
 </div>
 
 {{ 'pdm-styles-carousel-nav.css' | asset_url | stylesheet_tag }}
 
 {% for block in section.blocks %}
-    {%- case block.type -%}
-        {% when 'tab' %}
-            {% if block.settings.heading != blank %}
-                <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                        $(function() {
-                            var origTitle, animatedTitle, timer;
-                            origTitle = document.title;
-                
-                            function animateTitle(newTitle) {
-                            var currentState = false;
-                            origTitle = document.title; 
-                            animatedTitle = "{{ block.settings.heading }}";
-                            timer = setInterval(startAnimation, 2000);
-                
-                            function startAnimation() {
-                                document.title = currentState ? origTitle : animatedTitle;
-                                currentState = !currentState;
-                                }
-                            }
-                
-                            function restoreTitle() {
-                                clearInterval(timer);
-                                document.title = origTitle; 
-                            }
-                
-                            $(window).blur(function() {
-                                animateTitle();
-                            });
-                
-                            $(window).focus(function() {
-                                restoreTitle();
-                            });
-                        });
-                    });
-                </script> 
-            {% endif %}
-    {%- endcase -%}
+  {%- case block.type -%}
+    {% when 'tab' %}
+      {% if block.settings.heading != blank %}
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            $(function () {
+              var origTitle, animatedTitle, timer;
+              origTitle = document.title;
+
+              function animateTitle(newTitle) {
+                var currentState = false;
+                origTitle = document.title;
+                animatedTitle = '{{ block.settings.heading }}';
+                timer = setInterval(startAnimation, 2000);
+
+                function startAnimation() {
+                  document.title = currentState ? origTitle : animatedTitle;
+                  currentState = !currentState;
+                }
+              }
+
+              function restoreTitle() {
+                clearInterval(timer);
+                document.title = origTitle;
+              }
+
+              $(window).blur(function () {
+                animateTitle();
+              });
+
+              $(window).focus(function () {
+                restoreTitle();
+              });
+            });
+          });
+        </script>
+      {% endif %}
+  {%- endcase -%}
 {% endfor %}
 
 {% schema %}
 {
-    "name": "t:sections.header.name",
-    "class": "section-header",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Upsell Navigation"
-      },
-      {
-        "type": "metaobject_list",
-        "id": "upsell_content",
-        "label": "Upsell List Content",
-        "metaobject_type": "nav_upsell_card_item"
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_menu_upsell_carousel",
-        "label": "Enable menu upsell carousel",
-        "default": false
-      }
-    ],
-	"blocks": [
-		{
-			"type": "announcement",
-			"name": "t:sections.header.blocks.announcement.name",
-            "limit": 1,
-			"settings": [
-                {
-                    "type" : "richtext",
-                    "id" : "heading",
-                    "label" : "t:common.heading.label"
-                },
-                {
-                    "type": "text",
-                    "id": "button_label",
-                    "default": "Button label",
-                    "label": "t:common.button.label",
-                    "info": "t:common.button.info"
-                },
-                {
-                    "type": "url",
-                    "id": "button_url",
-                    "label": "t:common.button.url.label"
-                },
-                {
-                    "type": "color",
-                    "id": "ann_bg_clr",
-                    "label": "Background Color"
-                }
-			]
-		},
-		{
-			"type": "announcement-promotion",
-			"name": "t:sections.header.blocks.announcement-promo.name",
-            "limit": 1,
-			"settings": [
-                {
-                    "type" : "text",
-                    "id" : "heading",
-                    "label" : "t:common.heading.label"
-                },
-                {
-                    "type" : "text",
-                    "id" : "text",
-                    "label" : "t:common.text.label"
-                },
-                {
-                    "type": "text",
-                    "id": "button_label",
-                    "default": "Button label",
-                    "label": "t:common.button.label",
-                    "info": "t:common.button.info"
-                },
-                {
-                    "type": "text",
-                    "id": "button_mobile_label",
-                    "default": "Button label",
-                    "label": "t:common.button.mobile.label",
-                    "info": "t:common.button.info"
-                },
-                {
-                    "type": "url",
-                    "id": "button_url",
-                    "label": "t:common.button.url.label"
-                }
-			]
-		},
-		{
-			"type": "tab",
-			"name": "t:sections.header.blocks.tab.name",
-            "limit": 1,
-			"settings": [
-                {
-                    "type" : "text",
-                    "id" : "heading",
-                    "label" : "t:common.heading.label"
-                }
-			]
-		},
-		{
-			"type": "banner",
-			"name": "t:sections.header.blocks.banner.name",
-            "limit": 6,
-			"settings": [
-                {
-                    "type": "image_picker",
-                    "id": "image",
-                    "label": "t:common.image.label"
-                },
-                {
-                    "type": "text",
-                    "id": "button_label",
-                    "default": "Button label",
-                    "label": "t:common.button.label",
-                    "info": "t:common.button.info"
-                },
-                {
-                    "type": "url",
-                    "id": "button_url",
-                    "label": "t:common.button.url.label"
-                }
-			]
-		}
-	]
+  "name": "t:sections.header.name",
+  "class": "section-header",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Upsell Navigation"
+    },
+    {
+      "type": "metaobject_list",
+      "id": "upsell_content",
+      "label": "Upsell List Content",
+      "metaobject_type": "nav_upsell_card_item"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_menu_upsell_carousel",
+      "label": "Enable menu upsell carousel",
+      "default": false
+    },
+    {
+      "type": "number",
+      "id": "delay",
+      "label": "Rotating Announcements Delay in milliseconds",
+      "default": 3000
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_rotating_announcements",
+      "label": "Enable Rotating Announcements",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "t:sections.header.blocks.announcement.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "heading",
+          "label": "t:common.heading.label"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Button label",
+          "label": "t:common.button.label",
+          "info": "t:common.button.info"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "t:common.button.url.label"
+        },
+        {
+          "type": "color",
+          "id": "ann_bg_clr",
+          "label": "Background Color"
+        }
+      ]
+    },
+    {
+      "type": "announcement_rotating",
+      "name": "Announcement Rotating",
+      "settings": [
+        {
+          "type": "text",
+
+          "id": "heading",
+          "label": "t:common.header"
+        },
+        {
+          "type": "text",
+          "id": "button-label",
+          "label": "t:common.button-label"
+        },
+        {
+          "type": "text",
+
+          "id": "button-url",
+          "label": "t:common.button-url"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "icon"
+        }
+      ]
+    },
+    {
+      "type": "announcement-promotion",
+      "name": "t:sections.header.blocks.announcement-promo.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "t:common.heading.label"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "t:common.text.label"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Button label",
+          "label": "t:common.button.label",
+          "info": "t:common.button.info"
+        },
+        {
+          "type": "text",
+          "id": "button_mobile_label",
+          "default": "Button label",
+          "label": "t:common.button.mobile.label",
+          "info": "t:common.button.info"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "t:common.button.url.label"
+        }
+      ]
+    },
+    {
+      "type": "tab",
+      "name": "t:sections.header.blocks.tab.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "t:common.heading.label"
+        }
+      ]
+    },
+    {
+      "type": "banner",
+      "name": "t:sections.header.blocks.banner.name",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:common.image.label"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Button label",
+          "label": "t:common.button.label",
+          "info": "t:common.button.info"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "t:common.button.url.label"
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}

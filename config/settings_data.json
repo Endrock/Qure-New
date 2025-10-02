@@ -92,6 +92,28 @@
               "ann_bg_clr": "#135f42"
             }
           },
+          "announcement-1": {
+            "type": "announcement_rotating",
+            "settings": {
+              "heading": "<strong>END OF SUMMER SALE</strong> 70% OFF Micro-Infusion",
+              "button-label": "Shop Now",
+              "button-url": "https://qureskincare.com/pages/microinfusion"
+            }
+          },
+          "announcement-2": {
+            "type": "announcement_rotating",
+            "settings": {
+              "heading": "<strong>Free Shipping</strong> on Orders Over $100",
+              "icon": "shopify://shop_images/icon-cart.png"
+            }
+          },
+          "announcement-3": {
+            "type": "announcement_rotating",
+            "settings": {
+              "heading": "<strong>Clinically Proven,</strong> Visible Results",
+              "icon": "shopify://shop_images/icon-shield.png"
+            }
+          },
           "tab_3Wyyea": {
             "type": "tab",
             "settings": {
@@ -141,6 +163,9 @@
         },
         "block_order": [
           "announcement_TPxBgi",
+          "announcement-1",
+          "announcement-2",
+          "announcement-3",
           "tab_3Wyyea",
           "banner_jrcxU4",
           "banner_CiNYWN",
@@ -173,9 +198,7 @@
             }
           }
         },
-        "block_order": [
-          "form_Wgkcrq"
-        ],
+        "block_order": ["form_Wgkcrq"],
         "settings": {
           "heading": "Get the latest from Qure",
           "social_text": "Follow Us",
